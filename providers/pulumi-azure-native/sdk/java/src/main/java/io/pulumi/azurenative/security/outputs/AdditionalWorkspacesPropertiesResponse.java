@@ -88,17 +88,17 @@ public final class AdditionalWorkspacesPropertiesResponse {
             this.dataTypes = dataTypes;
             return this;
         }
-
+        public Builder dataTypes(String... dataTypes) {
+            return dataTypes(List.of(dataTypes));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder workspace(@Nullable String workspace) {
             this.workspace = workspace;
             return this;
-        }
-        public AdditionalWorkspacesPropertiesResponse build() {
+        }        public AdditionalWorkspacesPropertiesResponse build() {
             return new AdditionalWorkspacesPropertiesResponse(dataTypes, type, workspace);
         }
     }

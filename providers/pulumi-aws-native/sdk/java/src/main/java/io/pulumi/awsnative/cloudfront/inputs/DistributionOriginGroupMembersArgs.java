@@ -67,22 +67,21 @@ public final class DistributionOriginGroupMembersArgs extends io.pulumi.resource
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<DistributionOriginGroupMemberArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-
+        public Builder items(DistributionOriginGroupMemberArgs... items) {
+            return items(List.of(items));
+        }
         public Builder quantity(Output<Integer> quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
-
         public Builder quantity(Integer quantity) {
             this.quantity = Output.of(Objects.requireNonNull(quantity));
             return this;
-        }
-        public DistributionOriginGroupMembersArgs build() {
+        }        public DistributionOriginGroupMembersArgs build() {
             return new DistributionOriginGroupMembersArgs(items, quantity);
         }
     }

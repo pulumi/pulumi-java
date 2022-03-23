@@ -53,12 +53,10 @@ public final class AssistantServerSideEncryptionConfigurationArgs extends io.pul
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public AssistantServerSideEncryptionConfigurationArgs build() {
+        }        public AssistantServerSideEncryptionConfigurationArgs build() {
             return new AssistantServerSideEncryptionConfigurationArgs(kmsKeyId);
         }
     }

@@ -178,42 +178,37 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
             this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
             return this;
         }
-
         public Builder completedTrialCount(String completedTrialCount) {
             this.completedTrialCount = Objects.requireNonNull(completedTrialCount);
             return this;
         }
-
         public Builder consumedMLUnits(Double consumedMLUnits) {
             this.consumedMLUnits = Objects.requireNonNull(consumedMLUnits);
             return this;
         }
-
         public Builder hyperparameterMetricTag(String hyperparameterMetricTag) {
             this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
             return this;
         }
-
         public Builder isBuiltInAlgorithmJob(Boolean isBuiltInAlgorithmJob) {
             this.isBuiltInAlgorithmJob = Objects.requireNonNull(isBuiltInAlgorithmJob);
             return this;
         }
-
         public Builder isHyperparameterTuningJob(Boolean isHyperparameterTuningJob) {
             this.isHyperparameterTuningJob = Objects.requireNonNull(isHyperparameterTuningJob);
             return this;
         }
-
         public Builder trials(List<GoogleCloudMlV1__HyperparameterOutputResponse> trials) {
             this.trials = Objects.requireNonNull(trials);
             return this;
         }
-
+        public Builder trials(GoogleCloudMlV1__HyperparameterOutputResponse... trials) {
+            return trials(List.of(trials));
+        }
         public Builder webAccessUris(Map<String,String> webAccessUris) {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
-        }
-        public GoogleCloudMlV1__TrainingOutputResponse build() {
+        }        public GoogleCloudMlV1__TrainingOutputResponse build() {
             return new GoogleCloudMlV1__TrainingOutputResponse(builtInAlgorithmOutput, completedTrialCount, consumedMLUnits, hyperparameterMetricTag, isBuiltInAlgorithmJob, isHyperparameterTuningJob, trials, webAccessUris);
         }
     }

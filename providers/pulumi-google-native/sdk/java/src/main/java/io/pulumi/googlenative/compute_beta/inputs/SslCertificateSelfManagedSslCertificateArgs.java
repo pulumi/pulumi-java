@@ -78,22 +78,18 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
-        }
-        public SslCertificateSelfManagedSslCertificateArgs build() {
+        }        public SslCertificateSelfManagedSslCertificateArgs build() {
             return new SslCertificateSelfManagedSslCertificateArgs(certificate, privateKey);
         }
     }

@@ -45,8 +45,7 @@ public final class DeliveryStreamRedshiftRetryOptions {
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
-        }
-        public DeliveryStreamRedshiftRetryOptions build() {
+        }        public DeliveryStreamRedshiftRetryOptions build() {
             return new DeliveryStreamRedshiftRetryOptions(durationInSeconds);
         }
     }

@@ -90,17 +90,17 @@ public final class GetRegionInstanceGroupInstance extends io.pulumi.resources.In
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder namedPorts(List<GetRegionInstanceGroupInstanceNamedPort> namedPorts) {
             this.namedPorts = Objects.requireNonNull(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(GetRegionInstanceGroupInstanceNamedPort... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetRegionInstanceGroupInstance build() {
+        }        public GetRegionInstanceGroupInstance build() {
             return new GetRegionInstanceGroupInstance(instance, namedPorts, status);
         }
     }

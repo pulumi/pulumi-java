@@ -56,12 +56,10 @@ public final class GetSchedulingPolicyResult {
             this.arn = arn;
             return this;
         }
-
         public Builder fairsharePolicy(@Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
             this.fairsharePolicy = fairsharePolicy;
             return this;
-        }
-        public GetSchedulingPolicyResult build() {
+        }        public GetSchedulingPolicyResult build() {
             return new GetSchedulingPolicyResult(arn, fairsharePolicy);
         }
     }

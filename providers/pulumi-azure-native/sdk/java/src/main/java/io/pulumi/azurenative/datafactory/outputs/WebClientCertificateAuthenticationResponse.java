@@ -107,22 +107,18 @@ public final class WebClientCertificateAuthenticationResponse {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder pfx(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
             this.pfx = Objects.requireNonNull(pfx);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public WebClientCertificateAuthenticationResponse build() {
+        }        public WebClientCertificateAuthenticationResponse build() {
             return new WebClientCertificateAuthenticationResponse(authenticationType, password, pfx, url);
         }
     }

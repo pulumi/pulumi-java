@@ -69,12 +69,10 @@ public final class NamespacedGkeDeploymentTargetResponse {
             this.clusterNamespace = Objects.requireNonNull(clusterNamespace);
             return this;
         }
-
         public Builder targetGkeCluster(String targetGkeCluster) {
             this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
             return this;
-        }
-        public NamespacedGkeDeploymentTargetResponse build() {
+        }        public NamespacedGkeDeploymentTargetResponse build() {
             return new NamespacedGkeDeploymentTargetResponse(clusterNamespace, targetGkeCluster);
         }
     }

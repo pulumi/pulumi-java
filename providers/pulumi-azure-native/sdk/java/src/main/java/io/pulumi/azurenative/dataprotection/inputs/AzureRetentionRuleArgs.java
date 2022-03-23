@@ -101,42 +101,37 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
-
         public Builder lifecycles(Output<List<SourceLifeCycleArgs>> lifecycles) {
             this.lifecycles = Objects.requireNonNull(lifecycles);
             return this;
         }
-
         public Builder lifecycles(List<SourceLifeCycleArgs> lifecycles) {
             this.lifecycles = Output.of(Objects.requireNonNull(lifecycles));
             return this;
         }
-
+        public Builder lifecycles(SourceLifeCycleArgs... lifecycles) {
+            return lifecycles(List.of(lifecycles));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
-        }
-        public AzureRetentionRuleArgs build() {
+        }        public AzureRetentionRuleArgs build() {
             return new AzureRetentionRuleArgs(isDefault, lifecycles, name, objectType);
         }
     }

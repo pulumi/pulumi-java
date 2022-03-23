@@ -78,22 +78,18 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder type(Output<DomainRedirectType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(DomainRedirectType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DomainRedirectArgs build() {
+        }        public DomainRedirectArgs build() {
             return new DomainRedirectArgs(domainName, type);
         }
     }

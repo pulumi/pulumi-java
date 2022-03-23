@@ -69,12 +69,10 @@ public final class PackageResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PackageResponse build() {
+        }        public PackageResponse build() {
             return new PackageResponse(location, name);
         }
     }

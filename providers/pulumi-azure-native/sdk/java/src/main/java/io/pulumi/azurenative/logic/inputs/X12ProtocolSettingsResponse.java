@@ -250,62 +250,65 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
-
         public Builder envelopeOverrides(@Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
-
+        public Builder envelopeOverrides(X12EnvelopeOverrideResponse... envelopeOverrides) {
+            return envelopeOverrides(List.of(envelopeOverrides));
+        }
         public Builder envelopeSettings(X12EnvelopeSettingsResponse envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
-
         public Builder framingSettings(X12FramingSettingsResponse framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
-
         public Builder messageFilter(X12MessageFilterResponse messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
-
         public Builder messageFilterList(@Nullable List<X12MessageIdentifierResponse> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
-
+        public Builder messageFilterList(X12MessageIdentifierResponse... messageFilterList) {
+            return messageFilterList(List.of(messageFilterList));
+        }
         public Builder processingSettings(X12ProcessingSettingsResponse processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
-
         public Builder schemaReferences(List<X12SchemaReferenceResponse> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
-
+        public Builder schemaReferences(X12SchemaReferenceResponse... schemaReferences) {
+            return schemaReferences(List.of(schemaReferences));
+        }
         public Builder securitySettings(X12SecuritySettingsResponse securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
-
         public Builder validationOverrides(@Nullable List<X12ValidationOverrideResponse> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
-
+        public Builder validationOverrides(X12ValidationOverrideResponse... validationOverrides) {
+            return validationOverrides(List.of(validationOverrides));
+        }
         public Builder validationSettings(X12ValidationSettingsResponse validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public Builder x12DelimiterOverrides(@Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
             this.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
-        public X12ProtocolSettingsResponse build() {
+        public Builder x12DelimiterOverrides(X12DelimiterOverridesResponse... x12DelimiterOverrides) {
+            return x12DelimiterOverrides(List.of(x12DelimiterOverrides));
+        }        public X12ProtocolSettingsResponse build() {
             return new X12ProtocolSettingsResponse(acknowledgementSettings, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, securitySettings, validationOverrides, validationSettings, x12DelimiterOverrides);
         }
     }

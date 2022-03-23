@@ -79,22 +79,18 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
-
         public Builder window(@Nullable Output<MaintenanceWindowArgs> window) {
             this.window = window;
             return this;
         }
-
         public Builder window(@Nullable MaintenanceWindowArgs window) {
             this.window = Output.ofNullable(window);
             return this;
-        }
-        public MaintenancePolicyArgs build() {
+        }        public MaintenancePolicyArgs build() {
             return new MaintenancePolicyArgs(resourceVersion, window);
         }
     }

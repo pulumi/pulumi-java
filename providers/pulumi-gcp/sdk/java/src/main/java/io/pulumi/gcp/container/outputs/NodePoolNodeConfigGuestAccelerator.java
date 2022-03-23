@@ -64,17 +64,14 @@ public final class NodePoolNodeConfigGuestAccelerator {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public NodePoolNodeConfigGuestAccelerator build() {
+        }        public NodePoolNodeConfigGuestAccelerator build() {
             return new NodePoolNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }
     }

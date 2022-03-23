@@ -78,22 +78,18 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends io.pu
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public Builder script(String script) {
             this.script = Output.of(Objects.requireNonNull(script));
             return this;
         }
-
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
-
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
-        }
-        public ClusterClusterConfigInitializationActionGetArgs build() {
+        }        public ClusterClusterConfigInitializationActionGetArgs build() {
             return new ClusterClusterConfigInitializationActionGetArgs(script, timeoutSec);
         }
     }

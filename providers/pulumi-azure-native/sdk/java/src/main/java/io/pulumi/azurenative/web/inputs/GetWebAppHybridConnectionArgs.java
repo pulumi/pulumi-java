@@ -104,22 +104,18 @@ public final class GetWebAppHybridConnectionArgs extends io.pulumi.resources.Inv
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder relayName(String relayName) {
             this.relayName = Objects.requireNonNull(relayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppHybridConnectionArgs build() {
+        }        public GetWebAppHybridConnectionArgs build() {
             return new GetWebAppHybridConnectionArgs(name, namespaceName, relayName, resourceGroupName);
         }
     }

@@ -100,17 +100,14 @@ public final class TransformOutputResponse extends io.pulumi.resources.InvokeArg
             this.onError = onError;
             return this;
         }
-
         public Builder preset(Object preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
-
         public Builder relativePriority(@Nullable String relativePriority) {
             this.relativePriority = relativePriority;
             return this;
-        }
-        public TransformOutputResponse build() {
+        }        public TransformOutputResponse build() {
             return new TransformOutputResponse(onError, preset, relativePriority);
         }
     }

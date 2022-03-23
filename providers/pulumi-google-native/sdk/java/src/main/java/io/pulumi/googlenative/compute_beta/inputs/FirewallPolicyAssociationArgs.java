@@ -74,22 +74,18 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
             this.attachmentTarget = attachmentTarget;
             return this;
         }
-
         public Builder attachmentTarget(@Nullable String attachmentTarget) {
             this.attachmentTarget = Output.ofNullable(attachmentTarget);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FirewallPolicyAssociationArgs build() {
+        }        public FirewallPolicyAssociationArgs build() {
             return new FirewallPolicyAssociationArgs(attachmentTarget, name);
         }
     }

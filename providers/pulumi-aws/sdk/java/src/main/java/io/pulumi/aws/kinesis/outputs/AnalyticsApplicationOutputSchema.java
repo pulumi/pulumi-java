@@ -51,8 +51,7 @@ public final class AnalyticsApplicationOutputSchema {
         public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
-        }
-        public AnalyticsApplicationOutputSchema build() {
+        }        public AnalyticsApplicationOutputSchema build() {
             return new AnalyticsApplicationOutputSchema(recordFormatType);
         }
     }

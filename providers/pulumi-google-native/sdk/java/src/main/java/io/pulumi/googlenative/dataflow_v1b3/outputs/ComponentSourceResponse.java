@@ -85,17 +85,14 @@ public final class ComponentSourceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder originalTransformOrCollection(String originalTransformOrCollection) {
             this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ComponentSourceResponse build() {
+        }        public ComponentSourceResponse build() {
             return new ComponentSourceResponse(name, originalTransformOrCollection, userName);
         }
     }

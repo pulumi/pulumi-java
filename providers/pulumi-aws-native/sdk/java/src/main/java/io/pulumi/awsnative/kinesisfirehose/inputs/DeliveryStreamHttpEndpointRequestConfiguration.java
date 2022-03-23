@@ -68,12 +68,13 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration extends io.pul
             this.commonAttributes = commonAttributes;
             return this;
         }
-
+        public Builder commonAttributes(DeliveryStreamHttpEndpointCommonAttribute... commonAttributes) {
+            return commonAttributes(List.of(commonAttributes));
+        }
         public Builder contentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
-        }
-        public DeliveryStreamHttpEndpointRequestConfiguration build() {
+        }        public DeliveryStreamHttpEndpointRequestConfiguration build() {
             return new DeliveryStreamHttpEndpointRequestConfiguration(commonAttributes, contentEncoding);
         }
     }

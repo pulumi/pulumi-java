@@ -51,8 +51,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public FolderFeedFeedOutputConfigPubsubDestination build() {
+        }        public FolderFeedFeedOutputConfigPubsubDestination build() {
             return new FolderFeedFeedOutputConfigPubsubDestination(topic);
         }
     }

@@ -93,32 +93,29 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Output.ofNullable(allowInterrupt);
             return this;
         }
-
         public Builder frequencyInSeconds(Output<Integer> frequencyInSeconds) {
             this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
             return this;
         }
-
         public Builder frequencyInSeconds(Integer frequencyInSeconds) {
             this.frequencyInSeconds = Output.of(Objects.requireNonNull(frequencyInSeconds));
             return this;
         }
-
         public Builder messageGroups(Output<List<BotMessageGroupArgs>> messageGroups) {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
-
         public Builder messageGroups(List<BotMessageGroupArgs> messageGroups) {
             this.messageGroups = Output.of(Objects.requireNonNull(messageGroups));
             return this;
         }
-        public BotFulfillmentUpdateResponseSpecificationArgs build() {
+        public Builder messageGroups(BotMessageGroupArgs... messageGroups) {
+            return messageGroups(List.of(messageGroups));
+        }        public BotFulfillmentUpdateResponseSpecificationArgs build() {
             return new BotFulfillmentUpdateResponseSpecificationArgs(allowInterrupt, frequencyInSeconds, messageGroups);
         }
     }

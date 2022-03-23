@@ -78,22 +78,18 @@ public final class GcsDataArgs extends io.pulumi.resources.ResourceArgs {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public GcsDataArgs build() {
+        }        public GcsDataArgs build() {
             return new GcsDataArgs(bucketName, path);
         }
     }

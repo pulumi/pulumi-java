@@ -58,8 +58,7 @@ public final class OSPolicyResourcePackageResourceZypperResponse extends io.pulu
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OSPolicyResourcePackageResourceZypperResponse build() {
+        }        public OSPolicyResourcePackageResourceZypperResponse build() {
             return new OSPolicyResourcePackageResourceZypperResponse(name);
         }
     }

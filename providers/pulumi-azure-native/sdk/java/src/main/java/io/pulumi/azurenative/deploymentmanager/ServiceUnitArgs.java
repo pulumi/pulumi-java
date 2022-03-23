@@ -189,92 +189,74 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder artifacts(@Nullable ServiceUnitArtifactsArgs artifacts) {
             this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
-
         public Builder deploymentMode(Output<DeploymentMode> deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
-
         public Builder deploymentMode(DeploymentMode deploymentMode) {
             this.deploymentMode = Output.of(Objects.requireNonNull(deploymentMode));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder serviceTopologyName(Output<String> serviceTopologyName) {
             this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
             return this;
         }
-
         public Builder serviceTopologyName(String serviceTopologyName) {
             this.serviceTopologyName = Output.of(Objects.requireNonNull(serviceTopologyName));
             return this;
         }
-
         public Builder serviceUnitName(@Nullable Output<String> serviceUnitName) {
             this.serviceUnitName = serviceUnitName;
             return this;
         }
-
         public Builder serviceUnitName(@Nullable String serviceUnitName) {
             this.serviceUnitName = Output.ofNullable(serviceUnitName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetResourceGroup(Output<String> targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
-
         public Builder targetResourceGroup(String targetResourceGroup) {
             this.targetResourceGroup = Output.of(Objects.requireNonNull(targetResourceGroup));
             return this;
-        }
-        public ServiceUnitArgs build() {
+        }        public ServiceUnitArgs build() {
             return new ServiceUnitArgs(artifacts, deploymentMode, location, resourceGroupName, serviceName, serviceTopologyName, serviceUnitName, tags, targetResourceGroup);
         }
     }

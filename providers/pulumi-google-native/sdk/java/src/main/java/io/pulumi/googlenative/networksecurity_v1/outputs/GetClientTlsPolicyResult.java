@@ -169,42 +169,37 @@ public final class GetClientTlsPolicyResult {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serverValidationCa(List<ValidationCAResponse> serverValidationCa) {
             this.serverValidationCa = Objects.requireNonNull(serverValidationCa);
             return this;
         }
-
+        public Builder serverValidationCa(ValidationCAResponse... serverValidationCa) {
+            return serverValidationCa(List.of(serverValidationCa));
+        }
         public Builder sni(String sni) {
             this.sni = Objects.requireNonNull(sni);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetClientTlsPolicyResult build() {
+        }        public GetClientTlsPolicyResult build() {
             return new GetClientTlsPolicyResult(clientCertificate, createTime, description, labels, name, serverValidationCa, sni, updateTime);
         }
     }

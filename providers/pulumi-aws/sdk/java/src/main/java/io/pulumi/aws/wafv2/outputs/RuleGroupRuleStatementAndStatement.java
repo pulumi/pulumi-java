@@ -53,7 +53,9 @@ public final class RuleGroupRuleStatementAndStatement {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public RuleGroupRuleStatementAndStatement build() {
+        public Builder statements(RuleGroupRuleStatementAndStatementStatement... statements) {
+            return statements(List.of(statements));
+        }        public RuleGroupRuleStatementAndStatement build() {
             return new RuleGroupRuleStatementAndStatement(statements);
         }
     }

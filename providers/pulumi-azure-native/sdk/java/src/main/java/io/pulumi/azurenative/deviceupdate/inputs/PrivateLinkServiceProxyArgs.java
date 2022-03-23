@@ -97,32 +97,29 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
             this.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
-
         public Builder groupConnectivityInformation(@Nullable List<GroupConnectivityInformationArgs> groupConnectivityInformation) {
             this.groupConnectivityInformation = Output.ofNullable(groupConnectivityInformation);
             return this;
         }
-
+        public Builder groupConnectivityInformation(GroupConnectivityInformationArgs... groupConnectivityInformation) {
+            return groupConnectivityInformation(List.of(groupConnectivityInformation));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder remotePrivateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState) {
             this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }
-
         public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs remotePrivateLinkServiceConnectionState) {
             this.remotePrivateLinkServiceConnectionState = Output.ofNullable(remotePrivateLinkServiceConnectionState);
             return this;
-        }
-        public PrivateLinkServiceProxyArgs build() {
+        }        public PrivateLinkServiceProxyArgs build() {
             return new PrivateLinkServiceProxyArgs(groupConnectivityInformation, id, remotePrivateLinkServiceConnectionState);
         }
     }

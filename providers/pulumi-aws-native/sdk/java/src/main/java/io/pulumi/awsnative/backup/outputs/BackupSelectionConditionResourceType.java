@@ -61,17 +61,14 @@ public final class BackupSelectionConditionResourceType {
             this.conditionKey = Objects.requireNonNull(conditionKey);
             return this;
         }
-
         public Builder conditionType(String conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
-
         public Builder conditionValue(String conditionValue) {
             this.conditionValue = Objects.requireNonNull(conditionValue);
             return this;
-        }
-        public BackupSelectionConditionResourceType build() {
+        }        public BackupSelectionConditionResourceType build() {
             return new BackupSelectionConditionResourceType(conditionKey, conditionType, conditionValue);
         }
     }

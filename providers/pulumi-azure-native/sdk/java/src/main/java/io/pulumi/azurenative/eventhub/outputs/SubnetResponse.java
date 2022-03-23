@@ -51,8 +51,7 @@ public final class SubnetResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public SubnetResponse build() {
+        }        public SubnetResponse build() {
             return new SubnetResponse(id);
         }
     }

@@ -87,17 +87,14 @@ public final class ReplicaConfigurationResponse {
             this.failoverTarget = Objects.requireNonNull(failoverTarget);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder mysqlReplicaConfiguration(MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
             this.mysqlReplicaConfiguration = Objects.requireNonNull(mysqlReplicaConfiguration);
             return this;
-        }
-        public ReplicaConfigurationResponse build() {
+        }        public ReplicaConfigurationResponse build() {
             return new ReplicaConfigurationResponse(failoverTarget, kind, mysqlReplicaConfiguration);
         }
     }

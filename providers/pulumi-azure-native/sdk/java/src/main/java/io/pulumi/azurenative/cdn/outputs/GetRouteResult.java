@@ -323,92 +323,86 @@ public final class GetRouteResult {
             this.compressionSettings = compressionSettings;
             return this;
         }
-
         public Builder customDomains(@Nullable List<ResourceReferenceResponse> customDomains) {
             this.customDomains = customDomains;
             return this;
         }
-
+        public Builder customDomains(ResourceReferenceResponse... customDomains) {
+            return customDomains(List.of(customDomains));
+        }
         public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder forwardingProtocol(@Nullable String forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
-
         public Builder httpsRedirect(@Nullable String httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkToDefaultDomain(@Nullable String linkToDefaultDomain) {
             this.linkToDefaultDomain = linkToDefaultDomain;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder originGroup(ResourceReferenceResponse originGroup) {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
-
         public Builder originPath(@Nullable String originPath) {
             this.originPath = originPath;
             return this;
         }
-
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
+        public Builder patternsToMatch(String... patternsToMatch) {
+            return patternsToMatch(List.of(patternsToMatch));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder queryStringCachingBehavior(@Nullable String queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
-
         public Builder ruleSets(@Nullable List<ResourceReferenceResponse> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
-
+        public Builder ruleSets(ResourceReferenceResponse... ruleSets) {
+            return ruleSets(List.of(ruleSets));
+        }
         public Builder supportedProtocols(@Nullable List<String> supportedProtocols) {
             this.supportedProtocols = supportedProtocols;
             return this;
         }
-
+        public Builder supportedProtocols(String... supportedProtocols) {
+            return supportedProtocols(List.of(supportedProtocols));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRouteResult build() {
+        }        public GetRouteResult build() {
             return new GetRouteResult(compressionSettings, customDomains, deploymentStatus, enabledState, forwardingProtocol, httpsRedirect, id, linkToDefaultDomain, name, originGroup, originPath, patternsToMatch, provisioningState, queryStringCachingBehavior, ruleSets, supportedProtocols, systemData, type);
         }
     }

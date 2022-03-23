@@ -51,8 +51,7 @@ public final class ConnectorProfileSlackConnectorProfileProperties {
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
-        }
-        public ConnectorProfileSlackConnectorProfileProperties build() {
+        }        public ConnectorProfileSlackConnectorProfileProperties build() {
             return new ConnectorProfileSlackConnectorProfileProperties(instanceUrl);
         }
     }

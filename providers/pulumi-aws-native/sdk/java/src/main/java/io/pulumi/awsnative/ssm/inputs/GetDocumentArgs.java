@@ -54,8 +54,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetDocumentArgs build() {
+        }        public GetDocumentArgs build() {
             return new GetDocumentArgs(name);
         }
     }

@@ -66,22 +66,18 @@ public final class BackupPlanAdvancedBackupSettingResourceTypeArgs extends io.pu
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
-
         public Builder backupOptions(Object backupOptions) {
             this.backupOptions = Output.of(Objects.requireNonNull(backupOptions));
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
-        }
-        public BackupPlanAdvancedBackupSettingResourceTypeArgs build() {
+        }        public BackupPlanAdvancedBackupSettingResourceTypeArgs build() {
             return new BackupPlanAdvancedBackupSettingResourceTypeArgs(backupOptions, resourceType);
         }
     }

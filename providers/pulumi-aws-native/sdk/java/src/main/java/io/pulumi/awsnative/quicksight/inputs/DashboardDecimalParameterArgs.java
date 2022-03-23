@@ -79,22 +79,21 @@ public final class DashboardDecimalParameterArgs extends io.pulumi.resources.Res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder values(Output<List<Double>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<Double> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public DashboardDecimalParameterArgs build() {
+        public Builder values(Double... values) {
+            return values(List.of(values));
+        }        public DashboardDecimalParameterArgs build() {
             return new DashboardDecimalParameterArgs(name, values);
         }
     }

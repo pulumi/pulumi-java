@@ -104,22 +104,18 @@ public final class WorkflowParameterResponse {
             this.description = description;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
-        }
-        public WorkflowParameterResponse build() {
+        }        public WorkflowParameterResponse build() {
             return new WorkflowParameterResponse(description, metadata, type, value);
         }
     }

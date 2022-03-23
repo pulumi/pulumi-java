@@ -108,42 +108,34 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(RuleGroupActivatedRuleActionArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleId(Output<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public RuleGroupActivatedRuleArgs build() {
+        }        public RuleGroupActivatedRuleArgs build() {
             return new RuleGroupActivatedRuleArgs(action, priority, ruleId, type);
         }
     }

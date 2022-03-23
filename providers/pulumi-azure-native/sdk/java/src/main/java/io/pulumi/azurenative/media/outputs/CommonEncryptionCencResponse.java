@@ -107,22 +107,21 @@ public final class CommonEncryptionCencResponse {
             this.clearTracks = clearTracks;
             return this;
         }
-
+        public Builder clearTracks(TrackSelectionResponse... clearTracks) {
+            return clearTracks(List.of(clearTracks));
+        }
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
-
         public Builder drm(@Nullable CencDrmConfigurationResponse drm) {
             this.drm = drm;
             return this;
         }
-
         public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
-        }
-        public CommonEncryptionCencResponse build() {
+        }        public CommonEncryptionCencResponse build() {
             return new CommonEncryptionCencResponse(clearTracks, contentKeys, drm, enabledProtocols);
         }
     }

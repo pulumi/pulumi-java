@@ -98,32 +98,29 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder links(Output<List<GraphParameterLinkArgs>> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
-
         public Builder links(List<GraphParameterLinkArgs> links) {
             this.links = Output.of(Objects.requireNonNull(links));
             return this;
         }
-
+        public Builder links(GraphParameterLinkArgs... links) {
+            return links(List.of(links));
+        }
         public Builder type(Output<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ParameterType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public GraphParameterArgs build() {
+        }        public GraphParameterArgs build() {
             return new GraphParameterArgs(description, links, type);
         }
     }

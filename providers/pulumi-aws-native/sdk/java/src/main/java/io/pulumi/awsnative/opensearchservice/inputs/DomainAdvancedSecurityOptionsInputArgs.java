@@ -79,32 +79,26 @@ public final class DomainAdvancedSecurityOptionsInputArgs extends io.pulumi.reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder internalUserDatabaseEnabled(@Nullable Output<Boolean> internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
-
         public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = Output.ofNullable(internalUserDatabaseEnabled);
             return this;
         }
-
         public Builder masterUserOptions(@Nullable Output<DomainMasterUserOptionsArgs> masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
         }
-
         public Builder masterUserOptions(@Nullable DomainMasterUserOptionsArgs masterUserOptions) {
             this.masterUserOptions = Output.ofNullable(masterUserOptions);
             return this;
-        }
-        public DomainAdvancedSecurityOptionsInputArgs build() {
+        }        public DomainAdvancedSecurityOptionsInputArgs build() {
             return new DomainAdvancedSecurityOptionsInputArgs(enabled, internalUserDatabaseEnabled, masterUserOptions);
         }
     }

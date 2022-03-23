@@ -61,12 +61,10 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resourc
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable Object duration) {
             this.duration = Output.ofNullable(duration);
             return this;
-        }
-        public PipelineElapsedTimeMetricPolicyArgs build() {
+        }        public PipelineElapsedTimeMetricPolicyArgs build() {
             return new PipelineElapsedTimeMetricPolicyArgs(duration);
         }
     }

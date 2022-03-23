@@ -195,102 +195,88 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder fileShares(@Nullable Output<List<FileShareConfigArgs>> fileShares) {
             this.fileShares = fileShares;
             return this;
         }
-
         public Builder fileShares(@Nullable List<FileShareConfigArgs> fileShares) {
             this.fileShares = Output.ofNullable(fileShares);
             return this;
         }
-
+        public Builder fileShares(FileShareConfigArgs... fileShares) {
+            return fileShares(List.of(fileShares));
+        }
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networks(@Nullable Output<List<NetworkConfigArgs>> networks) {
             this.networks = networks;
             return this;
         }
-
         public Builder networks(@Nullable List<NetworkConfigArgs> networks) {
             this.networks = Output.ofNullable(networks);
             return this;
         }
-
+        public Builder networks(NetworkConfigArgs... networks) {
+            return networks(List.of(networks));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tier(@Nullable Output<InstanceTier> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable InstanceTier tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(description, etag, fileShares, instanceId, kmsKeyName, labels, location, networks, project, tier);
         }
     }

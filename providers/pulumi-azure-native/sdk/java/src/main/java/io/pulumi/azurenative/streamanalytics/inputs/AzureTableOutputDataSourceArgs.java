@@ -177,82 +177,69 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Output.ofNullable(batchSize);
             return this;
         }
-
         public Builder columnsToRemove(@Nullable Output<List<String>> columnsToRemove) {
             this.columnsToRemove = columnsToRemove;
             return this;
         }
-
         public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
             this.columnsToRemove = Output.ofNullable(columnsToRemove);
             return this;
         }
-
+        public Builder columnsToRemove(String... columnsToRemove) {
+            return columnsToRemove(List.of(columnsToRemove));
+        }
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
-
         public Builder rowKey(@Nullable Output<String> rowKey) {
             this.rowKey = rowKey;
             return this;
         }
-
         public Builder rowKey(@Nullable String rowKey) {
             this.rowKey = Output.ofNullable(rowKey);
             return this;
         }
-
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureTableOutputDataSourceArgs build() {
+        }        public AzureTableOutputDataSourceArgs build() {
             return new AzureTableOutputDataSourceArgs(accountKey, accountName, batchSize, columnsToRemove, partitionKey, rowKey, table, type);
         }
     }

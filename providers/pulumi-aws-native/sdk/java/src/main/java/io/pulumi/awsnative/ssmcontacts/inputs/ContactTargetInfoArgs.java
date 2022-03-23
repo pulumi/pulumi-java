@@ -78,22 +78,18 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
             this.contactId = Objects.requireNonNull(contactId);
             return this;
         }
-
         public Builder contactId(String contactId) {
             this.contactId = Output.of(Objects.requireNonNull(contactId));
             return this;
         }
-
         public Builder isEssential(Output<Boolean> isEssential) {
             this.isEssential = Objects.requireNonNull(isEssential);
             return this;
         }
-
         public Builder isEssential(Boolean isEssential) {
             this.isEssential = Output.of(Objects.requireNonNull(isEssential));
             return this;
-        }
-        public ContactTargetInfoArgs build() {
+        }        public ContactTargetInfoArgs build() {
             return new ContactTargetInfoArgs(contactId, isEssential);
         }
     }

@@ -70,12 +70,13 @@ public final class GetSitesResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-        public GetSitesResult build() {
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }        public GetSitesResult build() {
             return new GetSitesResult(id, ids);
         }
     }

@@ -73,12 +73,13 @@ public final class SupplementalGroupsStrategyOptions {
             this.ranges = ranges;
             return this;
         }
-
+        public Builder ranges(IDRange... ranges) {
+            return ranges(List.of(ranges));
+        }
         public Builder rule(@Nullable String rule) {
             this.rule = rule;
             return this;
-        }
-        public SupplementalGroupsStrategyOptions build() {
+        }        public SupplementalGroupsStrategyOptions build() {
             return new SupplementalGroupsStrategyOptions(ranges, rule);
         }
     }

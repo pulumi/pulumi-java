@@ -96,22 +96,18 @@ public final class ResourceTypeRegistrationResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(@Nullable ResourceTypeRegistrationResponseProperties properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ResourceTypeRegistrationResponse build() {
+        }        public ResourceTypeRegistrationResponse build() {
             return new ResourceTypeRegistrationResponse(id, name, properties, type);
         }
     }

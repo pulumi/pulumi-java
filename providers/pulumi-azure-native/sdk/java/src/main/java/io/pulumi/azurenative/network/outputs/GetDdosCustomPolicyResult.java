@@ -203,52 +203,48 @@ public final class GetDdosCustomPolicyResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protocolCustomSettings(@Nullable List<ProtocolCustomSettingsFormatResponse> protocolCustomSettings) {
             this.protocolCustomSettings = protocolCustomSettings;
             return this;
         }
-
+        public Builder protocolCustomSettings(ProtocolCustomSettingsFormatResponse... protocolCustomSettings) {
+            return protocolCustomSettings(List.of(protocolCustomSettings));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIPAddresses(List<SubResourceResponse> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
-
+        public Builder publicIPAddresses(SubResourceResponse... publicIPAddresses) {
+            return publicIPAddresses(List.of(publicIPAddresses));
+        }
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDdosCustomPolicyResult build() {
+        }        public GetDdosCustomPolicyResult build() {
             return new GetDdosCustomPolicyResult(etag, id, location, name, protocolCustomSettings, provisioningState, publicIPAddresses, resourceGuid, tags, type);
         }
     }

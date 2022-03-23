@@ -83,32 +83,29 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder lossType(@Nullable Output<String> lossType) {
             this.lossType = lossType;
             return this;
         }
-
         public Builder lossType(@Nullable String lossType) {
             this.lossType = Output.ofNullable(lossType);
             return this;
         }
-
         public Builder modelType(@Nullable Output<String> modelType) {
             this.modelType = modelType;
             return this;
         }
-
         public Builder modelType(@Nullable String modelType) {
             this.modelType = Output.ofNullable(modelType);
             return this;
-        }
-        public ModelDefinitionModelOptionsArgs build() {
+        }        public ModelDefinitionModelOptionsArgs build() {
             return new ModelDefinitionModelOptionsArgs(labels, lossType, modelType);
         }
     }

@@ -85,17 +85,14 @@ public final class NodeTaintResponse {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public NodeTaintResponse build() {
+        }        public NodeTaintResponse build() {
             return new NodeTaintResponse(effect, key, value);
         }
     }

@@ -179,82 +179,69 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.api = Objects.requireNonNull(api);
             return this;
         }
-
         public Builder api(String api) {
             this.api = Output.of(Objects.requireNonNull(api));
             return this;
         }
-
         public Builder apiConfigId(@Nullable Output<String> apiConfigId) {
             this.apiConfigId = apiConfigId;
             return this;
         }
-
         public Builder apiConfigId(@Nullable String apiConfigId) {
             this.apiConfigId = Output.ofNullable(apiConfigId);
             return this;
         }
-
         public Builder apiConfigIdPrefix(@Nullable Output<String> apiConfigIdPrefix) {
             this.apiConfigIdPrefix = apiConfigIdPrefix;
             return this;
         }
-
         public Builder apiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
             this.apiConfigIdPrefix = Output.ofNullable(apiConfigIdPrefix);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
-
         public Builder gatewayConfig(@Nullable ApiConfigGatewayConfigArgs gatewayConfig) {
             this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder openapiDocuments(Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
             this.openapiDocuments = Objects.requireNonNull(openapiDocuments);
             return this;
         }
-
         public Builder openapiDocuments(List<ApiConfigOpenapiDocumentArgs> openapiDocuments) {
             this.openapiDocuments = Output.of(Objects.requireNonNull(openapiDocuments));
             return this;
         }
-
+        public Builder openapiDocuments(ApiConfigOpenapiDocumentArgs... openapiDocuments) {
+            return openapiDocuments(List.of(openapiDocuments));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ApiConfigArgs build() {
+        }        public ApiConfigArgs build() {
             return new ApiConfigArgs(api, apiConfigId, apiConfigIdPrefix, displayName, gatewayConfig, labels, openapiDocuments, project);
         }
     }

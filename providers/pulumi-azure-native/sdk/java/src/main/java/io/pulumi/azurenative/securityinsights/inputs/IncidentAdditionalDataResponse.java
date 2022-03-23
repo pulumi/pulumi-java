@@ -126,27 +126,28 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
             this.alertProductNames = Objects.requireNonNull(alertProductNames);
             return this;
         }
-
+        public Builder alertProductNames(String... alertProductNames) {
+            return alertProductNames(List.of(alertProductNames));
+        }
         public Builder alertsCount(Integer alertsCount) {
             this.alertsCount = Objects.requireNonNull(alertsCount);
             return this;
         }
-
         public Builder bookmarksCount(Integer bookmarksCount) {
             this.bookmarksCount = Objects.requireNonNull(bookmarksCount);
             return this;
         }
-
         public Builder commentsCount(Integer commentsCount) {
             this.commentsCount = Objects.requireNonNull(commentsCount);
             return this;
         }
-
         public Builder tactics(List<String> tactics) {
             this.tactics = Objects.requireNonNull(tactics);
             return this;
         }
-        public IncidentAdditionalDataResponse build() {
+        public Builder tactics(String... tactics) {
+            return tactics(List.of(tactics));
+        }        public IncidentAdditionalDataResponse build() {
             return new IncidentAdditionalDataResponse(alertProductNames, alertsCount, bookmarksCount, commentsCount, tactics);
         }
     }

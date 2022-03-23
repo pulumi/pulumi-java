@@ -60,8 +60,7 @@ public final class ServiceTypeHealthPolicyResponse extends io.pulumi.resources.I
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
-        }
-        public ServiceTypeHealthPolicyResponse build() {
+        }        public ServiceTypeHealthPolicyResponse build() {
             return new ServiceTypeHealthPolicyResponse(maxPercentUnhealthyServices);
         }
     }

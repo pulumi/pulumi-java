@@ -87,17 +87,14 @@ public final class WnsCredentialResponse {
             this.packageSid = packageSid;
             return this;
         }
-
         public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = secretKey;
             return this;
         }
-
         public Builder windowsLiveEndpoint(@Nullable String windowsLiveEndpoint) {
             this.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;
-        }
-        public WnsCredentialResponse build() {
+        }        public WnsCredentialResponse build() {
             return new WnsCredentialResponse(packageSid, secretKey, windowsLiveEndpoint);
         }
     }

@@ -138,62 +138,50 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
             this.capabilityName = capabilityName;
             return this;
         }
-
         public Builder capabilityName(@Nullable String capabilityName) {
             this.capabilityName = Output.ofNullable(capabilityName);
             return this;
         }
-
         public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {
             this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
             return this;
         }
-
         public Builder parentProviderNamespace(String parentProviderNamespace) {
             this.parentProviderNamespace = Output.of(Objects.requireNonNull(parentProviderNamespace));
             return this;
         }
-
         public Builder parentResourceName(Output<String> parentResourceName) {
             this.parentResourceName = Objects.requireNonNull(parentResourceName);
             return this;
         }
-
         public Builder parentResourceName(String parentResourceName) {
             this.parentResourceName = Output.of(Objects.requireNonNull(parentResourceName));
             return this;
         }
-
         public Builder parentResourceType(Output<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
-
         public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder targetName(Output<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
-
         public Builder targetName(String targetName) {
             this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
-        }
-        public CapabilityArgs build() {
+        }        public CapabilityArgs build() {
             return new CapabilityArgs(capabilityName, parentProviderNamespace, parentResourceName, parentResourceType, resourceGroupName, targetName);
         }
     }

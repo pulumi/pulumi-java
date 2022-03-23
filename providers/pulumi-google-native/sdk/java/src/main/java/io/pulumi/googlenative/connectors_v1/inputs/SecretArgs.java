@@ -61,12 +61,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.secretVersion = secretVersion;
             return this;
         }
-
         public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = Output.ofNullable(secretVersion);
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(secretVersion);
         }
     }

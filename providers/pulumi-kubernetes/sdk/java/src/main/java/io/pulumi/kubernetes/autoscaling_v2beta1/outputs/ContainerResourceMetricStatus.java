@@ -104,22 +104,18 @@ public final class ContainerResourceMetricStatus {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
-
         public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ContainerResourceMetricStatus build() {
+        }        public ContainerResourceMetricStatus build() {
             return new ContainerResourceMetricStatus(container, currentAverageUtilization, currentAverageValue, name);
         }
     }

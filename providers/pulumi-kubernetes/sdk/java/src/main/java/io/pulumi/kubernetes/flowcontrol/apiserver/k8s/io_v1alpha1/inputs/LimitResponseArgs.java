@@ -79,22 +79,18 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.queuing = queuing;
             return this;
         }
-
         public Builder queuing(@Nullable QueuingConfigurationArgs queuing) {
             this.queuing = Output.ofNullable(queuing);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public LimitResponseArgs build() {
+        }        public LimitResponseArgs build() {
             return new LimitResponseArgs(queuing, type);
         }
     }

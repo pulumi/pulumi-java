@@ -96,32 +96,26 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
             this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
-
         public Builder defaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
             this.defaultTtlAsIso8601 = Output.ofNullable(defaultTtlAsIso8601);
             return this;
         }
-
         public Builder feedback(@Nullable Output<FeedbackPropertiesArgs> feedback) {
             this.feedback = feedback;
             return this;
         }
-
         public Builder feedback(@Nullable FeedbackPropertiesArgs feedback) {
             this.feedback = Output.ofNullable(feedback);
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = Output.ofNullable(maxDeliveryCount);
             return this;
-        }
-        public CloudToDevicePropertiesArgs build() {
+        }        public CloudToDevicePropertiesArgs build() {
             return new CloudToDevicePropertiesArgs(defaultTtlAsIso8601, feedback, maxDeliveryCount);
         }
     }

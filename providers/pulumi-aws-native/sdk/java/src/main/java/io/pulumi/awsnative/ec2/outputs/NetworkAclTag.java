@@ -53,12 +53,10 @@ public final class NetworkAclTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public NetworkAclTag build() {
+        }        public NetworkAclTag build() {
             return new NetworkAclTag(key, value);
         }
     }

@@ -106,42 +106,34 @@ public final class GetPackageVersionResult {
             this.isLatestPatch = isLatestPatch;
             return this;
         }
-
         public Builder markLatest(@Nullable Boolean markLatest) {
             this.markLatest = markLatest;
             return this;
         }
-
         public Builder packageArn(@Nullable String packageArn) {
             this.packageArn = packageArn;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder registeredTime(@Nullable Integer registeredTime) {
             this.registeredTime = registeredTime;
             return this;
         }
-
         public Builder status(@Nullable PackageVersionStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }
-
         public Builder updatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
-        }
-        public GetPackageVersionResult build() {
+        }        public GetPackageVersionResult build() {
             return new GetPackageVersionResult(isLatestPatch, markLatest, packageArn, packageName, registeredTime, status, statusDescription, updatedLatestPatchVersion);
         }
     }

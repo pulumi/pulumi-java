@@ -108,22 +108,18 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
-
         public Builder stageStatus(String stageStatus) {
             this.stageStatus = Objects.requireNonNull(stageStatus);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public StageDetailsResponse build() {
+        }        public StageDetailsResponse build() {
             return new StageDetailsResponse(displayName, stageName, stageStatus, startTime);
         }
     }

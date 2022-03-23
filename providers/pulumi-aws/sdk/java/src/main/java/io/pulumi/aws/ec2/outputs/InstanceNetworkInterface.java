@@ -89,17 +89,14 @@ public final class InstanceNetworkInterface {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
-        }
-        public InstanceNetworkInterface build() {
+        }        public InstanceNetworkInterface build() {
             return new InstanceNetworkInterface(deleteOnTermination, deviceIndex, networkInterfaceId);
         }
     }

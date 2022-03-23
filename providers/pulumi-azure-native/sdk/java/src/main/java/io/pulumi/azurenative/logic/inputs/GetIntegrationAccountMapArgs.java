@@ -88,17 +88,14 @@ public final class GetIntegrationAccountMapArgs extends io.pulumi.resources.Invo
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder mapName(String mapName) {
             this.mapName = Objects.requireNonNull(mapName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIntegrationAccountMapArgs build() {
+        }        public GetIntegrationAccountMapArgs build() {
             return new GetIntegrationAccountMapArgs(integrationAccountName, mapName, resourceGroupName);
         }
     }

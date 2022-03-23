@@ -80,17 +80,17 @@ public final class DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-        public DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration build() {
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }        public DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration build() {
             return new DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings);
         }
     }

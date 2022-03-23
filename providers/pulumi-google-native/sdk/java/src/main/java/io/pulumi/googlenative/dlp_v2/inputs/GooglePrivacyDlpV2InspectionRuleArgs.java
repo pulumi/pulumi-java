@@ -79,22 +79,18 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
             this.exclusionRule = exclusionRule;
             return this;
         }
-
         public Builder exclusionRule(@Nullable GooglePrivacyDlpV2ExclusionRuleArgs exclusionRule) {
             this.exclusionRule = Output.ofNullable(exclusionRule);
             return this;
         }
-
         public Builder hotwordRule(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }
-
         public Builder hotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
             this.hotwordRule = Output.ofNullable(hotwordRule);
             return this;
-        }
-        public GooglePrivacyDlpV2InspectionRuleArgs build() {
+        }        public GooglePrivacyDlpV2InspectionRuleArgs build() {
             return new GooglePrivacyDlpV2InspectionRuleArgs(exclusionRule, hotwordRule);
         }
     }

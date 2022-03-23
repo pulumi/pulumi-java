@@ -212,102 +212,82 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.authInfo = authInfo;
             return this;
         }
-
         public Builder authInfo(@Nullable BasicAuthenticationArgs authInfo) {
             this.authInfo = Output.ofNullable(authInfo);
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder contentType(@Nullable Output<HttpCheckContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable HttpCheckContentType contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder maskHeaders(@Nullable Output<Boolean> maskHeaders) {
             this.maskHeaders = maskHeaders;
             return this;
         }
-
         public Builder maskHeaders(@Nullable Boolean maskHeaders) {
             this.maskHeaders = Output.ofNullable(maskHeaders);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder requestMethod(@Nullable Output<HttpCheckRequestMethod> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder requestMethod(@Nullable HttpCheckRequestMethod requestMethod) {
             this.requestMethod = Output.ofNullable(requestMethod);
             return this;
         }
-
         public Builder useSsl(@Nullable Output<Boolean> useSsl) {
             this.useSsl = useSsl;
             return this;
         }
-
         public Builder useSsl(@Nullable Boolean useSsl) {
             this.useSsl = Output.ofNullable(useSsl);
             return this;
         }
-
         public Builder validateSsl(@Nullable Output<Boolean> validateSsl) {
             this.validateSsl = validateSsl;
             return this;
         }
-
         public Builder validateSsl(@Nullable Boolean validateSsl) {
             this.validateSsl = Output.ofNullable(validateSsl);
             return this;
-        }
-        public HttpCheckArgs build() {
+        }        public HttpCheckArgs build() {
             return new HttpCheckArgs(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
         }
     }

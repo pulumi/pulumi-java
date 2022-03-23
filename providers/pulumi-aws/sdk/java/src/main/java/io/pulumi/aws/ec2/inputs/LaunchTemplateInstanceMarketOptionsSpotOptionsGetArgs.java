@@ -124,52 +124,42 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
-
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = Output.ofNullable(blockDurationMinutes);
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
             return this;
         }
-
         public Builder maxPrice(@Nullable Output<String> maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
-
         public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = Output.ofNullable(maxPrice);
             return this;
         }
-
         public Builder spotInstanceType(@Nullable Output<String> spotInstanceType) {
             this.spotInstanceType = spotInstanceType;
             return this;
         }
-
         public Builder spotInstanceType(@Nullable String spotInstanceType) {
             this.spotInstanceType = Output.ofNullable(spotInstanceType);
             return this;
         }
-
         public Builder validUntil(@Nullable Output<String> validUntil) {
             this.validUntil = validUntil;
             return this;
         }
-
         public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = Output.ofNullable(validUntil);
             return this;
-        }
-        public LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs build() {
+        }        public LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs build() {
             return new LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs(blockDurationMinutes, instanceInterruptionBehavior, maxPrice, spotInstanceType, validUntil);
         }
     }

@@ -80,22 +80,21 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder rules(Output<List<DeliveryRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(List<DeliveryRuleArgs> rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-        public EndpointPropertiesUpdateParametersDeliveryPolicyArgs build() {
+        public Builder rules(DeliveryRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public EndpointPropertiesUpdateParametersDeliveryPolicyArgs build() {
             return new EndpointPropertiesUpdateParametersDeliveryPolicyArgs(description, rules);
         }
     }

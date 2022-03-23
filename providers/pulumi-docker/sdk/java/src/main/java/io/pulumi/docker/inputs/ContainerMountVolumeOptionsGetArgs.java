@@ -94,42 +94,37 @@ public final class ContainerMountVolumeOptionsGetArgs extends io.pulumi.resource
             this.driverName = driverName;
             return this;
         }
-
         public Builder driverName(@Nullable String driverName) {
             this.driverName = Output.ofNullable(driverName);
             return this;
         }
-
         public Builder driverOptions(@Nullable Output<Map<String,String>> driverOptions) {
             this.driverOptions = driverOptions;
             return this;
         }
-
         public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
             this.driverOptions = Output.ofNullable(driverOptions);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<ContainerMountVolumeOptionsLabelGetArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(ContainerMountVolumeOptionsLabelGetArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder noCopy(@Nullable Output<Boolean> noCopy) {
             this.noCopy = noCopy;
             return this;
         }
-
         public Builder noCopy(@Nullable Boolean noCopy) {
             this.noCopy = Output.ofNullable(noCopy);
             return this;
-        }
-        public ContainerMountVolumeOptionsGetArgs build() {
+        }        public ContainerMountVolumeOptionsGetArgs build() {
             return new ContainerMountVolumeOptionsGetArgs(driverName, driverOptions, labels, noCopy);
         }
     }

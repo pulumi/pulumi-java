@@ -92,17 +92,14 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
-
         public Builder enableVtpm(Boolean enableVtpm) {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
-        }
-        public ShieldedVmConfigResponse build() {
+        }        public ShieldedVmConfigResponse build() {
             return new ShieldedVmConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }
     }

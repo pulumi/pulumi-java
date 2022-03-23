@@ -189,47 +189,41 @@ public final class MetricCriteriaResponse {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
-
         public Builder dimensions(@Nullable List<MetricDimensionResponse> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
+        public Builder dimensions(MetricDimensionResponse... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder timeAggregation(String timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
-        }
-        public MetricCriteriaResponse build() {
+        }        public MetricCriteriaResponse build() {
             return new MetricCriteriaResponse(criterionType, dimensions, metricName, metricNamespace, name, operator, skipMetricValidation, threshold, timeAggregation);
         }
     }

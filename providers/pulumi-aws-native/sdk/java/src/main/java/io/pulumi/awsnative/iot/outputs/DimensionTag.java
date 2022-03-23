@@ -69,12 +69,10 @@ public final class DimensionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DimensionTag build() {
+        }        public DimensionTag build() {
             return new DimensionTag(key, value);
         }
     }

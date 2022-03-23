@@ -183,47 +183,38 @@ public final class ScanRunResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder executionState(String executionState) {
             this.executionState = Objects.requireNonNull(executionState);
             return this;
         }
-
         public Builder hasVulnerabilities(Boolean hasVulnerabilities) {
             this.hasVulnerabilities = Objects.requireNonNull(hasVulnerabilities);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder progressPercent(Integer progressPercent) {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
-
         public Builder resultState(String resultState) {
             this.resultState = Objects.requireNonNull(resultState);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder urlsCrawledCount(String urlsCrawledCount) {
             this.urlsCrawledCount = Objects.requireNonNull(urlsCrawledCount);
             return this;
         }
-
         public Builder urlsTestedCount(String urlsTestedCount) {
             this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount);
             return this;
-        }
-        public ScanRunResponse build() {
+        }        public ScanRunResponse build() {
             return new ScanRunResponse(endTime, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount);
         }
     }

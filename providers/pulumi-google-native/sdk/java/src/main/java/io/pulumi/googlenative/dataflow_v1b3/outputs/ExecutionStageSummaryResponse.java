@@ -153,37 +153,45 @@ public final class ExecutionStageSummaryResponse {
             this.componentSource = Objects.requireNonNull(componentSource);
             return this;
         }
-
+        public Builder componentSource(ComponentSourceResponse... componentSource) {
+            return componentSource(List.of(componentSource));
+        }
         public Builder componentTransform(List<ComponentTransformResponse> componentTransform) {
             this.componentTransform = Objects.requireNonNull(componentTransform);
             return this;
         }
-
+        public Builder componentTransform(ComponentTransformResponse... componentTransform) {
+            return componentTransform(List.of(componentTransform));
+        }
         public Builder inputSource(List<StageSourceResponse> inputSource) {
             this.inputSource = Objects.requireNonNull(inputSource);
             return this;
         }
-
+        public Builder inputSource(StageSourceResponse... inputSource) {
+            return inputSource(List.of(inputSource));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputSource(List<StageSourceResponse> outputSource) {
             this.outputSource = Objects.requireNonNull(outputSource);
             return this;
         }
-
+        public Builder outputSource(StageSourceResponse... outputSource) {
+            return outputSource(List.of(outputSource));
+        }
         public Builder prerequisiteStage(List<String> prerequisiteStage) {
             this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
             return this;
         }
-        public ExecutionStageSummaryResponse build() {
+        public Builder prerequisiteStage(String... prerequisiteStage) {
+            return prerequisiteStage(List.of(prerequisiteStage));
+        }        public ExecutionStageSummaryResponse build() {
             return new ExecutionStageSummaryResponse(componentSource, componentTransform, inputSource, kind, name, outputSource, prerequisiteStage);
         }
     }

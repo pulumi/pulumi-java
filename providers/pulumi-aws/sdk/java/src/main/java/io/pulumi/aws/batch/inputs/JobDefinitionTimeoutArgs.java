@@ -57,12 +57,10 @@ public final class JobDefinitionTimeoutArgs extends io.pulumi.resources.Resource
             this.attemptDurationSeconds = attemptDurationSeconds;
             return this;
         }
-
         public Builder attemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
             this.attemptDurationSeconds = Output.ofNullable(attemptDurationSeconds);
             return this;
-        }
-        public JobDefinitionTimeoutArgs build() {
+        }        public JobDefinitionTimeoutArgs build() {
             return new JobDefinitionTimeoutArgs(attemptDurationSeconds);
         }
     }

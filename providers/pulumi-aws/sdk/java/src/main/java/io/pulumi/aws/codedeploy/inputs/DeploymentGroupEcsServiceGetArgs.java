@@ -73,22 +73,18 @@ public final class DeploymentGroupEcsServiceGetArgs extends io.pulumi.resources.
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public DeploymentGroupEcsServiceGetArgs build() {
+        }        public DeploymentGroupEcsServiceGetArgs build() {
             return new DeploymentGroupEcsServiceGetArgs(clusterName, serviceName);
         }
     }

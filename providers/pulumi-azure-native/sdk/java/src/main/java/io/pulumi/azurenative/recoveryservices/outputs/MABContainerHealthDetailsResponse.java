@@ -105,22 +105,21 @@ public final class MABContainerHealthDetailsResponse {
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder recommendations(@Nullable List<String> recommendations) {
             this.recommendations = recommendations;
             return this;
         }
-
+        public Builder recommendations(String... recommendations) {
+            return recommendations(List.of(recommendations));
+        }
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public MABContainerHealthDetailsResponse build() {
+        }        public MABContainerHealthDetailsResponse build() {
             return new MABContainerHealthDetailsResponse(code, message, recommendations, title);
         }
     }

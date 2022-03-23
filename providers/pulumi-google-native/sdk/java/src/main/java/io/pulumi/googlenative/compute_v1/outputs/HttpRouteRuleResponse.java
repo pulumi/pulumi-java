@@ -155,37 +155,33 @@ public final class HttpRouteRuleResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder matchRules(List<HttpRouteRuleMatchResponse> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
-
+        public Builder matchRules(HttpRouteRuleMatchResponse... matchRules) {
+            return matchRules(List.of(matchRules));
+        }
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder routeAction(HttpRouteActionResponse routeAction) {
             this.routeAction = Objects.requireNonNull(routeAction);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder urlRedirect(HttpRedirectActionResponse urlRedirect) {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
-        }
-        public HttpRouteRuleResponse build() {
+        }        public HttpRouteRuleResponse build() {
             return new HttpRouteRuleResponse(description, headerAction, matchRules, priority, routeAction, service, urlRedirect);
         }
     }

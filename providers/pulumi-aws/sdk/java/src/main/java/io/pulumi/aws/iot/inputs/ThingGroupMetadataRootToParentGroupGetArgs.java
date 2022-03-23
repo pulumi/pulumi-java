@@ -66,22 +66,18 @@ public final class ThingGroupMetadataRootToParentGroupGetArgs extends io.pulumi.
             this.groupArn = groupArn;
             return this;
         }
-
         public Builder groupArn(@Nullable String groupArn) {
             this.groupArn = Output.ofNullable(groupArn);
             return this;
         }
-
         public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = Output.ofNullable(groupName);
             return this;
-        }
-        public ThingGroupMetadataRootToParentGroupGetArgs build() {
+        }        public ThingGroupMetadataRootToParentGroupGetArgs build() {
             return new ThingGroupMetadataRootToParentGroupGetArgs(groupArn, groupName);
         }
     }

@@ -115,22 +115,30 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderAction {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
-
+        public Builder requestHeadersToAdds(RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd... requestHeadersToAdds) {
+            return requestHeadersToAdds(List.of(requestHeadersToAdds));
+        }
         public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
-
+        public Builder requestHeadersToRemoves(String... requestHeadersToRemoves) {
+            return requestHeadersToRemoves(List.of(requestHeadersToRemoves));
+        }
         public Builder responseHeadersToAdds(@Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
-
+        public Builder responseHeadersToAdds(RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd... responseHeadersToAdds) {
+            return responseHeadersToAdds(List.of(responseHeadersToAdds));
+        }
         public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-        public RegionUrlMapPathMatcherRouteRuleHeaderAction build() {
+        public Builder responseHeadersToRemoves(String... responseHeadersToRemoves) {
+            return responseHeadersToRemoves(List.of(responseHeadersToRemoves));
+        }        public RegionUrlMapPathMatcherRouteRuleHeaderAction build() {
             return new RegionUrlMapPathMatcherRouteRuleHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }
     }

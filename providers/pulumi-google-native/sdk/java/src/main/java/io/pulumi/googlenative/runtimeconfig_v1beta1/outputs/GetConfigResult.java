@@ -69,12 +69,10 @@ public final class GetConfigResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetConfigResult build() {
+        }        public GetConfigResult build() {
             return new GetConfigResult(description, name);
         }
     }

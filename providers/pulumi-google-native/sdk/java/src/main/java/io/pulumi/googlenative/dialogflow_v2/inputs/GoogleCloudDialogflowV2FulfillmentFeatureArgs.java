@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GoogleCloudDialogflowV2FulfillmentFeatureType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudDialogflowV2FulfillmentFeatureArgs build() {
+        }        public GoogleCloudDialogflowV2FulfillmentFeatureArgs build() {
             return new GoogleCloudDialogflowV2FulfillmentFeatureArgs(type);
         }
     }

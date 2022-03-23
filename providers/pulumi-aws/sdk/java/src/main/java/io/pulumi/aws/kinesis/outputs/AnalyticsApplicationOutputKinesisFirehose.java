@@ -69,12 +69,10 @@ public final class AnalyticsApplicationOutputKinesisFirehose {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AnalyticsApplicationOutputKinesisFirehose build() {
+        }        public AnalyticsApplicationOutputKinesisFirehose build() {
             return new AnalyticsApplicationOutputKinesisFirehose(resourceArn, roleArn);
         }
     }

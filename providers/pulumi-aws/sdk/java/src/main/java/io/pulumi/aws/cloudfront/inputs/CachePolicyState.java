@@ -156,72 +156,58 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
-
         public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = Output.ofNullable(maxTtl);
             return this;
         }
-
         public Builder minTtl(@Nullable Output<Integer> minTtl) {
             this.minTtl = minTtl;
             return this;
         }
-
         public Builder minTtl(@Nullable Integer minTtl) {
             this.minTtl = Output.ofNullable(minTtl);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
             return this;
         }
-
         public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Output.ofNullable(parametersInCacheKeyAndForwardedToOrigin);
             return this;
-        }
-        public CachePolicyState build() {
+        }        public CachePolicyState build() {
             return new CachePolicyState(comment, defaultTtl, etag, maxTtl, minTtl, name, parametersInCacheKeyAndForwardedToOrigin);
         }
     }

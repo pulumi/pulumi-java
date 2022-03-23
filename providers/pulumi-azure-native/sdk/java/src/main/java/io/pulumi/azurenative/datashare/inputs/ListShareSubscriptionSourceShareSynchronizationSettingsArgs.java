@@ -106,22 +106,18 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListShareSubscriptionSourceShareSynchronizationSettingsArgs build() {
+        }        public ListShareSubscriptionSourceShareSynchronizationSettingsArgs build() {
             return new ListShareSubscriptionSourceShareSynchronizationSettingsArgs(accountName, resourceGroupName, shareSubscriptionName, skipToken);
         }
     }

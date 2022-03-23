@@ -102,22 +102,18 @@ public final class GremlinDatabaseGetPropertiesResponseResource {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
-
         public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
-        }
-        public GremlinDatabaseGetPropertiesResponseResource build() {
+        }        public GremlinDatabaseGetPropertiesResponseResource build() {
             return new GremlinDatabaseGetPropertiesResponseResource(etag, id, rid, ts);
         }
     }

@@ -72,12 +72,10 @@ public final class GetADCCatalogArgs extends io.pulumi.resources.InvokeArgs {
             this.catalogName = Objects.requireNonNull(catalogName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetADCCatalogArgs build() {
+        }        public GetADCCatalogArgs build() {
             return new GetADCCatalogArgs(catalogName, resourceGroupName);
         }
     }

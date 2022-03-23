@@ -71,12 +71,10 @@ public final class ParametersLinkResponse {
             this.contentVersion = contentVersion;
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ParametersLinkResponse build() {
+        }        public ParametersLinkResponse build() {
             return new ParametersLinkResponse(contentVersion, uri);
         }
     }

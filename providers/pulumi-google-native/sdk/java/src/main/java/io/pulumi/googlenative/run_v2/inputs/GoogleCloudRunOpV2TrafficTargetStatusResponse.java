@@ -125,27 +125,22 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GoogleCloudRunOpV2TrafficTargetStatusResponse build() {
+        }        public GoogleCloudRunOpV2TrafficTargetStatusResponse build() {
             return new GoogleCloudRunOpV2TrafficTargetStatusResponse(percent, revision, tag, type, uri);
         }
     }

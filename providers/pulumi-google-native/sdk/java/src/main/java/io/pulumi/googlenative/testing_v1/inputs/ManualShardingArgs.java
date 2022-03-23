@@ -61,12 +61,13 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }
-
         public Builder testTargetsForShard(List<TestTargetsForShardArgs> testTargetsForShard) {
             this.testTargetsForShard = Output.of(Objects.requireNonNull(testTargetsForShard));
             return this;
         }
-        public ManualShardingArgs build() {
+        public Builder testTargetsForShard(TestTargetsForShardArgs... testTargetsForShard) {
+            return testTargetsForShard(List.of(testTargetsForShard));
+        }        public ManualShardingArgs build() {
             return new ManualShardingArgs(testTargetsForShard);
         }
     }

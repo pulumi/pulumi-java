@@ -80,22 +80,18 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
-        }
-        public GCPolicyMaxAgeGetArgs build() {
+        }        public GCPolicyMaxAgeGetArgs build() {
             return new GCPolicyMaxAgeGetArgs(days, duration);
         }
     }

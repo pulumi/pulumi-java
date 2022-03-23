@@ -96,32 +96,26 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ExportPipelineTargetPropertiesArgs build() {
+        }        public ExportPipelineTargetPropertiesArgs build() {
             return new ExportPipelineTargetPropertiesArgs(keyVaultUri, type, uri);
         }
     }

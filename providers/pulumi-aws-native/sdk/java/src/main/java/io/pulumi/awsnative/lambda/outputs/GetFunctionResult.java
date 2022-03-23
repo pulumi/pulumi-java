@@ -362,102 +362,94 @@ public final class GetFunctionResult {
             this.architectures = architectures;
             return this;
         }
-
+        public Builder architectures(FunctionArchitecturesItem... architectures) {
+            return architectures(List.of(architectures));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable FunctionDeadLetterConfig deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder environment(@Nullable FunctionEnvironment environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder fileSystemConfigs(@Nullable List<FunctionFileSystemConfig> fileSystemConfigs) {
             this.fileSystemConfigs = fileSystemConfigs;
             return this;
         }
-
+        public Builder fileSystemConfigs(FunctionFileSystemConfig... fileSystemConfigs) {
+            return fileSystemConfigs(List.of(fileSystemConfigs));
+        }
         public Builder handler(@Nullable String handler) {
             this.handler = handler;
             return this;
         }
-
         public Builder imageConfig(@Nullable FunctionImageConfig imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder layers(@Nullable List<String> layers) {
             this.layers = layers;
             return this;
         }
-
+        public Builder layers(String... layers) {
+            return layers(List.of(layers));
+        }
         public Builder memorySize(@Nullable Integer memorySize) {
             this.memorySize = memorySize;
             return this;
         }
-
         public Builder packageType(@Nullable FunctionPackageType packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder reservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
-
         public Builder runtime(@Nullable String runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder tags(@Nullable List<FunctionTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(FunctionTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder tracingConfig(@Nullable FunctionTracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable FunctionVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
-        }
-        public GetFunctionResult build() {
+        }        public GetFunctionResult build() {
             return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, handler, imageConfig, kmsKeyArn, layers, memorySize, packageType, reservedConcurrentExecutions, role, runtime, tags, timeout, tracingConfig, vpcConfig);
         }
     }

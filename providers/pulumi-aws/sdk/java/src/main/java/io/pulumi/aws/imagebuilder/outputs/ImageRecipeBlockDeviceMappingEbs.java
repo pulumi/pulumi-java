@@ -152,37 +152,30 @@ public final class ImageRecipeBlockDeviceMappingEbs {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder encrypted(@Nullable String encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
-        }
-        public ImageRecipeBlockDeviceMappingEbs build() {
+        }        public ImageRecipeBlockDeviceMappingEbs build() {
             return new ImageRecipeBlockDeviceMappingEbs(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, volumeSize, volumeType);
         }
     }

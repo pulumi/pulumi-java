@@ -89,17 +89,20 @@ public final class GetRecoveryGroupResult {
             this.cells = cells;
             return this;
         }
-
+        public Builder cells(String... cells) {
+            return cells(List.of(cells));
+        }
         public Builder recoveryGroupArn(@Nullable String recoveryGroupArn) {
             this.recoveryGroupArn = recoveryGroupArn;
             return this;
         }
-
         public Builder tags(@Nullable List<RecoveryGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRecoveryGroupResult build() {
+        public Builder tags(RecoveryGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRecoveryGroupResult build() {
             return new GetRecoveryGroupResult(cells, recoveryGroupArn, tags);
         }
     }

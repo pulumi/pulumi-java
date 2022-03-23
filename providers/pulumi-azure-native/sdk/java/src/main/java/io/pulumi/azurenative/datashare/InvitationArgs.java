@@ -172,82 +172,66 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder invitationName(@Nullable Output<String> invitationName) {
             this.invitationName = invitationName;
             return this;
         }
-
         public Builder invitationName(@Nullable String invitationName) {
             this.invitationName = Output.ofNullable(invitationName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
-
         public Builder targetActiveDirectoryId(@Nullable Output<String> targetActiveDirectoryId) {
             this.targetActiveDirectoryId = targetActiveDirectoryId;
             return this;
         }
-
         public Builder targetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
             this.targetActiveDirectoryId = Output.ofNullable(targetActiveDirectoryId);
             return this;
         }
-
         public Builder targetEmail(@Nullable Output<String> targetEmail) {
             this.targetEmail = targetEmail;
             return this;
         }
-
         public Builder targetEmail(@Nullable String targetEmail) {
             this.targetEmail = Output.ofNullable(targetEmail);
             return this;
         }
-
         public Builder targetObjectId(@Nullable Output<String> targetObjectId) {
             this.targetObjectId = targetObjectId;
             return this;
         }
-
         public Builder targetObjectId(@Nullable String targetObjectId) {
             this.targetObjectId = Output.ofNullable(targetObjectId);
             return this;
-        }
-        public InvitationArgs build() {
+        }        public InvitationArgs build() {
             return new InvitationArgs(accountName, expirationDate, invitationName, resourceGroupName, shareName, targetActiveDirectoryId, targetEmail, targetObjectId);
         }
     }

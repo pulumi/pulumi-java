@@ -90,17 +90,14 @@ public final class GetDedicatedHostGroupArgs extends io.pulumi.resources.InvokeA
             this.expand = expand;
             return this;
         }
-
         public Builder hostGroupName(String hostGroupName) {
             this.hostGroupName = Objects.requireNonNull(hostGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDedicatedHostGroupArgs build() {
+        }        public GetDedicatedHostGroupArgs build() {
             return new GetDedicatedHostGroupArgs(expand, hostGroupName, resourceGroupName);
         }
     }

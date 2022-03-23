@@ -50,8 +50,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
         public Builder authorizerName(String authorizerName) {
             this.authorizerName = Objects.requireNonNull(authorizerName);
             return this;
-        }
-        public GetAuthorizerArgs build() {
+        }        public GetAuthorizerArgs build() {
             return new GetAuthorizerArgs(authorizerName);
         }
     }

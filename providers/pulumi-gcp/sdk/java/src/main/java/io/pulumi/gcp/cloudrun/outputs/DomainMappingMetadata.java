@@ -195,37 +195,30 @@ public final class DomainMappingMetadata {
             this.annotations = annotations;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
-        }
-        public DomainMappingMetadata build() {
+        }        public DomainMappingMetadata build() {
             return new DomainMappingMetadata(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }
     }

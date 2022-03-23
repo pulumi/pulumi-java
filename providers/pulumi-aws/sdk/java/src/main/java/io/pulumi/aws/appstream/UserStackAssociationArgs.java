@@ -107,42 +107,34 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
-
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
             this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
             return this;
         }
-
         public Builder stackName(Output<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
-
         public Builder stackName(String stackName) {
             this.stackName = Output.of(Objects.requireNonNull(stackName));
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public UserStackAssociationArgs build() {
+        }        public UserStackAssociationArgs build() {
             return new UserStackAssociationArgs(authenticationType, sendEmailNotification, stackName, userName);
         }
     }

@@ -80,17 +80,14 @@ public final class DetectorModelFirehose {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder separator(@Nullable String separator) {
             this.separator = separator;
             return this;
-        }
-        public DetectorModelFirehose build() {
+        }        public DetectorModelFirehose build() {
             return new DetectorModelFirehose(deliveryStreamName, payload, separator);
         }
     }

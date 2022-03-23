@@ -104,22 +104,18 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
-
         public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
             this.includeSubdomains = includeSubdomains;
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder preload(@Nullable Boolean preload) {
             this.preload = preload;
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity build() {
             return new ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity(accessControlMaxAgeSec, includeSubdomains, override, preload);
         }
     }

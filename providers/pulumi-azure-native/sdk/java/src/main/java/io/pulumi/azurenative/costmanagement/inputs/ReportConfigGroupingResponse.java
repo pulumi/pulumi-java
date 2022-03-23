@@ -76,12 +76,10 @@ public final class ReportConfigGroupingResponse extends io.pulumi.resources.Invo
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ReportConfigGroupingResponse build() {
+        }        public ReportConfigGroupingResponse build() {
             return new ReportConfigGroupingResponse(name, type);
         }
     }

@@ -71,12 +71,10 @@ public final class ConnectionCloudSqlCredential {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ConnectionCloudSqlCredential build() {
+        }        public ConnectionCloudSqlCredential build() {
             return new ConnectionCloudSqlCredential(password, username);
         }
     }

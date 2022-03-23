@@ -76,12 +76,10 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
             this.maxModulusSize = Objects.requireNonNull(maxModulusSize);
             return this;
         }
-
         public Builder minModulusSize(String minModulusSize) {
             this.minModulusSize = Objects.requireNonNull(minModulusSize);
             return this;
-        }
-        public RsaKeyTypeResponse build() {
+        }        public RsaKeyTypeResponse build() {
             return new RsaKeyTypeResponse(maxModulusSize, minModulusSize);
         }
     }

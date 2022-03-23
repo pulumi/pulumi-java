@@ -87,32 +87,29 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
-
         public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigArgs> auditLogConfigs) {
             this.auditLogConfigs = Output.of(Objects.requireNonNull(auditLogConfigs));
             return this;
         }
-
+        public Builder auditLogConfigs(IamAuditConfigAuditLogConfigArgs... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public IamAuditConfigArgs build() {
+        }        public IamAuditConfigArgs build() {
             return new IamAuditConfigArgs(auditLogConfigs, folder, service);
         }
     }

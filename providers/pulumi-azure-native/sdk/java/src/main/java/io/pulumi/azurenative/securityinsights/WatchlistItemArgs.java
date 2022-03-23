@@ -269,142 +269,114 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             this.created = created;
             return this;
         }
-
         public Builder created(@Nullable String created) {
             this.created = Output.ofNullable(created);
             return this;
         }
-
         public Builder createdBy(@Nullable Output<WatchlistUserInfoArgs> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable WatchlistUserInfoArgs createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder entityMapping(@Nullable Output<Object> entityMapping) {
             this.entityMapping = entityMapping;
             return this;
         }
-
         public Builder entityMapping(@Nullable Object entityMapping) {
             this.entityMapping = Output.ofNullable(entityMapping);
             return this;
         }
-
         public Builder isDeleted(@Nullable Output<Boolean> isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
-
         public Builder isDeleted(@Nullable Boolean isDeleted) {
             this.isDeleted = Output.ofNullable(isDeleted);
             return this;
         }
-
         public Builder itemsKeyValue(Output<Object> itemsKeyValue) {
             this.itemsKeyValue = Objects.requireNonNull(itemsKeyValue);
             return this;
         }
-
         public Builder itemsKeyValue(Object itemsKeyValue) {
             this.itemsKeyValue = Output.of(Objects.requireNonNull(itemsKeyValue));
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
-
         public Builder updated(@Nullable String updated) {
             this.updated = Output.ofNullable(updated);
             return this;
         }
-
         public Builder updatedBy(@Nullable Output<WatchlistUserInfoArgs> updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public Builder updatedBy(@Nullable WatchlistUserInfoArgs updatedBy) {
             this.updatedBy = Output.ofNullable(updatedBy);
             return this;
         }
-
         public Builder watchlistAlias(Output<String> watchlistAlias) {
             this.watchlistAlias = Objects.requireNonNull(watchlistAlias);
             return this;
         }
-
         public Builder watchlistAlias(String watchlistAlias) {
             this.watchlistAlias = Output.of(Objects.requireNonNull(watchlistAlias));
             return this;
         }
-
         public Builder watchlistItemId(@Nullable Output<String> watchlistItemId) {
             this.watchlistItemId = watchlistItemId;
             return this;
         }
-
         public Builder watchlistItemId(@Nullable String watchlistItemId) {
             this.watchlistItemId = Output.ofNullable(watchlistItemId);
             return this;
         }
-
         public Builder watchlistItemType(@Nullable Output<String> watchlistItemType) {
             this.watchlistItemType = watchlistItemType;
             return this;
         }
-
         public Builder watchlistItemType(@Nullable String watchlistItemType) {
             this.watchlistItemType = Output.ofNullable(watchlistItemType);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public WatchlistItemArgs build() {
+        }        public WatchlistItemArgs build() {
             return new WatchlistItemArgs(created, createdBy, entityMapping, isDeleted, itemsKeyValue, operationalInsightsResourceProvider, resourceGroupName, tenantId, updated, updatedBy, watchlistAlias, watchlistItemId, watchlistItemType, workspaceName);
         }
     }

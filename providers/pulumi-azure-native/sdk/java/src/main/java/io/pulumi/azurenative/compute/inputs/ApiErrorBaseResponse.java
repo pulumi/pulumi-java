@@ -94,17 +94,14 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ApiErrorBaseResponse build() {
+        }        public ApiErrorBaseResponse build() {
             return new ApiErrorBaseResponse(code, message, target);
         }
     }

@@ -90,32 +90,26 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder sha1Sum(@Nullable Output<String> sha1Sum) {
             this.sha1Sum = sha1Sum;
             return this;
         }
-
         public Builder sha1Sum(@Nullable String sha1Sum) {
             this.sha1Sum = Output.ofNullable(sha1Sum);
             return this;
         }
-
         public Builder sourceUrl(Output<String> sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Output.of(Objects.requireNonNull(sourceUrl));
             return this;
-        }
-        public StandardAppVersionDeploymentFileArgs build() {
+        }        public StandardAppVersionDeploymentFileArgs build() {
             return new StandardAppVersionDeploymentFileArgs(name, sha1Sum, sourceUrl);
         }
     }

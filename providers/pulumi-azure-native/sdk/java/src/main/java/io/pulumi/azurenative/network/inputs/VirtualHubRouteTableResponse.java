@@ -62,7 +62,9 @@ public final class VirtualHubRouteTableResponse extends io.pulumi.resources.Invo
             this.routes = routes;
             return this;
         }
-        public VirtualHubRouteTableResponse build() {
+        public Builder routes(VirtualHubRouteResponse... routes) {
+            return routes(List.of(routes));
+        }        public VirtualHubRouteTableResponse build() {
             return new VirtualHubRouteTableResponse(routes);
         }
     }

@@ -76,22 +76,18 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder specificReservation(@Nullable InstanceReservationAffinitySpecificReservationArgs specificReservation) {
             this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public InstanceReservationAffinityArgs build() {
+        }        public InstanceReservationAffinityArgs build() {
             return new InstanceReservationAffinityArgs(specificReservation, type);
         }
     }

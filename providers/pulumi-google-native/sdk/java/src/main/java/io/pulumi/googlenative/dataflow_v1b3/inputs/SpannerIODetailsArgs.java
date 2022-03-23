@@ -94,32 +94,26 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
             this.databaseId = databaseId;
             return this;
         }
-
         public Builder databaseId(@Nullable String databaseId) {
             this.databaseId = Output.ofNullable(databaseId);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public SpannerIODetailsArgs build() {
+        }        public SpannerIODetailsArgs build() {
             return new SpannerIODetailsArgs(databaseId, instanceId, project);
         }
     }

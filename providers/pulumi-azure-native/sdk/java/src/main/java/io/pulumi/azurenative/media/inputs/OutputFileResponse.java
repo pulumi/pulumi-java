@@ -60,7 +60,9 @@ public final class OutputFileResponse extends io.pulumi.resources.InvokeArgs {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-        public OutputFileResponse build() {
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }        public OutputFileResponse build() {
             return new OutputFileResponse(labels);
         }
     }

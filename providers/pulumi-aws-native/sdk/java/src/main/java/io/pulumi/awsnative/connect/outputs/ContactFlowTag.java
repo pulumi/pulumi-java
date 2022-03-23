@@ -69,12 +69,10 @@ public final class ContactFlowTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ContactFlowTag build() {
+        }        public ContactFlowTag build() {
             return new ContactFlowTag(key, value);
         }
     }

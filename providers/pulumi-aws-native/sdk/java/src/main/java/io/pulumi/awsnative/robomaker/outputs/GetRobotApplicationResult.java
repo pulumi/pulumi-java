@@ -115,32 +115,29 @@ public final class GetRobotApplicationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder robotSoftwareSuite(@Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite) {
             this.robotSoftwareSuite = robotSoftwareSuite;
             return this;
         }
-
         public Builder sources(@Nullable List<RobotApplicationSourceConfig> sources) {
             this.sources = sources;
             return this;
         }
-
+        public Builder sources(RobotApplicationSourceConfig... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tags(@Nullable RobotApplicationTags tags) {
             this.tags = tags;
             return this;
-        }
-        public GetRobotApplicationResult build() {
+        }        public GetRobotApplicationResult build() {
             return new GetRobotApplicationResult(arn, currentRevisionId, environment, robotSoftwareSuite, sources, tags);
         }
     }

@@ -227,57 +227,58 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
             this.allocationPolicy = allocationPolicy;
             return this;
         }
-
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
-
+        public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse... authorizationPolicies) {
+            return authorizationPolicies(List.of(authorizationPolicies));
+        }
         public Builder deviceProvisioningHostName(String deviceProvisioningHostName) {
             this.deviceProvisioningHostName = Objects.requireNonNull(deviceProvisioningHostName);
             return this;
         }
-
         public Builder idScope(String idScope) {
             this.idScope = Objects.requireNonNull(idScope);
             return this;
         }
-
         public Builder iotHubs(@Nullable List<IotHubDefinitionDescriptionResponse> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
-
+        public Builder iotHubs(IotHubDefinitionDescriptionResponse... iotHubs) {
+            return iotHubs(List.of(iotHubs));
+        }
         public Builder ipFilterRules(@Nullable List<TargetIpFilterRuleResponse> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
-
+        public Builder ipFilterRules(TargetIpFilterRuleResponse... ipFilterRules) {
+            return ipFilterRules(List.of(ipFilterRules));
+        }
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder serviceOperationsHostName(String serviceOperationsHostName) {
             this.serviceOperationsHostName = Objects.requireNonNull(serviceOperationsHostName);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public IotDpsPropertiesDescriptionResponse build() {
+        }        public IotDpsPropertiesDescriptionResponse build() {
             return new IotDpsPropertiesDescriptionResponse(allocationPolicy, authorizationPolicies, deviceProvisioningHostName, idScope, iotHubs, ipFilterRules, privateEndpointConnections, provisioningState, publicNetworkAccess, serviceOperationsHostName, state);
         }
     }

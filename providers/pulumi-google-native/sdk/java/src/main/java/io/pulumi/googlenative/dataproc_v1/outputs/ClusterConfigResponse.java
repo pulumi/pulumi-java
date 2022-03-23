@@ -289,77 +289,65 @@ public final class ClusterConfigResponse {
             this.autoscalingConfig = Objects.requireNonNull(autoscalingConfig);
             return this;
         }
-
         public Builder configBucket(String configBucket) {
             this.configBucket = Objects.requireNonNull(configBucket);
             return this;
         }
-
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
-
         public Builder endpointConfig(EndpointConfigResponse endpointConfig) {
             this.endpointConfig = Objects.requireNonNull(endpointConfig);
             return this;
         }
-
         public Builder gceClusterConfig(GceClusterConfigResponse gceClusterConfig) {
             this.gceClusterConfig = Objects.requireNonNull(gceClusterConfig);
             return this;
         }
-
         public Builder gkeClusterConfig(GkeClusterConfigResponse gkeClusterConfig) {
             this.gkeClusterConfig = Objects.requireNonNull(gkeClusterConfig);
             return this;
         }
-
         public Builder initializationActions(List<NodeInitializationActionResponse> initializationActions) {
             this.initializationActions = Objects.requireNonNull(initializationActions);
             return this;
         }
-
+        public Builder initializationActions(NodeInitializationActionResponse... initializationActions) {
+            return initializationActions(List.of(initializationActions));
+        }
         public Builder lifecycleConfig(LifecycleConfigResponse lifecycleConfig) {
             this.lifecycleConfig = Objects.requireNonNull(lifecycleConfig);
             return this;
         }
-
         public Builder masterConfig(InstanceGroupConfigResponse masterConfig) {
             this.masterConfig = Objects.requireNonNull(masterConfig);
             return this;
         }
-
         public Builder metastoreConfig(MetastoreConfigResponse metastoreConfig) {
             this.metastoreConfig = Objects.requireNonNull(metastoreConfig);
             return this;
         }
-
         public Builder secondaryWorkerConfig(InstanceGroupConfigResponse secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
             return this;
         }
-
         public Builder securityConfig(SecurityConfigResponse securityConfig) {
             this.securityConfig = Objects.requireNonNull(securityConfig);
             return this;
         }
-
         public Builder softwareConfig(SoftwareConfigResponse softwareConfig) {
             this.softwareConfig = Objects.requireNonNull(softwareConfig);
             return this;
         }
-
         public Builder tempBucket(String tempBucket) {
             this.tempBucket = Objects.requireNonNull(tempBucket);
             return this;
         }
-
         public Builder workerConfig(InstanceGroupConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
-        }
-        public ClusterConfigResponse build() {
+        }        public ClusterConfigResponse build() {
             return new ClusterConfigResponse(autoscalingConfig, configBucket, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);
         }
     }

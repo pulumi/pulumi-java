@@ -185,52 +185,45 @@ public final class GetScheduledQueryResult {
             this.arn = arn;
             return this;
         }
-
         public Builder sQErrorReportConfiguration(@Nullable String sQErrorReportConfiguration) {
             this.sQErrorReportConfiguration = sQErrorReportConfiguration;
             return this;
         }
-
         public Builder sQKmsKeyId(@Nullable String sQKmsKeyId) {
             this.sQKmsKeyId = sQKmsKeyId;
             return this;
         }
-
         public Builder sQName(@Nullable String sQName) {
             this.sQName = sQName;
             return this;
         }
-
         public Builder sQNotificationConfiguration(@Nullable String sQNotificationConfiguration) {
             this.sQNotificationConfiguration = sQNotificationConfiguration;
             return this;
         }
-
         public Builder sQQueryString(@Nullable String sQQueryString) {
             this.sQQueryString = sQQueryString;
             return this;
         }
-
         public Builder sQScheduleConfiguration(@Nullable String sQScheduleConfiguration) {
             this.sQScheduleConfiguration = sQScheduleConfiguration;
             return this;
         }
-
         public Builder sQScheduledQueryExecutionRoleArn(@Nullable String sQScheduledQueryExecutionRoleArn) {
             this.sQScheduledQueryExecutionRoleArn = sQScheduledQueryExecutionRoleArn;
             return this;
         }
-
         public Builder sQTargetConfiguration(@Nullable String sQTargetConfiguration) {
             this.sQTargetConfiguration = sQTargetConfiguration;
             return this;
         }
-
         public Builder tags(@Nullable List<ScheduledQueryTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetScheduledQueryResult build() {
+        public Builder tags(ScheduledQueryTag... tags) {
+            return tags(List.of(tags));
+        }        public GetScheduledQueryResult build() {
             return new GetScheduledQueryResult(arn, sQErrorReportConfiguration, sQKmsKeyId, sQName, sQNotificationConfiguration, sQQueryString, sQScheduleConfiguration, sQScheduledQueryExecutionRoleArn, sQTargetConfiguration, tags);
         }
     }

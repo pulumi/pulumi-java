@@ -95,17 +95,14 @@ public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
-
         public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = diskCount;
             return this;
         }
-
         public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
             this.startingDeviceId = startingDeviceId;
             return this;
-        }
-        public SqlStorageUpdateSettingsResponse build() {
+        }        public SqlStorageUpdateSettingsResponse build() {
             return new SqlStorageUpdateSettingsResponse(diskConfigurationType, diskCount, startingDeviceId);
         }
     }

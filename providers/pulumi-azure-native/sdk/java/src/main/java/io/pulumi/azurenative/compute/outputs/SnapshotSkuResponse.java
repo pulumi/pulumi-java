@@ -71,12 +71,10 @@ public final class SnapshotSkuResponse {
             this.name = name;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public SnapshotSkuResponse build() {
+        }        public SnapshotSkuResponse build() {
             return new SnapshotSkuResponse(name, tier);
         }
     }

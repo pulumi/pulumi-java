@@ -187,47 +187,38 @@ public final class GetJobStepResult {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder credential(String credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder executionOptions(@Nullable JobStepExecutionOptionsResponse executionOptions) {
             this.executionOptions = executionOptions;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder output(@Nullable JobStepOutputResponse output) {
             this.output = output;
             return this;
         }
-
         public Builder stepId(@Nullable Integer stepId) {
             this.stepId = stepId;
             return this;
         }
-
         public Builder targetGroup(String targetGroup) {
             this.targetGroup = Objects.requireNonNull(targetGroup);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetJobStepResult build() {
+        }        public GetJobStepResult build() {
             return new GetJobStepResult(action, credential, executionOptions, id, name, output, stepId, targetGroup, type);
         }
     }

@@ -76,12 +76,13 @@ public final class GetPipelineDefinitionArgs extends io.pulumi.resources.InvokeA
             this.parameterValues = parameterValues;
             return this;
         }
-
+        public Builder parameterValues(GetPipelineDefinitionParameterValue... parameterValues) {
+            return parameterValues(List.of(parameterValues));
+        }
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
-        }
-        public GetPipelineDefinitionArgs build() {
+        }        public GetPipelineDefinitionArgs build() {
             return new GetPipelineDefinitionArgs(parameterValues, pipelineId);
         }
     }

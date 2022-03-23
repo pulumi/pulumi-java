@@ -111,42 +111,34 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.averageUtilization = averageUtilization;
             return this;
         }
-
         public Builder averageUtilization(@Nullable Integer averageUtilization) {
             this.averageUtilization = Output.ofNullable(averageUtilization);
             return this;
         }
-
         public Builder averageValue(@Nullable Output<String> averageValue) {
             this.averageValue = averageValue;
             return this;
         }
-
         public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = Output.ofNullable(averageValue);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public MetricTargetArgs build() {
+        }        public MetricTargetArgs build() {
             return new MetricTargetArgs(averageUtilization, averageValue, type, value);
         }
     }

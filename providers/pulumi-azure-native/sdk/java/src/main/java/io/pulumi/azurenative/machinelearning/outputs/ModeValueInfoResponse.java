@@ -73,12 +73,13 @@ public final class ModeValueInfoResponse {
             this.interfaceString = interfaceString;
             return this;
         }
-
         public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-        public ModeValueInfoResponse build() {
+        public Builder parameters(ModuleAssetParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }        public ModeValueInfoResponse build() {
             return new ModeValueInfoResponse(interfaceString, parameters);
         }
     }

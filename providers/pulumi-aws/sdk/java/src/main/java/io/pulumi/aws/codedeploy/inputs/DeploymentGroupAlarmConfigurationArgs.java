@@ -94,32 +94,29 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
             this.alarms = alarms;
             return this;
         }
-
         public Builder alarms(@Nullable List<String> alarms) {
             this.alarms = Output.ofNullable(alarms);
             return this;
         }
-
+        public Builder alarms(String... alarms) {
+            return alarms(List.of(alarms));
+        }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder ignorePollAlarmFailure(@Nullable Output<Boolean> ignorePollAlarmFailure) {
             this.ignorePollAlarmFailure = ignorePollAlarmFailure;
             return this;
         }
-
         public Builder ignorePollAlarmFailure(@Nullable Boolean ignorePollAlarmFailure) {
             this.ignorePollAlarmFailure = Output.ofNullable(ignorePollAlarmFailure);
             return this;
-        }
-        public DeploymentGroupAlarmConfigurationArgs build() {
+        }        public DeploymentGroupAlarmConfigurationArgs build() {
             return new DeploymentGroupAlarmConfigurationArgs(alarms, enabled, ignorePollAlarmFailure);
         }
     }

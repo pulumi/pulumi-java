@@ -53,8 +53,7 @@ public final class SapHanaPartitionSettingsResponse {
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
-        }
-        public SapHanaPartitionSettingsResponse build() {
+        }        public SapHanaPartitionSettingsResponse build() {
             return new SapHanaPartitionSettingsResponse(partitionColumnName);
         }
     }

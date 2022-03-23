@@ -113,42 +113,37 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
             return this;
         }
-
+        public Builder nonKeyAttributes(String... nonKeyAttributes) {
+            return nonKeyAttributes(List.of(nonKeyAttributes));
+        }
         public Builder projectionType(Output<String> projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
-
         public Builder projectionType(String projectionType) {
             this.projectionType = Output.of(Objects.requireNonNull(projectionType));
             return this;
         }
-
         public Builder rangeKey(Output<String> rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }
-
         public Builder rangeKey(String rangeKey) {
             this.rangeKey = Output.of(Objects.requireNonNull(rangeKey));
             return this;
-        }
-        public TableLocalSecondaryIndexArgs build() {
+        }        public TableLocalSecondaryIndexArgs build() {
             return new TableLocalSecondaryIndexArgs(name, nonKeyAttributes, projectionType, rangeKey);
         }
     }

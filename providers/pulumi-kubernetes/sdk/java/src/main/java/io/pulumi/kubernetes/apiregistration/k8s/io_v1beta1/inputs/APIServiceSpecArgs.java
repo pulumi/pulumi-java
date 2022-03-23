@@ -161,72 +161,58 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.caBundle = caBundle;
             return this;
         }
-
         public Builder caBundle(@Nullable String caBundle) {
             this.caBundle = Output.ofNullable(caBundle);
             return this;
         }
-
         public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder groupPriorityMinimum(Output<Integer> groupPriorityMinimum) {
             this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum);
             return this;
         }
-
         public Builder groupPriorityMinimum(Integer groupPriorityMinimum) {
             this.groupPriorityMinimum = Output.of(Objects.requireNonNull(groupPriorityMinimum));
             return this;
         }
-
         public Builder insecureSkipTLSVerify(@Nullable Output<Boolean> insecureSkipTLSVerify) {
             this.insecureSkipTLSVerify = insecureSkipTLSVerify;
             return this;
         }
-
         public Builder insecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
             this.insecureSkipTLSVerify = Output.ofNullable(insecureSkipTLSVerify);
             return this;
         }
-
         public Builder service(Output<ServiceReferenceArgs> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(ServiceReferenceArgs service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder versionPriority(Output<Integer> versionPriority) {
             this.versionPriority = Objects.requireNonNull(versionPriority);
             return this;
         }
-
         public Builder versionPriority(Integer versionPriority) {
             this.versionPriority = Output.of(Objects.requireNonNull(versionPriority));
             return this;
-        }
-        public APIServiceSpecArgs build() {
+        }        public APIServiceSpecArgs build() {
             return new APIServiceSpecArgs(caBundle, group, groupPriorityMinimum, insecureSkipTLSVerify, service, version, versionPriority);
         }
     }

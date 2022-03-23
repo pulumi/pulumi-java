@@ -169,42 +169,34 @@ public final class BindingResourcePropertiesResponse {
             this.bindingParameters = bindingParameters;
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder generatedProperties(String generatedProperties) {
             this.generatedProperties = Objects.requireNonNull(generatedProperties);
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
-        }
-        public BindingResourcePropertiesResponse build() {
+        }        public BindingResourcePropertiesResponse build() {
             return new BindingResourcePropertiesResponse(bindingParameters, createdAt, generatedProperties, key, resourceId, resourceName, resourceType, updatedAt);
         }
     }

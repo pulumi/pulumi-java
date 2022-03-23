@@ -158,32 +158,26 @@ public final class ConnectivityTestSource {
             this.instance = instance;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
-
         public Builder networkType(@Nullable String networkType) {
             this.networkType = networkType;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
-        }
-        public ConnectivityTestSource build() {
+        }        public ConnectivityTestSource build() {
             return new ConnectivityTestSource(instance, ipAddress, network, networkType, port, projectId);
         }
     }

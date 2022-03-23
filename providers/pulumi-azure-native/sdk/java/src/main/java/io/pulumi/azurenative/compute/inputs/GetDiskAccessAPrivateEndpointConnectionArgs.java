@@ -88,17 +88,14 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends io.pulumi
             this.diskAccessName = Objects.requireNonNull(diskAccessName);
             return this;
         }
-
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDiskAccessAPrivateEndpointConnectionArgs build() {
+        }        public GetDiskAccessAPrivateEndpointConnectionArgs build() {
             return new GetDiskAccessAPrivateEndpointConnectionArgs(diskAccessName, privateEndpointConnectionName, resourceGroupName);
         }
     }

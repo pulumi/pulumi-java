@@ -88,17 +88,14 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends io.pulumi.r
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder clientName(String clientName) {
             this.clientName = Objects.requireNonNull(clientName);
             return this;
         }
-
         public Builder developerEmailAddress(String developerEmailAddress) {
             this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress);
             return this;
-        }
-        public BackendServiceIAPOAuth2ClientInfoResponse build() {
+        }        public BackendServiceIAPOAuth2ClientInfoResponse build() {
             return new BackendServiceIAPOAuth2ClientInfoResponse(applicationName, clientName, developerEmailAddress);
         }
     }

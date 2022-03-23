@@ -62,12 +62,10 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.driverLogLevels = driverLogLevels;
             return this;
         }
-
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
             this.driverLogLevels = Output.ofNullable(driverLogLevels);
             return this;
-        }
-        public LoggingConfigArgs build() {
+        }        public LoggingConfigArgs build() {
             return new LoggingConfigArgs(driverLogLevels);
         }
     }

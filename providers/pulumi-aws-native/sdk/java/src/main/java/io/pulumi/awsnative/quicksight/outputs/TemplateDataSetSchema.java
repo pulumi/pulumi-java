@@ -54,7 +54,9 @@ public final class TemplateDataSetSchema {
             this.columnSchemaList = columnSchemaList;
             return this;
         }
-        public TemplateDataSetSchema build() {
+        public Builder columnSchemaList(TemplateColumnSchema... columnSchemaList) {
+            return columnSchemaList(List.of(columnSchemaList));
+        }        public TemplateDataSetSchema build() {
             return new TemplateDataSetSchema(columnSchemaList);
         }
     }

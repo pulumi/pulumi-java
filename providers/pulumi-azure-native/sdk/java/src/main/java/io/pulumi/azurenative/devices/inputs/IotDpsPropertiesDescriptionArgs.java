@@ -183,82 +183,78 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
             this.allocationPolicy = allocationPolicy;
             return this;
         }
-
         public Builder allocationPolicy(@Nullable Either<String,AllocationPolicy> allocationPolicy) {
             this.allocationPolicy = Output.ofNullable(allocationPolicy);
             return this;
         }
-
         public Builder authorizationPolicies(@Nullable Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
-
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs> authorizationPolicies) {
             this.authorizationPolicies = Output.ofNullable(authorizationPolicies);
             return this;
         }
-
+        public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs... authorizationPolicies) {
+            return authorizationPolicies(List.of(authorizationPolicies));
+        }
         public Builder iotHubs(@Nullable Output<List<IotHubDefinitionDescriptionArgs>> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
-
         public Builder iotHubs(@Nullable List<IotHubDefinitionDescriptionArgs> iotHubs) {
             this.iotHubs = Output.ofNullable(iotHubs);
             return this;
         }
-
+        public Builder iotHubs(IotHubDefinitionDescriptionArgs... iotHubs) {
+            return iotHubs(List.of(iotHubs));
+        }
         public Builder ipFilterRules(@Nullable Output<List<TargetIpFilterRuleArgs>> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
-
         public Builder ipFilterRules(@Nullable List<TargetIpFilterRuleArgs> ipFilterRules) {
             this.ipFilterRules = Output.ofNullable(ipFilterRules);
             return this;
         }
-
+        public Builder ipFilterRules(TargetIpFilterRuleArgs... ipFilterRules) {
+            return ipFilterRules(List.of(ipFilterRules));
+        }
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,State>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,State> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public IotDpsPropertiesDescriptionArgs build() {
+        }        public IotDpsPropertiesDescriptionArgs build() {
             return new IotDpsPropertiesDescriptionArgs(allocationPolicy, authorizationPolicies, iotHubs, ipFilterRules, privateEndpointConnections, provisioningState, publicNetworkAccess, state);
         }
     }

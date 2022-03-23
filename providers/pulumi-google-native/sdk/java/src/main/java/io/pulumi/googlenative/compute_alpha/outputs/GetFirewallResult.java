@@ -347,97 +347,102 @@ public final class GetFirewallResult {
             this.allowed = Objects.requireNonNull(allowed);
             return this;
         }
-
+        public Builder allowed(FirewallAllowedItemResponse... allowed) {
+            return allowed(List.of(allowed));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder denied(List<FirewallDeniedItemResponse> denied) {
             this.denied = Objects.requireNonNull(denied);
             return this;
         }
-
+        public Builder denied(FirewallDeniedItemResponse... denied) {
+            return denied(List.of(denied));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder destinationRanges(List<String> destinationRanges) {
             this.destinationRanges = Objects.requireNonNull(destinationRanges);
             return this;
         }
-
+        public Builder destinationRanges(String... destinationRanges) {
+            return destinationRanges(List.of(destinationRanges));
+        }
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder logConfig(FirewallLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder sourceRanges(List<String> sourceRanges) {
             this.sourceRanges = Objects.requireNonNull(sourceRanges);
             return this;
         }
-
+        public Builder sourceRanges(String... sourceRanges) {
+            return sourceRanges(List.of(sourceRanges));
+        }
         public Builder sourceServiceAccounts(List<String> sourceServiceAccounts) {
             this.sourceServiceAccounts = Objects.requireNonNull(sourceServiceAccounts);
             return this;
         }
-
+        public Builder sourceServiceAccounts(String... sourceServiceAccounts) {
+            return sourceServiceAccounts(List.of(sourceServiceAccounts));
+        }
         public Builder sourceTags(List<String> sourceTags) {
             this.sourceTags = Objects.requireNonNull(sourceTags);
             return this;
         }
-
+        public Builder sourceTags(String... sourceTags) {
+            return sourceTags(List.of(sourceTags));
+        }
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }
         public Builder targetTags(List<String> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
-        public GetFirewallResult build() {
+        public Builder targetTags(String... targetTags) {
+            return targetTags(List.of(targetTags));
+        }        public GetFirewallResult build() {
             return new GetFirewallResult(allowed, creationTimestamp, denied, description, destinationRanges, direction, disabled, kind, logConfig, name, network, priority, selfLink, selfLinkWithId, sourceRanges, sourceServiceAccounts, sourceTags, targetServiceAccounts, targetTags);
         }
     }

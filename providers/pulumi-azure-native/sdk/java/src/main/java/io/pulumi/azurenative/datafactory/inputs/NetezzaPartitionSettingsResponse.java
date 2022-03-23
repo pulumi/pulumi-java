@@ -94,17 +94,14 @@ public final class NetezzaPartitionSettingsResponse extends io.pulumi.resources.
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
-        }
-        public NetezzaPartitionSettingsResponse build() {
+        }        public NetezzaPartitionSettingsResponse build() {
             return new NetezzaPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }
     }

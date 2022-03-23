@@ -177,82 +177,69 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<ModelContainerArgs> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(ModelContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
             return this;
         }
-
         public Builder executionRoleArn(Output<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
-
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
-
         public Builder inferenceExecutionConfig(@Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig) {
             this.inferenceExecutionConfig = inferenceExecutionConfig;
             return this;
         }
-
         public Builder inferenceExecutionConfig(@Nullable ModelInferenceExecutionConfigArgs inferenceExecutionConfig) {
             this.inferenceExecutionConfig = Output.ofNullable(inferenceExecutionConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder primaryContainer(@Nullable Output<ModelPrimaryContainerArgs> primaryContainer) {
             this.primaryContainer = primaryContainer;
             return this;
         }
-
         public Builder primaryContainer(@Nullable ModelPrimaryContainerArgs primaryContainer) {
             this.primaryContainer = Output.ofNullable(primaryContainer);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<ModelVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ModelVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public ModelArgs build() {
+        }        public ModelArgs build() {
             return new ModelArgs(containers, enableNetworkIsolation, executionRoleArn, inferenceExecutionConfig, name, primaryContainer, tags, vpcConfig);
         }
     }

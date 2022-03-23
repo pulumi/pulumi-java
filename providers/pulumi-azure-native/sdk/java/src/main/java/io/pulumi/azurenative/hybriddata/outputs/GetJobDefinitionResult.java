@@ -235,62 +235,56 @@ public final class GetJobDefinitionResult {
             this.customerSecrets = customerSecrets;
             return this;
         }
-
+        public Builder customerSecrets(CustomerSecretResponse... customerSecrets) {
+            return customerSecrets(List.of(customerSecrets));
+        }
         public Builder dataServiceInput(@Nullable Object dataServiceInput) {
             this.dataServiceInput = dataServiceInput;
             return this;
         }
-
         public Builder dataSinkId(String dataSinkId) {
             this.dataSinkId = Objects.requireNonNull(dataSinkId);
             return this;
         }
-
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder runLocation(@Nullable String runLocation) {
             this.runLocation = runLocation;
             return this;
         }
-
         public Builder schedules(@Nullable List<ScheduleResponse> schedules) {
             this.schedules = schedules;
             return this;
         }
-
+        public Builder schedules(ScheduleResponse... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userConfirmation(@Nullable String userConfirmation) {
             this.userConfirmation = userConfirmation;
             return this;
-        }
-        public GetJobDefinitionResult build() {
+        }        public GetJobDefinitionResult build() {
             return new GetJobDefinitionResult(customerSecrets, dataServiceInput, dataSinkId, dataSourceId, id, lastModifiedTime, name, runLocation, schedules, state, type, userConfirmation);
         }
     }

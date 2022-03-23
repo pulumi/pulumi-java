@@ -104,22 +104,21 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder media(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media) {
             this.media = Objects.requireNonNull(media);
             return this;
         }
-
         public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
-
+        public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse... suggestions) {
+            return suggestions(List.of(suggestions));
+        }
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(description, media, suggestions, title);
         }
     }

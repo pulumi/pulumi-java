@@ -311,82 +311,69 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
             this.allocationState = Objects.requireNonNull(allocationState);
             return this;
         }
-
         public Builder allocationStateTransitionTime(String allocationStateTransitionTime) {
             this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
             return this;
         }
-
         public Builder currentNodeCount(Integer currentNodeCount) {
             this.currentNodeCount = Objects.requireNonNull(currentNodeCount);
             return this;
         }
-
         public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
             this.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
-
         public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(MachineLearningServiceErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
             this.isolatedNetwork = isolatedNetwork;
             return this;
         }
-
         public Builder nodeStateCounts(NodeStateCountsResponse nodeStateCounts) {
             this.nodeStateCounts = Objects.requireNonNull(nodeStateCounts);
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder remoteLoginPortPublicAccess(@Nullable String remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
-
         public Builder scaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public Builder subnet(@Nullable ResourceIdResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder targetNodeCount(Integer targetNodeCount) {
             this.targetNodeCount = Objects.requireNonNull(targetNodeCount);
             return this;
         }
-
         public Builder userAccountCredentials(@Nullable UserAccountCredentialsResponse userAccountCredentials) {
             this.userAccountCredentials = userAccountCredentials;
             return this;
         }
-
         public Builder virtualMachineImage(@Nullable VirtualMachineImageResponse virtualMachineImage) {
             this.virtualMachineImage = virtualMachineImage;
             return this;
         }
-
         public Builder vmPriority(@Nullable String vmPriority) {
             this.vmPriority = vmPriority;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public AmlComputeResponseProperties build() {
+        }        public AmlComputeResponseProperties build() {
             return new AmlComputeResponseProperties(allocationState, allocationStateTransitionTime, currentNodeCount, enableNodePublicIp, errors, isolatedNetwork, nodeStateCounts, osType, remoteLoginPortPublicAccess, scaleSettings, subnet, targetNodeCount, userAccountCredentials, virtualMachineImage, vmPriority, vmSize);
         }
     }

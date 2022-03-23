@@ -138,62 +138,50 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.credentialName = credentialName;
             return this;
         }
-
         public Builder credentialName(@Nullable String credentialName) {
             this.credentialName = Output.ofNullable(credentialName);
             return this;
         }
-
         public Builder jobAgentName(Output<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
-
         public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public JobCredentialArgs build() {
+        }        public JobCredentialArgs build() {
             return new JobCredentialArgs(credentialName, jobAgentName, password, resourceGroupName, serverName, username);
         }
     }

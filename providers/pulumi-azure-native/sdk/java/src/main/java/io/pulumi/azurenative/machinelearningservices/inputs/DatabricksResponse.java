@@ -175,42 +175,37 @@ public final class DatabricksResponse extends io.pulumi.resources.InvokeArgs {
             this.computeLocation = computeLocation;
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder isAttachedCompute(Boolean isAttachedCompute) {
             this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute);
             return this;
         }
-
         public Builder properties(@Nullable DatabricksResponseProperties properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
             this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
             return this;
         }
-
+        public Builder provisioningErrors(MachineLearningServiceErrorResponse... provisioningErrors) {
+            return provisioningErrors(List.of(provisioningErrors));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public DatabricksResponse build() {
+        }        public DatabricksResponse build() {
             return new DatabricksResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }
     }

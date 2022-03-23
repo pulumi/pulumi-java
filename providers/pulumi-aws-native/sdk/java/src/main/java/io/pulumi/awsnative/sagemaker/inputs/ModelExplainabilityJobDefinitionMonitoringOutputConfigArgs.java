@@ -80,22 +80,21 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder monitoringOutputs(Output<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public Builder monitoringOutputs(List<ModelExplainabilityJobDefinitionMonitoringOutputArgs> monitoringOutputs) {
             this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-        public ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs build() {
+        public Builder monitoringOutputs(ModelExplainabilityJobDefinitionMonitoringOutputArgs... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs build() {
             return new ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }
     }

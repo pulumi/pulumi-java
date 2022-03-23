@@ -301,82 +301,66 @@ public final class GetServerDetailsResult {
             this.asAdministrators = asAdministrators;
             return this;
         }
-
         public Builder backupBlobContainerUri(@Nullable String backupBlobContainerUri) {
             this.backupBlobContainerUri = backupBlobContainerUri;
             return this;
         }
-
         public Builder gatewayDetails(@Nullable GatewayDetailsResponse gatewayDetails) {
             this.gatewayDetails = gatewayDetails;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipV4FirewallSettings(@Nullable IPv4FirewallSettingsResponse ipV4FirewallSettings) {
             this.ipV4FirewallSettings = ipV4FirewallSettings;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedMode(@Nullable Integer managedMode) {
             this.managedMode = managedMode;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder querypoolConnectionMode(@Nullable String querypoolConnectionMode) {
             this.querypoolConnectionMode = querypoolConnectionMode;
             return this;
         }
-
         public Builder serverFullName(String serverFullName) {
             this.serverFullName = Objects.requireNonNull(serverFullName);
             return this;
         }
-
         public Builder serverMonitorMode(@Nullable Integer serverMonitorMode) {
             this.serverMonitorMode = serverMonitorMode;
             return this;
         }
-
         public Builder sku(ResourceSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerDetailsResult build() {
+        }        public GetServerDetailsResult build() {
             return new GetServerDetailsResult(asAdministrators, backupBlobContainerUri, gatewayDetails, id, ipV4FirewallSettings, location, managedMode, name, provisioningState, querypoolConnectionMode, serverFullName, serverMonitorMode, sku, state, tags, type);
         }
     }

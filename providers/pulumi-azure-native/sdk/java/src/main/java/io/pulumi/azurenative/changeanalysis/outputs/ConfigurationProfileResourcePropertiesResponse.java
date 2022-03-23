@@ -53,8 +53,7 @@ public final class ConfigurationProfileResourcePropertiesResponse {
         public Builder notifications(@Nullable NotificationSettingsResponse notifications) {
             this.notifications = notifications;
             return this;
-        }
-        public ConfigurationProfileResourcePropertiesResponse build() {
+        }        public ConfigurationProfileResourcePropertiesResponse build() {
             return new ConfigurationProfileResourcePropertiesResponse(notifications);
         }
     }

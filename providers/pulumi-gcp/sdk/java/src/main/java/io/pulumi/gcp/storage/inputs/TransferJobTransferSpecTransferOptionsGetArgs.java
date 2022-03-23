@@ -91,32 +91,26 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
             this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
-
         public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Boolean deleteObjectsFromSourceAfterTransfer) {
             this.deleteObjectsFromSourceAfterTransfer = Output.ofNullable(deleteObjectsFromSourceAfterTransfer);
             return this;
         }
-
         public Builder deleteObjectsUniqueInSink(@Nullable Output<Boolean> deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
-
         public Builder deleteObjectsUniqueInSink(@Nullable Boolean deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = Output.ofNullable(deleteObjectsUniqueInSink);
             return this;
         }
-
         public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }
-
         public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = Output.ofNullable(overwriteObjectsAlreadyExistingInSink);
             return this;
-        }
-        public TransferJobTransferSpecTransferOptionsGetArgs build() {
+        }        public TransferJobTransferSpecTransferOptionsGetArgs build() {
             return new TransferJobTransferSpecTransferOptionsGetArgs(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, overwriteObjectsAlreadyExistingInSink);
         }
     }

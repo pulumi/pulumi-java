@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder value(GooglePrivacyDlpV2ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GooglePrivacyDlpV2ValueFrequencyResponse build() {
+        }        public GooglePrivacyDlpV2ValueFrequencyResponse build() {
             return new GooglePrivacyDlpV2ValueFrequencyResponse(count, value);
         }
     }

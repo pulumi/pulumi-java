@@ -62,12 +62,13 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesArgs> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-        public CloudServiceRoleProfileArgs build() {
+        public Builder roles(CloudServiceRoleProfilePropertiesArgs... roles) {
+            return roles(List.of(roles));
+        }        public CloudServiceRoleProfileArgs build() {
             return new CloudServiceRoleProfileArgs(roles);
         }
     }

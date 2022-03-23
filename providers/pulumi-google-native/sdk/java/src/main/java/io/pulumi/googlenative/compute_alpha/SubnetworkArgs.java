@@ -415,232 +415,192 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.aggregationInterval = aggregationInterval;
             return this;
         }
-
         public Builder aggregationInterval(@Nullable SubnetworkAggregationInterval aggregationInterval) {
             this.aggregationInterval = Output.ofNullable(aggregationInterval);
             return this;
         }
-
         public Builder allowSubnetCidrRoutesOverlap(@Nullable Output<Boolean> allowSubnetCidrRoutesOverlap) {
             this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
             return this;
         }
-
         public Builder allowSubnetCidrRoutesOverlap(@Nullable Boolean allowSubnetCidrRoutesOverlap) {
             this.allowSubnetCidrRoutesOverlap = Output.ofNullable(allowSubnetCidrRoutesOverlap);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableFlowLogs(@Nullable Output<Boolean> enableFlowLogs) {
             this.enableFlowLogs = enableFlowLogs;
             return this;
         }
-
         public Builder enableFlowLogs(@Nullable Boolean enableFlowLogs) {
             this.enableFlowLogs = Output.ofNullable(enableFlowLogs);
             return this;
         }
-
         public Builder enableL2(@Nullable Output<Boolean> enableL2) {
             this.enableL2 = enableL2;
             return this;
         }
-
         public Builder enableL2(@Nullable Boolean enableL2) {
             this.enableL2 = Output.ofNullable(enableL2);
             return this;
         }
-
         public Builder flowSampling(@Nullable Output<Double> flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
-
         public Builder flowSampling(@Nullable Double flowSampling) {
             this.flowSampling = Output.ofNullable(flowSampling);
             return this;
         }
-
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
-
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
-
         public Builder ipv6AccessType(@Nullable Output<SubnetworkIpv6AccessType> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
-
         public Builder ipv6AccessType(@Nullable SubnetworkIpv6AccessType ipv6AccessType) {
             this.ipv6AccessType = Output.ofNullable(ipv6AccessType);
             return this;
         }
-
         public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
-
         public Builder logConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
             this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
-
         public Builder metadata(@Nullable Output<SubnetworkMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable SubnetworkMetadata metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder privateIpGoogleAccess(@Nullable Output<Boolean> privateIpGoogleAccess) {
             this.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
-
         public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
             this.privateIpGoogleAccess = Output.ofNullable(privateIpGoogleAccess);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable Output<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable SubnetworkPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder purpose(@Nullable Output<SubnetworkPurpose> purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder purpose(@Nullable SubnetworkPurpose purpose) {
             this.purpose = Output.ofNullable(purpose);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder reservedInternalRange(@Nullable Output<String> reservedInternalRange) {
             this.reservedInternalRange = reservedInternalRange;
             return this;
         }
-
         public Builder reservedInternalRange(@Nullable String reservedInternalRange) {
             this.reservedInternalRange = Output.ofNullable(reservedInternalRange);
             return this;
         }
-
         public Builder role(@Nullable Output<SubnetworkRole> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable SubnetworkRole role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges) {
             this.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
-
         public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryRangeArgs> secondaryIpRanges) {
             this.secondaryIpRanges = Output.ofNullable(secondaryIpRanges);
             return this;
         }
-
+        public Builder secondaryIpRanges(SubnetworkSecondaryRangeArgs... secondaryIpRanges) {
+            return secondaryIpRanges(List.of(secondaryIpRanges));
+        }
         public Builder stackType(@Nullable Output<SubnetworkStackType> stackType) {
             this.stackType = stackType;
             return this;
         }
-
         public Builder stackType(@Nullable SubnetworkStackType stackType) {
             this.stackType = Output.ofNullable(stackType);
             return this;
         }
-
         public Builder vlans(@Nullable Output<List<Integer>> vlans) {
             this.vlans = vlans;
             return this;
         }
-
         public Builder vlans(@Nullable List<Integer> vlans) {
             this.vlans = Output.ofNullable(vlans);
             return this;
         }
-        public SubnetworkArgs build() {
+        public Builder vlans(Integer... vlans) {
+            return vlans(List.of(vlans));
+        }        public SubnetworkArgs build() {
             return new SubnetworkArgs(aggregationInterval, allowSubnetCidrRoutesOverlap, description, enableFlowLogs, enableL2, flowSampling, ipCidrRange, ipv6AccessType, logConfig, metadata, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, project, purpose, region, requestId, reservedInternalRange, role, secondaryIpRanges, stackType, vlans);
         }
     }

@@ -57,8 +57,7 @@ public final class GetLocationsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetLocationsArgs build() {
+        }        public GetLocationsArgs build() {
             return new GetLocationsArgs(project);
         }
     }

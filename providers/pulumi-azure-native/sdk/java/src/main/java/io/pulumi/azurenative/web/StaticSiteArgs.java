@@ -273,142 +273,114 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             this.allowConfigFileUpdates = allowConfigFileUpdates;
             return this;
         }
-
         public Builder allowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
             this.allowConfigFileUpdates = Output.ofNullable(allowConfigFileUpdates);
             return this;
         }
-
         public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder buildProperties(@Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties) {
             this.buildProperties = buildProperties;
             return this;
         }
-
         public Builder buildProperties(@Nullable StaticSiteBuildPropertiesArgs buildProperties) {
             this.buildProperties = Output.ofNullable(buildProperties);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder repositoryToken(@Nullable Output<String> repositoryToken) {
             this.repositoryToken = repositoryToken;
             return this;
         }
-
         public Builder repositoryToken(@Nullable String repositoryToken) {
             this.repositoryToken = Output.ofNullable(repositoryToken);
             return this;
         }
-
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
-
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = Output.ofNullable(repositoryUrl);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuDescriptionArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuDescriptionArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder stagingEnvironmentPolicy(@Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
             this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
             return this;
         }
-
         public Builder stagingEnvironmentPolicy(@Nullable StagingEnvironmentPolicy stagingEnvironmentPolicy) {
             this.stagingEnvironmentPolicy = Output.ofNullable(stagingEnvironmentPolicy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder templateProperties(@Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties) {
             this.templateProperties = templateProperties;
             return this;
         }
-
         public Builder templateProperties(@Nullable StaticSiteTemplateOptionsArgs templateProperties) {
             this.templateProperties = Output.ofNullable(templateProperties);
             return this;
-        }
-        public StaticSiteArgs build() {
+        }        public StaticSiteArgs build() {
             return new StaticSiteArgs(allowConfigFileUpdates, branch, buildProperties, identity, kind, location, name, repositoryToken, repositoryUrl, resourceGroupName, sku, stagingEnvironmentPolicy, tags, templateProperties);
         }
     }

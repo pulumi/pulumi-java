@@ -63,7 +63,9 @@ public final class TagTemplateFieldTypeEnumType {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
-        public TagTemplateFieldTypeEnumType build() {
+        public Builder allowedValues(TagTemplateFieldTypeEnumTypeAllowedValue... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }        public TagTemplateFieldTypeEnumType build() {
             return new TagTemplateFieldTypeEnumType(allowedValues);
         }
     }

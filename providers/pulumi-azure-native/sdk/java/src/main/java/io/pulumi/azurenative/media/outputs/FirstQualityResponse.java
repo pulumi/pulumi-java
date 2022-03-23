@@ -51,8 +51,7 @@ public final class FirstQualityResponse {
         public Builder bitrate(Integer bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
-        }
-        public FirstQualityResponse build() {
+        }        public FirstQualityResponse build() {
             return new FirstQualityResponse(bitrate);
         }
     }

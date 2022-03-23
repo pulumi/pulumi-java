@@ -126,42 +126,37 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
             this.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
-
         public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
             this.dependsOnOverrides = Output.ofNullable(dependsOnOverrides);
             return this;
         }
-
+        public Builder dependsOnOverrides(MoveResourceDependencyOverrideArgs... dependsOnOverrides) {
+            return dependsOnOverrides(List.of(dependsOnOverrides));
+        }
         public Builder existingTargetId(@Nullable Output<String> existingTargetId) {
             this.existingTargetId = existingTargetId;
             return this;
         }
-
         public Builder existingTargetId(@Nullable String existingTargetId) {
             this.existingTargetId = Output.ofNullable(existingTargetId);
             return this;
         }
-
         public Builder resourceSettings(@Nullable Output<Object> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
-
         public Builder resourceSettings(@Nullable Object resourceSettings) {
             this.resourceSettings = Output.ofNullable(resourceSettings);
             return this;
         }
-
         public Builder sourceId(Output<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Output.of(Objects.requireNonNull(sourceId));
             return this;
-        }
-        public MoveResourcePropertiesArgs build() {
+        }        public MoveResourcePropertiesArgs build() {
             return new MoveResourcePropertiesArgs(dependsOnOverrides, existingTargetId, resourceSettings, sourceId);
         }
     }

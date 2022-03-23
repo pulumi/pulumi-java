@@ -73,22 +73,18 @@ public final class VaultPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
-
         public Builder backupVaultName(String backupVaultName) {
             this.backupVaultName = Output.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public VaultPolicyArgs build() {
+        }        public VaultPolicyArgs build() {
             return new VaultPolicyArgs(backupVaultName, policy);
         }
     }

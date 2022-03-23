@@ -115,62 +115,50 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.markLatest = markLatest;
             return this;
         }
-
         public Builder markLatest(@Nullable Boolean markLatest) {
             this.markLatest = Output.ofNullable(markLatest);
             return this;
         }
-
         public Builder ownerAccount(@Nullable Output<String> ownerAccount) {
             this.ownerAccount = ownerAccount;
             return this;
         }
-
         public Builder ownerAccount(@Nullable String ownerAccount) {
             this.ownerAccount = Output.ofNullable(ownerAccount);
             return this;
         }
-
         public Builder packageId(Output<String> packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
-
         public Builder packageId(String packageId) {
             this.packageId = Output.of(Objects.requireNonNull(packageId));
             return this;
         }
-
         public Builder packageVersion(Output<String> packageVersion) {
             this.packageVersion = Objects.requireNonNull(packageVersion);
             return this;
         }
-
         public Builder packageVersion(String packageVersion) {
             this.packageVersion = Output.of(Objects.requireNonNull(packageVersion));
             return this;
         }
-
         public Builder patchVersion(Output<String> patchVersion) {
             this.patchVersion = Objects.requireNonNull(patchVersion);
             return this;
         }
-
         public Builder patchVersion(String patchVersion) {
             this.patchVersion = Output.of(Objects.requireNonNull(patchVersion));
             return this;
         }
-
         public Builder updatedLatestPatchVersion(@Nullable Output<String> updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
         }
-
         public Builder updatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = Output.ofNullable(updatedLatestPatchVersion);
             return this;
-        }
-        public PackageVersionArgs build() {
+        }        public PackageVersionArgs build() {
             return new PackageVersionArgs(markLatest, ownerAccount, packageId, packageVersion, patchVersion, updatedLatestPatchVersion);
         }
     }

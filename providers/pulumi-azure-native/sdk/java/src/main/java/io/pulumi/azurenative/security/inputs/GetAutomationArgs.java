@@ -72,12 +72,10 @@ public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
             this.automationName = Objects.requireNonNull(automationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAutomationArgs build() {
+        }        public GetAutomationArgs build() {
             return new GetAutomationArgs(automationName, resourceGroupName);
         }
     }

@@ -56,12 +56,10 @@ public final class NodeSchedulingConfigArgs extends io.pulumi.resources.Resource
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public Builder preemptible(Boolean preemptible) {
             this.preemptible = Output.of(Objects.requireNonNull(preemptible));
             return this;
-        }
-        public NodeSchedulingConfigArgs build() {
+        }        public NodeSchedulingConfigArgs build() {
             return new NodeSchedulingConfigArgs(preemptible);
         }
     }

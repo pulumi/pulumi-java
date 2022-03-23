@@ -109,22 +109,18 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder localCopy(LocalCopyResponse localCopy) {
             this.localCopy = Objects.requireNonNull(localCopy);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PipelineParameterResponse build() {
+        }        public PipelineParameterResponse build() {
             return new PipelineParameterResponse(defaultValue, description, localCopy, name);
         }
     }

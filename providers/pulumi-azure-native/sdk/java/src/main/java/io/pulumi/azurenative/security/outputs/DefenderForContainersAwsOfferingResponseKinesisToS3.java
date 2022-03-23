@@ -53,8 +53,7 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 {
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = cloudRoleArn;
             return this;
-        }
-        public DefenderForContainersAwsOfferingResponseKinesisToS3 build() {
+        }        public DefenderForContainersAwsOfferingResponseKinesisToS3 build() {
             return new DefenderForContainersAwsOfferingResponseKinesisToS3(cloudRoleArn);
         }
     }

@@ -111,42 +111,34 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder targetCpuUtilization(@Nullable Output<Double> targetCpuUtilization) {
             this.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
-
         public Builder targetCpuUtilization(@Nullable Double targetCpuUtilization) {
             this.targetCpuUtilization = Output.ofNullable(targetCpuUtilization);
             return this;
         }
-
         public Builder targetThroughputUtilization(@Nullable Output<Double> targetThroughputUtilization) {
             this.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
-
         public Builder targetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
             this.targetThroughputUtilization = Output.ofNullable(targetThroughputUtilization);
             return this;
-        }
-        public StandardSchedulerSettingsArgs build() {
+        }        public StandardSchedulerSettingsArgs build() {
             return new StandardSchedulerSettingsArgs(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }
     }

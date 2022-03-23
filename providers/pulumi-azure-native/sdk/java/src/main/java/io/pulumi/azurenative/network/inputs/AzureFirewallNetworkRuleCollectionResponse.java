@@ -162,37 +162,33 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
             this.action = action;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder rules(@Nullable List<AzureFirewallNetworkRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
-        public AzureFirewallNetworkRuleCollectionResponse build() {
+        public Builder rules(AzureFirewallNetworkRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public AzureFirewallNetworkRuleCollectionResponse build() {
             return new AzureFirewallNetworkRuleCollectionResponse(action, etag, id, name, priority, provisioningState, rules);
         }
     }

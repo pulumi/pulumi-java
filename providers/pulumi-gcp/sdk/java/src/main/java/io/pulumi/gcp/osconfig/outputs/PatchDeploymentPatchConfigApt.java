@@ -94,17 +94,20 @@ public final class PatchDeploymentPatchConfigApt {
             this.excludes = excludes;
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
-
+        public Builder exclusivePackages(String... exclusivePackages) {
+            return exclusivePackages(List.of(exclusivePackages));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PatchDeploymentPatchConfigApt build() {
+        }        public PatchDeploymentPatchConfigApt build() {
             return new PatchDeploymentPatchConfigApt(excludes, exclusivePackages, type);
         }
     }

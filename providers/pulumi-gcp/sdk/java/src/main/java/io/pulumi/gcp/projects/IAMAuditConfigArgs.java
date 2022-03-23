@@ -92,32 +92,29 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
-
         public Builder auditLogConfigs(List<IAMAuditConfigAuditLogConfigArgs> auditLogConfigs) {
             this.auditLogConfigs = Output.of(Objects.requireNonNull(auditLogConfigs));
             return this;
         }
-
+        public Builder auditLogConfigs(IAMAuditConfigAuditLogConfigArgs... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public IAMAuditConfigArgs build() {
+        }        public IAMAuditConfigArgs build() {
             return new IAMAuditConfigArgs(auditLogConfigs, project, service);
         }
     }

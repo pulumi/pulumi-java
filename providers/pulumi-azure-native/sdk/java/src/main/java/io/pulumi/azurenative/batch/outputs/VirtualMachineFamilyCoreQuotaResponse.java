@@ -70,12 +70,10 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
             this.coreQuota = Objects.requireNonNull(coreQuota);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public VirtualMachineFamilyCoreQuotaResponse build() {
+        }        public VirtualMachineFamilyCoreQuotaResponse build() {
             return new VirtualMachineFamilyCoreQuotaResponse(coreQuota, name);
         }
     }

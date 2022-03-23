@@ -61,12 +61,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.pubsub = pubsub;
             return this;
         }
-
         public Builder pubsub(@Nullable PubSubArgs pubsub) {
             this.pubsub = Output.ofNullable(pubsub);
             return this;
-        }
-        public NotificationConfigArgs build() {
+        }        public NotificationConfigArgs build() {
             return new NotificationConfigArgs(pubsub);
         }
     }

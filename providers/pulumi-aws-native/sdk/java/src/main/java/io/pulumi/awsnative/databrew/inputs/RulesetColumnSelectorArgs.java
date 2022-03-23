@@ -78,22 +78,18 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder regex(@Nullable Output<String> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable String regex) {
             this.regex = Output.ofNullable(regex);
             return this;
-        }
-        public RulesetColumnSelectorArgs build() {
+        }        public RulesetColumnSelectorArgs build() {
             return new RulesetColumnSelectorArgs(name, regex);
         }
     }

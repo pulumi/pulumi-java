@@ -74,22 +74,18 @@ public final class ConnectionCloudSqlCredentialGetArgs extends io.pulumi.resourc
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public ConnectionCloudSqlCredentialGetArgs build() {
+        }        public ConnectionCloudSqlCredentialGetArgs build() {
             return new ConnectionCloudSqlCredentialGetArgs(password, username);
         }
     }

@@ -72,12 +72,10 @@ public final class GetVaultArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public GetVaultArgs build() {
+        }        public GetVaultArgs build() {
             return new GetVaultArgs(resourceGroupName, vaultName);
         }
     }

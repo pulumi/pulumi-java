@@ -54,12 +54,10 @@ public final class ResponseHeadersPolicyContentSecurityPolicy {
             this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
-        }
-        public ResponseHeadersPolicyContentSecurityPolicy build() {
+        }        public ResponseHeadersPolicyContentSecurityPolicy build() {
             return new ResponseHeadersPolicyContentSecurityPolicy(contentSecurityPolicy, override);
         }
     }

@@ -63,17 +63,17 @@ public final class ResourceProviderCapabilitiesResponse {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder quotaId(String quotaId) {
             this.quotaId = Objects.requireNonNull(quotaId);
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-        public ResourceProviderCapabilitiesResponse build() {
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }        public ResourceProviderCapabilitiesResponse build() {
             return new ResourceProviderCapabilitiesResponse(effect, quotaId, requiredFeatures);
         }
     }

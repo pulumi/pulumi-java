@@ -71,12 +71,10 @@ public final class DetectorModelLambda extends io.pulumi.resources.InvokeArgs {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
-        }
-        public DetectorModelLambda build() {
+        }        public DetectorModelLambda build() {
             return new DetectorModelLambda(functionArn, payload);
         }
     }

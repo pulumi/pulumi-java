@@ -72,12 +72,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
             this.maxValue = Objects.requireNonNull(maxValue);
             return this;
         }
-
         public Builder minValue(Double minValue) {
             this.minValue = Objects.requireNonNull(minValue);
             return this;
-        }
-        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse build() {
+        }        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(maxValue, minValue);
         }
     }

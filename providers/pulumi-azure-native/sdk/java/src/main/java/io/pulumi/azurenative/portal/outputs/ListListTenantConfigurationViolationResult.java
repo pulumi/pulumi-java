@@ -73,12 +73,13 @@ public final class ListListTenantConfigurationViolationResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<ViolationResponse> value) {
             this.value = value;
             return this;
         }
-        public ListListTenantConfigurationViolationResult build() {
+        public Builder value(ViolationResponse... value) {
+            return value(List.of(value));
+        }        public ListListTenantConfigurationViolationResult build() {
             return new ListListTenantConfigurationViolationResult(nextLink, value);
         }
     }

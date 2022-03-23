@@ -73,22 +73,18 @@ public final class DataSourceParametersRdsGetArgs extends io.pulumi.resources.Re
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
-        }
-        public DataSourceParametersRdsGetArgs build() {
+        }        public DataSourceParametersRdsGetArgs build() {
             return new DataSourceParametersRdsGetArgs(database, instanceId);
         }
     }

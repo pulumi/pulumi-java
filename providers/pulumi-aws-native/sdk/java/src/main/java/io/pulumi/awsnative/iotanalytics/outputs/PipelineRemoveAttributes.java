@@ -64,17 +64,17 @@ public final class PipelineRemoveAttributes {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(String... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = next;
             return this;
-        }
-        public PipelineRemoveAttributes build() {
+        }        public PipelineRemoveAttributes build() {
             return new PipelineRemoveAttributes(attributes, name, next);
         }
     }

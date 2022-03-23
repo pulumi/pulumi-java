@@ -94,32 +94,26 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
-        }
-        public OperationErrorArgs build() {
+        }        public OperationErrorArgs build() {
             return new OperationErrorArgs(code, kind, message);
         }
     }

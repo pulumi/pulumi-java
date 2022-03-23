@@ -70,12 +70,13 @@ public final class GoogleCloudDialogflowCxV3EntityTypeEntityResponse {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3EntityTypeEntityResponse build() {
+        }        public GoogleCloudDialogflowCxV3EntityTypeEntityResponse build() {
             return new GoogleCloudDialogflowCxV3EntityTypeEntityResponse(synonyms, value);
         }
     }

@@ -206,102 +206,88 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder enableTimeout(@Nullable Output<Integer> enableTimeout) {
             this.enableTimeout = enableTimeout;
             return this;
         }
-
         public Builder enableTimeout(@Nullable Integer enableTimeout) {
             this.enableTimeout = Output.ofNullable(enableTimeout);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder envs(@Nullable Output<List<String>> envs) {
             this.envs = envs;
             return this;
         }
-
         public Builder envs(@Nullable List<String> envs) {
             this.envs = Output.ofNullable(envs);
             return this;
         }
-
+        public Builder envs(String... envs) {
+            return envs(List.of(envs));
+        }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder forceDisable(@Nullable Output<Boolean> forceDisable) {
             this.forceDisable = forceDisable;
             return this;
         }
-
         public Builder forceDisable(@Nullable Boolean forceDisable) {
             this.forceDisable = Output.ofNullable(forceDisable);
             return this;
         }
-
         public Builder grantAllPermissions(@Nullable Output<Boolean> grantAllPermissions) {
             this.grantAllPermissions = grantAllPermissions;
             return this;
         }
-
         public Builder grantAllPermissions(@Nullable Boolean grantAllPermissions) {
             this.grantAllPermissions = Output.ofNullable(grantAllPermissions);
             return this;
         }
-
         public Builder grantPermissions(@Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions) {
             this.grantPermissions = grantPermissions;
             return this;
         }
-
         public Builder grantPermissions(@Nullable List<PluginGrantPermissionGetArgs> grantPermissions) {
             this.grantPermissions = Output.ofNullable(grantPermissions);
             return this;
         }
-
+        public Builder grantPermissions(PluginGrantPermissionGetArgs... grantPermissions) {
+            return grantPermissions(List.of(grantPermissions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pluginReference(@Nullable Output<String> pluginReference) {
             this.pluginReference = pluginReference;
             return this;
         }
-
         public Builder pluginReference(@Nullable String pluginReference) {
             this.pluginReference = Output.ofNullable(pluginReference);
             return this;
-        }
-        public PluginState build() {
+        }        public PluginState build() {
             return new PluginState(alias, enableTimeout, enabled, envs, forceDestroy, forceDisable, grantAllPermissions, grantPermissions, name, pluginReference);
         }
     }

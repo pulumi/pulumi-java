@@ -72,12 +72,10 @@ public final class UserPoolAdminCreateUserConfig {
             this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
             return this;
         }
-
         public Builder inviteMessageTemplate(@Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate) {
             this.inviteMessageTemplate = inviteMessageTemplate;
             return this;
-        }
-        public UserPoolAdminCreateUserConfig build() {
+        }        public UserPoolAdminCreateUserConfig build() {
             return new UserPoolAdminCreateUserConfig(allowAdminCreateUserOnly, inviteMessageTemplate);
         }
     }

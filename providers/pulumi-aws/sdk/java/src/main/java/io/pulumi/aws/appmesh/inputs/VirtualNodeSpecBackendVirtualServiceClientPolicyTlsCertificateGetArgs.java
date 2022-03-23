@@ -75,22 +75,18 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileGetArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder sds(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
-
         public Builder sds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsGetArgs sds) {
             this.sds = Output.ofNullable(sds);
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs(file, sds);
         }
     }

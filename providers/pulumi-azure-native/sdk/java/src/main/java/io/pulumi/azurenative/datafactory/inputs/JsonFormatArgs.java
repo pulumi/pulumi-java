@@ -176,82 +176,66 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             this.deserializer = deserializer;
             return this;
         }
-
         public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = Output.ofNullable(deserializer);
             return this;
         }
-
         public Builder encodingName(@Nullable Output<Object> encodingName) {
             this.encodingName = encodingName;
             return this;
         }
-
         public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = Output.ofNullable(encodingName);
             return this;
         }
-
         public Builder filePattern(@Nullable Output<Object> filePattern) {
             this.filePattern = filePattern;
             return this;
         }
-
         public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = Output.ofNullable(filePattern);
             return this;
         }
-
         public Builder jsonNodeReference(@Nullable Output<Object> jsonNodeReference) {
             this.jsonNodeReference = jsonNodeReference;
             return this;
         }
-
         public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
             this.jsonNodeReference = Output.ofNullable(jsonNodeReference);
             return this;
         }
-
         public Builder jsonPathDefinition(@Nullable Output<Object> jsonPathDefinition) {
             this.jsonPathDefinition = jsonPathDefinition;
             return this;
         }
-
         public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
             this.jsonPathDefinition = Output.ofNullable(jsonPathDefinition);
             return this;
         }
-
         public Builder nestingSeparator(@Nullable Output<Object> nestingSeparator) {
             this.nestingSeparator = nestingSeparator;
             return this;
         }
-
         public Builder nestingSeparator(@Nullable Object nestingSeparator) {
             this.nestingSeparator = Output.ofNullable(nestingSeparator);
             return this;
         }
-
         public Builder serializer(@Nullable Output<Object> serializer) {
             this.serializer = serializer;
             return this;
         }
-
         public Builder serializer(@Nullable Object serializer) {
             this.serializer = Output.ofNullable(serializer);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public JsonFormatArgs build() {
+        }        public JsonFormatArgs build() {
             return new JsonFormatArgs(deserializer, encodingName, filePattern, jsonNodeReference, jsonPathDefinition, nestingSeparator, serializer, type);
         }
     }

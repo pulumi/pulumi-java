@@ -182,42 +182,49 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy {
             this.allowCredentials = allowCredentials;
             return this;
         }
-
         public Builder allowHeaders(@Nullable List<String> allowHeaders) {
             this.allowHeaders = allowHeaders;
             return this;
         }
-
+        public Builder allowHeaders(String... allowHeaders) {
+            return allowHeaders(List.of(allowHeaders));
+        }
         public Builder allowMethods(@Nullable List<String> allowMethods) {
             this.allowMethods = allowMethods;
             return this;
         }
-
+        public Builder allowMethods(String... allowMethods) {
+            return allowMethods(List.of(allowMethods));
+        }
         public Builder allowOriginRegexes(@Nullable List<String> allowOriginRegexes) {
             this.allowOriginRegexes = allowOriginRegexes;
             return this;
         }
-
+        public Builder allowOriginRegexes(String... allowOriginRegexes) {
+            return allowOriginRegexes(List.of(allowOriginRegexes));
+        }
         public Builder allowOrigins(@Nullable List<String> allowOrigins) {
             this.allowOrigins = allowOrigins;
             return this;
         }
-
+        public Builder allowOrigins(String... allowOrigins) {
+            return allowOrigins(List.of(allowOrigins));
+        }
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
-
+        public Builder exposeHeaders(String... exposeHeaders) {
+            return exposeHeaders(List.of(exposeHeaders));
+        }
         public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = maxAge;
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy build() {
+        }        public RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }
     }

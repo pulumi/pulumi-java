@@ -71,12 +71,10 @@ public final class GetDeploymentResult {
             this.deploymentId = deploymentId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public GetDeploymentResult build() {
+        }        public GetDeploymentResult build() {
             return new GetDeploymentResult(deploymentId, description);
         }
     }

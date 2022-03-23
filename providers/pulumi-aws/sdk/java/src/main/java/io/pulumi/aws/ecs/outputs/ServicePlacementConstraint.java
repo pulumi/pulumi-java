@@ -71,12 +71,10 @@ public final class ServicePlacementConstraint {
             this.expression = expression;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServicePlacementConstraint build() {
+        }        public ServicePlacementConstraint build() {
             return new ServicePlacementConstraint(expression, type);
         }
     }

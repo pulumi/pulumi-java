@@ -73,12 +73,13 @@ public final class ListVMHostResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<VMResourcesResponse> value) {
             this.value = value;
             return this;
         }
-        public ListVMHostResult build() {
+        public Builder value(VMResourcesResponse... value) {
+            return value(List.of(value));
+        }        public ListVMHostResult build() {
             return new ListVMHostResult(nextLink, value);
         }
     }

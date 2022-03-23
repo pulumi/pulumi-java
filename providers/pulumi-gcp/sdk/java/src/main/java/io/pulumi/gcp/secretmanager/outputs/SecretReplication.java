@@ -74,12 +74,10 @@ public final class SecretReplication {
             this.automatic = automatic;
             return this;
         }
-
         public Builder userManaged(@Nullable SecretReplicationUserManaged userManaged) {
             this.userManaged = userManaged;
             return this;
-        }
-        public SecretReplication build() {
+        }        public SecretReplication build() {
             return new SecretReplication(automatic, userManaged);
         }
     }

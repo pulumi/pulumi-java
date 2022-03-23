@@ -183,47 +183,41 @@ public final class CertificateResponse {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder notAfterTime(String notAfterTime) {
             this.notAfterTime = Objects.requireNonNull(notAfterTime);
             return this;
         }
-
         public Builder notBeforeTime(String notBeforeTime) {
             this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
             return this;
         }
-
         public Builder parsed(Boolean parsed) {
             this.parsed = Objects.requireNonNull(parsed);
             return this;
         }
-
         public Builder rawDer(String rawDer) {
             this.rawDer = Objects.requireNonNull(rawDer);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder sha256Fingerprint(String sha256Fingerprint) {
             this.sha256Fingerprint = Objects.requireNonNull(sha256Fingerprint);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subjectAlternativeDnsNames(List<String> subjectAlternativeDnsNames) {
             this.subjectAlternativeDnsNames = Objects.requireNonNull(subjectAlternativeDnsNames);
             return this;
         }
-        public CertificateResponse build() {
+        public Builder subjectAlternativeDnsNames(String... subjectAlternativeDnsNames) {
+            return subjectAlternativeDnsNames(List.of(subjectAlternativeDnsNames));
+        }        public CertificateResponse build() {
             return new CertificateResponse(issuer, notAfterTime, notBeforeTime, parsed, rawDer, serialNumber, sha256Fingerprint, subject, subjectAlternativeDnsNames);
         }
     }

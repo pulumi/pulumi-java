@@ -171,42 +171,37 @@ public final class VirtualNicResponse {
             this.customization = customization;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = macAddress;
             return this;
         }
-
         public Builder network(VirtualNetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
-
         public Builder powerOnBoot(@Nullable Boolean powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
-
         public Builder virtualNicId(@Nullable String virtualNicId) {
             this.virtualNicId = virtualNicId;
             return this;
         }
-
         public Builder virtualNicName(String virtualNicName) {
             this.virtualNicName = Objects.requireNonNull(virtualNicName);
             return this;
-        }
-        public VirtualNicResponse build() {
+        }        public VirtualNicResponse build() {
             return new VirtualNicResponse(customization, ipAddresses, macAddress, network, nicType, powerOnBoot, virtualNicId, virtualNicName);
         }
     }

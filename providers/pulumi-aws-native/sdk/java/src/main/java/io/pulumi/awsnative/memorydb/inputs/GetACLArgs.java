@@ -54,8 +54,7 @@ public final class GetACLArgs extends io.pulumi.resources.InvokeArgs {
         public Builder aCLName(String aCLName) {
             this.aCLName = Objects.requireNonNull(aCLName);
             return this;
-        }
-        public GetACLArgs build() {
+        }        public GetACLArgs build() {
             return new GetACLArgs(aCLName);
         }
     }

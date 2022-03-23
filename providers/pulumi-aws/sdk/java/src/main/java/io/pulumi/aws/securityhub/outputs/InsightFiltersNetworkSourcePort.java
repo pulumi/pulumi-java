@@ -87,17 +87,14 @@ public final class InsightFiltersNetworkSourcePort {
             this.eq = eq;
             return this;
         }
-
         public Builder gte(@Nullable String gte) {
             this.gte = gte;
             return this;
         }
-
         public Builder lte(@Nullable String lte) {
             this.lte = lte;
             return this;
-        }
-        public InsightFiltersNetworkSourcePort build() {
+        }        public InsightFiltersNetworkSourcePort build() {
             return new InsightFiltersNetworkSourcePort(eq, gte, lte);
         }
     }

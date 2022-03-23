@@ -114,42 +114,34 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
             this.cloudRepo = cloudRepo;
             return this;
         }
-
         public Builder cloudRepo(@Nullable GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs cloudRepo) {
             this.cloudRepo = Output.ofNullable(cloudRepo);
             return this;
         }
-
         public Builder gerrit(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit) {
             this.gerrit = gerrit;
             return this;
         }
-
         public Builder gerrit(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs gerrit) {
             this.gerrit = Output.ofNullable(gerrit);
             return this;
         }
-
         public Builder git(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git) {
             this.git = git;
             return this;
         }
-
         public Builder git(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs git) {
             this.git = Output.ofNullable(git);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs(cloudRepo, gerrit, git, labels);
         }
     }

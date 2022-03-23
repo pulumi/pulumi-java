@@ -96,32 +96,29 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigArgs extends io.pulumi.
             this.failureCondition = failureCondition;
             return this;
         }
-
         public Builder failureCondition(@Nullable String failureCondition) {
             this.failureCondition = Output.ofNullable(failureCondition);
             return this;
         }
-
         public Builder rolloutCondition(@Nullable Output<String> rolloutCondition) {
             this.rolloutCondition = rolloutCondition;
             return this;
         }
-
         public Builder rolloutCondition(@Nullable String rolloutCondition) {
             this.rolloutCondition = Output.ofNullable(rolloutCondition);
             return this;
         }
-
         public Builder rolloutSteps(@Nullable Output<List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs>> rolloutSteps) {
             this.rolloutSteps = rolloutSteps;
             return this;
         }
-
         public Builder rolloutSteps(@Nullable List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs> rolloutSteps) {
             this.rolloutSteps = Output.ofNullable(rolloutSteps);
             return this;
         }
-        public GoogleCloudDialogflowCxV3RolloutConfigArgs build() {
+        public Builder rolloutSteps(GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs... rolloutSteps) {
+            return rolloutSteps(List.of(rolloutSteps));
+        }        public GoogleCloudDialogflowCxV3RolloutConfigArgs build() {
             return new GoogleCloudDialogflowCxV3RolloutConfigArgs(failureCondition, rolloutCondition, rolloutSteps);
         }
     }

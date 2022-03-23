@@ -76,22 +76,18 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs
             this.classification = classification;
             return this;
         }
-
         public Builder classification(@Nullable String classification) {
             this.classification = Output.ofNullable(classification);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,Object>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs build() {
+        }        public ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs build() {
             return new ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs(classification, properties);
         }
     }

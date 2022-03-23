@@ -60,8 +60,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends io.pul
         public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
-        }
-        public AdditionalFeaturesServerConfigurationsResponse build() {
+        }        public AdditionalFeaturesServerConfigurationsResponse build() {
             return new AdditionalFeaturesServerConfigurationsResponse(isRServicesEnabled);
         }
     }

@@ -96,32 +96,26 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable ScanRunErrorTraceCode code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder mostCommonHttpErrorCode(@Nullable Output<Integer> mostCommonHttpErrorCode) {
             this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
             return this;
         }
-
         public Builder mostCommonHttpErrorCode(@Nullable Integer mostCommonHttpErrorCode) {
             this.mostCommonHttpErrorCode = Output.ofNullable(mostCommonHttpErrorCode);
             return this;
         }
-
         public Builder scanConfigError(@Nullable Output<ScanConfigErrorArgs> scanConfigError) {
             this.scanConfigError = scanConfigError;
             return this;
         }
-
         public Builder scanConfigError(@Nullable ScanConfigErrorArgs scanConfigError) {
             this.scanConfigError = Output.ofNullable(scanConfigError);
             return this;
-        }
-        public ScanRunErrorTraceArgs build() {
+        }        public ScanRunErrorTraceArgs build() {
             return new ScanRunErrorTraceArgs(code, mostCommonHttpErrorCode, scanConfigError);
         }
     }

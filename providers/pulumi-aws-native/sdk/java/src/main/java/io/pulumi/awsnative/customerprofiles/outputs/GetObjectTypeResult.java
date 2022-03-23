@@ -205,52 +205,51 @@ public final class GetObjectTypeResult {
             this.allowProfileCreation = allowProfileCreation;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder expirationDays(@Nullable Integer expirationDays) {
             this.expirationDays = expirationDays;
             return this;
         }
-
         public Builder fields(@Nullable List<ObjectTypeFieldMap> fields) {
             this.fields = fields;
             return this;
         }
-
+        public Builder fields(ObjectTypeFieldMap... fields) {
+            return fields(List.of(fields));
+        }
         public Builder keys(@Nullable List<ObjectTypeKeyMap> keys) {
             this.keys = keys;
             return this;
         }
-
+        public Builder keys(ObjectTypeKeyMap... keys) {
+            return keys(List.of(keys));
+        }
         public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
-
         public Builder tags(@Nullable List<ObjectTypeTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ObjectTypeTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder templateId(@Nullable String templateId) {
             this.templateId = templateId;
             return this;
-        }
-        public GetObjectTypeResult build() {
+        }        public GetObjectTypeResult build() {
             return new GetObjectTypeResult(allowProfileCreation, createdAt, description, encryptionKey, expirationDays, fields, keys, lastUpdatedAt, tags, templateId);
         }
     }

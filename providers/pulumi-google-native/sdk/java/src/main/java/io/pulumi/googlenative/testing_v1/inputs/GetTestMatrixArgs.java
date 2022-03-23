@@ -66,12 +66,10 @@ public final class GetTestMatrixArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder testMatrixId(String testMatrixId) {
             this.testMatrixId = Objects.requireNonNull(testMatrixId);
             return this;
-        }
-        public GetTestMatrixArgs build() {
+        }        public GetTestMatrixArgs build() {
             return new GetTestMatrixArgs(project, testMatrixId);
         }
     }

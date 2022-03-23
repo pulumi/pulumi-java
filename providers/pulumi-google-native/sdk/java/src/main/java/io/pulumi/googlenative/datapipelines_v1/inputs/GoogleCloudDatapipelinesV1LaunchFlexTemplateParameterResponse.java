@@ -159,37 +159,30 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
             this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath);
             return this;
         }
-
         public Builder environment(GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder launchOptions(Map<String,String> launchOptions) {
             this.launchOptions = Objects.requireNonNull(launchOptions);
             return this;
         }
-
         public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder transformNameMappings(Map<String,String> transformNameMappings) {
             this.transformNameMappings = Objects.requireNonNull(transformNameMappings);
             return this;
         }
-
         public Builder update(Boolean update) {
             this.update = Objects.requireNonNull(update);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse build() {
+        }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(containerSpecGcsPath, environment, jobName, launchOptions, parameters, transformNameMappings, update);
         }
     }

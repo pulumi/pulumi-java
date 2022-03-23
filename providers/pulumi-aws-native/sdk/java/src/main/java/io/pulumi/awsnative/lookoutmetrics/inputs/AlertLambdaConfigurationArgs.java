@@ -77,22 +77,18 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public AlertLambdaConfigurationArgs build() {
+        }        public AlertLambdaConfigurationArgs build() {
             return new AlertLambdaConfigurationArgs(lambdaArn, roleArn);
         }
     }

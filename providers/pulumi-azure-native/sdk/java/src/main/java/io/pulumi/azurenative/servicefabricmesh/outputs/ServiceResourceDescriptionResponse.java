@@ -285,77 +285,71 @@ public final class ServiceResourceDescriptionResponse {
             this.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
-
+        public Builder autoScalingPolicies(AutoScalingPolicyResponse... autoScalingPolicies) {
+            return autoScalingPolicies(List.of(autoScalingPolicies));
+        }
         public Builder codePackages(List<ContainerCodePackagePropertiesResponse> codePackages) {
             this.codePackages = Objects.requireNonNull(codePackages);
             return this;
         }
-
+        public Builder codePackages(ContainerCodePackagePropertiesResponse... codePackages) {
+            return codePackages(List.of(codePackages));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder diagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder healthState(String healthState) {
             this.healthState = Objects.requireNonNull(healthState);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder networkRefs(@Nullable List<NetworkRefResponse> networkRefs) {
             this.networkRefs = networkRefs;
             return this;
         }
-
+        public Builder networkRefs(NetworkRefResponse... networkRefs) {
+            return networkRefs(List.of(networkRefs));
+        }
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unhealthyEvaluation(String unhealthyEvaluation) {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
-        }
-        public ServiceResourceDescriptionResponse build() {
+        }        public ServiceResourceDescriptionResponse build() {
             return new ServiceResourceDescriptionResponse(autoScalingPolicies, codePackages, description, diagnostics, healthState, id, name, networkRefs, osType, provisioningState, replicaCount, status, statusDetails, type, unhealthyEvaluation);
         }
     }

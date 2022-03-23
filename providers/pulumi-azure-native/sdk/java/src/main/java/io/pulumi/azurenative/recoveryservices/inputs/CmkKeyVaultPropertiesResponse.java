@@ -60,8 +60,7 @@ public final class CmkKeyVaultPropertiesResponse extends io.pulumi.resources.Inv
         public Builder keyUri(@Nullable String keyUri) {
             this.keyUri = keyUri;
             return this;
-        }
-        public CmkKeyVaultPropertiesResponse build() {
+        }        public CmkKeyVaultPropertiesResponse build() {
             return new CmkKeyVaultPropertiesResponse(keyUri);
         }
     }

@@ -70,12 +70,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptions {
             this.frameOption = Objects.requireNonNull(frameOption);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigFrameOptions build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigFrameOptions build() {
             return new ResponseHeadersPolicySecurityHeadersConfigFrameOptions(frameOption, override);
         }
     }

@@ -71,12 +71,13 @@ public final class GetUptimeCheckIPsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder uptimeCheckIps(List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps) {
             this.uptimeCheckIps = Objects.requireNonNull(uptimeCheckIps);
             return this;
         }
-        public GetUptimeCheckIPsResult build() {
+        public Builder uptimeCheckIps(GetUptimeCheckIPsUptimeCheckIp... uptimeCheckIps) {
+            return uptimeCheckIps(List.of(uptimeCheckIps));
+        }        public GetUptimeCheckIPsResult build() {
             return new GetUptimeCheckIPsResult(id, uptimeCheckIps);
         }
     }

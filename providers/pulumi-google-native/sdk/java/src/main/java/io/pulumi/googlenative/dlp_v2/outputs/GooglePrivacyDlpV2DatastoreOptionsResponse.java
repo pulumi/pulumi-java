@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder partitionId(GooglePrivacyDlpV2PartitionIdResponse partitionId) {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
-        }
-        public GooglePrivacyDlpV2DatastoreOptionsResponse build() {
+        }        public GooglePrivacyDlpV2DatastoreOptionsResponse build() {
             return new GooglePrivacyDlpV2DatastoreOptionsResponse(kind, partitionId);
         }
     }

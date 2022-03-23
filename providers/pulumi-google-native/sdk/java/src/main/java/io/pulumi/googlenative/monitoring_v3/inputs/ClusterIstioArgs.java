@@ -110,42 +110,34 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
-
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
-        }
-        public ClusterIstioArgs build() {
+        }        public ClusterIstioArgs build() {
             return new ClusterIstioArgs(clusterName, location, serviceName, serviceNamespace);
         }
     }

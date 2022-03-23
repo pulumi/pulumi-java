@@ -73,22 +73,18 @@ public final class ProjectEnvironmentRegistryCredentialArgs extends io.pulumi.re
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder credential(String credential) {
             this.credential = Output.of(Objects.requireNonNull(credential));
             return this;
         }
-
         public Builder credentialProvider(Output<String> credentialProvider) {
             this.credentialProvider = Objects.requireNonNull(credentialProvider);
             return this;
         }
-
         public Builder credentialProvider(String credentialProvider) {
             this.credentialProvider = Output.of(Objects.requireNonNull(credentialProvider));
             return this;
-        }
-        public ProjectEnvironmentRegistryCredentialArgs build() {
+        }        public ProjectEnvironmentRegistryCredentialArgs build() {
             return new ProjectEnvironmentRegistryCredentialArgs(credential, credentialProvider);
         }
     }

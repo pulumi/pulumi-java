@@ -65,12 +65,10 @@ public final class ResponseHeadersPolicyFrameOptions extends io.pulumi.resources
             this.frameOption = Objects.requireNonNull(frameOption);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
-        }
-        public ResponseHeadersPolicyFrameOptions build() {
+        }        public ResponseHeadersPolicyFrameOptions build() {
             return new ResponseHeadersPolicyFrameOptions(frameOption, override);
         }
     }

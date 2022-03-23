@@ -70,12 +70,10 @@ public final class RuleGroupRuleGroupRuleVariablesPortSet {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
             this.portSet = Objects.requireNonNull(portSet);
             return this;
-        }
-        public RuleGroupRuleGroupRuleVariablesPortSet build() {
+        }        public RuleGroupRuleGroupRuleVariablesPortSet build() {
             return new RuleGroupRuleGroupRuleVariablesPortSet(key, portSet);
         }
     }

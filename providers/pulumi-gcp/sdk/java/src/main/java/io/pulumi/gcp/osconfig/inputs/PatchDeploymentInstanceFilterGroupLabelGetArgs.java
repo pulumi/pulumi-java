@@ -57,12 +57,10 @@ public final class PatchDeploymentInstanceFilterGroupLabelGetArgs extends io.pul
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
-        }
-        public PatchDeploymentInstanceFilterGroupLabelGetArgs build() {
+        }        public PatchDeploymentInstanceFilterGroupLabelGetArgs build() {
             return new PatchDeploymentInstanceFilterGroupLabelGetArgs(labels);
         }
     }

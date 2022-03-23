@@ -90,22 +90,18 @@ public final class GetMigrationJobIamPolicyArgs extends io.pulumi.resources.Invo
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = Objects.requireNonNull(migrationJobId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetMigrationJobIamPolicyArgs build() {
+        }        public GetMigrationJobIamPolicyArgs build() {
             return new GetMigrationJobIamPolicyArgs(location, migrationJobId, optionsRequestedPolicyVersion, project);
         }
     }

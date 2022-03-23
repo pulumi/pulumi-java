@@ -87,17 +87,17 @@ public final class UserOwnedDrydockNoteResponse {
             this.delegationServiceAccountEmail = Objects.requireNonNull(delegationServiceAccountEmail);
             return this;
         }
-
         public Builder noteReference(String noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
-
         public Builder publicKeys(List<AttestorPublicKeyResponse> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-        public UserOwnedDrydockNoteResponse build() {
+        public Builder publicKeys(AttestorPublicKeyResponse... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public UserOwnedDrydockNoteResponse build() {
             return new UserOwnedDrydockNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
         }
     }

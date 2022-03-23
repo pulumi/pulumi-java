@@ -71,12 +71,10 @@ public final class GetModelBiasJobDefinitionResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder jobDefinitionArn(@Nullable String jobDefinitionArn) {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
-        }
-        public GetModelBiasJobDefinitionResult build() {
+        }        public GetModelBiasJobDefinitionResult build() {
             return new GetModelBiasJobDefinitionResult(creationTime, jobDefinitionArn);
         }
     }

@@ -72,12 +72,10 @@ public final class ConnectorCloudWatchLogsLogDelivery {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder logGroup(@Nullable String logGroup) {
             this.logGroup = logGroup;
             return this;
-        }
-        public ConnectorCloudWatchLogsLogDelivery build() {
+        }        public ConnectorCloudWatchLogsLogDelivery build() {
             return new ConnectorCloudWatchLogsLogDelivery(enabled, logGroup);
         }
     }

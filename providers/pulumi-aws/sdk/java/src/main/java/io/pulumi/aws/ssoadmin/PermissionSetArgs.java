@@ -139,62 +139,50 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder relayState(@Nullable Output<String> relayState) {
             this.relayState = relayState;
             return this;
         }
-
         public Builder relayState(@Nullable String relayState) {
             this.relayState = Output.ofNullable(relayState);
             return this;
         }
-
         public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
-
         public Builder sessionDuration(@Nullable String sessionDuration) {
             this.sessionDuration = Output.ofNullable(sessionDuration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PermissionSetArgs build() {
+        }        public PermissionSetArgs build() {
             return new PermissionSetArgs(description, instanceArn, name, relayState, sessionDuration, tags);
         }
     }

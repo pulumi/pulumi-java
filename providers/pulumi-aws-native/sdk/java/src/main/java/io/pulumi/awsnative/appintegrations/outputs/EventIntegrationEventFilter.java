@@ -51,8 +51,7 @@ public final class EventIntegrationEventFilter {
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public EventIntegrationEventFilter build() {
+        }        public EventIntegrationEventFilter build() {
             return new EventIntegrationEventFilter(source);
         }
     }

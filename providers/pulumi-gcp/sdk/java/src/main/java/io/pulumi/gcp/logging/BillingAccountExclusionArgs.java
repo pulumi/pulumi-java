@@ -126,52 +126,42 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
-
         public Builder billingAccount(String billingAccount) {
             this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public BillingAccountExclusionArgs build() {
+        }        public BillingAccountExclusionArgs build() {
             return new BillingAccountExclusionArgs(billingAccount, description, disabled, filter, name);
         }
     }

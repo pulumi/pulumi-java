@@ -157,37 +157,30 @@ public final class TransferJobTransferSpec {
             this.awsS3DataSource = awsS3DataSource;
             return this;
         }
-
         public Builder azureBlobStorageDataSource(@Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
-
         public Builder gcsDataSink(@Nullable TransferJobTransferSpecGcsDataSink gcsDataSink) {
             this.gcsDataSink = gcsDataSink;
             return this;
         }
-
         public Builder gcsDataSource(@Nullable TransferJobTransferSpecGcsDataSource gcsDataSource) {
             this.gcsDataSource = gcsDataSource;
             return this;
         }
-
         public Builder httpDataSource(@Nullable TransferJobTransferSpecHttpDataSource httpDataSource) {
             this.httpDataSource = httpDataSource;
             return this;
         }
-
         public Builder objectConditions(@Nullable TransferJobTransferSpecObjectConditions objectConditions) {
             this.objectConditions = objectConditions;
             return this;
         }
-
         public Builder transferOptions(@Nullable TransferJobTransferSpecTransferOptions transferOptions) {
             this.transferOptions = transferOptions;
             return this;
-        }
-        public TransferJobTransferSpec build() {
+        }        public TransferJobTransferSpec build() {
             return new TransferJobTransferSpec(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, httpDataSource, objectConditions, transferOptions);
         }
     }

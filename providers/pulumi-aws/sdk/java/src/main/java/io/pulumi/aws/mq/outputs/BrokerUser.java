@@ -105,22 +105,21 @@ public final class BrokerUser {
             this.consoleAccess = consoleAccess;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public BrokerUser build() {
+        }        public BrokerUser build() {
             return new BrokerUser(consoleAccess, groups, password, username);
         }
     }

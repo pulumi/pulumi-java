@@ -76,12 +76,10 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends io.pulumi.resou
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GooglePrivacyDlpV2PartitionIdResponse build() {
+        }        public GooglePrivacyDlpV2PartitionIdResponse build() {
             return new GooglePrivacyDlpV2PartitionIdResponse(namespaceId, project);
         }
     }

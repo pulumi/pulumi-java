@@ -112,42 +112,34 @@ public final class TimeSeriesFilterArgs extends io.pulumi.resources.ResourceArgs
             this.aggregation = aggregation;
             return this;
         }
-
         public Builder aggregation(@Nullable AggregationArgs aggregation) {
             this.aggregation = Output.ofNullable(aggregation);
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder pickTimeSeriesFilter(@Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
-
         public Builder pickTimeSeriesFilter(@Nullable PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Output.ofNullable(pickTimeSeriesFilter);
             return this;
         }
-
         public Builder secondaryAggregation(@Nullable Output<AggregationArgs> secondaryAggregation) {
             this.secondaryAggregation = secondaryAggregation;
             return this;
         }
-
         public Builder secondaryAggregation(@Nullable AggregationArgs secondaryAggregation) {
             this.secondaryAggregation = Output.ofNullable(secondaryAggregation);
             return this;
-        }
-        public TimeSeriesFilterArgs build() {
+        }        public TimeSeriesFilterArgs build() {
             return new TimeSeriesFilterArgs(aggregation, filter, pickTimeSeriesFilter, secondaryAggregation);
         }
     }

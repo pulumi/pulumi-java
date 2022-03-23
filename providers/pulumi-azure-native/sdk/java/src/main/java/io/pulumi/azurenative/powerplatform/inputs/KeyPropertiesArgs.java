@@ -78,22 +78,18 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public KeyPropertiesArgs build() {
+        }        public KeyPropertiesArgs build() {
             return new KeyPropertiesArgs(name, version);
         }
     }

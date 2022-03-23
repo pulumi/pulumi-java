@@ -114,42 +114,37 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
             this.gaugeView = gaugeView;
             return this;
         }
-
         public Builder gaugeView(@Nullable GaugeViewArgs gaugeView) {
             this.gaugeView = Output.ofNullable(gaugeView);
             return this;
         }
-
         public Builder sparkChartView(@Nullable Output<SparkChartViewArgs> sparkChartView) {
             this.sparkChartView = sparkChartView;
             return this;
         }
-
         public Builder sparkChartView(@Nullable SparkChartViewArgs sparkChartView) {
             this.sparkChartView = Output.ofNullable(sparkChartView);
             return this;
         }
-
         public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
             this.thresholds = thresholds;
             return this;
         }
-
         public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
             this.thresholds = Output.ofNullable(thresholds);
             return this;
         }
-
+        public Builder thresholds(ThresholdArgs... thresholds) {
+            return thresholds(List.of(thresholds));
+        }
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
             this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
-        }
-        public ScorecardArgs build() {
+        }        public ScorecardArgs build() {
             return new ScorecardArgs(gaugeView, sparkChartView, thresholds, timeSeriesQuery);
         }
     }

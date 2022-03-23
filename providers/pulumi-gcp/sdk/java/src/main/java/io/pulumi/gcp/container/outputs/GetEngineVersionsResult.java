@@ -177,52 +177,48 @@ public final class GetEngineVersionsResult {
             this.defaultClusterVersion = Objects.requireNonNull(defaultClusterVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder latestMasterVersion(String latestMasterVersion) {
             this.latestMasterVersion = Objects.requireNonNull(latestMasterVersion);
             return this;
         }
-
         public Builder latestNodeVersion(String latestNodeVersion) {
             this.latestNodeVersion = Objects.requireNonNull(latestNodeVersion);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder releaseChannelDefaultVersion(Map<String,String> releaseChannelDefaultVersion) {
             this.releaseChannelDefaultVersion = Objects.requireNonNull(releaseChannelDefaultVersion);
             return this;
         }
-
         public Builder validMasterVersions(List<String> validMasterVersions) {
             this.validMasterVersions = Objects.requireNonNull(validMasterVersions);
             return this;
         }
-
+        public Builder validMasterVersions(String... validMasterVersions) {
+            return validMasterVersions(List.of(validMasterVersions));
+        }
         public Builder validNodeVersions(List<String> validNodeVersions) {
             this.validNodeVersions = Objects.requireNonNull(validNodeVersions);
             return this;
         }
-
+        public Builder validNodeVersions(String... validNodeVersions) {
+            return validNodeVersions(List.of(validNodeVersions));
+        }
         public Builder versionPrefix(@Nullable String versionPrefix) {
             this.versionPrefix = versionPrefix;
             return this;
-        }
-        public GetEngineVersionsResult build() {
+        }        public GetEngineVersionsResult build() {
             return new GetEngineVersionsResult(defaultClusterVersion, id, latestMasterVersion, latestNodeVersion, location, project, releaseChannelDefaultVersion, validMasterVersions, validNodeVersions, versionPrefix);
         }
     }

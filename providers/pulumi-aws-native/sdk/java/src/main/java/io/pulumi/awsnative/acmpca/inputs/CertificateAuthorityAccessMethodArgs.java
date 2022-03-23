@@ -70,22 +70,18 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
             this.accessMethodType = accessMethodType;
             return this;
         }
-
         public Builder accessMethodType(@Nullable String accessMethodType) {
             this.accessMethodType = Output.ofNullable(accessMethodType);
             return this;
         }
-
         public Builder customObjectIdentifier(@Nullable Output<String> customObjectIdentifier) {
             this.customObjectIdentifier = customObjectIdentifier;
             return this;
         }
-
         public Builder customObjectIdentifier(@Nullable String customObjectIdentifier) {
             this.customObjectIdentifier = Output.ofNullable(customObjectIdentifier);
             return this;
-        }
-        public CertificateAuthorityAccessMethodArgs build() {
+        }        public CertificateAuthorityAccessMethodArgs build() {
             return new CertificateAuthorityAccessMethodArgs(accessMethodType, customObjectIdentifier);
         }
     }

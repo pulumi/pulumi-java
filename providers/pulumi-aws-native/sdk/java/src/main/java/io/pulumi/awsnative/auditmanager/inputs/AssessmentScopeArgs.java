@@ -80,22 +80,24 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
             this.awsAccounts = awsAccounts;
             return this;
         }
-
         public Builder awsAccounts(@Nullable List<AssessmentAWSAccountArgs> awsAccounts) {
             this.awsAccounts = Output.ofNullable(awsAccounts);
             return this;
         }
-
+        public Builder awsAccounts(AssessmentAWSAccountArgs... awsAccounts) {
+            return awsAccounts(List.of(awsAccounts));
+        }
         public Builder awsServices(@Nullable Output<List<AssessmentAWSServiceArgs>> awsServices) {
             this.awsServices = awsServices;
             return this;
         }
-
         public Builder awsServices(@Nullable List<AssessmentAWSServiceArgs> awsServices) {
             this.awsServices = Output.ofNullable(awsServices);
             return this;
         }
-        public AssessmentScopeArgs build() {
+        public Builder awsServices(AssessmentAWSServiceArgs... awsServices) {
+            return awsServices(List.of(awsServices));
+        }        public AssessmentScopeArgs build() {
             return new AssessmentScopeArgs(awsAccounts, awsServices);
         }
     }

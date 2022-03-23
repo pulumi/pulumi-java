@@ -207,52 +207,42 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
             this.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
-
         public Builder keyToSign(@Nullable String keyToSign) {
             this.keyToSign = keyToSign;
             return this;
         }
-
         public Builder permissions(Either<String,Permissions> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder protocols(@Nullable HttpProtocol protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceTypes(Either<String,SignedResourceTypes> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
         public Builder services(Either<String,Services> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
         public Builder sharedAccessExpiryTime(String sharedAccessExpiryTime) {
             this.sharedAccessExpiryTime = Objects.requireNonNull(sharedAccessExpiryTime);
             return this;
         }
-
         public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
             this.sharedAccessStartTime = sharedAccessStartTime;
             return this;
-        }
-        public ListStorageAccountSASArgs build() {
+        }        public ListStorageAccountSASArgs build() {
             return new ListStorageAccountSASArgs(accountName, iPAddressOrRange, keyToSign, permissions, protocols, resourceGroupName, resourceTypes, services, sharedAccessExpiryTime, sharedAccessStartTime);
         }
     }

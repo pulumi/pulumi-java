@@ -78,12 +78,13 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public Builder tiles(List<TileResponse> tiles) {
             this.tiles = Objects.requireNonNull(tiles);
             return this;
         }
-        public MosaicLayoutResponse build() {
+        public Builder tiles(TileResponse... tiles) {
+            return tiles(List.of(tiles));
+        }        public MosaicLayoutResponse build() {
             return new MosaicLayoutResponse(columns, tiles);
         }
     }

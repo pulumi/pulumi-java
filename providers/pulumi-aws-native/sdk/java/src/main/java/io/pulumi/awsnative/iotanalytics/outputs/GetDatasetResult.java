@@ -111,42 +111,49 @@ public final class GetDatasetResult {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(DatasetAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder contentDeliveryRules(@Nullable List<DatasetContentDeliveryRule> contentDeliveryRules) {
             this.contentDeliveryRules = contentDeliveryRules;
             return this;
         }
-
+        public Builder contentDeliveryRules(DatasetContentDeliveryRule... contentDeliveryRules) {
+            return contentDeliveryRules(List.of(contentDeliveryRules));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder lateDataRules(@Nullable List<DatasetLateDataRule> lateDataRules) {
             this.lateDataRules = lateDataRules;
             return this;
         }
-
+        public Builder lateDataRules(DatasetLateDataRule... lateDataRules) {
+            return lateDataRules(List.of(lateDataRules));
+        }
         public Builder retentionPeriod(@Nullable DatasetRetentionPeriod retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder tags(@Nullable List<DatasetTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DatasetTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder triggers(@Nullable List<DatasetTrigger> triggers) {
             this.triggers = triggers;
             return this;
         }
-
+        public Builder triggers(DatasetTrigger... triggers) {
+            return triggers(List.of(triggers));
+        }
         public Builder versioningConfiguration(@Nullable DatasetVersioningConfiguration versioningConfiguration) {
             this.versioningConfiguration = versioningConfiguration;
             return this;
-        }
-        public GetDatasetResult build() {
+        }        public GetDatasetResult build() {
             return new GetDatasetResult(actions, contentDeliveryRules, id, lateDataRules, retentionPeriod, tags, triggers, versioningConfiguration);
         }
     }

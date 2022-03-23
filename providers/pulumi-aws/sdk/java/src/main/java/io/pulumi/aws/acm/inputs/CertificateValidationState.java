@@ -75,22 +75,21 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder validationRecordFqdns(@Nullable Output<List<String>> validationRecordFqdns) {
             this.validationRecordFqdns = validationRecordFqdns;
             return this;
         }
-
         public Builder validationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
             this.validationRecordFqdns = Output.ofNullable(validationRecordFqdns);
             return this;
         }
-        public CertificateValidationState build() {
+        public Builder validationRecordFqdns(String... validationRecordFqdns) {
+            return validationRecordFqdns(List.of(validationRecordFqdns));
+        }        public CertificateValidationState build() {
             return new CertificateValidationState(certificateArn, validationRecordFqdns);
         }
     }

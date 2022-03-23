@@ -58,8 +58,7 @@ public final class EmailPreferencesResponse extends io.pulumi.resources.InvokeAr
         public Builder enableFailureEmail(Boolean enableFailureEmail) {
             this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
             return this;
-        }
-        public EmailPreferencesResponse build() {
+        }        public EmailPreferencesResponse build() {
             return new EmailPreferencesResponse(enableFailureEmail);
         }
     }

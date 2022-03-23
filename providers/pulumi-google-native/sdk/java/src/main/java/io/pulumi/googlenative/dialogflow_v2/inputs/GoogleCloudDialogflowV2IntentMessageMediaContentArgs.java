@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
             this.mediaObjects = Objects.requireNonNull(mediaObjects);
             return this;
         }
-
         public Builder mediaObjects(List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs> mediaObjects) {
             this.mediaObjects = Output.of(Objects.requireNonNull(mediaObjects));
             return this;
         }
-
+        public Builder mediaObjects(GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs... mediaObjects) {
+            return mediaObjects(List.of(mediaObjects));
+        }
         public Builder mediaType(@Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
-
         public Builder mediaType(@Nullable GoogleCloudDialogflowV2IntentMessageMediaContentMediaType mediaType) {
             this.mediaType = Output.ofNullable(mediaType);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageMediaContentArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageMediaContentArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageMediaContentArgs(mediaObjects, mediaType);
         }
     }

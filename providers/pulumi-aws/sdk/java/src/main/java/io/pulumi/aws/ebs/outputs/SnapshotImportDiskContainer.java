@@ -104,22 +104,18 @@ public final class SnapshotImportDiskContainer {
             this.description = description;
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
-
         public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucket userBucket) {
             this.userBucket = userBucket;
             return this;
-        }
-        public SnapshotImportDiskContainer build() {
+        }        public SnapshotImportDiskContainer build() {
             return new SnapshotImportDiskContainer(description, format, url, userBucket);
         }
     }

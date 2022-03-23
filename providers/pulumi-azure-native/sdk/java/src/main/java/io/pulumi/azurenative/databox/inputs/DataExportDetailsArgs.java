@@ -99,32 +99,26 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
-
         public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
             this.accountDetails = Output.of(Objects.requireNonNull(accountDetails));
             return this;
         }
-
         public Builder logCollectionLevel(@Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel) {
             this.logCollectionLevel = logCollectionLevel;
             return this;
         }
-
         public Builder logCollectionLevel(@Nullable Either<String,LogCollectionLevel> logCollectionLevel) {
             this.logCollectionLevel = Output.ofNullable(logCollectionLevel);
             return this;
         }
-
         public Builder transferConfiguration(Output<TransferConfigurationArgs> transferConfiguration) {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }
-
         public Builder transferConfiguration(TransferConfigurationArgs transferConfiguration) {
             this.transferConfiguration = Output.of(Objects.requireNonNull(transferConfiguration));
             return this;
-        }
-        public DataExportDetailsArgs build() {
+        }        public DataExportDetailsArgs build() {
             return new DataExportDetailsArgs(accountDetails, logCollectionLevel, transferConfiguration);
         }
     }

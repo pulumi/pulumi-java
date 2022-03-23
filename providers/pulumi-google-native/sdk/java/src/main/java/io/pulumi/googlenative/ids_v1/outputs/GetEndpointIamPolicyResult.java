@@ -105,22 +105,24 @@ public final class GetEndpointIamPolicyResult {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(AuditConfigResponse... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(List<BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(BindingResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetEndpointIamPolicyResult build() {
+        }        public GetEndpointIamPolicyResult build() {
             return new GetEndpointIamPolicyResult(auditConfigs, bindings, etag, version);
         }
     }

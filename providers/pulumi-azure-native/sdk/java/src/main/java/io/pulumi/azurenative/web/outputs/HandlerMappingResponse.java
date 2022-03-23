@@ -87,17 +87,14 @@ public final class HandlerMappingResponse {
             this.arguments = arguments;
             return this;
         }
-
         public Builder extension(@Nullable String extension) {
             this.extension = extension;
             return this;
         }
-
         public Builder scriptProcessor(@Nullable String scriptProcessor) {
             this.scriptProcessor = scriptProcessor;
             return this;
-        }
-        public HandlerMappingResponse build() {
+        }        public HandlerMappingResponse build() {
             return new HandlerMappingResponse(arguments, extension, scriptProcessor);
         }
     }

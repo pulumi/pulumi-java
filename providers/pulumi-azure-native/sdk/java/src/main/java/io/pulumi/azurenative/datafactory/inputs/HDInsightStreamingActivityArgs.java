@@ -360,192 +360,172 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<Object> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(Object... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder combiner(@Nullable Output<Object> combiner) {
             this.combiner = combiner;
             return this;
         }
-
         public Builder combiner(@Nullable Object combiner) {
             this.combiner = Output.ofNullable(combiner);
             return this;
         }
-
         public Builder commandEnvironment(@Nullable Output<List<Object>> commandEnvironment) {
             this.commandEnvironment = commandEnvironment;
             return this;
         }
-
         public Builder commandEnvironment(@Nullable List<Object> commandEnvironment) {
             this.commandEnvironment = Output.ofNullable(commandEnvironment);
             return this;
         }
-
+        public Builder commandEnvironment(Object... commandEnvironment) {
+            return commandEnvironment(List.of(commandEnvironment));
+        }
         public Builder defines(@Nullable Output<Map<String,Object>> defines) {
             this.defines = defines;
             return this;
         }
-
         public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = Output.ofNullable(defines);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fileLinkedService(@Nullable Output<LinkedServiceReferenceArgs> fileLinkedService) {
             this.fileLinkedService = fileLinkedService;
             return this;
         }
-
         public Builder fileLinkedService(@Nullable LinkedServiceReferenceArgs fileLinkedService) {
             this.fileLinkedService = Output.ofNullable(fileLinkedService);
             return this;
         }
-
         public Builder filePaths(Output<List<Object>> filePaths) {
             this.filePaths = Objects.requireNonNull(filePaths);
             return this;
         }
-
         public Builder filePaths(List<Object> filePaths) {
             this.filePaths = Output.of(Objects.requireNonNull(filePaths));
             return this;
         }
-
+        public Builder filePaths(Object... filePaths) {
+            return filePaths(List.of(filePaths));
+        }
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
-
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
             this.getDebugInfo = Output.ofNullable(getDebugInfo);
             return this;
         }
-
         public Builder input(Output<Object> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder input(Object input) {
             this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder mapper(Output<Object> mapper) {
             this.mapper = Objects.requireNonNull(mapper);
             return this;
         }
-
         public Builder mapper(Object mapper) {
             this.mapper = Output.of(Objects.requireNonNull(mapper));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder output(Output<Object> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public Builder output(Object output) {
             this.output = Output.of(Objects.requireNonNull(output));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder reducer(Output<Object> reducer) {
             this.reducer = Objects.requireNonNull(reducer);
             return this;
         }
-
         public Builder reducer(Object reducer) {
             this.reducer = Output.of(Objects.requireNonNull(reducer));
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
             this.storageLinkedServices = Output.ofNullable(storageLinkedServices);
             return this;
         }
-
+        public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
+            return storageLinkedServices(List.of(storageLinkedServices));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public HDInsightStreamingActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public HDInsightStreamingActivityArgs build() {
             return new HDInsightStreamingActivityArgs(arguments, combiner, commandEnvironment, defines, dependsOn, description, fileLinkedService, filePaths, getDebugInfo, input, linkedServiceName, mapper, name, output, policy, reducer, storageLinkedServices, type, userProperties);
         }
     }

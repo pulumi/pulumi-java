@@ -93,32 +93,29 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder referenceDataSource(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource) {
             this.referenceDataSource = referenceDataSource;
             return this;
         }
-
         public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs referenceDataSource) {
             this.referenceDataSource = Output.ofNullable(referenceDataSource);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationArgs(input, outputs, referenceDataSource);
         }
     }

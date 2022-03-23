@@ -95,32 +95,26 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.allowUnregisteredCalls = allowUnregisteredCalls;
             return this;
         }
-
         public Builder allowUnregisteredCalls(@Nullable Boolean allowUnregisteredCalls) {
             this.allowUnregisteredCalls = Output.ofNullable(allowUnregisteredCalls);
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder skipServiceControl(@Nullable Output<Boolean> skipServiceControl) {
             this.skipServiceControl = skipServiceControl;
             return this;
         }
-
         public Builder skipServiceControl(@Nullable Boolean skipServiceControl) {
             this.skipServiceControl = Output.ofNullable(skipServiceControl);
             return this;
-        }
-        public UsageRuleArgs build() {
+        }        public UsageRuleArgs build() {
             return new UsageRuleArgs(allowUnregisteredCalls, selector, skipServiceControl);
         }
     }

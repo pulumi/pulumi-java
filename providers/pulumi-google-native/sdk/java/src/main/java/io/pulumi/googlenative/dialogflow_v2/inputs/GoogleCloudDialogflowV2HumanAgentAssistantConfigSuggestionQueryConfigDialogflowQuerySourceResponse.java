@@ -58,8 +58,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
         public Builder agent(String agent) {
             this.agent = Objects.requireNonNull(agent);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse build() {
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse(agent);
         }
     }

@@ -51,8 +51,7 @@ public final class PolicyRestorePolicy {
         public Builder $default(Boolean $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
-        }
-        public PolicyRestorePolicy build() {
+        }        public PolicyRestorePolicy build() {
             return new PolicyRestorePolicy($default);
         }
     }

@@ -142,32 +142,29 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder external(@Nullable Boolean external) {
             this.external = external;
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder targetPort(@Nullable Integer targetPort) {
             this.targetPort = targetPort;
             return this;
         }
-
         public Builder traffic(@Nullable List<TrafficWeightResponse> traffic) {
             this.traffic = traffic;
             return this;
         }
-
+        public Builder traffic(TrafficWeightResponse... traffic) {
+            return traffic(List.of(traffic));
+        }
         public Builder transport(@Nullable String transport) {
             this.transport = transport;
             return this;
-        }
-        public IngressResponse build() {
+        }        public IngressResponse build() {
             return new IngressResponse(allowInsecure, external, fqdn, targetPort, traffic, transport);
         }
     }

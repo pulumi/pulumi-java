@@ -138,32 +138,35 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
-
+        public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder columnProperties(List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties) {
             this.columnProperties = Objects.requireNonNull(columnProperties);
             return this;
         }
-
+        public Builder columnProperties(GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse... columnProperties) {
+            return columnProperties(List.of(columnProperties));
+        }
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder rows(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows) {
             this.rows = Objects.requireNonNull(rows);
             return this;
         }
-
+        public Builder rows(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse... rows) {
+            return rows(List.of(rows));
+        }
         public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(buttons, columnProperties, image, rows, subtitle, title);
         }
     }

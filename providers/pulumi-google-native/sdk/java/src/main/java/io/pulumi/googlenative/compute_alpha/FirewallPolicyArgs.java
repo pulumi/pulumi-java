@@ -150,72 +150,64 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.associations = associations;
             return this;
         }
-
         public Builder associations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
             this.associations = Output.ofNullable(associations);
             return this;
         }
-
+        public Builder associations(FirewallPolicyAssociationArgs... associations) {
+            return associations(List.of(associations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
-
         public Builder parentId(@Nullable String parentId) {
             this.parentId = Output.ofNullable(parentId);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<FirewallPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<FirewallPolicyRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(FirewallPolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
         }
-
         public Builder vpcNetworkScope(@Nullable Output<FirewallPolicyVpcNetworkScope> vpcNetworkScope) {
             this.vpcNetworkScope = vpcNetworkScope;
             return this;
         }
-
         public Builder vpcNetworkScope(@Nullable FirewallPolicyVpcNetworkScope vpcNetworkScope) {
             this.vpcNetworkScope = Output.ofNullable(vpcNetworkScope);
             return this;
-        }
-        public FirewallPolicyArgs build() {
+        }        public FirewallPolicyArgs build() {
             return new FirewallPolicyArgs(associations, description, parentId, requestId, rules, shortName, vpcNetworkScope);
         }
     }

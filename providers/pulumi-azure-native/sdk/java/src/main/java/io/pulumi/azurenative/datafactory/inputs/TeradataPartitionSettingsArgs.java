@@ -94,32 +94,26 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = Output.ofNullable(partitionColumnName);
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = Output.ofNullable(partitionLowerBound);
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = Output.ofNullable(partitionUpperBound);
             return this;
-        }
-        public TeradataPartitionSettingsArgs build() {
+        }        public TeradataPartitionSettingsArgs build() {
             return new TeradataPartitionSettingsArgs(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }
     }

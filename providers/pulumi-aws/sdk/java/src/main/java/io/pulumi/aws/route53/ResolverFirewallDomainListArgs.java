@@ -92,32 +92,29 @@ public final class ResolverFirewallDomainListArgs extends io.pulumi.resources.Re
             this.domains = domains;
             return this;
         }
-
         public Builder domains(@Nullable List<String> domains) {
             this.domains = Output.ofNullable(domains);
             return this;
         }
-
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResolverFirewallDomainListArgs build() {
+        }        public ResolverFirewallDomainListArgs build() {
             return new ResolverFirewallDomainListArgs(domains, name, tags);
         }
     }

@@ -91,32 +91,26 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ProjectMetadataItemArgs build() {
+        }        public ProjectMetadataItemArgs build() {
             return new ProjectMetadataItemArgs(key, project, value);
         }
     }

@@ -158,42 +158,34 @@ public final class GetTaskDefinitionResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder networkMode(String networkMode) {
             this.networkMode = Objects.requireNonNull(networkMode);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
         }
-
         public Builder taskRoleArn(String taskRoleArn) {
             this.taskRoleArn = Objects.requireNonNull(taskRoleArn);
             return this;
-        }
-        public GetTaskDefinitionResult build() {
+        }        public GetTaskDefinitionResult build() {
             return new GetTaskDefinitionResult(arn, family, id, networkMode, revision, status, taskDefinition, taskRoleArn);
         }
     }

@@ -53,12 +53,10 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
             this.templateUri = templateUri;
             return this;
         }
-
         public Builder templateUri(@Nullable String templateUri) {
             this.templateUri = Output.ofNullable(templateUri);
             return this;
-        }
-        public KnowledgeBaseRenderingConfigurationArgs build() {
+        }        public KnowledgeBaseRenderingConfigurationArgs build() {
             return new KnowledgeBaseRenderingConfigurationArgs(templateUri);
         }
     }

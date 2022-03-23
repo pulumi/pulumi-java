@@ -196,57 +196,49 @@ public final class DetectorEventVariable extends io.pulumi.resources.InvokeArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder dataSource(@Nullable DetectorEventVariableDataSource dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataType(@Nullable DetectorEventVariableDataType dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder inline(@Nullable Boolean inline) {
             this.inline = inline;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DetectorTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder variableType(@Nullable DetectorEventVariableVariableType variableType) {
             this.variableType = variableType;
             return this;
-        }
-        public DetectorEventVariable build() {
+        }        public DetectorEventVariable build() {
             return new DetectorEventVariable(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }
     }

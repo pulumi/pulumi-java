@@ -131,52 +131,45 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
             this.androidKeyRestrictions = androidKeyRestrictions;
             return this;
         }
-
         public Builder androidKeyRestrictions(@Nullable V2AndroidKeyRestrictionsArgs androidKeyRestrictions) {
             this.androidKeyRestrictions = Output.ofNullable(androidKeyRestrictions);
             return this;
         }
-
         public Builder apiTargets(@Nullable Output<List<V2ApiTargetArgs>> apiTargets) {
             this.apiTargets = apiTargets;
             return this;
         }
-
         public Builder apiTargets(@Nullable List<V2ApiTargetArgs> apiTargets) {
             this.apiTargets = Output.ofNullable(apiTargets);
             return this;
         }
-
+        public Builder apiTargets(V2ApiTargetArgs... apiTargets) {
+            return apiTargets(List.of(apiTargets));
+        }
         public Builder browserKeyRestrictions(@Nullable Output<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions) {
             this.browserKeyRestrictions = browserKeyRestrictions;
             return this;
         }
-
         public Builder browserKeyRestrictions(@Nullable V2BrowserKeyRestrictionsArgs browserKeyRestrictions) {
             this.browserKeyRestrictions = Output.ofNullable(browserKeyRestrictions);
             return this;
         }
-
         public Builder iosKeyRestrictions(@Nullable Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions) {
             this.iosKeyRestrictions = iosKeyRestrictions;
             return this;
         }
-
         public Builder iosKeyRestrictions(@Nullable V2IosKeyRestrictionsArgs iosKeyRestrictions) {
             this.iosKeyRestrictions = Output.ofNullable(iosKeyRestrictions);
             return this;
         }
-
         public Builder serverKeyRestrictions(@Nullable Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions) {
             this.serverKeyRestrictions = serverKeyRestrictions;
             return this;
         }
-
         public Builder serverKeyRestrictions(@Nullable V2ServerKeyRestrictionsArgs serverKeyRestrictions) {
             this.serverKeyRestrictions = Output.ofNullable(serverKeyRestrictions);
             return this;
-        }
-        public V2RestrictionsArgs build() {
+        }        public V2RestrictionsArgs build() {
             return new V2RestrictionsArgs(androidKeyRestrictions, apiTargets, browserKeyRestrictions, iosKeyRestrictions, serverKeyRestrictions);
         }
     }

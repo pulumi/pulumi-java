@@ -61,12 +61,10 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs build() {
+        }        public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs build() {
             return new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs(mode);
         }
     }

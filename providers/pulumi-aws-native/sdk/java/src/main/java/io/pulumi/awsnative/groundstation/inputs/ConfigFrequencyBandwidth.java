@@ -67,12 +67,10 @@ public final class ConfigFrequencyBandwidth extends io.pulumi.resources.InvokeAr
             this.units = units;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
-        }
-        public ConfigFrequencyBandwidth build() {
+        }        public ConfigFrequencyBandwidth build() {
             return new ConfigFrequencyBandwidth(units, value);
         }
     }

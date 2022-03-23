@@ -124,27 +124,25 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
             this.automaticRestart = Objects.requireNonNull(automaticRestart);
             return this;
         }
-
         public Builder minNodeCpus(Integer minNodeCpus) {
             this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
             return this;
         }
-
         public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
             this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
             return this;
         }
-
+        public Builder nodeAffinities(SchedulingNodeAffinityResponse... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
-
         public Builder restartType(String restartType) {
             this.restartType = Objects.requireNonNull(restartType);
             return this;
-        }
-        public ComputeSchedulingResponse build() {
+        }        public ComputeSchedulingResponse build() {
             return new ComputeSchedulingResponse(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, restartType);
         }
     }

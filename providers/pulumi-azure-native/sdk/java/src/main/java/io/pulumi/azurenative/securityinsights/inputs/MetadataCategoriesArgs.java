@@ -79,22 +79,24 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
             this.domains = domains;
             return this;
         }
-
         public Builder domains(@Nullable List<String> domains) {
             this.domains = Output.ofNullable(domains);
             return this;
         }
-
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }
         public Builder verticals(@Nullable Output<List<String>> verticals) {
             this.verticals = verticals;
             return this;
         }
-
         public Builder verticals(@Nullable List<String> verticals) {
             this.verticals = Output.ofNullable(verticals);
             return this;
         }
-        public MetadataCategoriesArgs build() {
+        public Builder verticals(String... verticals) {
+            return verticals(List.of(verticals));
+        }        public MetadataCategoriesArgs build() {
             return new MetadataCategoriesArgs(domains, verticals);
         }
     }

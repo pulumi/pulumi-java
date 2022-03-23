@@ -174,82 +174,72 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             this.attachedInstances = attachedInstances;
             return this;
         }
-
         public Builder attachedInstances(@Nullable List<String> attachedInstances) {
             this.attachedInstances = Output.ofNullable(attachedInstances);
             return this;
         }
-
+        public Builder attachedInstances(String... attachedInstances) {
+            return attachedInstances(List.of(attachedInstances));
+        }
         public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
-
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = Output.ofNullable(healthCheckPath);
             return this;
         }
-
         public Builder instancePort(Output<Integer> instancePort) {
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
-
         public Builder instancePort(Integer instancePort) {
             this.instancePort = Output.of(Objects.requireNonNull(instancePort));
             return this;
         }
-
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
-
         public Builder ipAddressType(@Nullable String ipAddressType) {
             this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
-
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
-
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
-
         public Builder sessionStickinessEnabled(@Nullable Output<Boolean> sessionStickinessEnabled) {
             this.sessionStickinessEnabled = sessionStickinessEnabled;
             return this;
         }
-
         public Builder sessionStickinessEnabled(@Nullable Boolean sessionStickinessEnabled) {
             this.sessionStickinessEnabled = Output.ofNullable(sessionStickinessEnabled);
             return this;
         }
-
         public Builder sessionStickinessLBCookieDurationSeconds(@Nullable Output<String> sessionStickinessLBCookieDurationSeconds) {
             this.sessionStickinessLBCookieDurationSeconds = sessionStickinessLBCookieDurationSeconds;
             return this;
         }
-
         public Builder sessionStickinessLBCookieDurationSeconds(@Nullable String sessionStickinessLBCookieDurationSeconds) {
             this.sessionStickinessLBCookieDurationSeconds = Output.ofNullable(sessionStickinessLBCookieDurationSeconds);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LoadBalancerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LoadBalancerTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LoadBalancerArgs build() {
+        public Builder tags(LoadBalancerTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LoadBalancerArgs build() {
             return new LoadBalancerArgs(attachedInstances, healthCheckPath, instancePort, ipAddressType, loadBalancerName, sessionStickinessEnabled, sessionStickinessLBCookieDurationSeconds, tags);
         }
     }

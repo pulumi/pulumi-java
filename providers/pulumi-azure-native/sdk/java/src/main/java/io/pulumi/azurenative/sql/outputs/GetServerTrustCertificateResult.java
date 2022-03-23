@@ -135,32 +135,26 @@ public final class GetServerTrustCertificateResult {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicBlob(@Nullable String publicBlob) {
             this.publicBlob = publicBlob;
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerTrustCertificateResult build() {
+        }        public GetServerTrustCertificateResult build() {
             return new GetServerTrustCertificateResult(certificateName, id, name, publicBlob, thumbprint, type);
         }
     }

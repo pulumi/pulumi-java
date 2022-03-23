@@ -60,8 +60,7 @@ public final class AccountAuditConfigurationAuditCheckConfiguration extends io.p
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public AccountAuditConfigurationAuditCheckConfiguration build() {
+        }        public AccountAuditConfigurationAuditCheckConfiguration build() {
             return new AccountAuditConfigurationAuditCheckConfiguration(enabled);
         }
     }

@@ -126,27 +126,22 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
-
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
-        }
-        public AKSServiceResponseResponseLivenessProbeRequirements build() {
+        }        public AKSServiceResponseResponseLivenessProbeRequirements build() {
             return new AKSServiceResponseResponseLivenessProbeRequirements(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }
     }

@@ -56,12 +56,10 @@ public final class AwsClusterControlPlaneConfigEncryptionGetArgs extends io.pulu
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
-
         public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Output.of(Objects.requireNonNull(kmsKeyArn));
             return this;
-        }
-        public AwsClusterControlPlaneConfigEncryptionGetArgs build() {
+        }        public AwsClusterControlPlaneConfigEncryptionGetArgs build() {
             return new AwsClusterControlPlaneConfigEncryptionGetArgs(kmsKeyArn);
         }
     }

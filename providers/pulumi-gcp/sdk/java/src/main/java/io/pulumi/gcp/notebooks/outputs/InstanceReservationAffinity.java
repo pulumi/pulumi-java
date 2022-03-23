@@ -90,17 +90,17 @@ public final class InstanceReservationAffinity {
             this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public InstanceReservationAffinity build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public InstanceReservationAffinity build() {
             return new InstanceReservationAffinity(consumeReservationType, key, values);
         }
     }

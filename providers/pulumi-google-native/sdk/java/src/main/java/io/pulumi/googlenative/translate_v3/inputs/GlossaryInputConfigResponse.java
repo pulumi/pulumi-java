@@ -58,8 +58,7 @@ public final class GlossaryInputConfigResponse extends io.pulumi.resources.Invok
         public Builder gcsSource(GcsSourceResponse gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
-        }
-        public GlossaryInputConfigResponse build() {
+        }        public GlossaryInputConfigResponse build() {
             return new GlossaryInputConfigResponse(gcsSource);
         }
     }

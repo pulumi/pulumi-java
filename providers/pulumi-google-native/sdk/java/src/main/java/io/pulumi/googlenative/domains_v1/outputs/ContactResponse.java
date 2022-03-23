@@ -102,22 +102,18 @@ public final class ContactResponse {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder faxNumber(String faxNumber) {
             this.faxNumber = Objects.requireNonNull(faxNumber);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder postalAddress(PostalAddressResponse postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
-        }
-        public ContactResponse build() {
+        }        public ContactResponse build() {
             return new ContactResponse(email, faxNumber, phoneNumber, postalAddress);
         }
     }

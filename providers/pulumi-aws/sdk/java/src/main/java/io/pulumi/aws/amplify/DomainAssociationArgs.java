@@ -109,42 +109,37 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder subDomains(Output<List<DomainAssociationSubDomainArgs>> subDomains) {
             this.subDomains = Objects.requireNonNull(subDomains);
             return this;
         }
-
         public Builder subDomains(List<DomainAssociationSubDomainArgs> subDomains) {
             this.subDomains = Output.of(Objects.requireNonNull(subDomains));
             return this;
         }
-
+        public Builder subDomains(DomainAssociationSubDomainArgs... subDomains) {
+            return subDomains(List.of(subDomains));
+        }
         public Builder waitForVerification(@Nullable Output<Boolean> waitForVerification) {
             this.waitForVerification = waitForVerification;
             return this;
         }
-
         public Builder waitForVerification(@Nullable Boolean waitForVerification) {
             this.waitForVerification = Output.ofNullable(waitForVerification);
             return this;
-        }
-        public DomainAssociationArgs build() {
+        }        public DomainAssociationArgs build() {
             return new DomainAssociationArgs(appId, domainName, subDomains, waitForVerification);
         }
     }

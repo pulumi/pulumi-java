@@ -53,12 +53,10 @@ public final class ContainerMountVolumeOptionsLabel {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ContainerMountVolumeOptionsLabel build() {
+        }        public ContainerMountVolumeOptionsLabel build() {
             return new ContainerMountVolumeOptionsLabel(label, value);
         }
     }

@@ -87,12 +87,13 @@ public final class FirewallAllow {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public FirewallAllow build() {
+        }        public FirewallAllow build() {
             return new FirewallAllow(ports, protocol);
         }
     }

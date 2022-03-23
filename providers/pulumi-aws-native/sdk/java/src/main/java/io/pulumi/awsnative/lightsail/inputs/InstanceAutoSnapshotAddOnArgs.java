@@ -61,12 +61,10 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
-
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
             this.snapshotTimeOfDay = Output.ofNullable(snapshotTimeOfDay);
             return this;
-        }
-        public InstanceAutoSnapshotAddOnArgs build() {
+        }        public InstanceAutoSnapshotAddOnArgs build() {
             return new InstanceAutoSnapshotAddOnArgs(snapshotTimeOfDay);
         }
     }

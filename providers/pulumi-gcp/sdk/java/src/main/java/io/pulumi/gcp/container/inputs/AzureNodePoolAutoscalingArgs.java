@@ -73,22 +73,18 @@ public final class AzureNodePoolAutoscalingArgs extends io.pulumi.resources.Reso
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
             return this;
         }
-
         public Builder minNodeCount(Output<Integer> minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Output.of(Objects.requireNonNull(minNodeCount));
             return this;
-        }
-        public AzureNodePoolAutoscalingArgs build() {
+        }        public AzureNodePoolAutoscalingArgs build() {
             return new AzureNodePoolAutoscalingArgs(maxNodeCount, minNodeCount);
         }
     }

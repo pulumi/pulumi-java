@@ -71,12 +71,10 @@ public final class UserPoolSchemaNumberAttributeConstraints {
             this.maxValue = maxValue;
             return this;
         }
-
         public Builder minValue(@Nullable String minValue) {
             this.minValue = minValue;
             return this;
-        }
-        public UserPoolSchemaNumberAttributeConstraints build() {
+        }        public UserPoolSchemaNumberAttributeConstraints build() {
             return new UserPoolSchemaNumberAttributeConstraints(maxValue, minValue);
         }
     }

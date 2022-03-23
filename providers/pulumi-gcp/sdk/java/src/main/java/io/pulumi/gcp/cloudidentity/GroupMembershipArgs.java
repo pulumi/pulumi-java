@@ -114,42 +114,37 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder group(String group) {
             this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
-
         public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
-
         public Builder memberKey(@Nullable GroupMembershipMemberKeyArgs memberKey) {
             this.memberKey = Output.ofNullable(memberKey);
             return this;
         }
-
         public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey) {
             this.preferredMemberKey = preferredMemberKey;
             return this;
         }
-
         public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
             this.preferredMemberKey = Output.ofNullable(preferredMemberKey);
             return this;
         }
-
         public Builder roles(Output<List<GroupMembershipRoleArgs>> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
         public Builder roles(List<GroupMembershipRoleArgs> roles) {
             this.roles = Output.of(Objects.requireNonNull(roles));
             return this;
         }
-        public GroupMembershipArgs build() {
+        public Builder roles(GroupMembershipRoleArgs... roles) {
+            return roles(List.of(roles));
+        }        public GroupMembershipArgs build() {
             return new GroupMembershipArgs(group, memberKey, preferredMemberKey, roles);
         }
     }

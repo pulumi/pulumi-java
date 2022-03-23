@@ -205,102 +205,82 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder inputParameters(@Nullable Output<String> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
-
         public Builder inputParameters(@Nullable String inputParameters) {
             this.inputParameters = Output.ofNullable(inputParameters);
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
-
         public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
-
         public Builder scope(@Nullable Output<RuleScopeGetArgs> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable RuleScopeGetArgs scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder source(@Nullable Output<RuleSourceGetArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable RuleSourceGetArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public RuleState build() {
+        }        public RuleState build() {
             return new RuleState(arn, description, inputParameters, maximumExecutionFrequency, name, ruleId, scope, source, tags, tagsAll);
         }
     }

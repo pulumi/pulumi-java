@@ -79,22 +79,18 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
             this.doNotPersistState = doNotPersistState;
             return this;
         }
-
         public Builder doNotPersistState(@Nullable Boolean doNotPersistState) {
             this.doNotPersistState = Output.ofNullable(doNotPersistState);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ReliableCollectionsRefArgs build() {
+        }        public ReliableCollectionsRefArgs build() {
             return new ReliableCollectionsRefArgs(doNotPersistState, name);
         }
     }

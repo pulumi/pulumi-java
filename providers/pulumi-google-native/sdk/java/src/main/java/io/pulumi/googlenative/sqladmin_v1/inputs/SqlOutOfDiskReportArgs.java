@@ -79,22 +79,18 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
             this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
             return this;
         }
-
         public Builder sqlMinRecommendedIncreaseSizeGb(@Nullable Integer sqlMinRecommendedIncreaseSizeGb) {
             this.sqlMinRecommendedIncreaseSizeGb = Output.ofNullable(sqlMinRecommendedIncreaseSizeGb);
             return this;
         }
-
         public Builder sqlOutOfDiskState(@Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState) {
             this.sqlOutOfDiskState = sqlOutOfDiskState;
             return this;
         }
-
         public Builder sqlOutOfDiskState(@Nullable SqlOutOfDiskReportSqlOutOfDiskState sqlOutOfDiskState) {
             this.sqlOutOfDiskState = Output.ofNullable(sqlOutOfDiskState);
             return this;
-        }
-        public SqlOutOfDiskReportArgs build() {
+        }        public SqlOutOfDiskReportArgs build() {
             return new SqlOutOfDiskReportArgs(sqlMinRecommendedIncreaseSizeGb, sqlOutOfDiskState);
         }
     }

@@ -108,42 +108,37 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
             this.frontDoorName = Objects.requireNonNull(frontDoorName);
             return this;
         }
-
         public Builder frontDoorName(String frontDoorName) {
             this.frontDoorName = Output.of(Objects.requireNonNull(frontDoorName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rules(@Nullable Output<List<RulesEngineRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<RulesEngineRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(RulesEngineRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder rulesEngineName(@Nullable Output<String> rulesEngineName) {
             this.rulesEngineName = rulesEngineName;
             return this;
         }
-
         public Builder rulesEngineName(@Nullable String rulesEngineName) {
             this.rulesEngineName = Output.ofNullable(rulesEngineName);
             return this;
-        }
-        public RulesEngineArgs build() {
+        }        public RulesEngineArgs build() {
             return new RulesEngineArgs(frontDoorName, resourceGroupName, rules, rulesEngineName);
         }
     }

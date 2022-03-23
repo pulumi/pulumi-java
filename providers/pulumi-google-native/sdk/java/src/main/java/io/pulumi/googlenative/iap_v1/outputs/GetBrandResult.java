@@ -102,22 +102,18 @@ public final class GetBrandResult {
             this.applicationTitle = Objects.requireNonNull(applicationTitle);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder orgInternalOnly(Boolean orgInternalOnly) {
             this.orgInternalOnly = Objects.requireNonNull(orgInternalOnly);
             return this;
         }
-
         public Builder supportEmail(String supportEmail) {
             this.supportEmail = Objects.requireNonNull(supportEmail);
             return this;
-        }
-        public GetBrandResult build() {
+        }        public GetBrandResult build() {
             return new GetBrandResult(applicationTitle, name, orgInternalOnly, supportEmail);
         }
     }

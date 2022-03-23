@@ -65,12 +65,13 @@ public final class DistributionStatusCodes extends io.pulumi.resources.InvokeArg
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(Integer... items) {
+            return items(List.of(items));
+        }
         public Builder quantity(Integer quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
-        }
-        public DistributionStatusCodes build() {
+        }        public DistributionStatusCodes build() {
             return new DistributionStatusCodes(items, quantity);
         }
     }

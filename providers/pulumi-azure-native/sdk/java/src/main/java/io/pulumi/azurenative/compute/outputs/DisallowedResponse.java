@@ -54,7 +54,9 @@ public final class DisallowedResponse {
             this.diskTypes = diskTypes;
             return this;
         }
-        public DisallowedResponse build() {
+        public Builder diskTypes(String... diskTypes) {
+            return diskTypes(List.of(diskTypes));
+        }        public DisallowedResponse build() {
             return new DisallowedResponse(diskTypes);
         }
     }

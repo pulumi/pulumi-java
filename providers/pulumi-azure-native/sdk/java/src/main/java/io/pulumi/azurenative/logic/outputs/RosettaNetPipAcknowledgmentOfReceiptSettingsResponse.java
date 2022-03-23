@@ -70,12 +70,10 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
             this.isNonRepudiationRequired = Objects.requireNonNull(isNonRepudiationRequired);
             return this;
         }
-
         public Builder timeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
             this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds);
             return this;
-        }
-        public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse build() {
+        }        public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse build() {
             return new RosettaNetPipAcknowledgmentOfReceiptSettingsResponse(isNonRepudiationRequired, timeToAcknowledgeInSeconds);
         }
     }

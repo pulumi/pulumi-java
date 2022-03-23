@@ -95,32 +95,26 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
             this.delayEvaluation = delayEvaluation;
             return this;
         }
-
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = Output.ofNullable(delayEvaluation);
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Output<Integer> evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = Output.ofNullable(evaluationInterval);
             return this;
         }
-
         public Builder policyType(Output<String> policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public Builder policyType(String policyType) {
             this.policyType = Output.of(Objects.requireNonNull(policyType));
             return this;
-        }
-        public MedianStoppingPolicyArgs build() {
+        }        public MedianStoppingPolicyArgs build() {
             return new MedianStoppingPolicyArgs(delayEvaluation, evaluationInterval, policyType);
         }
     }

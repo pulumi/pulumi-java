@@ -90,17 +90,14 @@ public final class GetLocalDiskArgs extends io.pulumi.resources.InvokeArgs {
             this.diskNode = diskNode;
             return this;
         }
-
         public Builder diskPath(@Nullable String diskPath) {
             this.diskPath = diskPath;
             return this;
         }
-
         public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
-        }
-        public GetLocalDiskArgs build() {
+        }        public GetLocalDiskArgs build() {
             return new GetLocalDiskArgs(diskNode, diskPath, gatewayArn);
         }
     }

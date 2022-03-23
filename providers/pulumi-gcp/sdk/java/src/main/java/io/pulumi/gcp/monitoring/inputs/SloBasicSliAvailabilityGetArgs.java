@@ -57,12 +57,10 @@ public final class SloBasicSliAvailabilityGetArgs extends io.pulumi.resources.Re
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public SloBasicSliAvailabilityGetArgs build() {
+        }        public SloBasicSliAvailabilityGetArgs build() {
             return new SloBasicSliAvailabilityGetArgs(enabled);
         }
     }

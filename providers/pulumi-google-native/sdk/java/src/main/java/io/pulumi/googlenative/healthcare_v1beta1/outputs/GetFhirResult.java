@@ -87,17 +87,14 @@ public final class GetFhirResult {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder extensions(List<Map<String,String>> extensions) {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
-        }
-        public GetFhirResult build() {
+        }        public GetFhirResult build() {
             return new GetFhirResult(contentType, data, extensions);
         }
     }

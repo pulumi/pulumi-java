@@ -71,12 +71,13 @@ public final class BasicLevelResponse {
             this.combiningFunction = Objects.requireNonNull(combiningFunction);
             return this;
         }
-
         public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-        public BasicLevelResponse build() {
+        public Builder conditions(ConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }        public BasicLevelResponse build() {
             return new BasicLevelResponse(combiningFunction, conditions);
         }
     }

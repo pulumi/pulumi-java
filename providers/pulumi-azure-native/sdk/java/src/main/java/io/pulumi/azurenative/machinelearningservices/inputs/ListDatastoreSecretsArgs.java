@@ -88,17 +88,14 @@ public final class ListDatastoreSecretsArgs extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListDatastoreSecretsArgs build() {
+        }        public ListDatastoreSecretsArgs build() {
             return new ListDatastoreSecretsArgs(name, resourceGroupName, workspaceName);
         }
     }

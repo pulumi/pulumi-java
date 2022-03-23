@@ -76,12 +76,10 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends io.pulumi.resou
             this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
-        }
-        public VpnGatewayVpnGatewayInterfaceResponse build() {
+        }        public VpnGatewayVpnGatewayInterfaceResponse build() {
             return new VpnGatewayVpnGatewayInterfaceResponse(interconnectAttachment, ipAddress);
         }
     }

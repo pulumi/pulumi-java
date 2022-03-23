@@ -95,32 +95,26 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
             this.averageUtilization = averageUtilization;
             return this;
         }
-
         public Builder averageUtilization(@Nullable Integer averageUtilization) {
             this.averageUtilization = Output.ofNullable(averageUtilization);
             return this;
         }
-
         public Builder averageValue(@Nullable Output<String> averageValue) {
             this.averageValue = averageValue;
             return this;
         }
-
         public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = Output.ofNullable(averageValue);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public MetricValueStatusArgs build() {
+        }        public MetricValueStatusArgs build() {
             return new MetricValueStatusArgs(averageUtilization, averageValue, value);
         }
     }

@@ -71,12 +71,16 @@ public final class NodeSelectorTerm {
             this.matchExpressions = matchExpressions;
             return this;
         }
-
+        public Builder matchExpressions(NodeSelectorRequirement... matchExpressions) {
+            return matchExpressions(List.of(matchExpressions));
+        }
         public Builder matchFields(@Nullable List<NodeSelectorRequirement> matchFields) {
             this.matchFields = matchFields;
             return this;
         }
-        public NodeSelectorTerm build() {
+        public Builder matchFields(NodeSelectorRequirement... matchFields) {
+            return matchFields(List.of(matchFields));
+        }        public NodeSelectorTerm build() {
             return new NodeSelectorTerm(matchExpressions, matchFields);
         }
     }

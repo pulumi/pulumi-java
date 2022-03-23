@@ -90,32 +90,26 @@ public final class VpcAssociationAuthorizationArgs extends io.pulumi.resources.R
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
-
         public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = Output.ofNullable(vpcRegion);
             return this;
         }
-
         public Builder zoneId(Output<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Output.of(Objects.requireNonNull(zoneId));
             return this;
-        }
-        public VpcAssociationAuthorizationArgs build() {
+        }        public VpcAssociationAuthorizationArgs build() {
             return new VpcAssociationAuthorizationArgs(vpcId, vpcRegion, zoneId);
         }
     }

@@ -187,47 +187,38 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
             this.blobContainerSasUri = Objects.requireNonNull(blobContainerSasUri);
             return this;
         }
-
         public Builder fromTime(String fromTime) {
             this.fromTime = Objects.requireNonNull(fromTime);
             return this;
         }
-
         public Builder groupByClientApplicationId(@Nullable Boolean groupByClientApplicationId) {
             this.groupByClientApplicationId = groupByClientApplicationId;
             return this;
         }
-
         public Builder groupByOperationName(@Nullable Boolean groupByOperationName) {
             this.groupByOperationName = groupByOperationName;
             return this;
         }
-
         public Builder groupByResourceName(@Nullable Boolean groupByResourceName) {
             this.groupByResourceName = groupByResourceName;
             return this;
         }
-
         public Builder groupByThrottlePolicy(@Nullable Boolean groupByThrottlePolicy) {
             this.groupByThrottlePolicy = groupByThrottlePolicy;
             return this;
         }
-
         public Builder groupByUserAgent(@Nullable Boolean groupByUserAgent) {
             this.groupByUserAgent = groupByUserAgent;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder toTime(String toTime) {
             this.toTime = Objects.requireNonNull(toTime);
             return this;
-        }
-        public GetLogAnalyticExportThrottledRequestsArgs build() {
+        }        public GetLogAnalyticExportThrottledRequestsArgs build() {
             return new GetLogAnalyticExportThrottledRequestsArgs(blobContainerSasUri, fromTime, groupByClientApplicationId, groupByOperationName, groupByResourceName, groupByThrottlePolicy, groupByUserAgent, location, toTime);
         }
     }

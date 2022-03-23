@@ -88,17 +88,17 @@ public final class AssetModelMetric {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder variables(List<AssetModelExpressionVariable> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
-
+        public Builder variables(AssetModelExpressionVariable... variables) {
+            return variables(List.of(variables));
+        }
         public Builder window(AssetModelMetricWindow window) {
             this.window = Objects.requireNonNull(window);
             return this;
-        }
-        public AssetModelMetric build() {
+        }        public AssetModelMetric build() {
             return new AssetModelMetric(expression, variables, window);
         }
     }

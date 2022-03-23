@@ -81,17 +81,14 @@ public final class OriginEndpointCmafEncryption {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
-
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
-
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
-        }
-        public OriginEndpointCmafEncryption build() {
+        }        public OriginEndpointCmafEncryption build() {
             return new OriginEndpointCmafEncryption(constantInitializationVector, keyRotationIntervalSeconds, spekeKeyProvider);
         }
     }

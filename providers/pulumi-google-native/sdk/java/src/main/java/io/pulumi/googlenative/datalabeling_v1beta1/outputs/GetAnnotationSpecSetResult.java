@@ -119,27 +119,28 @@ public final class GetAnnotationSpecSetResult {
             this.annotationSpecs = Objects.requireNonNull(annotationSpecs);
             return this;
         }
-
+        public Builder annotationSpecs(GoogleCloudDatalabelingV1beta1AnnotationSpecResponse... annotationSpecs) {
+            return annotationSpecs(List.of(annotationSpecs));
+        }
         public Builder blockingResources(List<String> blockingResources) {
             this.blockingResources = Objects.requireNonNull(blockingResources);
             return this;
         }
-
+        public Builder blockingResources(String... blockingResources) {
+            return blockingResources(List.of(blockingResources));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetAnnotationSpecSetResult build() {
+        }        public GetAnnotationSpecSetResult build() {
             return new GetAnnotationSpecSetResult(annotationSpecs, blockingResources, description, displayName, name);
         }
     }

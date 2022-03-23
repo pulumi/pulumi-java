@@ -64,12 +64,10 @@ public final class GetBotAliasArgs extends io.pulumi.resources.InvokeArgs {
             this.botAliasId = Objects.requireNonNull(botAliasId);
             return this;
         }
-
         public Builder botId(String botId) {
             this.botId = Objects.requireNonNull(botId);
             return this;
-        }
-        public GetBotAliasArgs build() {
+        }        public GetBotAliasArgs build() {
             return new GetBotAliasArgs(botAliasId, botId);
         }
     }

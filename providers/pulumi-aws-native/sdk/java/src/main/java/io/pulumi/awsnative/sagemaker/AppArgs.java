@@ -142,62 +142,53 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.appName = appName;
             return this;
         }
-
         public Builder appName(@Nullable String appName) {
             this.appName = Output.ofNullable(appName);
             return this;
         }
-
         public Builder appType(Output<AppType> appType) {
             this.appType = Objects.requireNonNull(appType);
             return this;
         }
-
         public Builder appType(AppType appType) {
             this.appType = Output.of(Objects.requireNonNull(appType));
             return this;
         }
-
         public Builder domainId(Output<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder domainId(String domainId) {
             this.domainId = Output.of(Objects.requireNonNull(domainId));
             return this;
         }
-
         public Builder resourceSpec(@Nullable Output<AppResourceSpecArgs> resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }
-
         public Builder resourceSpec(@Nullable AppResourceSpecArgs resourceSpec) {
             this.resourceSpec = Output.ofNullable(resourceSpec);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AppTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AppTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(AppTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userProfileName(Output<String> userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
         }
-
         public Builder userProfileName(String userProfileName) {
             this.userProfileName = Output.of(Objects.requireNonNull(userProfileName));
             return this;
-        }
-        public AppArgs build() {
+        }        public AppArgs build() {
             return new AppArgs(appName, appType, domainId, resourceSpec, tags, userProfileName);
         }
     }

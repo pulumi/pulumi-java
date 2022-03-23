@@ -76,12 +76,10 @@ public final class MetadataFilterLabelMatchResponse extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public MetadataFilterLabelMatchResponse build() {
+        }        public MetadataFilterLabelMatchResponse build() {
             return new MetadataFilterLabelMatchResponse(name, value);
         }
     }

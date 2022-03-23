@@ -57,12 +57,13 @@ public final class BucketReplicationRuleAndOperator {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-        public BucketReplicationRuleAndOperator build() {
+        public Builder tagFilters(BucketTagFilter... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public BucketReplicationRuleAndOperator build() {
             return new BucketReplicationRuleAndOperator(prefix, tagFilters);
         }
     }

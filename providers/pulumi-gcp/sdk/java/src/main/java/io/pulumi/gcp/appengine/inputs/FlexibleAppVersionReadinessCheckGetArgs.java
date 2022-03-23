@@ -157,72 +157,58 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
             this.appStartTimeout = appStartTimeout;
             return this;
         }
-
         public Builder appStartTimeout(@Nullable String appStartTimeout) {
             this.appStartTimeout = Output.ofNullable(appStartTimeout);
             return this;
         }
-
         public Builder checkInterval(@Nullable Output<String> checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
-
         public Builder checkInterval(@Nullable String checkInterval) {
             this.checkInterval = Output.ofNullable(checkInterval);
             return this;
         }
-
         public Builder failureThreshold(@Nullable Output<Double> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Double failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder successThreshold(@Nullable Output<Double> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder successThreshold(@Nullable Double successThreshold) {
             this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public FlexibleAppVersionReadinessCheckGetArgs build() {
+        }        public FlexibleAppVersionReadinessCheckGetArgs build() {
             return new FlexibleAppVersionReadinessCheckGetArgs(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }
     }

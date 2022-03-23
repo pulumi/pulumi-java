@@ -104,22 +104,18 @@ public final class GetBuildServiceBuilderArgs extends io.pulumi.resources.Invoke
             this.buildServiceName = Objects.requireNonNull(buildServiceName);
             return this;
         }
-
         public Builder builderName(String builderName) {
             this.builderName = Objects.requireNonNull(builderName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetBuildServiceBuilderArgs build() {
+        }        public GetBuildServiceBuilderArgs build() {
             return new GetBuildServiceBuilderArgs(buildServiceName, builderName, resourceGroupName, serviceName);
         }
     }

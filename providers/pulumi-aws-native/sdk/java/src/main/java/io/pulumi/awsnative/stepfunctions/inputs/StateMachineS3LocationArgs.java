@@ -78,32 +78,26 @@ public final class StateMachineS3LocationArgs extends io.pulumi.resources.Resour
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public StateMachineS3LocationArgs build() {
+        }        public StateMachineS3LocationArgs build() {
             return new StateMachineS3LocationArgs(bucket, key, version);
         }
     }

@@ -55,8 +55,7 @@ public final class RollingUpdateDaemonSet {
         public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
-        }
-        public RollingUpdateDaemonSet build() {
+        }        public RollingUpdateDaemonSet build() {
             return new RollingUpdateDaemonSet(maxUnavailable);
         }
     }

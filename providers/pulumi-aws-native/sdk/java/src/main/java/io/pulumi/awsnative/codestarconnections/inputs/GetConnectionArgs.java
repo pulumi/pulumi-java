@@ -54,8 +54,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder connectionArn(String connectionArn) {
             this.connectionArn = Objects.requireNonNull(connectionArn);
             return this;
-        }
-        public GetConnectionArgs build() {
+        }        public GetConnectionArgs build() {
             return new GetConnectionArgs(connectionArn);
         }
     }

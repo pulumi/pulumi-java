@@ -188,92 +188,80 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder dnsServerIps(@Nullable Output<List<String>> dnsServerIps) {
             this.dnsServerIps = dnsServerIps;
             return this;
         }
-
         public Builder dnsServerIps(@Nullable List<String> dnsServerIps) {
             this.dnsServerIps = Output.ofNullable(dnsServerIps);
             return this;
         }
-
+        public Builder dnsServerIps(String... dnsServerIps) {
+            return dnsServerIps(List.of(dnsServerIps));
+        }
         public Builder dnsServices(@Nullable Output<Double> dnsServices) {
             this.dnsServices = dnsServices;
             return this;
         }
-
         public Builder dnsServices(@Nullable Double dnsServices) {
             this.dnsServices = Output.ofNullable(dnsServices);
             return this;
         }
-
         public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
             this.dnsZoneId = dnsZoneId;
             return this;
         }
-
         public Builder dnsZoneId(@Nullable String dnsZoneId) {
             this.dnsZoneId = Output.ofNullable(dnsZoneId);
             return this;
         }
-
         public Builder domain(@Nullable Output<List<String>> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable List<String> domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
+        public Builder domain(String... domain) {
+            return domain(List.of(domain));
+        }
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder sourceIp(@Nullable Output<String> sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
-
         public Builder sourceIp(@Nullable String sourceIp) {
             this.sourceIp = Output.ofNullable(sourceIp);
             return this;
-        }
-        public WorkloadNetworkDnsZoneArgs build() {
+        }        public WorkloadNetworkDnsZoneArgs build() {
             return new WorkloadNetworkDnsZoneArgs(displayName, dnsServerIps, dnsServices, dnsZoneId, domain, privateCloudName, resourceGroupName, revision, sourceIp);
         }
     }

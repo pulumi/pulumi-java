@@ -191,92 +191,83 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
-
         public Builder additionalCapabilities(@Nullable List<String> additionalCapabilities) {
             this.additionalCapabilities = Output.ofNullable(additionalCapabilities);
             return this;
         }
-
+        public Builder additionalCapabilities(String... additionalCapabilities) {
+            return additionalCapabilities(List.of(additionalCapabilities));
+        }
         public Builder availabilityZones(Output<List<String>> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
         public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Output.of(Objects.requireNonNull(availabilityZones));
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder diskPoolName(@Nullable Output<String> diskPoolName) {
             this.diskPoolName = diskPoolName;
             return this;
         }
-
         public Builder diskPoolName(@Nullable String diskPoolName) {
             this.diskPoolName = Output.ofNullable(diskPoolName);
             return this;
         }
-
         public Builder disks(@Nullable Output<List<DiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<DiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(DiskArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tier(Output<Either<String,DiskPoolTier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(Either<String,DiskPoolTier> tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
-        }
-        public DiskPoolArgs build() {
+        }        public DiskPoolArgs build() {
             return new DiskPoolArgs(additionalCapabilities, availabilityZones, diskPoolName, disks, location, resourceGroupName, subnetId, tags, tier);
         }
     }

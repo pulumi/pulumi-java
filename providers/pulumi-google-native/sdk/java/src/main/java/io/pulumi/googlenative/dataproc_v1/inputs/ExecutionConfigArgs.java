@@ -127,52 +127,45 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
-
         public Builder networkTags(@Nullable Output<List<String>> networkTags) {
             this.networkTags = networkTags;
             return this;
         }
-
         public Builder networkTags(@Nullable List<String> networkTags) {
             this.networkTags = Output.ofNullable(networkTags);
             return this;
         }
-
+        public Builder networkTags(String... networkTags) {
+            return networkTags(List.of(networkTags));
+        }
         public Builder networkUri(@Nullable Output<String> networkUri) {
             this.networkUri = networkUri;
             return this;
         }
-
         public Builder networkUri(@Nullable String networkUri) {
             this.networkUri = Output.ofNullable(networkUri);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder subnetworkUri(@Nullable Output<String> subnetworkUri) {
             this.subnetworkUri = subnetworkUri;
             return this;
         }
-
         public Builder subnetworkUri(@Nullable String subnetworkUri) {
             this.subnetworkUri = Output.ofNullable(subnetworkUri);
             return this;
-        }
-        public ExecutionConfigArgs build() {
+        }        public ExecutionConfigArgs build() {
             return new ExecutionConfigArgs(kmsKey, networkTags, networkUri, serviceAccount, subnetworkUri);
         }
     }

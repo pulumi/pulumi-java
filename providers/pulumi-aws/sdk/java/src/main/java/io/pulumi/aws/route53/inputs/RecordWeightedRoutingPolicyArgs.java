@@ -56,12 +56,10 @@ public final class RecordWeightedRoutingPolicyArgs extends io.pulumi.resources.R
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
-        }
-        public RecordWeightedRoutingPolicyArgs build() {
+        }        public RecordWeightedRoutingPolicyArgs build() {
             return new RecordWeightedRoutingPolicyArgs(weight);
         }
     }

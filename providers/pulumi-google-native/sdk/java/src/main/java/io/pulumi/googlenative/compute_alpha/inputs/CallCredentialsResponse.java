@@ -77,12 +77,10 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
             this.callCredentialType = Objects.requireNonNull(callCredentialType);
             return this;
         }
-
         public Builder fromPlugin(MetadataCredentialsFromPluginResponse fromPlugin) {
             this.fromPlugin = Objects.requireNonNull(fromPlugin);
             return this;
-        }
-        public CallCredentialsResponse build() {
+        }        public CallCredentialsResponse build() {
             return new CallCredentialsResponse(callCredentialType, fromPlugin);
         }
     }

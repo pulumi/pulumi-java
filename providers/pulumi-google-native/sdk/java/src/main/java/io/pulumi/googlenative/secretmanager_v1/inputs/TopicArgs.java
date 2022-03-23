@@ -60,12 +60,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public TopicArgs build() {
+        }        public TopicArgs build() {
             return new TopicArgs(name);
         }
     }

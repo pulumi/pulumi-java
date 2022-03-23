@@ -140,52 +140,45 @@ public final class SubnetworkLogConfigGetArgs extends io.pulumi.resources.Resour
             this.aggregationInterval = aggregationInterval;
             return this;
         }
-
         public Builder aggregationInterval(@Nullable String aggregationInterval) {
             this.aggregationInterval = Output.ofNullable(aggregationInterval);
             return this;
         }
-
         public Builder filterExpr(@Nullable Output<String> filterExpr) {
             this.filterExpr = filterExpr;
             return this;
         }
-
         public Builder filterExpr(@Nullable String filterExpr) {
             this.filterExpr = Output.ofNullable(filterExpr);
             return this;
         }
-
         public Builder flowSampling(@Nullable Output<Double> flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
-
         public Builder flowSampling(@Nullable Double flowSampling) {
             this.flowSampling = Output.ofNullable(flowSampling);
             return this;
         }
-
         public Builder metadata(@Nullable Output<String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable String metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder metadataFields(@Nullable Output<List<String>> metadataFields) {
             this.metadataFields = metadataFields;
             return this;
         }
-
         public Builder metadataFields(@Nullable List<String> metadataFields) {
             this.metadataFields = Output.ofNullable(metadataFields);
             return this;
         }
-        public SubnetworkLogConfigGetArgs build() {
+        public Builder metadataFields(String... metadataFields) {
+            return metadataFields(List.of(metadataFields));
+        }        public SubnetworkLogConfigGetArgs build() {
             return new SubnetworkLogConfigGetArgs(aggregationInterval, filterExpr, flowSampling, metadata, metadataFields);
         }
     }

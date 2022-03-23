@@ -56,12 +56,13 @@ public final class GlobalTableProjection {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-
+        public Builder nonKeyAttributes(String... nonKeyAttributes) {
+            return nonKeyAttributes(List.of(nonKeyAttributes));
+        }
         public Builder projectionType(@Nullable String projectionType) {
             this.projectionType = projectionType;
             return this;
-        }
-        public GlobalTableProjection build() {
+        }        public GlobalTableProjection build() {
             return new GlobalTableProjection(nonKeyAttributes, projectionType);
         }
     }

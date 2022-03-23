@@ -91,32 +91,26 @@ public final class RecorderArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder recordingGroup(@Nullable Output<RecorderRecordingGroupArgs> recordingGroup) {
             this.recordingGroup = recordingGroup;
             return this;
         }
-
         public Builder recordingGroup(@Nullable RecorderRecordingGroupArgs recordingGroup) {
             this.recordingGroup = Output.ofNullable(recordingGroup);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public RecorderArgs build() {
+        }        public RecorderArgs build() {
             return new RecorderArgs(name, recordingGroup, roleArn);
         }
     }

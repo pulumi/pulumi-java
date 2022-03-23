@@ -87,17 +87,14 @@ public final class BuildApprovalResponse {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder result(ApprovalResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public BuildApprovalResponse build() {
+        }        public BuildApprovalResponse build() {
             return new BuildApprovalResponse(config, result, state);
         }
     }

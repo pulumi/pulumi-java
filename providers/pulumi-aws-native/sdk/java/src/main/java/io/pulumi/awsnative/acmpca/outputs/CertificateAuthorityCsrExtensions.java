@@ -57,12 +57,13 @@ public final class CertificateAuthorityCsrExtensions {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder subjectInformationAccess(@Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess) {
             this.subjectInformationAccess = subjectInformationAccess;
             return this;
         }
-        public CertificateAuthorityCsrExtensions build() {
+        public Builder subjectInformationAccess(CertificateAuthorityAccessDescription... subjectInformationAccess) {
+            return subjectInformationAccess(List.of(subjectInformationAccess));
+        }        public CertificateAuthorityCsrExtensions build() {
             return new CertificateAuthorityCsrExtensions(keyUsage, subjectInformationAccess);
         }
     }

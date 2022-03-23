@@ -80,17 +80,14 @@ public final class MonitoringScheduleNetworkConfig {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder vpcConfig(@Nullable MonitoringScheduleVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
-        }
-        public MonitoringScheduleNetworkConfig build() {
+        }        public MonitoringScheduleNetworkConfig build() {
             return new MonitoringScheduleNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }
     }

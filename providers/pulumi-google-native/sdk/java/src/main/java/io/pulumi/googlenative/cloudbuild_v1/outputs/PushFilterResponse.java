@@ -86,17 +86,14 @@ public final class PushFilterResponse {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
-
         public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
-        }
-        public PushFilterResponse build() {
+        }        public PushFilterResponse build() {
             return new PushFilterResponse(branch, invertRegex, tag);
         }
     }

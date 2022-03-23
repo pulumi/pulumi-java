@@ -79,22 +79,18 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.methodMatch = methodMatch;
             return this;
         }
-
         public Builder methodMatch(@Nullable String methodMatch) {
             this.methodMatch = Output.ofNullable(methodMatch);
             return this;
         }
-
         public Builder pollingOptions(@Nullable Output<PollingOptionsArgs> pollingOptions) {
             this.pollingOptions = pollingOptions;
             return this;
         }
-
         public Builder pollingOptions(@Nullable PollingOptionsArgs pollingOptions) {
             this.pollingOptions = Output.ofNullable(pollingOptions);
             return this;
-        }
-        public AsyncOptionsArgs build() {
+        }        public AsyncOptionsArgs build() {
             return new AsyncOptionsArgs(methodMatch, pollingOptions);
         }
     }

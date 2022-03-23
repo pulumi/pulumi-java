@@ -64,17 +64,17 @@ public final class RuleGroupRegexMatchStatement {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder regexString(String regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupRegexMatchStatement build() {
+        public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRegexMatchStatement build() {
             return new RuleGroupRegexMatchStatement(fieldToMatch, regexString, textTransformations);
         }
     }

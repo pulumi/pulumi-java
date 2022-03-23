@@ -68,22 +68,21 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
             this.commonAttributes = commonAttributes;
             return this;
         }
-
         public Builder commonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttributeArgs> commonAttributes) {
             this.commonAttributes = Output.ofNullable(commonAttributes);
             return this;
         }
-
+        public Builder commonAttributes(DeliveryStreamHttpEndpointCommonAttributeArgs... commonAttributes) {
+            return commonAttributes(List.of(commonAttributes));
+        }
         public Builder contentEncoding(@Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public Builder contentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
             this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
-        }
-        public DeliveryStreamHttpEndpointRequestConfigurationArgs build() {
+        }        public DeliveryStreamHttpEndpointRequestConfigurationArgs build() {
             return new DeliveryStreamHttpEndpointRequestConfigurationArgs(commonAttributes, contentEncoding);
         }
     }

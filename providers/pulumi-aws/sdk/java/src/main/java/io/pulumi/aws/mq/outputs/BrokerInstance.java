@@ -64,17 +64,17 @@ public final class BrokerInstance {
             this.consoleUrl = consoleUrl;
             return this;
         }
-
         public Builder endpoints(@Nullable List<String> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(String... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
-        }
-        public BrokerInstance build() {
+        }        public BrokerInstance build() {
             return new BrokerInstance(consoleUrl, endpoints, ipAddress);
         }
     }

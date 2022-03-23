@@ -69,12 +69,10 @@ public final class UrlSigningParamIdentifierResponse {
             this.paramIndicator = Objects.requireNonNull(paramIndicator);
             return this;
         }
-
         public Builder paramName(String paramName) {
             this.paramName = Objects.requireNonNull(paramName);
             return this;
-        }
-        public UrlSigningParamIdentifierResponse build() {
+        }        public UrlSigningParamIdentifierResponse build() {
             return new UrlSigningParamIdentifierResponse(paramIndicator, paramName);
         }
     }

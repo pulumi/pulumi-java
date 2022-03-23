@@ -90,32 +90,26 @@ public final class TopicRuleIotEventGetArgs extends io.pulumi.resources.Resource
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public Builder inputName(String inputName) {
             this.inputName = Output.of(Objects.requireNonNull(inputName));
             return this;
         }
-
         public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = Output.ofNullable(messageId);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public TopicRuleIotEventGetArgs build() {
+        }        public TopicRuleIotEventGetArgs build() {
             return new TopicRuleIotEventGetArgs(inputName, messageId, roleArn);
         }
     }

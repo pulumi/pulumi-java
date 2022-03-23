@@ -53,8 +53,7 @@ public final class VICredentialResponse {
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public VICredentialResponse build() {
+        }        public VICredentialResponse build() {
             return new VICredentialResponse(username);
         }
     }

@@ -60,7 +60,9 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse ex
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
-        public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse build() {
+        public Builder segments(GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse... segments) {
+            return segments(List.of(segments));
+        }        public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse(segments);
         }
     }

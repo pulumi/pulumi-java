@@ -180,92 +180,74 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder alternateEmail(@Nullable Output<String> alternateEmail) {
             this.alternateEmail = alternateEmail;
             return this;
         }
-
         public Builder alternateEmail(@Nullable String alternateEmail) {
             this.alternateEmail = Output.ofNullable(alternateEmail);
             return this;
         }
-
         public Builder channelPartnerId(@Nullable Output<String> channelPartnerId) {
             this.channelPartnerId = channelPartnerId;
             return this;
         }
-
         public Builder channelPartnerId(@Nullable String channelPartnerId) {
             this.channelPartnerId = Output.ofNullable(channelPartnerId);
             return this;
         }
-
         public Builder channelPartnerLinkId(Output<String> channelPartnerLinkId) {
             this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId);
             return this;
         }
-
         public Builder channelPartnerLinkId(String channelPartnerLinkId) {
             this.channelPartnerLinkId = Output.of(Objects.requireNonNull(channelPartnerLinkId));
             return this;
         }
-
         public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder orgDisplayName(Output<String> orgDisplayName) {
             this.orgDisplayName = Objects.requireNonNull(orgDisplayName);
             return this;
         }
-
         public Builder orgDisplayName(String orgDisplayName) {
             this.orgDisplayName = Output.of(Objects.requireNonNull(orgDisplayName));
             return this;
         }
-
         public Builder orgPostalAddress(Output<GoogleTypePostalAddressArgs> orgPostalAddress) {
             this.orgPostalAddress = Objects.requireNonNull(orgPostalAddress);
             return this;
         }
-
         public Builder orgPostalAddress(GoogleTypePostalAddressArgs orgPostalAddress) {
             this.orgPostalAddress = Output.of(Objects.requireNonNull(orgPostalAddress));
             return this;
         }
-
         public Builder primaryContactInfo(@Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo) {
             this.primaryContactInfo = primaryContactInfo;
             return this;
         }
-
         public Builder primaryContactInfo(@Nullable GoogleCloudChannelV1ContactInfoArgs primaryContactInfo) {
             this.primaryContactInfo = Output.ofNullable(primaryContactInfo);
             return this;
-        }
-        public CustomerArgs build() {
+        }        public CustomerArgs build() {
             return new CustomerArgs(accountId, alternateEmail, channelPartnerId, channelPartnerLinkId, domain, languageCode, orgDisplayName, orgPostalAddress, primaryContactInfo);
         }
     }

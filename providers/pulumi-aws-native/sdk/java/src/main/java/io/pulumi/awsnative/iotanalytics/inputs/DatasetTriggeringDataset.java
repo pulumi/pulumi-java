@@ -50,8 +50,7 @@ public final class DatasetTriggeringDataset extends io.pulumi.resources.InvokeAr
         public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
-        }
-        public DatasetTriggeringDataset build() {
+        }        public DatasetTriggeringDataset build() {
             return new DatasetTriggeringDataset(datasetName);
         }
     }

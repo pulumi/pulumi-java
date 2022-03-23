@@ -53,8 +53,7 @@ public final class DicomStoreStreamConfig {
         public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
-        }
-        public DicomStoreStreamConfig build() {
+        }        public DicomStoreStreamConfig build() {
             return new DicomStoreStreamConfig(bigqueryDestination);
         }
     }

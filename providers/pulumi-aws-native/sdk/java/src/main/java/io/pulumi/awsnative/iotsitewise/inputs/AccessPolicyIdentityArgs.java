@@ -84,32 +84,26 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
             this.iamRole = iamRole;
             return this;
         }
-
         public Builder iamRole(@Nullable AccessPolicyIamRoleArgs iamRole) {
             this.iamRole = Output.ofNullable(iamRole);
             return this;
         }
-
         public Builder iamUser(@Nullable Output<AccessPolicyIamUserArgs> iamUser) {
             this.iamUser = iamUser;
             return this;
         }
-
         public Builder iamUser(@Nullable AccessPolicyIamUserArgs iamUser) {
             this.iamUser = Output.ofNullable(iamUser);
             return this;
         }
-
         public Builder user(@Nullable Output<AccessPolicyUserArgs> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable AccessPolicyUserArgs user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public AccessPolicyIdentityArgs build() {
+        }        public AccessPolicyIdentityArgs build() {
             return new AccessPolicyIdentityArgs(iamRole, iamUser, user);
         }
     }

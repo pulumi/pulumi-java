@@ -74,12 +74,13 @@ public final class JobInputSequenceResponse {
             this.inputs = inputs;
             return this;
         }
-
+        public Builder inputs(JobInputClipResponse... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public JobInputSequenceResponse build() {
+        }        public JobInputSequenceResponse build() {
             return new JobInputSequenceResponse(inputs, odataType);
         }
     }

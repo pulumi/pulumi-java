@@ -79,22 +79,21 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public ServiceEndpointPropertiesFormatArgs build() {
+        }        public ServiceEndpointPropertiesFormatArgs build() {
             return new ServiceEndpointPropertiesFormatArgs(locations, service);
         }
     }

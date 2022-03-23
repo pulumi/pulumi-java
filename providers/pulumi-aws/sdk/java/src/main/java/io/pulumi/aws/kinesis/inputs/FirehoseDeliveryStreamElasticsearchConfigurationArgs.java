@@ -254,132 +254,106 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
             this.bufferingInterval = bufferingInterval;
             return this;
         }
-
         public Builder bufferingInterval(@Nullable Integer bufferingInterval) {
             this.bufferingInterval = Output.ofNullable(bufferingInterval);
             return this;
         }
-
         public Builder bufferingSize(@Nullable Output<Integer> bufferingSize) {
             this.bufferingSize = bufferingSize;
             return this;
         }
-
         public Builder bufferingSize(@Nullable Integer bufferingSize) {
             this.bufferingSize = Output.ofNullable(bufferingSize);
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
-
         public Builder clusterEndpoint(@Nullable Output<String> clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
-
         public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
             this.clusterEndpoint = Output.ofNullable(clusterEndpoint);
             return this;
         }
-
         public Builder domainArn(@Nullable Output<String> domainArn) {
             this.domainArn = domainArn;
             return this;
         }
-
         public Builder domainArn(@Nullable String domainArn) {
             this.domainArn = Output.ofNullable(domainArn);
             return this;
         }
-
         public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder indexName(String indexName) {
             this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
-
         public Builder indexRotationPeriod(@Nullable Output<String> indexRotationPeriod) {
             this.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
-
         public Builder indexRotationPeriod(@Nullable String indexRotationPeriod) {
             this.indexRotationPeriod = Output.ofNullable(indexRotationPeriod);
             return this;
         }
-
         public Builder processingConfiguration(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
-
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
-
         public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
-
         public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = Output.ofNullable(retryDuration);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
-
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public FirehoseDeliveryStreamElasticsearchConfigurationArgs build() {
+        }        public FirehoseDeliveryStreamElasticsearchConfigurationArgs build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationArgs(bufferingInterval, bufferingSize, cloudwatchLoggingOptions, clusterEndpoint, domainArn, indexName, indexRotationPeriod, processingConfiguration, retryDuration, roleArn, s3BackupMode, typeName, vpcConfig);
         }
     }

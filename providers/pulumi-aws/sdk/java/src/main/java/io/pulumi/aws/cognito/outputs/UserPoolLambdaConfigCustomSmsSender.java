@@ -69,12 +69,10 @@ public final class UserPoolLambdaConfigCustomSmsSender {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public Builder lambdaVersion(String lambdaVersion) {
             this.lambdaVersion = Objects.requireNonNull(lambdaVersion);
             return this;
-        }
-        public UserPoolLambdaConfigCustomSmsSender build() {
+        }        public UserPoolLambdaConfigCustomSmsSender build() {
             return new UserPoolLambdaConfigCustomSmsSender(lambdaArn, lambdaVersion);
         }
     }

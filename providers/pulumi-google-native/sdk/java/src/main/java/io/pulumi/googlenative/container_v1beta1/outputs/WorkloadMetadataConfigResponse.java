@@ -69,12 +69,10 @@ public final class WorkloadMetadataConfigResponse {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder nodeMetadata(String nodeMetadata) {
             this.nodeMetadata = Objects.requireNonNull(nodeMetadata);
             return this;
-        }
-        public WorkloadMetadataConfigResponse build() {
+        }        public WorkloadMetadataConfigResponse build() {
             return new WorkloadMetadataConfigResponse(mode, nodeMetadata);
         }
     }

@@ -71,12 +71,10 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
             this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
-        }
-        public SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption build() {
+        }        public SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption build() {
             return new SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption(jobBookmarksEncryptionMode, kmsKeyArn);
         }
     }

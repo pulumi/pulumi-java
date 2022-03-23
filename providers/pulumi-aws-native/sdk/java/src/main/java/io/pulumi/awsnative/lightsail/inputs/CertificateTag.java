@@ -78,12 +78,10 @@ public final class CertificateTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CertificateTag build() {
+        }        public CertificateTag build() {
             return new CertificateTag(key, value);
         }
     }

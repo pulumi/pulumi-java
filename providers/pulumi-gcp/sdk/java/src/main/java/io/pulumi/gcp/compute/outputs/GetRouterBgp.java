@@ -72,22 +72,24 @@ public final class GetRouterBgp {
             this.advertiseMode = Objects.requireNonNull(advertiseMode);
             return this;
         }
-
         public Builder advertisedGroups(List<String> advertisedGroups) {
             this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
             return this;
         }
-
+        public Builder advertisedGroups(String... advertisedGroups) {
+            return advertisedGroups(List.of(advertisedGroups));
+        }
         public Builder advertisedIpRanges(List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges) {
             this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
             return this;
         }
-
+        public Builder advertisedIpRanges(GetRouterBgpAdvertisedIpRange... advertisedIpRanges) {
+            return advertisedIpRanges(List.of(advertisedIpRanges));
+        }
         public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
-        }
-        public GetRouterBgp build() {
+        }        public GetRouterBgp build() {
             return new GetRouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
         }
     }

@@ -388,212 +388,176 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
             this.datasets = datasets;
             return this;
         }
-
         public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
             this.datasets = Output.ofNullable(datasets);
             return this;
         }
-
+        public Builder datasets(DatasetReferenceArgs... datasets) {
+            return datasets(List.of(datasets));
+        }
         public Builder derivedModelIds(@Nullable Output<List<String>> derivedModelIds) {
             this.derivedModelIds = derivedModelIds;
             return this;
         }
-
         public Builder derivedModelIds(@Nullable List<String> derivedModelIds) {
             this.derivedModelIds = Output.ofNullable(derivedModelIds);
             return this;
         }
-
+        public Builder derivedModelIds(String... derivedModelIds) {
+            return derivedModelIds(List.of(derivedModelIds));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder experimentName(@Nullable Output<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
-
         public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
-
         public Builder framework(@Nullable Output<String> framework) {
             this.framework = framework;
             return this;
         }
-
         public Builder framework(@Nullable String framework) {
             this.framework = Output.ofNullable(framework);
             return this;
         }
-
         public Builder frameworkVersion(@Nullable Output<String> frameworkVersion) {
             this.frameworkVersion = frameworkVersion;
             return this;
         }
-
         public Builder frameworkVersion(@Nullable String frameworkVersion) {
             this.frameworkVersion = Output.ofNullable(frameworkVersion);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
-
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Output.ofNullable(kvTags);
             return this;
         }
-
         public Builder mimeType(Output<String> mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public Builder mimeType(String mimeType) {
             this.mimeType = Output.of(Objects.requireNonNull(mimeType));
             return this;
         }
-
         public Builder modifiedTime(@Nullable Output<String> modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
-
         public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = Output.ofNullable(modifiedTime);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parentModelId(@Nullable Output<String> parentModelId) {
             this.parentModelId = parentModelId;
             return this;
         }
-
         public Builder parentModelId(@Nullable String parentModelId) {
             this.parentModelId = Output.ofNullable(parentModelId);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
-
         public Builder resourceRequirements(@Nullable ContainerResourceRequirementsArgs resourceRequirements) {
             this.resourceRequirements = Output.ofNullable(resourceRequirements);
             return this;
         }
-
         public Builder runId(@Nullable Output<String> runId) {
             this.runId = runId;
             return this;
         }
-
         public Builder runId(@Nullable String runId) {
             this.runId = Output.ofNullable(runId);
             return this;
         }
-
         public Builder sampleInputData(@Nullable Output<String> sampleInputData) {
             this.sampleInputData = sampleInputData;
             return this;
         }
-
         public Builder sampleInputData(@Nullable String sampleInputData) {
             this.sampleInputData = Output.ofNullable(sampleInputData);
             return this;
         }
-
         public Builder sampleOutputData(@Nullable Output<String> sampleOutputData) {
             this.sampleOutputData = sampleOutputData;
             return this;
         }
-
         public Builder sampleOutputData(@Nullable String sampleOutputData) {
             this.sampleOutputData = Output.ofNullable(sampleOutputData);
             return this;
         }
-
         public Builder unpack(@Nullable Output<Boolean> unpack) {
             this.unpack = unpack;
             return this;
         }
-
         public Builder unpack(@Nullable Boolean unpack) {
             this.unpack = Output.ofNullable(unpack);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder version(@Nullable Output<Double> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Double version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ModelArgs build() {
+        }        public ModelArgs build() {
             return new ModelArgs(createdTime, datasets, derivedModelIds, description, experimentName, framework, frameworkVersion, id, kvTags, mimeType, modifiedTime, name, parentModelId, properties, resourceRequirements, runId, sampleInputData, sampleOutputData, unpack, url, version);
         }
     }

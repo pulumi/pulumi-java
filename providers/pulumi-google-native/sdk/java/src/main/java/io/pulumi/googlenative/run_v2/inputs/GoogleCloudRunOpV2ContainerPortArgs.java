@@ -79,22 +79,18 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GoogleCloudRunOpV2ContainerPortArgs build() {
+        }        public GoogleCloudRunOpV2ContainerPortArgs build() {
             return new GoogleCloudRunOpV2ContainerPortArgs(containerPort, name);
         }
     }

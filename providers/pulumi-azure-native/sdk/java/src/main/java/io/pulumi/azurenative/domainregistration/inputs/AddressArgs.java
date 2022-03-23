@@ -142,62 +142,50 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             this.address1 = Objects.requireNonNull(address1);
             return this;
         }
-
         public Builder address1(String address1) {
             this.address1 = Output.of(Objects.requireNonNull(address1));
             return this;
         }
-
         public Builder address2(@Nullable Output<String> address2) {
             this.address2 = address2;
             return this;
         }
-
         public Builder address2(@Nullable String address2) {
             this.address2 = Output.ofNullable(address2);
             return this;
         }
-
         public Builder city(Output<String> city) {
             this.city = Objects.requireNonNull(city);
             return this;
         }
-
         public Builder city(String city) {
             this.city = Output.of(Objects.requireNonNull(city));
             return this;
         }
-
         public Builder country(Output<String> country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
-
         public Builder country(String country) {
             this.country = Output.of(Objects.requireNonNull(country));
             return this;
         }
-
         public Builder postalCode(Output<String> postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
-
         public Builder postalCode(String postalCode) {
             this.postalCode = Output.of(Objects.requireNonNull(postalCode));
             return this;
         }
-
         public Builder state(Output<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
-        }
-        public AddressArgs build() {
+        }        public AddressArgs build() {
             return new AddressArgs(address1, address2, city, country, postalCode, state);
         }
     }

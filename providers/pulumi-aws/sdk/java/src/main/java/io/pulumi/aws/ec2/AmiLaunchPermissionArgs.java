@@ -73,22 +73,18 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
-        }
-        public AmiLaunchPermissionArgs build() {
+        }        public AmiLaunchPermissionArgs build() {
             return new AmiLaunchPermissionArgs(accountId, imageId);
         }
     }

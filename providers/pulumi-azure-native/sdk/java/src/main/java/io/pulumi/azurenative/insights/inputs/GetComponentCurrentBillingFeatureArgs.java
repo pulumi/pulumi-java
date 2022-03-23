@@ -72,12 +72,10 @@ public final class GetComponentCurrentBillingFeatureArgs extends io.pulumi.resou
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetComponentCurrentBillingFeatureArgs build() {
+        }        public GetComponentCurrentBillingFeatureArgs build() {
             return new GetComponentCurrentBillingFeatureArgs(resourceGroupName, resourceName);
         }
     }

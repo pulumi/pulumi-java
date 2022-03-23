@@ -126,32 +126,26 @@ public final class GetWorkerConfigurationResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder latestRevision(Integer latestRevision) {
             this.latestRevision = Objects.requireNonNull(latestRevision);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder propertiesFileContent(String propertiesFileContent) {
             this.propertiesFileContent = Objects.requireNonNull(propertiesFileContent);
             return this;
-        }
-        public GetWorkerConfigurationResult build() {
+        }        public GetWorkerConfigurationResult build() {
             return new GetWorkerConfigurationResult(arn, description, id, latestRevision, name, propertiesFileContent);
         }
     }

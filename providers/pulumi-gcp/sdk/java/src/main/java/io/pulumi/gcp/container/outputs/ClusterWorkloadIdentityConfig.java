@@ -53,8 +53,7 @@ public final class ClusterWorkloadIdentityConfig {
         public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = workloadPool;
             return this;
-        }
-        public ClusterWorkloadIdentityConfig build() {
+        }        public ClusterWorkloadIdentityConfig build() {
             return new ClusterWorkloadIdentityConfig(workloadPool);
         }
     }

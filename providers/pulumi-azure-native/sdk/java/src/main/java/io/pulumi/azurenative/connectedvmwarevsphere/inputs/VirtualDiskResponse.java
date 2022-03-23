@@ -207,52 +207,42 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.controllerKey = controllerKey;
             return this;
         }
-
         public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder diskMode(@Nullable String diskMode) {
             this.diskMode = diskMode;
             return this;
         }
-
         public Builder diskObjectId(String diskObjectId) {
             this.diskObjectId = Objects.requireNonNull(diskObjectId);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder unitNumber(@Nullable Integer unitNumber) {
             this.unitNumber = unitNumber;
             return this;
-        }
-        public VirtualDiskResponse build() {
+        }        public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerKey, deviceKey, deviceName, diskMode, diskObjectId, diskSizeGB, diskType, label, name, unitNumber);
         }
     }

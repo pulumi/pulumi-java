@@ -111,42 +111,34 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder maxCount(Output<Integer> maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
-
         public Builder maxCount(Integer maxCount) {
             this.maxCount = Output.of(Objects.requireNonNull(maxCount));
             return this;
         }
-
         public Builder minCount(Output<Integer> minCount) {
             this.minCount = Objects.requireNonNull(minCount);
             return this;
         }
-
         public Builder minCount(Integer minCount) {
             this.minCount = Output.of(Objects.requireNonNull(minCount));
             return this;
         }
-
         public Builder scaleIncrement(Output<Integer> scaleIncrement) {
             this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
             return this;
         }
-
         public Builder scaleIncrement(Integer scaleIncrement) {
             this.scaleIncrement = Output.of(Objects.requireNonNull(scaleIncrement));
             return this;
-        }
-        public AddRemoveReplicaScalingMechanismArgs build() {
+        }        public AddRemoveReplicaScalingMechanismArgs build() {
             return new AddRemoveReplicaScalingMechanismArgs(kind, maxCount, minCount, scaleIncrement);
         }
     }

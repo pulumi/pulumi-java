@@ -207,102 +207,82 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultLimit = defaultLimit;
             return this;
         }
-
         public Builder defaultLimit(@Nullable String defaultLimit) {
             this.defaultLimit = Output.ofNullable(defaultLimit);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder freeTier(@Nullable Output<String> freeTier) {
             this.freeTier = freeTier;
             return this;
         }
-
         public Builder freeTier(@Nullable String freeTier) {
             this.freeTier = Output.ofNullable(freeTier);
             return this;
         }
-
         public Builder maxLimit(@Nullable Output<String> maxLimit) {
             this.maxLimit = maxLimit;
             return this;
         }
-
         public Builder maxLimit(@Nullable String maxLimit) {
             this.maxLimit = Output.ofNullable(maxLimit);
             return this;
         }
-
         public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable String metric) {
             this.metric = Output.ofNullable(metric);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
         }
-
         public Builder values(@Nullable Output<Map<String,String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable Map<String,String> values) {
             this.values = Output.ofNullable(values);
             return this;
-        }
-        public QuotaLimitArgs build() {
+        }        public QuotaLimitArgs build() {
             return new QuotaLimitArgs(defaultLimit, description, displayName, duration, freeTier, maxLimit, metric, name, unit, values);
         }
     }

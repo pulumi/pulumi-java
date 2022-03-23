@@ -52,12 +52,10 @@ public final class IntegrationZendeskSourcePropertiesArgs extends io.pulumi.reso
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public IntegrationZendeskSourcePropertiesArgs build() {
+        }        public IntegrationZendeskSourcePropertiesArgs build() {
             return new IntegrationZendeskSourcePropertiesArgs(object);
         }
     }

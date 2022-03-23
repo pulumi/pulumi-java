@@ -76,12 +76,10 @@ public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resource
             this.sha256Checksum = Objects.requireNonNull(sha256Checksum);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public OSPolicyResourceFileRemoteResponse build() {
+        }        public OSPolicyResourceFileRemoteResponse build() {
             return new OSPolicyResourceFileRemoteResponse(sha256Checksum, uri);
         }
     }

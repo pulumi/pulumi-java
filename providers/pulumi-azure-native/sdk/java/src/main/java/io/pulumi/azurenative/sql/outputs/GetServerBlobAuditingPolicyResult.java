@@ -386,62 +386,53 @@ public final class GetServerBlobAuditingPolicyResult {
             this.auditActionsAndGroups = auditActionsAndGroups;
             return this;
         }
-
+        public Builder auditActionsAndGroups(String... auditActionsAndGroups) {
+            return auditActionsAndGroups(List.of(auditActionsAndGroups));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
             this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;
             return this;
         }
-
         public Builder isDevopsAuditEnabled(@Nullable Boolean isDevopsAuditEnabled) {
             this.isDevopsAuditEnabled = isDevopsAuditEnabled;
             return this;
         }
-
         public Builder isStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
             this.isStorageSecondaryKeyInUse = isStorageSecondaryKeyInUse;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder queueDelayMs(@Nullable Integer queueDelayMs) {
             this.queueDelayMs = queueDelayMs;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
-
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerBlobAuditingPolicyResult build() {
+        }        public GetServerBlobAuditingPolicyResult build() {
             return new GetServerBlobAuditingPolicyResult(auditActionsAndGroups, id, isAzureMonitorTargetEnabled, isDevopsAuditEnabled, isStorageSecondaryKeyInUse, name, queueDelayMs, retentionDays, state, storageAccountSubscriptionId, storageEndpoint, type);
         }
     }

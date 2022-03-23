@@ -161,72 +161,58 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder partitionConfig(@Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig) {
             this.partitionConfig = partitionConfig;
             return this;
         }
-
         public Builder partitionConfig(@Nullable LiteTopicPartitionConfigGetArgs partitionConfig) {
             this.partitionConfig = Output.ofNullable(partitionConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder reservationConfig(@Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig) {
             this.reservationConfig = reservationConfig;
             return this;
         }
-
         public Builder reservationConfig(@Nullable LiteTopicReservationConfigGetArgs reservationConfig) {
             this.reservationConfig = Output.ofNullable(reservationConfig);
             return this;
         }
-
         public Builder retentionConfig(@Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig) {
             this.retentionConfig = retentionConfig;
             return this;
         }
-
         public Builder retentionConfig(@Nullable LiteTopicRetentionConfigGetArgs retentionConfig) {
             this.retentionConfig = Output.ofNullable(retentionConfig);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public LiteTopicState build() {
+        }        public LiteTopicState build() {
             return new LiteTopicState(name, partitionConfig, project, region, reservationConfig, retentionConfig, zone);
         }
     }

@@ -91,32 +91,26 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
             this.cloudwatchLogsRoleArn = Objects.requireNonNull(cloudwatchLogsRoleArn);
             return this;
         }
-
         public Builder cloudwatchLogsRoleArn(String cloudwatchLogsRoleArn) {
             this.cloudwatchLogsRoleArn = Output.of(Objects.requireNonNull(cloudwatchLogsRoleArn));
             return this;
         }
-
         public Builder excludeVerboseContent(@Nullable Output<Boolean> excludeVerboseContent) {
             this.excludeVerboseContent = excludeVerboseContent;
             return this;
         }
-
         public Builder excludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
             this.excludeVerboseContent = Output.ofNullable(excludeVerboseContent);
             return this;
         }
-
         public Builder fieldLogLevel(Output<String> fieldLogLevel) {
             this.fieldLogLevel = Objects.requireNonNull(fieldLogLevel);
             return this;
         }
-
         public Builder fieldLogLevel(String fieldLogLevel) {
             this.fieldLogLevel = Output.of(Objects.requireNonNull(fieldLogLevel));
             return this;
-        }
-        public GraphQLApiLogConfigGetArgs build() {
+        }        public GraphQLApiLogConfigGetArgs build() {
             return new GraphQLApiLogConfigGetArgs(cloudwatchLogsRoleArn, excludeVerboseContent, fieldLogLevel);
         }
     }

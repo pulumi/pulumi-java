@@ -52,12 +52,10 @@ public final class DatasetContentVersionValueArgs extends io.pulumi.resources.Re
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
-
         public Builder datasetName(String datasetName) {
             this.datasetName = Output.of(Objects.requireNonNull(datasetName));
             return this;
-        }
-        public DatasetContentVersionValueArgs build() {
+        }        public DatasetContentVersionValueArgs build() {
             return new DatasetContentVersionValueArgs(datasetName);
         }
     }

@@ -55,12 +55,10 @@ public final class StackAccessEndpoint {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = vpceId;
             return this;
-        }
-        public StackAccessEndpoint build() {
+        }        public StackAccessEndpoint build() {
             return new StackAccessEndpoint(endpointType, vpceId);
         }
     }

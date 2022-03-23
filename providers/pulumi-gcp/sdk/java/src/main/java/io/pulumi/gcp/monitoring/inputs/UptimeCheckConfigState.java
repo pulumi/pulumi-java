@@ -247,122 +247,104 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
             this.contentMatchers = contentMatchers;
             return this;
         }
-
         public Builder contentMatchers(@Nullable List<UptimeCheckConfigContentMatcherGetArgs> contentMatchers) {
             this.contentMatchers = Output.ofNullable(contentMatchers);
             return this;
         }
-
+        public Builder contentMatchers(UptimeCheckConfigContentMatcherGetArgs... contentMatchers) {
+            return contentMatchers(List.of(contentMatchers));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder httpCheck(@Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck) {
             this.httpCheck = httpCheck;
             return this;
         }
-
         public Builder httpCheck(@Nullable UptimeCheckConfigHttpCheckGetArgs httpCheck) {
             this.httpCheck = Output.ofNullable(httpCheck);
             return this;
         }
-
         public Builder monitoredResource(@Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
-
         public Builder monitoredResource(@Nullable UptimeCheckConfigMonitoredResourceGetArgs monitoredResource) {
             this.monitoredResource = Output.ofNullable(monitoredResource);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = Output.ofNullable(period);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceGroup(@Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceGroup(@Nullable UptimeCheckConfigResourceGroupGetArgs resourceGroup) {
             this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
-
         public Builder selectedRegions(@Nullable Output<List<String>> selectedRegions) {
             this.selectedRegions = selectedRegions;
             return this;
         }
-
         public Builder selectedRegions(@Nullable List<String> selectedRegions) {
             this.selectedRegions = Output.ofNullable(selectedRegions);
             return this;
         }
-
+        public Builder selectedRegions(String... selectedRegions) {
+            return selectedRegions(List.of(selectedRegions));
+        }
         public Builder tcpCheck(@Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck) {
             this.tcpCheck = tcpCheck;
             return this;
         }
-
         public Builder tcpCheck(@Nullable UptimeCheckConfigTcpCheckGetArgs tcpCheck) {
             this.tcpCheck = Output.ofNullable(tcpCheck);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder uptimeCheckId(@Nullable Output<String> uptimeCheckId) {
             this.uptimeCheckId = uptimeCheckId;
             return this;
         }
-
         public Builder uptimeCheckId(@Nullable String uptimeCheckId) {
             this.uptimeCheckId = Output.ofNullable(uptimeCheckId);
             return this;
-        }
-        public UptimeCheckConfigState build() {
+        }        public UptimeCheckConfigState build() {
             return new UptimeCheckConfigState(contentMatchers, displayName, httpCheck, monitoredResource, name, period, project, resourceGroup, selectedRegions, tcpCheck, timeout, uptimeCheckId);
         }
     }

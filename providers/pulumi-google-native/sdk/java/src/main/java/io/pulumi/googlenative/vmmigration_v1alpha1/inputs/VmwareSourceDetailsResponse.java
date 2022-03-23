@@ -108,22 +108,18 @@ public final class VmwareSourceDetailsResponse extends io.pulumi.resources.Invok
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder vcenterIp(String vcenterIp) {
             this.vcenterIp = Objects.requireNonNull(vcenterIp);
             return this;
-        }
-        public VmwareSourceDetailsResponse build() {
+        }        public VmwareSourceDetailsResponse build() {
             return new VmwareSourceDetailsResponse(password, thumbprint, username, vcenterIp);
         }
     }

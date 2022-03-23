@@ -66,12 +66,10 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetImageArgs build() {
+        }        public GetImageArgs build() {
             return new GetImageArgs(image, project);
         }
     }

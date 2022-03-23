@@ -183,47 +183,38 @@ public final class GetWorkloadClassifierResult {
             this.context = context;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder importance(@Nullable String importance) {
             this.importance = importance;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder memberName(String memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkloadClassifierResult build() {
+        }        public GetWorkloadClassifierResult build() {
             return new GetWorkloadClassifierResult(context, endTime, id, importance, label, memberName, name, startTime, type);
         }
     }

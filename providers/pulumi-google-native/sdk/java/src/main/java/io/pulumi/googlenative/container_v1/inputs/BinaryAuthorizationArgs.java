@@ -61,12 +61,10 @@ public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceA
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public BinaryAuthorizationArgs build() {
+        }        public BinaryAuthorizationArgs build() {
             return new BinaryAuthorizationArgs(enabled);
         }
     }

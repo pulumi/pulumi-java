@@ -78,32 +78,26 @@ public final class ListenerFixedResponseConfigArgs extends io.pulumi.resources.R
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder messageBody(@Nullable Output<String> messageBody) {
             this.messageBody = messageBody;
             return this;
         }
-
         public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = Output.ofNullable(messageBody);
             return this;
         }
-
         public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
-        }
-        public ListenerFixedResponseConfigArgs build() {
+        }        public ListenerFixedResponseConfigArgs build() {
             return new ListenerFixedResponseConfigArgs(contentType, messageBody, statusCode);
         }
     }

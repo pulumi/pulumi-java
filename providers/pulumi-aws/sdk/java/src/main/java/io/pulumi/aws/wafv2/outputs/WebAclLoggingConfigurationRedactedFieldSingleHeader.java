@@ -51,8 +51,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleHeader {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclLoggingConfigurationRedactedFieldSingleHeader build() {
+        }        public WebAclLoggingConfigurationRedactedFieldSingleHeader build() {
             return new WebAclLoggingConfigurationRedactedFieldSingleHeader(name);
         }
     }

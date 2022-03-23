@@ -271,142 +271,114 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudTiering = cloudTiering;
             return this;
         }
-
         public Builder cloudTiering(@Nullable Either<String,FeatureStatus> cloudTiering) {
             this.cloudTiering = Output.ofNullable(cloudTiering);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder initialDownloadPolicy(@Nullable Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy) {
             this.initialDownloadPolicy = initialDownloadPolicy;
             return this;
         }
-
         public Builder initialDownloadPolicy(@Nullable Either<String,InitialDownloadPolicy> initialDownloadPolicy) {
             this.initialDownloadPolicy = Output.ofNullable(initialDownloadPolicy);
             return this;
         }
-
         public Builder localCacheMode(@Nullable Output<Either<String,LocalCacheMode>> localCacheMode) {
             this.localCacheMode = localCacheMode;
             return this;
         }
-
         public Builder localCacheMode(@Nullable Either<String,LocalCacheMode> localCacheMode) {
             this.localCacheMode = Output.ofNullable(localCacheMode);
             return this;
         }
-
         public Builder offlineDataTransfer(@Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer) {
             this.offlineDataTransfer = offlineDataTransfer;
             return this;
         }
-
         public Builder offlineDataTransfer(@Nullable Either<String,FeatureStatus> offlineDataTransfer) {
             this.offlineDataTransfer = Output.ofNullable(offlineDataTransfer);
             return this;
         }
-
         public Builder offlineDataTransferShareName(@Nullable Output<String> offlineDataTransferShareName) {
             this.offlineDataTransferShareName = offlineDataTransferShareName;
             return this;
         }
-
         public Builder offlineDataTransferShareName(@Nullable String offlineDataTransferShareName) {
             this.offlineDataTransferShareName = Output.ofNullable(offlineDataTransferShareName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverEndpointName(@Nullable Output<String> serverEndpointName) {
             this.serverEndpointName = serverEndpointName;
             return this;
         }
-
         public Builder serverEndpointName(@Nullable String serverEndpointName) {
             this.serverEndpointName = Output.ofNullable(serverEndpointName);
             return this;
         }
-
         public Builder serverLocalPath(@Nullable Output<String> serverLocalPath) {
             this.serverLocalPath = serverLocalPath;
             return this;
         }
-
         public Builder serverLocalPath(@Nullable String serverLocalPath) {
             this.serverLocalPath = Output.ofNullable(serverLocalPath);
             return this;
         }
-
         public Builder serverResourceId(@Nullable Output<String> serverResourceId) {
             this.serverResourceId = serverResourceId;
             return this;
         }
-
         public Builder serverResourceId(@Nullable String serverResourceId) {
             this.serverResourceId = Output.ofNullable(serverResourceId);
             return this;
         }
-
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
-
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
-
         public Builder syncGroupName(Output<String> syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
-
         public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Output.of(Objects.requireNonNull(syncGroupName));
             return this;
         }
-
         public Builder tierFilesOlderThanDays(@Nullable Output<Integer> tierFilesOlderThanDays) {
             this.tierFilesOlderThanDays = tierFilesOlderThanDays;
             return this;
         }
-
         public Builder tierFilesOlderThanDays(@Nullable Integer tierFilesOlderThanDays) {
             this.tierFilesOlderThanDays = Output.ofNullable(tierFilesOlderThanDays);
             return this;
         }
-
         public Builder volumeFreeSpacePercent(@Nullable Output<Integer> volumeFreeSpacePercent) {
             this.volumeFreeSpacePercent = volumeFreeSpacePercent;
             return this;
         }
-
         public Builder volumeFreeSpacePercent(@Nullable Integer volumeFreeSpacePercent) {
             this.volumeFreeSpacePercent = Output.ofNullable(volumeFreeSpacePercent);
             return this;
-        }
-        public ServerEndpointArgs build() {
+        }        public ServerEndpointArgs build() {
             return new ServerEndpointArgs(cloudTiering, friendlyName, initialDownloadPolicy, localCacheMode, offlineDataTransfer, offlineDataTransferShareName, resourceGroupName, serverEndpointName, serverLocalPath, serverResourceId, storageSyncServiceName, syncGroupName, tierFilesOlderThanDays, volumeFreeSpacePercent);
         }
     }

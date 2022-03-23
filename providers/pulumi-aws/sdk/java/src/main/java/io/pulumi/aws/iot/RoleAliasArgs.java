@@ -91,32 +91,26 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder alias(String alias) {
             this.alias = Output.of(Objects.requireNonNull(alias));
             return this;
         }
-
         public Builder credentialDuration(@Nullable Output<Integer> credentialDuration) {
             this.credentialDuration = credentialDuration;
             return this;
         }
-
         public Builder credentialDuration(@Nullable Integer credentialDuration) {
             this.credentialDuration = Output.ofNullable(credentialDuration);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public RoleAliasArgs build() {
+        }        public RoleAliasArgs build() {
             return new RoleAliasArgs(alias, credentialDuration, roleArn);
         }
     }

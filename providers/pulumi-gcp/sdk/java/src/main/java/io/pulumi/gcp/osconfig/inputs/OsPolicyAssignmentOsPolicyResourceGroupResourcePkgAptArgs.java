@@ -56,12 +56,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs ext
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs(name);
         }
     }

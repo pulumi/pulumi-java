@@ -53,12 +53,10 @@ public final class TableColumn {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder columnType(String columnType) {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
-        }
-        public TableColumn build() {
+        }        public TableColumn build() {
             return new TableColumn(columnName, columnType);
         }
     }

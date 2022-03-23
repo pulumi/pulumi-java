@@ -574,152 +574,122 @@ public final class Volume {
             this.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
-
         public Builder azureDisk(@Nullable AzureDiskVolumeSource azureDisk) {
             this.azureDisk = azureDisk;
             return this;
         }
-
         public Builder azureFile(@Nullable AzureFileVolumeSource azureFile) {
             this.azureFile = azureFile;
             return this;
         }
-
         public Builder cephfs(@Nullable CephFSVolumeSource cephfs) {
             this.cephfs = cephfs;
             return this;
         }
-
         public Builder cinder(@Nullable CinderVolumeSource cinder) {
             this.cinder = cinder;
             return this;
         }
-
         public Builder configMap(@Nullable ConfigMapVolumeSource configMap) {
             this.configMap = configMap;
             return this;
         }
-
         public Builder csi(@Nullable CSIVolumeSource csi) {
             this.csi = csi;
             return this;
         }
-
         public Builder downwardAPI(@Nullable DownwardAPIVolumeSource downwardAPI) {
             this.downwardAPI = downwardAPI;
             return this;
         }
-
         public Builder emptyDir(@Nullable EmptyDirVolumeSource emptyDir) {
             this.emptyDir = emptyDir;
             return this;
         }
-
         public Builder ephemeral(@Nullable EphemeralVolumeSource ephemeral) {
             this.ephemeral = ephemeral;
             return this;
         }
-
         public Builder fc(@Nullable FCVolumeSource fc) {
             this.fc = fc;
             return this;
         }
-
         public Builder flexVolume(@Nullable FlexVolumeSource flexVolume) {
             this.flexVolume = flexVolume;
             return this;
         }
-
         public Builder flocker(@Nullable FlockerVolumeSource flocker) {
             this.flocker = flocker;
             return this;
         }
-
         public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSource gcePersistentDisk) {
             this.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
-
         public Builder gitRepo(@Nullable GitRepoVolumeSource gitRepo) {
             this.gitRepo = gitRepo;
             return this;
         }
-
         public Builder glusterfs(@Nullable GlusterfsVolumeSource glusterfs) {
             this.glusterfs = glusterfs;
             return this;
         }
-
         public Builder hostPath(@Nullable HostPathVolumeSource hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder iscsi(@Nullable ISCSIVolumeSource iscsi) {
             this.iscsi = iscsi;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nfs(@Nullable NFSVolumeSource nfs) {
             this.nfs = nfs;
             return this;
         }
-
         public Builder persistentVolumeClaim(@Nullable PersistentVolumeClaimVolumeSource persistentVolumeClaim) {
             this.persistentVolumeClaim = persistentVolumeClaim;
             return this;
         }
-
         public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk) {
             this.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
-
         public Builder portworxVolume(@Nullable PortworxVolumeSource portworxVolume) {
             this.portworxVolume = portworxVolume;
             return this;
         }
-
         public Builder projected(@Nullable ProjectedVolumeSource projected) {
             this.projected = projected;
             return this;
         }
-
         public Builder quobyte(@Nullable QuobyteVolumeSource quobyte) {
             this.quobyte = quobyte;
             return this;
         }
-
         public Builder rbd(@Nullable RBDVolumeSource rbd) {
             this.rbd = rbd;
             return this;
         }
-
         public Builder scaleIO(@Nullable ScaleIOVolumeSource scaleIO) {
             this.scaleIO = scaleIO;
             return this;
         }
-
         public Builder secret(@Nullable SecretVolumeSource secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder storageos(@Nullable StorageOSVolumeSource storageos) {
             this.storageos = storageos;
             return this;
         }
-
         public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
             this.vsphereVolume = vsphereVolume;
             return this;
-        }
-        public Volume build() {
+        }        public Volume build() {
             return new Volume(awsElasticBlockStore, azureDisk, azureFile, cephfs, cinder, configMap, csi, downwardAPI, emptyDir, ephemeral, fc, flexVolume, flocker, gcePersistentDisk, gitRepo, glusterfs, hostPath, iscsi, name, nfs, persistentVolumeClaim, photonPersistentDisk, portworxVolume, projected, quobyte, rbd, scaleIO, secret, storageos, vsphereVolume);
         }
     }

@@ -57,12 +57,10 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
             this.sns = sns;
             return this;
         }
-
         public Builder sns(@Nullable NotificationChannelSnsChannelConfigArgs sns) {
             this.sns = Output.ofNullable(sns);
             return this;
-        }
-        public NotificationChannelConfigArgs build() {
+        }        public NotificationChannelConfigArgs build() {
             return new NotificationChannelConfigArgs(sns);
         }
     }

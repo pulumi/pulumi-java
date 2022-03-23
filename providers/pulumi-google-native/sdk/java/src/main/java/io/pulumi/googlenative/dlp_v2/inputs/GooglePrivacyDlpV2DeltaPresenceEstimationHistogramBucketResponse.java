@@ -127,27 +127,25 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
-
         public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
-
         public Builder bucketValues(List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
-
+        public Builder bucketValues(GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse... bucketValues) {
+            return bucketValues(List.of(bucketValues));
+        }
         public Builder maxProbability(Double maxProbability) {
             this.maxProbability = Objects.requireNonNull(maxProbability);
             return this;
         }
-
         public Builder minProbability(Double minProbability) {
             this.minProbability = Objects.requireNonNull(minProbability);
             return this;
-        }
-        public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
+        }        public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxProbability, minProbability);
         }
     }

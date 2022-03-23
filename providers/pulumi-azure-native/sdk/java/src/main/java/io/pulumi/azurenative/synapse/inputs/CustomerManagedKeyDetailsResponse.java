@@ -79,12 +79,10 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
             this.key = key;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public CustomerManagedKeyDetailsResponse build() {
+        }        public CustomerManagedKeyDetailsResponse build() {
             return new CustomerManagedKeyDetailsResponse(key, status);
         }
     }

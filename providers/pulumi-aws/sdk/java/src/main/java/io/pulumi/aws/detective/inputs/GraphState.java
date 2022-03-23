@@ -103,42 +103,34 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder graphArn(@Nullable Output<String> graphArn) {
             this.graphArn = graphArn;
             return this;
         }
-
         public Builder graphArn(@Nullable String graphArn) {
             this.graphArn = Output.ofNullable(graphArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public GraphState build() {
+        }        public GraphState build() {
             return new GraphState(createdTime, graphArn, tags, tagsAll);
         }
     }

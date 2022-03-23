@@ -69,12 +69,10 @@ public final class OIDCProviderTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public OIDCProviderTag build() {
+        }        public OIDCProviderTag build() {
             return new OIDCProviderTag(key, value);
         }
     }

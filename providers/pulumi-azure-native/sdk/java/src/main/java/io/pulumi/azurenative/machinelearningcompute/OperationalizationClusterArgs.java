@@ -226,112 +226,90 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             this.appInsights = appInsights;
             return this;
         }
-
         public Builder appInsights(@Nullable AppInsightsPropertiesArgs appInsights) {
             this.appInsights = Output.ofNullable(appInsights);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder clusterType(Output<Either<String,ClusterType>> clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
-
         public Builder clusterType(Either<String,ClusterType> clusterType) {
             this.clusterType = Output.of(Objects.requireNonNull(clusterType));
             return this;
         }
-
         public Builder containerRegistry(@Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
-
         public Builder containerRegistry(@Nullable ContainerRegistryPropertiesArgs containerRegistry) {
             this.containerRegistry = Output.ofNullable(containerRegistry);
             return this;
         }
-
         public Builder containerService(@Nullable Output<AcsClusterPropertiesArgs> containerService) {
             this.containerService = containerService;
             return this;
         }
-
         public Builder containerService(@Nullable AcsClusterPropertiesArgs containerService) {
             this.containerService = Output.ofNullable(containerService);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalServiceConfiguration(@Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration) {
             this.globalServiceConfiguration = globalServiceConfiguration;
             return this;
         }
-
         public Builder globalServiceConfiguration(@Nullable GlobalServiceConfigurationArgs globalServiceConfiguration) {
             this.globalServiceConfiguration = Output.ofNullable(globalServiceConfiguration);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccount(@Nullable Output<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
             this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public OperationalizationClusterArgs build() {
+        }        public OperationalizationClusterArgs build() {
             return new OperationalizationClusterArgs(appInsights, clusterName, clusterType, containerRegistry, containerService, description, globalServiceConfiguration, location, resourceGroupName, storageAccount, tags);
         }
     }

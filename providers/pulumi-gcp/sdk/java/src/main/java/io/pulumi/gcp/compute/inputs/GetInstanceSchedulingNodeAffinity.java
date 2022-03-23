@@ -77,17 +77,17 @@ public final class GetInstanceSchedulingNodeAffinity extends io.pulumi.resources
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetInstanceSchedulingNodeAffinity build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetInstanceSchedulingNodeAffinity build() {
             return new GetInstanceSchedulingNodeAffinity(key, operator, values);
         }
     }

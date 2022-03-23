@@ -119,27 +119,22 @@ public final class GatewayApiMetadataPropertiesResponse {
             this.description = description;
             return this;
         }
-
         public Builder documentation(@Nullable String documentation) {
             this.documentation = documentation;
             return this;
         }
-
         public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GatewayApiMetadataPropertiesResponse build() {
+        }        public GatewayApiMetadataPropertiesResponse build() {
             return new GatewayApiMetadataPropertiesResponse(description, documentation, serverUrl, title, version);
         }
     }

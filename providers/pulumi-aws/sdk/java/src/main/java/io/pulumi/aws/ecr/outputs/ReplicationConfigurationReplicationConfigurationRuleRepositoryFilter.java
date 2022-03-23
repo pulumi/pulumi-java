@@ -69,12 +69,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filterType(String filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
-        }
-        public ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter build() {
+        }        public ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter build() {
             return new ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter(filter, filterType);
         }
     }

@@ -223,112 +223,93 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             this.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
-
         public Builder cloudwatchConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs cloudwatchConfig) {
             this.cloudwatchConfig = Output.ofNullable(cloudwatchConfig);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder documentHash(@Nullable Output<String> documentHash) {
             this.documentHash = documentHash;
             return this;
         }
-
         public Builder documentHash(@Nullable String documentHash) {
             this.documentHash = Output.ofNullable(documentHash);
             return this;
         }
-
         public Builder documentHashType(@Nullable Output<String> documentHashType) {
             this.documentHashType = documentHashType;
             return this;
         }
-
         public Builder documentHashType(@Nullable String documentHashType) {
             this.documentHashType = Output.ofNullable(documentHashType);
             return this;
         }
-
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder outputS3Bucket(@Nullable Output<String> outputS3Bucket) {
             this.outputS3Bucket = outputS3Bucket;
             return this;
         }
-
         public Builder outputS3Bucket(@Nullable String outputS3Bucket) {
             this.outputS3Bucket = Output.ofNullable(outputS3Bucket);
             return this;
         }
-
         public Builder outputS3KeyPrefix(@Nullable Output<String> outputS3KeyPrefix) {
             this.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
-
         public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
             this.outputS3KeyPrefix = Output.ofNullable(outputS3KeyPrefix);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs build() {
+        }        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs(cloudwatchConfig, comment, documentHash, documentHashType, documentVersion, notificationConfig, outputS3Bucket, outputS3KeyPrefix, parameters, serviceRoleArn, timeoutSeconds);
         }
     }

@@ -94,17 +94,20 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.enableOnpremGcsTransferLogs = Objects.requireNonNull(enableOnpremGcsTransferLogs);
             return this;
         }
-
         public Builder logActionStates(List<String> logActionStates) {
             this.logActionStates = Objects.requireNonNull(logActionStates);
             return this;
         }
-
+        public Builder logActionStates(String... logActionStates) {
+            return logActionStates(List.of(logActionStates));
+        }
         public Builder logActions(List<String> logActions) {
             this.logActions = Objects.requireNonNull(logActions);
             return this;
         }
-        public LoggingConfigResponse build() {
+        public Builder logActions(String... logActions) {
+            return logActions(List.of(logActions));
+        }        public LoggingConfigResponse build() {
             return new LoggingConfigResponse(enableOnpremGcsTransferLogs, logActionStates, logActions);
         }
     }

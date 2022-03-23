@@ -225,57 +225,49 @@ public final class SalesforceLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder apiVersion(@Nullable Object apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder environmentUrl(@Nullable Object environmentUrl) {
             this.environmentUrl = environmentUrl;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
-        }
-        public SalesforceLinkedServiceResponse build() {
+        }        public SalesforceLinkedServiceResponse build() {
             return new SalesforceLinkedServiceResponse(annotations, apiVersion, connectVia, description, encryptedCredential, environmentUrl, parameters, password, securityToken, type, username);
         }
     }

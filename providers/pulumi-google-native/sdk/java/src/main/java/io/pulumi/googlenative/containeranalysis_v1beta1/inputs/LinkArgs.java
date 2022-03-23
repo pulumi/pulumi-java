@@ -130,52 +130,51 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             this.byproducts = byproducts;
             return this;
         }
-
         public Builder byproducts(@Nullable ByProductsArgs byproducts) {
             this.byproducts = Output.ofNullable(byproducts);
             return this;
         }
-
         public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder environment(@Nullable Output<EnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable EnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder materials(@Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials) {
             this.materials = materials;
             return this;
         }
-
         public Builder materials(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> materials) {
             this.materials = Output.ofNullable(materials);
             return this;
         }
-
+        public Builder materials(GrafeasV1beta1IntotoArtifactArgs... materials) {
+            return materials(List.of(materials));
+        }
         public Builder products(@Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products) {
             this.products = products;
             return this;
         }
-
         public Builder products(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> products) {
             this.products = Output.ofNullable(products);
             return this;
         }
-        public LinkArgs build() {
+        public Builder products(GrafeasV1beta1IntotoArtifactArgs... products) {
+            return products(List.of(products));
+        }        public LinkArgs build() {
             return new LinkArgs(byproducts, command, environment, materials, products);
         }
     }

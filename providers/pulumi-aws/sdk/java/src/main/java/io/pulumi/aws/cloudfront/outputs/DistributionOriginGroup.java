@@ -88,17 +88,17 @@ public final class DistributionOriginGroup {
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
-
         public Builder members(List<DistributionOriginGroupMember> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
+        public Builder members(DistributionOriginGroupMember... members) {
+            return members(List.of(members));
+        }
         public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
-        }
-        public DistributionOriginGroup build() {
+        }        public DistributionOriginGroup build() {
             return new DistributionOriginGroup(failoverCriteria, members, originId);
         }
     }

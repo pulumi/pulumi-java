@@ -101,22 +101,18 @@ public final class SqlAclEntryResponse {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SqlAclEntryResponse build() {
+        }        public SqlAclEntryResponse build() {
             return new SqlAclEntryResponse(expireTime, label, ttl, value);
         }
     }

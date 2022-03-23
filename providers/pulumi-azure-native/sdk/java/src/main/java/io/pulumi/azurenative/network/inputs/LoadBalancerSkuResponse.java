@@ -78,12 +78,10 @@ public final class LoadBalancerSkuResponse extends io.pulumi.resources.InvokeArg
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public LoadBalancerSkuResponse build() {
+        }        public LoadBalancerSkuResponse build() {
             return new LoadBalancerSkuResponse(name, tier);
         }
     }

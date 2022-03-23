@@ -114,42 +114,37 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(NetworkInterfaceIPConfigurationArgs... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder macAddress(@Nullable Output<String> macAddress) {
             this.macAddress = macAddress;
             return this;
         }
-
         public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = Output.ofNullable(macAddress);
             return this;
         }
-
         public Builder networkInterfaceName(@Nullable Output<String> networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
-
         public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
             this.networkInterfaceName = Output.ofNullable(networkInterfaceName);
             return this;
         }
-
         public Builder vmSwitchType(@Nullable Output<Either<String,VMSwitchType>> vmSwitchType) {
             this.vmSwitchType = vmSwitchType;
             return this;
         }
-
         public Builder vmSwitchType(@Nullable Either<String,VMSwitchType> vmSwitchType) {
             this.vmSwitchType = Output.ofNullable(vmSwitchType);
             return this;
-        }
-        public NetworkInterfaceArgs build() {
+        }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(ipConfigurations, macAddress, networkInterfaceName, vmSwitchType);
         }
     }

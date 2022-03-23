@@ -140,62 +140,50 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.appendUserAgent = appendUserAgent;
             return this;
         }
-
         public Builder appendUserAgent(@Nullable String appendUserAgent) {
             this.appendUserAgent = Output.ofNullable(appendUserAgent);
             return this;
         }
-
         public Builder disablePartnerName(@Nullable Output<Boolean> disablePartnerName) {
             this.disablePartnerName = disablePartnerName;
             return this;
         }
-
         public Builder disablePartnerName(@Nullable Boolean disablePartnerName) {
             this.disablePartnerName = Output.ofNullable(disablePartnerName);
             return this;
         }
-
         public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
-
         public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public ProviderArgs build() {
+        }        public ProviderArgs build() {
             return new ProviderArgs(appendUserAgent, disablePartnerName, partnerName, project, region, zone);
         }
     }

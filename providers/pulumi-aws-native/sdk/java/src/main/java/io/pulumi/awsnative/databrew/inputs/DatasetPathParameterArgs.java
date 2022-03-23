@@ -70,22 +70,18 @@ public final class DatasetPathParameterArgs extends io.pulumi.resources.Resource
             this.datasetParameter = Objects.requireNonNull(datasetParameter);
             return this;
         }
-
         public Builder datasetParameter(DatasetParameterArgs datasetParameter) {
             this.datasetParameter = Output.of(Objects.requireNonNull(datasetParameter));
             return this;
         }
-
         public Builder pathParameterName(Output<String> pathParameterName) {
             this.pathParameterName = Objects.requireNonNull(pathParameterName);
             return this;
         }
-
         public Builder pathParameterName(String pathParameterName) {
             this.pathParameterName = Output.of(Objects.requireNonNull(pathParameterName));
             return this;
-        }
-        public DatasetPathParameterArgs build() {
+        }        public DatasetPathParameterArgs build() {
             return new DatasetPathParameterArgs(datasetParameter, pathParameterName);
         }
     }

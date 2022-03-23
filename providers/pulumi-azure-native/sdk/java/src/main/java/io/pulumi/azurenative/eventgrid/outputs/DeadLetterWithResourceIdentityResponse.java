@@ -74,12 +74,10 @@ public final class DeadLetterWithResourceIdentityResponse {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
-
         public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             this.identity = identity;
             return this;
-        }
-        public DeadLetterWithResourceIdentityResponse build() {
+        }        public DeadLetterWithResourceIdentityResponse build() {
             return new DeadLetterWithResourceIdentityResponse(deadLetterDestination, identity);
         }
     }

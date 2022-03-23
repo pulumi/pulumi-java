@@ -128,27 +128,22 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
             this.failureDetail = Objects.requireNonNull(failureDetail);
             return this;
         }
-
         public Builder inconclusiveDetail(InconclusiveDetailResponse inconclusiveDetail) {
             this.inconclusiveDetail = Objects.requireNonNull(inconclusiveDetail);
             return this;
         }
-
         public Builder skippedDetail(SkippedDetailResponse skippedDetail) {
             this.skippedDetail = Objects.requireNonNull(skippedDetail);
             return this;
         }
-
         public Builder successDetail(SuccessDetailResponse successDetail) {
             this.successDetail = Objects.requireNonNull(successDetail);
             return this;
         }
-
         public Builder summary(String summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
-        }
-        public OutcomeResponse build() {
+        }        public OutcomeResponse build() {
             return new OutcomeResponse(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
         }
     }

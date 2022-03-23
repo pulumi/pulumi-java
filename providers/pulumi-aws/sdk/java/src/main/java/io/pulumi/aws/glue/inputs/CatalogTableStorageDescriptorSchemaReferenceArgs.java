@@ -92,32 +92,26 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
             this.schemaId = schemaId;
             return this;
         }
-
         public Builder schemaId(@Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs schemaId) {
             this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
-
         public Builder schemaVersionId(@Nullable Output<String> schemaVersionId) {
             this.schemaVersionId = schemaVersionId;
             return this;
         }
-
         public Builder schemaVersionId(@Nullable String schemaVersionId) {
             this.schemaVersionId = Output.ofNullable(schemaVersionId);
             return this;
         }
-
         public Builder schemaVersionNumber(Output<Integer> schemaVersionNumber) {
             this.schemaVersionNumber = Objects.requireNonNull(schemaVersionNumber);
             return this;
         }
-
         public Builder schemaVersionNumber(Integer schemaVersionNumber) {
             this.schemaVersionNumber = Output.of(Objects.requireNonNull(schemaVersionNumber));
             return this;
-        }
-        public CatalogTableStorageDescriptorSchemaReferenceArgs build() {
+        }        public CatalogTableStorageDescriptorSchemaReferenceArgs build() {
             return new CatalogTableStorageDescriptorSchemaReferenceArgs(schemaId, schemaVersionId, schemaVersionNumber);
         }
     }

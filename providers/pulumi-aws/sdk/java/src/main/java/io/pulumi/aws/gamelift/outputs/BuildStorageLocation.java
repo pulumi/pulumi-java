@@ -85,17 +85,14 @@ public final class BuildStorageLocation {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public BuildStorageLocation build() {
+        }        public BuildStorageLocation build() {
             return new BuildStorageLocation(bucket, key, roleArn);
         }
     }

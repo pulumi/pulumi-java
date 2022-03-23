@@ -104,32 +104,29 @@ public final class GetResolverRulesResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
-
         public Builder resolverRuleIds(List<String> resolverRuleIds) {
             this.resolverRuleIds = Objects.requireNonNull(resolverRuleIds);
             return this;
         }
-
+        public Builder resolverRuleIds(String... resolverRuleIds) {
+            return resolverRuleIds(List.of(resolverRuleIds));
+        }
         public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = ruleType;
             return this;
         }
-
         public Builder shareStatus(@Nullable String shareStatus) {
             this.shareStatus = shareStatus;
             return this;
-        }
-        public GetResolverRulesResult build() {
+        }        public GetResolverRulesResult build() {
             return new GetResolverRulesResult(id, ownerId, resolverEndpointId, resolverRuleIds, ruleType, shareStatus);
         }
     }

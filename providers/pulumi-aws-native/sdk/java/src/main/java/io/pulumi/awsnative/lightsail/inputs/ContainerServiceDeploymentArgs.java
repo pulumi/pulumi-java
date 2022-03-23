@@ -80,22 +80,21 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(ContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder publicEndpoint(@Nullable Output<ContainerPublicEndpointArgs> publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
-
         public Builder publicEndpoint(@Nullable ContainerPublicEndpointArgs publicEndpoint) {
             this.publicEndpoint = Output.ofNullable(publicEndpoint);
             return this;
-        }
-        public ContainerServiceDeploymentArgs build() {
+        }        public ContainerServiceDeploymentArgs build() {
             return new ContainerServiceDeploymentArgs(containers, publicEndpoint);
         }
     }

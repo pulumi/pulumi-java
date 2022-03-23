@@ -101,22 +101,18 @@ public final class LifecycleConfigResponse {
             this.autoDeleteTime = Objects.requireNonNull(autoDeleteTime);
             return this;
         }
-
         public Builder autoDeleteTtl(String autoDeleteTtl) {
             this.autoDeleteTtl = Objects.requireNonNull(autoDeleteTtl);
             return this;
         }
-
         public Builder idleDeleteTtl(String idleDeleteTtl) {
             this.idleDeleteTtl = Objects.requireNonNull(idleDeleteTtl);
             return this;
         }
-
         public Builder idleStartTime(String idleStartTime) {
             this.idleStartTime = Objects.requireNonNull(idleStartTime);
             return this;
-        }
-        public LifecycleConfigResponse build() {
+        }        public LifecycleConfigResponse build() {
             return new LifecycleConfigResponse(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
         }
     }

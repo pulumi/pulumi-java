@@ -247,112 +247,99 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dataset(DatasetReferenceArgs dataset) {
             this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fieldList(@Nullable Output<List<Object>> fieldList) {
             this.fieldList = fieldList;
             return this;
         }
-
         public Builder fieldList(@Nullable List<Object> fieldList) {
             this.fieldList = Output.ofNullable(fieldList);
             return this;
         }
-
+        public Builder fieldList(Object... fieldList) {
+            return fieldList(List.of(fieldList));
+        }
         public Builder formatSettings(@Nullable Output<Object> formatSettings) {
             this.formatSettings = formatSettings;
             return this;
         }
-
         public Builder formatSettings(@Nullable Object formatSettings) {
             this.formatSettings = Output.ofNullable(formatSettings);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder storeSettings(@Nullable Output<Object> storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
-
         public Builder storeSettings(@Nullable Object storeSettings) {
             this.storeSettings = Output.ofNullable(storeSettings);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public GetMetadataActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public GetMetadataActivityArgs build() {
             return new GetMetadataActivityArgs(dataset, dependsOn, description, fieldList, formatSettings, linkedServiceName, name, policy, storeSettings, type, userProperties);
         }
     }

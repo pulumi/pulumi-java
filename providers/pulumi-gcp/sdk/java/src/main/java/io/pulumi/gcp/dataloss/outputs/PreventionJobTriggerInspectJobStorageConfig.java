@@ -114,22 +114,18 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
             this.bigQueryOptions = bigQueryOptions;
             return this;
         }
-
         public Builder cloudStorageOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions cloudStorageOptions) {
             this.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
-
         public Builder datastoreOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptions datastoreOptions) {
             this.datastoreOptions = datastoreOptions;
             return this;
         }
-
         public Builder timespanConfig(@Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig) {
             this.timespanConfig = timespanConfig;
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfig build() {
+        }        public PreventionJobTriggerInspectJobStorageConfig build() {
             return new PreventionJobTriggerInspectJobStorageConfig(bigQueryOptions, cloudStorageOptions, datastoreOptions, timespanConfig);
         }
     }

@@ -88,17 +88,14 @@ public final class GetDataConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetDataConnectorArgs build() {
+        }        public GetDataConnectorArgs build() {
             return new GetDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
         }
     }

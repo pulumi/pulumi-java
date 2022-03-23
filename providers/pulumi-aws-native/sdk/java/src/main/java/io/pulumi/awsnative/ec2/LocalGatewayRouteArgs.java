@@ -89,32 +89,26 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
-
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
-
         public Builder localGatewayRouteTableId(Output<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
-
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Output.of(Objects.requireNonNull(localGatewayRouteTableId));
             return this;
         }
-
         public Builder localGatewayVirtualInterfaceGroupId(Output<String> localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = Objects.requireNonNull(localGatewayVirtualInterfaceGroupId);
             return this;
         }
-
         public Builder localGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = Output.of(Objects.requireNonNull(localGatewayVirtualInterfaceGroupId));
             return this;
-        }
-        public LocalGatewayRouteArgs build() {
+        }        public LocalGatewayRouteArgs build() {
             return new LocalGatewayRouteArgs(destinationCidrBlock, localGatewayRouteTableId, localGatewayVirtualInterfaceGroupId);
         }
     }

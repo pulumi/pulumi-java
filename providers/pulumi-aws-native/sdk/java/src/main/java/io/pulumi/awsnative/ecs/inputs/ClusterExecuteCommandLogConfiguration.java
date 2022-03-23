@@ -107,27 +107,22 @@ public final class ClusterExecuteCommandLogConfiguration extends io.pulumi.resou
             this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
             return this;
         }
-
         public Builder cloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
             this.cloudWatchLogGroupName = cloudWatchLogGroupName;
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3EncryptionEnabled(@Nullable Boolean s3EncryptionEnabled) {
             this.s3EncryptionEnabled = s3EncryptionEnabled;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }
-        public ClusterExecuteCommandLogConfiguration build() {
+        }        public ClusterExecuteCommandLogConfiguration build() {
             return new ClusterExecuteCommandLogConfiguration(cloudWatchEncryptionEnabled, cloudWatchLogGroupName, s3BucketName, s3EncryptionEnabled, s3KeyPrefix);
         }
     }

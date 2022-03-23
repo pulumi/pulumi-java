@@ -134,32 +134,26 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
             this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
             return this;
         }
-
         public Builder identityCertThumbprint(String identityCertThumbprint) {
             this.identityCertThumbprint = Objects.requireNonNull(identityCertThumbprint);
             return this;
         }
-
         public Builder isIdentityCertExprired(Boolean isIdentityCertExprired) {
             this.isIdentityCertExprired = Objects.requireNonNull(isIdentityCertExprired);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder serviceToken(String serviceToken) {
             this.serviceToken = Objects.requireNonNull(serviceToken);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetIntegrationRuntimeConnectionInfoResult build() {
+        }        public GetIntegrationRuntimeConnectionInfoResult build() {
             return new GetIntegrationRuntimeConnectionInfoResult(hostServiceUri, identityCertThumbprint, isIdentityCertExprired, publicKey, serviceToken, version);
         }
     }

@@ -126,27 +126,28 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder status(BucketIntelligentTieringConfigurationStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
+        public Builder tagFilters(BucketTagFilter... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }
         public Builder tierings(List<BucketTiering> tierings) {
             this.tierings = Objects.requireNonNull(tierings);
             return this;
         }
-        public BucketIntelligentTieringConfiguration build() {
+        public Builder tierings(BucketTiering... tierings) {
+            return tierings(List.of(tierings));
+        }        public BucketIntelligentTieringConfiguration build() {
             return new BucketIntelligentTieringConfiguration(id, prefix, status, tagFilters, tierings);
         }
     }

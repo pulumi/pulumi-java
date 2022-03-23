@@ -68,22 +68,21 @@ public final class DataSourceOneDriveUsersArgs extends io.pulumi.resources.Resou
             this.oneDriveUserList = oneDriveUserList;
             return this;
         }
-
         public Builder oneDriveUserList(@Nullable List<String> oneDriveUserList) {
             this.oneDriveUserList = Output.ofNullable(oneDriveUserList);
             return this;
         }
-
+        public Builder oneDriveUserList(String... oneDriveUserList) {
+            return oneDriveUserList(List.of(oneDriveUserList));
+        }
         public Builder oneDriveUserS3Path(@Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path) {
             this.oneDriveUserS3Path = oneDriveUserS3Path;
             return this;
         }
-
         public Builder oneDriveUserS3Path(@Nullable DataSourceS3PathArgs oneDriveUserS3Path) {
             this.oneDriveUserS3Path = Output.ofNullable(oneDriveUserS3Path);
             return this;
-        }
-        public DataSourceOneDriveUsersArgs build() {
+        }        public DataSourceOneDriveUsersArgs build() {
             return new DataSourceOneDriveUsersArgs(oneDriveUserList, oneDriveUserS3Path);
         }
     }

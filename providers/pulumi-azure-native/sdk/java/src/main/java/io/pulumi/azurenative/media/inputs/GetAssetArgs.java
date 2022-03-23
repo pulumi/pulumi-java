@@ -88,17 +88,14 @@ public final class GetAssetArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAssetArgs build() {
+        }        public GetAssetArgs build() {
             return new GetAssetArgs(accountName, assetName, resourceGroupName);
         }
     }

@@ -152,32 +152,32 @@ public final class LaunchProfileStreamConfiguration {
             this.clipboardMode = Objects.requireNonNull(clipboardMode);
             return this;
         }
-
         public Builder ec2InstanceTypes(List<LaunchProfileStreamingInstanceType> ec2InstanceTypes) {
             this.ec2InstanceTypes = Objects.requireNonNull(ec2InstanceTypes);
             return this;
         }
-
+        public Builder ec2InstanceTypes(LaunchProfileStreamingInstanceType... ec2InstanceTypes) {
+            return ec2InstanceTypes(List.of(ec2InstanceTypes));
+        }
         public Builder maxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
             this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
             return this;
         }
-
         public Builder maxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
             this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
             return this;
         }
-
         public Builder sessionStorage(@Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage) {
             this.sessionStorage = sessionStorage;
             return this;
         }
-
         public Builder streamingImageIds(List<String> streamingImageIds) {
             this.streamingImageIds = Objects.requireNonNull(streamingImageIds);
             return this;
         }
-        public LaunchProfileStreamConfiguration build() {
+        public Builder streamingImageIds(String... streamingImageIds) {
+            return streamingImageIds(List.of(streamingImageIds));
+        }        public LaunchProfileStreamConfiguration build() {
             return new LaunchProfileStreamConfiguration(clipboardMode, ec2InstanceTypes, maxSessionLengthInMinutes, maxStoppedSessionLengthInMinutes, sessionStorage, streamingImageIds);
         }
     }

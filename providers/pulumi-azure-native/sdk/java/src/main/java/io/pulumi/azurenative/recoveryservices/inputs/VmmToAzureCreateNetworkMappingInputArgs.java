@@ -62,12 +62,10 @@ public final class VmmToAzureCreateNetworkMappingInputArgs extends io.pulumi.res
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
-        }
-        public VmmToAzureCreateNetworkMappingInputArgs build() {
+        }        public VmmToAzureCreateNetworkMappingInputArgs build() {
             return new VmmToAzureCreateNetworkMappingInputArgs(instanceType);
         }
     }

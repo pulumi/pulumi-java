@@ -249,67 +249,57 @@ public final class SiteResponse {
             this.eTag = eTag;
             return this;
         }
-
         public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
             this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
             this.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
-
         public Builder isTokenEnabled(@Nullable Boolean isTokenEnabled) {
             this.isTokenEnabled = isTokenEnabled;
             return this;
         }
-
         public Builder isV1Enabled(Boolean isV1Enabled) {
             this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
             return this;
         }
-
         public Builder isV3Enabled(Boolean isV3Enabled) {
             this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
             return this;
         }
-
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
             this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
-
         public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
             this.trustedOrigins = trustedOrigins;
             return this;
         }
-        public SiteResponse build() {
+        public Builder trustedOrigins(String... trustedOrigins) {
+            return trustedOrigins(List.of(trustedOrigins));
+        }        public SiteResponse build() {
             return new SiteResponse(eTag, isBlockUserUploadEnabled, isEnabled, isSecureSiteEnabled, isTokenEnabled, isV1Enabled, isV3Enabled, isWebchatPreviewEnabled, key, key2, siteId, siteName, trustedOrigins);
         }
     }

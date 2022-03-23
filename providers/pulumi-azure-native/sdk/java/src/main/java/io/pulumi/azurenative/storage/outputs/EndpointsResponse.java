@@ -169,42 +169,34 @@ public final class EndpointsResponse {
             this.blob = Objects.requireNonNull(blob);
             return this;
         }
-
         public Builder dfs(String dfs) {
             this.dfs = Objects.requireNonNull(dfs);
             return this;
         }
-
         public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder internetEndpoints(@Nullable StorageAccountInternetEndpointsResponse internetEndpoints) {
             this.internetEndpoints = internetEndpoints;
             return this;
         }
-
         public Builder microsoftEndpoints(@Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints) {
             this.microsoftEndpoints = microsoftEndpoints;
             return this;
         }
-
         public Builder queue(String queue) {
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
-
         public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder web(String web) {
             this.web = Objects.requireNonNull(web);
             return this;
-        }
-        public EndpointsResponse build() {
+        }        public EndpointsResponse build() {
             return new EndpointsResponse(blob, dfs, file, internetEndpoints, microsoftEndpoints, queue, table, web);
         }
     }

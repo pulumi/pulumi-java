@@ -98,32 +98,26 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
             this.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
-
         public Builder destinationPortBehavior(@Nullable Either<String,DestinationPortBehavior> destinationPortBehavior) {
             this.destinationPortBehavior = Output.ofNullable(destinationPortBehavior);
             return this;
         }
-
         public Builder disableTraceRoute(@Nullable Output<Boolean> disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
-
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = Output.ofNullable(disableTraceRoute);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public ConnectionMonitorTcpConfigurationArgs build() {
+        }        public ConnectionMonitorTcpConfigurationArgs build() {
             return new ConnectionMonitorTcpConfigurationArgs(destinationPortBehavior, disableTraceRoute, port);
         }
     }

@@ -95,32 +95,26 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
             return this;
         }
-
         public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }
-
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
             this.minNodeCount = Output.ofNullable(minNodeCount);
             return this;
         }
-
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable Output<String> nodeIdleTimeBeforeScaleDown) {
             this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
         }
-
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
             this.nodeIdleTimeBeforeScaleDown = Output.ofNullable(nodeIdleTimeBeforeScaleDown);
             return this;
-        }
-        public ScaleSettingsArgs build() {
+        }        public ScaleSettingsArgs build() {
             return new ScaleSettingsArgs(maxNodeCount, minNodeCount, nodeIdleTimeBeforeScaleDown);
         }
     }

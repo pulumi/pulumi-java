@@ -88,17 +88,14 @@ public final class KpiPropertiesResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public KpiPropertiesResponse build() {
+        }        public KpiPropertiesResponse build() {
             return new KpiPropertiesResponse(enabled, id, type);
         }
     }

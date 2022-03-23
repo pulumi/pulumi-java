@@ -69,12 +69,10 @@ public final class JobOutputResponse {
             this.datastoreId = Objects.requireNonNull(datastoreId);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public JobOutputResponse build() {
+        }        public JobOutputResponse build() {
             return new JobOutputResponse(datastoreId, path);
         }
     }

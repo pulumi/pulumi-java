@@ -61,12 +61,10 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
-        }
-        public ReplicaArgs build() {
+        }        public ReplicaArgs build() {
             return new ReplicaArgs(location);
         }
     }

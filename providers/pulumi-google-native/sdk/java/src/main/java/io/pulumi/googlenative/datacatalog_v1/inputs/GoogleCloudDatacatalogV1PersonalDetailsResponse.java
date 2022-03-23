@@ -77,12 +77,10 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
             this.starTime = Objects.requireNonNull(starTime);
             return this;
         }
-
         public Builder starred(Boolean starred) {
             this.starred = Objects.requireNonNull(starred);
             return this;
-        }
-        public GoogleCloudDatacatalogV1PersonalDetailsResponse build() {
+        }        public GoogleCloudDatacatalogV1PersonalDetailsResponse build() {
             return new GoogleCloudDatacatalogV1PersonalDetailsResponse(starTime, starred);
         }
     }

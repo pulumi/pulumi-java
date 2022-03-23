@@ -62,12 +62,13 @@ public final class DetectorModelOnExitArgs extends io.pulumi.resources.ResourceA
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable List<DetectorModelEventArgs> events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-        public DetectorModelOnExitArgs build() {
+        public Builder events(DetectorModelEventArgs... events) {
+            return events(List.of(events));
+        }        public DetectorModelOnExitArgs build() {
             return new DetectorModelOnExitArgs(events);
         }
     }

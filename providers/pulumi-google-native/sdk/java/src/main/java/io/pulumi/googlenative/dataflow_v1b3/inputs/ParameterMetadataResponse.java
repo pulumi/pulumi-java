@@ -159,37 +159,33 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
             this.customMetadata = Objects.requireNonNull(customMetadata);
             return this;
         }
-
         public Builder helpText(String helpText) {
             this.helpText = Objects.requireNonNull(helpText);
             return this;
         }
-
         public Builder isOptional(Boolean isOptional) {
             this.isOptional = Objects.requireNonNull(isOptional);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder paramType(String paramType) {
             this.paramType = Objects.requireNonNull(paramType);
             return this;
         }
-
         public Builder regexes(List<String> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-        public ParameterMetadataResponse build() {
+        public Builder regexes(String... regexes) {
+            return regexes(List.of(regexes));
+        }        public ParameterMetadataResponse build() {
             return new ParameterMetadataResponse(customMetadata, helpText, isOptional, label, name, paramType, regexes);
         }
     }

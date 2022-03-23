@@ -155,72 +155,58 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
             this.billingAccount = billingAccount;
             return this;
         }
-
         public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
-
         public Builder bucketId(@Nullable Output<String> bucketId) {
             this.bucketId = bucketId;
             return this;
         }
-
         public Builder bucketId(@Nullable String bucketId) {
             this.bucketId = Output.ofNullable(bucketId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
-
         public Builder lifecycleState(@Nullable String lifecycleState) {
             this.lifecycleState = Output.ofNullable(lifecycleState);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
-        }
-        public BillingAccountBucketConfigState build() {
+        }        public BillingAccountBucketConfigState build() {
             return new BillingAccountBucketConfigState(billingAccount, bucketId, description, lifecycleState, location, name, retentionDays);
         }
     }

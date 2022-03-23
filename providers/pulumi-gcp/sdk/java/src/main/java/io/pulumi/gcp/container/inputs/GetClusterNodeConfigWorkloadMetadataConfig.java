@@ -50,8 +50,7 @@ public final class GetClusterNodeConfigWorkloadMetadataConfig extends io.pulumi.
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public GetClusterNodeConfigWorkloadMetadataConfig build() {
+        }        public GetClusterNodeConfigWorkloadMetadataConfig build() {
             return new GetClusterNodeConfigWorkloadMetadataConfig(mode);
         }
     }

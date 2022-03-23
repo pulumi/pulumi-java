@@ -105,42 +105,40 @@ public final class GetThemeResult {
             this.appId = appId;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder overrides(@Nullable List<ThemeValues> overrides) {
             this.overrides = overrides;
             return this;
         }
-
+        public Builder overrides(ThemeValues... overrides) {
+            return overrides(List.of(overrides));
+        }
         public Builder values(@Nullable List<ThemeValues> values) {
             this.values = values;
             return this;
         }
-        public GetThemeResult build() {
+        public Builder values(ThemeValues... values) {
+            return values(List.of(values));
+        }        public GetThemeResult build() {
             return new GetThemeResult(appId, createdAt, environmentName, id, modifiedAt, name, overrides, values);
         }
     }

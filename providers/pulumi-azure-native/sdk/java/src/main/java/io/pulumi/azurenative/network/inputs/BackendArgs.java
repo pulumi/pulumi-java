@@ -225,112 +225,90 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder backendHostHeader(@Nullable Output<String> backendHostHeader) {
             this.backendHostHeader = backendHostHeader;
             return this;
         }
-
         public Builder backendHostHeader(@Nullable String backendHostHeader) {
             this.backendHostHeader = Output.ofNullable(backendHostHeader);
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,BackendEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,BackendEnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-
         public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = Output.ofNullable(httpPort);
             return this;
         }
-
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-
         public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = Output.ofNullable(httpsPort);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
-
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = Output.ofNullable(privateLinkAlias);
             return this;
         }
-
         public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
-
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = Output.ofNullable(privateLinkApprovalMessage);
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public BackendArgs build() {
+        }        public BackendArgs build() {
             return new BackendArgs(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }
     }

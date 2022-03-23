@@ -97,22 +97,21 @@ public final class FlowSalesforceDestinationProperties extends io.pulumi.resourc
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder idFieldNames(@Nullable List<String> idFieldNames) {
             this.idFieldNames = idFieldNames;
             return this;
         }
-
+        public Builder idFieldNames(String... idFieldNames) {
+            return idFieldNames(List.of(idFieldNames));
+        }
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
             this.writeOperationType = writeOperationType;
             return this;
-        }
-        public FlowSalesforceDestinationProperties build() {
+        }        public FlowSalesforceDestinationProperties build() {
             return new FlowSalesforceDestinationProperties(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }
     }

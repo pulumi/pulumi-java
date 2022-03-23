@@ -65,12 +65,10 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
             this.retainedBackups = Objects.requireNonNull(retainedBackups);
             return this;
         }
-
         public Builder retentionUnit(String retentionUnit) {
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
-        }
-        public GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting build() {
+        }        public GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting build() {
             return new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(retainedBackups, retentionUnit);
         }
     }

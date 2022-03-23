@@ -124,52 +124,42 @@ public final class FunctionEventInvokeConfigState extends io.pulumi.resources.Re
             this.destinationConfig = destinationConfig;
             return this;
         }
-
         public Builder destinationConfig(@Nullable FunctionEventInvokeConfigDestinationConfigGetArgs destinationConfig) {
             this.destinationConfig = Output.ofNullable(destinationConfig);
             return this;
         }
-
         public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
-
         public Builder functionName(@Nullable String functionName) {
             this.functionName = Output.ofNullable(functionName);
             return this;
         }
-
         public Builder maximumEventAgeInSeconds(@Nullable Output<Integer> maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
-
         public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = Output.ofNullable(maximumEventAgeInSeconds);
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = Output.ofNullable(maximumRetryAttempts);
             return this;
         }
-
         public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Output.ofNullable(qualifier);
             return this;
-        }
-        public FunctionEventInvokeConfigState build() {
+        }        public FunctionEventInvokeConfigState build() {
             return new FunctionEventInvokeConfigState(destinationConfig, functionName, maximumEventAgeInSeconds, maximumRetryAttempts, qualifier);
         }
     }

@@ -154,72 +154,58 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder cloudfrontDistributionArn(@Nullable Output<String> cloudfrontDistributionArn) {
             this.cloudfrontDistributionArn = cloudfrontDistributionArn;
             return this;
         }
-
         public Builder cloudfrontDistributionArn(@Nullable String cloudfrontDistributionArn) {
             this.cloudfrontDistributionArn = Output.ofNullable(cloudfrontDistributionArn);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Output.ofNullable(userPoolId);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public UserPoolDomainState build() {
+        }        public UserPoolDomainState build() {
             return new UserPoolDomainState(awsAccountId, certificateArn, cloudfrontDistributionArn, domain, s3Bucket, userPoolId, version);
         }
     }

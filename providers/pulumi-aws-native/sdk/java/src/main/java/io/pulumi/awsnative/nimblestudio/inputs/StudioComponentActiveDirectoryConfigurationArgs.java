@@ -96,32 +96,29 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
             this.computerAttributes = computerAttributes;
             return this;
         }
-
         public Builder computerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttributeArgs> computerAttributes) {
             this.computerAttributes = Output.ofNullable(computerAttributes);
             return this;
         }
-
+        public Builder computerAttributes(StudioComponentActiveDirectoryComputerAttributeArgs... computerAttributes) {
+            return computerAttributes(List.of(computerAttributes));
+        }
         public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
-
         public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
             return this;
-        }
-        public StudioComponentActiveDirectoryConfigurationArgs build() {
+        }        public StudioComponentActiveDirectoryConfigurationArgs build() {
             return new StudioComponentActiveDirectoryConfigurationArgs(computerAttributes, directoryId, organizationalUnitDistinguishedName);
         }
     }

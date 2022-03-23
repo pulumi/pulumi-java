@@ -159,72 +159,58 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
             this.integrationAccountName = integrationAccountName;
             return this;
         }
-
         public Builder integrationAccountName(@Nullable String integrationAccountName) {
             this.integrationAccountName = Output.ofNullable(integrationAccountName);
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
             this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<IntegrationAccountSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable IntegrationAccountSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,WorkflowState> state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationAccountArgs build() {
+        }        public IntegrationAccountArgs build() {
             return new IntegrationAccountArgs(integrationAccountName, integrationServiceEnvironment, location, resourceGroupName, sku, state, tags);
         }
     }

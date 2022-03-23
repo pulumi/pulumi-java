@@ -80,22 +80,21 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder monitoringOutputs(Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public Builder monitoringOutputs(List<DataQualityJobDefinitionMonitoringOutputArgs> monitoringOutputs) {
             this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-        public DataQualityJobDefinitionMonitoringOutputConfigArgs build() {
+        public Builder monitoringOutputs(DataQualityJobDefinitionMonitoringOutputArgs... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public DataQualityJobDefinitionMonitoringOutputConfigArgs build() {
             return new DataQualityJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }
     }

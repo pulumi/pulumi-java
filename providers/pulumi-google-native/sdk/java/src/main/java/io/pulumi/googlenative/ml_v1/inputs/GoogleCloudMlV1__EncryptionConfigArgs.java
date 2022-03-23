@@ -61,12 +61,10 @@ public final class GoogleCloudMlV1__EncryptionConfigArgs extends io.pulumi.resou
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
-        }
-        public GoogleCloudMlV1__EncryptionConfigArgs build() {
+        }        public GoogleCloudMlV1__EncryptionConfigArgs build() {
             return new GoogleCloudMlV1__EncryptionConfigArgs(kmsKeyName);
         }
     }

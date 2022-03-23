@@ -108,42 +108,37 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
             this.account = Objects.requireNonNull(account);
             return this;
         }
-
         public Builder account(String account) {
             this.account = Output.of(Objects.requireNonNull(account));
             return this;
         }
-
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
-
         public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable Boolean force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder vpcIds(@Nullable Output<List<String>> vpcIds) {
             this.vpcIds = vpcIds;
             return this;
         }
-
         public Builder vpcIds(@Nullable List<String> vpcIds) {
             this.vpcIds = Output.ofNullable(vpcIds);
             return this;
         }
-        public EndpointAuthorizationArgs build() {
+        public Builder vpcIds(String... vpcIds) {
+            return vpcIds(List.of(vpcIds));
+        }        public EndpointAuthorizationArgs build() {
             return new EndpointAuthorizationArgs(account, clusterIdentifier, force, vpcIds);
         }
     }

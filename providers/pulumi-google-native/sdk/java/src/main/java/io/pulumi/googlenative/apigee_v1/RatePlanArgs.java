@@ -315,172 +315,144 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             this.apiproduct = apiproduct;
             return this;
         }
-
         public Builder apiproduct(@Nullable String apiproduct) {
             this.apiproduct = Output.ofNullable(apiproduct);
             return this;
         }
-
         public Builder apiproductId(Output<String> apiproductId) {
             this.apiproductId = Objects.requireNonNull(apiproductId);
             return this;
         }
-
         public Builder apiproductId(String apiproductId) {
             this.apiproductId = Output.of(Objects.requireNonNull(apiproductId));
             return this;
         }
-
         public Builder billingPeriod(@Nullable Output<RatePlanBillingPeriod> billingPeriod) {
             this.billingPeriod = billingPeriod;
             return this;
         }
-
         public Builder billingPeriod(@Nullable RatePlanBillingPeriod billingPeriod) {
             this.billingPeriod = Output.ofNullable(billingPeriod);
             return this;
         }
-
         public Builder consumptionPricingRates(@Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates) {
             this.consumptionPricingRates = consumptionPricingRates;
             return this;
         }
-
         public Builder consumptionPricingRates(@Nullable List<GoogleCloudApigeeV1RateRangeArgs> consumptionPricingRates) {
             this.consumptionPricingRates = Output.ofNullable(consumptionPricingRates);
             return this;
         }
-
+        public Builder consumptionPricingRates(GoogleCloudApigeeV1RateRangeArgs... consumptionPricingRates) {
+            return consumptionPricingRates(List.of(consumptionPricingRates));
+        }
         public Builder consumptionPricingType(@Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType) {
             this.consumptionPricingType = consumptionPricingType;
             return this;
         }
-
         public Builder consumptionPricingType(@Nullable RatePlanConsumptionPricingType consumptionPricingType) {
             this.consumptionPricingType = Output.ofNullable(consumptionPricingType);
             return this;
         }
-
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
-
         public Builder currencyCode(@Nullable String currencyCode) {
             this.currencyCode = Output.ofNullable(currencyCode);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder fixedFeeFrequency(@Nullable Output<Integer> fixedFeeFrequency) {
             this.fixedFeeFrequency = fixedFeeFrequency;
             return this;
         }
-
         public Builder fixedFeeFrequency(@Nullable Integer fixedFeeFrequency) {
             this.fixedFeeFrequency = Output.ofNullable(fixedFeeFrequency);
             return this;
         }
-
         public Builder fixedRecurringFee(@Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee) {
             this.fixedRecurringFee = fixedRecurringFee;
             return this;
         }
-
         public Builder fixedRecurringFee(@Nullable GoogleTypeMoneyArgs fixedRecurringFee) {
             this.fixedRecurringFee = Output.ofNullable(fixedRecurringFee);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder revenueShareRates(@Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates) {
             this.revenueShareRates = revenueShareRates;
             return this;
         }
-
         public Builder revenueShareRates(@Nullable List<GoogleCloudApigeeV1RevenueShareRangeArgs> revenueShareRates) {
             this.revenueShareRates = Output.ofNullable(revenueShareRates);
             return this;
         }
-
+        public Builder revenueShareRates(GoogleCloudApigeeV1RevenueShareRangeArgs... revenueShareRates) {
+            return revenueShareRates(List.of(revenueShareRates));
+        }
         public Builder revenueShareType(@Nullable Output<RatePlanRevenueShareType> revenueShareType) {
             this.revenueShareType = revenueShareType;
             return this;
         }
-
         public Builder revenueShareType(@Nullable RatePlanRevenueShareType revenueShareType) {
             this.revenueShareType = Output.ofNullable(revenueShareType);
             return this;
         }
-
         public Builder setupFee(@Nullable Output<GoogleTypeMoneyArgs> setupFee) {
             this.setupFee = setupFee;
             return this;
         }
-
         public Builder setupFee(@Nullable GoogleTypeMoneyArgs setupFee) {
             this.setupFee = Output.ofNullable(setupFee);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder state(@Nullable Output<RatePlanState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable RatePlanState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public RatePlanArgs build() {
+        }        public RatePlanArgs build() {
             return new RatePlanArgs(apiproduct, apiproductId, billingPeriod, consumptionPricingRates, consumptionPricingType, currencyCode, description, displayName, endTime, fixedFeeFrequency, fixedRecurringFee, organizationId, revenueShareRates, revenueShareType, setupFee, startTime, state);
         }
     }

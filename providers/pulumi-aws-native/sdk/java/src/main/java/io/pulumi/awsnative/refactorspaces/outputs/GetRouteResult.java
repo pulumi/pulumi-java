@@ -81,22 +81,21 @@ public final class GetRouteResult {
             this.arn = arn;
             return this;
         }
-
         public Builder pathResourceToId(@Nullable String pathResourceToId) {
             this.pathResourceToId = pathResourceToId;
             return this;
         }
-
         public Builder routeIdentifier(@Nullable String routeIdentifier) {
             this.routeIdentifier = routeIdentifier;
             return this;
         }
-
         public Builder tags(@Nullable List<RouteTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRouteResult build() {
+        public Builder tags(RouteTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRouteResult build() {
             return new GetRouteResult(arn, pathResourceToId, routeIdentifier, tags);
         }
     }

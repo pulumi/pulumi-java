@@ -53,8 +53,7 @@ public final class ResourceIdResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ResourceIdResponse build() {
+        }        public ResourceIdResponse build() {
             return new ResourceIdResponse(id);
         }
     }

@@ -86,17 +86,17 @@ public final class GetGcpUserAccessBindingResult {
             this.accessLevels = Objects.requireNonNull(accessLevels);
             return this;
         }
-
+        public Builder accessLevels(String... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder groupKey(String groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetGcpUserAccessBindingResult build() {
+        }        public GetGcpUserAccessBindingResult build() {
             return new GetGcpUserAccessBindingResult(accessLevels, groupKey, name);
         }
     }

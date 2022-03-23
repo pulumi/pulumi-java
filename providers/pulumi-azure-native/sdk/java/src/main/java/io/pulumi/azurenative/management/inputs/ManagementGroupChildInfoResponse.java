@@ -127,27 +127,25 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
             this.children = children;
             return this;
         }
-
+        public Builder children(ManagementGroupChildInfoResponse... children) {
+            return children(List.of(children));
+        }
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ManagementGroupChildInfoResponse build() {
+        }        public ManagementGroupChildInfoResponse build() {
             return new ManagementGroupChildInfoResponse(children, displayName, id, name, type);
         }
     }

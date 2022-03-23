@@ -94,32 +94,26 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable GooglePrivacyDlpV2ValueArgs max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<GooglePrivacyDlpV2ValueArgs> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable GooglePrivacyDlpV2ValueArgs min) {
             this.min = Output.ofNullable(min);
             return this;
         }
-
         public Builder replacementValue(Output<GooglePrivacyDlpV2ValueArgs> replacementValue) {
             this.replacementValue = Objects.requireNonNull(replacementValue);
             return this;
         }
-
         public Builder replacementValue(GooglePrivacyDlpV2ValueArgs replacementValue) {
             this.replacementValue = Output.of(Objects.requireNonNull(replacementValue));
             return this;
-        }
-        public GooglePrivacyDlpV2BucketArgs build() {
+        }        public GooglePrivacyDlpV2BucketArgs build() {
             return new GooglePrivacyDlpV2BucketArgs(max, min, replacementValue);
         }
     }

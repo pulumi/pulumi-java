@@ -51,8 +51,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument build() {
+        }        public RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument build() {
             return new RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument(name);
         }
     }

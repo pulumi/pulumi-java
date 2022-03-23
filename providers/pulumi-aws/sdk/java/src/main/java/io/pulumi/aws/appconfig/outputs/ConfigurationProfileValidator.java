@@ -71,12 +71,10 @@ public final class ConfigurationProfileValidator {
             this.content = content;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ConfigurationProfileValidator build() {
+        }        public ConfigurationProfileValidator build() {
             return new ConfigurationProfileValidator(content, type);
         }
     }

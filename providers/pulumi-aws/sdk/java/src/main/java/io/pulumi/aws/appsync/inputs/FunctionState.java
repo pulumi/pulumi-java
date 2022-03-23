@@ -220,112 +220,90 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder dataSource(@Nullable Output<String> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable String dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder functionId(@Nullable Output<String> functionId) {
             this.functionId = functionId;
             return this;
         }
-
         public Builder functionId(@Nullable String functionId) {
             this.functionId = Output.ofNullable(functionId);
             return this;
         }
-
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
             this.functionVersion = functionVersion;
             return this;
         }
-
         public Builder functionVersion(@Nullable String functionVersion) {
             this.functionVersion = Output.ofNullable(functionVersion);
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
-
         public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
             this.maxBatchSize = Output.ofNullable(maxBatchSize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder requestMappingTemplate(@Nullable Output<String> requestMappingTemplate) {
             this.requestMappingTemplate = requestMappingTemplate;
             return this;
         }
-
         public Builder requestMappingTemplate(@Nullable String requestMappingTemplate) {
             this.requestMappingTemplate = Output.ofNullable(requestMappingTemplate);
             return this;
         }
-
         public Builder responseMappingTemplate(@Nullable Output<String> responseMappingTemplate) {
             this.responseMappingTemplate = responseMappingTemplate;
             return this;
         }
-
         public Builder responseMappingTemplate(@Nullable String responseMappingTemplate) {
             this.responseMappingTemplate = Output.ofNullable(responseMappingTemplate);
             return this;
         }
-
         public Builder syncConfig(@Nullable Output<FunctionSyncConfigGetArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
-
         public Builder syncConfig(@Nullable FunctionSyncConfigGetArgs syncConfig) {
             this.syncConfig = Output.ofNullable(syncConfig);
             return this;
-        }
-        public FunctionState build() {
+        }        public FunctionState build() {
             return new FunctionState(apiId, arn, dataSource, description, functionId, functionVersion, maxBatchSize, name, requestMappingTemplate, responseMappingTemplate, syncConfig);
         }
     }

@@ -81,22 +81,18 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,PublicIPAddressSkuName> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,PublicIPAddressSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,PublicIPAddressSkuTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public PublicIPAddressSkuArgs build() {
+        }        public PublicIPAddressSkuArgs build() {
             return new PublicIPAddressSkuArgs(name, tier);
         }
     }

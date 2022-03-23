@@ -464,132 +464,109 @@ public final class GetDeviceResult {
             this.configuredRoleTypes = Objects.requireNonNull(configuredRoleTypes);
             return this;
         }
-
+        public Builder configuredRoleTypes(String... configuredRoleTypes) {
+            return configuredRoleTypes(List.of(configuredRoleTypes));
+        }
         public Builder culture(String culture) {
             this.culture = Objects.requireNonNull(culture);
             return this;
         }
-
         public Builder dataBoxEdgeDeviceStatus(@Nullable String dataBoxEdgeDeviceStatus) {
             this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder deviceHcsVersion(String deviceHcsVersion) {
             this.deviceHcsVersion = Objects.requireNonNull(deviceHcsVersion);
             return this;
         }
-
         public Builder deviceLocalCapacity(Double deviceLocalCapacity) {
             this.deviceLocalCapacity = Objects.requireNonNull(deviceLocalCapacity);
             return this;
         }
-
         public Builder deviceModel(String deviceModel) {
             this.deviceModel = Objects.requireNonNull(deviceModel);
             return this;
         }
-
         public Builder deviceSoftwareVersion(String deviceSoftwareVersion) {
             this.deviceSoftwareVersion = Objects.requireNonNull(deviceSoftwareVersion);
             return this;
         }
-
         public Builder deviceType(String deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
-
         public Builder edgeProfile(EdgeProfileResponse edgeProfile) {
             this.edgeProfile = Objects.requireNonNull(edgeProfile);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder modelDescription(String modelDescription) {
             this.modelDescription = Objects.requireNonNull(modelDescription);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder resourceMoveDetails(ResourceMoveDetailsResponse resourceMoveDetails) {
             this.resourceMoveDetails = Objects.requireNonNull(resourceMoveDetails);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDeviceResult build() {
+        }        public GetDeviceResult build() {
             return new GetDeviceResult(configuredRoleTypes, culture, dataBoxEdgeDeviceStatus, description, deviceHcsVersion, deviceLocalCapacity, deviceModel, deviceSoftwareVersion, deviceType, edgeProfile, etag, friendlyName, id, identity, kind, location, modelDescription, name, nodeCount, resourceMoveDetails, serialNumber, sku, systemData, tags, timeZone, type);
         }
     }

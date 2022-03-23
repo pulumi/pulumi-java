@@ -51,8 +51,7 @@ public final class CaseClassificationResponse {
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
-        }
-        public CaseClassificationResponse build() {
+        }        public CaseClassificationResponse build() {
             return new CaseClassificationResponse(displayName);
         }
     }

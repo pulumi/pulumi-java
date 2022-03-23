@@ -99,17 +99,17 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.errorDetail = errorDetail;
             return this;
         }
-
         public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails) {
             this.inquiryDetails = inquiryDetails;
             return this;
         }
-
+        public Builder inquiryDetails(WorkloadInquiryDetailsResponse... inquiryDetails) {
+            return inquiryDetails(List.of(inquiryDetails));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public InquiryInfoResponse build() {
+        }        public InquiryInfoResponse build() {
             return new InquiryInfoResponse(errorDetail, inquiryDetails, status);
         }
     }

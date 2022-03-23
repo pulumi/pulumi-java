@@ -89,27 +89,25 @@ public final class GetImageResult {
             this.imageArn = imageArn;
             return this;
         }
-
         public Builder imageDescription(@Nullable String imageDescription) {
             this.imageDescription = imageDescription;
             return this;
         }
-
         public Builder imageDisplayName(@Nullable String imageDisplayName) {
             this.imageDisplayName = imageDisplayName;
             return this;
         }
-
         public Builder imageRoleArn(@Nullable String imageRoleArn) {
             this.imageRoleArn = imageRoleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<ImageTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetImageResult build() {
+        public Builder tags(ImageTag... tags) {
+            return tags(List.of(tags));
+        }        public GetImageResult build() {
             return new GetImageResult(imageArn, imageDescription, imageDisplayName, imageRoleArn, tags);
         }
     }

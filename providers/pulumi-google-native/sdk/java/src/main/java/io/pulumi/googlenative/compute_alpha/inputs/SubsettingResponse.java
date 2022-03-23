@@ -73,12 +73,10 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder subsetSize(Integer subsetSize) {
             this.subsetSize = Objects.requireNonNull(subsetSize);
             return this;
-        }
-        public SubsettingResponse build() {
+        }        public SubsettingResponse build() {
             return new SubsettingResponse(policy, subsetSize);
         }
     }

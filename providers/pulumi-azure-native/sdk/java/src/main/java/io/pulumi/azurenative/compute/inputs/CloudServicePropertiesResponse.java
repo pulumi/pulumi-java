@@ -249,62 +249,50 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
             this.allowModelOverride = allowModelOverride;
             return this;
         }
-
         public Builder configuration(@Nullable String configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configurationUrl(@Nullable String configurationUrl) {
             this.configurationUrl = configurationUrl;
             return this;
         }
-
         public Builder extensionProfile(@Nullable CloudServiceExtensionProfileResponse extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable CloudServiceNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable CloudServiceOsProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder packageUrl(@Nullable String packageUrl) {
             this.packageUrl = packageUrl;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder roleProfile(@Nullable CloudServiceRoleProfileResponse roleProfile) {
             this.roleProfile = roleProfile;
             return this;
         }
-
         public Builder startCloudService(@Nullable Boolean startCloudService) {
             this.startCloudService = startCloudService;
             return this;
         }
-
         public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public Builder upgradeMode(@Nullable String upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
-        }
-        public CloudServicePropertiesResponse build() {
+        }        public CloudServicePropertiesResponse build() {
             return new CloudServicePropertiesResponse(allowModelOverride, configuration, configurationUrl, extensionProfile, networkProfile, osProfile, packageUrl, provisioningState, roleProfile, startCloudService, uniqueId, upgradeMode);
         }
     }

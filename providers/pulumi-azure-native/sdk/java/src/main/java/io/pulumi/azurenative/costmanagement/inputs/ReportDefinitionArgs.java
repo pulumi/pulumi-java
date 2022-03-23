@@ -115,42 +115,34 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable ReportDatasetArgs dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder timePeriod(@Nullable Output<ReportTimePeriodArgs> timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
-
         public Builder timePeriod(@Nullable ReportTimePeriodArgs timePeriod) {
             this.timePeriod = Output.ofNullable(timePeriod);
             return this;
         }
-
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
-
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
             this.timeframe = Output.of(Objects.requireNonNull(timeframe));
             return this;
         }
-
         public Builder type(Output<Either<String,ReportType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ReportType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ReportDefinitionArgs build() {
+        }        public ReportDefinitionArgs build() {
             return new ReportDefinitionArgs(dataset, timePeriod, timeframe, type);
         }
     }

@@ -56,12 +56,10 @@ public final class ChannelRetentionPeriod {
             this.numberOfDays = numberOfDays;
             return this;
         }
-
         public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = unlimited;
             return this;
-        }
-        public ChannelRetentionPeriod build() {
+        }        public ChannelRetentionPeriod build() {
             return new ChannelRetentionPeriod(numberOfDays, unlimited);
         }
     }

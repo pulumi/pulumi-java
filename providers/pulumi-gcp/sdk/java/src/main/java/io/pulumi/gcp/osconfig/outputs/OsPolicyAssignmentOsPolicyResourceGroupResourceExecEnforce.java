@@ -121,27 +121,25 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFile file) {
             this.file = file;
             return this;
         }
-
         public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
-
         public Builder outputFilePath(@Nullable String outputFilePath) {
             this.outputFilePath = outputFilePath;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce(args, file, interpreter, outputFilePath, script);
         }
     }

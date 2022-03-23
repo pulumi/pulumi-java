@@ -74,12 +74,13 @@ public final class BranchResponse {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(Object... actions) {
+            return actions(List.of(actions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public BranchResponse build() {
+        }        public BranchResponse build() {
             return new BranchResponse(actions, name);
         }
     }

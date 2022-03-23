@@ -144,32 +144,26 @@ public final class WorkflowTriggerRecurrenceResponse extends io.pulumi.resources
             this.endTime = endTime;
             return this;
         }
-
         public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder schedule(@Nullable RecurrenceScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public WorkflowTriggerRecurrenceResponse build() {
+        }        public WorkflowTriggerRecurrenceResponse build() {
             return new WorkflowTriggerRecurrenceResponse(endTime, frequency, interval, schedule, startTime, timeZone);
         }
     }

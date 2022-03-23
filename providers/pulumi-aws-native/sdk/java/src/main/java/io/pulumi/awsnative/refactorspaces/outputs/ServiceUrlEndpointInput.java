@@ -55,12 +55,10 @@ public final class ServiceUrlEndpointInput {
             this.healthUrl = healthUrl;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public ServiceUrlEndpointInput build() {
+        }        public ServiceUrlEndpointInput build() {
             return new ServiceUrlEndpointInput(healthUrl, url);
         }
     }

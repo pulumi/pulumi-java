@@ -74,22 +74,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
-
         public Builder osShortName(String osShortName) {
             this.osShortName = Output.of(Objects.requireNonNull(osShortName));
             return this;
         }
-
         public Builder osVersion(@Nullable Output<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = Output.ofNullable(osVersion);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs(osShortName, osVersion);
         }
     }

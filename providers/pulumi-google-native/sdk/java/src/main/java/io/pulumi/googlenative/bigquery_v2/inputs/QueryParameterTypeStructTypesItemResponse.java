@@ -89,17 +89,14 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(QueryParameterTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public QueryParameterTypeStructTypesItemResponse build() {
+        }        public QueryParameterTypeStructTypesItemResponse build() {
             return new QueryParameterTypeStructTypesItemResponse(description, name, type);
         }
     }

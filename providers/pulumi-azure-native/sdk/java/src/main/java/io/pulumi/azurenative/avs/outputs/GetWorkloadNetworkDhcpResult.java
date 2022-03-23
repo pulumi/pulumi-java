@@ -169,42 +169,37 @@ public final class GetWorkloadNetworkDhcpResult {
             this.dhcpType = Objects.requireNonNull(dhcpType);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder segments(List<String> segments) {
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
-
+        public Builder segments(String... segments) {
+            return segments(List.of(segments));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkloadNetworkDhcpResult build() {
+        }        public GetWorkloadNetworkDhcpResult build() {
             return new GetWorkloadNetworkDhcpResult(dhcpType, displayName, id, name, provisioningState, revision, segments, type);
         }
     }

@@ -160,72 +160,58 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder featurestore(@Nullable Output<String> featurestore) {
             this.featurestore = featurestore;
             return this;
         }
-
         public Builder featurestore(@Nullable String featurestore) {
             this.featurestore = Output.ofNullable(featurestore);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
-
         public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
             this.monitoringConfig = Output.ofNullable(monitoringConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public AiFeatureStoreEntityTypeState build() {
+        }        public AiFeatureStoreEntityTypeState build() {
             return new AiFeatureStoreEntityTypeState(createTime, etag, featurestore, labels, monitoringConfig, name, updateTime);
         }
     }

@@ -78,12 +78,10 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse extends io
             this.name = name;
             return this;
         }
-
         public Builder publicCertData(@Nullable String publicCertData) {
             this.publicCertData = publicCertData;
             return this;
-        }
-        public VpnServerConfigRadiusServerRootCertificateResponse build() {
+        }        public VpnServerConfigRadiusServerRootCertificateResponse build() {
             return new VpnServerConfigRadiusServerRootCertificateResponse(name, publicCertData);
         }
     }

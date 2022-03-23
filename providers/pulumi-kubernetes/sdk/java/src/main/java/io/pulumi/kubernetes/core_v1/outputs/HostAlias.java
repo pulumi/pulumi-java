@@ -72,12 +72,13 @@ public final class HostAlias {
             this.hostnames = hostnames;
             return this;
         }
-
+        public Builder hostnames(String... hostnames) {
+            return hostnames(List.of(hostnames));
+        }
         public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
-        }
-        public HostAlias build() {
+        }        public HostAlias build() {
             return new HostAlias(hostnames, ip);
         }
     }

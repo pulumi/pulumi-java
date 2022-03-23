@@ -64,12 +64,10 @@ public final class GetSigningJobSignedObjectS3 extends io.pulumi.resources.Invok
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public GetSigningJobSignedObjectS3 build() {
+        }        public GetSigningJobSignedObjectS3 build() {
             return new GetSigningJobSignedObjectS3(bucket, key);
         }
     }

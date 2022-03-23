@@ -92,42 +92,37 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationAr
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Output.of(Objects.requireNonNull(documentDataFieldName));
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable Output<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
             return this;
         }
-
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs build() {
+        }        public DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs build() {
             return new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
         }
     }

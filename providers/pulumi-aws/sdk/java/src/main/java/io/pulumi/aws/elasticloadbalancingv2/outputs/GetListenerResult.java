@@ -129,52 +129,45 @@ public final class GetListenerResult {
             this.alpnPolicy = Objects.requireNonNull(alpnPolicy);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder defaultActions(List<GetListenerDefaultAction> defaultActions) {
             this.defaultActions = Objects.requireNonNull(defaultActions);
             return this;
         }
-
+        public Builder defaultActions(GetListenerDefaultAction... defaultActions) {
+            return defaultActions(List.of(defaultActions));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder loadBalancerArn(String loadBalancerArn) {
             this.loadBalancerArn = Objects.requireNonNull(loadBalancerArn);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetListenerResult build() {
+        }        public GetListenerResult build() {
             return new GetListenerResult(alpnPolicy, arn, certificateArn, defaultActions, id, loadBalancerArn, port, protocol, sslPolicy, tags);
         }
     }

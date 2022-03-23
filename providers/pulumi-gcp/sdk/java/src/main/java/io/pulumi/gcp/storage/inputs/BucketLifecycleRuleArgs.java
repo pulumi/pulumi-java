@@ -74,22 +74,18 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(BucketLifecycleRuleActionArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder condition(Output<BucketLifecycleRuleConditionArgs> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder condition(BucketLifecycleRuleConditionArgs condition) {
             this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
-        }
-        public BucketLifecycleRuleArgs build() {
+        }        public BucketLifecycleRuleArgs build() {
             return new BucketLifecycleRuleArgs(action, condition);
         }
     }

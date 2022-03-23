@@ -132,62 +132,50 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder baseImage(@Nullable Output<String> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
-
         public Builder baseImage(@Nullable String baseImage) {
             this.baseImage = Output.ofNullable(baseImage);
             return this;
         }
-
         public Builder containerImage(@Nullable Output<String> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
-
         public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
-
         public Builder imageArn(@Nullable Output<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
-
         public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = Output.ofNullable(imageArn);
             return this;
         }
-
         public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = Output.ofNullable(imageName);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ImageVersionState build() {
+        }        public ImageVersionState build() {
             return new ImageVersionState(arn, baseImage, containerImage, imageArn, imageName, version);
         }
     }

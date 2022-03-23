@@ -60,12 +60,10 @@ public final class MongoDBDatabaseResourceArgs extends io.pulumi.resources.Resou
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public MongoDBDatabaseResourceArgs build() {
+        }        public MongoDBDatabaseResourceArgs build() {
             return new MongoDBDatabaseResourceArgs(id);
         }
     }

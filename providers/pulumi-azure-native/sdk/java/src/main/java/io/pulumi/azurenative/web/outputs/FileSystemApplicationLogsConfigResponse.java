@@ -53,8 +53,7 @@ public final class FileSystemApplicationLogsConfigResponse {
         public Builder level(@Nullable String level) {
             this.level = level;
             return this;
-        }
-        public FileSystemApplicationLogsConfigResponse build() {
+        }        public FileSystemApplicationLogsConfigResponse build() {
             return new FileSystemApplicationLogsConfigResponse(level);
         }
     }

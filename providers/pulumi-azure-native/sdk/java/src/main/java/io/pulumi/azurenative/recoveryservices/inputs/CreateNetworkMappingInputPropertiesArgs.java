@@ -98,32 +98,26 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
             this.fabricSpecificDetails = fabricSpecificDetails;
             return this;
         }
-
         public Builder fabricSpecificDetails(@Nullable Object fabricSpecificDetails) {
             this.fabricSpecificDetails = Output.ofNullable(fabricSpecificDetails);
             return this;
         }
-
         public Builder recoveryFabricName(@Nullable Output<String> recoveryFabricName) {
             this.recoveryFabricName = recoveryFabricName;
             return this;
         }
-
         public Builder recoveryFabricName(@Nullable String recoveryFabricName) {
             this.recoveryFabricName = Output.ofNullable(recoveryFabricName);
             return this;
         }
-
         public Builder recoveryNetworkId(@Nullable Output<String> recoveryNetworkId) {
             this.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
-
         public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
             this.recoveryNetworkId = Output.ofNullable(recoveryNetworkId);
             return this;
-        }
-        public CreateNetworkMappingInputPropertiesArgs build() {
+        }        public CreateNetworkMappingInputPropertiesArgs build() {
             return new CreateNetworkMappingInputPropertiesArgs(fabricSpecificDetails, recoveryFabricName, recoveryNetworkId);
         }
     }

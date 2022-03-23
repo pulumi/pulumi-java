@@ -89,17 +89,20 @@ public final class GetDimensionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder stringValues(@Nullable List<String> stringValues) {
             this.stringValues = stringValues;
             return this;
         }
-
+        public Builder stringValues(String... stringValues) {
+            return stringValues(List.of(stringValues));
+        }
         public Builder tags(@Nullable List<DimensionTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDimensionResult build() {
+        public Builder tags(DimensionTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDimensionResult build() {
             return new GetDimensionResult(arn, stringValues, tags);
         }
     }

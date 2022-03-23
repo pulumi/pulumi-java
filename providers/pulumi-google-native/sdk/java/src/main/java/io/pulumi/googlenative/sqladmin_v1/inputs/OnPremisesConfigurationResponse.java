@@ -189,47 +189,38 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
-
         public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
-
         public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
-
         public Builder dumpFilePath(String dumpFilePath) {
             this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
             return this;
         }
-
         public Builder hostPort(String hostPort) {
             this.hostPort = Objects.requireNonNull(hostPort);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder sourceInstance(InstanceReferenceResponse sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public OnPremisesConfigurationResponse build() {
+        }        public OnPremisesConfigurationResponse build() {
             return new OnPremisesConfigurationResponse(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);
         }
     }

@@ -234,132 +234,112 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
-
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
             return this;
         }
-
         public Builder advancedOptionsConfig(@Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
             this.advancedOptionsConfig = advancedOptionsConfig;
             return this;
         }
-
         public Builder advancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
             this.advancedOptionsConfig = Output.ofNullable(advancedOptionsConfig);
             return this;
         }
-
         public Builder associations(@Nullable Output<List<SecurityPolicyAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
-
         public Builder associations(@Nullable List<SecurityPolicyAssociationArgs> associations) {
             this.associations = Output.ofNullable(associations);
             return this;
         }
-
+        public Builder associations(SecurityPolicyAssociationArgs... associations) {
+            return associations(List.of(associations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder recaptchaOptionsConfig(@Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = recaptchaOptionsConfig;
             return this;
         }
-
         public Builder recaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = Output.ofNullable(recaptchaOptionsConfig);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(SecurityPolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder type(@Nullable Output<SecurityPolicyType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable SecurityPolicyType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public SecurityPolicyArgs build() {
+        }        public SecurityPolicyArgs build() {
             return new SecurityPolicyArgs(adaptiveProtectionConfig, advancedOptionsConfig, associations, description, displayName, labels, name, project, recaptchaOptionsConfig, requestId, rules, type, validateOnly);
         }
     }

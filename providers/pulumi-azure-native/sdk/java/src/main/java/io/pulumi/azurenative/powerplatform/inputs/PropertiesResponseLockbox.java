@@ -60,8 +60,7 @@ public final class PropertiesResponseLockbox extends io.pulumi.resources.InvokeA
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public PropertiesResponseLockbox build() {
+        }        public PropertiesResponseLockbox build() {
             return new PropertiesResponseLockbox(state);
         }
     }

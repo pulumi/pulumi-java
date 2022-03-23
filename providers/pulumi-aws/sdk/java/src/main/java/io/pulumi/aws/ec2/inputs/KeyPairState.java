@@ -171,82 +171,66 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
             this.keyNamePrefix = keyNamePrefix;
             return this;
         }
-
         public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
             this.keyNamePrefix = Output.ofNullable(keyNamePrefix);
             return this;
         }
-
         public Builder keyPairId(@Nullable Output<String> keyPairId) {
             this.keyPairId = keyPairId;
             return this;
         }
-
         public Builder keyPairId(@Nullable String keyPairId) {
             this.keyPairId = Output.ofNullable(keyPairId);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public KeyPairState build() {
+        }        public KeyPairState build() {
             return new KeyPairState(arn, fingerprint, keyName, keyNamePrefix, keyPairId, publicKey, tags, tagsAll);
         }
     }

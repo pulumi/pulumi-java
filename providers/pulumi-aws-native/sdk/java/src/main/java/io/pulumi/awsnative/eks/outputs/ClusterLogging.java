@@ -52,8 +52,7 @@ public final class ClusterLogging {
         public Builder clusterLogging(@Nullable ClusterLogging clusterLogging) {
             this.clusterLogging = clusterLogging;
             return this;
-        }
-        public ClusterLogging build() {
+        }        public ClusterLogging build() {
             return new ClusterLogging(clusterLogging);
         }
     }

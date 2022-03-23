@@ -52,7 +52,9 @@ public final class ResponseHeadersPolicyAccessControlAllowHeaders extends io.pul
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public ResponseHeadersPolicyAccessControlAllowHeaders build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyAccessControlAllowHeaders build() {
             return new ResponseHeadersPolicyAccessControlAllowHeaders(items);
         }
     }

@@ -72,12 +72,10 @@ public final class ImageImageTestsConfiguration {
             this.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
-
         public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
             this.timeoutMinutes = timeoutMinutes;
             return this;
-        }
-        public ImageImageTestsConfiguration build() {
+        }        public ImageImageTestsConfiguration build() {
             return new ImageImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
         }
     }

@@ -128,52 +128,42 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder maxThreshold(Output<Integer> maxThreshold) {
             this.maxThreshold = Objects.requireNonNull(maxThreshold);
             return this;
         }
-
         public Builder maxThreshold(Integer maxThreshold) {
             this.maxThreshold = Output.of(Objects.requireNonNull(maxThreshold));
             return this;
         }
-
         public Builder minThreshold(Output<Integer> minThreshold) {
             this.minThreshold = Objects.requireNonNull(minThreshold);
             return this;
         }
-
         public Builder minThreshold(Integer minThreshold) {
             this.minThreshold = Output.of(Objects.requireNonNull(minThreshold));
             return this;
         }
-
         public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public Builder timeWindowSize(Output<String> timeWindowSize) {
             this.timeWindowSize = Objects.requireNonNull(timeWindowSize);
             return this;
         }
-
         public Builder timeWindowSize(String timeWindowSize) {
             this.timeWindowSize = Output.of(Objects.requireNonNull(timeWindowSize));
             return this;
-        }
-        public TimeWindowCustomAlertRuleArgs build() {
+        }        public TimeWindowCustomAlertRuleArgs build() {
             return new TimeWindowCustomAlertRuleArgs(isEnabled, maxThreshold, minThreshold, ruleType, timeWindowSize);
         }
     }

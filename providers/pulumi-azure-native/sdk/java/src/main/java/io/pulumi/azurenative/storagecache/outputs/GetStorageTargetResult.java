@@ -238,62 +238,53 @@ public final class GetStorageTargetResult {
             this.blobNfs = blobNfs;
             return this;
         }
-
         public Builder clfs(@Nullable ClfsTargetResponse clfs) {
             this.clfs = clfs;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder junctions(@Nullable List<NamespaceJunctionResponse> junctions) {
             this.junctions = junctions;
             return this;
         }
-
+        public Builder junctions(NamespaceJunctionResponse... junctions) {
+            return junctions(List.of(junctions));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nfs3(@Nullable Nfs3TargetResponse nfs3) {
             this.nfs3 = nfs3;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unknown(@Nullable UnknownTargetResponse unknown) {
             this.unknown = unknown;
             return this;
-        }
-        public GetStorageTargetResult build() {
+        }        public GetStorageTargetResult build() {
             return new GetStorageTargetResult(blobNfs, clfs, id, junctions, location, name, nfs3, provisioningState, systemData, targetType, type, unknown);
         }
     }

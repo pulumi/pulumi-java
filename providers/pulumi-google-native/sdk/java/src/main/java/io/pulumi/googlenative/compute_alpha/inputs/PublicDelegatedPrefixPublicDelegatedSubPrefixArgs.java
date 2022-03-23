@@ -127,52 +127,42 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
             this.delegateeProject = delegateeProject;
             return this;
         }
-
         public Builder delegateeProject(@Nullable String delegateeProject) {
             this.delegateeProject = Output.ofNullable(delegateeProject);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
-
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
-
         public Builder isAddress(@Nullable Output<Boolean> isAddress) {
             this.isAddress = isAddress;
             return this;
         }
-
         public Builder isAddress(@Nullable Boolean isAddress) {
             this.isAddress = Output.ofNullable(isAddress);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs build() {
+        }        public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs build() {
             return new PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(delegateeProject, description, ipCidrRange, isAddress, name);
         }
     }

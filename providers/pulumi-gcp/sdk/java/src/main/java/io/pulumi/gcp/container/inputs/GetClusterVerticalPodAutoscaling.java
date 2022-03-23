@@ -50,8 +50,7 @@ public final class GetClusterVerticalPodAutoscaling extends io.pulumi.resources.
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetClusterVerticalPodAutoscaling build() {
+        }        public GetClusterVerticalPodAutoscaling build() {
             return new GetClusterVerticalPodAutoscaling(enabled);
         }
     }

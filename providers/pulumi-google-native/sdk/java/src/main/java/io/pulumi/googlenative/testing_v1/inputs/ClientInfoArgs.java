@@ -80,22 +80,21 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.clientInfoDetails = clientInfoDetails;
             return this;
         }
-
         public Builder clientInfoDetails(@Nullable List<ClientInfoDetailArgs> clientInfoDetails) {
             this.clientInfoDetails = Output.ofNullable(clientInfoDetails);
             return this;
         }
-
+        public Builder clientInfoDetails(ClientInfoDetailArgs... clientInfoDetails) {
+            return clientInfoDetails(List.of(clientInfoDetails));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ClientInfoArgs build() {
+        }        public ClientInfoArgs build() {
             return new ClientInfoArgs(clientInfoDetails, name);
         }
     }

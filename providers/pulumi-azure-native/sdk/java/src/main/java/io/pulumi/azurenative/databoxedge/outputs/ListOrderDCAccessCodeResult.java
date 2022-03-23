@@ -53,8 +53,7 @@ public final class ListOrderDCAccessCodeResult {
         public Builder authCode(@Nullable String authCode) {
             this.authCode = authCode;
             return this;
-        }
-        public ListOrderDCAccessCodeResult build() {
+        }        public ListOrderDCAccessCodeResult build() {
             return new ListOrderDCAccessCodeResult(authCode);
         }
     }

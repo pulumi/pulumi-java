@@ -103,17 +103,17 @@ public final class NodeSelectorRequirement {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public NodeSelectorRequirement build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public NodeSelectorRequirement build() {
             return new NodeSelectorRequirement(key, operator, values);
         }
     }

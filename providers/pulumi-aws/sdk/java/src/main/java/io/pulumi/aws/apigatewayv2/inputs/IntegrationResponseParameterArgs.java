@@ -75,22 +75,18 @@ public final class IntegrationResponseParameterArgs extends io.pulumi.resources.
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
-
         public Builder mappings(Map<String,String> mappings) {
             this.mappings = Output.of(Objects.requireNonNull(mappings));
             return this;
         }
-
         public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
-        }
-        public IntegrationResponseParameterArgs build() {
+        }        public IntegrationResponseParameterArgs build() {
             return new IntegrationResponseParameterArgs(mappings, statusCode);
         }
     }

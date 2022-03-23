@@ -92,32 +92,26 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
             this.humanTaskUiName = Objects.requireNonNull(humanTaskUiName);
             return this;
         }
-
         public Builder humanTaskUiName(String humanTaskUiName) {
             this.humanTaskUiName = Output.of(Objects.requireNonNull(humanTaskUiName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder uiTemplate(Output<HumanTaskUIUiTemplateArgs> uiTemplate) {
             this.uiTemplate = Objects.requireNonNull(uiTemplate);
             return this;
         }
-
         public Builder uiTemplate(HumanTaskUIUiTemplateArgs uiTemplate) {
             this.uiTemplate = Output.of(Objects.requireNonNull(uiTemplate));
             return this;
-        }
-        public HumanTaskUIArgs build() {
+        }        public HumanTaskUIArgs build() {
             return new HumanTaskUIArgs(humanTaskUiName, tags, uiTemplate);
         }
     }

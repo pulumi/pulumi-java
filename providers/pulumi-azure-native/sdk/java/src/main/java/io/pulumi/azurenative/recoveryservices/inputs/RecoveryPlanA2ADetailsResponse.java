@@ -95,17 +95,14 @@ public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.In
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder primaryZone(@Nullable String primaryZone) {
             this.primaryZone = primaryZone;
             return this;
         }
-
         public Builder recoveryZone(@Nullable String recoveryZone) {
             this.recoveryZone = recoveryZone;
             return this;
-        }
-        public RecoveryPlanA2ADetailsResponse build() {
+        }        public RecoveryPlanA2ADetailsResponse build() {
             return new RecoveryPlanA2ADetailsResponse(instanceType, primaryZone, recoveryZone);
         }
     }

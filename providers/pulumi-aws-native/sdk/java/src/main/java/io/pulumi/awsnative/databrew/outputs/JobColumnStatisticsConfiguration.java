@@ -56,12 +56,13 @@ public final class JobColumnStatisticsConfiguration {
             this.selectors = selectors;
             return this;
         }
-
+        public Builder selectors(JobColumnSelector... selectors) {
+            return selectors(List.of(selectors));
+        }
         public Builder statistics(JobStatisticsConfiguration statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
-        }
-        public JobColumnStatisticsConfiguration build() {
+        }        public JobColumnStatisticsConfiguration build() {
             return new JobColumnStatisticsConfiguration(selectors, statistics);
         }
     }

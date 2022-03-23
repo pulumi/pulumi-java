@@ -88,17 +88,14 @@ public final class GetResolverConfigResult {
             this.autodefinedReverse = autodefinedReverse;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
-        }
-        public GetResolverConfigResult build() {
+        }        public GetResolverConfigResult build() {
             return new GetResolverConfigResult(autodefinedReverse, id, ownerId);
         }
     }

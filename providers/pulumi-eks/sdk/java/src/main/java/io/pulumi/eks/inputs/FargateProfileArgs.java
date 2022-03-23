@@ -96,32 +96,32 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
-
         public Builder podExecutionRoleArn(@Nullable String podExecutionRoleArn) {
             this.podExecutionRoleArn = Output.ofNullable(podExecutionRoleArn);
             return this;
         }
-
         public Builder selectors(@Nullable Output<List<FargateProfileSelectorArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
-
         public Builder selectors(@Nullable List<FargateProfileSelectorArgs> selectors) {
             this.selectors = Output.ofNullable(selectors);
             return this;
         }
-
+        public Builder selectors(FargateProfileSelectorArgs... selectors) {
+            return selectors(List.of(selectors));
+        }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-        public FargateProfileArgs build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public FargateProfileArgs build() {
             return new FargateProfileArgs(podExecutionRoleArn, selectors, subnetIds);
         }
     }

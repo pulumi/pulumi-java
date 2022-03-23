@@ -64,12 +64,10 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetApiArgs build() {
+        }        public GetApiArgs build() {
             return new GetApiArgs(apiId, organizationId);
         }
     }

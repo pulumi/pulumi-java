@@ -75,22 +75,21 @@ public final class RestApiEndpointConfigurationGetArgs extends io.pulumi.resourc
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
         public Builder types(String types) {
             this.types = Output.of(Objects.requireNonNull(types));
             return this;
         }
-
         public Builder vpcEndpointIds(@Nullable Output<List<String>> vpcEndpointIds) {
             this.vpcEndpointIds = vpcEndpointIds;
             return this;
         }
-
         public Builder vpcEndpointIds(@Nullable List<String> vpcEndpointIds) {
             this.vpcEndpointIds = Output.ofNullable(vpcEndpointIds);
             return this;
         }
-        public RestApiEndpointConfigurationGetArgs build() {
+        public Builder vpcEndpointIds(String... vpcEndpointIds) {
+            return vpcEndpointIds(List.of(vpcEndpointIds));
+        }        public RestApiEndpointConfigurationGetArgs build() {
             return new RestApiEndpointConfigurationGetArgs(types, vpcEndpointIds);
         }
     }

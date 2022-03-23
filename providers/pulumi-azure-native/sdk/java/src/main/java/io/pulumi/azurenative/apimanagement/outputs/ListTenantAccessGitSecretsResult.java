@@ -104,22 +104,18 @@ public final class ListTenantAccessGitSecretsResult {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListTenantAccessGitSecretsResult build() {
+        }        public ListTenantAccessGitSecretsResult build() {
             return new ListTenantAccessGitSecretsResult(enabled, id, primaryKey, secondaryKey);
         }
     }

@@ -72,12 +72,10 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogs {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder logGroup(@Nullable String logGroup) {
             this.logGroup = logGroup;
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogsCloudwatchLogs build() {
+        }        public ClusterLoggingInfoBrokerLogsCloudwatchLogs build() {
             return new ClusterLoggingInfoBrokerLogsCloudwatchLogs(enabled, logGroup);
         }
     }

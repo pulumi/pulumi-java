@@ -70,22 +70,21 @@ public final class ResourceProviderManifestPropertiesTemplateDeploymentOptionsAr
             this.preflightOptions = preflightOptions;
             return this;
         }
-
         public Builder preflightOptions(@Nullable List<Either<String,PreflightOption>> preflightOptions) {
             this.preflightOptions = Output.ofNullable(preflightOptions);
             return this;
         }
-
+        public Builder preflightOptions(Either<String,PreflightOption>... preflightOptions) {
+            return preflightOptions(List.of(preflightOptions));
+        }
         public Builder preflightSupported(@Nullable Output<Boolean> preflightSupported) {
             this.preflightSupported = preflightSupported;
             return this;
         }
-
         public Builder preflightSupported(@Nullable Boolean preflightSupported) {
             this.preflightSupported = Output.ofNullable(preflightSupported);
             return this;
-        }
-        public ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs build() {
+        }        public ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs build() {
             return new ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs(preflightOptions, preflightSupported);
         }
     }

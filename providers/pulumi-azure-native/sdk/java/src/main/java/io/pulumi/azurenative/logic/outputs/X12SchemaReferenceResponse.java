@@ -103,22 +103,18 @@ public final class X12SchemaReferenceResponse {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
-
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
-        }
-        public X12SchemaReferenceResponse build() {
+        }        public X12SchemaReferenceResponse build() {
             return new X12SchemaReferenceResponse(messageId, schemaName, schemaVersion, senderApplicationId);
         }
     }

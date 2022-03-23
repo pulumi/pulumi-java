@@ -93,17 +93,14 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
             this.documentationUrl = Objects.requireNonNull(documentationUrl);
             return this;
         }
-
         public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder type(ServiceMeshTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceMeshAnalysisMessageBaseResponse build() {
+        }        public ServiceMeshAnalysisMessageBaseResponse build() {
             return new ServiceMeshAnalysisMessageBaseResponse(documentationUrl, level, type);
         }
     }

@@ -65,12 +65,13 @@ public final class GetCollectionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<CollectionTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetCollectionResult build() {
+        public Builder tags(CollectionTag... tags) {
+            return tags(List.of(tags));
+        }        public GetCollectionResult build() {
             return new GetCollectionResult(arn, tags);
         }
     }

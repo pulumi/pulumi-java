@@ -64,17 +64,14 @@ public final class ServiceTaskSpecResourcesReservation {
             this.genericResources = genericResources;
             return this;
         }
-
         public Builder memoryBytes(@Nullable Integer memoryBytes) {
             this.memoryBytes = memoryBytes;
             return this;
         }
-
         public Builder nanoCpus(@Nullable Integer nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
-        }
-        public ServiceTaskSpecResourcesReservation build() {
+        }        public ServiceTaskSpecResourcesReservation build() {
             return new ServiceTaskSpecResourcesReservation(genericResources, memoryBytes, nanoCpus);
         }
     }

@@ -77,12 +77,10 @@ public final class ResourceGroupResourceSettingsResponse extends io.pulumi.resou
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
-        }
-        public ResourceGroupResourceSettingsResponse build() {
+        }        public ResourceGroupResourceSettingsResponse build() {
             return new ResourceGroupResourceSettingsResponse(resourceType, targetResourceName);
         }
     }

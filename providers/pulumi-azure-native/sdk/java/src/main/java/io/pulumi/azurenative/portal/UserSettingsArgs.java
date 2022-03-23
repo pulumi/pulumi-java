@@ -75,22 +75,18 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(UserPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder userSettingsName(@Nullable Output<String> userSettingsName) {
             this.userSettingsName = userSettingsName;
             return this;
         }
-
         public Builder userSettingsName(@Nullable String userSettingsName) {
             this.userSettingsName = Output.ofNullable(userSettingsName);
             return this;
-        }
-        public UserSettingsArgs build() {
+        }        public UserSettingsArgs build() {
             return new UserSettingsArgs(properties, userSettingsName);
         }
     }

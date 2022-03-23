@@ -96,17 +96,14 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfig healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
-        }
-        public ContainerPublicEndpoint build() {
+        }        public ContainerPublicEndpoint build() {
             return new ContainerPublicEndpoint(containerName, containerPort, healthCheckConfig);
         }
     }

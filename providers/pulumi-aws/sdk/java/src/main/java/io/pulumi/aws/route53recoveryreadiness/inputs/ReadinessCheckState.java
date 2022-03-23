@@ -123,52 +123,42 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder readinessCheckName(@Nullable Output<String> readinessCheckName) {
             this.readinessCheckName = readinessCheckName;
             return this;
         }
-
         public Builder readinessCheckName(@Nullable String readinessCheckName) {
             this.readinessCheckName = Output.ofNullable(readinessCheckName);
             return this;
         }
-
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
             this.resourceSetName = resourceSetName;
             return this;
         }
-
         public Builder resourceSetName(@Nullable String resourceSetName) {
             this.resourceSetName = Output.ofNullable(resourceSetName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ReadinessCheckState build() {
+        }        public ReadinessCheckState build() {
             return new ReadinessCheckState(arn, readinessCheckName, resourceSetName, tags, tagsAll);
         }
     }

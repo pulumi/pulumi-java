@@ -75,12 +75,10 @@ public final class InstanceNetworkConfig {
             this.ipAllocation = Objects.requireNonNull(ipAllocation);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
-        }
-        public InstanceNetworkConfig build() {
+        }        public InstanceNetworkConfig build() {
             return new InstanceNetworkConfig(ipAllocation, network);
         }
     }

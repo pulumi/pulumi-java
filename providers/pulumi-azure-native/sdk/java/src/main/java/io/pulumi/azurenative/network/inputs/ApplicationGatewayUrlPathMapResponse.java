@@ -209,52 +209,45 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
             this.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
-
         public Builder defaultBackendHttpSettings(@Nullable SubResourceResponse defaultBackendHttpSettings) {
             this.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
-
         public Builder defaultRedirectConfiguration(@Nullable SubResourceResponse defaultRedirectConfiguration) {
             this.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
-
         public Builder defaultRewriteRuleSet(@Nullable SubResourceResponse defaultRewriteRuleSet) {
             this.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder pathRules(@Nullable List<ApplicationGatewayPathRuleResponse> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
+        public Builder pathRules(ApplicationGatewayPathRuleResponse... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewayUrlPathMapResponse build() {
+        }        public ApplicationGatewayUrlPathMapResponse build() {
             return new ApplicationGatewayUrlPathMapResponse(defaultBackendAddressPool, defaultBackendHttpSettings, defaultRedirectConfiguration, defaultRewriteRuleSet, etag, id, name, pathRules, provisioningState, type);
         }
     }

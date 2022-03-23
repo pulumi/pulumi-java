@@ -88,17 +88,14 @@ public final class CapacityProviderAutoScalingGroupProvider {
             this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
             return this;
         }
-
         public Builder managedScaling(@Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling) {
             this.managedScaling = managedScaling;
             return this;
         }
-
         public Builder managedTerminationProtection(@Nullable String managedTerminationProtection) {
             this.managedTerminationProtection = managedTerminationProtection;
             return this;
-        }
-        public CapacityProviderAutoScalingGroupProvider build() {
+        }        public CapacityProviderAutoScalingGroupProvider build() {
             return new CapacityProviderAutoScalingGroupProvider(autoScalingGroupArn, managedScaling, managedTerminationProtection);
         }
     }

@@ -217,142 +217,123 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder autoBranchCreationConfig(@Nullable Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig) {
             this.autoBranchCreationConfig = autoBranchCreationConfig;
             return this;
         }
-
         public Builder autoBranchCreationConfig(@Nullable AppAutoBranchCreationConfigArgs autoBranchCreationConfig) {
             this.autoBranchCreationConfig = Output.ofNullable(autoBranchCreationConfig);
             return this;
         }
-
         public Builder basicAuthConfig(@Nullable Output<AppBasicAuthConfigArgs> basicAuthConfig) {
             this.basicAuthConfig = basicAuthConfig;
             return this;
         }
-
         public Builder basicAuthConfig(@Nullable AppBasicAuthConfigArgs basicAuthConfig) {
             this.basicAuthConfig = Output.ofNullable(basicAuthConfig);
             return this;
         }
-
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
-
         public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = Output.ofNullable(buildSpec);
             return this;
         }
-
         public Builder customHeaders(@Nullable Output<String> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
-
         public Builder customHeaders(@Nullable String customHeaders) {
             this.customHeaders = Output.ofNullable(customHeaders);
             return this;
         }
-
         public Builder customRules(@Nullable Output<List<AppCustomRuleArgs>> customRules) {
             this.customRules = customRules;
             return this;
         }
-
         public Builder customRules(@Nullable List<AppCustomRuleArgs> customRules) {
             this.customRules = Output.ofNullable(customRules);
             return this;
         }
-
+        public Builder customRules(AppCustomRuleArgs... customRules) {
+            return customRules(List.of(customRules));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableBranchAutoDeletion(@Nullable Output<Boolean> enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = enableBranchAutoDeletion;
             return this;
         }
-
         public Builder enableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = Output.ofNullable(enableBranchAutoDeletion);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<AppEnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(AppEnvironmentVariableArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder iAMServiceRole(@Nullable Output<String> iAMServiceRole) {
             this.iAMServiceRole = iAMServiceRole;
             return this;
         }
-
         public Builder iAMServiceRole(@Nullable String iAMServiceRole) {
             this.iAMServiceRole = Output.ofNullable(iAMServiceRole);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder oauthToken(@Nullable Output<String> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
-
         public Builder oauthToken(@Nullable String oauthToken) {
             this.oauthToken = Output.ofNullable(oauthToken);
             return this;
         }
-
         public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = Output.ofNullable(repository);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AppTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AppTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AppArgs build() {
+        public Builder tags(AppTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AppArgs build() {
             return new AppArgs(accessToken, autoBranchCreationConfig, basicAuthConfig, buildSpec, customHeaders, customRules, description, enableBranchAutoDeletion, environmentVariables, iAMServiceRole, name, oauthToken, repository, tags);
         }
     }

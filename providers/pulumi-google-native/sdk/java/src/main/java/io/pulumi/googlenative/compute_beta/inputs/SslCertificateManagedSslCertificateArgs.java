@@ -62,12 +62,13 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
             this.domains = domains;
             return this;
         }
-
         public Builder domains(@Nullable List<String> domains) {
             this.domains = Output.ofNullable(domains);
             return this;
         }
-        public SslCertificateManagedSslCertificateArgs build() {
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }        public SslCertificateManagedSslCertificateArgs build() {
             return new SslCertificateManagedSslCertificateArgs(domains);
         }
     }

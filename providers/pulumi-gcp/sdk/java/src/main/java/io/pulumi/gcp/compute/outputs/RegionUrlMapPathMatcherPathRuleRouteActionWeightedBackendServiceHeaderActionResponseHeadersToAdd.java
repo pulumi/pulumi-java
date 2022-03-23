@@ -90,17 +90,14 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public Builder replace(Boolean replace) {
             this.replace = Objects.requireNonNull(replace);
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd(headerName, headerValue, replace);
         }
     }

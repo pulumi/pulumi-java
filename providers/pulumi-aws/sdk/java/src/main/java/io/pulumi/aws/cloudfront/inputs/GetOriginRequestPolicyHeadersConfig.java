@@ -66,12 +66,13 @@ public final class GetOriginRequestPolicyHeadersConfig extends io.pulumi.resourc
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
-
         public Builder headers(List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-        public GetOriginRequestPolicyHeadersConfig build() {
+        public Builder headers(GetOriginRequestPolicyHeadersConfigHeader... headers) {
+            return headers(List.of(headers));
+        }        public GetOriginRequestPolicyHeadersConfig build() {
             return new GetOriginRequestPolicyHeadersConfig(headerBehavior, headers);
         }
     }

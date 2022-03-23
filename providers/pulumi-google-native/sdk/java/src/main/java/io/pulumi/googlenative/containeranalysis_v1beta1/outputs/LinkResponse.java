@@ -121,27 +121,31 @@ public final class LinkResponse {
             this.byproducts = Objects.requireNonNull(byproducts);
             return this;
         }
-
         public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder environment(EnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder materials(List<GrafeasV1beta1IntotoArtifactResponse> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
-
+        public Builder materials(GrafeasV1beta1IntotoArtifactResponse... materials) {
+            return materials(List.of(materials));
+        }
         public Builder products(List<GrafeasV1beta1IntotoArtifactResponse> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-        public LinkResponse build() {
+        public Builder products(GrafeasV1beta1IntotoArtifactResponse... products) {
+            return products(List.of(products));
+        }        public LinkResponse build() {
             return new LinkResponse(byproducts, command, environment, materials, products);
         }
     }

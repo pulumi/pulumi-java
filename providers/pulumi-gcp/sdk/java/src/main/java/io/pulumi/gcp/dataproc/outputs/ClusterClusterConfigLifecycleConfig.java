@@ -85,17 +85,14 @@ public final class ClusterClusterConfigLifecycleConfig {
             this.autoDeleteTime = autoDeleteTime;
             return this;
         }
-
         public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
             this.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
-
         public Builder idleStartTime(@Nullable String idleStartTime) {
             this.idleStartTime = idleStartTime;
             return this;
-        }
-        public ClusterClusterConfigLifecycleConfig build() {
+        }        public ClusterClusterConfigLifecycleConfig build() {
             return new ClusterClusterConfigLifecycleConfig(autoDeleteTime, idleDeleteTtl, idleStartTime);
         }
     }

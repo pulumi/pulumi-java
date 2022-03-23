@@ -58,8 +58,7 @@ public final class TopicResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public TopicResponse build() {
+        }        public TopicResponse build() {
             return new TopicResponse(name);
         }
     }

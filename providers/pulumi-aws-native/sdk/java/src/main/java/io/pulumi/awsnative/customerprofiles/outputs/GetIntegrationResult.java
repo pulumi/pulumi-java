@@ -122,27 +122,28 @@ public final class GetIntegrationResult {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
-
         public Builder objectTypeName(@Nullable String objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
-
         public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMapping> objectTypeNames) {
             this.objectTypeNames = objectTypeNames;
             return this;
         }
-
+        public Builder objectTypeNames(IntegrationObjectTypeMapping... objectTypeNames) {
+            return objectTypeNames(List.of(objectTypeNames));
+        }
         public Builder tags(@Nullable List<IntegrationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetIntegrationResult build() {
+        public Builder tags(IntegrationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetIntegrationResult build() {
             return new GetIntegrationResult(createdAt, lastUpdatedAt, objectTypeName, objectTypeNames, tags);
         }
     }

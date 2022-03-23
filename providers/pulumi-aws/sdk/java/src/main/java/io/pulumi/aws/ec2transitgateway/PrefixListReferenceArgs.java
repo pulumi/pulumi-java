@@ -107,42 +107,34 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
             this.blackhole = blackhole;
             return this;
         }
-
         public Builder blackhole(@Nullable Boolean blackhole) {
             this.blackhole = Output.ofNullable(blackhole);
             return this;
         }
-
         public Builder prefixListId(Output<String> prefixListId) {
             this.prefixListId = Objects.requireNonNull(prefixListId);
             return this;
         }
-
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = Output.of(Objects.requireNonNull(prefixListId));
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId);
             return this;
         }
-
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Output.of(Objects.requireNonNull(transitGatewayRouteTableId));
             return this;
-        }
-        public PrefixListReferenceArgs build() {
+        }        public PrefixListReferenceArgs build() {
             return new PrefixListReferenceArgs(blackhole, prefixListId, transitGatewayAttachmentId, transitGatewayRouteTableId);
         }
     }

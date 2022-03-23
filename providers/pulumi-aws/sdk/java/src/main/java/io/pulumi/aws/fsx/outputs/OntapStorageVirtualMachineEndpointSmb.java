@@ -72,12 +72,13 @@ public final class OntapStorageVirtualMachineEndpointSmb {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-        public OntapStorageVirtualMachineEndpointSmb build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public OntapStorageVirtualMachineEndpointSmb build() {
             return new OntapStorageVirtualMachineEndpointSmb(dnsName, ipAddresses);
         }
     }

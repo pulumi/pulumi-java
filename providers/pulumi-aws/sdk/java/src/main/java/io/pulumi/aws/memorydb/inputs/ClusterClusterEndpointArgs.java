@@ -75,22 +75,18 @@ public final class ClusterClusterEndpointArgs extends io.pulumi.resources.Resour
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public ClusterClusterEndpointArgs build() {
+        }        public ClusterClusterEndpointArgs build() {
             return new ClusterClusterEndpointArgs(address, port);
         }
     }

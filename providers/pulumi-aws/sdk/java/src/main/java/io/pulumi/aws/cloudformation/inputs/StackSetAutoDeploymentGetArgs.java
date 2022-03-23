@@ -74,22 +74,18 @@ public final class StackSetAutoDeploymentGetArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder retainStacksOnAccountRemoval(@Nullable Output<Boolean> retainStacksOnAccountRemoval) {
             this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
         }
-
         public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
             this.retainStacksOnAccountRemoval = Output.ofNullable(retainStacksOnAccountRemoval);
             return this;
-        }
-        public StackSetAutoDeploymentGetArgs build() {
+        }        public StackSetAutoDeploymentGetArgs build() {
             return new StackSetAutoDeploymentGetArgs(enabled, retainStacksOnAccountRemoval);
         }
     }

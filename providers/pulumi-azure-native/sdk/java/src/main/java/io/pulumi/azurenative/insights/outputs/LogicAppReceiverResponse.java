@@ -104,22 +104,18 @@ public final class LogicAppReceiverResponse {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }
-        public LogicAppReceiverResponse build() {
+        }        public LogicAppReceiverResponse build() {
             return new LogicAppReceiverResponse(callbackUrl, name, resourceId, useCommonAlertSchema);
         }
     }

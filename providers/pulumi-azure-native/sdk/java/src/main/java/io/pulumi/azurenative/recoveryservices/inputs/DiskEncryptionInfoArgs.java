@@ -79,22 +79,18 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
             this.diskEncryptionKeyInfo = diskEncryptionKeyInfo;
             return this;
         }
-
         public Builder diskEncryptionKeyInfo(@Nullable DiskEncryptionKeyInfoArgs diskEncryptionKeyInfo) {
             this.diskEncryptionKeyInfo = Output.ofNullable(diskEncryptionKeyInfo);
             return this;
         }
-
         public Builder keyEncryptionKeyInfo(@Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
             this.keyEncryptionKeyInfo = keyEncryptionKeyInfo;
             return this;
         }
-
         public Builder keyEncryptionKeyInfo(@Nullable KeyEncryptionKeyInfoArgs keyEncryptionKeyInfo) {
             this.keyEncryptionKeyInfo = Output.ofNullable(keyEncryptionKeyInfo);
             return this;
-        }
-        public DiskEncryptionInfoArgs build() {
+        }        public DiskEncryptionInfoArgs build() {
             return new DiskEncryptionInfoArgs(diskEncryptionKeyInfo, keyEncryptionKeyInfo);
         }
     }

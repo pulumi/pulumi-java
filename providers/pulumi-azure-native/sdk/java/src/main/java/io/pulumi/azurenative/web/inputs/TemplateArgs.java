@@ -116,42 +116,37 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(ContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder dapr(@Nullable Output<DaprArgs> dapr) {
             this.dapr = dapr;
             return this;
         }
-
         public Builder dapr(@Nullable DaprArgs dapr) {
             this.dapr = Output.ofNullable(dapr);
             return this;
         }
-
         public Builder revisionSuffix(@Nullable Output<String> revisionSuffix) {
             this.revisionSuffix = revisionSuffix;
             return this;
         }
-
         public Builder revisionSuffix(@Nullable String revisionSuffix) {
             this.revisionSuffix = Output.ofNullable(revisionSuffix);
             return this;
         }
-
         public Builder scale(@Nullable Output<ScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
-
         public Builder scale(@Nullable ScaleArgs scale) {
             this.scale = Output.ofNullable(scale);
             return this;
-        }
-        public TemplateArgs build() {
+        }        public TemplateArgs build() {
             return new TemplateArgs(containers, dapr, revisionSuffix, scale);
         }
     }

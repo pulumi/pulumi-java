@@ -103,27 +103,22 @@ public final class DomainEndpointOptions extends io.pulumi.resources.InvokeArgs 
             this.customEndpoint = customEndpoint;
             return this;
         }
-
         public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
             this.customEndpointCertificateArn = customEndpointCertificateArn;
             return this;
         }
-
         public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
             this.customEndpointEnabled = customEndpointEnabled;
             return this;
         }
-
         public Builder enforceHTTPS(@Nullable Boolean enforceHTTPS) {
             this.enforceHTTPS = enforceHTTPS;
             return this;
         }
-
         public Builder tLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
             this.tLSSecurityPolicy = tLSSecurityPolicy;
             return this;
-        }
-        public DomainEndpointOptions build() {
+        }        public DomainEndpointOptions build() {
             return new DomainEndpointOptions(customEndpoint, customEndpointCertificateArn, customEndpointEnabled, enforceHTTPS, tLSSecurityPolicy);
         }
     }

@@ -88,17 +88,14 @@ public final class GetReadWriteDatabaseArgs extends io.pulumi.resources.InvokeAr
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetReadWriteDatabaseArgs build() {
+        }        public GetReadWriteDatabaseArgs build() {
             return new GetReadWriteDatabaseArgs(clusterName, databaseName, resourceGroupName);
         }
     }

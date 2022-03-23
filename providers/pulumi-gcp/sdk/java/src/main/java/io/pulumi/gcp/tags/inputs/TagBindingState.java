@@ -90,32 +90,26 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
-
         public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = Output.ofNullable(tagValue);
             return this;
-        }
-        public TagBindingState build() {
+        }        public TagBindingState build() {
             return new TagBindingState(name, parent, tagValue);
         }
     }

@@ -60,8 +60,7 @@ public final class ServiceManagedIdentityResponseIdentity extends io.pulumi.reso
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ServiceManagedIdentityResponseIdentity build() {
+        }        public ServiceManagedIdentityResponseIdentity build() {
             return new ServiceManagedIdentityResponseIdentity(type);
         }
     }

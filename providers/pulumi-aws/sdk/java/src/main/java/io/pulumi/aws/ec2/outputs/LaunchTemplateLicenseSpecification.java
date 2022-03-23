@@ -51,8 +51,7 @@ public final class LaunchTemplateLicenseSpecification {
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
             this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
             return this;
-        }
-        public LaunchTemplateLicenseSpecification build() {
+        }        public LaunchTemplateLicenseSpecification build() {
             return new LaunchTemplateLicenseSpecification(licenseConfigurationArn);
         }
     }

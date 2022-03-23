@@ -93,17 +93,14 @@ public final class ResourcePolicySnapshotSchedulePolicy {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder schedule(ResourcePolicySnapshotSchedulePolicySchedule schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder snapshotProperties(@Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
             this.snapshotProperties = snapshotProperties;
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicy build() {
+        }        public ResourcePolicySnapshotSchedulePolicy build() {
             return new ResourcePolicySnapshotSchedulePolicy(retentionPolicy, schedule, snapshotProperties);
         }
     }

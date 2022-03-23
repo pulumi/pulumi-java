@@ -159,72 +159,58 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
             this.automationAccountId = Objects.requireNonNull(automationAccountId);
             return this;
         }
-
         public Builder automationAccountId(String automationAccountId) {
             this.automationAccountId = Output.of(Objects.requireNonNull(automationAccountId));
             return this;
         }
-
         public Builder isGlobalRunbook(Output<Boolean> isGlobalRunbook) {
             this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook);
             return this;
         }
-
         public Builder isGlobalRunbook(Boolean isGlobalRunbook) {
             this.isGlobalRunbook = Output.of(Objects.requireNonNull(isGlobalRunbook));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder runbookName(Output<String> runbookName) {
             this.runbookName = Objects.requireNonNull(runbookName);
             return this;
         }
-
         public Builder runbookName(String runbookName) {
             this.runbookName = Output.of(Objects.requireNonNull(runbookName));
             return this;
         }
-
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
-
         public Builder serviceUri(@Nullable String serviceUri) {
             this.serviceUri = Output.ofNullable(serviceUri);
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
         }
-
         public Builder webhookResourceId(Output<String> webhookResourceId) {
             this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
             return this;
         }
-
         public Builder webhookResourceId(String webhookResourceId) {
             this.webhookResourceId = Output.of(Objects.requireNonNull(webhookResourceId));
             return this;
-        }
-        public AutomationRunbookReceiverArgs build() {
+        }        public AutomationRunbookReceiverArgs build() {
             return new AutomationRunbookReceiverArgs(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
         }
     }

@@ -154,42 +154,37 @@ public final class GetCachePolicyResult {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
-
         public Builder minTtl(Integer minTtl) {
             this.minTtl = Objects.requireNonNull(minTtl);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder parametersInCacheKeyAndForwardedToOrigins(List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
             this.parametersInCacheKeyAndForwardedToOrigins = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigins);
             return this;
         }
-        public GetCachePolicyResult build() {
+        public Builder parametersInCacheKeyAndForwardedToOrigins(GetCachePolicyParametersInCacheKeyAndForwardedToOrigin... parametersInCacheKeyAndForwardedToOrigins) {
+            return parametersInCacheKeyAndForwardedToOrigins(List.of(parametersInCacheKeyAndForwardedToOrigins));
+        }        public GetCachePolicyResult build() {
             return new GetCachePolicyResult(comment, defaultTtl, etag, id, maxTtl, minTtl, name, parametersInCacheKeyAndForwardedToOrigins);
         }
     }

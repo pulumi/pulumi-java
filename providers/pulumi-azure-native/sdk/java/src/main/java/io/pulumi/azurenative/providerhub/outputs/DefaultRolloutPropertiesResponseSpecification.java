@@ -111,42 +111,37 @@ public final class DefaultRolloutPropertiesResponseSpecification {
             this.canary = canary;
             return this;
         }
-
         public Builder highTraffic(@Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic) {
             this.highTraffic = highTraffic;
             return this;
         }
-
         public Builder lowTraffic(@Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic) {
             this.lowTraffic = lowTraffic;
             return this;
         }
-
         public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic) {
             this.mediumTraffic = mediumTraffic;
             return this;
         }
-
         public Builder providerRegistration(@Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration) {
             this.providerRegistration = providerRegistration;
             return this;
         }
-
         public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations) {
             this.resourceTypeRegistrations = resourceTypeRegistrations;
             return this;
         }
-
+        public Builder resourceTypeRegistrations(ResourceTypeRegistrationResponse... resourceTypeRegistrations) {
+            return resourceTypeRegistrations(List.of(resourceTypeRegistrations));
+        }
         public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne) {
             this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
             return this;
         }
-
         public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
-        }
-        public DefaultRolloutPropertiesResponseSpecification build() {
+        }        public DefaultRolloutPropertiesResponseSpecification build() {
             return new DefaultRolloutPropertiesResponseSpecification(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
         }
     }

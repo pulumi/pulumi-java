@@ -126,27 +126,28 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
             this.additionalInfo = Objects.requireNonNull(additionalInfo);
             return this;
         }
-
+        public Builder additionalInfo(ErrorAdditionalInfoResponse... additionalInfo) {
+            return additionalInfo(List.of(additionalInfo));
+        }
         public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(List<ErrorResponseResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
+        public Builder details(ErrorResponseResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ErrorResponseResponse build() {
+        }        public ErrorResponseResponse build() {
             return new ErrorResponseResponse(additionalInfo, code, details, message, target);
         }
     }

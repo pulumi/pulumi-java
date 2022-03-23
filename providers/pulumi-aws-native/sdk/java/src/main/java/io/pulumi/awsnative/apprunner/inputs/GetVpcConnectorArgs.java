@@ -54,8 +54,7 @@ public final class GetVpcConnectorArgs extends io.pulumi.resources.InvokeArgs {
         public Builder vpcConnectorArn(String vpcConnectorArn) {
             this.vpcConnectorArn = Objects.requireNonNull(vpcConnectorArn);
             return this;
-        }
-        public GetVpcConnectorArgs build() {
+        }        public GetVpcConnectorArgs build() {
             return new GetVpcConnectorArgs(vpcConnectorArn);
         }
     }

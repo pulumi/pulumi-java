@@ -70,12 +70,13 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse {
             this.placeIds = Objects.requireNonNull(placeIds);
             return this;
         }
-
+        public Builder placeIds(String... placeIds) {
+            return placeIds(List.of(placeIds));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudRetailV2betaFulfillmentInfoResponse build() {
+        }        public GoogleCloudRetailV2betaFulfillmentInfoResponse build() {
             return new GoogleCloudRetailV2betaFulfillmentInfoResponse(placeIds, type);
         }
     }

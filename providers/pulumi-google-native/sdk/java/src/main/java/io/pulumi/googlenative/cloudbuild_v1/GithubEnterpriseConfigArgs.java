@@ -219,122 +219,98 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gheConfigId(@Nullable Output<String> gheConfigId) {
             this.gheConfigId = gheConfigId;
             return this;
         }
-
         public Builder gheConfigId(@Nullable String gheConfigId) {
             this.gheConfigId = Output.ofNullable(gheConfigId);
             return this;
         }
-
         public Builder hostUrl(@Nullable Output<String> hostUrl) {
             this.hostUrl = hostUrl;
             return this;
         }
-
         public Builder hostUrl(@Nullable String hostUrl) {
             this.hostUrl = Output.ofNullable(hostUrl);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder peeredNetwork(@Nullable Output<String> peeredNetwork) {
             this.peeredNetwork = peeredNetwork;
             return this;
         }
-
         public Builder peeredNetwork(@Nullable String peeredNetwork) {
             this.peeredNetwork = Output.ofNullable(peeredNetwork);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder secrets(@Nullable Output<GitHubEnterpriseSecretsArgs> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable GitHubEnterpriseSecretsArgs secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-
         public Builder sslCa(@Nullable Output<String> sslCa) {
             this.sslCa = sslCa;
             return this;
         }
-
         public Builder sslCa(@Nullable String sslCa) {
             this.sslCa = Output.ofNullable(sslCa);
             return this;
         }
-
         public Builder webhookKey(@Nullable Output<String> webhookKey) {
             this.webhookKey = webhookKey;
             return this;
         }
-
         public Builder webhookKey(@Nullable String webhookKey) {
             this.webhookKey = Output.ofNullable(webhookKey);
             return this;
-        }
-        public GithubEnterpriseConfigArgs build() {
+        }        public GithubEnterpriseConfigArgs build() {
             return new GithubEnterpriseConfigArgs(appId, displayName, gheConfigId, hostUrl, location, name, peeredNetwork, project, projectId, secrets, sslCa, webhookKey);
         }
     }

@@ -70,12 +70,13 @@ public final class DashboardStringParameter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public DashboardStringParameter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public DashboardStringParameter build() {
             return new DashboardStringParameter(name, values);
         }
     }

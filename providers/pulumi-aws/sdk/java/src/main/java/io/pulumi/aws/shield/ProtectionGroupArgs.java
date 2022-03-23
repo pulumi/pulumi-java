@@ -140,62 +140,53 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
             this.aggregation = Objects.requireNonNull(aggregation);
             return this;
         }
-
         public Builder aggregation(String aggregation) {
             this.aggregation = Output.of(Objects.requireNonNull(aggregation));
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public Builder pattern(String pattern) {
             this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
         }
-
         public Builder protectionGroupId(Output<String> protectionGroupId) {
             this.protectionGroupId = Objects.requireNonNull(protectionGroupId);
             return this;
         }
-
         public Builder protectionGroupId(String protectionGroupId) {
             this.protectionGroupId = Output.of(Objects.requireNonNull(protectionGroupId));
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ProtectionGroupArgs build() {
+        }        public ProtectionGroupArgs build() {
             return new ProtectionGroupArgs(aggregation, members, pattern, protectionGroupId, resourceType, tags);
         }
     }

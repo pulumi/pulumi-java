@@ -88,17 +88,14 @@ public final class GetWatcherArgs extends io.pulumi.resources.InvokeArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder watcherName(String watcherName) {
             this.watcherName = Objects.requireNonNull(watcherName);
             return this;
-        }
-        public GetWatcherArgs build() {
+        }        public GetWatcherArgs build() {
             return new GetWatcherArgs(automationAccountName, resourceGroupName, watcherName);
         }
     }

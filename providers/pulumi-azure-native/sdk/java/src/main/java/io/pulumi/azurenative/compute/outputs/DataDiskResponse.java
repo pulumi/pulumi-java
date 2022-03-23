@@ -268,72 +268,58 @@ public final class DataDiskResponse {
             this.caching = caching;
             return this;
         }
-
         public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder deleteOption(@Nullable String deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder detachOption(@Nullable String detachOption) {
             this.detachOption = detachOption;
             return this;
         }
-
         public Builder diskIOPSReadWrite(Double diskIOPSReadWrite) {
             this.diskIOPSReadWrite = Objects.requireNonNull(diskIOPSReadWrite);
             return this;
         }
-
         public Builder diskMBpsReadWrite(Double diskMBpsReadWrite) {
             this.diskMBpsReadWrite = Objects.requireNonNull(diskMBpsReadWrite);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder image(@Nullable VirtualHardDiskResponse image) {
             this.image = image;
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder toBeDetached(@Nullable Boolean toBeDetached) {
             this.toBeDetached = toBeDetached;
             return this;
         }
-
         public Builder vhd(@Nullable VirtualHardDiskResponse vhd) {
             this.vhd = vhd;
             return this;
         }
-
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
-        }
-        public DataDiskResponse build() {
+        }        public DataDiskResponse build() {
             return new DataDiskResponse(caching, createOption, deleteOption, detachOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);
         }
     }

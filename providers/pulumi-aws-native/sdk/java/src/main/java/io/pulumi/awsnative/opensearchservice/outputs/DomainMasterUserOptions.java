@@ -63,17 +63,14 @@ public final class DomainMasterUserOptions {
             this.masterUserARN = masterUserARN;
             return this;
         }
-
         public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
-
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
-        }
-        public DomainMasterUserOptions build() {
+        }        public DomainMasterUserOptions build() {
             return new DomainMasterUserOptions(masterUserARN, masterUserName, masterUserPassword);
         }
     }

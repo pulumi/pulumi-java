@@ -101,37 +101,33 @@ public final class GetBudgetsActionResult {
             this.actionId = actionId;
             return this;
         }
-
         public Builder actionThreshold(@Nullable BudgetsActionActionThreshold actionThreshold) {
             this.actionThreshold = actionThreshold;
             return this;
         }
-
         public Builder approvalModel(@Nullable BudgetsActionApprovalModel approvalModel) {
             this.approvalModel = approvalModel;
             return this;
         }
-
         public Builder definition(@Nullable BudgetsActionDefinition definition) {
             this.definition = definition;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder notificationType(@Nullable BudgetsActionNotificationType notificationType) {
             this.notificationType = notificationType;
             return this;
         }
-
         public Builder subscribers(@Nullable List<BudgetsActionSubscriber> subscribers) {
             this.subscribers = subscribers;
             return this;
         }
-        public GetBudgetsActionResult build() {
+        public Builder subscribers(BudgetsActionSubscriber... subscribers) {
+            return subscribers(List.of(subscribers));
+        }        public GetBudgetsActionResult build() {
             return new GetBudgetsActionResult(actionId, actionThreshold, approvalModel, definition, executionRoleArn, notificationType, subscribers);
         }
     }

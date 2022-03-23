@@ -72,12 +72,13 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor build() {
+        }        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor build() {
             return new FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor(parameters, type);
         }
     }

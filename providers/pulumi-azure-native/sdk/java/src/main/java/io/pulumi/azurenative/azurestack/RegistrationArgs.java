@@ -108,42 +108,34 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable Either<String,Location> location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder registrationName(@Nullable Output<String> registrationName) {
             this.registrationName = registrationName;
             return this;
         }
-
         public Builder registrationName(@Nullable String registrationName) {
             this.registrationName = Output.ofNullable(registrationName);
             return this;
         }
-
         public Builder registrationToken(Output<String> registrationToken) {
             this.registrationToken = Objects.requireNonNull(registrationToken);
             return this;
         }
-
         public Builder registrationToken(String registrationToken) {
             this.registrationToken = Output.of(Objects.requireNonNull(registrationToken));
             return this;
         }
-
         public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
-        }
-        public RegistrationArgs build() {
+        }        public RegistrationArgs build() {
             return new RegistrationArgs(location, registrationName, registrationToken, resourceGroup);
         }
     }

@@ -66,22 +66,18 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs build() {
+        }        public InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs build() {
             return new InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs(key, value);
         }
     }

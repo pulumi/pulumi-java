@@ -53,8 +53,7 @@ public final class ScopeNamespaceResponse {
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
-        }
-        public ScopeNamespaceResponse build() {
+        }        public ScopeNamespaceResponse build() {
             return new ScopeNamespaceResponse(targetNamespace);
         }
     }

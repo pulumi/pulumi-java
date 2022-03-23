@@ -72,12 +72,10 @@ public final class TwitterResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder registration(@Nullable TwitterRegistrationResponse registration) {
             this.registration = registration;
             return this;
-        }
-        public TwitterResponse build() {
+        }        public TwitterResponse build() {
             return new TwitterResponse(enabled, registration);
         }
     }

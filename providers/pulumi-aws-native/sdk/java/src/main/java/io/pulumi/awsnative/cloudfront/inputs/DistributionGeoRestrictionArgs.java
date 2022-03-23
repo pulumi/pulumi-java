@@ -67,22 +67,21 @@ public final class DistributionGeoRestrictionArgs extends io.pulumi.resources.Re
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder restrictionType(Output<String> restrictionType) {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
         }
-
         public Builder restrictionType(String restrictionType) {
             this.restrictionType = Output.of(Objects.requireNonNull(restrictionType));
             return this;
-        }
-        public DistributionGeoRestrictionArgs build() {
+        }        public DistributionGeoRestrictionArgs build() {
             return new DistributionGeoRestrictionArgs(locations, restrictionType);
         }
     }

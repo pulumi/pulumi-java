@@ -95,32 +95,26 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
             return this;
         }
-
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = Output.ofNullable(oldestRecoveryPoint);
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = Output.ofNullable(recoveryPointCount);
             return this;
-        }
-        public MabFileFolderProtectedItemExtendedInfoArgs build() {
+        }        public MabFileFolderProtectedItemExtendedInfoArgs build() {
             return new MabFileFolderProtectedItemExtendedInfoArgs(lastRefreshedAt, oldestRecoveryPoint, recoveryPointCount);
         }
     }

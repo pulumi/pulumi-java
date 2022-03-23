@@ -51,8 +51,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolGrpc {
         public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
-        }
-        public VirtualGatewaySpecListenerConnectionPoolGrpc build() {
+        }        public VirtualGatewaySpecListenerConnectionPoolGrpc build() {
             return new VirtualGatewaySpecListenerConnectionPoolGrpc(maxRequests);
         }
     }

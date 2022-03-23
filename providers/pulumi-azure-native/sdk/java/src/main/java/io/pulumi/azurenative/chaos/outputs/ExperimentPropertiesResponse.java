@@ -90,17 +90,20 @@ public final class ExperimentPropertiesResponse {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
-
+        public Builder selectors(SelectorResponse... selectors) {
+            return selectors(List.of(selectors));
+        }
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
-
         public Builder steps(List<StepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-        public ExperimentPropertiesResponse build() {
+        public Builder steps(StepResponse... steps) {
+            return steps(List.of(steps));
+        }        public ExperimentPropertiesResponse build() {
             return new ExperimentPropertiesResponse(selectors, startOnCreation, steps);
         }
     }

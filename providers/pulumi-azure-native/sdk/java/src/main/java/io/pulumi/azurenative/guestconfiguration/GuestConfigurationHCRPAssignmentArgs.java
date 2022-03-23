@@ -139,62 +139,50 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
             this.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
-
         public Builder guestConfigurationAssignmentName(@Nullable String guestConfigurationAssignmentName) {
             this.guestConfigurationAssignmentName = Output.ofNullable(guestConfigurationAssignmentName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder machineName(Output<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
-
         public Builder machineName(String machineName) {
             this.machineName = Output.of(Objects.requireNonNull(machineName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable GuestConfigurationAssignmentPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public GuestConfigurationHCRPAssignmentArgs build() {
+        }        public GuestConfigurationHCRPAssignmentArgs build() {
             return new GuestConfigurationHCRPAssignmentArgs(guestConfigurationAssignmentName, location, machineName, name, properties, resourceGroupName);
         }
     }

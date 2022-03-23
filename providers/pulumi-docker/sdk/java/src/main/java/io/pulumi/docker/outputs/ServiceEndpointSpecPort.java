@@ -80,27 +80,22 @@ public final class ServiceEndpointSpecPort {
             this.name = name;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder publishMode(@Nullable String publishMode) {
             this.publishMode = publishMode;
             return this;
         }
-
         public Builder publishedPort(@Nullable Integer publishedPort) {
             this.publishedPort = publishedPort;
             return this;
         }
-
         public Builder targetPort(Integer targetPort) {
             this.targetPort = Objects.requireNonNull(targetPort);
             return this;
-        }
-        public ServiceEndpointSpecPort build() {
+        }        public ServiceEndpointSpecPort build() {
             return new ServiceEndpointSpecPort(name, protocol, publishMode, publishedPort, targetPort);
         }
     }

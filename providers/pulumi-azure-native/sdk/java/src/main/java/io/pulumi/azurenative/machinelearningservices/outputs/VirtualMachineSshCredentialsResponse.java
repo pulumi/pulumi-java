@@ -103,22 +103,18 @@ public final class VirtualMachineSshCredentialsResponse {
             this.password = password;
             return this;
         }
-
         public Builder privateKeyData(@Nullable String privateKeyData) {
             this.privateKeyData = privateKeyData;
             return this;
         }
-
         public Builder publicKeyData(@Nullable String publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public VirtualMachineSshCredentialsResponse build() {
+        }        public VirtualMachineSshCredentialsResponse build() {
             return new VirtualMachineSshCredentialsResponse(password, privateKeyData, publicKeyData, username);
         }
     }

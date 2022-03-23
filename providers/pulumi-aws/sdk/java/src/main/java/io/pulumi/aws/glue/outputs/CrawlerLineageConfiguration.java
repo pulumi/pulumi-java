@@ -53,8 +53,7 @@ public final class CrawlerLineageConfiguration {
         public Builder crawlerLineageSettings(@Nullable String crawlerLineageSettings) {
             this.crawlerLineageSettings = crawlerLineageSettings;
             return this;
-        }
-        public CrawlerLineageConfiguration build() {
+        }        public CrawlerLineageConfiguration build() {
             return new CrawlerLineageConfiguration(crawlerLineageSettings);
         }
     }

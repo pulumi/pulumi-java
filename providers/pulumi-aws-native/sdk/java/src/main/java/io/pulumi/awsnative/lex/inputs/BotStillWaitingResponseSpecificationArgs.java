@@ -101,42 +101,37 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Output.ofNullable(allowInterrupt);
             return this;
         }
-
         public Builder frequencyInSeconds(Output<Integer> frequencyInSeconds) {
             this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
             return this;
         }
-
         public Builder frequencyInSeconds(Integer frequencyInSeconds) {
             this.frequencyInSeconds = Output.of(Objects.requireNonNull(frequencyInSeconds));
             return this;
         }
-
         public Builder messageGroupsList(Output<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-
         public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
             this.messageGroupsList = Output.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }
-
+        public Builder messageGroupsList(BotMessageGroupArgs... messageGroupsList) {
+            return messageGroupsList(List.of(messageGroupsList));
+        }
         public Builder timeoutInSeconds(Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
-
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.of(Objects.requireNonNull(timeoutInSeconds));
             return this;
-        }
-        public BotStillWaitingResponseSpecificationArgs build() {
+        }        public BotStillWaitingResponseSpecificationArgs build() {
             return new BotStillWaitingResponseSpecificationArgs(allowInterrupt, frequencyInSeconds, messageGroupsList, timeoutInSeconds);
         }
     }

@@ -61,12 +61,10 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public CloudEndpointsArgs build() {
+        }        public CloudEndpointsArgs build() {
             return new CloudEndpointsArgs(service);
         }
     }

@@ -217,57 +217,58 @@ public final class GetStreamResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder closedShards(List<String> closedShards) {
             this.closedShards = Objects.requireNonNull(closedShards);
             return this;
         }
-
+        public Builder closedShards(String... closedShards) {
+            return closedShards(List.of(closedShards));
+        }
         public Builder creationTimestamp(Integer creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder openShards(List<String> openShards) {
             this.openShards = Objects.requireNonNull(openShards);
             return this;
         }
-
+        public Builder openShards(String... openShards) {
+            return openShards(List.of(openShards));
+        }
         public Builder retentionPeriod(Integer retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
-
         public Builder shardLevelMetrics(List<String> shardLevelMetrics) {
             this.shardLevelMetrics = Objects.requireNonNull(shardLevelMetrics);
             return this;
         }
-
+        public Builder shardLevelMetrics(String... shardLevelMetrics) {
+            return shardLevelMetrics(List.of(shardLevelMetrics));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder streamModeDetails(List<GetStreamStreamModeDetail> streamModeDetails) {
             this.streamModeDetails = Objects.requireNonNull(streamModeDetails);
             return this;
         }
-
+        public Builder streamModeDetails(GetStreamStreamModeDetail... streamModeDetails) {
+            return streamModeDetails(List.of(streamModeDetails));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetStreamResult build() {
+        }        public GetStreamResult build() {
             return new GetStreamResult(arn, closedShards, creationTimestamp, id, name, openShards, retentionPeriod, shardLevelMetrics, status, streamModeDetails, tags);
         }
     }

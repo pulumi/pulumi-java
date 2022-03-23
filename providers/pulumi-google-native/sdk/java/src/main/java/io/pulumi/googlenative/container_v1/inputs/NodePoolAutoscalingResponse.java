@@ -109,22 +109,18 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
             this.autoprovisioned = Objects.requireNonNull(autoprovisioned);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
-        }
-        public NodePoolAutoscalingResponse build() {
+        }        public NodePoolAutoscalingResponse build() {
             return new NodePoolAutoscalingResponse(autoprovisioned, enabled, maxNodeCount, minNodeCount);
         }
     }

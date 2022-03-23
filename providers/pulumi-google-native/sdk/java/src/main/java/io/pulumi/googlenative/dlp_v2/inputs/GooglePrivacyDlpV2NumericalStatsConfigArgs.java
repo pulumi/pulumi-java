@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends io.pulumi.
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
             this.field = Output.ofNullable(field);
             return this;
-        }
-        public GooglePrivacyDlpV2NumericalStatsConfigArgs build() {
+        }        public GooglePrivacyDlpV2NumericalStatsConfigArgs build() {
             return new GooglePrivacyDlpV2NumericalStatsConfigArgs(field);
         }
     }

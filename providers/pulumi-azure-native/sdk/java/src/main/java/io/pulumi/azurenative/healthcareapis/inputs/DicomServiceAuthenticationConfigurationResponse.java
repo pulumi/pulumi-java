@@ -77,12 +77,13 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder authority(String authority) {
             this.authority = Objects.requireNonNull(authority);
             return this;
-        }
-        public DicomServiceAuthenticationConfigurationResponse build() {
+        }        public DicomServiceAuthenticationConfigurationResponse build() {
             return new DicomServiceAuthenticationConfigurationResponse(audiences, authority);
         }
     }

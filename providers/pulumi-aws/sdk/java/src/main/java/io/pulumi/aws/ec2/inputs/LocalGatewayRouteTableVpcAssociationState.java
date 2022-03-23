@@ -119,52 +119,42 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
             this.localGatewayId = localGatewayId;
             return this;
         }
-
         public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = Output.ofNullable(localGatewayId);
             return this;
         }
-
         public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
-
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Output.ofNullable(localGatewayRouteTableId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public LocalGatewayRouteTableVpcAssociationState build() {
+        }        public LocalGatewayRouteTableVpcAssociationState build() {
             return new LocalGatewayRouteTableVpcAssociationState(localGatewayId, localGatewayRouteTableId, tags, tagsAll, vpcId);
         }
     }

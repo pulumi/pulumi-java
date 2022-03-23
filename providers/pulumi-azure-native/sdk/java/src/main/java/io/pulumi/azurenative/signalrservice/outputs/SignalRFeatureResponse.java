@@ -91,17 +91,14 @@ public final class SignalRFeatureResponse {
             this.flag = Objects.requireNonNull(flag);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SignalRFeatureResponse build() {
+        }        public SignalRFeatureResponse build() {
             return new SignalRFeatureResponse(flag, properties, value);
         }
     }

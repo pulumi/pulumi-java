@@ -64,12 +64,10 @@ public final class GetFolderPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
-        }
-        public GetFolderPolicyArgs build() {
+        }        public GetFolderPolicyArgs build() {
             return new GetFolderPolicyArgs(folderId, policyId);
         }
     }

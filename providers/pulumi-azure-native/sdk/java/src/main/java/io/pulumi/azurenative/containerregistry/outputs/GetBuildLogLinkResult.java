@@ -53,8 +53,7 @@ public final class GetBuildLogLinkResult {
         public Builder logLink(@Nullable String logLink) {
             this.logLink = logLink;
             return this;
-        }
-        public GetBuildLogLinkResult build() {
+        }        public GetBuildLogLinkResult build() {
             return new GetBuildLogLinkResult(logLink);
         }
     }

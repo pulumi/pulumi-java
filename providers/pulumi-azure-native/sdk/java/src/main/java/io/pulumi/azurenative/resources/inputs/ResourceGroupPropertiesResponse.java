@@ -58,8 +58,7 @@ public final class ResourceGroupPropertiesResponse extends io.pulumi.resources.I
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ResourceGroupPropertiesResponse build() {
+        }        public ResourceGroupPropertiesResponse build() {
             return new ResourceGroupPropertiesResponse(provisioningState);
         }
     }

@@ -90,32 +90,26 @@ public final class SpotFleetEbsBlockDevice {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeType(@Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
             this.volumeType = volumeType;
             return this;
-        }
-        public SpotFleetEbsBlockDevice build() {
+        }        public SpotFleetEbsBlockDevice build() {
             return new SpotFleetEbsBlockDevice(deleteOnTermination, encrypted, iops, snapshotId, volumeSize, volumeType);
         }
     }

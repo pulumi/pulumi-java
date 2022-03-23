@@ -60,7 +60,9 @@ public final class EndpointVerificationSpecificAttributesResponse extends io.pul
             this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
             return this;
         }
-        public EndpointVerificationSpecificAttributesResponse build() {
+        public Builder certificateAttributes(CertificateAttributesResponse... certificateAttributes) {
+            return certificateAttributes(List.of(certificateAttributes));
+        }        public EndpointVerificationSpecificAttributesResponse build() {
             return new EndpointVerificationSpecificAttributesResponse(certificateAttributes);
         }
     }

@@ -96,37 +96,51 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
-
+        public Builder destinationPorts(String... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder destinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
             this.destinationPrefixLists = destinationPrefixLists;
             return this;
         }
-
+        public Builder destinationPrefixLists(String... destinationPrefixLists) {
+            return destinationPrefixLists(List.of(destinationPrefixLists));
+        }
         public Builder protocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(NetworkInsightsAccessScopeProtocol... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
-
+        public Builder sourcePorts(String... sourcePorts) {
+            return sourcePorts(List.of(sourcePorts));
+        }
         public Builder sourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
             this.sourcePrefixLists = sourcePrefixLists;
             return this;
         }
-        public NetworkInsightsAccessScopePacketHeaderStatementRequest build() {
+        public Builder sourcePrefixLists(String... sourcePrefixLists) {
+            return sourcePrefixLists(List.of(sourcePrefixLists));
+        }        public NetworkInsightsAccessScopePacketHeaderStatementRequest build() {
             return new NetworkInsightsAccessScopePacketHeaderStatementRequest(destinationAddresses, destinationPorts, destinationPrefixLists, protocols, sourceAddresses, sourcePorts, sourcePrefixLists);
         }
     }

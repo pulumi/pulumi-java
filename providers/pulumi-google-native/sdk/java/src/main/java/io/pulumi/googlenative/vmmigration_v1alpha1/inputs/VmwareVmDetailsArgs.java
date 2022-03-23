@@ -240,122 +240,98 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.committedStorage = committedStorage;
             return this;
         }
-
         public Builder committedStorage(@Nullable String committedStorage) {
             this.committedStorage = Output.ofNullable(committedStorage);
             return this;
         }
-
         public Builder committedStorageMb(@Nullable Output<String> committedStorageMb) {
             this.committedStorageMb = committedStorageMb;
             return this;
         }
-
         public Builder committedStorageMb(@Nullable String committedStorageMb) {
             this.committedStorageMb = Output.ofNullable(committedStorageMb);
             return this;
         }
-
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
-
         public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = Output.ofNullable(cpuCount);
             return this;
         }
-
         public Builder datacenterDescription(@Nullable Output<String> datacenterDescription) {
             this.datacenterDescription = datacenterDescription;
             return this;
         }
-
         public Builder datacenterDescription(@Nullable String datacenterDescription) {
             this.datacenterDescription = Output.ofNullable(datacenterDescription);
             return this;
         }
-
         public Builder datacenterId(@Nullable Output<String> datacenterId) {
             this.datacenterId = datacenterId;
             return this;
         }
-
         public Builder datacenterId(@Nullable String datacenterId) {
             this.datacenterId = Output.ofNullable(datacenterId);
             return this;
         }
-
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
             this.diskCount = diskCount;
             return this;
         }
-
         public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = Output.ofNullable(diskCount);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder guestDescription(@Nullable Output<String> guestDescription) {
             this.guestDescription = guestDescription;
             return this;
         }
-
         public Builder guestDescription(@Nullable String guestDescription) {
             this.guestDescription = Output.ofNullable(guestDescription);
             return this;
         }
-
         public Builder memoryMb(@Nullable Output<Integer> memoryMb) {
             this.memoryMb = memoryMb;
             return this;
         }
-
         public Builder memoryMb(@Nullable Integer memoryMb) {
             this.memoryMb = Output.ofNullable(memoryMb);
             return this;
         }
-
         public Builder powerState(@Nullable Output<VmwareVmDetailsPowerState> powerState) {
             this.powerState = powerState;
             return this;
         }
-
         public Builder powerState(@Nullable VmwareVmDetailsPowerState powerState) {
             this.powerState = Output.ofNullable(powerState);
             return this;
         }
-
         public Builder uuid(@Nullable Output<String> uuid) {
             this.uuid = uuid;
             return this;
         }
-
         public Builder uuid(@Nullable String uuid) {
             this.uuid = Output.ofNullable(uuid);
             return this;
         }
-
         public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = Output.ofNullable(vmId);
             return this;
-        }
-        public VmwareVmDetailsArgs build() {
+        }        public VmwareVmDetailsArgs build() {
             return new VmwareVmDetailsArgs(committedStorage, committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
         }
     }

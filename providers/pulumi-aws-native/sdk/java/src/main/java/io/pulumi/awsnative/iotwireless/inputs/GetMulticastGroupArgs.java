@@ -54,8 +54,7 @@ public final class GetMulticastGroupArgs extends io.pulumi.resources.InvokeArgs 
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetMulticastGroupArgs build() {
+        }        public GetMulticastGroupArgs build() {
             return new GetMulticastGroupArgs(id);
         }
     }

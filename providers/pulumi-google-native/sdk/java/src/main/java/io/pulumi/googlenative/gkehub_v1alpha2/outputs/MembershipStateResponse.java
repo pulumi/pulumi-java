@@ -51,8 +51,7 @@ public final class MembershipStateResponse {
         public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
-        }
-        public MembershipStateResponse build() {
+        }        public MembershipStateResponse build() {
             return new MembershipStateResponse(code);
         }
     }

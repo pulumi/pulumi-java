@@ -217,102 +217,88 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
             this.fsGroup = fsGroup;
             return this;
         }
-
         public Builder fsGroup(@Nullable Integer fsGroup) {
             this.fsGroup = Output.ofNullable(fsGroup);
             return this;
         }
-
         public Builder fsGroupChangePolicy(@Nullable Output<String> fsGroupChangePolicy) {
             this.fsGroupChangePolicy = fsGroupChangePolicy;
             return this;
         }
-
         public Builder fsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
             this.fsGroupChangePolicy = Output.ofNullable(fsGroupChangePolicy);
             return this;
         }
-
         public Builder runAsGroup(@Nullable Output<Integer> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
-
         public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = Output.ofNullable(runAsGroup);
             return this;
         }
-
         public Builder runAsNonRoot(@Nullable Output<Boolean> runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
-
         public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = Output.ofNullable(runAsNonRoot);
             return this;
         }
-
         public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
-
         public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = Output.ofNullable(runAsUser);
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
             this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
             return this;
         }
-
         public Builder seccompProfile(@Nullable Output<SeccompProfileArgs> seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
-
         public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
             this.seccompProfile = Output.ofNullable(seccompProfile);
             return this;
         }
-
         public Builder supplementalGroups(@Nullable Output<List<Integer>> supplementalGroups) {
             this.supplementalGroups = supplementalGroups;
             return this;
         }
-
         public Builder supplementalGroups(@Nullable List<Integer> supplementalGroups) {
             this.supplementalGroups = Output.ofNullable(supplementalGroups);
             return this;
         }
-
+        public Builder supplementalGroups(Integer... supplementalGroups) {
+            return supplementalGroups(List.of(supplementalGroups));
+        }
         public Builder sysctls(@Nullable Output<List<SysctlArgs>> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
-
         public Builder sysctls(@Nullable List<SysctlArgs> sysctls) {
             this.sysctls = Output.ofNullable(sysctls);
             return this;
         }
-
+        public Builder sysctls(SysctlArgs... sysctls) {
+            return sysctls(List.of(sysctls));
+        }
         public Builder windowsOptions(@Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }
-
         public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
             this.windowsOptions = Output.ofNullable(windowsOptions);
             return this;
-        }
-        public PodSecurityContextArgs build() {
+        }        public PodSecurityContextArgs build() {
             return new PodSecurityContextArgs(fsGroup, fsGroupChangePolicy, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, supplementalGroups, sysctls, windowsOptions);
         }
     }

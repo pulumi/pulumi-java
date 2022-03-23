@@ -107,42 +107,34 @@ public final class ServiceServiceRegistriesGetArgs extends io.pulumi.resources.R
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder registryArn(Output<String> registryArn) {
             this.registryArn = Objects.requireNonNull(registryArn);
             return this;
         }
-
         public Builder registryArn(String registryArn) {
             this.registryArn = Output.of(Objects.requireNonNull(registryArn));
             return this;
-        }
-        public ServiceServiceRegistriesGetArgs build() {
+        }        public ServiceServiceRegistriesGetArgs build() {
             return new ServiceServiceRegistriesGetArgs(containerName, containerPort, port, registryArn);
         }
     }

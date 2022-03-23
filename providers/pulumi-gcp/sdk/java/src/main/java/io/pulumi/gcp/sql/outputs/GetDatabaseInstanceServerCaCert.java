@@ -77,27 +77,22 @@ public final class GetDatabaseInstanceServerCaCert {
             this.cert = Objects.requireNonNull(cert);
             return this;
         }
-
         public Builder commonName(String commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
-        }
-        public GetDatabaseInstanceServerCaCert build() {
+        }        public GetDatabaseInstanceServerCaCert build() {
             return new GetDatabaseInstanceServerCaCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }
     }

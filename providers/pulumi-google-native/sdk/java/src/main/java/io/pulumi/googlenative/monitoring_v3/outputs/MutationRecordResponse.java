@@ -69,12 +69,10 @@ public final class MutationRecordResponse {
             this.mutateTime = Objects.requireNonNull(mutateTime);
             return this;
         }
-
         public Builder mutatedBy(String mutatedBy) {
             this.mutatedBy = Objects.requireNonNull(mutatedBy);
             return this;
-        }
-        public MutationRecordResponse build() {
+        }        public MutationRecordResponse build() {
             return new MutationRecordResponse(mutateTime, mutatedBy);
         }
     }

@@ -120,52 +120,45 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userNames(@Nullable Output<List<String>> userNames) {
             this.userNames = userNames;
             return this;
         }
-
         public Builder userNames(@Nullable List<String> userNames) {
             this.userNames = Output.ofNullable(userNames);
             return this;
         }
-        public AclArgs build() {
+        public Builder userNames(String... userNames) {
+            return userNames(List.of(userNames));
+        }        public AclArgs build() {
             return new AclArgs(name, namePrefix, tags, tagsAll, userNames);
         }
     }

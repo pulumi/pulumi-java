@@ -75,12 +75,10 @@ public final class GetJobQueueArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetJobQueueArgs build() {
+        }        public GetJobQueueArgs build() {
             return new GetJobQueueArgs(name, tags);
         }
     }

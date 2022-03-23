@@ -108,22 +108,18 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public Builder versionCode(String versionCode) {
             this.versionCode = Objects.requireNonNull(versionCode);
             return this;
         }
-
         public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
-        }
-        public AndroidAppInfoResponse build() {
+        }        public AndroidAppInfoResponse build() {
             return new AndroidAppInfoResponse(name, packageName, versionCode, versionName);
         }
     }

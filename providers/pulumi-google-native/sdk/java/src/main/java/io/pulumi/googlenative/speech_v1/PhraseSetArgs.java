@@ -133,62 +133,53 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
             this.boost = boost;
             return this;
         }
-
         public Builder boost(@Nullable Double boost) {
             this.boost = Output.ofNullable(boost);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder phraseSetId(Output<String> phraseSetId) {
             this.phraseSetId = Objects.requireNonNull(phraseSetId);
             return this;
         }
-
         public Builder phraseSetId(String phraseSetId) {
             this.phraseSetId = Output.of(Objects.requireNonNull(phraseSetId));
             return this;
         }
-
         public Builder phrases(@Nullable Output<List<PhraseArgs>> phrases) {
             this.phrases = phrases;
             return this;
         }
-
         public Builder phrases(@Nullable List<PhraseArgs> phrases) {
             this.phrases = Output.ofNullable(phrases);
             return this;
         }
-
+        public Builder phrases(PhraseArgs... phrases) {
+            return phrases(List.of(phrases));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public PhraseSetArgs build() {
+        }        public PhraseSetArgs build() {
             return new PhraseSetArgs(boost, location, name, phraseSetId, phrases, project);
         }
     }

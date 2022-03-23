@@ -71,12 +71,10 @@ public final class PrincipalsResponse {
             this.objectId = objectId;
             return this;
         }
-
         public Builder upn(@Nullable String upn) {
             this.upn = upn;
             return this;
-        }
-        public PrincipalsResponse build() {
+        }        public PrincipalsResponse build() {
             return new PrincipalsResponse(objectId, upn);
         }
     }

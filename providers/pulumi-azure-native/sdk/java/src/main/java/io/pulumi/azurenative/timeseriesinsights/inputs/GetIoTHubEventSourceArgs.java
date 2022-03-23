@@ -88,17 +88,14 @@ public final class GetIoTHubEventSourceArgs extends io.pulumi.resources.InvokeAr
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder eventSourceName(String eventSourceName) {
             this.eventSourceName = Objects.requireNonNull(eventSourceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIoTHubEventSourceArgs build() {
+        }        public GetIoTHubEventSourceArgs build() {
             return new GetIoTHubEventSourceArgs(environmentName, eventSourceName, resourceGroupName);
         }
     }

@@ -202,102 +202,94 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.billingMode = billingMode;
             return this;
         }
-
         public Builder billingMode(@Nullable TableBillingModeArgs billingMode) {
             this.billingMode = Output.ofNullable(billingMode);
             return this;
         }
-
         public Builder clusteringKeyColumns(@Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
             this.clusteringKeyColumns = clusteringKeyColumns;
             return this;
         }
-
         public Builder clusteringKeyColumns(@Nullable List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
             this.clusteringKeyColumns = Output.ofNullable(clusteringKeyColumns);
             return this;
         }
-
+        public Builder clusteringKeyColumns(TableClusteringKeyColumnArgs... clusteringKeyColumns) {
+            return clusteringKeyColumns(List.of(clusteringKeyColumns));
+        }
         public Builder defaultTimeToLive(@Nullable Output<Integer> defaultTimeToLive) {
             this.defaultTimeToLive = defaultTimeToLive;
             return this;
         }
-
         public Builder defaultTimeToLive(@Nullable Integer defaultTimeToLive) {
             this.defaultTimeToLive = Output.ofNullable(defaultTimeToLive);
             return this;
         }
-
         public Builder encryptionSpecification(@Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification) {
             this.encryptionSpecification = encryptionSpecification;
             return this;
         }
-
         public Builder encryptionSpecification(@Nullable TableEncryptionSpecificationArgs encryptionSpecification) {
             this.encryptionSpecification = Output.ofNullable(encryptionSpecification);
             return this;
         }
-
         public Builder keyspaceName(Output<String> keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
-
         public Builder keyspaceName(String keyspaceName) {
             this.keyspaceName = Output.of(Objects.requireNonNull(keyspaceName));
             return this;
         }
-
         public Builder partitionKeyColumns(Output<List<TableColumnArgs>> partitionKeyColumns) {
             this.partitionKeyColumns = Objects.requireNonNull(partitionKeyColumns);
             return this;
         }
-
         public Builder partitionKeyColumns(List<TableColumnArgs> partitionKeyColumns) {
             this.partitionKeyColumns = Output.of(Objects.requireNonNull(partitionKeyColumns));
             return this;
         }
-
+        public Builder partitionKeyColumns(TableColumnArgs... partitionKeyColumns) {
+            return partitionKeyColumns(List.of(partitionKeyColumns));
+        }
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
-
         public Builder regularColumns(@Nullable Output<List<TableColumnArgs>> regularColumns) {
             this.regularColumns = regularColumns;
             return this;
         }
-
         public Builder regularColumns(@Nullable List<TableColumnArgs> regularColumns) {
             this.regularColumns = Output.ofNullable(regularColumns);
             return this;
         }
-
+        public Builder regularColumns(TableColumnArgs... regularColumns) {
+            return regularColumns(List.of(regularColumns));
+        }
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TableTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public TableArgs build() {
+        public Builder tags(TableTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public TableArgs build() {
             return new TableArgs(billingMode, clusteringKeyColumns, defaultTimeToLive, encryptionSpecification, keyspaceName, partitionKeyColumns, pointInTimeRecoveryEnabled, regularColumns, tableName, tags);
         }
     }

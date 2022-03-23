@@ -60,12 +60,10 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
             return this;
-        }
-        public AutoStorageBasePropertiesArgs build() {
+        }        public AutoStorageBasePropertiesArgs build() {
             return new AutoStorageBasePropertiesArgs(storageAccountId);
         }
     }

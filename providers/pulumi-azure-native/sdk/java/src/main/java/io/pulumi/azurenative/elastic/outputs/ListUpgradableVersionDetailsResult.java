@@ -72,12 +72,13 @@ public final class ListUpgradableVersionDetailsResult {
             this.currentVersion = currentVersion;
             return this;
         }
-
         public Builder upgradableVersions(@Nullable List<String> upgradableVersions) {
             this.upgradableVersions = upgradableVersions;
             return this;
         }
-        public ListUpgradableVersionDetailsResult build() {
+        public Builder upgradableVersions(String... upgradableVersions) {
+            return upgradableVersions(List.of(upgradableVersions));
+        }        public ListUpgradableVersionDetailsResult build() {
             return new ListUpgradableVersionDetailsResult(currentVersion, upgradableVersions);
         }
     }

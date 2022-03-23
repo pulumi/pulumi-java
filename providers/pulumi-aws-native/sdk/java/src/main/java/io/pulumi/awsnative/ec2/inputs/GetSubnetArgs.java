@@ -50,8 +50,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public GetSubnetArgs build() {
+        }        public GetSubnetArgs build() {
             return new GetSubnetArgs(subnetId);
         }
     }

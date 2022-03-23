@@ -76,12 +76,10 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
-
         public Builder maxUnavailable(Integer maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
-        }
-        public UpgradeSettingsResponse build() {
+        }        public UpgradeSettingsResponse build() {
             return new UpgradeSettingsResponse(maxSurge, maxUnavailable);
         }
     }

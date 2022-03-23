@@ -52,12 +52,10 @@ public final class RuleGroupNotStatementArgs extends io.pulumi.resources.Resourc
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder statement(RuleGroupStatementArgs statement) {
             this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
-        }
-        public RuleGroupNotStatementArgs build() {
+        }        public RuleGroupNotStatementArgs build() {
             return new RuleGroupNotStatementArgs(statement);
         }
     }

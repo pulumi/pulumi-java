@@ -72,12 +72,10 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetBotArgs build() {
+        }        public GetBotArgs build() {
             return new GetBotArgs(resourceGroupName, resourceName);
         }
     }

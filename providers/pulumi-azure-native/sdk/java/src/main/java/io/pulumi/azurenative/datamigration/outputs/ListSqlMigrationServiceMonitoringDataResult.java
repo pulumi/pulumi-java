@@ -71,12 +71,13 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodes(List<NodeMonitoringDataResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-        public ListSqlMigrationServiceMonitoringDataResult build() {
+        public Builder nodes(NodeMonitoringDataResponse... nodes) {
+            return nodes(List.of(nodes));
+        }        public ListSqlMigrationServiceMonitoringDataResult build() {
             return new ListSqlMigrationServiceMonitoringDataResult(name, nodes);
         }
     }

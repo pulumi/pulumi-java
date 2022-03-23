@@ -52,12 +52,10 @@ public final class InstanceFromMachineImageScratchDiskArgs extends io.pulumi.res
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
-
         public Builder $interface(String $interface) {
             this.$interface = Output.of(Objects.requireNonNull($interface));
             return this;
-        }
-        public InstanceFromMachineImageScratchDiskArgs build() {
+        }        public InstanceFromMachineImageScratchDiskArgs build() {
             return new InstanceFromMachineImageScratchDiskArgs($interface);
         }
     }

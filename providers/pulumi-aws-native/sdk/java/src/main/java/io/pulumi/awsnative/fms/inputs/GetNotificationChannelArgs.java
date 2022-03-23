@@ -50,8 +50,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
         public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
-        }
-        public GetNotificationChannelArgs build() {
+        }        public GetNotificationChannelArgs build() {
             return new GetNotificationChannelArgs(snsTopicArn);
         }
     }

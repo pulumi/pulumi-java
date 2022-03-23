@@ -90,17 +90,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public Builder replace(@Nullable Boolean replace) {
             this.replace = replace;
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd(headerName, headerValue, replace);
         }
     }

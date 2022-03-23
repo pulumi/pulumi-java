@@ -74,22 +74,18 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
             this.definition = definition;
             return this;
         }
-
         public Builder definition(@Nullable String definition) {
             this.definition = Output.ofNullable(definition);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
-        }
-        public AlertManagerDefinitionState build() {
+        }        public AlertManagerDefinitionState build() {
             return new AlertManagerDefinitionState(definition, workspaceId);
         }
     }

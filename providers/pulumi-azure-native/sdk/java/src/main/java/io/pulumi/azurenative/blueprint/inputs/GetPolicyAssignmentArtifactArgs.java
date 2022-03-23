@@ -88,17 +88,14 @@ public final class GetPolicyAssignmentArtifactArgs extends io.pulumi.resources.I
             this.artifactName = Objects.requireNonNull(artifactName);
             return this;
         }
-
         public Builder blueprintName(String blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
-        }
-        public GetPolicyAssignmentArtifactArgs build() {
+        }        public GetPolicyAssignmentArtifactArgs build() {
             return new GetPolicyAssignmentArtifactArgs(artifactName, blueprintName, resourceScope);
         }
     }

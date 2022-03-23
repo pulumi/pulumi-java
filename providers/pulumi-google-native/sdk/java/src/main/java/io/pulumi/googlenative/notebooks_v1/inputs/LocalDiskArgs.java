@@ -127,52 +127,42 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.initializeParams = initializeParams;
             return this;
         }
-
         public Builder initializeParams(@Nullable LocalDiskInitializeParamsArgs initializeParams) {
             this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
-
         public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public LocalDiskArgs build() {
+        }        public LocalDiskArgs build() {
             return new LocalDiskArgs(initializeParams, $interface, mode, source, type);
         }
     }

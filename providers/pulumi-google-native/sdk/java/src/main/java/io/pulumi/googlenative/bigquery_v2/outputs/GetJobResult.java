@@ -169,42 +169,34 @@ public final class GetJobResult {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder jobReference(JobReferenceResponse jobReference) {
             this.jobReference = Objects.requireNonNull(jobReference);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder statistics(JobStatisticsResponse statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
-
         public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(configuration, etag, jobReference, kind, selfLink, statistics, status, userEmail);
         }
     }

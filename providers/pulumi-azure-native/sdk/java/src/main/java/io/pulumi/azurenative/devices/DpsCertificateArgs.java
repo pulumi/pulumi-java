@@ -123,52 +123,42 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder isVerified(@Nullable Output<Boolean> isVerified) {
             this.isVerified = isVerified;
             return this;
         }
-
         public Builder isVerified(@Nullable Boolean isVerified) {
             this.isVerified = Output.ofNullable(isVerified);
             return this;
         }
-
         public Builder provisioningServiceName(Output<String> provisioningServiceName) {
             this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
             return this;
         }
-
         public Builder provisioningServiceName(String provisioningServiceName) {
             this.provisioningServiceName = Output.of(Objects.requireNonNull(provisioningServiceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DpsCertificateArgs build() {
+        }        public DpsCertificateArgs build() {
             return new DpsCertificateArgs(certificate, certificateName, isVerified, provisioningServiceName, resourceGroupName);
         }
     }

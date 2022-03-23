@@ -73,22 +73,18 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
             this.accessPolicy = Objects.requireNonNull(accessPolicy);
             return this;
         }
-
         public Builder accessPolicy(String accessPolicy) {
             this.accessPolicy = Output.of(Objects.requireNonNull(accessPolicy));
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
-        }
-        public DomainServiceAccessPolicyArgs build() {
+        }        public DomainServiceAccessPolicyArgs build() {
             return new DomainServiceAccessPolicyArgs(accessPolicy, domainName);
         }
     }

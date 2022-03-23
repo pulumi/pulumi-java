@@ -135,32 +135,26 @@ public final class GetCloneJobResult {
             this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
-        }
-        public GetCloneJobResult build() {
+        }        public GetCloneJobResult build() {
             return new GetCloneJobResult(computeEngineTargetDetails, createTime, error, name, state, stateTime);
         }
     }

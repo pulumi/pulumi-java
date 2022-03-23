@@ -219,92 +219,80 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.alertStrategy = alertStrategy;
             return this;
         }
-
         public Builder alertStrategy(@Nullable AlertPolicyAlertStrategyArgs alertStrategy) {
             this.alertStrategy = Output.ofNullable(alertStrategy);
             return this;
         }
-
         public Builder combiner(Output<String> combiner) {
             this.combiner = Objects.requireNonNull(combiner);
             return this;
         }
-
         public Builder combiner(String combiner) {
             this.combiner = Output.of(Objects.requireNonNull(combiner));
             return this;
         }
-
         public Builder conditions(Output<List<AlertPolicyConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public Builder conditions(List<AlertPolicyConditionArgs> conditions) {
             this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
-
+        public Builder conditions(AlertPolicyConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder documentation(@Nullable Output<AlertPolicyDocumentationArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
-
         public Builder documentation(@Nullable AlertPolicyDocumentationArgs documentation) {
             this.documentation = Output.ofNullable(documentation);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder notificationChannels(@Nullable Output<List<String>> notificationChannels) {
             this.notificationChannels = notificationChannels;
             return this;
         }
-
         public Builder notificationChannels(@Nullable List<String> notificationChannels) {
             this.notificationChannels = Output.ofNullable(notificationChannels);
             return this;
         }
-
+        public Builder notificationChannels(String... notificationChannels) {
+            return notificationChannels(List.of(notificationChannels));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
-        }
-        public AlertPolicyArgs build() {
+        }        public AlertPolicyArgs build() {
             return new AlertPolicyArgs(alertStrategy, combiner, conditions, displayName, documentation, enabled, notificationChannels, project, userLabels);
         }
     }

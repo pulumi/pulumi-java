@@ -141,62 +141,50 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets) {
             this.deploymentTargets = deploymentTargets;
             return this;
         }
-
         public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsArgs deploymentTargets) {
             this.deploymentTargets = Output.ofNullable(deploymentTargets);
             return this;
         }
-
         public Builder parameterOverrides(@Nullable Output<Map<String,String>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
-
         public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
             this.parameterOverrides = Output.ofNullable(parameterOverrides);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder retainStack(@Nullable Output<Boolean> retainStack) {
             this.retainStack = retainStack;
             return this;
         }
-
         public Builder retainStack(@Nullable Boolean retainStack) {
             this.retainStack = Output.ofNullable(retainStack);
             return this;
         }
-
         public Builder stackSetName(Output<String> stackSetName) {
             this.stackSetName = Objects.requireNonNull(stackSetName);
             return this;
         }
-
         public Builder stackSetName(String stackSetName) {
             this.stackSetName = Output.of(Objects.requireNonNull(stackSetName));
             return this;
-        }
-        public StackSetInstanceArgs build() {
+        }        public StackSetInstanceArgs build() {
             return new StackSetInstanceArgs(accountId, deploymentTargets, parameterOverrides, region, retainStack, stackSetName);
         }
     }

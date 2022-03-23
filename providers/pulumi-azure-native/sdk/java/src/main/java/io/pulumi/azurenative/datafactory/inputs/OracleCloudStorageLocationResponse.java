@@ -128,27 +128,22 @@ public final class OracleCloudStorageLocationResponse extends io.pulumi.resource
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
-        }
-        public OracleCloudStorageLocationResponse build() {
+        }        public OracleCloudStorageLocationResponse build() {
             return new OracleCloudStorageLocationResponse(bucketName, fileName, folderPath, type, version);
         }
     }

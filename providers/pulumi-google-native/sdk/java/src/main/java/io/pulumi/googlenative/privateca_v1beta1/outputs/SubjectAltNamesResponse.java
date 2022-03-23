@@ -119,27 +119,37 @@ public final class SubjectAltNamesResponse {
             this.customSans = Objects.requireNonNull(customSans);
             return this;
         }
-
+        public Builder customSans(X509ExtensionResponse... customSans) {
+            return customSans(List.of(customSans));
+        }
         public Builder dnsNames(List<String> dnsNames) {
             this.dnsNames = Objects.requireNonNull(dnsNames);
             return this;
         }
-
+        public Builder dnsNames(String... dnsNames) {
+            return dnsNames(List.of(dnsNames));
+        }
         public Builder emailAddresses(List<String> emailAddresses) {
             this.emailAddresses = Objects.requireNonNull(emailAddresses);
             return this;
         }
-
+        public Builder emailAddresses(String... emailAddresses) {
+            return emailAddresses(List.of(emailAddresses));
+        }
         public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-        public SubjectAltNamesResponse build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public SubjectAltNamesResponse build() {
             return new SubjectAltNamesResponse(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }
     }

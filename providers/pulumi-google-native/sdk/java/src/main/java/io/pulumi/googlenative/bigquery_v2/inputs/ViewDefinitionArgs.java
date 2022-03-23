@@ -109,42 +109,37 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder useExplicitColumnNames(@Nullable Output<Boolean> useExplicitColumnNames) {
             this.useExplicitColumnNames = useExplicitColumnNames;
             return this;
         }
-
         public Builder useExplicitColumnNames(@Nullable Boolean useExplicitColumnNames) {
             this.useExplicitColumnNames = Output.ofNullable(useExplicitColumnNames);
             return this;
         }
-
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
-
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = Output.ofNullable(useLegacySql);
             return this;
         }
-
         public Builder userDefinedFunctionResources(@Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
-
         public Builder userDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Output.ofNullable(userDefinedFunctionResources);
             return this;
         }
-        public ViewDefinitionArgs build() {
+        public Builder userDefinedFunctionResources(UserDefinedFunctionResourceArgs... userDefinedFunctionResources) {
+            return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
+        }        public ViewDefinitionArgs build() {
             return new ViewDefinitionArgs(query, useExplicitColumnNames, useLegacySql, userDefinedFunctionResources);
         }
     }

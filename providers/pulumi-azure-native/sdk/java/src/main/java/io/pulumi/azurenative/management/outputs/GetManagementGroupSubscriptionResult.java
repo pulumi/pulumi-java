@@ -152,37 +152,30 @@ public final class GetManagementGroupSubscriptionResult {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(@Nullable DescendantParentGroupInfoResponse parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tenant(@Nullable String tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagementGroupSubscriptionResult build() {
+        }        public GetManagementGroupSubscriptionResult build() {
             return new GetManagementGroupSubscriptionResult(displayName, id, name, parent, state, tenant, type);
         }
     }

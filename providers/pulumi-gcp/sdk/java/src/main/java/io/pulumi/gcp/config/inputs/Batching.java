@@ -67,12 +67,10 @@ public final class Batching extends io.pulumi.resources.InvokeArgs {
             this.enableBatching = enableBatching;
             return this;
         }
-
         public Builder sendAfter(@Nullable String sendAfter) {
             this.sendAfter = sendAfter;
             return this;
-        }
-        public Batching build() {
+        }        public Batching build() {
             return new Batching(enableBatching, sendAfter);
         }
     }

@@ -263,52 +263,45 @@ public final class TableExternalDataConfiguration {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder csvOptions(@Nullable TableExternalDataConfigurationCsvOptions csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
-
         public Builder googleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
-
         public Builder hivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
-
         public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-        public TableExternalDataConfiguration build() {
+        public Builder sourceUris(String... sourceUris) {
+            return sourceUris(List.of(sourceUris));
+        }        public TableExternalDataConfiguration build() {
             return new TableExternalDataConfiguration(autodetect, compression, csvOptions, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, schema, sourceFormat, sourceUris);
         }
     }

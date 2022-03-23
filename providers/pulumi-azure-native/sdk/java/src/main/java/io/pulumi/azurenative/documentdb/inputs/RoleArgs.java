@@ -78,22 +78,18 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.db = db;
             return this;
         }
-
         public Builder db(@Nullable String db) {
             this.db = Output.ofNullable(db);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public RoleArgs build() {
+        }        public RoleArgs build() {
             return new RoleArgs(db, role);
         }
     }

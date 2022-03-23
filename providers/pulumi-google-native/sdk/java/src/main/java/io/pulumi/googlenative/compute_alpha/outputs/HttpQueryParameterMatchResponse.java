@@ -102,22 +102,18 @@ public final class HttpQueryParameterMatchResponse {
             this.exactMatch = Objects.requireNonNull(exactMatch);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder presentMatch(Boolean presentMatch) {
             this.presentMatch = Objects.requireNonNull(presentMatch);
             return this;
         }
-
         public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
-        }
-        public HttpQueryParameterMatchResponse build() {
+        }        public HttpQueryParameterMatchResponse build() {
             return new HttpQueryParameterMatchResponse(exactMatch, name, presentMatch, regexMatch);
         }
     }

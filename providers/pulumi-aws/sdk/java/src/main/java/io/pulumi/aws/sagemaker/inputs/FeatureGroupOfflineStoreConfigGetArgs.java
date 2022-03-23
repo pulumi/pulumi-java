@@ -92,32 +92,26 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends io.pulumi.resou
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
-
         public Builder dataCatalogConfig(@Nullable FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs dataCatalogConfig) {
             this.dataCatalogConfig = Output.ofNullable(dataCatalogConfig);
             return this;
         }
-
         public Builder disableGlueTableCreation(@Nullable Output<Boolean> disableGlueTableCreation) {
             this.disableGlueTableCreation = disableGlueTableCreation;
             return this;
         }
-
         public Builder disableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
             this.disableGlueTableCreation = Output.ofNullable(disableGlueTableCreation);
             return this;
         }
-
         public Builder s3StorageConfig(Output<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> s3StorageConfig) {
             this.s3StorageConfig = Objects.requireNonNull(s3StorageConfig);
             return this;
         }
-
         public Builder s3StorageConfig(FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs s3StorageConfig) {
             this.s3StorageConfig = Output.of(Objects.requireNonNull(s3StorageConfig));
             return this;
-        }
-        public FeatureGroupOfflineStoreConfigGetArgs build() {
+        }        public FeatureGroupOfflineStoreConfigGetArgs build() {
             return new FeatureGroupOfflineStoreConfigGetArgs(dataCatalogConfig, disableGlueTableCreation, s3StorageConfig);
         }
     }

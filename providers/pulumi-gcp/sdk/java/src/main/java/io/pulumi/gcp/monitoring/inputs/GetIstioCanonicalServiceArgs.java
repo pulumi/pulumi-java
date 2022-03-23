@@ -110,22 +110,18 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
             this.canonicalService = Objects.requireNonNull(canonicalService);
             return this;
         }
-
         public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
             this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
             return this;
         }
-
         public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetIstioCanonicalServiceArgs build() {
+        }        public GetIstioCanonicalServiceArgs build() {
             return new GetIstioCanonicalServiceArgs(canonicalService, canonicalServiceNamespace, meshUid, project);
         }
     }

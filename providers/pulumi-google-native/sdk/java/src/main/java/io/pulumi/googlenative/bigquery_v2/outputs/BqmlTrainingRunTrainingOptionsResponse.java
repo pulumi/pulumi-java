@@ -111,47 +111,38 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
             this.earlyStop = Objects.requireNonNull(earlyStop);
             return this;
         }
-
         public Builder l1Reg(Double l1Reg) {
             this.l1Reg = Objects.requireNonNull(l1Reg);
             return this;
         }
-
         public Builder l2Reg(Double l2Reg) {
             this.l2Reg = Objects.requireNonNull(l2Reg);
             return this;
         }
-
         public Builder learnRate(Double learnRate) {
             this.learnRate = Objects.requireNonNull(learnRate);
             return this;
         }
-
         public Builder learnRateStrategy(String learnRateStrategy) {
             this.learnRateStrategy = Objects.requireNonNull(learnRateStrategy);
             return this;
         }
-
         public Builder lineSearchInitLearnRate(Double lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = Objects.requireNonNull(lineSearchInitLearnRate);
             return this;
         }
-
         public Builder maxIteration(String maxIteration) {
             this.maxIteration = Objects.requireNonNull(maxIteration);
             return this;
         }
-
         public Builder minRelProgress(Double minRelProgress) {
             this.minRelProgress = Objects.requireNonNull(minRelProgress);
             return this;
         }
-
         public Builder warmStart(Boolean warmStart) {
             this.warmStart = Objects.requireNonNull(warmStart);
             return this;
-        }
-        public BqmlTrainingRunTrainingOptionsResponse build() {
+        }        public BqmlTrainingRunTrainingOptionsResponse build() {
             return new BqmlTrainingRunTrainingOptionsResponse(earlyStop, l1Reg, l2Reg, learnRate, learnRateStrategy, lineSearchInitLearnRate, maxIteration, minRelProgress, warmStart);
         }
     }

@@ -121,27 +121,22 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
-
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
-
         public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
-
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public Ipv6ExpressRouteCircuitPeeringConfigResponse build() {
+        }        public Ipv6ExpressRouteCircuitPeeringConfigResponse build() {
             return new Ipv6ExpressRouteCircuitPeeringConfigResponse(microsoftPeeringConfig, primaryPeerAddressPrefix, routeFilter, secondaryPeerAddressPrefix, state);
         }
     }

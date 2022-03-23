@@ -71,12 +71,10 @@ public final class StandardAppVersionLibrary {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public StandardAppVersionLibrary build() {
+        }        public StandardAppVersionLibrary build() {
             return new StandardAppVersionLibrary(name, version);
         }
     }

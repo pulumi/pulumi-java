@@ -78,17 +78,14 @@ public final class DistributionOriginGroup extends io.pulumi.resources.InvokeArg
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder members(DistributionOriginGroupMembers members) {
             this.members = Objects.requireNonNull(members);
             return this;
-        }
-        public DistributionOriginGroup build() {
+        }        public DistributionOriginGroup build() {
             return new DistributionOriginGroup(failoverCriteria, id, members);
         }
     }

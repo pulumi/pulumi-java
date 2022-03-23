@@ -54,8 +54,7 @@ public final class GetEventSourceMappingArgs extends io.pulumi.resources.InvokeA
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetEventSourceMappingArgs build() {
+        }        public GetEventSourceMappingArgs build() {
             return new GetEventSourceMappingArgs(id);
         }
     }

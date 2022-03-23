@@ -51,8 +51,7 @@ public final class AwsClusterAuthorizationAdminUser {
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public AwsClusterAuthorizationAdminUser build() {
+        }        public AwsClusterAuthorizationAdminUser build() {
             return new AwsClusterAuthorizationAdminUser(username);
         }
     }

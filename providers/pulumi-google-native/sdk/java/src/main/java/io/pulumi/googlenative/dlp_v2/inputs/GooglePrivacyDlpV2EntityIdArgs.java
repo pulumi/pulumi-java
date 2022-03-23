@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2EntityIdArgs extends io.pulumi.resources.Re
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
             this.field = Output.ofNullable(field);
             return this;
-        }
-        public GooglePrivacyDlpV2EntityIdArgs build() {
+        }        public GooglePrivacyDlpV2EntityIdArgs build() {
             return new GooglePrivacyDlpV2EntityIdArgs(field);
         }
     }

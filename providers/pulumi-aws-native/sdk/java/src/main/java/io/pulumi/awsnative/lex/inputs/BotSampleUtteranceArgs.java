@@ -56,12 +56,10 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
             this.utterance = Objects.requireNonNull(utterance);
             return this;
         }
-
         public Builder utterance(String utterance) {
             this.utterance = Output.of(Objects.requireNonNull(utterance));
             return this;
-        }
-        public BotSampleUtteranceArgs build() {
+        }        public BotSampleUtteranceArgs build() {
             return new BotSampleUtteranceArgs(utterance);
         }
     }

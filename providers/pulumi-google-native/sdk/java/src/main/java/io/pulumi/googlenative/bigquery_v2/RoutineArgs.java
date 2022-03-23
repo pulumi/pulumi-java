@@ -251,132 +251,112 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(ArgumentArgs... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder definitionBody(Output<String> definitionBody) {
             this.definitionBody = Objects.requireNonNull(definitionBody);
             return this;
         }
-
         public Builder definitionBody(String definitionBody) {
             this.definitionBody = Output.of(Objects.requireNonNull(definitionBody));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder determinismLevel(@Nullable Output<RoutineDeterminismLevel> determinismLevel) {
             this.determinismLevel = determinismLevel;
             return this;
         }
-
         public Builder determinismLevel(@Nullable RoutineDeterminismLevel determinismLevel) {
             this.determinismLevel = Output.ofNullable(determinismLevel);
             return this;
         }
-
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
             this.importedLibraries = importedLibraries;
             return this;
         }
-
         public Builder importedLibraries(@Nullable List<String> importedLibraries) {
             this.importedLibraries = Output.ofNullable(importedLibraries);
             return this;
         }
-
+        public Builder importedLibraries(String... importedLibraries) {
+            return importedLibraries(List.of(importedLibraries));
+        }
         public Builder language(@Nullable Output<RoutineLanguage> language) {
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable RoutineLanguage language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder returnTableType(@Nullable Output<StandardSqlTableTypeArgs> returnTableType) {
             this.returnTableType = returnTableType;
             return this;
         }
-
         public Builder returnTableType(@Nullable StandardSqlTableTypeArgs returnTableType) {
             this.returnTableType = Output.ofNullable(returnTableType);
             return this;
         }
-
         public Builder returnType(@Nullable Output<StandardSqlDataTypeArgs> returnType) {
             this.returnType = returnType;
             return this;
         }
-
         public Builder returnType(@Nullable StandardSqlDataTypeArgs returnType) {
             this.returnType = Output.ofNullable(returnType);
             return this;
         }
-
         public Builder routineReference(Output<RoutineReferenceArgs> routineReference) {
             this.routineReference = Objects.requireNonNull(routineReference);
             return this;
         }
-
         public Builder routineReference(RoutineReferenceArgs routineReference) {
             this.routineReference = Output.of(Objects.requireNonNull(routineReference));
             return this;
         }
-
         public Builder routineType(Output<RoutineRoutineType> routineType) {
             this.routineType = Objects.requireNonNull(routineType);
             return this;
         }
-
         public Builder routineType(RoutineRoutineType routineType) {
             this.routineType = Output.of(Objects.requireNonNull(routineType));
             return this;
         }
-
         public Builder strictMode(@Nullable Output<Boolean> strictMode) {
             this.strictMode = strictMode;
             return this;
         }
-
         public Builder strictMode(@Nullable Boolean strictMode) {
             this.strictMode = Output.ofNullable(strictMode);
             return this;
-        }
-        public RoutineArgs build() {
+        }        public RoutineArgs build() {
             return new RoutineArgs(arguments, datasetId, definitionBody, description, determinismLevel, importedLibraries, language, project, returnTableType, returnType, routineReference, routineType, strictMode);
         }
     }

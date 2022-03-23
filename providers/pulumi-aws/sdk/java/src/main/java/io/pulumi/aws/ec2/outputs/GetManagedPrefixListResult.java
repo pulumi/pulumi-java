@@ -187,52 +187,48 @@ public final class GetManagedPrefixListResult {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder entries(List<GetManagedPrefixListEntry> entries) {
             this.entries = Objects.requireNonNull(entries);
             return this;
         }
-
+        public Builder entries(GetManagedPrefixListEntry... entries) {
+            return entries(List.of(entries));
+        }
         public Builder filters(@Nullable List<GetManagedPrefixListFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetManagedPrefixListFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder maxEntries(Integer maxEntries) {
             this.maxEntries = Objects.requireNonNull(maxEntries);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetManagedPrefixListResult build() {
+        }        public GetManagedPrefixListResult build() {
             return new GetManagedPrefixListResult(addressFamily, arn, entries, filters, id, maxEntries, name, ownerId, tags, version);
         }
     }

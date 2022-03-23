@@ -72,12 +72,10 @@ public final class InventoryDestinationBucketEncryption {
             this.sseKms = sseKms;
             return this;
         }
-
         public Builder sseS3(@Nullable InventoryDestinationBucketEncryptionSseS3 sseS3) {
             this.sseS3 = sseS3;
             return this;
-        }
-        public InventoryDestinationBucketEncryption build() {
+        }        public InventoryDestinationBucketEncryption build() {
             return new InventoryDestinationBucketEncryption(sseKms, sseS3);
         }
     }

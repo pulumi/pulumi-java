@@ -67,22 +67,24 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
             this.hiddenPathsOnRequest = hiddenPathsOnRequest;
             return this;
         }
-
         public Builder hiddenPathsOnRequest(@Nullable List<String> hiddenPathsOnRequest) {
             this.hiddenPathsOnRequest = Output.ofNullable(hiddenPathsOnRequest);
             return this;
         }
-
+        public Builder hiddenPathsOnRequest(String... hiddenPathsOnRequest) {
+            return hiddenPathsOnRequest(List.of(hiddenPathsOnRequest));
+        }
         public Builder hiddenPathsOnResponse(@Nullable Output<List<String>> hiddenPathsOnResponse) {
             this.hiddenPathsOnResponse = hiddenPathsOnResponse;
             return this;
         }
-
         public Builder hiddenPathsOnResponse(@Nullable List<String> hiddenPathsOnResponse) {
             this.hiddenPathsOnResponse = Output.ofNullable(hiddenPathsOnResponse);
             return this;
         }
-        public LoggingRuleHiddenPropertyPathsArgs build() {
+        public Builder hiddenPathsOnResponse(String... hiddenPathsOnResponse) {
+            return hiddenPathsOnResponse(List.of(hiddenPathsOnResponse));
+        }        public LoggingRuleHiddenPropertyPathsArgs build() {
             return new LoggingRuleHiddenPropertyPathsArgs(hiddenPathsOnRequest, hiddenPathsOnResponse);
         }
     }

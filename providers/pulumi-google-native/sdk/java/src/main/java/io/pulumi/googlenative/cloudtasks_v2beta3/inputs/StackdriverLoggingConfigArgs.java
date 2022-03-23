@@ -61,12 +61,10 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
             this.samplingRatio = samplingRatio;
             return this;
         }
-
         public Builder samplingRatio(@Nullable Double samplingRatio) {
             this.samplingRatio = Output.ofNullable(samplingRatio);
             return this;
-        }
-        public StackdriverLoggingConfigArgs build() {
+        }        public StackdriverLoggingConfigArgs build() {
             return new StackdriverLoggingConfigArgs(samplingRatio);
         }
     }

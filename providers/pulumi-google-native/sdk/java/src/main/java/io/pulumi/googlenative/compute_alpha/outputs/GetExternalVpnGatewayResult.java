@@ -184,47 +184,41 @@ public final class GetExternalVpnGatewayResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder interfaces(List<ExternalVpnGatewayInterfaceResponse> interfaces) {
             this.interfaces = Objects.requireNonNull(interfaces);
             return this;
         }
-
+        public Builder interfaces(ExternalVpnGatewayInterfaceResponse... interfaces) {
+            return interfaces(List.of(interfaces));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder redundancyType(String redundancyType) {
             this.redundancyType = Objects.requireNonNull(redundancyType);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetExternalVpnGatewayResult build() {
+        }        public GetExternalVpnGatewayResult build() {
             return new GetExternalVpnGatewayResult(creationTimestamp, description, interfaces, kind, labelFingerprint, labels, name, redundancyType, selfLink);
         }
     }

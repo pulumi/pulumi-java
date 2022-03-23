@@ -51,8 +51,7 @@ public final class BotSSMLMessage {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BotSSMLMessage build() {
+        }        public BotSSMLMessage build() {
             return new BotSSMLMessage(value);
         }
     }

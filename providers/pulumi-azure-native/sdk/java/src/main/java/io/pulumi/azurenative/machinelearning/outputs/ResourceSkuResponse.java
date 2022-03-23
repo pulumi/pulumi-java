@@ -88,17 +88,14 @@ public final class ResourceSkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ResourceSkuResponse build() {
+        }        public ResourceSkuResponse build() {
             return new ResourceSkuResponse(capacity, name, tier);
         }
     }

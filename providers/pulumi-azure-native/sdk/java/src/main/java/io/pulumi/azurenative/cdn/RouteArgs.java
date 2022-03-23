@@ -308,162 +308,142 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.compressionSettings = compressionSettings;
             return this;
         }
-
         public Builder compressionSettings(@Nullable CompressionSettingsArgs compressionSettings) {
             this.compressionSettings = Output.ofNullable(compressionSettings);
             return this;
         }
-
         public Builder customDomains(@Nullable Output<List<ResourceReferenceArgs>> customDomains) {
             this.customDomains = customDomains;
             return this;
         }
-
         public Builder customDomains(@Nullable List<ResourceReferenceArgs> customDomains) {
             this.customDomains = Output.ofNullable(customDomains);
             return this;
         }
-
+        public Builder customDomains(ResourceReferenceArgs... customDomains) {
+            return customDomains(List.of(customDomains));
+        }
         public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
-
         public Builder forwardingProtocol(@Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
-
         public Builder forwardingProtocol(@Nullable Either<String,ForwardingProtocol> forwardingProtocol) {
             this.forwardingProtocol = Output.ofNullable(forwardingProtocol);
             return this;
         }
-
         public Builder httpsRedirect(@Nullable Output<Either<String,HttpsRedirect>> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
-
         public Builder httpsRedirect(@Nullable Either<String,HttpsRedirect> httpsRedirect) {
             this.httpsRedirect = Output.ofNullable(httpsRedirect);
             return this;
         }
-
         public Builder linkToDefaultDomain(@Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
             this.linkToDefaultDomain = linkToDefaultDomain;
             return this;
         }
-
         public Builder linkToDefaultDomain(@Nullable Either<String,LinkToDefaultDomain> linkToDefaultDomain) {
             this.linkToDefaultDomain = Output.ofNullable(linkToDefaultDomain);
             return this;
         }
-
         public Builder originGroup(Output<ResourceReferenceArgs> originGroup) {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
-
         public Builder originGroup(ResourceReferenceArgs originGroup) {
             this.originGroup = Output.of(Objects.requireNonNull(originGroup));
             return this;
         }
-
         public Builder originPath(@Nullable Output<String> originPath) {
             this.originPath = originPath;
             return this;
         }
-
         public Builder originPath(@Nullable String originPath) {
             this.originPath = Output.ofNullable(originPath);
             return this;
         }
-
         public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = Output.ofNullable(patternsToMatch);
             return this;
         }
-
+        public Builder patternsToMatch(String... patternsToMatch) {
+            return patternsToMatch(List.of(patternsToMatch));
+        }
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder queryStringCachingBehavior(@Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
-
         public Builder queryStringCachingBehavior(@Nullable AfdQueryStringCachingBehavior queryStringCachingBehavior) {
             this.queryStringCachingBehavior = Output.ofNullable(queryStringCachingBehavior);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routeName(@Nullable Output<String> routeName) {
             this.routeName = routeName;
             return this;
         }
-
         public Builder routeName(@Nullable String routeName) {
             this.routeName = Output.ofNullable(routeName);
             return this;
         }
-
         public Builder ruleSets(@Nullable Output<List<ResourceReferenceArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
-
         public Builder ruleSets(@Nullable List<ResourceReferenceArgs> ruleSets) {
             this.ruleSets = Output.ofNullable(ruleSets);
             return this;
         }
-
+        public Builder ruleSets(ResourceReferenceArgs... ruleSets) {
+            return ruleSets(List.of(ruleSets));
+        }
         public Builder supportedProtocols(@Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
             this.supportedProtocols = supportedProtocols;
             return this;
         }
-
         public Builder supportedProtocols(@Nullable List<Either<String,AFDEndpointProtocols>> supportedProtocols) {
             this.supportedProtocols = Output.ofNullable(supportedProtocols);
             return this;
         }
-        public RouteArgs build() {
+        public Builder supportedProtocols(Either<String,AFDEndpointProtocols>... supportedProtocols) {
+            return supportedProtocols(List.of(supportedProtocols));
+        }        public RouteArgs build() {
             return new RouteArgs(compressionSettings, customDomains, enabledState, endpointName, forwardingProtocol, httpsRedirect, linkToDefaultDomain, originGroup, originPath, patternsToMatch, profileName, queryStringCachingBehavior, resourceGroupName, routeName, ruleSets, supportedProtocols);
         }
     }

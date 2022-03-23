@@ -142,62 +142,50 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
             this.billingAccountId = billingAccountId;
             return this;
         }
-
         public Builder billingAccountId(@Nullable String billingAccountId) {
             this.billingAccountId = Output.ofNullable(billingAccountId);
             return this;
         }
-
         public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
             this.deletionPolicy = deletionPolicy;
             return this;
         }
-
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
             this.deletionPolicy = Output.ofNullable(deletionPolicy);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
             this.masterBillingAccount = masterBillingAccount;
             return this;
         }
-
         public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
             this.masterBillingAccount = Output.ofNullable(masterBillingAccount);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder open(@Nullable Output<Boolean> open) {
             this.open = open;
             return this;
         }
-
         public Builder open(@Nullable Boolean open) {
             this.open = Output.ofNullable(open);
             return this;
-        }
-        public SubAccountState build() {
+        }        public SubAccountState build() {
             return new SubAccountState(billingAccountId, deletionPolicy, displayName, masterBillingAccount, name, open);
         }
     }

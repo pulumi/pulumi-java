@@ -70,22 +70,18 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(String interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public Builder offset(@Nullable Output<String> offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder offset(@Nullable String offset) {
             this.offset = Output.ofNullable(offset);
             return this;
-        }
-        public AssetModelTumblingWindowArgs build() {
+        }        public AssetModelTumblingWindowArgs build() {
             return new AssetModelTumblingWindowArgs(interval, offset);
         }
     }

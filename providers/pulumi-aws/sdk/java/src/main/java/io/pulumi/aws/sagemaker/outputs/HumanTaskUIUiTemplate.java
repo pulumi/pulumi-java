@@ -87,17 +87,14 @@ public final class HumanTaskUIUiTemplate {
             this.content = content;
             return this;
         }
-
         public Builder contentSha256(@Nullable String contentSha256) {
             this.contentSha256 = contentSha256;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public HumanTaskUIUiTemplate build() {
+        }        public HumanTaskUIUiTemplate build() {
             return new HumanTaskUIUiTemplate(content, contentSha256, url);
         }
     }

@@ -420,112 +420,111 @@ public final class Container {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(@Nullable List<EnvVar> env) {
             this.env = env;
             return this;
         }
-
+        public Builder env(EnvVar... env) {
+            return env(List.of(env));
+        }
         public Builder envFrom(@Nullable List<EnvFromSource> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
-
+        public Builder envFrom(EnvFromSource... envFrom) {
+            return envFrom(List.of(envFrom));
+        }
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
-
         public Builder imagePullPolicy(@Nullable String imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
-
         public Builder lifecycle(@Nullable Lifecycle lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public Builder livenessProbe(@Nullable Probe livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ports(@Nullable List<ContainerPort> ports) {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(ContainerPort... ports) {
+            return ports(List.of(ports));
+        }
         public Builder readinessProbe(@Nullable Probe readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
-
         public Builder resources(@Nullable ResourceRequirements resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder securityContext(@Nullable SecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-
         public Builder startupProbe(@Nullable Probe startupProbe) {
             this.startupProbe = startupProbe;
             return this;
         }
-
         public Builder stdin(@Nullable Boolean stdin) {
             this.stdin = stdin;
             return this;
         }
-
         public Builder stdinOnce(@Nullable Boolean stdinOnce) {
             this.stdinOnce = stdinOnce;
             return this;
         }
-
         public Builder terminationMessagePath(@Nullable String terminationMessagePath) {
             this.terminationMessagePath = terminationMessagePath;
             return this;
         }
-
         public Builder terminationMessagePolicy(@Nullable String terminationMessagePolicy) {
             this.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
-
         public Builder tty(@Nullable Boolean tty) {
             this.tty = tty;
             return this;
         }
-
         public Builder volumeDevices(@Nullable List<VolumeDevice> volumeDevices) {
             this.volumeDevices = volumeDevices;
             return this;
         }
-
+        public Builder volumeDevices(VolumeDevice... volumeDevices) {
+            return volumeDevices(List.of(volumeDevices));
+        }
         public Builder volumeMounts(@Nullable List<VolumeMount> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
+        public Builder volumeMounts(VolumeMount... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = workingDir;
             return this;
-        }
-        public Container build() {
+        }        public Container build() {
             return new Container(args, command, env, envFrom, image, imagePullPolicy, lifecycle, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, stdin, stdinOnce, terminationMessagePath, terminationMessagePolicy, tty, volumeDevices, volumeMounts, workingDir);
         }
     }

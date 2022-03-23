@@ -87,17 +87,17 @@ public final class LogConfigCounterOptionsResponse {
             this.customFields = Objects.requireNonNull(customFields);
             return this;
         }
-
+        public Builder customFields(LogConfigCounterOptionsCustomFieldResponse... customFields) {
+            return customFields(List.of(customFields));
+        }
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
-        }
-        public LogConfigCounterOptionsResponse build() {
+        }        public LogConfigCounterOptionsResponse build() {
             return new LogConfigCounterOptionsResponse(customFields, field, metric);
         }
     }

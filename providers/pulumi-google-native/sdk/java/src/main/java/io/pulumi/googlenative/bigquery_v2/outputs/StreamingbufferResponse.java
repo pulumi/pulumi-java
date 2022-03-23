@@ -85,17 +85,14 @@ public final class StreamingbufferResponse {
             this.estimatedBytes = Objects.requireNonNull(estimatedBytes);
             return this;
         }
-
         public Builder estimatedRows(String estimatedRows) {
             this.estimatedRows = Objects.requireNonNull(estimatedRows);
             return this;
         }
-
         public Builder oldestEntryTime(String oldestEntryTime) {
             this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime);
             return this;
-        }
-        public StreamingbufferResponse build() {
+        }        public StreamingbufferResponse build() {
             return new StreamingbufferResponse(estimatedBytes, estimatedRows, oldestEntryTime);
         }
     }

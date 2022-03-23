@@ -152,37 +152,30 @@ public final class GetApplicationResult {
             this.allowUpdates = allowUpdates;
             return this;
         }
-
         public Builder defaultVersion(@Nullable String defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(allowUpdates, defaultVersion, displayName, etag, id, name, type);
         }
     }

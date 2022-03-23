@@ -60,8 +60,7 @@ public final class TIDataConnectorDataTypesResponse extends io.pulumi.resources.
         public Builder indicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
             this.indicators = indicators;
             return this;
-        }
-        public TIDataConnectorDataTypesResponse build() {
+        }        public TIDataConnectorDataTypesResponse build() {
             return new TIDataConnectorDataTypesResponse(indicators);
         }
     }

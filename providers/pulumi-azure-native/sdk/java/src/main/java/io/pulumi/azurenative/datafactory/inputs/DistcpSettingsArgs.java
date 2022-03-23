@@ -94,32 +94,26 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.distcpOptions = distcpOptions;
             return this;
         }
-
         public Builder distcpOptions(@Nullable Object distcpOptions) {
             this.distcpOptions = Output.ofNullable(distcpOptions);
             return this;
         }
-
         public Builder resourceManagerEndpoint(Output<Object> resourceManagerEndpoint) {
             this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint);
             return this;
         }
-
         public Builder resourceManagerEndpoint(Object resourceManagerEndpoint) {
             this.resourceManagerEndpoint = Output.of(Objects.requireNonNull(resourceManagerEndpoint));
             return this;
         }
-
         public Builder tempScriptPath(Output<Object> tempScriptPath) {
             this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
             return this;
         }
-
         public Builder tempScriptPath(Object tempScriptPath) {
             this.tempScriptPath = Output.of(Objects.requireNonNull(tempScriptPath));
             return this;
-        }
-        public DistcpSettingsArgs build() {
+        }        public DistcpSettingsArgs build() {
             return new DistcpSettingsArgs(distcpOptions, resourceManagerEndpoint, tempScriptPath);
         }
     }

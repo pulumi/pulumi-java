@@ -102,27 +102,22 @@ public final class GetDatasetDicomStoreIamPolicyArgs extends io.pulumi.resources
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder dicomStoreId(String dicomStoreId) {
             this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDatasetDicomStoreIamPolicyArgs build() {
+        }        public GetDatasetDicomStoreIamPolicyArgs build() {
             return new GetDatasetDicomStoreIamPolicyArgs(datasetId, dicomStoreId, location, optionsRequestedPolicyVersion, project);
         }
     }

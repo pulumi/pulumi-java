@@ -61,12 +61,10 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.cardinality = cardinality;
             return this;
         }
-
         public Builder cardinality(@Nullable CardinalityArgs cardinality) {
             this.cardinality = Output.ofNullable(cardinality);
             return this;
-        }
-        public EndConditionArgs build() {
+        }        public EndConditionArgs build() {
             return new EndConditionArgs(cardinality);
         }
     }

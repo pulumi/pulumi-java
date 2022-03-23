@@ -90,17 +90,20 @@ public final class GetDistributionConfigurationDistribution extends io.pulumi.re
             this.amiDistributionConfigurations = Objects.requireNonNull(amiDistributionConfigurations);
             return this;
         }
-
+        public Builder amiDistributionConfigurations(GetDistributionConfigurationDistributionAmiDistributionConfiguration... amiDistributionConfigurations) {
+            return amiDistributionConfigurations(List.of(amiDistributionConfigurations));
+        }
         public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = Objects.requireNonNull(licenseConfigurationArns);
             return this;
         }
-
+        public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
+            return licenseConfigurationArns(List.of(licenseConfigurationArns));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetDistributionConfigurationDistribution build() {
+        }        public GetDistributionConfigurationDistribution build() {
             return new GetDistributionConfigurationDistribution(amiDistributionConfigurations, licenseConfigurationArns, region);
         }
     }

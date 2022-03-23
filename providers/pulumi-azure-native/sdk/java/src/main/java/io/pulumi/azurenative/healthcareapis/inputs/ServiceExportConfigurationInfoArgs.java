@@ -61,12 +61,10 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
-        }
-        public ServiceExportConfigurationInfoArgs build() {
+        }        public ServiceExportConfigurationInfoArgs build() {
             return new ServiceExportConfigurationInfoArgs(storageAccountName);
         }
     }

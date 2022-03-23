@@ -53,12 +53,10 @@ public final class GetBackendServiceOutlierDetectionBaseEjectionTime {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public GetBackendServiceOutlierDetectionBaseEjectionTime build() {
+        }        public GetBackendServiceOutlierDetectionBaseEjectionTime build() {
             return new GetBackendServiceOutlierDetectionBaseEjectionTime(nanos, seconds);
         }
     }

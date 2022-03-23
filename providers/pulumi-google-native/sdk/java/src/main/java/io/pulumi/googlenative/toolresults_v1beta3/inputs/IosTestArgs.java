@@ -130,52 +130,42 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
             this.iosAppInfo = iosAppInfo;
             return this;
         }
-
         public Builder iosAppInfo(@Nullable IosAppInfoArgs iosAppInfo) {
             this.iosAppInfo = Output.ofNullable(iosAppInfo);
             return this;
         }
-
         public Builder iosRoboTest(@Nullable Output<IosRoboTestArgs> iosRoboTest) {
             this.iosRoboTest = iosRoboTest;
             return this;
         }
-
         public Builder iosRoboTest(@Nullable IosRoboTestArgs iosRoboTest) {
             this.iosRoboTest = Output.ofNullable(iosRoboTest);
             return this;
         }
-
         public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
             this.iosTestLoop = iosTestLoop;
             return this;
         }
-
         public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
             this.iosTestLoop = Output.ofNullable(iosTestLoop);
             return this;
         }
-
         public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
             this.iosXcTest = iosXcTest;
             return this;
         }
-
         public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
             this.iosXcTest = Output.ofNullable(iosXcTest);
             return this;
         }
-
         public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
             this.testTimeout = testTimeout;
             return this;
         }
-
         public Builder testTimeout(@Nullable DurationArgs testTimeout) {
             this.testTimeout = Output.ofNullable(testTimeout);
             return this;
-        }
-        public IosTestArgs build() {
+        }        public IosTestArgs build() {
             return new IosTestArgs(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
         }
     }

@@ -72,12 +72,10 @@ public final class ListClusterFollowerDatabasesArgs extends io.pulumi.resources.
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListClusterFollowerDatabasesArgs build() {
+        }        public ListClusterFollowerDatabasesArgs build() {
             return new ListClusterFollowerDatabasesArgs(clusterName, resourceGroupName);
         }
     }

@@ -122,27 +122,22 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder product(String product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ResourceModelWithAllowedPropertySetResponsePlan build() {
+        }        public ResourceModelWithAllowedPropertySetResponsePlan build() {
             return new ResourceModelWithAllowedPropertySetResponsePlan(name, product, promotionCode, publisher, version);
         }
     }

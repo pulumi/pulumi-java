@@ -216,102 +216,106 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.adBreaks = adBreaks;
             return this;
         }
-
         public Builder adBreaks(@Nullable List<AdBreakArgs> adBreaks) {
             this.adBreaks = Output.ofNullable(adBreaks);
             return this;
         }
-
+        public Builder adBreaks(AdBreakArgs... adBreaks) {
+            return adBreaks(List.of(adBreaks));
+        }
         public Builder editList(@Nullable Output<List<EditAtomArgs>> editList) {
             this.editList = editList;
             return this;
         }
-
         public Builder editList(@Nullable List<EditAtomArgs> editList) {
             this.editList = Output.ofNullable(editList);
             return this;
         }
-
+        public Builder editList(EditAtomArgs... editList) {
+            return editList(List.of(editList));
+        }
         public Builder elementaryStreams(@Nullable Output<List<ElementaryStreamArgs>> elementaryStreams) {
             this.elementaryStreams = elementaryStreams;
             return this;
         }
-
         public Builder elementaryStreams(@Nullable List<ElementaryStreamArgs> elementaryStreams) {
             this.elementaryStreams = Output.ofNullable(elementaryStreams);
             return this;
         }
-
+        public Builder elementaryStreams(ElementaryStreamArgs... elementaryStreams) {
+            return elementaryStreams(List.of(elementaryStreams));
+        }
         public Builder inputs(@Nullable Output<List<InputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<InputArgs> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(InputArgs... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder manifests(@Nullable Output<List<ManifestArgs>> manifests) {
             this.manifests = manifests;
             return this;
         }
-
         public Builder manifests(@Nullable List<ManifestArgs> manifests) {
             this.manifests = Output.ofNullable(manifests);
             return this;
         }
-
+        public Builder manifests(ManifestArgs... manifests) {
+            return manifests(List.of(manifests));
+        }
         public Builder muxStreams(@Nullable Output<List<MuxStreamArgs>> muxStreams) {
             this.muxStreams = muxStreams;
             return this;
         }
-
         public Builder muxStreams(@Nullable List<MuxStreamArgs> muxStreams) {
             this.muxStreams = Output.ofNullable(muxStreams);
             return this;
         }
-
+        public Builder muxStreams(MuxStreamArgs... muxStreams) {
+            return muxStreams(List.of(muxStreams));
+        }
         public Builder output(@Nullable Output<OutputArgs> output) {
             this.output = output;
             return this;
         }
-
         public Builder output(@Nullable OutputArgs output) {
             this.output = Output.ofNullable(output);
             return this;
         }
-
         public Builder overlays(@Nullable Output<List<OverlayArgs>> overlays) {
             this.overlays = overlays;
             return this;
         }
-
         public Builder overlays(@Nullable List<OverlayArgs> overlays) {
             this.overlays = Output.ofNullable(overlays);
             return this;
         }
-
+        public Builder overlays(OverlayArgs... overlays) {
+            return overlays(List.of(overlays));
+        }
         public Builder pubsubDestination(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
             this.pubsubDestination = pubsubDestination;
             return this;
         }
-
         public Builder pubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
             this.pubsubDestination = Output.ofNullable(pubsubDestination);
             return this;
         }
-
         public Builder spriteSheets(@Nullable Output<List<SpriteSheetArgs>> spriteSheets) {
             this.spriteSheets = spriteSheets;
             return this;
         }
-
         public Builder spriteSheets(@Nullable List<SpriteSheetArgs> spriteSheets) {
             this.spriteSheets = Output.ofNullable(spriteSheets);
             return this;
         }
-        public JobConfigArgs build() {
+        public Builder spriteSheets(SpriteSheetArgs... spriteSheets) {
+            return spriteSheets(List.of(spriteSheets));
+        }        public JobConfigArgs build() {
             return new JobConfigArgs(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
         }
     }

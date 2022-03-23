@@ -125,27 +125,25 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
             this.commandType = Objects.requireNonNull(commandType);
             return this;
         }
-
         public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(ODataErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder input(@Nullable MigrateMISyncCompleteCommandInputResponse input) {
             this.input = input;
             return this;
         }
-
         public Builder output(MigrateMISyncCompleteCommandOutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public MigrateMISyncCompleteCommandPropertiesResponse build() {
+        }        public MigrateMISyncCompleteCommandPropertiesResponse build() {
             return new MigrateMISyncCompleteCommandPropertiesResponse(commandType, errors, input, output, state);
         }
     }

@@ -141,62 +141,53 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.accessString = accessString;
             return this;
         }
-
         public Builder accessString(@Nullable String accessString) {
             this.accessString = Output.ofNullable(accessString);
             return this;
         }
-
         public Builder engine(Output<UserEngine> engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engine(UserEngine engine) {
             this.engine = Output.of(Objects.requireNonNull(engine));
             return this;
         }
-
         public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
             this.noPasswordRequired = noPasswordRequired;
             return this;
         }
-
         public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
             this.noPasswordRequired = Output.ofNullable(noPasswordRequired);
             return this;
         }
-
         public Builder passwords(@Nullable Output<List<String>> passwords) {
             this.passwords = passwords;
             return this;
         }
-
         public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = Output.ofNullable(passwords);
             return this;
         }
-
+        public Builder passwords(String... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(accessString, engine, noPasswordRequired, passwords, userId, userName);
         }
     }

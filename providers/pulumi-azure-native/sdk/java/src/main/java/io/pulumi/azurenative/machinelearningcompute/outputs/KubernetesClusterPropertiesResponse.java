@@ -53,8 +53,7 @@ public final class KubernetesClusterPropertiesResponse {
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
-        }
-        public KubernetesClusterPropertiesResponse build() {
+        }        public KubernetesClusterPropertiesResponse build() {
             return new KubernetesClusterPropertiesResponse(servicePrincipal);
         }
     }

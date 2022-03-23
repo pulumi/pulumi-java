@@ -53,8 +53,7 @@ public final class FlavorDataResponse {
         public Builder data(@Nullable Map<String,String> data) {
             this.data = data;
             return this;
-        }
-        public FlavorDataResponse build() {
+        }        public FlavorDataResponse build() {
             return new FlavorDataResponse(data);
         }
     }

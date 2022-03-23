@@ -150,62 +150,59 @@ public final class InstanceFromTemplateNetworkInterface {
             this.accessConfigs = accessConfigs;
             return this;
         }
-
+        public Builder accessConfigs(InstanceFromTemplateNetworkInterfaceAccessConfig... accessConfigs) {
+            return accessConfigs(List.of(accessConfigs));
+        }
         public Builder aliasIpRanges(@Nullable List<InstanceFromTemplateNetworkInterfaceAliasIpRange> aliasIpRanges) {
             this.aliasIpRanges = aliasIpRanges;
             return this;
         }
-
+        public Builder aliasIpRanges(InstanceFromTemplateNetworkInterfaceAliasIpRange... aliasIpRanges) {
+            return aliasIpRanges(List.of(aliasIpRanges));
+        }
         public Builder ipv6AccessConfigs(@Nullable List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
-
+        public Builder ipv6AccessConfigs(InstanceFromTemplateNetworkInterfaceIpv6AccessConfig... ipv6AccessConfigs) {
+            return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
+        }
         public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
-
         public Builder networkIp(@Nullable String networkIp) {
             this.networkIp = networkIp;
             return this;
         }
-
         public Builder nicType(@Nullable String nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder queueCount(@Nullable Integer queueCount) {
             this.queueCount = queueCount;
             return this;
         }
-
         public Builder stackType(@Nullable String stackType) {
             this.stackType = stackType;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetworkProject(@Nullable String subnetworkProject) {
             this.subnetworkProject = subnetworkProject;
             return this;
-        }
-        public InstanceFromTemplateNetworkInterface build() {
+        }        public InstanceFromTemplateNetworkInterface build() {
             return new InstanceFromTemplateNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }
     }

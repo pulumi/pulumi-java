@@ -107,42 +107,34 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder providerEndpoint(Output<String> providerEndpoint) {
             this.providerEndpoint = Objects.requireNonNull(providerEndpoint);
             return this;
         }
-
         public Builder providerEndpoint(String providerEndpoint) {
             this.providerEndpoint = Output.of(Objects.requireNonNull(providerEndpoint));
             return this;
         }
-
         public Builder providerType(Output<String> providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
-
         public Builder providerType(String providerType) {
             this.providerType = Output.of(Objects.requireNonNull(providerType));
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable HostVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
-        }
-        public HostArgs build() {
+        }        public HostArgs build() {
             return new HostArgs(name, providerEndpoint, providerType, vpcConfiguration);
         }
     }

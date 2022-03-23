@@ -77,12 +77,10 @@ public final class ServiceOrderedPlacementStrategy {
             this.field = field;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceOrderedPlacementStrategy build() {
+        }        public ServiceOrderedPlacementStrategy build() {
             return new ServiceOrderedPlacementStrategy(field, type);
         }
     }

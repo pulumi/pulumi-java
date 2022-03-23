@@ -58,8 +58,7 @@ public final class OSPolicyResourcePackageResourceYUMResponse extends io.pulumi.
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OSPolicyResourcePackageResourceYUMResponse build() {
+        }        public OSPolicyResourcePackageResourceYUMResponse build() {
             return new OSPolicyResourcePackageResourceYUMResponse(name);
         }
     }

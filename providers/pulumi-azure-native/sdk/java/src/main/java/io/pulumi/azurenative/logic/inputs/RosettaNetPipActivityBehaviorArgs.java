@@ -177,82 +177,66 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder actionType(RosettaNetActionType actionType) {
             this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
-
         public Builder isAuthorizationRequired(Output<Boolean> isAuthorizationRequired) {
             this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired);
             return this;
         }
-
         public Builder isAuthorizationRequired(Boolean isAuthorizationRequired) {
             this.isAuthorizationRequired = Output.of(Objects.requireNonNull(isAuthorizationRequired));
             return this;
         }
-
         public Builder isSecuredTransportRequired(Output<Boolean> isSecuredTransportRequired) {
             this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired);
             return this;
         }
-
         public Builder isSecuredTransportRequired(Boolean isSecuredTransportRequired) {
             this.isSecuredTransportRequired = Output.of(Objects.requireNonNull(isSecuredTransportRequired));
             return this;
         }
-
         public Builder nonRepudiationOfOriginAndContent(Output<Boolean> nonRepudiationOfOriginAndContent) {
             this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent);
             return this;
         }
-
         public Builder nonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
             this.nonRepudiationOfOriginAndContent = Output.of(Objects.requireNonNull(nonRepudiationOfOriginAndContent));
             return this;
         }
-
         public Builder persistentConfidentialityScope(Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope) {
             this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope);
             return this;
         }
-
         public Builder persistentConfidentialityScope(RosettaNetPipConfidentialityScope persistentConfidentialityScope) {
             this.persistentConfidentialityScope = Output.of(Objects.requireNonNull(persistentConfidentialityScope));
             return this;
         }
-
         public Builder responseType(Output<RosettaNetResponseType> responseType) {
             this.responseType = Objects.requireNonNull(responseType);
             return this;
         }
-
         public Builder responseType(RosettaNetResponseType responseType) {
             this.responseType = Output.of(Objects.requireNonNull(responseType));
             return this;
         }
-
         public Builder retryCount(Output<Integer> retryCount) {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }
-
         public Builder retryCount(Integer retryCount) {
             this.retryCount = Output.of(Objects.requireNonNull(retryCount));
             return this;
         }
-
         public Builder timeToPerformInSeconds(Output<Integer> timeToPerformInSeconds) {
             this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
             return this;
         }
-
         public Builder timeToPerformInSeconds(Integer timeToPerformInSeconds) {
             this.timeToPerformInSeconds = Output.of(Objects.requireNonNull(timeToPerformInSeconds));
             return this;
-        }
-        public RosettaNetPipActivityBehaviorArgs build() {
+        }        public RosettaNetPipActivityBehaviorArgs build() {
             return new RosettaNetPipActivityBehaviorArgs(actionType, isAuthorizationRequired, isSecuredTransportRequired, nonRepudiationOfOriginAndContent, persistentConfidentialityScope, responseType, retryCount, timeToPerformInSeconds);
         }
     }

@@ -85,17 +85,14 @@ public final class ServiceAttachmentConnectedEndpointResponse {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder pscConnectionId(String pscConnectionId) {
             this.pscConnectionId = Objects.requireNonNull(pscConnectionId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ServiceAttachmentConnectedEndpointResponse build() {
+        }        public ServiceAttachmentConnectedEndpointResponse build() {
             return new ServiceAttachmentConnectedEndpointResponse(endpoint, pscConnectionId, status);
         }
     }

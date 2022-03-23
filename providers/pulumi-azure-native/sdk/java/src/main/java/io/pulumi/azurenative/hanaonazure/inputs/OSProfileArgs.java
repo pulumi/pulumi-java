@@ -78,22 +78,18 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.computerName = computerName;
             return this;
         }
-
         public Builder computerName(@Nullable String computerName) {
             this.computerName = Output.ofNullable(computerName);
             return this;
         }
-
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
-
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
             this.sshPublicKey = Output.ofNullable(sshPublicKey);
             return this;
-        }
-        public OSProfileArgs build() {
+        }        public OSProfileArgs build() {
             return new OSProfileArgs(computerName, sshPublicKey);
         }
     }

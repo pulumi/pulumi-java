@@ -88,17 +88,14 @@ public final class PartitionStorageDescriptorSerDeInfo {
             this.name = name;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder serializationLibrary(@Nullable String serializationLibrary) {
             this.serializationLibrary = serializationLibrary;
             return this;
-        }
-        public PartitionStorageDescriptorSerDeInfo build() {
+        }        public PartitionStorageDescriptorSerDeInfo build() {
             return new PartitionStorageDescriptorSerDeInfo(name, parameters, serializationLibrary);
         }
     }

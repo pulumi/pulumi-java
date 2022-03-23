@@ -52,8 +52,7 @@ public final class ConfigTrackingConfig extends io.pulumi.resources.InvokeArgs {
         public Builder autotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
             this.autotrack = autotrack;
             return this;
-        }
-        public ConfigTrackingConfig build() {
+        }        public ConfigTrackingConfig build() {
             return new ConfigTrackingConfig(autotrack);
         }
     }

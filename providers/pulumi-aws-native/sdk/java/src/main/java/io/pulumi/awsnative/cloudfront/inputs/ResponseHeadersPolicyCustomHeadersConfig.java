@@ -52,7 +52,9 @@ public final class ResponseHeadersPolicyCustomHeadersConfig extends io.pulumi.re
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public ResponseHeadersPolicyCustomHeadersConfig build() {
+        public Builder items(ResponseHeadersPolicyCustomHeader... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyCustomHeadersConfig build() {
             return new ResponseHeadersPolicyCustomHeadersConfig(items);
         }
     }

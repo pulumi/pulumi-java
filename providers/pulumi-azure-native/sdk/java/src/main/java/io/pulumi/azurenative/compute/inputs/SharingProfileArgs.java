@@ -63,12 +63,10 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable Either<String,GallerySharingPermissionTypes> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
-        }
-        public SharingProfileArgs build() {
+        }        public SharingProfileArgs build() {
             return new SharingProfileArgs(permissions);
         }
     }

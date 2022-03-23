@@ -299,97 +299,99 @@ public final class GetVpcEndpointResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder cidrBlocks(List<String> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(String... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder dnsEntries(List<GetVpcEndpointDnsEntry> dnsEntries) {
             this.dnsEntries = Objects.requireNonNull(dnsEntries);
             return this;
         }
-
+        public Builder dnsEntries(GetVpcEndpointDnsEntry... dnsEntries) {
+            return dnsEntries(List.of(dnsEntries));
+        }
         public Builder filters(@Nullable List<GetVpcEndpointFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcEndpointFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder networkInterfaceIds(List<String> networkInterfaceIds) {
             this.networkInterfaceIds = Objects.requireNonNull(networkInterfaceIds);
             return this;
         }
-
+        public Builder networkInterfaceIds(String... networkInterfaceIds) {
+            return networkInterfaceIds(List.of(networkInterfaceIds));
+        }
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = Objects.requireNonNull(prefixListId);
             return this;
         }
-
         public Builder privateDnsEnabled(Boolean privateDnsEnabled) {
             this.privateDnsEnabled = Objects.requireNonNull(privateDnsEnabled);
             return this;
         }
-
         public Builder requesterManaged(Boolean requesterManaged) {
             this.requesterManaged = Objects.requireNonNull(requesterManaged);
             return this;
         }
-
         public Builder routeTableIds(List<String> routeTableIds) {
             this.routeTableIds = Objects.requireNonNull(routeTableIds);
             return this;
         }
-
+        public Builder routeTableIds(String... routeTableIds) {
+            return routeTableIds(List.of(routeTableIds));
+        }
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcEndpointType(String vpcEndpointType) {
             this.vpcEndpointType = Objects.requireNonNull(vpcEndpointType);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetVpcEndpointResult build() {
+        }        public GetVpcEndpointResult build() {
             return new GetVpcEndpointResult(arn, cidrBlocks, dnsEntries, filters, id, networkInterfaceIds, ownerId, policy, prefixListId, privateDnsEnabled, requesterManaged, routeTableIds, securityGroupIds, serviceName, state, subnetIds, tags, vpcEndpointType, vpcId);
         }
     }

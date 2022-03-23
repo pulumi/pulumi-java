@@ -79,12 +79,10 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
             this.issue = issue;
             return this;
         }
-
         public Builder numberOfVms(@Nullable Double numberOfVms) {
             this.numberOfVms = numberOfVms;
             return this;
-        }
-        public AdaptiveApplicationControlIssueSummaryResponse build() {
+        }        public AdaptiveApplicationControlIssueSummaryResponse build() {
             return new AdaptiveApplicationControlIssueSummaryResponse(issue, numberOfVms);
         }
     }

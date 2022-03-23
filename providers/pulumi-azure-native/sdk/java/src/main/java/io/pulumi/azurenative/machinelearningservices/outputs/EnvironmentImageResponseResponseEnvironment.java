@@ -172,42 +172,34 @@ public final class EnvironmentImageResponseResponseEnvironment {
             this.docker = docker;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
             this.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder python(@Nullable ModelEnvironmentDefinitionResponseResponsePython python) {
             this.python = python;
             return this;
         }
-
         public Builder r(@Nullable ModelEnvironmentDefinitionResponseResponseR r) {
             this.r = r;
             return this;
         }
-
         public Builder spark(@Nullable ModelEnvironmentDefinitionResponseResponseSpark spark) {
             this.spark = spark;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public EnvironmentImageResponseResponseEnvironment build() {
+        }        public EnvironmentImageResponseResponseEnvironment build() {
             return new EnvironmentImageResponseResponseEnvironment(docker, environmentVariables, inferencingStackVersion, name, python, r, spark, version);
         }
     }

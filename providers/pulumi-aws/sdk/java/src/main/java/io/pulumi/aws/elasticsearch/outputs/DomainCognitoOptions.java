@@ -104,22 +104,18 @@ public final class DomainCognitoOptions {
             this.enabled = enabled;
             return this;
         }
-
         public Builder identityPoolId(String identityPoolId) {
             this.identityPoolId = Objects.requireNonNull(identityPoolId);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
-        }
-        public DomainCognitoOptions build() {
+        }        public DomainCognitoOptions build() {
             return new DomainCognitoOptions(enabled, identityPoolId, roleArn, userPoolId);
         }
     }

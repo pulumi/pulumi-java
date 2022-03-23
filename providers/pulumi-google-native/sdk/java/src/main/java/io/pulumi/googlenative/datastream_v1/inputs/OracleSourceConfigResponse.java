@@ -76,12 +76,10 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
             this.excludeObjects = Objects.requireNonNull(excludeObjects);
             return this;
         }
-
         public Builder includeObjects(OracleRdbmsResponse includeObjects) {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
-        }
-        public OracleSourceConfigResponse build() {
+        }        public OracleSourceConfigResponse build() {
             return new OracleSourceConfigResponse(excludeObjects, includeObjects);
         }
     }

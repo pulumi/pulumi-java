@@ -299,162 +299,130 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.authCode = authCode;
             return this;
         }
-
         public Builder authCode(@Nullable String authCode) {
             this.authCode = Output.ofNullable(authCode);
             return this;
         }
-
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
-
         public Builder consent(Output<DomainPurchaseConsentArgs> consent) {
             this.consent = Objects.requireNonNull(consent);
             return this;
         }
-
         public Builder consent(DomainPurchaseConsentArgs consent) {
             this.consent = Output.of(Objects.requireNonNull(consent));
             return this;
         }
-
         public Builder contactAdmin(Output<ContactArgs> contactAdmin) {
             this.contactAdmin = Objects.requireNonNull(contactAdmin);
             return this;
         }
-
         public Builder contactAdmin(ContactArgs contactAdmin) {
             this.contactAdmin = Output.of(Objects.requireNonNull(contactAdmin));
             return this;
         }
-
         public Builder contactBilling(Output<ContactArgs> contactBilling) {
             this.contactBilling = Objects.requireNonNull(contactBilling);
             return this;
         }
-
         public Builder contactBilling(ContactArgs contactBilling) {
             this.contactBilling = Output.of(Objects.requireNonNull(contactBilling));
             return this;
         }
-
         public Builder contactRegistrant(Output<ContactArgs> contactRegistrant) {
             this.contactRegistrant = Objects.requireNonNull(contactRegistrant);
             return this;
         }
-
         public Builder contactRegistrant(ContactArgs contactRegistrant) {
             this.contactRegistrant = Output.of(Objects.requireNonNull(contactRegistrant));
             return this;
         }
-
         public Builder contactTech(Output<ContactArgs> contactTech) {
             this.contactTech = Objects.requireNonNull(contactTech);
             return this;
         }
-
         public Builder contactTech(ContactArgs contactTech) {
             this.contactTech = Output.of(Objects.requireNonNull(contactTech));
             return this;
         }
-
         public Builder dnsType(@Nullable Output<DnsType> dnsType) {
             this.dnsType = dnsType;
             return this;
         }
-
         public Builder dnsType(@Nullable DnsType dnsType) {
             this.dnsType = Output.ofNullable(dnsType);
             return this;
         }
-
         public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
             this.dnsZoneId = dnsZoneId;
             return this;
         }
-
         public Builder dnsZoneId(@Nullable String dnsZoneId) {
             this.dnsZoneId = Output.ofNullable(dnsZoneId);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privacy(@Nullable Output<Boolean> privacy) {
             this.privacy = privacy;
             return this;
         }
-
         public Builder privacy(@Nullable Boolean privacy) {
             this.privacy = Output.ofNullable(privacy);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetDnsType(@Nullable Output<DnsType> targetDnsType) {
             this.targetDnsType = targetDnsType;
             return this;
         }
-
         public Builder targetDnsType(@Nullable DnsType targetDnsType) {
             this.targetDnsType = Output.ofNullable(targetDnsType);
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(authCode, autoRenew, consent, contactAdmin, contactBilling, contactRegistrant, contactTech, dnsType, dnsZoneId, domainName, kind, location, privacy, resourceGroupName, tags, targetDnsType);
         }
     }

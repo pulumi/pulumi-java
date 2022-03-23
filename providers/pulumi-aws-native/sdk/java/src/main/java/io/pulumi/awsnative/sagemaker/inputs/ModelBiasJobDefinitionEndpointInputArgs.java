@@ -201,102 +201,82 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             this.endTimeOffset = endTimeOffset;
             return this;
         }
-
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Output.ofNullable(endTimeOffset);
             return this;
         }
-
         public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
-
         public Builder featuresAttribute(@Nullable Output<String> featuresAttribute) {
             this.featuresAttribute = featuresAttribute;
             return this;
         }
-
         public Builder featuresAttribute(@Nullable String featuresAttribute) {
             this.featuresAttribute = Output.ofNullable(featuresAttribute);
             return this;
         }
-
         public Builder inferenceAttribute(@Nullable Output<String> inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
-
         public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = Output.ofNullable(inferenceAttribute);
             return this;
         }
-
         public Builder localPath(Output<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
-
         public Builder probabilityAttribute(@Nullable Output<String> probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
-
         public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = Output.ofNullable(probabilityAttribute);
             return this;
         }
-
         public Builder probabilityThresholdAttribute(@Nullable Output<Double> probabilityThresholdAttribute) {
             this.probabilityThresholdAttribute = probabilityThresholdAttribute;
             return this;
         }
-
         public Builder probabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
             this.probabilityThresholdAttribute = Output.ofNullable(probabilityThresholdAttribute);
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
-
         public Builder s3DataDistributionType(@Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = Output.ofNullable(s3DataDistributionType);
             return this;
         }
-
         public Builder s3InputMode(@Nullable Output<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public Builder s3InputMode(@Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = Output.ofNullable(s3InputMode);
             return this;
         }
-
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
-        }
-        public ModelBiasJobDefinitionEndpointInputArgs build() {
+        }        public ModelBiasJobDefinitionEndpointInputArgs build() {
             return new ModelBiasJobDefinitionEndpointInputArgs(endTimeOffset, endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, probabilityThresholdAttribute, s3DataDistributionType, s3InputMode, startTimeOffset);
         }
     }

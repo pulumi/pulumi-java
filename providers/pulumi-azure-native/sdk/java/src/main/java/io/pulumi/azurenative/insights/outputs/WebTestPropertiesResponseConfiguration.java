@@ -53,8 +53,7 @@ public final class WebTestPropertiesResponseConfiguration {
         public Builder webTest(@Nullable String webTest) {
             this.webTest = webTest;
             return this;
-        }
-        public WebTestPropertiesResponseConfiguration build() {
+        }        public WebTestPropertiesResponseConfiguration build() {
             return new WebTestPropertiesResponseConfiguration(webTest);
         }
     }

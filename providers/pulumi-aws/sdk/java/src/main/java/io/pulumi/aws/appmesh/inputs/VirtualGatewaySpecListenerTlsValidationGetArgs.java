@@ -75,22 +75,18 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
         public Builder trust(Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }
-
         public Builder trust(VirtualGatewaySpecListenerTlsValidationTrustGetArgs trust) {
             this.trust = Output.of(Objects.requireNonNull(trust));
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsValidationGetArgs build() {
+        }        public VirtualGatewaySpecListenerTlsValidationGetArgs build() {
             return new VirtualGatewaySpecListenerTlsValidationGetArgs(subjectAlternativeNames, trust);
         }
     }

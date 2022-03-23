@@ -81,22 +81,18 @@ public final class ContainerGroupIdentityArgs extends io.pulumi.resources.Resour
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public ContainerGroupIdentityArgs build() {
+        }        public ContainerGroupIdentityArgs build() {
             return new ContainerGroupIdentityArgs(type, userAssignedIdentities);
         }
     }

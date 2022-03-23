@@ -126,52 +126,42 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
             this.binauthz = binauthz;
             return this;
         }
-
         public Builder binauthz(@Nullable FeatureMembershipConfigmanagementBinauthzArgs binauthz) {
             this.binauthz = Output.ofNullable(binauthz);
             return this;
         }
-
         public Builder configSync(@Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync) {
             this.configSync = configSync;
             return this;
         }
-
         public Builder configSync(@Nullable FeatureMembershipConfigmanagementConfigSyncArgs configSync) {
             this.configSync = Output.ofNullable(configSync);
             return this;
         }
-
         public Builder hierarchyController(@Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController) {
             this.hierarchyController = hierarchyController;
             return this;
         }
-
         public Builder hierarchyController(@Nullable FeatureMembershipConfigmanagementHierarchyControllerArgs hierarchyController) {
             this.hierarchyController = Output.ofNullable(hierarchyController);
             return this;
         }
-
         public Builder policyController(@Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController) {
             this.policyController = policyController;
             return this;
         }
-
         public Builder policyController(@Nullable FeatureMembershipConfigmanagementPolicyControllerArgs policyController) {
             this.policyController = Output.ofNullable(policyController);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public FeatureMembershipConfigmanagementArgs build() {
+        }        public FeatureMembershipConfigmanagementArgs build() {
             return new FeatureMembershipConfigmanagementArgs(binauthz, configSync, hierarchyController, policyController, version);
         }
     }

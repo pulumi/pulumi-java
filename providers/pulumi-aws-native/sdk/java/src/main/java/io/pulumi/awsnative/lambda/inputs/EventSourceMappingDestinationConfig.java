@@ -60,8 +60,7 @@ public final class EventSourceMappingDestinationConfig extends io.pulumi.resourc
         public Builder onFailure(@Nullable EventSourceMappingOnFailure onFailure) {
             this.onFailure = onFailure;
             return this;
-        }
-        public EventSourceMappingDestinationConfig build() {
+        }        public EventSourceMappingDestinationConfig build() {
             return new EventSourceMappingDestinationConfig(onFailure);
         }
     }

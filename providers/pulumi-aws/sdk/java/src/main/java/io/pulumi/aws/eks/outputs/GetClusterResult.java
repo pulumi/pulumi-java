@@ -275,77 +275,71 @@ public final class GetClusterResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder certificateAuthority(GetClusterCertificateAuthority certificateAuthority) {
             this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder enabledClusterLogTypes(List<String> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = Objects.requireNonNull(enabledClusterLogTypes);
             return this;
         }
-
+        public Builder enabledClusterLogTypes(String... enabledClusterLogTypes) {
+            return enabledClusterLogTypes(List.of(enabledClusterLogTypes));
+        }
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identities(List<GetClusterIdentity> identities) {
             this.identities = Objects.requireNonNull(identities);
             return this;
         }
-
+        public Builder identities(GetClusterIdentity... identities) {
+            return identities(List.of(identities));
+        }
         public Builder kubernetesNetworkConfigs(List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs) {
             this.kubernetesNetworkConfigs = Objects.requireNonNull(kubernetesNetworkConfigs);
             return this;
         }
-
+        public Builder kubernetesNetworkConfigs(GetClusterKubernetesNetworkConfig... kubernetesNetworkConfigs) {
+            return kubernetesNetworkConfigs(List.of(kubernetesNetworkConfigs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder platformVersion(String platformVersion) {
             this.platformVersion = Objects.requireNonNull(platformVersion);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder vpcConfig(GetClusterVpcConfig vpcConfig) {
             this.vpcConfig = Objects.requireNonNull(vpcConfig);
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(arn, certificateAuthority, createdAt, enabledClusterLogTypes, endpoint, id, identities, kubernetesNetworkConfigs, name, platformVersion, roleArn, status, tags, version, vpcConfig);
         }
     }

@@ -104,22 +104,18 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
             this.recordType = Objects.requireNonNull(recordType);
             return this;
         }
-
         public Builder relativeRecordSetName(String relativeRecordSetName) {
             this.relativeRecordSetName = Objects.requireNonNull(relativeRecordSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder zoneName(String zoneName) {
             this.zoneName = Objects.requireNonNull(zoneName);
             return this;
-        }
-        public GetRecordSetArgs build() {
+        }        public GetRecordSetArgs build() {
             return new GetRecordSetArgs(recordType, relativeRecordSetName, resourceGroupName, zoneName);
         }
     }

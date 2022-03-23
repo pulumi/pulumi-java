@@ -93,32 +93,29 @@ public final class WebAclRuleActionBlockCustomResponseArgs extends io.pulumi.res
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
             return this;
         }
-
         public Builder responseCode(Output<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Output.of(Objects.requireNonNull(responseCode));
             return this;
         }
-
         public Builder responseHeaders(@Nullable Output<List<WebAclRuleActionBlockCustomResponseResponseHeaderArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<WebAclRuleActionBlockCustomResponseResponseHeaderArgs> responseHeaders) {
             this.responseHeaders = Output.ofNullable(responseHeaders);
             return this;
         }
-        public WebAclRuleActionBlockCustomResponseArgs build() {
+        public Builder responseHeaders(WebAclRuleActionBlockCustomResponseResponseHeaderArgs... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public WebAclRuleActionBlockCustomResponseArgs build() {
             return new WebAclRuleActionBlockCustomResponseArgs(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

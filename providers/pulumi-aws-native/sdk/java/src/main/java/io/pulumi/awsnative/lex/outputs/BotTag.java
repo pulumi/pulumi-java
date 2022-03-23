@@ -69,12 +69,10 @@ public final class BotTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BotTag build() {
+        }        public BotTag build() {
             return new BotTag(key, value);
         }
     }

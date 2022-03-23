@@ -58,12 +58,13 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<String> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs(items);
         }
     }

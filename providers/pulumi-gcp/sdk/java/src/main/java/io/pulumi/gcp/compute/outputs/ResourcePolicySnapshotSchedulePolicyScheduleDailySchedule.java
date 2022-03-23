@@ -70,12 +70,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
             this.daysInCycle = Objects.requireNonNull(daysInCycle);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule build() {
+        }        public ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(daysInCycle, startTime);
         }
     }

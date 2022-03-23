@@ -78,12 +78,13 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.infoTypes = infoTypes;
             return this;
         }
-
+        public Builder infoTypes(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation(infoTypes, primitiveTransformation);
         }
     }

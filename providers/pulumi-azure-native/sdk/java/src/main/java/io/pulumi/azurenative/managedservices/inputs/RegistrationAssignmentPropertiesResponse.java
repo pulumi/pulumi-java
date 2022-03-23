@@ -93,17 +93,14 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder registrationDefinition(RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition) {
             this.registrationDefinition = Objects.requireNonNull(registrationDefinition);
             return this;
         }
-
         public Builder registrationDefinitionId(String registrationDefinitionId) {
             this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
             return this;
-        }
-        public RegistrationAssignmentPropertiesResponse build() {
+        }        public RegistrationAssignmentPropertiesResponse build() {
             return new RegistrationAssignmentPropertiesResponse(provisioningState, registrationDefinition, registrationDefinitionId);
         }
     }

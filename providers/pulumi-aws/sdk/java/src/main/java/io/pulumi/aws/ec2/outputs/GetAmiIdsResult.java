@@ -106,37 +106,42 @@ public final class GetAmiIdsResult {
             this.executableUsers = executableUsers;
             return this;
         }
-
+        public Builder executableUsers(String... executableUsers) {
+            return executableUsers(List.of(executableUsers));
+        }
         public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetAmiIdsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder nameRegex(@Nullable String nameRegex) {
             this.nameRegex = nameRegex;
             return this;
         }
-
         public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }
-
+        public Builder owners(String... owners) {
+            return owners(List.of(owners));
+        }
         public Builder sortAscending(@Nullable Boolean sortAscending) {
             this.sortAscending = sortAscending;
             return this;
-        }
-        public GetAmiIdsResult build() {
+        }        public GetAmiIdsResult build() {
             return new GetAmiIdsResult(executableUsers, filters, id, ids, nameRegex, owners, sortAscending);
         }
     }

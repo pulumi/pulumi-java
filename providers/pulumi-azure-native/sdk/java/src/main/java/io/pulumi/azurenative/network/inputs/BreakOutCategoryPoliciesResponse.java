@@ -94,17 +94,14 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
             this.allow = allow;
             return this;
         }
-
         public Builder $default(@Nullable Boolean $default) {
             this.$default = $default;
             return this;
         }
-
         public Builder optimize(@Nullable Boolean optimize) {
             this.optimize = optimize;
             return this;
-        }
-        public BreakOutCategoryPoliciesResponse build() {
+        }        public BreakOutCategoryPoliciesResponse build() {
             return new BreakOutCategoryPoliciesResponse(allow, $default, optimize);
         }
     }

@@ -73,12 +73,13 @@ public final class ClusterEncryptionConfig {
             this.provider = provider;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-        public ClusterEncryptionConfig build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public ClusterEncryptionConfig build() {
             return new ClusterEncryptionConfig(provider, resources);
         }
     }

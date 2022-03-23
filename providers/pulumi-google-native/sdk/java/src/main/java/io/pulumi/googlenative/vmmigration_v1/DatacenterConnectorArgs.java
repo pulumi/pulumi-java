@@ -150,82 +150,66 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId);
             return this;
         }
-
         public Builder datacenterConnectorId(String datacenterConnectorId) {
             this.datacenterConnectorId = Output.of(Objects.requireNonNull(datacenterConnectorId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder registrationId(@Nullable Output<String> registrationId) {
             this.registrationId = registrationId;
             return this;
         }
-
         public Builder registrationId(@Nullable String registrationId) {
             this.registrationId = Output.ofNullable(registrationId);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder sourceId(Output<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Output.of(Objects.requireNonNull(sourceId));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DatacenterConnectorArgs build() {
+        }        public DatacenterConnectorArgs build() {
             return new DatacenterConnectorArgs(datacenterConnectorId, location, project, registrationId, requestId, serviceAccount, sourceId, version);
         }
     }

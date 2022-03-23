@@ -72,12 +72,10 @@ public final class BucketIntelligentTieringConfigurationFilter {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public BucketIntelligentTieringConfigurationFilter build() {
+        }        public BucketIntelligentTieringConfigurationFilter build() {
             return new BucketIntelligentTieringConfigurationFilter(prefix, tags);
         }
     }

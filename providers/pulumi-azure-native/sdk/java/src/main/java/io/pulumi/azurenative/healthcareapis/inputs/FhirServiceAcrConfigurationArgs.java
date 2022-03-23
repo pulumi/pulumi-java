@@ -62,12 +62,13 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
             this.loginServers = loginServers;
             return this;
         }
-
         public Builder loginServers(@Nullable List<String> loginServers) {
             this.loginServers = Output.ofNullable(loginServers);
             return this;
         }
-        public FhirServiceAcrConfigurationArgs build() {
+        public Builder loginServers(String... loginServers) {
+            return loginServers(List.of(loginServers));
+        }        public FhirServiceAcrConfigurationArgs build() {
             return new FhirServiceAcrConfigurationArgs(loginServers);
         }
     }

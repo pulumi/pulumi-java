@@ -80,22 +80,21 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             this.distribution = distribution;
             return this;
         }
-
         public Builder distribution(@Nullable List<DistributionArgs> distribution) {
             this.distribution = Output.ofNullable(distribution);
             return this;
         }
-
+        public Builder distribution(DistributionArgs... distribution) {
+            return distribution(List.of(distribution));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public PackageArgs build() {
+        }        public PackageArgs build() {
             return new PackageArgs(distribution, name);
         }
     }

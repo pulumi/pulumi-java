@@ -59,12 +59,10 @@ public final class SmbFileShareCacheAttributesGetArgs extends io.pulumi.resource
             this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
         }
-
         public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
             this.cacheStaleTimeoutInSeconds = Output.ofNullable(cacheStaleTimeoutInSeconds);
             return this;
-        }
-        public SmbFileShareCacheAttributesGetArgs build() {
+        }        public SmbFileShareCacheAttributesGetArgs build() {
             return new SmbFileShareCacheAttributesGetArgs(cacheStaleTimeoutInSeconds);
         }
     }

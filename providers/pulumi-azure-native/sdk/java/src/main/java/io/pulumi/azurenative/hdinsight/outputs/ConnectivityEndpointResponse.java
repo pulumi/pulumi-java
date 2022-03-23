@@ -120,27 +120,22 @@ public final class ConnectivityEndpointResponse {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public ConnectivityEndpointResponse build() {
+        }        public ConnectivityEndpointResponse build() {
             return new ConnectivityEndpointResponse(location, name, port, privateIPAddress, protocol);
         }
     }

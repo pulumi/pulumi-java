@@ -248,67 +248,57 @@ public final class GetCompanyResult {
             this.careerSiteUri = Objects.requireNonNull(careerSiteUri);
             return this;
         }
-
         public Builder derivedInfo(CompanyDerivedInfoResponse derivedInfo) {
             this.derivedInfo = Objects.requireNonNull(derivedInfo);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder eeoText(String eeoText) {
             this.eeoText = Objects.requireNonNull(eeoText);
             return this;
         }
-
         public Builder externalId(String externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
-
         public Builder headquartersAddress(String headquartersAddress) {
             this.headquartersAddress = Objects.requireNonNull(headquartersAddress);
             return this;
         }
-
         public Builder hiringAgency(Boolean hiringAgency) {
             this.hiringAgency = Objects.requireNonNull(hiringAgency);
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder keywordSearchableJobCustomAttributes(List<String> keywordSearchableJobCustomAttributes) {
             this.keywordSearchableJobCustomAttributes = Objects.requireNonNull(keywordSearchableJobCustomAttributes);
             return this;
         }
-
+        public Builder keywordSearchableJobCustomAttributes(String... keywordSearchableJobCustomAttributes) {
+            return keywordSearchableJobCustomAttributes(List.of(keywordSearchableJobCustomAttributes));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder suspended(Boolean suspended) {
             this.suspended = Objects.requireNonNull(suspended);
             return this;
         }
-
         public Builder websiteUri(String websiteUri) {
             this.websiteUri = Objects.requireNonNull(websiteUri);
             return this;
-        }
-        public GetCompanyResult build() {
+        }        public GetCompanyResult build() {
             return new GetCompanyResult(careerSiteUri, derivedInfo, displayName, eeoText, externalId, headquartersAddress, hiringAgency, imageUri, keywordSearchableJobCustomAttributes, name, size, suspended, websiteUri);
         }
     }

@@ -88,17 +88,14 @@ public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.agentPoolName = Objects.requireNonNull(agentPoolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetAgentPoolArgs build() {
+        }        public GetAgentPoolArgs build() {
             return new GetAgentPoolArgs(agentPoolName, resourceGroupName, resourceName);
         }
     }

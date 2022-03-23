@@ -129,52 +129,42 @@ public final class PersistentVolumeClaimArgs extends io.pulumi.resources.Resourc
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(@Nullable Output<PersistentVolumeClaimSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable PersistentVolumeClaimSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder status(@Nullable Output<PersistentVolumeClaimStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable PersistentVolumeClaimStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public PersistentVolumeClaimArgs build() {
+        }        public PersistentVolumeClaimArgs build() {
             return new PersistentVolumeClaimArgs(apiVersion, kind, metadata, spec, status);
         }
     }

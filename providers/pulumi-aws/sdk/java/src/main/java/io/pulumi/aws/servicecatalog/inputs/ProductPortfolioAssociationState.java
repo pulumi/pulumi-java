@@ -106,42 +106,34 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
-
         public Builder portfolioId(@Nullable String portfolioId) {
             this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
-
         public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = Output.ofNullable(productId);
             return this;
         }
-
         public Builder sourcePortfolioId(@Nullable Output<String> sourcePortfolioId) {
             this.sourcePortfolioId = sourcePortfolioId;
             return this;
         }
-
         public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
             this.sourcePortfolioId = Output.ofNullable(sourcePortfolioId);
             return this;
-        }
-        public ProductPortfolioAssociationState build() {
+        }        public ProductPortfolioAssociationState build() {
             return new ProductPortfolioAssociationState(acceptLanguage, portfolioId, productId, sourcePortfolioId);
         }
     }

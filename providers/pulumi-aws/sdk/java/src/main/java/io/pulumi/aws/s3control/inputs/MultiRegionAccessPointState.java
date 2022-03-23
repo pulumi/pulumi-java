@@ -139,62 +139,50 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder details(@Nullable Output<MultiRegionAccessPointDetailsGetArgs> details) {
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable MultiRegionAccessPointDetailsGetArgs details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public MultiRegionAccessPointState build() {
+        }        public MultiRegionAccessPointState build() {
             return new MultiRegionAccessPointState(accountId, alias, arn, details, domainName, status);
         }
     }

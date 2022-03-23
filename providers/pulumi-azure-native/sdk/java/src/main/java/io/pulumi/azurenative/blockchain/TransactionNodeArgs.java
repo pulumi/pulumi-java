@@ -140,62 +140,53 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
             this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
             return this;
         }
-
         public Builder blockchainMemberName(String blockchainMemberName) {
             this.blockchainMemberName = Output.of(Objects.requireNonNull(blockchainMemberName));
             return this;
         }
-
         public Builder firewallRules(@Nullable Output<List<FirewallRuleArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
             this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
-
+        public Builder firewallRules(FirewallRuleArgs... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder transactionNodeName(@Nullable Output<String> transactionNodeName) {
             this.transactionNodeName = transactionNodeName;
             return this;
         }
-
         public Builder transactionNodeName(@Nullable String transactionNodeName) {
             this.transactionNodeName = Output.ofNullable(transactionNodeName);
             return this;
-        }
-        public TransactionNodeArgs build() {
+        }        public TransactionNodeArgs build() {
             return new TransactionNodeArgs(blockchainMemberName, firewallRules, location, password, resourceGroupName, transactionNodeName);
         }
     }

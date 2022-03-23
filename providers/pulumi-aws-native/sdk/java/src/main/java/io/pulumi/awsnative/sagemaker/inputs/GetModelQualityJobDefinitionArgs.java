@@ -54,8 +54,7 @@ public final class GetModelQualityJobDefinitionArgs extends io.pulumi.resources.
         public Builder jobDefinitionArn(String jobDefinitionArn) {
             this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
             return this;
-        }
-        public GetModelQualityJobDefinitionArgs build() {
+        }        public GetModelQualityJobDefinitionArgs build() {
             return new GetModelQualityJobDefinitionArgs(jobDefinitionArn);
         }
     }

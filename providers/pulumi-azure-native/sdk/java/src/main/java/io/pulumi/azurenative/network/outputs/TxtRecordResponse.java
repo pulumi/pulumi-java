@@ -54,7 +54,9 @@ public final class TxtRecordResponse {
             this.value = value;
             return this;
         }
-        public TxtRecordResponse build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public TxtRecordResponse build() {
             return new TxtRecordResponse(value);
         }
     }

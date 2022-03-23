@@ -60,8 +60,7 @@ public final class FailoverGroupReadOnlyEndpointResponse extends io.pulumi.resou
         public Builder failoverPolicy(@Nullable String failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
-        }
-        public FailoverGroupReadOnlyEndpointResponse build() {
+        }        public FailoverGroupReadOnlyEndpointResponse build() {
             return new FailoverGroupReadOnlyEndpointResponse(failoverPolicy);
         }
     }

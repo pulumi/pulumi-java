@@ -94,32 +94,26 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.periodSeconds = Objects.requireNonNull(periodSeconds);
             return this;
         }
-
         public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = Output.of(Objects.requireNonNull(periodSeconds));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public HPAScalingPolicyArgs build() {
+        }        public HPAScalingPolicyArgs build() {
             return new HPAScalingPolicyArgs(periodSeconds, type, value);
         }
     }

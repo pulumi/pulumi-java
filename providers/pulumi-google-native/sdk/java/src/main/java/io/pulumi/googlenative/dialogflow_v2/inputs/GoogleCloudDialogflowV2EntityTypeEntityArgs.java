@@ -78,22 +78,21 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public Builder synonyms(List<String> synonyms) {
             this.synonyms = Output.of(Objects.requireNonNull(synonyms));
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public GoogleCloudDialogflowV2EntityTypeEntityArgs build() {
+        }        public GoogleCloudDialogflowV2EntityTypeEntityArgs build() {
             return new GoogleCloudDialogflowV2EntityTypeEntityArgs(synonyms, value);
         }
     }

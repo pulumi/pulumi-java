@@ -115,42 +115,46 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable List<ExtensionDataSourceArgs> extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-
+        public Builder extensions(ExtensionDataSourceArgs... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder performanceCounters(@Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters) {
             this.performanceCounters = performanceCounters;
             return this;
         }
-
         public Builder performanceCounters(@Nullable List<PerfCounterDataSourceArgs> performanceCounters) {
             this.performanceCounters = Output.ofNullable(performanceCounters);
             return this;
         }
-
+        public Builder performanceCounters(PerfCounterDataSourceArgs... performanceCounters) {
+            return performanceCounters(List.of(performanceCounters));
+        }
         public Builder syslog(@Nullable Output<List<SyslogDataSourceArgs>> syslog) {
             this.syslog = syslog;
             return this;
         }
-
         public Builder syslog(@Nullable List<SyslogDataSourceArgs> syslog) {
             this.syslog = Output.ofNullable(syslog);
             return this;
         }
-
+        public Builder syslog(SyslogDataSourceArgs... syslog) {
+            return syslog(List.of(syslog));
+        }
         public Builder windowsEventLogs(@Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
-
         public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceArgs> windowsEventLogs) {
             this.windowsEventLogs = Output.ofNullable(windowsEventLogs);
             return this;
         }
-        public DataCollectionRuleDataSourcesArgs build() {
+        public Builder windowsEventLogs(WindowsEventLogDataSourceArgs... windowsEventLogs) {
+            return windowsEventLogs(List.of(windowsEventLogs));
+        }        public DataCollectionRuleDataSourcesArgs build() {
             return new DataCollectionRuleDataSourcesArgs(extensions, performanceCounters, syslog, windowsEventLogs);
         }
     }

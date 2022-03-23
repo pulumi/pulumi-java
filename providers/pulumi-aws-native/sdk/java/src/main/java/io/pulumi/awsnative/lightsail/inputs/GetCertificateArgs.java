@@ -54,8 +54,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         public Builder certificateName(String certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
-        }
-        public GetCertificateArgs build() {
+        }        public GetCertificateArgs build() {
             return new GetCertificateArgs(certificateName);
         }
     }

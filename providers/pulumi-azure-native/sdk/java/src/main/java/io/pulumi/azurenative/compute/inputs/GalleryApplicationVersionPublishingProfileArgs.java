@@ -178,82 +178,69 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             this.enableHealthCheck = enableHealthCheck;
             return this;
         }
-
         public Builder enableHealthCheck(@Nullable Boolean enableHealthCheck) {
             this.enableHealthCheck = Output.ofNullable(enableHealthCheck);
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
             return this;
         }
-
         public Builder manageActions(@Nullable Output<UserArtifactManageArgs> manageActions) {
             this.manageActions = manageActions;
             return this;
         }
-
         public Builder manageActions(@Nullable UserArtifactManageArgs manageActions) {
             this.manageActions = Output.ofNullable(manageActions);
             return this;
         }
-
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
-
         public Builder source(Output<UserArtifactSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(UserArtifactSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
-
         public Builder targetRegions(@Nullable Output<List<TargetRegionArgs>> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }
-
         public Builder targetRegions(@Nullable List<TargetRegionArgs> targetRegions) {
             this.targetRegions = Output.ofNullable(targetRegions);
             return this;
         }
-        public GalleryApplicationVersionPublishingProfileArgs build() {
+        public Builder targetRegions(TargetRegionArgs... targetRegions) {
+            return targetRegions(List.of(targetRegions));
+        }        public GalleryApplicationVersionPublishingProfileArgs build() {
             return new GalleryApplicationVersionPublishingProfileArgs(enableHealthCheck, endOfLifeDate, excludeFromLatest, manageActions, replicaCount, source, storageAccountType, targetRegions);
         }
     }

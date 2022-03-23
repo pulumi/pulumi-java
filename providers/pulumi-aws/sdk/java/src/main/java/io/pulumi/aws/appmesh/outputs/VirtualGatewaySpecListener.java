@@ -106,22 +106,18 @@ public final class VirtualGatewaySpecListener {
             this.connectionPool = connectionPool;
             return this;
         }
-
         public Builder healthCheck(@Nullable VirtualGatewaySpecListenerHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder portMapping(VirtualGatewaySpecListenerPortMapping portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
-
         public Builder tls(@Nullable VirtualGatewaySpecListenerTls tls) {
             this.tls = tls;
             return this;
-        }
-        public VirtualGatewaySpecListener build() {
+        }        public VirtualGatewaySpecListener build() {
             return new VirtualGatewaySpecListener(connectionPool, healthCheck, portMapping, tls);
         }
     }

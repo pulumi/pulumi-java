@@ -104,22 +104,18 @@ public final class GlusterfsPersistentVolumeSource {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder endpointsNamespace(@Nullable String endpointsNamespace) {
             this.endpointsNamespace = endpointsNamespace;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
-        }
-        public GlusterfsPersistentVolumeSource build() {
+        }        public GlusterfsPersistentVolumeSource build() {
             return new GlusterfsPersistentVolumeSource(endpoints, endpointsNamespace, path, readOnly);
         }
     }

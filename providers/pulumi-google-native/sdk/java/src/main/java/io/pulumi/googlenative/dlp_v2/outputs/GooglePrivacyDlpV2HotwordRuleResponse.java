@@ -87,17 +87,14 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
             this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
             return this;
         }
-
         public Builder likelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment) {
             this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
             return this;
         }
-
         public Builder proximity(GooglePrivacyDlpV2ProximityResponse proximity) {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
-        }
-        public GooglePrivacyDlpV2HotwordRuleResponse build() {
+        }        public GooglePrivacyDlpV2HotwordRuleResponse build() {
             return new GooglePrivacyDlpV2HotwordRuleResponse(hotwordRegex, likelihoodAdjustment, proximity);
         }
     }

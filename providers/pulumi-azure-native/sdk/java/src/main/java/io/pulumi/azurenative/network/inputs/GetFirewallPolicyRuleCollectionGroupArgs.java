@@ -88,17 +88,14 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleCollectionGroupName(String ruleCollectionGroupName) {
             this.ruleCollectionGroupName = Objects.requireNonNull(ruleCollectionGroupName);
             return this;
-        }
-        public GetFirewallPolicyRuleCollectionGroupArgs build() {
+        }        public GetFirewallPolicyRuleCollectionGroupArgs build() {
             return new GetFirewallPolicyRuleCollectionGroupArgs(firewallPolicyName, resourceGroupName, ruleCollectionGroupName);
         }
     }

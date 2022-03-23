@@ -140,62 +140,53 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.backupPolicyName = backupPolicyName;
             return this;
         }
-
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
             this.backupPolicyName = Output.ofNullable(backupPolicyName);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder volumeIds(Output<List<String>> volumeIds) {
             this.volumeIds = Objects.requireNonNull(volumeIds);
             return this;
         }
-
         public Builder volumeIds(List<String> volumeIds) {
             this.volumeIds = Output.of(Objects.requireNonNull(volumeIds));
             return this;
         }
-        public BackupPolicyArgs build() {
+        public Builder volumeIds(String... volumeIds) {
+            return volumeIds(List.of(volumeIds));
+        }        public BackupPolicyArgs build() {
             return new BackupPolicyArgs(backupPolicyName, deviceName, kind, managerName, resourceGroupName, volumeIds);
         }
     }

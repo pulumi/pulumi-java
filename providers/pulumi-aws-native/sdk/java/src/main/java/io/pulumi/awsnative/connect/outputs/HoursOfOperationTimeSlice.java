@@ -69,12 +69,10 @@ public final class HoursOfOperationTimeSlice {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
-        }
-        public HoursOfOperationTimeSlice build() {
+        }        public HoursOfOperationTimeSlice build() {
             return new HoursOfOperationTimeSlice(hours, minutes);
         }
     }

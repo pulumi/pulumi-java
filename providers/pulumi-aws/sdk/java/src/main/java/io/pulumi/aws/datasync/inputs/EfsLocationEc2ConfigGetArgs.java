@@ -74,22 +74,21 @@ public final class EfsLocationEc2ConfigGetArgs extends io.pulumi.resources.Resou
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
-
         public Builder securityGroupArns(List<String> securityGroupArns) {
             this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subnetArn(Output<String> subnetArn) {
             this.subnetArn = Objects.requireNonNull(subnetArn);
             return this;
         }
-
         public Builder subnetArn(String subnetArn) {
             this.subnetArn = Output.of(Objects.requireNonNull(subnetArn));
             return this;
-        }
-        public EfsLocationEc2ConfigGetArgs build() {
+        }        public EfsLocationEc2ConfigGetArgs build() {
             return new EfsLocationEc2ConfigGetArgs(securityGroupArns, subnetArn);
         }
     }

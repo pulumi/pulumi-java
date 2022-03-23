@@ -62,12 +62,10 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,IntegrationAccountSkuName> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public IntegrationAccountSkuArgs build() {
+        }        public IntegrationAccountSkuArgs build() {
             return new IntegrationAccountSkuArgs(name);
         }
     }

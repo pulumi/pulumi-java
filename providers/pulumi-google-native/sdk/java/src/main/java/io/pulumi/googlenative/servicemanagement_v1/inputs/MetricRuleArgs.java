@@ -79,22 +79,18 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.metricCosts = metricCosts;
             return this;
         }
-
         public Builder metricCosts(@Nullable Map<String,String> metricCosts) {
             this.metricCosts = Output.ofNullable(metricCosts);
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public MetricRuleArgs build() {
+        }        public MetricRuleArgs build() {
             return new MetricRuleArgs(metricCosts, selector);
         }
     }

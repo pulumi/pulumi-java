@@ -198,52 +198,42 @@ public final class GetKeyResult {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
-
         public Builder keyOrigin(String keyOrigin) {
             this.keyOrigin = Objects.requireNonNull(keyOrigin);
             return this;
         }
-
         public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateKeyData(String privateKeyData) {
             this.privateKeyData = Objects.requireNonNull(privateKeyData);
             return this;
         }
-
         public Builder privateKeyType(String privateKeyType) {
             this.privateKeyType = Objects.requireNonNull(privateKeyType);
             return this;
         }
-
         public Builder publicKeyData(String publicKeyData) {
             this.publicKeyData = Objects.requireNonNull(publicKeyData);
             return this;
         }
-
         public Builder validAfterTime(String validAfterTime) {
             this.validAfterTime = Objects.requireNonNull(validAfterTime);
             return this;
         }
-
         public Builder validBeforeTime(String validBeforeTime) {
             this.validBeforeTime = Objects.requireNonNull(validBeforeTime);
             return this;
-        }
-        public GetKeyResult build() {
+        }        public GetKeyResult build() {
             return new GetKeyResult(disabled, keyAlgorithm, keyOrigin, keyType, name, privateKeyData, privateKeyType, publicKeyData, validAfterTime, validBeforeTime);
         }
     }

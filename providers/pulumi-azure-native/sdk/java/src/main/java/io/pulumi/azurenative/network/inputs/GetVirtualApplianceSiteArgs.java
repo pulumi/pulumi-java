@@ -88,17 +88,14 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
             this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
-        }
-        public GetVirtualApplianceSiteArgs build() {
+        }        public GetVirtualApplianceSiteArgs build() {
             return new GetVirtualApplianceSiteArgs(networkVirtualApplianceName, resourceGroupName, siteName);
         }
     }

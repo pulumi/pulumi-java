@@ -51,8 +51,7 @@ public final class WorkspaceResponseProperties {
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public WorkspaceResponseProperties build() {
+        }        public WorkspaceResponseProperties build() {
             return new WorkspaceResponseProperties(provisioningState);
         }
     }

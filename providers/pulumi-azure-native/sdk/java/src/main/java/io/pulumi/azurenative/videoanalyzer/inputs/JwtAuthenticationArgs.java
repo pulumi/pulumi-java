@@ -132,52 +132,54 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
             this.audiences = audiences;
             return this;
         }
-
         public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = Output.ofNullable(audiences);
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder claims(@Nullable Output<List<TokenClaimArgs>> claims) {
             this.claims = claims;
             return this;
         }
-
         public Builder claims(@Nullable List<TokenClaimArgs> claims) {
             this.claims = Output.ofNullable(claims);
             return this;
         }
-
+        public Builder claims(TokenClaimArgs... claims) {
+            return claims(List.of(claims));
+        }
         public Builder issuers(@Nullable Output<List<String>> issuers) {
             this.issuers = issuers;
             return this;
         }
-
         public Builder issuers(@Nullable List<String> issuers) {
             this.issuers = Output.ofNullable(issuers);
             return this;
         }
-
+        public Builder issuers(String... issuers) {
+            return issuers(List.of(issuers));
+        }
         public Builder keys(@Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>> keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
+        public Builder keys(Either<EccTokenKeyArgs,RsaTokenKeyArgs>... keys) {
+            return keys(List.of(keys));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public JwtAuthenticationArgs build() {
+        }        public JwtAuthenticationArgs build() {
             return new JwtAuthenticationArgs(audiences, claims, issuers, keys, type);
         }
     }

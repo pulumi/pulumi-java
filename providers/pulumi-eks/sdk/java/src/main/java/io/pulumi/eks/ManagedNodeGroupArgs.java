@@ -384,202 +384,171 @@ public final class ManagedNodeGroupArgs extends io.pulumi.resources.ResourceArgs
             this.amiType = amiType;
             return this;
         }
-
         public Builder amiType(@Nullable String amiType) {
             this.amiType = Output.ofNullable(amiType);
             return this;
         }
-
         public Builder capacityType(@Nullable Output<String> capacityType) {
             this.capacityType = capacityType;
             return this;
         }
-
         public Builder capacityType(@Nullable String capacityType) {
             this.capacityType = Output.ofNullable(capacityType);
             return this;
         }
-
         public Builder cluster(Output<CoreDataArgs> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(CoreDataArgs cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder diskSize(@Nullable Output<Integer> diskSize) {
             this.diskSize = diskSize;
             return this;
         }
-
         public Builder diskSize(@Nullable Integer diskSize) {
             this.diskSize = Output.ofNullable(diskSize);
             return this;
         }
-
         public Builder forceUpdateVersion(@Nullable Output<Boolean> forceUpdateVersion) {
             this.forceUpdateVersion = forceUpdateVersion;
             return this;
         }
-
         public Builder forceUpdateVersion(@Nullable Boolean forceUpdateVersion) {
             this.forceUpdateVersion = Output.ofNullable(forceUpdateVersion);
             return this;
         }
-
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
-
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = Output.ofNullable(instanceTypes);
             return this;
         }
-
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder launchTemplate(@Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
-
         public Builder launchTemplate(@Nullable NodeGroupLaunchTemplateArgs launchTemplate) {
             this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
-
         public Builder nodeGroupName(@Nullable Output<String> nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
             return this;
         }
-
         public Builder nodeGroupName(@Nullable String nodeGroupName) {
             this.nodeGroupName = Output.ofNullable(nodeGroupName);
             return this;
         }
-
         public Builder nodeGroupNamePrefix(@Nullable Output<String> nodeGroupNamePrefix) {
             this.nodeGroupNamePrefix = nodeGroupNamePrefix;
             return this;
         }
-
         public Builder nodeGroupNamePrefix(@Nullable String nodeGroupNamePrefix) {
             this.nodeGroupNamePrefix = Output.ofNullable(nodeGroupNamePrefix);
             return this;
         }
-
         public Builder nodeRole(@Nullable Output<Role> nodeRole) {
             this.nodeRole = nodeRole;
             return this;
         }
-
         public Builder nodeRole(@Nullable Role nodeRole) {
             this.nodeRole = Output.ofNullable(nodeRole);
             return this;
         }
-
         public Builder nodeRoleArn(@Nullable Output<String> nodeRoleArn) {
             this.nodeRoleArn = nodeRoleArn;
             return this;
         }
-
         public Builder nodeRoleArn(@Nullable String nodeRoleArn) {
             this.nodeRoleArn = Output.ofNullable(nodeRoleArn);
             return this;
         }
-
         public Builder releaseVersion(@Nullable Output<String> releaseVersion) {
             this.releaseVersion = releaseVersion;
             return this;
         }
-
         public Builder releaseVersion(@Nullable String releaseVersion) {
             this.releaseVersion = Output.ofNullable(releaseVersion);
             return this;
         }
-
         public Builder remoteAccess(@Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess) {
             this.remoteAccess = remoteAccess;
             return this;
         }
-
         public Builder remoteAccess(@Nullable NodeGroupRemoteAccessArgs remoteAccess) {
             this.remoteAccess = Output.ofNullable(remoteAccess);
             return this;
         }
-
         public Builder scalingConfig(@Nullable Output<NodeGroupScalingConfigArgs> scalingConfig) {
             this.scalingConfig = scalingConfig;
             return this;
         }
-
         public Builder scalingConfig(@Nullable NodeGroupScalingConfigArgs scalingConfig) {
             this.scalingConfig = Output.ofNullable(scalingConfig);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder taints(@Nullable Output<List<NodeGroupTaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
-
         public Builder taints(@Nullable List<NodeGroupTaintArgs> taints) {
             this.taints = Output.ofNullable(taints);
             return this;
         }
-
+        public Builder taints(NodeGroupTaintArgs... taints) {
+            return taints(List.of(taints));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ManagedNodeGroupArgs build() {
+        }        public ManagedNodeGroupArgs build() {
             return new ManagedNodeGroupArgs(amiType, capacityType, cluster, clusterName, diskSize, forceUpdateVersion, instanceTypes, labels, launchTemplate, nodeGroupName, nodeGroupNamePrefix, nodeRole, nodeRoleArn, releaseVersion, remoteAccess, scalingConfig, subnetIds, tags, taints, version);
         }
     }

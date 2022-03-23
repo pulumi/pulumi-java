@@ -45,8 +45,7 @@ public final class AnalysisSourceEntity {
         public Builder sourceTemplate(@Nullable AnalysisSourceTemplate sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
-        }
-        public AnalysisSourceEntity build() {
+        }        public AnalysisSourceEntity build() {
             return new AnalysisSourceEntity(sourceTemplate);
         }
     }

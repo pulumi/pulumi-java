@@ -183,47 +183,38 @@ public final class VMwareCbtNicDetailsResponse {
             this.isPrimaryNic = isPrimaryNic;
             return this;
         }
-
         public Builder isSelectedForMigration(@Nullable String isSelectedForMigration) {
             this.isSelectedForMigration = isSelectedForMigration;
             return this;
         }
-
         public Builder nicId(String nicId) {
             this.nicId = Objects.requireNonNull(nicId);
             return this;
         }
-
         public Builder sourceIPAddress(String sourceIPAddress) {
             this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
             return this;
         }
-
         public Builder sourceIPAddressType(String sourceIPAddressType) {
             this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
             return this;
         }
-
         public Builder sourceNetworkId(String sourceNetworkId) {
             this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
             return this;
         }
-
         public Builder targetIPAddress(@Nullable String targetIPAddress) {
             this.targetIPAddress = targetIPAddress;
             return this;
         }
-
         public Builder targetIPAddressType(@Nullable String targetIPAddressType) {
             this.targetIPAddressType = targetIPAddressType;
             return this;
         }
-
         public Builder targetSubnetName(@Nullable String targetSubnetName) {
             this.targetSubnetName = targetSubnetName;
             return this;
-        }
-        public VMwareCbtNicDetailsResponse build() {
+        }        public VMwareCbtNicDetailsResponse build() {
             return new VMwareCbtNicDetailsResponse(isPrimaryNic, isSelectedForMigration, nicId, sourceIPAddress, sourceIPAddressType, sourceNetworkId, targetIPAddress, targetIPAddressType, targetSubnetName);
         }
     }

@@ -101,22 +101,18 @@ public final class GoogleCloudRetailV2IntervalResponse {
             this.exclusiveMaximum = Objects.requireNonNull(exclusiveMaximum);
             return this;
         }
-
         public Builder exclusiveMinimum(Double exclusiveMinimum) {
             this.exclusiveMinimum = Objects.requireNonNull(exclusiveMinimum);
             return this;
         }
-
         public Builder maximum(Double maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
-
         public Builder minimum(Double minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
-        }
-        public GoogleCloudRetailV2IntervalResponse build() {
+        }        public GoogleCloudRetailV2IntervalResponse build() {
             return new GoogleCloudRetailV2IntervalResponse(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }
     }

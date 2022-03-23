@@ -79,22 +79,18 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             this.digest = digest;
             return this;
         }
-
         public Builder digest(@Nullable Map<String,String> digest) {
             this.digest = Output.ofNullable(digest);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SubjectArgs build() {
+        }        public SubjectArgs build() {
             return new SubjectArgs(digest, name);
         }
     }

@@ -93,17 +93,14 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public StepResponse build() {
+        }        public StepResponse build() {
             return new StepResponse(kind, name, properties);
         }
     }

@@ -79,22 +79,18 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
             this.oAuth2 = oAuth2;
             return this;
         }
-
         public Builder oAuth2(@Nullable OAuth2AuthenticationSettingsContractArgs oAuth2) {
             this.oAuth2 = Output.ofNullable(oAuth2);
             return this;
         }
-
         public Builder openid(@Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid) {
             this.openid = openid;
             return this;
         }
-
         public Builder openid(@Nullable OpenIdAuthenticationSettingsContractArgs openid) {
             this.openid = Output.ofNullable(openid);
             return this;
-        }
-        public AuthenticationSettingsContractArgs build() {
+        }        public AuthenticationSettingsContractArgs build() {
             return new AuthenticationSettingsContractArgs(oAuth2, openid);
         }
     }

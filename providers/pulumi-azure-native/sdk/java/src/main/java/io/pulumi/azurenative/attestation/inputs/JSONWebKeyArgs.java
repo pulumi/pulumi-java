@@ -340,172 +340,141 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.alg = alg;
             return this;
         }
-
         public Builder alg(@Nullable String alg) {
             this.alg = Output.ofNullable(alg);
             return this;
         }
-
         public Builder crv(@Nullable Output<String> crv) {
             this.crv = crv;
             return this;
         }
-
         public Builder crv(@Nullable String crv) {
             this.crv = Output.ofNullable(crv);
             return this;
         }
-
         public Builder d(@Nullable Output<String> d) {
             this.d = d;
             return this;
         }
-
         public Builder d(@Nullable String d) {
             this.d = Output.ofNullable(d);
             return this;
         }
-
         public Builder dp(@Nullable Output<String> dp) {
             this.dp = dp;
             return this;
         }
-
         public Builder dp(@Nullable String dp) {
             this.dp = Output.ofNullable(dp);
             return this;
         }
-
         public Builder dq(@Nullable Output<String> dq) {
             this.dq = dq;
             return this;
         }
-
         public Builder dq(@Nullable String dq) {
             this.dq = Output.ofNullable(dq);
             return this;
         }
-
         public Builder e(@Nullable Output<String> e) {
             this.e = e;
             return this;
         }
-
         public Builder e(@Nullable String e) {
             this.e = Output.ofNullable(e);
             return this;
         }
-
         public Builder k(@Nullable Output<String> k) {
             this.k = k;
             return this;
         }
-
         public Builder k(@Nullable String k) {
             this.k = Output.ofNullable(k);
             return this;
         }
-
         public Builder kid(@Nullable Output<String> kid) {
             this.kid = kid;
             return this;
         }
-
         public Builder kid(@Nullable String kid) {
             this.kid = Output.ofNullable(kid);
             return this;
         }
-
         public Builder kty(Output<String> kty) {
             this.kty = Objects.requireNonNull(kty);
             return this;
         }
-
         public Builder kty(String kty) {
             this.kty = Output.of(Objects.requireNonNull(kty));
             return this;
         }
-
         public Builder n(@Nullable Output<String> n) {
             this.n = n;
             return this;
         }
-
         public Builder n(@Nullable String n) {
             this.n = Output.ofNullable(n);
             return this;
         }
-
         public Builder p(@Nullable Output<String> p) {
             this.p = p;
             return this;
         }
-
         public Builder p(@Nullable String p) {
             this.p = Output.ofNullable(p);
             return this;
         }
-
         public Builder q(@Nullable Output<String> q) {
             this.q = q;
             return this;
         }
-
         public Builder q(@Nullable String q) {
             this.q = Output.ofNullable(q);
             return this;
         }
-
         public Builder qi(@Nullable Output<String> qi) {
             this.qi = qi;
             return this;
         }
-
         public Builder qi(@Nullable String qi) {
             this.qi = Output.ofNullable(qi);
             return this;
         }
-
         public Builder use(@Nullable Output<String> use) {
             this.use = use;
             return this;
         }
-
         public Builder use(@Nullable String use) {
             this.use = Output.ofNullable(use);
             return this;
         }
-
         public Builder x(@Nullable Output<String> x) {
             this.x = x;
             return this;
         }
-
         public Builder x(@Nullable String x) {
             this.x = Output.ofNullable(x);
             return this;
         }
-
         public Builder x5c(@Nullable Output<List<String>> x5c) {
             this.x5c = x5c;
             return this;
         }
-
         public Builder x5c(@Nullable List<String> x5c) {
             this.x5c = Output.ofNullable(x5c);
             return this;
         }
-
+        public Builder x5c(String... x5c) {
+            return x5c(List.of(x5c));
+        }
         public Builder y(@Nullable Output<String> y) {
             this.y = y;
             return this;
         }
-
         public Builder y(@Nullable String y) {
             this.y = Output.ofNullable(y);
             return this;
-        }
-        public JSONWebKeyArgs build() {
+        }        public JSONWebKeyArgs build() {
             return new JSONWebKeyArgs(alg, crv, d, dp, dq, e, k, kid, kty, n, p, q, qi, use, x, x5c, y);
         }
     }

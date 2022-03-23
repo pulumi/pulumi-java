@@ -77,22 +77,18 @@ public final class EventFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder attribute(String attribute) {
             this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public EventFilterArgs build() {
+        }        public EventFilterArgs build() {
             return new EventFilterArgs(attribute, value);
         }
     }

@@ -160,72 +160,73 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fqdnTags(@Nullable Output<List<String>> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
-
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
             this.fqdnTags = Output.ofNullable(fqdnTags);
             return this;
         }
-
+        public Builder fqdnTags(String... fqdnTags) {
+            return fqdnTags(List.of(fqdnTags));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocols(@Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder protocols(@Nullable List<AzureFirewallApplicationRuleProtocolArgs> protocols) {
             this.protocols = Output.ofNullable(protocols);
             return this;
         }
-
+        public Builder protocols(AzureFirewallApplicationRuleProtocolArgs... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
             return this;
         }
-
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }
         public Builder targetFqdns(@Nullable Output<List<String>> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }
-
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
             this.targetFqdns = Output.ofNullable(targetFqdns);
             return this;
         }
-        public AzureFirewallApplicationRuleArgs build() {
+        public Builder targetFqdns(String... targetFqdns) {
+            return targetFqdns(List.of(targetFqdns));
+        }        public AzureFirewallApplicationRuleArgs build() {
             return new AzureFirewallApplicationRuleArgs(description, fqdnTags, name, protocols, sourceAddresses, sourceIpGroups, targetFqdns);
         }
     }

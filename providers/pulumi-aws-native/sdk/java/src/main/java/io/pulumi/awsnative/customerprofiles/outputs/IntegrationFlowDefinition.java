@@ -91,32 +91,29 @@ public final class IntegrationFlowDefinition {
             this.description = description;
             return this;
         }
-
         public Builder flowName(String flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
-
         public Builder kmsArn(String kmsArn) {
             this.kmsArn = Objects.requireNonNull(kmsArn);
             return this;
         }
-
         public Builder sourceFlowConfig(IntegrationSourceFlowConfig sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
-
         public Builder tasks(List<IntegrationTask> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
-
+        public Builder tasks(IntegrationTask... tasks) {
+            return tasks(List.of(tasks));
+        }
         public Builder triggerConfig(IntegrationTriggerConfig triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
-        }
-        public IntegrationFlowDefinition build() {
+        }        public IntegrationFlowDefinition build() {
             return new IntegrationFlowDefinition(description, flowName, kmsArn, sourceFlowConfig, tasks, triggerConfig);
         }
     }

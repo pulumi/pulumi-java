@@ -110,42 +110,34 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder booleanValue(@Nullable String booleanValue) {
             this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
-
         public Builder doubleValue(@Nullable Output<String> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
-
         public Builder doubleValue(@Nullable String doubleValue) {
             this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
-
         public Builder integerValue(@Nullable Output<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
-
         public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = Output.ofNullable(integerValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
-        }
-        public DetectorModelAssetPropertyVariantArgs build() {
+        }        public DetectorModelAssetPropertyVariantArgs build() {
             return new DetectorModelAssetPropertyVariantArgs(booleanValue, doubleValue, integerValue, stringValue);
         }
     }

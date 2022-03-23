@@ -54,8 +54,7 @@ public final class GetCostCategoryArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetCostCategoryArgs build() {
+        }        public GetCostCategoryArgs build() {
             return new GetCostCategoryArgs(arn);
         }
     }

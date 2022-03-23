@@ -95,32 +95,26 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public ConnectorS3LogDeliveryArgs build() {
+        }        public ConnectorS3LogDeliveryArgs build() {
             return new ConnectorS3LogDeliveryArgs(bucket, enabled, prefix);
         }
     }

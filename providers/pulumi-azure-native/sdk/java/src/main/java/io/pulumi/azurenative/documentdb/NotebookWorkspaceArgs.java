@@ -90,32 +90,26 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder notebookWorkspaceName(@Nullable Output<String> notebookWorkspaceName) {
             this.notebookWorkspaceName = notebookWorkspaceName;
             return this;
         }
-
         public Builder notebookWorkspaceName(@Nullable String notebookWorkspaceName) {
             this.notebookWorkspaceName = Output.ofNullable(notebookWorkspaceName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public NotebookWorkspaceArgs build() {
+        }        public NotebookWorkspaceArgs build() {
             return new NotebookWorkspaceArgs(accountName, notebookWorkspaceName, resourceGroupName);
         }
     }

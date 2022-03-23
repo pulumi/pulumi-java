@@ -72,12 +72,10 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
             this.apiproduct = Objects.requireNonNull(apiproduct);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GoogleCloudApigeeV1ApiProductRefResponse build() {
+        }        public GoogleCloudApigeeV1ApiProductRefResponse build() {
             return new GoogleCloudApigeeV1ApiProductRefResponse(apiproduct, status);
         }
     }

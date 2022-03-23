@@ -88,17 +88,14 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder credentialName(String credentialName) {
             this.credentialName = Objects.requireNonNull(credentialName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCredentialArgs build() {
+        }        public GetCredentialArgs build() {
             return new GetCredentialArgs(automationAccountName, credentialName, resourceGroupName);
         }
     }

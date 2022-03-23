@@ -81,17 +81,17 @@ public final class GetVirtualClusterResult {
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<VirtualClusterTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetVirtualClusterResult build() {
+        public Builder tags(VirtualClusterTag... tags) {
+            return tags(List.of(tags));
+        }        public GetVirtualClusterResult build() {
             return new GetVirtualClusterResult(arn, id, tags);
         }
     }

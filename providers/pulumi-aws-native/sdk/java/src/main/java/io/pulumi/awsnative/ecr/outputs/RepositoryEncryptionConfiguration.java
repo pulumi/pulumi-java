@@ -56,12 +56,10 @@ public final class RepositoryEncryptionConfiguration {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
-        }
-        public RepositoryEncryptionConfiguration build() {
+        }        public RepositoryEncryptionConfiguration build() {
             return new RepositoryEncryptionConfiguration(encryptionType, kmsKey);
         }
     }

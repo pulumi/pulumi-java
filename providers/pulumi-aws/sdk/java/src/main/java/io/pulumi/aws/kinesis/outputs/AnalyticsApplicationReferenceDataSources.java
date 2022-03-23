@@ -105,22 +105,18 @@ public final class AnalyticsApplicationReferenceDataSources {
             this.id = id;
             return this;
         }
-
         public Builder s3(AnalyticsApplicationReferenceDataSourcesS3 s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
-
         public Builder schema(AnalyticsApplicationReferenceDataSourcesSchema schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSources build() {
+        }        public AnalyticsApplicationReferenceDataSources build() {
             return new AnalyticsApplicationReferenceDataSources(id, s3, schema, tableName);
         }
     }

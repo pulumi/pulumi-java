@@ -55,12 +55,10 @@ public final class TaskDefinitionInferenceAccelerator {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceType(@Nullable String deviceType) {
             this.deviceType = deviceType;
             return this;
-        }
-        public TaskDefinitionInferenceAccelerator build() {
+        }        public TaskDefinitionInferenceAccelerator build() {
             return new TaskDefinitionInferenceAccelerator(deviceName, deviceType);
         }
     }

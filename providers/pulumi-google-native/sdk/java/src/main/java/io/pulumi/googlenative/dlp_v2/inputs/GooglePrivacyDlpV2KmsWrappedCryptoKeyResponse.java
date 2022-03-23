@@ -76,12 +76,10 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
             this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
             return this;
         }
-
         public Builder wrappedKey(String wrappedKey) {
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
-        }
-        public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse build() {
+        }        public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(cryptoKeyName, wrappedKey);
         }
     }

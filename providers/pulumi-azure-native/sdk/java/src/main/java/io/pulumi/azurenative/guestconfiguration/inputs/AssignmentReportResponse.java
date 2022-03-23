@@ -190,47 +190,41 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
             this.assignment = assignment;
             return this;
         }
-
         public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder operationType(String operationType) {
             this.operationType = Objects.requireNonNull(operationType);
             return this;
         }
-
         public Builder reportId(String reportId) {
             this.reportId = Objects.requireNonNull(reportId);
             return this;
         }
-
         public Builder resources(@Nullable List<AssignmentReportResourceResponse> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(AssignmentReportResourceResponse... resources) {
+            return resources(List.of(resources));
+        }
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder vm(@Nullable VMInfoResponse vm) {
             this.vm = vm;
             return this;
-        }
-        public AssignmentReportResponse build() {
+        }        public AssignmentReportResponse build() {
             return new AssignmentReportResponse(assignment, complianceStatus, endTime, id, operationType, reportId, resources, startTime, vm);
         }
     }

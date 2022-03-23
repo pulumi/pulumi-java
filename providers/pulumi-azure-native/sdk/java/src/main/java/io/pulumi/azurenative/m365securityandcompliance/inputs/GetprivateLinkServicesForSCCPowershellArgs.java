@@ -72,12 +72,10 @@ public final class GetprivateLinkServicesForSCCPowershellArgs extends io.pulumi.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetprivateLinkServicesForSCCPowershellArgs build() {
+        }        public GetprivateLinkServicesForSCCPowershellArgs build() {
             return new GetprivateLinkServicesForSCCPowershellArgs(resourceGroupName, resourceName);
         }
     }

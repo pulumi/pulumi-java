@@ -107,42 +107,34 @@ public final class AzureADMetricArgs extends io.pulumi.resources.ResourceArgs {
             this.azureADMetricsName = azureADMetricsName;
             return this;
         }
-
         public Builder azureADMetricsName(@Nullable String azureADMetricsName) {
             this.azureADMetricsName = Output.ofNullable(azureADMetricsName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AzureADMetricArgs build() {
+        }        public AzureADMetricArgs build() {
             return new AzureADMetricArgs(azureADMetricsName, location, resourceGroupName, tags);
         }
     }

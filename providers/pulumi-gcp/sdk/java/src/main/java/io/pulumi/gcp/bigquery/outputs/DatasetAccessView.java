@@ -89,17 +89,14 @@ public final class DatasetAccessView {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public DatasetAccessView build() {
+        }        public DatasetAccessView build() {
             return new DatasetAccessView(datasetId, projectId, tableId);
         }
     }

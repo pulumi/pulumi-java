@@ -71,12 +71,10 @@ public final class FlowEndpointsConfigurationResponse {
             this.connector = connector;
             return this;
         }
-
         public Builder workflow(@Nullable FlowEndpointsResponse workflow) {
             this.workflow = workflow;
             return this;
-        }
-        public FlowEndpointsConfigurationResponse build() {
+        }        public FlowEndpointsConfigurationResponse build() {
             return new FlowEndpointsConfigurationResponse(connector, workflow);
         }
     }

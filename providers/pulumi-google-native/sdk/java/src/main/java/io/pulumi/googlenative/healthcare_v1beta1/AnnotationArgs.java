@@ -191,102 +191,82 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             this.annotationSource = annotationSource;
             return this;
         }
-
         public Builder annotationSource(@Nullable AnnotationSourceArgs annotationSource) {
             this.annotationSource = Output.ofNullable(annotationSource);
             return this;
         }
-
         public Builder annotationStoreId(Output<String> annotationStoreId) {
             this.annotationStoreId = Objects.requireNonNull(annotationStoreId);
             return this;
         }
-
         public Builder annotationStoreId(String annotationStoreId) {
             this.annotationStoreId = Output.of(Objects.requireNonNull(annotationStoreId));
             return this;
         }
-
         public Builder customData(@Nullable Output<Map<String,String>> customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder customData(@Nullable Map<String,String> customData) {
             this.customData = Output.ofNullable(customData);
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder imageAnnotation(@Nullable Output<ImageAnnotationArgs> imageAnnotation) {
             this.imageAnnotation = imageAnnotation;
             return this;
         }
-
         public Builder imageAnnotation(@Nullable ImageAnnotationArgs imageAnnotation) {
             this.imageAnnotation = Output.ofNullable(imageAnnotation);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceAnnotation(@Nullable Output<ResourceAnnotationArgs> resourceAnnotation) {
             this.resourceAnnotation = resourceAnnotation;
             return this;
         }
-
         public Builder resourceAnnotation(@Nullable ResourceAnnotationArgs resourceAnnotation) {
             this.resourceAnnotation = Output.ofNullable(resourceAnnotation);
             return this;
         }
-
         public Builder textAnnotation(@Nullable Output<SensitiveTextAnnotationArgs> textAnnotation) {
             this.textAnnotation = textAnnotation;
             return this;
         }
-
         public Builder textAnnotation(@Nullable SensitiveTextAnnotationArgs textAnnotation) {
             this.textAnnotation = Output.ofNullable(textAnnotation);
             return this;
-        }
-        public AnnotationArgs build() {
+        }        public AnnotationArgs build() {
             return new AnnotationArgs(annotationSource, annotationStoreId, customData, datasetId, imageAnnotation, location, name, project, resourceAnnotation, textAnnotation);
         }
     }

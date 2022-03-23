@@ -90,17 +90,14 @@ public final class GetStreamingJobArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetStreamingJobArgs build() {
+        }        public GetStreamingJobArgs build() {
             return new GetStreamingJobArgs(expand, jobName, resourceGroupName);
         }
     }

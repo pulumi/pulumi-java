@@ -78,17 +78,14 @@ public final class GetFeatureArgs extends io.pulumi.resources.InvokeArgs {
             this.featureId = Objects.requireNonNull(featureId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetFeatureArgs build() {
+        }        public GetFeatureArgs build() {
             return new GetFeatureArgs(featureId, location, project);
         }
     }

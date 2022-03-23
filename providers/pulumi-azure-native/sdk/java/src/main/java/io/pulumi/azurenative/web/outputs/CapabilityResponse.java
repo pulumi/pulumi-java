@@ -87,17 +87,14 @@ public final class CapabilityResponse {
             this.name = name;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CapabilityResponse build() {
+        }        public CapabilityResponse build() {
             return new CapabilityResponse(name, reason, value);
         }
     }

@@ -75,22 +75,18 @@ public final class RouteSpecGrpcRouteTimeoutArgs extends io.pulumi.resources.Res
             this.idle = idle;
             return this;
         }
-
         public Builder idle(@Nullable RouteSpecGrpcRouteTimeoutIdleArgs idle) {
             this.idle = Output.ofNullable(idle);
             return this;
         }
-
         public Builder perRequest(@Nullable Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
-
         public Builder perRequest(@Nullable RouteSpecGrpcRouteTimeoutPerRequestArgs perRequest) {
             this.perRequest = Output.ofNullable(perRequest);
             return this;
-        }
-        public RouteSpecGrpcRouteTimeoutArgs build() {
+        }        public RouteSpecGrpcRouteTimeoutArgs build() {
             return new RouteSpecGrpcRouteTimeoutArgs(idle, perRequest);
         }
     }

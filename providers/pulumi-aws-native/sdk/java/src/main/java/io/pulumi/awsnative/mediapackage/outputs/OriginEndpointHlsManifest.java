@@ -198,52 +198,45 @@ public final class OriginEndpointHlsManifest {
             this.adMarkers = adMarkers;
             return this;
         }
-
         public Builder adTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
-
+        public Builder adTriggers(OriginEndpointHlsManifestAdTriggersItem... adTriggers) {
+            return adTriggers(List.of(adTriggers));
+        }
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder playlistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
             this.playlistType = playlistType;
             return this;
         }
-
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public OriginEndpointHlsManifest build() {
+        }        public OriginEndpointHlsManifest build() {
             return new OriginEndpointHlsManifest(adMarkers, adTriggers, adsOnDeliveryRestrictions, id, includeIframeOnlyStream, manifestName, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, url);
         }
     }

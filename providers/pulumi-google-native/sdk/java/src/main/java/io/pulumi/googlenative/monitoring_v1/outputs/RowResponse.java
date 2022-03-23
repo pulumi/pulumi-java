@@ -71,12 +71,13 @@ public final class RowResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public Builder widgets(List<WidgetResponse> widgets) {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-        public RowResponse build() {
+        public Builder widgets(WidgetResponse... widgets) {
+            return widgets(List.of(widgets));
+        }        public RowResponse build() {
             return new RowResponse(weight, widgets);
         }
     }

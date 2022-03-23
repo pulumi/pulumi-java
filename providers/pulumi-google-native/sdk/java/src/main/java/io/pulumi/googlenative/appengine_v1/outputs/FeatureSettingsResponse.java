@@ -69,12 +69,10 @@ public final class FeatureSettingsResponse {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }
-
         public Builder useContainerOptimizedOs(Boolean useContainerOptimizedOs) {
             this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
             return this;
-        }
-        public FeatureSettingsResponse build() {
+        }        public FeatureSettingsResponse build() {
             return new FeatureSettingsResponse(splitHealthChecks, useContainerOptimizedOs);
         }
     }

@@ -197,47 +197,38 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageResponse extends io.p
             this.conversationSuccess = Objects.requireNonNull(conversationSuccess);
             return this;
         }
-
         public Builder endInteraction(GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse endInteraction) {
             this.endInteraction = Objects.requireNonNull(endInteraction);
             return this;
         }
-
         public Builder liveAgentHandoff(GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse liveAgentHandoff) {
             this.liveAgentHandoff = Objects.requireNonNull(liveAgentHandoff);
             return this;
         }
-
         public Builder mixedAudio(GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse mixedAudio) {
             this.mixedAudio = Objects.requireNonNull(mixedAudio);
             return this;
         }
-
         public Builder outputAudioText(GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse outputAudioText) {
             this.outputAudioText = Objects.requireNonNull(outputAudioText);
             return this;
         }
-
         public Builder payload(Map<String,String> payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
-
         public Builder playAudio(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse playAudio) {
             this.playAudio = Objects.requireNonNull(playAudio);
             return this;
         }
-
         public Builder telephonyTransferCall(GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse telephonyTransferCall) {
             this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall);
             return this;
         }
-
         public Builder text(GoogleCloudDialogflowCxV3ResponseMessageTextResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ResponseMessageResponse build() {
+        }        public GoogleCloudDialogflowCxV3ResponseMessageResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageResponse(conversationSuccess, endInteraction, liveAgentHandoff, mixedAudio, outputAudioText, payload, playAudio, telephonyTransferCall, text);
         }
     }

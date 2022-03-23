@@ -78,12 +78,10 @@ public final class DeliveryRuleResponseHeaderActionResponse extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(HeaderActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleResponseHeaderActionResponse build() {
+        }        public DeliveryRuleResponseHeaderActionResponse build() {
             return new DeliveryRuleResponseHeaderActionResponse(name, parameters);
         }
     }

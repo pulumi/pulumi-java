@@ -58,8 +58,7 @@ public final class ApprovalConfigResponse extends io.pulumi.resources.InvokeArgs
         public Builder approvalRequired(Boolean approvalRequired) {
             this.approvalRequired = Objects.requireNonNull(approvalRequired);
             return this;
-        }
-        public ApprovalConfigResponse build() {
+        }        public ApprovalConfigResponse build() {
             return new ApprovalConfigResponse(approvalRequired);
         }
     }

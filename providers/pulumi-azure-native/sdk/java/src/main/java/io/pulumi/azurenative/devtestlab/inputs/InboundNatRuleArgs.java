@@ -97,32 +97,26 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.backendPort = backendPort;
             return this;
         }
-
         public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = Output.ofNullable(backendPort);
             return this;
         }
-
         public Builder frontendPort(@Nullable Output<Integer> frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
-
         public Builder frontendPort(@Nullable Integer frontendPort) {
             this.frontendPort = Output.ofNullable(frontendPort);
             return this;
         }
-
         public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public Builder transportProtocol(@Nullable Either<String,TransportProtocol> transportProtocol) {
             this.transportProtocol = Output.ofNullable(transportProtocol);
             return this;
-        }
-        public InboundNatRuleArgs build() {
+        }        public InboundNatRuleArgs build() {
             return new InboundNatRuleArgs(backendPort, frontendPort, transportProtocol);
         }
     }

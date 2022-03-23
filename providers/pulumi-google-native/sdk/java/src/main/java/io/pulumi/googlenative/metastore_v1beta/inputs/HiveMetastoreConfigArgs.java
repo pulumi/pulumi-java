@@ -129,52 +129,42 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
             this.auxiliaryVersions = auxiliaryVersions;
             return this;
         }
-
         public Builder auxiliaryVersions(@Nullable Map<String,String> auxiliaryVersions) {
             this.auxiliaryVersions = Output.ofNullable(auxiliaryVersions);
             return this;
         }
-
         public Builder configOverrides(@Nullable Output<Map<String,String>> configOverrides) {
             this.configOverrides = configOverrides;
             return this;
         }
-
         public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
             this.configOverrides = Output.ofNullable(configOverrides);
             return this;
         }
-
         public Builder endpointProtocol(@Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol) {
             this.endpointProtocol = endpointProtocol;
             return this;
         }
-
         public Builder endpointProtocol(@Nullable HiveMetastoreConfigEndpointProtocol endpointProtocol) {
             this.endpointProtocol = Output.ofNullable(endpointProtocol);
             return this;
         }
-
         public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
-
         public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Output.ofNullable(kerberosConfig);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public HiveMetastoreConfigArgs build() {
+        }        public HiveMetastoreConfigArgs build() {
             return new HiveMetastoreConfigArgs(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
         }
     }

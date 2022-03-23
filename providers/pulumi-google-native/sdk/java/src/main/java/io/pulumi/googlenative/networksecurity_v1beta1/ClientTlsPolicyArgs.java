@@ -178,92 +178,77 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.clientCertificate = clientCertificate;
             return this;
         }
-
         public Builder clientCertificate(@Nullable GoogleCloudNetworksecurityV1beta1CertificateProviderArgs clientCertificate) {
             this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
-
         public Builder clientTlsPolicyId(Output<String> clientTlsPolicyId) {
             this.clientTlsPolicyId = Objects.requireNonNull(clientTlsPolicyId);
             return this;
         }
-
         public Builder clientTlsPolicyId(String clientTlsPolicyId) {
             this.clientTlsPolicyId = Output.of(Objects.requireNonNull(clientTlsPolicyId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serverValidationCa(@Nullable Output<List<ValidationCAArgs>> serverValidationCa) {
             this.serverValidationCa = serverValidationCa;
             return this;
         }
-
         public Builder serverValidationCa(@Nullable List<ValidationCAArgs> serverValidationCa) {
             this.serverValidationCa = Output.ofNullable(serverValidationCa);
             return this;
         }
-
+        public Builder serverValidationCa(ValidationCAArgs... serverValidationCa) {
+            return serverValidationCa(List.of(serverValidationCa));
+        }
         public Builder sni(@Nullable Output<String> sni) {
             this.sni = sni;
             return this;
         }
-
         public Builder sni(@Nullable String sni) {
             this.sni = Output.ofNullable(sni);
             return this;
-        }
-        public ClientTlsPolicyArgs build() {
+        }        public ClientTlsPolicyArgs build() {
             return new ClientTlsPolicyArgs(clientCertificate, clientTlsPolicyId, description, labels, location, name, project, serverValidationCa, sni);
         }
     }

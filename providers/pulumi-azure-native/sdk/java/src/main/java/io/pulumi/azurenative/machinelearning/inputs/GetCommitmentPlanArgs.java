@@ -72,12 +72,10 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
             this.commitmentPlanName = Objects.requireNonNull(commitmentPlanName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCommitmentPlanArgs build() {
+        }        public GetCommitmentPlanArgs build() {
             return new GetCommitmentPlanArgs(commitmentPlanName, resourceGroupName);
         }
     }

@@ -364,192 +364,160 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
             this.connectVia = Objects.requireNonNull(connectVia);
             return this;
         }
-
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.of(Objects.requireNonNull(connectVia));
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentPath(@Nullable Output<Object> environmentPath) {
             this.environmentPath = environmentPath;
             return this;
         }
-
         public Builder environmentPath(@Nullable Object environmentPath) {
             this.environmentPath = Output.ofNullable(environmentPath);
             return this;
         }
-
         public Builder executionCredential(@Nullable Output<SSISExecutionCredentialArgs> executionCredential) {
             this.executionCredential = executionCredential;
             return this;
         }
-
         public Builder executionCredential(@Nullable SSISExecutionCredentialArgs executionCredential) {
             this.executionCredential = Output.ofNullable(executionCredential);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder logLocation(@Nullable Output<SSISLogLocationArgs> logLocation) {
             this.logLocation = logLocation;
             return this;
         }
-
         public Builder logLocation(@Nullable SSISLogLocationArgs logLocation) {
             this.logLocation = Output.ofNullable(logLocation);
             return this;
         }
-
         public Builder loggingLevel(@Nullable Output<Object> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder loggingLevel(@Nullable Object loggingLevel) {
             this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder packageConnectionManagers(@Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers) {
             this.packageConnectionManagers = packageConnectionManagers;
             return this;
         }
-
         public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> packageConnectionManagers) {
             this.packageConnectionManagers = Output.ofNullable(packageConnectionManagers);
             return this;
         }
-
         public Builder packageLocation(Output<SSISPackageLocationArgs> packageLocation) {
             this.packageLocation = Objects.requireNonNull(packageLocation);
             return this;
         }
-
         public Builder packageLocation(SSISPackageLocationArgs packageLocation) {
             this.packageLocation = Output.of(Objects.requireNonNull(packageLocation));
             return this;
         }
-
         public Builder packageParameters(@Nullable Output<Map<String,SSISExecutionParameterArgs>> packageParameters) {
             this.packageParameters = packageParameters;
             return this;
         }
-
         public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterArgs> packageParameters) {
             this.packageParameters = Output.ofNullable(packageParameters);
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder projectConnectionManagers(@Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers) {
             this.projectConnectionManagers = projectConnectionManagers;
             return this;
         }
-
         public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> projectConnectionManagers) {
             this.projectConnectionManagers = Output.ofNullable(projectConnectionManagers);
             return this;
         }
-
         public Builder projectParameters(@Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters) {
             this.projectParameters = projectParameters;
             return this;
         }
-
         public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterArgs> projectParameters) {
             this.projectParameters = Output.ofNullable(projectParameters);
             return this;
         }
-
         public Builder propertyOverrides(@Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides) {
             this.propertyOverrides = propertyOverrides;
             return this;
         }
-
         public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideArgs> propertyOverrides) {
             this.propertyOverrides = Output.ofNullable(propertyOverrides);
             return this;
         }
-
         public Builder runtime(@Nullable Output<Object> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable Object runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public ExecuteSSISPackageActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public ExecuteSSISPackageActivityArgs build() {
             return new ExecuteSSISPackageActivityArgs(connectVia, dependsOn, description, environmentPath, executionCredential, linkedServiceName, logLocation, loggingLevel, name, packageConnectionManagers, packageLocation, packageParameters, policy, projectConnectionManagers, projectParameters, propertyOverrides, runtime, type, userProperties);
         }
     }

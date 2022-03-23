@@ -171,82 +171,66 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
-
         public Builder format(@Nullable Output<CertificateFormat> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable CertificateFormat format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
-
         public Builder thumbprintAlgorithm(@Nullable Output<String> thumbprintAlgorithm) {
             this.thumbprintAlgorithm = thumbprintAlgorithm;
             return this;
         }
-
         public Builder thumbprintAlgorithm(@Nullable String thumbprintAlgorithm) {
             this.thumbprintAlgorithm = Output.ofNullable(thumbprintAlgorithm);
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(accountName, certificateName, data, format, password, resourceGroupName, thumbprint, thumbprintAlgorithm);
         }
     }

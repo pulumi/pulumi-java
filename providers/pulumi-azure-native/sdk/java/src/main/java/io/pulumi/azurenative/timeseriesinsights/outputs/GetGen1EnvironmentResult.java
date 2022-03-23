@@ -286,77 +286,65 @@ public final class GetGen1EnvironmentResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder dataAccessFqdn(String dataAccessFqdn) {
             this.dataAccessFqdn = Objects.requireNonNull(dataAccessFqdn);
             return this;
         }
-
         public Builder dataAccessId(String dataAccessId) {
             this.dataAccessId = Objects.requireNonNull(dataAccessId);
             return this;
         }
-
         public Builder dataRetentionTime(String dataRetentionTime) {
             this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partitionKeyProperties(@Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties) {
             this.partitionKeyProperties = partitionKeyProperties;
             return this;
         }
-
+        public Builder partitionKeyProperties(TimeSeriesIdPropertyResponse... partitionKeyProperties) {
+            return partitionKeyProperties(List.of(partitionKeyProperties));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder status(EnvironmentStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageLimitExceededBehavior(@Nullable String storageLimitExceededBehavior) {
             this.storageLimitExceededBehavior = storageLimitExceededBehavior;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGen1EnvironmentResult build() {
+        }        public GetGen1EnvironmentResult build() {
             return new GetGen1EnvironmentResult(creationTime, dataAccessFqdn, dataAccessId, dataRetentionTime, id, kind, location, name, partitionKeyProperties, provisioningState, sku, status, storageLimitExceededBehavior, tags, type);
         }
     }

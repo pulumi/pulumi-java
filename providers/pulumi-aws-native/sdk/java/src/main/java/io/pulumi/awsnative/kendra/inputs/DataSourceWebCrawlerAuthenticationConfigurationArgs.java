@@ -54,12 +54,13 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends i
             this.basicAuthentication = basicAuthentication;
             return this;
         }
-
         public Builder basicAuthentication(@Nullable List<DataSourceWebCrawlerBasicAuthenticationArgs> basicAuthentication) {
             this.basicAuthentication = Output.ofNullable(basicAuthentication);
             return this;
         }
-        public DataSourceWebCrawlerAuthenticationConfigurationArgs build() {
+        public Builder basicAuthentication(DataSourceWebCrawlerBasicAuthenticationArgs... basicAuthentication) {
+            return basicAuthentication(List.of(basicAuthentication));
+        }        public DataSourceWebCrawlerAuthenticationConfigurationArgs build() {
             return new DataSourceWebCrawlerAuthenticationConfigurationArgs(basicAuthentication);
         }
     }

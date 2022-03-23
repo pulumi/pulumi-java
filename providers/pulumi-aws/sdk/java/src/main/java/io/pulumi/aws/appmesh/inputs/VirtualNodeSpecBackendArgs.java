@@ -56,12 +56,10 @@ public final class VirtualNodeSpecBackendArgs extends io.pulumi.resources.Resour
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }
-
         public Builder virtualService(VirtualNodeSpecBackendVirtualServiceArgs virtualService) {
             this.virtualService = Output.of(Objects.requireNonNull(virtualService));
             return this;
-        }
-        public VirtualNodeSpecBackendArgs build() {
+        }        public VirtualNodeSpecBackendArgs build() {
             return new VirtualNodeSpecBackendArgs(virtualService);
         }
     }

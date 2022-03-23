@@ -62,12 +62,13 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<ColumnArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-        public ColumnLayoutArgs build() {
+        public Builder columns(ColumnArgs... columns) {
+            return columns(List.of(columns));
+        }        public ColumnLayoutArgs build() {
             return new ColumnLayoutArgs(columns);
         }
     }

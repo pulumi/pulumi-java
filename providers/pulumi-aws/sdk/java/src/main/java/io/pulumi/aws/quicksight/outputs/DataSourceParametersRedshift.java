@@ -104,22 +104,18 @@ public final class DataSourceParametersRedshift {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public DataSourceParametersRedshift build() {
+        }        public DataSourceParametersRedshift build() {
             return new DataSourceParametersRedshift(clusterId, database, host, port);
         }
     }

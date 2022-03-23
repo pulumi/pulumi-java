@@ -72,12 +72,10 @@ public final class ClusterShardNodeEndpoint {
             this.address = address;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ClusterShardNodeEndpoint build() {
+        }        public ClusterShardNodeEndpoint build() {
             return new ClusterShardNodeEndpoint(address, port);
         }
     }

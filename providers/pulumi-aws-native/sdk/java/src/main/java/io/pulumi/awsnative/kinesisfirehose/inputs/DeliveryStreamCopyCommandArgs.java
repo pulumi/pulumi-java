@@ -78,32 +78,26 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
             this.copyOptions = copyOptions;
             return this;
         }
-
         public Builder copyOptions(@Nullable String copyOptions) {
             this.copyOptions = Output.ofNullable(copyOptions);
             return this;
         }
-
         public Builder dataTableColumns(@Nullable Output<String> dataTableColumns) {
             this.dataTableColumns = dataTableColumns;
             return this;
         }
-
         public Builder dataTableColumns(@Nullable String dataTableColumns) {
             this.dataTableColumns = Output.ofNullable(dataTableColumns);
             return this;
         }
-
         public Builder dataTableName(Output<String> dataTableName) {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
         }
-
         public Builder dataTableName(String dataTableName) {
             this.dataTableName = Output.of(Objects.requireNonNull(dataTableName));
             return this;
-        }
-        public DeliveryStreamCopyCommandArgs build() {
+        }        public DeliveryStreamCopyCommandArgs build() {
             return new DeliveryStreamCopyCommandArgs(copyOptions, dataTableColumns, dataTableName);
         }
     }

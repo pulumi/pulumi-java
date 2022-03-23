@@ -56,8 +56,7 @@ public final class WebACLBlockAction extends io.pulumi.resources.InvokeArgs {
         public Builder customResponse(@Nullable WebACLCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
-        }
-        public WebACLBlockAction build() {
+        }        public WebACLBlockAction build() {
             return new WebACLBlockAction(customResponse);
         }
     }

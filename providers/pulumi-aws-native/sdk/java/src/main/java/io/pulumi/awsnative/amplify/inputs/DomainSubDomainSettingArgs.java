@@ -65,22 +65,18 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
-
         public Builder branchName(String branchName) {
             this.branchName = Output.of(Objects.requireNonNull(branchName));
             return this;
         }
-
         public Builder prefix(Output<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
-        }
-        public DomainSubDomainSettingArgs build() {
+        }        public DomainSubDomainSettingArgs build() {
             return new DomainSubDomainSettingArgs(branchName, prefix);
         }
     }

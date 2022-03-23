@@ -79,22 +79,18 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<CacheKeyQueryStringActionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(CacheKeyQueryStringActionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleCacheKeyQueryStringActionArgs build() {
+        }        public DeliveryRuleCacheKeyQueryStringActionArgs build() {
             return new DeliveryRuleCacheKeyQueryStringActionArgs(name, parameters);
         }
     }

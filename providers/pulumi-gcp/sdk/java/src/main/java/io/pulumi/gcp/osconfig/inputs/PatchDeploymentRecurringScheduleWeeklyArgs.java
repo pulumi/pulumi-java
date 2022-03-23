@@ -57,12 +57,10 @@ public final class PatchDeploymentRecurringScheduleWeeklyArgs extends io.pulumi.
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
-        }
-        public PatchDeploymentRecurringScheduleWeeklyArgs build() {
+        }        public PatchDeploymentRecurringScheduleWeeklyArgs build() {
             return new PatchDeploymentRecurringScheduleWeeklyArgs(dayOfWeek);
         }
     }

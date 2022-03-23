@@ -69,12 +69,10 @@ public final class DailyMaintenanceWindowResponse {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public DailyMaintenanceWindowResponse build() {
+        }        public DailyMaintenanceWindowResponse build() {
             return new DailyMaintenanceWindowResponse(duration, startTime);
         }
     }

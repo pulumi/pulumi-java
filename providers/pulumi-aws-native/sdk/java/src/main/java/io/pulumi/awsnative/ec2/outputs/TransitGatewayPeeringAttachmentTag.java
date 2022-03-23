@@ -71,12 +71,10 @@ public final class TransitGatewayPeeringAttachmentTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TransitGatewayPeeringAttachmentTag build() {
+        }        public TransitGatewayPeeringAttachmentTag build() {
             return new TransitGatewayPeeringAttachmentTag(key, value);
         }
     }

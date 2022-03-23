@@ -81,12 +81,10 @@ public final class SubnetworkSecondaryIpRange {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder rangeName(String rangeName) {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
-        }
-        public SubnetworkSecondaryIpRange build() {
+        }        public SubnetworkSecondaryIpRange build() {
             return new SubnetworkSecondaryIpRange(ipCidrRange, rangeName);
         }
     }

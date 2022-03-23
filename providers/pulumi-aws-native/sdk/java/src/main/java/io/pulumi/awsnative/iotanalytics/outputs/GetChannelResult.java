@@ -75,22 +75,21 @@ public final class GetChannelResult {
             this.channelStorage = channelStorage;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable ChannelRetentionPeriod retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder tags(@Nullable List<ChannelTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetChannelResult build() {
+        public Builder tags(ChannelTag... tags) {
+            return tags(List.of(tags));
+        }        public GetChannelResult build() {
             return new GetChannelResult(channelStorage, id, retentionPeriod, tags);
         }
     }

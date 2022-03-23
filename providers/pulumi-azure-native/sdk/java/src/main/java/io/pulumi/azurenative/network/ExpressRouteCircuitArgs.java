@@ -341,182 +341,152 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
             this.allowClassicOperations = allowClassicOperations;
             return this;
         }
-
         public Builder allowClassicOperations(@Nullable Boolean allowClassicOperations) {
             this.allowClassicOperations = Output.ofNullable(allowClassicOperations);
             return this;
         }
-
         public Builder authorizations(@Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
-
         public Builder authorizations(@Nullable List<ExpressRouteCircuitAuthorizationArgs> authorizations) {
             this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
-
+        public Builder authorizations(ExpressRouteCircuitAuthorizationArgs... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder bandwidthInGbps(@Nullable Output<Double> bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
-
         public Builder bandwidthInGbps(@Nullable Double bandwidthInGbps) {
             this.bandwidthInGbps = Output.ofNullable(bandwidthInGbps);
             return this;
         }
-
         public Builder circuitName(@Nullable Output<String> circuitName) {
             this.circuitName = circuitName;
             return this;
         }
-
         public Builder circuitName(@Nullable String circuitName) {
             this.circuitName = Output.ofNullable(circuitName);
             return this;
         }
-
         public Builder circuitProvisioningState(@Nullable Output<String> circuitProvisioningState) {
             this.circuitProvisioningState = circuitProvisioningState;
             return this;
         }
-
         public Builder circuitProvisioningState(@Nullable String circuitProvisioningState) {
             this.circuitProvisioningState = Output.ofNullable(circuitProvisioningState);
             return this;
         }
-
         public Builder expressRoutePort(@Nullable Output<SubResourceArgs> expressRoutePort) {
             this.expressRoutePort = expressRoutePort;
             return this;
         }
-
         public Builder expressRoutePort(@Nullable SubResourceArgs expressRoutePort) {
             this.expressRoutePort = Output.ofNullable(expressRoutePort);
             return this;
         }
-
         public Builder gatewayManagerEtag(@Nullable Output<String> gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
-
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = Output.ofNullable(gatewayManagerEtag);
             return this;
         }
-
         public Builder globalReachEnabled(@Nullable Output<Boolean> globalReachEnabled) {
             this.globalReachEnabled = globalReachEnabled;
             return this;
         }
-
         public Builder globalReachEnabled(@Nullable Boolean globalReachEnabled) {
             this.globalReachEnabled = Output.ofNullable(globalReachEnabled);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder peerings(@Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings) {
             this.peerings = peerings;
             return this;
         }
-
         public Builder peerings(@Nullable List<ExpressRouteCircuitPeeringArgs> peerings) {
             this.peerings = Output.ofNullable(peerings);
             return this;
         }
-
+        public Builder peerings(ExpressRouteCircuitPeeringArgs... peerings) {
+            return peerings(List.of(peerings));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceKey(@Nullable Output<String> serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
-
         public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = Output.ofNullable(serviceKey);
             return this;
         }
-
         public Builder serviceProviderNotes(@Nullable Output<String> serviceProviderNotes) {
             this.serviceProviderNotes = serviceProviderNotes;
             return this;
         }
-
         public Builder serviceProviderNotes(@Nullable String serviceProviderNotes) {
             this.serviceProviderNotes = Output.ofNullable(serviceProviderNotes);
             return this;
         }
-
         public Builder serviceProviderProperties(@Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties) {
             this.serviceProviderProperties = serviceProviderProperties;
             return this;
         }
-
         public Builder serviceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesArgs serviceProviderProperties) {
             this.serviceProviderProperties = Output.ofNullable(serviceProviderProperties);
             return this;
         }
-
         public Builder serviceProviderProvisioningState(@Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState) {
             this.serviceProviderProvisioningState = serviceProviderProvisioningState;
             return this;
         }
-
         public Builder serviceProviderProvisioningState(@Nullable Either<String,ServiceProviderProvisioningState> serviceProviderProvisioningState) {
             this.serviceProviderProvisioningState = Output.ofNullable(serviceProviderProvisioningState);
             return this;
         }
-
         public Builder sku(@Nullable Output<ExpressRouteCircuitSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ExpressRouteCircuitSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ExpressRouteCircuitArgs build() {
+        }        public ExpressRouteCircuitArgs build() {
             return new ExpressRouteCircuitArgs(allowClassicOperations, authorizations, bandwidthInGbps, circuitName, circuitProvisioningState, expressRoutePort, gatewayManagerEtag, globalReachEnabled, id, location, peerings, resourceGroupName, serviceKey, serviceProviderNotes, serviceProviderProperties, serviceProviderProvisioningState, sku, tags);
         }
     }

@@ -74,22 +74,18 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public KnowledgeBaseArgs build() {
+        }        public KnowledgeBaseArgs build() {
             return new KnowledgeBaseArgs(name, url);
         }
     }

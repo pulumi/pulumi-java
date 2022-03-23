@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
             this.imageDisplayOptions = Objects.requireNonNull(imageDisplayOptions);
             return this;
         }
-
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse build() {
+        public Builder items(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse... items) {
+            return items(List.of(items));
+        }        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(imageDisplayOptions, items);
         }
     }

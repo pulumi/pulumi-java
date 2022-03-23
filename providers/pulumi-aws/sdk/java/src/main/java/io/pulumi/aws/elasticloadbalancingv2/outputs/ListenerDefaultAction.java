@@ -173,42 +173,34 @@ public final class ListenerDefaultAction {
             this.authenticateCognito = authenticateCognito;
             return this;
         }
-
         public Builder authenticateOidc(@Nullable ListenerDefaultActionAuthenticateOidc authenticateOidc) {
             this.authenticateOidc = authenticateOidc;
             return this;
         }
-
         public Builder fixedResponse(@Nullable ListenerDefaultActionFixedResponse fixedResponse) {
             this.fixedResponse = fixedResponse;
             return this;
         }
-
         public Builder forward(@Nullable ListenerDefaultActionForward forward) {
             this.forward = forward;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
-
         public Builder redirect(@Nullable ListenerDefaultActionRedirect redirect) {
             this.redirect = redirect;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListenerDefaultAction build() {
+        }        public ListenerDefaultAction build() {
             return new ListenerDefaultAction(authenticateCognito, authenticateOidc, fixedResponse, forward, order, redirect, targetGroupArn, type);
         }
     }

@@ -79,22 +79,18 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
             this.greengrass = greengrass;
             return this;
         }
-
         public Builder greengrass(@Nullable GatewayGreengrassArgs greengrass) {
             this.greengrass = Output.ofNullable(greengrass);
             return this;
         }
-
         public Builder greengrassV2(@Nullable Output<GatewayGreengrassV2Args> greengrassV2) {
             this.greengrassV2 = greengrassV2;
             return this;
         }
-
         public Builder greengrassV2(@Nullable GatewayGreengrassV2Args greengrassV2) {
             this.greengrassV2 = Output.ofNullable(greengrassV2);
             return this;
-        }
-        public GatewayPlatformArgs build() {
+        }        public GatewayPlatformArgs build() {
             return new GatewayPlatformArgs(greengrass, greengrassV2);
         }
     }

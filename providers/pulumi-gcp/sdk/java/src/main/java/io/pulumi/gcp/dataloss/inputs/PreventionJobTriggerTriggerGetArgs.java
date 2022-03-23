@@ -58,12 +58,10 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable PreventionJobTriggerTriggerScheduleGetArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public PreventionJobTriggerTriggerGetArgs build() {
+        }        public PreventionJobTriggerTriggerGetArgs build() {
             return new PreventionJobTriggerTriggerGetArgs(schedule);
         }
     }

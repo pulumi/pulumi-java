@@ -118,27 +118,22 @@ public final class GetLaunchTemplateMetadataOption {
             this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
             return this;
         }
-
         public Builder httpProtocolIpv6(String httpProtocolIpv6) {
             this.httpProtocolIpv6 = Objects.requireNonNull(httpProtocolIpv6);
             return this;
         }
-
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
             return this;
         }
-
         public Builder httpTokens(String httpTokens) {
             this.httpTokens = Objects.requireNonNull(httpTokens);
             return this;
         }
-
         public Builder instanceMetadataTags(String instanceMetadataTags) {
             this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags);
             return this;
-        }
-        public GetLaunchTemplateMetadataOption build() {
+        }        public GetLaunchTemplateMetadataOption build() {
             return new GetLaunchTemplateMetadataOption(httpEndpoint, httpProtocolIpv6, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
         }
     }

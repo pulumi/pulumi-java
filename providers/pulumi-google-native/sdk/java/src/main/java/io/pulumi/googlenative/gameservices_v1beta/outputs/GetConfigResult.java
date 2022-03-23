@@ -153,37 +153,36 @@ public final class GetConfigResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fleetConfigs(List<FleetConfigResponse> fleetConfigs) {
             this.fleetConfigs = Objects.requireNonNull(fleetConfigs);
             return this;
         }
-
+        public Builder fleetConfigs(FleetConfigResponse... fleetConfigs) {
+            return fleetConfigs(List.of(fleetConfigs));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scalingConfigs(List<ScalingConfigResponse> scalingConfigs) {
             this.scalingConfigs = Objects.requireNonNull(scalingConfigs);
             return this;
         }
-
+        public Builder scalingConfigs(ScalingConfigResponse... scalingConfigs) {
+            return scalingConfigs(List.of(scalingConfigs));
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetConfigResult build() {
+        }        public GetConfigResult build() {
             return new GetConfigResult(createTime, description, fleetConfigs, labels, name, scalingConfigs, updateTime);
         }
     }

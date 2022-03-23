@@ -151,37 +151,33 @@ public final class GetBackupResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restoringServices(List<String> restoringServices) {
             this.restoringServices = Objects.requireNonNull(restoringServices);
             return this;
         }
-
+        public Builder restoringServices(String... restoringServices) {
+            return restoringServices(List.of(restoringServices));
+        }
         public Builder serviceRevision(ServiceResponse serviceRevision) {
             this.serviceRevision = Objects.requireNonNull(serviceRevision);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetBackupResult build() {
+        }        public GetBackupResult build() {
             return new GetBackupResult(createTime, description, endTime, name, restoringServices, serviceRevision, state);
         }
     }

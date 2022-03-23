@@ -72,12 +72,10 @@ public final class AssignmentInfoResponse {
             this.configuration = configuration;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AssignmentInfoResponse build() {
+        }        public AssignmentInfoResponse build() {
             return new AssignmentInfoResponse(configuration, name);
         }
     }

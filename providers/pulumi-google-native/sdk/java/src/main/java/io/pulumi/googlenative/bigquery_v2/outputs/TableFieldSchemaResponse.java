@@ -208,57 +208,49 @@ public final class TableFieldSchemaResponse {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
         public Builder collationSpec(String collationSpec) {
             this.collationSpec = Objects.requireNonNull(collationSpec);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fields(List<TableFieldSchemaResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
+        public Builder fields(TableFieldSchemaResponse... fields) {
+            return fields(List.of(fields));
+        }
         public Builder maxLength(String maxLength) {
             this.maxLength = Objects.requireNonNull(maxLength);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyTags(TableFieldSchemaPolicyTagsResponse policyTags) {
             this.policyTags = Objects.requireNonNull(policyTags);
             return this;
         }
-
         public Builder precision(String precision) {
             this.precision = Objects.requireNonNull(precision);
             return this;
         }
-
         public Builder scale(String scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TableFieldSchemaResponse build() {
+        }        public TableFieldSchemaResponse build() {
             return new TableFieldSchemaResponse(categories, collationSpec, description, fields, maxLength, mode, name, policyTags, precision, scale, type);
         }
     }

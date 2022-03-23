@@ -54,8 +54,7 @@ public final class ListContainerAppSecretsArgs extends io.pulumi.resources.Invok
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ListContainerAppSecretsArgs build() {
+        }        public ListContainerAppSecretsArgs build() {
             return new ListContainerAppSecretsArgs(name);
         }
     }

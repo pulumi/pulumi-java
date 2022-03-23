@@ -113,22 +113,18 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder targetName(Object targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(Object userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public CmdkeySetupResponse build() {
+        }        public CmdkeySetupResponse build() {
             return new CmdkeySetupResponse(password, targetName, type, userName);
         }
     }

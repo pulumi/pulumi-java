@@ -105,22 +105,24 @@ public final class GetApiIamPolicyResult {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(ApigatewayAuditConfigResponse... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(List<ApigatewayBindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(ApigatewayBindingResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetApiIamPolicyResult build() {
+        }        public GetApiIamPolicyResult build() {
             return new GetApiIamPolicyResult(auditConfigs, bindings, etag, version);
         }
     }

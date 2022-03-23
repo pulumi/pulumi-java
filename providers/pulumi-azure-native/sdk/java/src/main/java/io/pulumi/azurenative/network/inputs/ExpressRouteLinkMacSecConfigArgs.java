@@ -113,42 +113,34 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
             this.cakSecretIdentifier = cakSecretIdentifier;
             return this;
         }
-
         public Builder cakSecretIdentifier(@Nullable String cakSecretIdentifier) {
             this.cakSecretIdentifier = Output.ofNullable(cakSecretIdentifier);
             return this;
         }
-
         public Builder cipher(@Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher) {
             this.cipher = cipher;
             return this;
         }
-
         public Builder cipher(@Nullable Either<String,ExpressRouteLinkMacSecCipher> cipher) {
             this.cipher = Output.ofNullable(cipher);
             return this;
         }
-
         public Builder cknSecretIdentifier(@Nullable Output<String> cknSecretIdentifier) {
             this.cknSecretIdentifier = cknSecretIdentifier;
             return this;
         }
-
         public Builder cknSecretIdentifier(@Nullable String cknSecretIdentifier) {
             this.cknSecretIdentifier = Output.ofNullable(cknSecretIdentifier);
             return this;
         }
-
         public Builder sciState(@Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState) {
             this.sciState = sciState;
             return this;
         }
-
         public Builder sciState(@Nullable Either<String,ExpressRouteLinkMacSecSciState> sciState) {
             this.sciState = Output.ofNullable(sciState);
             return this;
-        }
-        public ExpressRouteLinkMacSecConfigArgs build() {
+        }        public ExpressRouteLinkMacSecConfigArgs build() {
             return new ExpressRouteLinkMacSecConfigArgs(cakSecretIdentifier, cipher, cknSecretIdentifier, sciState);
         }
     }

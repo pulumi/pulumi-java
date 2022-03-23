@@ -66,12 +66,10 @@ public final class GetHistoryArgs extends io.pulumi.resources.InvokeArgs {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetHistoryArgs build() {
+        }        public GetHistoryArgs build() {
             return new GetHistoryArgs(historyId, project);
         }
     }

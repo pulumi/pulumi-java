@@ -320,172 +320,141 @@ public final class OpenZfsFileSystemArgs extends io.pulumi.resources.ResourceArg
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
-
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
             return this;
         }
-
         public Builder backupId(@Nullable Output<String> backupId) {
             this.backupId = backupId;
             return this;
         }
-
         public Builder backupId(@Nullable String backupId) {
             this.backupId = Output.ofNullable(backupId);
             return this;
         }
-
         public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
             this.copyTagsToBackups = copyTagsToBackups;
             return this;
         }
-
         public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
             this.copyTagsToBackups = Output.ofNullable(copyTagsToBackups);
             return this;
         }
-
         public Builder copyTagsToVolumes(@Nullable Output<Boolean> copyTagsToVolumes) {
             this.copyTagsToVolumes = copyTagsToVolumes;
             return this;
         }
-
         public Builder copyTagsToVolumes(@Nullable Boolean copyTagsToVolumes) {
             this.copyTagsToVolumes = Output.ofNullable(copyTagsToVolumes);
             return this;
         }
-
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
-
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
-
         public Builder deploymentType(Output<String> deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
-
         public Builder deploymentType(String deploymentType) {
             this.deploymentType = Output.of(Objects.requireNonNull(deploymentType));
             return this;
         }
-
         public Builder diskIopsConfiguration(@Nullable Output<OpenZfsFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
             this.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
-
         public Builder diskIopsConfiguration(@Nullable OpenZfsFileSystemDiskIopsConfigurationArgs diskIopsConfiguration) {
             this.diskIopsConfiguration = Output.ofNullable(diskIopsConfiguration);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder rootVolumeConfiguration(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationArgs> rootVolumeConfiguration) {
             this.rootVolumeConfiguration = rootVolumeConfiguration;
             return this;
         }
-
         public Builder rootVolumeConfiguration(@Nullable OpenZfsFileSystemRootVolumeConfigurationArgs rootVolumeConfiguration) {
             this.rootVolumeConfiguration = Output.ofNullable(rootVolumeConfiguration);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
-
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
             this.storageCapacity = Output.ofNullable(storageCapacity);
             return this;
         }
-
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder subnetIds(Output<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(String subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder throughputCapacity(Output<Integer> throughputCapacity) {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }
-
         public Builder throughputCapacity(Integer throughputCapacity) {
             this.throughputCapacity = Output.of(Objects.requireNonNull(throughputCapacity));
             return this;
         }
-
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
-
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
             return this;
-        }
-        public OpenZfsFileSystemArgs build() {
+        }        public OpenZfsFileSystemArgs build() {
             return new OpenZfsFileSystemArgs(automaticBackupRetentionDays, backupId, copyTagsToBackups, copyTagsToVolumes, dailyAutomaticBackupStartTime, deploymentType, diskIopsConfiguration, kmsKeyId, rootVolumeConfiguration, securityGroupIds, storageCapacity, storageType, subnetIds, tags, tagsAll, throughputCapacity, weeklyMaintenanceStartTime);
         }
     }

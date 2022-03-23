@@ -51,12 +51,10 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
             this.replicationConfiguration = Objects.requireNonNull(replicationConfiguration);
             return this;
         }
-
         public Builder replicationConfiguration(io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs replicationConfiguration) {
             this.replicationConfiguration = Output.of(Objects.requireNonNull(replicationConfiguration));
             return this;
-        }
-        public ReplicationConfigurationArgs build() {
+        }        public ReplicationConfigurationArgs build() {
             return new ReplicationConfigurationArgs(replicationConfiguration);
         }
     }

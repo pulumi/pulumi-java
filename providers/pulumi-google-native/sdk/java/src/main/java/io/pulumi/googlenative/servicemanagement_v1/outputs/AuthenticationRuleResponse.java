@@ -105,22 +105,21 @@ public final class AuthenticationRuleResponse {
             this.allowWithoutCredential = Objects.requireNonNull(allowWithoutCredential);
             return this;
         }
-
         public Builder oauth(OAuthRequirementsResponse oauth) {
             this.oauth = Objects.requireNonNull(oauth);
             return this;
         }
-
         public Builder requirements(List<AuthRequirementResponse> requirements) {
             this.requirements = Objects.requireNonNull(requirements);
             return this;
         }
-
+        public Builder requirements(AuthRequirementResponse... requirements) {
+            return requirements(List.of(requirements));
+        }
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
-        }
-        public AuthenticationRuleResponse build() {
+        }        public AuthenticationRuleResponse build() {
             return new AuthenticationRuleResponse(allowWithoutCredential, oauth, requirements, selector);
         }
     }

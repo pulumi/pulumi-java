@@ -74,22 +74,18 @@ public final class BucketLifecycleRuleActionArgs extends io.pulumi.resources.Res
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public BucketLifecycleRuleActionArgs build() {
+        }        public BucketLifecycleRuleActionArgs build() {
             return new BucketLifecycleRuleActionArgs(storageClass, type);
         }
     }

@@ -63,12 +63,13 @@ public final class AnalyzerArchiveRule {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
+        public Builder filter(AnalyzerFilter... filter) {
+            return filter(List.of(filter));
+        }
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public AnalyzerArchiveRule build() {
+        }        public AnalyzerArchiveRule build() {
             return new AnalyzerArchiveRule(filter, ruleName);
         }
     }

@@ -58,12 +58,13 @@ public final class TableFieldSchemaPolicyTagsArgs extends io.pulumi.resources.Re
             this.names = names;
             return this;
         }
-
         public Builder names(@Nullable List<String> names) {
             this.names = Output.ofNullable(names);
             return this;
         }
-        public TableFieldSchemaPolicyTagsArgs build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public TableFieldSchemaPolicyTagsArgs build() {
             return new TableFieldSchemaPolicyTagsArgs(names);
         }
     }

@@ -74,12 +74,10 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetIntentArgs build() {
+        }        public GetIntentArgs build() {
             return new GetIntentArgs(name, version);
         }
     }

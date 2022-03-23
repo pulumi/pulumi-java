@@ -53,12 +53,13 @@ public final class ResourceProviderManifestPropertiesProviderAuthenticationArgs 
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-
         public Builder allowedAudiences(List<String> allowedAudiences) {
             this.allowedAudiences = Output.of(Objects.requireNonNull(allowedAudiences));
             return this;
         }
-        public ResourceProviderManifestPropertiesProviderAuthenticationArgs build() {
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }        public ResourceProviderManifestPropertiesProviderAuthenticationArgs build() {
             return new ResourceProviderManifestPropertiesProviderAuthenticationArgs(allowedAudiences);
         }
     }

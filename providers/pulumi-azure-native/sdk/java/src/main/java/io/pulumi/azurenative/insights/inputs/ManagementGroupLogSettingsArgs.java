@@ -78,22 +78,18 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder category(String category) {
             this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ManagementGroupLogSettingsArgs build() {
+        }        public ManagementGroupLogSettingsArgs build() {
             return new ManagementGroupLogSettingsArgs(category, enabled);
         }
     }

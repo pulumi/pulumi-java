@@ -62,12 +62,13 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
             this.allowedOrigins = allowedOrigins;
             return this;
         }
-
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = Output.ofNullable(allowedOrigins);
             return this;
         }
-        public SignalRCorsSettingsArgs build() {
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }        public SignalRCorsSettingsArgs build() {
             return new SignalRCorsSettingsArgs(allowedOrigins);
         }
     }

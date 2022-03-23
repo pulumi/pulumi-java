@@ -61,12 +61,10 @@ public final class AccessPolicyPortalArgs extends io.pulumi.resources.ResourceAr
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public AccessPolicyPortalArgs build() {
+        }        public AccessPolicyPortalArgs build() {
             return new AccessPolicyPortalArgs(id);
         }
     }

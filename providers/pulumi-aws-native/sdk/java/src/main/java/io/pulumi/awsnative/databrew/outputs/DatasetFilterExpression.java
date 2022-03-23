@@ -63,12 +63,13 @@ public final class DatasetFilterExpression {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder valuesMap(List<DatasetFilterValue> valuesMap) {
             this.valuesMap = Objects.requireNonNull(valuesMap);
             return this;
         }
-        public DatasetFilterExpression build() {
+        public Builder valuesMap(DatasetFilterValue... valuesMap) {
+            return valuesMap(List.of(valuesMap));
+        }        public DatasetFilterExpression build() {
             return new DatasetFilterExpression(expression, valuesMap);
         }
     }

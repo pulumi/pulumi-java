@@ -63,17 +63,14 @@ public final class ClassificationJobUserPausedDetail {
             this.jobExpiresAt = jobExpiresAt;
             return this;
         }
-
         public Builder jobImminentExpirationHealthEventArn(@Nullable String jobImminentExpirationHealthEventArn) {
             this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
             return this;
         }
-
         public Builder jobPausedAt(@Nullable String jobPausedAt) {
             this.jobPausedAt = jobPausedAt;
             return this;
-        }
-        public ClassificationJobUserPausedDetail build() {
+        }        public ClassificationJobUserPausedDetail build() {
             return new ClassificationJobUserPausedDetail(jobExpiresAt, jobImminentExpirationHealthEventArn, jobPausedAt);
         }
     }

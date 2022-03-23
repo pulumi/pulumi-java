@@ -90,32 +90,26 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
             this.diskId = diskId;
             return this;
         }
-
         public Builder diskId(@Nullable String diskId) {
             this.diskId = Output.ofNullable(diskId);
             return this;
         }
-
         public Builder diskPath(@Nullable Output<String> diskPath) {
             this.diskPath = diskPath;
             return this;
         }
-
         public Builder diskPath(@Nullable String diskPath) {
             this.diskPath = Output.ofNullable(diskPath);
             return this;
         }
-
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
-
         public Builder gatewayArn(@Nullable String gatewayArn) {
             this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
-        }
-        public UploadBufferState build() {
+        }        public UploadBufferState build() {
             return new UploadBufferState(diskId, diskPath, gatewayArn);
         }
     }

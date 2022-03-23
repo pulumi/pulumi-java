@@ -71,17 +71,14 @@ public final class VolumeResponse {
             this.configMap = Objects.requireNonNull(configMap);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secret(SecretVolumeSourceResponse secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public VolumeResponse build() {
+        }        public VolumeResponse build() {
             return new VolumeResponse(configMap, name, secret);
         }
     }

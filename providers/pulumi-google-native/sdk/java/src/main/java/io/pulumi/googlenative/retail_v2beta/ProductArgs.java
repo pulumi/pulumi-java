@@ -626,372 +626,331 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder audience(@Nullable Output<GoogleCloudRetailV2betaAudienceArgs> audience) {
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable GoogleCloudRetailV2betaAudienceArgs audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder availability(@Nullable Output<ProductAvailability> availability) {
             this.availability = availability;
             return this;
         }
-
         public Builder availability(@Nullable ProductAvailability availability) {
             this.availability = Output.ofNullable(availability);
             return this;
         }
-
         public Builder availableQuantity(@Nullable Output<Integer> availableQuantity) {
             this.availableQuantity = availableQuantity;
             return this;
         }
-
         public Builder availableQuantity(@Nullable Integer availableQuantity) {
             this.availableQuantity = Output.ofNullable(availableQuantity);
             return this;
         }
-
         public Builder availableTime(@Nullable Output<String> availableTime) {
             this.availableTime = availableTime;
             return this;
         }
-
         public Builder availableTime(@Nullable String availableTime) {
             this.availableTime = Output.ofNullable(availableTime);
             return this;
         }
-
         public Builder branchId(Output<String> branchId) {
             this.branchId = Objects.requireNonNull(branchId);
             return this;
         }
-
         public Builder branchId(String branchId) {
             this.branchId = Output.of(Objects.requireNonNull(branchId));
             return this;
         }
-
         public Builder brands(@Nullable Output<List<String>> brands) {
             this.brands = brands;
             return this;
         }
-
         public Builder brands(@Nullable List<String> brands) {
             this.brands = Output.ofNullable(brands);
             return this;
         }
-
+        public Builder brands(String... brands) {
+            return brands(List.of(brands));
+        }
         public Builder catalogId(Output<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
-
         public Builder categories(@Nullable Output<List<String>> categories) {
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable List<String> categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder collectionMemberIds(@Nullable Output<List<String>> collectionMemberIds) {
             this.collectionMemberIds = collectionMemberIds;
             return this;
         }
-
         public Builder collectionMemberIds(@Nullable List<String> collectionMemberIds) {
             this.collectionMemberIds = Output.ofNullable(collectionMemberIds);
             return this;
         }
-
+        public Builder collectionMemberIds(String... collectionMemberIds) {
+            return collectionMemberIds(List.of(collectionMemberIds));
+        }
         public Builder colorInfo(@Nullable Output<GoogleCloudRetailV2betaColorInfoArgs> colorInfo) {
             this.colorInfo = colorInfo;
             return this;
         }
-
         public Builder colorInfo(@Nullable GoogleCloudRetailV2betaColorInfoArgs colorInfo) {
             this.colorInfo = Output.ofNullable(colorInfo);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<String>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<String> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(String... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder fulfillmentInfo(@Nullable Output<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo) {
             this.fulfillmentInfo = fulfillmentInfo;
             return this;
         }
-
         public Builder fulfillmentInfo(@Nullable List<GoogleCloudRetailV2betaFulfillmentInfoArgs> fulfillmentInfo) {
             this.fulfillmentInfo = Output.ofNullable(fulfillmentInfo);
             return this;
         }
-
+        public Builder fulfillmentInfo(GoogleCloudRetailV2betaFulfillmentInfoArgs... fulfillmentInfo) {
+            return fulfillmentInfo(List.of(fulfillmentInfo));
+        }
         public Builder gtin(@Nullable Output<String> gtin) {
             this.gtin = gtin;
             return this;
         }
-
         public Builder gtin(@Nullable String gtin) {
             this.gtin = Output.ofNullable(gtin);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder images(@Nullable Output<List<GoogleCloudRetailV2betaImageArgs>> images) {
             this.images = images;
             return this;
         }
-
         public Builder images(@Nullable List<GoogleCloudRetailV2betaImageArgs> images) {
             this.images = Output.ofNullable(images);
             return this;
         }
-
+        public Builder images(GoogleCloudRetailV2betaImageArgs... images) {
+            return images(List.of(images));
+        }
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder materials(@Nullable Output<List<String>> materials) {
             this.materials = materials;
             return this;
         }
-
         public Builder materials(@Nullable List<String> materials) {
             this.materials = Output.ofNullable(materials);
             return this;
         }
-
+        public Builder materials(String... materials) {
+            return materials(List.of(materials));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder patterns(@Nullable Output<List<String>> patterns) {
             this.patterns = patterns;
             return this;
         }
-
         public Builder patterns(@Nullable List<String> patterns) {
             this.patterns = Output.ofNullable(patterns);
             return this;
         }
-
+        public Builder patterns(String... patterns) {
+            return patterns(List.of(patterns));
+        }
         public Builder priceInfo(@Nullable Output<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo) {
             this.priceInfo = priceInfo;
             return this;
         }
-
         public Builder priceInfo(@Nullable GoogleCloudRetailV2betaPriceInfoArgs priceInfo) {
             this.priceInfo = Output.ofNullable(priceInfo);
             return this;
         }
-
         public Builder primaryProductId(@Nullable Output<String> primaryProductId) {
             this.primaryProductId = primaryProductId;
             return this;
         }
-
         public Builder primaryProductId(@Nullable String primaryProductId) {
             this.primaryProductId = Output.ofNullable(primaryProductId);
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder promotions(@Nullable Output<List<GoogleCloudRetailV2betaPromotionArgs>> promotions) {
             this.promotions = promotions;
             return this;
         }
-
         public Builder promotions(@Nullable List<GoogleCloudRetailV2betaPromotionArgs> promotions) {
             this.promotions = Output.ofNullable(promotions);
             return this;
         }
-
+        public Builder promotions(GoogleCloudRetailV2betaPromotionArgs... promotions) {
+            return promotions(List.of(promotions));
+        }
         public Builder publishTime(@Nullable Output<String> publishTime) {
             this.publishTime = publishTime;
             return this;
         }
-
         public Builder publishTime(@Nullable String publishTime) {
             this.publishTime = Output.ofNullable(publishTime);
             return this;
         }
-
         public Builder rating(@Nullable Output<GoogleCloudRetailV2betaRatingArgs> rating) {
             this.rating = rating;
             return this;
         }
-
         public Builder rating(@Nullable GoogleCloudRetailV2betaRatingArgs rating) {
             this.rating = Output.ofNullable(rating);
             return this;
         }
-
         public Builder retrievableFields(@Nullable Output<String> retrievableFields) {
             this.retrievableFields = retrievableFields;
             return this;
         }
-
         public Builder retrievableFields(@Nullable String retrievableFields) {
             this.retrievableFields = Output.ofNullable(retrievableFields);
             return this;
         }
-
         public Builder sizes(@Nullable Output<List<String>> sizes) {
             this.sizes = sizes;
             return this;
         }
-
         public Builder sizes(@Nullable List<String> sizes) {
             this.sizes = Output.ofNullable(sizes);
             return this;
         }
-
+        public Builder sizes(String... sizes) {
+            return sizes(List.of(sizes));
+        }
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
-
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder type(@Nullable Output<ProductType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ProductType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ProductArgs build() {
+        }        public ProductArgs build() {
             return new ProductArgs(attributes, audience, availability, availableQuantity, availableTime, branchId, brands, catalogId, categories, collectionMemberIds, colorInfo, conditions, description, expireTime, fulfillmentInfo, gtin, id, images, languageCode, location, materials, name, patterns, priceInfo, primaryProductId, productId, project, promotions, publishTime, rating, retrievableFields, sizes, tags, title, ttl, type, uri);
         }
     }

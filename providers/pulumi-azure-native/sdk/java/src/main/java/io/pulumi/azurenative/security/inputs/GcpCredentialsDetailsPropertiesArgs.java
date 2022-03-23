@@ -238,122 +238,98 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
             this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
             return this;
         }
-
         public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
             this.authProviderX509CertUrl = Output.of(Objects.requireNonNull(authProviderX509CertUrl));
             return this;
         }
-
         public Builder authUri(Output<String> authUri) {
             this.authUri = Objects.requireNonNull(authUri);
             return this;
         }
-
         public Builder authUri(String authUri) {
             this.authUri = Output.of(Objects.requireNonNull(authUri));
             return this;
         }
-
         public Builder authenticationType(Output<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder clientEmail(Output<String> clientEmail) {
             this.clientEmail = Objects.requireNonNull(clientEmail);
             return this;
         }
-
         public Builder clientEmail(String clientEmail) {
             this.clientEmail = Output.of(Objects.requireNonNull(clientEmail));
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientX509CertUrl(Output<String> clientX509CertUrl) {
             this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
             return this;
         }
-
         public Builder clientX509CertUrl(String clientX509CertUrl) {
             this.clientX509CertUrl = Output.of(Objects.requireNonNull(clientX509CertUrl));
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
         }
-
         public Builder privateKeyId(Output<String> privateKeyId) {
             this.privateKeyId = Objects.requireNonNull(privateKeyId);
             return this;
         }
-
         public Builder privateKeyId(String privateKeyId) {
             this.privateKeyId = Output.of(Objects.requireNonNull(privateKeyId));
             return this;
         }
-
         public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public Builder tokenUri(Output<String> tokenUri) {
             this.tokenUri = Objects.requireNonNull(tokenUri);
             return this;
         }
-
         public Builder tokenUri(String tokenUri) {
             this.tokenUri = Output.of(Objects.requireNonNull(tokenUri));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public GcpCredentialsDetailsPropertiesArgs build() {
+        }        public GcpCredentialsDetailsPropertiesArgs build() {
             return new GcpCredentialsDetailsPropertiesArgs(authProviderX509CertUrl, authUri, authenticationType, clientEmail, clientId, clientX509CertUrl, organizationId, privateKey, privateKeyId, projectId, tokenUri, type);
         }
     }

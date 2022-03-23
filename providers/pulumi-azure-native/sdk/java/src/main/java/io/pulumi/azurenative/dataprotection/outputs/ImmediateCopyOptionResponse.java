@@ -53,8 +53,7 @@ public final class ImmediateCopyOptionResponse {
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
-        }
-        public ImmediateCopyOptionResponse build() {
+        }        public ImmediateCopyOptionResponse build() {
             return new ImmediateCopyOptionResponse(objectType);
         }
     }

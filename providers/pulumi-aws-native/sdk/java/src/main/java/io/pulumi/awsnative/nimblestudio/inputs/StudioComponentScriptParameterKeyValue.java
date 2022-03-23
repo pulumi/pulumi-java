@@ -78,12 +78,10 @@ public final class StudioComponentScriptParameterKeyValue extends io.pulumi.reso
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public StudioComponentScriptParameterKeyValue build() {
+        }        public StudioComponentScriptParameterKeyValue build() {
             return new StudioComponentScriptParameterKeyValue(key, value);
         }
     }

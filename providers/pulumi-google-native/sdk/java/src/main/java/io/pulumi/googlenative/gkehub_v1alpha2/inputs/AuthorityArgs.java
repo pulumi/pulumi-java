@@ -78,22 +78,18 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             this.issuer = issuer;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = Output.ofNullable(issuer);
             return this;
         }
-
         public Builder oidcJwks(@Nullable Output<String> oidcJwks) {
             this.oidcJwks = oidcJwks;
             return this;
         }
-
         public Builder oidcJwks(@Nullable String oidcJwks) {
             this.oidcJwks = Output.ofNullable(oidcJwks);
             return this;
-        }
-        public AuthorityArgs build() {
+        }        public AuthorityArgs build() {
             return new AuthorityArgs(issuer, oidcJwks);
         }
     }

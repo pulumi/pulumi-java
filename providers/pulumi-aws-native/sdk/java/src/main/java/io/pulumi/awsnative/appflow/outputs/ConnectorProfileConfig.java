@@ -56,12 +56,10 @@ public final class ConnectorProfileConfig {
             this.connectorProfileCredentials = Objects.requireNonNull(connectorProfileCredentials);
             return this;
         }
-
         public Builder connectorProfileProperties(@Nullable ConnectorProfileProperties connectorProfileProperties) {
             this.connectorProfileProperties = connectorProfileProperties;
             return this;
-        }
-        public ConnectorProfileConfig build() {
+        }        public ConnectorProfileConfig build() {
             return new ConnectorProfileConfig(connectorProfileCredentials, connectorProfileProperties);
         }
     }

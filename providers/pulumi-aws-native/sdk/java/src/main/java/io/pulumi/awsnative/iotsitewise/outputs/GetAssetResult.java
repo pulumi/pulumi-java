@@ -139,37 +139,39 @@ public final class GetAssetResult {
             this.assetArn = assetArn;
             return this;
         }
-
         public Builder assetHierarchies(@Nullable List<AssetHierarchy> assetHierarchies) {
             this.assetHierarchies = assetHierarchies;
             return this;
         }
-
+        public Builder assetHierarchies(AssetHierarchy... assetHierarchies) {
+            return assetHierarchies(List.of(assetHierarchies));
+        }
         public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
-
         public Builder assetModelId(@Nullable String assetModelId) {
             this.assetModelId = assetModelId;
             return this;
         }
-
         public Builder assetName(@Nullable String assetName) {
             this.assetName = assetName;
             return this;
         }
-
         public Builder assetProperties(@Nullable List<AssetProperty> assetProperties) {
             this.assetProperties = assetProperties;
             return this;
         }
-
+        public Builder assetProperties(AssetProperty... assetProperties) {
+            return assetProperties(List.of(assetProperties));
+        }
         public Builder tags(@Nullable List<AssetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAssetResult build() {
+        public Builder tags(AssetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAssetResult build() {
             return new GetAssetResult(assetArn, assetHierarchies, assetId, assetModelId, assetName, assetProperties, tags);
         }
     }

@@ -78,22 +78,18 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
             this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
-
         public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
             this.httpErrorCodeReturnedEquals = Output.ofNullable(httpErrorCodeReturnedEquals);
             return this;
         }
-
         public Builder keyPrefixEquals(@Nullable Output<String> keyPrefixEquals) {
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
-
         public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
             this.keyPrefixEquals = Output.ofNullable(keyPrefixEquals);
             return this;
-        }
-        public BucketRoutingRuleConditionArgs build() {
+        }        public BucketRoutingRuleConditionArgs build() {
             return new BucketRoutingRuleConditionArgs(httpErrorCodeReturnedEquals, keyPrefixEquals);
         }
     }

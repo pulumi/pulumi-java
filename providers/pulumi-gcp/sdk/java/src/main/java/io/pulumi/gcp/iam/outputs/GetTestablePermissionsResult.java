@@ -105,27 +105,28 @@ public final class GetTestablePermissionsResult {
             this.customSupportLevel = customSupportLevel;
             return this;
         }
-
         public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder permissions(List<GetTestablePermissionsPermission> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
+        public Builder permissions(GetTestablePermissionsPermission... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder stages(@Nullable List<String> stages) {
             this.stages = stages;
             return this;
         }
-        public GetTestablePermissionsResult build() {
+        public Builder stages(String... stages) {
+            return stages(List.of(stages));
+        }        public GetTestablePermissionsResult build() {
             return new GetTestablePermissionsResult(customSupportLevel, fullResourceName, id, permissions, stages);
         }
     }

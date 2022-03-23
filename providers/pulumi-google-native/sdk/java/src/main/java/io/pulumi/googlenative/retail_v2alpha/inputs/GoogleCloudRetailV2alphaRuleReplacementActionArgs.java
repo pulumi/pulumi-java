@@ -95,32 +95,29 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
             this.queryTerms = queryTerms;
             return this;
         }
-
         public Builder queryTerms(@Nullable List<String> queryTerms) {
             this.queryTerms = Output.ofNullable(queryTerms);
             return this;
         }
-
+        public Builder queryTerms(String... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }
         public Builder replacementTerm(@Nullable Output<String> replacementTerm) {
             this.replacementTerm = replacementTerm;
             return this;
         }
-
         public Builder replacementTerm(@Nullable String replacementTerm) {
             this.replacementTerm = Output.ofNullable(replacementTerm);
             return this;
         }
-
         public Builder term(@Nullable Output<String> term) {
             this.term = term;
             return this;
         }
-
         public Builder term(@Nullable String term) {
             this.term = Output.ofNullable(term);
             return this;
-        }
-        public GoogleCloudRetailV2alphaRuleReplacementActionArgs build() {
+        }        public GoogleCloudRetailV2alphaRuleReplacementActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleReplacementActionArgs(queryTerms, replacementTerm, term);
         }
     }

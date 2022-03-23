@@ -138,32 +138,32 @@ public final class GetResolverRuleResult {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
-
         public Builder resolverRuleId(@Nullable String resolverRuleId) {
             this.resolverRuleId = resolverRuleId;
             return this;
         }
-
         public Builder tags(@Nullable List<ResolverRuleTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ResolverRuleTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetIps(@Nullable List<ResolverRuleTargetAddress> targetIps) {
             this.targetIps = targetIps;
             return this;
         }
-        public GetResolverRuleResult build() {
+        public Builder targetIps(ResolverRuleTargetAddress... targetIps) {
+            return targetIps(List.of(targetIps));
+        }        public GetResolverRuleResult build() {
             return new GetResolverRuleResult(arn, name, resolverEndpointId, resolverRuleId, tags, targetIps);
         }
     }

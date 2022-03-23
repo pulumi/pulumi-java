@@ -138,62 +138,50 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.endIpAddress = endIpAddress;
             return this;
         }
-
         public Builder endIpAddress(@Nullable String endIpAddress) {
             this.endIpAddress = Output.ofNullable(endIpAddress);
             return this;
         }
-
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
-
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
             this.firewallRuleName = Output.ofNullable(firewallRuleName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder startIpAddress(@Nullable Output<String> startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
         }
-
         public Builder startIpAddress(@Nullable String startIpAddress) {
             this.startIpAddress = Output.ofNullable(startIpAddress);
             return this;
-        }
-        public FirewallRuleArgs build() {
+        }        public FirewallRuleArgs build() {
             return new FirewallRuleArgs(endIpAddress, firewallRuleName, name, resourceGroupName, serverName, startIpAddress);
         }
     }

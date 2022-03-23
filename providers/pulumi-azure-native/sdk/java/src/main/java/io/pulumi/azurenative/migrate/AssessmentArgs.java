@@ -139,62 +139,50 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             this.assessmentName = assessmentName;
             return this;
         }
-
         public Builder assessmentName(@Nullable String assessmentName) {
             this.assessmentName = Output.ofNullable(assessmentName);
             return this;
         }
-
         public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
-
         public Builder properties(Output<AssessmentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(AssessmentPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public AssessmentArgs build() {
+        }        public AssessmentArgs build() {
             return new AssessmentArgs(assessmentName, eTag, groupName, projectName, properties, resourceGroupName);
         }
     }

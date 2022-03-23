@@ -72,22 +72,18 @@ public final class DomainCognitoOptions {
             this.enabled = enabled;
             return this;
         }
-
         public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = userPoolId;
             return this;
-        }
-        public DomainCognitoOptions build() {
+        }        public DomainCognitoOptions build() {
             return new DomainCognitoOptions(enabled, identityPoolId, roleArn, userPoolId);
         }
     }

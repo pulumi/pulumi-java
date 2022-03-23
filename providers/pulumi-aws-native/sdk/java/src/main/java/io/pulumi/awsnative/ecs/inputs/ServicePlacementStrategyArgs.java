@@ -67,22 +67,18 @@ public final class ServicePlacementStrategyArgs extends io.pulumi.resources.Reso
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder type(Output<ServicePlacementStrategyType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ServicePlacementStrategyType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ServicePlacementStrategyArgs build() {
+        }        public ServicePlacementStrategyArgs build() {
             return new ServicePlacementStrategyArgs(field, type);
         }
     }

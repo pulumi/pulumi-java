@@ -129,52 +129,42 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sourceRange(@Nullable Output<String> sourceRange) {
             this.sourceRange = sourceRange;
             return this;
         }
-
         public Builder sourceRange(@Nullable String sourceRange) {
             this.sourceRange = Output.ofNullable(sourceRange);
             return this;
-        }
-        public FirewallRuleState build() {
+        }        public FirewallRuleState build() {
             return new FirewallRuleState(action, description, priority, project, sourceRange);
         }
     }

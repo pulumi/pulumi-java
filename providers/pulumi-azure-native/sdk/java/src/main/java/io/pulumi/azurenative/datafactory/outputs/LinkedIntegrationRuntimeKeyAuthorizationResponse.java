@@ -72,12 +72,10 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder key(SecureStringResponse key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public LinkedIntegrationRuntimeKeyAuthorizationResponse build() {
+        }        public LinkedIntegrationRuntimeKeyAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeKeyAuthorizationResponse(authorizationType, key);
         }
     }

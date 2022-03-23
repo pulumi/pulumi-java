@@ -121,27 +121,25 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
             this.metricDimensions = metricDimensions;
             return this;
         }
-
+        public Builder metricDimensions(PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension... metricDimensions) {
+            return metricDimensions(List.of(metricDimensions));
+        }
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
-        }
-        public PolicyTargetTrackingConfigurationCustomizedMetricSpecification build() {
+        }        public PolicyTargetTrackingConfigurationCustomizedMetricSpecification build() {
             return new PolicyTargetTrackingConfigurationCustomizedMetricSpecification(metricDimensions, metricName, namespace, statistic, unit);
         }
     }

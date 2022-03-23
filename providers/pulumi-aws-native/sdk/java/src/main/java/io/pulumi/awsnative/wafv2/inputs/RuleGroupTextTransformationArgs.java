@@ -70,22 +70,18 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder type(Output<RuleGroupTextTransformationType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(RuleGroupTextTransformationType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RuleGroupTextTransformationArgs build() {
+        }        public RuleGroupTextTransformationArgs build() {
             return new RuleGroupTextTransformationArgs(priority, type);
         }
     }

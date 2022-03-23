@@ -87,17 +87,14 @@ public final class ForwardProxyResponse {
             this.convention = convention;
             return this;
         }
-
         public Builder customHostHeaderName(@Nullable String customHostHeaderName) {
             this.customHostHeaderName = customHostHeaderName;
             return this;
         }
-
         public Builder customProtoHeaderName(@Nullable String customProtoHeaderName) {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
-        }
-        public ForwardProxyResponse build() {
+        }        public ForwardProxyResponse build() {
             return new ForwardProxyResponse(convention, customHostHeaderName, customProtoHeaderName);
         }
     }

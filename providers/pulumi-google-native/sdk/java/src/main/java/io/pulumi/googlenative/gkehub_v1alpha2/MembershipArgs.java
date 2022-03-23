@@ -162,82 +162,66 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             this.authority = authority;
             return this;
         }
-
         public Builder authority(@Nullable AuthorityArgs authority) {
             this.authority = Output.ofNullable(authority);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<MembershipEndpointArgs> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable MembershipEndpointArgs endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder infrastructureType(@Nullable Output<MembershipInfrastructureType> infrastructureType) {
             this.infrastructureType = infrastructureType;
             return this;
         }
-
         public Builder infrastructureType(@Nullable MembershipInfrastructureType infrastructureType) {
             this.infrastructureType = Output.ofNullable(infrastructureType);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder membershipId(Output<String> membershipId) {
             this.membershipId = Objects.requireNonNull(membershipId);
             return this;
         }
-
         public Builder membershipId(String membershipId) {
             this.membershipId = Output.of(Objects.requireNonNull(membershipId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public MembershipArgs build() {
+        }        public MembershipArgs build() {
             return new MembershipArgs(authority, endpoint, externalId, infrastructureType, labels, location, membershipId, project);
         }
     }

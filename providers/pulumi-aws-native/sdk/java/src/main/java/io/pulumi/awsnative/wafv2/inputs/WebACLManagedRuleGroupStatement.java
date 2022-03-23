@@ -105,27 +105,25 @@ public final class WebACLManagedRuleGroupStatement extends io.pulumi.resources.I
             this.excludedRules = excludedRules;
             return this;
         }
-
+        public Builder excludedRules(WebACLExcludedRule... excludedRules) {
+            return excludedRules(List.of(excludedRules));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public WebACLManagedRuleGroupStatement build() {
+        }        public WebACLManagedRuleGroupStatement build() {
             return new WebACLManagedRuleGroupStatement(excludedRules, name, scopeDownStatement, vendorName, version);
         }
     }

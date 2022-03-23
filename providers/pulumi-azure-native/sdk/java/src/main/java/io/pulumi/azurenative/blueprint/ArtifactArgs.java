@@ -108,42 +108,34 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactName = artifactName;
             return this;
         }
-
         public Builder artifactName(@Nullable String artifactName) {
             this.artifactName = Output.ofNullable(artifactName);
             return this;
         }
-
         public Builder blueprintName(Output<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder blueprintName(String blueprintName) {
             this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
             return this;
         }
-
         public Builder kind(Output<Either<String,ArtifactKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,ArtifactKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
-        }
-        public ArtifactArgs build() {
+        }        public ArtifactArgs build() {
             return new ArtifactArgs(artifactName, blueprintName, kind, resourceScope);
         }
     }

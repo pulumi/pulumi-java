@@ -104,22 +104,18 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder dataConnectionName(String dataConnectionName) {
             this.dataConnectionName = Objects.requireNonNull(dataConnectionName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDataConnectionArgs build() {
+        }        public GetDataConnectionArgs build() {
             return new GetDataConnectionArgs(clusterName, dataConnectionName, databaseName, resourceGroupName);
         }
     }

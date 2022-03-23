@@ -94,17 +94,14 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder oid(@Nullable String oid) {
             this.oid = oid;
             return this;
         }
-
         public Builder puid(@Nullable String puid) {
             this.puid = puid;
             return this;
-        }
-        public ApplicationClientDetailsResponse build() {
+        }        public ApplicationClientDetailsResponse build() {
             return new ApplicationClientDetailsResponse(applicationId, oid, puid);
         }
     }

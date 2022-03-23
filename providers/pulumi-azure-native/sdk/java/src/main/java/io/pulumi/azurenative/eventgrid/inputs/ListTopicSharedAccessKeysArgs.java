@@ -72,12 +72,10 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
-        }
-        public ListTopicSharedAccessKeysArgs build() {
+        }        public ListTopicSharedAccessKeysArgs build() {
             return new ListTopicSharedAccessKeysArgs(resourceGroupName, topicName);
         }
     }

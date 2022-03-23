@@ -57,12 +57,10 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
-        }
-        public DetectorModelArgs build() {
+        }        public DetectorModelArgs build() {
             return new DetectorModelArgs(arn);
         }
     }

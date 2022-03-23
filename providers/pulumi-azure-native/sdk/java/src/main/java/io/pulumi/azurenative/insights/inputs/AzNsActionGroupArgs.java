@@ -95,32 +95,29 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
             this.actionGroup = actionGroup;
             return this;
         }
-
         public Builder actionGroup(@Nullable List<String> actionGroup) {
             this.actionGroup = Output.ofNullable(actionGroup);
             return this;
         }
-
+        public Builder actionGroup(String... actionGroup) {
+            return actionGroup(List.of(actionGroup));
+        }
         public Builder customWebhookPayload(@Nullable Output<String> customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
-
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             this.customWebhookPayload = Output.ofNullable(customWebhookPayload);
             return this;
         }
-
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
-
         public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = Output.ofNullable(emailSubject);
             return this;
-        }
-        public AzNsActionGroupArgs build() {
+        }        public AzNsActionGroupArgs build() {
             return new AzNsActionGroupArgs(actionGroup, customWebhookPayload, emailSubject);
         }
     }

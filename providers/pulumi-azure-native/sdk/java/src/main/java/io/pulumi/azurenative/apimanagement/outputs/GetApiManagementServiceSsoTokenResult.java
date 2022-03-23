@@ -53,8 +53,7 @@ public final class GetApiManagementServiceSsoTokenResult {
         public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = redirectUri;
             return this;
-        }
-        public GetApiManagementServiceSsoTokenResult build() {
+        }        public GetApiManagementServiceSsoTokenResult build() {
             return new GetApiManagementServiceSsoTokenResult(redirectUri);
         }
     }

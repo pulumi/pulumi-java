@@ -57,12 +57,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public PrivateEndpointArgs build() {
+        }        public PrivateEndpointArgs build() {
             return new PrivateEndpointArgs(id);
         }
     }

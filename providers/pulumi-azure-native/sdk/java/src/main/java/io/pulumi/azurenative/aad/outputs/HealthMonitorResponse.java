@@ -85,17 +85,14 @@ public final class HealthMonitorResponse {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public HealthMonitorResponse build() {
+        }        public HealthMonitorResponse build() {
             return new HealthMonitorResponse(details, id, name);
         }
     }

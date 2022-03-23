@@ -69,12 +69,10 @@ public final class TriggerReferenceResponse {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TriggerReferenceResponse build() {
+        }        public TriggerReferenceResponse build() {
             return new TriggerReferenceResponse(referenceName, type);
         }
     }

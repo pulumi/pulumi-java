@@ -111,22 +111,21 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
+        public Builder days(String... days) {
+            return days(List.of(days));
+        }
         public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
-
         public Builder start(TimeResponse start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder stop(TimeResponse stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
-        }
-        public BandwidthScheduleResponse build() {
+        }        public BandwidthScheduleResponse build() {
             return new BandwidthScheduleResponse(days, rateInMbps, start, stop);
         }
     }

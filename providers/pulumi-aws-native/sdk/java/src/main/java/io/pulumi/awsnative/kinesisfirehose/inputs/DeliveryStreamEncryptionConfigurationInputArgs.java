@@ -67,22 +67,18 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
             this.keyARN = keyARN;
             return this;
         }
-
         public Builder keyARN(@Nullable String keyARN) {
             this.keyARN = Output.ofNullable(keyARN);
             return this;
         }
-
         public Builder keyType(Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public Builder keyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
             this.keyType = Output.of(Objects.requireNonNull(keyType));
             return this;
-        }
-        public DeliveryStreamEncryptionConfigurationInputArgs build() {
+        }        public DeliveryStreamEncryptionConfigurationInputArgs build() {
             return new DeliveryStreamEncryptionConfigurationInputArgs(keyARN, keyType);
         }
     }

@@ -180,42 +180,37 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder inputPorts(@Nullable Map<String,InputPortResponse> inputPorts) {
             this.inputPorts = inputPorts;
             return this;
         }
-
         public Builder locationInfo(BlobLocationResponse locationInfo) {
             this.locationInfo = Objects.requireNonNull(locationInfo);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputPorts(@Nullable Map<String,OutputPortResponse> outputPorts) {
             this.outputPorts = outputPorts;
             return this;
         }
-
         public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ModuleAssetParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AssetItemResponse build() {
+        }        public AssetItemResponse build() {
             return new AssetItemResponse(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
         }
     }

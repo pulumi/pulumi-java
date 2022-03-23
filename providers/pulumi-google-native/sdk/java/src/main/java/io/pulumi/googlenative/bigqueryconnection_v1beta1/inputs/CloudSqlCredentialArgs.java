@@ -78,22 +78,18 @@ public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceAr
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public CloudSqlCredentialArgs build() {
+        }        public CloudSqlCredentialArgs build() {
             return new CloudSqlCredentialArgs(password, username);
         }
     }

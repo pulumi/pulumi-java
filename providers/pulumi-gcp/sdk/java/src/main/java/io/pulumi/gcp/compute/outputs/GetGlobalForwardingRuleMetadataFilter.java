@@ -55,12 +55,13 @@ public final class GetGlobalForwardingRuleMetadataFilter {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
-
+        public Builder filterLabels(GetGlobalForwardingRuleMetadataFilterFilterLabel... filterLabels) {
+            return filterLabels(List.of(filterLabels));
+        }
         public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
-        }
-        public GetGlobalForwardingRuleMetadataFilter build() {
+        }        public GetGlobalForwardingRuleMetadataFilter build() {
             return new GetGlobalForwardingRuleMetadataFilter(filterLabels, filterMatchCriteria);
         }
     }

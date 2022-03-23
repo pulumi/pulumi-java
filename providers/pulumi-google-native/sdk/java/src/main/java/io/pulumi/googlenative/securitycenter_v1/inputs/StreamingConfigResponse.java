@@ -58,8 +58,7 @@ public final class StreamingConfigResponse extends io.pulumi.resources.InvokeArg
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
-        }
-        public StreamingConfigResponse build() {
+        }        public StreamingConfigResponse build() {
             return new StreamingConfigResponse(filter);
         }
     }

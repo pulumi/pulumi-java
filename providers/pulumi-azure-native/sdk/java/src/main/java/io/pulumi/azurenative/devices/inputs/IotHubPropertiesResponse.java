@@ -347,92 +347,86 @@ public final class IotHubPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
-
+        public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleResponse... authorizationPolicies) {
+            return authorizationPolicies(List.of(authorizationPolicies));
+        }
         public Builder cloudToDevice(@Nullable CloudToDevicePropertiesResponse cloudToDevice) {
             this.cloudToDevice = cloudToDevice;
             return this;
         }
-
         public Builder comments(@Nullable String comments) {
             this.comments = comments;
             return this;
         }
-
         public Builder enableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
             this.enableFileUploadNotifications = enableFileUploadNotifications;
             return this;
         }
-
         public Builder eventHubEndpoints(@Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints) {
             this.eventHubEndpoints = eventHubEndpoints;
             return this;
         }
-
         public Builder features(@Nullable String features) {
             this.features = features;
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder ipFilterRules(@Nullable List<IpFilterRuleResponse> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
-
+        public Builder ipFilterRules(IpFilterRuleResponse... ipFilterRules) {
+            return ipFilterRules(List.of(ipFilterRules));
+        }
         public Builder locations(List<IotHubLocationDescriptionResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(IotHubLocationDescriptionResponse... locations) {
+            return locations(List.of(locations));
+        }
         public Builder messagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints) {
             this.messagingEndpoints = messagingEndpoints;
             return this;
         }
-
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
-
         public Builder networkRuleSets(@Nullable NetworkRuleSetPropertiesResponse networkRuleSets) {
             this.networkRuleSets = networkRuleSets;
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder routing(@Nullable RoutingPropertiesResponse routing) {
             this.routing = routing;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageEndpoints(@Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
             this.storageEndpoints = storageEndpoints;
             return this;
-        }
-        public IotHubPropertiesResponse build() {
+        }        public IotHubPropertiesResponse build() {
             return new IotHubPropertiesResponse(authorizationPolicies, cloudToDevice, comments, enableFileUploadNotifications, eventHubEndpoints, features, hostName, ipFilterRules, locations, messagingEndpoints, minTlsVersion, networkRuleSets, privateEndpointConnections, provisioningState, publicNetworkAccess, routing, state, storageEndpoints);
         }
     }

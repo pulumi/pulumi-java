@@ -127,27 +127,22 @@ public final class VMResponse extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VMResponse build() {
+        }        public VMResponse build() {
             return new VMResponse(id, location, name, tags, type);
         }
     }

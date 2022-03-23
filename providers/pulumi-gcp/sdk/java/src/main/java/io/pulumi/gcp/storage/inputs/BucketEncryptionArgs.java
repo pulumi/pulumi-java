@@ -52,12 +52,10 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
-
         public Builder defaultKmsKeyName(String defaultKmsKeyName) {
             this.defaultKmsKeyName = Output.of(Objects.requireNonNull(defaultKmsKeyName));
             return this;
-        }
-        public BucketEncryptionArgs build() {
+        }        public BucketEncryptionArgs build() {
             return new BucketEncryptionArgs(defaultKmsKeyName);
         }
     }

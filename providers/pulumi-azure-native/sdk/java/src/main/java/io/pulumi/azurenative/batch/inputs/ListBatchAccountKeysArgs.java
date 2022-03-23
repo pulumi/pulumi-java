@@ -72,12 +72,10 @@ public final class ListBatchAccountKeysArgs extends io.pulumi.resources.InvokeAr
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListBatchAccountKeysArgs build() {
+        }        public ListBatchAccountKeysArgs build() {
             return new ListBatchAccountKeysArgs(accountName, resourceGroupName);
         }
     }

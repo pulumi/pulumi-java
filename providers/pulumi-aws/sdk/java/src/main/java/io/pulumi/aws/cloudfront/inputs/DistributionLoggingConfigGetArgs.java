@@ -94,32 +94,26 @@ public final class DistributionLoggingConfigGetArgs extends io.pulumi.resources.
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder includeCookies(@Nullable Output<Boolean> includeCookies) {
             this.includeCookies = includeCookies;
             return this;
         }
-
         public Builder includeCookies(@Nullable Boolean includeCookies) {
             this.includeCookies = Output.ofNullable(includeCookies);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public DistributionLoggingConfigGetArgs build() {
+        }        public DistributionLoggingConfigGetArgs build() {
             return new DistributionLoggingConfigGetArgs(bucket, includeCookies, prefix);
         }
     }

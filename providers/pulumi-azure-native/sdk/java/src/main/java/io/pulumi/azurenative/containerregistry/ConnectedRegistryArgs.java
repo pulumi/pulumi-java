@@ -159,72 +159,61 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
             this.clientTokenIds = clientTokenIds;
             return this;
         }
-
         public Builder clientTokenIds(@Nullable List<String> clientTokenIds) {
             this.clientTokenIds = Output.ofNullable(clientTokenIds);
             return this;
         }
-
+        public Builder clientTokenIds(String... clientTokenIds) {
+            return clientTokenIds(List.of(clientTokenIds));
+        }
         public Builder connectedRegistryName(@Nullable Output<String> connectedRegistryName) {
             this.connectedRegistryName = connectedRegistryName;
             return this;
         }
-
         public Builder connectedRegistryName(@Nullable String connectedRegistryName) {
             this.connectedRegistryName = Output.ofNullable(connectedRegistryName);
             return this;
         }
-
         public Builder logging(@Nullable Output<LoggingPropertiesArgs> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable LoggingPropertiesArgs logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder mode(Output<Either<String,ConnectedRegistryMode>> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(Either<String,ConnectedRegistryMode> mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public Builder parent(Output<ParentPropertiesArgs> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(ParentPropertiesArgs parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ConnectedRegistryArgs build() {
+        }        public ConnectedRegistryArgs build() {
             return new ConnectedRegistryArgs(clientTokenIds, connectedRegistryName, logging, mode, parent, registryName, resourceGroupName);
         }
     }

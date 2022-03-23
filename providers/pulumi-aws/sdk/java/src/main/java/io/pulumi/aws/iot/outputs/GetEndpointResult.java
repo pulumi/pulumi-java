@@ -89,17 +89,14 @@ public final class GetEndpointResult {
             this.endpointAddress = Objects.requireNonNull(endpointAddress);
             return this;
         }
-
         public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetEndpointResult build() {
+        }        public GetEndpointResult build() {
             return new GetEndpointResult(endpointAddress, endpointType, id);
         }
     }

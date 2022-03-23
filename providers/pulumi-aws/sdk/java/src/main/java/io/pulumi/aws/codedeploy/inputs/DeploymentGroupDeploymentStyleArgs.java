@@ -74,22 +74,18 @@ public final class DeploymentGroupDeploymentStyleArgs extends io.pulumi.resource
             this.deploymentOption = deploymentOption;
             return this;
         }
-
         public Builder deploymentOption(@Nullable String deploymentOption) {
             this.deploymentOption = Output.ofNullable(deploymentOption);
             return this;
         }
-
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = Output.ofNullable(deploymentType);
             return this;
-        }
-        public DeploymentGroupDeploymentStyleArgs build() {
+        }        public DeploymentGroupDeploymentStyleArgs build() {
             return new DeploymentGroupDeploymentStyleArgs(deploymentOption, deploymentType);
         }
     }

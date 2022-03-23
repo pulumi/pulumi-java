@@ -433,122 +433,98 @@ public final class GetSnapshotResult {
             this.creationData = Objects.requireNonNull(creationData);
             return this;
         }
-
         public Builder diskAccessId(@Nullable String diskAccessId) {
             this.diskAccessId = diskAccessId;
             return this;
         }
-
         public Builder diskSizeBytes(Double diskSizeBytes) {
             this.diskSizeBytes = Objects.requireNonNull(diskSizeBytes);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskState(String diskState) {
             this.diskState = Objects.requireNonNull(diskState);
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection) {
             this.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder incremental(@Nullable Boolean incremental) {
             this.incremental = incremental;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managedBy(String managedBy) {
             this.managedBy = Objects.requireNonNull(managedBy);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkAccessPolicy(@Nullable String networkAccessPolicy) {
             this.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder purchasePlan(@Nullable PurchasePlanResponse purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
-
         public Builder sku(@Nullable SnapshotSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
             this.supportsHibernation = supportsHibernation;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
-        }
-        public GetSnapshotResult build() {
+        }        public GetSnapshotResult build() {
             return new GetSnapshotResult(creationData, diskAccessId, diskSizeBytes, diskSizeGB, diskState, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, id, incremental, location, managedBy, name, networkAccessPolicy, osType, provisioningState, purchasePlan, sku, supportsHibernation, tags, timeCreated, type, uniqueId);
         }
     }

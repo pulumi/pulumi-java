@@ -60,7 +60,9 @@ public final class ValueValidationResponse extends io.pulumi.resources.InvokeArg
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ValueValidationResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ValueValidationResponse build() {
             return new ValueValidationResponse(values);
         }
     }

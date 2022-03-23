@@ -153,72 +153,58 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.apiProxyType = apiProxyType;
             return this;
         }
-
         public Builder apiProxyType(@Nullable EnvironmentApiProxyType apiProxyType) {
             this.apiProxyType = Output.ofNullable(apiProxyType);
             return this;
         }
-
         public Builder deploymentType(@Nullable Output<EnvironmentDeploymentType> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder deploymentType(@Nullable EnvironmentDeploymentType deploymentType) {
             this.deploymentType = Output.ofNullable(deploymentType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder properties(@Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(apiProxyType, deploymentType, description, displayName, name, organizationId, properties);
         }
     }

@@ -127,52 +127,42 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.maxAttempts = maxAttempts;
             return this;
         }
-
         public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = Output.ofNullable(maxAttempts);
             return this;
         }
-
         public Builder maxBackoff(@Nullable Output<String> maxBackoff) {
             this.maxBackoff = maxBackoff;
             return this;
         }
-
         public Builder maxBackoff(@Nullable String maxBackoff) {
             this.maxBackoff = Output.ofNullable(maxBackoff);
             return this;
         }
-
         public Builder maxDoublings(@Nullable Output<Integer> maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
-
         public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = Output.ofNullable(maxDoublings);
             return this;
         }
-
         public Builder maxRetryDuration(@Nullable Output<String> maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
-
         public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = Output.ofNullable(maxRetryDuration);
             return this;
         }
-
         public Builder minBackoff(@Nullable Output<String> minBackoff) {
             this.minBackoff = minBackoff;
             return this;
         }
-
         public Builder minBackoff(@Nullable String minBackoff) {
             this.minBackoff = Output.ofNullable(minBackoff);
             return this;
-        }
-        public RetryConfigArgs build() {
+        }        public RetryConfigArgs build() {
             return new RetryConfigArgs(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff);
         }
     }

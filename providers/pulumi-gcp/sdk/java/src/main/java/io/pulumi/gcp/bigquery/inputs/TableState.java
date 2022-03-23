@@ -481,252 +481,205 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
             this.clusterings = clusterings;
             return this;
         }
-
         public Builder clusterings(@Nullable List<String> clusterings) {
             this.clusterings = Output.ofNullable(clusterings);
             return this;
         }
-
+        public Builder clusterings(String... clusterings) {
+            return clusterings(List.of(clusterings));
+        }
         public Builder creationTime(@Nullable Output<Integer> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable Integer creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable TableEncryptionConfigurationGetArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<Integer> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable Integer expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder externalDataConfiguration(@Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration) {
             this.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
-
         public Builder externalDataConfiguration(@Nullable TableExternalDataConfigurationGetArgs externalDataConfiguration) {
             this.externalDataConfiguration = Output.ofNullable(externalDataConfiguration);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
             this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder materializedView(@Nullable Output<TableMaterializedViewGetArgs> materializedView) {
             this.materializedView = materializedView;
             return this;
         }
-
         public Builder materializedView(@Nullable TableMaterializedViewGetArgs materializedView) {
             this.materializedView = Output.ofNullable(materializedView);
             return this;
         }
-
         public Builder numBytes(@Nullable Output<Integer> numBytes) {
             this.numBytes = numBytes;
             return this;
         }
-
         public Builder numBytes(@Nullable Integer numBytes) {
             this.numBytes = Output.ofNullable(numBytes);
             return this;
         }
-
         public Builder numLongTermBytes(@Nullable Output<Integer> numLongTermBytes) {
             this.numLongTermBytes = numLongTermBytes;
             return this;
         }
-
         public Builder numLongTermBytes(@Nullable Integer numLongTermBytes) {
             this.numLongTermBytes = Output.ofNullable(numLongTermBytes);
             return this;
         }
-
         public Builder numRows(@Nullable Output<Integer> numRows) {
             this.numRows = numRows;
             return this;
         }
-
         public Builder numRows(@Nullable Integer numRows) {
             this.numRows = Output.ofNullable(numRows);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rangePartitioning(@Nullable Output<TableRangePartitioningGetArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
-
         public Builder rangePartitioning(@Nullable TableRangePartitioningGetArgs rangePartitioning) {
             this.rangePartitioning = Output.ofNullable(rangePartitioning);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder tableId(@Nullable Output<String> tableId) {
             this.tableId = tableId;
             return this;
         }
-
         public Builder tableId(@Nullable String tableId) {
             this.tableId = Output.ofNullable(tableId);
             return this;
         }
-
         public Builder timePartitioning(@Nullable Output<TableTimePartitioningGetArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
-
         public Builder timePartitioning(@Nullable TableTimePartitioningGetArgs timePartitioning) {
             this.timePartitioning = Output.ofNullable(timePartitioning);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder view(@Nullable Output<TableViewGetArgs> view) {
             this.view = view;
             return this;
         }
-
         public Builder view(@Nullable TableViewGetArgs view) {
             this.view = Output.ofNullable(view);
             return this;
-        }
-        public TableState build() {
+        }        public TableState build() {
             return new TableState(clusterings, creationTime, datasetId, deletionProtection, description, encryptionConfiguration, etag, expirationTime, externalDataConfiguration, friendlyName, labels, lastModifiedTime, location, materializedView, numBytes, numLongTermBytes, numRows, project, rangePartitioning, schema, selfLink, tableId, timePartitioning, type, view);
         }
     }

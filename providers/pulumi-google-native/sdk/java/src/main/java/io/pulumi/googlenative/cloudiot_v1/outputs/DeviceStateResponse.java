@@ -69,12 +69,10 @@ public final class DeviceStateResponse {
             this.binaryData = Objects.requireNonNull(binaryData);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public DeviceStateResponse build() {
+        }        public DeviceStateResponse build() {
             return new DeviceStateResponse(binaryData, updateTime);
         }
     }

@@ -89,17 +89,14 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             this.description = description;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder sizeDisk(String sizeDisk) {
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
-        }
-        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse build() {
+        }        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse build() {
             return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(description, kind, sizeDisk);
         }
     }

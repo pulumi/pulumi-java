@@ -93,32 +93,29 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
         public Builder recordColumns(List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs> recordColumns) {
             this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
             return this;
         }
-
+        public Builder recordColumns(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = Output.ofNullable(recordEncoding);
             return this;
         }
-
         public Builder recordFormat(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
-
         public Builder recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs recordFormat) {
             this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs(recordColumns, recordEncoding, recordFormat);
         }
     }

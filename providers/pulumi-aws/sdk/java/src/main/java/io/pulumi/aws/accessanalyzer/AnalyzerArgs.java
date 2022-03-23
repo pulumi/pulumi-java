@@ -91,32 +91,26 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             this.analyzerName = Objects.requireNonNull(analyzerName);
             return this;
         }
-
         public Builder analyzerName(String analyzerName) {
             this.analyzerName = Output.of(Objects.requireNonNull(analyzerName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AnalyzerArgs build() {
+        }        public AnalyzerArgs build() {
             return new AnalyzerArgs(analyzerName, tags, type);
         }
     }

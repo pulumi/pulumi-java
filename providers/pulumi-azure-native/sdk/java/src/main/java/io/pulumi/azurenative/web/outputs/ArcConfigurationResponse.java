@@ -88,32 +88,26 @@ public final class ArcConfigurationResponse {
             this.artifactStorageAccessMode = artifactStorageAccessMode;
             return this;
         }
-
         public Builder artifactStorageClassName(@Nullable String artifactStorageClassName) {
             this.artifactStorageClassName = artifactStorageClassName;
             return this;
         }
-
         public Builder artifactStorageMountPath(@Nullable String artifactStorageMountPath) {
             this.artifactStorageMountPath = artifactStorageMountPath;
             return this;
         }
-
         public Builder artifactStorageNodeName(@Nullable String artifactStorageNodeName) {
             this.artifactStorageNodeName = artifactStorageNodeName;
             return this;
         }
-
         public Builder artifactsStorageType(@Nullable String artifactsStorageType) {
             this.artifactsStorageType = artifactsStorageType;
             return this;
         }
-
         public Builder frontEndServiceConfiguration(@Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
             this.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
-        }
-        public ArcConfigurationResponse build() {
+        }        public ArcConfigurationResponse build() {
             return new ArcConfigurationResponse(artifactStorageAccessMode, artifactStorageClassName, artifactStorageMountPath, artifactStorageNodeName, artifactsStorageType, frontEndServiceConfiguration);
         }
     }

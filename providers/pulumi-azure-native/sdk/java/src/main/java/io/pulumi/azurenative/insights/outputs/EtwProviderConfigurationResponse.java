@@ -55,12 +55,13 @@ public final class EtwProviderConfigurationResponse {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(EtwEventConfigurationResponse... events) {
+            return events(List.of(events));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public EtwProviderConfigurationResponse build() {
+        }        public EtwProviderConfigurationResponse build() {
             return new EtwProviderConfigurationResponse(events, id);
         }
     }

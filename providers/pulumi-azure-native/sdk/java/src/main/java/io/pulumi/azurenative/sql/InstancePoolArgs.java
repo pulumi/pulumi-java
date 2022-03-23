@@ -175,82 +175,66 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.instancePoolName = instancePoolName;
             return this;
         }
-
         public Builder instancePoolName(@Nullable String instancePoolName) {
             this.instancePoolName = Output.ofNullable(instancePoolName);
             return this;
         }
-
         public Builder licenseType(Output<Either<String,InstancePoolLicenseType>> licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
-
         public Builder licenseType(Either<String,InstancePoolLicenseType> licenseType) {
             this.licenseType = Output.of(Objects.requireNonNull(licenseType));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vCores(Output<Integer> vCores) {
             this.vCores = Objects.requireNonNull(vCores);
             return this;
         }
-
         public Builder vCores(Integer vCores) {
             this.vCores = Output.of(Objects.requireNonNull(vCores));
             return this;
-        }
-        public InstancePoolArgs build() {
+        }        public InstancePoolArgs build() {
             return new InstancePoolArgs(instancePoolName, licenseType, location, resourceGroupName, sku, subnetId, tags, vCores);
         }
     }

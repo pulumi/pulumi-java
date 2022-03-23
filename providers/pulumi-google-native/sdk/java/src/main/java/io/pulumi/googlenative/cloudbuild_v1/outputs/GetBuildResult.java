@@ -498,142 +498,129 @@ public final class GetBuildResult {
             this.approval = Objects.requireNonNull(approval);
             return this;
         }
-
         public Builder artifacts(ArtifactsResponse artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
-
         public Builder availableSecrets(SecretsResponse availableSecrets) {
             this.availableSecrets = Objects.requireNonNull(availableSecrets);
             return this;
         }
-
         public Builder buildTriggerId(String buildTriggerId) {
             this.buildTriggerId = Objects.requireNonNull(buildTriggerId);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder failureInfo(FailureInfoResponse failureInfo) {
             this.failureInfo = Objects.requireNonNull(failureInfo);
             return this;
         }
-
         public Builder finishTime(String finishTime) {
             this.finishTime = Objects.requireNonNull(finishTime);
             return this;
         }
-
         public Builder images(List<String> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
-
+        public Builder images(String... images) {
+            return images(List.of(images));
+        }
         public Builder logUrl(String logUrl) {
             this.logUrl = Objects.requireNonNull(logUrl);
             return this;
         }
-
         public Builder logsBucket(String logsBucket) {
             this.logsBucket = Objects.requireNonNull(logsBucket);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(BuildOptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder queueTtl(String queueTtl) {
             this.queueTtl = Objects.requireNonNull(queueTtl);
             return this;
         }
-
         public Builder results(ResultsResponse results) {
             this.results = Objects.requireNonNull(results);
             return this;
         }
-
         public Builder secrets(List<SecretResponse> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
-
+        public Builder secrets(SecretResponse... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder sourceProvenance(SourceProvenanceResponse sourceProvenance) {
             this.sourceProvenance = Objects.requireNonNull(sourceProvenance);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetail(String statusDetail) {
             this.statusDetail = Objects.requireNonNull(statusDetail);
             return this;
         }
-
         public Builder steps(List<BuildStepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
+        public Builder steps(BuildStepResponse... steps) {
+            return steps(List.of(steps));
+        }
         public Builder substitutions(Map<String,String> substitutions) {
             this.substitutions = Objects.requireNonNull(substitutions);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder timing(Map<String,String> timing) {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
-
         public Builder warnings(List<WarningResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-        public GetBuildResult build() {
+        public Builder warnings(WarningResponse... warnings) {
+            return warnings(List.of(warnings));
+        }        public GetBuildResult build() {
             return new GetBuildResult(approval, artifacts, availableSecrets, buildTriggerId, createTime, failureInfo, finishTime, images, logUrl, logsBucket, name, options, project, queueTtl, results, secrets, serviceAccount, source, sourceProvenance, startTime, status, statusDetail, steps, substitutions, tags, timeout, timing, warnings);
         }
     }

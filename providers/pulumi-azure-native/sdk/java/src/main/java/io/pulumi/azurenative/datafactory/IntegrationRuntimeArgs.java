@@ -109,42 +109,34 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
-
         public Builder integrationRuntimeName(@Nullable Output<String> integrationRuntimeName) {
             this.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
-
         public Builder integrationRuntimeName(@Nullable String integrationRuntimeName) {
             this.integrationRuntimeName = Output.ofNullable(integrationRuntimeName);
             return this;
         }
-
         public Builder properties(Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public IntegrationRuntimeArgs build() {
+        }        public IntegrationRuntimeArgs build() {
             return new IntegrationRuntimeArgs(factoryName, integrationRuntimeName, properties, resourceGroupName);
         }
     }

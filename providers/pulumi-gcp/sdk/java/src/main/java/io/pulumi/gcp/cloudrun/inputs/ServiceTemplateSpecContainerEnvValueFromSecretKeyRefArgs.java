@@ -74,22 +74,18 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs exte
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs build() {
+        }        public ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs build() {
             return new ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs(key, name);
         }
     }

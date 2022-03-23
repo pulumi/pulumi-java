@@ -100,22 +100,18 @@ public final class PolicyListPolicy {
             this.allow = allow;
             return this;
         }
-
         public Builder deny(@Nullable PolicyListPolicyDeny deny) {
             this.deny = deny;
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
-
         public Builder suggestedValue(@Nullable String suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
-        }
-        public PolicyListPolicy build() {
+        }        public PolicyListPolicy build() {
             return new PolicyListPolicy(allow, deny, inheritFromParent, suggestedValue);
         }
     }

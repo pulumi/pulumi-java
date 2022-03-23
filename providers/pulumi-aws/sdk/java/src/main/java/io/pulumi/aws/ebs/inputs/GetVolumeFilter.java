@@ -65,12 +65,13 @@ public final class GetVolumeFilter extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetVolumeFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetVolumeFilter build() {
             return new GetVolumeFilter(name, values);
         }
     }

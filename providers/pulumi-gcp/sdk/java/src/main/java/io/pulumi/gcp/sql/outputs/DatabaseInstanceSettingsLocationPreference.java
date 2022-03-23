@@ -75,12 +75,10 @@ public final class DatabaseInstanceSettingsLocationPreference {
             this.followGaeApplication = followGaeApplication;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public DatabaseInstanceSettingsLocationPreference build() {
+        }        public DatabaseInstanceSettingsLocationPreference build() {
             return new DatabaseInstanceSettingsLocationPreference(followGaeApplication, zone);
         }
     }

@@ -104,22 +104,18 @@ public final class GetADLSGen2FolderDataSetArgs extends io.pulumi.resources.Invo
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataSetName(String dataSetName) {
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public GetADLSGen2FolderDataSetArgs build() {
+        }        public GetADLSGen2FolderDataSetArgs build() {
             return new GetADLSGen2FolderDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
         }
     }

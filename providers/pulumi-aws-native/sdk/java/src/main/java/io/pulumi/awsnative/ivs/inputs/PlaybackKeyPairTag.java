@@ -64,12 +64,10 @@ public final class PlaybackKeyPairTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PlaybackKeyPairTag build() {
+        }        public PlaybackKeyPairTag build() {
             return new PlaybackKeyPairTag(key, value);
         }
     }

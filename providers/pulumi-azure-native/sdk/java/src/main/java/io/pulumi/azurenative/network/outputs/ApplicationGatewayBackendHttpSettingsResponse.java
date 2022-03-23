@@ -332,92 +332,80 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
             this.affinityCookieName = affinityCookieName;
             return this;
         }
-
         public Builder authenticationCertificates(@Nullable List<SubResourceResponse> authenticationCertificates) {
             this.authenticationCertificates = authenticationCertificates;
             return this;
         }
-
+        public Builder authenticationCertificates(SubResourceResponse... authenticationCertificates) {
+            return authenticationCertificates(List.of(authenticationCertificates));
+        }
         public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
-
         public Builder cookieBasedAffinity(@Nullable String cookieBasedAffinity) {
             this.cookieBasedAffinity = cookieBasedAffinity;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
             this.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder probe(@Nullable SubResourceResponse probe) {
             this.probe = probe;
             return this;
         }
-
         public Builder probeEnabled(@Nullable Boolean probeEnabled) {
             this.probeEnabled = probeEnabled;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder requestTimeout(@Nullable Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
-
         public Builder trustedRootCertificates(@Nullable List<SubResourceResponse> trustedRootCertificates) {
             this.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
-
+        public Builder trustedRootCertificates(SubResourceResponse... trustedRootCertificates) {
+            return trustedRootCertificates(List.of(trustedRootCertificates));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewayBackendHttpSettingsResponse build() {
+        }        public ApplicationGatewayBackendHttpSettingsResponse build() {
             return new ApplicationGatewayBackendHttpSettingsResponse(affinityCookieName, authenticationCertificates, connectionDraining, cookieBasedAffinity, etag, hostName, id, name, path, pickHostNameFromBackendAddress, port, probe, probeEnabled, protocol, provisioningState, requestTimeout, trustedRootCertificates, type);
         }
     }

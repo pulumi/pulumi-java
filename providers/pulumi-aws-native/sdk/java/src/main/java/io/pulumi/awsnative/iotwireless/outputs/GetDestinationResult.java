@@ -138,32 +138,29 @@ public final class GetDestinationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder expressionType(@Nullable DestinationExpressionType expressionType) {
             this.expressionType = expressionType;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<DestinationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDestinationResult build() {
+        public Builder tags(DestinationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDestinationResult build() {
             return new GetDestinationResult(arn, description, expression, expressionType, roleArn, tags);
         }
     }

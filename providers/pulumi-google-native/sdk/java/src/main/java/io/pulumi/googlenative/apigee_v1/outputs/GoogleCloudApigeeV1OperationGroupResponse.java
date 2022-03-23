@@ -71,12 +71,13 @@ public final class GoogleCloudApigeeV1OperationGroupResponse {
             this.operationConfigType = Objects.requireNonNull(operationConfigType);
             return this;
         }
-
         public Builder operationConfigs(List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-        public GoogleCloudApigeeV1OperationGroupResponse build() {
+        public Builder operationConfigs(GoogleCloudApigeeV1OperationConfigResponse... operationConfigs) {
+            return operationConfigs(List.of(operationConfigs));
+        }        public GoogleCloudApigeeV1OperationGroupResponse build() {
             return new GoogleCloudApigeeV1OperationGroupResponse(operationConfigType, operationConfigs);
         }
     }

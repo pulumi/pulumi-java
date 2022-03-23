@@ -77,17 +77,14 @@ public final class GetFirehoseDeliveryStreamResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetFirehoseDeliveryStreamResult build() {
+        }        public GetFirehoseDeliveryStreamResult build() {
             return new GetFirehoseDeliveryStreamResult(arn, id, name);
         }
     }

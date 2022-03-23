@@ -154,72 +154,58 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder externalDocsDescription(@Nullable Output<String> externalDocsDescription) {
             this.externalDocsDescription = externalDocsDescription;
             return this;
         }
-
         public Builder externalDocsDescription(@Nullable String externalDocsDescription) {
             this.externalDocsDescription = Output.ofNullable(externalDocsDescription);
             return this;
         }
-
         public Builder externalDocsUrl(@Nullable Output<String> externalDocsUrl) {
             this.externalDocsUrl = externalDocsUrl;
             return this;
         }
-
         public Builder externalDocsUrl(@Nullable String externalDocsUrl) {
             this.externalDocsUrl = Output.ofNullable(externalDocsUrl);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder tagDescriptionId(@Nullable Output<String> tagDescriptionId) {
             this.tagDescriptionId = tagDescriptionId;
             return this;
         }
-
         public Builder tagDescriptionId(@Nullable String tagDescriptionId) {
             this.tagDescriptionId = Output.ofNullable(tagDescriptionId);
             return this;
-        }
-        public ApiTagDescriptionArgs build() {
+        }        public ApiTagDescriptionArgs build() {
             return new ApiTagDescriptionArgs(apiId, description, externalDocsDescription, externalDocsUrl, resourceGroupName, serviceName, tagDescriptionId);
         }
     }

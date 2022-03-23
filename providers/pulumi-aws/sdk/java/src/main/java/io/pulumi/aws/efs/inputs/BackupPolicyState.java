@@ -75,22 +75,18 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
             this.backupPolicy = backupPolicy;
             return this;
         }
-
         public Builder backupPolicy(@Nullable BackupPolicyBackupPolicyGetArgs backupPolicy) {
             this.backupPolicy = Output.ofNullable(backupPolicy);
             return this;
         }
-
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
-        }
-        public BackupPolicyState build() {
+        }        public BackupPolicyState build() {
             return new BackupPolicyState(backupPolicy, fileSystemId);
         }
     }

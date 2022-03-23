@@ -170,82 +170,66 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
             this.approvalRuleTemplateId = approvalRuleTemplateId;
             return this;
         }
-
         public Builder approvalRuleTemplateId(@Nullable String approvalRuleTemplateId) {
             this.approvalRuleTemplateId = Output.ofNullable(approvalRuleTemplateId);
             return this;
         }
-
         public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = Output.ofNullable(lastModifiedDate);
             return this;
         }
-
         public Builder lastModifiedUser(@Nullable Output<String> lastModifiedUser) {
             this.lastModifiedUser = lastModifiedUser;
             return this;
         }
-
         public Builder lastModifiedUser(@Nullable String lastModifiedUser) {
             this.lastModifiedUser = Output.ofNullable(lastModifiedUser);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleContentSha256(@Nullable Output<String> ruleContentSha256) {
             this.ruleContentSha256 = ruleContentSha256;
             return this;
         }
-
         public Builder ruleContentSha256(@Nullable String ruleContentSha256) {
             this.ruleContentSha256 = Output.ofNullable(ruleContentSha256);
             return this;
-        }
-        public ApprovalRuleTemplateState build() {
+        }        public ApprovalRuleTemplateState build() {
             return new ApprovalRuleTemplateState(approvalRuleTemplateId, content, creationDate, description, lastModifiedDate, lastModifiedUser, name, ruleContentSha256);
         }
     }

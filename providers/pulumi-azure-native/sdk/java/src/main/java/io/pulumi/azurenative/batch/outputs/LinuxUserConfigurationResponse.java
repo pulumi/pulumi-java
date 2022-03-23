@@ -88,17 +88,14 @@ public final class LinuxUserConfigurationResponse {
             this.gid = gid;
             return this;
         }
-
         public Builder sshPrivateKey(@Nullable String sshPrivateKey) {
             this.sshPrivateKey = sshPrivateKey;
             return this;
         }
-
         public Builder uid(@Nullable Integer uid) {
             this.uid = uid;
             return this;
-        }
-        public LinuxUserConfigurationResponse build() {
+        }        public LinuxUserConfigurationResponse build() {
             return new LinuxUserConfigurationResponse(gid, sshPrivateKey, uid);
         }
     }

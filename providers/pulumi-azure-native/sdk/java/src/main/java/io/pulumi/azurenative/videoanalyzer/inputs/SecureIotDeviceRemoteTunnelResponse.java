@@ -93,17 +93,14 @@ public final class SecureIotDeviceRemoteTunnelResponse extends io.pulumi.resourc
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
-
         public Builder iotHubName(String iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SecureIotDeviceRemoteTunnelResponse build() {
+        }        public SecureIotDeviceRemoteTunnelResponse build() {
             return new SecureIotDeviceRemoteTunnelResponse(deviceId, iotHubName, type);
         }
     }

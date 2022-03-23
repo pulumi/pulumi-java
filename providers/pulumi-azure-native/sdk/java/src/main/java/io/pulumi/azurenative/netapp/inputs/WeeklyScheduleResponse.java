@@ -128,27 +128,22 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
             this.day = day;
             return this;
         }
-
         public Builder hour(@Nullable Integer hour) {
             this.hour = hour;
             return this;
         }
-
         public Builder minute(@Nullable Integer minute) {
             this.minute = minute;
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-
         public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = usedBytes;
             return this;
-        }
-        public WeeklyScheduleResponse build() {
+        }        public WeeklyScheduleResponse build() {
             return new WeeklyScheduleResponse(day, hour, minute, snapshotsToKeep, usedBytes);
         }
     }

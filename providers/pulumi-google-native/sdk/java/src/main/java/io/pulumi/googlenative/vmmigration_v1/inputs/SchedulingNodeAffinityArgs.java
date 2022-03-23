@@ -96,32 +96,29 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder operator(@Nullable Output<SchedulingNodeAffinityOperator> operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable SchedulingNodeAffinityOperator operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public SchedulingNodeAffinityArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public SchedulingNodeAffinityArgs build() {
             return new SchedulingNodeAffinityArgs(key, operator, values);
         }
     }

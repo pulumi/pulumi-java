@@ -119,27 +119,22 @@ public final class ClusterS3Import {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder ingestionRole(String ingestionRole) {
             this.ingestionRole = Objects.requireNonNull(ingestionRole);
             return this;
         }
-
         public Builder sourceEngine(String sourceEngine) {
             this.sourceEngine = Objects.requireNonNull(sourceEngine);
             return this;
         }
-
         public Builder sourceEngineVersion(String sourceEngineVersion) {
             this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion);
             return this;
-        }
-        public ClusterS3Import build() {
+        }        public ClusterS3Import build() {
             return new ClusterS3Import(bucketName, bucketPrefix, ingestionRole, sourceEngine, sourceEngineVersion);
         }
     }

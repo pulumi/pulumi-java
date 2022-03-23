@@ -55,12 +55,13 @@ public final class OriginRequestPolicyQueryStringsConfig {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
-
         public Builder queryStrings(@Nullable List<String> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-        public OriginRequestPolicyQueryStringsConfig build() {
+        public Builder queryStrings(String... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public OriginRequestPolicyQueryStringsConfig build() {
             return new OriginRequestPolicyQueryStringsConfig(queryStringBehavior, queryStrings);
         }
     }

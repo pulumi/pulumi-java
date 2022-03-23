@@ -51,8 +51,7 @@ public final class MHSMVirtualNetworkRuleResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public MHSMVirtualNetworkRuleResponse build() {
+        }        public MHSMVirtualNetworkRuleResponse build() {
             return new MHSMVirtualNetworkRuleResponse(id);
         }
     }

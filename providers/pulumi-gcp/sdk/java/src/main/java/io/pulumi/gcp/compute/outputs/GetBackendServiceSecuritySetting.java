@@ -54,12 +54,13 @@ public final class GetBackendServiceSecuritySetting {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
-
         public Builder subjectAltNames(List<String> subjectAltNames) {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
-        public GetBackendServiceSecuritySetting build() {
+        public Builder subjectAltNames(String... subjectAltNames) {
+            return subjectAltNames(List.of(subjectAltNames));
+        }        public GetBackendServiceSecuritySetting build() {
             return new GetBackendServiceSecuritySetting(clientTlsPolicy, subjectAltNames);
         }
     }

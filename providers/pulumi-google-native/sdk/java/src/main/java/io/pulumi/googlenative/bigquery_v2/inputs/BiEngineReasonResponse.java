@@ -72,12 +72,10 @@ public final class BiEngineReasonResponse extends io.pulumi.resources.InvokeArgs
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public BiEngineReasonResponse build() {
+        }        public BiEngineReasonResponse build() {
             return new BiEngineReasonResponse(code, message);
         }
     }

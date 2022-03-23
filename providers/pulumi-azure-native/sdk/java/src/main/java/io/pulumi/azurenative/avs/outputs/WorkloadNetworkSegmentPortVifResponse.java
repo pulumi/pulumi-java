@@ -53,8 +53,7 @@ public final class WorkloadNetworkSegmentPortVifResponse {
         public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
-        }
-        public WorkloadNetworkSegmentPortVifResponse build() {
+        }        public WorkloadNetworkSegmentPortVifResponse build() {
             return new WorkloadNetworkSegmentPortVifResponse(portName);
         }
     }

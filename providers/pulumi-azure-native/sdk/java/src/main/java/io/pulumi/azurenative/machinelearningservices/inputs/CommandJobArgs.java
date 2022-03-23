@@ -317,162 +317,130 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             this.codeId = codeId;
             return this;
         }
-
         public Builder codeId(@Nullable String codeId) {
             this.codeId = Output.ofNullable(codeId);
             return this;
         }
-
         public Builder command(Output<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public Builder command(String command) {
             this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
-
         public Builder compute(Output<ComputeConfigurationArgs> compute) {
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
-
         public Builder compute(ComputeConfigurationArgs compute) {
             this.compute = Output.of(Objects.requireNonNull(compute));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder distribution(@Nullable Output<Object> distribution) {
             this.distribution = distribution;
             return this;
         }
-
         public Builder distribution(@Nullable Object distribution) {
             this.distribution = Output.ofNullable(distribution);
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder experimentName(@Nullable Output<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
-
         public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
-
         public Builder identity(@Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
-
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
             this.inputDataBindings = Output.ofNullable(inputDataBindings);
             return this;
         }
-
         public Builder jobType(Output<String> jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
-
         public Builder jobType(String jobType) {
             this.jobType = Output.of(Objects.requireNonNull(jobType));
             return this;
         }
-
         public Builder outputDataBindings(@Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
-
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
             this.outputDataBindings = Output.ofNullable(outputDataBindings);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public CommandJobArgs build() {
+        }        public CommandJobArgs build() {
             return new CommandJobArgs(codeId, command, compute, description, distribution, environmentId, environmentVariables, experimentName, identity, inputDataBindings, jobType, outputDataBindings, priority, properties, tags, timeout);
         }
     }

@@ -104,32 +104,32 @@ public final class GetAccountAccessTokenResult {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
-
         public Builder delegates(@Nullable List<String> delegates) {
             this.delegates = delegates;
             return this;
         }
-
+        public Builder delegates(String... delegates) {
+            return delegates(List.of(delegates));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = lifetime;
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder targetServiceAccount(String targetServiceAccount) {
             this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
             return this;
-        }
-        public GetAccountAccessTokenResult build() {
+        }        public GetAccountAccessTokenResult build() {
             return new GetAccountAccessTokenResult(accessToken, delegates, id, lifetime, scopes, targetServiceAccount);
         }
     }

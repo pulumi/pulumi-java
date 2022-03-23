@@ -109,42 +109,37 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder predicates(@Nullable Output<List<RulePredicateArgs>> predicates) {
             this.predicates = predicates;
             return this;
         }
-
         public Builder predicates(@Nullable List<RulePredicateArgs> predicates) {
             this.predicates = Output.ofNullable(predicates);
             return this;
         }
-
+        public Builder predicates(RulePredicateArgs... predicates) {
+            return predicates(List.of(predicates));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RuleArgs build() {
+        }        public RuleArgs build() {
             return new RuleArgs(metricName, name, predicates, tags);
         }
     }

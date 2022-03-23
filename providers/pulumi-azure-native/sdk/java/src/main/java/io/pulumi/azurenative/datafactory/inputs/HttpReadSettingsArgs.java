@@ -193,92 +193,74 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.additionalHeaders = additionalHeaders;
             return this;
         }
-
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = Output.ofNullable(additionalHeaders);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = Output.ofNullable(enablePartitionDiscovery);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = Output.ofNullable(partitionRootPath);
             return this;
         }
-
         public Builder requestBody(@Nullable Output<Object> requestBody) {
             this.requestBody = requestBody;
             return this;
         }
-
         public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = Output.ofNullable(requestBody);
             return this;
         }
-
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = Output.ofNullable(requestMethod);
             return this;
         }
-
         public Builder requestTimeout(@Nullable Output<Object> requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
-
         public Builder requestTimeout(@Nullable Object requestTimeout) {
             this.requestTimeout = Output.ofNullable(requestTimeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public HttpReadSettingsArgs build() {
+        }        public HttpReadSettingsArgs build() {
             return new HttpReadSettingsArgs(additionalHeaders, disableMetricsCollection, enablePartitionDiscovery, maxConcurrentConnections, partitionRootPath, requestBody, requestMethod, requestTimeout, type);
         }
     }

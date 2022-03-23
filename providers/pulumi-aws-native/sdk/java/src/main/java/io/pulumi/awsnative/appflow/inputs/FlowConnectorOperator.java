@@ -240,77 +240,62 @@ public final class FlowConnectorOperator extends io.pulumi.resources.InvokeArgs 
             this.amplitude = amplitude;
             return this;
         }
-
         public Builder datadog(@Nullable FlowDatadogConnectorOperator datadog) {
             this.datadog = datadog;
             return this;
         }
-
         public Builder dynatrace(@Nullable FlowDynatraceConnectorOperator dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
-
         public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
-
         public Builder inforNexus(@Nullable FlowInforNexusConnectorOperator inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
-
         public Builder marketo(@Nullable FlowMarketoConnectorOperator marketo) {
             this.marketo = marketo;
             return this;
         }
-
         public Builder s3(@Nullable FlowS3ConnectorOperator s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder sAPOData(@Nullable FlowSAPODataConnectorOperator sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
-
         public Builder salesforce(@Nullable FlowSalesforceConnectorOperator salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder serviceNow(@Nullable FlowServiceNowConnectorOperator serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder singular(@Nullable FlowSingularConnectorOperator singular) {
             this.singular = singular;
             return this;
         }
-
         public Builder slack(@Nullable FlowSlackConnectorOperator slack) {
             this.slack = slack;
             return this;
         }
-
         public Builder trendmicro(@Nullable FlowTrendmicroConnectorOperator trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
-
         public Builder veeva(@Nullable FlowVeevaConnectorOperator veeva) {
             this.veeva = veeva;
             return this;
         }
-
         public Builder zendesk(@Nullable FlowZendeskConnectorOperator zendesk) {
             this.zendesk = zendesk;
             return this;
-        }
-        public FlowConnectorOperator build() {
+        }        public FlowConnectorOperator build() {
             return new FlowConnectorOperator(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
         }
     }

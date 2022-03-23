@@ -94,32 +94,29 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
             this.callbackUri = Objects.requireNonNull(callbackUri);
             return this;
         }
-
         public Builder callbackUri(String callbackUri) {
             this.callbackUri = Output.of(Objects.requireNonNull(callbackUri));
             return this;
         }
-
         public Builder spCertificates(@Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
-
         public Builder spCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
             this.spCertificates = Output.ofNullable(spCertificates);
             return this;
         }
-
+        public Builder spCertificates(TenantInboundSamlConfigSpConfigSpCertificateArgs... spCertificates) {
+            return spCertificates(List.of(spCertificates));
+        }
         public Builder spEntityId(Output<String> spEntityId) {
             this.spEntityId = Objects.requireNonNull(spEntityId);
             return this;
         }
-
         public Builder spEntityId(String spEntityId) {
             this.spEntityId = Output.of(Objects.requireNonNull(spEntityId));
             return this;
-        }
-        public TenantInboundSamlConfigSpConfigArgs build() {
+        }        public TenantInboundSamlConfigSpConfigArgs build() {
             return new TenantInboundSamlConfigSpConfigArgs(callbackUri, spCertificates, spEntityId);
         }
     }

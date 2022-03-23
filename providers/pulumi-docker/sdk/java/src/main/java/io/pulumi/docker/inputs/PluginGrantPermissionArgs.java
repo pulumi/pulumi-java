@@ -66,22 +66,21 @@ public final class PluginGrantPermissionArgs extends io.pulumi.resources.Resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public PluginGrantPermissionArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public PluginGrantPermissionArgs build() {
             return new PluginGrantPermissionArgs(name, values);
         }
     }

@@ -87,17 +87,14 @@ public final class GetContextResult {
             this.lifespanCount = Objects.requireNonNull(lifespanCount);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public GetContextResult build() {
+        }        public GetContextResult build() {
             return new GetContextResult(lifespanCount, name, parameters);
         }
     }

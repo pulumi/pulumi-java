@@ -89,32 +89,26 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(String cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
-
         public Builder taskSetId(Output<String> taskSetId) {
             this.taskSetId = Objects.requireNonNull(taskSetId);
             return this;
         }
-
         public Builder taskSetId(String taskSetId) {
             this.taskSetId = Output.of(Objects.requireNonNull(taskSetId));
             return this;
-        }
-        public PrimaryTaskSetArgs build() {
+        }        public PrimaryTaskSetArgs build() {
             return new PrimaryTaskSetArgs(cluster, service, taskSetId);
         }
     }

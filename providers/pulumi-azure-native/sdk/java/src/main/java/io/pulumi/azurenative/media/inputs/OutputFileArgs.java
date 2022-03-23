@@ -61,12 +61,13 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(List<String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
-        public OutputFileArgs build() {
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }        public OutputFileArgs build() {
             return new OutputFileArgs(labels);
         }
     }

@@ -95,42 +95,34 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder databaseId(String databaseId) {
             this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public SessionArgs build() {
+        }        public SessionArgs build() {
             return new SessionArgs(databaseId, instanceId, labels, project);
         }
     }

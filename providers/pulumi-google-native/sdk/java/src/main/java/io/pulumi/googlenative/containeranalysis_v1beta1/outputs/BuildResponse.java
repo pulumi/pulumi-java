@@ -70,12 +70,10 @@ public final class BuildResponse {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
-
         public Builder signature(BuildSignatureResponse signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
-        }
-        public BuildResponse build() {
+        }        public BuildResponse build() {
             return new BuildResponse(builderVersion, signature);
         }
     }

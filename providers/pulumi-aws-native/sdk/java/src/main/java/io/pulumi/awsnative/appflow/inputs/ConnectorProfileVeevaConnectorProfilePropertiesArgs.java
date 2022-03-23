@@ -56,12 +56,10 @@ public final class ConnectorProfileVeevaConnectorProfilePropertiesArgs extends i
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
-
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
             return this;
-        }
-        public ConnectorProfileVeevaConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileVeevaConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileVeevaConnectorProfilePropertiesArgs(instanceUrl);
         }
     }

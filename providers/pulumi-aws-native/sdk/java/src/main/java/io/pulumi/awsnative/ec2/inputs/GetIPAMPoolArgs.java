@@ -54,8 +54,7 @@ public final class GetIPAMPoolArgs extends io.pulumi.resources.InvokeArgs {
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
-        }
-        public GetIPAMPoolArgs build() {
+        }        public GetIPAMPoolArgs build() {
             return new GetIPAMPoolArgs(ipamPoolId);
         }
     }

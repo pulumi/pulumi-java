@@ -58,8 +58,7 @@ public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs 
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SandboxConfigResponse build() {
+        }        public SandboxConfigResponse build() {
             return new SandboxConfigResponse(type);
         }
     }

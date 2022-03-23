@@ -102,27 +102,22 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder experimentId(String experimentId) {
             this.experimentId = Objects.requireNonNull(experimentId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetExperimentArgs build() {
+        }        public GetExperimentArgs build() {
             return new GetExperimentArgs(agentId, environmentId, experimentId, location, project);
         }
     }

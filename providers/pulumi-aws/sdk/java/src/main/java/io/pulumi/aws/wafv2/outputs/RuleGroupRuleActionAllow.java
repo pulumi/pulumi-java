@@ -53,8 +53,7 @@ public final class RuleGroupRuleActionAllow {
         public Builder customRequestHandling(@Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public RuleGroupRuleActionAllow build() {
+        }        public RuleGroupRuleActionAllow build() {
             return new RuleGroupRuleActionAllow(customRequestHandling);
         }
     }

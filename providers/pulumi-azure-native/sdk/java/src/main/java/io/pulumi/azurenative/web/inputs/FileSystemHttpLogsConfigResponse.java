@@ -99,17 +99,14 @@ public final class FileSystemHttpLogsConfigResponse extends io.pulumi.resources.
             this.enabled = enabled;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInMb(@Nullable Integer retentionInMb) {
             this.retentionInMb = retentionInMb;
             return this;
-        }
-        public FileSystemHttpLogsConfigResponse build() {
+        }        public FileSystemHttpLogsConfigResponse build() {
             return new FileSystemHttpLogsConfigResponse(enabled, retentionInDays, retentionInMb);
         }
     }

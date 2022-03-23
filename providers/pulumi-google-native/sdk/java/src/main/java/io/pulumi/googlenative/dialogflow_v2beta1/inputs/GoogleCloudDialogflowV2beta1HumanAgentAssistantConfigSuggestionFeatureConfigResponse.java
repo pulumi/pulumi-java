@@ -145,32 +145,26 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.conversationModelConfig = Objects.requireNonNull(conversationModelConfig);
             return this;
         }
-
         public Builder conversationProcessConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig) {
             this.conversationProcessConfig = Objects.requireNonNull(conversationProcessConfig);
             return this;
         }
-
         public Builder enableEventBasedSuggestion(Boolean enableEventBasedSuggestion) {
             this.enableEventBasedSuggestion = Objects.requireNonNull(enableEventBasedSuggestion);
             return this;
         }
-
         public Builder queryConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig) {
             this.queryConfig = Objects.requireNonNull(queryConfig);
             return this;
         }
-
         public Builder suggestionFeature(GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature) {
             this.suggestionFeature = Objects.requireNonNull(suggestionFeature);
             return this;
         }
-
         public Builder suggestionTriggerSettings(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
             this.suggestionTriggerSettings = Objects.requireNonNull(suggestionTriggerSettings);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse(conversationModelConfig, conversationProcessConfig, enableEventBasedSuggestion, queryConfig, suggestionFeature, suggestionTriggerSettings);
         }
     }

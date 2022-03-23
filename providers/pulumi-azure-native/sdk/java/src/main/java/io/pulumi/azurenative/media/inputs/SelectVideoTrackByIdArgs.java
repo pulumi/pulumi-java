@@ -79,22 +79,18 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder trackId(Output<Double> trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
-
         public Builder trackId(Double trackId) {
             this.trackId = Output.of(Objects.requireNonNull(trackId));
             return this;
-        }
-        public SelectVideoTrackByIdArgs build() {
+        }        public SelectVideoTrackByIdArgs build() {
             return new SelectVideoTrackByIdArgs(odataType, trackId);
         }
     }

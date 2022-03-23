@@ -91,32 +91,26 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public Builder years(@Nullable Output<Integer> years) {
             this.years = years;
             return this;
         }
-
         public Builder years(@Nullable Integer years) {
             this.years = Output.ofNullable(years);
             return this;
-        }
-        public BucketObjectLockConfigurationRuleDefaultRetentionArgs build() {
+        }        public BucketObjectLockConfigurationRuleDefaultRetentionArgs build() {
             return new BucketObjectLockConfigurationRuleDefaultRetentionArgs(days, mode, years);
         }
     }

@@ -56,12 +56,10 @@ public final class ReplicationConfigurationReplicationConfigurationArgs extends 
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder rule(ReplicationConfigurationReplicationConfigurationRuleArgs rule) {
             this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
-        }
-        public ReplicationConfigurationReplicationConfigurationArgs build() {
+        }        public ReplicationConfigurationReplicationConfigurationArgs build() {
             return new ReplicationConfigurationReplicationConfigurationArgs(rule);
         }
     }

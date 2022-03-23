@@ -72,12 +72,13 @@ public final class RestResponseResponseRegex {
             this.matchQuantifier = matchQuantifier;
             return this;
         }
-
         public Builder matches(@Nullable List<String> matches) {
             this.matches = matches;
             return this;
         }
-        public RestResponseResponseRegex build() {
+        public Builder matches(String... matches) {
+            return matches(List.of(matches));
+        }        public RestResponseResponseRegex build() {
             return new RestResponseResponseRegex(matchQuantifier, matches);
         }
     }

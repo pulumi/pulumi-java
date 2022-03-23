@@ -53,7 +53,9 @@ public final class StackTraceResponse {
             this.elements = Objects.requireNonNull(elements);
             return this;
         }
-        public StackTraceResponse build() {
+        public Builder elements(StackTraceElementResponse... elements) {
+            return elements(List.of(elements));
+        }        public StackTraceResponse build() {
             return new StackTraceResponse(elements);
         }
     }

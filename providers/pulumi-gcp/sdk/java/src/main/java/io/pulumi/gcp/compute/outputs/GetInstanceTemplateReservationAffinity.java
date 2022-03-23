@@ -63,12 +63,13 @@ public final class GetInstanceTemplateReservationAffinity {
             this.specificReservations = Objects.requireNonNull(specificReservations);
             return this;
         }
-
+        public Builder specificReservations(GetInstanceTemplateReservationAffinitySpecificReservation... specificReservations) {
+            return specificReservations(List.of(specificReservations));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInstanceTemplateReservationAffinity build() {
+        }        public GetInstanceTemplateReservationAffinity build() {
             return new GetInstanceTemplateReservationAffinity(specificReservations, type);
         }
     }

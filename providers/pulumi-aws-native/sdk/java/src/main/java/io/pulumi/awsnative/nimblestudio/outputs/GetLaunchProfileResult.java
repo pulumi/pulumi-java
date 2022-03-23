@@ -125,32 +125,32 @@ public final class GetLaunchProfileResult {
             this.description = description;
             return this;
         }
-
         public Builder launchProfileId(@Nullable String launchProfileId) {
             this.launchProfileId = launchProfileId;
             return this;
         }
-
         public Builder launchProfileProtocolVersions(@Nullable List<String> launchProfileProtocolVersions) {
             this.launchProfileProtocolVersions = launchProfileProtocolVersions;
             return this;
         }
-
+        public Builder launchProfileProtocolVersions(String... launchProfileProtocolVersions) {
+            return launchProfileProtocolVersions(List.of(launchProfileProtocolVersions));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder streamConfiguration(@Nullable LaunchProfileStreamConfiguration streamConfiguration) {
             this.streamConfiguration = streamConfiguration;
             return this;
         }
-
         public Builder studioComponentIds(@Nullable List<String> studioComponentIds) {
             this.studioComponentIds = studioComponentIds;
             return this;
         }
-        public GetLaunchProfileResult build() {
+        public Builder studioComponentIds(String... studioComponentIds) {
+            return studioComponentIds(List.of(studioComponentIds));
+        }        public GetLaunchProfileResult build() {
             return new GetLaunchProfileResult(description, launchProfileId, launchProfileProtocolVersions, name, streamConfiguration, studioComponentIds);
         }
     }

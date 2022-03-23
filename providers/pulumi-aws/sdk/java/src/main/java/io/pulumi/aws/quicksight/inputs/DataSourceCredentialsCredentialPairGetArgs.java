@@ -73,22 +73,18 @@ public final class DataSourceCredentialsCredentialPairGetArgs extends io.pulumi.
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public DataSourceCredentialsCredentialPairGetArgs build() {
+        }        public DataSourceCredentialsCredentialPairGetArgs build() {
             return new DataSourceCredentialsCredentialPairGetArgs(password, username);
         }
     }

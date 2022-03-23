@@ -69,12 +69,10 @@ public final class GetHoursOfOperationConfigEndTime {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
-        }
-        public GetHoursOfOperationConfigEndTime build() {
+        }        public GetHoursOfOperationConfigEndTime build() {
             return new GetHoursOfOperationConfigEndTime(hours, minutes);
         }
     }

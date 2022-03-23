@@ -161,37 +161,36 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
             this.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
-
+        public Builder containerNetworkInterfaces(SubResourceResponse... containerNetworkInterfaces) {
+            return containerNetworkInterfaces(List.of(containerNetworkInterfaces));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<IPConfigurationProfileResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
+        public Builder ipConfigurations(IPConfigurationProfileResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ContainerNetworkInterfaceConfigurationResponse build() {
+        }        public ContainerNetworkInterfaceConfigurationResponse build() {
             return new ContainerNetworkInterfaceConfigurationResponse(containerNetworkInterfaces, etag, id, ipConfigurations, name, provisioningState, type);
         }
     }

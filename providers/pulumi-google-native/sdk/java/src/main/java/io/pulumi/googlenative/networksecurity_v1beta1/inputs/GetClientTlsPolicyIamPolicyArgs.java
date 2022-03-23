@@ -90,22 +90,18 @@ public final class GetClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.I
             this.clientTlsPolicyId = Objects.requireNonNull(clientTlsPolicyId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetClientTlsPolicyIamPolicyArgs build() {
+        }        public GetClientTlsPolicyIamPolicyArgs build() {
             return new GetClientTlsPolicyIamPolicyArgs(clientTlsPolicyId, location, optionsRequestedPolicyVersion, project);
         }
     }

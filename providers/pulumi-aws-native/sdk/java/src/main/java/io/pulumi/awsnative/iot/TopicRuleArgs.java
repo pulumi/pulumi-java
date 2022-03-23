@@ -81,32 +81,29 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TopicRuleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TopicRuleTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TopicRuleTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder topicRulePayload(Output<TopicRulePayloadArgs> topicRulePayload) {
             this.topicRulePayload = Objects.requireNonNull(topicRulePayload);
             return this;
         }
-
         public Builder topicRulePayload(TopicRulePayloadArgs topicRulePayload) {
             this.topicRulePayload = Output.of(Objects.requireNonNull(topicRulePayload));
             return this;
-        }
-        public TopicRuleArgs build() {
+        }        public TopicRuleArgs build() {
             return new TopicRuleArgs(ruleName, tags, topicRulePayload);
         }
     }

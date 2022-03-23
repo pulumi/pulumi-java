@@ -101,22 +101,18 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
             this.confidenceLevel = Objects.requireNonNull(confidenceLevel);
             return this;
         }
-
         public Builder lowerBound(Double lowerBound) {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
-
         public Builder ratio(Double ratio) {
             this.ratio = Objects.requireNonNull(ratio);
             return this;
         }
-
         public Builder upperBound(Double upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse(confidenceLevel, lowerBound, ratio, upperBound);
         }
     }

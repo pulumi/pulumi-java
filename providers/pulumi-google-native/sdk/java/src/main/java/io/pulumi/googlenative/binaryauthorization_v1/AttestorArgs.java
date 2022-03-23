@@ -115,52 +115,42 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
             this.attestorId = Objects.requireNonNull(attestorId);
             return this;
         }
-
         public Builder attestorId(String attestorId) {
             this.attestorId = Output.of(Objects.requireNonNull(attestorId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder userOwnedGrafeasNote(@Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote) {
             this.userOwnedGrafeasNote = userOwnedGrafeasNote;
             return this;
         }
-
         public Builder userOwnedGrafeasNote(@Nullable UserOwnedGrafeasNoteArgs userOwnedGrafeasNote) {
             this.userOwnedGrafeasNote = Output.ofNullable(userOwnedGrafeasNote);
             return this;
-        }
-        public AttestorArgs build() {
+        }        public AttestorArgs build() {
             return new AttestorArgs(attestorId, description, name, project, userOwnedGrafeasNote);
         }
     }

@@ -95,27 +95,22 @@ public final class GetCipherTextResult {
             this.ciphertextBlob = Objects.requireNonNull(ciphertextBlob);
             return this;
         }
-
         public Builder context(@Nullable Map<String,String> context) {
             this.context = context;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
-        }
-        public GetCipherTextResult build() {
+        }        public GetCipherTextResult build() {
             return new GetCipherTextResult(ciphertextBlob, context, id, keyId, plaintext);
         }
     }

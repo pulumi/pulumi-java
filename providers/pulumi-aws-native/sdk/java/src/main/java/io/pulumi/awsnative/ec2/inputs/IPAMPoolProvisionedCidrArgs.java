@@ -56,12 +56,10 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder cidr(String cidr) {
             this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
-        }
-        public IPAMPoolProvisionedCidrArgs build() {
+        }        public IPAMPoolProvisionedCidrArgs build() {
             return new IPAMPoolProvisionedCidrArgs(cidr);
         }
     }

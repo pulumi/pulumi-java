@@ -56,12 +56,10 @@ public final class CertificateAuthorityOcspConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder ocspCustomCname(@Nullable String ocspCustomCname) {
             this.ocspCustomCname = ocspCustomCname;
             return this;
-        }
-        public CertificateAuthorityOcspConfiguration build() {
+        }        public CertificateAuthorityOcspConfiguration build() {
             return new CertificateAuthorityOcspConfiguration(enabled, ocspCustomCname);
         }
     }

@@ -66,12 +66,10 @@ public final class GetNetworkFirewallPolicyArgs extends io.pulumi.resources.Invo
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetNetworkFirewallPolicyArgs build() {
+        }        public GetNetworkFirewallPolicyArgs build() {
             return new GetNetworkFirewallPolicyArgs(firewallPolicy, project);
         }
     }

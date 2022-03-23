@@ -117,52 +117,42 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.elevationLevel = elevationLevel;
             return this;
         }
-
         public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
             this.elevationLevel = Output.ofNullable(elevationLevel);
             return this;
         }
-
         public Builder linuxUserConfiguration(@Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration) {
             this.linuxUserConfiguration = linuxUserConfiguration;
             return this;
         }
-
         public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationArgs linuxUserConfiguration) {
             this.linuxUserConfiguration = Output.ofNullable(linuxUserConfiguration);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder windowsUserConfiguration(@Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration) {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
-
         public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationArgs windowsUserConfiguration) {
             this.windowsUserConfiguration = Output.ofNullable(windowsUserConfiguration);
             return this;
-        }
-        public UserAccountArgs build() {
+        }        public UserAccountArgs build() {
             return new UserAccountArgs(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
         }
     }

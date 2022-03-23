@@ -78,17 +78,14 @@ public final class GetRegionUrlMapArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder urlMap(String urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
-        }
-        public GetRegionUrlMapArgs build() {
+        }        public GetRegionUrlMapArgs build() {
             return new GetRegionUrlMapArgs(project, region, urlMap);
         }
     }

@@ -171,37 +171,33 @@ public final class PodDisruptionBudgetStatus {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(Condition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder currentHealthy(Integer currentHealthy) {
             this.currentHealthy = Objects.requireNonNull(currentHealthy);
             return this;
         }
-
         public Builder desiredHealthy(Integer desiredHealthy) {
             this.desiredHealthy = Objects.requireNonNull(desiredHealthy);
             return this;
         }
-
         public Builder disruptedPods(@Nullable Map<String,String> disruptedPods) {
             this.disruptedPods = disruptedPods;
             return this;
         }
-
         public Builder disruptionsAllowed(Integer disruptionsAllowed) {
             this.disruptionsAllowed = Objects.requireNonNull(disruptionsAllowed);
             return this;
         }
-
         public Builder expectedPods(Integer expectedPods) {
             this.expectedPods = Objects.requireNonNull(expectedPods);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
-        }
-        public PodDisruptionBudgetStatus build() {
+        }        public PodDisruptionBudgetStatus build() {
             return new PodDisruptionBudgetStatus(conditions, currentHealthy, desiredHealthy, disruptedPods, disruptionsAllowed, expectedPods, observedGeneration);
         }
     }

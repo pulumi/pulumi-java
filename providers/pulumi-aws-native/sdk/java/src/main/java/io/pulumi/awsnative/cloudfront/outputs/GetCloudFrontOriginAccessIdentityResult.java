@@ -64,17 +64,14 @@ public final class GetCloudFrontOriginAccessIdentityResult {
             this.cloudFrontOriginAccessIdentityConfig = cloudFrontOriginAccessIdentityConfig;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder s3CanonicalUserId(@Nullable String s3CanonicalUserId) {
             this.s3CanonicalUserId = s3CanonicalUserId;
             return this;
-        }
-        public GetCloudFrontOriginAccessIdentityResult build() {
+        }        public GetCloudFrontOriginAccessIdentityResult build() {
             return new GetCloudFrontOriginAccessIdentityResult(cloudFrontOriginAccessIdentityConfig, id, s3CanonicalUserId);
         }
     }

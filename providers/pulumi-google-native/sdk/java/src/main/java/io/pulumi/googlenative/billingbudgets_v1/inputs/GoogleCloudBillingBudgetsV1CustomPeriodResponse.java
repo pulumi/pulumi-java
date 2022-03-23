@@ -76,12 +76,10 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse extends io.pu
             this.endDate = Objects.requireNonNull(endDate);
             return this;
         }
-
         public Builder startDate(GoogleTypeDateResponse startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
-        }
-        public GoogleCloudBillingBudgetsV1CustomPeriodResponse build() {
+        }        public GoogleCloudBillingBudgetsV1CustomPeriodResponse build() {
             return new GoogleCloudBillingBudgetsV1CustomPeriodResponse(endDate, startDate);
         }
     }

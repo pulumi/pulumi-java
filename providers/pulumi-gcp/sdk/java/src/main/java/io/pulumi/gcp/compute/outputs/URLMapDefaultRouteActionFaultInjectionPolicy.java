@@ -76,12 +76,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
             this.abort = abort;
             return this;
         }
-
         public Builder delay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay) {
             this.delay = delay;
             return this;
-        }
-        public URLMapDefaultRouteActionFaultInjectionPolicy build() {
+        }        public URLMapDefaultRouteActionFaultInjectionPolicy build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicy(abort, delay);
         }
     }

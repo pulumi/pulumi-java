@@ -54,8 +54,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetEndpointArgs build() {
+        }        public GetEndpointArgs build() {
             return new GetEndpointArgs(arn);
         }
     }

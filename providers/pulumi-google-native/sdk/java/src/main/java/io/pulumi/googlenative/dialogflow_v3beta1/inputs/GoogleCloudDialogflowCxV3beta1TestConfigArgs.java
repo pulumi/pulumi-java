@@ -79,22 +79,21 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
             this.flow = flow;
             return this;
         }
-
         public Builder flow(@Nullable String flow) {
             this.flow = Output.ofNullable(flow);
             return this;
         }
-
         public Builder trackingParameters(@Nullable Output<List<String>> trackingParameters) {
             this.trackingParameters = trackingParameters;
             return this;
         }
-
         public Builder trackingParameters(@Nullable List<String> trackingParameters) {
             this.trackingParameters = Output.ofNullable(trackingParameters);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1TestConfigArgs build() {
+        public Builder trackingParameters(String... trackingParameters) {
+            return trackingParameters(List.of(trackingParameters));
+        }        public GoogleCloudDialogflowCxV3beta1TestConfigArgs build() {
             return new GoogleCloudDialogflowCxV3beta1TestConfigArgs(flow, trackingParameters);
         }
     }

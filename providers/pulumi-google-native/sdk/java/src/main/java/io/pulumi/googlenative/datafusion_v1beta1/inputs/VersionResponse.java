@@ -110,22 +110,21 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
             this.availableFeatures = Objects.requireNonNull(availableFeatures);
             return this;
         }
-
+        public Builder availableFeatures(String... availableFeatures) {
+            return availableFeatures(List.of(availableFeatures));
+        }
         public Builder defaultVersion(Boolean defaultVersion) {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder versionNumber(String versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
-        }
-        public VersionResponse build() {
+        }        public VersionResponse build() {
             return new VersionResponse(availableFeatures, defaultVersion, type, versionNumber);
         }
     }

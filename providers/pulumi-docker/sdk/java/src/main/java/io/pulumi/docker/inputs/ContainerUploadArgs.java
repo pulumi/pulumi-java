@@ -115,62 +115,50 @@ public final class ContainerUploadArgs extends io.pulumi.resources.ResourceArgs 
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentBase64(@Nullable Output<String> contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
-
         public Builder contentBase64(@Nullable String contentBase64) {
             this.contentBase64 = Output.ofNullable(contentBase64);
             return this;
         }
-
         public Builder executable(@Nullable Output<Boolean> executable) {
             this.executable = executable;
             return this;
         }
-
         public Builder executable(@Nullable Boolean executable) {
             this.executable = Output.ofNullable(executable);
             return this;
         }
-
         public Builder file(Output<String> file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder file(String file) {
             this.file = Output.of(Objects.requireNonNull(file));
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder sourceHash(@Nullable Output<String> sourceHash) {
             this.sourceHash = sourceHash;
             return this;
         }
-
         public Builder sourceHash(@Nullable String sourceHash) {
             this.sourceHash = Output.ofNullable(sourceHash);
             return this;
-        }
-        public ContainerUploadArgs build() {
+        }        public ContainerUploadArgs build() {
             return new ContainerUploadArgs(content, contentBase64, executable, file, source, sourceHash);
         }
     }

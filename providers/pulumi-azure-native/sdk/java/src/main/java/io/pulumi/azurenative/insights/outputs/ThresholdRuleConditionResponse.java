@@ -141,32 +141,26 @@ public final class ThresholdRuleConditionResponse {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder timeAggregation(@Nullable String timeAggregation) {
             this.timeAggregation = timeAggregation;
             return this;
         }
-
         public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = windowSize;
             return this;
-        }
-        public ThresholdRuleConditionResponse build() {
+        }        public ThresholdRuleConditionResponse build() {
             return new ThresholdRuleConditionResponse(dataSource, odataType, operator, threshold, timeAggregation, windowSize);
         }
     }

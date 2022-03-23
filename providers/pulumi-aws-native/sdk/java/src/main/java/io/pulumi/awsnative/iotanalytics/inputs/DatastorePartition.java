@@ -66,12 +66,10 @@ public final class DatastorePartition extends io.pulumi.resources.InvokeArgs {
             this.partition = partition;
             return this;
         }
-
         public Builder timestampPartition(@Nullable DatastoreTimestampPartition timestampPartition) {
             this.timestampPartition = timestampPartition;
             return this;
-        }
-        public DatastorePartition build() {
+        }        public DatastorePartition build() {
             return new DatastorePartition(partition, timestampPartition);
         }
     }

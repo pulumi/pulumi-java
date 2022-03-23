@@ -50,8 +50,7 @@ public final class GetSimulationApplicationVersionArgs extends io.pulumi.resourc
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetSimulationApplicationVersionArgs build() {
+        }        public GetSimulationApplicationVersionArgs build() {
             return new GetSimulationApplicationVersionArgs(arn);
         }
     }

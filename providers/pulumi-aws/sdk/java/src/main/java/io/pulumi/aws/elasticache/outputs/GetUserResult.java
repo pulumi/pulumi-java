@@ -129,37 +129,33 @@ public final class GetUserResult {
             this.accessString = accessString;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
             this.noPasswordRequired = noPasswordRequired;
             return this;
         }
-
         public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = passwords;
             return this;
         }
-
+        public Builder passwords(String... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public GetUserResult build() {
+        }        public GetUserResult build() {
             return new GetUserResult(accessString, engine, id, noPasswordRequired, passwords, userId, userName);
         }
     }

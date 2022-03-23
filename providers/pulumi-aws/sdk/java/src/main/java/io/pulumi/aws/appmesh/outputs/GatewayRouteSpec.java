@@ -89,17 +89,14 @@ public final class GatewayRouteSpec {
             this.grpcRoute = grpcRoute;
             return this;
         }
-
         public Builder http2Route(@Nullable GatewayRouteSpecHttp2Route http2Route) {
             this.http2Route = http2Route;
             return this;
         }
-
         public Builder httpRoute(@Nullable GatewayRouteSpecHttpRoute httpRoute) {
             this.httpRoute = httpRoute;
             return this;
-        }
-        public GatewayRouteSpec build() {
+        }        public GatewayRouteSpec build() {
             return new GatewayRouteSpec(grpcRoute, http2Route, httpRoute);
         }
     }

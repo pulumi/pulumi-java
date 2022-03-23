@@ -88,17 +88,14 @@ public final class GetServerKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerKeyArgs build() {
+        }        public GetServerKeyArgs build() {
             return new GetServerKeyArgs(keyName, resourceGroupName, serverName);
         }
     }

@@ -62,12 +62,13 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulum
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable List<String> text) {
             this.text = Output.ofNullable(text);
             return this;
         }
-        public GoogleCloudDialogflowV2IntentMessageTextArgs build() {
+        public Builder text(String... text) {
+            return text(List.of(text));
+        }        public GoogleCloudDialogflowV2IntentMessageTextArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageTextArgs(text);
         }
     }

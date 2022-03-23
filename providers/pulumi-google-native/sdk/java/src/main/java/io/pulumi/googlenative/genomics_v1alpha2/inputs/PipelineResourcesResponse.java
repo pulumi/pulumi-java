@@ -193,47 +193,44 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
-
         public Builder disks(List<DiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(DiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder minimumCpuCores(Integer minimumCpuCores) {
             this.minimumCpuCores = Objects.requireNonNull(minimumCpuCores);
             return this;
         }
-
         public Builder minimumRamGb(Double minimumRamGb) {
             this.minimumRamGb = Objects.requireNonNull(minimumRamGb);
             return this;
         }
-
         public Builder noAddress(Boolean noAddress) {
             this.noAddress = Objects.requireNonNull(noAddress);
             return this;
         }
-
         public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public PipelineResourcesResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public PipelineResourcesResponse build() {
             return new PipelineResourcesResponse(acceleratorCount, acceleratorType, bootDiskSizeGb, disks, minimumCpuCores, minimumRamGb, noAddress, preemptible, zones);
         }
     }

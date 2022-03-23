@@ -53,8 +53,7 @@ public final class ServiceDeploymentController {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ServiceDeploymentController build() {
+        }        public ServiceDeploymentController build() {
             return new ServiceDeploymentController(type);
         }
     }

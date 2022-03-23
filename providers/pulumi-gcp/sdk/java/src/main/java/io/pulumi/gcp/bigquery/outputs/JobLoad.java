@@ -459,97 +459,87 @@ public final class JobLoad {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
-
         public Builder autodetect(@Nullable Boolean autodetect) {
             this.autodetect = autodetect;
             return this;
         }
-
         public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable JobLoadDestinationEncryptionConfiguration destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationTable(JobLoadDestinationTable destinationTable) {
             this.destinationTable = Objects.requireNonNull(destinationTable);
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
-
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
-
         public Builder nullMarker(@Nullable String nullMarker) {
             this.nullMarker = nullMarker;
             return this;
         }
-
         public Builder projectionFields(@Nullable List<String> projectionFields) {
             this.projectionFields = projectionFields;
             return this;
         }
-
+        public Builder projectionFields(String... projectionFields) {
+            return projectionFields(List.of(projectionFields));
+        }
         public Builder quote(@Nullable String quote) {
             this.quote = quote;
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
-
+        public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
+            return schemaUpdateOptions(List.of(schemaUpdateOptions));
+        }
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
-
         public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
+        public Builder sourceUris(String... sourceUris) {
+            return sourceUris(List.of(sourceUris));
+        }
         public Builder timePartitioning(@Nullable JobLoadTimePartitioning timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
-
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
-        }
-        public JobLoad build() {
+        }        public JobLoad build() {
             return new JobLoad(allowJaggedRows, allowQuotedNewlines, autodetect, createDisposition, destinationEncryptionConfiguration, destinationTable, encoding, fieldDelimiter, ignoreUnknownValues, maxBadRecords, nullMarker, projectionFields, quote, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, writeDisposition);
         }
     }

@@ -136,32 +136,26 @@ public final class GetVirtualNetworkRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkSubnetId(String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
             return this;
-        }
-        public GetVirtualNetworkRuleResult build() {
+        }        public GetVirtualNetworkRuleResult build() {
             return new GetVirtualNetworkRuleResult(id, ignoreMissingVnetServiceEndpoint, name, state, type, virtualNetworkSubnetId);
         }
     }

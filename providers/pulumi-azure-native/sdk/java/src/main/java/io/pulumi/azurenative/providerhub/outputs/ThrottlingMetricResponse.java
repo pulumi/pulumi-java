@@ -64,17 +64,14 @@ public final class ThrottlingMetricResponse {
             this.interval = interval;
             return this;
         }
-
         public Builder limit(Double limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ThrottlingMetricResponse build() {
+        }        public ThrottlingMetricResponse build() {
             return new ThrottlingMetricResponse(interval, limit, type);
         }
     }

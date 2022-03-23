@@ -74,22 +74,18 @@ public final class BucketPolicyState extends io.pulumi.resources.ResourceArgs {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public BucketPolicyState build() {
+        }        public BucketPolicyState build() {
             return new BucketPolicyState(bucket, policy);
         }
     }

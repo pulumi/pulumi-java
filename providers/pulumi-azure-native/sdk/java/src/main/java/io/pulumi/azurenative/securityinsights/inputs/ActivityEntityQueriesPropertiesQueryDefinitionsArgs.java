@@ -61,12 +61,10 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
-        }
-        public ActivityEntityQueriesPropertiesQueryDefinitionsArgs build() {
+        }        public ActivityEntityQueriesPropertiesQueryDefinitionsArgs build() {
             return new ActivityEntityQueriesPropertiesQueryDefinitionsArgs(query);
         }
     }

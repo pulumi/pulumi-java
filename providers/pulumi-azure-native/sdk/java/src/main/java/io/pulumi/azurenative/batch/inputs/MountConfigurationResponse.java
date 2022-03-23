@@ -109,22 +109,18 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
             this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
             return this;
         }
-
         public Builder azureFileShareConfiguration(@Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration) {
             this.azureFileShareConfiguration = azureFileShareConfiguration;
             return this;
         }
-
         public Builder cifsMountConfiguration(@Nullable CIFSMountConfigurationResponse cifsMountConfiguration) {
             this.cifsMountConfiguration = cifsMountConfiguration;
             return this;
         }
-
         public Builder nfsMountConfiguration(@Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
             this.nfsMountConfiguration = nfsMountConfiguration;
             return this;
-        }
-        public MountConfigurationResponse build() {
+        }        public MountConfigurationResponse build() {
             return new MountConfigurationResponse(azureBlobFileSystemConfiguration, azureFileShareConfiguration, cifsMountConfiguration, nfsMountConfiguration);
         }
     }

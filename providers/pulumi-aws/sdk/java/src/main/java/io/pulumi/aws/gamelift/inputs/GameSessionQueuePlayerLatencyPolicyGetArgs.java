@@ -74,22 +74,18 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
             this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds);
             return this;
         }
-
         public Builder maximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
             this.maximumIndividualPlayerLatencyMilliseconds = Output.of(Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds));
             return this;
         }
-
         public Builder policyDurationSeconds(@Nullable Output<Integer> policyDurationSeconds) {
             this.policyDurationSeconds = policyDurationSeconds;
             return this;
         }
-
         public Builder policyDurationSeconds(@Nullable Integer policyDurationSeconds) {
             this.policyDurationSeconds = Output.ofNullable(policyDurationSeconds);
             return this;
-        }
-        public GameSessionQueuePlayerLatencyPolicyGetArgs build() {
+        }        public GameSessionQueuePlayerLatencyPolicyGetArgs build() {
             return new GameSessionQueuePlayerLatencyPolicyGetArgs(maximumIndividualPlayerLatencyMilliseconds, policyDurationSeconds);
         }
     }

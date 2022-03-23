@@ -270,72 +270,64 @@ public final class P2SVpnGatewayResponse {
             this.customDnsServers = customDnsServers;
             return this;
         }
-
+        public Builder customDnsServers(String... customDnsServers) {
+            return customDnsServers(List.of(customDnsServers));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder p2SConnectionConfigurations(@Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations) {
             this.p2SConnectionConfigurations = p2SConnectionConfigurations;
             return this;
         }
-
+        public Builder p2SConnectionConfigurations(P2SConnectionConfigurationResponse... p2SConnectionConfigurations) {
+            return p2SConnectionConfigurations(List.of(p2SConnectionConfigurations));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public Builder vpnClientConnectionHealth(VpnClientConnectionHealthResponse vpnClientConnectionHealth) {
             this.vpnClientConnectionHealth = Objects.requireNonNull(vpnClientConnectionHealth);
             return this;
         }
-
         public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
-
         public Builder vpnServerConfiguration(@Nullable SubResourceResponse vpnServerConfiguration) {
             this.vpnServerConfiguration = vpnServerConfiguration;
             return this;
-        }
-        public P2SVpnGatewayResponse build() {
+        }        public P2SVpnGatewayResponse build() {
             return new P2SVpnGatewayResponse(customDnsServers, etag, id, isRoutingPreferenceInternet, location, name, p2SConnectionConfigurations, provisioningState, tags, type, virtualHub, vpnClientConnectionHealth, vpnGatewayScaleUnit, vpnServerConfiguration);
         }
     }

@@ -155,72 +155,58 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.contactName = contactName;
             return this;
         }
-
         public Builder contactName(@Nullable String contactName) {
             this.contactName = Output.ofNullable(contactName);
             return this;
         }
-
         public Builder contactProfile(Output<ResourceReferenceArgs> contactProfile) {
             this.contactProfile = Objects.requireNonNull(contactProfile);
             return this;
         }
-
         public Builder contactProfile(ResourceReferenceArgs contactProfile) {
             this.contactProfile = Output.of(Objects.requireNonNull(contactProfile));
             return this;
         }
-
         public Builder groundStationName(Output<String> groundStationName) {
             this.groundStationName = Objects.requireNonNull(groundStationName);
             return this;
         }
-
         public Builder groundStationName(String groundStationName) {
             this.groundStationName = Output.of(Objects.requireNonNull(groundStationName));
             return this;
         }
-
         public Builder reservationEndTime(Output<String> reservationEndTime) {
             this.reservationEndTime = Objects.requireNonNull(reservationEndTime);
             return this;
         }
-
         public Builder reservationEndTime(String reservationEndTime) {
             this.reservationEndTime = Output.of(Objects.requireNonNull(reservationEndTime));
             return this;
         }
-
         public Builder reservationStartTime(Output<String> reservationStartTime) {
             this.reservationStartTime = Objects.requireNonNull(reservationStartTime);
             return this;
         }
-
         public Builder reservationStartTime(String reservationStartTime) {
             this.reservationStartTime = Output.of(Objects.requireNonNull(reservationStartTime));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder spacecraftName(Output<String> spacecraftName) {
             this.spacecraftName = Objects.requireNonNull(spacecraftName);
             return this;
         }
-
         public Builder spacecraftName(String spacecraftName) {
             this.spacecraftName = Output.of(Objects.requireNonNull(spacecraftName));
             return this;
-        }
-        public ContactArgs build() {
+        }        public ContactArgs build() {
             return new ContactArgs(contactName, contactProfile, groundStationName, reservationEndTime, reservationStartTime, resourceGroupName, spacecraftName);
         }
     }

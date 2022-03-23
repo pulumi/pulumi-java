@@ -134,37 +134,33 @@ public final class GetIpSetResult {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipAddressVersion(String ipAddressVersion) {
             this.ipAddressVersion = Objects.requireNonNull(ipAddressVersion);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetIpSetResult build() {
+        }        public GetIpSetResult build() {
             return new GetIpSetResult(addresses, arn, description, id, ipAddressVersion, name, scope);
         }
     }

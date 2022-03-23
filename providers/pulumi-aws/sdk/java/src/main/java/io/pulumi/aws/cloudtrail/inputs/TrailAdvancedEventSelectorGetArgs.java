@@ -76,22 +76,21 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
             this.fieldSelectors = Objects.requireNonNull(fieldSelectors);
             return this;
         }
-
         public Builder fieldSelectors(List<TrailAdvancedEventSelectorFieldSelectorGetArgs> fieldSelectors) {
             this.fieldSelectors = Output.of(Objects.requireNonNull(fieldSelectors));
             return this;
         }
-
+        public Builder fieldSelectors(TrailAdvancedEventSelectorFieldSelectorGetArgs... fieldSelectors) {
+            return fieldSelectors(List.of(fieldSelectors));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public TrailAdvancedEventSelectorGetArgs build() {
+        }        public TrailAdvancedEventSelectorGetArgs build() {
             return new TrailAdvancedEventSelectorGetArgs(fieldSelectors, name);
         }
     }

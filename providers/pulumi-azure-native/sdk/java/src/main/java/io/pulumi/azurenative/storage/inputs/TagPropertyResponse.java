@@ -124,27 +124,22 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
             this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public Builder upn(String upn) {
             this.upn = Objects.requireNonNull(upn);
             return this;
-        }
-        public TagPropertyResponse build() {
+        }        public TagPropertyResponse build() {
             return new TagPropertyResponse(objectIdentifier, tag, tenantId, timestamp, upn);
         }
     }

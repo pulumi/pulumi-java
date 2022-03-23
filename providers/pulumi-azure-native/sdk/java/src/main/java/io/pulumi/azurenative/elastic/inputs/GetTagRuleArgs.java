@@ -88,17 +88,14 @@ public final class GetTagRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
-        }
-        public GetTagRuleArgs build() {
+        }        public GetTagRuleArgs build() {
             return new GetTagRuleArgs(monitorName, resourceGroupName, ruleSetName);
         }
     }

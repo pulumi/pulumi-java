@@ -58,8 +58,7 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
         public Builder intentUniqueId(String intentUniqueId) {
             this.intentUniqueId = Objects.requireNonNull(intentUniqueId);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(intentUniqueId);
         }
     }

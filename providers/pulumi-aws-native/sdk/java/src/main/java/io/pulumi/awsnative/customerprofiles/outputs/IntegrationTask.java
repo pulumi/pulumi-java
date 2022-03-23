@@ -83,27 +83,28 @@ public final class IntegrationTask {
             this.connectorOperator = connectorOperator;
             return this;
         }
-
         public Builder destinationField(@Nullable String destinationField) {
             this.destinationField = destinationField;
             return this;
         }
-
         public Builder sourceFields(List<String> sourceFields) {
             this.sourceFields = Objects.requireNonNull(sourceFields);
             return this;
         }
-
+        public Builder sourceFields(String... sourceFields) {
+            return sourceFields(List.of(sourceFields));
+        }
         public Builder taskProperties(@Nullable List<IntegrationTaskPropertiesMap> taskProperties) {
             this.taskProperties = taskProperties;
             return this;
         }
-
+        public Builder taskProperties(IntegrationTaskPropertiesMap... taskProperties) {
+            return taskProperties(List.of(taskProperties));
+        }
         public Builder taskType(IntegrationTaskType taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
-        }
-        public IntegrationTask build() {
+        }        public IntegrationTask build() {
             return new IntegrationTask(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }
     }

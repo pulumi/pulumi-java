@@ -95,32 +95,26 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
-
         public Builder percent(Output<Integer> percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public Builder percent(Integer percent) {
             this.percent = Output.of(Objects.requireNonNull(percent));
             return this;
         }
-
         public Builder revisionName(@Nullable Output<String> revisionName) {
             this.revisionName = revisionName;
             return this;
         }
-
         public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = Output.ofNullable(revisionName);
             return this;
-        }
-        public ServiceTrafficArgs build() {
+        }        public ServiceTrafficArgs build() {
             return new ServiceTrafficArgs(latestRevision, percent, revisionName);
         }
     }

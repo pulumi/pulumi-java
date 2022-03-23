@@ -74,22 +74,18 @@ public final class VpcEndpointDnsEntryArgs extends io.pulumi.resources.ResourceA
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
-        }
-        public VpcEndpointDnsEntryArgs build() {
+        }        public VpcEndpointDnsEntryArgs build() {
             return new VpcEndpointDnsEntryArgs(dnsName, hostedZoneId);
         }
     }

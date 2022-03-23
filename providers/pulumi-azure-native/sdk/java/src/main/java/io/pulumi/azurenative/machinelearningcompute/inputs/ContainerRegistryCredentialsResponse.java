@@ -108,22 +108,18 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
             this.loginServer = Objects.requireNonNull(loginServer);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password2(String password2) {
             this.password2 = Objects.requireNonNull(password2);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ContainerRegistryCredentialsResponse build() {
+        }        public ContainerRegistryCredentialsResponse build() {
             return new ContainerRegistryCredentialsResponse(loginServer, password, password2, username);
         }
     }

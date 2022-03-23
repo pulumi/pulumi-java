@@ -104,52 +104,45 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             this.appVisibility = Objects.requireNonNull(appVisibility);
             return this;
         }
-
         public Builder appVisibility(String appVisibility) {
             this.appVisibility = Output.of(Objects.requireNonNull(appVisibility));
             return this;
         }
-
         public Builder attributes(Output<List<EntitlementAttributeArgs>> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(List<EntitlementAttributeArgs> attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-
+        public Builder attributes(EntitlementAttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder stackName(Output<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
-
         public Builder stackName(String stackName) {
             this.stackName = Output.of(Objects.requireNonNull(stackName));
             return this;
-        }
-        public EntitlementArgs build() {
+        }        public EntitlementArgs build() {
             return new EntitlementArgs(appVisibility, attributes, description, name, stackName);
         }
     }

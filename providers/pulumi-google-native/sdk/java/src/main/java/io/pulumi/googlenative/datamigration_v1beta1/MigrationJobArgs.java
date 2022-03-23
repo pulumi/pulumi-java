@@ -305,172 +305,138 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder destinationDatabase(@Nullable Output<DatabaseTypeArgs> destinationDatabase) {
             this.destinationDatabase = destinationDatabase;
             return this;
         }
-
         public Builder destinationDatabase(@Nullable DatabaseTypeArgs destinationDatabase) {
             this.destinationDatabase = Output.ofNullable(destinationDatabase);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder dumpPath(@Nullable Output<String> dumpPath) {
             this.dumpPath = dumpPath;
             return this;
         }
-
         public Builder dumpPath(@Nullable String dumpPath) {
             this.dumpPath = Output.ofNullable(dumpPath);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder migrationJobId(Output<String> migrationJobId) {
             this.migrationJobId = Objects.requireNonNull(migrationJobId);
             return this;
         }
-
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = Output.of(Objects.requireNonNull(migrationJobId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder reverseSshConnectivity(@Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity) {
             this.reverseSshConnectivity = reverseSshConnectivity;
             return this;
         }
-
         public Builder reverseSshConnectivity(@Nullable ReverseSshConnectivityArgs reverseSshConnectivity) {
             this.reverseSshConnectivity = Output.ofNullable(reverseSshConnectivity);
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder sourceDatabase(@Nullable Output<DatabaseTypeArgs> sourceDatabase) {
             this.sourceDatabase = sourceDatabase;
             return this;
         }
-
         public Builder sourceDatabase(@Nullable DatabaseTypeArgs sourceDatabase) {
             this.sourceDatabase = Output.ofNullable(sourceDatabase);
             return this;
         }
-
         public Builder state(@Nullable Output<MigrationJobState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable MigrationJobState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder staticIpConnectivity(@Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity) {
             this.staticIpConnectivity = staticIpConnectivity;
             return this;
         }
-
         public Builder staticIpConnectivity(@Nullable StaticIpConnectivityArgs staticIpConnectivity) {
             this.staticIpConnectivity = Output.ofNullable(staticIpConnectivity);
             return this;
         }
-
         public Builder type(Output<MigrationJobType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(MigrationJobType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder vpcPeeringConnectivity(@Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity) {
             this.vpcPeeringConnectivity = vpcPeeringConnectivity;
             return this;
         }
-
         public Builder vpcPeeringConnectivity(@Nullable VpcPeeringConnectivityArgs vpcPeeringConnectivity) {
             this.vpcPeeringConnectivity = Output.ofNullable(vpcPeeringConnectivity);
             return this;
-        }
-        public MigrationJobArgs build() {
+        }        public MigrationJobArgs build() {
             return new MigrationJobArgs(destination, destinationDatabase, displayName, dumpPath, labels, location, migrationJobId, name, project, requestId, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, vpcPeeringConnectivity);
         }
     }

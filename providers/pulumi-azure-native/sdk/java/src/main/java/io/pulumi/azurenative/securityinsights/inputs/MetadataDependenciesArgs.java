@@ -146,62 +146,53 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             this.contentId = contentId;
             return this;
         }
-
         public Builder contentId(@Nullable String contentId) {
             this.contentId = Output.ofNullable(contentId);
             return this;
         }
-
         public Builder criteria(@Nullable Output<List<MetadataDependenciesArgs>> criteria) {
             this.criteria = criteria;
             return this;
         }
-
         public Builder criteria(@Nullable List<MetadataDependenciesArgs> criteria) {
             this.criteria = Output.ofNullable(criteria);
             return this;
         }
-
+        public Builder criteria(MetadataDependenciesArgs... criteria) {
+            return criteria(List.of(criteria));
+        }
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable Either<String,Operator> operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public MetadataDependenciesArgs build() {
+        }        public MetadataDependenciesArgs build() {
             return new MetadataDependenciesArgs(contentId, criteria, kind, name, operator, version);
         }
     }

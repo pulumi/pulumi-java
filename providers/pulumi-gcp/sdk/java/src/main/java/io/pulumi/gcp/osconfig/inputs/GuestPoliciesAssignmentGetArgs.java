@@ -137,52 +137,57 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
             this.groupLabels = groupLabels;
             return this;
         }
-
         public Builder groupLabels(@Nullable List<GuestPoliciesAssignmentGroupLabelGetArgs> groupLabels) {
             this.groupLabels = Output.ofNullable(groupLabels);
             return this;
         }
-
+        public Builder groupLabels(GuestPoliciesAssignmentGroupLabelGetArgs... groupLabels) {
+            return groupLabels(List.of(groupLabels));
+        }
         public Builder instanceNamePrefixes(@Nullable Output<List<String>> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
-
         public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = Output.ofNullable(instanceNamePrefixes);
             return this;
         }
-
+        public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
+            return instanceNamePrefixes(List.of(instanceNamePrefixes));
+        }
         public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<String> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder osTypes(@Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes) {
             this.osTypes = osTypes;
             return this;
         }
-
         public Builder osTypes(@Nullable List<GuestPoliciesAssignmentOsTypeGetArgs> osTypes) {
             this.osTypes = Output.ofNullable(osTypes);
             return this;
         }
-
+        public Builder osTypes(GuestPoliciesAssignmentOsTypeGetArgs... osTypes) {
+            return osTypes(List.of(osTypes));
+        }
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public GuestPoliciesAssignmentGetArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GuestPoliciesAssignmentGetArgs build() {
             return new GuestPoliciesAssignmentGetArgs(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }
     }

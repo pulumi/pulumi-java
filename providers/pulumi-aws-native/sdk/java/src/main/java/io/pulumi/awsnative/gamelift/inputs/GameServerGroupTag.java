@@ -74,12 +74,10 @@ public final class GameServerGroupTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GameServerGroupTag build() {
+        }        public GameServerGroupTag build() {
             return new GameServerGroupTag(key, value);
         }
     }

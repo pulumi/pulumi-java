@@ -72,12 +72,10 @@ public final class RegionInstanceGroupManagerNamedPort {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public RegionInstanceGroupManagerNamedPort build() {
+        }        public RegionInstanceGroupManagerNamedPort build() {
             return new RegionInstanceGroupManagerNamedPort(name, port);
         }
     }

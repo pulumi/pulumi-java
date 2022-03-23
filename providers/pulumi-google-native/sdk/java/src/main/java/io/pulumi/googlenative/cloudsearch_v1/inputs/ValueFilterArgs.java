@@ -75,22 +75,18 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.operatorName = operatorName;
             return this;
         }
-
         public Builder operatorName(@Nullable String operatorName) {
             this.operatorName = Output.ofNullable(operatorName);
             return this;
         }
-
         public Builder value(@Nullable Output<ValueArgs> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable ValueArgs value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ValueFilterArgs build() {
+        }        public ValueFilterArgs build() {
             return new ValueFilterArgs(operatorName, value);
         }
     }

@@ -91,17 +91,23 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
             this.classifications = classifications;
             return this;
         }
-
+        public Builder classifications(String... classifications) {
+            return classifications(List.of(classifications));
+        }
         public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = excludes;
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
-        public PatchDeploymentPatchConfigWindowsUpdate build() {
+        public Builder exclusivePatches(String... exclusivePatches) {
+            return exclusivePatches(List.of(exclusivePatches));
+        }        public PatchDeploymentPatchConfigWindowsUpdate build() {
             return new PatchDeploymentPatchConfigWindowsUpdate(classifications, excludes, exclusivePatches);
         }
     }

@@ -77,32 +77,26 @@ public final class TopicRuleSigV4AuthorizationArgs extends io.pulumi.resources.R
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder signingRegion(Output<String> signingRegion) {
             this.signingRegion = Objects.requireNonNull(signingRegion);
             return this;
         }
-
         public Builder signingRegion(String signingRegion) {
             this.signingRegion = Output.of(Objects.requireNonNull(signingRegion));
             return this;
-        }
-        public TopicRuleSigV4AuthorizationArgs build() {
+        }        public TopicRuleSigV4AuthorizationArgs build() {
             return new TopicRuleSigV4AuthorizationArgs(roleArn, serviceName, signingRegion);
         }
     }

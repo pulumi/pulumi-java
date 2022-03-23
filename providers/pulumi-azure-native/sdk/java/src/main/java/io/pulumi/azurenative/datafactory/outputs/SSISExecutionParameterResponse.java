@@ -51,8 +51,7 @@ public final class SSISExecutionParameterResponse {
         public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SSISExecutionParameterResponse build() {
+        }        public SSISExecutionParameterResponse build() {
             return new SSISExecutionParameterResponse(value);
         }
     }

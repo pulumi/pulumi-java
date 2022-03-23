@@ -56,12 +56,10 @@ public final class GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs exten
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
         }
-
         public Builder virtualServiceName(String virtualServiceName) {
             this.virtualServiceName = Output.of(Objects.requireNonNull(virtualServiceName));
             return this;
-        }
-        public GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs build() {
+        }        public GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs build() {
             return new GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs(virtualServiceName);
         }
     }

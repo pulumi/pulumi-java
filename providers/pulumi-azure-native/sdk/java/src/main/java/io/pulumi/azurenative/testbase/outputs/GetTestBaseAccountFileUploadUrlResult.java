@@ -69,12 +69,10 @@ public final class GetTestBaseAccountFileUploadUrlResult {
             this.blobPath = Objects.requireNonNull(blobPath);
             return this;
         }
-
         public Builder uploadUrl(String uploadUrl) {
             this.uploadUrl = Objects.requireNonNull(uploadUrl);
             return this;
-        }
-        public GetTestBaseAccountFileUploadUrlResult build() {
+        }        public GetTestBaseAccountFileUploadUrlResult build() {
             return new GetTestBaseAccountFileUploadUrlResult(blobPath, uploadUrl);
         }
     }

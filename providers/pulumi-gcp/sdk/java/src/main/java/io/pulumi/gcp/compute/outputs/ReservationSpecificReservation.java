@@ -92,17 +92,14 @@ public final class ReservationSpecificReservation {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder inUseCount(@Nullable Integer inUseCount) {
             this.inUseCount = inUseCount;
             return this;
         }
-
         public Builder instanceProperties(ReservationSpecificReservationInstanceProperties instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
-        }
-        public ReservationSpecificReservation build() {
+        }        public ReservationSpecificReservation build() {
             return new ReservationSpecificReservation(count, inUseCount, instanceProperties);
         }
     }

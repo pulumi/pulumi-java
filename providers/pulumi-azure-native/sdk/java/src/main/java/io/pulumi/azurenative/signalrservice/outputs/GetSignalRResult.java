@@ -364,97 +364,84 @@ public final class GetSignalRResult {
             this.cors = cors;
             return this;
         }
-
         public Builder externalIP(String externalIP) {
             this.externalIP = Objects.requireNonNull(externalIP);
             return this;
         }
-
         public Builder features(@Nullable List<SignalRFeatureResponse> features) {
             this.features = features;
             return this;
         }
-
+        public Builder features(SignalRFeatureResponse... features) {
+            return features(List.of(features));
+        }
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostNamePrefix(String hostNamePrefix) {
             this.hostNamePrefix = Objects.requireNonNull(hostNamePrefix);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkACLs(@Nullable SignalRNetworkACLsResponse networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicPort(Integer publicPort) {
             this.publicPort = Objects.requireNonNull(publicPort);
             return this;
         }
-
         public Builder serverPort(Integer serverPort) {
             this.serverPort = Objects.requireNonNull(serverPort);
             return this;
         }
-
         public Builder sku(@Nullable ResourceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder upstream(@Nullable ServerlessUpstreamSettingsResponse upstream) {
             this.upstream = upstream;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetSignalRResult build() {
+        }        public GetSignalRResult build() {
             return new GetSignalRResult(cors, externalIP, features, hostName, hostNamePrefix, id, kind, location, name, networkACLs, privateEndpointConnections, provisioningState, publicPort, serverPort, sku, tags, type, upstream, version);
         }
     }

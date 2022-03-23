@@ -52,12 +52,10 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends io.pul
             this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
             return this;
         }
-
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = Output.of(Objects.requireNonNull(timeoutInMinutes));
             return this;
-        }
-        public DatasetDeltaTimeSessionWindowConfigurationArgs build() {
+        }        public DatasetDeltaTimeSessionWindowConfigurationArgs build() {
             return new DatasetDeltaTimeSessionWindowConfigurationArgs(timeoutInMinutes);
         }
     }

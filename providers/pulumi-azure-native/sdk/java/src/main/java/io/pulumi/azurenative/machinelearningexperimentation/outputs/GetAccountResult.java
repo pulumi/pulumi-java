@@ -281,77 +281,62 @@ public final class GetAccountResult {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder discoveryUri(String discoveryUri) {
             this.discoveryUri = Objects.requireNonNull(discoveryUri);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder seats(@Nullable String seats) {
             this.seats = seats;
             return this;
         }
-
         public Builder storageAccount(StorageAccountPropertiesResponse storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vsoAccountId(String vsoAccountId) {
             this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
             return this;
-        }
-        public GetAccountResult build() {
+        }        public GetAccountResult build() {
             return new GetAccountResult(accountId, creationDate, description, discoveryUri, friendlyName, id, keyVaultId, location, name, provisioningState, seats, storageAccount, tags, type, vsoAccountId);
         }
     }

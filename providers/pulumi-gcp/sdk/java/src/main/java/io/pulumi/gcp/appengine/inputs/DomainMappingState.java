@@ -147,62 +147,53 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
             this.overrideStrategy = overrideStrategy;
             return this;
         }
-
         public Builder overrideStrategy(@Nullable String overrideStrategy) {
             this.overrideStrategy = Output.ofNullable(overrideStrategy);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceRecords(@Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
-
         public Builder resourceRecords(@Nullable List<DomainMappingResourceRecordGetArgs> resourceRecords) {
             this.resourceRecords = Output.ofNullable(resourceRecords);
             return this;
         }
-
+        public Builder resourceRecords(DomainMappingResourceRecordGetArgs... resourceRecords) {
+            return resourceRecords(List.of(resourceRecords));
+        }
         public Builder sslSettings(@Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings) {
             this.sslSettings = sslSettings;
             return this;
         }
-
         public Builder sslSettings(@Nullable DomainMappingSslSettingsGetArgs sslSettings) {
             this.sslSettings = Output.ofNullable(sslSettings);
             return this;
-        }
-        public DomainMappingState build() {
+        }        public DomainMappingState build() {
             return new DomainMappingState(domainName, name, overrideStrategy, project, resourceRecords, sslSettings);
         }
     }

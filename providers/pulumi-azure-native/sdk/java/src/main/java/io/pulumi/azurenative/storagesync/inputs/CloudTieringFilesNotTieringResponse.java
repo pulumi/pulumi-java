@@ -95,17 +95,17 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(FilesNotTieringErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public Builder totalFileCount(Double totalFileCount) {
             this.totalFileCount = Objects.requireNonNull(totalFileCount);
             return this;
-        }
-        public CloudTieringFilesNotTieringResponse build() {
+        }        public CloudTieringFilesNotTieringResponse build() {
             return new CloudTieringFilesNotTieringResponse(errors, lastUpdatedTimestamp, totalFileCount);
         }
     }

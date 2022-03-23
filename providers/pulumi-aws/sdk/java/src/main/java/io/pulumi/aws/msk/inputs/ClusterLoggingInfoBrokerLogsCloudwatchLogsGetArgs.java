@@ -75,22 +75,18 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs extends io.
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder logGroup(@Nullable Output<String> logGroup) {
             this.logGroup = logGroup;
             return this;
         }
-
         public Builder logGroup(@Nullable String logGroup) {
             this.logGroup = Output.ofNullable(logGroup);
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs build() {
+        }        public ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs build() {
             return new ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs(enabled, logGroup);
         }
     }

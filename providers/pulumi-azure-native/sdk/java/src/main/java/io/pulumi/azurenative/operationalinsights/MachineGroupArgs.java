@@ -176,82 +176,69 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder groupType(@Nullable Output<Either<String,MachineGroupType>> groupType) {
             this.groupType = groupType;
             return this;
         }
-
         public Builder groupType(@Nullable Either<String,MachineGroupType> groupType) {
             this.groupType = Output.ofNullable(groupType);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder machineGroupName(@Nullable Output<String> machineGroupName) {
             this.machineGroupName = machineGroupName;
             return this;
         }
-
         public Builder machineGroupName(@Nullable String machineGroupName) {
             this.machineGroupName = Output.ofNullable(machineGroupName);
             return this;
         }
-
         public Builder machines(@Nullable Output<List<MachineReferenceWithHintsArgs>> machines) {
             this.machines = machines;
             return this;
         }
-
         public Builder machines(@Nullable List<MachineReferenceWithHintsArgs> machines) {
             this.machines = Output.ofNullable(machines);
             return this;
         }
-
+        public Builder machines(MachineReferenceWithHintsArgs... machines) {
+            return machines(List.of(machines));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public MachineGroupArgs build() {
+        }        public MachineGroupArgs build() {
             return new MachineGroupArgs(count, displayName, groupType, kind, machineGroupName, machines, resourceGroupName, workspaceName);
         }
     }

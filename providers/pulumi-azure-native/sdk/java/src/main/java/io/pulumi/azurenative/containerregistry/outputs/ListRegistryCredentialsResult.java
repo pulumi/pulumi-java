@@ -73,12 +73,13 @@ public final class ListRegistryCredentialsResult {
             this.passwords = passwords;
             return this;
         }
-
+        public Builder passwords(RegistryPasswordResponse... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ListRegistryCredentialsResult build() {
+        }        public ListRegistryCredentialsResult build() {
             return new ListRegistryCredentialsResult(passwords, username);
         }
     }

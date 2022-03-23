@@ -90,32 +90,26 @@ public final class EC2FleetOnDemandOptionsRequest {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder capacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions) {
             this.capacityReservationOptions = capacityReservationOptions;
             return this;
         }
-
         public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
-
         public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
-
         public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
-
         public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
-        }
-        public EC2FleetOnDemandOptionsRequest build() {
+        }        public EC2FleetOnDemandOptionsRequest build() {
             return new EC2FleetOnDemandOptionsRequest(allocationStrategy, capacityReservationOptions, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
         }
     }

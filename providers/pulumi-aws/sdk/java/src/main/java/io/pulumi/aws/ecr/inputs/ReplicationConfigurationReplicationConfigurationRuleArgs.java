@@ -76,22 +76,24 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
-
         public Builder destinations(List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs> destinations) {
             this.destinations = Output.of(Objects.requireNonNull(destinations));
             return this;
         }
-
+        public Builder destinations(ReplicationConfigurationReplicationConfigurationRuleDestinationArgs... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder repositoryFilters(@Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> repositoryFilters) {
             this.repositoryFilters = repositoryFilters;
             return this;
         }
-
         public Builder repositoryFilters(@Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs> repositoryFilters) {
             this.repositoryFilters = Output.ofNullable(repositoryFilters);
             return this;
         }
-        public ReplicationConfigurationReplicationConfigurationRuleArgs build() {
+        public Builder repositoryFilters(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs... repositoryFilters) {
+            return repositoryFilters(List.of(repositoryFilters));
+        }        public ReplicationConfigurationReplicationConfigurationRuleArgs build() {
             return new ReplicationConfigurationReplicationConfigurationRuleArgs(destinations, repositoryFilters);
         }
     }

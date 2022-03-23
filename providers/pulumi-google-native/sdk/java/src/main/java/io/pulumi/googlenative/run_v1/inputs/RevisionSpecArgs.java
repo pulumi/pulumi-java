@@ -160,72 +160,67 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
-
         public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
             this.containerConcurrency = Output.ofNullable(containerConcurrency);
             return this;
         }
-
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(ContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
-
         public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
             this.enableServiceLinks = Output.ofNullable(enableServiceLinks);
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
             this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
             return this;
         }
-
+        public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
+            return imagePullSecrets(List.of(imagePullSecrets));
+        }
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public RevisionSpecArgs build() {
+        public Builder volumes(VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public RevisionSpecArgs build() {
             return new RevisionSpecArgs(containerConcurrency, containers, enableServiceLinks, imagePullSecrets, serviceAccountName, timeoutSeconds, volumes);
         }
     }

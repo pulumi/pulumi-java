@@ -78,22 +78,18 @@ public final class ImageFormatArgs extends io.pulumi.resources.ResourceArgs {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Output.of(Objects.requireNonNull(filenamePattern));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public ImageFormatArgs build() {
+        }        public ImageFormatArgs build() {
             return new ImageFormatArgs(filenamePattern, odataType);
         }
     }

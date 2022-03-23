@@ -170,82 +170,66 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder css(@Nullable Output<String> css) {
             this.css = css;
             return this;
         }
-
         public Builder css(@Nullable String css) {
             this.css = Output.ofNullable(css);
             return this;
         }
-
         public Builder cssVersion(@Nullable Output<String> cssVersion) {
             this.cssVersion = cssVersion;
             return this;
         }
-
         public Builder cssVersion(@Nullable String cssVersion) {
             this.cssVersion = Output.ofNullable(cssVersion);
             return this;
         }
-
         public Builder imageFile(@Nullable Output<String> imageFile) {
             this.imageFile = imageFile;
             return this;
         }
-
         public Builder imageFile(@Nullable String imageFile) {
             this.imageFile = Output.ofNullable(imageFile);
             return this;
         }
-
         public Builder imageUrl(@Nullable Output<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
-
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = Output.ofNullable(imageUrl);
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = Output.ofNullable(lastModifiedDate);
             return this;
         }
-
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Output.ofNullable(userPoolId);
             return this;
-        }
-        public UserPoolUICustomizationState build() {
+        }        public UserPoolUICustomizationState build() {
             return new UserPoolUICustomizationState(clientId, creationDate, css, cssVersion, imageFile, imageUrl, lastModifiedDate, userPoolId);
         }
     }

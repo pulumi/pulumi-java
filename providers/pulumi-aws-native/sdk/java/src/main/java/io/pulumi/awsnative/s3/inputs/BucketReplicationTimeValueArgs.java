@@ -52,12 +52,10 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
-        }
-        public BucketReplicationTimeValueArgs build() {
+        }        public BucketReplicationTimeValueArgs build() {
             return new BucketReplicationTimeValueArgs(minutes);
         }
     }

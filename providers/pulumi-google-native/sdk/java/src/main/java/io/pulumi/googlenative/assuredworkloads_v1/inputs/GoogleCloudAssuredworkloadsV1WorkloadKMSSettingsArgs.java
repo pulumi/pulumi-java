@@ -77,22 +77,18 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends 
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
-
         public Builder nextRotationTime(String nextRotationTime) {
             this.nextRotationTime = Output.of(Objects.requireNonNull(nextRotationTime));
             return this;
         }
-
         public Builder rotationPeriod(Output<String> rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Output.of(Objects.requireNonNull(rotationPeriod));
             return this;
-        }
-        public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs build() {
+        }        public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs(nextRotationTime, rotationPeriod);
         }
     }

@@ -206,102 +206,85 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder linkedTemplates(@Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates) {
             this.linkedTemplates = linkedTemplates;
             return this;
         }
-
         public Builder linkedTemplates(@Nullable List<LinkedTemplateArtifactArgs> linkedTemplates) {
             this.linkedTemplates = Output.ofNullable(linkedTemplates);
             return this;
         }
-
+        public Builder linkedTemplates(LinkedTemplateArtifactArgs... linkedTemplates) {
+            return linkedTemplates(List.of(linkedTemplates));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mainTemplate(@Nullable Output<Object> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
-
         public Builder mainTemplate(@Nullable Object mainTemplate) {
             this.mainTemplate = Output.ofNullable(mainTemplate);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder templateSpecName(Output<String> templateSpecName) {
             this.templateSpecName = Objects.requireNonNull(templateSpecName);
             return this;
         }
-
         public Builder templateSpecName(String templateSpecName) {
             this.templateSpecName = Output.of(Objects.requireNonNull(templateSpecName));
             return this;
         }
-
         public Builder templateSpecVersion(@Nullable Output<String> templateSpecVersion) {
             this.templateSpecVersion = templateSpecVersion;
             return this;
         }
-
         public Builder templateSpecVersion(@Nullable String templateSpecVersion) {
             this.templateSpecVersion = Output.ofNullable(templateSpecVersion);
             return this;
         }
-
         public Builder uiFormDefinition(@Nullable Output<Object> uiFormDefinition) {
             this.uiFormDefinition = uiFormDefinition;
             return this;
         }
-
         public Builder uiFormDefinition(@Nullable Object uiFormDefinition) {
             this.uiFormDefinition = Output.ofNullable(uiFormDefinition);
             return this;
-        }
-        public TemplateSpecVersionArgs build() {
+        }        public TemplateSpecVersionArgs build() {
             return new TemplateSpecVersionArgs(description, linkedTemplates, location, mainTemplate, metadata, resourceGroupName, tags, templateSpecName, templateSpecVersion, uiFormDefinition);
         }
     }

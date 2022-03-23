@@ -87,17 +87,14 @@ public final class ListManagerPublicEncryptionKeyResult {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder valueCertificateThumbprint(@Nullable String valueCertificateThumbprint) {
             this.valueCertificateThumbprint = valueCertificateThumbprint;
             return this;
-        }
-        public ListManagerPublicEncryptionKeyResult build() {
+        }        public ListManagerPublicEncryptionKeyResult build() {
             return new ListManagerPublicEncryptionKeyResult(encryptionAlgorithm, value, valueCertificateThumbprint);
         }
     }

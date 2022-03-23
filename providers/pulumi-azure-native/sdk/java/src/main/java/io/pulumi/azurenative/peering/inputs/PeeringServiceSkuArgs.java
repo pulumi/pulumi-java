@@ -61,12 +61,10 @@ public final class PeeringServiceSkuArgs extends io.pulumi.resources.ResourceArg
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public PeeringServiceSkuArgs build() {
+        }        public PeeringServiceSkuArgs build() {
             return new PeeringServiceSkuArgs(name);
         }
     }

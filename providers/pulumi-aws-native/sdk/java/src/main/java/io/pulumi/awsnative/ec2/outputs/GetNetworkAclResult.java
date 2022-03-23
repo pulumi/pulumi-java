@@ -65,12 +65,13 @@ public final class GetNetworkAclResult {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkAclTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetNetworkAclResult build() {
+        public Builder tags(NetworkAclTag... tags) {
+            return tags(List.of(tags));
+        }        public GetNetworkAclResult build() {
             return new GetNetworkAclResult(id, tags);
         }
     }

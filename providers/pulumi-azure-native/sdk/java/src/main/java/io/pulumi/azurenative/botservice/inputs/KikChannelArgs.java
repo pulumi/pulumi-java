@@ -112,42 +112,34 @@ public final class KikChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder channelName(String channelName) {
             this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<KikChannelPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable KikChannelPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public KikChannelArgs build() {
+        }        public KikChannelArgs build() {
             return new KikChannelArgs(channelName, etag, location, properties);
         }
     }

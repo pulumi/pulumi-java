@@ -87,17 +87,14 @@ public final class AzureActiveDirectoryResponse {
             this.clientApplication = clientApplication;
             return this;
         }
-
         public Builder clusterApplication(@Nullable String clusterApplication) {
             this.clusterApplication = clusterApplication;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public AzureActiveDirectoryResponse build() {
+        }        public AzureActiveDirectoryResponse build() {
             return new AzureActiveDirectoryResponse(clientApplication, clusterApplication, tenantId);
         }
     }

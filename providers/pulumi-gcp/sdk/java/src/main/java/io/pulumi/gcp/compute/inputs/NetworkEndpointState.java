@@ -144,62 +144,50 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder networkEndpointGroup(@Nullable Output<String> networkEndpointGroup) {
             this.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
-
         public Builder networkEndpointGroup(@Nullable String networkEndpointGroup) {
             this.networkEndpointGroup = Output.ofNullable(networkEndpointGroup);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public NetworkEndpointState build() {
+        }        public NetworkEndpointState build() {
             return new NetworkEndpointState(instance, ipAddress, networkEndpointGroup, port, project, zone);
         }
     }

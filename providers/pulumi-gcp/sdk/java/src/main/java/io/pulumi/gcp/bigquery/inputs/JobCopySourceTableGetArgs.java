@@ -91,32 +91,26 @@ public final class JobCopySourceTableGetArgs extends io.pulumi.resources.Resourc
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
-        }
-        public JobCopySourceTableGetArgs build() {
+        }        public JobCopySourceTableGetArgs build() {
             return new JobCopySourceTableGetArgs(datasetId, projectId, tableId);
         }
     }

@@ -83,22 +83,18 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
             this.compressionProperties = compressionProperties;
             return this;
         }
-
         public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = Output.ofNullable(compressionProperties);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public BinaryReadSettingsArgs build() {
+        }        public BinaryReadSettingsArgs build() {
             return new BinaryReadSettingsArgs(compressionProperties, type);
         }
     }

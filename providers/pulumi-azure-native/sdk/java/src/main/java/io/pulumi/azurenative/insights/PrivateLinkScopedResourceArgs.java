@@ -106,42 +106,34 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
             this.linkedResourceId = linkedResourceId;
             return this;
         }
-
         public Builder linkedResourceId(@Nullable String linkedResourceId) {
             this.linkedResourceId = Output.ofNullable(linkedResourceId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scopeName(Output<String> scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
-
         public Builder scopeName(String scopeName) {
             this.scopeName = Output.of(Objects.requireNonNull(scopeName));
             return this;
-        }
-        public PrivateLinkScopedResourceArgs build() {
+        }        public PrivateLinkScopedResourceArgs build() {
             return new PrivateLinkScopedResourceArgs(linkedResourceId, name, resourceGroupName, scopeName);
         }
     }

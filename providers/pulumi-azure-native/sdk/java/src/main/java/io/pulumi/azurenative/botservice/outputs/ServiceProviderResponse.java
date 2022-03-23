@@ -53,8 +53,7 @@ public final class ServiceProviderResponse {
         public Builder properties(@Nullable ServiceProviderPropertiesResponse properties) {
             this.properties = properties;
             return this;
-        }
-        public ServiceProviderResponse build() {
+        }        public ServiceProviderResponse build() {
             return new ServiceProviderResponse(properties);
         }
     }

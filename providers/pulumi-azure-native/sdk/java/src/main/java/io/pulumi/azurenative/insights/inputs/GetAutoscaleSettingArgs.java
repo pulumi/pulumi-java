@@ -72,12 +72,10 @@ public final class GetAutoscaleSettingArgs extends io.pulumi.resources.InvokeArg
             this.autoscaleSettingName = Objects.requireNonNull(autoscaleSettingName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAutoscaleSettingArgs build() {
+        }        public GetAutoscaleSettingArgs build() {
             return new GetAutoscaleSettingArgs(autoscaleSettingName, resourceGroupName);
         }
     }

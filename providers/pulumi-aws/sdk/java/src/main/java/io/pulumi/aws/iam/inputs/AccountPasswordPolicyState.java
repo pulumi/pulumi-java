@@ -203,102 +203,82 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
             this.allowUsersToChangePassword = allowUsersToChangePassword;
             return this;
         }
-
         public Builder allowUsersToChangePassword(@Nullable Boolean allowUsersToChangePassword) {
             this.allowUsersToChangePassword = Output.ofNullable(allowUsersToChangePassword);
             return this;
         }
-
         public Builder expirePasswords(@Nullable Output<Boolean> expirePasswords) {
             this.expirePasswords = expirePasswords;
             return this;
         }
-
         public Builder expirePasswords(@Nullable Boolean expirePasswords) {
             this.expirePasswords = Output.ofNullable(expirePasswords);
             return this;
         }
-
         public Builder hardExpiry(@Nullable Output<Boolean> hardExpiry) {
             this.hardExpiry = hardExpiry;
             return this;
         }
-
         public Builder hardExpiry(@Nullable Boolean hardExpiry) {
             this.hardExpiry = Output.ofNullable(hardExpiry);
             return this;
         }
-
         public Builder maxPasswordAge(@Nullable Output<Integer> maxPasswordAge) {
             this.maxPasswordAge = maxPasswordAge;
             return this;
         }
-
         public Builder maxPasswordAge(@Nullable Integer maxPasswordAge) {
             this.maxPasswordAge = Output.ofNullable(maxPasswordAge);
             return this;
         }
-
         public Builder minimumPasswordLength(@Nullable Output<Integer> minimumPasswordLength) {
             this.minimumPasswordLength = minimumPasswordLength;
             return this;
         }
-
         public Builder minimumPasswordLength(@Nullable Integer minimumPasswordLength) {
             this.minimumPasswordLength = Output.ofNullable(minimumPasswordLength);
             return this;
         }
-
         public Builder passwordReusePrevention(@Nullable Output<Integer> passwordReusePrevention) {
             this.passwordReusePrevention = passwordReusePrevention;
             return this;
         }
-
         public Builder passwordReusePrevention(@Nullable Integer passwordReusePrevention) {
             this.passwordReusePrevention = Output.ofNullable(passwordReusePrevention);
             return this;
         }
-
         public Builder requireLowercaseCharacters(@Nullable Output<Boolean> requireLowercaseCharacters) {
             this.requireLowercaseCharacters = requireLowercaseCharacters;
             return this;
         }
-
         public Builder requireLowercaseCharacters(@Nullable Boolean requireLowercaseCharacters) {
             this.requireLowercaseCharacters = Output.ofNullable(requireLowercaseCharacters);
             return this;
         }
-
         public Builder requireNumbers(@Nullable Output<Boolean> requireNumbers) {
             this.requireNumbers = requireNumbers;
             return this;
         }
-
         public Builder requireNumbers(@Nullable Boolean requireNumbers) {
             this.requireNumbers = Output.ofNullable(requireNumbers);
             return this;
         }
-
         public Builder requireSymbols(@Nullable Output<Boolean> requireSymbols) {
             this.requireSymbols = requireSymbols;
             return this;
         }
-
         public Builder requireSymbols(@Nullable Boolean requireSymbols) {
             this.requireSymbols = Output.ofNullable(requireSymbols);
             return this;
         }
-
         public Builder requireUppercaseCharacters(@Nullable Output<Boolean> requireUppercaseCharacters) {
             this.requireUppercaseCharacters = requireUppercaseCharacters;
             return this;
         }
-
         public Builder requireUppercaseCharacters(@Nullable Boolean requireUppercaseCharacters) {
             this.requireUppercaseCharacters = Output.ofNullable(requireUppercaseCharacters);
             return this;
-        }
-        public AccountPasswordPolicyState build() {
+        }        public AccountPasswordPolicyState build() {
             return new AccountPasswordPolicyState(allowUsersToChangePassword, expirePasswords, hardExpiry, maxPasswordAge, minimumPasswordLength, passwordReusePrevention, requireLowercaseCharacters, requireNumbers, requireSymbols, requireUppercaseCharacters);
         }
     }

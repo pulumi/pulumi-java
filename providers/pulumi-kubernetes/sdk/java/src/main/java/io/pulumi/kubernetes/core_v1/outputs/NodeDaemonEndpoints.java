@@ -53,8 +53,7 @@ public final class NodeDaemonEndpoints {
         public Builder kubeletEndpoint(@Nullable DaemonEndpoint kubeletEndpoint) {
             this.kubeletEndpoint = kubeletEndpoint;
             return this;
-        }
-        public NodeDaemonEndpoints build() {
+        }        public NodeDaemonEndpoints build() {
             return new NodeDaemonEndpoints(kubeletEndpoint);
         }
     }

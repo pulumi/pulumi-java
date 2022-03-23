@@ -89,17 +89,14 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public GetDomainLogPublishingOption build() {
+        }        public GetDomainLogPublishingOption build() {
             return new GetDomainLogPublishingOption(cloudwatchLogGroupArn, enabled, logType);
         }
     }

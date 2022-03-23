@@ -74,22 +74,18 @@ public final class AmiEphemeralBlockDeviceArgs extends io.pulumi.resources.Resou
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder virtualName(Output<String> virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Output.of(Objects.requireNonNull(virtualName));
             return this;
-        }
-        public AmiEphemeralBlockDeviceArgs build() {
+        }        public AmiEphemeralBlockDeviceArgs build() {
             return new AmiEphemeralBlockDeviceArgs(deviceName, virtualName);
         }
     }

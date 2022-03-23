@@ -166,72 +166,61 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
             this.classification = classification;
             return this;
         }
-
         public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
             this.classification = Output.ofNullable(classification);
             return this;
         }
-
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
-
         public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = Output.ofNullable(classificationComment);
             return this;
         }
-
         public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
-
         public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
             this.classificationReason = Output.ofNullable(classificationReason);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(IncidentLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
             this.severity = Output.ofNullable(severity);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,IncidentStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,IncidentStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public AutomationRuleModifyPropertiesActionActionConfigurationArgs build() {
+        }        public AutomationRuleModifyPropertiesActionActionConfigurationArgs build() {
             return new AutomationRuleModifyPropertiesActionActionConfigurationArgs(classification, classificationComment, classificationReason, labels, owner, severity, status);
         }
     }

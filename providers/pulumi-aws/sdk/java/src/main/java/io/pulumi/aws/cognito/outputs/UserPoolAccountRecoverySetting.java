@@ -53,7 +53,9 @@ public final class UserPoolAccountRecoverySetting {
             this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms);
             return this;
         }
-        public UserPoolAccountRecoverySetting build() {
+        public Builder recoveryMechanisms(UserPoolAccountRecoverySettingRecoveryMechanism... recoveryMechanisms) {
+            return recoveryMechanisms(List.of(recoveryMechanisms));
+        }        public UserPoolAccountRecoverySetting build() {
             return new UserPoolAccountRecoverySetting(recoveryMechanisms);
         }
     }

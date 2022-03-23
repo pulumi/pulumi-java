@@ -317,87 +317,79 @@ public final class GetInstanceResult {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder discoveryEndpoint(String discoveryEndpoint) {
             this.discoveryEndpoint = Objects.requireNonNull(discoveryEndpoint);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder instanceMessages(List<InstanceMessageResponse> instanceMessages) {
             this.instanceMessages = Objects.requireNonNull(instanceMessages);
             return this;
         }
-
+        public Builder instanceMessages(InstanceMessageResponse... instanceMessages) {
+            return instanceMessages(List.of(instanceMessages));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder memcacheFullVersion(String memcacheFullVersion) {
             this.memcacheFullVersion = Objects.requireNonNull(memcacheFullVersion);
             return this;
         }
-
         public Builder memcacheNodes(List<NodeResponse> memcacheNodes) {
             this.memcacheNodes = Objects.requireNonNull(memcacheNodes);
             return this;
         }
-
+        public Builder memcacheNodes(NodeResponse... memcacheNodes) {
+            return memcacheNodes(List.of(memcacheNodes));
+        }
         public Builder memcacheVersion(String memcacheVersion) {
             this.memcacheVersion = Objects.requireNonNull(memcacheVersion);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeConfig(NodeConfigResponse nodeConfig) {
             this.nodeConfig = Objects.requireNonNull(nodeConfig);
             return this;
         }
-
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder parameters(MemcacheParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateAvailable(Boolean updateAvailable) {
             this.updateAvailable = Objects.requireNonNull(updateAvailable);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public GetInstanceResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(authorizedNetwork, createTime, discoveryEndpoint, displayName, instanceMessages, labels, memcacheFullVersion, memcacheNodes, memcacheVersion, name, nodeConfig, nodeCount, parameters, state, updateAvailable, updateTime, zones);
         }
     }

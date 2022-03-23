@@ -53,8 +53,7 @@ public final class DiskSecurityProfileResponse {
         public Builder securityType(@Nullable String securityType) {
             this.securityType = securityType;
             return this;
-        }
-        public DiskSecurityProfileResponse build() {
+        }        public DiskSecurityProfileResponse build() {
             return new DiskSecurityProfileResponse(securityType);
         }
     }

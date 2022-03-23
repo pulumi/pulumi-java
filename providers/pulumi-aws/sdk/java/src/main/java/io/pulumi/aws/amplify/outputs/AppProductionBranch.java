@@ -103,22 +103,18 @@ public final class AppProductionBranch {
             this.branchName = branchName;
             return this;
         }
-
         public Builder lastDeployTime(@Nullable String lastDeployTime) {
             this.lastDeployTime = lastDeployTime;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder thumbnailUrl(@Nullable String thumbnailUrl) {
             this.thumbnailUrl = thumbnailUrl;
             return this;
-        }
-        public AppProductionBranch build() {
+        }        public AppProductionBranch build() {
             return new AppProductionBranch(branchName, lastDeployTime, status, thumbnailUrl);
         }
     }

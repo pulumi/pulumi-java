@@ -76,22 +76,21 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
             this.ipSetDescriptors = ipSetDescriptors;
             return this;
         }
-
         public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
             this.ipSetDescriptors = Output.ofNullable(ipSetDescriptors);
             return this;
         }
-
+        public Builder ipSetDescriptors(IpSetIpSetDescriptorArgs... ipSetDescriptors) {
+            return ipSetDescriptors(List.of(ipSetDescriptors));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public IpSetArgs build() {
+        }        public IpSetArgs build() {
             return new IpSetArgs(ipSetDescriptors, name);
         }
     }

@@ -72,12 +72,10 @@ public final class GetLaunchPathsSummaryConstraintSummary extends io.pulumi.reso
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLaunchPathsSummaryConstraintSummary build() {
+        }        public GetLaunchPathsSummaryConstraintSummary build() {
             return new GetLaunchPathsSummaryConstraintSummary(description, type);
         }
     }

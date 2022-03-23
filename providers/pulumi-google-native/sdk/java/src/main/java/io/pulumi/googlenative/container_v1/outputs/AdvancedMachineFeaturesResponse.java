@@ -51,8 +51,7 @@ public final class AdvancedMachineFeaturesResponse {
         public Builder threadsPerCore(String threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
-        }
-        public AdvancedMachineFeaturesResponse build() {
+        }        public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(threadsPerCore);
         }
     }

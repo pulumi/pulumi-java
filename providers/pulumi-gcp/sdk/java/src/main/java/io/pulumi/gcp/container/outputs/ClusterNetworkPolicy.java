@@ -74,12 +74,10 @@ public final class ClusterNetworkPolicy {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
-        }
-        public ClusterNetworkPolicy build() {
+        }        public ClusterNetworkPolicy build() {
             return new ClusterNetworkPolicy(enabled, provider);
         }
     }

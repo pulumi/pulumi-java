@@ -75,22 +75,18 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder s3Destination(Output<ResourceDataSyncS3DestinationArgs> s3Destination) {
             this.s3Destination = Objects.requireNonNull(s3Destination);
             return this;
         }
-
         public Builder s3Destination(ResourceDataSyncS3DestinationArgs s3Destination) {
             this.s3Destination = Output.of(Objects.requireNonNull(s3Destination));
             return this;
-        }
-        public ResourceDataSyncArgs build() {
+        }        public ResourceDataSyncArgs build() {
             return new ResourceDataSyncArgs(name, s3Destination);
         }
     }

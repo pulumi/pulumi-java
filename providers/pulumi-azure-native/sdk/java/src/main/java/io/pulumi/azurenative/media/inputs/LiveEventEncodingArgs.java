@@ -113,42 +113,34 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
             this.encodingType = encodingType;
             return this;
         }
-
         public Builder encodingType(@Nullable Either<String,LiveEventEncodingType> encodingType) {
             this.encodingType = Output.ofNullable(encodingType);
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
             return this;
         }
-
         public Builder presetName(@Nullable Output<String> presetName) {
             this.presetName = presetName;
             return this;
         }
-
         public Builder presetName(@Nullable String presetName) {
             this.presetName = Output.ofNullable(presetName);
             return this;
         }
-
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
             this.stretchMode = Output.ofNullable(stretchMode);
             return this;
-        }
-        public LiveEventEncodingArgs build() {
+        }        public LiveEventEncodingArgs build() {
             return new LiveEventEncodingArgs(encodingType, keyFrameInterval, presetName, stretchMode);
         }
     }

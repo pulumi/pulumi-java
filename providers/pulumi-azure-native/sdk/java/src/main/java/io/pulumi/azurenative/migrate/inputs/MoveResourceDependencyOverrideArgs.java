@@ -79,22 +79,18 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = Output.ofNullable(targetId);
             return this;
-        }
-        public MoveResourceDependencyOverrideArgs build() {
+        }        public MoveResourceDependencyOverrideArgs build() {
             return new MoveResourceDependencyOverrideArgs(id, targetId);
         }
     }

@@ -147,82 +147,75 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultVariation = defaultVariation;
             return this;
         }
-
         public Builder defaultVariation(@Nullable String defaultVariation) {
             this.defaultVariation = Output.ofNullable(defaultVariation);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder entityOverrides(@Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides) {
             this.entityOverrides = entityOverrides;
             return this;
         }
-
         public Builder entityOverrides(@Nullable List<FeatureEntityOverrideArgs> entityOverrides) {
             this.entityOverrides = Output.ofNullable(entityOverrides);
             return this;
         }
-
+        public Builder entityOverrides(FeatureEntityOverrideArgs... entityOverrides) {
+            return entityOverrides(List.of(entityOverrides));
+        }
         public Builder evaluationStrategy(@Nullable Output<FeatureEvaluationStrategy> evaluationStrategy) {
             this.evaluationStrategy = evaluationStrategy;
             return this;
         }
-
         public Builder evaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
             this.evaluationStrategy = Output.ofNullable(evaluationStrategy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FeatureTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FeatureTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(FeatureTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder variations(Output<List<FeatureVariationObjectArgs>> variations) {
             this.variations = Objects.requireNonNull(variations);
             return this;
         }
-
         public Builder variations(List<FeatureVariationObjectArgs> variations) {
             this.variations = Output.of(Objects.requireNonNull(variations));
             return this;
         }
-        public FeatureArgs build() {
+        public Builder variations(FeatureVariationObjectArgs... variations) {
+            return variations(List.of(variations));
+        }        public FeatureArgs build() {
             return new FeatureArgs(defaultVariation, description, entityOverrides, evaluationStrategy, name, project, tags, variations);
         }
     }

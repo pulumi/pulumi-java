@@ -51,8 +51,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
         public Builder awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
             this.awsLambda = Objects.requireNonNull(awsLambda);
             return this;
-        }
-        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation build() {
+        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation build() {
             return new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(awsLambda);
         }
     }

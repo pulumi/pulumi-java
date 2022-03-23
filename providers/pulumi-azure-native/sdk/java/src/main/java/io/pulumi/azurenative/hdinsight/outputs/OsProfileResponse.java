@@ -53,8 +53,7 @@ public final class OsProfileResponse {
         public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
-        }
-        public OsProfileResponse build() {
+        }        public OsProfileResponse build() {
             return new OsProfileResponse(linuxOperatingSystemProfile);
         }
     }

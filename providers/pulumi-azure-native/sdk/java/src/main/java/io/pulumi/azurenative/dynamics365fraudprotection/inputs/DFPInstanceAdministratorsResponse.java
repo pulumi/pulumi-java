@@ -62,7 +62,9 @@ public final class DFPInstanceAdministratorsResponse extends io.pulumi.resources
             this.members = members;
             return this;
         }
-        public DFPInstanceAdministratorsResponse build() {
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }        public DFPInstanceAdministratorsResponse build() {
             return new DFPInstanceAdministratorsResponse(members);
         }
     }

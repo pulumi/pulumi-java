@@ -61,12 +61,10 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }
-
         public Builder bootDiagnostics(@Nullable BootDiagnosticsArgs bootDiagnostics) {
             this.bootDiagnostics = Output.ofNullable(bootDiagnostics);
             return this;
-        }
-        public DiagnosticsProfileArgs build() {
+        }        public DiagnosticsProfileArgs build() {
             return new DiagnosticsProfileArgs(bootDiagnostics);
         }
     }

@@ -182,82 +182,66 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.codeId = codeId;
             return this;
         }
-
         public Builder codeId(@Nullable String codeId) {
             this.codeId = Output.ofNullable(codeId);
             return this;
         }
-
         public Builder command(Output<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public Builder command(String command) {
             this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
-
         public Builder distribution(@Nullable Output<Object> distribution) {
             this.distribution = distribution;
             return this;
         }
-
         public Builder distribution(@Nullable Object distribution) {
             this.distribution = Output.ofNullable(distribution);
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
-
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
             this.inputDataBindings = Output.ofNullable(inputDataBindings);
             return this;
         }
-
         public Builder outputDataBindings(@Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
-
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
             this.outputDataBindings = Output.ofNullable(outputDataBindings);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public TrialComponentArgs build() {
+        }        public TrialComponentArgs build() {
             return new TrialComponentArgs(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
         }
     }

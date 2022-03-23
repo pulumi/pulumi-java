@@ -91,22 +91,24 @@ public final class GetIAMPolicyResult {
             this.auditConfigs = auditConfigs;
             return this;
         }
-
+        public Builder auditConfigs(GetIAMPolicyAuditConfig... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(@Nullable List<GetIAMPolicyBinding> bindings) {
             this.bindings = bindings;
             return this;
         }
-
+        public Builder bindings(GetIAMPolicyBinding... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
-        }
-        public GetIAMPolicyResult build() {
+        }        public GetIAMPolicyResult build() {
             return new GetIAMPolicyResult(auditConfigs, bindings, id, policyData);
         }
     }

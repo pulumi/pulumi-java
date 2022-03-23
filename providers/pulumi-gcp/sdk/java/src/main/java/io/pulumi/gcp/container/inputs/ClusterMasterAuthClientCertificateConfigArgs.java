@@ -52,12 +52,10 @@ public final class ClusterMasterAuthClientCertificateConfigArgs extends io.pulum
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }
-
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
             this.issueClientCertificate = Output.of(Objects.requireNonNull(issueClientCertificate));
             return this;
-        }
-        public ClusterMasterAuthClientCertificateConfigArgs build() {
+        }        public ClusterMasterAuthClientCertificateConfigArgs build() {
             return new ClusterMasterAuthClientCertificateConfigArgs(issueClientCertificate);
         }
     }

@@ -253,67 +253,57 @@ public final class GetTestMatrixResult {
             this.clientInfo = Objects.requireNonNull(clientInfo);
             return this;
         }
-
         public Builder environmentMatrix(EnvironmentMatrixResponse environmentMatrix) {
             this.environmentMatrix = Objects.requireNonNull(environmentMatrix);
             return this;
         }
-
         public Builder failFast(Boolean failFast) {
             this.failFast = Objects.requireNonNull(failFast);
             return this;
         }
-
         public Builder flakyTestAttempts(Integer flakyTestAttempts) {
             this.flakyTestAttempts = Objects.requireNonNull(flakyTestAttempts);
             return this;
         }
-
         public Builder invalidMatrixDetails(String invalidMatrixDetails) {
             this.invalidMatrixDetails = Objects.requireNonNull(invalidMatrixDetails);
             return this;
         }
-
         public Builder outcomeSummary(String outcomeSummary) {
             this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder resultStorage(ResultStorageResponse resultStorage) {
             this.resultStorage = Objects.requireNonNull(resultStorage);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder testExecutions(List<TestExecutionResponse> testExecutions) {
             this.testExecutions = Objects.requireNonNull(testExecutions);
             return this;
         }
-
+        public Builder testExecutions(TestExecutionResponse... testExecutions) {
+            return testExecutions(List.of(testExecutions));
+        }
         public Builder testMatrixId(String testMatrixId) {
             this.testMatrixId = Objects.requireNonNull(testMatrixId);
             return this;
         }
-
         public Builder testSpecification(TestSpecificationResponse testSpecification) {
             this.testSpecification = Objects.requireNonNull(testSpecification);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
-        }
-        public GetTestMatrixResult build() {
+        }        public GetTestMatrixResult build() {
             return new GetTestMatrixResult(clientInfo, environmentMatrix, failFast, flakyTestAttempts, invalidMatrixDetails, outcomeSummary, project, resultStorage, state, testExecutions, testMatrixId, testSpecification, timestamp);
         }
     }

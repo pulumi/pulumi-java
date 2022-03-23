@@ -95,32 +95,26 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.diskSizeInGB = diskSizeInGB;
             return this;
         }
-
         public Builder diskSizeInGB(@Nullable Integer diskSizeInGB) {
             this.diskSizeInGB = Output.ofNullable(diskSizeInGB);
             return this;
         }
-
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
-
         public Builder fileShareName(@Nullable String fileShareName) {
             this.fileShareName = Output.ofNullable(fileShareName);
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = Output.ofNullable(storageAccountResourceId);
             return this;
-        }
-        public StorageProfileArgs build() {
+        }        public StorageProfileArgs build() {
             return new StorageProfileArgs(diskSizeInGB, fileShareName, storageAccountResourceId);
         }
     }

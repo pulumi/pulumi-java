@@ -232,62 +232,50 @@ public final class GetReservationResult {
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder shareSettings(ShareSettingsResponse shareSettings) {
             this.shareSettings = Objects.requireNonNull(shareSettings);
             return this;
         }
-
         public Builder specificReservation(AllocationSpecificSKUReservationResponse specificReservation) {
             this.specificReservation = Objects.requireNonNull(specificReservation);
             return this;
         }
-
         public Builder specificReservationRequired(Boolean specificReservationRequired) {
             this.specificReservationRequired = Objects.requireNonNull(specificReservationRequired);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetReservationResult build() {
+        }        public GetReservationResult build() {
             return new GetReservationResult(commitment, creationTimestamp, description, kind, name, satisfiesPzs, selfLink, shareSettings, specificReservation, specificReservationRequired, status, zone);
         }
     }

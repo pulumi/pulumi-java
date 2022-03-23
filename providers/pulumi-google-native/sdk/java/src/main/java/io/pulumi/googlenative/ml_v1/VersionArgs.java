@@ -380,212 +380,173 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
-
         public Builder acceleratorConfig(@Nullable GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
             return this;
         }
-
         public Builder autoScaling(@Nullable Output<GoogleCloudMlV1__AutoScalingArgs> autoScaling) {
             this.autoScaling = autoScaling;
             return this;
         }
-
         public Builder autoScaling(@Nullable GoogleCloudMlV1__AutoScalingArgs autoScaling) {
             this.autoScaling = Output.ofNullable(autoScaling);
             return this;
         }
-
         public Builder container(@Nullable Output<GoogleCloudMlV1__ContainerSpecArgs> container) {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable GoogleCloudMlV1__ContainerSpecArgs container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder deploymentUri(@Nullable Output<String> deploymentUri) {
             this.deploymentUri = deploymentUri;
             return this;
         }
-
         public Builder deploymentUri(@Nullable String deploymentUri) {
             this.deploymentUri = Output.ofNullable(deploymentUri);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder explanationConfig(@Nullable Output<GoogleCloudMlV1__ExplanationConfigArgs> explanationConfig) {
             this.explanationConfig = explanationConfig;
             return this;
         }
-
         public Builder explanationConfig(@Nullable GoogleCloudMlV1__ExplanationConfigArgs explanationConfig) {
             this.explanationConfig = Output.ofNullable(explanationConfig);
             return this;
         }
-
         public Builder framework(@Nullable Output<VersionFramework> framework) {
             this.framework = framework;
             return this;
         }
-
         public Builder framework(@Nullable VersionFramework framework) {
             this.framework = Output.ofNullable(framework);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder manualScaling(@Nullable Output<GoogleCloudMlV1__ManualScalingArgs> manualScaling) {
             this.manualScaling = manualScaling;
             return this;
         }
-
         public Builder manualScaling(@Nullable GoogleCloudMlV1__ManualScalingArgs manualScaling) {
             this.manualScaling = Output.ofNullable(manualScaling);
             return this;
         }
-
         public Builder modelId(Output<String> modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
-
         public Builder modelId(String modelId) {
             this.modelId = Output.of(Objects.requireNonNull(modelId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageUris(@Nullable Output<List<String>> packageUris) {
             this.packageUris = packageUris;
             return this;
         }
-
         public Builder packageUris(@Nullable List<String> packageUris) {
             this.packageUris = Output.ofNullable(packageUris);
             return this;
         }
-
+        public Builder packageUris(String... packageUris) {
+            return packageUris(List.of(packageUris));
+        }
         public Builder predictionClass(@Nullable Output<String> predictionClass) {
             this.predictionClass = predictionClass;
             return this;
         }
-
         public Builder predictionClass(@Nullable String predictionClass) {
             this.predictionClass = Output.ofNullable(predictionClass);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pythonVersion(Output<String> pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
-
         public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Output.of(Objects.requireNonNull(pythonVersion));
             return this;
         }
-
         public Builder requestLoggingConfig(@Nullable Output<GoogleCloudMlV1__RequestLoggingConfigArgs> requestLoggingConfig) {
             this.requestLoggingConfig = requestLoggingConfig;
             return this;
         }
-
         public Builder requestLoggingConfig(@Nullable GoogleCloudMlV1__RequestLoggingConfigArgs requestLoggingConfig) {
             this.requestLoggingConfig = Output.ofNullable(requestLoggingConfig);
             return this;
         }
-
         public Builder routes(@Nullable Output<GoogleCloudMlV1__RouteMapArgs> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable GoogleCloudMlV1__RouteMapArgs routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
         public Builder runtimeVersion(Output<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Output.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
-        }
-        public VersionArgs build() {
+        }        public VersionArgs build() {
             return new VersionArgs(acceleratorConfig, autoScaling, container, deploymentUri, description, etag, explanationConfig, framework, labels, machineType, manualScaling, modelId, name, packageUris, predictionClass, project, pythonVersion, requestLoggingConfig, routes, runtimeVersion, serviceAccount);
         }
     }

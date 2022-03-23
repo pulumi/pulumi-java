@@ -112,42 +112,46 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
             this.requestHeadersToAdd = requestHeadersToAdd;
             return this;
         }
-
         public Builder requestHeadersToAdd(@Nullable List<HttpHeaderOptionArgs> requestHeadersToAdd) {
             this.requestHeadersToAdd = Output.ofNullable(requestHeadersToAdd);
             return this;
         }
-
+        public Builder requestHeadersToAdd(HttpHeaderOptionArgs... requestHeadersToAdd) {
+            return requestHeadersToAdd(List.of(requestHeadersToAdd));
+        }
         public Builder requestHeadersToRemove(@Nullable Output<List<String>> requestHeadersToRemove) {
             this.requestHeadersToRemove = requestHeadersToRemove;
             return this;
         }
-
         public Builder requestHeadersToRemove(@Nullable List<String> requestHeadersToRemove) {
             this.requestHeadersToRemove = Output.ofNullable(requestHeadersToRemove);
             return this;
         }
-
+        public Builder requestHeadersToRemove(String... requestHeadersToRemove) {
+            return requestHeadersToRemove(List.of(requestHeadersToRemove));
+        }
         public Builder responseHeadersToAdd(@Nullable Output<List<HttpHeaderOptionArgs>> responseHeadersToAdd) {
             this.responseHeadersToAdd = responseHeadersToAdd;
             return this;
         }
-
         public Builder responseHeadersToAdd(@Nullable List<HttpHeaderOptionArgs> responseHeadersToAdd) {
             this.responseHeadersToAdd = Output.ofNullable(responseHeadersToAdd);
             return this;
         }
-
+        public Builder responseHeadersToAdd(HttpHeaderOptionArgs... responseHeadersToAdd) {
+            return responseHeadersToAdd(List.of(responseHeadersToAdd));
+        }
         public Builder responseHeadersToRemove(@Nullable Output<List<String>> responseHeadersToRemove) {
             this.responseHeadersToRemove = responseHeadersToRemove;
             return this;
         }
-
         public Builder responseHeadersToRemove(@Nullable List<String> responseHeadersToRemove) {
             this.responseHeadersToRemove = Output.ofNullable(responseHeadersToRemove);
             return this;
         }
-        public HttpHeaderActionArgs build() {
+        public Builder responseHeadersToRemove(String... responseHeadersToRemove) {
+            return responseHeadersToRemove(List.of(responseHeadersToRemove));
+        }        public HttpHeaderActionArgs build() {
             return new HttpHeaderActionArgs(requestHeadersToAdd, requestHeadersToRemove, responseHeadersToAdd, responseHeadersToRemove);
         }
     }

@@ -124,52 +124,45 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
-
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rights(Output<List<AccessRights>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
-
         public Builder rights(List<AccessRights> rights) {
             this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
-
+        public Builder rights(AccessRights... rights) {
+            return rights(List.of(rights));
+        }
         public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
-        }
-        public TopicAuthorizationRuleArgs build() {
+        }        public TopicAuthorizationRuleArgs build() {
             return new TopicAuthorizationRuleArgs(authorizationRuleName, namespaceName, resourceGroupName, rights, topicName);
         }
     }

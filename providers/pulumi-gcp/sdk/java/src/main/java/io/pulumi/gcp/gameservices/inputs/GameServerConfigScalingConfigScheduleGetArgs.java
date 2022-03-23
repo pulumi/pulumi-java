@@ -112,42 +112,34 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends io.pulum
             this.cronJobDuration = cronJobDuration;
             return this;
         }
-
         public Builder cronJobDuration(@Nullable String cronJobDuration) {
             this.cronJobDuration = Output.ofNullable(cronJobDuration);
             return this;
         }
-
         public Builder cronSpec(@Nullable Output<String> cronSpec) {
             this.cronSpec = cronSpec;
             return this;
         }
-
         public Builder cronSpec(@Nullable String cronSpec) {
             this.cronSpec = Output.ofNullable(cronSpec);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public GameServerConfigScalingConfigScheduleGetArgs build() {
+        }        public GameServerConfigScalingConfigScheduleGetArgs build() {
             return new GameServerConfigScalingConfigScheduleGetArgs(cronJobDuration, cronSpec, endTime, startTime);
         }
     }

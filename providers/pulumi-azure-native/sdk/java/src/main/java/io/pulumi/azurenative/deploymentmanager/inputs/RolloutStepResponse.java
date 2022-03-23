@@ -146,32 +146,32 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(MessageResponse... messages) {
+            return messages(List.of(messages));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationInfo(StepOperationInfoResponse operationInfo) {
             this.operationInfo = Objects.requireNonNull(operationInfo);
             return this;
         }
-
         public Builder resourceOperations(List<ResourceOperationResponse> resourceOperations) {
             this.resourceOperations = Objects.requireNonNull(resourceOperations);
             return this;
         }
-
+        public Builder resourceOperations(ResourceOperationResponse... resourceOperations) {
+            return resourceOperations(List.of(resourceOperations));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder stepGroup(@Nullable String stepGroup) {
             this.stepGroup = stepGroup;
             return this;
-        }
-        public RolloutStepResponse build() {
+        }        public RolloutStepResponse build() {
             return new RolloutStepResponse(messages, name, operationInfo, resourceOperations, status, stepGroup);
         }
     }

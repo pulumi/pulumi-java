@@ -69,12 +69,10 @@ public final class WebhookFilter {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
-
         public Builder matchEquals(String matchEquals) {
             this.matchEquals = Objects.requireNonNull(matchEquals);
             return this;
-        }
-        public WebhookFilter build() {
+        }        public WebhookFilter build() {
             return new WebhookFilter(jsonPath, matchEquals);
         }
     }

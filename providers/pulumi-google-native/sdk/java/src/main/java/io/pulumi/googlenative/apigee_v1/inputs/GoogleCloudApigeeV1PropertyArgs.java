@@ -78,22 +78,18 @@ public final class GoogleCloudApigeeV1PropertyArgs extends io.pulumi.resources.R
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public GoogleCloudApigeeV1PropertyArgs build() {
+        }        public GoogleCloudApigeeV1PropertyArgs build() {
             return new GoogleCloudApigeeV1PropertyArgs(name, value);
         }
     }

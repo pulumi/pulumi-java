@@ -305,82 +305,66 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
             this.backendAddressPool = backendAddressPool;
             return this;
         }
-
         public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = backendPort;
             return this;
         }
-
         public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
             this.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-
         public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder loadDistribution(@Nullable String loadDistribution) {
             this.loadDistribution = loadDistribution;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder probe(@Nullable SubResourceResponse probe) {
             this.probe = probe;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public LoadBalancingRuleResponse build() {
+        }        public LoadBalancingRuleResponse build() {
             return new LoadBalancingRuleResponse(backendAddressPool, backendPort, disableOutboundSnat, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, loadDistribution, name, probe, protocol, provisioningState, type);
         }
     }

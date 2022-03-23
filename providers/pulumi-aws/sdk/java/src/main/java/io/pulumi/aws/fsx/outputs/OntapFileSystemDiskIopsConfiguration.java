@@ -72,12 +72,10 @@ public final class OntapFileSystemDiskIopsConfiguration {
             this.iops = iops;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public OntapFileSystemDiskIopsConfiguration build() {
+        }        public OntapFileSystemDiskIopsConfiguration build() {
             return new OntapFileSystemDiskIopsConfiguration(iops, mode);
         }
     }

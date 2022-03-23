@@ -51,8 +51,7 @@ public final class MonitoringScheduleStoppingCondition {
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
-        }
-        public MonitoringScheduleStoppingCondition build() {
+        }        public MonitoringScheduleStoppingCondition build() {
             return new MonitoringScheduleStoppingCondition(maxRuntimeInSeconds);
         }
     }

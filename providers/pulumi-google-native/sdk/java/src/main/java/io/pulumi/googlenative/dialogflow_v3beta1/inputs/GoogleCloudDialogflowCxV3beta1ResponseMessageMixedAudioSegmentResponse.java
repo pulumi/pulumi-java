@@ -93,17 +93,14 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
-
         public Builder audio(String audio) {
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse(allowPlaybackInterruption, audio, uri);
         }
     }

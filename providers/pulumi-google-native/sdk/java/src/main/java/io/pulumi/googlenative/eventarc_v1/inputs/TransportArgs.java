@@ -61,12 +61,10 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
             this.pubsub = pubsub;
             return this;
         }
-
         public Builder pubsub(@Nullable PubsubArgs pubsub) {
             this.pubsub = Output.ofNullable(pubsub);
             return this;
-        }
-        public TransportArgs build() {
+        }        public TransportArgs build() {
             return new TransportArgs(pubsub);
         }
     }

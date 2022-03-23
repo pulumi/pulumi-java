@@ -88,17 +88,14 @@ public final class GetJobScheduleArgs extends io.pulumi.resources.InvokeArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder jobScheduleId(String jobScheduleId) {
             this.jobScheduleId = Objects.requireNonNull(jobScheduleId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetJobScheduleArgs build() {
+        }        public GetJobScheduleArgs build() {
             return new GetJobScheduleArgs(automationAccountName, jobScheduleId, resourceGroupName);
         }
     }

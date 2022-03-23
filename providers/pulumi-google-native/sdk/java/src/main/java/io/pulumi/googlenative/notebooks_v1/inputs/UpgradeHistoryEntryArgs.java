@@ -208,102 +208,82 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable UpgradeHistoryEntryAction action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder containerImage(@Nullable Output<String> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
-
         public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder framework(@Nullable Output<String> framework) {
             this.framework = framework;
             return this;
         }
-
         public Builder framework(@Nullable String framework) {
             this.framework = Output.ofNullable(framework);
             return this;
         }
-
         public Builder snapshot(@Nullable Output<String> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder snapshot(@Nullable String snapshot) {
             this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
-
         public Builder state(@Nullable Output<UpgradeHistoryEntryState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable UpgradeHistoryEntryState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder targetImage(@Nullable Output<String> targetImage) {
             this.targetImage = targetImage;
             return this;
         }
-
         public Builder targetImage(@Nullable String targetImage) {
             this.targetImage = Output.ofNullable(targetImage);
             return this;
         }
-
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
             this.targetVersion = targetVersion;
             return this;
         }
-
         public Builder targetVersion(@Nullable String targetVersion) {
             this.targetVersion = Output.ofNullable(targetVersion);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder vmImage(@Nullable Output<String> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
-
         public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = Output.ofNullable(vmImage);
             return this;
-        }
-        public UpgradeHistoryEntryArgs build() {
+        }        public UpgradeHistoryEntryArgs build() {
             return new UpgradeHistoryEntryArgs(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
         }
     }

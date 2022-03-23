@@ -94,32 +94,26 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable String logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
         public Builder metrics(@Nullable Output<String> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable String metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
         public Builder usages(@Nullable Output<String> usages) {
             this.usages = usages;
             return this;
         }
-
         public Builder usages(@Nullable String usages) {
             this.usages = Output.ofNullable(usages);
             return this;
-        }
-        public UploadWatermarkArgs build() {
+        }        public UploadWatermarkArgs build() {
             return new UploadWatermarkArgs(logs, metrics, usages);
         }
     }

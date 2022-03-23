@@ -69,12 +69,10 @@ public final class DisplayInfoResponse {
             this.configurationDisplayName = Objects.requireNonNull(configurationDisplayName);
             return this;
         }
-
         public Builder productFamilyDisplayName(String productFamilyDisplayName) {
             this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
             return this;
-        }
-        public DisplayInfoResponse build() {
+        }        public DisplayInfoResponse build() {
             return new DisplayInfoResponse(configurationDisplayName, productFamilyDisplayName);
         }
     }

@@ -113,42 +113,40 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.excludedPackageNameMasks = excludedPackageNameMasks;
             return this;
         }
-
         public Builder excludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
             this.excludedPackageNameMasks = Output.ofNullable(excludedPackageNameMasks);
             return this;
         }
-
+        public Builder excludedPackageNameMasks(String... excludedPackageNameMasks) {
+            return excludedPackageNameMasks(List.of(excludedPackageNameMasks));
+        }
         public Builder includedPackageClassifications(@Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications) {
             this.includedPackageClassifications = includedPackageClassifications;
             return this;
         }
-
         public Builder includedPackageClassifications(@Nullable Either<String,LinuxUpdateClasses> includedPackageClassifications) {
             this.includedPackageClassifications = Output.ofNullable(includedPackageClassifications);
             return this;
         }
-
         public Builder includedPackageNameMasks(@Nullable Output<List<String>> includedPackageNameMasks) {
             this.includedPackageNameMasks = includedPackageNameMasks;
             return this;
         }
-
         public Builder includedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
             this.includedPackageNameMasks = Output.ofNullable(includedPackageNameMasks);
             return this;
         }
-
+        public Builder includedPackageNameMasks(String... includedPackageNameMasks) {
+            return includedPackageNameMasks(List.of(includedPackageNameMasks));
+        }
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
         }
-
         public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = Output.ofNullable(rebootSetting);
             return this;
-        }
-        public LinuxPropertiesArgs build() {
+        }        public LinuxPropertiesArgs build() {
             return new LinuxPropertiesArgs(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);
         }
     }

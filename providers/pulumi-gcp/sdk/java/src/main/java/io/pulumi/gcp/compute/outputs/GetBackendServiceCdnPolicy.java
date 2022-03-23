@@ -114,47 +114,44 @@ public final class GetBackendServiceCdnPolicy {
             this.cacheKeyPolicies = Objects.requireNonNull(cacheKeyPolicies);
             return this;
         }
-
+        public Builder cacheKeyPolicies(GetBackendServiceCdnPolicyCacheKeyPolicy... cacheKeyPolicies) {
+            return cacheKeyPolicies(List.of(cacheKeyPolicies));
+        }
         public Builder cacheMode(String cacheMode) {
             this.cacheMode = Objects.requireNonNull(cacheMode);
             return this;
         }
-
         public Builder clientTtl(Integer clientTtl) {
             this.clientTtl = Objects.requireNonNull(clientTtl);
             return this;
         }
-
         public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
-
         public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
-
         public Builder negativeCaching(Boolean negativeCaching) {
             this.negativeCaching = Objects.requireNonNull(negativeCaching);
             return this;
         }
-
         public Builder negativeCachingPolicies(List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
             this.negativeCachingPolicies = Objects.requireNonNull(negativeCachingPolicies);
             return this;
         }
-
+        public Builder negativeCachingPolicies(GetBackendServiceCdnPolicyNegativeCachingPolicy... negativeCachingPolicies) {
+            return negativeCachingPolicies(List.of(negativeCachingPolicies));
+        }
         public Builder serveWhileStale(Integer serveWhileStale) {
             this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
             return this;
         }
-
         public Builder signedUrlCacheMaxAgeSec(Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
-        }
-        public GetBackendServiceCdnPolicy build() {
+        }        public GetBackendServiceCdnPolicy build() {
             return new GetBackendServiceCdnPolicy(cacheKeyPolicies, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }
     }

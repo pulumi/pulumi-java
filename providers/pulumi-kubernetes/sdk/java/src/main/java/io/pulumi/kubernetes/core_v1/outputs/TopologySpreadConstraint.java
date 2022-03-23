@@ -119,22 +119,18 @@ public final class TopologySpreadConstraint {
             this.labelSelector = labelSelector;
             return this;
         }
-
         public Builder maxSkew(Integer maxSkew) {
             this.maxSkew = Objects.requireNonNull(maxSkew);
             return this;
         }
-
         public Builder topologyKey(String topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
-
         public Builder whenUnsatisfiable(String whenUnsatisfiable) {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
-        }
-        public TopologySpreadConstraint build() {
+        }        public TopologySpreadConstraint build() {
             return new TopologySpreadConstraint(labelSelector, maxSkew, topologyKey, whenUnsatisfiable);
         }
     }

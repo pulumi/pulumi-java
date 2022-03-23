@@ -185,47 +185,38 @@ public final class GetIotConnectorFhirDestinationResult {
             this.etag = etag;
             return this;
         }
-
         public Builder fhirMapping(IotMappingPropertiesResponse fhirMapping) {
             this.fhirMapping = Objects.requireNonNull(fhirMapping);
             return this;
         }
-
         public Builder fhirServiceResourceId(String fhirServiceResourceId) {
             this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceIdentityResolutionType(String resourceIdentityResolutionType) {
             this.resourceIdentityResolutionType = Objects.requireNonNull(resourceIdentityResolutionType);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIotConnectorFhirDestinationResult build() {
+        }        public GetIotConnectorFhirDestinationResult build() {
             return new GetIotConnectorFhirDestinationResult(etag, fhirMapping, fhirServiceResourceId, id, location, name, resourceIdentityResolutionType, systemData, type);
         }
     }

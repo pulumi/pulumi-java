@@ -57,12 +57,13 @@ public final class MysqlLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public MysqlLayerCloudwatchConfiguration build() {
+        public Builder logStreams(MysqlLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public MysqlLayerCloudwatchConfiguration build() {
             return new MysqlLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

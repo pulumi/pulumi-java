@@ -102,22 +102,18 @@ public final class RegionalReplicationStatusResponse {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public RegionalReplicationStatusResponse build() {
+        }        public RegionalReplicationStatusResponse build() {
             return new RegionalReplicationStatusResponse(details, progress, region, state);
         }
     }

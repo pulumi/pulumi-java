@@ -123,52 +123,42 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
-
         public Builder appName(String appName) {
             this.appName = Output.of(Objects.requireNonNull(appName));
             return this;
         }
-
         public Builder bindingName(@Nullable Output<String> bindingName) {
             this.bindingName = bindingName;
             return this;
         }
-
         public Builder bindingName(@Nullable String bindingName) {
             this.bindingName = Output.ofNullable(bindingName);
             return this;
         }
-
         public Builder properties(@Nullable Output<BindingResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable BindingResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public BindingArgs build() {
+        }        public BindingArgs build() {
             return new BindingArgs(appName, bindingName, properties, resourceGroupName, serviceName);
         }
     }

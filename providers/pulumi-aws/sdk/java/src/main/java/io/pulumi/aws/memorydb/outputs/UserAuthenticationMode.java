@@ -89,17 +89,17 @@ public final class UserAuthenticationMode {
             this.passwordCount = passwordCount;
             return this;
         }
-
         public Builder passwords(List<String> passwords) {
             this.passwords = Objects.requireNonNull(passwords);
             return this;
         }
-
+        public Builder passwords(String... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public UserAuthenticationMode build() {
+        }        public UserAuthenticationMode build() {
             return new UserAuthenticationMode(passwordCount, passwords, type);
         }
     }

@@ -73,12 +73,13 @@ public final class GetTransitGatewayFilter extends io.pulumi.resources.InvokeArg
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetTransitGatewayFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetTransitGatewayFilter build() {
             return new GetTransitGatewayFilter(name, values);
         }
     }

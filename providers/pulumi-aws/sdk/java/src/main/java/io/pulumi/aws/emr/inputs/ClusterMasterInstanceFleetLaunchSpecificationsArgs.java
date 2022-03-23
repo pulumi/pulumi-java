@@ -76,22 +76,24 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsArgs extends io
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-
         public Builder onDemandSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
             this.onDemandSpecifications = Output.ofNullable(onDemandSpecifications);
             return this;
         }
-
+        public Builder onDemandSpecifications(ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs... onDemandSpecifications) {
+            return onDemandSpecifications(List.of(onDemandSpecifications));
+        }
         public Builder spotSpecifications(@Nullable Output<List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }
-
         public Builder spotSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
             this.spotSpecifications = Output.ofNullable(spotSpecifications);
             return this;
         }
-        public ClusterMasterInstanceFleetLaunchSpecificationsArgs build() {
+        public Builder spotSpecifications(ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs... spotSpecifications) {
+            return spotSpecifications(List.of(spotSpecifications));
+        }        public ClusterMasterInstanceFleetLaunchSpecificationsArgs build() {
             return new ClusterMasterInstanceFleetLaunchSpecificationsArgs(onDemandSpecifications, spotSpecifications);
         }
     }

@@ -247,102 +247,88 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             this.admissionReviewVersions = admissionReviewVersions;
             return this;
         }
-
         public Builder admissionReviewVersions(@Nullable List<String> admissionReviewVersions) {
             this.admissionReviewVersions = Output.ofNullable(admissionReviewVersions);
             return this;
         }
-
+        public Builder admissionReviewVersions(String... admissionReviewVersions) {
+            return admissionReviewVersions(List.of(admissionReviewVersions));
+        }
         public Builder clientConfig(Output<WebhookClientConfigArgs> clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
-
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
             this.clientConfig = Output.of(Objects.requireNonNull(clientConfig));
             return this;
         }
-
         public Builder failurePolicy(@Nullable Output<String> failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
-
         public Builder failurePolicy(@Nullable String failurePolicy) {
             this.failurePolicy = Output.ofNullable(failurePolicy);
             return this;
         }
-
         public Builder matchPolicy(@Nullable Output<String> matchPolicy) {
             this.matchPolicy = matchPolicy;
             return this;
         }
-
         public Builder matchPolicy(@Nullable String matchPolicy) {
             this.matchPolicy = Output.ofNullable(matchPolicy);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
-
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
             this.namespaceSelector = Output.ofNullable(namespaceSelector);
             return this;
         }
-
         public Builder objectSelector(@Nullable Output<LabelSelectorArgs> objectSelector) {
             this.objectSelector = objectSelector;
             return this;
         }
-
         public Builder objectSelector(@Nullable LabelSelectorArgs objectSelector) {
             this.objectSelector = Output.ofNullable(objectSelector);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<RuleWithOperationsArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<RuleWithOperationsArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(RuleWithOperationsArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder sideEffects(@Nullable Output<String> sideEffects) {
             this.sideEffects = sideEffects;
             return this;
         }
-
         public Builder sideEffects(@Nullable String sideEffects) {
             this.sideEffects = Output.ofNullable(sideEffects);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
-        }
-        public ValidatingWebhookArgs build() {
+        }        public ValidatingWebhookArgs build() {
             return new ValidatingWebhookArgs(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, rules, sideEffects, timeoutSeconds);
         }
     }

@@ -57,12 +57,13 @@ public final class ScheduledQueryMultiMeasureMappings {
             this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings);
             return this;
         }
-
+        public Builder multiMeasureAttributeMappings(ScheduledQueryMultiMeasureAttributeMapping... multiMeasureAttributeMappings) {
+            return multiMeasureAttributeMappings(List.of(multiMeasureAttributeMappings));
+        }
         public Builder targetMultiMeasureName(@Nullable String targetMultiMeasureName) {
             this.targetMultiMeasureName = targetMultiMeasureName;
             return this;
-        }
-        public ScheduledQueryMultiMeasureMappings build() {
+        }        public ScheduledQueryMultiMeasureMappings build() {
             return new ScheduledQueryMultiMeasureMappings(multiMeasureAttributeMappings, targetMultiMeasureName);
         }
     }

@@ -72,22 +72,21 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder networks(@Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
             this.networks = networks;
             return this;
         }
-
         public Builder networks(@Nullable List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
             this.networks = Output.ofNullable(networks);
             return this;
         }
-        public ManagedZonePrivateVisibilityConfigArgs build() {
+        public Builder networks(ManagedZonePrivateVisibilityConfigNetworkArgs... networks) {
+            return networks(List.of(networks));
+        }        public ManagedZonePrivateVisibilityConfigArgs build() {
             return new ManagedZonePrivateVisibilityConfigArgs(kind, networks);
         }
     }

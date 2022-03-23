@@ -125,52 +125,45 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
             this.buildCommand = buildCommand;
             return this;
         }
-
         public Builder buildCommand(@Nullable String buildCommand) {
             this.buildCommand = Output.ofNullable(buildCommand);
             return this;
         }
-
         public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder runtime(Output<ServiceCodeConfigurationValuesRuntime> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtime(ServiceCodeConfigurationValuesRuntime runtime) {
             this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
-
+        public Builder runtimeEnvironmentVariables(ServiceKeyValuePairArgs... runtimeEnvironmentVariables) {
+            return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
+        }
         public Builder startCommand(@Nullable Output<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
-
         public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = Output.ofNullable(startCommand);
             return this;
-        }
-        public ServiceCodeConfigurationValuesArgs build() {
+        }        public ServiceCodeConfigurationValuesArgs build() {
             return new ServiceCodeConfigurationValuesArgs(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
         }
     }

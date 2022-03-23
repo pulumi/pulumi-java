@@ -90,17 +90,14 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder templateSpecName(String templateSpecName) {
             this.templateSpecName = Objects.requireNonNull(templateSpecName);
             return this;
-        }
-        public GetTemplateSpecArgs build() {
+        }        public GetTemplateSpecArgs build() {
             return new GetTemplateSpecArgs(expand, resourceGroupName, templateSpecName);
         }
     }

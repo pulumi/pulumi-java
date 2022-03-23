@@ -111,22 +111,18 @@ public final class MachineImageMachineImageEncryptionKey {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
-
         public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }
-
         public Builder sha256(@Nullable String sha256) {
             this.sha256 = sha256;
             return this;
-        }
-        public MachineImageMachineImageEncryptionKey build() {
+        }        public MachineImageMachineImageEncryptionKey build() {
             return new MachineImageMachineImageEncryptionKey(kmsKeyName, kmsKeyServiceAccount, rawKey, sha256);
         }
     }

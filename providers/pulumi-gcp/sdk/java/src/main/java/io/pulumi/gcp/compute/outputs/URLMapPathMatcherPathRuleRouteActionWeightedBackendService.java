@@ -107,17 +107,14 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendService {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder headerAction(@Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public URLMapPathMatcherPathRuleRouteActionWeightedBackendService build() {
+        }        public URLMapPathMatcherPathRuleRouteActionWeightedBackendService build() {
             return new URLMapPathMatcherPathRuleRouteActionWeightedBackendService(backendService, headerAction, weight);
         }
     }

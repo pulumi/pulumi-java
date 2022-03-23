@@ -70,12 +70,10 @@ public final class RouteSpecHttp2RouteActionWeightedTarget {
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public RouteSpecHttp2RouteActionWeightedTarget build() {
+        }        public RouteSpecHttp2RouteActionWeightedTarget build() {
             return new RouteSpecHttp2RouteActionWeightedTarget(virtualNode, weight);
         }
     }

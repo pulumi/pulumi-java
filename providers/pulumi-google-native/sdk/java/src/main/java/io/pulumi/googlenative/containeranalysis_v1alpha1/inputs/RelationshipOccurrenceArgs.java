@@ -94,32 +94,26 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public RelationshipOccurrenceArgs build() {
+        }        public RelationshipOccurrenceArgs build() {
             return new RelationshipOccurrenceArgs(comment, source, target);
         }
     }

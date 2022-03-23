@@ -120,27 +120,22 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
             this.buildCommand = buildCommand;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-
         public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues build() {
+        }        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues build() {
             return new ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
         }
     }

@@ -51,8 +51,7 @@ public final class LoggingConfigurationConditionActionConditionProperties {
         public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
-        }
-        public LoggingConfigurationConditionActionConditionProperties build() {
+        }        public LoggingConfigurationConditionActionConditionProperties build() {
             return new LoggingConfigurationConditionActionConditionProperties(action);
         }
     }

@@ -71,12 +71,13 @@ public final class OracleSchemaResponse {
             this.oracleTables = Objects.requireNonNull(oracleTables);
             return this;
         }
-
+        public Builder oracleTables(OracleTableResponse... oracleTables) {
+            return oracleTables(List.of(oracleTables));
+        }
         public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
-        }
-        public OracleSchemaResponse build() {
+        }        public OracleSchemaResponse build() {
             return new OracleSchemaResponse(oracleTables, schema);
         }
     }

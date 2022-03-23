@@ -107,42 +107,34 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
             this.allowSelfManagement = allowSelfManagement;
             return this;
         }
-
         public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
             this.allowSelfManagement = Output.ofNullable(allowSelfManagement);
             return this;
         }
-
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
-
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
             this.sshPublicKey = Output.ofNullable(sshPublicKey);
             return this;
         }
-
         public Builder sshUsername(@Nullable Output<String> sshUsername) {
             this.sshUsername = sshUsername;
             return this;
         }
-
         public Builder sshUsername(@Nullable String sshUsername) {
             this.sshUsername = Output.ofNullable(sshUsername);
             return this;
         }
-
         public Builder userArn(@Nullable Output<String> userArn) {
             this.userArn = userArn;
             return this;
         }
-
         public Builder userArn(@Nullable String userArn) {
             this.userArn = Output.ofNullable(userArn);
             return this;
-        }
-        public UserProfileState build() {
+        }        public UserProfileState build() {
             return new UserProfileState(allowSelfManagement, sshPublicKey, sshUsername, userArn);
         }
     }

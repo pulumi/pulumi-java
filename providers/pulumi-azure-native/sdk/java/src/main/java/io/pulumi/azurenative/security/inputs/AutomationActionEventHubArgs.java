@@ -95,32 +95,26 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder actionType(String actionType) {
             this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
-
         public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
-
         public Builder eventHubResourceId(@Nullable Output<String> eventHubResourceId) {
             this.eventHubResourceId = eventHubResourceId;
             return this;
         }
-
         public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
             this.eventHubResourceId = Output.ofNullable(eventHubResourceId);
             return this;
-        }
-        public AutomationActionEventHubArgs build() {
+        }        public AutomationActionEventHubArgs build() {
             return new AutomationActionEventHubArgs(actionType, connectionString, eventHubResourceId);
         }
     }

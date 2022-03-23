@@ -72,12 +72,10 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
             this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIotDpsResourceArgs build() {
+        }        public GetIotDpsResourceArgs build() {
             return new GetIotDpsResourceArgs(provisioningServiceName, resourceGroupName);
         }
     }

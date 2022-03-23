@@ -270,72 +270,58 @@ public final class GetRegistryResult {
             this.adminUserEnabled = adminUserEnabled;
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder loginServer(String loginServer) {
             this.loginServer = Objects.requireNonNull(loginServer);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkRuleSet(@Nullable NetworkRuleSetResponse networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
-
         public Builder policies(@Nullable PoliciesResponse policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder status(StatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageAccount(@Nullable StorageAccountPropertiesResponse storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRegistryResult build() {
+        }        public GetRegistryResult build() {
             return new GetRegistryResult(adminUserEnabled, creationDate, id, location, loginServer, name, networkRuleSet, policies, provisioningState, sku, status, storageAccount, tags, type);
         }
     }

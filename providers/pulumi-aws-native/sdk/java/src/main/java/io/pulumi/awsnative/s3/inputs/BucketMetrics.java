@@ -67,12 +67,10 @@ public final class BucketMetrics extends io.pulumi.resources.InvokeArgs {
             this.eventThreshold = eventThreshold;
             return this;
         }
-
         public Builder status(BucketMetricsStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BucketMetrics build() {
+        }        public BucketMetrics build() {
             return new BucketMetrics(eventThreshold, status);
         }
     }

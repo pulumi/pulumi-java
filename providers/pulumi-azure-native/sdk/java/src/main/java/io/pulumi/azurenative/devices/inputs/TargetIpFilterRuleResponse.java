@@ -110,22 +110,18 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
-
         public Builder ipMask(String ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public TargetIpFilterRuleResponse build() {
+        }        public TargetIpFilterRuleResponse build() {
             return new TargetIpFilterRuleResponse(action, filterName, ipMask, target);
         }
     }

@@ -539,302 +539,245 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             this.clientAffinityEnabled = clientAffinityEnabled;
             return this;
         }
-
         public Builder clientAffinityEnabled(@Nullable Boolean clientAffinityEnabled) {
             this.clientAffinityEnabled = Output.ofNullable(clientAffinityEnabled);
             return this;
         }
-
         public Builder clientCertEnabled(@Nullable Output<Boolean> clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
-
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = Output.ofNullable(clientCertEnabled);
             return this;
         }
-
         public Builder clientCertExclusionPaths(@Nullable Output<String> clientCertExclusionPaths) {
             this.clientCertExclusionPaths = clientCertExclusionPaths;
             return this;
         }
-
         public Builder clientCertExclusionPaths(@Nullable String clientCertExclusionPaths) {
             this.clientCertExclusionPaths = Output.ofNullable(clientCertExclusionPaths);
             return this;
         }
-
         public Builder clientCertMode(@Nullable Output<ClientCertMode> clientCertMode) {
             this.clientCertMode = clientCertMode;
             return this;
         }
-
         public Builder clientCertMode(@Nullable ClientCertMode clientCertMode) {
             this.clientCertMode = Output.ofNullable(clientCertMode);
             return this;
         }
-
         public Builder cloningInfo(@Nullable Output<CloningInfoArgs> cloningInfo) {
             this.cloningInfo = cloningInfo;
             return this;
         }
-
         public Builder cloningInfo(@Nullable CloningInfoArgs cloningInfo) {
             this.cloningInfo = Output.ofNullable(cloningInfo);
             return this;
         }
-
         public Builder containerSize(@Nullable Output<Integer> containerSize) {
             this.containerSize = containerSize;
             return this;
         }
-
         public Builder containerSize(@Nullable Integer containerSize) {
             this.containerSize = Output.ofNullable(containerSize);
             return this;
         }
-
         public Builder customDomainVerificationId(@Nullable Output<String> customDomainVerificationId) {
             this.customDomainVerificationId = customDomainVerificationId;
             return this;
         }
-
         public Builder customDomainVerificationId(@Nullable String customDomainVerificationId) {
             this.customDomainVerificationId = Output.ofNullable(customDomainVerificationId);
             return this;
         }
-
         public Builder dailyMemoryTimeQuota(@Nullable Output<Integer> dailyMemoryTimeQuota) {
             this.dailyMemoryTimeQuota = dailyMemoryTimeQuota;
             return this;
         }
-
         public Builder dailyMemoryTimeQuota(@Nullable Integer dailyMemoryTimeQuota) {
             this.dailyMemoryTimeQuota = Output.ofNullable(dailyMemoryTimeQuota);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder hostNameSslStates(@Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates) {
             this.hostNameSslStates = hostNameSslStates;
             return this;
         }
-
         public Builder hostNameSslStates(@Nullable List<HostNameSslStateArgs> hostNameSslStates) {
             this.hostNameSslStates = Output.ofNullable(hostNameSslStates);
             return this;
         }
-
+        public Builder hostNameSslStates(HostNameSslStateArgs... hostNameSslStates) {
+            return hostNameSslStates(List.of(hostNameSslStates));
+        }
         public Builder hostNamesDisabled(@Nullable Output<Boolean> hostNamesDisabled) {
             this.hostNamesDisabled = hostNamesDisabled;
             return this;
         }
-
         public Builder hostNamesDisabled(@Nullable Boolean hostNamesDisabled) {
             this.hostNamesDisabled = Output.ofNullable(hostNamesDisabled);
             return this;
         }
-
         public Builder hostingEnvironmentProfile(@Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
-
         public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = Output.ofNullable(hostingEnvironmentProfile);
             return this;
         }
-
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
-
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
-
         public Builder hyperV(@Nullable Output<Boolean> hyperV) {
             this.hyperV = hyperV;
             return this;
         }
-
         public Builder hyperV(@Nullable Boolean hyperV) {
             this.hyperV = Output.ofNullable(hyperV);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder isXenon(@Nullable Output<Boolean> isXenon) {
             this.isXenon = isXenon;
             return this;
         }
-
         public Builder isXenon(@Nullable Boolean isXenon) {
             this.isXenon = Output.ofNullable(isXenon);
             return this;
         }
-
         public Builder keyVaultReferenceIdentity(@Nullable Output<String> keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
-
         public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = Output.ofNullable(keyVaultReferenceIdentity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder redundancyMode(@Nullable Output<RedundancyMode> redundancyMode) {
             this.redundancyMode = redundancyMode;
             return this;
         }
-
         public Builder redundancyMode(@Nullable RedundancyMode redundancyMode) {
             this.redundancyMode = Output.ofNullable(redundancyMode);
             return this;
         }
-
         public Builder reserved(@Nullable Output<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
-
         public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = Output.ofNullable(reserved);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scmSiteAlsoStopped(@Nullable Output<Boolean> scmSiteAlsoStopped) {
             this.scmSiteAlsoStopped = scmSiteAlsoStopped;
             return this;
         }
-
         public Builder scmSiteAlsoStopped(@Nullable Boolean scmSiteAlsoStopped) {
             this.scmSiteAlsoStopped = Output.ofNullable(scmSiteAlsoStopped);
             return this;
         }
-
         public Builder serverFarmId(@Nullable Output<String> serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
-
         public Builder serverFarmId(@Nullable String serverFarmId) {
             this.serverFarmId = Output.ofNullable(serverFarmId);
             return this;
         }
-
         public Builder siteConfig(@Nullable Output<SiteConfigArgs> siteConfig) {
             this.siteConfig = siteConfig;
             return this;
         }
-
         public Builder siteConfig(@Nullable SiteConfigArgs siteConfig) {
             this.siteConfig = Output.ofNullable(siteConfig);
             return this;
         }
-
         public Builder slot(@Nullable Output<String> slot) {
             this.slot = slot;
             return this;
         }
-
         public Builder slot(@Nullable String slot) {
             this.slot = Output.ofNullable(slot);
             return this;
         }
-
         public Builder storageAccountRequired(@Nullable Output<Boolean> storageAccountRequired) {
             this.storageAccountRequired = storageAccountRequired;
             return this;
         }
-
         public Builder storageAccountRequired(@Nullable Boolean storageAccountRequired) {
             this.storageAccountRequired = Output.ofNullable(storageAccountRequired);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualNetworkSubnetId(@Nullable Output<String> virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
-
         public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Output.ofNullable(virtualNetworkSubnetId);
             return this;
-        }
-        public WebAppSlotArgs build() {
+        }        public WebAppSlotArgs build() {
             return new WebAppSlotArgs(clientAffinityEnabled, clientCertEnabled, clientCertExclusionPaths, clientCertMode, cloningInfo, containerSize, customDomainVerificationId, dailyMemoryTimeQuota, enabled, hostNameSslStates, hostNamesDisabled, hostingEnvironmentProfile, httpsOnly, hyperV, identity, isXenon, keyVaultReferenceIdentity, kind, location, name, redundancyMode, reserved, resourceGroupName, scmSiteAlsoStopped, serverFarmId, siteConfig, slot, storageAccountRequired, tags, virtualNetworkSubnetId);
         }
     }

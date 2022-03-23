@@ -291,87 +291,82 @@ public final class GetJobResult {
             this.dataCatalogOutputs = dataCatalogOutputs;
             return this;
         }
-
+        public Builder dataCatalogOutputs(JobDataCatalogOutput... dataCatalogOutputs) {
+            return dataCatalogOutputs(List.of(dataCatalogOutputs));
+        }
         public Builder databaseOutputs(@Nullable List<JobDatabaseOutput> databaseOutputs) {
             this.databaseOutputs = databaseOutputs;
             return this;
         }
-
+        public Builder databaseOutputs(JobDatabaseOutput... databaseOutputs) {
+            return databaseOutputs(List.of(databaseOutputs));
+        }
         public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
-
         public Builder encryptionMode(@Nullable JobEncryptionMode encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
-
         public Builder jobSample(@Nullable JobSample jobSample) {
             this.jobSample = jobSample;
             return this;
         }
-
         public Builder logSubscription(@Nullable JobLogSubscription logSubscription) {
             this.logSubscription = logSubscription;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder outputLocation(@Nullable JobOutputLocation outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputs(@Nullable List<JobOutput> outputs) {
             this.outputs = outputs;
             return this;
         }
-
+        public Builder outputs(JobOutput... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder profileConfiguration(@Nullable JobProfileConfiguration profileConfiguration) {
             this.profileConfiguration = profileConfiguration;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder recipe(@Nullable JobRecipe recipe) {
             this.recipe = recipe;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder validationConfigurations(@Nullable List<JobValidationConfiguration> validationConfigurations) {
             this.validationConfigurations = validationConfigurations;
             return this;
         }
-        public GetJobResult build() {
+        public Builder validationConfigurations(JobValidationConfiguration... validationConfigurations) {
+            return validationConfigurations(List.of(validationConfigurations));
+        }        public GetJobResult build() {
             return new GetJobResult(dataCatalogOutputs, databaseOutputs, datasetName, encryptionKeyArn, encryptionMode, jobSample, logSubscription, maxCapacity, maxRetries, outputLocation, outputs, profileConfiguration, projectName, recipe, roleArn, timeout, validationConfigurations);
         }
     }

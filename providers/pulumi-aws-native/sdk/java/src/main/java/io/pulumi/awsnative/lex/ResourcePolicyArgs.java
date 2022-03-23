@@ -66,22 +66,18 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(ResourcePolicyPolicyArgs policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
-
         public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
-        }
-        public ResourcePolicyArgs build() {
+        }        public ResourcePolicyArgs build() {
             return new ResourcePolicyArgs(policy, resourceArn);
         }
     }

@@ -71,12 +71,13 @@ public final class ListQueryKeyBySearchServiceResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<QueryKeyResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListQueryKeyBySearchServiceResult build() {
+        public Builder value(QueryKeyResponse... value) {
+            return value(List.of(value));
+        }        public ListQueryKeyBySearchServiceResult build() {
             return new ListQueryKeyBySearchServiceResult(nextLink, value);
         }
     }

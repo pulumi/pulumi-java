@@ -107,42 +107,34 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder credential(@Nullable Output<RunAsCredentialAssociationPropertyArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable RunAsCredentialAssociationPropertyArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder hybridRunbookWorkerGroupName(@Nullable Output<String> hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
-
         public Builder hybridRunbookWorkerGroupName(@Nullable String hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = Output.ofNullable(hybridRunbookWorkerGroupName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public HybridRunbookWorkerGroupArgs build() {
+        }        public HybridRunbookWorkerGroupArgs build() {
             return new HybridRunbookWorkerGroupArgs(automationAccountName, credential, hybridRunbookWorkerGroupName, resourceGroupName);
         }
     }

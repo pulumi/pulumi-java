@@ -70,12 +70,10 @@ public final class CpuUtilizationResponse {
             this.aggregationWindowLength = Objects.requireNonNull(aggregationWindowLength);
             return this;
         }
-
         public Builder targetUtilization(Double targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
-        }
-        public CpuUtilizationResponse build() {
+        }        public CpuUtilizationResponse build() {
             return new CpuUtilizationResponse(aggregationWindowLength, targetUtilization);
         }
     }

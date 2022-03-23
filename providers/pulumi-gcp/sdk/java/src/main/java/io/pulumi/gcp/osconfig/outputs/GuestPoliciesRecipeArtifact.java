@@ -116,22 +116,18 @@ public final class GuestPoliciesRecipeArtifact {
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder gcs(@Nullable GuestPoliciesRecipeArtifactGcs gcs) {
             this.gcs = gcs;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder remote(@Nullable GuestPoliciesRecipeArtifactRemote remote) {
             this.remote = remote;
             return this;
-        }
-        public GuestPoliciesRecipeArtifact build() {
+        }        public GuestPoliciesRecipeArtifact build() {
             return new GuestPoliciesRecipeArtifact(allowInsecure, gcs, id, remote);
         }
     }

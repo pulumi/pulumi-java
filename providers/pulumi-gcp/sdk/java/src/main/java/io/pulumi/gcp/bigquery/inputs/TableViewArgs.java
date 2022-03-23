@@ -76,22 +76,18 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
-
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
-
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = Output.ofNullable(useLegacySql);
             return this;
-        }
-        public TableViewArgs build() {
+        }        public TableViewArgs build() {
             return new TableViewArgs(query, useLegacySql);
         }
     }

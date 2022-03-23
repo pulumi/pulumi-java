@@ -74,22 +74,18 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
             this.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
-
         public Builder licenseConfigurationArn(@Nullable String licenseConfigurationArn) {
             this.licenseConfigurationArn = Output.ofNullable(licenseConfigurationArn);
             return this;
         }
-
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
-        }
-        public AssociationState build() {
+        }        public AssociationState build() {
             return new AssociationState(licenseConfigurationArn, resourceArn);
         }
     }

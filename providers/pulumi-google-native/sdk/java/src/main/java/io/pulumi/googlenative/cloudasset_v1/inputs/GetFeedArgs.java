@@ -76,17 +76,14 @@ public final class GetFeedArgs extends io.pulumi.resources.InvokeArgs {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
-
         public Builder v1Id(String v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
-
         public Builder v1Id1(String v1Id1) {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
-        }
-        public GetFeedArgs build() {
+        }        public GetFeedArgs build() {
             return new GetFeedArgs(feedId, v1Id, v1Id1);
         }
     }

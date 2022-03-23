@@ -151,72 +151,67 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<ResponsePlanActionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(ResponsePlanActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder chatChannel(@Nullable Output<ResponsePlanChatChannelArgs> chatChannel) {
             this.chatChannel = chatChannel;
             return this;
         }
-
         public Builder chatChannel(@Nullable ResponsePlanChatChannelArgs chatChannel) {
             this.chatChannel = Output.ofNullable(chatChannel);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder engagements(@Nullable Output<List<String>> engagements) {
             this.engagements = engagements;
             return this;
         }
-
         public Builder engagements(@Nullable List<String> engagements) {
             this.engagements = Output.ofNullable(engagements);
             return this;
         }
-
+        public Builder engagements(String... engagements) {
+            return engagements(List.of(engagements));
+        }
         public Builder incidentTemplate(Output<ResponsePlanIncidentTemplateArgs> incidentTemplate) {
             this.incidentTemplate = Objects.requireNonNull(incidentTemplate);
             return this;
         }
-
         public Builder incidentTemplate(ResponsePlanIncidentTemplateArgs incidentTemplate) {
             this.incidentTemplate = Output.of(Objects.requireNonNull(incidentTemplate));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ResponsePlanTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ResponsePlanTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ResponsePlanArgs build() {
+        public Builder tags(ResponsePlanTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ResponsePlanArgs build() {
             return new ResponsePlanArgs(actions, chatChannel, displayName, engagements, incidentTemplate, name, tags);
         }
     }

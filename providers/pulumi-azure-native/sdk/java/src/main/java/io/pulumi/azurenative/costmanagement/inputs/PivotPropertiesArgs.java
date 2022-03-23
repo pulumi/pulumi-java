@@ -80,22 +80,18 @@ public final class PivotPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,PivotTypeType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,PivotTypeType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public PivotPropertiesArgs build() {
+        }        public PivotPropertiesArgs build() {
             return new PivotPropertiesArgs(name, type);
         }
     }

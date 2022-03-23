@@ -158,72 +158,61 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
             this.hostGroupName = hostGroupName;
             return this;
         }
-
         public Builder hostGroupName(@Nullable String hostGroupName) {
             this.hostGroupName = Output.ofNullable(hostGroupName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder platformFaultDomainCount(Output<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = Objects.requireNonNull(platformFaultDomainCount);
             return this;
         }
-
         public Builder platformFaultDomainCount(Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = Output.of(Objects.requireNonNull(platformFaultDomainCount));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder supportAutomaticPlacement(@Nullable Output<Boolean> supportAutomaticPlacement) {
             this.supportAutomaticPlacement = supportAutomaticPlacement;
             return this;
         }
-
         public Builder supportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
             this.supportAutomaticPlacement = Output.ofNullable(supportAutomaticPlacement);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public DedicatedHostGroupArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public DedicatedHostGroupArgs build() {
             return new DedicatedHostGroupArgs(hostGroupName, location, platformFaultDomainCount, resourceGroupName, supportAutomaticPlacement, tags, zones);
         }
     }

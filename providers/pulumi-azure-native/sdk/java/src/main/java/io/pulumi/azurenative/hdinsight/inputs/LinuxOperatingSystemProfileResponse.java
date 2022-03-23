@@ -95,17 +95,14 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
             this.password = password;
             return this;
         }
-
         public Builder sshProfile(@Nullable SshProfileResponse sshProfile) {
             this.sshProfile = sshProfile;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public LinuxOperatingSystemProfileResponse build() {
+        }        public LinuxOperatingSystemProfileResponse build() {
             return new LinuxOperatingSystemProfileResponse(password, sshProfile, username);
         }
     }

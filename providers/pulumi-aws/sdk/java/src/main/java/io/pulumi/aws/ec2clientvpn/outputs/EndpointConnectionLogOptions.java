@@ -88,17 +88,14 @@ public final class EndpointConnectionLogOptions {
             this.cloudwatchLogGroup = cloudwatchLogGroup;
             return this;
         }
-
         public Builder cloudwatchLogStream(@Nullable String cloudwatchLogStream) {
             this.cloudwatchLogStream = cloudwatchLogStream;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public EndpointConnectionLogOptions build() {
+        }        public EndpointConnectionLogOptions build() {
             return new EndpointConnectionLogOptions(cloudwatchLogGroup, cloudwatchLogStream, enabled);
         }
     }

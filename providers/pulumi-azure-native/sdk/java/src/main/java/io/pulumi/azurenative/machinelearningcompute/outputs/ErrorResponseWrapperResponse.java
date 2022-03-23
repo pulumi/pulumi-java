@@ -53,8 +53,7 @@ public final class ErrorResponseWrapperResponse {
         public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
-        }
-        public ErrorResponseWrapperResponse build() {
+        }        public ErrorResponseWrapperResponse build() {
             return new ErrorResponseWrapperResponse(error);
         }
     }

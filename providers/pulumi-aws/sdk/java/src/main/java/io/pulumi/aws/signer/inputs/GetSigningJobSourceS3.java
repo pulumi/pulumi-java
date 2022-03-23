@@ -76,17 +76,14 @@ public final class GetSigningJobSourceS3 extends io.pulumi.resources.InvokeArgs 
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetSigningJobSourceS3 build() {
+        }        public GetSigningJobSourceS3 build() {
             return new GetSigningJobSourceS3(bucket, key, version);
         }
     }

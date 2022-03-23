@@ -71,12 +71,10 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
             this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType);
             return this;
         }
-
         public Builder resourceLabel(@Nullable String resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
-        }
-        public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification build() {
+        }        public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification build() {
             return new ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification(predefinedScalingMetricType, resourceLabel);
         }
     }

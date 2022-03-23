@@ -241,122 +241,98 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.asAdministrators = asAdministrators;
             return this;
         }
-
         public Builder asAdministrators(@Nullable ServerAdministratorsArgs asAdministrators) {
             this.asAdministrators = Output.ofNullable(asAdministrators);
             return this;
         }
-
         public Builder backupBlobContainerUri(@Nullable Output<String> backupBlobContainerUri) {
             this.backupBlobContainerUri = backupBlobContainerUri;
             return this;
         }
-
         public Builder backupBlobContainerUri(@Nullable String backupBlobContainerUri) {
             this.backupBlobContainerUri = Output.ofNullable(backupBlobContainerUri);
             return this;
         }
-
         public Builder gatewayDetails(@Nullable Output<GatewayDetailsArgs> gatewayDetails) {
             this.gatewayDetails = gatewayDetails;
             return this;
         }
-
         public Builder gatewayDetails(@Nullable GatewayDetailsArgs gatewayDetails) {
             this.gatewayDetails = Output.ofNullable(gatewayDetails);
             return this;
         }
-
         public Builder ipV4FirewallSettings(@Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings) {
             this.ipV4FirewallSettings = ipV4FirewallSettings;
             return this;
         }
-
         public Builder ipV4FirewallSettings(@Nullable IPv4FirewallSettingsArgs ipV4FirewallSettings) {
             this.ipV4FirewallSettings = Output.ofNullable(ipV4FirewallSettings);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedMode(@Nullable Output<Integer> managedMode) {
             this.managedMode = managedMode;
             return this;
         }
-
         public Builder managedMode(@Nullable Integer managedMode) {
             this.managedMode = Output.ofNullable(managedMode);
             return this;
         }
-
         public Builder querypoolConnectionMode(@Nullable Output<ConnectionMode> querypoolConnectionMode) {
             this.querypoolConnectionMode = querypoolConnectionMode;
             return this;
         }
-
         public Builder querypoolConnectionMode(@Nullable ConnectionMode querypoolConnectionMode) {
             this.querypoolConnectionMode = Output.ofNullable(querypoolConnectionMode);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverMonitorMode(@Nullable Output<Integer> serverMonitorMode) {
             this.serverMonitorMode = serverMonitorMode;
             return this;
         }
-
         public Builder serverMonitorMode(@Nullable Integer serverMonitorMode) {
             this.serverMonitorMode = Output.ofNullable(serverMonitorMode);
             return this;
         }
-
         public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = Output.ofNullable(serverName);
             return this;
         }
-
         public Builder sku(Output<ResourceSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(ResourceSkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServerDetailsArgs build() {
+        }        public ServerDetailsArgs build() {
             return new ServerDetailsArgs(asAdministrators, backupBlobContainerUri, gatewayDetails, ipV4FirewallSettings, location, managedMode, querypoolConnectionMode, resourceGroupName, serverMonitorMode, serverName, sku, tags);
         }
     }

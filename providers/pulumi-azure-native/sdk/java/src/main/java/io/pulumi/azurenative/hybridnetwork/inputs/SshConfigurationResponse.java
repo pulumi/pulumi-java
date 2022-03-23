@@ -62,7 +62,9 @@ public final class SshConfigurationResponse extends io.pulumi.resources.InvokeAr
             this.publicKeys = publicKeys;
             return this;
         }
-        public SshConfigurationResponse build() {
+        public Builder publicKeys(SshPublicKeyResponse... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public SshConfigurationResponse build() {
             return new SshConfigurationResponse(publicKeys);
         }
     }

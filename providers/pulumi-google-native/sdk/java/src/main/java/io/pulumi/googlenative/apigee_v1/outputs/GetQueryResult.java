@@ -247,67 +247,54 @@ public final class GetQueryResult {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder envgroupHostname(String envgroupHostname) {
             this.envgroupHostname = Objects.requireNonNull(envgroupHostname);
             return this;
         }
-
         public Builder error(String error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder executionTime(String executionTime) {
             this.executionTime = Objects.requireNonNull(executionTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder queryParams(GoogleCloudApigeeV1QueryMetadataResponse queryParams) {
             this.queryParams = Objects.requireNonNull(queryParams);
             return this;
         }
-
         public Builder reportDefinitionId(String reportDefinitionId) {
             this.reportDefinitionId = Objects.requireNonNull(reportDefinitionId);
             return this;
         }
-
         public Builder result(GoogleCloudApigeeV1AsyncQueryResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder resultFileSize(String resultFileSize) {
             this.resultFileSize = Objects.requireNonNull(resultFileSize);
             return this;
         }
-
         public Builder resultRows(String resultRows) {
             this.resultRows = Objects.requireNonNull(resultRows);
             return this;
         }
-
         public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
-        }
-        public GetQueryResult build() {
+        }        public GetQueryResult build() {
             return new GetQueryResult(created, envgroupHostname, error, executionTime, name, queryParams, reportDefinitionId, result, resultFileSize, resultRows, self, state, updated);
         }
     }

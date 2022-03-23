@@ -61,12 +61,10 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
             this.functionAlias = functionAlias;
             return this;
         }
-
         public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = Output.ofNullable(functionAlias);
             return this;
-        }
-        public ApplicationInsightsComponentAnalyticsItemPropertiesArgs build() {
+        }        public ApplicationInsightsComponentAnalyticsItemPropertiesArgs build() {
             return new ApplicationInsightsComponentAnalyticsItemPropertiesArgs(functionAlias);
         }
     }

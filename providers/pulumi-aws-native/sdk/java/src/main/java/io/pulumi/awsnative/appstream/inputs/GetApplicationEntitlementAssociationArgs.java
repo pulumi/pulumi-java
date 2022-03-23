@@ -76,17 +76,14 @@ public final class GetApplicationEntitlementAssociationArgs extends io.pulumi.re
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
-
         public Builder entitlementName(String entitlementName) {
             this.entitlementName = Objects.requireNonNull(entitlementName);
             return this;
         }
-
         public Builder stackName(String stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
-        }
-        public GetApplicationEntitlementAssociationArgs build() {
+        }        public GetApplicationEntitlementAssociationArgs build() {
             return new GetApplicationEntitlementAssociationArgs(applicationIdentifier, entitlementName, stackName);
         }
     }

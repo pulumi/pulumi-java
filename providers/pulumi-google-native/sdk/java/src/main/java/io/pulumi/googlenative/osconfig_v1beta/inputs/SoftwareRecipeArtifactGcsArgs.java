@@ -94,32 +94,26 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder generation(@Nullable Output<String> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable String generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder object(@Nullable Output<String> object) {
             this.object = object;
             return this;
         }
-
         public Builder object(@Nullable String object) {
             this.object = Output.ofNullable(object);
             return this;
-        }
-        public SoftwareRecipeArtifactGcsArgs build() {
+        }        public SoftwareRecipeArtifactGcsArgs build() {
             return new SoftwareRecipeArtifactGcsArgs(bucket, generation, object);
         }
     }

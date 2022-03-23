@@ -72,12 +72,10 @@ public final class ListIotHubResourceKeysArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListIotHubResourceKeysArgs build() {
+        }        public ListIotHubResourceKeysArgs build() {
             return new ListIotHubResourceKeysArgs(resourceGroupName, resourceName);
         }
     }

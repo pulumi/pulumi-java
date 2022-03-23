@@ -316,172 +316,138 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder defaultVersionId(@Nullable Output<String> defaultVersionId) {
             this.defaultVersionId = defaultVersionId;
             return this;
         }
-
         public Builder defaultVersionId(@Nullable String defaultVersionId) {
             this.defaultVersionId = Output.ofNullable(defaultVersionId);
             return this;
         }
-
         public Builder deprecatedStatus(@Nullable Output<String> deprecatedStatus) {
             this.deprecatedStatus = deprecatedStatus;
             return this;
         }
-
         public Builder deprecatedStatus(@Nullable String deprecatedStatus) {
             this.deprecatedStatus = Output.ofNullable(deprecatedStatus);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentationUrl(@Nullable Output<String> documentationUrl) {
             this.documentationUrl = documentationUrl;
             return this;
         }
-
         public Builder documentationUrl(@Nullable String documentationUrl) {
             this.documentationUrl = Output.ofNullable(documentationUrl);
             return this;
         }
-
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
-
         public Builder isDefaultVersion(@Nullable Output<Boolean> isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
-
         public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
             this.isDefaultVersion = Output.ofNullable(isDefaultVersion);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder provisioningType(@Nullable Output<String> provisioningType) {
             this.provisioningType = provisioningType;
             return this;
         }
-
         public Builder provisioningType(@Nullable String provisioningType) {
             this.provisioningType = Output.ofNullable(provisioningType);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder schemaHandlerPackage(@Nullable Output<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = schemaHandlerPackage;
             return this;
         }
-
         public Builder schemaHandlerPackage(@Nullable String schemaHandlerPackage) {
             this.schemaHandlerPackage = Output.ofNullable(schemaHandlerPackage);
             return this;
         }
-
         public Builder sourceUrl(@Nullable Output<String> sourceUrl) {
             this.sourceUrl = sourceUrl;
             return this;
         }
-
         public Builder sourceUrl(@Nullable String sourceUrl) {
             this.sourceUrl = Output.ofNullable(sourceUrl);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeArn(@Nullable Output<String> typeArn) {
             this.typeArn = typeArn;
             return this;
         }
-
         public Builder typeArn(@Nullable String typeArn) {
             this.typeArn = Output.ofNullable(typeArn);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
         }
-
         public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = Output.ofNullable(versionId);
             return this;
         }
-
         public Builder visibility(@Nullable Output<String> visibility) {
             this.visibility = visibility;
             return this;
         }
-
         public Builder visibility(@Nullable String visibility) {
             this.visibility = Output.ofNullable(visibility);
             return this;
-        }
-        public CloudFormationTypeState build() {
+        }        public CloudFormationTypeState build() {
             return new CloudFormationTypeState(arn, defaultVersionId, deprecatedStatus, description, documentationUrl, executionRoleArn, isDefaultVersion, loggingConfig, provisioningType, schema, schemaHandlerPackage, sourceUrl, type, typeArn, typeName, versionId, visibility);
         }
     }

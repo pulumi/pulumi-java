@@ -95,32 +95,26 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder expires(@Nullable Output<Double> expires) {
             this.expires = expires;
             return this;
         }
-
         public Builder expires(@Nullable Double expires) {
             this.expires = Output.ofNullable(expires);
             return this;
         }
-
         public Builder notBefore(@Nullable Output<Double> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
-
         public Builder notBefore(@Nullable Double notBefore) {
             this.notBefore = Output.ofNullable(notBefore);
             return this;
-        }
-        public KeyAttributesArgs build() {
+        }        public KeyAttributesArgs build() {
             return new KeyAttributesArgs(enabled, expires, notBefore);
         }
     }

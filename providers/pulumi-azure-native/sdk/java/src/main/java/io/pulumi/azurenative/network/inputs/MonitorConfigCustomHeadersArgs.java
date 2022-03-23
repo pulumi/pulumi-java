@@ -78,22 +78,18 @@ public final class MonitorConfigCustomHeadersArgs extends io.pulumi.resources.Re
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public MonitorConfigCustomHeadersArgs build() {
+        }        public MonitorConfigCustomHeadersArgs build() {
             return new MonitorConfigCustomHeadersArgs(name, value);
         }
     }

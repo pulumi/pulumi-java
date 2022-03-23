@@ -54,12 +54,13 @@ public final class GetCustomerGatewayFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetCustomerGatewayFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetCustomerGatewayFilter build() {
             return new GetCustomerGatewayFilter(name, values);
         }
     }

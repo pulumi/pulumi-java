@@ -160,37 +160,30 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
             this.address = address;
             return this;
         }
-
         public Builder coverageLevel(@Nullable String coverageLevel) {
             this.coverageLevel = coverageLevel;
             return this;
         }
-
         public Builder filter(@Nullable ConnectionMonitorEndpointFilterResponse filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder scope(@Nullable ConnectionMonitorEndpointScopeResponse scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ConnectionMonitorEndpointResponse build() {
+        }        public ConnectionMonitorEndpointResponse build() {
             return new ConnectionMonitorEndpointResponse(address, coverageLevel, filter, name, resourceId, scope, type);
         }
     }

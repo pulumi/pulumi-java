@@ -71,12 +71,10 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfig {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder streamArn(String streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
-        }
-        public RealtimeLogConfigEndpointKinesisStreamConfig build() {
+        }        public RealtimeLogConfigEndpointKinesisStreamConfig build() {
             return new RealtimeLogConfigEndpointKinesisStreamConfig(roleArn, streamArn);
         }
     }

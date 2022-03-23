@@ -57,8 +57,7 @@ public final class ServiceTypeDeltaHealthPolicyResponse {
         public Builder maxPercentDeltaUnhealthyServices(@Nullable Integer maxPercentDeltaUnhealthyServices) {
             this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
-        }
-        public ServiceTypeDeltaHealthPolicyResponse build() {
+        }        public ServiceTypeDeltaHealthPolicyResponse build() {
             return new ServiceTypeDeltaHealthPolicyResponse(maxPercentDeltaUnhealthyServices);
         }
     }

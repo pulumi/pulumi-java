@@ -62,12 +62,13 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
             this.trackSelections = trackSelections;
             return this;
         }
-
         public Builder trackSelections(@Nullable List<TrackPropertyConditionArgs> trackSelections) {
             this.trackSelections = Output.ofNullable(trackSelections);
             return this;
         }
-        public TrackSelectionArgs build() {
+        public Builder trackSelections(TrackPropertyConditionArgs... trackSelections) {
+            return trackSelections(List.of(trackSelections));
+        }        public TrackSelectionArgs build() {
             return new TrackSelectionArgs(trackSelections);
         }
     }

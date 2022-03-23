@@ -65,22 +65,18 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
             this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN);
             return this;
         }
-
         public Builder kinesisStreamARN(String kinesisStreamARN) {
             this.kinesisStreamARN = Output.of(Objects.requireNonNull(kinesisStreamARN));
             return this;
         }
-
         public Builder roleARN(Output<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
-
         public Builder roleARN(String roleARN) {
             this.roleARN = Output.of(Objects.requireNonNull(roleARN));
             return this;
-        }
-        public DeliveryStreamKinesisStreamSourceConfigurationArgs build() {
+        }        public DeliveryStreamKinesisStreamSourceConfigurationArgs build() {
             return new DeliveryStreamKinesisStreamSourceConfigurationArgs(kinesisStreamARN, roleARN);
         }
     }

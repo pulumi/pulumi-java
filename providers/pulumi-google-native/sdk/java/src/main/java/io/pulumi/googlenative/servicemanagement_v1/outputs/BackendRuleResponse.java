@@ -159,42 +159,34 @@ public final class BackendRuleResponse {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder deadline(Double deadline) {
             this.deadline = Objects.requireNonNull(deadline);
             return this;
         }
-
         public Builder disableAuth(Boolean disableAuth) {
             this.disableAuth = Objects.requireNonNull(disableAuth);
             return this;
         }
-
         public Builder jwtAudience(String jwtAudience) {
             this.jwtAudience = Objects.requireNonNull(jwtAudience);
             return this;
         }
-
         public Builder operationDeadline(Double operationDeadline) {
             this.operationDeadline = Objects.requireNonNull(operationDeadline);
             return this;
         }
-
         public Builder pathTranslation(String pathTranslation) {
             this.pathTranslation = Objects.requireNonNull(pathTranslation);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
-        }
-        public BackendRuleResponse build() {
+        }        public BackendRuleResponse build() {
             return new BackendRuleResponse(address, deadline, disableAuth, jwtAudience, operationDeadline, pathTranslation, protocol, selector);
         }
     }

@@ -67,22 +67,21 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public GroupTagFilterArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GroupTagFilterArgs build() {
             return new GroupTagFilterArgs(key, values);
         }
     }

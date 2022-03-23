@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnArgs extends io
             this.userInput = userInput;
             return this;
         }
-
         public Builder userInput(@Nullable GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs userInput) {
             this.userInput = Output.ofNullable(userInput);
             return this;
         }
-
         public Builder virtualAgentOutput(@Nullable Output<GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs> virtualAgentOutput) {
             this.virtualAgentOutput = virtualAgentOutput;
             return this;
         }
-
         public Builder virtualAgentOutput(@Nullable GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs virtualAgentOutput) {
             this.virtualAgentOutput = Output.ofNullable(virtualAgentOutput);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ConversationTurnArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ConversationTurnArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnArgs(userInput, virtualAgentOutput);
         }
     }

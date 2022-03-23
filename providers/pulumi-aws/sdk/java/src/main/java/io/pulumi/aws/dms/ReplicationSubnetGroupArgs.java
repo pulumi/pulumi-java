@@ -108,42 +108,37 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
             this.replicationSubnetGroupDescription = Objects.requireNonNull(replicationSubnetGroupDescription);
             return this;
         }
-
         public Builder replicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = Output.of(Objects.requireNonNull(replicationSubnetGroupDescription));
             return this;
         }
-
         public Builder replicationSubnetGroupId(Output<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Objects.requireNonNull(replicationSubnetGroupId);
             return this;
         }
-
         public Builder replicationSubnetGroupId(String replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Output.of(Objects.requireNonNull(replicationSubnetGroupId));
             return this;
         }
-
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ReplicationSubnetGroupArgs build() {
+        }        public ReplicationSubnetGroupArgs build() {
             return new ReplicationSubnetGroupArgs(replicationSubnetGroupDescription, replicationSubnetGroupId, subnetIds, tags);
         }
     }

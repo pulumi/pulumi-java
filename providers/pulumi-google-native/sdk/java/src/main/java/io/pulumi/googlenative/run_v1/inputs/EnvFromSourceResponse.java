@@ -94,17 +94,14 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.configMapRef = Objects.requireNonNull(configMapRef);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder secretRef(SecretEnvSourceResponse secretRef) {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
-        }
-        public EnvFromSourceResponse build() {
+        }        public EnvFromSourceResponse build() {
             return new EnvFromSourceResponse(configMapRef, prefix, secretRef);
         }
     }

@@ -299,82 +299,66 @@ public final class GetEventHubEventSourceResult {
             this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder eventHubName(String eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
-
         public Builder eventSourceResourceId(String eventSourceResourceId) {
             this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder localTimestamp(@Nullable LocalTimestampResponse localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceBusNamespace(String serviceBusNamespace) {
             this.serviceBusNamespace = Objects.requireNonNull(serviceBusNamespace);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }
-
         public Builder timestampPropertyName(@Nullable String timestampPropertyName) {
             this.timestampPropertyName = timestampPropertyName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEventHubEventSourceResult build() {
+        }        public GetEventHubEventSourceResult build() {
             return new GetEventHubEventSourceResult(consumerGroupName, creationTime, eventHubName, eventSourceResourceId, id, keyName, kind, localTimestamp, location, name, provisioningState, serviceBusNamespace, tags, time, timestampPropertyName, type);
         }
     }

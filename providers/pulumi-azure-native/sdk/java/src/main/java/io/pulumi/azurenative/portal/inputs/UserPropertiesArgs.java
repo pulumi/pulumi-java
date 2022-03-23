@@ -130,52 +130,42 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.preferredLocation = Objects.requireNonNull(preferredLocation);
             return this;
         }
-
         public Builder preferredLocation(String preferredLocation) {
             this.preferredLocation = Output.of(Objects.requireNonNull(preferredLocation));
             return this;
         }
-
         public Builder preferredOsType(Output<Either<String,OsType>> preferredOsType) {
             this.preferredOsType = Objects.requireNonNull(preferredOsType);
             return this;
         }
-
         public Builder preferredOsType(Either<String,OsType> preferredOsType) {
             this.preferredOsType = Output.of(Objects.requireNonNull(preferredOsType));
             return this;
         }
-
         public Builder preferredShellType(Output<Either<String,ShellType>> preferredShellType) {
             this.preferredShellType = Objects.requireNonNull(preferredShellType);
             return this;
         }
-
         public Builder preferredShellType(Either<String,ShellType> preferredShellType) {
             this.preferredShellType = Output.of(Objects.requireNonNull(preferredShellType));
             return this;
         }
-
         public Builder storageProfile(Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
-
         public Builder storageProfile(StorageProfileArgs storageProfile) {
             this.storageProfile = Output.of(Objects.requireNonNull(storageProfile));
             return this;
         }
-
         public Builder terminalSettings(Output<TerminalSettingsArgs> terminalSettings) {
             this.terminalSettings = Objects.requireNonNull(terminalSettings);
             return this;
         }
-
         public Builder terminalSettings(TerminalSettingsArgs terminalSettings) {
             this.terminalSettings = Output.of(Objects.requireNonNull(terminalSettings));
             return this;
-        }
-        public UserPropertiesArgs build() {
+        }        public UserPropertiesArgs build() {
             return new UserPropertiesArgs(preferredLocation, preferredOsType, preferredShellType, storageProfile, terminalSettings);
         }
     }

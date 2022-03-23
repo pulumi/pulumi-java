@@ -204,102 +204,85 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.changeDescription = changeDescription;
             return this;
         }
-
         public Builder changeDescription(@Nullable String changeDescription) {
             this.changeDescription = Output.ofNullable(changeDescription);
             return this;
         }
-
         public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder platform(Output<String> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder platform(String platform) {
             this.platform = Output.of(Objects.requireNonNull(platform));
             return this;
         }
-
         public Builder supportedOsVersions(@Nullable Output<List<String>> supportedOsVersions) {
             this.supportedOsVersions = supportedOsVersions;
             return this;
         }
-
         public Builder supportedOsVersions(@Nullable List<String> supportedOsVersions) {
             this.supportedOsVersions = Output.ofNullable(supportedOsVersions);
             return this;
         }
-
+        public Builder supportedOsVersions(String... supportedOsVersions) {
+            return supportedOsVersions(List.of(supportedOsVersions));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public ComponentArgs build() {
+        }        public ComponentArgs build() {
             return new ComponentArgs(changeDescription, data, description, kmsKeyId, name, platform, supportedOsVersions, tags, uri, version);
         }
     }

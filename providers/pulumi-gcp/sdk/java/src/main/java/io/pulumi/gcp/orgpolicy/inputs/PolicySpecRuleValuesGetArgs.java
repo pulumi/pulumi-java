@@ -75,22 +75,24 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
             this.allowedValues = allowedValues;
             return this;
         }
-
         public Builder allowedValues(@Nullable List<String> allowedValues) {
             this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder deniedValues(@Nullable Output<List<String>> deniedValues) {
             this.deniedValues = deniedValues;
             return this;
         }
-
         public Builder deniedValues(@Nullable List<String> deniedValues) {
             this.deniedValues = Output.ofNullable(deniedValues);
             return this;
         }
-        public PolicySpecRuleValuesGetArgs build() {
+        public Builder deniedValues(String... deniedValues) {
+            return deniedValues(List.of(deniedValues));
+        }        public PolicySpecRuleValuesGetArgs build() {
             return new PolicySpecRuleValuesGetArgs(allowedValues, deniedValues);
         }
     }

@@ -53,12 +53,10 @@ public final class JobHadoopConfigLoggingConfigGetArgs extends io.pulumi.resourc
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             this.driverLogLevels = Output.of(Objects.requireNonNull(driverLogLevels));
             return this;
-        }
-        public JobHadoopConfigLoggingConfigGetArgs build() {
+        }        public JobHadoopConfigLoggingConfigGetArgs build() {
             return new JobHadoopConfigLoggingConfigGetArgs(driverLogLevels);
         }
     }

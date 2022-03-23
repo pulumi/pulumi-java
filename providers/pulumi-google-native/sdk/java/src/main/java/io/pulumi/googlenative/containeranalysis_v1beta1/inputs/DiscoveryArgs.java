@@ -60,12 +60,10 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
-
         public Builder analysisKind(DiscoveryAnalysisKind analysisKind) {
             this.analysisKind = Output.of(Objects.requireNonNull(analysisKind));
             return this;
-        }
-        public DiscoveryArgs build() {
+        }        public DiscoveryArgs build() {
             return new DiscoveryArgs(analysisKind);
         }
     }

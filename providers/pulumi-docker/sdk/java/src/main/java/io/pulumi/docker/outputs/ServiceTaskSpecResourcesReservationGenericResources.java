@@ -55,12 +55,16 @@ public final class ServiceTaskSpecResourcesReservationGenericResources {
             this.discreteResourcesSpecs = discreteResourcesSpecs;
             return this;
         }
-
+        public Builder discreteResourcesSpecs(String... discreteResourcesSpecs) {
+            return discreteResourcesSpecs(List.of(discreteResourcesSpecs));
+        }
         public Builder namedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
             this.namedResourcesSpecs = namedResourcesSpecs;
             return this;
         }
-        public ServiceTaskSpecResourcesReservationGenericResources build() {
+        public Builder namedResourcesSpecs(String... namedResourcesSpecs) {
+            return namedResourcesSpecs(List.of(namedResourcesSpecs));
+        }        public ServiceTaskSpecResourcesReservationGenericResources build() {
             return new ServiceTaskSpecResourcesReservationGenericResources(discreteResourcesSpecs, namedResourcesSpecs);
         }
     }

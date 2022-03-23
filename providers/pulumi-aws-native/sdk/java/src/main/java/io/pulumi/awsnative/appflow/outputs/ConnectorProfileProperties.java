@@ -146,62 +146,50 @@ public final class ConnectorProfileProperties {
             this.datadog = datadog;
             return this;
         }
-
         public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
-
         public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
-
         public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfileProperties marketo) {
             this.marketo = marketo;
             return this;
         }
-
         public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
-
         public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder slack(@Nullable ConnectorProfileSlackConnectorProfileProperties slack) {
             this.slack = slack;
             return this;
         }
-
         public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake) {
             this.snowflake = snowflake;
             return this;
         }
-
         public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfileProperties veeva) {
             this.veeva = veeva;
             return this;
         }
-
         public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
             this.zendesk = zendesk;
             return this;
-        }
-        public ConnectorProfileProperties build() {
+        }        public ConnectorProfileProperties build() {
             return new ConnectorProfileProperties(datadog, dynatrace, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, slack, snowflake, veeva, zendesk);
         }
     }

@@ -78,17 +78,14 @@ public final class GetRegionSslPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
-        }
-        public GetRegionSslPolicyArgs build() {
+        }        public GetRegionSslPolicyArgs build() {
             return new GetRegionSslPolicyArgs(project, region, sslPolicy);
         }
     }

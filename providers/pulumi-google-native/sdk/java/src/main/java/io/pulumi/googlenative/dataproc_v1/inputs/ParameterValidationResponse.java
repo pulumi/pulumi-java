@@ -77,12 +77,10 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public Builder values(ValueValidationResponse values) {
             this.values = Objects.requireNonNull(values);
             return this;
-        }
-        public ParameterValidationResponse build() {
+        }        public ParameterValidationResponse build() {
             return new ParameterValidationResponse(regex, values);
         }
     }

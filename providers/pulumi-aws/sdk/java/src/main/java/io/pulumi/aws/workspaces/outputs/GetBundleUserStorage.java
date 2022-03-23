@@ -51,8 +51,7 @@ public final class GetBundleUserStorage {
         public Builder capacity(String capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
-        }
-        public GetBundleUserStorage build() {
+        }        public GetBundleUserStorage build() {
             return new GetBundleUserStorage(capacity);
         }
     }

@@ -89,17 +89,14 @@ public final class StorageLensSelectionCriteria {
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder maxDepth(@Nullable Integer maxDepth) {
             this.maxDepth = maxDepth;
             return this;
         }
-
         public Builder minStorageBytesPercentage(@Nullable Double minStorageBytesPercentage) {
             this.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
-        }
-        public StorageLensSelectionCriteria build() {
+        }        public StorageLensSelectionCriteria build() {
             return new StorageLensSelectionCriteria(delimiter, maxDepth, minStorageBytesPercentage);
         }
     }

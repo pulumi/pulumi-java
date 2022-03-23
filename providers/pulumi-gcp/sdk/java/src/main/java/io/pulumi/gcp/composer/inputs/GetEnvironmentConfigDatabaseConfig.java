@@ -50,8 +50,7 @@ public final class GetEnvironmentConfigDatabaseConfig extends io.pulumi.resource
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
-        }
-        public GetEnvironmentConfigDatabaseConfig build() {
+        }        public GetEnvironmentConfigDatabaseConfig build() {
             return new GetEnvironmentConfigDatabaseConfig(machineType);
         }
     }

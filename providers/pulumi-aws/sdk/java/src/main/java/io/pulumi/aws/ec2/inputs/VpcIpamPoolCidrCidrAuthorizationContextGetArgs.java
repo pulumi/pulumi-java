@@ -74,22 +74,18 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder signature(@Nullable Output<String> signature) {
             this.signature = signature;
             return this;
         }
-
         public Builder signature(@Nullable String signature) {
             this.signature = Output.ofNullable(signature);
             return this;
-        }
-        public VpcIpamPoolCidrCidrAuthorizationContextGetArgs build() {
+        }        public VpcIpamPoolCidrCidrAuthorizationContextGetArgs build() {
             return new VpcIpamPoolCidrCidrAuthorizationContextGetArgs(message, signature);
         }
     }

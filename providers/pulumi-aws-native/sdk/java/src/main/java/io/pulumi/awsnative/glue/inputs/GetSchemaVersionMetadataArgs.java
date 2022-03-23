@@ -88,17 +88,14 @@ public final class GetSchemaVersionMetadataArgs extends io.pulumi.resources.Invo
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder schemaVersionId(String schemaVersionId) {
             this.schemaVersionId = Objects.requireNonNull(schemaVersionId);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetSchemaVersionMetadataArgs build() {
+        }        public GetSchemaVersionMetadataArgs build() {
             return new GetSchemaVersionMetadataArgs(key, schemaVersionId, value);
         }
     }

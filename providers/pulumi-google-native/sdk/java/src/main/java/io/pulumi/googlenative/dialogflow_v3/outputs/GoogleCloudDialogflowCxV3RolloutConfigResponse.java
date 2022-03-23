@@ -87,17 +87,17 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
             this.failureCondition = Objects.requireNonNull(failureCondition);
             return this;
         }
-
         public Builder rolloutCondition(String rolloutCondition) {
             this.rolloutCondition = Objects.requireNonNull(rolloutCondition);
             return this;
         }
-
         public Builder rolloutSteps(List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
             this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
             return this;
         }
-        public GoogleCloudDialogflowCxV3RolloutConfigResponse build() {
+        public Builder rolloutSteps(GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse... rolloutSteps) {
+            return rolloutSteps(List.of(rolloutSteps));
+        }        public GoogleCloudDialogflowCxV3RolloutConfigResponse build() {
             return new GoogleCloudDialogflowCxV3RolloutConfigResponse(failureCondition, rolloutCondition, rolloutSteps);
         }
     }

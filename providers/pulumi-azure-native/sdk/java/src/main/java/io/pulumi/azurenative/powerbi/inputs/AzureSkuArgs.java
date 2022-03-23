@@ -76,22 +76,18 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,AzureSkuName> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder tier(Output<Either<String,AzureSkuTier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(Either<String,AzureSkuTier> tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
-        }
-        public AzureSkuArgs build() {
+        }        public AzureSkuArgs build() {
             return new AzureSkuArgs(name, tier);
         }
     }

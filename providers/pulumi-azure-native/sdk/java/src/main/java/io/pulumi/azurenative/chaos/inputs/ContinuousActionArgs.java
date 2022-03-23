@@ -128,52 +128,45 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<List<KeyValuePairArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(List<KeyValuePairArgs> parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
+        public Builder parameters(KeyValuePairArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder selectorId(Output<String> selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
-
         public Builder selectorId(String selectorId) {
             this.selectorId = Output.of(Objects.requireNonNull(selectorId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ContinuousActionArgs build() {
+        }        public ContinuousActionArgs build() {
             return new ContinuousActionArgs(duration, name, parameters, selectorId, type);
         }
     }

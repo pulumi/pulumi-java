@@ -45,8 +45,7 @@ public final class BucketStorageClassAnalysis {
         public Builder dataExport(@Nullable BucketDataExport dataExport) {
             this.dataExport = dataExport;
             return this;
-        }
-        public BucketStorageClassAnalysis build() {
+        }        public BucketStorageClassAnalysis build() {
             return new BucketStorageClassAnalysis(dataExport);
         }
     }

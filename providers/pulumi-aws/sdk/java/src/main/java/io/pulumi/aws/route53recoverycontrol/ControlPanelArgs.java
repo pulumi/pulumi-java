@@ -74,22 +74,18 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
-
         public Builder clusterArn(String clusterArn) {
             this.clusterArn = Output.of(Objects.requireNonNull(clusterArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ControlPanelArgs build() {
+        }        public ControlPanelArgs build() {
             return new ControlPanelArgs(clusterArn, name);
         }
     }

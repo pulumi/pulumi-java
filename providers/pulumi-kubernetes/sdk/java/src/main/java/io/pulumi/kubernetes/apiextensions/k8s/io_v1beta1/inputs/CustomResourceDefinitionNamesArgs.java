@@ -143,62 +143,56 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable List<String> categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder listKind(@Nullable Output<String> listKind) {
             this.listKind = listKind;
             return this;
         }
-
         public Builder listKind(@Nullable String listKind) {
             this.listKind = Output.ofNullable(listKind);
             return this;
         }
-
         public Builder plural(Output<String> plural) {
             this.plural = Objects.requireNonNull(plural);
             return this;
         }
-
         public Builder plural(String plural) {
             this.plural = Output.of(Objects.requireNonNull(plural));
             return this;
         }
-
         public Builder shortNames(@Nullable Output<List<String>> shortNames) {
             this.shortNames = shortNames;
             return this;
         }
-
         public Builder shortNames(@Nullable List<String> shortNames) {
             this.shortNames = Output.ofNullable(shortNames);
             return this;
         }
-
+        public Builder shortNames(String... shortNames) {
+            return shortNames(List.of(shortNames));
+        }
         public Builder singular(@Nullable Output<String> singular) {
             this.singular = singular;
             return this;
         }
-
         public Builder singular(@Nullable String singular) {
             this.singular = Output.ofNullable(singular);
             return this;
-        }
-        public CustomResourceDefinitionNamesArgs build() {
+        }        public CustomResourceDefinitionNamesArgs build() {
             return new CustomResourceDefinitionNamesArgs(categories, kind, listKind, plural, shortNames, singular);
         }
     }

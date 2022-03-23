@@ -51,8 +51,7 @@ public final class AllowedFlexVolume {
         public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
-        }
-        public AllowedFlexVolume build() {
+        }        public AllowedFlexVolume build() {
             return new AllowedFlexVolume(driver);
         }
     }

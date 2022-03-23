@@ -109,42 +109,40 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder stringValues(Output<List<String>> stringValues) {
             this.stringValues = Objects.requireNonNull(stringValues);
             return this;
         }
-
         public Builder stringValues(List<String> stringValues) {
             this.stringValues = Output.of(Objects.requireNonNull(stringValues));
             return this;
         }
-
+        public Builder stringValues(String... stringValues) {
+            return stringValues(List.of(stringValues));
+        }
         public Builder tags(@Nullable Output<List<DimensionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DimensionTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DimensionTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(Output<DimensionType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(DimensionType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DimensionArgs build() {
+        }        public DimensionArgs build() {
             return new DimensionArgs(name, stringValues, tags, type);
         }
     }

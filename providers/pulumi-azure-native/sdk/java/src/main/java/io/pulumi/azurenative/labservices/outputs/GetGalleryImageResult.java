@@ -315,87 +315,70 @@ public final class GetGalleryImageResult {
             this.author = Objects.requireNonNull(author);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder icon(String icon) {
             this.icon = Objects.requireNonNull(icon);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageReference(GalleryImageReferenceResponse imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isOverride(@Nullable Boolean isOverride) {
             this.isOverride = isOverride;
             return this;
         }
-
         public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
-
         public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder planId(String planId) {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
-        }
-        public GetGalleryImageResult build() {
+        }        public GetGalleryImageResult build() {
             return new GetGalleryImageResult(author, createdDate, description, icon, id, imageReference, isEnabled, isOverride, isPlanAuthorized, latestOperationResult, location, name, planId, provisioningState, tags, type, uniqueIdentifier);
         }
     }

@@ -92,17 +92,14 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
-
         public Builder pendingManagedCertificateId(String pendingManagedCertificateId) {
             this.pendingManagedCertificateId = Objects.requireNonNull(pendingManagedCertificateId);
             return this;
         }
-
         public Builder sslManagementType(String sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
-        }
-        public SslSettingsResponse build() {
+        }        public SslSettingsResponse build() {
             return new SslSettingsResponse(certificateId, pendingManagedCertificateId, sslManagementType);
         }
     }

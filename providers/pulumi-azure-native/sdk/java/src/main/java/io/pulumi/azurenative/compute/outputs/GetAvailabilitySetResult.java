@@ -221,57 +221,52 @@ public final class GetAvailabilitySetResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
-
         public Builder platformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
             this.platformUpdateDomainCount = platformUpdateDomainCount;
             return this;
         }
-
         public Builder proximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder statuses(List<InstanceViewStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachines(@Nullable List<SubResourceResponse> virtualMachines) {
             this.virtualMachines = virtualMachines;
             return this;
         }
-        public GetAvailabilitySetResult build() {
+        public Builder virtualMachines(SubResourceResponse... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public GetAvailabilitySetResult build() {
             return new GetAvailabilitySetResult(id, location, name, platformFaultDomainCount, platformUpdateDomainCount, proximityPlacementGroup, sku, statuses, tags, type, virtualMachines);
         }
     }

@@ -171,47 +171,41 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
             this.baselineConfig = baselineConfig;
             return this;
         }
-
         public Builder environment(@Nullable Object environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder monitoringAppSpecification(MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification) {
             this.monitoringAppSpecification = Objects.requireNonNull(monitoringAppSpecification);
             return this;
         }
-
         public Builder monitoringInputs(List<MonitoringScheduleMonitoringInput> monitoringInputs) {
             this.monitoringInputs = Objects.requireNonNull(monitoringInputs);
             return this;
         }
-
+        public Builder monitoringInputs(MonitoringScheduleMonitoringInput... monitoringInputs) {
+            return monitoringInputs(List.of(monitoringInputs));
+        }
         public Builder monitoringOutputConfig(MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig) {
             this.monitoringOutputConfig = Objects.requireNonNull(monitoringOutputConfig);
             return this;
         }
-
         public Builder monitoringResources(MonitoringScheduleMonitoringResources monitoringResources) {
             this.monitoringResources = Objects.requireNonNull(monitoringResources);
             return this;
         }
-
         public Builder networkConfig(@Nullable MonitoringScheduleNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder stoppingCondition(@Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
             this.stoppingCondition = stoppingCondition;
             return this;
-        }
-        public MonitoringScheduleMonitoringJobDefinition build() {
+        }        public MonitoringScheduleMonitoringJobDefinition build() {
             return new MonitoringScheduleMonitoringJobDefinition(baselineConfig, environment, monitoringAppSpecification, monitoringInputs, monitoringOutputConfig, monitoringResources, networkConfig, roleArn, stoppingCondition);
         }
     }

@@ -64,12 +64,10 @@ public final class DetectorModelSns {
             this.payload = payload;
             return this;
         }
-
         public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
-        }
-        public DetectorModelSns build() {
+        }        public DetectorModelSns build() {
             return new DetectorModelSns(payload, targetArn);
         }
     }

@@ -98,32 +98,29 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<Object> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(Object... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder settings(@Nullable Output<MarkdownPartMetadataSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable MarkdownPartMetadataSettingsArgs settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public MarkdownPartMetadataArgs build() {
+        }        public MarkdownPartMetadataArgs build() {
             return new MarkdownPartMetadataArgs(inputs, settings, type);
         }
     }

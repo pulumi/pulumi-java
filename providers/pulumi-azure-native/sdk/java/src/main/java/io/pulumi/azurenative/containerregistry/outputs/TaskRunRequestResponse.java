@@ -139,32 +139,26 @@ public final class TaskRunRequestResponse {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder overrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties) {
             this.overrideTaskStepProperties = overrideTaskStepProperties;
             return this;
         }
-
         public Builder taskId(String taskId) {
             this.taskId = Objects.requireNonNull(taskId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TaskRunRequestResponse build() {
+        }        public TaskRunRequestResponse build() {
             return new TaskRunRequestResponse(agentPoolName, isArchiveEnabled, logTemplate, overrideTaskStepProperties, taskId, type);
         }
     }

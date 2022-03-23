@@ -95,32 +95,26 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder emailAddress(String emailAddress) {
             this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
-        }
-        public EmailReceiverArgs build() {
+        }        public EmailReceiverArgs build() {
             return new EmailReceiverArgs(emailAddress, name, useCommonAlertSchema);
         }
     }

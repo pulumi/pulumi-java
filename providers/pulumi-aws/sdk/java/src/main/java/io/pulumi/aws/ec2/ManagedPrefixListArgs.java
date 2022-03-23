@@ -126,52 +126,45 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
-
         public Builder addressFamily(String addressFamily) {
             this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
             return this;
         }
-
         public Builder entries(@Nullable Output<List<ManagedPrefixListEntryArgs>> entries) {
             this.entries = entries;
             return this;
         }
-
         public Builder entries(@Nullable List<ManagedPrefixListEntryArgs> entries) {
             this.entries = Output.ofNullable(entries);
             return this;
         }
-
+        public Builder entries(ManagedPrefixListEntryArgs... entries) {
+            return entries(List.of(entries));
+        }
         public Builder maxEntries(Output<Integer> maxEntries) {
             this.maxEntries = Objects.requireNonNull(maxEntries);
             return this;
         }
-
         public Builder maxEntries(Integer maxEntries) {
             this.maxEntries = Output.of(Objects.requireNonNull(maxEntries));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ManagedPrefixListArgs build() {
+        }        public ManagedPrefixListArgs build() {
             return new ManagedPrefixListArgs(addressFamily, entries, maxEntries, name, tags);
         }
     }

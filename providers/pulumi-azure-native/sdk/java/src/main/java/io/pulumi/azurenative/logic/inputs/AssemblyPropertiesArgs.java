@@ -200,102 +200,82 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.assemblyCulture = assemblyCulture;
             return this;
         }
-
         public Builder assemblyCulture(@Nullable String assemblyCulture) {
             this.assemblyCulture = Output.ofNullable(assemblyCulture);
             return this;
         }
-
         public Builder assemblyName(Output<String> assemblyName) {
             this.assemblyName = Objects.requireNonNull(assemblyName);
             return this;
         }
-
         public Builder assemblyName(String assemblyName) {
             this.assemblyName = Output.of(Objects.requireNonNull(assemblyName));
             return this;
         }
-
         public Builder assemblyPublicKeyToken(@Nullable Output<String> assemblyPublicKeyToken) {
             this.assemblyPublicKeyToken = assemblyPublicKeyToken;
             return this;
         }
-
         public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
             this.assemblyPublicKeyToken = Output.ofNullable(assemblyPublicKeyToken);
             return this;
         }
-
         public Builder assemblyVersion(@Nullable Output<String> assemblyVersion) {
             this.assemblyVersion = assemblyVersion;
             return this;
         }
-
         public Builder assemblyVersion(@Nullable String assemblyVersion) {
             this.assemblyVersion = Output.ofNullable(assemblyVersion);
             return this;
         }
-
         public Builder changedTime(@Nullable Output<String> changedTime) {
             this.changedTime = changedTime;
             return this;
         }
-
         public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = Output.ofNullable(changedTime);
             return this;
         }
-
         public Builder content(@Nullable Output<Object> content) {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable Object content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentLink(@Nullable Output<ContentLinkArgs> contentLink) {
             this.contentLink = contentLink;
             return this;
         }
-
         public Builder contentLink(@Nullable ContentLinkArgs contentLink) {
             this.contentLink = Output.ofNullable(contentLink);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public AssemblyPropertiesArgs build() {
+        }        public AssemblyPropertiesArgs build() {
             return new AssemblyPropertiesArgs(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
         }
     }

@@ -88,17 +88,14 @@ public final class GetFileEventTriggerArgs extends io.pulumi.resources.InvokeArg
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFileEventTriggerArgs build() {
+        }        public GetFileEventTriggerArgs build() {
             return new GetFileEventTriggerArgs(deviceName, name, resourceGroupName);
         }
     }

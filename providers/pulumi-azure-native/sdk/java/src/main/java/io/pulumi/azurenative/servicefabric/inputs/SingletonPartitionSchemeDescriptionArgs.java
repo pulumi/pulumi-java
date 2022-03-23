@@ -61,12 +61,10 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
             return this;
-        }
-        public SingletonPartitionSchemeDescriptionArgs build() {
+        }        public SingletonPartitionSchemeDescriptionArgs build() {
             return new SingletonPartitionSchemeDescriptionArgs(partitionScheme);
         }
     }

@@ -94,32 +94,26 @@ public final class PrivateLinkConnectionStateArgs extends io.pulumi.resources.Re
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = Output.ofNullable(actionsRequired);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public PrivateLinkConnectionStateArgs build() {
+        }        public PrivateLinkConnectionStateArgs build() {
             return new PrivateLinkConnectionStateArgs(actionsRequired, description, status);
         }
     }

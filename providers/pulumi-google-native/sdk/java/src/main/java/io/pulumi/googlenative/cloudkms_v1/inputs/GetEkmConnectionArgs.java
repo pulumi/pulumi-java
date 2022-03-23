@@ -78,17 +78,14 @@ public final class GetEkmConnectionArgs extends io.pulumi.resources.InvokeArgs {
             this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEkmConnectionArgs build() {
+        }        public GetEkmConnectionArgs build() {
             return new GetEkmConnectionArgs(ekmConnectionId, location, project);
         }
     }

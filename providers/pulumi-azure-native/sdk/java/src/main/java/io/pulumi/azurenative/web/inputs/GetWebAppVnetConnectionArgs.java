@@ -88,17 +88,14 @@ public final class GetWebAppVnetConnectionArgs extends io.pulumi.resources.Invok
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vnetName(String vnetName) {
             this.vnetName = Objects.requireNonNull(vnetName);
             return this;
-        }
-        public GetWebAppVnetConnectionArgs build() {
+        }        public GetWebAppVnetConnectionArgs build() {
             return new GetWebAppVnetConnectionArgs(name, resourceGroupName, vnetName);
         }
     }

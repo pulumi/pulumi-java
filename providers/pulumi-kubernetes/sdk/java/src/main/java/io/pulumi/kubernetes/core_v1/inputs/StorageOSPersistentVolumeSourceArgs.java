@@ -128,52 +128,42 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<ObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable ObjectReferenceArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
-
         public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Output.ofNullable(volumeName);
             return this;
         }
-
         public Builder volumeNamespace(@Nullable Output<String> volumeNamespace) {
             this.volumeNamespace = volumeNamespace;
             return this;
         }
-
         public Builder volumeNamespace(@Nullable String volumeNamespace) {
             this.volumeNamespace = Output.ofNullable(volumeNamespace);
             return this;
-        }
-        public StorageOSPersistentVolumeSourceArgs build() {
+        }        public StorageOSPersistentVolumeSourceArgs build() {
             return new StorageOSPersistentVolumeSourceArgs(fsType, readOnly, secretRef, volumeName, volumeNamespace);
         }
     }

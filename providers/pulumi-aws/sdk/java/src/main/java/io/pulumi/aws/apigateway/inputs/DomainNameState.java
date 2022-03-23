@@ -360,192 +360,154 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
-
         public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Output.ofNullable(certificateBody);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder certificatePrivateKey(@Nullable Output<String> certificatePrivateKey) {
             this.certificatePrivateKey = certificatePrivateKey;
             return this;
         }
-
         public Builder certificatePrivateKey(@Nullable String certificatePrivateKey) {
             this.certificatePrivateKey = Output.ofNullable(certificatePrivateKey);
             return this;
         }
-
         public Builder certificateUploadDate(@Nullable Output<String> certificateUploadDate) {
             this.certificateUploadDate = certificateUploadDate;
             return this;
         }
-
         public Builder certificateUploadDate(@Nullable String certificateUploadDate) {
             this.certificateUploadDate = Output.ofNullable(certificateUploadDate);
             return this;
         }
-
         public Builder cloudfrontDomainName(@Nullable Output<String> cloudfrontDomainName) {
             this.cloudfrontDomainName = cloudfrontDomainName;
             return this;
         }
-
         public Builder cloudfrontDomainName(@Nullable String cloudfrontDomainName) {
             this.cloudfrontDomainName = Output.ofNullable(cloudfrontDomainName);
             return this;
         }
-
         public Builder cloudfrontZoneId(@Nullable Output<String> cloudfrontZoneId) {
             this.cloudfrontZoneId = cloudfrontZoneId;
             return this;
         }
-
         public Builder cloudfrontZoneId(@Nullable String cloudfrontZoneId) {
             this.cloudfrontZoneId = Output.ofNullable(cloudfrontZoneId);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationGetArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable DomainNameEndpointConfigurationGetArgs endpointConfiguration) {
             this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
             return this;
         }
-
         public Builder regionalCertificateArn(@Nullable Output<String> regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
-
         public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = Output.ofNullable(regionalCertificateArn);
             return this;
         }
-
         public Builder regionalCertificateName(@Nullable Output<String> regionalCertificateName) {
             this.regionalCertificateName = regionalCertificateName;
             return this;
         }
-
         public Builder regionalCertificateName(@Nullable String regionalCertificateName) {
             this.regionalCertificateName = Output.ofNullable(regionalCertificateName);
             return this;
         }
-
         public Builder regionalDomainName(@Nullable Output<String> regionalDomainName) {
             this.regionalDomainName = regionalDomainName;
             return this;
         }
-
         public Builder regionalDomainName(@Nullable String regionalDomainName) {
             this.regionalDomainName = Output.ofNullable(regionalDomainName);
             return this;
         }
-
         public Builder regionalZoneId(@Nullable Output<String> regionalZoneId) {
             this.regionalZoneId = regionalZoneId;
             return this;
         }
-
         public Builder regionalZoneId(@Nullable String regionalZoneId) {
             this.regionalZoneId = Output.ofNullable(regionalZoneId);
             return this;
         }
-
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
-
         public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = Output.ofNullable(securityPolicy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DomainNameState build() {
+        }        public DomainNameState build() {
             return new DomainNameState(arn, certificateArn, certificateBody, certificateChain, certificateName, certificatePrivateKey, certificateUploadDate, cloudfrontDomainName, cloudfrontZoneId, domainName, endpointConfiguration, mutualTlsAuthentication, regionalCertificateArn, regionalCertificateName, regionalDomainName, regionalZoneId, securityPolicy, tags, tagsAll);
         }
     }

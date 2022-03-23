@@ -50,8 +50,7 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetDatasetArgs build() {
+        }        public GetDatasetArgs build() {
             return new GetDatasetArgs(arn);
         }
     }

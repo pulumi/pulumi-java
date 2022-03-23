@@ -60,8 +60,7 @@ public final class ProtocolSettingsResponse extends io.pulumi.resources.InvokeAr
         public Builder smb(@Nullable SmbSettingResponse smb) {
             this.smb = smb;
             return this;
-        }
-        public ProtocolSettingsResponse build() {
+        }        public ProtocolSettingsResponse build() {
             return new ProtocolSettingsResponse(smb);
         }
     }

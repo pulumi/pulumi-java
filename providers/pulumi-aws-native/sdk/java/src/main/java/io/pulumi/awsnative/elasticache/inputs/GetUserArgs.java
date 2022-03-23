@@ -54,8 +54,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GetUserArgs build() {
+        }        public GetUserArgs build() {
             return new GetUserArgs(userId);
         }
     }

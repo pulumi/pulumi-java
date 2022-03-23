@@ -61,12 +61,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
-        }
-        public NetworkInterfaceArgs build() {
+        }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(privateIpAddress);
         }
     }

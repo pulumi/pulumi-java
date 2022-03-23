@@ -55,12 +55,10 @@ public final class KeyRingImportJobAttestation {
             this.content = content;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
-        }
-        public KeyRingImportJobAttestation build() {
+        }        public KeyRingImportJobAttestation build() {
             return new KeyRingImportJobAttestation(content, format);
         }
     }

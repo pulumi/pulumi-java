@@ -195,92 +195,77 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable ServiceAuthArgs auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
         public Builder convergeConfig(@Nullable Output<ServiceConvergeConfigArgs> convergeConfig) {
             this.convergeConfig = convergeConfig;
             return this;
         }
-
         public Builder convergeConfig(@Nullable ServiceConvergeConfigArgs convergeConfig) {
             this.convergeConfig = Output.ofNullable(convergeConfig);
             return this;
         }
-
         public Builder endpointSpec(@Nullable Output<ServiceEndpointSpecArgs> endpointSpec) {
             this.endpointSpec = endpointSpec;
             return this;
         }
-
         public Builder endpointSpec(@Nullable ServiceEndpointSpecArgs endpointSpec) {
             this.endpointSpec = Output.ofNullable(endpointSpec);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<ServiceLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<ServiceLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(ServiceLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder mode(@Nullable Output<ServiceModeArgs> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable ServiceModeArgs mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rollbackConfig(@Nullable Output<ServiceRollbackConfigArgs> rollbackConfig) {
             this.rollbackConfig = rollbackConfig;
             return this;
         }
-
         public Builder rollbackConfig(@Nullable ServiceRollbackConfigArgs rollbackConfig) {
             this.rollbackConfig = Output.ofNullable(rollbackConfig);
             return this;
         }
-
         public Builder taskSpec(Output<ServiceTaskSpecArgs> taskSpec) {
             this.taskSpec = Objects.requireNonNull(taskSpec);
             return this;
         }
-
         public Builder taskSpec(ServiceTaskSpecArgs taskSpec) {
             this.taskSpec = Output.of(Objects.requireNonNull(taskSpec));
             return this;
         }
-
         public Builder updateConfig(@Nullable Output<ServiceUpdateConfigArgs> updateConfig) {
             this.updateConfig = updateConfig;
             return this;
         }
-
         public Builder updateConfig(@Nullable ServiceUpdateConfigArgs updateConfig) {
             this.updateConfig = Output.ofNullable(updateConfig);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(auth, convergeConfig, endpointSpec, labels, mode, name, rollbackConfig, taskSpec, updateConfig);
         }
     }

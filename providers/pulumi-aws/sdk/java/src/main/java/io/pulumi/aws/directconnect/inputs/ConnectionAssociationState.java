@@ -74,22 +74,18 @@ public final class ConnectionAssociationState extends io.pulumi.resources.Resour
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder lagId(@Nullable Output<String> lagId) {
             this.lagId = lagId;
             return this;
         }
-
         public Builder lagId(@Nullable String lagId) {
             this.lagId = Output.ofNullable(lagId);
             return this;
-        }
-        public ConnectionAssociationState build() {
+        }        public ConnectionAssociationState build() {
             return new ConnectionAssociationState(connectionId, lagId);
         }
     }

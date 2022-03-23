@@ -107,42 +107,34 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
             this.labelingJobId = labelingJobId;
             return this;
         }
-
         public Builder labelingJobId(@Nullable String labelingJobId) {
             this.labelingJobId = Output.ofNullable(labelingJobId);
             return this;
         }
-
         public Builder properties(@Nullable Output<LabelingJobPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable LabelingJobPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public LabelingJobArgs build() {
+        }        public LabelingJobArgs build() {
             return new LabelingJobArgs(labelingJobId, properties, resourceGroupName, workspaceName);
         }
     }

@@ -79,22 +79,18 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
             this.retainedBackups = retainedBackups;
             return this;
         }
-
         public Builder retainedBackups(@Nullable Integer retainedBackups) {
             this.retainedBackups = Output.ofNullable(retainedBackups);
             return this;
         }
-
         public Builder retentionUnit(@Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit) {
             this.retentionUnit = retentionUnit;
             return this;
         }
-
         public Builder retentionUnit(@Nullable BackupRetentionSettingsRetentionUnit retentionUnit) {
             this.retentionUnit = Output.ofNullable(retentionUnit);
             return this;
-        }
-        public BackupRetentionSettingsArgs build() {
+        }        public BackupRetentionSettingsArgs build() {
             return new BackupRetentionSettingsArgs(retainedBackups, retentionUnit);
         }
     }

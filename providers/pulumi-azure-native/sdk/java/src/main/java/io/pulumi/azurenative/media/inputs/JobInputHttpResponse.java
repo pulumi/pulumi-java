@@ -167,37 +167,36 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
             this.baseUri = baseUri;
             return this;
         }
-
         public Builder end(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end) {
             this.end = end;
             return this;
         }
-
         public Builder files(@Nullable List<String> files) {
             this.files = files;
             return this;
         }
-
+        public Builder files(String... files) {
+            return files(List.of(files));
+        }
         public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
             this.inputDefinitions = inputDefinitions;
             return this;
         }
-
+        public Builder inputDefinitions(Object... inputDefinitions) {
+            return inputDefinitions(List.of(inputDefinitions));
+        }
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder start(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
             this.start = start;
             return this;
-        }
-        public JobInputHttpResponse build() {
+        }        public JobInputHttpResponse build() {
             return new JobInputHttpResponse(baseUri, end, files, inputDefinitions, label, odataType, start);
         }
     }

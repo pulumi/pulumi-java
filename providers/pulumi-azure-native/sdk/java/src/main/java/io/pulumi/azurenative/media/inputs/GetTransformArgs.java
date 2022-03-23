@@ -88,17 +88,14 @@ public final class GetTransformArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder transformName(String transformName) {
             this.transformName = Objects.requireNonNull(transformName);
             return this;
-        }
-        public GetTransformArgs build() {
+        }        public GetTransformArgs build() {
             return new GetTransformArgs(accountName, resourceGroupName, transformName);
         }
     }

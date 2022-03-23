@@ -94,42 +94,37 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.channelName = channelName;
             return this;
         }
-
         public Builder channelName(@Nullable String channelName) {
             this.channelName = Output.ofNullable(channelName);
             return this;
         }
-
         public Builder channelStorage(@Nullable Output<ChannelStorageArgs> channelStorage) {
             this.channelStorage = channelStorage;
             return this;
         }
-
         public Builder channelStorage(@Nullable ChannelStorageArgs channelStorage) {
             this.channelStorage = Output.ofNullable(channelStorage);
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable ChannelRetentionPeriodArgs retentionPeriod) {
             this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ChannelArgs build() {
+        public Builder tags(ChannelTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ChannelArgs build() {
             return new ChannelArgs(channelName, channelStorage, retentionPeriod, tags);
         }
     }

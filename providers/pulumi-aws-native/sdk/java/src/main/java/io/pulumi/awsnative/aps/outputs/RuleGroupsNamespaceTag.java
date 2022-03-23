@@ -69,12 +69,10 @@ public final class RuleGroupsNamespaceTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RuleGroupsNamespaceTag build() {
+        }        public RuleGroupsNamespaceTag build() {
             return new RuleGroupsNamespaceTag(key, value);
         }
     }

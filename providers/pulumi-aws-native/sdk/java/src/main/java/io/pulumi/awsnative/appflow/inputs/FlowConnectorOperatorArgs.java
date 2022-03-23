@@ -240,152 +240,122 @@ public final class FlowConnectorOperatorArgs extends io.pulumi.resources.Resourc
             this.amplitude = amplitude;
             return this;
         }
-
         public Builder amplitude(@Nullable FlowAmplitudeConnectorOperator amplitude) {
             this.amplitude = Output.ofNullable(amplitude);
             return this;
         }
-
         public Builder datadog(@Nullable Output<FlowDatadogConnectorOperator> datadog) {
             this.datadog = datadog;
             return this;
         }
-
         public Builder datadog(@Nullable FlowDatadogConnectorOperator datadog) {
             this.datadog = Output.ofNullable(datadog);
             return this;
         }
-
         public Builder dynatrace(@Nullable Output<FlowDynatraceConnectorOperator> dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
-
         public Builder dynatrace(@Nullable FlowDynatraceConnectorOperator dynatrace) {
             this.dynatrace = Output.ofNullable(dynatrace);
             return this;
         }
-
         public Builder googleAnalytics(@Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
-
         public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics) {
             this.googleAnalytics = Output.ofNullable(googleAnalytics);
             return this;
         }
-
         public Builder inforNexus(@Nullable Output<FlowInforNexusConnectorOperator> inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
-
         public Builder inforNexus(@Nullable FlowInforNexusConnectorOperator inforNexus) {
             this.inforNexus = Output.ofNullable(inforNexus);
             return this;
         }
-
         public Builder marketo(@Nullable Output<FlowMarketoConnectorOperator> marketo) {
             this.marketo = marketo;
             return this;
         }
-
         public Builder marketo(@Nullable FlowMarketoConnectorOperator marketo) {
             this.marketo = Output.ofNullable(marketo);
             return this;
         }
-
         public Builder s3(@Nullable Output<FlowS3ConnectorOperator> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable FlowS3ConnectorOperator s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder sAPOData(@Nullable Output<FlowSAPODataConnectorOperator> sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
-
         public Builder sAPOData(@Nullable FlowSAPODataConnectorOperator sAPOData) {
             this.sAPOData = Output.ofNullable(sAPOData);
             return this;
         }
-
         public Builder salesforce(@Nullable Output<FlowSalesforceConnectorOperator> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder salesforce(@Nullable FlowSalesforceConnectorOperator salesforce) {
             this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
-
         public Builder serviceNow(@Nullable Output<FlowServiceNowConnectorOperator> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder serviceNow(@Nullable FlowServiceNowConnectorOperator serviceNow) {
             this.serviceNow = Output.ofNullable(serviceNow);
             return this;
         }
-
         public Builder singular(@Nullable Output<FlowSingularConnectorOperator> singular) {
             this.singular = singular;
             return this;
         }
-
         public Builder singular(@Nullable FlowSingularConnectorOperator singular) {
             this.singular = Output.ofNullable(singular);
             return this;
         }
-
         public Builder slack(@Nullable Output<FlowSlackConnectorOperator> slack) {
             this.slack = slack;
             return this;
         }
-
         public Builder slack(@Nullable FlowSlackConnectorOperator slack) {
             this.slack = Output.ofNullable(slack);
             return this;
         }
-
         public Builder trendmicro(@Nullable Output<FlowTrendmicroConnectorOperator> trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
-
         public Builder trendmicro(@Nullable FlowTrendmicroConnectorOperator trendmicro) {
             this.trendmicro = Output.ofNullable(trendmicro);
             return this;
         }
-
         public Builder veeva(@Nullable Output<FlowVeevaConnectorOperator> veeva) {
             this.veeva = veeva;
             return this;
         }
-
         public Builder veeva(@Nullable FlowVeevaConnectorOperator veeva) {
             this.veeva = Output.ofNullable(veeva);
             return this;
         }
-
         public Builder zendesk(@Nullable Output<FlowZendeskConnectorOperator> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
-
         public Builder zendesk(@Nullable FlowZendeskConnectorOperator zendesk) {
             this.zendesk = Output.ofNullable(zendesk);
             return this;
-        }
-        public FlowConnectorOperatorArgs build() {
+        }        public FlowConnectorOperatorArgs build() {
             return new FlowConnectorOperatorArgs(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
         }
     }

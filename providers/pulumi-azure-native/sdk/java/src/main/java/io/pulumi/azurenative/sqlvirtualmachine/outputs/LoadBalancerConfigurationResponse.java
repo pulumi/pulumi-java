@@ -122,27 +122,25 @@ public final class LoadBalancerConfigurationResponse {
             this.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable PrivateIPAddressResponse privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder probePort(@Nullable Integer probePort) {
             this.probePort = probePort;
             return this;
         }
-
         public Builder publicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
             this.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
-
         public Builder sqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
             this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
-        public LoadBalancerConfigurationResponse build() {
+        public Builder sqlVirtualMachineInstances(String... sqlVirtualMachineInstances) {
+            return sqlVirtualMachineInstances(List.of(sqlVirtualMachineInstances));
+        }        public LoadBalancerConfigurationResponse build() {
             return new LoadBalancerConfigurationResponse(loadBalancerResourceId, privateIpAddress, probePort, publicIpAddressResourceId, sqlVirtualMachineInstances);
         }
     }

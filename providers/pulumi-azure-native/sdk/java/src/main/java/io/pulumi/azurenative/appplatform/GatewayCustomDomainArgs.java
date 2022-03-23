@@ -123,52 +123,42 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder gatewayName(Output<String> gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = Output.of(Objects.requireNonNull(gatewayName));
             return this;
         }
-
         public Builder properties(@Nullable Output<GatewayCustomDomainPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable GatewayCustomDomainPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public GatewayCustomDomainArgs build() {
+        }        public GatewayCustomDomainArgs build() {
             return new GatewayCustomDomainArgs(domainName, gatewayName, properties, resourceGroupName, serviceName);
         }
     }

@@ -90,22 +90,18 @@ public final class GetResponsePolicyRuleArgs extends io.pulumi.resources.InvokeA
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder responsePolicy(String responsePolicy) {
             this.responsePolicy = Objects.requireNonNull(responsePolicy);
             return this;
         }
-
         public Builder responsePolicyRule(String responsePolicyRule) {
             this.responsePolicyRule = Objects.requireNonNull(responsePolicyRule);
             return this;
-        }
-        public GetResponsePolicyRuleArgs build() {
+        }        public GetResponsePolicyRuleArgs build() {
             return new GetResponsePolicyRuleArgs(clientOperationId, project, responsePolicy, responsePolicyRule);
         }
     }

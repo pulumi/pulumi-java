@@ -54,8 +54,7 @@ public final class GetIPAMArgs extends io.pulumi.resources.InvokeArgs {
         public Builder ipamId(String ipamId) {
             this.ipamId = Objects.requireNonNull(ipamId);
             return this;
-        }
-        public GetIPAMArgs build() {
+        }        public GetIPAMArgs build() {
             return new GetIPAMArgs(ipamId);
         }
     }

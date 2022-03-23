@@ -129,52 +129,45 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable List<String> filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
+        public Builder filters(String... filters) {
+            return filters(List.of(filters));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder searchCriteria(@Nullable Output<String> searchCriteria) {
             this.searchCriteria = searchCriteria;
             return this;
         }
-
         public Builder searchCriteria(@Nullable String searchCriteria) {
             this.searchCriteria = Output.ofNullable(searchCriteria);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder updateLimit(@Nullable Output<Integer> updateLimit) {
             this.updateLimit = updateLimit;
             return this;
         }
-
         public Builder updateLimit(@Nullable Integer updateLimit) {
             this.updateLimit = Output.ofNullable(updateLimit);
             return this;
-        }
-        public ImageTemplateWindowsUpdateCustomizerArgs build() {
+        }        public ImageTemplateWindowsUpdateCustomizerArgs build() {
             return new ImageTemplateWindowsUpdateCustomizerArgs(filters, name, searchCriteria, type, updateLimit);
         }
     }

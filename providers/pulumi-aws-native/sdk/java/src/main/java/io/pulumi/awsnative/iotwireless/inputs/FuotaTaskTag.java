@@ -66,12 +66,10 @@ public final class FuotaTaskTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public FuotaTaskTag build() {
+        }        public FuotaTaskTag build() {
             return new FuotaTaskTag(key, value);
         }
     }

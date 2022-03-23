@@ -171,82 +171,66 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder monthlyRetention(@Nullable Output<String> monthlyRetention) {
             this.monthlyRetention = monthlyRetention;
             return this;
         }
-
         public Builder monthlyRetention(@Nullable String monthlyRetention) {
             this.monthlyRetention = Output.ofNullable(monthlyRetention);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder weekOfYear(@Nullable Output<Integer> weekOfYear) {
             this.weekOfYear = weekOfYear;
             return this;
         }
-
         public Builder weekOfYear(@Nullable Integer weekOfYear) {
             this.weekOfYear = Output.ofNullable(weekOfYear);
             return this;
         }
-
         public Builder weeklyRetention(@Nullable Output<String> weeklyRetention) {
             this.weeklyRetention = weeklyRetention;
             return this;
         }
-
         public Builder weeklyRetention(@Nullable String weeklyRetention) {
             this.weeklyRetention = Output.ofNullable(weeklyRetention);
             return this;
         }
-
         public Builder yearlyRetention(@Nullable Output<String> yearlyRetention) {
             this.yearlyRetention = yearlyRetention;
             return this;
         }
-
         public Builder yearlyRetention(@Nullable String yearlyRetention) {
             this.yearlyRetention = Output.ofNullable(yearlyRetention);
             return this;
-        }
-        public LongTermRetentionPolicyArgs build() {
+        }        public LongTermRetentionPolicyArgs build() {
             return new LongTermRetentionPolicyArgs(databaseName, monthlyRetention, policyName, resourceGroupName, serverName, weekOfYear, weeklyRetention, yearlyRetention);
         }
     }

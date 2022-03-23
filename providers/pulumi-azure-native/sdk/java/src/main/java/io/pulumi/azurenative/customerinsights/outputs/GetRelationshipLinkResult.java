@@ -266,72 +266,67 @@ public final class GetRelationshipLinkResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder interactionType(String interactionType) {
             this.interactionType = Objects.requireNonNull(interactionType);
             return this;
         }
-
         public Builder linkName(String linkName) {
             this.linkName = Objects.requireNonNull(linkName);
             return this;
         }
-
         public Builder mappings(@Nullable List<RelationshipLinkFieldMappingResponse> mappings) {
             this.mappings = mappings;
             return this;
         }
-
+        public Builder mappings(RelationshipLinkFieldMappingResponse... mappings) {
+            return mappings(List.of(mappings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder profilePropertyReferences(List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences) {
             this.profilePropertyReferences = Objects.requireNonNull(profilePropertyReferences);
             return this;
         }
-
+        public Builder profilePropertyReferences(ParticipantProfilePropertyReferenceResponse... profilePropertyReferences) {
+            return profilePropertyReferences(List.of(profilePropertyReferences));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder relatedProfilePropertyReferences(List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences) {
             this.relatedProfilePropertyReferences = Objects.requireNonNull(relatedProfilePropertyReferences);
             return this;
         }
-
+        public Builder relatedProfilePropertyReferences(ParticipantProfilePropertyReferenceResponse... relatedProfilePropertyReferences) {
+            return relatedProfilePropertyReferences(List.of(relatedProfilePropertyReferences));
+        }
         public Builder relationshipGuidId(String relationshipGuidId) {
             this.relationshipGuidId = Objects.requireNonNull(relationshipGuidId);
             return this;
         }
-
         public Builder relationshipName(String relationshipName) {
             this.relationshipName = Objects.requireNonNull(relationshipName);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRelationshipLinkResult build() {
+        }        public GetRelationshipLinkResult build() {
             return new GetRelationshipLinkResult(description, displayName, id, interactionType, linkName, mappings, name, profilePropertyReferences, provisioningState, relatedProfilePropertyReferences, relationshipGuidId, relationshipName, tenantId, type);
         }
     }

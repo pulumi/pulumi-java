@@ -174,42 +174,34 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
             this.copy = Objects.requireNonNull(copy);
             return this;
         }
-
         public Builder dryRun(Boolean dryRun) {
             this.dryRun = Objects.requireNonNull(dryRun);
             return this;
         }
-
         public Builder extract(JobConfigurationExtractResponse extract) {
             this.extract = Objects.requireNonNull(extract);
             return this;
         }
-
         public Builder jobTimeoutMs(String jobTimeoutMs) {
             this.jobTimeoutMs = Objects.requireNonNull(jobTimeoutMs);
             return this;
         }
-
         public Builder jobType(String jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder load(JobConfigurationLoadResponse load) {
             this.load = Objects.requireNonNull(load);
             return this;
         }
-
         public Builder query(JobConfigurationQueryResponse query) {
             this.query = Objects.requireNonNull(query);
             return this;
-        }
-        public JobConfigurationResponse build() {
+        }        public JobConfigurationResponse build() {
             return new JobConfigurationResponse(copy, dryRun, extract, jobTimeoutMs, jobType, labels, load, query);
         }
     }

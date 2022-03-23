@@ -117,62 +117,50 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
             this.backgroundColor = backgroundColor;
             return this;
         }
-
         public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = Output.ofNullable(backgroundColor);
             return this;
         }
-
         public Builder bodyConfig(@Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig) {
             this.bodyConfig = bodyConfig;
             return this;
         }
-
         public Builder bodyConfig(@Nullable InAppTemplateBodyConfigArgs bodyConfig) {
             this.bodyConfig = Output.ofNullable(bodyConfig);
             return this;
         }
-
         public Builder headerConfig(@Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig) {
             this.headerConfig = headerConfig;
             return this;
         }
-
         public Builder headerConfig(@Nullable InAppTemplateHeaderConfigArgs headerConfig) {
             this.headerConfig = Output.ofNullable(headerConfig);
             return this;
         }
-
         public Builder imageUrl(@Nullable Output<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
-
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = Output.ofNullable(imageUrl);
             return this;
         }
-
         public Builder primaryBtn(@Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn) {
             this.primaryBtn = primaryBtn;
             return this;
         }
-
         public Builder primaryBtn(@Nullable InAppTemplateButtonConfigArgs primaryBtn) {
             this.primaryBtn = Output.ofNullable(primaryBtn);
             return this;
         }
-
         public Builder secondaryBtn(@Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn) {
             this.secondaryBtn = secondaryBtn;
             return this;
         }
-
         public Builder secondaryBtn(@Nullable InAppTemplateButtonConfigArgs secondaryBtn) {
             this.secondaryBtn = Output.ofNullable(secondaryBtn);
             return this;
-        }
-        public InAppTemplateInAppMessageContentArgs build() {
+        }        public InAppTemplateInAppMessageContentArgs build() {
             return new InAppTemplateInAppMessageContentArgs(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
         }
     }

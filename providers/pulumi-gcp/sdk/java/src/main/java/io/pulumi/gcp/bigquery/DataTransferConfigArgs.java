@@ -299,142 +299,114 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
             this.dataRefreshWindowDays = dataRefreshWindowDays;
             return this;
         }
-
         public Builder dataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
             this.dataRefreshWindowDays = Output.ofNullable(dataRefreshWindowDays);
             return this;
         }
-
         public Builder dataSourceId(Output<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
-
         public Builder destinationDatasetId(@Nullable Output<String> destinationDatasetId) {
             this.destinationDatasetId = destinationDatasetId;
             return this;
         }
-
         public Builder destinationDatasetId(@Nullable String destinationDatasetId) {
             this.destinationDatasetId = Output.ofNullable(destinationDatasetId);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder emailPreferences(@Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences) {
             this.emailPreferences = emailPreferences;
             return this;
         }
-
         public Builder emailPreferences(@Nullable DataTransferConfigEmailPreferencesArgs emailPreferences) {
             this.emailPreferences = Output.ofNullable(emailPreferences);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder notificationPubsubTopic(@Nullable Output<String> notificationPubsubTopic) {
             this.notificationPubsubTopic = notificationPubsubTopic;
             return this;
         }
-
         public Builder notificationPubsubTopic(@Nullable String notificationPubsubTopic) {
             this.notificationPubsubTopic = Output.ofNullable(notificationPubsubTopic);
             return this;
         }
-
         public Builder params(Output<Map<String,String>> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
-
         public Builder params(Map<String,String> params) {
             this.params = Output.of(Objects.requireNonNull(params));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder scheduleOptions(@Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions) {
             this.scheduleOptions = scheduleOptions;
             return this;
         }
-
         public Builder scheduleOptions(@Nullable DataTransferConfigScheduleOptionsArgs scheduleOptions) {
             this.scheduleOptions = Output.ofNullable(scheduleOptions);
             return this;
         }
-
         public Builder sensitiveParams(@Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams) {
             this.sensitiveParams = sensitiveParams;
             return this;
         }
-
         public Builder sensitiveParams(@Nullable DataTransferConfigSensitiveParamsArgs sensitiveParams) {
             this.sensitiveParams = Output.ofNullable(sensitiveParams);
             return this;
         }
-
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
-        }
-        public DataTransferConfigArgs build() {
+        }        public DataTransferConfigArgs build() {
             return new DataTransferConfigArgs(dataRefreshWindowDays, dataSourceId, destinationDatasetId, disabled, displayName, emailPreferences, location, notificationPubsubTopic, params, project, schedule, scheduleOptions, sensitiveParams, serviceAccountName);
         }
     }

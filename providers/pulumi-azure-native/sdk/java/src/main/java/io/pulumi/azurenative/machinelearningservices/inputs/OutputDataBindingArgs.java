@@ -108,42 +108,34 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = Output.ofNullable(datastoreId);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,DataBindingMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,DataBindingMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
             this.pathOnCompute = pathOnCompute;
             return this;
         }
-
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
             this.pathOnCompute = Output.ofNullable(pathOnCompute);
             return this;
         }
-
         public Builder pathOnDatastore(@Nullable Output<String> pathOnDatastore) {
             this.pathOnDatastore = pathOnDatastore;
             return this;
         }
-
         public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
             this.pathOnDatastore = Output.ofNullable(pathOnDatastore);
             return this;
-        }
-        public OutputDataBindingArgs build() {
+        }        public OutputDataBindingArgs build() {
             return new OutputDataBindingArgs(datastoreId, mode, pathOnCompute, pathOnDatastore);
         }
     }

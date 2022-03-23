@@ -60,12 +60,10 @@ public final class DSSEHintArgs extends io.pulumi.resources.ResourceArgs {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Output.of(Objects.requireNonNull(humanReadableName));
             return this;
-        }
-        public DSSEHintArgs build() {
+        }        public DSSEHintArgs build() {
             return new DSSEHintArgs(humanReadableName);
         }
     }

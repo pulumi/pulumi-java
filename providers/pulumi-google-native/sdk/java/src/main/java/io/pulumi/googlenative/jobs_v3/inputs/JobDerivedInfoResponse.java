@@ -78,12 +78,16 @@ public final class JobDerivedInfoResponse extends io.pulumi.resources.InvokeArgs
             this.jobCategories = Objects.requireNonNull(jobCategories);
             return this;
         }
-
+        public Builder jobCategories(String... jobCategories) {
+            return jobCategories(List.of(jobCategories));
+        }
         public Builder locations(List<LocationResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-        public JobDerivedInfoResponse build() {
+        public Builder locations(LocationResponse... locations) {
+            return locations(List.of(locations));
+        }        public JobDerivedInfoResponse build() {
             return new JobDerivedInfoResponse(jobCategories, locations);
         }
     }

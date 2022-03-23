@@ -78,12 +78,10 @@ public final class XssMatchSetXssMatchTuple {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
-        }
-        public XssMatchSetXssMatchTuple build() {
+        }        public XssMatchSetXssMatchTuple build() {
             return new XssMatchSetXssMatchTuple(fieldToMatch, textTransformation);
         }
     }

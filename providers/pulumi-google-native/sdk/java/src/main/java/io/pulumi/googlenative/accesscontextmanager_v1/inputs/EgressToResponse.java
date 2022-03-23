@@ -78,12 +78,16 @@ public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
-
+        public Builder operations(ApiOperationResponse... operations) {
+            return operations(List.of(operations));
+        }
         public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-        public EgressToResponse build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public EgressToResponse build() {
             return new EgressToResponse(operations, resources);
         }
     }

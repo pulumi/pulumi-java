@@ -74,22 +74,18 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
             this.routeTableId = routeTableId;
             return this;
         }
-
         public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = Output.ofNullable(routeTableId);
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
-        }
-        public VpcEndpointRouteTableAssociationState build() {
+        }        public VpcEndpointRouteTableAssociationState build() {
             return new VpcEndpointRouteTableAssociationState(routeTableId, vpcEndpointId);
         }
     }

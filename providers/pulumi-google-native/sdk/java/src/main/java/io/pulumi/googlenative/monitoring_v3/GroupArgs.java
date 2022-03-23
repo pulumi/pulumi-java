@@ -131,62 +131,50 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             this.isCluster = isCluster;
             return this;
         }
-
         public Builder isCluster(@Nullable Boolean isCluster) {
             this.isCluster = Output.ofNullable(isCluster);
             return this;
         }
-
         public Builder parentName(@Nullable Output<String> parentName) {
             this.parentName = parentName;
             return this;
         }
-
         public Builder parentName(@Nullable String parentName) {
             this.parentName = Output.ofNullable(parentName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public GroupArgs build() {
+        }        public GroupArgs build() {
             return new GroupArgs(displayName, filter, isCluster, parentName, project, validateOnly);
         }
     }

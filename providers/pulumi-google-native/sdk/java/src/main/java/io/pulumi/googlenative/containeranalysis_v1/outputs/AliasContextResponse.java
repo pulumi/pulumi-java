@@ -69,12 +69,10 @@ public final class AliasContextResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public AliasContextResponse build() {
+        }        public AliasContextResponse build() {
             return new AliasContextResponse(kind, name);
         }
     }

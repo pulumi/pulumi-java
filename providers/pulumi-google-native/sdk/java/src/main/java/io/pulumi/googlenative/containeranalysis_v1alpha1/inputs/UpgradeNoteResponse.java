@@ -95,17 +95,17 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
-
+        public Builder distributions(UpgradeDistributionResponse... distributions) {
+            return distributions(List.of(distributions));
+        }
         public Builder $package(String $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
-
         public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public UpgradeNoteResponse build() {
+        }        public UpgradeNoteResponse build() {
             return new UpgradeNoteResponse(distributions, $package, version);
         }
     }

@@ -86,17 +86,14 @@ public final class AccessPointRootDirectoryCreationInfo {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
-
         public Builder ownerUid(Integer ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
-
         public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
-        }
-        public AccessPointRootDirectoryCreationInfo build() {
+        }        public AccessPointRootDirectoryCreationInfo build() {
             return new AccessPointRootDirectoryCreationInfo(ownerGid, ownerUid, permissions);
         }
     }

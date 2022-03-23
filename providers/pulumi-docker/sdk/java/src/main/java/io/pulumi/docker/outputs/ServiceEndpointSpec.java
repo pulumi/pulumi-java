@@ -57,12 +57,13 @@ public final class ServiceEndpointSpec {
             this.mode = mode;
             return this;
         }
-
         public Builder ports(@Nullable List<ServiceEndpointSpecPort> ports) {
             this.ports = ports;
             return this;
         }
-        public ServiceEndpointSpec build() {
+        public Builder ports(ServiceEndpointSpecPort... ports) {
+            return ports(List.of(ports));
+        }        public ServiceEndpointSpec build() {
             return new ServiceEndpointSpec(mode, ports);
         }
     }

@@ -144,62 +144,50 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
             this.disconnectDelay = disconnectDelay;
             return this;
         }
-
         public Builder disconnectDelay(@Nullable String disconnectDelay) {
             this.disconnectDelay = Output.ofNullable(disconnectDelay);
             return this;
         }
-
         public Builder idleDelay(@Nullable Output<String> idleDelay) {
             this.idleDelay = idleDelay;
             return this;
         }
-
         public Builder idleDelay(@Nullable String idleDelay) {
             this.idleDelay = Output.ofNullable(idleDelay);
             return this;
         }
-
         public Builder noConnectDelay(@Nullable Output<String> noConnectDelay) {
             this.noConnectDelay = noConnectDelay;
             return this;
         }
-
         public Builder noConnectDelay(@Nullable String noConnectDelay) {
             this.noConnectDelay = Output.ofNullable(noConnectDelay);
             return this;
         }
-
         public Builder shutdownOnDisconnect(@Nullable Output<EnableState> shutdownOnDisconnect) {
             this.shutdownOnDisconnect = shutdownOnDisconnect;
             return this;
         }
-
         public Builder shutdownOnDisconnect(@Nullable EnableState shutdownOnDisconnect) {
             this.shutdownOnDisconnect = Output.ofNullable(shutdownOnDisconnect);
             return this;
         }
-
         public Builder shutdownOnIdle(@Nullable Output<ShutdownOnIdleMode> shutdownOnIdle) {
             this.shutdownOnIdle = shutdownOnIdle;
             return this;
         }
-
         public Builder shutdownOnIdle(@Nullable ShutdownOnIdleMode shutdownOnIdle) {
             this.shutdownOnIdle = Output.ofNullable(shutdownOnIdle);
             return this;
         }
-
         public Builder shutdownWhenNotConnected(@Nullable Output<EnableState> shutdownWhenNotConnected) {
             this.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
         }
-
         public Builder shutdownWhenNotConnected(@Nullable EnableState shutdownWhenNotConnected) {
             this.shutdownWhenNotConnected = Output.ofNullable(shutdownWhenNotConnected);
             return this;
-        }
-        public AutoShutdownProfileArgs build() {
+        }        public AutoShutdownProfileArgs build() {
             return new AutoShutdownProfileArgs(disconnectDelay, idleDelay, noConnectDelay, shutdownOnDisconnect, shutdownOnIdle, shutdownWhenNotConnected);
         }
     }

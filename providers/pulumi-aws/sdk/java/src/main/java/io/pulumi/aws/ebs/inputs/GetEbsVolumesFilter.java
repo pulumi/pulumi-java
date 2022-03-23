@@ -76,12 +76,13 @@ public final class GetEbsVolumesFilter extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetEbsVolumesFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetEbsVolumesFilter build() {
             return new GetEbsVolumesFilter(name, values);
         }
     }

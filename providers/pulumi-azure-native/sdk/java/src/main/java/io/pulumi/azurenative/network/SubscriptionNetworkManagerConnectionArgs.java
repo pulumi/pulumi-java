@@ -90,32 +90,26 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder networkManagerConnectionName(@Nullable Output<String> networkManagerConnectionName) {
             this.networkManagerConnectionName = networkManagerConnectionName;
             return this;
         }
-
         public Builder networkManagerConnectionName(@Nullable String networkManagerConnectionName) {
             this.networkManagerConnectionName = Output.ofNullable(networkManagerConnectionName);
             return this;
         }
-
         public Builder networkManagerId(@Nullable Output<String> networkManagerId) {
             this.networkManagerId = networkManagerId;
             return this;
         }
-
         public Builder networkManagerId(@Nullable String networkManagerId) {
             this.networkManagerId = Output.ofNullable(networkManagerId);
             return this;
-        }
-        public SubscriptionNetworkManagerConnectionArgs build() {
+        }        public SubscriptionNetworkManagerConnectionArgs build() {
             return new SubscriptionNetworkManagerConnectionArgs(description, networkManagerConnectionName, networkManagerId);
         }
     }

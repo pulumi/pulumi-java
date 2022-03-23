@@ -54,12 +54,13 @@ public final class GetResolverEndpointFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetResolverEndpointFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetResolverEndpointFilter build() {
             return new GetResolverEndpointFilter(name, values);
         }
     }

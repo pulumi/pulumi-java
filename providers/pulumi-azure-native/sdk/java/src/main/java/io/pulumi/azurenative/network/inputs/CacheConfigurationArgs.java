@@ -113,42 +113,34 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.cacheDuration = cacheDuration;
             return this;
         }
-
         public Builder cacheDuration(@Nullable String cacheDuration) {
             this.cacheDuration = Output.ofNullable(cacheDuration);
             return this;
         }
-
         public Builder dynamicCompression(@Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression) {
             this.dynamicCompression = dynamicCompression;
             return this;
         }
-
         public Builder dynamicCompression(@Nullable Either<String,DynamicCompressionEnabled> dynamicCompression) {
             this.dynamicCompression = Output.ofNullable(dynamicCompression);
             return this;
         }
-
         public Builder queryParameterStripDirective(@Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective) {
             this.queryParameterStripDirective = queryParameterStripDirective;
             return this;
         }
-
         public Builder queryParameterStripDirective(@Nullable Either<String,FrontDoorQuery> queryParameterStripDirective) {
             this.queryParameterStripDirective = Output.ofNullable(queryParameterStripDirective);
             return this;
         }
-
         public Builder queryParameters(@Nullable Output<String> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
-
         public Builder queryParameters(@Nullable String queryParameters) {
             this.queryParameters = Output.ofNullable(queryParameters);
             return this;
-        }
-        public CacheConfigurationArgs build() {
+        }        public CacheConfigurationArgs build() {
             return new CacheConfigurationArgs(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);
         }
     }

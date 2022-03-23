@@ -135,32 +135,26 @@ public final class ListenerDefaultActionRedirect {
             this.host = host;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public ListenerDefaultActionRedirect build() {
+        }        public ListenerDefaultActionRedirect build() {
             return new ListenerDefaultActionRedirect(host, path, port, protocol, query, statusCode);
         }
     }

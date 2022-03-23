@@ -113,42 +113,43 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalIpas = additionalIpas;
             return this;
         }
-
         public Builder additionalIpas(@Nullable List<FileReferenceArgs> additionalIpas) {
             this.additionalIpas = Output.ofNullable(additionalIpas);
             return this;
         }
-
+        public Builder additionalIpas(FileReferenceArgs... additionalIpas) {
+            return additionalIpas(List.of(additionalIpas));
+        }
         public Builder networkProfile(@Nullable Output<String> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable String networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder pullDirectories(@Nullable Output<List<IosDeviceFileArgs>> pullDirectories) {
             this.pullDirectories = pullDirectories;
             return this;
         }
-
         public Builder pullDirectories(@Nullable List<IosDeviceFileArgs> pullDirectories) {
             this.pullDirectories = Output.ofNullable(pullDirectories);
             return this;
         }
-
+        public Builder pullDirectories(IosDeviceFileArgs... pullDirectories) {
+            return pullDirectories(List.of(pullDirectories));
+        }
         public Builder pushFiles(@Nullable Output<List<IosDeviceFileArgs>> pushFiles) {
             this.pushFiles = pushFiles;
             return this;
         }
-
         public Builder pushFiles(@Nullable List<IosDeviceFileArgs> pushFiles) {
             this.pushFiles = Output.ofNullable(pushFiles);
             return this;
         }
-        public IosTestSetupArgs build() {
+        public Builder pushFiles(IosDeviceFileArgs... pushFiles) {
+            return pushFiles(List.of(pushFiles));
+        }        public IosTestSetupArgs build() {
             return new IosTestSetupArgs(additionalIpas, networkProfile, pullDirectories, pushFiles);
         }
     }

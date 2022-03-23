@@ -84,12 +84,16 @@ public final class ServicePerimeterStatusEgressPolicyEgressTo {
             this.operations = operations;
             return this;
         }
-
+        public Builder operations(ServicePerimeterStatusEgressPolicyEgressToOperation... operations) {
+            return operations(List.of(operations));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-        public ServicePerimeterStatusEgressPolicyEgressTo build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public ServicePerimeterStatusEgressPolicyEgressTo build() {
             return new ServicePerimeterStatusEgressPolicyEgressTo(operations, resources);
         }
     }

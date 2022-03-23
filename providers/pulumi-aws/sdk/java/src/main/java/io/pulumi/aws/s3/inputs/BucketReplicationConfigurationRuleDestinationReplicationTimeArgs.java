@@ -75,22 +75,18 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
             this.minutes = minutes;
             return this;
         }
-
         public Builder minutes(@Nullable Integer minutes) {
             this.minutes = Output.ofNullable(minutes);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public BucketReplicationConfigurationRuleDestinationReplicationTimeArgs build() {
+        }        public BucketReplicationConfigurationRuleDestinationReplicationTimeArgs build() {
             return new BucketReplicationConfigurationRuleDestinationReplicationTimeArgs(minutes, status);
         }
     }

@@ -87,17 +87,17 @@ public final class AccessPointPosixUser {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
-
         public Builder secondaryGids(@Nullable List<String> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
-
+        public Builder secondaryGids(String... secondaryGids) {
+            return secondaryGids(List.of(secondaryGids));
+        }
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public AccessPointPosixUser build() {
+        }        public AccessPointPosixUser build() {
             return new AccessPointPosixUser(gid, secondaryGids, uid);
         }
     }

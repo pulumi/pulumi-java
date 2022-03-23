@@ -71,12 +71,13 @@ public final class ApigatewayAuditConfigResponse {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(ApigatewayAuditLogConfigResponse... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public ApigatewayAuditConfigResponse build() {
+        }        public ApigatewayAuditConfigResponse build() {
             return new ApigatewayAuditConfigResponse(auditLogConfigs, service);
         }
     }

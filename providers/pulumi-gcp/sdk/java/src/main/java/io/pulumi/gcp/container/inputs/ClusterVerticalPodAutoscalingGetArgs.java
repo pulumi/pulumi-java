@@ -57,12 +57,10 @@ public final class ClusterVerticalPodAutoscalingGetArgs extends io.pulumi.resour
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterVerticalPodAutoscalingGetArgs build() {
+        }        public ClusterVerticalPodAutoscalingGetArgs build() {
             return new ClusterVerticalPodAutoscalingGetArgs(enabled);
         }
     }

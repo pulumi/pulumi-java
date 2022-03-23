@@ -88,17 +88,14 @@ public final class GetRoutingControlResult {
             this.name = name;
             return this;
         }
-
         public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
-
         public Builder status(@Nullable RoutingControlStatus status) {
             this.status = status;
             return this;
-        }
-        public GetRoutingControlResult build() {
+        }        public GetRoutingControlResult build() {
             return new GetRoutingControlResult(name, routingControlArn, status);
         }
     }

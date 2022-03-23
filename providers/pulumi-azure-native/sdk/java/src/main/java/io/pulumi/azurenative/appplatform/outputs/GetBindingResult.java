@@ -102,22 +102,18 @@ public final class GetBindingResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(BindingResourcePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBindingResult build() {
+        }        public GetBindingResult build() {
             return new GetBindingResult(id, name, properties, type);
         }
     }

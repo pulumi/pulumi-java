@@ -64,12 +64,10 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
-        }
-        public GetDataSourceArgs build() {
+        }        public GetDataSourceArgs build() {
             return new GetDataSourceArgs(awsAccountId, dataSourceId);
         }
     }

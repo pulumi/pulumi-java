@@ -111,42 +111,34 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder linkType(@Nullable Output<LinkedServiceLinkType> linkType) {
             this.linkType = linkType;
             return this;
         }
-
         public Builder linkType(@Nullable LinkedServiceLinkType linkType) {
             this.linkType = Output.ofNullable(linkType);
             return this;
         }
-
         public Builder linkedServiceResourceId(Output<String> linkedServiceResourceId) {
             this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
             return this;
         }
-
         public Builder linkedServiceResourceId(String linkedServiceResourceId) {
             this.linkedServiceResourceId = Output.of(Objects.requireNonNull(linkedServiceResourceId));
             return this;
         }
-
         public Builder modifiedTime(@Nullable Output<String> modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
-
         public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = Output.ofNullable(modifiedTime);
             return this;
-        }
-        public LinkedServicePropsArgs build() {
+        }        public LinkedServicePropsArgs build() {
             return new LinkedServicePropsArgs(createdTime, linkType, linkedServiceResourceId, modifiedTime);
         }
     }

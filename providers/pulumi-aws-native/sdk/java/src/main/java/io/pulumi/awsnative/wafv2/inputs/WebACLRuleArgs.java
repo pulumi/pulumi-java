@@ -154,82 +154,69 @@ public final class WebACLRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable WebACLRuleActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder captchaConfig(@Nullable Output<WebACLCaptchaConfigArgs> captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
-
         public Builder captchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
             this.captchaConfig = Output.ofNullable(captchaConfig);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder overrideAction(@Nullable Output<WebACLOverrideActionArgs> overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
-
         public Builder overrideAction(@Nullable WebACLOverrideActionArgs overrideAction) {
             this.overrideAction = Output.ofNullable(overrideAction);
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleLabels(@Nullable Output<List<WebACLLabelArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
-
         public Builder ruleLabels(@Nullable List<WebACLLabelArgs> ruleLabels) {
             this.ruleLabels = Output.ofNullable(ruleLabels);
             return this;
         }
-
+        public Builder ruleLabels(WebACLLabelArgs... ruleLabels) {
+            return ruleLabels(List.of(ruleLabels));
+        }
         public Builder statement(Output<WebACLStatementArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder statement(WebACLStatementArgs statement) {
             this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
         }
-
         public Builder visibilityConfig(Output<WebACLVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public Builder visibilityConfig(WebACLVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
-        }
-        public WebACLRuleArgs build() {
+        }        public WebACLRuleArgs build() {
             return new WebACLRuleArgs(action, captchaConfig, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
         }
     }

@@ -88,17 +88,14 @@ public final class GetPipelineJobArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder pipelineJobName(String pipelineJobName) {
             this.pipelineJobName = Objects.requireNonNull(pipelineJobName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPipelineJobArgs build() {
+        }        public GetPipelineJobArgs build() {
             return new GetPipelineJobArgs(accountName, pipelineJobName, resourceGroupName);
         }
     }

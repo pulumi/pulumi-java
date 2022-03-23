@@ -146,62 +146,50 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<HttpTargetHttpMethod> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable HttpTargetHttpMethod httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder oauthToken(@Nullable Output<OAuthTokenArgs> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
-
         public Builder oauthToken(@Nullable OAuthTokenArgs oauthToken) {
             this.oauthToken = Output.ofNullable(oauthToken);
             return this;
         }
-
         public Builder oidcToken(@Nullable Output<OidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
-
         public Builder oidcToken(@Nullable OidcTokenArgs oidcToken) {
             this.oidcToken = Output.ofNullable(oidcToken);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public HttpTargetArgs build() {
+        }        public HttpTargetArgs build() {
             return new HttpTargetArgs(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }
     }

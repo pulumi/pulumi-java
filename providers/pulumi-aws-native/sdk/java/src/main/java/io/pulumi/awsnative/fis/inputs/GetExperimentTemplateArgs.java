@@ -50,8 +50,7 @@ public final class GetExperimentTemplateArgs extends io.pulumi.resources.InvokeA
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetExperimentTemplateArgs build() {
+        }        public GetExperimentTemplateArgs build() {
             return new GetExperimentTemplateArgs(id);
         }
     }

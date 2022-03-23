@@ -88,17 +88,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigDisk
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-
         public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
-
         public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
             this.numLocalSsds = numLocalSsds;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }
     }

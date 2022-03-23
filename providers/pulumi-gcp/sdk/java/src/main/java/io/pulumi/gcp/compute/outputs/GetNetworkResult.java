@@ -136,37 +136,33 @@ public final class GetNetworkResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder gatewayIpv4(String gatewayIpv4) {
             this.gatewayIpv4 = Objects.requireNonNull(gatewayIpv4);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder subnetworksSelfLinks(List<String> subnetworksSelfLinks) {
             this.subnetworksSelfLinks = Objects.requireNonNull(subnetworksSelfLinks);
             return this;
         }
-        public GetNetworkResult build() {
+        public Builder subnetworksSelfLinks(String... subnetworksSelfLinks) {
+            return subnetworksSelfLinks(List.of(subnetworksSelfLinks));
+        }        public GetNetworkResult build() {
             return new GetNetworkResult(description, gatewayIpv4, id, name, project, selfLink, subnetworksSelfLinks);
         }
     }

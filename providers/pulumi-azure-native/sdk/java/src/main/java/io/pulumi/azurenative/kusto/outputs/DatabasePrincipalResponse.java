@@ -151,37 +151,30 @@ public final class DatabasePrincipalResponse {
             this.appId = appId;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
-
         public Builder fqn(@Nullable String fqn) {
             this.fqn = fqn;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder tenantName(String tenantName) {
             this.tenantName = Objects.requireNonNull(tenantName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DatabasePrincipalResponse build() {
+        }        public DatabasePrincipalResponse build() {
             return new DatabasePrincipalResponse(appId, email, fqn, name, role, tenantName, type);
         }
     }

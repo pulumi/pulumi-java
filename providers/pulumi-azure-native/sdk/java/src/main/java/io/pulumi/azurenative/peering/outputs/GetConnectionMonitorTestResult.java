@@ -202,52 +202,45 @@ public final class GetConnectionMonitorTestResult {
             this.destination = destination;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isTestSuccessful(Boolean isTestSuccessful) {
             this.isTestSuccessful = Objects.requireNonNull(isTestSuccessful);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(List<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
+        public Builder path(String... path) {
+            return path(List.of(path));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sourceAgent(@Nullable String sourceAgent) {
             this.sourceAgent = sourceAgent;
             return this;
         }
-
         public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
             this.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConnectionMonitorTestResult build() {
+        }        public GetConnectionMonitorTestResult build() {
             return new GetConnectionMonitorTestResult(destination, destinationPort, id, isTestSuccessful, name, path, provisioningState, sourceAgent, testFrequencyInSec, type);
         }
     }

@@ -122,27 +122,22 @@ public final class VideoAnalyzerPresetResponse {
             this.audioLanguage = audioLanguage;
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
-
         public Builder insightsToExtract(@Nullable String insightsToExtract) {
             this.insightsToExtract = insightsToExtract;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public VideoAnalyzerPresetResponse build() {
+        }        public VideoAnalyzerPresetResponse build() {
             return new VideoAnalyzerPresetResponse(audioLanguage, experimentalOptions, insightsToExtract, mode, odataType);
         }
     }

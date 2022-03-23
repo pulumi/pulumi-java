@@ -56,8 +56,7 @@ public final class JobOutputFormatOptions extends io.pulumi.resources.InvokeArgs
         public Builder csv(@Nullable JobCsvOutputOptions csv) {
             this.csv = csv;
             return this;
-        }
-        public JobOutputFormatOptions build() {
+        }        public JobOutputFormatOptions build() {
             return new JobOutputFormatOptions(csv);
         }
     }

@@ -93,17 +93,17 @@ public final class GetTransitGatewayArgs extends io.pulumi.resources.InvokeArgs 
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetTransitGatewayFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetTransitGatewayArgs build() {
+        }        public GetTransitGatewayArgs build() {
             return new GetTransitGatewayArgs(filters, id, tags);
         }
     }

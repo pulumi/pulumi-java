@@ -64,12 +64,10 @@ public final class GetApiProductArgs extends io.pulumi.resources.InvokeArgs {
             this.apiproductId = Objects.requireNonNull(apiproductId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetApiProductArgs build() {
+        }        public GetApiProductArgs build() {
             return new GetApiProductArgs(apiproductId, organizationId);
         }
     }

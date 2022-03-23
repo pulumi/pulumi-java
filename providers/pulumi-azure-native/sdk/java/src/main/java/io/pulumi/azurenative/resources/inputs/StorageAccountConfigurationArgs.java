@@ -78,22 +78,18 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
             this.storageAccountKey = storageAccountKey;
             return this;
         }
-
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
             this.storageAccountKey = Output.ofNullable(storageAccountKey);
             return this;
         }
-
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
-        }
-        public StorageAccountConfigurationArgs build() {
+        }        public StorageAccountConfigurationArgs build() {
             return new StorageAccountConfigurationArgs(storageAccountKey, storageAccountName);
         }
     }

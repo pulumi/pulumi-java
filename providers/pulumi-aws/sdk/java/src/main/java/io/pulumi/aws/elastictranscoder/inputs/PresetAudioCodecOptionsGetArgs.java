@@ -106,42 +106,34 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
             this.bitDepth = bitDepth;
             return this;
         }
-
         public Builder bitDepth(@Nullable String bitDepth) {
             this.bitDepth = Output.ofNullable(bitDepth);
             return this;
         }
-
         public Builder bitOrder(@Nullable Output<String> bitOrder) {
             this.bitOrder = bitOrder;
             return this;
         }
-
         public Builder bitOrder(@Nullable String bitOrder) {
             this.bitOrder = Output.ofNullable(bitOrder);
             return this;
         }
-
         public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder signed(@Nullable Output<String> signed) {
             this.signed = signed;
             return this;
         }
-
         public Builder signed(@Nullable String signed) {
             this.signed = Output.ofNullable(signed);
             return this;
-        }
-        public PresetAudioCodecOptionsGetArgs build() {
+        }        public PresetAudioCodecOptionsGetArgs build() {
             return new PresetAudioCodecOptionsGetArgs(bitDepth, bitOrder, profile, signed);
         }
     }

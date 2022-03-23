@@ -222,112 +222,90 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder autoscaling(Output<AzureNodePoolAutoscalingArgs> autoscaling) {
             this.autoscaling = Objects.requireNonNull(autoscaling);
             return this;
         }
-
         public Builder autoscaling(AzureNodePoolAutoscalingArgs autoscaling) {
             this.autoscaling = Output.of(Objects.requireNonNull(autoscaling));
             return this;
         }
-
         public Builder azureAvailabilityZone(@Nullable Output<String> azureAvailabilityZone) {
             this.azureAvailabilityZone = azureAvailabilityZone;
             return this;
         }
-
         public Builder azureAvailabilityZone(@Nullable String azureAvailabilityZone) {
             this.azureAvailabilityZone = Output.ofNullable(azureAvailabilityZone);
             return this;
         }
-
         public Builder cluster(Output<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(String cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public Builder config(Output<AzureNodePoolConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(AzureNodePoolConfigArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder maxPodsConstraint(Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
             this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
             return this;
         }
-
         public Builder maxPodsConstraint(AzureNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
             this.maxPodsConstraint = Output.of(Objects.requireNonNull(maxPodsConstraint));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public AzureNodePoolArgs build() {
+        }        public AzureNodePoolArgs build() {
             return new AzureNodePoolArgs(annotations, autoscaling, azureAvailabilityZone, cluster, config, location, maxPodsConstraint, name, project, subnetId, version);
         }
     }

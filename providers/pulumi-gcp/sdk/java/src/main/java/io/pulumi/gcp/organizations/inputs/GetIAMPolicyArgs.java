@@ -78,12 +78,16 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.auditConfigs = auditConfigs;
             return this;
         }
-
+        public Builder auditConfigs(GetIAMPolicyAuditConfig... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(@Nullable List<GetIAMPolicyBinding> bindings) {
             this.bindings = bindings;
             return this;
         }
-        public GetIAMPolicyArgs build() {
+        public Builder bindings(GetIAMPolicyBinding... bindings) {
+            return bindings(List.of(bindings));
+        }        public GetIAMPolicyArgs build() {
             return new GetIAMPolicyArgs(auditConfigs, bindings);
         }
     }

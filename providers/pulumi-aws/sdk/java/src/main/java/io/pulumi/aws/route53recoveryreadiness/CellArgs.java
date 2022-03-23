@@ -92,32 +92,29 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
             this.cellName = Objects.requireNonNull(cellName);
             return this;
         }
-
         public Builder cellName(String cellName) {
             this.cellName = Output.of(Objects.requireNonNull(cellName));
             return this;
         }
-
         public Builder cells(@Nullable Output<List<String>> cells) {
             this.cells = cells;
             return this;
         }
-
         public Builder cells(@Nullable List<String> cells) {
             this.cells = Output.ofNullable(cells);
             return this;
         }
-
+        public Builder cells(String... cells) {
+            return cells(List.of(cells));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CellArgs build() {
+        }        public CellArgs build() {
             return new CellArgs(cellName, cells, tags);
         }
     }

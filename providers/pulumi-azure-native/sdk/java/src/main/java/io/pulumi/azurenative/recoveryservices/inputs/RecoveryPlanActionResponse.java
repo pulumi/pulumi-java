@@ -113,22 +113,24 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public Builder customDetails(Object customDetails) {
             this.customDetails = Objects.requireNonNull(customDetails);
             return this;
         }
-
         public Builder failoverDirections(List<String> failoverDirections) {
             this.failoverDirections = Objects.requireNonNull(failoverDirections);
             return this;
         }
-
+        public Builder failoverDirections(String... failoverDirections) {
+            return failoverDirections(List.of(failoverDirections));
+        }
         public Builder failoverTypes(List<String> failoverTypes) {
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }
-        public RecoveryPlanActionResponse build() {
+        public Builder failoverTypes(String... failoverTypes) {
+            return failoverTypes(List.of(failoverTypes));
+        }        public RecoveryPlanActionResponse build() {
             return new RecoveryPlanActionResponse(actionName, customDetails, failoverDirections, failoverTypes);
         }
     }

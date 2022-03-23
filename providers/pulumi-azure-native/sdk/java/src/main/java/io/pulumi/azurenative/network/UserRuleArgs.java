@@ -140,62 +140,50 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder configurationName(String configurationName) {
             this.configurationName = Output.of(Objects.requireNonNull(configurationName));
             return this;
         }
-
         public Builder kind(Output<Either<String,UserRuleKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,UserRuleKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleCollectionName(Output<String> ruleCollectionName) {
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
         }
-
         public Builder ruleCollectionName(String ruleCollectionName) {
             this.ruleCollectionName = Output.of(Objects.requireNonNull(ruleCollectionName));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
-        }
-        public UserRuleArgs build() {
+        }        public UserRuleArgs build() {
             return new UserRuleArgs(configurationName, kind, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);
         }
     }

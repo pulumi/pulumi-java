@@ -110,22 +110,24 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
             this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
-        }
-        public SoftwareRecipeStepExecFileResponse build() {
+        }        public SoftwareRecipeStepExecFileResponse build() {
             return new SoftwareRecipeStepExecFileResponse(allowedExitCodes, args, artifactId, localPath);
         }
     }

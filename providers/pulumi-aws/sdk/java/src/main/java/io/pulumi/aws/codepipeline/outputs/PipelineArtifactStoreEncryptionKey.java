@@ -69,12 +69,10 @@ public final class PipelineArtifactStoreEncryptionKey {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PipelineArtifactStoreEncryptionKey build() {
+        }        public PipelineArtifactStoreEncryptionKey build() {
             return new PipelineArtifactStoreEncryptionKey(id, type);
         }
     }

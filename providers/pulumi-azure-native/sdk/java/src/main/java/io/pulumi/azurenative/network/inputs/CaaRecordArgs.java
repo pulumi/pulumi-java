@@ -95,32 +95,26 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.flags = flags;
             return this;
         }
-
         public Builder flags(@Nullable Integer flags) {
             this.flags = Output.ofNullable(flags);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public CaaRecordArgs build() {
+        }        public CaaRecordArgs build() {
             return new CaaRecordArgs(flags, tag, value);
         }
     }

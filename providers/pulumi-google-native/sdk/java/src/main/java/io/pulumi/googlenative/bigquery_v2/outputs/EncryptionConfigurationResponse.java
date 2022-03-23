@@ -51,8 +51,7 @@ public final class EncryptionConfigurationResponse {
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public EncryptionConfigurationResponse build() {
+        }        public EncryptionConfigurationResponse build() {
             return new EncryptionConfigurationResponse(kmsKeyName);
         }
     }

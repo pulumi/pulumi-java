@@ -60,12 +60,10 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
             this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
             return this;
         }
-
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
             this.daysAfterCreationGreaterThan = Output.of(Objects.requireNonNull(daysAfterCreationGreaterThan));
             return this;
-        }
-        public DateAfterCreationArgs build() {
+        }        public DateAfterCreationArgs build() {
             return new DateAfterCreationArgs(daysAfterCreationGreaterThan);
         }
     }

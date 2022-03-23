@@ -79,22 +79,21 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
             this.files = files;
             return this;
         }
-
         public Builder files(@Nullable List<StandardAppVersionDeploymentFileArgs> files) {
             this.files = Output.ofNullable(files);
             return this;
         }
-
+        public Builder files(StandardAppVersionDeploymentFileArgs... files) {
+            return files(List.of(files));
+        }
         public Builder zip(@Nullable Output<StandardAppVersionDeploymentZipArgs> zip) {
             this.zip = zip;
             return this;
         }
-
         public Builder zip(@Nullable StandardAppVersionDeploymentZipArgs zip) {
             this.zip = Output.ofNullable(zip);
             return this;
-        }
-        public StandardAppVersionDeploymentArgs build() {
+        }        public StandardAppVersionDeploymentArgs build() {
             return new StandardAppVersionDeploymentArgs(files, zip);
         }
     }

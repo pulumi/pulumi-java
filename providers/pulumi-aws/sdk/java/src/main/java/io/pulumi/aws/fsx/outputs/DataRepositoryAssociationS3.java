@@ -72,12 +72,10 @@ public final class DataRepositoryAssociationS3 {
             this.autoExportPolicy = autoExportPolicy;
             return this;
         }
-
         public Builder autoImportPolicy(@Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
             this.autoImportPolicy = autoImportPolicy;
             return this;
-        }
-        public DataRepositoryAssociationS3 build() {
+        }        public DataRepositoryAssociationS3 build() {
             return new DataRepositoryAssociationS3(autoExportPolicy, autoImportPolicy);
         }
     }

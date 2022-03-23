@@ -69,12 +69,10 @@ public final class InsightFiltersWorkflowStatus {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersWorkflowStatus build() {
+        }        public InsightFiltersWorkflowStatus build() {
             return new InsightFiltersWorkflowStatus(comparison, value);
         }
     }

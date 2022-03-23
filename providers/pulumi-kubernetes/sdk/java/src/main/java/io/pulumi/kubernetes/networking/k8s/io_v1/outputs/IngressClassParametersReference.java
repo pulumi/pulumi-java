@@ -119,27 +119,22 @@ public final class IngressClassParametersReference {
             this.apiGroup = apiGroup;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
-        }
-        public IngressClassParametersReference build() {
+        }        public IngressClassParametersReference build() {
             return new IngressClassParametersReference(apiGroup, kind, name, namespace, scope);
         }
     }

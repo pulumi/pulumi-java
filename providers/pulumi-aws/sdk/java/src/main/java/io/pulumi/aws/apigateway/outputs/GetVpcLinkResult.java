@@ -143,37 +143,33 @@ public final class GetVpcLinkResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder targetArns(List<String> targetArns) {
             this.targetArns = Objects.requireNonNull(targetArns);
             return this;
         }
-        public GetVpcLinkResult build() {
+        public Builder targetArns(String... targetArns) {
+            return targetArns(List.of(targetArns));
+        }        public GetVpcLinkResult build() {
             return new GetVpcLinkResult(description, id, name, status, statusMessage, tags, targetArns);
         }
     }

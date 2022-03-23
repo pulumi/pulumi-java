@@ -74,12 +74,10 @@ public final class JobRecipe extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public JobRecipe build() {
+        }        public JobRecipe build() {
             return new JobRecipe(name, version);
         }
     }

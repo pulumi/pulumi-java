@@ -60,12 +60,10 @@ public final class BotInputContextArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public BotInputContextArgs build() {
+        }        public BotInputContextArgs build() {
             return new BotInputContextArgs(name);
         }
     }

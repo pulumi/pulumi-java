@@ -108,22 +108,18 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.backup = Objects.requireNonNull(backup);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder sourceDatabase(String sourceDatabase) {
             this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
             return this;
         }
-
         public Builder versionTime(String versionTime) {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
-        }
-        public BackupInfoResponse build() {
+        }        public BackupInfoResponse build() {
             return new BackupInfoResponse(backup, createTime, sourceDatabase, versionTime);
         }
     }

@@ -361,192 +361,157 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             this.aadResourceId = aadResourceId;
             return this;
         }
-
         public Builder aadResourceId(@Nullable Object aadResourceId) {
             this.aadResourceId = Output.ofNullable(aadResourceId);
             return this;
         }
-
         public Builder aadServicePrincipalCredentialType(@Nullable Output<Either<String,ODataAadServicePrincipalCredentialType>> aadServicePrincipalCredentialType) {
             this.aadServicePrincipalCredentialType = aadServicePrincipalCredentialType;
             return this;
         }
-
         public Builder aadServicePrincipalCredentialType(@Nullable Either<String,ODataAadServicePrincipalCredentialType> aadServicePrincipalCredentialType) {
             this.aadServicePrincipalCredentialType = Output.ofNullable(aadServicePrincipalCredentialType);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authHeaders(@Nullable Output<Object> authHeaders) {
             this.authHeaders = authHeaders;
             return this;
         }
-
         public Builder authHeaders(@Nullable Object authHeaders) {
             this.authHeaders = Output.ofNullable(authHeaders);
             return this;
         }
-
         public Builder authenticationType(@Nullable Output<Either<String,ODataAuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,ODataAuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
-
         public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = Output.ofNullable(azureCloudType);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder servicePrincipalEmbeddedCert(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCert) {
             this.servicePrincipalEmbeddedCert = servicePrincipalEmbeddedCert;
             return this;
         }
-
         public Builder servicePrincipalEmbeddedCert(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalEmbeddedCert) {
             this.servicePrincipalEmbeddedCert = Output.ofNullable(servicePrincipalEmbeddedCert);
             return this;
         }
-
         public Builder servicePrincipalEmbeddedCertPassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCertPassword) {
             this.servicePrincipalEmbeddedCertPassword = servicePrincipalEmbeddedCertPassword;
             return this;
         }
-
         public Builder servicePrincipalEmbeddedCertPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalEmbeddedCertPassword) {
             this.servicePrincipalEmbeddedCertPassword = Output.ofNullable(servicePrincipalEmbeddedCertPassword);
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
             return this;
         }
-
         public Builder tenant(@Nullable Output<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder tenant(@Nullable Object tenant) {
             this.tenant = Output.ofNullable(tenant);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder userName(@Nullable Output<Object> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public ODataLinkedServiceArgs build() {
+        }        public ODataLinkedServiceArgs build() {
             return new ODataLinkedServiceArgs(aadResourceId, aadServicePrincipalCredentialType, annotations, authHeaders, authenticationType, azureCloudType, connectVia, description, encryptedCredential, parameters, password, servicePrincipalEmbeddedCert, servicePrincipalEmbeddedCertPassword, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);
         }
     }

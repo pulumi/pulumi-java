@@ -60,8 +60,7 @@ public final class FirewallPolicyNatRuleActionResponse extends io.pulumi.resourc
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public FirewallPolicyNatRuleActionResponse build() {
+        }        public FirewallPolicyNatRuleActionResponse build() {
             return new FirewallPolicyNatRuleActionResponse(type);
         }
     }

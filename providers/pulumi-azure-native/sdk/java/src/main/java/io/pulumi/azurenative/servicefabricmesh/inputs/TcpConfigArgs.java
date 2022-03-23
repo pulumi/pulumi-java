@@ -95,32 +95,26 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(GatewayDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public TcpConfigArgs build() {
+        }        public TcpConfigArgs build() {
             return new TcpConfigArgs(destination, name, port);
         }
     }

@@ -88,17 +88,14 @@ public final class GetPrivateEndpointConnectionsForSCCPowershellArgs extends io.
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetPrivateEndpointConnectionsForSCCPowershellArgs build() {
+        }        public GetPrivateEndpointConnectionsForSCCPowershellArgs build() {
             return new GetPrivateEndpointConnectionsForSCCPowershellArgs(privateEndpointConnectionName, resourceGroupName, resourceName);
         }
     }

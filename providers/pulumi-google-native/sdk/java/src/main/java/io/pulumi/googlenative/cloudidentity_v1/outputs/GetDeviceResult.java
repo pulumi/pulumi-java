@@ -488,142 +488,120 @@ public final class GetDeviceResult {
             this.androidSpecificAttributes = Objects.requireNonNull(androidSpecificAttributes);
             return this;
         }
-
         public Builder assetTag(String assetTag) {
             this.assetTag = Objects.requireNonNull(assetTag);
             return this;
         }
-
         public Builder basebandVersion(String basebandVersion) {
             this.basebandVersion = Objects.requireNonNull(basebandVersion);
             return this;
         }
-
         public Builder bootloaderVersion(String bootloaderVersion) {
             this.bootloaderVersion = Objects.requireNonNull(bootloaderVersion);
             return this;
         }
-
         public Builder brand(String brand) {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
-
         public Builder buildNumber(String buildNumber) {
             this.buildNumber = Objects.requireNonNull(buildNumber);
             return this;
         }
-
         public Builder compromisedState(String compromisedState) {
             this.compromisedState = Objects.requireNonNull(compromisedState);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deviceType(String deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
-
         public Builder enabledDeveloperOptions(Boolean enabledDeveloperOptions) {
             this.enabledDeveloperOptions = Objects.requireNonNull(enabledDeveloperOptions);
             return this;
         }
-
         public Builder enabledUsbDebugging(Boolean enabledUsbDebugging) {
             this.enabledUsbDebugging = Objects.requireNonNull(enabledUsbDebugging);
             return this;
         }
-
         public Builder encryptionState(String encryptionState) {
             this.encryptionState = Objects.requireNonNull(encryptionState);
             return this;
         }
-
         public Builder imei(String imei) {
             this.imei = Objects.requireNonNull(imei);
             return this;
         }
-
         public Builder kernelVersion(String kernelVersion) {
             this.kernelVersion = Objects.requireNonNull(kernelVersion);
             return this;
         }
-
         public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
-
         public Builder managementState(String managementState) {
             this.managementState = Objects.requireNonNull(managementState);
             return this;
         }
-
         public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
-
         public Builder meid(String meid) {
             this.meid = Objects.requireNonNull(meid);
             return this;
         }
-
         public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkOperator(String networkOperator) {
             this.networkOperator = Objects.requireNonNull(networkOperator);
             return this;
         }
-
         public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public Builder otherAccounts(List<String> otherAccounts) {
             this.otherAccounts = Objects.requireNonNull(otherAccounts);
             return this;
         }
-
+        public Builder otherAccounts(String... otherAccounts) {
+            return otherAccounts(List.of(otherAccounts));
+        }
         public Builder ownerType(String ownerType) {
             this.ownerType = Objects.requireNonNull(ownerType);
             return this;
         }
-
         public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = Objects.requireNonNull(releaseVersion);
             return this;
         }
-
         public Builder securityPatchTime(String securityPatchTime) {
             this.securityPatchTime = Objects.requireNonNull(securityPatchTime);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder wifiMacAddresses(List<String> wifiMacAddresses) {
             this.wifiMacAddresses = Objects.requireNonNull(wifiMacAddresses);
             return this;
         }
-        public GetDeviceResult build() {
+        public Builder wifiMacAddresses(String... wifiMacAddresses) {
+            return wifiMacAddresses(List.of(wifiMacAddresses));
+        }        public GetDeviceResult build() {
             return new GetDeviceResult(androidSpecificAttributes, assetTag, basebandVersion, bootloaderVersion, brand, buildNumber, compromisedState, createTime, deviceType, enabledDeveloperOptions, enabledUsbDebugging, encryptionState, imei, kernelVersion, lastSyncTime, managementState, manufacturer, meid, model, name, networkOperator, osVersion, otherAccounts, ownerType, releaseVersion, securityPatchTime, serialNumber, wifiMacAddresses);
         }
     }

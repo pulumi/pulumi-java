@@ -72,12 +72,10 @@ public final class ListServerGatewayStatusArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public ListServerGatewayStatusArgs build() {
+        }        public ListServerGatewayStatusArgs build() {
             return new ListServerGatewayStatusArgs(resourceGroupName, serverName);
         }
     }

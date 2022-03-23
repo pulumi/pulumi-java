@@ -75,12 +75,10 @@ public final class MongoDBCollectionGetPropertiesResponseOptions extends io.pulu
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public MongoDBCollectionGetPropertiesResponseOptions build() {
+        }        public MongoDBCollectionGetPropertiesResponseOptions build() {
             return new MongoDBCollectionGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

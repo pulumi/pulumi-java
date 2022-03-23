@@ -95,17 +95,14 @@ public final class AutomationRuleRunPlaybookActionResponse extends io.pulumi.res
             this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
             return this;
         }
-
         public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
-        }
-        public AutomationRuleRunPlaybookActionResponse build() {
+        }        public AutomationRuleRunPlaybookActionResponse build() {
             return new AutomationRuleRunPlaybookActionResponse(actionConfiguration, actionType, order);
         }
     }

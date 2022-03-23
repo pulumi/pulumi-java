@@ -72,12 +72,10 @@ public final class TableTtl {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public TableTtl build() {
+        }        public TableTtl build() {
             return new TableTtl(attributeName, enabled);
         }
     }

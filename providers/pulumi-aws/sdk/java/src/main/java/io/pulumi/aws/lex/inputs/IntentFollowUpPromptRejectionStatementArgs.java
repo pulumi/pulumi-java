@@ -80,22 +80,21 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
         public Builder messages(List<IntentFollowUpPromptRejectionStatementMessageArgs> messages) {
             this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
-
+        public Builder messages(IntentFollowUpPromptRejectionStatementMessageArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Output.ofNullable(responseCard);
             return this;
-        }
-        public IntentFollowUpPromptRejectionStatementArgs build() {
+        }        public IntentFollowUpPromptRejectionStatementArgs build() {
             return new IntentFollowUpPromptRejectionStatementArgs(messages, responseCard);
         }
     }

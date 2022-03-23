@@ -107,42 +107,40 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
             this.excludePrefixes = excludePrefixes;
             return this;
         }
-
         public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
             this.excludePrefixes = Output.ofNullable(excludePrefixes);
             return this;
         }
-
+        public Builder excludePrefixes(String... excludePrefixes) {
+            return excludePrefixes(List.of(excludePrefixes));
+        }
         public Builder includePrefixes(@Nullable Output<List<String>> includePrefixes) {
             this.includePrefixes = includePrefixes;
             return this;
         }
-
         public Builder includePrefixes(@Nullable List<String> includePrefixes) {
             this.includePrefixes = Output.ofNullable(includePrefixes);
             return this;
         }
-
+        public Builder includePrefixes(String... includePrefixes) {
+            return includePrefixes(List.of(includePrefixes));
+        }
         public Builder maxTimeElapsedSinceLastModification(@Nullable Output<String> maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
-
         public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = Output.ofNullable(maxTimeElapsedSinceLastModification);
             return this;
         }
-
         public Builder minTimeElapsedSinceLastModification(@Nullable Output<String> minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }
-
         public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = Output.ofNullable(minTimeElapsedSinceLastModification);
             return this;
-        }
-        public TransferJobTransferSpecObjectConditionsGetArgs build() {
+        }        public TransferJobTransferSpecObjectConditionsGetArgs build() {
             return new TransferJobTransferSpecObjectConditionsGetArgs(excludePrefixes, includePrefixes, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }
     }

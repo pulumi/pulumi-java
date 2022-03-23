@@ -413,117 +413,103 @@ public final class GetJobResult {
             this.clientRequestId = Objects.requireNonNull(clientRequestId);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder createdFromSnapshotId(String createdFromSnapshotId) {
             this.createdFromSnapshotId = Objects.requireNonNull(createdFromSnapshotId);
             return this;
         }
-
         public Builder currentState(String currentState) {
             this.currentState = Objects.requireNonNull(currentState);
             return this;
         }
-
         public Builder currentStateTime(String currentStateTime) {
             this.currentStateTime = Objects.requireNonNull(currentStateTime);
             return this;
         }
-
         public Builder environment(EnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder jobMetadata(JobMetadataResponse jobMetadata) {
             this.jobMetadata = Objects.requireNonNull(jobMetadata);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pipelineDescription(PipelineDescriptionResponse pipelineDescription) {
             this.pipelineDescription = Objects.requireNonNull(pipelineDescription);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder replaceJobId(String replaceJobId) {
             this.replaceJobId = Objects.requireNonNull(replaceJobId);
             return this;
         }
-
         public Builder replacedByJobId(String replacedByJobId) {
             this.replacedByJobId = Objects.requireNonNull(replacedByJobId);
             return this;
         }
-
         public Builder requestedState(String requestedState) {
             this.requestedState = Objects.requireNonNull(requestedState);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder stageStates(List<ExecutionStageStateResponse> stageStates) {
             this.stageStates = Objects.requireNonNull(stageStates);
             return this;
         }
-
+        public Builder stageStates(ExecutionStageStateResponse... stageStates) {
+            return stageStates(List.of(stageStates));
+        }
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder steps(List<StepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
+        public Builder steps(StepResponse... steps) {
+            return steps(List.of(steps));
+        }
         public Builder stepsLocation(String stepsLocation) {
             this.stepsLocation = Objects.requireNonNull(stepsLocation);
             return this;
         }
-
         public Builder tempFiles(List<String> tempFiles) {
             this.tempFiles = Objects.requireNonNull(tempFiles);
             return this;
         }
-
+        public Builder tempFiles(String... tempFiles) {
+            return tempFiles(List.of(tempFiles));
+        }
         public Builder transformNameMapping(Map<String,String> transformNameMapping) {
             this.transformNameMapping = Objects.requireNonNull(transformNameMapping);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type);
         }
     }

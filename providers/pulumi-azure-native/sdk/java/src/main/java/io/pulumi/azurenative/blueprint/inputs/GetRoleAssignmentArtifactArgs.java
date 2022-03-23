@@ -88,17 +88,14 @@ public final class GetRoleAssignmentArtifactArgs extends io.pulumi.resources.Inv
             this.artifactName = Objects.requireNonNull(artifactName);
             return this;
         }
-
         public Builder blueprintName(String blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
-        }
-        public GetRoleAssignmentArtifactArgs build() {
+        }        public GetRoleAssignmentArtifactArgs build() {
             return new GetRoleAssignmentArtifactArgs(artifactName, blueprintName, resourceScope);
         }
     }

@@ -241,122 +241,101 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
         public Builder credentials(@Nullable Output<DataSourceCredentialsGetArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable DataSourceCredentialsGetArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
-
         public Builder dataSourceId(@Nullable String dataSourceId) {
             this.dataSourceId = Output.ofNullable(dataSourceId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<DataSourceParametersGetArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable DataSourceParametersGetArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<DataSourcePermissionGetArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<DataSourcePermissionGetArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(DataSourcePermissionGetArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
-
         public Builder sslProperties(@Nullable DataSourceSslPropertiesGetArgs sslProperties) {
             this.sslProperties = Output.ofNullable(sslProperties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
-
         public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesGetArgs vpcConnectionProperties) {
             this.vpcConnectionProperties = Output.ofNullable(vpcConnectionProperties);
             return this;
-        }
-        public DataSourceState build() {
+        }        public DataSourceState build() {
             return new DataSourceState(arn, awsAccountId, credentials, dataSourceId, name, parameters, permissions, sslProperties, tags, tagsAll, type, vpcConnectionProperties);
         }
     }

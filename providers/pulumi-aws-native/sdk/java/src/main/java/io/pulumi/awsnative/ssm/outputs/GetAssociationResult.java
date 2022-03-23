@@ -247,87 +247,76 @@ public final class GetAssociationResult {
             this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
-
         public Builder associationId(@Nullable String associationId) {
             this.associationId = associationId;
             return this;
         }
-
         public Builder associationName(@Nullable String associationName) {
             this.associationName = associationName;
             return this;
         }
-
         public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
             this.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
-
         public Builder calendarNames(@Nullable List<String> calendarNames) {
             this.calendarNames = calendarNames;
             return this;
         }
-
+        public Builder calendarNames(String... calendarNames) {
+            return calendarNames(List.of(calendarNames));
+        }
         public Builder complianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
             this.complianceSeverity = complianceSeverity;
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder maxConcurrency(@Nullable String maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
-
         public Builder maxErrors(@Nullable String maxErrors) {
             this.maxErrors = maxErrors;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder outputLocation(@Nullable AssociationInstanceAssociationOutputLocation outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
-
         public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
             this.syncCompliance = syncCompliance;
             return this;
         }
-
         public Builder targets(@Nullable List<AssociationTarget> targets) {
             this.targets = targets;
             return this;
         }
-
+        public Builder targets(AssociationTarget... targets) {
+            return targets(List.of(targets));
+        }
         public Builder waitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
-        }
-        public GetAssociationResult build() {
+        }        public GetAssociationResult build() {
             return new GetAssociationResult(applyOnlyAtCronInterval, associationId, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);
         }
     }

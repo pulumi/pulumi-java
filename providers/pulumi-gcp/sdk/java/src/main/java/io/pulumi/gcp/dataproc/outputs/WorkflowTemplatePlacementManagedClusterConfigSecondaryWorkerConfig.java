@@ -211,52 +211,51 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.accelerators = accelerators;
             return this;
         }
-
+        public Builder accelerators(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
-
         public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
-
+        public Builder instanceNames(String... instanceNames) {
+            return instanceNames(List.of(instanceNames));
+        }
         public Builder isPreemptible(@Nullable Boolean isPreemptible) {
             this.isPreemptible = isPreemptible;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig> managedGroupConfigs) {
             this.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
-
+        public Builder managedGroupConfigs(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig... managedGroupConfigs) {
+            return managedGroupConfigs(List.of(managedGroupConfigs));
+        }
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
         }
-
         public Builder preemptibility(@Nullable String preemptibility) {
             this.preemptibility = preemptibility;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig(accelerators, diskConfig, image, instanceNames, isPreemptible, machineType, managedGroupConfigs, minCpuPlatform, numInstances, preemptibility);
         }
     }

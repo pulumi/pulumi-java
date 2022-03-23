@@ -355,172 +355,144 @@ public final class JobQueryGetArgs extends io.pulumi.resources.ResourceArgs {
             this.allowLargeResults = allowLargeResults;
             return this;
         }
-
         public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
             this.allowLargeResults = Output.ofNullable(allowLargeResults);
             return this;
         }
-
         public Builder createDisposition(@Nullable Output<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Output.ofNullable(createDisposition);
             return this;
         }
-
         public Builder defaultDataset(@Nullable Output<JobQueryDefaultDatasetGetArgs> defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
-
         public Builder defaultDataset(@Nullable JobQueryDefaultDatasetGetArgs defaultDataset) {
             this.defaultDataset = Output.ofNullable(defaultDataset);
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable Output<JobQueryDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
-
         public Builder destinationTable(@Nullable Output<JobQueryDestinationTableGetArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
-
         public Builder destinationTable(@Nullable JobQueryDestinationTableGetArgs destinationTable) {
             this.destinationTable = Output.ofNullable(destinationTable);
             return this;
         }
-
         public Builder flattenResults(@Nullable Output<Boolean> flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
-
         public Builder flattenResults(@Nullable Boolean flattenResults) {
             this.flattenResults = Output.ofNullable(flattenResults);
             return this;
         }
-
         public Builder maximumBillingTier(@Nullable Output<Integer> maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
-
         public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
             this.maximumBillingTier = Output.ofNullable(maximumBillingTier);
             return this;
         }
-
         public Builder maximumBytesBilled(@Nullable Output<String> maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
-
         public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
             this.maximumBytesBilled = Output.ofNullable(maximumBytesBilled);
             return this;
         }
-
         public Builder parameterMode(@Nullable Output<String> parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
-
         public Builder parameterMode(@Nullable String parameterMode) {
             this.parameterMode = Output.ofNullable(parameterMode);
             return this;
         }
-
         public Builder priority(@Nullable Output<String> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable String priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable Output<List<String>> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Output.ofNullable(schemaUpdateOptions);
             return this;
         }
-
+        public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
+            return schemaUpdateOptions(List.of(schemaUpdateOptions));
+        }
         public Builder scriptOptions(@Nullable Output<JobQueryScriptOptionsGetArgs> scriptOptions) {
             this.scriptOptions = scriptOptions;
             return this;
         }
-
         public Builder scriptOptions(@Nullable JobQueryScriptOptionsGetArgs scriptOptions) {
             this.scriptOptions = Output.ofNullable(scriptOptions);
             return this;
         }
-
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
-
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = Output.ofNullable(useLegacySql);
             return this;
         }
-
         public Builder useQueryCache(@Nullable Output<Boolean> useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
-
         public Builder useQueryCache(@Nullable Boolean useQueryCache) {
             this.useQueryCache = Output.ofNullable(useQueryCache);
             return this;
         }
-
         public Builder userDefinedFunctionResources(@Nullable Output<List<JobQueryUserDefinedFunctionResourceGetArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
-
         public Builder userDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResourceGetArgs> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Output.ofNullable(userDefinedFunctionResources);
             return this;
         }
-
+        public Builder userDefinedFunctionResources(JobQueryUserDefinedFunctionResourceGetArgs... userDefinedFunctionResources) {
+            return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
+        }
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
-        }
-        public JobQueryGetArgs build() {
+        }        public JobQueryGetArgs build() {
             return new JobQueryGetArgs(allowLargeResults, createDisposition, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, schemaUpdateOptions, scriptOptions, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }
     }

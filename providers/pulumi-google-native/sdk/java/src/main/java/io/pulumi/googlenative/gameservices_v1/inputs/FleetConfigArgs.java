@@ -78,22 +78,18 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.fleetSpec = fleetSpec;
             return this;
         }
-
         public Builder fleetSpec(@Nullable String fleetSpec) {
             this.fleetSpec = Output.ofNullable(fleetSpec);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FleetConfigArgs build() {
+        }        public FleetConfigArgs build() {
             return new FleetConfigArgs(fleetSpec, name);
         }
     }

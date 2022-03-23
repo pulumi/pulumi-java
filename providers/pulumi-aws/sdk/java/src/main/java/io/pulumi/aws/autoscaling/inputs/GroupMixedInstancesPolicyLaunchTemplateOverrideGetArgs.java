@@ -91,32 +91,26 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs extend
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder launchTemplateSpecification(@Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
-
         public Builder launchTemplateSpecification(@Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Output.ofNullable(launchTemplateSpecification);
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Output<String> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
-        }
-        public GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs build() {
+        }        public GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs build() {
             return new GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs(instanceType, launchTemplateSpecification, weightedCapacity);
         }
     }

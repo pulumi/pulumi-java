@@ -93,17 +93,14 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder persistentCount(Double persistentCount) {
             this.persistentCount = Objects.requireNonNull(persistentCount);
             return this;
         }
-
         public Builder transientCount(Double transientCount) {
             this.transientCount = Objects.requireNonNull(transientCount);
             return this;
-        }
-        public ServerEndpointFilesNotSyncingErrorResponse build() {
+        }        public ServerEndpointFilesNotSyncingErrorResponse build() {
             return new ServerEndpointFilesNotSyncingErrorResponse(errorCode, persistentCount, transientCount);
         }
     }

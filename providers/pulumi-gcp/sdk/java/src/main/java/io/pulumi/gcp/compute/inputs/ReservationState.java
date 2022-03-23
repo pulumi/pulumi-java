@@ -232,112 +232,90 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             this.commitment = commitment;
             return this;
         }
-
         public Builder commitment(@Nullable String commitment) {
             this.commitment = Output.ofNullable(commitment);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder shareSettings(@Nullable Output<ReservationShareSettingsGetArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
-
         public Builder shareSettings(@Nullable ReservationShareSettingsGetArgs shareSettings) {
             this.shareSettings = Output.ofNullable(shareSettings);
             return this;
         }
-
         public Builder specificReservation(@Nullable Output<ReservationSpecificReservationGetArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder specificReservation(@Nullable ReservationSpecificReservationGetArgs specificReservation) {
             this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
-
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
             this.specificReservationRequired = specificReservationRequired;
             return this;
         }
-
         public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
             this.specificReservationRequired = Output.ofNullable(specificReservationRequired);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public ReservationState build() {
+        }        public ReservationState build() {
             return new ReservationState(commitment, creationTimestamp, description, name, project, selfLink, shareSettings, specificReservation, specificReservationRequired, status, zone);
         }
     }

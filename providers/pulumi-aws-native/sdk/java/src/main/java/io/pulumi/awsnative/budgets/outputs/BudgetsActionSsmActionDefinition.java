@@ -63,17 +63,17 @@ public final class BudgetsActionSsmActionDefinition {
             this.instanceIds = Objects.requireNonNull(instanceIds);
             return this;
         }
-
+        public Builder instanceIds(String... instanceIds) {
+            return instanceIds(List.of(instanceIds));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder subtype(BudgetsActionSsmActionDefinitionSubtype subtype) {
             this.subtype = Objects.requireNonNull(subtype);
             return this;
-        }
-        public BudgetsActionSsmActionDefinition build() {
+        }        public BudgetsActionSsmActionDefinition build() {
             return new BudgetsActionSsmActionDefinition(instanceIds, region, subtype);
         }
     }

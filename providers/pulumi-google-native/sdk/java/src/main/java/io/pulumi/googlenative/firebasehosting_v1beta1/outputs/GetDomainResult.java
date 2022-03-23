@@ -135,32 +135,26 @@ public final class GetDomainResult {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainRedirect(DomainRedirectResponse domainRedirect) {
             this.domainRedirect = Objects.requireNonNull(domainRedirect);
             return this;
         }
-
         public Builder provisioning(DomainProvisioningResponse provisioning) {
             this.provisioning = Objects.requireNonNull(provisioning);
             return this;
         }
-
         public Builder site(String site) {
             this.site = Objects.requireNonNull(site);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetDomainResult build() {
+        }        public GetDomainResult build() {
             return new GetDomainResult(domainName, domainRedirect, provisioning, site, status, updateTime);
         }
     }

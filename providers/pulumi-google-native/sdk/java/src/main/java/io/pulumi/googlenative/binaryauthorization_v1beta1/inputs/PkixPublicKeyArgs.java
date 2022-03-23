@@ -79,22 +79,18 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.publicKeyPem = publicKeyPem;
             return this;
         }
-
         public Builder publicKeyPem(@Nullable String publicKeyPem) {
             this.publicKeyPem = Output.ofNullable(publicKeyPem);
             return this;
         }
-
         public Builder signatureAlgorithm(@Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
-
         public Builder signatureAlgorithm(@Nullable PkixPublicKeySignatureAlgorithm signatureAlgorithm) {
             this.signatureAlgorithm = Output.ofNullable(signatureAlgorithm);
             return this;
-        }
-        public PkixPublicKeyArgs build() {
+        }        public PkixPublicKeyArgs build() {
             return new PkixPublicKeyArgs(publicKeyPem, signatureAlgorithm);
         }
     }

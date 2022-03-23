@@ -58,12 +58,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder backendService(String backendService) {
             this.backendService = Output.of(Objects.requireNonNull(backendService));
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs build() {
+        }        public RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs(backendService);
         }
     }

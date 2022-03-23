@@ -76,12 +76,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig(coreCount, type);
         }
     }

@@ -58,8 +58,7 @@ public final class BucketAbortIncompleteMultipartUpload extends io.pulumi.resour
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
             this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
             return this;
-        }
-        public BucketAbortIncompleteMultipartUpload build() {
+        }        public BucketAbortIncompleteMultipartUpload build() {
             return new BucketAbortIncompleteMultipartUpload(daysAfterInitiation);
         }
     }

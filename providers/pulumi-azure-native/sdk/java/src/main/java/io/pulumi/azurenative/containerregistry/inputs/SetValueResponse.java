@@ -95,17 +95,14 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
             this.isSecret = isSecret;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SetValueResponse build() {
+        }        public SetValueResponse build() {
             return new SetValueResponse(isSecret, name, value);
         }
     }

@@ -64,12 +64,10 @@ public final class TemplateError {
             this.message = message;
             return this;
         }
-
         public Builder type(@Nullable TemplateErrorType type) {
             this.type = type;
             return this;
-        }
-        public TemplateError build() {
+        }        public TemplateError build() {
             return new TemplateError(message, type);
         }
     }

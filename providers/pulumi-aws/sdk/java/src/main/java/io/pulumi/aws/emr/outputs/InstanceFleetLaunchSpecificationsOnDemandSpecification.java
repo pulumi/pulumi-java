@@ -51,8 +51,7 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecification {
         public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
-        }
-        public InstanceFleetLaunchSpecificationsOnDemandSpecification build() {
+        }        public InstanceFleetLaunchSpecificationsOnDemandSpecification build() {
             return new InstanceFleetLaunchSpecificationsOnDemandSpecification(allocationStrategy);
         }
     }

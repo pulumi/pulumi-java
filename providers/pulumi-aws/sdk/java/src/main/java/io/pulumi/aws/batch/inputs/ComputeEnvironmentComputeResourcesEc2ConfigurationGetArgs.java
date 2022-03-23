@@ -74,22 +74,18 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ext
             this.imageIdOverride = imageIdOverride;
             return this;
         }
-
         public Builder imageIdOverride(@Nullable String imageIdOverride) {
             this.imageIdOverride = Output.ofNullable(imageIdOverride);
             return this;
         }
-
         public Builder imageType(@Nullable Output<String> imageType) {
             this.imageType = imageType;
             return this;
         }
-
         public Builder imageType(@Nullable String imageType) {
             this.imageType = Output.ofNullable(imageType);
             return this;
-        }
-        public ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs build() {
+        }        public ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs build() {
             return new ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs(imageIdOverride, imageType);
         }
     }

@@ -276,142 +276,114 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             this.apiKeySelectionExpression = apiKeySelectionExpression;
             return this;
         }
-
         public Builder apiKeySelectionExpression(@Nullable String apiKeySelectionExpression) {
             this.apiKeySelectionExpression = Output.ofNullable(apiKeySelectionExpression);
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder corsConfiguration(@Nullable Output<ApiCorsConfigurationArgs> corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
-
         public Builder corsConfiguration(@Nullable ApiCorsConfigurationArgs corsConfiguration) {
             this.corsConfiguration = Output.ofNullable(corsConfiguration);
             return this;
         }
-
         public Builder credentialsArn(@Nullable Output<String> credentialsArn) {
             this.credentialsArn = credentialsArn;
             return this;
         }
-
         public Builder credentialsArn(@Nullable String credentialsArn) {
             this.credentialsArn = Output.ofNullable(credentialsArn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disableExecuteApiEndpoint(@Nullable Output<Boolean> disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
             return this;
         }
-
         public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = Output.ofNullable(disableExecuteApiEndpoint);
             return this;
         }
-
         public Builder failOnWarnings(@Nullable Output<Boolean> failOnWarnings) {
             this.failOnWarnings = failOnWarnings;
             return this;
         }
-
         public Builder failOnWarnings(@Nullable Boolean failOnWarnings) {
             this.failOnWarnings = Output.ofNullable(failOnWarnings);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocolType(Output<String> protocolType) {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public Builder protocolType(String protocolType) {
             this.protocolType = Output.of(Objects.requireNonNull(protocolType));
             return this;
         }
-
         public Builder routeKey(@Nullable Output<String> routeKey) {
             this.routeKey = routeKey;
             return this;
         }
-
         public Builder routeKey(@Nullable String routeKey) {
             this.routeKey = Output.ofNullable(routeKey);
             return this;
         }
-
         public Builder routeSelectionExpression(@Nullable Output<String> routeSelectionExpression) {
             this.routeSelectionExpression = routeSelectionExpression;
             return this;
         }
-
         public Builder routeSelectionExpression(@Nullable String routeSelectionExpression) {
             this.routeSelectionExpression = Output.ofNullable(routeSelectionExpression);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ApiArgs build() {
+        }        public ApiArgs build() {
             return new ApiArgs(apiKeySelectionExpression, body, corsConfiguration, credentialsArn, description, disableExecuteApiEndpoint, failOnWarnings, name, protocolType, routeKey, routeSelectionExpression, tags, target, version);
         }
     }

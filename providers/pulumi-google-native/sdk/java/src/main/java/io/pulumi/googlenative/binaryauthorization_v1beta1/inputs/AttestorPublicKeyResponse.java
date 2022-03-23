@@ -93,17 +93,14 @@ public final class AttestorPublicKeyResponse extends io.pulumi.resources.InvokeA
             this.asciiArmoredPgpPublicKey = Objects.requireNonNull(asciiArmoredPgpPublicKey);
             return this;
         }
-
         public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder pkixPublicKey(PkixPublicKeyResponse pkixPublicKey) {
             this.pkixPublicKey = Objects.requireNonNull(pkixPublicKey);
             return this;
-        }
-        public AttestorPublicKeyResponse build() {
+        }        public AttestorPublicKeyResponse build() {
             return new AttestorPublicKeyResponse(asciiArmoredPgpPublicKey, comment, pkixPublicKey);
         }
     }

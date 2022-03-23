@@ -147,62 +147,50 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
             this.audio = audio;
             return this;
         }
-
         public Builder audio(@Nullable AudioArgs audio) {
             this.audio = Output.ofNullable(audio);
             return this;
         }
-
         public Builder color(@Nullable Output<ColorArgs> color) {
             this.color = color;
             return this;
         }
-
         public Builder color(@Nullable ColorArgs color) {
             this.color = Output.ofNullable(color);
             return this;
         }
-
         public Builder crop(@Nullable Output<CropArgs> crop) {
             this.crop = crop;
             return this;
         }
-
         public Builder crop(@Nullable CropArgs crop) {
             this.crop = Output.ofNullable(crop);
             return this;
         }
-
         public Builder deblock(@Nullable Output<DeblockArgs> deblock) {
             this.deblock = deblock;
             return this;
         }
-
         public Builder deblock(@Nullable DeblockArgs deblock) {
             this.deblock = Output.ofNullable(deblock);
             return this;
         }
-
         public Builder denoise(@Nullable Output<DenoiseArgs> denoise) {
             this.denoise = denoise;
             return this;
         }
-
         public Builder denoise(@Nullable DenoiseArgs denoise) {
             this.denoise = Output.ofNullable(denoise);
             return this;
         }
-
         public Builder pad(@Nullable Output<PadArgs> pad) {
             this.pad = pad;
             return this;
         }
-
         public Builder pad(@Nullable PadArgs pad) {
             this.pad = Output.ofNullable(pad);
             return this;
-        }
-        public PreprocessingConfigArgs build() {
+        }        public PreprocessingConfigArgs build() {
             return new PreprocessingConfigArgs(audio, color, crop, deblock, denoise, pad);
         }
     }

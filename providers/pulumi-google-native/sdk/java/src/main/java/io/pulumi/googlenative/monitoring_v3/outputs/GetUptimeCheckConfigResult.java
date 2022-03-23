@@ -253,67 +253,63 @@ public final class GetUptimeCheckConfigResult {
             this.checkerType = Objects.requireNonNull(checkerType);
             return this;
         }
-
         public Builder contentMatchers(List<ContentMatcherResponse> contentMatchers) {
             this.contentMatchers = Objects.requireNonNull(contentMatchers);
             return this;
         }
-
+        public Builder contentMatchers(ContentMatcherResponse... contentMatchers) {
+            return contentMatchers(List.of(contentMatchers));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder httpCheck(HttpCheckResponse httpCheck) {
             this.httpCheck = Objects.requireNonNull(httpCheck);
             return this;
         }
-
         public Builder internalCheckers(List<InternalCheckerResponse> internalCheckers) {
             this.internalCheckers = Objects.requireNonNull(internalCheckers);
             return this;
         }
-
+        public Builder internalCheckers(InternalCheckerResponse... internalCheckers) {
+            return internalCheckers(List.of(internalCheckers));
+        }
         public Builder isInternal(Boolean isInternal) {
             this.isInternal = Objects.requireNonNull(isInternal);
             return this;
         }
-
         public Builder monitoredResource(MonitoredResourceResponse monitoredResource) {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
-
         public Builder resourceGroup(ResourceGroupResponse resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder selectedRegions(List<String> selectedRegions) {
             this.selectedRegions = Objects.requireNonNull(selectedRegions);
             return this;
         }
-
+        public Builder selectedRegions(String... selectedRegions) {
+            return selectedRegions(List.of(selectedRegions));
+        }
         public Builder tcpCheck(TcpCheckResponse tcpCheck) {
             this.tcpCheck = Objects.requireNonNull(tcpCheck);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
-        }
-        public GetUptimeCheckConfigResult build() {
+        }        public GetUptimeCheckConfigResult build() {
             return new GetUptimeCheckConfigResult(checkerType, contentMatchers, displayName, httpCheck, internalCheckers, isInternal, monitoredResource, name, period, resourceGroup, selectedRegions, tcpCheck, timeout);
         }
     }

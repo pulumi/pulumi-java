@@ -172,42 +172,37 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
             this.detectionRules = Objects.requireNonNull(detectionRules);
             return this;
         }
-
+        public Builder detectionRules(GooglePrivacyDlpV2DetectionRuleResponse... detectionRules) {
+            return detectionRules(List.of(detectionRules));
+        }
         public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             this.dictionary = Objects.requireNonNull(dictionary);
             return this;
         }
-
         public Builder exclusionType(String exclusionType) {
             this.exclusionType = Objects.requireNonNull(exclusionType);
             return this;
         }
-
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public Builder likelihood(String likelihood) {
             this.likelihood = Objects.requireNonNull(likelihood);
             return this;
         }
-
         public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public Builder storedType(GooglePrivacyDlpV2StoredTypeResponse storedType) {
             this.storedType = Objects.requireNonNull(storedType);
             return this;
         }
-
         public Builder surrogateType(GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
             this.surrogateType = Objects.requireNonNull(surrogateType);
             return this;
-        }
-        public GooglePrivacyDlpV2CustomInfoTypeResponse build() {
+        }        public GooglePrivacyDlpV2CustomInfoTypeResponse build() {
             return new GooglePrivacyDlpV2CustomInfoTypeResponse(detectionRules, dictionary, exclusionType, infoType, likelihood, regex, storedType, surrogateType);
         }
     }

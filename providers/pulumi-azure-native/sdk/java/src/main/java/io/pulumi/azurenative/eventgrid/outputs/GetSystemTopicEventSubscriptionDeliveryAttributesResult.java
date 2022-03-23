@@ -56,7 +56,9 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
             this.value = value;
             return this;
         }
-        public GetSystemTopicEventSubscriptionDeliveryAttributesResult build() {
+        public Builder value(Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>... value) {
+            return value(List.of(value));
+        }        public GetSystemTopicEventSubscriptionDeliveryAttributesResult build() {
             return new GetSystemTopicEventSubscriptionDeliveryAttributesResult(value);
         }
     }

@@ -112,22 +112,21 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
             this.backupFilePaths = backupFilePaths;
             return this;
         }
-
+        public Builder backupFilePaths(String... backupFilePaths) {
+            return backupFilePaths(List.of(backupFilePaths));
+        }
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restoreDatabaseName(String restoreDatabaseName) {
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
-        }
-        public MigrateSqlServerSqlMIDatabaseInputResponse build() {
+        }        public MigrateSqlServerSqlMIDatabaseInputResponse build() {
             return new MigrateSqlServerSqlMIDatabaseInputResponse(backupFilePaths, backupFileShare, name, restoreDatabaseName);
         }
     }

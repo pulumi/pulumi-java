@@ -51,8 +51,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse {
         public Builder speechModelVariant(String speechModelVariant) {
             this.speechModelVariant = Objects.requireNonNull(speechModelVariant);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse build() {
+        }        public GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse(speechModelVariant);
         }
     }

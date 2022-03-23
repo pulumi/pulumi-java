@@ -259,132 +259,112 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             this.buildOptions = buildOptions;
             return this;
         }
-
         public Builder buildOptions(@Nullable Map<String,String> buildOptions) {
             this.buildOptions = Output.ofNullable(buildOptions);
             return this;
         }
-
         public Builder builderVersion(@Nullable Output<String> builderVersion) {
             this.builderVersion = builderVersion;
             return this;
         }
-
         public Builder builderVersion(@Nullable String builderVersion) {
             this.builderVersion = Output.ofNullable(builderVersion);
             return this;
         }
-
         public Builder builtArtifacts(@Nullable Output<List<ArtifactArgs>> builtArtifacts) {
             this.builtArtifacts = builtArtifacts;
             return this;
         }
-
         public Builder builtArtifacts(@Nullable List<ArtifactArgs> builtArtifacts) {
             this.builtArtifacts = Output.ofNullable(builtArtifacts);
             return this;
         }
-
+        public Builder builtArtifacts(ArtifactArgs... builtArtifacts) {
+            return builtArtifacts(List.of(builtArtifacts));
+        }
         public Builder commands(@Nullable Output<List<CommandArgs>> commands) {
             this.commands = commands;
             return this;
         }
-
         public Builder commands(@Nullable List<CommandArgs> commands) {
             this.commands = Output.ofNullable(commands);
             return this;
         }
-
+        public Builder commands(CommandArgs... commands) {
+            return commands(List.of(commands));
+        }
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder creator(@Nullable Output<String> creator) {
             this.creator = creator;
             return this;
         }
-
         public Builder creator(@Nullable String creator) {
             this.creator = Output.ofNullable(creator);
             return this;
         }
-
         public Builder finishTime(@Nullable Output<String> finishTime) {
             this.finishTime = finishTime;
             return this;
         }
-
         public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = Output.ofNullable(finishTime);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder logsBucket(@Nullable Output<String> logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
-
         public Builder logsBucket(@Nullable String logsBucket) {
             this.logsBucket = Output.ofNullable(logsBucket);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sourceProvenance(@Nullable Output<SourceArgs> sourceProvenance) {
             this.sourceProvenance = sourceProvenance;
             return this;
         }
-
         public Builder sourceProvenance(@Nullable SourceArgs sourceProvenance) {
             this.sourceProvenance = Output.ofNullable(sourceProvenance);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder triggerId(@Nullable Output<String> triggerId) {
             this.triggerId = triggerId;
             return this;
         }
-
         public Builder triggerId(@Nullable String triggerId) {
             this.triggerId = Output.ofNullable(triggerId);
             return this;
-        }
-        public BuildProvenanceArgs build() {
+        }        public BuildProvenanceArgs build() {
             return new BuildProvenanceArgs(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, finishTime, id, logsBucket, project, sourceProvenance, startTime, triggerId);
         }
     }

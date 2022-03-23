@@ -346,97 +346,93 @@ public final class GetAuthorizationServerResult {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder authorizationMethods(@Nullable List<String> authorizationMethods) {
             this.authorizationMethods = authorizationMethods;
             return this;
         }
-
+        public Builder authorizationMethods(String... authorizationMethods) {
+            return authorizationMethods(List.of(authorizationMethods));
+        }
         public Builder bearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
-
+        public Builder bearerTokenSendingMethods(String... bearerTokenSendingMethods) {
+            return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
+        }
         public Builder clientAuthenticationMethod(@Nullable List<String> clientAuthenticationMethod) {
             this.clientAuthenticationMethod = clientAuthenticationMethod;
             return this;
         }
-
+        public Builder clientAuthenticationMethod(String... clientAuthenticationMethod) {
+            return clientAuthenticationMethod(List.of(clientAuthenticationMethod));
+        }
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientRegistrationEndpoint(String clientRegistrationEndpoint) {
             this.clientRegistrationEndpoint = Objects.requireNonNull(clientRegistrationEndpoint);
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder defaultScope(@Nullable String defaultScope) {
             this.defaultScope = defaultScope;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder grantTypes(List<String> grantTypes) {
             this.grantTypes = Objects.requireNonNull(grantTypes);
             return this;
         }
-
+        public Builder grantTypes(String... grantTypes) {
+            return grantTypes(List.of(grantTypes));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
             this.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
-
         public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }
-
         public Builder supportState(@Nullable Boolean supportState) {
             this.supportState = supportState;
             return this;
         }
-
         public Builder tokenBodyParameters(@Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters) {
             this.tokenBodyParameters = tokenBodyParameters;
             return this;
         }
-
+        public Builder tokenBodyParameters(TokenBodyParameterContractResponse... tokenBodyParameters) {
+            return tokenBodyParameters(List.of(tokenBodyParameters));
+        }
         public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAuthorizationServerResult build() {
+        }        public GetAuthorizationServerResult build() {
             return new GetAuthorizationServerResult(authorizationEndpoint, authorizationMethods, bearerTokenSendingMethods, clientAuthenticationMethod, clientId, clientRegistrationEndpoint, clientSecret, defaultScope, description, displayName, grantTypes, id, name, resourceOwnerPassword, resourceOwnerUsername, supportState, tokenBodyParameters, tokenEndpoint, type);
         }
     }

@@ -60,12 +60,10 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
-
         public Builder derivedImage(DerivedArgs derivedImage) {
             this.derivedImage = Output.of(Objects.requireNonNull(derivedImage));
             return this;
-        }
-        public GrafeasV1beta1ImageDetailsArgs build() {
+        }        public GrafeasV1beta1ImageDetailsArgs build() {
             return new GrafeasV1beta1ImageDetailsArgs(derivedImage);
         }
     }

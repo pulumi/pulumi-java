@@ -114,27 +114,25 @@ public final class ServiceCodeConfigurationValues {
             this.buildCommand = buildCommand;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
-
         public Builder runtime(ServiceCodeConfigurationValuesRuntime runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-
+        public Builder runtimeEnvironmentVariables(ServiceKeyValuePair... runtimeEnvironmentVariables) {
+            return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
+        }
         public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
-        }
-        public ServiceCodeConfigurationValues build() {
+        }        public ServiceCodeConfigurationValues build() {
             return new ServiceCodeConfigurationValues(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
         }
     }

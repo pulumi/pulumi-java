@@ -88,17 +88,14 @@ public final class ReceiptRuleStopAction {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
-        }
-        public ReceiptRuleStopAction build() {
+        }        public ReceiptRuleStopAction build() {
             return new ReceiptRuleStopAction(position, scope, topicArn);
         }
     }

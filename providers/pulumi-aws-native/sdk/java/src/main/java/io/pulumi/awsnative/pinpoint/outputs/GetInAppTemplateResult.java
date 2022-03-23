@@ -91,32 +91,29 @@ public final class GetInAppTemplateResult {
             this.arn = arn;
             return this;
         }
-
         public Builder content(@Nullable List<InAppTemplateInAppMessageContent> content) {
             this.content = content;
             return this;
         }
-
+        public Builder content(InAppTemplateInAppMessageContent... content) {
+            return content(List.of(content));
+        }
         public Builder customConfig(@Nullable Object customConfig) {
             this.customConfig = customConfig;
             return this;
         }
-
         public Builder layout(@Nullable InAppTemplateLayout layout) {
             this.layout = layout;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder templateDescription(@Nullable String templateDescription) {
             this.templateDescription = templateDescription;
             return this;
-        }
-        public GetInAppTemplateResult build() {
+        }        public GetInAppTemplateResult build() {
             return new GetInAppTemplateResult(arn, content, customConfig, layout, tags, templateDescription);
         }
     }

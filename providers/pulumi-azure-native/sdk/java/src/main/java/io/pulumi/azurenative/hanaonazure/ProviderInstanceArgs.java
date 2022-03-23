@@ -138,62 +138,50 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable String metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder properties(@Nullable Output<String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable String properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder providerInstanceName(@Nullable Output<String> providerInstanceName) {
             this.providerInstanceName = providerInstanceName;
             return this;
         }
-
         public Builder providerInstanceName(@Nullable String providerInstanceName) {
             this.providerInstanceName = Output.ofNullable(providerInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sapMonitorName(Output<String> sapMonitorName) {
             this.sapMonitorName = Objects.requireNonNull(sapMonitorName);
             return this;
         }
-
         public Builder sapMonitorName(String sapMonitorName) {
             this.sapMonitorName = Output.of(Objects.requireNonNull(sapMonitorName));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ProviderInstanceArgs build() {
+        }        public ProviderInstanceArgs build() {
             return new ProviderInstanceArgs(metadata, properties, providerInstanceName, resourceGroupName, sapMonitorName, type);
         }
     }

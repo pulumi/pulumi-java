@@ -70,12 +70,10 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReference {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatelessRuleGroupReference build() {
+        }        public FirewallPolicyFirewallPolicyStatelessRuleGroupReference build() {
             return new FirewallPolicyFirewallPolicyStatelessRuleGroupReference(priority, resourceArn);
         }
     }

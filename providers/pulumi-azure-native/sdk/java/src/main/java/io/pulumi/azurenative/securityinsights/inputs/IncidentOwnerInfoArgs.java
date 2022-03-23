@@ -110,42 +110,34 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
             this.assignedTo = assignedTo;
             return this;
         }
-
         public Builder assignedTo(@Nullable String assignedTo) {
             this.assignedTo = Output.ofNullable(assignedTo);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder userPrincipalName(@Nullable Output<String> userPrincipalName) {
             this.userPrincipalName = userPrincipalName;
             return this;
         }
-
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
             this.userPrincipalName = Output.ofNullable(userPrincipalName);
             return this;
-        }
-        public IncidentOwnerInfoArgs build() {
+        }        public IncidentOwnerInfoArgs build() {
             return new IncidentOwnerInfoArgs(assignedTo, email, objectId, userPrincipalName);
         }
     }

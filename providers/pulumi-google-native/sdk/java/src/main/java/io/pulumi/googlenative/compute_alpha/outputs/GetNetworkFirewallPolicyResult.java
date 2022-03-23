@@ -265,72 +265,64 @@ public final class GetNetworkFirewallPolicyResult {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
-
+        public Builder associations(FirewallPolicyAssociationResponse... associations) {
+            return associations(List.of(associations));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
-
         public Builder rules(List<FirewallPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(FirewallPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public Builder vpcNetworkScope(String vpcNetworkScope) {
             this.vpcNetworkScope = Objects.requireNonNull(vpcNetworkScope);
             return this;
-        }
-        public GetNetworkFirewallPolicyResult build() {
+        }        public GetNetworkFirewallPolicyResult build() {
             return new GetNetworkFirewallPolicyResult(associations, creationTimestamp, description, fingerprint, kind, name, parent, region, ruleTupleCount, rules, selfLink, selfLinkWithId, shortName, vpcNetworkScope);
         }
     }

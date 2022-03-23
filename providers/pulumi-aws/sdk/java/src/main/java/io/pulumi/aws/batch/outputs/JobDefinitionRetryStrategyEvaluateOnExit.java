@@ -103,22 +103,18 @@ public final class JobDefinitionRetryStrategyEvaluateOnExit {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder onExitCode(@Nullable String onExitCode) {
             this.onExitCode = onExitCode;
             return this;
         }
-
         public Builder onReason(@Nullable String onReason) {
             this.onReason = onReason;
             return this;
         }
-
         public Builder onStatusReason(@Nullable String onStatusReason) {
             this.onStatusReason = onStatusReason;
             return this;
-        }
-        public JobDefinitionRetryStrategyEvaluateOnExit build() {
+        }        public JobDefinitionRetryStrategyEvaluateOnExit build() {
             return new JobDefinitionRetryStrategyEvaluateOnExit(action, onExitCode, onReason, onStatusReason);
         }
     }

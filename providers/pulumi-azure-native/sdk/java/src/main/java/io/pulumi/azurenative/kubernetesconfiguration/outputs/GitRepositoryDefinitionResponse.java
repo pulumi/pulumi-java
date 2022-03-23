@@ -169,42 +169,34 @@ public final class GitRepositoryDefinitionResponse {
             this.httpsCAFile = httpsCAFile;
             return this;
         }
-
         public Builder httpsUser(@Nullable String httpsUser) {
             this.httpsUser = httpsUser;
             return this;
         }
-
         public Builder localAuthRef(@Nullable String localAuthRef) {
             this.localAuthRef = localAuthRef;
             return this;
         }
-
         public Builder repositoryRef(@Nullable RepositoryRefDefinitionResponse repositoryRef) {
             this.repositoryRef = repositoryRef;
             return this;
         }
-
         public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
             this.sshKnownHosts = sshKnownHosts;
             return this;
         }
-
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public GitRepositoryDefinitionResponse build() {
+        }        public GitRepositoryDefinitionResponse build() {
             return new GitRepositoryDefinitionResponse(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);
         }
     }

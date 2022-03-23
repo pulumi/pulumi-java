@@ -232,112 +232,96 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
             this.attestationAuthority = attestationAuthority;
             return this;
         }
-
         public Builder attestationAuthority(@Nullable NoteAttestationAuthorityGetArgs attestationAuthority) {
             this.attestationAuthority = Output.ofNullable(attestationAuthority);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
-
         public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
             this.relatedNoteNames = Output.ofNullable(relatedNoteNames);
             return this;
         }
-
+        public Builder relatedNoteNames(String... relatedNoteNames) {
+            return relatedNoteNames(List.of(relatedNoteNames));
+        }
         public Builder relatedUrls(@Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls) {
             this.relatedUrls = relatedUrls;
             return this;
         }
-
         public Builder relatedUrls(@Nullable List<NoteRelatedUrlGetArgs> relatedUrls) {
             this.relatedUrls = Output.ofNullable(relatedUrls);
             return this;
         }
-
+        public Builder relatedUrls(NoteRelatedUrlGetArgs... relatedUrls) {
+            return relatedUrls(List.of(relatedUrls));
+        }
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
-
         public Builder shortDescription(@Nullable String shortDescription) {
             this.shortDescription = Output.ofNullable(shortDescription);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public NoteState build() {
+        }        public NoteState build() {
             return new NoteState(attestationAuthority, createTime, expirationTime, kind, longDescription, name, project, relatedNoteNames, relatedUrls, shortDescription, updateTime);
         }
     }

@@ -313,87 +313,76 @@ public final class PackageInfoNoteResponse {
             this.analyzed = Objects.requireNonNull(analyzed);
             return this;
         }
-
         public Builder attribution(String attribution) {
             this.attribution = Objects.requireNonNull(attribution);
             return this;
         }
-
         public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
-
         public Builder copyright(String copyright) {
             this.copyright = Objects.requireNonNull(copyright);
             return this;
         }
-
         public Builder detailedDescription(String detailedDescription) {
             this.detailedDescription = Objects.requireNonNull(detailedDescription);
             return this;
         }
-
         public Builder downloadLocation(String downloadLocation) {
             this.downloadLocation = Objects.requireNonNull(downloadLocation);
             return this;
         }
-
         public Builder externalRefs(List<ExternalRefResponse> externalRefs) {
             this.externalRefs = Objects.requireNonNull(externalRefs);
             return this;
         }
-
+        public Builder externalRefs(ExternalRefResponse... externalRefs) {
+            return externalRefs(List.of(externalRefs));
+        }
         public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
             this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo);
             return this;
         }
-
+        public Builder filesLicenseInfo(String... filesLicenseInfo) {
+            return filesLicenseInfo(List.of(filesLicenseInfo));
+        }
         public Builder homePage(String homePage) {
             this.homePage = Objects.requireNonNull(homePage);
             return this;
         }
-
         public Builder licenseDeclared(LicenseResponse licenseDeclared) {
             this.licenseDeclared = Objects.requireNonNull(licenseDeclared);
             return this;
         }
-
         public Builder originator(String originator) {
             this.originator = Objects.requireNonNull(originator);
             return this;
         }
-
         public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public Builder summaryDescription(String summaryDescription) {
             this.summaryDescription = Objects.requireNonNull(summaryDescription);
             return this;
         }
-
         public Builder supplier(String supplier) {
             this.supplier = Objects.requireNonNull(supplier);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder verificationCode(String verificationCode) {
             this.verificationCode = Objects.requireNonNull(verificationCode);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public PackageInfoNoteResponse build() {
+        }        public PackageInfoNoteResponse build() {
             return new PackageInfoNoteResponse(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);
         }
     }

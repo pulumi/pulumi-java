@@ -57,12 +57,10 @@ public final class OrganizationConfigurationDatasourcesGetArgs extends io.pulumi
             this.s3Logs = s3Logs;
             return this;
         }
-
         public Builder s3Logs(@Nullable OrganizationConfigurationDatasourcesS3LogsGetArgs s3Logs) {
             this.s3Logs = Output.ofNullable(s3Logs);
             return this;
-        }
-        public OrganizationConfigurationDatasourcesGetArgs build() {
+        }        public OrganizationConfigurationDatasourcesGetArgs build() {
             return new OrganizationConfigurationDatasourcesGetArgs(s3Logs);
         }
     }

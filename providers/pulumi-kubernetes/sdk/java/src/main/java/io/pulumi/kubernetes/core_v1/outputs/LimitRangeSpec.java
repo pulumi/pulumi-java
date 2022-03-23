@@ -53,7 +53,9 @@ public final class LimitRangeSpec {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-        public LimitRangeSpec build() {
+        public Builder limits(LimitRangeItem... limits) {
+            return limits(List.of(limits));
+        }        public LimitRangeSpec build() {
             return new LimitRangeSpec(limits);
         }
     }

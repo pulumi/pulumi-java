@@ -127,52 +127,42 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
             this.driver = driver;
             return this;
         }
-
         public Builder driver(@Nullable String driver) {
             this.driver = Output.ofNullable(driver);
             return this;
         }
-
         public Builder pluginsPath(@Nullable Output<String> pluginsPath) {
             this.pluginsPath = pluginsPath;
             return this;
         }
-
         public Builder pluginsPath(@Nullable String pluginsPath) {
             this.pluginsPath = Output.ofNullable(pluginsPath);
             return this;
         }
-
         public Builder registryConfigPath(@Nullable Output<String> registryConfigPath) {
             this.registryConfigPath = registryConfigPath;
             return this;
         }
-
         public Builder registryConfigPath(@Nullable String registryConfigPath) {
             this.registryConfigPath = Output.ofNullable(registryConfigPath);
             return this;
         }
-
         public Builder repositoryCache(@Nullable Output<String> repositoryCache) {
             this.repositoryCache = repositoryCache;
             return this;
         }
-
         public Builder repositoryCache(@Nullable String repositoryCache) {
             this.repositoryCache = Output.ofNullable(repositoryCache);
             return this;
         }
-
         public Builder repositoryConfigPath(@Nullable Output<String> repositoryConfigPath) {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
         }
-
         public Builder repositoryConfigPath(@Nullable String repositoryConfigPath) {
             this.repositoryConfigPath = Output.ofNullable(repositoryConfigPath);
             return this;
-        }
-        public HelmReleaseSettingsArgs build() {
+        }        public HelmReleaseSettingsArgs build() {
             return new HelmReleaseSettingsArgs(driver, pluginsPath, registryConfigPath, repositoryCache, repositoryConfigPath);
         }
     }

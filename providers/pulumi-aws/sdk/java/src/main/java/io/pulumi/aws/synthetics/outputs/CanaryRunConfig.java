@@ -88,17 +88,14 @@ public final class CanaryRunConfig {
             this.activeTracing = activeTracing;
             return this;
         }
-
         public Builder memoryInMb(@Nullable Integer memoryInMb) {
             this.memoryInMb = memoryInMb;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
-        }
-        public CanaryRunConfig build() {
+        }        public CanaryRunConfig build() {
             return new CanaryRunConfig(activeTracing, memoryInMb, timeoutInSeconds);
         }
     }

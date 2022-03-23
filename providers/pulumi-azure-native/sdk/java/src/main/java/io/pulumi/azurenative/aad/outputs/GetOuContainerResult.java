@@ -283,77 +283,65 @@ public final class GetOuContainerResult {
             this.accounts = accounts;
             return this;
         }
-
+        public Builder accounts(ContainerAccountResponse... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder containerId(String containerId) {
             this.containerId = Objects.requireNonNull(containerId);
             return this;
         }
-
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
-
         public Builder distinguishedName(String distinguishedName) {
             this.distinguishedName = Objects.requireNonNull(distinguishedName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = Objects.requireNonNull(serviceStatus);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOuContainerResult build() {
+        }        public GetOuContainerResult build() {
             return new GetOuContainerResult(accounts, containerId, deploymentId, distinguishedName, domainName, etag, id, location, name, provisioningState, serviceStatus, systemData, tags, tenantId, type);
         }
     }

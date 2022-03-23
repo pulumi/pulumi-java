@@ -120,27 +120,22 @@ public final class GetManagementAssociationResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(ManagementAssociationPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagementAssociationResult build() {
+        }        public GetManagementAssociationResult build() {
             return new GetManagementAssociationResult(id, location, name, properties, type);
         }
     }

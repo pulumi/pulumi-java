@@ -77,12 +77,16 @@ public final class MonitoringResponse extends io.pulumi.resources.InvokeArgs {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }
-
+        public Builder consumerDestinations(MonitoringDestinationResponse... consumerDestinations) {
+            return consumerDestinations(List.of(consumerDestinations));
+        }
         public Builder producerDestinations(List<MonitoringDestinationResponse> producerDestinations) {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }
-        public MonitoringResponse build() {
+        public Builder producerDestinations(MonitoringDestinationResponse... producerDestinations) {
+            return producerDestinations(List.of(producerDestinations));
+        }        public MonitoringResponse build() {
             return new MonitoringResponse(consumerDestinations, producerDestinations);
         }
     }

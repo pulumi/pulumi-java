@@ -261,132 +261,112 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.accumulated = accumulated;
             return this;
         }
-
         public Builder accumulated(@Nullable Either<String,AccumulatedType> accumulated) {
             this.accumulated = Output.ofNullable(accumulated);
             return this;
         }
-
         public Builder chart(@Nullable Output<Either<String,ChartType>> chart) {
             this.chart = chart;
             return this;
         }
-
         public Builder chart(@Nullable Either<String,ChartType> chart) {
             this.chart = Output.ofNullable(chart);
             return this;
         }
-
         public Builder dataSet(@Nullable Output<ReportConfigDatasetArgs> dataSet) {
             this.dataSet = dataSet;
             return this;
         }
-
         public Builder dataSet(@Nullable ReportConfigDatasetArgs dataSet) {
             this.dataSet = Output.ofNullable(dataSet);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder kpis(@Nullable Output<List<KpiPropertiesArgs>> kpis) {
             this.kpis = kpis;
             return this;
         }
-
         public Builder kpis(@Nullable List<KpiPropertiesArgs> kpis) {
             this.kpis = Output.ofNullable(kpis);
             return this;
         }
-
+        public Builder kpis(KpiPropertiesArgs... kpis) {
+            return kpis(List.of(kpis));
+        }
         public Builder metric(@Nullable Output<Either<String,MetricType>> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable Either<String,MetricType> metric) {
             this.metric = Output.ofNullable(metric);
             return this;
         }
-
         public Builder pivots(@Nullable Output<List<PivotPropertiesArgs>> pivots) {
             this.pivots = pivots;
             return this;
         }
-
         public Builder pivots(@Nullable List<PivotPropertiesArgs> pivots) {
             this.pivots = Output.ofNullable(pivots);
             return this;
         }
-
+        public Builder pivots(PivotPropertiesArgs... pivots) {
+            return pivots(List.of(pivots));
+        }
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder timePeriod(@Nullable Output<ReportConfigTimePeriodArgs> timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
-
         public Builder timePeriod(@Nullable ReportConfigTimePeriodArgs timePeriod) {
             this.timePeriod = Output.ofNullable(timePeriod);
             return this;
         }
-
         public Builder timeframe(Output<Either<String,ReportTimeframeType>> timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
-
         public Builder timeframe(Either<String,ReportTimeframeType> timeframe) {
             this.timeframe = Output.of(Objects.requireNonNull(timeframe));
             return this;
         }
-
         public Builder type(Output<Either<String,ReportType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ReportType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder viewName(@Nullable Output<String> viewName) {
             this.viewName = viewName;
             return this;
         }
-
         public Builder viewName(@Nullable String viewName) {
             this.viewName = Output.ofNullable(viewName);
             return this;
-        }
-        public ViewByScopeArgs build() {
+        }        public ViewByScopeArgs build() {
             return new ViewByScopeArgs(accumulated, chart, dataSet, displayName, eTag, kpis, metric, pivots, scope, timePeriod, timeframe, type, viewName);
         }
     }

@@ -88,17 +88,14 @@ public final class InsightFiltersUpdatedAt {
             this.dateRange = dateRange;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = start;
             return this;
-        }
-        public InsightFiltersUpdatedAt build() {
+        }        public InsightFiltersUpdatedAt build() {
             return new InsightFiltersUpdatedAt(dateRange, end, start);
         }
     }

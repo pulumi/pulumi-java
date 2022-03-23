@@ -60,8 +60,7 @@ public final class AssignmentPropertiesResponseAdditionalData extends io.pulumi.
         public Builder exemptionCategory(@Nullable String exemptionCategory) {
             this.exemptionCategory = exemptionCategory;
             return this;
-        }
-        public AssignmentPropertiesResponseAdditionalData build() {
+        }        public AssignmentPropertiesResponseAdditionalData build() {
             return new AssignmentPropertiesResponseAdditionalData(exemptionCategory);
         }
     }

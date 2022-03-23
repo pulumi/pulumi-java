@@ -61,12 +61,10 @@ public final class GetFunctionSourceRepository {
             this.deployedUrl = Objects.requireNonNull(deployedUrl);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetFunctionSourceRepository build() {
+        }        public GetFunctionSourceRepository build() {
             return new GetFunctionSourceRepository(deployedUrl, url);
         }
     }

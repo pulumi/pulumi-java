@@ -72,12 +72,10 @@ public final class GetUserFilter extends io.pulumi.resources.InvokeArgs {
             this.attributePath = Objects.requireNonNull(attributePath);
             return this;
         }
-
         public Builder attributeValue(String attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
-        }
-        public GetUserFilter build() {
+        }        public GetUserFilter build() {
             return new GetUserFilter(attributePath, attributeValue);
         }
     }

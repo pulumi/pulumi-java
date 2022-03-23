@@ -292,152 +292,122 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
             this.adaptiveBFrame = adaptiveBFrame;
             return this;
         }
-
         public Builder adaptiveBFrame(@Nullable Boolean adaptiveBFrame) {
             this.adaptiveBFrame = Output.ofNullable(adaptiveBFrame);
             return this;
         }
-
         public Builder bFrames(@Nullable Output<Integer> bFrames) {
             this.bFrames = bFrames;
             return this;
         }
-
         public Builder bFrames(@Nullable Integer bFrames) {
             this.bFrames = Output.ofNullable(bFrames);
             return this;
         }
-
         public Builder bitrate(Output<Integer> bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
-
         public Builder bitrate(Integer bitrate) {
             this.bitrate = Output.of(Objects.requireNonNull(bitrate));
             return this;
         }
-
         public Builder bufferWindow(@Nullable Output<String> bufferWindow) {
             this.bufferWindow = bufferWindow;
             return this;
         }
-
         public Builder bufferWindow(@Nullable String bufferWindow) {
             this.bufferWindow = Output.ofNullable(bufferWindow);
             return this;
         }
-
         public Builder entropyMode(@Nullable Output<Either<String,EntropyMode>> entropyMode) {
             this.entropyMode = entropyMode;
             return this;
         }
-
         public Builder entropyMode(@Nullable Either<String,EntropyMode> entropyMode) {
             this.entropyMode = Output.ofNullable(entropyMode);
             return this;
         }
-
         public Builder frameRate(@Nullable Output<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
-
         public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = Output.ofNullable(frameRate);
             return this;
         }
-
         public Builder height(@Nullable Output<String> height) {
             this.height = height;
             return this;
         }
-
         public Builder height(@Nullable String height) {
             this.height = Output.ofNullable(height);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder maxBitrate(@Nullable Output<Integer> maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
-
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = Output.ofNullable(maxBitrate);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder profile(@Nullable Output<Either<String,H264VideoProfile>> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable Either<String,H264VideoProfile> profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder referenceFrames(@Nullable Output<Integer> referenceFrames) {
             this.referenceFrames = referenceFrames;
             return this;
         }
-
         public Builder referenceFrames(@Nullable Integer referenceFrames) {
             this.referenceFrames = Output.ofNullable(referenceFrames);
             return this;
         }
-
         public Builder slices(@Nullable Output<Integer> slices) {
             this.slices = slices;
             return this;
         }
-
         public Builder slices(@Nullable Integer slices) {
             this.slices = Output.ofNullable(slices);
             return this;
         }
-
         public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = Output.ofNullable(width);
             return this;
-        }
-        public H264LayerArgs build() {
+        }        public H264LayerArgs build() {
             return new H264LayerArgs(adaptiveBFrame, bFrames, bitrate, bufferWindow, entropyMode, frameRate, height, label, level, maxBitrate, odataType, profile, referenceFrames, slices, width);
         }
     }

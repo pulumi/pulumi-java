@@ -115,22 +115,18 @@ public final class AccessPointPublicAccessBlockConfiguration extends io.pulumi.r
             this.blockPublicAcls = blockPublicAcls;
             return this;
         }
-
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
             this.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
-
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
-        }
-        public AccessPointPublicAccessBlockConfiguration build() {
+        }        public AccessPointPublicAccessBlockConfiguration build() {
             return new AccessPointPublicAccessBlockConfiguration(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }
     }

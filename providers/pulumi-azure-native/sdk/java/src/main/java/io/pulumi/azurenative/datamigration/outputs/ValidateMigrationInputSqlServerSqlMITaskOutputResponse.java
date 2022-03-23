@@ -170,42 +170,49 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
             this.backupFolderErrors = Objects.requireNonNull(backupFolderErrors);
             return this;
         }
-
+        public Builder backupFolderErrors(ReportableExceptionResponse... backupFolderErrors) {
+            return backupFolderErrors(List.of(backupFolderErrors));
+        }
         public Builder backupShareCredentialsErrors(List<ReportableExceptionResponse> backupShareCredentialsErrors) {
             this.backupShareCredentialsErrors = Objects.requireNonNull(backupShareCredentialsErrors);
             return this;
         }
-
+        public Builder backupShareCredentialsErrors(ReportableExceptionResponse... backupShareCredentialsErrors) {
+            return backupShareCredentialsErrors(List.of(backupShareCredentialsErrors));
+        }
         public Builder backupStorageAccountErrors(List<ReportableExceptionResponse> backupStorageAccountErrors) {
             this.backupStorageAccountErrors = Objects.requireNonNull(backupStorageAccountErrors);
             return this;
         }
-
+        public Builder backupStorageAccountErrors(ReportableExceptionResponse... backupStorageAccountErrors) {
+            return backupStorageAccountErrors(List.of(backupStorageAccountErrors));
+        }
         public Builder databaseBackupInfo(@Nullable DatabaseBackupInfoResponse databaseBackupInfo) {
             this.databaseBackupInfo = databaseBackupInfo;
             return this;
         }
-
         public Builder existingBackupErrors(List<ReportableExceptionResponse> existingBackupErrors) {
             this.existingBackupErrors = Objects.requireNonNull(existingBackupErrors);
             return this;
         }
-
+        public Builder existingBackupErrors(ReportableExceptionResponse... existingBackupErrors) {
+            return existingBackupErrors(List.of(existingBackupErrors));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restoreDatabaseNameErrors(List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
             this.restoreDatabaseNameErrors = Objects.requireNonNull(restoreDatabaseNameErrors);
             return this;
         }
-        public ValidateMigrationInputSqlServerSqlMITaskOutputResponse build() {
+        public Builder restoreDatabaseNameErrors(ReportableExceptionResponse... restoreDatabaseNameErrors) {
+            return restoreDatabaseNameErrors(List.of(restoreDatabaseNameErrors));
+        }        public ValidateMigrationInputSqlServerSqlMITaskOutputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskOutputResponse(backupFolderErrors, backupShareCredentialsErrors, backupStorageAccountErrors, databaseBackupInfo, existingBackupErrors, id, name, restoreDatabaseNameErrors);
         }
     }

@@ -80,22 +80,18 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.projectMap = projectMap;
             return this;
         }
-
         public Builder projectMap(@Nullable Map<String,String> projectMap) {
             this.projectMap = Output.ofNullable(projectMap);
             return this;
         }
-
         public Builder shareType(@Nullable Output<ShareSettingsShareType> shareType) {
             this.shareType = shareType;
             return this;
         }
-
         public Builder shareType(@Nullable ShareSettingsShareType shareType) {
             this.shareType = Output.ofNullable(shareType);
             return this;
-        }
-        public ShareSettingsArgs build() {
+        }        public ShareSettingsArgs build() {
             return new ShareSettingsArgs(projectMap, shareType);
         }
     }

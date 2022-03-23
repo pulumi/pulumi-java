@@ -70,12 +70,10 @@ public final class ReusableConfigWrapperResponse {
             this.reusableConfig = Objects.requireNonNull(reusableConfig);
             return this;
         }
-
         public Builder reusableConfigValues(ReusableConfigValuesResponse reusableConfigValues) {
             this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
             return this;
-        }
-        public ReusableConfigWrapperResponse build() {
+        }        public ReusableConfigWrapperResponse build() {
             return new ReusableConfigWrapperResponse(reusableConfig, reusableConfigValues);
         }
     }

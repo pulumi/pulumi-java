@@ -121,27 +121,28 @@ public final class AndroidTestLoopResponse {
             this.appApk = Objects.requireNonNull(appApk);
             return this;
         }
-
         public Builder appBundle(AppBundleResponse appBundle) {
             this.appBundle = Objects.requireNonNull(appBundle);
             return this;
         }
-
         public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
             return this;
         }
-
         public Builder scenarioLabels(List<String> scenarioLabels) {
             this.scenarioLabels = Objects.requireNonNull(scenarioLabels);
             return this;
         }
-
+        public Builder scenarioLabels(String... scenarioLabels) {
+            return scenarioLabels(List.of(scenarioLabels));
+        }
         public Builder scenarios(List<Integer> scenarios) {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-        public AndroidTestLoopResponse build() {
+        public Builder scenarios(Integer... scenarios) {
+            return scenarios(List.of(scenarios));
+        }        public AndroidTestLoopResponse build() {
             return new AndroidTestLoopResponse(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
         }
     }

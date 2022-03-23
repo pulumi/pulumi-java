@@ -72,12 +72,10 @@ public final class AnalyticsConfigurationFilter {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public AnalyticsConfigurationFilter build() {
+        }        public AnalyticsConfigurationFilter build() {
             return new AnalyticsConfigurationFilter(prefix, tags);
         }
     }

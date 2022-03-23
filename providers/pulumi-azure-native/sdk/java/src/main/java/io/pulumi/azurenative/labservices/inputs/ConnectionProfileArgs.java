@@ -110,42 +110,34 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             this.clientRdpAccess = clientRdpAccess;
             return this;
         }
-
         public Builder clientRdpAccess(@Nullable ConnectionType clientRdpAccess) {
             this.clientRdpAccess = Output.ofNullable(clientRdpAccess);
             return this;
         }
-
         public Builder clientSshAccess(@Nullable Output<ConnectionType> clientSshAccess) {
             this.clientSshAccess = clientSshAccess;
             return this;
         }
-
         public Builder clientSshAccess(@Nullable ConnectionType clientSshAccess) {
             this.clientSshAccess = Output.ofNullable(clientSshAccess);
             return this;
         }
-
         public Builder webRdpAccess(@Nullable Output<ConnectionType> webRdpAccess) {
             this.webRdpAccess = webRdpAccess;
             return this;
         }
-
         public Builder webRdpAccess(@Nullable ConnectionType webRdpAccess) {
             this.webRdpAccess = Output.ofNullable(webRdpAccess);
             return this;
         }
-
         public Builder webSshAccess(@Nullable Output<ConnectionType> webSshAccess) {
             this.webSshAccess = webSshAccess;
             return this;
         }
-
         public Builder webSshAccess(@Nullable ConnectionType webSshAccess) {
             this.webSshAccess = Output.ofNullable(webSshAccess);
             return this;
-        }
-        public ConnectionProfileArgs build() {
+        }        public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
         }
     }

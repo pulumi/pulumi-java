@@ -122,52 +122,42 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
             this.manifestLayout = manifestLayout;
             return this;
         }
-
         public Builder manifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
             this.manifestLayout = Output.ofNullable(manifestLayout);
             return this;
         }
-
         public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
-
         public Builder minBufferTimeSeconds(@Nullable Output<Integer> minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
-
         public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = Output.ofNullable(minBufferTimeSeconds);
             return this;
         }
-
         public Builder profile(@Nullable Output<PackagingConfigurationDashManifestProfile> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable PackagingConfigurationDashManifestProfile profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
             this.streamSelection = Output.ofNullable(streamSelection);
             return this;
-        }
-        public PackagingConfigurationDashManifestArgs build() {
+        }        public PackagingConfigurationDashManifestArgs build() {
             return new PackagingConfigurationDashManifestArgs(manifestLayout, manifestName, minBufferTimeSeconds, profile, streamSelection);
         }
     }

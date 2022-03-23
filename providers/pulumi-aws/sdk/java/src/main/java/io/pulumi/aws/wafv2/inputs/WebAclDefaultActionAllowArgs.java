@@ -57,12 +57,10 @@ public final class WebAclDefaultActionAllowArgs extends io.pulumi.resources.Reso
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public Builder customRequestHandling(@Nullable WebAclDefaultActionAllowCustomRequestHandlingArgs customRequestHandling) {
             this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
-        }
-        public WebAclDefaultActionAllowArgs build() {
+        }        public WebAclDefaultActionAllowArgs build() {
             return new WebAclDefaultActionAllowArgs(customRequestHandling);
         }
     }

@@ -72,12 +72,10 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
-
         public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
-        }
-        public GetDeploymentArgs build() {
+        }        public GetDeploymentArgs build() {
             return new GetDeploymentArgs(deploymentId, restApiId);
         }
     }

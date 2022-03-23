@@ -88,17 +88,14 @@ public final class ModelExplainabilityJobDefinitionS3Output {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder s3UploadMode(@Nullable ModelExplainabilityJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
-        }
-        public ModelExplainabilityJobDefinitionS3Output build() {
+        }        public ModelExplainabilityJobDefinitionS3Output build() {
             return new ModelExplainabilityJobDefinitionS3Output(localPath, s3UploadMode, s3Uri);
         }
     }

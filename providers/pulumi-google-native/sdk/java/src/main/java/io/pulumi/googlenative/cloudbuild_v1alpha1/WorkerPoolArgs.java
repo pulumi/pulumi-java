@@ -125,52 +125,45 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder regions(@Nullable Output<List<WorkerPoolRegionsItem>> regions) {
             this.regions = regions;
             return this;
         }
-
         public Builder regions(@Nullable List<WorkerPoolRegionsItem> regions) {
             this.regions = Output.ofNullable(regions);
             return this;
         }
-
+        public Builder regions(WorkerPoolRegionsItem... regions) {
+            return regions(List.of(regions));
+        }
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
             this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
-
         public Builder workerCount(@Nullable Output<String> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
-
         public Builder workerCount(@Nullable String workerCount) {
             this.workerCount = Output.ofNullable(workerCount);
             return this;
-        }
-        public WorkerPoolArgs build() {
+        }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(name, project, regions, workerConfig, workerCount);
         }
     }

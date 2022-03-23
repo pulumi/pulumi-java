@@ -261,142 +261,114 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             this.applicationGroupName = applicationGroupName;
             return this;
         }
-
         public Builder applicationGroupName(@Nullable String applicationGroupName) {
             this.applicationGroupName = Output.ofNullable(applicationGroupName);
             return this;
         }
-
         public Builder applicationGroupType(Output<Either<String,ApplicationGroupType>> applicationGroupType) {
             this.applicationGroupType = Objects.requireNonNull(applicationGroupType);
             return this;
         }
-
         public Builder applicationGroupType(Either<String,ApplicationGroupType> applicationGroupType) {
             this.applicationGroupType = Output.of(Objects.requireNonNull(applicationGroupType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder hostPoolArmPath(Output<String> hostPoolArmPath) {
             this.hostPoolArmPath = Objects.requireNonNull(hostPoolArmPath);
             return this;
         }
-
         public Builder hostPoolArmPath(String hostPoolArmPath) {
             this.hostPoolArmPath = Output.of(Objects.requireNonNull(hostPoolArmPath));
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
-
         public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
             this.migrationRequest = migrationRequest;
             return this;
         }
-
         public Builder migrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
             this.migrationRequest = Output.ofNullable(migrationRequest);
             return this;
         }
-
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationGroupArgs build() {
+        }        public ApplicationGroupArgs build() {
             return new ApplicationGroupArgs(applicationGroupName, applicationGroupType, description, friendlyName, hostPoolArmPath, identity, kind, location, managedBy, migrationRequest, plan, resourceGroupName, sku, tags);
         }
     }

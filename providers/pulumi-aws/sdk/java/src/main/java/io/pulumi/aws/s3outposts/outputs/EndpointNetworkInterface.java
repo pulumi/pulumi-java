@@ -53,8 +53,7 @@ public final class EndpointNetworkInterface {
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
-        }
-        public EndpointNetworkInterface build() {
+        }        public EndpointNetworkInterface build() {
             return new EndpointNetworkInterface(networkInterfaceId);
         }
     }

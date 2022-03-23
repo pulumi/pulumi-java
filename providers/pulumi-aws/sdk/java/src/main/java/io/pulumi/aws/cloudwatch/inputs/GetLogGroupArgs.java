@@ -75,12 +75,10 @@ public final class GetLogGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetLogGroupArgs build() {
+        }        public GetLogGroupArgs build() {
             return new GetLogGroupArgs(name, tags);
         }
     }

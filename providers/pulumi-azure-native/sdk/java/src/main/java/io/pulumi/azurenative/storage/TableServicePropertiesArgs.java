@@ -107,42 +107,34 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
-
         public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Output.ofNullable(cors);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tableServiceName(@Nullable Output<String> tableServiceName) {
             this.tableServiceName = tableServiceName;
             return this;
         }
-
         public Builder tableServiceName(@Nullable String tableServiceName) {
             this.tableServiceName = Output.ofNullable(tableServiceName);
             return this;
-        }
-        public TableServicePropertiesArgs build() {
+        }        public TableServicePropertiesArgs build() {
             return new TableServicePropertiesArgs(accountName, cors, resourceGroupName, tableServiceName);
         }
     }

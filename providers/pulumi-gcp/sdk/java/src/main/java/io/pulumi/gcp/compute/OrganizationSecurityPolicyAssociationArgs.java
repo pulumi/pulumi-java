@@ -90,32 +90,26 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
-
         public Builder attachmentId(String attachmentId) {
             this.attachmentId = Output.of(Objects.requireNonNull(attachmentId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyId(Output<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
-        }
-        public OrganizationSecurityPolicyAssociationArgs build() {
+        }        public OrganizationSecurityPolicyAssociationArgs build() {
             return new OrganizationSecurityPolicyAssociationArgs(attachmentId, name, policyId);
         }
     }

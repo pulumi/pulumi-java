@@ -56,12 +56,10 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
             this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig);
             return this;
         }
-
         public Builder kmsEncryptionConfig(FHIRDatastoreKmsEncryptionConfigArgs kmsEncryptionConfig) {
             this.kmsEncryptionConfig = Output.of(Objects.requireNonNull(kmsEncryptionConfig));
             return this;
-        }
-        public FHIRDatastoreSseConfigurationArgs build() {
+        }        public FHIRDatastoreSseConfigurationArgs build() {
             return new FHIRDatastoreSseConfigurationArgs(kmsEncryptionConfig);
         }
     }

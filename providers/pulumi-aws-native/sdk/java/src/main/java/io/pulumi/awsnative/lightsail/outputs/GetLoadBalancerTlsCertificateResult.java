@@ -80,17 +80,14 @@ public final class GetLoadBalancerTlsCertificateResult {
             this.isAttached = isAttached;
             return this;
         }
-
         public Builder loadBalancerTlsCertificateArn(@Nullable String loadBalancerTlsCertificateArn) {
             this.loadBalancerTlsCertificateArn = loadBalancerTlsCertificateArn;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetLoadBalancerTlsCertificateResult build() {
+        }        public GetLoadBalancerTlsCertificateResult build() {
             return new GetLoadBalancerTlsCertificateResult(isAttached, loadBalancerTlsCertificateArn, status);
         }
     }

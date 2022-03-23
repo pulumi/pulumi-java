@@ -53,8 +53,7 @@ public final class EncryptionIdentityResponse {
         public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
             this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
-        }
-        public EncryptionIdentityResponse build() {
+        }        public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(encryptionUserAssignedIdentity);
         }
     }

@@ -366,102 +366,82 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder cacheControl(@Nullable String cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
-
         public Builder canonicalizedResource(String canonicalizedResource) {
             this.canonicalizedResource = Objects.requireNonNull(canonicalizedResource);
             return this;
         }
-
         public Builder contentDisposition(@Nullable String contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
-
         public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public Builder contentLanguage(@Nullable String contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
             this.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = identifier;
             return this;
         }
-
         public Builder keyToSign(@Nullable String keyToSign) {
             this.keyToSign = keyToSign;
             return this;
         }
-
         public Builder partitionKeyEnd(@Nullable String partitionKeyEnd) {
             this.partitionKeyEnd = partitionKeyEnd;
             return this;
         }
-
         public Builder partitionKeyStart(@Nullable String partitionKeyStart) {
             this.partitionKeyStart = partitionKeyStart;
             return this;
         }
-
         public Builder permissions(@Nullable Either<String,Permissions> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder protocols(@Nullable HttpProtocol protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder resource(@Nullable Either<String,SignedResource> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder rowKeyEnd(@Nullable String rowKeyEnd) {
             this.rowKeyEnd = rowKeyEnd;
             return this;
         }
-
         public Builder rowKeyStart(@Nullable String rowKeyStart) {
             this.rowKeyStart = rowKeyStart;
             return this;
         }
-
         public Builder sharedAccessExpiryTime(@Nullable String sharedAccessExpiryTime) {
             this.sharedAccessExpiryTime = sharedAccessExpiryTime;
             return this;
         }
-
         public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
             this.sharedAccessStartTime = sharedAccessStartTime;
             return this;
-        }
-        public ListStorageAccountServiceSASArgs build() {
+        }        public ListStorageAccountServiceSASArgs build() {
             return new ListStorageAccountServiceSASArgs(accountName, cacheControl, canonicalizedResource, contentDisposition, contentEncoding, contentLanguage, contentType, iPAddressOrRange, identifier, keyToSign, partitionKeyEnd, partitionKeyStart, permissions, protocols, resource, resourceGroupName, rowKeyEnd, rowKeyStart, sharedAccessExpiryTime, sharedAccessStartTime);
         }
     }

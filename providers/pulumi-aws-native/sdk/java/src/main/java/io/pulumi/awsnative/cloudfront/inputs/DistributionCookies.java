@@ -67,12 +67,13 @@ public final class DistributionCookies extends io.pulumi.resources.InvokeArgs {
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
-
         public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
             this.whitelistedNames = whitelistedNames;
             return this;
         }
-        public DistributionCookies build() {
+        public Builder whitelistedNames(String... whitelistedNames) {
+            return whitelistedNames(List.of(whitelistedNames));
+        }        public DistributionCookies build() {
             return new DistributionCookies(forward, whitelistedNames);
         }
     }

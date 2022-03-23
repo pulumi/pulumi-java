@@ -81,32 +81,32 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
-
         public Builder advancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceTypeArgs> advancedBackupSettings) {
             this.advancedBackupSettings = Output.ofNullable(advancedBackupSettings);
             return this;
         }
-
+        public Builder advancedBackupSettings(BackupPlanAdvancedBackupSettingResourceTypeArgs... advancedBackupSettings) {
+            return advancedBackupSettings(List.of(advancedBackupSettings));
+        }
         public Builder backupPlanName(Output<String> backupPlanName) {
             this.backupPlanName = Objects.requireNonNull(backupPlanName);
             return this;
         }
-
         public Builder backupPlanName(String backupPlanName) {
             this.backupPlanName = Output.of(Objects.requireNonNull(backupPlanName));
             return this;
         }
-
         public Builder backupPlanRule(Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
             this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
             return this;
         }
-
         public Builder backupPlanRule(List<BackupPlanBackupRuleResourceTypeArgs> backupPlanRule) {
             this.backupPlanRule = Output.of(Objects.requireNonNull(backupPlanRule));
             return this;
         }
-        public BackupPlanResourceTypeArgs build() {
+        public Builder backupPlanRule(BackupPlanBackupRuleResourceTypeArgs... backupPlanRule) {
+            return backupPlanRule(List.of(backupPlanRule));
+        }        public BackupPlanResourceTypeArgs build() {
             return new BackupPlanResourceTypeArgs(advancedBackupSettings, backupPlanName, backupPlanRule);
         }
     }

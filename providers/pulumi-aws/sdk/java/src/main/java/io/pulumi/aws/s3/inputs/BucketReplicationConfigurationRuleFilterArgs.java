@@ -76,22 +76,18 @@ public final class BucketReplicationConfigurationRuleFilterArgs extends io.pulum
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public BucketReplicationConfigurationRuleFilterArgs build() {
+        }        public BucketReplicationConfigurationRuleFilterArgs build() {
             return new BucketReplicationConfigurationRuleFilterArgs(prefix, tags);
         }
     }

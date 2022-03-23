@@ -107,22 +107,21 @@ public final class DaprResponse {
             this.appId = appId;
             return this;
         }
-
         public Builder appPort(@Nullable Integer appPort) {
             this.appPort = appPort;
             return this;
         }
-
         public Builder components(@Nullable List<DaprComponentResponse> components) {
             this.components = components;
             return this;
         }
-
+        public Builder components(DaprComponentResponse... components) {
+            return components(List.of(components));
+        }
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public DaprResponse build() {
+        }        public DaprResponse build() {
             return new DaprResponse(appId, appPort, components, enabled);
         }
     }

@@ -189,122 +189,101 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder downlinkBandwidthBits(@Nullable Output<Integer> downlinkBandwidthBits) {
             this.downlinkBandwidthBits = downlinkBandwidthBits;
             return this;
         }
-
         public Builder downlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
             this.downlinkBandwidthBits = Output.ofNullable(downlinkBandwidthBits);
             return this;
         }
-
         public Builder downlinkDelayMs(@Nullable Output<Integer> downlinkDelayMs) {
             this.downlinkDelayMs = downlinkDelayMs;
             return this;
         }
-
         public Builder downlinkDelayMs(@Nullable Integer downlinkDelayMs) {
             this.downlinkDelayMs = Output.ofNullable(downlinkDelayMs);
             return this;
         }
-
         public Builder downlinkJitterMs(@Nullable Output<Integer> downlinkJitterMs) {
             this.downlinkJitterMs = downlinkJitterMs;
             return this;
         }
-
         public Builder downlinkJitterMs(@Nullable Integer downlinkJitterMs) {
             this.downlinkJitterMs = Output.ofNullable(downlinkJitterMs);
             return this;
         }
-
         public Builder downlinkLossPercent(@Nullable Output<Integer> downlinkLossPercent) {
             this.downlinkLossPercent = downlinkLossPercent;
             return this;
         }
-
         public Builder downlinkLossPercent(@Nullable Integer downlinkLossPercent) {
             this.downlinkLossPercent = Output.ofNullable(downlinkLossPercent);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder projectArn(Output<String> projectArn) {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }
-
         public Builder projectArn(String projectArn) {
             this.projectArn = Output.of(Objects.requireNonNull(projectArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<NetworkProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkProfileTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(NetworkProfileTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder uplinkBandwidthBits(@Nullable Output<Integer> uplinkBandwidthBits) {
             this.uplinkBandwidthBits = uplinkBandwidthBits;
             return this;
         }
-
         public Builder uplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
             this.uplinkBandwidthBits = Output.ofNullable(uplinkBandwidthBits);
             return this;
         }
-
         public Builder uplinkDelayMs(@Nullable Output<Integer> uplinkDelayMs) {
             this.uplinkDelayMs = uplinkDelayMs;
             return this;
         }
-
         public Builder uplinkDelayMs(@Nullable Integer uplinkDelayMs) {
             this.uplinkDelayMs = Output.ofNullable(uplinkDelayMs);
             return this;
         }
-
         public Builder uplinkJitterMs(@Nullable Output<Integer> uplinkJitterMs) {
             this.uplinkJitterMs = uplinkJitterMs;
             return this;
         }
-
         public Builder uplinkJitterMs(@Nullable Integer uplinkJitterMs) {
             this.uplinkJitterMs = Output.ofNullable(uplinkJitterMs);
             return this;
         }
-
         public Builder uplinkLossPercent(@Nullable Output<Integer> uplinkLossPercent) {
             this.uplinkLossPercent = uplinkLossPercent;
             return this;
         }
-
         public Builder uplinkLossPercent(@Nullable Integer uplinkLossPercent) {
             this.uplinkLossPercent = Output.ofNullable(uplinkLossPercent);
             return this;
-        }
-        public NetworkProfileArgs build() {
+        }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(description, downlinkBandwidthBits, downlinkDelayMs, downlinkJitterMs, downlinkLossPercent, name, projectArn, tags, uplinkBandwidthBits, uplinkDelayMs, uplinkJitterMs, uplinkLossPercent);
         }
     }

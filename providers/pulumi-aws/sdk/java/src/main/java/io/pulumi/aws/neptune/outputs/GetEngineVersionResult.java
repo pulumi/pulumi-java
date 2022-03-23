@@ -201,62 +201,62 @@ public final class GetEngineVersionResult {
             this.engine = engine;
             return this;
         }
-
         public Builder engineDescription(String engineDescription) {
             this.engineDescription = Objects.requireNonNull(engineDescription);
             return this;
         }
-
         public Builder exportableLogTypes(List<String> exportableLogTypes) {
             this.exportableLogTypes = Objects.requireNonNull(exportableLogTypes);
             return this;
         }
-
+        public Builder exportableLogTypes(String... exportableLogTypes) {
+            return exportableLogTypes(List.of(exportableLogTypes));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parameterGroupFamily(String parameterGroupFamily) {
             this.parameterGroupFamily = Objects.requireNonNull(parameterGroupFamily);
             return this;
         }
-
         public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             this.preferredVersions = preferredVersions;
             return this;
         }
-
+        public Builder preferredVersions(String... preferredVersions) {
+            return preferredVersions(List.of(preferredVersions));
+        }
         public Builder supportedTimezones(List<String> supportedTimezones) {
             this.supportedTimezones = Objects.requireNonNull(supportedTimezones);
             return this;
         }
-
+        public Builder supportedTimezones(String... supportedTimezones) {
+            return supportedTimezones(List.of(supportedTimezones));
+        }
         public Builder supportsLogExportsToCloudwatch(Boolean supportsLogExportsToCloudwatch) {
             this.supportsLogExportsToCloudwatch = Objects.requireNonNull(supportsLogExportsToCloudwatch);
             return this;
         }
-
         public Builder supportsReadReplica(Boolean supportsReadReplica) {
             this.supportsReadReplica = Objects.requireNonNull(supportsReadReplica);
             return this;
         }
-
         public Builder validUpgradeTargets(List<String> validUpgradeTargets) {
             this.validUpgradeTargets = Objects.requireNonNull(validUpgradeTargets);
             return this;
         }
-
+        public Builder validUpgradeTargets(String... validUpgradeTargets) {
+            return validUpgradeTargets(List.of(validUpgradeTargets));
+        }
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder versionDescription(String versionDescription) {
             this.versionDescription = Objects.requireNonNull(versionDescription);
             return this;
-        }
-        public GetEngineVersionResult build() {
+        }        public GetEngineVersionResult build() {
             return new GetEngineVersionResult(engine, engineDescription, exportableLogTypes, id, parameterGroupFamily, preferredVersions, supportedTimezones, supportsLogExportsToCloudwatch, supportsReadReplica, validUpgradeTargets, version, versionDescription);
         }
     }

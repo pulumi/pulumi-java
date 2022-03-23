@@ -50,8 +50,7 @@ public final class GetServiceActionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetServiceActionArgs build() {
+        }        public GetServiceActionArgs build() {
             return new GetServiceActionArgs(id);
         }
     }

@@ -77,12 +77,10 @@ public final class AzureMLWebServiceFileResponse extends io.pulumi.resources.Inv
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
-        }
-        public AzureMLWebServiceFileResponse build() {
+        }        public AzureMLWebServiceFileResponse build() {
             return new AzureMLWebServiceFileResponse(filePath, linkedServiceName);
         }
     }

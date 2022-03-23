@@ -164,72 +164,61 @@ public final class HaVpnGatewayState extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder vpnInterfaces(@Nullable Output<List<HaVpnGatewayVpnInterfaceGetArgs>> vpnInterfaces) {
             this.vpnInterfaces = vpnInterfaces;
             return this;
         }
-
         public Builder vpnInterfaces(@Nullable List<HaVpnGatewayVpnInterfaceGetArgs> vpnInterfaces) {
             this.vpnInterfaces = Output.ofNullable(vpnInterfaces);
             return this;
         }
-        public HaVpnGatewayState build() {
+        public Builder vpnInterfaces(HaVpnGatewayVpnInterfaceGetArgs... vpnInterfaces) {
+            return vpnInterfaces(List.of(vpnInterfaces));
+        }        public HaVpnGatewayState build() {
             return new HaVpnGatewayState(description, name, network, project, region, selfLink, vpnInterfaces);
         }
     }

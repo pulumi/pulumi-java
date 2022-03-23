@@ -294,82 +294,75 @@ public final class GetIPAMPoolResult {
             this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
             return this;
         }
-
         public Builder allocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
             return this;
         }
-
         public Builder allocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = allocationMinNetmaskLength;
             return this;
         }
-
         public Builder allocationResourceTags(@Nullable List<IPAMPoolTag> allocationResourceTags) {
             this.allocationResourceTags = allocationResourceTags;
             return this;
         }
-
+        public Builder allocationResourceTags(IPAMPoolTag... allocationResourceTags) {
+            return allocationResourceTags(List.of(allocationResourceTags));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder autoImport(@Nullable Boolean autoImport) {
             this.autoImport = autoImport;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder ipamArn(@Nullable String ipamArn) {
             this.ipamArn = ipamArn;
             return this;
         }
-
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
-
         public Builder ipamScopeArn(@Nullable String ipamScopeArn) {
             this.ipamScopeArn = ipamScopeArn;
             return this;
         }
-
         public Builder ipamScopeType(@Nullable IPAMPoolIpamScopeType ipamScopeType) {
             this.ipamScopeType = ipamScopeType;
             return this;
         }
-
         public Builder poolDepth(@Nullable Integer poolDepth) {
             this.poolDepth = poolDepth;
             return this;
         }
-
         public Builder provisionedCidrs(@Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs) {
             this.provisionedCidrs = provisionedCidrs;
             return this;
         }
-
+        public Builder provisionedCidrs(IPAMPoolProvisionedCidr... provisionedCidrs) {
+            return provisionedCidrs(List.of(provisionedCidrs));
+        }
         public Builder state(@Nullable IPAMPoolState state) {
             this.state = state;
             return this;
         }
-
         public Builder stateMessage(@Nullable String stateMessage) {
             this.stateMessage = stateMessage;
             return this;
         }
-
         public Builder tags(@Nullable List<IPAMPoolTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetIPAMPoolResult build() {
+        public Builder tags(IPAMPoolTag... tags) {
+            return tags(List.of(tags));
+        }        public GetIPAMPoolResult build() {
             return new GetIPAMPoolResult(allocationDefaultNetmaskLength, allocationMaxNetmaskLength, allocationMinNetmaskLength, allocationResourceTags, arn, autoImport, description, ipamArn, ipamPoolId, ipamScopeArn, ipamScopeType, poolDepth, provisionedCidrs, state, stateMessage, tags);
         }
     }

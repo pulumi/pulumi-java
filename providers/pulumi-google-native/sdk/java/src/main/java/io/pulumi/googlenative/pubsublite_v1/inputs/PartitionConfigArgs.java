@@ -79,22 +79,18 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable CapacityArgs capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder count(@Nullable Output<String> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable String count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public PartitionConfigArgs build() {
+        }        public PartitionConfigArgs build() {
             return new PartitionConfigArgs(capacity, count);
         }
     }

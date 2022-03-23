@@ -87,17 +87,14 @@ public final class MobilityServiceUpdateResponse {
             this.osType = osType;
             return this;
         }
-
         public Builder rebootStatus(@Nullable String rebootStatus) {
             this.rebootStatus = rebootStatus;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public MobilityServiceUpdateResponse build() {
+        }        public MobilityServiceUpdateResponse build() {
             return new MobilityServiceUpdateResponse(osType, rebootStatus, version);
         }
     }

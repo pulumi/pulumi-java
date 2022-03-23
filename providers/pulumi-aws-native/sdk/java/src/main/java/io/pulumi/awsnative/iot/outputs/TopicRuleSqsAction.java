@@ -64,17 +64,14 @@ public final class TopicRuleSqsAction {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder useBase64(@Nullable Boolean useBase64) {
             this.useBase64 = useBase64;
             return this;
-        }
-        public TopicRuleSqsAction build() {
+        }        public TopicRuleSqsAction build() {
             return new TopicRuleSqsAction(queueUrl, roleArn, useBase64);
         }
     }

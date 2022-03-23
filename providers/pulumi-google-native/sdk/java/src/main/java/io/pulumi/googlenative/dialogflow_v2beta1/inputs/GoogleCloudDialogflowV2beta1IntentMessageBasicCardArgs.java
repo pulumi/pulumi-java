@@ -129,52 +129,45 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
             this.buttons = buttons;
             return this;
         }
-
         public Builder buttons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs> buttons) {
             this.buttons = Output.ofNullable(buttons);
             return this;
         }
-
+        public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder formattedText(@Nullable Output<String> formattedText) {
             this.formattedText = formattedText;
             return this;
         }
-
         public Builder formattedText(@Nullable String formattedText) {
             this.formattedText = Output.ofNullable(formattedText);
             return this;
         }
-
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs(buttons, formattedText, image, subtitle, title);
         }
     }

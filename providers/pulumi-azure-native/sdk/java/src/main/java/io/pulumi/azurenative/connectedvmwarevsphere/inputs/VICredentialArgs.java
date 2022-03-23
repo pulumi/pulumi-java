@@ -78,22 +78,18 @@ public final class VICredentialArgs extends io.pulumi.resources.ResourceArgs {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public VICredentialArgs build() {
+        }        public VICredentialArgs build() {
             return new VICredentialArgs(password, username);
         }
     }

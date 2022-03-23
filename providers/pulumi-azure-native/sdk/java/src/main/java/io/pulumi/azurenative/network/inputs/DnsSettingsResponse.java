@@ -96,17 +96,17 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.enableProxy = enableProxy;
             return this;
         }
-
         public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
             this.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
-
         public Builder servers(@Nullable List<String> servers) {
             this.servers = servers;
             return this;
         }
-        public DnsSettingsResponse build() {
+        public Builder servers(String... servers) {
+            return servers(List.of(servers));
+        }        public DnsSettingsResponse build() {
             return new DnsSettingsResponse(enableProxy, requireProxyForNetworkRules, servers);
         }
     }

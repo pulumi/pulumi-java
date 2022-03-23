@@ -88,17 +88,14 @@ public final class GetIdentityProviderArgs extends io.pulumi.resources.InvokeArg
             this.identityProviderName = Objects.requireNonNull(identityProviderName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetIdentityProviderArgs build() {
+        }        public GetIdentityProviderArgs build() {
             return new GetIdentityProviderArgs(identityProviderName, resourceGroupName, serviceName);
         }
     }

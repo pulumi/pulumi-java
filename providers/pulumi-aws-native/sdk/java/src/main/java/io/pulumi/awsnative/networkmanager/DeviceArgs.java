@@ -189,92 +189,77 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
-
         public Builder location(@Nullable Output<DeviceLocationArgs> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable DeviceLocationArgs location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder model(@Nullable Output<String> model) {
             this.model = model;
             return this;
         }
-
         public Builder model(@Nullable String model) {
             this.model = Output.ofNullable(model);
             return this;
         }
-
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = Output.ofNullable(serialNumber);
             return this;
         }
-
         public Builder siteId(@Nullable Output<String> siteId) {
             this.siteId = siteId;
             return this;
         }
-
         public Builder siteId(@Nullable String siteId) {
             this.siteId = Output.ofNullable(siteId);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DeviceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DeviceTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = Output.ofNullable(vendor);
             return this;
-        }
-        public DeviceArgs build() {
+        }        public DeviceArgs build() {
             return new DeviceArgs(description, globalNetworkId, location, model, serialNumber, siteId, tags, type, vendor);
         }
     }

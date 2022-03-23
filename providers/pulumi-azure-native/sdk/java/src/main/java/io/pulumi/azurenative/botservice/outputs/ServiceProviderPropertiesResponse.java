@@ -136,32 +136,29 @@ public final class ServiceProviderPropertiesResponse {
             this.devPortalUrl = Objects.requireNonNull(devPortalUrl);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder iconUrl(String iconUrl) {
             this.iconUrl = Objects.requireNonNull(iconUrl);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parameters(@Nullable List<ServiceProviderParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ServiceProviderParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder serviceProviderName(String serviceProviderName) {
             this.serviceProviderName = Objects.requireNonNull(serviceProviderName);
             return this;
-        }
-        public ServiceProviderPropertiesResponse build() {
+        }        public ServiceProviderPropertiesResponse build() {
             return new ServiceProviderPropertiesResponse(devPortalUrl, displayName, iconUrl, id, parameters, serviceProviderName);
         }
     }

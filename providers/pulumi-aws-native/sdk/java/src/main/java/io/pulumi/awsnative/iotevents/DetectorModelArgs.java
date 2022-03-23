@@ -158,72 +158,61 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             this.detectorModelDefinition = Objects.requireNonNull(detectorModelDefinition);
             return this;
         }
-
         public Builder detectorModelDefinition(DetectorModelDefinitionArgs detectorModelDefinition) {
             this.detectorModelDefinition = Output.of(Objects.requireNonNull(detectorModelDefinition));
             return this;
         }
-
         public Builder detectorModelDescription(@Nullable Output<String> detectorModelDescription) {
             this.detectorModelDescription = detectorModelDescription;
             return this;
         }
-
         public Builder detectorModelDescription(@Nullable String detectorModelDescription) {
             this.detectorModelDescription = Output.ofNullable(detectorModelDescription);
             return this;
         }
-
         public Builder detectorModelName(@Nullable Output<String> detectorModelName) {
             this.detectorModelName = detectorModelName;
             return this;
         }
-
         public Builder detectorModelName(@Nullable String detectorModelName) {
             this.detectorModelName = Output.ofNullable(detectorModelName);
             return this;
         }
-
         public Builder evaluationMethod(@Nullable Output<DetectorModelEvaluationMethod> evaluationMethod) {
             this.evaluationMethod = evaluationMethod;
             return this;
         }
-
         public Builder evaluationMethod(@Nullable DetectorModelEvaluationMethod evaluationMethod) {
             this.evaluationMethod = Output.ofNullable(evaluationMethod);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DetectorModelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorModelTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DetectorModelArgs build() {
+        public Builder tags(DetectorModelTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DetectorModelArgs build() {
             return new DetectorModelArgs(detectorModelDefinition, detectorModelDescription, detectorModelName, evaluationMethod, key, roleArn, tags);
         }
     }

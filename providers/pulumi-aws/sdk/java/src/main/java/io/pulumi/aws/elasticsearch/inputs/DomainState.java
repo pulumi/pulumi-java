@@ -383,207 +383,169 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public Builder advancedOptions(@Nullable Output<Map<String,String>> advancedOptions) {
             this.advancedOptions = advancedOptions;
             return this;
         }
-
         public Builder advancedOptions(@Nullable Map<String,String> advancedOptions) {
             this.advancedOptions = Output.ofNullable(advancedOptions);
             return this;
         }
-
         public Builder advancedSecurityOptions(@Nullable Output<DomainAdvancedSecurityOptionsGetArgs> advancedSecurityOptions) {
             this.advancedSecurityOptions = advancedSecurityOptions;
             return this;
         }
-
         public Builder advancedSecurityOptions(@Nullable DomainAdvancedSecurityOptionsGetArgs advancedSecurityOptions) {
             this.advancedSecurityOptions = Output.ofNullable(advancedSecurityOptions);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoTuneOptions(@Nullable Output<DomainAutoTuneOptionsGetArgs> autoTuneOptions) {
             this.autoTuneOptions = autoTuneOptions;
             return this;
         }
-
         public Builder autoTuneOptions(@Nullable DomainAutoTuneOptionsGetArgs autoTuneOptions) {
             this.autoTuneOptions = Output.ofNullable(autoTuneOptions);
             return this;
         }
-
         public Builder clusterConfig(@Nullable Output<DomainClusterConfigGetArgs> clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
-
         public Builder clusterConfig(@Nullable DomainClusterConfigGetArgs clusterConfig) {
             this.clusterConfig = Output.ofNullable(clusterConfig);
             return this;
         }
-
         public Builder cognitoOptions(@Nullable Output<DomainCognitoOptionsGetArgs> cognitoOptions) {
             this.cognitoOptions = cognitoOptions;
             return this;
         }
-
         public Builder cognitoOptions(@Nullable DomainCognitoOptionsGetArgs cognitoOptions) {
             this.cognitoOptions = Output.ofNullable(cognitoOptions);
             return this;
         }
-
         public Builder domainEndpointOptions(@Nullable Output<DomainDomainEndpointOptionsGetArgs> domainEndpointOptions) {
             this.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
-
         public Builder domainEndpointOptions(@Nullable DomainDomainEndpointOptionsGetArgs domainEndpointOptions) {
             this.domainEndpointOptions = Output.ofNullable(domainEndpointOptions);
             return this;
         }
-
         public Builder domainId(@Nullable Output<String> domainId) {
             this.domainId = domainId;
             return this;
         }
-
         public Builder domainId(@Nullable String domainId) {
             this.domainId = Output.ofNullable(domainId);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder ebsOptions(@Nullable Output<DomainEbsOptionsGetArgs> ebsOptions) {
             this.ebsOptions = ebsOptions;
             return this;
         }
-
         public Builder ebsOptions(@Nullable DomainEbsOptionsGetArgs ebsOptions) {
             this.ebsOptions = Output.ofNullable(ebsOptions);
             return this;
         }
-
         public Builder elasticsearchVersion(@Nullable Output<String> elasticsearchVersion) {
             this.elasticsearchVersion = elasticsearchVersion;
             return this;
         }
-
         public Builder elasticsearchVersion(@Nullable String elasticsearchVersion) {
             this.elasticsearchVersion = Output.ofNullable(elasticsearchVersion);
             return this;
         }
-
         public Builder encryptAtRest(@Nullable Output<DomainEncryptAtRestGetArgs> encryptAtRest) {
             this.encryptAtRest = encryptAtRest;
             return this;
         }
-
         public Builder encryptAtRest(@Nullable DomainEncryptAtRestGetArgs encryptAtRest) {
             this.encryptAtRest = Output.ofNullable(encryptAtRest);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder kibanaEndpoint(@Nullable Output<String> kibanaEndpoint) {
             this.kibanaEndpoint = kibanaEndpoint;
             return this;
         }
-
         public Builder kibanaEndpoint(@Nullable String kibanaEndpoint) {
             this.kibanaEndpoint = Output.ofNullable(kibanaEndpoint);
             return this;
         }
-
         public Builder logPublishingOptions(@Nullable Output<List<DomainLogPublishingOptionGetArgs>> logPublishingOptions) {
             this.logPublishingOptions = logPublishingOptions;
             return this;
         }
-
         public Builder logPublishingOptions(@Nullable List<DomainLogPublishingOptionGetArgs> logPublishingOptions) {
             this.logPublishingOptions = Output.ofNullable(logPublishingOptions);
             return this;
         }
-
+        public Builder logPublishingOptions(DomainLogPublishingOptionGetArgs... logPublishingOptions) {
+            return logPublishingOptions(List.of(logPublishingOptions));
+        }
         public Builder nodeToNodeEncryption(@Nullable Output<DomainNodeToNodeEncryptionGetArgs> nodeToNodeEncryption) {
             this.nodeToNodeEncryption = nodeToNodeEncryption;
             return this;
         }
-
         public Builder nodeToNodeEncryption(@Nullable DomainNodeToNodeEncryptionGetArgs nodeToNodeEncryption) {
             this.nodeToNodeEncryption = Output.ofNullable(nodeToNodeEncryption);
             return this;
         }
-
         public Builder snapshotOptions(@Nullable Output<DomainSnapshotOptionsGetArgs> snapshotOptions) {
             this.snapshotOptions = snapshotOptions;
             return this;
         }
-
         public Builder snapshotOptions(@Nullable DomainSnapshotOptionsGetArgs snapshotOptions) {
             this.snapshotOptions = Output.ofNullable(snapshotOptions);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcOptions(@Nullable Output<DomainVpcOptionsGetArgs> vpcOptions) {
             this.vpcOptions = vpcOptions;
             return this;
         }
-
         public Builder vpcOptions(@Nullable DomainVpcOptionsGetArgs vpcOptions) {
             this.vpcOptions = Output.ofNullable(vpcOptions);
             return this;
-        }
-        public DomainState build() {
+        }        public DomainState build() {
             return new DomainState(accessPolicies, advancedOptions, advancedSecurityOptions, arn, autoTuneOptions, clusterConfig, cognitoOptions, domainEndpointOptions, domainId, domainName, ebsOptions, elasticsearchVersion, encryptAtRest, endpoint, kibanaEndpoint, logPublishingOptions, nodeToNodeEncryption, snapshotOptions, tags, tagsAll, vpcOptions);
         }
     }

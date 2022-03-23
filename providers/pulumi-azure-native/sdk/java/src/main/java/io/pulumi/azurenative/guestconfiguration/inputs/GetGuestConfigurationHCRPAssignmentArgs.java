@@ -88,17 +88,14 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
             this.guestConfigurationAssignmentName = Objects.requireNonNull(guestConfigurationAssignmentName);
             return this;
         }
-
         public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGuestConfigurationHCRPAssignmentArgs build() {
+        }        public GetGuestConfigurationHCRPAssignmentArgs build() {
             return new GetGuestConfigurationHCRPAssignmentArgs(guestConfigurationAssignmentName, machineName, resourceGroupName);
         }
     }

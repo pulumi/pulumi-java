@@ -73,12 +73,13 @@ public final class VaultSecretGroupResponse {
             this.sourceVault = sourceVault;
             return this;
         }
-
         public Builder vaultCertificates(@Nullable List<VaultCertificateResponse> vaultCertificates) {
             this.vaultCertificates = vaultCertificates;
             return this;
         }
-        public VaultSecretGroupResponse build() {
+        public Builder vaultCertificates(VaultCertificateResponse... vaultCertificates) {
+            return vaultCertificates(List.of(vaultCertificates));
+        }        public VaultSecretGroupResponse build() {
             return new VaultSecretGroupResponse(sourceVault, vaultCertificates);
         }
     }

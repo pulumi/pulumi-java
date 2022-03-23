@@ -79,22 +79,21 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
             this.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
-
         public Builder customBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
             this.customBgpIpAddresses = Output.ofNullable(customBgpIpAddresses);
             return this;
         }
-
+        public Builder customBgpIpAddresses(String... customBgpIpAddresses) {
+            return customBgpIpAddresses(List.of(customBgpIpAddresses));
+        }
         public Builder ipconfigurationId(@Nullable Output<String> ipconfigurationId) {
             this.ipconfigurationId = ipconfigurationId;
             return this;
         }
-
         public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
             this.ipconfigurationId = Output.ofNullable(ipconfigurationId);
             return this;
-        }
-        public IPConfigurationBgpPeeringAddressArgs build() {
+        }        public IPConfigurationBgpPeeringAddressArgs build() {
             return new IPConfigurationBgpPeeringAddressArgs(customBgpIpAddresses, ipconfigurationId);
         }
     }

@@ -71,12 +71,10 @@ public final class SKUResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public SKUResponse build() {
+        }        public SKUResponse build() {
             return new SKUResponse(name, tier);
         }
     }

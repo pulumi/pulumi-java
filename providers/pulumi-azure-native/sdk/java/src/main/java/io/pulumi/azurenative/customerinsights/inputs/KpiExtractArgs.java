@@ -77,22 +77,18 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public Builder extractName(Output<String> extractName) {
             this.extractName = Objects.requireNonNull(extractName);
             return this;
         }
-
         public Builder extractName(String extractName) {
             this.extractName = Output.of(Objects.requireNonNull(extractName));
             return this;
-        }
-        public KpiExtractArgs build() {
+        }        public KpiExtractArgs build() {
             return new KpiExtractArgs(expression, extractName);
         }
     }

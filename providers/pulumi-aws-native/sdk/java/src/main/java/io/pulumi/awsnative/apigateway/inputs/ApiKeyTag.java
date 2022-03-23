@@ -72,12 +72,10 @@ public final class ApiKeyTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ApiKeyTag build() {
+        }        public ApiKeyTag build() {
             return new ApiKeyTag(key, value);
         }
     }

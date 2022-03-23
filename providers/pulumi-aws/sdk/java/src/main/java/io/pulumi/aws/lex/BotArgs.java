@@ -273,142 +273,117 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             this.abortStatement = Objects.requireNonNull(abortStatement);
             return this;
         }
-
         public Builder abortStatement(BotAbortStatementArgs abortStatement) {
             this.abortStatement = Output.of(Objects.requireNonNull(abortStatement));
             return this;
         }
-
         public Builder childDirected(Output<Boolean> childDirected) {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
-
         public Builder childDirected(Boolean childDirected) {
             this.childDirected = Output.of(Objects.requireNonNull(childDirected));
             return this;
         }
-
         public Builder clarificationPrompt(@Nullable Output<BotClarificationPromptArgs> clarificationPrompt) {
             this.clarificationPrompt = clarificationPrompt;
             return this;
         }
-
         public Builder clarificationPrompt(@Nullable BotClarificationPromptArgs clarificationPrompt) {
             this.clarificationPrompt = Output.ofNullable(clarificationPrompt);
             return this;
         }
-
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
-
         public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Output.ofNullable(createVersion);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder detectSentiment(@Nullable Output<Boolean> detectSentiment) {
             this.detectSentiment = detectSentiment;
             return this;
         }
-
         public Builder detectSentiment(@Nullable Boolean detectSentiment) {
             this.detectSentiment = Output.ofNullable(detectSentiment);
             return this;
         }
-
         public Builder enableModelImprovements(@Nullable Output<Boolean> enableModelImprovements) {
             this.enableModelImprovements = enableModelImprovements;
             return this;
         }
-
         public Builder enableModelImprovements(@Nullable Boolean enableModelImprovements) {
             this.enableModelImprovements = Output.ofNullable(enableModelImprovements);
             return this;
         }
-
         public Builder idleSessionTtlInSeconds(@Nullable Output<Integer> idleSessionTtlInSeconds) {
             this.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
             return this;
         }
-
         public Builder idleSessionTtlInSeconds(@Nullable Integer idleSessionTtlInSeconds) {
             this.idleSessionTtlInSeconds = Output.ofNullable(idleSessionTtlInSeconds);
             return this;
         }
-
         public Builder intents(Output<List<BotIntentArgs>> intents) {
             this.intents = Objects.requireNonNull(intents);
             return this;
         }
-
         public Builder intents(List<BotIntentArgs> intents) {
             this.intents = Output.of(Objects.requireNonNull(intents));
             return this;
         }
-
+        public Builder intents(BotIntentArgs... intents) {
+            return intents(List.of(intents));
+        }
         public Builder locale(@Nullable Output<String> locale) {
             this.locale = locale;
             return this;
         }
-
         public Builder locale(@Nullable String locale) {
             this.locale = Output.ofNullable(locale);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nluIntentConfidenceThreshold(@Nullable Output<Double> nluIntentConfidenceThreshold) {
             this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
             return this;
         }
-
         public Builder nluIntentConfidenceThreshold(@Nullable Double nluIntentConfidenceThreshold) {
             this.nluIntentConfidenceThreshold = Output.ofNullable(nluIntentConfidenceThreshold);
             return this;
         }
-
         public Builder processBehavior(@Nullable Output<String> processBehavior) {
             this.processBehavior = processBehavior;
             return this;
         }
-
         public Builder processBehavior(@Nullable String processBehavior) {
             this.processBehavior = Output.ofNullable(processBehavior);
             return this;
         }
-
         public Builder voiceId(@Nullable Output<String> voiceId) {
             this.voiceId = voiceId;
             return this;
         }
-
         public Builder voiceId(@Nullable String voiceId) {
             this.voiceId = Output.ofNullable(voiceId);
             return this;
-        }
-        public BotArgs build() {
+        }        public BotArgs build() {
             return new BotArgs(abortStatement, childDirected, clarificationPrompt, createVersion, description, detectSentiment, enableModelImprovements, idleSessionTtlInSeconds, intents, locale, name, nluIntentConfidenceThreshold, processBehavior, voiceId);
         }
     }

@@ -61,12 +61,10 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable LogLevel level) {
             this.level = Output.ofNullable(level);
             return this;
-        }
-        public FileSystemApplicationLogsConfigArgs build() {
+        }        public FileSystemApplicationLogsConfigArgs build() {
             return new FileSystemApplicationLogsConfigArgs(level);
         }
     }

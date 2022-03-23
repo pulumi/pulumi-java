@@ -124,52 +124,45 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
             return this;
         }
-
         public Builder packagingGroupId(String packagingGroupId) {
             this.packagingGroupId = Output.of(Objects.requireNonNull(packagingGroupId));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder sourceArn(Output<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
-
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = Output.of(Objects.requireNonNull(sourceArn));
             return this;
         }
-
         public Builder sourceRoleArn(Output<String> sourceRoleArn) {
             this.sourceRoleArn = Objects.requireNonNull(sourceRoleArn);
             return this;
         }
-
         public Builder sourceRoleArn(String sourceRoleArn) {
             this.sourceRoleArn = Output.of(Objects.requireNonNull(sourceRoleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AssetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AssetArgs build() {
+        public Builder tags(AssetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AssetArgs build() {
             return new AssetArgs(packagingGroupId, resourceId, sourceArn, sourceRoleArn, tags);
         }
     }

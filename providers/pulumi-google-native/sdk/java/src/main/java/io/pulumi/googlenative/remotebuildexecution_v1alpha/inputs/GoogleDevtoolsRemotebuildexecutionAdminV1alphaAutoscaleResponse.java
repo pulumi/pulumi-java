@@ -76,12 +76,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
-
         public Builder minSize(String minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
-        }
-        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse build() {
+        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(maxSize, minSize);
         }
     }

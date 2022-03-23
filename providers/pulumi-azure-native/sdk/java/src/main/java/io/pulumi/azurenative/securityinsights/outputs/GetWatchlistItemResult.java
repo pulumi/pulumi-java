@@ -283,77 +283,62 @@ public final class GetWatchlistItemResult {
             this.created = created;
             return this;
         }
-
         public Builder createdBy(@Nullable WatchlistUserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder entityMapping(@Nullable Object entityMapping) {
             this.entityMapping = entityMapping;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isDeleted(@Nullable Boolean isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
-
         public Builder itemsKeyValue(Object itemsKeyValue) {
             this.itemsKeyValue = Objects.requireNonNull(itemsKeyValue);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updated(@Nullable String updated) {
             this.updated = updated;
             return this;
         }
-
         public Builder updatedBy(@Nullable WatchlistUserInfoResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public Builder watchlistItemId(@Nullable String watchlistItemId) {
             this.watchlistItemId = watchlistItemId;
             return this;
         }
-
         public Builder watchlistItemType(@Nullable String watchlistItemType) {
             this.watchlistItemType = watchlistItemType;
             return this;
-        }
-        public GetWatchlistItemResult build() {
+        }        public GetWatchlistItemResult build() {
             return new GetWatchlistItemResult(created, createdBy, entityMapping, etag, id, isDeleted, itemsKeyValue, name, systemData, tenantId, type, updated, updatedBy, watchlistItemId, watchlistItemType);
         }
     }

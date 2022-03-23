@@ -158,37 +158,30 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
-
         public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder dataType(String dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder length(Integer length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
-
         public Builder nullable(Boolean nullable) {
             this.nullable = Objects.requireNonNull(nullable);
             return this;
         }
-
         public Builder ordinalPosition(Integer ordinalPosition) {
             this.ordinalPosition = Objects.requireNonNull(ordinalPosition);
             return this;
         }
-
         public Builder primaryKey(Boolean primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
-        }
-        public MysqlColumnResponse build() {
+        }        public MysqlColumnResponse build() {
             return new MysqlColumnResponse(collation, column, dataType, length, nullable, ordinalPosition, primaryKey);
         }
     }

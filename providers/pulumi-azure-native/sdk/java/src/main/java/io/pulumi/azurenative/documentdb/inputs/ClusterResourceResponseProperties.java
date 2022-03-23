@@ -259,67 +259,69 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
             this.authenticationMethod = authenticationMethod;
             return this;
         }
-
         public Builder cassandraVersion(@Nullable String cassandraVersion) {
             this.cassandraVersion = cassandraVersion;
             return this;
         }
-
         public Builder clientCertificates(@Nullable List<CertificateResponse> clientCertificates) {
             this.clientCertificates = clientCertificates;
             return this;
         }
-
+        public Builder clientCertificates(CertificateResponse... clientCertificates) {
+            return clientCertificates(List.of(clientCertificates));
+        }
         public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
             this.clusterNameOverride = clusterNameOverride;
             return this;
         }
-
         public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
             this.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
-
         public Builder externalGossipCertificates(@Nullable List<CertificateResponse> externalGossipCertificates) {
             this.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
-
+        public Builder externalGossipCertificates(CertificateResponse... externalGossipCertificates) {
+            return externalGossipCertificates(List.of(externalGossipCertificates));
+        }
         public Builder externalSeedNodes(@Nullable List<SeedNodeResponse> externalSeedNodes) {
             this.externalSeedNodes = externalSeedNodes;
             return this;
         }
-
+        public Builder externalSeedNodes(SeedNodeResponse... externalSeedNodes) {
+            return externalSeedNodes(List.of(externalSeedNodes));
+        }
         public Builder gossipCertificates(List<CertificateResponse> gossipCertificates) {
             this.gossipCertificates = Objects.requireNonNull(gossipCertificates);
             return this;
         }
-
+        public Builder gossipCertificates(CertificateResponse... gossipCertificates) {
+            return gossipCertificates(List.of(gossipCertificates));
+        }
         public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
             this.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
-
         public Builder prometheusEndpoint(@Nullable SeedNodeResponse prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder repairEnabled(@Nullable Boolean repairEnabled) {
             this.repairEnabled = repairEnabled;
             return this;
         }
-
         public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }
-        public ClusterResourceResponseProperties build() {
+        public Builder seedNodes(SeedNodeResponse... seedNodes) {
+            return seedNodes(List.of(seedNodes));
+        }        public ClusterResourceResponseProperties build() {
             return new ClusterResourceResponseProperties(authenticationMethod, cassandraVersion, clientCertificates, clusterNameOverride, delegatedManagementSubnetId, externalGossipCertificates, externalSeedNodes, gossipCertificates, hoursBetweenBackups, prometheusEndpoint, provisioningState, repairEnabled, seedNodes);
         }
     }

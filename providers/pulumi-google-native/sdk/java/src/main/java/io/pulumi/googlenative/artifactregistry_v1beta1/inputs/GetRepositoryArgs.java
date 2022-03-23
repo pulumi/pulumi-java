@@ -78,17 +78,14 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder repositoryId(String repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
-        }
-        public GetRepositoryArgs build() {
+        }        public GetRepositoryArgs build() {
             return new GetRepositoryArgs(location, project, repositoryId);
         }
     }

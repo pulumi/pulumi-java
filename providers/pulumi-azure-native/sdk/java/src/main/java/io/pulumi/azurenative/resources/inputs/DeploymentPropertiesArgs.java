@@ -180,82 +180,66 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             this.debugSetting = debugSetting;
             return this;
         }
-
         public Builder debugSetting(@Nullable DebugSettingArgs debugSetting) {
             this.debugSetting = Output.ofNullable(debugSetting);
             return this;
         }
-
         public Builder expressionEvaluationOptions(@Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
             this.expressionEvaluationOptions = expressionEvaluationOptions;
             return this;
         }
-
         public Builder expressionEvaluationOptions(@Nullable ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
             this.expressionEvaluationOptions = Output.ofNullable(expressionEvaluationOptions);
             return this;
         }
-
         public Builder mode(Output<DeploymentMode> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(DeploymentMode mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public Builder onErrorDeployment(@Nullable Output<OnErrorDeploymentArgs> onErrorDeployment) {
             this.onErrorDeployment = onErrorDeployment;
             return this;
         }
-
         public Builder onErrorDeployment(@Nullable OnErrorDeploymentArgs onErrorDeployment) {
             this.onErrorDeployment = Output.ofNullable(onErrorDeployment);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder parametersLink(@Nullable Output<ParametersLinkArgs> parametersLink) {
             this.parametersLink = parametersLink;
             return this;
         }
-
         public Builder parametersLink(@Nullable ParametersLinkArgs parametersLink) {
             this.parametersLink = Output.ofNullable(parametersLink);
             return this;
         }
-
         public Builder template(@Nullable Output<Object> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable Object template) {
             this.template = Output.ofNullable(template);
             return this;
         }
-
         public Builder templateLink(@Nullable Output<TemplateLinkArgs> templateLink) {
             this.templateLink = templateLink;
             return this;
         }
-
         public Builder templateLink(@Nullable TemplateLinkArgs templateLink) {
             this.templateLink = Output.ofNullable(templateLink);
             return this;
-        }
-        public DeploymentPropertiesArgs build() {
+        }        public DeploymentPropertiesArgs build() {
             return new DeploymentPropertiesArgs(debugSetting, expressionEvaluationOptions, mode, onErrorDeployment, parameters, parametersLink, template, templateLink);
         }
     }

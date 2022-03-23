@@ -161,72 +161,58 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             this.applicationReadable = applicationReadable;
             return this;
         }
-
         public Builder applicationReadable(@Nullable Boolean applicationReadable) {
             this.applicationReadable = Output.ofNullable(applicationReadable);
             return this;
         }
-
         public Builder expiration(@Nullable Output<String> expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder expiration(@Nullable String expiration) {
             this.expiration = Output.ofNullable(expiration);
             return this;
         }
-
         public Builder httpHeaders(@Nullable Output<Map<String,String>> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
-
         public Builder httpHeaders(@Nullable Map<String,String> httpHeaders) {
             this.httpHeaders = Output.ofNullable(httpHeaders);
             return this;
         }
-
         public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
-
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = Output.ofNullable(mimeType);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder requireMatchingFile(@Nullable Output<Boolean> requireMatchingFile) {
             this.requireMatchingFile = requireMatchingFile;
             return this;
         }
-
         public Builder requireMatchingFile(@Nullable Boolean requireMatchingFile) {
             this.requireMatchingFile = Output.ofNullable(requireMatchingFile);
             return this;
         }
-
         public Builder uploadPathRegex(@Nullable Output<String> uploadPathRegex) {
             this.uploadPathRegex = uploadPathRegex;
             return this;
         }
-
         public Builder uploadPathRegex(@Nullable String uploadPathRegex) {
             this.uploadPathRegex = Output.ofNullable(uploadPathRegex);
             return this;
-        }
-        public StandardAppVersionHandlerStaticFilesArgs build() {
+        }        public StandardAppVersionHandlerStaticFilesArgs build() {
             return new StandardAppVersionHandlerStaticFilesArgs(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
         }
     }

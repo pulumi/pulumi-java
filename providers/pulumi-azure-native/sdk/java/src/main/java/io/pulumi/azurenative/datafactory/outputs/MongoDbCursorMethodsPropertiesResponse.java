@@ -103,22 +103,18 @@ public final class MongoDbCursorMethodsPropertiesResponse {
             this.limit = limit;
             return this;
         }
-
         public Builder project(@Nullable Object project) {
             this.project = project;
             return this;
         }
-
         public Builder skip(@Nullable Object skip) {
             this.skip = skip;
             return this;
         }
-
         public Builder sort(@Nullable Object sort) {
             this.sort = sort;
             return this;
-        }
-        public MongoDbCursorMethodsPropertiesResponse build() {
+        }        public MongoDbCursorMethodsPropertiesResponse build() {
             return new MongoDbCursorMethodsPropertiesResponse(limit, project, skip, sort);
         }
     }

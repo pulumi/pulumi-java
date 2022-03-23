@@ -77,17 +77,14 @@ public final class GetInstanceTypeInferenceAccelerator extends io.pulumi.resourc
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetInstanceTypeInferenceAccelerator build() {
+        }        public GetInstanceTypeInferenceAccelerator build() {
             return new GetInstanceTypeInferenceAccelerator(count, manufacturer, name);
         }
     }

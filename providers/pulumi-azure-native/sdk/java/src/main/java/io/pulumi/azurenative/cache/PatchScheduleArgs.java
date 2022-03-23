@@ -108,42 +108,37 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.$default = $default;
             return this;
         }
-
         public Builder $default(@Nullable String $default) {
             this.$default = Output.ofNullable($default);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scheduleEntries(Output<List<ScheduleEntryArgs>> scheduleEntries) {
             this.scheduleEntries = Objects.requireNonNull(scheduleEntries);
             return this;
         }
-
         public Builder scheduleEntries(List<ScheduleEntryArgs> scheduleEntries) {
             this.scheduleEntries = Output.of(Objects.requireNonNull(scheduleEntries));
             return this;
         }
-        public PatchScheduleArgs build() {
+        public Builder scheduleEntries(ScheduleEntryArgs... scheduleEntries) {
+            return scheduleEntries(List.of(scheduleEntries));
+        }        public PatchScheduleArgs build() {
             return new PatchScheduleArgs($default, name, resourceGroupName, scheduleEntries);
         }
     }

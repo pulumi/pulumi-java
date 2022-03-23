@@ -71,22 +71,24 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
             this.aCCOUNT = aCCOUNT;
             return this;
         }
-
         public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
             this.aCCOUNT = Output.ofNullable(aCCOUNT);
             return this;
         }
-
+        public Builder aCCOUNT(String... aCCOUNT) {
+            return aCCOUNT(List.of(aCCOUNT));
+        }
         public Builder oRGUNIT(@Nullable Output<List<String>> oRGUNIT) {
             this.oRGUNIT = oRGUNIT;
             return this;
         }
-
         public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
             this.oRGUNIT = Output.ofNullable(oRGUNIT);
             return this;
         }
-        public PolicyIEMapArgs build() {
+        public Builder oRGUNIT(String... oRGUNIT) {
+            return oRGUNIT(List.of(oRGUNIT));
+        }        public PolicyIEMapArgs build() {
             return new PolicyIEMapArgs(aCCOUNT, oRGUNIT);
         }
     }

@@ -202,52 +202,45 @@ public final class GetMessageResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder messageType(String messageType) {
             this.messageType = Objects.requireNonNull(messageType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parsedData(ParsedDataResponse parsedData) {
             this.parsedData = Objects.requireNonNull(parsedData);
             return this;
         }
-
         public Builder patientIds(List<PatientIdResponse> patientIds) {
             this.patientIds = Objects.requireNonNull(patientIds);
             return this;
         }
-
+        public Builder patientIds(PatientIdResponse... patientIds) {
+            return patientIds(List.of(patientIds));
+        }
         public Builder schematizedData(SchematizedDataResponse schematizedData) {
             this.schematizedData = Objects.requireNonNull(schematizedData);
             return this;
         }
-
         public Builder sendFacility(String sendFacility) {
             this.sendFacility = Objects.requireNonNull(sendFacility);
             return this;
         }
-
         public Builder sendTime(String sendTime) {
             this.sendTime = Objects.requireNonNull(sendTime);
             return this;
-        }
-        public GetMessageResult build() {
+        }        public GetMessageResult build() {
             return new GetMessageResult(createTime, data, labels, messageType, name, parsedData, patientIds, schematizedData, sendFacility, sendTime);
         }
     }

@@ -221,112 +221,90 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
-
         public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Output.of(Objects.requireNonNull(availabilityZoneId));
             return this;
         }
-
         public Builder dedicatedCloudNodeName(@Nullable Output<String> dedicatedCloudNodeName) {
             this.dedicatedCloudNodeName = dedicatedCloudNodeName;
             return this;
         }
-
         public Builder dedicatedCloudNodeName(@Nullable String dedicatedCloudNodeName) {
             this.dedicatedCloudNodeName = Output.ofNullable(dedicatedCloudNodeName);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder nodesCount(Output<Integer> nodesCount) {
             this.nodesCount = Objects.requireNonNull(nodesCount);
             return this;
         }
-
         public Builder nodesCount(Integer nodesCount) {
             this.nodesCount = Output.of(Objects.requireNonNull(nodesCount));
             return this;
         }
-
         public Builder placementGroupId(Output<String> placementGroupId) {
             this.placementGroupId = Objects.requireNonNull(placementGroupId);
             return this;
         }
-
         public Builder placementGroupId(String placementGroupId) {
             this.placementGroupId = Output.of(Objects.requireNonNull(placementGroupId));
             return this;
         }
-
         public Builder purchaseId(Output<String> purchaseId) {
             this.purchaseId = Objects.requireNonNull(purchaseId);
             return this;
         }
-
         public Builder purchaseId(String purchaseId) {
             this.purchaseId = Output.of(Objects.requireNonNull(purchaseId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DedicatedCloudNodeArgs build() {
+        }        public DedicatedCloudNodeArgs build() {
             return new DedicatedCloudNodeArgs(availabilityZoneId, dedicatedCloudNodeName, id, location, name, nodesCount, placementGroupId, purchaseId, resourceGroupName, sku, tags);
         }
     }

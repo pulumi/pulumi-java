@@ -53,12 +53,10 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public ResourceTypeRegistrationArgs build() {
+        }        public ResourceTypeRegistrationArgs build() {
             return new ResourceTypeRegistrationArgs(properties);
         }
     }

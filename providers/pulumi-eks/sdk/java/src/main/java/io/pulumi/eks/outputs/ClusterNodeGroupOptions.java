@@ -535,132 +535,112 @@ public final class ClusterNodeGroupOptions {
             this.amiId = amiId;
             return this;
         }
-
         public Builder autoScalingGroupTags(@Nullable Map<String,String> autoScalingGroupTags) {
             this.autoScalingGroupTags = autoScalingGroupTags;
             return this;
         }
-
         public Builder bootstrapExtraArgs(@Nullable String bootstrapExtraArgs) {
             this.bootstrapExtraArgs = bootstrapExtraArgs;
             return this;
         }
-
         public Builder cloudFormationTags(@Nullable Map<String,String> cloudFormationTags) {
             this.cloudFormationTags = cloudFormationTags;
             return this;
         }
-
         public Builder clusterIngressRule(@Nullable SecurityGroupRule clusterIngressRule) {
             this.clusterIngressRule = clusterIngressRule;
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
-
         public Builder encryptRootBlockDevice(@Nullable Boolean encryptRootBlockDevice) {
             this.encryptRootBlockDevice = encryptRootBlockDevice;
             return this;
         }
-
         public Builder extraNodeSecurityGroups(@Nullable List<SecurityGroup> extraNodeSecurityGroups) {
             this.extraNodeSecurityGroups = extraNodeSecurityGroups;
             return this;
         }
-
+        public Builder extraNodeSecurityGroups(SecurityGroup... extraNodeSecurityGroups) {
+            return extraNodeSecurityGroups(List.of(extraNodeSecurityGroups));
+        }
         public Builder gpu(@Nullable Boolean gpu) {
             this.gpu = gpu;
             return this;
         }
-
         public Builder instanceProfile(@Nullable InstanceProfile instanceProfile) {
             this.instanceProfile = instanceProfile;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder kubeletExtraArgs(@Nullable String kubeletExtraArgs) {
             this.kubeletExtraArgs = kubeletExtraArgs;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder nodeAssociatePublicIpAddress(@Nullable Boolean nodeAssociatePublicIpAddress) {
             this.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
             return this;
         }
-
         public Builder nodePublicKey(@Nullable String nodePublicKey) {
             this.nodePublicKey = nodePublicKey;
             return this;
         }
-
         public Builder nodeRootVolumeSize(@Nullable Integer nodeRootVolumeSize) {
             this.nodeRootVolumeSize = nodeRootVolumeSize;
             return this;
         }
-
         public Builder nodeSecurityGroup(@Nullable SecurityGroup nodeSecurityGroup) {
             this.nodeSecurityGroup = nodeSecurityGroup;
             return this;
         }
-
         public Builder nodeSubnetIds(@Nullable List<String> nodeSubnetIds) {
             this.nodeSubnetIds = nodeSubnetIds;
             return this;
         }
-
+        public Builder nodeSubnetIds(String... nodeSubnetIds) {
+            return nodeSubnetIds(List.of(nodeSubnetIds));
+        }
         public Builder nodeUserData(@Nullable String nodeUserData) {
             this.nodeUserData = nodeUserData;
             return this;
         }
-
         public Builder nodeUserDataOverride(@Nullable String nodeUserDataOverride) {
             this.nodeUserDataOverride = nodeUserDataOverride;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder taints(@Nullable Map<String,Taint> taints) {
             this.taints = taints;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ClusterNodeGroupOptions build() {
+        }        public ClusterNodeGroupOptions build() {
             return new ClusterNodeGroupOptions(amiId, autoScalingGroupTags, bootstrapExtraArgs, cloudFormationTags, clusterIngressRule, desiredCapacity, encryptRootBlockDevice, extraNodeSecurityGroups, gpu, instanceProfile, instanceType, keyName, kubeletExtraArgs, labels, maxSize, minSize, nodeAssociatePublicIpAddress, nodePublicKey, nodeRootVolumeSize, nodeSecurityGroup, nodeSubnetIds, nodeUserData, nodeUserDataOverride, spotPrice, taints, version);
         }
     }

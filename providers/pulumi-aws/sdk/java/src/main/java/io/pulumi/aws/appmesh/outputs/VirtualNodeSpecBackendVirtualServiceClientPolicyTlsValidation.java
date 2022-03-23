@@ -72,12 +72,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder trust(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation(subjectAlternativeNames, trust);
         }
     }

@@ -145,72 +145,58 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
             this.basicAlgorithm = basicAlgorithm;
             return this;
         }
-
         public Builder basicAlgorithm(@Nullable BasicAutoscalingAlgorithmArgs basicAlgorithm) {
             this.basicAlgorithm = Output.ofNullable(basicAlgorithm);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder secondaryWorkerConfig(@Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
-
         public Builder secondaryWorkerConfig(@Nullable InstanceGroupAutoscalingPolicyConfigArgs secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Output.ofNullable(secondaryWorkerConfig);
             return this;
         }
-
         public Builder workerConfig(Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public Builder workerConfig(InstanceGroupAutoscalingPolicyConfigArgs workerConfig) {
             this.workerConfig = Output.of(Objects.requireNonNull(workerConfig));
             return this;
-        }
-        public AutoscalingPolicyArgs build() {
+        }        public AutoscalingPolicyArgs build() {
             return new AutoscalingPolicyArgs(basicAlgorithm, id, labels, location, project, secondaryWorkerConfig, workerConfig);
         }
     }

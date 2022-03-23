@@ -69,12 +69,10 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
             this.profileId = Objects.requireNonNull(profileId);
             return this;
         }
-
         public Builder queryArg(String queryArg) {
             this.queryArg = Objects.requireNonNull(queryArg);
             return this;
-        }
-        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem build() {
+        }        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem build() {
             return new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem(profileId, queryArg);
         }
     }

@@ -70,12 +70,10 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
-        }
-        public GoogleCloudDialogflowV2DocumentReloadStatusResponse build() {
+        }        public GoogleCloudDialogflowV2DocumentReloadStatusResponse build() {
             return new GoogleCloudDialogflowV2DocumentReloadStatusResponse(status, time);
         }
     }

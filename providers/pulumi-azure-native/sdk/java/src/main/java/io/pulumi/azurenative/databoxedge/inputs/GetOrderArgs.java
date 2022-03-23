@@ -72,12 +72,10 @@ public final class GetOrderArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetOrderArgs build() {
+        }        public GetOrderArgs build() {
             return new GetOrderArgs(deviceName, resourceGroupName);
         }
     }

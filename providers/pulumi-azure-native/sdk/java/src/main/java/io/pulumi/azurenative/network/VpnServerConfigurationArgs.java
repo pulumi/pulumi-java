@@ -326,172 +326,162 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
             this.aadAuthenticationParameters = aadAuthenticationParameters;
             return this;
         }
-
         public Builder aadAuthenticationParameters(@Nullable AadAuthenticationParametersArgs aadAuthenticationParameters) {
             this.aadAuthenticationParameters = Output.ofNullable(aadAuthenticationParameters);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder radiusClientRootCertificates(@Nullable Output<List<VpnServerConfigRadiusClientRootCertificateArgs>> radiusClientRootCertificates) {
             this.radiusClientRootCertificates = radiusClientRootCertificates;
             return this;
         }
-
         public Builder radiusClientRootCertificates(@Nullable List<VpnServerConfigRadiusClientRootCertificateArgs> radiusClientRootCertificates) {
             this.radiusClientRootCertificates = Output.ofNullable(radiusClientRootCertificates);
             return this;
         }
-
+        public Builder radiusClientRootCertificates(VpnServerConfigRadiusClientRootCertificateArgs... radiusClientRootCertificates) {
+            return radiusClientRootCertificates(List.of(radiusClientRootCertificates));
+        }
         public Builder radiusServerAddress(@Nullable Output<String> radiusServerAddress) {
             this.radiusServerAddress = radiusServerAddress;
             return this;
         }
-
         public Builder radiusServerAddress(@Nullable String radiusServerAddress) {
             this.radiusServerAddress = Output.ofNullable(radiusServerAddress);
             return this;
         }
-
         public Builder radiusServerRootCertificates(@Nullable Output<List<VpnServerConfigRadiusServerRootCertificateArgs>> radiusServerRootCertificates) {
             this.radiusServerRootCertificates = radiusServerRootCertificates;
             return this;
         }
-
         public Builder radiusServerRootCertificates(@Nullable List<VpnServerConfigRadiusServerRootCertificateArgs> radiusServerRootCertificates) {
             this.radiusServerRootCertificates = Output.ofNullable(radiusServerRootCertificates);
             return this;
         }
-
+        public Builder radiusServerRootCertificates(VpnServerConfigRadiusServerRootCertificateArgs... radiusServerRootCertificates) {
+            return radiusServerRootCertificates(List.of(radiusServerRootCertificates));
+        }
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
-
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             this.radiusServerSecret = Output.ofNullable(radiusServerSecret);
             return this;
         }
-
         public Builder radiusServers(@Nullable Output<List<RadiusServerArgs>> radiusServers) {
             this.radiusServers = radiusServers;
             return this;
         }
-
         public Builder radiusServers(@Nullable List<RadiusServerArgs> radiusServers) {
             this.radiusServers = Output.ofNullable(radiusServers);
             return this;
         }
-
+        public Builder radiusServers(RadiusServerArgs... radiusServers) {
+            return radiusServers(List.of(radiusServers));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpnAuthenticationTypes(@Nullable Output<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes) {
             this.vpnAuthenticationTypes = vpnAuthenticationTypes;
             return this;
         }
-
         public Builder vpnAuthenticationTypes(@Nullable List<Either<String,VpnAuthenticationType>> vpnAuthenticationTypes) {
             this.vpnAuthenticationTypes = Output.ofNullable(vpnAuthenticationTypes);
             return this;
         }
-
+        public Builder vpnAuthenticationTypes(Either<String,VpnAuthenticationType>... vpnAuthenticationTypes) {
+            return vpnAuthenticationTypes(List.of(vpnAuthenticationTypes));
+        }
         public Builder vpnClientIpsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies) {
             this.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
             return this;
         }
-
         public Builder vpnClientIpsecPolicies(@Nullable List<IpsecPolicyArgs> vpnClientIpsecPolicies) {
             this.vpnClientIpsecPolicies = Output.ofNullable(vpnClientIpsecPolicies);
             return this;
         }
-
+        public Builder vpnClientIpsecPolicies(IpsecPolicyArgs... vpnClientIpsecPolicies) {
+            return vpnClientIpsecPolicies(List.of(vpnClientIpsecPolicies));
+        }
         public Builder vpnClientRevokedCertificates(@Nullable Output<List<VpnServerConfigVpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates) {
             this.vpnClientRevokedCertificates = vpnClientRevokedCertificates;
             return this;
         }
-
         public Builder vpnClientRevokedCertificates(@Nullable List<VpnServerConfigVpnClientRevokedCertificateArgs> vpnClientRevokedCertificates) {
             this.vpnClientRevokedCertificates = Output.ofNullable(vpnClientRevokedCertificates);
             return this;
         }
-
+        public Builder vpnClientRevokedCertificates(VpnServerConfigVpnClientRevokedCertificateArgs... vpnClientRevokedCertificates) {
+            return vpnClientRevokedCertificates(List.of(vpnClientRevokedCertificates));
+        }
         public Builder vpnClientRootCertificates(@Nullable Output<List<VpnServerConfigVpnClientRootCertificateArgs>> vpnClientRootCertificates) {
             this.vpnClientRootCertificates = vpnClientRootCertificates;
             return this;
         }
-
         public Builder vpnClientRootCertificates(@Nullable List<VpnServerConfigVpnClientRootCertificateArgs> vpnClientRootCertificates) {
             this.vpnClientRootCertificates = Output.ofNullable(vpnClientRootCertificates);
             return this;
         }
-
+        public Builder vpnClientRootCertificates(VpnServerConfigVpnClientRootCertificateArgs... vpnClientRootCertificates) {
+            return vpnClientRootCertificates(List.of(vpnClientRootCertificates));
+        }
         public Builder vpnProtocols(@Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols) {
             this.vpnProtocols = vpnProtocols;
             return this;
         }
-
         public Builder vpnProtocols(@Nullable List<Either<String,VpnGatewayTunnelingProtocol>> vpnProtocols) {
             this.vpnProtocols = Output.ofNullable(vpnProtocols);
             return this;
         }
-
+        public Builder vpnProtocols(Either<String,VpnGatewayTunnelingProtocol>... vpnProtocols) {
+            return vpnProtocols(List.of(vpnProtocols));
+        }
         public Builder vpnServerConfigurationName(@Nullable Output<String> vpnServerConfigurationName) {
             this.vpnServerConfigurationName = vpnServerConfigurationName;
             return this;
         }
-
         public Builder vpnServerConfigurationName(@Nullable String vpnServerConfigurationName) {
             this.vpnServerConfigurationName = Output.ofNullable(vpnServerConfigurationName);
             return this;
-        }
-        public VpnServerConfigurationArgs build() {
+        }        public VpnServerConfigurationArgs build() {
             return new VpnServerConfigurationArgs(aadAuthenticationParameters, id, location, name, radiusClientRootCertificates, radiusServerAddress, radiusServerRootCertificates, radiusServerSecret, radiusServers, resourceGroupName, tags, vpnAuthenticationTypes, vpnClientIpsecPolicies, vpnClientRevokedCertificates, vpnClientRootCertificates, vpnProtocols, vpnServerConfigurationName);
         }
     }

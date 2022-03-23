@@ -93,32 +93,35 @@ public final class EventConnectionAuthParametersInvocationHttpParametersGetArgs 
             this.bodies = bodies;
             return this;
         }
-
         public Builder bodies(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersBodyGetArgs> bodies) {
             this.bodies = Output.ofNullable(bodies);
             return this;
         }
-
+        public Builder bodies(EventConnectionAuthParametersInvocationHttpParametersBodyGetArgs... bodies) {
+            return bodies(List.of(bodies));
+        }
         public Builder headers(@Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderGetArgs>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeaderGetArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(EventConnectionAuthParametersInvocationHttpParametersHeaderGetArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryStrings(@Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringGetArgs>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public Builder queryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryStringGetArgs> queryStrings) {
             this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
-        public EventConnectionAuthParametersInvocationHttpParametersGetArgs build() {
+        public Builder queryStrings(EventConnectionAuthParametersInvocationHttpParametersQueryStringGetArgs... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public EventConnectionAuthParametersInvocationHttpParametersGetArgs build() {
             return new EventConnectionAuthParametersInvocationHttpParametersGetArgs(bodies, headers, queryStrings);
         }
     }

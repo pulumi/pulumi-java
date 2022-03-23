@@ -79,22 +79,18 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ignoreMissingVNetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint) {
             this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
         }
-
         public Builder ignoreMissingVNetServiceEndpoint(@Nullable Boolean ignoreMissingVNetServiceEndpoint) {
             this.ignoreMissingVNetServiceEndpoint = Output.ofNullable(ignoreMissingVNetServiceEndpoint);
             return this;
-        }
-        public VirtualNetworkRuleArgs build() {
+        }        public VirtualNetworkRuleArgs build() {
             return new VirtualNetworkRuleArgs(id, ignoreMissingVNetServiceEndpoint);
         }
     }

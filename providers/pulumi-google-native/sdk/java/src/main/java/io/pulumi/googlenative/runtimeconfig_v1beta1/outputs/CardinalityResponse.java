@@ -70,12 +70,10 @@ public final class CardinalityResponse {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public CardinalityResponse build() {
+        }        public CardinalityResponse build() {
             return new CardinalityResponse(number, path);
         }
     }

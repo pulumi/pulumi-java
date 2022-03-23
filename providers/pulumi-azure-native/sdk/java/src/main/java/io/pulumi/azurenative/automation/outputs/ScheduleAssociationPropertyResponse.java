@@ -53,8 +53,7 @@ public final class ScheduleAssociationPropertyResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ScheduleAssociationPropertyResponse build() {
+        }        public ScheduleAssociationPropertyResponse build() {
             return new ScheduleAssociationPropertyResponse(name);
         }
     }

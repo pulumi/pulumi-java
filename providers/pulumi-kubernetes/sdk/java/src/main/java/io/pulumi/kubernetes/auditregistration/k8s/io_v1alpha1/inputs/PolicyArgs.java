@@ -79,22 +79,21 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder level(String level) {
             this.level = Output.of(Objects.requireNonNull(level));
             return this;
         }
-
         public Builder stages(@Nullable Output<List<String>> stages) {
             this.stages = stages;
             return this;
         }
-
         public Builder stages(@Nullable List<String> stages) {
             this.stages = Output.ofNullable(stages);
             return this;
         }
-        public PolicyArgs build() {
+        public Builder stages(String... stages) {
+            return stages(List.of(stages));
+        }        public PolicyArgs build() {
             return new PolicyArgs(level, stages);
         }
     }

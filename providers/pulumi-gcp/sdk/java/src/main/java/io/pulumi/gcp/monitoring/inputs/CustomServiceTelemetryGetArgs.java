@@ -59,12 +59,10 @@ public final class CustomServiceTelemetryGetArgs extends io.pulumi.resources.Res
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
-        }
-        public CustomServiceTelemetryGetArgs build() {
+        }        public CustomServiceTelemetryGetArgs build() {
             return new CustomServiceTelemetryGetArgs(resourceName);
         }
     }

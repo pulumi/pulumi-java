@@ -141,62 +141,59 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
             this.acceptanceRequired = Objects.requireNonNull(acceptanceRequired);
             return this;
         }
-
         public Builder acceptanceRequired(Boolean acceptanceRequired) {
             this.acceptanceRequired = Output.of(Objects.requireNonNull(acceptanceRequired));
             return this;
         }
-
         public Builder allowedPrincipals(@Nullable Output<List<String>> allowedPrincipals) {
             this.allowedPrincipals = allowedPrincipals;
             return this;
         }
-
         public Builder allowedPrincipals(@Nullable List<String> allowedPrincipals) {
             this.allowedPrincipals = Output.ofNullable(allowedPrincipals);
             return this;
         }
-
+        public Builder allowedPrincipals(String... allowedPrincipals) {
+            return allowedPrincipals(List.of(allowedPrincipals));
+        }
         public Builder gatewayLoadBalancerArns(@Nullable Output<List<String>> gatewayLoadBalancerArns) {
             this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
             return this;
         }
-
         public Builder gatewayLoadBalancerArns(@Nullable List<String> gatewayLoadBalancerArns) {
             this.gatewayLoadBalancerArns = Output.ofNullable(gatewayLoadBalancerArns);
             return this;
         }
-
+        public Builder gatewayLoadBalancerArns(String... gatewayLoadBalancerArns) {
+            return gatewayLoadBalancerArns(List.of(gatewayLoadBalancerArns));
+        }
         public Builder networkLoadBalancerArns(@Nullable Output<List<String>> networkLoadBalancerArns) {
             this.networkLoadBalancerArns = networkLoadBalancerArns;
             return this;
         }
-
         public Builder networkLoadBalancerArns(@Nullable List<String> networkLoadBalancerArns) {
             this.networkLoadBalancerArns = Output.ofNullable(networkLoadBalancerArns);
             return this;
         }
-
+        public Builder networkLoadBalancerArns(String... networkLoadBalancerArns) {
+            return networkLoadBalancerArns(List.of(networkLoadBalancerArns));
+        }
         public Builder privateDnsName(@Nullable Output<String> privateDnsName) {
             this.privateDnsName = privateDnsName;
             return this;
         }
-
         public Builder privateDnsName(@Nullable String privateDnsName) {
             this.privateDnsName = Output.ofNullable(privateDnsName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VpcEndpointServiceArgs build() {
+        }        public VpcEndpointServiceArgs build() {
             return new VpcEndpointServiceArgs(acceptanceRequired, allowedPrincipals, gatewayLoadBalancerArns, networkLoadBalancerArns, privateDnsName, tags);
         }
     }

@@ -50,8 +50,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
         public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
-        }
-        public GetDeviceArgs build() {
+        }        public GetDeviceArgs build() {
             return new GetDeviceArgs(deviceId);
         }
     }

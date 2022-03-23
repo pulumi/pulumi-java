@@ -65,12 +65,10 @@ public final class DatasetResourceConfiguration extends io.pulumi.resources.Invo
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
-        }
-        public DatasetResourceConfiguration build() {
+        }        public DatasetResourceConfiguration build() {
             return new DatasetResourceConfiguration(computeType, volumeSizeInGB);
         }
     }

@@ -183,42 +183,46 @@ public final class GetAnalysisResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder dataSetArns(@Nullable List<String> dataSetArns) {
             this.dataSetArns = dataSetArns;
             return this;
         }
-
+        public Builder dataSetArns(String... dataSetArns) {
+            return dataSetArns(List.of(dataSetArns));
+        }
         public Builder errors(@Nullable List<AnalysisError> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(AnalysisError... errors) {
+            return errors(List.of(errors));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder permissions(@Nullable List<AnalysisResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
-
+        public Builder permissions(AnalysisResourcePermission... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder tags(@Nullable List<AnalysisTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(AnalysisTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = themeArn;
             return this;
-        }
-        public GetAnalysisResult build() {
+        }        public GetAnalysisResult build() {
             return new GetAnalysisResult(arn, createdTime, dataSetArns, errors, name, permissions, tags, themeArn);
         }
     }

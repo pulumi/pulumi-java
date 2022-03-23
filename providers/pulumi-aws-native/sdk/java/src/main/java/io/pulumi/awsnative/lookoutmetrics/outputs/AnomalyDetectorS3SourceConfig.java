@@ -72,22 +72,24 @@ public final class AnomalyDetectorS3SourceConfig {
             this.fileFormatDescriptor = Objects.requireNonNull(fileFormatDescriptor);
             return this;
         }
-
         public Builder historicalDataPathList(@Nullable List<String> historicalDataPathList) {
             this.historicalDataPathList = historicalDataPathList;
             return this;
         }
-
+        public Builder historicalDataPathList(String... historicalDataPathList) {
+            return historicalDataPathList(List.of(historicalDataPathList));
+        }
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder templatedPathList(@Nullable List<String> templatedPathList) {
             this.templatedPathList = templatedPathList;
             return this;
         }
-        public AnomalyDetectorS3SourceConfig build() {
+        public Builder templatedPathList(String... templatedPathList) {
+            return templatedPathList(List.of(templatedPathList));
+        }        public AnomalyDetectorS3SourceConfig build() {
             return new AnomalyDetectorS3SourceConfig(fileFormatDescriptor, historicalDataPathList, roleArn, templatedPathList);
         }
     }

@@ -91,17 +91,14 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
             this.alertRuleName = Objects.requireNonNull(alertRuleName);
             return this;
         }
-
         public Builder expandDetector(@Nullable Boolean expandDetector) {
             this.expandDetector = expandDetector;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetSmartDetectorAlertRuleArgs build() {
+        }        public GetSmartDetectorAlertRuleArgs build() {
             return new GetSmartDetectorAlertRuleArgs(alertRuleName, expandDetector, resourceGroupName);
         }
     }

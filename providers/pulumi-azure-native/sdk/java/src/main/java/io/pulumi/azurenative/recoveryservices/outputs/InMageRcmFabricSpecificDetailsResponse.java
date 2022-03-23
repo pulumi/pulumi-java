@@ -287,77 +287,83 @@ public final class InMageRcmFabricSpecificDetailsResponse {
             this.agentDetails = Objects.requireNonNull(agentDetails);
             return this;
         }
-
+        public Builder agentDetails(AgentDetailsResponse... agentDetails) {
+            return agentDetails(List.of(agentDetails));
+        }
         public Builder controlPlaneUri(String controlPlaneUri) {
             this.controlPlaneUri = Objects.requireNonNull(controlPlaneUri);
             return this;
         }
-
         public Builder dataPlaneUri(String dataPlaneUri) {
             this.dataPlaneUri = Objects.requireNonNull(dataPlaneUri);
             return this;
         }
-
         public Builder dras(List<DraDetailsResponse> dras) {
             this.dras = Objects.requireNonNull(dras);
             return this;
         }
-
+        public Builder dras(DraDetailsResponse... dras) {
+            return dras(List.of(dras));
+        }
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder physicalSiteId(String physicalSiteId) {
             this.physicalSiteId = Objects.requireNonNull(physicalSiteId);
             return this;
         }
-
         public Builder processServers(List<ProcessServerDetailsResponse> processServers) {
             this.processServers = Objects.requireNonNull(processServers);
             return this;
         }
-
+        public Builder processServers(ProcessServerDetailsResponse... processServers) {
+            return processServers(List.of(processServers));
+        }
         public Builder pushInstallers(List<PushInstallerDetailsResponse> pushInstallers) {
             this.pushInstallers = Objects.requireNonNull(pushInstallers);
             return this;
         }
-
+        public Builder pushInstallers(PushInstallerDetailsResponse... pushInstallers) {
+            return pushInstallers(List.of(pushInstallers));
+        }
         public Builder rcmProxies(List<RcmProxyDetailsResponse> rcmProxies) {
             this.rcmProxies = Objects.requireNonNull(rcmProxies);
             return this;
         }
-
+        public Builder rcmProxies(RcmProxyDetailsResponse... rcmProxies) {
+            return rcmProxies(List.of(rcmProxies));
+        }
         public Builder replicationAgents(List<ReplicationAgentDetailsResponse> replicationAgents) {
             this.replicationAgents = Objects.requireNonNull(replicationAgents);
             return this;
         }
-
+        public Builder replicationAgents(ReplicationAgentDetailsResponse... replicationAgents) {
+            return replicationAgents(List.of(replicationAgents));
+        }
         public Builder reprotectAgents(List<ReprotectAgentDetailsResponse> reprotectAgents) {
             this.reprotectAgents = Objects.requireNonNull(reprotectAgents);
             return this;
         }
-
+        public Builder reprotectAgents(ReprotectAgentDetailsResponse... reprotectAgents) {
+            return reprotectAgents(List.of(reprotectAgents));
+        }
         public Builder serviceContainerId(String serviceContainerId) {
             this.serviceContainerId = Objects.requireNonNull(serviceContainerId);
             return this;
         }
-
         public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
-
         public Builder serviceResourceId(String serviceResourceId) {
             this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
             return this;
         }
-
         public Builder vmwareSiteId(String vmwareSiteId) {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
-        }
-        public InMageRcmFabricSpecificDetailsResponse build() {
+        }        public InMageRcmFabricSpecificDetailsResponse build() {
             return new InMageRcmFabricSpecificDetailsResponse(agentDetails, controlPlaneUri, dataPlaneUri, dras, instanceType, physicalSiteId, processServers, pushInstallers, rcmProxies, replicationAgents, reprotectAgents, serviceContainerId, serviceEndpoint, serviceResourceId, vmwareSiteId);
         }
     }

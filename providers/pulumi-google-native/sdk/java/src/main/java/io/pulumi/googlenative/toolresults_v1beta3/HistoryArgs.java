@@ -131,62 +131,50 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder historyId(@Nullable Output<String> historyId) {
             this.historyId = historyId;
             return this;
         }
-
         public Builder historyId(@Nullable String historyId) {
             this.historyId = Output.ofNullable(historyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder testPlatform(@Nullable Output<HistoryTestPlatform> testPlatform) {
             this.testPlatform = testPlatform;
             return this;
         }
-
         public Builder testPlatform(@Nullable HistoryTestPlatform testPlatform) {
             this.testPlatform = Output.ofNullable(testPlatform);
             return this;
-        }
-        public HistoryArgs build() {
+        }        public HistoryArgs build() {
             return new HistoryArgs(displayName, historyId, name, project, requestId, testPlatform);
         }
     }

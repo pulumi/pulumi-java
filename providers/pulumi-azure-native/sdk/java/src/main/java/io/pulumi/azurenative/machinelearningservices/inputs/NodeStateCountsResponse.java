@@ -140,32 +140,26 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
             this.idleNodeCount = Objects.requireNonNull(idleNodeCount);
             return this;
         }
-
         public Builder leavingNodeCount(Integer leavingNodeCount) {
             this.leavingNodeCount = Objects.requireNonNull(leavingNodeCount);
             return this;
         }
-
         public Builder preemptedNodeCount(Integer preemptedNodeCount) {
             this.preemptedNodeCount = Objects.requireNonNull(preemptedNodeCount);
             return this;
         }
-
         public Builder preparingNodeCount(Integer preparingNodeCount) {
             this.preparingNodeCount = Objects.requireNonNull(preparingNodeCount);
             return this;
         }
-
         public Builder runningNodeCount(Integer runningNodeCount) {
             this.runningNodeCount = Objects.requireNonNull(runningNodeCount);
             return this;
         }
-
         public Builder unusableNodeCount(Integer unusableNodeCount) {
             this.unusableNodeCount = Objects.requireNonNull(unusableNodeCount);
             return this;
-        }
-        public NodeStateCountsResponse build() {
+        }        public NodeStateCountsResponse build() {
             return new NodeStateCountsResponse(idleNodeCount, leavingNodeCount, preemptedNodeCount, preparingNodeCount, runningNodeCount, unusableNodeCount);
         }
     }

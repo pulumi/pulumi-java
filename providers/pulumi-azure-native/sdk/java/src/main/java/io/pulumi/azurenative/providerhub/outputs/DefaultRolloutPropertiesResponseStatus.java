@@ -82,27 +82,25 @@ public final class DefaultRolloutPropertiesResponseStatus {
             this.completedRegions = completedRegions;
             return this;
         }
-
+        public Builder completedRegions(String... completedRegions) {
+            return completedRegions(List.of(completedRegions));
+        }
         public Builder failedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions) {
             this.failedOrSkippedRegions = failedOrSkippedRegions;
             return this;
         }
-
         public Builder nextTrafficRegion(@Nullable String nextTrafficRegion) {
             this.nextTrafficRegion = nextTrafficRegion;
             return this;
         }
-
         public Builder nextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
             this.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
             return this;
         }
-
         public Builder subscriptionReregistrationResult(@Nullable String subscriptionReregistrationResult) {
             this.subscriptionReregistrationResult = subscriptionReregistrationResult;
             return this;
-        }
-        public DefaultRolloutPropertiesResponseStatus build() {
+        }        public DefaultRolloutPropertiesResponseStatus build() {
             return new DefaultRolloutPropertiesResponseStatus(completedRegions, failedOrSkippedRegions, nextTrafficRegion, nextTrafficRegionScheduledTime, subscriptionReregistrationResult);
         }
     }

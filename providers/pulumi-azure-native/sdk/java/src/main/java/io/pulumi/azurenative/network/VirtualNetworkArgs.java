@@ -292,152 +292,131 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.addressSpace = addressSpace;
             return this;
         }
-
         public Builder addressSpace(@Nullable AddressSpaceArgs addressSpace) {
             this.addressSpace = Output.ofNullable(addressSpace);
             return this;
         }
-
         public Builder bgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities) {
             this.bgpCommunities = bgpCommunities;
             return this;
         }
-
         public Builder bgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs bgpCommunities) {
             this.bgpCommunities = Output.ofNullable(bgpCommunities);
             return this;
         }
-
         public Builder ddosProtectionPlan(@Nullable Output<SubResourceArgs> ddosProtectionPlan) {
             this.ddosProtectionPlan = ddosProtectionPlan;
             return this;
         }
-
         public Builder ddosProtectionPlan(@Nullable SubResourceArgs ddosProtectionPlan) {
             this.ddosProtectionPlan = Output.ofNullable(ddosProtectionPlan);
             return this;
         }
-
         public Builder dhcpOptions(@Nullable Output<DhcpOptionsArgs> dhcpOptions) {
             this.dhcpOptions = dhcpOptions;
             return this;
         }
-
         public Builder dhcpOptions(@Nullable DhcpOptionsArgs dhcpOptions) {
             this.dhcpOptions = Output.ofNullable(dhcpOptions);
             return this;
         }
-
         public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
-
         public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
             this.enableDdosProtection = Output.ofNullable(enableDdosProtection);
             return this;
         }
-
         public Builder enableVmProtection(@Nullable Output<Boolean> enableVmProtection) {
             this.enableVmProtection = enableVmProtection;
             return this;
         }
-
         public Builder enableVmProtection(@Nullable Boolean enableVmProtection) {
             this.enableVmProtection = Output.ofNullable(enableVmProtection);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
-
         public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
             this.ipAllocations = Output.ofNullable(ipAllocations);
             return this;
         }
-
+        public Builder ipAllocations(SubResourceArgs... ipAllocations) {
+            return ipAllocations(List.of(ipAllocations));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subnets(@Nullable Output<List<SubnetArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<SubnetArgs> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(SubnetArgs... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualNetworkName(@Nullable Output<String> virtualNetworkName) {
             this.virtualNetworkName = virtualNetworkName;
             return this;
         }
-
         public Builder virtualNetworkName(@Nullable String virtualNetworkName) {
             this.virtualNetworkName = Output.ofNullable(virtualNetworkName);
             return this;
         }
-
         public Builder virtualNetworkPeerings(@Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
-
         public Builder virtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringArgs> virtualNetworkPeerings) {
             this.virtualNetworkPeerings = Output.ofNullable(virtualNetworkPeerings);
             return this;
         }
-        public VirtualNetworkArgs build() {
+        public Builder virtualNetworkPeerings(VirtualNetworkPeeringArgs... virtualNetworkPeerings) {
+            return virtualNetworkPeerings(List.of(virtualNetworkPeerings));
+        }        public VirtualNetworkArgs build() {
             return new VirtualNetworkArgs(addressSpace, bgpCommunities, ddosProtectionPlan, dhcpOptions, enableDdosProtection, enableVmProtection, extendedLocation, id, ipAllocations, location, resourceGroupName, subnets, tags, virtualNetworkName, virtualNetworkPeerings);
         }
     }

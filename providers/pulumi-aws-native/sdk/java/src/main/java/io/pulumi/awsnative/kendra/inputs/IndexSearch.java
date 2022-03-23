@@ -90,22 +90,18 @@ public final class IndexSearch extends io.pulumi.resources.InvokeArgs {
             this.displayable = displayable;
             return this;
         }
-
         public Builder facetable(@Nullable Boolean facetable) {
             this.facetable = facetable;
             return this;
         }
-
         public Builder searchable(@Nullable Boolean searchable) {
             this.searchable = searchable;
             return this;
         }
-
         public Builder sortable(@Nullable Boolean sortable) {
             this.sortable = sortable;
             return this;
-        }
-        public IndexSearch build() {
+        }        public IndexSearch build() {
             return new IndexSearch(displayable, facetable, searchable, sortable);
         }
     }

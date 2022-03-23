@@ -119,27 +119,22 @@ public final class BotAliasConversationLogsLogSetting {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourcePrefix(@Nullable String resourcePrefix) {
             this.resourcePrefix = resourcePrefix;
             return this;
-        }
-        public BotAliasConversationLogsLogSetting build() {
+        }        public BotAliasConversationLogsLogSetting build() {
             return new BotAliasConversationLogsLogSetting(destination, kmsKeyArn, logType, resourceArn, resourcePrefix);
         }
     }

@@ -108,42 +108,34 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable RouterNatRuleActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder match(@Nullable Output<String> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable String match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
             this.ruleNumber = ruleNumber;
             return this;
         }
-
         public Builder ruleNumber(@Nullable Integer ruleNumber) {
             this.ruleNumber = Output.ofNullable(ruleNumber);
             return this;
-        }
-        public RouterNatRuleArgs build() {
+        }        public RouterNatRuleArgs build() {
             return new RouterNatRuleArgs(action, description, match, ruleNumber);
         }
     }

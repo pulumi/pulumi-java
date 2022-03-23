@@ -78,12 +78,13 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
             this.logPatterns = Objects.requireNonNull(logPatterns);
             return this;
         }
-
+        public Builder logPatterns(ApplicationLogPattern... logPatterns) {
+            return logPatterns(List.of(logPatterns));
+        }
         public Builder patternSetName(String patternSetName) {
             this.patternSetName = Objects.requireNonNull(patternSetName);
             return this;
-        }
-        public ApplicationLogPatternSet build() {
+        }        public ApplicationLogPatternSet build() {
             return new ApplicationLogPatternSet(logPatterns, patternSetName);
         }
     }

@@ -66,12 +66,10 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetModelArgs build() {
+        }        public GetModelArgs build() {
             return new GetModelArgs(modelId, project);
         }
     }

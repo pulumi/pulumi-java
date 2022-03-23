@@ -72,12 +72,13 @@ public final class OntapStorageVirtualMachineEndpointIscse {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-        public OntapStorageVirtualMachineEndpointIscse build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public OntapStorageVirtualMachineEndpointIscse build() {
             return new OntapStorageVirtualMachineEndpointIscse(dnsName, ipAddresses);
         }
     }

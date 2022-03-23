@@ -56,12 +56,10 @@ public final class LaunchTemplateElasticInferenceAcceleratorArgs extends io.pulu
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public LaunchTemplateElasticInferenceAcceleratorArgs build() {
+        }        public LaunchTemplateElasticInferenceAcceleratorArgs build() {
             return new LaunchTemplateElasticInferenceAcceleratorArgs(type);
         }
     }

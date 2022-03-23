@@ -69,12 +69,10 @@ public final class InsightFiltersThreatIntelIndicatorType {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersThreatIntelIndicatorType build() {
+        }        public InsightFiltersThreatIntelIndicatorType build() {
             return new InsightFiltersThreatIntelIndicatorType(comparison, value);
         }
     }

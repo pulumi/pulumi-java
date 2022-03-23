@@ -79,12 +79,10 @@ public final class VpnLinkBgpSettingsResponse extends io.pulumi.resources.Invoke
             this.asn = asn;
             return this;
         }
-
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
-        }
-        public VpnLinkBgpSettingsResponse build() {
+        }        public VpnLinkBgpSettingsResponse build() {
             return new VpnLinkBgpSettingsResponse(asn, bgpPeeringAddress);
         }
     }

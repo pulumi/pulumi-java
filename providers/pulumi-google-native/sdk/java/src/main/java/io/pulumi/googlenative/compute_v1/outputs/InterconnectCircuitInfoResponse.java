@@ -85,17 +85,14 @@ public final class InterconnectCircuitInfoResponse {
             this.customerDemarcId = Objects.requireNonNull(customerDemarcId);
             return this;
         }
-
         public Builder googleCircuitId(String googleCircuitId) {
             this.googleCircuitId = Objects.requireNonNull(googleCircuitId);
             return this;
         }
-
         public Builder googleDemarcId(String googleDemarcId) {
             this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
             return this;
-        }
-        public InterconnectCircuitInfoResponse build() {
+        }        public InterconnectCircuitInfoResponse build() {
             return new InterconnectCircuitInfoResponse(customerDemarcId, googleCircuitId, googleDemarcId);
         }
     }

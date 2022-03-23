@@ -79,22 +79,18 @@ public final class AutoscalingPolicyScaleDownControlArgs extends io.pulumi.resou
             this.maxScaledDownReplicas = maxScaledDownReplicas;
             return this;
         }
-
         public Builder maxScaledDownReplicas(@Nullable FixedOrPercentArgs maxScaledDownReplicas) {
             this.maxScaledDownReplicas = Output.ofNullable(maxScaledDownReplicas);
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = Output.ofNullable(timeWindowSec);
             return this;
-        }
-        public AutoscalingPolicyScaleDownControlArgs build() {
+        }        public AutoscalingPolicyScaleDownControlArgs build() {
             return new AutoscalingPolicyScaleDownControlArgs(maxScaledDownReplicas, timeWindowSec);
         }
     }

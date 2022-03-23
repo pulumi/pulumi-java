@@ -71,22 +71,18 @@ public final class GetPlaceIndexResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder indexArn(@Nullable String indexArn) {
             this.indexArn = indexArn;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public GetPlaceIndexResult build() {
+        }        public GetPlaceIndexResult build() {
             return new GetPlaceIndexResult(arn, createTime, indexArn, updateTime);
         }
     }

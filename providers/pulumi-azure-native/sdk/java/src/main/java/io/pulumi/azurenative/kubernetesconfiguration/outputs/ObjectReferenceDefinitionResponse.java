@@ -71,12 +71,10 @@ public final class ObjectReferenceDefinitionResponse {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
-        }
-        public ObjectReferenceDefinitionResponse build() {
+        }        public ObjectReferenceDefinitionResponse build() {
             return new ObjectReferenceDefinitionResponse(name, namespace);
         }
     }

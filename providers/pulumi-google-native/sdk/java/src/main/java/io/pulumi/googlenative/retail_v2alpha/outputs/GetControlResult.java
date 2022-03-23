@@ -136,32 +136,32 @@ public final class GetControlResult {
             this.associatedServingConfigIds = Objects.requireNonNull(associatedServingConfigIds);
             return this;
         }
-
+        public Builder associatedServingConfigIds(String... associatedServingConfigIds) {
+            return associatedServingConfigIds(List.of(associatedServingConfigIds));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder facetSpec(GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec) {
             this.facetSpec = Objects.requireNonNull(facetSpec);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rule(GoogleCloudRetailV2alphaRuleResponse rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder solutionTypes(List<String> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
-        public GetControlResult build() {
+        public Builder solutionTypes(String... solutionTypes) {
+            return solutionTypes(List.of(solutionTypes));
+        }        public GetControlResult build() {
             return new GetControlResult(associatedServingConfigIds, displayName, facetSpec, name, rule, solutionTypes);
         }
     }

@@ -83,32 +83,26 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
-
         public Builder logDestination(Object logDestination) {
             this.logDestination = Output.of(Objects.requireNonNull(logDestination));
             return this;
         }
-
         public Builder logDestinationType(Output<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
-
         public Builder logDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
             this.logDestinationType = Output.of(Objects.requireNonNull(logDestinationType));
             return this;
         }
-
         public Builder logType(Output<LoggingConfigurationLogDestinationConfigLogType> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder logType(LoggingConfigurationLogDestinationConfigLogType logType) {
             this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
-        }
-        public LoggingConfigurationLogDestinationConfigArgs build() {
+        }        public LoggingConfigurationLogDestinationConfigArgs build() {
             return new LoggingConfigurationLogDestinationConfigArgs(logDestination, logDestinationType, logType);
         }
     }

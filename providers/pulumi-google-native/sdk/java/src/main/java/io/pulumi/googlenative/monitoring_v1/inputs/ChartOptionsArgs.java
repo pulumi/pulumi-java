@@ -61,12 +61,10 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable ChartOptionsMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public ChartOptionsArgs build() {
+        }        public ChartOptionsArgs build() {
             return new ChartOptionsArgs(mode);
         }
     }

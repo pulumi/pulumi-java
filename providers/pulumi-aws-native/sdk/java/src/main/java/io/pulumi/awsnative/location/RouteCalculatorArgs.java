@@ -91,42 +91,34 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
             this.calculatorName = Objects.requireNonNull(calculatorName);
             return this;
         }
-
         public Builder calculatorName(String calculatorName) {
             this.calculatorName = Output.of(Objects.requireNonNull(calculatorName));
             return this;
         }
-
         public Builder dataSource(Output<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
-
         public Builder dataSource(String dataSource) {
             this.dataSource = Output.of(Objects.requireNonNull(dataSource));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<RouteCalculatorPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable RouteCalculatorPricingPlan pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
-        }
-        public RouteCalculatorArgs build() {
+        }        public RouteCalculatorArgs build() {
             return new RouteCalculatorArgs(calculatorName, dataSource, description, pricingPlan);
         }
     }

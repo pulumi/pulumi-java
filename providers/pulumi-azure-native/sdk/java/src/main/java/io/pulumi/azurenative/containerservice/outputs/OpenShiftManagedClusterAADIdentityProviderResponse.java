@@ -121,27 +121,22 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
             this.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public OpenShiftManagedClusterAADIdentityProviderResponse build() {
+        }        public OpenShiftManagedClusterAADIdentityProviderResponse build() {
             return new OpenShiftManagedClusterAADIdentityProviderResponse(clientId, customerAdminGroupId, kind, secret, tenantId);
         }
     }

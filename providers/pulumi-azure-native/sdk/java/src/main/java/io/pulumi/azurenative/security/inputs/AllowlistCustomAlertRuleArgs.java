@@ -96,32 +96,29 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
             this.allowlistValues = Objects.requireNonNull(allowlistValues);
             return this;
         }
-
         public Builder allowlistValues(List<String> allowlistValues) {
             this.allowlistValues = Output.of(Objects.requireNonNull(allowlistValues));
             return this;
         }
-
+        public Builder allowlistValues(String... allowlistValues) {
+            return allowlistValues(List.of(allowlistValues));
+        }
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
-        }
-        public AllowlistCustomAlertRuleArgs build() {
+        }        public AllowlistCustomAlertRuleArgs build() {
             return new AllowlistCustomAlertRuleArgs(allowlistValues, isEnabled, ruleType);
         }
     }

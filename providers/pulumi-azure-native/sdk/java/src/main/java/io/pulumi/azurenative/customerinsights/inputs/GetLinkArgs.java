@@ -88,17 +88,14 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder linkName(String linkName) {
             this.linkName = Objects.requireNonNull(linkName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLinkArgs build() {
+        }        public GetLinkArgs build() {
             return new GetLinkArgs(hubName, linkName, resourceGroupName);
         }
     }

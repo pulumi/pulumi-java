@@ -79,22 +79,21 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoArgs extends io.pulumi
             this.placeIds = placeIds;
             return this;
         }
-
         public Builder placeIds(@Nullable List<String> placeIds) {
             this.placeIds = Output.ofNullable(placeIds);
             return this;
         }
-
+        public Builder placeIds(String... placeIds) {
+            return placeIds(List.of(placeIds));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudRetailV2alphaFulfillmentInfoArgs build() {
+        }        public GoogleCloudRetailV2alphaFulfillmentInfoArgs build() {
             return new GoogleCloudRetailV2alphaFulfillmentInfoArgs(placeIds, type);
         }
     }

@@ -91,32 +91,32 @@ public final class GetDevicePoolResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder maxDevices(@Nullable Integer maxDevices) {
             this.maxDevices = maxDevices;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder rules(@Nullable List<DevicePoolRule> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(DevicePoolRule... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable List<DevicePoolTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDevicePoolResult build() {
+        public Builder tags(DevicePoolTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDevicePoolResult build() {
             return new GetDevicePoolResult(arn, description, maxDevices, name, rules, tags);
         }
     }

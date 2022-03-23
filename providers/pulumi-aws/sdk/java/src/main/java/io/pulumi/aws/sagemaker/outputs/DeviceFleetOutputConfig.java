@@ -71,12 +71,10 @@ public final class DeviceFleetOutputConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder s3OutputLocation(String s3OutputLocation) {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
-        }
-        public DeviceFleetOutputConfig build() {
+        }        public DeviceFleetOutputConfig build() {
             return new DeviceFleetOutputConfig(kmsKeyId, s3OutputLocation);
         }
     }

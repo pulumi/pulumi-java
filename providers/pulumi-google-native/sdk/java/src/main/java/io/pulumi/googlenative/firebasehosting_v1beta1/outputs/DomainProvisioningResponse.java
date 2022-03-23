@@ -168,42 +168,43 @@ public final class DomainProvisioningResponse {
             this.certChallengeDiscoveredTxt = Objects.requireNonNull(certChallengeDiscoveredTxt);
             return this;
         }
-
+        public Builder certChallengeDiscoveredTxt(String... certChallengeDiscoveredTxt) {
+            return certChallengeDiscoveredTxt(List.of(certChallengeDiscoveredTxt));
+        }
         public Builder certChallengeDns(CertDnsChallengeResponse certChallengeDns) {
             this.certChallengeDns = Objects.requireNonNull(certChallengeDns);
             return this;
         }
-
         public Builder certChallengeHttp(CertHttpChallengeResponse certChallengeHttp) {
             this.certChallengeHttp = Objects.requireNonNull(certChallengeHttp);
             return this;
         }
-
         public Builder certStatus(String certStatus) {
             this.certStatus = Objects.requireNonNull(certStatus);
             return this;
         }
-
         public Builder discoveredIps(List<String> discoveredIps) {
             this.discoveredIps = Objects.requireNonNull(discoveredIps);
             return this;
         }
-
+        public Builder discoveredIps(String... discoveredIps) {
+            return discoveredIps(List.of(discoveredIps));
+        }
         public Builder dnsFetchTime(String dnsFetchTime) {
             this.dnsFetchTime = Objects.requireNonNull(dnsFetchTime);
             return this;
         }
-
         public Builder dnsStatus(String dnsStatus) {
             this.dnsStatus = Objects.requireNonNull(dnsStatus);
             return this;
         }
-
         public Builder expectedIps(List<String> expectedIps) {
             this.expectedIps = Objects.requireNonNull(expectedIps);
             return this;
         }
-        public DomainProvisioningResponse build() {
+        public Builder expectedIps(String... expectedIps) {
+            return expectedIps(List.of(expectedIps));
+        }        public DomainProvisioningResponse build() {
             return new DomainProvisioningResponse(certChallengeDiscoveredTxt, certChallengeDns, certChallengeHttp, certStatus, discoveredIps, dnsFetchTime, dnsStatus, expectedIps);
         }
     }

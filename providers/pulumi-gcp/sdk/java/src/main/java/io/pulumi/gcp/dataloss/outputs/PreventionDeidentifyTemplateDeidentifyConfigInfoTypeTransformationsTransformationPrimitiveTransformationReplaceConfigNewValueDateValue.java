@@ -89,17 +89,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.day = day;
             return this;
         }
-
         public Builder month(@Nullable Integer month) {
             this.month = month;
             return this;
         }
-
         public Builder year(@Nullable Integer year) {
             this.year = year;
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue(day, month, year);
         }
     }

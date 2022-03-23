@@ -90,22 +90,18 @@ public final class GetNamespaceServiceIamPolicyArgs extends io.pulumi.resources.
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
-        }
-        public GetNamespaceServiceIamPolicyArgs build() {
+        }        public GetNamespaceServiceIamPolicyArgs build() {
             return new GetNamespaceServiceIamPolicyArgs(location, namespaceId, project, serviceId);
         }
     }

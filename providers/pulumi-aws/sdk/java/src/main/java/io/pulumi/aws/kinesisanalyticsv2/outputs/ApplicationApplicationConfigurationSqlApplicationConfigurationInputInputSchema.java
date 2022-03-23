@@ -90,17 +90,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
+        public Builder recordColumns(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema(recordColumns, recordEncoding, recordFormat);
         }
     }

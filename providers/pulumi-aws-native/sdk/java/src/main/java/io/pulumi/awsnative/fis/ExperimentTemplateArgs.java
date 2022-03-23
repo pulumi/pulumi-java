@@ -119,62 +119,53 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable ExperimentTemplateActionMapArgs actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder stopConditions(Output<List<ExperimentTemplateStopConditionArgs>> stopConditions) {
             this.stopConditions = Objects.requireNonNull(stopConditions);
             return this;
         }
-
         public Builder stopConditions(List<ExperimentTemplateStopConditionArgs> stopConditions) {
             this.stopConditions = Output.of(Objects.requireNonNull(stopConditions));
             return this;
         }
-
+        public Builder stopConditions(ExperimentTemplateStopConditionArgs... stopConditions) {
+            return stopConditions(List.of(stopConditions));
+        }
         public Builder tags(Output<Object> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder tags(Object tags) {
             this.tags = Output.of(Objects.requireNonNull(tags));
             return this;
         }
-
         public Builder targets(Output<ExperimentTemplateTargetMapArgs> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-
         public Builder targets(ExperimentTemplateTargetMapArgs targets) {
             this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
-        }
-        public ExperimentTemplateArgs build() {
+        }        public ExperimentTemplateArgs build() {
             return new ExperimentTemplateArgs(actions, description, roleArn, stopConditions, tags, targets);
         }
     }

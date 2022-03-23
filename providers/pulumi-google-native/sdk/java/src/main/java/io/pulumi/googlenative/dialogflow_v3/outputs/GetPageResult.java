@@ -154,37 +154,39 @@ public final class GetPageResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder entryFulfillment(GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment) {
             this.entryFulfillment = Objects.requireNonNull(entryFulfillment);
             return this;
         }
-
         public Builder eventHandlers(List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers) {
             this.eventHandlers = Objects.requireNonNull(eventHandlers);
             return this;
         }
-
+        public Builder eventHandlers(GoogleCloudDialogflowCxV3EventHandlerResponse... eventHandlers) {
+            return eventHandlers(List.of(eventHandlers));
+        }
         public Builder form(GoogleCloudDialogflowCxV3FormResponse form) {
             this.form = Objects.requireNonNull(form);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups);
             return this;
         }
-
+        public Builder transitionRouteGroups(String... transitionRouteGroups) {
+            return transitionRouteGroups(List.of(transitionRouteGroups));
+        }
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-        public GetPageResult build() {
+        public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteResponse... transitionRoutes) {
+            return transitionRoutes(List.of(transitionRoutes));
+        }        public GetPageResult build() {
             return new GetPageResult(displayName, entryFulfillment, eventHandlers, form, name, transitionRouteGroups, transitionRoutes);
         }
     }

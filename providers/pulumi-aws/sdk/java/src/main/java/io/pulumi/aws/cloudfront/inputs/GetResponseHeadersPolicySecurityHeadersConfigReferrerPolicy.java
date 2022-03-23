@@ -73,12 +73,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy e
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder referrerPolicy(String referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
-        }
-        public GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy build() {
+        }        public GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy build() {
             return new GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy(override, referrerPolicy);
         }
     }

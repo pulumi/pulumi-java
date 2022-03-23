@@ -387,212 +387,173 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
             return this;
         }
-
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder disksToInclude(@Nullable Output<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude) {
             this.disksToInclude = disksToInclude;
             return this;
         }
-
         public Builder disksToInclude(@Nullable List<InMageAzureV2DiskInputDetailsArgs> disksToInclude) {
             this.disksToInclude = Output.ofNullable(disksToInclude);
             return this;
         }
-
+        public Builder disksToInclude(InMageAzureV2DiskInputDetailsArgs... disksToInclude) {
+            return disksToInclude(List.of(disksToInclude));
+        }
         public Builder enableRdpOnTargetOption(@Nullable Output<String> enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
-
         public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = Output.ofNullable(enableRdpOnTargetOption);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
             this.logStorageAccountId = logStorageAccountId;
             return this;
         }
-
         public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
             this.logStorageAccountId = Output.ofNullable(logStorageAccountId);
             return this;
         }
-
         public Builder masterTargetId(@Nullable Output<String> masterTargetId) {
             this.masterTargetId = masterTargetId;
             return this;
         }
-
         public Builder masterTargetId(@Nullable String masterTargetId) {
             this.masterTargetId = Output.ofNullable(masterTargetId);
             return this;
         }
-
         public Builder multiVmGroupId(@Nullable Output<String> multiVmGroupId) {
             this.multiVmGroupId = multiVmGroupId;
             return this;
         }
-
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             this.multiVmGroupId = Output.ofNullable(multiVmGroupId);
             return this;
         }
-
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
-
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = Output.ofNullable(multiVmGroupName);
             return this;
         }
-
         public Builder processServerId(@Nullable Output<String> processServerId) {
             this.processServerId = processServerId;
             return this;
         }
-
         public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = Output.ofNullable(processServerId);
             return this;
         }
-
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
-
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = Output.ofNullable(runAsAccountId);
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
-
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Output.ofNullable(targetAvailabilitySetId);
             return this;
         }
-
         public Builder targetAvailabilityZone(@Nullable Output<String> targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
-
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = Output.ofNullable(targetAvailabilityZone);
             return this;
         }
-
         public Builder targetAzureNetworkId(@Nullable Output<String> targetAzureNetworkId) {
             this.targetAzureNetworkId = targetAzureNetworkId;
             return this;
         }
-
         public Builder targetAzureNetworkId(@Nullable String targetAzureNetworkId) {
             this.targetAzureNetworkId = Output.ofNullable(targetAzureNetworkId);
             return this;
         }
-
         public Builder targetAzureSubnetId(@Nullable Output<String> targetAzureSubnetId) {
             this.targetAzureSubnetId = targetAzureSubnetId;
             return this;
         }
-
         public Builder targetAzureSubnetId(@Nullable String targetAzureSubnetId) {
             this.targetAzureSubnetId = Output.ofNullable(targetAzureSubnetId);
             return this;
         }
-
         public Builder targetAzureV1ResourceGroupId(@Nullable Output<String> targetAzureV1ResourceGroupId) {
             this.targetAzureV1ResourceGroupId = targetAzureV1ResourceGroupId;
             return this;
         }
-
         public Builder targetAzureV1ResourceGroupId(@Nullable String targetAzureV1ResourceGroupId) {
             this.targetAzureV1ResourceGroupId = Output.ofNullable(targetAzureV1ResourceGroupId);
             return this;
         }
-
         public Builder targetAzureV2ResourceGroupId(@Nullable Output<String> targetAzureV2ResourceGroupId) {
             this.targetAzureV2ResourceGroupId = targetAzureV2ResourceGroupId;
             return this;
         }
-
         public Builder targetAzureV2ResourceGroupId(@Nullable String targetAzureV2ResourceGroupId) {
             this.targetAzureV2ResourceGroupId = Output.ofNullable(targetAzureV2ResourceGroupId);
             return this;
         }
-
         public Builder targetAzureVmName(@Nullable Output<String> targetAzureVmName) {
             this.targetAzureVmName = targetAzureVmName;
             return this;
         }
-
         public Builder targetAzureVmName(@Nullable String targetAzureVmName) {
             this.targetAzureVmName = Output.ofNullable(targetAzureVmName);
             return this;
         }
-
         public Builder targetProximityPlacementGroupId(@Nullable Output<String> targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
-
         public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = Output.ofNullable(targetProximityPlacementGroupId);
             return this;
         }
-
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
-
         public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = Output.ofNullable(targetVmSize);
             return this;
-        }
-        public InMageAzureV2EnableProtectionInputArgs build() {
+        }        public InMageAzureV2EnableProtectionInputArgs build() {
             return new InMageAzureV2EnableProtectionInputArgs(diskEncryptionSetId, diskType, disksToInclude, enableRdpOnTargetOption, instanceType, logStorageAccountId, masterTargetId, multiVmGroupId, multiVmGroupName, processServerId, runAsAccountId, storageAccountId, targetAvailabilitySetId, targetAvailabilityZone, targetAzureNetworkId, targetAzureSubnetId, targetAzureV1ResourceGroupId, targetAzureV2ResourceGroupId, targetAzureVmName, targetProximityPlacementGroupId, targetVmSize);
         }
     }

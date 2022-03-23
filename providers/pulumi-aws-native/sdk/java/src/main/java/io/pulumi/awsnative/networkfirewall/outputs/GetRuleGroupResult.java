@@ -82,27 +82,25 @@ public final class GetRuleGroupResult {
             this.description = description;
             return this;
         }
-
         public Builder ruleGroup(@Nullable RuleGroup ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
-
         public Builder ruleGroupArn(@Nullable String ruleGroupArn) {
             this.ruleGroupArn = ruleGroupArn;
             return this;
         }
-
         public Builder ruleGroupId(@Nullable String ruleGroupId) {
             this.ruleGroupId = ruleGroupId;
             return this;
         }
-
         public Builder tags(@Nullable List<RuleGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRuleGroupResult build() {
+        public Builder tags(RuleGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRuleGroupResult build() {
             return new GetRuleGroupResult(description, ruleGroup, ruleGroupArn, ruleGroupId, tags);
         }
     }

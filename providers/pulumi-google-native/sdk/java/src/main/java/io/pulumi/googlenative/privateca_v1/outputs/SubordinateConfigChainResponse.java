@@ -53,7 +53,9 @@ public final class SubordinateConfigChainResponse {
             this.pemCertificates = Objects.requireNonNull(pemCertificates);
             return this;
         }
-        public SubordinateConfigChainResponse build() {
+        public Builder pemCertificates(String... pemCertificates) {
+            return pemCertificates(List.of(pemCertificates));
+        }        public SubordinateConfigChainResponse build() {
             return new SubordinateConfigChainResponse(pemCertificates);
         }
     }

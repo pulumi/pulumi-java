@@ -93,17 +93,23 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
             this.eventLogs = eventLogs;
             return this;
         }
-
+        public Builder eventLogs(EventLogConfigurationResponse... eventLogs) {
+            return eventLogs(List.of(eventLogs));
+        }
         public Builder perfCounters(@Nullable List<PerformanceCounterConfigurationResponse> perfCounters) {
             this.perfCounters = perfCounters;
             return this;
         }
-
+        public Builder perfCounters(PerformanceCounterConfigurationResponse... perfCounters) {
+            return perfCounters(List.of(perfCounters));
+        }
         public Builder providers(@Nullable List<EtwProviderConfigurationResponse> providers) {
             this.providers = providers;
             return this;
         }
-        public DataSourceConfigurationResponse build() {
+        public Builder providers(EtwProviderConfigurationResponse... providers) {
+            return providers(List.of(providers));
+        }        public DataSourceConfigurationResponse build() {
             return new DataSourceConfigurationResponse(eventLogs, perfCounters, providers);
         }
     }

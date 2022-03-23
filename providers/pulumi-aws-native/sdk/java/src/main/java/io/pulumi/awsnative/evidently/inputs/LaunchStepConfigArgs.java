@@ -67,22 +67,21 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
             this.groupWeights = Objects.requireNonNull(groupWeights);
             return this;
         }
-
         public Builder groupWeights(List<LaunchGroupToWeightArgs> groupWeights) {
             this.groupWeights = Output.of(Objects.requireNonNull(groupWeights));
             return this;
         }
-
+        public Builder groupWeights(LaunchGroupToWeightArgs... groupWeights) {
+            return groupWeights(List.of(groupWeights));
+        }
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public LaunchStepConfigArgs build() {
+        }        public LaunchStepConfigArgs build() {
             return new LaunchStepConfigArgs(groupWeights, startTime);
         }
     }

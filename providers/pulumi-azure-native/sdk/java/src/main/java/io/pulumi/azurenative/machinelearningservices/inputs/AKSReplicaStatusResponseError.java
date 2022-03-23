@@ -58,8 +58,7 @@ public final class AKSReplicaStatusResponseError extends io.pulumi.resources.Inv
         public Builder error(ErrorResponseResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
-        }
-        public AKSReplicaStatusResponseError build() {
+        }        public AKSReplicaStatusResponseError build() {
             return new AKSReplicaStatusResponseError(error);
         }
     }

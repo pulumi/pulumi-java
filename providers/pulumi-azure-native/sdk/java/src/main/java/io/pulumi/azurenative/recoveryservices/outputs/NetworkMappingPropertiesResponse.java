@@ -187,47 +187,38 @@ public final class NetworkMappingPropertiesResponse {
             this.fabricSpecificSettings = fabricSpecificSettings;
             return this;
         }
-
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             this.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
-
         public Builder primaryNetworkFriendlyName(@Nullable String primaryNetworkFriendlyName) {
             this.primaryNetworkFriendlyName = primaryNetworkFriendlyName;
             return this;
         }
-
         public Builder primaryNetworkId(@Nullable String primaryNetworkId) {
             this.primaryNetworkId = primaryNetworkId;
             return this;
         }
-
         public Builder recoveryFabricArmId(@Nullable String recoveryFabricArmId) {
             this.recoveryFabricArmId = recoveryFabricArmId;
             return this;
         }
-
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
-
         public Builder recoveryNetworkFriendlyName(@Nullable String recoveryNetworkFriendlyName) {
             this.recoveryNetworkFriendlyName = recoveryNetworkFriendlyName;
             return this;
         }
-
         public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
             this.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public NetworkMappingPropertiesResponse build() {
+        }        public NetworkMappingPropertiesResponse build() {
             return new NetworkMappingPropertiesResponse(fabricSpecificSettings, primaryFabricFriendlyName, primaryNetworkFriendlyName, primaryNetworkId, recoveryFabricArmId, recoveryFabricFriendlyName, recoveryNetworkFriendlyName, recoveryNetworkId, state);
         }
     }

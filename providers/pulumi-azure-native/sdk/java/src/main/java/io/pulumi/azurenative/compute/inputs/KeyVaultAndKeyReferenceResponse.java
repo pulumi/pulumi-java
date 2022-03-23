@@ -77,12 +77,10 @@ public final class KeyVaultAndKeyReferenceResponse extends io.pulumi.resources.I
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
-
         public Builder sourceVault(SourceVaultResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
-        }
-        public KeyVaultAndKeyReferenceResponse build() {
+        }        public KeyVaultAndKeyReferenceResponse build() {
             return new KeyVaultAndKeyReferenceResponse(keyUrl, sourceVault);
         }
     }

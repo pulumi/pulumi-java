@@ -88,17 +88,14 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder recommendationType(String recommendationType) {
             this.recommendationType = Objects.requireNonNull(recommendationType);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public RecommendationConfigurationPropertiesResponse build() {
+        }        public RecommendationConfigurationPropertiesResponse build() {
             return new RecommendationConfigurationPropertiesResponse(name, recommendationType, status);
         }
     }

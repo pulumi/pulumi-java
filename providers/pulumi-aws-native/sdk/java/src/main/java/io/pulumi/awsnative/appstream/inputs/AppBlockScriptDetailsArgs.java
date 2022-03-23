@@ -92,42 +92,34 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
             this.executableParameters = executableParameters;
             return this;
         }
-
         public Builder executableParameters(@Nullable String executableParameters) {
             this.executableParameters = Output.ofNullable(executableParameters);
             return this;
         }
-
         public Builder executablePath(Output<String> executablePath) {
             this.executablePath = Objects.requireNonNull(executablePath);
             return this;
         }
-
         public Builder executablePath(String executablePath) {
             this.executablePath = Output.of(Objects.requireNonNull(executablePath));
             return this;
         }
-
         public Builder scriptS3Location(Output<AppBlockS3LocationArgs> scriptS3Location) {
             this.scriptS3Location = Objects.requireNonNull(scriptS3Location);
             return this;
         }
-
         public Builder scriptS3Location(AppBlockS3LocationArgs scriptS3Location) {
             this.scriptS3Location = Output.of(Objects.requireNonNull(scriptS3Location));
             return this;
         }
-
         public Builder timeoutInSeconds(Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
-
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.of(Objects.requireNonNull(timeoutInSeconds));
             return this;
-        }
-        public AppBlockScriptDetailsArgs build() {
+        }        public AppBlockScriptDetailsArgs build() {
             return new AppBlockScriptDetailsArgs(executableParameters, executablePath, scriptS3Location, timeoutInSeconds);
         }
     }

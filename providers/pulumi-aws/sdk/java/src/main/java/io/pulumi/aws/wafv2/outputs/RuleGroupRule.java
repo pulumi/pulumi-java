@@ -140,32 +140,29 @@ public final class RuleGroupRule {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder ruleLabels(@Nullable List<RuleGroupRuleRuleLabel> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
-
+        public Builder ruleLabels(RuleGroupRuleRuleLabel... ruleLabels) {
+            return ruleLabels(List.of(ruleLabels));
+        }
         public Builder statement(RuleGroupRuleStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder visibilityConfig(RuleGroupRuleVisibilityConfig visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
-        }
-        public RuleGroupRule build() {
+        }        public RuleGroupRule build() {
             return new RuleGroupRule(action, name, priority, ruleLabels, statement, visibilityConfig);
         }
     }

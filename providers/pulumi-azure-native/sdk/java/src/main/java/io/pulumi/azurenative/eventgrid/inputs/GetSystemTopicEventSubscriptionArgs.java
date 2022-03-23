@@ -88,17 +88,14 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder systemTopicName(String systemTopicName) {
             this.systemTopicName = Objects.requireNonNull(systemTopicName);
             return this;
-        }
-        public GetSystemTopicEventSubscriptionArgs build() {
+        }        public GetSystemTopicEventSubscriptionArgs build() {
             return new GetSystemTopicEventSubscriptionArgs(eventSubscriptionName, resourceGroupName, systemTopicName);
         }
     }

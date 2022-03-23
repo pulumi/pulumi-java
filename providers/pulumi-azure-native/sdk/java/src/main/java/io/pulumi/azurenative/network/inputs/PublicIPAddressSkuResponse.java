@@ -78,12 +78,10 @@ public final class PublicIPAddressSkuResponse extends io.pulumi.resources.Invoke
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public PublicIPAddressSkuResponse build() {
+        }        public PublicIPAddressSkuResponse build() {
             return new PublicIPAddressSkuResponse(name, tier);
         }
     }

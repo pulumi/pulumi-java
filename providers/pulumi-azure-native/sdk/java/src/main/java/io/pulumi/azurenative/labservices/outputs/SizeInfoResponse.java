@@ -105,22 +105,18 @@ public final class SizeInfoResponse {
             this.computeSize = computeSize;
             return this;
         }
-
         public Builder memory(@Nullable Double memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder numberOfCores(@Nullable Integer numberOfCores) {
             this.numberOfCores = numberOfCores;
             return this;
         }
-
         public Builder price(@Nullable Double price) {
             this.price = price;
             return this;
-        }
-        public SizeInfoResponse build() {
+        }        public SizeInfoResponse build() {
             return new SizeInfoResponse(computeSize, memory, numberOfCores, price);
         }
     }

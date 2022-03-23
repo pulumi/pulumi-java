@@ -73,12 +73,13 @@ public final class MitigationActionAddThingsToThingGroupParams {
             this.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
-
         public Builder thingGroupNames(List<String> thingGroupNames) {
             this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
             return this;
         }
-        public MitigationActionAddThingsToThingGroupParams build() {
+        public Builder thingGroupNames(String... thingGroupNames) {
+            return thingGroupNames(List.of(thingGroupNames));
+        }        public MitigationActionAddThingsToThingGroupParams build() {
             return new MitigationActionAddThingsToThingGroupParams(overrideDynamicGroups, thingGroupNames);
         }
     }

@@ -63,17 +63,14 @@ public final class GetDomainNameResult {
             this.appSyncDomainName = appSyncDomainName;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
-        }
-        public GetDomainNameResult build() {
+        }        public GetDomainNameResult build() {
             return new GetDomainNameResult(appSyncDomainName, description, hostedZoneId);
         }
     }

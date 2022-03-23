@@ -362,102 +362,100 @@ public final class GetSecurityRuleResult {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
-
         public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
             this.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
-
+        public Builder destinationAddressPrefixes(String... destinationAddressPrefixes) {
+            return destinationAddressPrefixes(List.of(destinationAddressPrefixes));
+        }
         public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups) {
             this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
-
+        public Builder destinationApplicationSecurityGroups(ApplicationSecurityGroupResponse... destinationApplicationSecurityGroups) {
+            return destinationApplicationSecurityGroups(List.of(destinationApplicationSecurityGroups));
+        }
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
-
         public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
-
+        public Builder destinationPortRanges(String... destinationPortRanges) {
+            return destinationPortRanges(List.of(destinationPortRanges));
+        }
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
-
         public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
             this.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
-
+        public Builder sourceAddressPrefixes(String... sourceAddressPrefixes) {
+            return sourceAddressPrefixes(List.of(sourceAddressPrefixes));
+        }
         public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups) {
             this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
-
+        public Builder sourceApplicationSecurityGroups(ApplicationSecurityGroupResponse... sourceApplicationSecurityGroups) {
+            return sourceApplicationSecurityGroups(List.of(sourceApplicationSecurityGroups));
+        }
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
-
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
+        public Builder sourcePortRanges(String... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetSecurityRuleResult build() {
+        }        public GetSecurityRuleResult build() {
             return new GetSecurityRuleResult(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, etag, id, name, priority, protocol, provisioningState, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
         }
     }

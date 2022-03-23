@@ -155,72 +155,58 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
-
         public Builder propertyBag(@Nullable String propertyBag) {
             this.propertyBag = Output.ofNullable(propertyBag);
             return this;
         }
-
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlServerRegistrationName(@Nullable Output<String> sqlServerRegistrationName) {
             this.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
-
         public Builder sqlServerRegistrationName(@Nullable String sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Output.ofNullable(sqlServerRegistrationName);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SqlServerRegistrationArgs build() {
+        }        public SqlServerRegistrationArgs build() {
             return new SqlServerRegistrationArgs(location, propertyBag, resourceGroup, resourceGroupName, sqlServerRegistrationName, subscriptionId, tags);
         }
     }

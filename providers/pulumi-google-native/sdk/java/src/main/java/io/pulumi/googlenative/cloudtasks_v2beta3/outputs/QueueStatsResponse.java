@@ -118,27 +118,22 @@ public final class QueueStatsResponse {
             this.concurrentDispatchesCount = Objects.requireNonNull(concurrentDispatchesCount);
             return this;
         }
-
         public Builder effectiveExecutionRate(Double effectiveExecutionRate) {
             this.effectiveExecutionRate = Objects.requireNonNull(effectiveExecutionRate);
             return this;
         }
-
         public Builder executedLastMinuteCount(String executedLastMinuteCount) {
             this.executedLastMinuteCount = Objects.requireNonNull(executedLastMinuteCount);
             return this;
         }
-
         public Builder oldestEstimatedArrivalTime(String oldestEstimatedArrivalTime) {
             this.oldestEstimatedArrivalTime = Objects.requireNonNull(oldestEstimatedArrivalTime);
             return this;
         }
-
         public Builder tasksCount(String tasksCount) {
             this.tasksCount = Objects.requireNonNull(tasksCount);
             return this;
-        }
-        public QueueStatsResponse build() {
+        }        public QueueStatsResponse build() {
             return new QueueStatsResponse(concurrentDispatchesCount, effectiveExecutionRate, executedLastMinuteCount, oldestEstimatedArrivalTime, tasksCount);
         }
     }

@@ -60,8 +60,7 @@ public final class EndpointRefResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public EndpointRefResponse build() {
+        }        public EndpointRefResponse build() {
             return new EndpointRefResponse(name);
         }
     }

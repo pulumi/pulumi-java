@@ -78,12 +78,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             this.mediaObjects = Objects.requireNonNull(mediaObjects);
             return this;
         }
-
+        public Builder mediaObjects(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse... mediaObjects) {
+            return mediaObjects(List.of(mediaObjects));
+        }
         public Builder mediaType(String mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(mediaObjects, mediaType);
         }
     }

@@ -206,102 +206,82 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
-
         public Builder connectorName(String connectorName) {
             this.connectorName = Output.of(Objects.requireNonNull(connectorName));
             return this;
         }
-
         public Builder connectorType(@Nullable Output<Either<String,ConnectorTypes>> connectorType) {
             this.connectorType = connectorType;
             return this;
         }
-
         public Builder connectorType(@Nullable Either<String,ConnectorTypes> connectorType) {
             this.connectorType = Output.ofNullable(connectorType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder entityType(Output<EntityTypes> entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder entityType(EntityTypes entityType) {
             this.entityType = Output.of(Objects.requireNonNull(entityType));
             return this;
         }
-
         public Builder entityTypeName(Output<String> entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
-
         public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Output.of(Objects.requireNonNull(entityTypeName));
             return this;
         }
-
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder mappingName(@Nullable Output<String> mappingName) {
             this.mappingName = mappingName;
             return this;
         }
-
         public Builder mappingName(@Nullable String mappingName) {
             this.mappingName = Output.ofNullable(mappingName);
             return this;
         }
-
         public Builder mappingProperties(Output<ConnectorMappingPropertiesArgs> mappingProperties) {
             this.mappingProperties = Objects.requireNonNull(mappingProperties);
             return this;
         }
-
         public Builder mappingProperties(ConnectorMappingPropertiesArgs mappingProperties) {
             this.mappingProperties = Output.of(Objects.requireNonNull(mappingProperties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ConnectorMappingArgs build() {
+        }        public ConnectorMappingArgs build() {
             return new ConnectorMappingArgs(connectorName, connectorType, description, displayName, entityType, entityTypeName, hubName, mappingName, mappingProperties, resourceGroupName);
         }
     }

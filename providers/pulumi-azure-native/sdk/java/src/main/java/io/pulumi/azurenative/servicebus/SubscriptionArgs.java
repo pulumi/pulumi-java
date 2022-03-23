@@ -301,162 +301,130 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
-
         public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
             this.autoDeleteOnIdle = Output.ofNullable(autoDeleteOnIdle);
             return this;
         }
-
         public Builder deadLetteringOnFilterEvaluationExceptions(@Nullable Output<Boolean> deadLetteringOnFilterEvaluationExceptions) {
             this.deadLetteringOnFilterEvaluationExceptions = deadLetteringOnFilterEvaluationExceptions;
             return this;
         }
-
         public Builder deadLetteringOnFilterEvaluationExceptions(@Nullable Boolean deadLetteringOnFilterEvaluationExceptions) {
             this.deadLetteringOnFilterEvaluationExceptions = Output.ofNullable(deadLetteringOnFilterEvaluationExceptions);
             return this;
         }
-
         public Builder deadLetteringOnMessageExpiration(@Nullable Output<Boolean> deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
             return this;
         }
-
         public Builder deadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = Output.ofNullable(deadLetteringOnMessageExpiration);
             return this;
         }
-
         public Builder defaultMessageTimeToLive(@Nullable Output<String> defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
-
         public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = Output.ofNullable(defaultMessageTimeToLive);
             return this;
         }
-
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable Output<String> duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
-
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = Output.ofNullable(duplicateDetectionHistoryTimeWindow);
             return this;
         }
-
         public Builder enableBatchedOperations(@Nullable Output<Boolean> enableBatchedOperations) {
             this.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
-
         public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
             this.enableBatchedOperations = Output.ofNullable(enableBatchedOperations);
             return this;
         }
-
         public Builder forwardDeadLetteredMessagesTo(@Nullable Output<String> forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
             return this;
         }
-
         public Builder forwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = Output.ofNullable(forwardDeadLetteredMessagesTo);
             return this;
         }
-
         public Builder forwardTo(@Nullable Output<String> forwardTo) {
             this.forwardTo = forwardTo;
             return this;
         }
-
         public Builder forwardTo(@Nullable String forwardTo) {
             this.forwardTo = Output.ofNullable(forwardTo);
             return this;
         }
-
         public Builder lockDuration(@Nullable Output<String> lockDuration) {
             this.lockDuration = lockDuration;
             return this;
         }
-
         public Builder lockDuration(@Nullable String lockDuration) {
             this.lockDuration = Output.ofNullable(lockDuration);
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = Output.ofNullable(maxDeliveryCount);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder requiresSession(@Nullable Output<Boolean> requiresSession) {
             this.requiresSession = requiresSession;
             return this;
         }
-
         public Builder requiresSession(@Nullable Boolean requiresSession) {
             this.requiresSession = Output.ofNullable(requiresSession);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder status(@Nullable Output<EntityStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable EntityStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subscriptionName(@Nullable Output<String> subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
         }
-
         public Builder subscriptionName(@Nullable String subscriptionName) {
             this.subscriptionName = Output.ofNullable(subscriptionName);
             return this;
         }
-
         public Builder topicName(Output<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Output.of(Objects.requireNonNull(topicName));
             return this;
-        }
-        public SubscriptionArgs build() {
+        }        public SubscriptionArgs build() {
             return new SubscriptionArgs(autoDeleteOnIdle, deadLetteringOnFilterEvaluationExceptions, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, forwardDeadLetteredMessagesTo, forwardTo, lockDuration, maxDeliveryCount, namespaceName, requiresSession, resourceGroupName, status, subscriptionName, topicName);
         }
     }

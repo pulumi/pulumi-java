@@ -55,12 +55,10 @@ public final class ConfigDataflowEndpointConfig {
             this.dataflowEndpointName = dataflowEndpointName;
             return this;
         }
-
         public Builder dataflowEndpointRegion(@Nullable String dataflowEndpointRegion) {
             this.dataflowEndpointRegion = dataflowEndpointRegion;
             return this;
-        }
-        public ConfigDataflowEndpointConfig build() {
+        }        public ConfigDataflowEndpointConfig build() {
             return new ConfigDataflowEndpointConfig(dataflowEndpointName, dataflowEndpointRegion);
         }
     }

@@ -69,12 +69,10 @@ public final class GetDatasetResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
-        }
-        public GetDatasetResult build() {
+        }        public GetDatasetResult build() {
             return new GetDatasetResult(name, timeZone);
         }
     }

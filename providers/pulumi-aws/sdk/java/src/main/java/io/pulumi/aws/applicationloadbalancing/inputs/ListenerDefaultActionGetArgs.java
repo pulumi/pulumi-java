@@ -176,82 +176,66 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             this.authenticateCognito = authenticateCognito;
             return this;
         }
-
         public Builder authenticateCognito(@Nullable ListenerDefaultActionAuthenticateCognitoGetArgs authenticateCognito) {
             this.authenticateCognito = Output.ofNullable(authenticateCognito);
             return this;
         }
-
         public Builder authenticateOidc(@Nullable Output<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc) {
             this.authenticateOidc = authenticateOidc;
             return this;
         }
-
         public Builder authenticateOidc(@Nullable ListenerDefaultActionAuthenticateOidcGetArgs authenticateOidc) {
             this.authenticateOidc = Output.ofNullable(authenticateOidc);
             return this;
         }
-
         public Builder fixedResponse(@Nullable Output<ListenerDefaultActionFixedResponseGetArgs> fixedResponse) {
             this.fixedResponse = fixedResponse;
             return this;
         }
-
         public Builder fixedResponse(@Nullable ListenerDefaultActionFixedResponseGetArgs fixedResponse) {
             this.fixedResponse = Output.ofNullable(fixedResponse);
             return this;
         }
-
         public Builder forward(@Nullable Output<ListenerDefaultActionForwardGetArgs> forward) {
             this.forward = forward;
             return this;
         }
-
         public Builder forward(@Nullable ListenerDefaultActionForwardGetArgs forward) {
             this.forward = Output.ofNullable(forward);
             return this;
         }
-
         public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder redirect(@Nullable Output<ListenerDefaultActionRedirectGetArgs> redirect) {
             this.redirect = redirect;
             return this;
         }
-
         public Builder redirect(@Nullable ListenerDefaultActionRedirectGetArgs redirect) {
             this.redirect = Output.ofNullable(redirect);
             return this;
         }
-
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ListenerDefaultActionGetArgs build() {
+        }        public ListenerDefaultActionGetArgs build() {
             return new ListenerDefaultActionGetArgs(authenticateCognito, authenticateOidc, fixedResponse, forward, order, redirect, targetGroupArn, type);
         }
     }

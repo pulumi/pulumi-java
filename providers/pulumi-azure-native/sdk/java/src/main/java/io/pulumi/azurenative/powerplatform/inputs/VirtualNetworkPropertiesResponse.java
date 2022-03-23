@@ -79,12 +79,10 @@ public final class VirtualNetworkPropertiesResponse extends io.pulumi.resources.
             this.id = id;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetPropertiesResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public VirtualNetworkPropertiesResponse build() {
+        }        public VirtualNetworkPropertiesResponse build() {
             return new VirtualNetworkPropertiesResponse(id, subnet);
         }
     }

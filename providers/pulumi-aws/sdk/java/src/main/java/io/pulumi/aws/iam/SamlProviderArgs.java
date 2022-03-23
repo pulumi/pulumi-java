@@ -91,32 +91,26 @@ public final class SamlProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder samlMetadataDocument(Output<String> samlMetadataDocument) {
             this.samlMetadataDocument = Objects.requireNonNull(samlMetadataDocument);
             return this;
         }
-
         public Builder samlMetadataDocument(String samlMetadataDocument) {
             this.samlMetadataDocument = Output.of(Objects.requireNonNull(samlMetadataDocument));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SamlProviderArgs build() {
+        }        public SamlProviderArgs build() {
             return new SamlProviderArgs(name, samlMetadataDocument, tags);
         }
     }

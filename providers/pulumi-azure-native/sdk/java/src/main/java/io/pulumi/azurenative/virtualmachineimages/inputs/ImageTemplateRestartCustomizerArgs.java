@@ -127,52 +127,42 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder restartCheckCommand(@Nullable Output<String> restartCheckCommand) {
             this.restartCheckCommand = restartCheckCommand;
             return this;
         }
-
         public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
             this.restartCheckCommand = Output.ofNullable(restartCheckCommand);
             return this;
         }
-
         public Builder restartCommand(@Nullable Output<String> restartCommand) {
             this.restartCommand = restartCommand;
             return this;
         }
-
         public Builder restartCommand(@Nullable String restartCommand) {
             this.restartCommand = Output.ofNullable(restartCommand);
             return this;
         }
-
         public Builder restartTimeout(@Nullable Output<String> restartTimeout) {
             this.restartTimeout = restartTimeout;
             return this;
         }
-
         public Builder restartTimeout(@Nullable String restartTimeout) {
             this.restartTimeout = Output.ofNullable(restartTimeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageTemplateRestartCustomizerArgs build() {
+        }        public ImageTemplateRestartCustomizerArgs build() {
             return new ImageTemplateRestartCustomizerArgs(name, restartCheckCommand, restartCommand, restartTimeout, type);
         }
     }

@@ -63,12 +63,10 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,DiskStorageAccountTypes> name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DiskSkuArgs build() {
+        }        public DiskSkuArgs build() {
             return new DiskSkuArgs(name);
         }
     }

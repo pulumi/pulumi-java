@@ -61,12 +61,10 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
             this.localSsdCount = localSsdCount;
             return this;
         }
-
         public Builder localSsdCount(@Nullable Integer localSsdCount) {
             this.localSsdCount = Output.ofNullable(localSsdCount);
             return this;
-        }
-        public EphemeralStorageConfigArgs build() {
+        }        public EphemeralStorageConfigArgs build() {
             return new EphemeralStorageConfigArgs(localSsdCount);
         }
     }

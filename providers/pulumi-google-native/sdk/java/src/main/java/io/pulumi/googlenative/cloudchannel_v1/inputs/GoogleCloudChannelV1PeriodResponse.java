@@ -77,12 +77,10 @@ public final class GoogleCloudChannelV1PeriodResponse extends io.pulumi.resource
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder periodType(String periodType) {
             this.periodType = Objects.requireNonNull(periodType);
             return this;
-        }
-        public GoogleCloudChannelV1PeriodResponse build() {
+        }        public GoogleCloudChannelV1PeriodResponse build() {
             return new GoogleCloudChannelV1PeriodResponse(duration, periodType);
         }
     }

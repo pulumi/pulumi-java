@@ -266,72 +266,58 @@ public final class GetEventGridDataConnectionResult {
             this.blobStorageEventType = blobStorageEventType;
             return this;
         }
-
         public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
-
         public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder eventHubResourceId(String eventHubResourceId) {
             this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ignoreFirstRecord(@Nullable Boolean ignoreFirstRecord) {
             this.ignoreFirstRecord = ignoreFirstRecord;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder storageAccountResourceId(String storageAccountResourceId) {
             this.storageAccountResourceId = Objects.requireNonNull(storageAccountResourceId);
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEventGridDataConnectionResult build() {
+        }        public GetEventGridDataConnectionResult build() {
             return new GetEventGridDataConnectionResult(blobStorageEventType, consumerGroup, dataFormat, eventHubResourceId, id, ignoreFirstRecord, kind, location, mappingRuleName, name, provisioningState, storageAccountResourceId, tableName, type);
         }
     }

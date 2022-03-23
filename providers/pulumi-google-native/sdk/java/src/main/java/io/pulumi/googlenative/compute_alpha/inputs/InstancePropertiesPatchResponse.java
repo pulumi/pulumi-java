@@ -77,12 +77,10 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
-        }
-        public InstancePropertiesPatchResponse build() {
+        }        public InstancePropertiesPatchResponse build() {
             return new InstancePropertiesPatchResponse(labels, metadata);
         }
     }

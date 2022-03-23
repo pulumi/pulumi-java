@@ -61,12 +61,10 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable String threadsPerCore) {
             this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
-        }
-        public AdvancedMachineFeaturesArgs build() {
+        }        public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(threadsPerCore);
         }
     }

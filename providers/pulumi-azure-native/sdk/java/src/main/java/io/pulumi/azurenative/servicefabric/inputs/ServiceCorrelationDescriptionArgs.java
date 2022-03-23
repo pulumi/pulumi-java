@@ -79,22 +79,18 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
-
         public Builder scheme(Either<String,ServiceCorrelationScheme> scheme) {
             this.scheme = Output.of(Objects.requireNonNull(scheme));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ServiceCorrelationDescriptionArgs build() {
+        }        public ServiceCorrelationDescriptionArgs build() {
             return new ServiceCorrelationDescriptionArgs(scheme, serviceName);
         }
     }

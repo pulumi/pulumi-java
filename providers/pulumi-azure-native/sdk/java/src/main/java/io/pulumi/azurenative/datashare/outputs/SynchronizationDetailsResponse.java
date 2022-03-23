@@ -279,77 +279,62 @@ public final class SynchronizationDetailsResponse {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder dataSetType(String dataSetType) {
             this.dataSetType = Objects.requireNonNull(dataSetType);
             return this;
         }
-
         public Builder durationMs(Integer durationMs) {
             this.durationMs = Objects.requireNonNull(durationMs);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder filesRead(Double filesRead) {
             this.filesRead = Objects.requireNonNull(filesRead);
             return this;
         }
-
         public Builder filesWritten(Double filesWritten) {
             this.filesWritten = Objects.requireNonNull(filesWritten);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rowsCopied(Double rowsCopied) {
             this.rowsCopied = Objects.requireNonNull(rowsCopied);
             return this;
         }
-
         public Builder rowsRead(Double rowsRead) {
             this.rowsRead = Objects.requireNonNull(rowsRead);
             return this;
         }
-
         public Builder sizeRead(Double sizeRead) {
             this.sizeRead = Objects.requireNonNull(sizeRead);
             return this;
         }
-
         public Builder sizeWritten(Double sizeWritten) {
             this.sizeWritten = Objects.requireNonNull(sizeWritten);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder vCore(Double vCore) {
             this.vCore = Objects.requireNonNull(vCore);
             return this;
-        }
-        public SynchronizationDetailsResponse build() {
+        }        public SynchronizationDetailsResponse build() {
             return new SynchronizationDetailsResponse(dataSetId, dataSetType, durationMs, endTime, filesRead, filesWritten, message, name, rowsCopied, rowsRead, sizeRead, sizeWritten, startTime, status, vCore);
         }
     }

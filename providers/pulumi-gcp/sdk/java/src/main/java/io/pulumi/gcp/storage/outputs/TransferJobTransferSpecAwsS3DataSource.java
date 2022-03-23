@@ -88,17 +88,14 @@ public final class TransferJobTransferSpecAwsS3DataSource {
             this.awsAccessKey = awsAccessKey;
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public TransferJobTransferSpecAwsS3DataSource build() {
+        }        public TransferJobTransferSpecAwsS3DataSource build() {
             return new TransferJobTransferSpecAwsS3DataSource(awsAccessKey, bucketName, roleArn);
         }
     }

@@ -335,92 +335,77 @@ public final class GetWorkspaceResult {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder customerId(String customerId) {
             this.customerId = Objects.requireNonNull(customerId);
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder features(@Nullable WorkspaceFeaturesResponse features) {
             this.features = features;
             return this;
         }
-
         public Builder forceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
             this.forceCmkForQuery = forceCmkForQuery;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder modifiedDate(String modifiedDate) {
             this.modifiedDate = Objects.requireNonNull(modifiedDate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateLinkScopedResources(List<PrivateLinkScopedResourceResponse> privateLinkScopedResources) {
             this.privateLinkScopedResources = Objects.requireNonNull(privateLinkScopedResources);
             return this;
         }
-
+        public Builder privateLinkScopedResources(PrivateLinkScopedResourceResponse... privateLinkScopedResources) {
+            return privateLinkScopedResources(List.of(privateLinkScopedResources));
+        }
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder publicNetworkAccessForIngestion(@Nullable String publicNetworkAccessForIngestion) {
             this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
         }
-
         public Builder publicNetworkAccessForQuery(@Nullable String publicNetworkAccessForQuery) {
             this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder sku(@Nullable WorkspaceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workspaceCapping(@Nullable WorkspaceCappingResponse workspaceCapping) {
             this.workspaceCapping = workspaceCapping;
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(createdDate, customerId, eTag, features, forceCmkForQuery, id, location, modifiedDate, name, privateLinkScopedResources, provisioningState, publicNetworkAccessForIngestion, publicNetworkAccessForQuery, retentionInDays, sku, tags, type, workspaceCapping);
         }
     }

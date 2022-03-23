@@ -217,57 +217,46 @@ public final class GetServiceResult {
             this.adminDomainName = adminDomainName;
             return this;
         }
-
         public Builder billingDomainName(@Nullable String billingDomainName) {
             this.billingDomainName = billingDomainName;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
-
         public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(adminDomainName, billingDomainName, etag, id, location, name, notes, quantity, startDate, tags, type);
         }
     }

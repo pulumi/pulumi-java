@@ -110,42 +110,37 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
             this.idpCertificates = Objects.requireNonNull(idpCertificates);
             return this;
         }
-
         public Builder idpCertificates(List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs> idpCertificates) {
             this.idpCertificates = Output.of(Objects.requireNonNull(idpCertificates));
             return this;
         }
-
+        public Builder idpCertificates(TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs... idpCertificates) {
+            return idpCertificates(List.of(idpCertificates));
+        }
         public Builder idpEntityId(Output<String> idpEntityId) {
             this.idpEntityId = Objects.requireNonNull(idpEntityId);
             return this;
         }
-
         public Builder idpEntityId(String idpEntityId) {
             this.idpEntityId = Output.of(Objects.requireNonNull(idpEntityId));
             return this;
         }
-
         public Builder signRequest(@Nullable Output<Boolean> signRequest) {
             this.signRequest = signRequest;
             return this;
         }
-
         public Builder signRequest(@Nullable Boolean signRequest) {
             this.signRequest = Output.ofNullable(signRequest);
             return this;
         }
-
         public Builder ssoUrl(Output<String> ssoUrl) {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }
-
         public Builder ssoUrl(String ssoUrl) {
             this.ssoUrl = Output.of(Objects.requireNonNull(ssoUrl));
             return this;
-        }
-        public TenantInboundSamlConfigIdpConfigGetArgs build() {
+        }        public TenantInboundSamlConfigIdpConfigGetArgs build() {
             return new TenantInboundSamlConfigIdpConfigGetArgs(idpCertificates, idpEntityId, signRequest, ssoUrl);
         }
     }

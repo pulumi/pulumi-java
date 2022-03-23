@@ -109,32 +109,26 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
             this.applicationHealthPolicies = applicationHealthPolicies;
             return this;
         }
-
         public Builder applicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyArgs> applicationHealthPolicies) {
             this.applicationHealthPolicies = Output.ofNullable(applicationHealthPolicies);
             return this;
         }
-
         public Builder maxPercentUnhealthyApplications(@Nullable Output<Integer> maxPercentUnhealthyApplications) {
             this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
             return this;
         }
-
         public Builder maxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
             this.maxPercentUnhealthyApplications = Output.ofNullable(maxPercentUnhealthyApplications);
             return this;
         }
-
         public Builder maxPercentUnhealthyNodes(@Nullable Output<Integer> maxPercentUnhealthyNodes) {
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
         }
-
         public Builder maxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
             this.maxPercentUnhealthyNodes = Output.ofNullable(maxPercentUnhealthyNodes);
             return this;
-        }
-        public ClusterHealthPolicyArgs build() {
+        }        public ClusterHealthPolicyArgs build() {
             return new ClusterHealthPolicyArgs(applicationHealthPolicies, maxPercentUnhealthyApplications, maxPercentUnhealthyNodes);
         }
     }

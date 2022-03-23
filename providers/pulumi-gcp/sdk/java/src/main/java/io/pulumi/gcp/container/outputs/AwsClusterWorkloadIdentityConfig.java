@@ -63,17 +63,14 @@ public final class AwsClusterWorkloadIdentityConfig {
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
-
         public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = workloadPool;
             return this;
-        }
-        public AwsClusterWorkloadIdentityConfig build() {
+        }        public AwsClusterWorkloadIdentityConfig build() {
             return new AwsClusterWorkloadIdentityConfig(identityProvider, issuerUri, workloadPool);
         }
     }

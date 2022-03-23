@@ -349,97 +349,81 @@ public final class GetConversationResult {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder callMetadata(GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse callMetadata) {
             this.callMetadata = Objects.requireNonNull(callMetadata);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dataSource(GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
-
         public Builder dialogflowIntents(Map<String,String> dialogflowIntents) {
             this.dialogflowIntents = Objects.requireNonNull(dialogflowIntents);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder latestAnalysis(GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis) {
             this.latestAnalysis = Objects.requireNonNull(latestAnalysis);
             return this;
         }
-
         public Builder medium(String medium) {
             this.medium = Objects.requireNonNull(medium);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder obfuscatedUserId(String obfuscatedUserId) {
             this.obfuscatedUserId = Objects.requireNonNull(obfuscatedUserId);
             return this;
         }
-
         public Builder runtimeAnnotations(List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse> runtimeAnnotations) {
             this.runtimeAnnotations = Objects.requireNonNull(runtimeAnnotations);
             return this;
         }
-
+        public Builder runtimeAnnotations(GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse... runtimeAnnotations) {
+            return runtimeAnnotations(List.of(runtimeAnnotations));
+        }
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder transcript(GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse transcript) {
             this.transcript = Objects.requireNonNull(transcript);
             return this;
         }
-
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder turnCount(Integer turnCount) {
             this.turnCount = Objects.requireNonNull(turnCount);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetConversationResult build() {
+        }        public GetConversationResult build() {
             return new GetConversationResult(agentId, callMetadata, createTime, dataSource, dialogflowIntents, duration, expireTime, labels, languageCode, latestAnalysis, medium, name, obfuscatedUserId, runtimeAnnotations, startTime, transcript, ttl, turnCount, updateTime);
         }
     }

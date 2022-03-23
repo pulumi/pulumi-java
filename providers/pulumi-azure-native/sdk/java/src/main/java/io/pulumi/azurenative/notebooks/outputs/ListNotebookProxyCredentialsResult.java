@@ -103,22 +103,18 @@ public final class ListNotebookProxyCredentialsResult {
             this.hostname = hostname;
             return this;
         }
-
         public Builder primaryAccessKey(@Nullable String primaryAccessKey) {
             this.primaryAccessKey = primaryAccessKey;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder secondaryAccessKey(@Nullable String secondaryAccessKey) {
             this.secondaryAccessKey = secondaryAccessKey;
             return this;
-        }
-        public ListNotebookProxyCredentialsResult build() {
+        }        public ListNotebookProxyCredentialsResult build() {
             return new ListNotebookProxyCredentialsResult(hostname, primaryAccessKey, resourceId, secondaryAccessKey);
         }
     }

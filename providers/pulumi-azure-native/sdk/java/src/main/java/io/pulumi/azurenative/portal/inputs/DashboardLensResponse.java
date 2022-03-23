@@ -99,17 +99,17 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
             this.metadata = metadata;
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder parts(List<DashboardPartsResponse> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-        public DashboardLensResponse build() {
+        public Builder parts(DashboardPartsResponse... parts) {
+            return parts(List.of(parts));
+        }        public DashboardLensResponse build() {
             return new DashboardLensResponse(metadata, order, parts);
         }
     }

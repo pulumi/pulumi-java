@@ -156,72 +156,64 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder fsxFilesystemArn(Output<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn);
             return this;
         }
-
         public Builder fsxFilesystemArn(String fsxFilesystemArn) {
             this.fsxFilesystemArn = Output.of(Objects.requireNonNull(fsxFilesystemArn));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
-
         public Builder securityGroupArns(List<String> securityGroupArns) {
             this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LocationFSxWindowsTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationFSxWindowsTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(LocationFSxWindowsTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Output.of(Objects.requireNonNull(user));
             return this;
-        }
-        public LocationFSxWindowsArgs build() {
+        }        public LocationFSxWindowsArgs build() {
             return new LocationFSxWindowsArgs(domain, fsxFilesystemArn, password, securityGroupArns, subdirectory, tags, user);
         }
     }

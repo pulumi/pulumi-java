@@ -71,12 +71,10 @@ public final class UserAssignedIdentityResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
-        }
-        public UserAssignedIdentityResponse build() {
+        }        public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, principalId);
         }
     }

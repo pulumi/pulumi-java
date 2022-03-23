@@ -58,12 +58,10 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Output.of(Objects.requireNonNull(networkUrl));
             return this;
-        }
-        public PolicyNetworkArgs build() {
+        }        public PolicyNetworkArgs build() {
             return new PolicyNetworkArgs(networkUrl);
         }
     }

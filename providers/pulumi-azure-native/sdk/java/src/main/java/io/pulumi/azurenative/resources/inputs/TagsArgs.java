@@ -58,12 +58,10 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public TagsArgs build() {
+        }        public TagsArgs build() {
             return new TagsArgs(tags);
         }
     }

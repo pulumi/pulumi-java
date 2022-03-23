@@ -208,52 +208,42 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
-
         public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy) {
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
         }
-
         public Builder partitionKey(@Nullable ContainerPartitionKeyResponse partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
-
         public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
             this.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
-        }
-        public SqlContainerGetPropertiesResponseResource build() {
+        }        public SqlContainerGetPropertiesResponseResource build() {
             return new SqlContainerGetPropertiesResponseResource(analyticalStorageTtl, conflictResolutionPolicy, defaultTtl, etag, id, indexingPolicy, partitionKey, rid, ts, uniqueKeyPolicy);
         }
     }

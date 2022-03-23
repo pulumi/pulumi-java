@@ -78,12 +78,10 @@ public final class RegionBackendServiceLogConfig {
             this.enable = enable;
             return this;
         }
-
         public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = sampleRate;
             return this;
-        }
-        public RegionBackendServiceLogConfig build() {
+        }        public RegionBackendServiceLogConfig build() {
             return new RegionBackendServiceLogConfig(enable, sampleRate);
         }
     }

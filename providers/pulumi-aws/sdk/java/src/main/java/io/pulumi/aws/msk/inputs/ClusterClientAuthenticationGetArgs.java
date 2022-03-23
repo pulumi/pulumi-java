@@ -75,22 +75,18 @@ public final class ClusterClientAuthenticationGetArgs extends io.pulumi.resource
             this.sasl = sasl;
             return this;
         }
-
         public Builder sasl(@Nullable ClusterClientAuthenticationSaslGetArgs sasl) {
             this.sasl = Output.ofNullable(sasl);
             return this;
         }
-
         public Builder tls(@Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls) {
             this.tls = tls;
             return this;
         }
-
         public Builder tls(@Nullable ClusterClientAuthenticationTlsGetArgs tls) {
             this.tls = Output.ofNullable(tls);
             return this;
-        }
-        public ClusterClientAuthenticationGetArgs build() {
+        }        public ClusterClientAuthenticationGetArgs build() {
             return new ClusterClientAuthenticationGetArgs(sasl, tls);
         }
     }

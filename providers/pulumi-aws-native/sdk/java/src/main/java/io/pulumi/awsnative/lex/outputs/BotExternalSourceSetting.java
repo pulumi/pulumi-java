@@ -45,8 +45,7 @@ public final class BotExternalSourceSetting {
         public Builder grammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSetting grammarSlotTypeSetting) {
             this.grammarSlotTypeSetting = grammarSlotTypeSetting;
             return this;
-        }
-        public BotExternalSourceSetting build() {
+        }        public BotExternalSourceSetting build() {
             return new BotExternalSourceSetting(grammarSlotTypeSetting);
         }
     }

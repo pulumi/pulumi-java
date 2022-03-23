@@ -125,52 +125,42 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder data(@Nullable Output<JsonElement> data) {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable JsonElement data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder revision(Output<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Output.of(Objects.requireNonNull(revision));
             return this;
-        }
-        public ControllerRevisionArgs build() {
+        }        public ControllerRevisionArgs build() {
             return new ControllerRevisionArgs(apiVersion, data, kind, metadata, revision);
         }
     }

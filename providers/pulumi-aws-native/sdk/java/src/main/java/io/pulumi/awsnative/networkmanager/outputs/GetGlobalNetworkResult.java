@@ -105,22 +105,21 @@ public final class GetGlobalNetworkResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<GlobalNetworkTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetGlobalNetworkResult build() {
+        public Builder tags(GlobalNetworkTag... tags) {
+            return tags(List.of(tags));
+        }        public GetGlobalNetworkResult build() {
             return new GetGlobalNetworkResult(arn, description, id, tags);
         }
     }

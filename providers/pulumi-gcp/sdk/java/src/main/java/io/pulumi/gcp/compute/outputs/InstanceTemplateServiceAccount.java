@@ -78,12 +78,13 @@ public final class InstanceTemplateServiceAccount {
             this.email = email;
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-        public InstanceTemplateServiceAccount build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public InstanceTemplateServiceAccount build() {
             return new InstanceTemplateServiceAccount(email, scopes);
         }
     }

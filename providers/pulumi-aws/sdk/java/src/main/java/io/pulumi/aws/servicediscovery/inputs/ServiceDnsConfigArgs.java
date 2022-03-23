@@ -92,32 +92,29 @@ public final class ServiceDnsConfigArgs extends io.pulumi.resources.ResourceArgs
             this.dnsRecords = Objects.requireNonNull(dnsRecords);
             return this;
         }
-
         public Builder dnsRecords(List<ServiceDnsConfigDnsRecordArgs> dnsRecords) {
             this.dnsRecords = Output.of(Objects.requireNonNull(dnsRecords));
             return this;
         }
-
+        public Builder dnsRecords(ServiceDnsConfigDnsRecordArgs... dnsRecords) {
+            return dnsRecords(List.of(dnsRecords));
+        }
         public Builder namespaceId(Output<String> namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
-
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
             return this;
         }
-
         public Builder routingPolicy(@Nullable Output<String> routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
         }
-
         public Builder routingPolicy(@Nullable String routingPolicy) {
             this.routingPolicy = Output.ofNullable(routingPolicy);
             return this;
-        }
-        public ServiceDnsConfigArgs build() {
+        }        public ServiceDnsConfigArgs build() {
             return new ServiceDnsConfigArgs(dnsRecords, namespaceId, routingPolicy);
         }
     }

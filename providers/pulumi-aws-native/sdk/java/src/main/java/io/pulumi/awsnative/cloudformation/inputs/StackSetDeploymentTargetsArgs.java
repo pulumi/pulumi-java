@@ -79,22 +79,24 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
             this.accounts = accounts;
             return this;
         }
-
         public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = Output.ofNullable(accounts);
             return this;
         }
-
+        public Builder accounts(String... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder organizationalUnitIds(@Nullable Output<List<String>> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = Output.ofNullable(organizationalUnitIds);
             return this;
         }
-        public StackSetDeploymentTargetsArgs build() {
+        public Builder organizationalUnitIds(String... organizationalUnitIds) {
+            return organizationalUnitIds(List.of(organizationalUnitIds));
+        }        public StackSetDeploymentTargetsArgs build() {
             return new StackSetDeploymentTargetsArgs(accounts, organizationalUnitIds);
         }
     }

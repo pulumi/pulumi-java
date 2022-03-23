@@ -94,32 +94,26 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
             this.interimSchemaName = interimSchemaName;
             return this;
         }
-
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
             this.interimSchemaName = Output.ofNullable(interimSchemaName);
             return this;
         }
-
         public Builder keys(@Nullable Output<Object> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable Object keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
         public Builder useTempDB(@Nullable Output<Object> useTempDB) {
             this.useTempDB = useTempDB;
             return this;
         }
-
         public Builder useTempDB(@Nullable Object useTempDB) {
             this.useTempDB = Output.ofNullable(useTempDB);
             return this;
-        }
-        public SqlUpsertSettingsArgs build() {
+        }        public SqlUpsertSettingsArgs build() {
             return new SqlUpsertSettingsArgs(interimSchemaName, keys, useTempDB);
         }
     }

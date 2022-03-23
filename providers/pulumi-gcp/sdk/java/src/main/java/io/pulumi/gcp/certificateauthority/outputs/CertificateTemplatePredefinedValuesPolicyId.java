@@ -53,7 +53,9 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-        public CertificateTemplatePredefinedValuesPolicyId build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateTemplatePredefinedValuesPolicyId build() {
             return new CertificateTemplatePredefinedValuesPolicyId(objectIdPaths);
         }
     }

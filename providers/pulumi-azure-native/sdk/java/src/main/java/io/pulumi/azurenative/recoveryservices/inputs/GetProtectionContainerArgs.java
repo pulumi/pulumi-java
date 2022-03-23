@@ -104,22 +104,18 @@ public final class GetProtectionContainerArgs extends io.pulumi.resources.Invoke
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder fabricName(String fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public GetProtectionContainerArgs build() {
+        }        public GetProtectionContainerArgs build() {
             return new GetProtectionContainerArgs(containerName, fabricName, resourceGroupName, vaultName);
         }
     }

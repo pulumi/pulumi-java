@@ -107,42 +107,34 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
-
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder properties(Output<SharedAccessAuthorizationRulePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(SharedAccessAuthorizationRulePropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public NamespaceAuthorizationRuleArgs build() {
+        }        public NamespaceAuthorizationRuleArgs build() {
             return new NamespaceAuthorizationRuleArgs(authorizationRuleName, namespaceName, properties, resourceGroupName);
         }
     }

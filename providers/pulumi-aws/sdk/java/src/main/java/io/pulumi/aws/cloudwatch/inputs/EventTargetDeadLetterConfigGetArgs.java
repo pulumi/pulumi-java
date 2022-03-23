@@ -57,12 +57,10 @@ public final class EventTargetDeadLetterConfigGetArgs extends io.pulumi.resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
-        }
-        public EventTargetDeadLetterConfigGetArgs build() {
+        }        public EventTargetDeadLetterConfigGetArgs build() {
             return new EventTargetDeadLetterConfigGetArgs(arn);
         }
     }

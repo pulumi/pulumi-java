@@ -97,32 +97,26 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder operation(Either<String,TrackPropertyCompareOperation> operation) {
             this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
-
         public Builder property(Output<Either<String,TrackPropertyType>> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
-
         public Builder property(Either<String,TrackPropertyType> property) {
             this.property = Output.of(Objects.requireNonNull(property));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TrackPropertyConditionArgs build() {
+        }        public TrackPropertyConditionArgs build() {
             return new TrackPropertyConditionArgs(operation, property, value);
         }
     }

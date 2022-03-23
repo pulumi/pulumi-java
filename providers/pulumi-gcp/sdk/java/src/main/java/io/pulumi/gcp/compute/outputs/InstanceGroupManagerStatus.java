@@ -90,17 +90,20 @@ public final class InstanceGroupManagerStatus {
             this.isStable = isStable;
             return this;
         }
-
         public Builder statefuls(@Nullable List<InstanceGroupManagerStatusStateful> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
-
+        public Builder statefuls(InstanceGroupManagerStatusStateful... statefuls) {
+            return statefuls(List.of(statefuls));
+        }
         public Builder versionTargets(@Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }
-        public InstanceGroupManagerStatus build() {
+        public Builder versionTargets(InstanceGroupManagerStatusVersionTarget... versionTargets) {
+            return versionTargets(List.of(versionTargets));
+        }        public InstanceGroupManagerStatus build() {
             return new InstanceGroupManagerStatus(isStable, statefuls, versionTargets);
         }
     }

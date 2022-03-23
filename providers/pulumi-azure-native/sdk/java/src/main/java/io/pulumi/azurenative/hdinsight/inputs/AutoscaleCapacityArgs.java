@@ -78,22 +78,18 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
-
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
             this.maxInstanceCount = Output.ofNullable(maxInstanceCount);
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = Output.ofNullable(minInstanceCount);
             return this;
-        }
-        public AutoscaleCapacityArgs build() {
+        }        public AutoscaleCapacityArgs build() {
             return new AutoscaleCapacityArgs(maxInstanceCount, minInstanceCount);
         }
     }

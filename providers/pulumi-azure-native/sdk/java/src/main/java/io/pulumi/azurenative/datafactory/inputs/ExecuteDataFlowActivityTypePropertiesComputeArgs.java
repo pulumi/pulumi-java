@@ -78,22 +78,18 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
             this.computeType = computeType;
             return this;
         }
-
         public Builder computeType(@Nullable Object computeType) {
             this.computeType = Output.ofNullable(computeType);
             return this;
         }
-
         public Builder coreCount(@Nullable Output<Object> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder coreCount(@Nullable Object coreCount) {
             this.coreCount = Output.ofNullable(coreCount);
             return this;
-        }
-        public ExecuteDataFlowActivityTypePropertiesComputeArgs build() {
+        }        public ExecuteDataFlowActivityTypePropertiesComputeArgs build() {
             return new ExecuteDataFlowActivityTypePropertiesComputeArgs(computeType, coreCount);
         }
     }

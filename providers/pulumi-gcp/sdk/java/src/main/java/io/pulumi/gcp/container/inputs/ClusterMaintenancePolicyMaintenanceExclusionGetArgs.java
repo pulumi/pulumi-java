@@ -77,32 +77,26 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Output.of(Objects.requireNonNull(endTime));
             return this;
         }
-
         public Builder exclusionName(Output<String> exclusionName) {
             this.exclusionName = Objects.requireNonNull(exclusionName);
             return this;
         }
-
         public Builder exclusionName(String exclusionName) {
             this.exclusionName = Output.of(Objects.requireNonNull(exclusionName));
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public ClusterMaintenancePolicyMaintenanceExclusionGetArgs build() {
+        }        public ClusterMaintenancePolicyMaintenanceExclusionGetArgs build() {
             return new ClusterMaintenancePolicyMaintenanceExclusionGetArgs(endTime, exclusionName, startTime);
         }
     }

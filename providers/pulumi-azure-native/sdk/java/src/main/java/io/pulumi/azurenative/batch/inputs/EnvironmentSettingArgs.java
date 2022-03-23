@@ -66,22 +66,18 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public EnvironmentSettingArgs build() {
+        }        public EnvironmentSettingArgs build() {
             return new EnvironmentSettingArgs(name, value);
         }
     }

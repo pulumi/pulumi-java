@@ -101,22 +101,18 @@ public final class GitFileSourceResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder repoType(String repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
-
         public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GitFileSourceResponse build() {
+        }        public GitFileSourceResponse build() {
             return new GitFileSourceResponse(path, repoType, revision, uri);
         }
     }

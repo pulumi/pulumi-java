@@ -66,22 +66,18 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
-
         public Builder pubsubTopicName(String pubsubTopicName) {
             this.pubsubTopicName = Output.of(Objects.requireNonNull(pubsubTopicName));
             return this;
         }
-
         public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
             this.subfolderMatches = subfolderMatches;
             return this;
         }
-
         public Builder subfolderMatches(@Nullable String subfolderMatches) {
             this.subfolderMatches = Output.ofNullable(subfolderMatches);
             return this;
-        }
-        public RegistryEventNotificationConfigItemArgs build() {
+        }        public RegistryEventNotificationConfigItemArgs build() {
             return new RegistryEventNotificationConfigItemArgs(pubsubTopicName, subfolderMatches);
         }
     }

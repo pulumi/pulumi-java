@@ -70,12 +70,13 @@ public final class GetLaunchTemplateFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetLaunchTemplateFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetLaunchTemplateFilter build() {
             return new GetLaunchTemplateFilter(name, values);
         }
     }

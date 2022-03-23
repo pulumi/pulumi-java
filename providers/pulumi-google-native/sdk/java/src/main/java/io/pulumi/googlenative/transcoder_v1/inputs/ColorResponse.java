@@ -92,17 +92,14 @@ public final class ColorResponse extends io.pulumi.resources.InvokeArgs {
             this.brightness = Objects.requireNonNull(brightness);
             return this;
         }
-
         public Builder contrast(Double contrast) {
             this.contrast = Objects.requireNonNull(contrast);
             return this;
         }
-
         public Builder saturation(Double saturation) {
             this.saturation = Objects.requireNonNull(saturation);
             return this;
-        }
-        public ColorResponse build() {
+        }        public ColorResponse build() {
             return new ColorResponse(brightness, contrast, saturation);
         }
     }

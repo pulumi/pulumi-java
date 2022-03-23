@@ -87,17 +87,14 @@ public final class MsixPackageDependenciesResponse {
             this.dependencyName = dependencyName;
             return this;
         }
-
         public Builder minVersion(@Nullable String minVersion) {
             this.minVersion = minVersion;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
-        }
-        public MsixPackageDependenciesResponse build() {
+        }        public MsixPackageDependenciesResponse build() {
             return new MsixPackageDependenciesResponse(dependencyName, minVersion, publisher);
         }
     }

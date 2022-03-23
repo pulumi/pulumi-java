@@ -72,12 +72,10 @@ public final class GetWorkbookArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetWorkbookArgs build() {
+        }        public GetWorkbookArgs build() {
             return new GetWorkbookArgs(resourceGroupName, resourceName);
         }
     }

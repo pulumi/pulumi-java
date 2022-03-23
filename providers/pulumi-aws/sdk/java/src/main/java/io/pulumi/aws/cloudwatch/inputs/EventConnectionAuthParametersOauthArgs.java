@@ -108,42 +108,34 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
-
         public Builder clientParameters(@Nullable Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters) {
             this.clientParameters = clientParameters;
             return this;
         }
-
         public Builder clientParameters(@Nullable EventConnectionAuthParametersOauthClientParametersArgs clientParameters) {
             this.clientParameters = Output.ofNullable(clientParameters);
             return this;
         }
-
         public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
-
         public Builder oauthHttpParameters(Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters) {
             this.oauthHttpParameters = Objects.requireNonNull(oauthHttpParameters);
             return this;
         }
-
         public Builder oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParametersArgs oauthHttpParameters) {
             this.oauthHttpParameters = Output.of(Objects.requireNonNull(oauthHttpParameters));
             return this;
-        }
-        public EventConnectionAuthParametersOauthArgs build() {
+        }        public EventConnectionAuthParametersOauthArgs build() {
             return new EventConnectionAuthParametersOauthArgs(authorizationEndpoint, clientParameters, httpMethod, oauthHttpParameters);
         }
     }

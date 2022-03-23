@@ -145,62 +145,50 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
             this.activeDeploymentName = activeDeploymentName;
             return this;
         }
-
         public Builder activeDeploymentName(@Nullable String activeDeploymentName) {
             this.activeDeploymentName = Output.ofNullable(activeDeploymentName);
             return this;
         }
-
         public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
-
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
-
         public Builder persistentDisk(@Nullable Output<PersistentDiskArgs> persistentDisk) {
             this.persistentDisk = persistentDisk;
             return this;
         }
-
         public Builder persistentDisk(@Nullable PersistentDiskArgs persistentDisk) {
             this.persistentDisk = Output.ofNullable(persistentDisk);
             return this;
         }
-
         public Builder $public(@Nullable Output<Boolean> $public) {
             this.$public = $public;
             return this;
         }
-
         public Builder $public(@Nullable Boolean $public) {
             this.$public = Output.ofNullable($public);
             return this;
         }
-
         public Builder temporaryDisk(@Nullable Output<TemporaryDiskArgs> temporaryDisk) {
             this.temporaryDisk = temporaryDisk;
             return this;
         }
-
         public Builder temporaryDisk(@Nullable TemporaryDiskArgs temporaryDisk) {
             this.temporaryDisk = Output.ofNullable(temporaryDisk);
             return this;
-        }
-        public AppResourcePropertiesArgs build() {
+        }        public AppResourcePropertiesArgs build() {
             return new AppResourcePropertiesArgs(activeDeploymentName, fqdn, httpsOnly, persistentDisk, $public, temporaryDisk);
         }
     }

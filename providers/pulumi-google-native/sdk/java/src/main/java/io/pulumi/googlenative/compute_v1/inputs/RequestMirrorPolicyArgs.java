@@ -61,12 +61,10 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
             this.backendService = backendService;
             return this;
         }
-
         public Builder backendService(@Nullable String backendService) {
             this.backendService = Output.ofNullable(backendService);
             return this;
-        }
-        public RequestMirrorPolicyArgs build() {
+        }        public RequestMirrorPolicyArgs build() {
             return new RequestMirrorPolicyArgs(backendService);
         }
     }

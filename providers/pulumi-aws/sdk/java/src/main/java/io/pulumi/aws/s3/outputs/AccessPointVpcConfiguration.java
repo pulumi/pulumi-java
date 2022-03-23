@@ -51,8 +51,7 @@ public final class AccessPointVpcConfiguration {
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public AccessPointVpcConfiguration build() {
+        }        public AccessPointVpcConfiguration build() {
             return new AccessPointVpcConfiguration(vpcId);
         }
     }

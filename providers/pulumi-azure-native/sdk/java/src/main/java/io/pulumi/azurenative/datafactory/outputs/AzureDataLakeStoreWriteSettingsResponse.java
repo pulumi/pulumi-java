@@ -122,27 +122,22 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
             this.copyBehavior = copyBehavior;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder expiryDateTime(@Nullable Object expiryDateTime) {
             this.expiryDateTime = expiryDateTime;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureDataLakeStoreWriteSettingsResponse build() {
+        }        public AzureDataLakeStoreWriteSettingsResponse build() {
             return new AzureDataLakeStoreWriteSettingsResponse(copyBehavior, disableMetricsCollection, expiryDateTime, maxConcurrentConnections, type);
         }
     }

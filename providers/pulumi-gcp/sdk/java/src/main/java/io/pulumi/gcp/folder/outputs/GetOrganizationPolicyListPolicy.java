@@ -73,22 +73,24 @@ public final class GetOrganizationPolicyListPolicy {
             this.allows = Objects.requireNonNull(allows);
             return this;
         }
-
+        public Builder allows(GetOrganizationPolicyListPolicyAllow... allows) {
+            return allows(List.of(allows));
+        }
         public Builder denies(List<GetOrganizationPolicyListPolicyDeny> denies) {
             this.denies = Objects.requireNonNull(denies);
             return this;
         }
-
+        public Builder denies(GetOrganizationPolicyListPolicyDeny... denies) {
+            return denies(List.of(denies));
+        }
         public Builder inheritFromParent(Boolean inheritFromParent) {
             this.inheritFromParent = Objects.requireNonNull(inheritFromParent);
             return this;
         }
-
         public Builder suggestedValue(String suggestedValue) {
             this.suggestedValue = Objects.requireNonNull(suggestedValue);
             return this;
-        }
-        public GetOrganizationPolicyListPolicy build() {
+        }        public GetOrganizationPolicyListPolicy build() {
             return new GetOrganizationPolicyListPolicy(allows, denies, inheritFromParent, suggestedValue);
         }
     }

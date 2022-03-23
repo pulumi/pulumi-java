@@ -56,8 +56,7 @@ public final class PackagingGroupLogConfiguration extends io.pulumi.resources.In
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
-        }
-        public PackagingGroupLogConfiguration build() {
+        }        public PackagingGroupLogConfiguration build() {
             return new PackagingGroupLogConfiguration(logGroupName);
         }
     }

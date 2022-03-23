@@ -123,52 +123,45 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder languageTag(@Nullable Output<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
-
         public Builder languageTag(@Nullable String languageTag) {
             this.languageTag = Output.ofNullable(languageTag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable Output<List<String>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable List<String> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
             return this;
         }
-
+        public Builder notificationCategorySubscriptions(String... notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
+        }
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
-        }
-        public ContactState build() {
+        }        public ContactState build() {
             return new ContactState(email, languageTag, name, notificationCategorySubscriptions, parent);
         }
     }

@@ -114,22 +114,24 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder enrichments(@Nullable List<EnrichmentPropertiesResponse> enrichments) {
             this.enrichments = enrichments;
             return this;
         }
-
+        public Builder enrichments(EnrichmentPropertiesResponse... enrichments) {
+            return enrichments(List.of(enrichments));
+        }
         public Builder fallbackRoute(@Nullable FallbackRoutePropertiesResponse fallbackRoute) {
             this.fallbackRoute = fallbackRoute;
             return this;
         }
-
         public Builder routes(@Nullable List<RoutePropertiesResponse> routes) {
             this.routes = routes;
             return this;
         }
-        public RoutingPropertiesResponse build() {
+        public Builder routes(RoutePropertiesResponse... routes) {
+            return routes(List.of(routes));
+        }        public RoutingPropertiesResponse build() {
             return new RoutingPropertiesResponse(endpoints, enrichments, fallbackRoute, routes);
         }
     }

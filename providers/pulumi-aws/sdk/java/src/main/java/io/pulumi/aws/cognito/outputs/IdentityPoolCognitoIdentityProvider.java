@@ -88,17 +88,14 @@ public final class IdentityPoolCognitoIdentityProvider {
             this.clientId = clientId;
             return this;
         }
-
         public Builder providerName(@Nullable String providerName) {
             this.providerName = providerName;
             return this;
         }
-
         public Builder serverSideTokenCheck(@Nullable Boolean serverSideTokenCheck) {
             this.serverSideTokenCheck = serverSideTokenCheck;
             return this;
-        }
-        public IdentityPoolCognitoIdentityProvider build() {
+        }        public IdentityPoolCognitoIdentityProvider build() {
             return new IdentityPoolCognitoIdentityProvider(clientId, providerName, serverSideTokenCheck);
         }
     }

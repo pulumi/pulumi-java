@@ -253,132 +253,106 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder fixedRate(Output<Double> fixedRate) {
             this.fixedRate = Objects.requireNonNull(fixedRate);
             return this;
         }
-
         public Builder fixedRate(Double fixedRate) {
             this.fixedRate = Output.of(Objects.requireNonNull(fixedRate));
             return this;
         }
-
         public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder reservoirSize(Output<Integer> reservoirSize) {
             this.reservoirSize = Objects.requireNonNull(reservoirSize);
             return this;
         }
-
         public Builder reservoirSize(Integer reservoirSize) {
             this.reservoirSize = Output.of(Objects.requireNonNull(reservoirSize));
             return this;
         }
-
         public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder serviceType(Output<String> serviceType) {
             this.serviceType = Objects.requireNonNull(serviceType);
             return this;
         }
-
         public Builder serviceType(String serviceType) {
             this.serviceType = Output.of(Objects.requireNonNull(serviceType));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder urlPath(Output<String> urlPath) {
             this.urlPath = Objects.requireNonNull(urlPath);
             return this;
         }
-
         public Builder urlPath(String urlPath) {
             this.urlPath = Output.of(Objects.requireNonNull(urlPath));
             return this;
         }
-
         public Builder version(Output<Integer> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public SamplingRuleArgs build() {
+        }        public SamplingRuleArgs build() {
             return new SamplingRuleArgs(attributes, fixedRate, host, httpMethod, priority, reservoirSize, resourceArn, ruleName, serviceName, serviceType, tags, urlPath, version);
         }
     }

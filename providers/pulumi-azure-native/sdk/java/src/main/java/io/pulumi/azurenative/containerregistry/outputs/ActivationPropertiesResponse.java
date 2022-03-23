@@ -51,8 +51,7 @@ public final class ActivationPropertiesResponse {
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ActivationPropertiesResponse build() {
+        }        public ActivationPropertiesResponse build() {
             return new ActivationPropertiesResponse(status);
         }
     }

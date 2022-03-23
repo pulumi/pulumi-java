@@ -72,12 +72,10 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
             this.planTypeName = Objects.requireNonNull(planTypeName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
-        }
-        public GetSupportPlanTypeArgs build() {
+        }        public GetSupportPlanTypeArgs build() {
             return new GetSupportPlanTypeArgs(planTypeName, providerName);
         }
     }

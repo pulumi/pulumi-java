@@ -200,112 +200,96 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             this.beneficiary = beneficiary;
             return this;
         }
-
         public Builder beneficiary(@Nullable String beneficiary) {
             this.beneficiary = Output.ofNullable(beneficiary);
             return this;
         }
-
         public Builder consumptionConfiguration(Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration) {
             this.consumptionConfiguration = Objects.requireNonNull(consumptionConfiguration);
             return this;
         }
-
         public Builder consumptionConfiguration(LicenseConsumptionConfigurationArgs consumptionConfiguration) {
             this.consumptionConfiguration = Output.of(Objects.requireNonNull(consumptionConfiguration));
             return this;
         }
-
         public Builder entitlements(Output<List<LicenseEntitlementArgs>> entitlements) {
             this.entitlements = Objects.requireNonNull(entitlements);
             return this;
         }
-
         public Builder entitlements(List<LicenseEntitlementArgs> entitlements) {
             this.entitlements = Output.of(Objects.requireNonNull(entitlements));
             return this;
         }
-
+        public Builder entitlements(LicenseEntitlementArgs... entitlements) {
+            return entitlements(List.of(entitlements));
+        }
         public Builder homeRegion(Output<String> homeRegion) {
             this.homeRegion = Objects.requireNonNull(homeRegion);
             return this;
         }
-
         public Builder homeRegion(String homeRegion) {
             this.homeRegion = Output.of(Objects.requireNonNull(homeRegion));
             return this;
         }
-
         public Builder issuer(Output<LicenseIssuerDataArgs> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder issuer(LicenseIssuerDataArgs issuer) {
             this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
-
         public Builder licenseMetadata(@Nullable Output<List<LicenseMetadataArgs>> licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
             return this;
         }
-
         public Builder licenseMetadata(@Nullable List<LicenseMetadataArgs> licenseMetadata) {
             this.licenseMetadata = Output.ofNullable(licenseMetadata);
             return this;
         }
-
+        public Builder licenseMetadata(LicenseMetadataArgs... licenseMetadata) {
+            return licenseMetadata(List.of(licenseMetadata));
+        }
         public Builder licenseName(@Nullable Output<String> licenseName) {
             this.licenseName = licenseName;
             return this;
         }
-
         public Builder licenseName(@Nullable String licenseName) {
             this.licenseName = Output.ofNullable(licenseName);
             return this;
         }
-
         public Builder productName(Output<String> productName) {
             this.productName = Objects.requireNonNull(productName);
             return this;
         }
-
         public Builder productName(String productName) {
             this.productName = Output.of(Objects.requireNonNull(productName));
             return this;
         }
-
         public Builder productSKU(@Nullable Output<String> productSKU) {
             this.productSKU = productSKU;
             return this;
         }
-
         public Builder productSKU(@Nullable String productSKU) {
             this.productSKU = Output.ofNullable(productSKU);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder validity(Output<LicenseValidityDateFormatArgs> validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
-
         public Builder validity(LicenseValidityDateFormatArgs validity) {
             this.validity = Output.of(Objects.requireNonNull(validity));
             return this;
-        }
-        public LicenseArgs build() {
+        }        public LicenseArgs build() {
             return new LicenseArgs(beneficiary, consumptionConfiguration, entitlements, homeRegion, issuer, licenseMetadata, licenseName, productName, productSKU, status, validity);
         }
     }

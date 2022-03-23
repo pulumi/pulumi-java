@@ -53,12 +53,10 @@ public final class ClusterNodePoolUpgradeSettings {
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
-
         public Builder maxUnavailable(Integer maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
-        }
-        public ClusterNodePoolUpgradeSettings build() {
+        }        public ClusterNodePoolUpgradeSettings build() {
             return new ClusterNodePoolUpgradeSettings(maxSurge, maxUnavailable);
         }
     }

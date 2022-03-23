@@ -136,62 +136,56 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterEndpointIdentifier = Objects.requireNonNull(clusterEndpointIdentifier);
             return this;
         }
-
         public Builder clusterEndpointIdentifier(String clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = Output.of(Objects.requireNonNull(clusterEndpointIdentifier));
             return this;
         }
-
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder excludedMembers(@Nullable Output<List<String>> excludedMembers) {
             this.excludedMembers = excludedMembers;
             return this;
         }
-
         public Builder excludedMembers(@Nullable List<String> excludedMembers) {
             this.excludedMembers = Output.ofNullable(excludedMembers);
             return this;
         }
-
+        public Builder excludedMembers(String... excludedMembers) {
+            return excludedMembers(List.of(excludedMembers));
+        }
         public Builder staticMembers(@Nullable Output<List<String>> staticMembers) {
             this.staticMembers = staticMembers;
             return this;
         }
-
         public Builder staticMembers(@Nullable List<String> staticMembers) {
             this.staticMembers = Output.ofNullable(staticMembers);
             return this;
         }
-
+        public Builder staticMembers(String... staticMembers) {
+            return staticMembers(List.of(staticMembers));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ClusterEndpointArgs build() {
+        }        public ClusterEndpointArgs build() {
             return new ClusterEndpointArgs(clusterEndpointIdentifier, clusterIdentifier, endpointType, excludedMembers, staticMembers, tags);
         }
     }

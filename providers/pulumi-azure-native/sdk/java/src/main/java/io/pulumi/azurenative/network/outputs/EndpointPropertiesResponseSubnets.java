@@ -88,17 +88,14 @@ public final class EndpointPropertiesResponseSubnets {
             this.first = first;
             return this;
         }
-
         public Builder last(@Nullable String last) {
             this.last = last;
             return this;
         }
-
         public Builder scope(@Nullable Integer scope) {
             this.scope = scope;
             return this;
-        }
-        public EndpointPropertiesResponseSubnets build() {
+        }        public EndpointPropertiesResponseSubnets build() {
             return new EndpointPropertiesResponseSubnets(first, last, scope);
         }
     }

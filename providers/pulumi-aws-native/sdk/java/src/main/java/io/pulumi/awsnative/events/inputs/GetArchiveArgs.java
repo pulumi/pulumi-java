@@ -50,8 +50,7 @@ public final class GetArchiveArgs extends io.pulumi.resources.InvokeArgs {
         public Builder archiveName(String archiveName) {
             this.archiveName = Objects.requireNonNull(archiveName);
             return this;
-        }
-        public GetArchiveArgs build() {
+        }        public GetArchiveArgs build() {
             return new GetArchiveArgs(archiveName);
         }
     }

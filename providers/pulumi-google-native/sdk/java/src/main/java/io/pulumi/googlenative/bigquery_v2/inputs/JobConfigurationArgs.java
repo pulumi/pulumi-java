@@ -160,72 +160,58 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             this.copy = copy;
             return this;
         }
-
         public Builder copy(@Nullable JobConfigurationTableCopyArgs copy) {
             this.copy = Output.ofNullable(copy);
             return this;
         }
-
         public Builder dryRun(@Nullable Output<Boolean> dryRun) {
             this.dryRun = dryRun;
             return this;
         }
-
         public Builder dryRun(@Nullable Boolean dryRun) {
             this.dryRun = Output.ofNullable(dryRun);
             return this;
         }
-
         public Builder extract(@Nullable Output<JobConfigurationExtractArgs> extract) {
             this.extract = extract;
             return this;
         }
-
         public Builder extract(@Nullable JobConfigurationExtractArgs extract) {
             this.extract = Output.ofNullable(extract);
             return this;
         }
-
         public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
             this.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
-
         public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
             this.jobTimeoutMs = Output.ofNullable(jobTimeoutMs);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder load(@Nullable Output<JobConfigurationLoadArgs> load) {
             this.load = load;
             return this;
         }
-
         public Builder load(@Nullable JobConfigurationLoadArgs load) {
             this.load = Output.ofNullable(load);
             return this;
         }
-
         public Builder query(@Nullable Output<JobConfigurationQueryArgs> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable JobConfigurationQueryArgs query) {
             this.query = Output.ofNullable(query);
             return this;
-        }
-        public JobConfigurationArgs build() {
+        }        public JobConfigurationArgs build() {
             return new JobConfigurationArgs(copy, dryRun, extract, jobTimeoutMs, labels, load, query);
         }
     }

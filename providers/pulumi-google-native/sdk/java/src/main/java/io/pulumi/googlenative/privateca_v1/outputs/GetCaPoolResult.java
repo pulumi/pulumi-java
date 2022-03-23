@@ -120,27 +120,22 @@ public final class GetCaPoolResult {
             this.issuancePolicy = Objects.requireNonNull(issuancePolicy);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publishingOptions(PublishingOptionsResponse publishingOptions) {
             this.publishingOptions = Objects.requireNonNull(publishingOptions);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public GetCaPoolResult build() {
+        }        public GetCaPoolResult build() {
             return new GetCaPoolResult(issuancePolicy, labels, name, publishingOptions, tier);
         }
     }

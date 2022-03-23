@@ -77,12 +77,10 @@ public final class LocationHDFSNameNode extends io.pulumi.resources.InvokeArgs {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public LocationHDFSNameNode build() {
+        }        public LocationHDFSNameNode build() {
             return new LocationHDFSNameNode(hostname, port);
         }
     }

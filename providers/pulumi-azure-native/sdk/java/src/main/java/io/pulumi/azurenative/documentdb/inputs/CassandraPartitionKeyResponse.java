@@ -60,8 +60,7 @@ public final class CassandraPartitionKeyResponse extends io.pulumi.resources.Inv
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public CassandraPartitionKeyResponse build() {
+        }        public CassandraPartitionKeyResponse build() {
             return new CassandraPartitionKeyResponse(name);
         }
     }

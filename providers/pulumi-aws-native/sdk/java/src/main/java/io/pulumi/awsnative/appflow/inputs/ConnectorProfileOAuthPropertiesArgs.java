@@ -79,32 +79,29 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
             this.authCodeUrl = authCodeUrl;
             return this;
         }
-
         public Builder authCodeUrl(@Nullable String authCodeUrl) {
             this.authCodeUrl = Output.ofNullable(authCodeUrl);
             return this;
         }
-
         public Builder oAuthScopes(@Nullable Output<List<String>> oAuthScopes) {
             this.oAuthScopes = oAuthScopes;
             return this;
         }
-
         public Builder oAuthScopes(@Nullable List<String> oAuthScopes) {
             this.oAuthScopes = Output.ofNullable(oAuthScopes);
             return this;
         }
-
+        public Builder oAuthScopes(String... oAuthScopes) {
+            return oAuthScopes(List.of(oAuthScopes));
+        }
         public Builder tokenUrl(@Nullable Output<String> tokenUrl) {
             this.tokenUrl = tokenUrl;
             return this;
         }
-
         public Builder tokenUrl(@Nullable String tokenUrl) {
             this.tokenUrl = Output.ofNullable(tokenUrl);
             return this;
-        }
-        public ConnectorProfileOAuthPropertiesArgs build() {
+        }        public ConnectorProfileOAuthPropertiesArgs build() {
             return new ConnectorProfileOAuthPropertiesArgs(authCodeUrl, oAuthScopes, tokenUrl);
         }
     }

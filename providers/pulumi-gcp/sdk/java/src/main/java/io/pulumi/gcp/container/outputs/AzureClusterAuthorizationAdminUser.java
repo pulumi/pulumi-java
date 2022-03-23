@@ -51,8 +51,7 @@ public final class AzureClusterAuthorizationAdminUser {
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public AzureClusterAuthorizationAdminUser build() {
+        }        public AzureClusterAuthorizationAdminUser build() {
             return new AzureClusterAuthorizationAdminUser(username);
         }
     }

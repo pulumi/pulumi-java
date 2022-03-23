@@ -89,17 +89,14 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.checkpointConfiguration = checkpointConfiguration;
             return this;
         }
-
         public Builder monitoringConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration monitoringConfiguration) {
             this.monitoringConfiguration = monitoringConfiguration;
             return this;
         }
-
         public Builder parallelismConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration) {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfiguration build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfiguration build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfiguration(checkpointConfiguration, monitoringConfiguration, parallelismConfiguration);
         }
     }

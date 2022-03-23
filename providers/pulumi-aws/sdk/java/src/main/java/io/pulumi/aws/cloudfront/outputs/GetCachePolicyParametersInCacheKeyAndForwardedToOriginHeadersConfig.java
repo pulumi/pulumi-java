@@ -71,12 +71,13 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
-
         public Builder headers(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig build() {
+        public Builder headers(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader... headers) {
+            return headers(List.of(headers));
+        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig build() {
             return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(headerBehavior, headers);
         }
     }

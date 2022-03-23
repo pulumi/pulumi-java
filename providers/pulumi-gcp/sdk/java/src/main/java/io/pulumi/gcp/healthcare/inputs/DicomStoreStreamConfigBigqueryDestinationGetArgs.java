@@ -56,12 +56,10 @@ public final class DicomStoreStreamConfigBigqueryDestinationGetArgs extends io.p
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
-
         public Builder tableUri(String tableUri) {
             this.tableUri = Output.of(Objects.requireNonNull(tableUri));
             return this;
-        }
-        public DicomStoreStreamConfigBigqueryDestinationGetArgs build() {
+        }        public DicomStoreStreamConfigBigqueryDestinationGetArgs build() {
             return new DicomStoreStreamConfigBigqueryDestinationGetArgs(tableUri);
         }
     }

@@ -119,22 +119,21 @@ public final class ManagedZoneDnssecConfig {
             this.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
-
+        public Builder defaultKeySpecs(ManagedZoneDnssecConfigDefaultKeySpec... defaultKeySpecs) {
+            return defaultKeySpecs(List.of(defaultKeySpecs));
+        }
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder nonExistence(@Nullable String nonExistence) {
             this.nonExistence = nonExistence;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public ManagedZoneDnssecConfig build() {
+        }        public ManagedZoneDnssecConfig build() {
             return new ManagedZoneDnssecConfig(defaultKeySpecs, kind, nonExistence, state);
         }
     }

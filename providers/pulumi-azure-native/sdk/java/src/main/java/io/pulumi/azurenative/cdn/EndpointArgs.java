@@ -391,212 +391,185 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
-
         public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
             this.contentTypesToCompress = Output.ofNullable(contentTypesToCompress);
             return this;
         }
-
+        public Builder contentTypesToCompress(String... contentTypesToCompress) {
+            return contentTypesToCompress(List.of(contentTypesToCompress));
+        }
         public Builder defaultOriginGroup(@Nullable Output<ResourceReferenceArgs> defaultOriginGroup) {
             this.defaultOriginGroup = defaultOriginGroup;
             return this;
         }
-
         public Builder defaultOriginGroup(@Nullable ResourceReferenceArgs defaultOriginGroup) {
             this.defaultOriginGroup = Output.ofNullable(defaultOriginGroup);
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable EndpointPropertiesUpdateParametersDeliveryPolicyArgs deliveryPolicy) {
             this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
             return this;
         }
-
         public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
-
         public Builder geoFilters(@Nullable Output<List<GeoFilterArgs>> geoFilters) {
             this.geoFilters = geoFilters;
             return this;
         }
-
         public Builder geoFilters(@Nullable List<GeoFilterArgs> geoFilters) {
             this.geoFilters = Output.ofNullable(geoFilters);
             return this;
         }
-
+        public Builder geoFilters(GeoFilterArgs... geoFilters) {
+            return geoFilters(List.of(geoFilters));
+        }
         public Builder isCompressionEnabled(@Nullable Output<Boolean> isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
-
         public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
             this.isCompressionEnabled = Output.ofNullable(isCompressionEnabled);
             return this;
         }
-
         public Builder isHttpAllowed(@Nullable Output<Boolean> isHttpAllowed) {
             this.isHttpAllowed = isHttpAllowed;
             return this;
         }
-
         public Builder isHttpAllowed(@Nullable Boolean isHttpAllowed) {
             this.isHttpAllowed = Output.ofNullable(isHttpAllowed);
             return this;
         }
-
         public Builder isHttpsAllowed(@Nullable Output<Boolean> isHttpsAllowed) {
             this.isHttpsAllowed = isHttpsAllowed;
             return this;
         }
-
         public Builder isHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
             this.isHttpsAllowed = Output.ofNullable(isHttpsAllowed);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder optimizationType(@Nullable Output<Either<String,OptimizationType>> optimizationType) {
             this.optimizationType = optimizationType;
             return this;
         }
-
         public Builder optimizationType(@Nullable Either<String,OptimizationType> optimizationType) {
             this.optimizationType = Output.ofNullable(optimizationType);
             return this;
         }
-
         public Builder originGroups(@Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
-
         public Builder originGroups(@Nullable List<DeepCreatedOriginGroupArgs> originGroups) {
             this.originGroups = Output.ofNullable(originGroups);
             return this;
         }
-
+        public Builder originGroups(DeepCreatedOriginGroupArgs... originGroups) {
+            return originGroups(List.of(originGroups));
+        }
         public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
-
         public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = Output.ofNullable(originHostHeader);
             return this;
         }
-
         public Builder originPath(@Nullable Output<String> originPath) {
             this.originPath = originPath;
             return this;
         }
-
         public Builder originPath(@Nullable String originPath) {
             this.originPath = Output.ofNullable(originPath);
             return this;
         }
-
         public Builder origins(Output<List<DeepCreatedOriginArgs>> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
-
         public Builder origins(List<DeepCreatedOriginArgs> origins) {
             this.origins = Output.of(Objects.requireNonNull(origins));
             return this;
         }
-
+        public Builder origins(DeepCreatedOriginArgs... origins) {
+            return origins(List.of(origins));
+        }
         public Builder probePath(@Nullable Output<String> probePath) {
             this.probePath = probePath;
             return this;
         }
-
         public Builder probePath(@Nullable String probePath) {
             this.probePath = Output.ofNullable(probePath);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder queryStringCachingBehavior(@Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
-
         public Builder queryStringCachingBehavior(@Nullable QueryStringCachingBehavior queryStringCachingBehavior) {
             this.queryStringCachingBehavior = Output.ofNullable(queryStringCachingBehavior);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder urlSigningKeys(@Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys) {
             this.urlSigningKeys = urlSigningKeys;
             return this;
         }
-
         public Builder urlSigningKeys(@Nullable List<UrlSigningKeyArgs> urlSigningKeys) {
             this.urlSigningKeys = Output.ofNullable(urlSigningKeys);
             return this;
         }
-
+        public Builder urlSigningKeys(UrlSigningKeyArgs... urlSigningKeys) {
+            return urlSigningKeys(List.of(urlSigningKeys));
+        }
         public Builder webApplicationFirewallPolicyLink(@Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public Builder webApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(contentTypesToCompress, defaultOriginGroup, deliveryPolicy, endpointName, geoFilters, isCompressionEnabled, isHttpAllowed, isHttpsAllowed, location, optimizationType, originGroups, originHostHeader, originPath, origins, probePath, profileName, queryStringCachingBehavior, resourceGroupName, tags, urlSigningKeys, webApplicationFirewallPolicyLink);
         }
     }

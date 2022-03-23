@@ -62,12 +62,13 @@ public final class ExportDatasetConfigurationArgs extends io.pulumi.resources.Re
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<String> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-        public ExportDatasetConfigurationArgs build() {
+        public Builder columns(String... columns) {
+            return columns(List.of(columns));
+        }        public ExportDatasetConfigurationArgs build() {
             return new ExportDatasetConfigurationArgs(columns);
         }
     }

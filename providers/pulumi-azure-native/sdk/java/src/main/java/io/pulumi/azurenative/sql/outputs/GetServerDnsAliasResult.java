@@ -101,22 +101,18 @@ public final class GetServerDnsAliasResult {
             this.azureDnsRecord = Objects.requireNonNull(azureDnsRecord);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerDnsAliasResult build() {
+        }        public GetServerDnsAliasResult build() {
             return new GetServerDnsAliasResult(azureDnsRecord, id, name, type);
         }
     }

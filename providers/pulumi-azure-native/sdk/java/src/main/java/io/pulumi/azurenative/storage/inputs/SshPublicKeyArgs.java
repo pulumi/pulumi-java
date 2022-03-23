@@ -74,22 +74,18 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public SshPublicKeyArgs build() {
+        }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(description, key);
         }
     }

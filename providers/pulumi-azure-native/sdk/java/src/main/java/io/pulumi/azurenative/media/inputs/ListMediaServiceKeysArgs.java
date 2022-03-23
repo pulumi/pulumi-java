@@ -72,12 +72,10 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
             this.mediaServiceName = Objects.requireNonNull(mediaServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListMediaServiceKeysArgs build() {
+        }        public ListMediaServiceKeysArgs build() {
             return new ListMediaServiceKeysArgs(mediaServiceName, resourceGroupName);
         }
     }

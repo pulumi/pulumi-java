@@ -71,12 +71,10 @@ public final class DefaultKeyResponse {
             this.label = label;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
-        }
-        public DefaultKeyResponse build() {
+        }        public DefaultKeyResponse build() {
             return new DefaultKeyResponse(label, policyName);
         }
     }

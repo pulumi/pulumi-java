@@ -154,37 +154,30 @@ public final class DomainSamlOptionsSamlOptions {
             this.enabled = enabled;
             return this;
         }
-
         public Builder idp(@Nullable DomainSamlOptionsSamlOptionsIdp idp) {
             this.idp = idp;
             return this;
         }
-
         public Builder masterBackendRole(@Nullable String masterBackendRole) {
             this.masterBackendRole = masterBackendRole;
             return this;
         }
-
         public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
-
         public Builder rolesKey(@Nullable String rolesKey) {
             this.rolesKey = rolesKey;
             return this;
         }
-
         public Builder sessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
             this.sessionTimeoutMinutes = sessionTimeoutMinutes;
             return this;
         }
-
         public Builder subjectKey(@Nullable String subjectKey) {
             this.subjectKey = subjectKey;
             return this;
-        }
-        public DomainSamlOptionsSamlOptions build() {
+        }        public DomainSamlOptionsSamlOptions build() {
             return new DomainSamlOptionsSamlOptions(enabled, idp, masterBackendRole, masterUserName, rolesKey, sessionTimeoutMinutes, subjectKey);
         }
     }

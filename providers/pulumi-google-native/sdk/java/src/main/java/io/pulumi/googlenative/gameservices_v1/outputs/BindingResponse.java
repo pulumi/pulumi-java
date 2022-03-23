@@ -95,22 +95,21 @@ public final class BindingResponse {
             this.bindingId = Objects.requireNonNull(bindingId);
             return this;
         }
-
         public Builder condition(ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
-        }
-        public BindingResponse build() {
+        }        public BindingResponse build() {
             return new BindingResponse(bindingId, condition, members, role);
         }
     }

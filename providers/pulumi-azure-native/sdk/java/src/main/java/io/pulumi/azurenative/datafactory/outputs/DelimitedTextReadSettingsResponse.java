@@ -93,17 +93,14 @@ public final class DelimitedTextReadSettingsResponse {
             this.compressionProperties = compressionProperties;
             return this;
         }
-
         public Builder skipLineCount(@Nullable Object skipLineCount) {
             this.skipLineCount = skipLineCount;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DelimitedTextReadSettingsResponse build() {
+        }        public DelimitedTextReadSettingsResponse build() {
             return new DelimitedTextReadSettingsResponse(compressionProperties, skipLineCount, type);
         }
     }

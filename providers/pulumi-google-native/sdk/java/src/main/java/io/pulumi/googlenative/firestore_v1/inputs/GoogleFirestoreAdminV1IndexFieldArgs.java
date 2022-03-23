@@ -96,32 +96,26 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
             this.arrayConfig = arrayConfig;
             return this;
         }
-
         public Builder arrayConfig(@Nullable GoogleFirestoreAdminV1IndexFieldArrayConfig arrayConfig) {
             this.arrayConfig = Output.ofNullable(arrayConfig);
             return this;
         }
-
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
-
         public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = Output.ofNullable(fieldPath);
             return this;
         }
-
         public Builder order(@Nullable Output<GoogleFirestoreAdminV1IndexFieldOrder> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable GoogleFirestoreAdminV1IndexFieldOrder order) {
             this.order = Output.ofNullable(order);
             return this;
-        }
-        public GoogleFirestoreAdminV1IndexFieldArgs build() {
+        }        public GoogleFirestoreAdminV1IndexFieldArgs build() {
             return new GoogleFirestoreAdminV1IndexFieldArgs(arrayConfig, fieldPath, order);
         }
     }

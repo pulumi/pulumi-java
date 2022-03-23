@@ -135,32 +135,26 @@ public final class ResourceOperationResponse {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
-        }
-        public ResourceOperationResponse build() {
+        }        public ResourceOperationResponse build() {
             return new ResourceOperationResponse(operationId, provisioningState, resourceName, resourceType, statusCode, statusMessage);
         }
     }

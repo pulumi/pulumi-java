@@ -386,212 +386,173 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.attestationAuthority = attestationAuthority;
             return this;
         }
-
         public Builder attestationAuthority(@Nullable AttestationAuthorityArgs attestationAuthority) {
             this.attestationAuthority = Output.ofNullable(attestationAuthority);
             return this;
         }
-
         public Builder baseImage(@Nullable Output<BasisArgs> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
-
         public Builder baseImage(@Nullable BasisArgs baseImage) {
             this.baseImage = Output.ofNullable(baseImage);
             return this;
         }
-
         public Builder buildType(@Nullable Output<BuildTypeArgs> buildType) {
             this.buildType = buildType;
             return this;
         }
-
         public Builder buildType(@Nullable BuildTypeArgs buildType) {
             this.buildType = Output.ofNullable(buildType);
             return this;
         }
-
         public Builder compliance(@Nullable Output<ComplianceNoteArgs> compliance) {
             this.compliance = compliance;
             return this;
         }
-
         public Builder compliance(@Nullable ComplianceNoteArgs compliance) {
             this.compliance = Output.ofNullable(compliance);
             return this;
         }
-
         public Builder deployable(@Nullable Output<DeployableArgs> deployable) {
             this.deployable = deployable;
             return this;
         }
-
         public Builder deployable(@Nullable DeployableArgs deployable) {
             this.deployable = Output.ofNullable(deployable);
             return this;
         }
-
         public Builder discovery(@Nullable Output<DiscoveryArgs> discovery) {
             this.discovery = discovery;
             return this;
         }
-
         public Builder discovery(@Nullable DiscoveryArgs discovery) {
             this.discovery = Output.ofNullable(discovery);
             return this;
         }
-
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationNoteArgs> dsseAttestation) {
             this.dsseAttestation = dsseAttestation;
             return this;
         }
-
         public Builder dsseAttestation(@Nullable DSSEAttestationNoteArgs dsseAttestation) {
             this.dsseAttestation = Output.ofNullable(dsseAttestation);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
-
         public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder noteId(@Nullable Output<String> noteId) {
             this.noteId = noteId;
             return this;
         }
-
         public Builder noteId(@Nullable String noteId) {
             this.noteId = Output.ofNullable(noteId);
             return this;
         }
-
         public Builder $package(@Nullable Output<PackageArgs> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable PackageArgs $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder relatedUrl(@Nullable Output<List<RelatedUrlArgs>> relatedUrl) {
             this.relatedUrl = relatedUrl;
             return this;
         }
-
         public Builder relatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
             this.relatedUrl = Output.ofNullable(relatedUrl);
             return this;
         }
-
+        public Builder relatedUrl(RelatedUrlArgs... relatedUrl) {
+            return relatedUrl(List.of(relatedUrl));
+        }
         public Builder sbom(@Nullable Output<DocumentNoteArgs> sbom) {
             this.sbom = sbom;
             return this;
         }
-
         public Builder sbom(@Nullable DocumentNoteArgs sbom) {
             this.sbom = Output.ofNullable(sbom);
             return this;
         }
-
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
-
         public Builder shortDescription(@Nullable String shortDescription) {
             this.shortDescription = Output.ofNullable(shortDescription);
             return this;
         }
-
         public Builder spdxFile(@Nullable Output<FileNoteArgs> spdxFile) {
             this.spdxFile = spdxFile;
             return this;
         }
-
         public Builder spdxFile(@Nullable FileNoteArgs spdxFile) {
             this.spdxFile = Output.ofNullable(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(@Nullable Output<PackageInfoNoteArgs> spdxPackage) {
             this.spdxPackage = spdxPackage;
             return this;
         }
-
         public Builder spdxPackage(@Nullable PackageInfoNoteArgs spdxPackage) {
             this.spdxPackage = Output.ofNullable(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(@Nullable Output<RelationshipNoteArgs> spdxRelationship) {
             this.spdxRelationship = spdxRelationship;
             return this;
         }
-
         public Builder spdxRelationship(@Nullable RelationshipNoteArgs spdxRelationship) {
             this.spdxRelationship = Output.ofNullable(spdxRelationship);
             return this;
         }
-
         public Builder upgrade(@Nullable Output<UpgradeNoteArgs> upgrade) {
             this.upgrade = upgrade;
             return this;
         }
-
         public Builder upgrade(@Nullable UpgradeNoteArgs upgrade) {
             this.upgrade = Output.ofNullable(upgrade);
             return this;
         }
-
         public Builder vulnerabilityType(@Nullable Output<VulnerabilityTypeArgs> vulnerabilityType) {
             this.vulnerabilityType = vulnerabilityType;
             return this;
         }
-
         public Builder vulnerabilityType(@Nullable VulnerabilityTypeArgs vulnerabilityType) {
             this.vulnerabilityType = Output.ofNullable(vulnerabilityType);
             return this;
-        }
-        public NoteArgs build() {
+        }        public NoteArgs build() {
             return new NoteArgs(attestationAuthority, baseImage, buildType, compliance, deployable, discovery, dsseAttestation, expirationTime, longDescription, name, noteId, $package, project, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, upgrade, vulnerabilityType);
         }
     }

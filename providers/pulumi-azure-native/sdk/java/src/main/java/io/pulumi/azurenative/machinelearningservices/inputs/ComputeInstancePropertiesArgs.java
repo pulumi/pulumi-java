@@ -165,72 +165,58 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             this.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
-
         public Builder applicationSharingPolicy(@Nullable Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
             this.applicationSharingPolicy = Output.ofNullable(applicationSharingPolicy);
             return this;
         }
-
         public Builder computeInstanceAuthorizationType(@Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
             this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
-
         public Builder computeInstanceAuthorizationType(@Nullable Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
             this.computeInstanceAuthorizationType = Output.ofNullable(computeInstanceAuthorizationType);
             return this;
         }
-
         public Builder personalComputeInstanceSettings(@Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
             this.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
-
         public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
             this.personalComputeInstanceSettings = Output.ofNullable(personalComputeInstanceSettings);
             return this;
         }
-
         public Builder setupScripts(@Nullable Output<SetupScriptsArgs> setupScripts) {
             this.setupScripts = setupScripts;
             return this;
         }
-
         public Builder setupScripts(@Nullable SetupScriptsArgs setupScripts) {
             this.setupScripts = Output.ofNullable(setupScripts);
             return this;
         }
-
         public Builder sshSettings(@Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings) {
             this.sshSettings = sshSettings;
             return this;
         }
-
         public Builder sshSettings(@Nullable ComputeInstanceSshSettingsArgs sshSettings) {
             this.sshSettings = Output.ofNullable(sshSettings);
             return this;
         }
-
         public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable ResourceIdArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
-        }
-        public ComputeInstancePropertiesArgs build() {
+        }        public ComputeInstancePropertiesArgs build() {
             return new ComputeInstancePropertiesArgs(applicationSharingPolicy, computeInstanceAuthorizationType, personalComputeInstanceSettings, setupScripts, sshSettings, subnet, vmSize);
         }
     }

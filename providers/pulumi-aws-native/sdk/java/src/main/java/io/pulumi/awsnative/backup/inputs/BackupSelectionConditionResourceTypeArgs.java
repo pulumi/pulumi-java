@@ -77,32 +77,26 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
             this.conditionKey = Objects.requireNonNull(conditionKey);
             return this;
         }
-
         public Builder conditionKey(String conditionKey) {
             this.conditionKey = Output.of(Objects.requireNonNull(conditionKey));
             return this;
         }
-
         public Builder conditionType(Output<String> conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
-
         public Builder conditionType(String conditionType) {
             this.conditionType = Output.of(Objects.requireNonNull(conditionType));
             return this;
         }
-
         public Builder conditionValue(Output<String> conditionValue) {
             this.conditionValue = Objects.requireNonNull(conditionValue);
             return this;
         }
-
         public Builder conditionValue(String conditionValue) {
             this.conditionValue = Output.of(Objects.requireNonNull(conditionValue));
             return this;
-        }
-        public BackupSelectionConditionResourceTypeArgs build() {
+        }        public BackupSelectionConditionResourceTypeArgs build() {
             return new BackupSelectionConditionResourceTypeArgs(conditionKey, conditionType, conditionValue);
         }
     }

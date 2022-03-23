@@ -98,27 +98,25 @@ public final class GetVpnAttachmentResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpnAttachmentFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;
             return this;
-        }
-        public GetVpnAttachmentResult build() {
+        }        public GetVpnAttachmentResult build() {
             return new GetVpnAttachmentResult(filters, id, tags, transitGatewayId, vpnConnectionId);
         }
     }

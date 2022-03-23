@@ -164,72 +164,61 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
             this.artifactTags = artifactTags;
             return this;
         }
-
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = Output.ofNullable(artifactTags);
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
             return this;
         }
-
         public Builder galleryImageId(Output<String> galleryImageId) {
             this.galleryImageId = Objects.requireNonNull(galleryImageId);
             return this;
         }
-
         public Builder galleryImageId(String galleryImageId) {
             this.galleryImageId = Output.of(Objects.requireNonNull(galleryImageId));
             return this;
         }
-
         public Builder replicationRegions(Output<List<String>> replicationRegions) {
             this.replicationRegions = Objects.requireNonNull(replicationRegions);
             return this;
         }
-
         public Builder replicationRegions(List<String> replicationRegions) {
             this.replicationRegions = Output.of(Objects.requireNonNull(replicationRegions));
             return this;
         }
-
+        public Builder replicationRegions(String... replicationRegions) {
+            return replicationRegions(List.of(replicationRegions));
+        }
         public Builder runOutputName(Output<String> runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
-
         public Builder runOutputName(String runOutputName) {
             this.runOutputName = Output.of(Objects.requireNonNull(runOutputName));
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,SharedImageStorageAccountType> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageTemplateSharedImageDistributorArgs build() {
+        }        public ImageTemplateSharedImageDistributorArgs build() {
             return new ImageTemplateSharedImageDistributorArgs(artifactTags, excludeFromLatest, galleryImageId, replicationRegions, runOutputName, storageAccountType, type);
         }
     }

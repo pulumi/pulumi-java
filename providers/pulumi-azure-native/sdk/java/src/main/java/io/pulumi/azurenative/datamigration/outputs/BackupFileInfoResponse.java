@@ -88,17 +88,14 @@ public final class BackupFileInfoResponse {
             this.familySequenceNumber = familySequenceNumber;
             return this;
         }
-
         public Builder fileLocation(@Nullable String fileLocation) {
             this.fileLocation = fileLocation;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public BackupFileInfoResponse build() {
+        }        public BackupFileInfoResponse build() {
             return new BackupFileInfoResponse(familySequenceNumber, fileLocation, status);
         }
     }

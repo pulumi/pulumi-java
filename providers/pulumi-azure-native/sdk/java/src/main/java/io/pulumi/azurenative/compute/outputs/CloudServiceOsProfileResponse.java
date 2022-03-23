@@ -54,7 +54,9 @@ public final class CloudServiceOsProfileResponse {
             this.secrets = secrets;
             return this;
         }
-        public CloudServiceOsProfileResponse build() {
+        public Builder secrets(CloudServiceVaultSecretGroupResponse... secrets) {
+            return secrets(List.of(secrets));
+        }        public CloudServiceOsProfileResponse build() {
             return new CloudServiceOsProfileResponse(secrets);
         }
     }

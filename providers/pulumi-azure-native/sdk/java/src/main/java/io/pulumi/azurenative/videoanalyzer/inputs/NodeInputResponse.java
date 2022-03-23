@@ -58,8 +58,7 @@ public final class NodeInputResponse extends io.pulumi.resources.InvokeArgs {
         public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
-        }
-        public NodeInputResponse build() {
+        }        public NodeInputResponse build() {
             return new NodeInputResponse(nodeName);
         }
     }

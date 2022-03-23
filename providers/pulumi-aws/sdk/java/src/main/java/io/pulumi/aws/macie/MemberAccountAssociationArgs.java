@@ -56,12 +56,10 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
             this.memberAccountId = Objects.requireNonNull(memberAccountId);
             return this;
         }
-
         public Builder memberAccountId(String memberAccountId) {
             this.memberAccountId = Output.of(Objects.requireNonNull(memberAccountId));
             return this;
-        }
-        public MemberAccountAssociationArgs build() {
+        }        public MemberAccountAssociationArgs build() {
             return new MemberAccountAssociationArgs(memberAccountId);
         }
     }

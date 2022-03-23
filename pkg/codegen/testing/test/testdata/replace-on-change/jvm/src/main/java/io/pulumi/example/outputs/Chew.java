@@ -45,8 +45,7 @@ public final class Chew {
         public Builder owner(@Nullable Dog owner) {
             this.owner = owner;
             return this;
-        }
-        public Chew build() {
+        }        public Chew build() {
             return new Chew(owner);
         }
     }

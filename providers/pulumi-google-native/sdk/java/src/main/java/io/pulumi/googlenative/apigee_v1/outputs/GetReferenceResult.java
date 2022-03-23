@@ -101,22 +101,18 @@ public final class GetReferenceResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder refers(String refers) {
             this.refers = Objects.requireNonNull(refers);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GetReferenceResult build() {
+        }        public GetReferenceResult build() {
             return new GetReferenceResult(description, name, refers, resourceType);
         }
     }

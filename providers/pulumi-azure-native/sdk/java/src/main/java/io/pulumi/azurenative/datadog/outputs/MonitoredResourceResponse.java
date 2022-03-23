@@ -120,27 +120,22 @@ public final class MonitoredResourceResponse {
             this.id = id;
             return this;
         }
-
         public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
             this.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
-
         public Builder reasonForMetricsStatus(@Nullable String reasonForMetricsStatus) {
             this.reasonForMetricsStatus = reasonForMetricsStatus;
             return this;
         }
-
         public Builder sendingLogs(@Nullable Boolean sendingLogs) {
             this.sendingLogs = sendingLogs;
             return this;
         }
-
         public Builder sendingMetrics(@Nullable Boolean sendingMetrics) {
             this.sendingMetrics = sendingMetrics;
             return this;
-        }
-        public MonitoredResourceResponse build() {
+        }        public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, reasonForMetricsStatus, sendingLogs, sendingMetrics);
         }
     }

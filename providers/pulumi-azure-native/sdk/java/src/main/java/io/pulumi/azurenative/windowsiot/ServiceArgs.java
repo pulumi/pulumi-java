@@ -172,82 +172,66 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.adminDomainName = adminDomainName;
             return this;
         }
-
         public Builder adminDomainName(@Nullable String adminDomainName) {
             this.adminDomainName = Output.ofNullable(adminDomainName);
             return this;
         }
-
         public Builder billingDomainName(@Nullable Output<String> billingDomainName) {
             this.billingDomainName = billingDomainName;
             return this;
         }
-
         public Builder billingDomainName(@Nullable String billingDomainName) {
             this.billingDomainName = Output.ofNullable(billingDomainName);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder quantity(@Nullable Output<Double> quantity) {
             this.quantity = quantity;
             return this;
         }
-
         public Builder quantity(@Nullable Double quantity) {
             this.quantity = Output.ofNullable(quantity);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(adminDomainName, billingDomainName, deviceName, location, notes, quantity, resourceGroupName, tags);
         }
     }

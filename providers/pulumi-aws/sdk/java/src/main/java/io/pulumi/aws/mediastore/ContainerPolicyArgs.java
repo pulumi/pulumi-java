@@ -73,22 +73,18 @@ public final class ContainerPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public ContainerPolicyArgs build() {
+        }        public ContainerPolicyArgs build() {
             return new ContainerPolicyArgs(containerName, policy);
         }
     }

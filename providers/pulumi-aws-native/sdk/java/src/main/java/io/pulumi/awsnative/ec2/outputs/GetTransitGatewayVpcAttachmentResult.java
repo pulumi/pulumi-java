@@ -90,27 +90,31 @@ public final class GetTransitGatewayVpcAttachmentResult {
             this.addSubnetIds = addSubnetIds;
             return this;
         }
-
+        public Builder addSubnetIds(String... addSubnetIds) {
+            return addSubnetIds(List.of(addSubnetIds));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder options(@Nullable OptionsProperties options) {
             this.options = options;
             return this;
         }
-
         public Builder removeSubnetIds(@Nullable List<String> removeSubnetIds) {
             this.removeSubnetIds = removeSubnetIds;
             return this;
         }
-
+        public Builder removeSubnetIds(String... removeSubnetIds) {
+            return removeSubnetIds(List.of(removeSubnetIds));
+        }
         public Builder tags(@Nullable List<TransitGatewayVpcAttachmentTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetTransitGatewayVpcAttachmentResult build() {
+        public Builder tags(TransitGatewayVpcAttachmentTag... tags) {
+            return tags(List.of(tags));
+        }        public GetTransitGatewayVpcAttachmentResult build() {
             return new GetTransitGatewayVpcAttachmentResult(addSubnetIds, id, options, removeSubnetIds, tags);
         }
     }

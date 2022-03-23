@@ -72,12 +72,10 @@ public final class GetPermissionArgs extends io.pulumi.resources.InvokeArgs {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
-        }
-        public GetPermissionArgs build() {
+        }        public GetPermissionArgs build() {
             return new GetPermissionArgs(certificateAuthorityArn, principal);
         }
     }

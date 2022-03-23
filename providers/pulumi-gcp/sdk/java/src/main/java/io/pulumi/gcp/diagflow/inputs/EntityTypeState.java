@@ -148,62 +148,53 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
             return this;
         }
-
         public Builder entities(@Nullable Output<List<EntityTypeEntityGetArgs>> entities) {
             this.entities = entities;
             return this;
         }
-
         public Builder entities(@Nullable List<EntityTypeEntityGetArgs> entities) {
             this.entities = Output.ofNullable(entities);
             return this;
         }
-
+        public Builder entities(EntityTypeEntityGetArgs... entities) {
+            return entities(List.of(entities));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public EntityTypeState build() {
+        }        public EntityTypeState build() {
             return new EntityTypeState(displayName, enableFuzzyExtraction, entities, kind, name, project);
         }
     }

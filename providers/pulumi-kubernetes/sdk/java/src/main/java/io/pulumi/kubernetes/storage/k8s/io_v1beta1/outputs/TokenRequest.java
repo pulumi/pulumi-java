@@ -72,12 +72,10 @@ public final class TokenRequest {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
-
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
-        }
-        public TokenRequest build() {
+        }        public TokenRequest build() {
             return new TokenRequest(audience, expirationSeconds);
         }
     }

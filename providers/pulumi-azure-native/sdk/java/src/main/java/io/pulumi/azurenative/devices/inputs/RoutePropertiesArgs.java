@@ -130,52 +130,45 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder endpointNames(Output<List<String>> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
-
         public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Output.of(Objects.requireNonNull(endpointNames));
             return this;
         }
-
+        public Builder endpointNames(String... endpointNames) {
+            return endpointNames(List.of(endpointNames));
+        }
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder source(Output<Either<String,RoutingSource>> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(Either<String,RoutingSource> source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public RoutePropertiesArgs build() {
+        }        public RoutePropertiesArgs build() {
             return new RoutePropertiesArgs(condition, endpointNames, isEnabled, name, source);
         }
     }

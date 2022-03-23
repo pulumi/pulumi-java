@@ -72,12 +72,10 @@ public final class MongoIndexResponse {
             this.key = key;
             return this;
         }
-
         public Builder options(@Nullable MongoIndexOptionsResponse options) {
             this.options = options;
             return this;
-        }
-        public MongoIndexResponse build() {
+        }        public MongoIndexResponse build() {
             return new MongoIndexResponse(key, options);
         }
     }

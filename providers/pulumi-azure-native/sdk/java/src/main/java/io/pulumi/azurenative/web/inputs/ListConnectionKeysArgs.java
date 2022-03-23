@@ -187,47 +187,38 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder validityTimeSpan(@Nullable String validityTimeSpan) {
             this.validityTimeSpan = validityTimeSpan;
             return this;
-        }
-        public ListConnectionKeysArgs build() {
+        }        public ListConnectionKeysArgs build() {
             return new ListConnectionKeysArgs(connectionName, id, kind, location, name, resourceGroupName, tags, type, validityTimeSpan);
         }
     }

@@ -72,12 +72,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
             this.properties = properties;
             return this;
         }
-
+        public Builder properties(String... properties) {
+            return properties(List.of(properties));
+        }
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi(properties, source);
         }
     }

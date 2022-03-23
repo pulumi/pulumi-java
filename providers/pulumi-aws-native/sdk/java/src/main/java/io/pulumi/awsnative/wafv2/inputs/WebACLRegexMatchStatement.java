@@ -79,17 +79,17 @@ public final class WebACLRegexMatchStatement extends io.pulumi.resources.InvokeA
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder regexString(String regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebACLRegexMatchStatement build() {
+        public Builder textTransformations(WebACLTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLRegexMatchStatement build() {
             return new WebACLRegexMatchStatement(fieldToMatch, regexString, textTransformations);
         }
     }

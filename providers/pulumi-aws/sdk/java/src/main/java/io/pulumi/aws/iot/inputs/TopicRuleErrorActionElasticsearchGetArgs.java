@@ -121,52 +121,42 @@ public final class TopicRuleErrorActionElasticsearchGetArgs extends io.pulumi.re
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder index(Output<String> index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public Builder index(String index) {
             this.index = Output.of(Objects.requireNonNull(index));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TopicRuleErrorActionElasticsearchGetArgs build() {
+        }        public TopicRuleErrorActionElasticsearchGetArgs build() {
             return new TopicRuleErrorActionElasticsearchGetArgs(endpoint, id, index, roleArn, type);
         }
     }

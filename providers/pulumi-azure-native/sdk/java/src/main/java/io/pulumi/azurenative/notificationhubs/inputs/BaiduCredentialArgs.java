@@ -94,32 +94,26 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
             this.baiduApiKey = baiduApiKey;
             return this;
         }
-
         public Builder baiduApiKey(@Nullable String baiduApiKey) {
             this.baiduApiKey = Output.ofNullable(baiduApiKey);
             return this;
         }
-
         public Builder baiduEndPoint(@Nullable Output<String> baiduEndPoint) {
             this.baiduEndPoint = baiduEndPoint;
             return this;
         }
-
         public Builder baiduEndPoint(@Nullable String baiduEndPoint) {
             this.baiduEndPoint = Output.ofNullable(baiduEndPoint);
             return this;
         }
-
         public Builder baiduSecretKey(@Nullable Output<String> baiduSecretKey) {
             this.baiduSecretKey = baiduSecretKey;
             return this;
         }
-
         public Builder baiduSecretKey(@Nullable String baiduSecretKey) {
             this.baiduSecretKey = Output.ofNullable(baiduSecretKey);
             return this;
-        }
-        public BaiduCredentialArgs build() {
+        }        public BaiduCredentialArgs build() {
             return new BaiduCredentialArgs(baiduApiKey, baiduEndPoint, baiduSecretKey);
         }
     }

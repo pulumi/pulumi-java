@@ -88,17 +88,14 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder linkedServiceName(String linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLinkedServiceArgs build() {
+        }        public GetLinkedServiceArgs build() {
             return new GetLinkedServiceArgs(factoryName, linkedServiceName, resourceGroupName);
         }
     }

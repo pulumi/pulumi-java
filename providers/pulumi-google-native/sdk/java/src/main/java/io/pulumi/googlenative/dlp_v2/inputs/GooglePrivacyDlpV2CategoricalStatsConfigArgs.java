@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends io.pulum
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
             this.field = Output.ofNullable(field);
             return this;
-        }
-        public GooglePrivacyDlpV2CategoricalStatsConfigArgs build() {
+        }        public GooglePrivacyDlpV2CategoricalStatsConfigArgs build() {
             return new GooglePrivacyDlpV2CategoricalStatsConfigArgs(field);
         }
     }

@@ -157,72 +157,58 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
             this.customContextTag = customContextTag;
             return this;
         }
-
         public Builder customContextTag(@Nullable String customContextTag) {
             this.customContextTag = Output.ofNullable(customContextTag);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sinkInfo(Output<RoleSinkInfoArgs> sinkInfo) {
             this.sinkInfo = Objects.requireNonNull(sinkInfo);
             return this;
         }
-
         public Builder sinkInfo(RoleSinkInfoArgs sinkInfo) {
             this.sinkInfo = Output.of(Objects.requireNonNull(sinkInfo));
             return this;
         }
-
         public Builder sourceInfo(Output<PeriodicTimerSourceInfoArgs> sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
-
         public Builder sourceInfo(PeriodicTimerSourceInfoArgs sourceInfo) {
             this.sourceInfo = Output.of(Objects.requireNonNull(sourceInfo));
             return this;
-        }
-        public PeriodicTimerEventTriggerArgs build() {
+        }        public PeriodicTimerEventTriggerArgs build() {
             return new PeriodicTimerEventTriggerArgs(customContextTag, deviceName, kind, name, resourceGroupName, sinkInfo, sourceInfo);
         }
     }

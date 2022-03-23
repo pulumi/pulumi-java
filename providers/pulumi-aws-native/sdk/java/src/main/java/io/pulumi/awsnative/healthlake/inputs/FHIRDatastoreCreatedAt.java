@@ -77,12 +77,10 @@ public final class FHIRDatastoreCreatedAt extends io.pulumi.resources.InvokeArgs
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public FHIRDatastoreCreatedAt build() {
+        }        public FHIRDatastoreCreatedAt build() {
             return new FHIRDatastoreCreatedAt(nanos, seconds);
         }
     }

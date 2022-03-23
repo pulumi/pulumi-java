@@ -190,92 +190,74 @@ public final class CassandraResourceCassandraViewArgs extends io.pulumi.resource
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder keyspaceName(Output<String> keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
-
         public Builder keyspaceName(String keyspaceName) {
             this.keyspaceName = Output.of(Objects.requireNonNull(keyspaceName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder resource(Output<CassandraViewResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(CassandraViewResourceArgs resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder viewName(@Nullable Output<String> viewName) {
             this.viewName = viewName;
             return this;
         }
-
         public Builder viewName(@Nullable String viewName) {
             this.viewName = Output.ofNullable(viewName);
             return this;
-        }
-        public CassandraResourceCassandraViewArgs build() {
+        }        public CassandraResourceCassandraViewArgs build() {
             return new CassandraResourceCassandraViewArgs(accountName, identity, keyspaceName, location, options, resource, resourceGroupName, tags, viewName);
         }
     }

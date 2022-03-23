@@ -78,12 +78,10 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
             this.addressPrefix = addressPrefix;
             return this;
         }
-
         public Builder addressPrefixType(@Nullable String addressPrefixType) {
             this.addressPrefixType = addressPrefixType;
             return this;
-        }
-        public AddressPrefixItemResponse build() {
+        }        public AddressPrefixItemResponse build() {
             return new AddressPrefixItemResponse(addressPrefix, addressPrefixType);
         }
     }

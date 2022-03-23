@@ -79,22 +79,18 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public Builder taggingCriteria(Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-
         public Builder taggingCriteria(AdhocBasedTaggingCriteriaArgs taggingCriteria) {
             this.taggingCriteria = Output.of(Objects.requireNonNull(taggingCriteria));
             return this;
-        }
-        public AdhocBasedTriggerContextArgs build() {
+        }        public AdhocBasedTriggerContextArgs build() {
             return new AdhocBasedTriggerContextArgs(objectType, taggingCriteria);
         }
     }

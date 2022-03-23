@@ -70,12 +70,13 @@ public final class V2ApiTargetResponse {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public V2ApiTargetResponse build() {
+        }        public V2ApiTargetResponse build() {
             return new V2ApiTargetResponse(methods, service);
         }
     }

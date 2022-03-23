@@ -308,162 +308,133 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
             return this;
         }
-
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
-
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
             this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
             return this;
         }
-
         public Builder creationToken(@Nullable Output<String> creationToken) {
             this.creationToken = creationToken;
             return this;
         }
-
         public Builder creationToken(@Nullable String creationToken) {
             this.creationToken = Output.ofNullable(creationToken);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
-
         public Builder lifecyclePolicy(@Nullable FileSystemLifecyclePolicyGetArgs lifecyclePolicy) {
             this.lifecyclePolicy = Output.ofNullable(lifecyclePolicy);
             return this;
         }
-
         public Builder numberOfMountTargets(@Nullable Output<Integer> numberOfMountTargets) {
             this.numberOfMountTargets = numberOfMountTargets;
             return this;
         }
-
         public Builder numberOfMountTargets(@Nullable Integer numberOfMountTargets) {
             this.numberOfMountTargets = Output.ofNullable(numberOfMountTargets);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder performanceMode(@Nullable Output<String> performanceMode) {
             this.performanceMode = performanceMode;
             return this;
         }
-
         public Builder performanceMode(@Nullable String performanceMode) {
             this.performanceMode = Output.ofNullable(performanceMode);
             return this;
         }
-
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
-
         public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Output.ofNullable(provisionedThroughputInMibps);
             return this;
         }
-
         public Builder sizeInBytes(@Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes) {
             this.sizeInBytes = sizeInBytes;
             return this;
         }
-
         public Builder sizeInBytes(@Nullable List<FileSystemSizeInByteGetArgs> sizeInBytes) {
             this.sizeInBytes = Output.ofNullable(sizeInBytes);
             return this;
         }
-
+        public Builder sizeInBytes(FileSystemSizeInByteGetArgs... sizeInBytes) {
+            return sizeInBytes(List.of(sizeInBytes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
             this.throughputMode = throughputMode;
             return this;
         }
-
         public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = Output.ofNullable(throughputMode);
             return this;
-        }
-        public FileSystemState build() {
+        }        public FileSystemState build() {
             return new FileSystemState(arn, availabilityZoneId, availabilityZoneName, creationToken, dnsName, encrypted, kmsKeyId, lifecyclePolicy, numberOfMountTargets, ownerId, performanceMode, provisionedThroughputInMibps, sizeInBytes, tags, tagsAll, throughputMode);
         }
     }

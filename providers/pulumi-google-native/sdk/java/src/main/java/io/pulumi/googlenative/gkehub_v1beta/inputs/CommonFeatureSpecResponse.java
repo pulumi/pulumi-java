@@ -77,12 +77,10 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
-
         public Builder multiclusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
-        }
-        public CommonFeatureSpecResponse build() {
+        }        public CommonFeatureSpecResponse build() {
             return new CommonFeatureSpecResponse(appdevexperience, multiclusteringress);
         }
     }

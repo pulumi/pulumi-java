@@ -63,17 +63,14 @@ public final class Hl7StoreIamMemberCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public Hl7StoreIamMemberCondition build() {
+        }        public Hl7StoreIamMemberCondition build() {
             return new Hl7StoreIamMemberCondition(description, expression, title);
         }
     }

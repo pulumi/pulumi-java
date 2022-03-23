@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
-
         public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
             this.enableSpeechAdaptation = Output.ofNullable(enableSpeechAdaptation);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs build() {
+        }        public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(enableSpeechAdaptation);
         }
     }

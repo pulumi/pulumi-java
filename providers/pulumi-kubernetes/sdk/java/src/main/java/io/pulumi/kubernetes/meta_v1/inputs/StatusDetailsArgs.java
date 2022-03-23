@@ -145,62 +145,53 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.causes = causes;
             return this;
         }
-
         public Builder causes(@Nullable List<StatusCauseArgs> causes) {
             this.causes = Output.ofNullable(causes);
             return this;
         }
-
+        public Builder causes(StatusCauseArgs... causes) {
+            return causes(List.of(causes));
+        }
         public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retryAfterSeconds(@Nullable Output<Integer> retryAfterSeconds) {
             this.retryAfterSeconds = retryAfterSeconds;
             return this;
         }
-
         public Builder retryAfterSeconds(@Nullable Integer retryAfterSeconds) {
             this.retryAfterSeconds = Output.ofNullable(retryAfterSeconds);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public StatusDetailsArgs build() {
+        }        public StatusDetailsArgs build() {
             return new StatusDetailsArgs(causes, group, kind, name, retryAfterSeconds, uid);
         }
     }

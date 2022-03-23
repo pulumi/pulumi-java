@@ -85,17 +85,14 @@ public final class DataTransferRegionalServiceResourceResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public DataTransferRegionalServiceResourceResponse build() {
+        }        public DataTransferRegionalServiceResourceResponse build() {
             return new DataTransferRegionalServiceResourceResponse(location, name, status);
         }
     }

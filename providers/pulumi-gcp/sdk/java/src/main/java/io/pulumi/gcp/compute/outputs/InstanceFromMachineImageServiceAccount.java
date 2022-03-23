@@ -56,12 +56,13 @@ public final class InstanceFromMachineImageServiceAccount {
             this.email = email;
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-        public InstanceFromMachineImageServiceAccount build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public InstanceFromMachineImageServiceAccount build() {
             return new InstanceFromMachineImageServiceAccount(email, scopes);
         }
     }

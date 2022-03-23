@@ -53,7 +53,9 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-        public WorkteamMemberDefinitionOidcMemberDefinition build() {
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }        public WorkteamMemberDefinitionOidcMemberDefinition build() {
             return new WorkteamMemberDefinitionOidcMemberDefinition(groups);
         }
     }

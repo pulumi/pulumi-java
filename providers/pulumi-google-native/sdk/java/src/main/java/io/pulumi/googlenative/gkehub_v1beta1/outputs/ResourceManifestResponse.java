@@ -70,12 +70,10 @@ public final class ResourceManifestResponse {
             this.clusterScoped = Objects.requireNonNull(clusterScoped);
             return this;
         }
-
         public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
-        }
-        public ResourceManifestResponse build() {
+        }        public ResourceManifestResponse build() {
             return new ResourceManifestResponse(clusterScoped, manifest);
         }
     }

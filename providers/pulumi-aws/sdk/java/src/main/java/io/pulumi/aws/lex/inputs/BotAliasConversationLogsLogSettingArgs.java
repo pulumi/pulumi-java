@@ -122,52 +122,42 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
         }
-
         public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public Builder resourcePrefix(@Nullable Output<String> resourcePrefix) {
             this.resourcePrefix = resourcePrefix;
             return this;
         }
-
         public Builder resourcePrefix(@Nullable String resourcePrefix) {
             this.resourcePrefix = Output.ofNullable(resourcePrefix);
             return this;
-        }
-        public BotAliasConversationLogsLogSettingArgs build() {
+        }        public BotAliasConversationLogsLogSettingArgs build() {
             return new BotAliasConversationLogsLogSettingArgs(destination, kmsKeyArn, logType, resourceArn, resourcePrefix);
         }
     }

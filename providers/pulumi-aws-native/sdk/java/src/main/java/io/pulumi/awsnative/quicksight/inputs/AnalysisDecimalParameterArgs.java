@@ -79,22 +79,21 @@ public final class AnalysisDecimalParameterArgs extends io.pulumi.resources.Reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder values(Output<List<Double>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<Double> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public AnalysisDecimalParameterArgs build() {
+        public Builder values(Double... values) {
+            return values(List.of(values));
+        }        public AnalysisDecimalParameterArgs build() {
             return new AnalysisDecimalParameterArgs(name, values);
         }
     }

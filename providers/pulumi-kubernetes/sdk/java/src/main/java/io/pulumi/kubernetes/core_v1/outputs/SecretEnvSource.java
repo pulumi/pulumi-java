@@ -72,12 +72,10 @@ public final class SecretEnvSource {
             this.name = name;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public SecretEnvSource build() {
+        }        public SecretEnvSource build() {
             return new SecretEnvSource(name, optional);
         }
     }

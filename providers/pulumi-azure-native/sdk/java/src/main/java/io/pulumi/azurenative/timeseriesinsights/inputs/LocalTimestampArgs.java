@@ -81,22 +81,18 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,LocalTimestampFormat> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder timeZoneOffset(@Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
             this.timeZoneOffset = timeZoneOffset;
             return this;
         }
-
         public Builder timeZoneOffset(@Nullable LocalTimestampTimeZoneOffsetArgs timeZoneOffset) {
             this.timeZoneOffset = Output.ofNullable(timeZoneOffset);
             return this;
-        }
-        public LocalTimestampArgs build() {
+        }        public LocalTimestampArgs build() {
             return new LocalTimestampArgs(format, timeZoneOffset);
         }
     }

@@ -267,72 +267,58 @@ public final class GetConnectorResult {
             this.connectorId = Objects.requireNonNull(connectorId);
             return this;
         }
-
         public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = connectorName;
             return this;
         }
-
         public Builder connectorProperties(Map<String,Object> connectorProperties) {
             this.connectorProperties = Objects.requireNonNull(connectorProperties);
             return this;
         }
-
         public Builder connectorType(String connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isInternal(@Nullable Boolean isInternal) {
             this.isInternal = isInternal;
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConnectorResult build() {
+        }        public GetConnectorResult build() {
             return new GetConnectorResult(connectorId, connectorName, connectorProperties, connectorType, created, description, displayName, id, isInternal, lastModified, name, state, tenantId, type);
         }
     }

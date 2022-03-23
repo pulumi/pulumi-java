@@ -58,12 +58,10 @@ public final class MeshSpecEgressFilterGetArgs extends io.pulumi.resources.Resou
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public MeshSpecEgressFilterGetArgs build() {
+        }        public MeshSpecEgressFilterGetArgs build() {
             return new MeshSpecEgressFilterGetArgs(type);
         }
     }

@@ -74,22 +74,18 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs 
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
-
         public Builder referrerPolicy(Output<String> referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
         }
-
         public Builder referrerPolicy(String referrerPolicy) {
             this.referrerPolicy = Output.of(Objects.requireNonNull(referrerPolicy));
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs build() {
             return new ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs(override, referrerPolicy);
         }
     }

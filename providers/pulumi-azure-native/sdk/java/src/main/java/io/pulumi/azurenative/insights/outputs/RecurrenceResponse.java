@@ -70,12 +70,10 @@ public final class RecurrenceResponse {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder schedule(RecurrentScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
-        }
-        public RecurrenceResponse build() {
+        }        public RecurrenceResponse build() {
             return new RecurrenceResponse(frequency, schedule);
         }
     }

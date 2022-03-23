@@ -56,12 +56,10 @@ public final class PackagingConfigurationMssEncryptionArgs extends io.pulumi.res
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
-        }
-        public PackagingConfigurationMssEncryptionArgs build() {
+        }        public PackagingConfigurationMssEncryptionArgs build() {
             return new PackagingConfigurationMssEncryptionArgs(spekeKeyProvider);
         }
     }

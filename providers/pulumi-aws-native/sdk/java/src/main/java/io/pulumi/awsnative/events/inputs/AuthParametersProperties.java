@@ -93,22 +93,18 @@ public final class AuthParametersProperties extends io.pulumi.resources.InvokeAr
             this.apiKeyAuthParameters = apiKeyAuthParameters;
             return this;
         }
-
         public Builder basicAuthParameters(@Nullable ConnectionBasicAuthParameters basicAuthParameters) {
             this.basicAuthParameters = basicAuthParameters;
             return this;
         }
-
         public Builder invocationHttpParameters(@Nullable ConnectionHttpParameters invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
-
         public Builder oAuthParameters(@Nullable ConnectionOAuthParameters oAuthParameters) {
             this.oAuthParameters = oAuthParameters;
             return this;
-        }
-        public AuthParametersProperties build() {
+        }        public AuthParametersProperties build() {
             return new AuthParametersProperties(apiKeyAuthParameters, basicAuthParameters, invocationHttpParameters, oAuthParameters);
         }
     }

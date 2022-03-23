@@ -61,12 +61,10 @@ public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArg
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public InquiryValidationArgs build() {
+        }        public InquiryValidationArgs build() {
             return new InquiryValidationArgs(status);
         }
     }

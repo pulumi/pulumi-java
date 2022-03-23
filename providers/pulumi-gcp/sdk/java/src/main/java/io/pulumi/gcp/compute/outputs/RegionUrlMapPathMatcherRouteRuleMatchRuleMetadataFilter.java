@@ -89,12 +89,13 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
-
+        public Builder filterLabels(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel... filterLabels) {
+            return filterLabels(List.of(filterLabels));
+        }
         public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter build() {
+        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter(filterLabels, filterMatchCriteria);
         }
     }

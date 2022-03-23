@@ -66,22 +66,18 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
-
         public Builder featureName(String featureName) {
             this.featureName = Output.of(Objects.requireNonNull(featureName));
             return this;
         }
-
         public Builder featureType(Output<FeatureGroupFeatureDefinitionFeatureType> featureType) {
             this.featureType = Objects.requireNonNull(featureType);
             return this;
         }
-
         public Builder featureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
             this.featureType = Output.of(Objects.requireNonNull(featureType));
             return this;
-        }
-        public FeatureGroupFeatureDefinitionArgs build() {
+        }        public FeatureGroupFeatureDefinitionArgs build() {
             return new FeatureGroupFeatureDefinitionArgs(featureName, featureType);
         }
     }

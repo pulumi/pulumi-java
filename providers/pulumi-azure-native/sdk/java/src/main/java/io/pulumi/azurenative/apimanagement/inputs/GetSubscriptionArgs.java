@@ -88,17 +88,14 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder sid(String sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
-        }
-        public GetSubscriptionArgs build() {
+        }        public GetSubscriptionArgs build() {
             return new GetSubscriptionArgs(resourceGroupName, serviceName, sid);
         }
     }

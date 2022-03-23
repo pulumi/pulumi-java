@@ -91,32 +91,26 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
             this.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
-
         public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
             this.numFiniteBuckets = Output.ofNullable(numFiniteBuckets);
             return this;
         }
-
         public Builder offset(@Nullable Output<Double> offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder offset(@Nullable Double offset) {
             this.offset = Output.ofNullable(offset);
             return this;
         }
-
         public Builder width(@Nullable Output<Double> width) {
             this.width = width;
             return this;
         }
-
         public Builder width(@Nullable Double width) {
             this.width = Output.ofNullable(width);
             return this;
-        }
-        public MetricBucketOptionsLinearBucketsGetArgs build() {
+        }        public MetricBucketOptionsLinearBucketsGetArgs build() {
             return new MetricBucketOptionsLinearBucketsGetArgs(numFiniteBuckets, offset, width);
         }
     }

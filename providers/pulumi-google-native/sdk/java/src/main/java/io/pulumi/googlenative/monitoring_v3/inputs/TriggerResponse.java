@@ -77,12 +77,10 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder percent(Double percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
-        }
-        public TriggerResponse build() {
+        }        public TriggerResponse build() {
             return new TriggerResponse(count, percent);
         }
     }

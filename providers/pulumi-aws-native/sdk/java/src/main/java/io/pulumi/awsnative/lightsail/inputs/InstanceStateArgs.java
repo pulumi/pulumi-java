@@ -79,22 +79,18 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Integer code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public InstanceStateArgs build() {
+        }        public InstanceStateArgs build() {
             return new InstanceStateArgs(code, name);
         }
     }

@@ -86,17 +86,14 @@ public final class GetSubscriptionResult {
             this.deliveryConfig = Objects.requireNonNull(deliveryConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GetSubscriptionResult build() {
+        }        public GetSubscriptionResult build() {
             return new GetSubscriptionResult(deliveryConfig, name, topic);
         }
     }

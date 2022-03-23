@@ -59,12 +59,10 @@ public final class FolderSinkBigqueryOptionsArgs extends io.pulumi.resources.Res
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
-
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Output.of(Objects.requireNonNull(usePartitionedTables));
             return this;
-        }
-        public FolderSinkBigqueryOptionsArgs build() {
+        }        public FolderSinkBigqueryOptionsArgs build() {
             return new FolderSinkBigqueryOptionsArgs(usePartitionedTables);
         }
     }

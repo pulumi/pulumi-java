@@ -101,22 +101,18 @@ public final class RelationshipOccurrenceResponse {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RelationshipOccurrenceResponse build() {
+        }        public RelationshipOccurrenceResponse build() {
             return new RelationshipOccurrenceResponse(comment, source, target, type);
         }
     }

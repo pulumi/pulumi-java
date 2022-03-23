@@ -161,37 +161,39 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
             this.fullPathMatch = Objects.requireNonNull(fullPathMatch);
             return this;
         }
-
         public Builder headerMatches(List<HttpHeaderMatchResponse> headerMatches) {
             this.headerMatches = Objects.requireNonNull(headerMatches);
             return this;
         }
-
+        public Builder headerMatches(HttpHeaderMatchResponse... headerMatches) {
+            return headerMatches(List.of(headerMatches));
+        }
         public Builder ignoreCase(Boolean ignoreCase) {
             this.ignoreCase = Objects.requireNonNull(ignoreCase);
             return this;
         }
-
         public Builder metadataFilters(List<MetadataFilterResponse> metadataFilters) {
             this.metadataFilters = Objects.requireNonNull(metadataFilters);
             return this;
         }
-
+        public Builder metadataFilters(MetadataFilterResponse... metadataFilters) {
+            return metadataFilters(List.of(metadataFilters));
+        }
         public Builder prefixMatch(String prefixMatch) {
             this.prefixMatch = Objects.requireNonNull(prefixMatch);
             return this;
         }
-
         public Builder queryParameterMatches(List<HttpQueryParameterMatchResponse> queryParameterMatches) {
             this.queryParameterMatches = Objects.requireNonNull(queryParameterMatches);
             return this;
         }
-
+        public Builder queryParameterMatches(HttpQueryParameterMatchResponse... queryParameterMatches) {
+            return queryParameterMatches(List.of(queryParameterMatches));
+        }
         public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
-        }
-        public HttpRouteRuleMatchResponse build() {
+        }        public HttpRouteRuleMatchResponse build() {
             return new HttpRouteRuleMatchResponse(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }
     }

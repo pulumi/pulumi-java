@@ -127,27 +127,22 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder initializingReplication(InitializingReplicationStepResponse initializingReplication) {
             this.initializingReplication = Objects.requireNonNull(initializingReplication);
             return this;
         }
-
         public Builder postProcessing(PostProcessingStepResponse postProcessing) {
             this.postProcessing = Objects.requireNonNull(postProcessing);
             return this;
         }
-
         public Builder replicating(ReplicatingStepResponse replicating) {
             this.replicating = Objects.requireNonNull(replicating);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public CycleStepResponse build() {
+        }        public CycleStepResponse build() {
             return new CycleStepResponse(endTime, initializingReplication, postProcessing, replicating, startTime);
         }
     }

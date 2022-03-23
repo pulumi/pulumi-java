@@ -139,62 +139,50 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
             this.dataMaskingPolicyName = dataMaskingPolicyName;
             return this;
         }
-
         public Builder dataMaskingPolicyName(@Nullable String dataMaskingPolicyName) {
             this.dataMaskingPolicyName = Output.ofNullable(dataMaskingPolicyName);
             return this;
         }
-
         public Builder dataMaskingState(Output<DataMaskingState> dataMaskingState) {
             this.dataMaskingState = Objects.requireNonNull(dataMaskingState);
             return this;
         }
-
         public Builder dataMaskingState(DataMaskingState dataMaskingState) {
             this.dataMaskingState = Output.of(Objects.requireNonNull(dataMaskingState));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder exemptPrincipals(@Nullable Output<String> exemptPrincipals) {
             this.exemptPrincipals = exemptPrincipals;
             return this;
         }
-
         public Builder exemptPrincipals(@Nullable String exemptPrincipals) {
             this.exemptPrincipals = Output.ofNullable(exemptPrincipals);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
-        }
-        public DataMaskingPolicyArgs build() {
+        }        public DataMaskingPolicyArgs build() {
             return new DataMaskingPolicyArgs(dataMaskingPolicyName, dataMaskingState, databaseName, exemptPrincipals, resourceGroupName, serverName);
         }
     }

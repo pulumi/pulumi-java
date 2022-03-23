@@ -94,32 +94,26 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends io.pulum
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
-
         public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = Output.ofNullable(firstName);
             return this;
         }
-
         public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
-
         public Builder lastName(@Nullable String lastName) {
             this.lastName = Output.ofNullable(lastName);
             return this;
-        }
-        public OrganizationResourcePropertiesUserDetailArgs build() {
+        }        public OrganizationResourcePropertiesUserDetailArgs build() {
             return new OrganizationResourcePropertiesUserDetailArgs(emailAddress, firstName, lastName);
         }
     }

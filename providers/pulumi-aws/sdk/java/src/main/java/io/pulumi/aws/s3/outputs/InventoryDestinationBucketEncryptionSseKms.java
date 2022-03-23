@@ -51,8 +51,7 @@ public final class InventoryDestinationBucketEncryptionSseKms {
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
-        }
-        public InventoryDestinationBucketEncryptionSseKms build() {
+        }        public InventoryDestinationBucketEncryptionSseKms build() {
             return new InventoryDestinationBucketEncryptionSseKms(keyId);
         }
     }

@@ -53,12 +53,10 @@ public final class GetClusterMasterAuthorizedNetworksConfigCidrBlock {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
-        }
-        public GetClusterMasterAuthorizedNetworksConfigCidrBlock build() {
+        }        public GetClusterMasterAuthorizedNetworksConfigCidrBlock build() {
             return new GetClusterMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }
     }

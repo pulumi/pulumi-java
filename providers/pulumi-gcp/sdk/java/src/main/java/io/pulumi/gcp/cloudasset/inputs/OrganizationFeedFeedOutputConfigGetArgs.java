@@ -57,12 +57,10 @@ public final class OrganizationFeedFeedOutputConfigGetArgs extends io.pulumi.res
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
-
         public Builder pubsubDestination(OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs pubsubDestination) {
             this.pubsubDestination = Output.of(Objects.requireNonNull(pubsubDestination));
             return this;
-        }
-        public OrganizationFeedFeedOutputConfigGetArgs build() {
+        }        public OrganizationFeedFeedOutputConfigGetArgs build() {
             return new OrganizationFeedFeedOutputConfigGetArgs(pubsubDestination);
         }
     }

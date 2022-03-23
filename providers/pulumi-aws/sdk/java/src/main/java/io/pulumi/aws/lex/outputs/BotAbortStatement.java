@@ -81,12 +81,13 @@ public final class BotAbortStatement {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(BotAbortStatementMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public BotAbortStatement build() {
+        }        public BotAbortStatement build() {
             return new BotAbortStatement(messages, responseCard);
         }
     }

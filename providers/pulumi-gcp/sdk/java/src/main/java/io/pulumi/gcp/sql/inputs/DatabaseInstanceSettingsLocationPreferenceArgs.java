@@ -76,22 +76,18 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
             this.followGaeApplication = followGaeApplication;
             return this;
         }
-
         public Builder followGaeApplication(@Nullable String followGaeApplication) {
             this.followGaeApplication = Output.ofNullable(followGaeApplication);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public DatabaseInstanceSettingsLocationPreferenceArgs build() {
+        }        public DatabaseInstanceSettingsLocationPreferenceArgs build() {
             return new DatabaseInstanceSettingsLocationPreferenceArgs(followGaeApplication, zone);
         }
     }

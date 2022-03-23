@@ -79,22 +79,21 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<String> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(String... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder monitoredResource(@Nullable Output<String> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
-
         public Builder monitoredResource(@Nullable String monitoredResource) {
             this.monitoredResource = Output.ofNullable(monitoredResource);
             return this;
-        }
-        public BillingDestinationArgs build() {
+        }        public BillingDestinationArgs build() {
             return new BillingDestinationArgs(metrics, monitoredResource);
         }
     }

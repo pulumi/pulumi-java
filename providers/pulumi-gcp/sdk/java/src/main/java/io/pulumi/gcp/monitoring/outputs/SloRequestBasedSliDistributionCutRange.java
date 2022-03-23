@@ -79,12 +79,10 @@ public final class SloRequestBasedSliDistributionCutRange {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
-        }
-        public SloRequestBasedSliDistributionCutRange build() {
+        }        public SloRequestBasedSliDistributionCutRange build() {
             return new SloRequestBasedSliDistributionCutRange(max, min);
         }
     }

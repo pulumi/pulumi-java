@@ -75,22 +75,24 @@ public final class ComponentVersionLambdaContainerParams {
             this.devices = devices;
             return this;
         }
-
+        public Builder devices(ComponentVersionLambdaDeviceMount... devices) {
+            return devices(List.of(devices));
+        }
         public Builder memorySizeInKB(@Nullable Integer memorySizeInKB) {
             this.memorySizeInKB = memorySizeInKB;
             return this;
         }
-
         public Builder mountROSysfs(@Nullable Boolean mountROSysfs) {
             this.mountROSysfs = mountROSysfs;
             return this;
         }
-
         public Builder volumes(@Nullable List<ComponentVersionLambdaVolumeMount> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public ComponentVersionLambdaContainerParams build() {
+        public Builder volumes(ComponentVersionLambdaVolumeMount... volumes) {
+            return volumes(List.of(volumes));
+        }        public ComponentVersionLambdaContainerParams build() {
             return new ComponentVersionLambdaContainerParams(devices, memorySizeInKB, mountROSysfs, volumes);
         }
     }

@@ -91,32 +91,26 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public Builder tableId(@Nullable Output<String> tableId) {
             this.tableId = tableId;
             return this;
         }
-
         public Builder tableId(@Nullable String tableId) {
             this.tableId = Output.ofNullable(tableId);
             return this;
-        }
-        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs build() {
+        }        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs(datasetId, projectId, tableId);
         }
     }

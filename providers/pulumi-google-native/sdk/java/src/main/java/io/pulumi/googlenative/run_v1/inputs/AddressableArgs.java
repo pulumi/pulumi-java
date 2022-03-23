@@ -57,12 +57,10 @@ public final class AddressableArgs extends io.pulumi.resources.ResourceArgs {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public AddressableArgs build() {
+        }        public AddressableArgs build() {
             return new AddressableArgs(url);
         }
     }

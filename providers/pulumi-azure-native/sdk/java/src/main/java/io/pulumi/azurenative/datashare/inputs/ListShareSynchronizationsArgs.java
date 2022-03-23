@@ -138,32 +138,26 @@ public final class ListShareSynchronizationsArgs extends io.pulumi.resources.Inv
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder orderby(@Nullable String orderby) {
             this.orderby = orderby;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListShareSynchronizationsArgs build() {
+        }        public ListShareSynchronizationsArgs build() {
             return new ListShareSynchronizationsArgs(accountName, filter, orderby, resourceGroupName, shareName, skipToken);
         }
     }

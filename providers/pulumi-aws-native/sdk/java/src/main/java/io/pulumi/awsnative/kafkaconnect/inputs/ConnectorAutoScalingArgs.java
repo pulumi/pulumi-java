@@ -119,52 +119,42 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
             this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
             return this;
         }
-
         public Builder maxWorkerCount(Integer maxWorkerCount) {
             this.maxWorkerCount = Output.of(Objects.requireNonNull(maxWorkerCount));
             return this;
         }
-
         public Builder mcuCount(Output<Integer> mcuCount) {
             this.mcuCount = Objects.requireNonNull(mcuCount);
             return this;
         }
-
         public Builder mcuCount(Integer mcuCount) {
             this.mcuCount = Output.of(Objects.requireNonNull(mcuCount));
             return this;
         }
-
         public Builder minWorkerCount(Output<Integer> minWorkerCount) {
             this.minWorkerCount = Objects.requireNonNull(minWorkerCount);
             return this;
         }
-
         public Builder minWorkerCount(Integer minWorkerCount) {
             this.minWorkerCount = Output.of(Objects.requireNonNull(minWorkerCount));
             return this;
         }
-
         public Builder scaleInPolicy(Output<ConnectorScaleInPolicyArgs> scaleInPolicy) {
             this.scaleInPolicy = Objects.requireNonNull(scaleInPolicy);
             return this;
         }
-
         public Builder scaleInPolicy(ConnectorScaleInPolicyArgs scaleInPolicy) {
             this.scaleInPolicy = Output.of(Objects.requireNonNull(scaleInPolicy));
             return this;
         }
-
         public Builder scaleOutPolicy(Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy) {
             this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
             return this;
         }
-
         public Builder scaleOutPolicy(ConnectorScaleOutPolicyArgs scaleOutPolicy) {
             this.scaleOutPolicy = Output.of(Objects.requireNonNull(scaleOutPolicy));
             return this;
-        }
-        public ConnectorAutoScalingArgs build() {
+        }        public ConnectorAutoScalingArgs build() {
             return new ConnectorAutoScalingArgs(maxWorkerCount, mcuCount, minWorkerCount, scaleInPolicy, scaleOutPolicy);
         }
     }

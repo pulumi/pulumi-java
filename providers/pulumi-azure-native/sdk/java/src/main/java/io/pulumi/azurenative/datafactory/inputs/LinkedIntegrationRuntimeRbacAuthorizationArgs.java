@@ -96,32 +96,26 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder authorizationType(String authorizationType) {
             this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
-
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public LinkedIntegrationRuntimeRbacAuthorizationArgs build() {
+        }        public LinkedIntegrationRuntimeRbacAuthorizationArgs build() {
             return new LinkedIntegrationRuntimeRbacAuthorizationArgs(authorizationType, credential, resourceId);
         }
     }

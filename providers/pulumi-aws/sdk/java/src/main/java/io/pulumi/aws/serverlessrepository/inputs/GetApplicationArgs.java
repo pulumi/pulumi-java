@@ -74,12 +74,10 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder semanticVersion(@Nullable String semanticVersion) {
             this.semanticVersion = semanticVersion;
             return this;
-        }
-        public GetApplicationArgs build() {
+        }        public GetApplicationArgs build() {
             return new GetApplicationArgs(applicationId, semanticVersion);
         }
     }

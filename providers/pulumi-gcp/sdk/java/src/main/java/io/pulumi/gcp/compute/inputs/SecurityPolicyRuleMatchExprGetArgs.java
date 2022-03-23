@@ -57,12 +57,10 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends io.pulumi.resource
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
-        }
-        public SecurityPolicyRuleMatchExprGetArgs build() {
+        }        public SecurityPolicyRuleMatchExprGetArgs build() {
             return new SecurityPolicyRuleMatchExprGetArgs(expression);
         }
     }

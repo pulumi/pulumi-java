@@ -233,62 +233,50 @@ public final class GetTransferJobResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder deletionTime(String deletionTime) {
             this.deletionTime = Objects.requireNonNull(deletionTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder lastModificationTime(String lastModificationTime) {
             this.lastModificationTime = Objects.requireNonNull(lastModificationTime);
             return this;
         }
-
         public Builder latestOperationName(String latestOperationName) {
             this.latestOperationName = Objects.requireNonNull(latestOperationName);
             return this;
         }
-
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder schedule(ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder transferSpec(TransferSpecResponse transferSpec) {
             this.transferSpec = Objects.requireNonNull(transferSpec);
             return this;
-        }
-        public GetTransferJobResult build() {
+        }        public GetTransferJobResult build() {
             return new GetTransferJobResult(creationTime, deletionTime, description, lastModificationTime, latestOperationName, loggingConfig, name, notificationConfig, project, schedule, status, transferSpec);
         }
     }

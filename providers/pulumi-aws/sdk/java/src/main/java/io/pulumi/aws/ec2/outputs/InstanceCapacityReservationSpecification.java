@@ -72,12 +72,10 @@ public final class InstanceCapacityReservationSpecification {
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable InstanceCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
-        }
-        public InstanceCapacityReservationSpecification build() {
+        }        public InstanceCapacityReservationSpecification build() {
             return new InstanceCapacityReservationSpecification(capacityReservationPreference, capacityReservationTarget);
         }
     }

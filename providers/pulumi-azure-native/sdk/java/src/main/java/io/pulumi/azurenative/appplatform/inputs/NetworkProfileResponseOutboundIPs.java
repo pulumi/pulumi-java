@@ -60,7 +60,9 @@ public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources
             this.publicIPs = Objects.requireNonNull(publicIPs);
             return this;
         }
-        public NetworkProfileResponseOutboundIPs build() {
+        public Builder publicIPs(String... publicIPs) {
+            return publicIPs(List.of(publicIPs));
+        }        public NetworkProfileResponseOutboundIPs build() {
             return new NetworkProfileResponseOutboundIPs(publicIPs);
         }
     }

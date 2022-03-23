@@ -210,102 +210,106 @@ public final class ServiceTaskSpecContainerSpec {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder commands(@Nullable List<String> commands) {
             this.commands = commands;
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder configs(@Nullable List<ServiceTaskSpecContainerSpecConfig> configs) {
             this.configs = configs;
             return this;
         }
-
+        public Builder configs(ServiceTaskSpecContainerSpecConfig... configs) {
+            return configs(List.of(configs));
+        }
         public Builder dir(@Nullable String dir) {
             this.dir = dir;
             return this;
         }
-
         public Builder dnsConfig(@Nullable ServiceTaskSpecContainerSpecDnsConfig dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder env(@Nullable Map<String,String> env) {
             this.env = env;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder healthcheck(@Nullable ServiceTaskSpecContainerSpecHealthcheck healthcheck) {
             this.healthcheck = healthcheck;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hosts(@Nullable List<ServiceTaskSpecContainerSpecHost> hosts) {
             this.hosts = hosts;
             return this;
         }
-
+        public Builder hosts(ServiceTaskSpecContainerSpecHost... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder isolation(@Nullable String isolation) {
             this.isolation = isolation;
             return this;
         }
-
         public Builder labels(@Nullable List<ServiceTaskSpecContainerSpecLabel> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(ServiceTaskSpecContainerSpecLabel... labels) {
+            return labels(List.of(labels));
+        }
         public Builder mounts(@Nullable List<ServiceTaskSpecContainerSpecMount> mounts) {
             this.mounts = mounts;
             return this;
         }
-
+        public Builder mounts(ServiceTaskSpecContainerSpecMount... mounts) {
+            return mounts(List.of(mounts));
+        }
         public Builder privileges(@Nullable ServiceTaskSpecContainerSpecPrivileges privileges) {
             this.privileges = privileges;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secrets(@Nullable List<ServiceTaskSpecContainerSpecSecret> secrets) {
             this.secrets = secrets;
             return this;
         }
-
+        public Builder secrets(ServiceTaskSpecContainerSpecSecret... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder stopGracePeriod(@Nullable String stopGracePeriod) {
             this.stopGracePeriod = stopGracePeriod;
             return this;
         }
-
         public Builder stopSignal(@Nullable String stopSignal) {
             this.stopSignal = stopSignal;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = user;
             return this;
-        }
-        public ServiceTaskSpecContainerSpec build() {
+        }        public ServiceTaskSpecContainerSpec build() {
             return new ServiceTaskSpecContainerSpec(args, commands, configs, dir, dnsConfig, env, groups, healthcheck, hostname, hosts, image, isolation, labels, mounts, privileges, readOnly, secrets, stopGracePeriod, stopSignal, user);
         }
     }

@@ -161,72 +161,61 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable WebAclRuleActionGetArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder overrideAction(@Nullable Output<WebAclRuleOverrideActionGetArgs> overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
-
         public Builder overrideAction(@Nullable WebAclRuleOverrideActionGetArgs overrideAction) {
             this.overrideAction = Output.ofNullable(overrideAction);
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleLabels(@Nullable Output<List<WebAclRuleRuleLabelGetArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
-
         public Builder ruleLabels(@Nullable List<WebAclRuleRuleLabelGetArgs> ruleLabels) {
             this.ruleLabels = Output.ofNullable(ruleLabels);
             return this;
         }
-
+        public Builder ruleLabels(WebAclRuleRuleLabelGetArgs... ruleLabels) {
+            return ruleLabels(List.of(ruleLabels));
+        }
         public Builder statement(Output<WebAclRuleStatementGetArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder statement(WebAclRuleStatementGetArgs statement) {
             this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
         }
-
         public Builder visibilityConfig(Output<WebAclRuleVisibilityConfigGetArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public Builder visibilityConfig(WebAclRuleVisibilityConfigGetArgs visibilityConfig) {
             this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
-        }
-        public WebAclRuleGetArgs build() {
+        }        public WebAclRuleGetArgs build() {
             return new WebAclRuleGetArgs(action, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
         }
     }

@@ -76,12 +76,10 @@ public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs 
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public SecretVersionResponse build() {
+        }        public SecretVersionResponse build() {
             return new SecretVersionResponse(path, version);
         }
     }

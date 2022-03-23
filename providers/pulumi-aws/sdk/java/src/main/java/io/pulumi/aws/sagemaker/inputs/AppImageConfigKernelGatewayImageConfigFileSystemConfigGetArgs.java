@@ -91,32 +91,26 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs
             this.defaultGid = defaultGid;
             return this;
         }
-
         public Builder defaultGid(@Nullable Integer defaultGid) {
             this.defaultGid = Output.ofNullable(defaultGid);
             return this;
         }
-
         public Builder defaultUid(@Nullable Output<Integer> defaultUid) {
             this.defaultUid = defaultUid;
             return this;
         }
-
         public Builder defaultUid(@Nullable Integer defaultUid) {
             this.defaultUid = Output.ofNullable(defaultUid);
             return this;
         }
-
         public Builder mountPath(@Nullable Output<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
-
         public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Output.ofNullable(mountPath);
             return this;
-        }
-        public AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs build() {
+        }        public AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs build() {
             return new AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs(defaultGid, defaultUid, mountPath);
         }
     }

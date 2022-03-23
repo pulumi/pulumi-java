@@ -109,22 +109,18 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder copyLogDetailsType(String copyLogDetailsType) {
             this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
             return this;
         }
-
         public Builder copyLogLink(String copyLogLink) {
             this.copyLogLink = Objects.requireNonNull(copyLogLink);
             return this;
         }
-
         public Builder copyVerboseLogLink(String copyVerboseLogLink) {
             this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
             return this;
-        }
-        public DataBoxAccountCopyLogDetailsResponse build() {
+        }        public DataBoxAccountCopyLogDetailsResponse build() {
             return new DataBoxAccountCopyLogDetailsResponse(accountName, copyLogDetailsType, copyLogLink, copyVerboseLogLink);
         }
     }

@@ -100,32 +100,26 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
             this.hostRewrite = hostRewrite;
             return this;
         }
-
         public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = Output.ofNullable(hostRewrite);
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable Output<String> pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
-
         public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = Output.ofNullable(pathPrefixRewrite);
             return this;
         }
-
         public Builder pathTemplateRewrite(@Nullable Output<String> pathTemplateRewrite) {
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
         }
-
         public Builder pathTemplateRewrite(@Nullable String pathTemplateRewrite) {
             this.pathTemplateRewrite = Output.ofNullable(pathTemplateRewrite);
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs(hostRewrite, pathPrefixRewrite, pathTemplateRewrite);
         }
     }

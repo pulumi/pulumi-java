@@ -95,32 +95,26 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder targetAverageUtilization(@Nullable Output<Integer> targetAverageUtilization) {
             this.targetAverageUtilization = targetAverageUtilization;
             return this;
         }
-
         public Builder targetAverageUtilization(@Nullable Integer targetAverageUtilization) {
             this.targetAverageUtilization = Output.ofNullable(targetAverageUtilization);
             return this;
         }
-
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
-
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = Output.ofNullable(targetAverageValue);
             return this;
-        }
-        public ResourceMetricSourceArgs build() {
+        }        public ResourceMetricSourceArgs build() {
             return new ResourceMetricSourceArgs(name, targetAverageUtilization, targetAverageValue);
         }
     }

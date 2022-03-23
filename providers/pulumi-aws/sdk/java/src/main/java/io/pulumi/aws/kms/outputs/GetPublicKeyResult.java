@@ -167,47 +167,47 @@ public final class GetPublicKeyResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder customerMasterKeySpec(String customerMasterKeySpec) {
             this.customerMasterKeySpec = Objects.requireNonNull(customerMasterKeySpec);
             return this;
         }
-
         public Builder encryptionAlgorithms(List<String> encryptionAlgorithms) {
             this.encryptionAlgorithms = Objects.requireNonNull(encryptionAlgorithms);
             return this;
         }
-
+        public Builder encryptionAlgorithms(String... encryptionAlgorithms) {
+            return encryptionAlgorithms(List.of(encryptionAlgorithms));
+        }
         public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
-
+        public Builder grantTokens(String... grantTokens) {
+            return grantTokens(List.of(grantTokens));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyUsage(String keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder signingAlgorithms(List<String> signingAlgorithms) {
             this.signingAlgorithms = Objects.requireNonNull(signingAlgorithms);
             return this;
         }
-        public GetPublicKeyResult build() {
+        public Builder signingAlgorithms(String... signingAlgorithms) {
+            return signingAlgorithms(List.of(signingAlgorithms));
+        }        public GetPublicKeyResult build() {
             return new GetPublicKeyResult(arn, customerMasterKeySpec, encryptionAlgorithms, grantTokens, id, keyId, keyUsage, publicKey, signingAlgorithms);
         }
     }

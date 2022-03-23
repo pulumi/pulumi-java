@@ -93,32 +93,26 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
-
         public Builder commonName(String commonName) {
             this.commonName = Output.of(Objects.requireNonNull(commonName));
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public SslCertArgs build() {
+        }        public SslCertArgs build() {
             return new SslCertArgs(commonName, instance, project);
         }
     }

@@ -78,22 +78,18 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public SqlStoredProcedureResourceArgs build() {
+        }        public SqlStoredProcedureResourceArgs build() {
             return new SqlStoredProcedureResourceArgs(body, id);
         }
     }

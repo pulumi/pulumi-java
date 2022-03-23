@@ -77,12 +77,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
             this.dataflowFlexTemplateRequest = Objects.requireNonNull(dataflowFlexTemplateRequest);
             return this;
         }
-
         public Builder dataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
             this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1WorkloadResponse build() {
+        }        public GoogleCloudDatapipelinesV1WorkloadResponse build() {
             return new GoogleCloudDatapipelinesV1WorkloadResponse(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
         }
     }

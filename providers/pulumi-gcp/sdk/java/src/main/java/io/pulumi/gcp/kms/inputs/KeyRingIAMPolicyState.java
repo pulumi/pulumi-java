@@ -94,32 +94,26 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder keyRingId(@Nullable Output<String> keyRingId) {
             this.keyRingId = keyRingId;
             return this;
         }
-
         public Builder keyRingId(@Nullable String keyRingId) {
             this.keyRingId = Output.ofNullable(keyRingId);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public KeyRingIAMPolicyState build() {
+        }        public KeyRingIAMPolicyState build() {
             return new KeyRingIAMPolicyState(etag, keyRingId, policyData);
         }
     }

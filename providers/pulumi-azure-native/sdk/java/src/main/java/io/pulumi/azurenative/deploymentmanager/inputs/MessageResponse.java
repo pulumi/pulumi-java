@@ -76,12 +76,10 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder timeStamp(String timeStamp) {
             this.timeStamp = Objects.requireNonNull(timeStamp);
             return this;
-        }
-        public MessageResponse build() {
+        }        public MessageResponse build() {
             return new MessageResponse(message, timeStamp);
         }
     }

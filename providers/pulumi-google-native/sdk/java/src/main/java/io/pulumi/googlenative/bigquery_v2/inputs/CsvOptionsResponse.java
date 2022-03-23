@@ -153,37 +153,30 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
             return this;
         }
-
         public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
             return this;
         }
-
         public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
-
         public Builder nullMarker(String nullMarker) {
             this.nullMarker = Objects.requireNonNull(nullMarker);
             return this;
         }
-
         public Builder quote(String quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
-
         public Builder skipLeadingRows(String skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
-        }
-        public CsvOptionsResponse build() {
+        }        public CsvOptionsResponse build() {
             return new CsvOptionsResponse(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, nullMarker, quote, skipLeadingRows);
         }
     }

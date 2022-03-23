@@ -80,22 +80,21 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
             this.defaultKey = defaultKey;
             return this;
         }
-
         public Builder defaultKey(@Nullable DefaultKeyArgs defaultKey) {
             this.defaultKey = Output.ofNullable(defaultKey);
             return this;
         }
-
         public Builder keyToTrackMappings(@Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
             this.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
-
         public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyArgs> keyToTrackMappings) {
             this.keyToTrackMappings = Output.ofNullable(keyToTrackMappings);
             return this;
         }
-        public StreamingPolicyContentKeysArgs build() {
+        public Builder keyToTrackMappings(StreamingPolicyContentKeyArgs... keyToTrackMappings) {
+            return keyToTrackMappings(List.of(keyToTrackMappings));
+        }        public StreamingPolicyContentKeysArgs build() {
             return new StreamingPolicyContentKeysArgs(defaultKey, keyToTrackMappings);
         }
     }

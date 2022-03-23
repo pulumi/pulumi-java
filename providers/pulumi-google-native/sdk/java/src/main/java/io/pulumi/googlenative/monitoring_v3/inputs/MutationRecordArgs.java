@@ -78,22 +78,18 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.mutateTime = mutateTime;
             return this;
         }
-
         public Builder mutateTime(@Nullable String mutateTime) {
             this.mutateTime = Output.ofNullable(mutateTime);
             return this;
         }
-
         public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
             this.mutatedBy = mutatedBy;
             return this;
         }
-
         public Builder mutatedBy(@Nullable String mutatedBy) {
             this.mutatedBy = Output.ofNullable(mutatedBy);
             return this;
-        }
-        public MutationRecordArgs build() {
+        }        public MutationRecordArgs build() {
             return new MutationRecordArgs(mutateTime, mutatedBy);
         }
     }

@@ -71,12 +71,13 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
-        }
-        public ObjectLambdaAccessPointConfigurationTransformationConfiguration build() {
+        }        public ObjectLambdaAccessPointConfigurationTransformationConfiguration build() {
             return new ObjectLambdaAccessPointConfigurationTransformationConfiguration(actions, contentTransformation);
         }
     }

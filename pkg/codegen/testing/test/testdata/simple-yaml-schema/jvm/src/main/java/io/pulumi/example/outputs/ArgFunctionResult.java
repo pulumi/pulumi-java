@@ -45,8 +45,7 @@ public final class ArgFunctionResult {
         public Builder result(@Nullable Resource result) {
             this.result = result;
             return this;
-        }
-        public ArgFunctionResult build() {
+        }        public ArgFunctionResult build() {
             return new ArgFunctionResult(result);
         }
     }

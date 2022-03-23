@@ -112,42 +112,34 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.incidentId = incidentId;
             return this;
         }
-
         public Builder incidentId(@Nullable String incidentId) {
             this.incidentId = Output.ofNullable(incidentId);
             return this;
         }
-
         public Builder relationName(@Nullable Output<String> relationName) {
             this.relationName = relationName;
             return this;
         }
-
         public Builder relationName(@Nullable String relationName) {
             this.relationName = Output.ofNullable(relationName);
             return this;
         }
-
         public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
             this.severity = Output.ofNullable(severity);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public IncidentInfoArgs build() {
+        }        public IncidentInfoArgs build() {
             return new IncidentInfoArgs(incidentId, relationName, severity, title);
         }
     }

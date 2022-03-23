@@ -58,8 +58,7 @@ public final class ExpirationPolicyResponse extends io.pulumi.resources.InvokeAr
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public ExpirationPolicyResponse build() {
+        }        public ExpirationPolicyResponse build() {
             return new ExpirationPolicyResponse(ttl);
         }
     }

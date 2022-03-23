@@ -81,17 +81,17 @@ public final class GetReleaseLabelsResult {
             this.filters = filters;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder releaseLabels(List<String> releaseLabels) {
             this.releaseLabels = Objects.requireNonNull(releaseLabels);
             return this;
         }
-        public GetReleaseLabelsResult build() {
+        public Builder releaseLabels(String... releaseLabels) {
+            return releaseLabels(List.of(releaseLabels));
+        }        public GetReleaseLabelsResult build() {
             return new GetReleaseLabelsResult(filters, id, releaseLabels);
         }
     }

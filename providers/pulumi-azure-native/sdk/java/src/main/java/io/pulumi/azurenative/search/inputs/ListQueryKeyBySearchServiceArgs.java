@@ -72,12 +72,10 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder searchServiceName(String searchServiceName) {
             this.searchServiceName = Objects.requireNonNull(searchServiceName);
             return this;
-        }
-        public ListQueryKeyBySearchServiceArgs build() {
+        }        public ListQueryKeyBySearchServiceArgs build() {
             return new ListQueryKeyBySearchServiceArgs(resourceGroupName, searchServiceName);
         }
     }

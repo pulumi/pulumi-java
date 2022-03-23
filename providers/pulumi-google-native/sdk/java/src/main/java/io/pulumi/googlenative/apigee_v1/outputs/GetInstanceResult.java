@@ -245,67 +245,54 @@ public final class GetInstanceResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskEncryptionKeyName(String diskEncryptionKeyName) {
             this.diskEncryptionKeyName = Objects.requireNonNull(diskEncryptionKeyName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeringCidrRange(String peeringCidrRange) {
             this.peeringCidrRange = Objects.requireNonNull(peeringCidrRange);
             return this;
         }
-
         public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(createdAt, description, diskEncryptionKeyName, displayName, host, ipRange, lastModifiedAt, location, name, peeringCidrRange, port, runtimeVersion, state);
         }
     }

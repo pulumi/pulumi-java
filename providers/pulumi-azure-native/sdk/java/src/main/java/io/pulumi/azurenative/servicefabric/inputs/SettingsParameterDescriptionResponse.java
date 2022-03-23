@@ -76,12 +76,10 @@ public final class SettingsParameterDescriptionResponse extends io.pulumi.resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SettingsParameterDescriptionResponse build() {
+        }        public SettingsParameterDescriptionResponse build() {
             return new SettingsParameterDescriptionResponse(name, value);
         }
     }

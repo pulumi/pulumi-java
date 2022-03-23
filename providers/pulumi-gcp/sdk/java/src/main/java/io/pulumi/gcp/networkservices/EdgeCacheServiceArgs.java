@@ -230,112 +230,93 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disableQuic(@Nullable Output<Boolean> disableQuic) {
             this.disableQuic = disableQuic;
             return this;
         }
-
         public Builder disableQuic(@Nullable Boolean disableQuic) {
             this.disableQuic = Output.ofNullable(disableQuic);
             return this;
         }
-
         public Builder edgeSecurityPolicy(@Nullable Output<String> edgeSecurityPolicy) {
             this.edgeSecurityPolicy = edgeSecurityPolicy;
             return this;
         }
-
         public Builder edgeSecurityPolicy(@Nullable String edgeSecurityPolicy) {
             this.edgeSecurityPolicy = Output.ofNullable(edgeSecurityPolicy);
             return this;
         }
-
         public Builder edgeSslCertificates(@Nullable Output<List<String>> edgeSslCertificates) {
             this.edgeSslCertificates = edgeSslCertificates;
             return this;
         }
-
         public Builder edgeSslCertificates(@Nullable List<String> edgeSslCertificates) {
             this.edgeSslCertificates = Output.ofNullable(edgeSslCertificates);
             return this;
         }
-
+        public Builder edgeSslCertificates(String... edgeSslCertificates) {
+            return edgeSslCertificates(List.of(edgeSslCertificates));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder logConfig(@Nullable Output<EdgeCacheServiceLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
-
         public Builder logConfig(@Nullable EdgeCacheServiceLogConfigArgs logConfig) {
             this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requireTls(@Nullable Output<Boolean> requireTls) {
             this.requireTls = requireTls;
             return this;
         }
-
         public Builder requireTls(@Nullable Boolean requireTls) {
             this.requireTls = Output.ofNullable(requireTls);
             return this;
         }
-
         public Builder routing(Output<EdgeCacheServiceRoutingArgs> routing) {
             this.routing = Objects.requireNonNull(routing);
             return this;
         }
-
         public Builder routing(EdgeCacheServiceRoutingArgs routing) {
             this.routing = Output.of(Objects.requireNonNull(routing));
             return this;
         }
-
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
-        }
-        public EdgeCacheServiceArgs build() {
+        }        public EdgeCacheServiceArgs build() {
             return new EdgeCacheServiceArgs(description, disableQuic, edgeSecurityPolicy, edgeSslCertificates, labels, logConfig, name, project, requireTls, routing, sslPolicy);
         }
     }

@@ -54,8 +54,7 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetLedgerArgs build() {
+        }        public GetLedgerArgs build() {
             return new GetLedgerArgs(name);
         }
     }

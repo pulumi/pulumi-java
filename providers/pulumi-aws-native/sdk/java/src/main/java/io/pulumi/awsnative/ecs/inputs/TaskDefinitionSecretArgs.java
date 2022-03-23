@@ -65,22 +65,18 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder valueFrom(Output<String> valueFrom) {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }
-
         public Builder valueFrom(String valueFrom) {
             this.valueFrom = Output.of(Objects.requireNonNull(valueFrom));
             return this;
-        }
-        public TaskDefinitionSecretArgs build() {
+        }        public TaskDefinitionSecretArgs build() {
             return new TaskDefinitionSecretArgs(name, valueFrom);
         }
     }

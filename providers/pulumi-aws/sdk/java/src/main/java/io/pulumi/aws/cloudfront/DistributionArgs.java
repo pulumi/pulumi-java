@@ -383,192 +383,169 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             this.aliases = aliases;
             return this;
         }
-
         public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = Output.ofNullable(aliases);
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder customErrorResponses(@Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses) {
             this.customErrorResponses = customErrorResponses;
             return this;
         }
-
         public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponseArgs> customErrorResponses) {
             this.customErrorResponses = Output.ofNullable(customErrorResponses);
             return this;
         }
-
+        public Builder customErrorResponses(DistributionCustomErrorResponseArgs... customErrorResponses) {
+            return customErrorResponses(List.of(customErrorResponses));
+        }
         public Builder defaultCacheBehavior(Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior) {
             this.defaultCacheBehavior = Objects.requireNonNull(defaultCacheBehavior);
             return this;
         }
-
         public Builder defaultCacheBehavior(DistributionDefaultCacheBehaviorArgs defaultCacheBehavior) {
             this.defaultCacheBehavior = Output.of(Objects.requireNonNull(defaultCacheBehavior));
             return this;
         }
-
         public Builder defaultRootObject(@Nullable Output<String> defaultRootObject) {
             this.defaultRootObject = defaultRootObject;
             return this;
         }
-
         public Builder defaultRootObject(@Nullable String defaultRootObject) {
             this.defaultRootObject = Output.ofNullable(defaultRootObject);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder httpVersion(@Nullable Output<String> httpVersion) {
             this.httpVersion = httpVersion;
             return this;
         }
-
         public Builder httpVersion(@Nullable String httpVersion) {
             this.httpVersion = Output.ofNullable(httpVersion);
             return this;
         }
-
         public Builder isIpv6Enabled(@Nullable Output<Boolean> isIpv6Enabled) {
             this.isIpv6Enabled = isIpv6Enabled;
             return this;
         }
-
         public Builder isIpv6Enabled(@Nullable Boolean isIpv6Enabled) {
             this.isIpv6Enabled = Output.ofNullable(isIpv6Enabled);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<DistributionLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable DistributionLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder orderedCacheBehaviors(@Nullable Output<List<DistributionOrderedCacheBehaviorArgs>> orderedCacheBehaviors) {
             this.orderedCacheBehaviors = orderedCacheBehaviors;
             return this;
         }
-
         public Builder orderedCacheBehaviors(@Nullable List<DistributionOrderedCacheBehaviorArgs> orderedCacheBehaviors) {
             this.orderedCacheBehaviors = Output.ofNullable(orderedCacheBehaviors);
             return this;
         }
-
+        public Builder orderedCacheBehaviors(DistributionOrderedCacheBehaviorArgs... orderedCacheBehaviors) {
+            return orderedCacheBehaviors(List.of(orderedCacheBehaviors));
+        }
         public Builder originGroups(@Nullable Output<List<DistributionOriginGroupArgs>> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
-
         public Builder originGroups(@Nullable List<DistributionOriginGroupArgs> originGroups) {
             this.originGroups = Output.ofNullable(originGroups);
             return this;
         }
-
+        public Builder originGroups(DistributionOriginGroupArgs... originGroups) {
+            return originGroups(List.of(originGroups));
+        }
         public Builder origins(Output<List<DistributionOriginArgs>> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
-
         public Builder origins(List<DistributionOriginArgs> origins) {
             this.origins = Output.of(Objects.requireNonNull(origins));
             return this;
         }
-
+        public Builder origins(DistributionOriginArgs... origins) {
+            return origins(List.of(origins));
+        }
         public Builder priceClass(@Nullable Output<String> priceClass) {
             this.priceClass = priceClass;
             return this;
         }
-
         public Builder priceClass(@Nullable String priceClass) {
             this.priceClass = Output.ofNullable(priceClass);
             return this;
         }
-
         public Builder restrictions(Output<DistributionRestrictionsArgs> restrictions) {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }
-
         public Builder restrictions(DistributionRestrictionsArgs restrictions) {
             this.restrictions = Output.of(Objects.requireNonNull(restrictions));
             return this;
         }
-
         public Builder retainOnDelete(@Nullable Output<Boolean> retainOnDelete) {
             this.retainOnDelete = retainOnDelete;
             return this;
         }
-
         public Builder retainOnDelete(@Nullable Boolean retainOnDelete) {
             this.retainOnDelete = Output.ofNullable(retainOnDelete);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder viewerCertificate(Output<DistributionViewerCertificateArgs> viewerCertificate) {
             this.viewerCertificate = Objects.requireNonNull(viewerCertificate);
             return this;
         }
-
         public Builder viewerCertificate(DistributionViewerCertificateArgs viewerCertificate) {
             this.viewerCertificate = Output.of(Objects.requireNonNull(viewerCertificate));
             return this;
         }
-
         public Builder waitForDeployment(@Nullable Output<Boolean> waitForDeployment) {
             this.waitForDeployment = waitForDeployment;
             return this;
         }
-
         public Builder waitForDeployment(@Nullable Boolean waitForDeployment) {
             this.waitForDeployment = Output.ofNullable(waitForDeployment);
             return this;
         }
-
         public Builder webAclId(@Nullable Output<String> webAclId) {
             this.webAclId = webAclId;
             return this;
         }
-
         public Builder webAclId(@Nullable String webAclId) {
             this.webAclId = Output.ofNullable(webAclId);
             return this;
-        }
-        public DistributionArgs build() {
+        }        public DistributionArgs build() {
             return new DistributionArgs(aliases, comment, customErrorResponses, defaultCacheBehavior, defaultRootObject, enabled, httpVersion, isIpv6Enabled, loggingConfig, orderedCacheBehaviors, originGroups, origins, priceClass, restrictions, retainOnDelete, tags, viewerCertificate, waitForDeployment, webAclId);
         }
     }

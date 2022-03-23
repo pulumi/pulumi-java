@@ -69,12 +69,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
-
         public Builder resourceLabel(String resourceLabel) {
             this.resourceLabel = Objects.requireNonNull(resourceLabel);
             return this;
-        }
-        public PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification build() {
+        }        public PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification build() {
             return new PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification(predefinedMetricType, resourceLabel);
         }
     }

@@ -51,8 +51,7 @@ public final class TopicRuleErrorActionLambda {
         public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
-        }
-        public TopicRuleErrorActionLambda build() {
+        }        public TopicRuleErrorActionLambda build() {
             return new TopicRuleErrorActionLambda(functionArn);
         }
     }

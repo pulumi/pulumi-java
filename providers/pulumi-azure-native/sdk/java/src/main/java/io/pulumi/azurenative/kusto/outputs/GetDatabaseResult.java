@@ -119,27 +119,22 @@ public final class GetDatabaseResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDatabaseResult build() {
+        }        public GetDatabaseResult build() {
             return new GetDatabaseResult(id, kind, location, name, type);
         }
     }

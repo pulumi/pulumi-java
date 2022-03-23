@@ -312,172 +312,144 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder exclusionTag(@Nullable Output<String> exclusionTag) {
             this.exclusionTag = exclusionTag;
             return this;
         }
-
         public Builder exclusionTag(@Nullable String exclusionTag) {
             this.exclusionTag = Output.ofNullable(exclusionTag);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder hostPoolReferences(@Nullable Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences) {
             this.hostPoolReferences = hostPoolReferences;
             return this;
         }
-
         public Builder hostPoolReferences(@Nullable List<ScalingHostPoolReferenceArgs> hostPoolReferences) {
             this.hostPoolReferences = Output.ofNullable(hostPoolReferences);
             return this;
         }
-
+        public Builder hostPoolReferences(ScalingHostPoolReferenceArgs... hostPoolReferences) {
+            return hostPoolReferences(List.of(hostPoolReferences));
+        }
         public Builder hostPoolType(@Nullable Output<Either<String,HostPoolType>> hostPoolType) {
             this.hostPoolType = hostPoolType;
             return this;
         }
-
         public Builder hostPoolType(@Nullable Either<String,HostPoolType> hostPoolType) {
             this.hostPoolType = Output.ofNullable(hostPoolType);
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
-
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ring(@Nullable Output<Integer> ring) {
             this.ring = ring;
             return this;
         }
-
         public Builder ring(@Nullable Integer ring) {
             this.ring = Output.ofNullable(ring);
             return this;
         }
-
         public Builder scalingPlanName(@Nullable Output<String> scalingPlanName) {
             this.scalingPlanName = scalingPlanName;
             return this;
         }
-
         public Builder scalingPlanName(@Nullable String scalingPlanName) {
             this.scalingPlanName = Output.ofNullable(scalingPlanName);
             return this;
         }
-
         public Builder schedules(@Nullable Output<List<ScalingScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
-
         public Builder schedules(@Nullable List<ScalingScheduleArgs> schedules) {
             this.schedules = Output.ofNullable(schedules);
             return this;
         }
-
+        public Builder schedules(ScalingScheduleArgs... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public ScalingPlanArgs build() {
+        }        public ScalingPlanArgs build() {
             return new ScalingPlanArgs(description, exclusionTag, friendlyName, hostPoolReferences, hostPoolType, identity, kind, location, managedBy, plan, resourceGroupName, ring, scalingPlanName, schedules, sku, tags, timeZone);
         }
     }

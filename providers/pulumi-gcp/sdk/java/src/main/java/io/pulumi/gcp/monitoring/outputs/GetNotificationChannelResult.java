@@ -139,57 +139,49 @@ public final class GetNotificationChannelResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sensitiveLabels(List<GetNotificationChannelSensitiveLabel> sensitiveLabels) {
             this.sensitiveLabels = Objects.requireNonNull(sensitiveLabels);
             return this;
         }
-
+        public Builder sensitiveLabels(GetNotificationChannelSensitiveLabel... sensitiveLabels) {
+            return sensitiveLabels(List.of(sensitiveLabels));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder verificationStatus(String verificationStatus) {
             this.verificationStatus = Objects.requireNonNull(verificationStatus);
             return this;
-        }
-        public GetNotificationChannelResult build() {
+        }        public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(description, displayName, enabled, id, labels, name, project, sensitiveLabels, type, userLabels, verificationStatus);
         }
     }

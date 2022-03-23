@@ -95,32 +95,26 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs ex
             this.cdnPolicy = cdnPolicy;
             return this;
         }
-
         public Builder cdnPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs cdnPolicy) {
             this.cdnPolicy = Output.ofNullable(cdnPolicy);
             return this;
         }
-
         public Builder corsPolicy(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
-
         public Builder corsPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs corsPolicy) {
             this.corsPolicy = Output.ofNullable(corsPolicy);
             return this;
         }
-
         public Builder urlRewrite(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
-
         public Builder urlRewrite(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs urlRewrite) {
             this.urlRewrite = Output.ofNullable(urlRewrite);
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs(cdnPolicy, corsPolicy, urlRewrite);
         }
     }

@@ -61,12 +61,10 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
             this.bigqueryConnectionSpec = bigqueryConnectionSpec;
             return this;
         }
-
         public Builder bigqueryConnectionSpec(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs bigqueryConnectionSpec) {
             this.bigqueryConnectionSpec = Output.ofNullable(bigqueryConnectionSpec);
             return this;
-        }
-        public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs build() {
+        }        public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(bigqueryConnectionSpec);
         }
     }

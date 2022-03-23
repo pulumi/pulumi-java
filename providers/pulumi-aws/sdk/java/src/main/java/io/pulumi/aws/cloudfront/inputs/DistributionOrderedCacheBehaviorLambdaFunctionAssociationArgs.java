@@ -92,32 +92,26 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder eventType(String eventType) {
             this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
-
         public Builder includeBody(@Nullable Output<Boolean> includeBody) {
             this.includeBody = includeBody;
             return this;
         }
-
         public Builder includeBody(@Nullable Boolean includeBody) {
             this.includeBody = Output.ofNullable(includeBody);
             return this;
         }
-
         public Builder lambdaArn(Output<String> lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
             return this;
-        }
-        public DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs build() {
+        }        public DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs build() {
             return new DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs(eventType, includeBody, lambdaArn);
         }
     }

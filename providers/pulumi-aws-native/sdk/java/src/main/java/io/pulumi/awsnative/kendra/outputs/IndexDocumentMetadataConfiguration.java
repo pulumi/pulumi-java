@@ -74,22 +74,18 @@ public final class IndexDocumentMetadataConfiguration {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder relevance(@Nullable IndexRelevance relevance) {
             this.relevance = relevance;
             return this;
         }
-
         public Builder search(@Nullable IndexSearch search) {
             this.search = search;
             return this;
         }
-
         public Builder type(IndexDocumentAttributeValueType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public IndexDocumentMetadataConfiguration build() {
+        }        public IndexDocumentMetadataConfiguration build() {
             return new IndexDocumentMetadataConfiguration(name, relevance, search, type);
         }
     }

@@ -54,7 +54,9 @@ public final class ListDeviceFailoverSetsResult {
             this.value = value;
             return this;
         }
-        public ListDeviceFailoverSetsResult build() {
+        public Builder value(FailoverSetResponse... value) {
+            return value(List.of(value));
+        }        public ListDeviceFailoverSetsResult build() {
             return new ListDeviceFailoverSetsResult(value);
         }
     }

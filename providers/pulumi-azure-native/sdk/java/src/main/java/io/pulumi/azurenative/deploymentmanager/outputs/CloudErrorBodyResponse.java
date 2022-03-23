@@ -104,22 +104,21 @@ public final class CloudErrorBodyResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(@Nullable List<CloudErrorBodyResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(CloudErrorBodyResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public CloudErrorBodyResponse build() {
+        }        public CloudErrorBodyResponse build() {
             return new CloudErrorBodyResponse(code, details, message, target);
         }
     }

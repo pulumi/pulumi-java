@@ -103,42 +103,34 @@ public final class RegistryImageBuildAuthConfig {
             this.auth = auth;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder identityToken(@Nullable String identityToken) {
             this.identityToken = identityToken;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder registryToken(@Nullable String registryToken) {
             this.registryToken = registryToken;
             return this;
         }
-
         public Builder serverAddress(@Nullable String serverAddress) {
             this.serverAddress = serverAddress;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public RegistryImageBuildAuthConfig build() {
+        }        public RegistryImageBuildAuthConfig build() {
             return new RegistryImageBuildAuthConfig(auth, email, hostName, identityToken, password, registryToken, serverAddress, userName);
         }
     }

@@ -70,22 +70,18 @@ public final class EventBusPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.eventBusName = eventBusName;
             return this;
         }
-
         public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Output.ofNullable(eventBusName);
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public EventBusPolicyArgs build() {
+        }        public EventBusPolicyArgs build() {
             return new EventBusPolicyArgs(eventBusName, policy);
         }
     }

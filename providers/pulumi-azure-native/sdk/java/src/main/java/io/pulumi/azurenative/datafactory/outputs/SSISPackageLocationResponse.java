@@ -206,52 +206,45 @@ public final class SSISPackageLocationResponse {
             this.accessCredential = accessCredential;
             return this;
         }
-
         public Builder childPackages(@Nullable List<SSISChildPackageResponse> childPackages) {
             this.childPackages = childPackages;
             return this;
         }
-
+        public Builder childPackages(SSISChildPackageResponse... childPackages) {
+            return childPackages(List.of(childPackages));
+        }
         public Builder configurationAccessCredential(@Nullable SSISAccessCredentialResponse configurationAccessCredential) {
             this.configurationAccessCredential = configurationAccessCredential;
             return this;
         }
-
         public Builder configurationPath(@Nullable Object configurationPath) {
             this.configurationPath = configurationPath;
             return this;
         }
-
         public Builder packageContent(@Nullable Object packageContent) {
             this.packageContent = packageContent;
             return this;
         }
-
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword) {
             this.packagePassword = packagePassword;
             return this;
         }
-
         public Builder packagePath(@Nullable Object packagePath) {
             this.packagePath = packagePath;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public SSISPackageLocationResponse build() {
+        }        public SSISPackageLocationResponse build() {
             return new SSISPackageLocationResponse(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);
         }
     }

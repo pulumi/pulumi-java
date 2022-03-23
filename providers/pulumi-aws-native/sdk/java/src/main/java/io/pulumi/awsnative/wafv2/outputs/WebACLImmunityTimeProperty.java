@@ -43,8 +43,7 @@ public final class WebACLImmunityTimeProperty {
         public Builder immunityTime(Integer immunityTime) {
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
-        }
-        public WebACLImmunityTimeProperty build() {
+        }        public WebACLImmunityTimeProperty build() {
             return new WebACLImmunityTimeProperty(immunityTime);
         }
     }

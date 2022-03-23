@@ -67,22 +67,18 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable ServiceTaskSpecResourcesLimitsGetArgs limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
         public Builder reservation(@Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
             this.reservation = reservation;
             return this;
         }
-
         public Builder reservation(@Nullable ServiceTaskSpecResourcesReservationGetArgs reservation) {
             this.reservation = Output.ofNullable(reservation);
             return this;
-        }
-        public ServiceTaskSpecResourcesGetArgs build() {
+        }        public ServiceTaskSpecResourcesGetArgs build() {
             return new ServiceTaskSpecResourcesGetArgs(limits, reservation);
         }
     }

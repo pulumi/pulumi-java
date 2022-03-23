@@ -112,22 +112,18 @@ public final class LinuxOSConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.swapFileSizeMB = swapFileSizeMB;
             return this;
         }
-
         public Builder sysctls(@Nullable SysctlConfigResponse sysctls) {
             this.sysctls = sysctls;
             return this;
         }
-
         public Builder transparentHugePageDefrag(@Nullable String transparentHugePageDefrag) {
             this.transparentHugePageDefrag = transparentHugePageDefrag;
             return this;
         }
-
         public Builder transparentHugePageEnabled(@Nullable String transparentHugePageEnabled) {
             this.transparentHugePageEnabled = transparentHugePageEnabled;
             return this;
-        }
-        public LinuxOSConfigResponse build() {
+        }        public LinuxOSConfigResponse build() {
             return new LinuxOSConfigResponse(swapFileSizeMB, sysctls, transparentHugePageDefrag, transparentHugePageEnabled);
         }
     }

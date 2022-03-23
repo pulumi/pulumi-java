@@ -97,32 +97,29 @@ public final class IntentFollowUpPromptPromptGetArgs extends io.pulumi.resources
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
-
         public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Output.of(Objects.requireNonNull(maxAttempts));
             return this;
         }
-
         public Builder messages(Output<List<IntentFollowUpPromptPromptMessageGetArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
         public Builder messages(List<IntentFollowUpPromptPromptMessageGetArgs> messages) {
             this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
-
+        public Builder messages(IntentFollowUpPromptPromptMessageGetArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Output.ofNullable(responseCard);
             return this;
-        }
-        public IntentFollowUpPromptPromptGetArgs build() {
+        }        public IntentFollowUpPromptPromptGetArgs build() {
             return new IntentFollowUpPromptPromptGetArgs(maxAttempts, messages, responseCard);
         }
     }

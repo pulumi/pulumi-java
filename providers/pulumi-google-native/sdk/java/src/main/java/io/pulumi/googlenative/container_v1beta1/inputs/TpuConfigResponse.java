@@ -93,17 +93,14 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder ipv4CidrBlock(String ipv4CidrBlock) {
             this.ipv4CidrBlock = Objects.requireNonNull(ipv4CidrBlock);
             return this;
         }
-
         public Builder useServiceNetworking(Boolean useServiceNetworking) {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
-        }
-        public TpuConfigResponse build() {
+        }        public TpuConfigResponse build() {
             return new TpuConfigResponse(enabled, ipv4CidrBlock, useServiceNetworking);
         }
     }

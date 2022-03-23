@@ -197,92 +197,74 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.apt = apt;
             return this;
         }
-
         public Builder apt(@Nullable AptSettingsArgs apt) {
             this.apt = Output.ofNullable(apt);
             return this;
         }
-
         public Builder goo(@Nullable Output<GooSettingsArgs> goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder goo(@Nullable GooSettingsArgs goo) {
             this.goo = Output.ofNullable(goo);
             return this;
         }
-
         public Builder migInstancesAllowed(@Nullable Output<Boolean> migInstancesAllowed) {
             this.migInstancesAllowed = migInstancesAllowed;
             return this;
         }
-
         public Builder migInstancesAllowed(@Nullable Boolean migInstancesAllowed) {
             this.migInstancesAllowed = Output.ofNullable(migInstancesAllowed);
             return this;
         }
-
         public Builder postStep(@Nullable Output<ExecStepArgs> postStep) {
             this.postStep = postStep;
             return this;
         }
-
         public Builder postStep(@Nullable ExecStepArgs postStep) {
             this.postStep = Output.ofNullable(postStep);
             return this;
         }
-
         public Builder preStep(@Nullable Output<ExecStepArgs> preStep) {
             this.preStep = preStep;
             return this;
         }
-
         public Builder preStep(@Nullable ExecStepArgs preStep) {
             this.preStep = Output.ofNullable(preStep);
             return this;
         }
-
         public Builder rebootConfig(@Nullable Output<PatchConfigRebootConfig> rebootConfig) {
             this.rebootConfig = rebootConfig;
             return this;
         }
-
         public Builder rebootConfig(@Nullable PatchConfigRebootConfig rebootConfig) {
             this.rebootConfig = Output.ofNullable(rebootConfig);
             return this;
         }
-
         public Builder windowsUpdate(@Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
-
         public Builder windowsUpdate(@Nullable WindowsUpdateSettingsArgs windowsUpdate) {
             this.windowsUpdate = Output.ofNullable(windowsUpdate);
             return this;
         }
-
         public Builder yum(@Nullable Output<YumSettingsArgs> yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder yum(@Nullable YumSettingsArgs yum) {
             this.yum = Output.ofNullable(yum);
             return this;
         }
-
         public Builder zypper(@Nullable Output<ZypperSettingsArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
-
         public Builder zypper(@Nullable ZypperSettingsArgs zypper) {
             this.zypper = Output.ofNullable(zypper);
             return this;
-        }
-        public PatchConfigArgs build() {
+        }        public PatchConfigArgs build() {
             return new PatchConfigArgs(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }
     }

@@ -61,12 +61,10 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
             this.bounds = bounds;
             return this;
         }
-
         public Builder bounds(@Nullable ExpressRouteGatewayPropertiesBoundsArgs bounds) {
             this.bounds = Output.ofNullable(bounds);
             return this;
-        }
-        public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {
+        }        public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {
             return new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(bounds);
         }
     }

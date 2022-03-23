@@ -73,12 +73,13 @@ public final class SQLStorageSettingsResponse {
             this.defaultFilePath = defaultFilePath;
             return this;
         }
-
         public Builder luns(@Nullable List<Integer> luns) {
             this.luns = luns;
             return this;
         }
-        public SQLStorageSettingsResponse build() {
+        public Builder luns(Integer... luns) {
+            return luns(List.of(luns));
+        }        public SQLStorageSettingsResponse build() {
             return new SQLStorageSettingsResponse(defaultFilePath, luns);
         }
     }

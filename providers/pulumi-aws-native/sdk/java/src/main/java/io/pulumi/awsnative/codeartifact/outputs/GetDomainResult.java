@@ -122,27 +122,25 @@ public final class GetDomainResult {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDomainResult build() {
+        public Builder tags(DomainTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDomainResult build() {
             return new GetDomainResult(arn, name, owner, permissionsPolicyDocument, tags);
         }
     }

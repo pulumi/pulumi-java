@@ -45,8 +45,7 @@ public final class StateMachineTracingConfiguration {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public StateMachineTracingConfiguration build() {
+        }        public StateMachineTracingConfiguration build() {
             return new StateMachineTracingConfiguration(enabled);
         }
     }

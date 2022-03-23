@@ -205,67 +205,69 @@ public final class GetTaskResult {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
-
         public Builder destinationNetworkInterfaceArns(@Nullable List<String> destinationNetworkInterfaceArns) {
             this.destinationNetworkInterfaceArns = destinationNetworkInterfaceArns;
             return this;
         }
-
+        public Builder destinationNetworkInterfaceArns(String... destinationNetworkInterfaceArns) {
+            return destinationNetworkInterfaceArns(List.of(destinationNetworkInterfaceArns));
+        }
         public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
-
         public Builder errorDetail(@Nullable String errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
-
         public Builder excludes(@Nullable List<TaskFilterRule> excludes) {
             this.excludes = excludes;
             return this;
         }
-
+        public Builder excludes(TaskFilterRule... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder includes(@Nullable List<TaskFilterRule> includes) {
             this.includes = includes;
             return this;
         }
-
+        public Builder includes(TaskFilterRule... includes) {
+            return includes(List.of(includes));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder options(@Nullable TaskOptions options) {
             this.options = options;
             return this;
         }
-
         public Builder schedule(@Nullable TaskSchedule schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder sourceNetworkInterfaceArns(@Nullable List<String> sourceNetworkInterfaceArns) {
             this.sourceNetworkInterfaceArns = sourceNetworkInterfaceArns;
             return this;
         }
-
+        public Builder sourceNetworkInterfaceArns(String... sourceNetworkInterfaceArns) {
+            return sourceNetworkInterfaceArns(List.of(sourceNetworkInterfaceArns));
+        }
         public Builder status(@Nullable TaskStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<TaskTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TaskTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taskArn(@Nullable String taskArn) {
             this.taskArn = taskArn;
             return this;
-        }
-        public GetTaskResult build() {
+        }        public GetTaskResult build() {
             return new GetTaskResult(cloudWatchLogGroupArn, destinationNetworkInterfaceArns, errorCode, errorDetail, excludes, includes, name, options, schedule, sourceNetworkInterfaceArns, status, tags, taskArn);
         }
     }

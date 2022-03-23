@@ -73,22 +73,18 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
             this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
             return this;
         }
-
         public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
             this.playbackDurationSeconds = Output.of(Objects.requireNonNull(playbackDurationSeconds));
             return this;
         }
-
         public Builder storageDurationSeconds(Output<Double> storageDurationSeconds) {
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
         }
-
         public Builder storageDurationSeconds(Double storageDurationSeconds) {
             this.storageDurationSeconds = Output.of(Objects.requireNonNull(storageDurationSeconds));
             return this;
-        }
-        public ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs build() {
+        }        public ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs build() {
             return new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs(playbackDurationSeconds, storageDurationSeconds);
         }
     }

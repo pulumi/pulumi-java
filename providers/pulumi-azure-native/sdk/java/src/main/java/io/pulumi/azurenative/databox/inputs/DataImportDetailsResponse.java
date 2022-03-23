@@ -60,8 +60,7 @@ public final class DataImportDetailsResponse extends io.pulumi.resources.InvokeA
         public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
-        }
-        public DataImportDetailsResponse build() {
+        }        public DataImportDetailsResponse build() {
             return new DataImportDetailsResponse(accountDetails);
         }
     }

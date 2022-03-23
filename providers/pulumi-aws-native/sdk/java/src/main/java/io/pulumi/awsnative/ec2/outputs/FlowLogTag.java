@@ -53,12 +53,10 @@ public final class FlowLogTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FlowLogTag build() {
+        }        public FlowLogTag build() {
             return new FlowLogTag(key, value);
         }
     }

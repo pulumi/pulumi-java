@@ -96,32 +96,29 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rewriteRules(@Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules) {
             this.rewriteRules = rewriteRules;
             return this;
         }
-
         public Builder rewriteRules(@Nullable List<ApplicationGatewayRewriteRuleArgs> rewriteRules) {
             this.rewriteRules = Output.ofNullable(rewriteRules);
             return this;
         }
-        public ApplicationGatewayRewriteRuleSetArgs build() {
+        public Builder rewriteRules(ApplicationGatewayRewriteRuleArgs... rewriteRules) {
+            return rewriteRules(List.of(rewriteRules));
+        }        public ApplicationGatewayRewriteRuleSetArgs build() {
             return new ApplicationGatewayRewriteRuleSetArgs(id, name, rewriteRules);
         }
     }

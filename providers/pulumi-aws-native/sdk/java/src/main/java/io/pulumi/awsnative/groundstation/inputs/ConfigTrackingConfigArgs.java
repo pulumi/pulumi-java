@@ -53,12 +53,10 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
             this.autotrack = autotrack;
             return this;
         }
-
         public Builder autotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
             this.autotrack = Output.ofNullable(autotrack);
             return this;
-        }
-        public ConfigTrackingConfigArgs build() {
+        }        public ConfigTrackingConfigArgs build() {
             return new ConfigTrackingConfigArgs(autotrack);
         }
     }

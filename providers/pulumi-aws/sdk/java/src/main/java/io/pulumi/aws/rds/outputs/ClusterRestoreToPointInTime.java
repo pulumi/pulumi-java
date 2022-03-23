@@ -106,22 +106,18 @@ public final class ClusterRestoreToPointInTime {
             this.restoreToTime = restoreToTime;
             return this;
         }
-
         public Builder restoreType(@Nullable String restoreType) {
             this.restoreType = restoreType;
             return this;
         }
-
         public Builder sourceClusterIdentifier(String sourceClusterIdentifier) {
             this.sourceClusterIdentifier = Objects.requireNonNull(sourceClusterIdentifier);
             return this;
         }
-
         public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
             this.useLatestRestorableTime = useLatestRestorableTime;
             return this;
-        }
-        public ClusterRestoreToPointInTime build() {
+        }        public ClusterRestoreToPointInTime build() {
             return new ClusterRestoreToPointInTime(restoreToTime, restoreType, sourceClusterIdentifier, useLatestRestorableTime);
         }
     }

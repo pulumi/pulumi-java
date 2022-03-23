@@ -80,12 +80,10 @@ public final class BudgetThresholdRule {
             this.spendBasis = spendBasis;
             return this;
         }
-
         public Builder thresholdPercent(Double thresholdPercent) {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
-        }
-        public BudgetThresholdRule build() {
+        }        public BudgetThresholdRule build() {
             return new BudgetThresholdRule(spendBasis, thresholdPercent);
         }
     }

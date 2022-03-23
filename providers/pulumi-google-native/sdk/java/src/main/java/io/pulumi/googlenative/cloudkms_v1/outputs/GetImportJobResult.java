@@ -199,52 +199,42 @@ public final class GetImportJobResult {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder expireEventTime(String expireEventTime) {
             this.expireEventTime = Objects.requireNonNull(expireEventTime);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder generateTime(String generateTime) {
             this.generateTime = Objects.requireNonNull(generateTime);
             return this;
         }
-
         public Builder importMethod(String importMethod) {
             this.importMethod = Objects.requireNonNull(importMethod);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
-
         public Builder publicKey(WrappingPublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetImportJobResult build() {
+        }        public GetImportJobResult build() {
             return new GetImportJobResult(attestation, createTime, expireEventTime, expireTime, generateTime, importMethod, name, protectionLevel, publicKey, state);
         }
     }

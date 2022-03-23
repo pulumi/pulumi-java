@@ -105,22 +105,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig 
             this.autoDeleteTime = autoDeleteTime;
             return this;
         }
-
         public Builder autoDeleteTtl(@Nullable String autoDeleteTtl) {
             this.autoDeleteTtl = autoDeleteTtl;
             return this;
         }
-
         public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
             this.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
-
         public Builder idleStartTime(@Nullable String idleStartTime) {
             this.idleStartTime = idleStartTime;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
         }
     }

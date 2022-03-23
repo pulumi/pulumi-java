@@ -69,12 +69,10 @@ public final class PrivateEndpointResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder subnetArmId(String subnetArmId) {
             this.subnetArmId = Objects.requireNonNull(subnetArmId);
             return this;
-        }
-        public PrivateEndpointResponse build() {
+        }        public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(id, subnetArmId);
         }
     }

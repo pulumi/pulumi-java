@@ -100,42 +100,34 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.authParameters = Objects.requireNonNull(authParameters);
             return this;
         }
-
         public Builder authParameters(AuthParametersPropertiesArgs authParameters) {
             this.authParameters = Output.of(Objects.requireNonNull(authParameters));
             return this;
         }
-
         public Builder authorizationType(Output<ConnectionAuthorizationType> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder authorizationType(ConnectionAuthorizationType authorizationType) {
             this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ConnectionArgs build() {
+        }        public ConnectionArgs build() {
             return new ConnectionArgs(authParameters, authorizationType, description, name);
         }
     }

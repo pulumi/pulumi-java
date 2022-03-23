@@ -52,12 +52,10 @@ public final class IntegrationServiceNowSourcePropertiesArgs extends io.pulumi.r
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public IntegrationServiceNowSourcePropertiesArgs build() {
+        }        public IntegrationServiceNowSourcePropertiesArgs build() {
             return new IntegrationServiceNowSourcePropertiesArgs(object);
         }
     }

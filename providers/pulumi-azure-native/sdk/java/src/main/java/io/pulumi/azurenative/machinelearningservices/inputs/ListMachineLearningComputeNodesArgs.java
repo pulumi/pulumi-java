@@ -88,17 +88,14 @@ public final class ListMachineLearningComputeNodesArgs extends io.pulumi.resourc
             this.computeName = Objects.requireNonNull(computeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListMachineLearningComputeNodesArgs build() {
+        }        public ListMachineLearningComputeNodesArgs build() {
             return new ListMachineLearningComputeNodesArgs(computeName, resourceGroupName, workspaceName);
         }
     }

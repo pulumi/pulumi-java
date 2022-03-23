@@ -221,112 +221,93 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             this.administrationRoleArn = administrationRoleArn;
             return this;
         }
-
         public Builder administrationRoleArn(@Nullable String administrationRoleArn) {
             this.administrationRoleArn = Output.ofNullable(administrationRoleArn);
             return this;
         }
-
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
             this.autoDeployment = autoDeployment;
             return this;
         }
-
         public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
             this.autoDeployment = Output.ofNullable(autoDeployment);
             return this;
         }
-
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
             this.executionRoleName = executionRoleName;
             return this;
         }
-
         public Builder executionRoleName(@Nullable String executionRoleName) {
             this.executionRoleName = Output.ofNullable(executionRoleName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder permissionModel(@Nullable Output<String> permissionModel) {
             this.permissionModel = permissionModel;
             return this;
         }
-
         public Builder permissionModel(@Nullable String permissionModel) {
             this.permissionModel = Output.ofNullable(permissionModel);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder templateBody(@Nullable Output<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
-
         public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Output.ofNullable(templateBody);
             return this;
         }
-
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
-
         public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = Output.ofNullable(templateUrl);
             return this;
-        }
-        public StackSetArgs build() {
+        }        public StackSetArgs build() {
             return new StackSetArgs(administrationRoleArn, autoDeployment, capabilities, description, executionRoleName, name, parameters, permissionModel, tags, templateBody, templateUrl);
         }
     }

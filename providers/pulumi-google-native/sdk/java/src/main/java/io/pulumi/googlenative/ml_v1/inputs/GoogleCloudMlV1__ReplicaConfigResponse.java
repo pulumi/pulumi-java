@@ -143,32 +143,32 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
-
         public Builder containerArgs(List<String> containerArgs) {
             this.containerArgs = Objects.requireNonNull(containerArgs);
             return this;
         }
-
+        public Builder containerArgs(String... containerArgs) {
+            return containerArgs(List.of(containerArgs));
+        }
         public Builder containerCommand(List<String> containerCommand) {
             this.containerCommand = Objects.requireNonNull(containerCommand);
             return this;
         }
-
+        public Builder containerCommand(String... containerCommand) {
+            return containerCommand(List.of(containerCommand));
+        }
         public Builder diskConfig(GoogleCloudMlV1__DiskConfigResponse diskConfig) {
             this.diskConfig = Objects.requireNonNull(diskConfig);
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder tpuTfVersion(String tpuTfVersion) {
             this.tpuTfVersion = Objects.requireNonNull(tpuTfVersion);
             return this;
-        }
-        public GoogleCloudMlV1__ReplicaConfigResponse build() {
+        }        public GoogleCloudMlV1__ReplicaConfigResponse build() {
             return new GoogleCloudMlV1__ReplicaConfigResponse(acceleratorConfig, containerArgs, containerCommand, diskConfig, imageUri, tpuTfVersion);
         }
     }

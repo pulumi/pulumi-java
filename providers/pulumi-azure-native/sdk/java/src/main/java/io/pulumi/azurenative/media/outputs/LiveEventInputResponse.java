@@ -122,27 +122,25 @@ public final class LiveEventInputResponse {
             this.accessControl = accessControl;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder endpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(LiveEventEndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
             this.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
-
         public Builder streamingProtocol(String streamingProtocol) {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
-        }
-        public LiveEventInputResponse build() {
+        }        public LiveEventInputResponse build() {
             return new LiveEventInputResponse(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
         }
     }

@@ -92,17 +92,14 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder oid(String oid) {
             this.oid = Objects.requireNonNull(oid);
             return this;
         }
-
         public Builder puid(String puid) {
             this.puid = Objects.requireNonNull(puid);
             return this;
-        }
-        public CreatedByResponse build() {
+        }        public CreatedByResponse build() {
             return new CreatedByResponse(applicationId, oid, puid);
         }
     }

@@ -95,32 +95,26 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
-
         public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
             this.currentAverageUtilization = Output.ofNullable(currentAverageUtilization);
             return this;
         }
-
         public Builder currentAverageValue(Output<String> currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
-
         public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Output.of(Objects.requireNonNull(currentAverageValue));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ResourceMetricStatusArgs build() {
+        }        public ResourceMetricStatusArgs build() {
             return new ResourceMetricStatusArgs(currentAverageUtilization, currentAverageValue, name);
         }
     }

@@ -266,72 +266,58 @@ public final class RuleManagementEventDataSourceResponse {
             this.claims = claims;
             return this;
         }
-
         public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
         }
-
         public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = eventSource;
             return this;
         }
-
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder operationName(@Nullable String operationName) {
             this.operationName = operationName;
             return this;
         }
-
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
-
         public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
-
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder subStatus(@Nullable String subStatus) {
             this.subStatus = subStatus;
             return this;
-        }
-        public RuleManagementEventDataSourceResponse build() {
+        }        public RuleManagementEventDataSourceResponse build() {
             return new RuleManagementEventDataSourceResponse(claims, eventName, eventSource, legacyResourceId, level, metricNamespace, odataType, operationName, resourceGroupName, resourceLocation, resourceProviderName, resourceUri, status, subStatus);
         }
     }

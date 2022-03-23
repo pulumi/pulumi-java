@@ -88,17 +88,14 @@ public final class PortworxVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder volumeID(String volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
-        }
-        public PortworxVolumeSource build() {
+        }        public PortworxVolumeSource build() {
             return new PortworxVolumeSource(fsType, readOnly, volumeID);
         }
     }

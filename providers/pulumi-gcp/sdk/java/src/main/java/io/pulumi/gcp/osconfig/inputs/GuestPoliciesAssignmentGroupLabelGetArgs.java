@@ -57,12 +57,10 @@ public final class GuestPoliciesAssignmentGroupLabelGetArgs extends io.pulumi.re
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
-        }
-        public GuestPoliciesAssignmentGroupLabelGetArgs build() {
+        }        public GuestPoliciesAssignmentGroupLabelGetArgs build() {
             return new GuestPoliciesAssignmentGroupLabelGetArgs(labels);
         }
     }

@@ -81,22 +81,18 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,LoadBalancerSkuName> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,LoadBalancerSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,LoadBalancerSkuTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public LoadBalancerSkuArgs build() {
+        }        public LoadBalancerSkuArgs build() {
             return new LoadBalancerSkuArgs(name, tier);
         }
     }

@@ -329,92 +329,74 @@ public final class GetCloudConnectorResult {
             this.billingModel = billingModel;
             return this;
         }
-
         public Builder collectionInfo(ConnectorCollectionInfoResponse collectionInfo) {
             this.collectionInfo = Objects.requireNonNull(collectionInfo);
             return this;
         }
-
         public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
-
         public Builder credentialsKey(@Nullable String credentialsKey) {
             this.credentialsKey = credentialsKey;
             return this;
         }
-
         public Builder daysTrialRemaining(Integer daysTrialRemaining) {
             this.daysTrialRemaining = Objects.requireNonNull(daysTrialRemaining);
             return this;
         }
-
         public Builder defaultManagementGroupId(@Nullable String defaultManagementGroupId) {
             this.defaultManagementGroupId = defaultManagementGroupId;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder externalBillingAccountId(String externalBillingAccountId) {
             this.externalBillingAccountId = Objects.requireNonNull(externalBillingAccountId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder modifiedOn(String modifiedOn) {
             this.modifiedOn = Objects.requireNonNull(modifiedOn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder providerBillingAccountDisplayName(String providerBillingAccountDisplayName) {
             this.providerBillingAccountDisplayName = Objects.requireNonNull(providerBillingAccountDisplayName);
             return this;
         }
-
         public Builder providerBillingAccountId(String providerBillingAccountId) {
             this.providerBillingAccountId = Objects.requireNonNull(providerBillingAccountId);
             return this;
         }
-
         public Builder reportId(@Nullable String reportId) {
             this.reportId = reportId;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCloudConnectorResult build() {
+        }        public GetCloudConnectorResult build() {
             return new GetCloudConnectorResult(billingModel, collectionInfo, createdOn, credentialsKey, daysTrialRemaining, defaultManagementGroupId, displayName, externalBillingAccountId, id, kind, modifiedOn, name, providerBillingAccountDisplayName, providerBillingAccountId, reportId, status, subscriptionId, type);
         }
     }

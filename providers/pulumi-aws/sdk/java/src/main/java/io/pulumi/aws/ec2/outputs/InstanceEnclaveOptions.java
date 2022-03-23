@@ -53,8 +53,7 @@ public final class InstanceEnclaveOptions {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public InstanceEnclaveOptions build() {
+        }        public InstanceEnclaveOptions build() {
             return new InstanceEnclaveOptions(enabled);
         }
     }

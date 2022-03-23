@@ -128,52 +128,45 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
             this.allowedCaCerts = allowedCaCerts;
             return this;
         }
-
         public Builder allowedCaCerts(@Nullable List<String> allowedCaCerts) {
             this.allowedCaCerts = Output.ofNullable(allowedCaCerts);
             return this;
         }
-
+        public Builder allowedCaCerts(String... allowedCaCerts) {
+            return allowedCaCerts(List.of(allowedCaCerts));
+        }
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
-
         public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
             this.requestHeaders = Output.ofNullable(requestHeaders);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs build() {
             return new GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs(allowedCaCerts, password, requestHeaders, uri, username);
         }
     }

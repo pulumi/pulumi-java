@@ -75,22 +75,18 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
             this.attributeName = attributeName;
             return this;
         }
-
         public Builder attributeName(@Nullable String attributeName) {
             this.attributeName = Output.ofNullable(attributeName);
             return this;
         }
-
         public Builder attributeType(@Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType) {
             this.attributeType = attributeType;
             return this;
         }
-
         public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
             this.attributeType = Output.ofNullable(attributeType);
             return this;
-        }
-        public AttributesItemPropertiesArgs build() {
+        }        public AttributesItemPropertiesArgs build() {
             return new AttributesItemPropertiesArgs(attributeName, attributeType);
         }
     }

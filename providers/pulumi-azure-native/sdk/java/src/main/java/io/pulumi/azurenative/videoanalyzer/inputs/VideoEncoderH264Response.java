@@ -112,22 +112,18 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
             this.bitrateKbps = bitrateKbps;
             return this;
         }
-
         public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = frameRate;
             return this;
         }
-
         public Builder scale(@Nullable VideoScaleResponse scale) {
             this.scale = scale;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VideoEncoderH264Response build() {
+        }        public VideoEncoderH264Response build() {
             return new VideoEncoderH264Response(bitrateKbps, frameRate, scale, type);
         }
     }

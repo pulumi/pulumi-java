@@ -54,12 +54,10 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends io
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
-
         public Builder requiredFeaturesPolicy(Either<String,FeaturesPolicy> requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Output.of(Objects.requireNonNull(requiredFeaturesPolicy));
             return this;
-        }
-        public ResourceProviderManifestPropertiesFeaturesRuleArgs build() {
+        }        public ResourceProviderManifestPropertiesFeaturesRuleArgs build() {
             return new ResourceProviderManifestPropertiesFeaturesRuleArgs(requiredFeaturesPolicy);
         }
     }

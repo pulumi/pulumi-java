@@ -192,47 +192,41 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
             this.enableHealthCheck = enableHealthCheck;
             return this;
         }
-
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
-
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
-
         public Builder manageActions(@Nullable UserArtifactManageResponse manageActions) {
             this.manageActions = manageActions;
             return this;
         }
-
         public Builder publishedDate(String publishedDate) {
             this.publishedDate = Objects.requireNonNull(publishedDate);
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder source(UserArtifactSourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder targetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }
-        public GalleryApplicationVersionPublishingProfileResponse build() {
+        public Builder targetRegions(TargetRegionResponse... targetRegions) {
+            return targetRegions(List.of(targetRegions));
+        }        public GalleryApplicationVersionPublishingProfileResponse build() {
             return new GalleryApplicationVersionPublishingProfileResponse(enableHealthCheck, endOfLifeDate, excludeFromLatest, manageActions, publishedDate, replicaCount, source, storageAccountType, targetRegions);
         }
     }

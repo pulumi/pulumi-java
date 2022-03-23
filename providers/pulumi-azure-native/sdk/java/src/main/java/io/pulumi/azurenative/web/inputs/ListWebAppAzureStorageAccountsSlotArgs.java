@@ -88,17 +88,14 @@ public final class ListWebAppAzureStorageAccountsSlotArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppAzureStorageAccountsSlotArgs build() {
+        }        public ListWebAppAzureStorageAccountsSlotArgs build() {
             return new ListWebAppAzureStorageAccountsSlotArgs(name, resourceGroupName, slot);
         }
     }

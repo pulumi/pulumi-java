@@ -86,17 +86,14 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
             this.countOfDowngrades = Objects.requireNonNull(countOfDowngrades);
             return this;
         }
-
         public Builder countOfUpgradesAfterDowngrades(Double countOfUpgradesAfterDowngrades) {
             this.countOfUpgradesAfterDowngrades = Objects.requireNonNull(countOfUpgradesAfterDowngrades);
             return this;
         }
-
         public Builder lastChangeDate(String lastChangeDate) {
             this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
             return this;
-        }
-        public CognitiveServicesAccountSkuChangeInfoResponse build() {
+        }        public CognitiveServicesAccountSkuChangeInfoResponse build() {
             return new CognitiveServicesAccountSkuChangeInfoResponse(countOfDowngrades, countOfUpgradesAfterDowngrades, lastChangeDate);
         }
     }

@@ -182,47 +182,38 @@ public final class InMageRcmProtectedDiskDetailsResponse {
             this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
             return this;
         }
-
         public Builder diskEncryptionSetId(String diskEncryptionSetId) {
             this.diskEncryptionSetId = Objects.requireNonNull(diskEncryptionSetId);
             return this;
         }
-
         public Builder diskId(String diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder isOSDisk(String isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
-
         public Builder logStorageAccountId(String logStorageAccountId) {
             this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
             return this;
         }
-
         public Builder seedManagedDiskId(String seedManagedDiskId) {
             this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId);
             return this;
         }
-
         public Builder targetManagedDiskId(String targetManagedDiskId) {
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
-        }
-        public InMageRcmProtectedDiskDetailsResponse build() {
+        }        public InMageRcmProtectedDiskDetailsResponse build() {
             return new InMageRcmProtectedDiskDetailsResponse(capacityInBytes, diskEncryptionSetId, diskId, diskName, diskType, isOSDisk, logStorageAccountId, seedManagedDiskId, targetManagedDiskId);
         }
     }

@@ -74,22 +74,18 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
-        }
-        public JobQueryDefaultDatasetGetArgs build() {
+        }        public JobQueryDefaultDatasetGetArgs build() {
             return new JobQueryDefaultDatasetGetArgs(datasetId, projectId);
         }
     }

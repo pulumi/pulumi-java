@@ -45,8 +45,7 @@ public final class SpotFleetIamInstanceProfileSpecification {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public SpotFleetIamInstanceProfileSpecification build() {
+        }        public SpotFleetIamInstanceProfileSpecification build() {
             return new SpotFleetIamInstanceProfileSpecification(arn);
         }
     }

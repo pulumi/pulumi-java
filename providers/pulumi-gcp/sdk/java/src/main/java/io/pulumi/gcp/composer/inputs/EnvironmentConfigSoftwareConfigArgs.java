@@ -116,62 +116,50 @@ public final class EnvironmentConfigSoftwareConfigArgs extends io.pulumi.resourc
             this.airflowConfigOverrides = airflowConfigOverrides;
             return this;
         }
-
         public Builder airflowConfigOverrides(@Nullable Map<String,String> airflowConfigOverrides) {
             this.airflowConfigOverrides = Output.ofNullable(airflowConfigOverrides);
             return this;
         }
-
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
-
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = Output.ofNullable(envVariables);
             return this;
         }
-
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
-
         public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = Output.ofNullable(imageVersion);
             return this;
         }
-
         public Builder pypiPackages(@Nullable Output<Map<String,String>> pypiPackages) {
             this.pypiPackages = pypiPackages;
             return this;
         }
-
         public Builder pypiPackages(@Nullable Map<String,String> pypiPackages) {
             this.pypiPackages = Output.ofNullable(pypiPackages);
             return this;
         }
-
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
-
         public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
-
         public Builder schedulerCount(@Nullable Output<Integer> schedulerCount) {
             this.schedulerCount = schedulerCount;
             return this;
         }
-
         public Builder schedulerCount(@Nullable Integer schedulerCount) {
             this.schedulerCount = Output.ofNullable(schedulerCount);
             return this;
-        }
-        public EnvironmentConfigSoftwareConfigArgs build() {
+        }        public EnvironmentConfigSoftwareConfigArgs build() {
             return new EnvironmentConfigSoftwareConfigArgs(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }
     }

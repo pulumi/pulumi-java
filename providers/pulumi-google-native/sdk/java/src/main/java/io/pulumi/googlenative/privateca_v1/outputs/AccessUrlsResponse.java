@@ -70,12 +70,13 @@ public final class AccessUrlsResponse {
             this.caCertificateAccessUrl = Objects.requireNonNull(caCertificateAccessUrl);
             return this;
         }
-
         public Builder crlAccessUrls(List<String> crlAccessUrls) {
             this.crlAccessUrls = Objects.requireNonNull(crlAccessUrls);
             return this;
         }
-        public AccessUrlsResponse build() {
+        public Builder crlAccessUrls(String... crlAccessUrls) {
+            return crlAccessUrls(List.of(crlAccessUrls));
+        }        public AccessUrlsResponse build() {
             return new AccessUrlsResponse(caCertificateAccessUrl, crlAccessUrls);
         }
     }

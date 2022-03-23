@@ -80,12 +80,10 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public BatchPoolIdentityResponse build() {
+        }        public BatchPoolIdentityResponse build() {
             return new BatchPoolIdentityResponse(type, userAssignedIdentities);
         }
     }

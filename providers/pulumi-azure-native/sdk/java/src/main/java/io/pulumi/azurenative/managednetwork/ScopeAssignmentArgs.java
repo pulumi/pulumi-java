@@ -106,42 +106,34 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
             this.assignedManagedNetwork = assignedManagedNetwork;
             return this;
         }
-
         public Builder assignedManagedNetwork(@Nullable String assignedManagedNetwork) {
             this.assignedManagedNetwork = Output.ofNullable(assignedManagedNetwork);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder scopeAssignmentName(@Nullable Output<String> scopeAssignmentName) {
             this.scopeAssignmentName = scopeAssignmentName;
             return this;
         }
-
         public Builder scopeAssignmentName(@Nullable String scopeAssignmentName) {
             this.scopeAssignmentName = Output.ofNullable(scopeAssignmentName);
             return this;
-        }
-        public ScopeAssignmentArgs build() {
+        }        public ScopeAssignmentArgs build() {
             return new ScopeAssignmentArgs(assignedManagedNetwork, location, scope, scopeAssignmentName);
         }
     }

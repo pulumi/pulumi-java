@@ -88,17 +88,14 @@ public final class AliasRoutingStrategy {
             this.fleetId = fleetId;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder type(AliasRoutingStrategyType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AliasRoutingStrategy build() {
+        }        public AliasRoutingStrategy build() {
             return new AliasRoutingStrategy(fleetId, message, type);
         }
     }

@@ -118,62 +118,53 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder setupScriptDetails(Output<AppBlockScriptDetailsArgs> setupScriptDetails) {
             this.setupScriptDetails = Objects.requireNonNull(setupScriptDetails);
             return this;
         }
-
         public Builder setupScriptDetails(AppBlockScriptDetailsArgs setupScriptDetails) {
             this.setupScriptDetails = Output.of(Objects.requireNonNull(setupScriptDetails));
             return this;
         }
-
         public Builder sourceS3Location(Output<AppBlockS3LocationArgs> sourceS3Location) {
             this.sourceS3Location = Objects.requireNonNull(sourceS3Location);
             return this;
         }
-
         public Builder sourceS3Location(AppBlockS3LocationArgs sourceS3Location) {
             this.sourceS3Location = Output.of(Objects.requireNonNull(sourceS3Location));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AppBlockTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AppBlockTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AppBlockArgs build() {
+        public Builder tags(AppBlockTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AppBlockArgs build() {
             return new AppBlockArgs(description, displayName, name, setupScriptDetails, sourceS3Location, tags);
         }
     }

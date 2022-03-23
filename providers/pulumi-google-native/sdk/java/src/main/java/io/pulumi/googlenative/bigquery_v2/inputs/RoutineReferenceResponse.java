@@ -88,17 +88,14 @@ public final class RoutineReferenceResponse extends io.pulumi.resources.InvokeAr
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder routineId(String routineId) {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
-        }
-        public RoutineReferenceResponse build() {
+        }        public RoutineReferenceResponse build() {
             return new RoutineReferenceResponse(datasetId, project, routineId);
         }
     }

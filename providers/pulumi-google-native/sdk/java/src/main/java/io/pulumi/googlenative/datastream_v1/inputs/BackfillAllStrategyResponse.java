@@ -77,12 +77,10 @@ public final class BackfillAllStrategyResponse extends io.pulumi.resources.Invok
             this.mysqlExcludedObjects = Objects.requireNonNull(mysqlExcludedObjects);
             return this;
         }
-
         public Builder oracleExcludedObjects(OracleRdbmsResponse oracleExcludedObjects) {
             this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects);
             return this;
-        }
-        public BackfillAllStrategyResponse build() {
+        }        public BackfillAllStrategyResponse build() {
             return new BackfillAllStrategyResponse(mysqlExcludedObjects, oracleExcludedObjects);
         }
     }

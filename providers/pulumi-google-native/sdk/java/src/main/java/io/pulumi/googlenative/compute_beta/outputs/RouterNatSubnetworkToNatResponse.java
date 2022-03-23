@@ -86,17 +86,20 @@ public final class RouterNatSubnetworkToNatResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = Objects.requireNonNull(secondaryIpRangeNames);
             return this;
         }
-
+        public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {
+            return secondaryIpRangeNames(List.of(secondaryIpRangeNames));
+        }
         public Builder sourceIpRangesToNat(List<String> sourceIpRangesToNat) {
             this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat);
             return this;
         }
-        public RouterNatSubnetworkToNatResponse build() {
+        public Builder sourceIpRangesToNat(String... sourceIpRangesToNat) {
+            return sourceIpRangesToNat(List.of(sourceIpRangesToNat));
+        }        public RouterNatSubnetworkToNatResponse build() {
             return new RouterNatSubnetworkToNatResponse(name, secondaryIpRangeNames, sourceIpRangesToNat);
         }
     }

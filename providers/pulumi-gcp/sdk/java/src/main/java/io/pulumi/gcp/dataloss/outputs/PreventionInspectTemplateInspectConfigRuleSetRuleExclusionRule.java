@@ -114,22 +114,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.dictionary = dictionary;
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder matchingType(String matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
-
         public Builder regex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
             this.regex = regex;
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule(dictionary, excludeInfoTypes, matchingType, regex);
         }
     }

@@ -61,12 +61,10 @@ public final class VideoTrackDescriptorArgs extends io.pulumi.resources.Resource
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public VideoTrackDescriptorArgs build() {
+        }        public VideoTrackDescriptorArgs build() {
             return new VideoTrackDescriptorArgs(odataType);
         }
     }

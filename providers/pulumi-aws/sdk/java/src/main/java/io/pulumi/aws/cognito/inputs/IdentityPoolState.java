@@ -223,112 +223,99 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
             this.allowClassicFlow = allowClassicFlow;
             return this;
         }
-
         public Builder allowClassicFlow(@Nullable Boolean allowClassicFlow) {
             this.allowClassicFlow = Output.ofNullable(allowClassicFlow);
             return this;
         }
-
         public Builder allowUnauthenticatedIdentities(@Nullable Output<Boolean> allowUnauthenticatedIdentities) {
             this.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
             return this;
         }
-
         public Builder allowUnauthenticatedIdentities(@Nullable Boolean allowUnauthenticatedIdentities) {
             this.allowUnauthenticatedIdentities = Output.ofNullable(allowUnauthenticatedIdentities);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cognitoIdentityProviders(@Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders) {
             this.cognitoIdentityProviders = cognitoIdentityProviders;
             return this;
         }
-
         public Builder cognitoIdentityProviders(@Nullable List<IdentityPoolCognitoIdentityProviderGetArgs> cognitoIdentityProviders) {
             this.cognitoIdentityProviders = Output.ofNullable(cognitoIdentityProviders);
             return this;
         }
-
+        public Builder cognitoIdentityProviders(IdentityPoolCognitoIdentityProviderGetArgs... cognitoIdentityProviders) {
+            return cognitoIdentityProviders(List.of(cognitoIdentityProviders));
+        }
         public Builder developerProviderName(@Nullable Output<String> developerProviderName) {
             this.developerProviderName = developerProviderName;
             return this;
         }
-
         public Builder developerProviderName(@Nullable String developerProviderName) {
             this.developerProviderName = Output.ofNullable(developerProviderName);
             return this;
         }
-
         public Builder identityPoolName(@Nullable Output<String> identityPoolName) {
             this.identityPoolName = identityPoolName;
             return this;
         }
-
         public Builder identityPoolName(@Nullable String identityPoolName) {
             this.identityPoolName = Output.ofNullable(identityPoolName);
             return this;
         }
-
         public Builder openidConnectProviderArns(@Nullable Output<List<String>> openidConnectProviderArns) {
             this.openidConnectProviderArns = openidConnectProviderArns;
             return this;
         }
-
         public Builder openidConnectProviderArns(@Nullable List<String> openidConnectProviderArns) {
             this.openidConnectProviderArns = Output.ofNullable(openidConnectProviderArns);
             return this;
         }
-
+        public Builder openidConnectProviderArns(String... openidConnectProviderArns) {
+            return openidConnectProviderArns(List.of(openidConnectProviderArns));
+        }
         public Builder samlProviderArns(@Nullable Output<List<String>> samlProviderArns) {
             this.samlProviderArns = samlProviderArns;
             return this;
         }
-
         public Builder samlProviderArns(@Nullable List<String> samlProviderArns) {
             this.samlProviderArns = Output.ofNullable(samlProviderArns);
             return this;
         }
-
+        public Builder samlProviderArns(String... samlProviderArns) {
+            return samlProviderArns(List.of(samlProviderArns));
+        }
         public Builder supportedLoginProviders(@Nullable Output<Map<String,String>> supportedLoginProviders) {
             this.supportedLoginProviders = supportedLoginProviders;
             return this;
         }
-
         public Builder supportedLoginProviders(@Nullable Map<String,String> supportedLoginProviders) {
             this.supportedLoginProviders = Output.ofNullable(supportedLoginProviders);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public IdentityPoolState build() {
+        }        public IdentityPoolState build() {
             return new IdentityPoolState(allowClassicFlow, allowUnauthenticatedIdentities, arn, cognitoIdentityProviders, developerProviderName, identityPoolName, openidConnectProviderArns, samlProviderArns, supportedLoginProviders, tags, tagsAll);
         }
     }

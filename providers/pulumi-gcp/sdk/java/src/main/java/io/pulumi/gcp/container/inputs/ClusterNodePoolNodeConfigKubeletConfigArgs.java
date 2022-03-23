@@ -97,32 +97,26 @@ public final class ClusterNodePoolNodeConfigKubeletConfigArgs extends io.pulumi.
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
-
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = Output.ofNullable(cpuCfsQuota);
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Output.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
-
         public Builder cpuManagerPolicy(Output<String> cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
-
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Output.of(Objects.requireNonNull(cpuManagerPolicy));
             return this;
-        }
-        public ClusterNodePoolNodeConfigKubeletConfigArgs build() {
+        }        public ClusterNodePoolNodeConfigKubeletConfigArgs build() {
             return new ClusterNodePoolNodeConfigKubeletConfigArgs(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }
     }

@@ -71,12 +71,10 @@ public final class NameValuePairResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public NameValuePairResponse build() {
+        }        public NameValuePairResponse build() {
             return new NameValuePairResponse(name, value);
         }
     }

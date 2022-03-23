@@ -61,12 +61,10 @@ public final class MonitoringScheduleStatisticsResourceArgs extends io.pulumi.re
             this.s3Uri = s3Uri;
             return this;
         }
-
         public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = Output.ofNullable(s3Uri);
             return this;
-        }
-        public MonitoringScheduleStatisticsResourceArgs build() {
+        }        public MonitoringScheduleStatisticsResourceArgs build() {
             return new MonitoringScheduleStatisticsResourceArgs(s3Uri);
         }
     }

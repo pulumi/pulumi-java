@@ -51,8 +51,7 @@ public final class GetUserSettingsResult {
         public Builder properties(UserPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public GetUserSettingsResult build() {
+        }        public GetUserSettingsResult build() {
             return new GetUserSettingsResult(properties);
         }
     }

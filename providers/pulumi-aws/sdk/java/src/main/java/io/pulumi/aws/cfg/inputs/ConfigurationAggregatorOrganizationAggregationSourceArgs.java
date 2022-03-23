@@ -92,32 +92,29 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
             this.allRegions = allRegions;
             return this;
         }
-
         public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = Output.ofNullable(allRegions);
             return this;
         }
-
         public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = Output.ofNullable(regions);
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public ConfigurationAggregatorOrganizationAggregationSourceArgs build() {
+        }        public ConfigurationAggregatorOrganizationAggregationSourceArgs build() {
             return new ConfigurationAggregatorOrganizationAggregationSourceArgs(allRegions, regions, roleArn);
         }
     }

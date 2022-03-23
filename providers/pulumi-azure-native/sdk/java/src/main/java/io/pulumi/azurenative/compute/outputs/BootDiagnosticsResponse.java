@@ -72,12 +72,10 @@ public final class BootDiagnosticsResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder storageUri(@Nullable String storageUri) {
             this.storageUri = storageUri;
             return this;
-        }
-        public BootDiagnosticsResponse build() {
+        }        public BootDiagnosticsResponse build() {
             return new BootDiagnosticsResponse(enabled, storageUri);
         }
     }

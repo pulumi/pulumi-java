@@ -89,17 +89,20 @@ public final class EventTargetEcsTargetNetworkConfiguration {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-        public EventTargetEcsTargetNetworkConfiguration build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public EventTargetEcsTargetNetworkConfiguration build() {
             return new EventTargetEcsTargetNetworkConfiguration(assignPublicIp, securityGroups, subnets);
         }
     }

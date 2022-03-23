@@ -152,72 +152,61 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder minimumEngineVersion(@Nullable Output<String> minimumEngineVersion) {
             this.minimumEngineVersion = minimumEngineVersion;
             return this;
         }
-
         public Builder minimumEngineVersion(@Nullable String minimumEngineVersion) {
             this.minimumEngineVersion = Output.ofNullable(minimumEngineVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userNames(@Nullable Output<List<String>> userNames) {
             this.userNames = userNames;
             return this;
         }
-
         public Builder userNames(@Nullable List<String> userNames) {
             this.userNames = Output.ofNullable(userNames);
             return this;
         }
-        public AclState build() {
+        public Builder userNames(String... userNames) {
+            return userNames(List.of(userNames));
+        }        public AclState build() {
             return new AclState(arn, minimumEngineVersion, name, namePrefix, tags, tagsAll, userNames);
         }
     }

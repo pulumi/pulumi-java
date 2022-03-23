@@ -66,12 +66,10 @@ public final class DataflowEndpointGroupTag extends io.pulumi.resources.InvokeAr
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DataflowEndpointGroupTag build() {
+        }        public DataflowEndpointGroupTag build() {
             return new DataflowEndpointGroupTag(key, value);
         }
     }

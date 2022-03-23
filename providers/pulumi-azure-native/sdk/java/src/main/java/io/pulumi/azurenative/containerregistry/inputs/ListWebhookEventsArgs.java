@@ -88,17 +88,14 @@ public final class ListWebhookEventsArgs extends io.pulumi.resources.InvokeArgs 
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder webhookName(String webhookName) {
             this.webhookName = Objects.requireNonNull(webhookName);
             return this;
-        }
-        public ListWebhookEventsArgs build() {
+        }        public ListWebhookEventsArgs build() {
             return new ListWebhookEventsArgs(registryName, resourceGroupName, webhookName);
         }
     }

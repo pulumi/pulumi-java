@@ -113,42 +113,37 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
             this.aggregations = aggregations;
             return this;
         }
-
         public Builder aggregations(@Nullable List<AggregationArgs> aggregations) {
             this.aggregations = Output.ofNullable(aggregations);
             return this;
         }
-
+        public Builder aggregations(AggregationArgs... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder trigger(@Nullable Output<TriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
-
         public Builder trigger(@Nullable TriggerArgs trigger) {
             this.trigger = Output.ofNullable(trigger);
             return this;
-        }
-        public MetricAbsenceArgs build() {
+        }        public MetricAbsenceArgs build() {
             return new MetricAbsenceArgs(aggregations, duration, filter, trigger);
         }
     }

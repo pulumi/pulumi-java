@@ -180,92 +180,77 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder className(@Nullable Output<String> className) {
             this.className = className;
             return this;
         }
-
         public Builder className(@Nullable String className) {
             this.className = Output.ofNullable(className);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerName(@Nullable Output<String> ownerName) {
             this.ownerName = ownerName;
             return this;
         }
-
         public Builder ownerName(@Nullable String ownerName) {
             this.ownerName = Output.ofNullable(ownerName);
             return this;
         }
-
         public Builder ownerType(@Nullable Output<String> ownerType) {
             this.ownerType = ownerType;
             return this;
         }
-
         public Builder ownerType(@Nullable String ownerType) {
             this.ownerType = Output.ofNullable(ownerType);
             return this;
         }
-
         public Builder resourceUris(@Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris) {
             this.resourceUris = resourceUris;
             return this;
         }
-
         public Builder resourceUris(@Nullable List<UserDefinedFunctionResourceUriGetArgs> resourceUris) {
             this.resourceUris = Output.ofNullable(resourceUris);
             return this;
         }
-        public UserDefinedFunctionState build() {
+        public Builder resourceUris(UserDefinedFunctionResourceUriGetArgs... resourceUris) {
+            return resourceUris(List.of(resourceUris));
+        }        public UserDefinedFunctionState build() {
             return new UserDefinedFunctionState(arn, catalogId, className, createTime, databaseName, name, ownerName, ownerType, resourceUris);
         }
     }

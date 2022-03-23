@@ -159,72 +159,61 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
             this.dataStringComparisonBehavior = dataStringComparisonBehavior;
             return this;
         }
-
         public Builder dataStringComparisonBehavior(@Nullable Either<String,DataStringComparisonBehavior> dataStringComparisonBehavior) {
             this.dataStringComparisonBehavior = Output.ofNullable(dataStringComparisonBehavior);
             return this;
         }
-
         public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
-
         public Builder keyProperties(Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties) {
             this.keyProperties = Objects.requireNonNull(keyProperties);
             return this;
         }
-
         public Builder keyProperties(List<ReferenceDataSetKeyPropertyArgs> keyProperties) {
             this.keyProperties = Output.of(Objects.requireNonNull(keyProperties));
             return this;
         }
-
+        public Builder keyProperties(ReferenceDataSetKeyPropertyArgs... keyProperties) {
+            return keyProperties(List.of(keyProperties));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder referenceDataSetName(@Nullable Output<String> referenceDataSetName) {
             this.referenceDataSetName = referenceDataSetName;
             return this;
         }
-
         public Builder referenceDataSetName(@Nullable String referenceDataSetName) {
             this.referenceDataSetName = Output.ofNullable(referenceDataSetName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ReferenceDataSetArgs build() {
+        }        public ReferenceDataSetArgs build() {
             return new ReferenceDataSetArgs(dataStringComparisonBehavior, environmentName, keyProperties, location, referenceDataSetName, resourceGroupName, tags);
         }
     }

@@ -175,82 +175,66 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
             this.distro = distro;
             return this;
         }
-
         public Builder distro(@Nullable Either<String,Distro> distro) {
             this.distro = Output.ofNullable(distro);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder infrastructureConfig(@Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig) {
             this.infrastructureConfig = infrastructureConfig;
             return this;
         }
-
         public Builder infrastructureConfig(@Nullable AppliancePropertiesInfrastructureConfigArgs infrastructureConfig) {
             this.infrastructureConfig = Output.ofNullable(infrastructureConfig);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplianceArgs build() {
+        }        public ApplianceArgs build() {
             return new ApplianceArgs(distro, identity, infrastructureConfig, location, publicKey, resourceGroupName, resourceName, tags);
         }
     }

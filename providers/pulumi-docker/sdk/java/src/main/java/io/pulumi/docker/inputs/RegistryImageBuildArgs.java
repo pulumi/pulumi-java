@@ -432,322 +432,273 @@ public final class RegistryImageBuildArgs extends io.pulumi.resources.ResourceAr
             this.authConfigs = authConfigs;
             return this;
         }
-
         public Builder authConfigs(@Nullable List<RegistryImageBuildAuthConfigArgs> authConfigs) {
             this.authConfigs = Output.ofNullable(authConfigs);
             return this;
         }
-
+        public Builder authConfigs(RegistryImageBuildAuthConfigArgs... authConfigs) {
+            return authConfigs(List.of(authConfigs));
+        }
         public Builder buildArgs(@Nullable Output<Map<String,String>> buildArgs) {
             this.buildArgs = buildArgs;
             return this;
         }
-
         public Builder buildArgs(@Nullable Map<String,String> buildArgs) {
             this.buildArgs = Output.ofNullable(buildArgs);
             return this;
         }
-
         public Builder buildId(@Nullable Output<String> buildId) {
             this.buildId = buildId;
             return this;
         }
-
         public Builder buildId(@Nullable String buildId) {
             this.buildId = Output.ofNullable(buildId);
             return this;
         }
-
         public Builder cacheFroms(@Nullable Output<List<String>> cacheFroms) {
             this.cacheFroms = cacheFroms;
             return this;
         }
-
         public Builder cacheFroms(@Nullable List<String> cacheFroms) {
             this.cacheFroms = Output.ofNullable(cacheFroms);
             return this;
         }
-
+        public Builder cacheFroms(String... cacheFroms) {
+            return cacheFroms(List.of(cacheFroms));
+        }
         public Builder cgroupParent(@Nullable Output<String> cgroupParent) {
             this.cgroupParent = cgroupParent;
             return this;
         }
-
         public Builder cgroupParent(@Nullable String cgroupParent) {
             this.cgroupParent = Output.ofNullable(cgroupParent);
             return this;
         }
-
         public Builder context(Output<String> context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder context(String context) {
             this.context = Output.of(Objects.requireNonNull(context));
             return this;
         }
-
         public Builder cpuPeriod(@Nullable Output<Integer> cpuPeriod) {
             this.cpuPeriod = cpuPeriod;
             return this;
         }
-
         public Builder cpuPeriod(@Nullable Integer cpuPeriod) {
             this.cpuPeriod = Output.ofNullable(cpuPeriod);
             return this;
         }
-
         public Builder cpuQuota(@Nullable Output<Integer> cpuQuota) {
             this.cpuQuota = cpuQuota;
             return this;
         }
-
         public Builder cpuQuota(@Nullable Integer cpuQuota) {
             this.cpuQuota = Output.ofNullable(cpuQuota);
             return this;
         }
-
         public Builder cpuSetCpus(@Nullable Output<String> cpuSetCpus) {
             this.cpuSetCpus = cpuSetCpus;
             return this;
         }
-
         public Builder cpuSetCpus(@Nullable String cpuSetCpus) {
             this.cpuSetCpus = Output.ofNullable(cpuSetCpus);
             return this;
         }
-
         public Builder cpuSetMems(@Nullable Output<String> cpuSetMems) {
             this.cpuSetMems = cpuSetMems;
             return this;
         }
-
         public Builder cpuSetMems(@Nullable String cpuSetMems) {
             this.cpuSetMems = Output.ofNullable(cpuSetMems);
             return this;
         }
-
         public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
             this.cpuShares = cpuShares;
             return this;
         }
-
         public Builder cpuShares(@Nullable Integer cpuShares) {
             this.cpuShares = Output.ofNullable(cpuShares);
             return this;
         }
-
         public Builder dockerfile(@Nullable Output<String> dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
-
         public Builder dockerfile(@Nullable String dockerfile) {
             this.dockerfile = Output.ofNullable(dockerfile);
             return this;
         }
-
         public Builder extraHosts(@Nullable Output<List<String>> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
-
         public Builder extraHosts(@Nullable List<String> extraHosts) {
             this.extraHosts = Output.ofNullable(extraHosts);
             return this;
         }
-
+        public Builder extraHosts(String... extraHosts) {
+            return extraHosts(List.of(extraHosts));
+        }
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
-
         public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = Output.ofNullable(forceRemove);
             return this;
         }
-
         public Builder isolation(@Nullable Output<String> isolation) {
             this.isolation = isolation;
             return this;
         }
-
         public Builder isolation(@Nullable String isolation) {
             this.isolation = Output.ofNullable(isolation);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder memory(@Nullable Output<Integer> memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memory(@Nullable Integer memory) {
             this.memory = Output.ofNullable(memory);
             return this;
         }
-
         public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
             this.memorySwap = memorySwap;
             return this;
         }
-
         public Builder memorySwap(@Nullable Integer memorySwap) {
             this.memorySwap = Output.ofNullable(memorySwap);
             return this;
         }
-
         public Builder networkMode(@Nullable Output<String> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
-
         public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = Output.ofNullable(networkMode);
             return this;
         }
-
         public Builder noCache(@Nullable Output<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
-
         public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = Output.ofNullable(noCache);
             return this;
         }
-
         public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder pullParent(@Nullable Output<Boolean> pullParent) {
             this.pullParent = pullParent;
             return this;
         }
-
         public Builder pullParent(@Nullable Boolean pullParent) {
             this.pullParent = Output.ofNullable(pullParent);
             return this;
         }
-
         public Builder remoteContext(@Nullable Output<String> remoteContext) {
             this.remoteContext = remoteContext;
             return this;
         }
-
         public Builder remoteContext(@Nullable String remoteContext) {
             this.remoteContext = Output.ofNullable(remoteContext);
             return this;
         }
-
         public Builder remove(@Nullable Output<Boolean> remove) {
             this.remove = remove;
             return this;
         }
-
         public Builder remove(@Nullable Boolean remove) {
             this.remove = Output.ofNullable(remove);
             return this;
         }
-
         public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
             this.securityOpts = securityOpts;
             return this;
         }
-
         public Builder securityOpts(@Nullable List<String> securityOpts) {
             this.securityOpts = Output.ofNullable(securityOpts);
             return this;
         }
-
+        public Builder securityOpts(String... securityOpts) {
+            return securityOpts(List.of(securityOpts));
+        }
         public Builder sessionId(@Nullable Output<String> sessionId) {
             this.sessionId = sessionId;
             return this;
         }
-
         public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = Output.ofNullable(sessionId);
             return this;
         }
-
         public Builder shmSize(@Nullable Output<Integer> shmSize) {
             this.shmSize = shmSize;
             return this;
         }
-
         public Builder shmSize(@Nullable Integer shmSize) {
             this.shmSize = Output.ofNullable(shmSize);
             return this;
         }
-
         public Builder squash(@Nullable Output<Boolean> squash) {
             this.squash = squash;
             return this;
         }
-
         public Builder squash(@Nullable Boolean squash) {
             this.squash = Output.ofNullable(squash);
             return this;
         }
-
         public Builder suppressOutput(@Nullable Output<Boolean> suppressOutput) {
             this.suppressOutput = suppressOutput;
             return this;
         }
-
         public Builder suppressOutput(@Nullable Boolean suppressOutput) {
             this.suppressOutput = Output.ofNullable(suppressOutput);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder ulimits(@Nullable Output<List<RegistryImageBuildUlimitArgs>> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
-
         public Builder ulimits(@Nullable List<RegistryImageBuildUlimitArgs> ulimits) {
             this.ulimits = Output.ofNullable(ulimits);
             return this;
         }
-
+        public Builder ulimits(RegistryImageBuildUlimitArgs... ulimits) {
+            return ulimits(List.of(ulimits));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public RegistryImageBuildArgs build() {
+        }        public RegistryImageBuildArgs build() {
             return new RegistryImageBuildArgs(authConfigs, buildArgs, buildId, cacheFroms, cgroupParent, context, cpuPeriod, cpuQuota, cpuSetCpus, cpuSetMems, cpuShares, dockerfile, extraHosts, forceRemove, isolation, labels, memory, memorySwap, networkMode, noCache, platform, pullParent, remoteContext, remove, securityOpts, sessionId, shmSize, squash, suppressOutput, target, ulimits, version);
         }
     }

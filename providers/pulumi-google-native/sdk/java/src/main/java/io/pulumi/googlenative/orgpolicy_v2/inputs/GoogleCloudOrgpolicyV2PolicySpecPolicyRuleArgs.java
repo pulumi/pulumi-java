@@ -128,52 +128,42 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
             this.allowAll = allowAll;
             return this;
         }
-
         public Builder allowAll(@Nullable Boolean allowAll) {
             this.allowAll = Output.ofNullable(allowAll);
             return this;
         }
-
         public Builder condition(@Nullable Output<GoogleTypeExprArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable GoogleTypeExprArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder denyAll(@Nullable Output<Boolean> denyAll) {
             this.denyAll = denyAll;
             return this;
         }
-
         public Builder denyAll(@Nullable Boolean denyAll) {
             this.denyAll = Output.ofNullable(denyAll);
             return this;
         }
-
         public Builder enforce(@Nullable Output<Boolean> enforce) {
             this.enforce = enforce;
             return this;
         }
-
         public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = Output.ofNullable(enforce);
             return this;
         }
-
         public Builder values(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
             this.values = Output.ofNullable(values);
             return this;
-        }
-        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs build() {
+        }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(allowAll, condition, denyAll, enforce, values);
         }
     }

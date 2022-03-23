@@ -77,12 +77,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
             this.userInput = Objects.requireNonNull(userInput);
             return this;
         }
-
         public Builder virtualAgentOutput(GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
             this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ConversationTurnResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1ConversationTurnResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(userInput, virtualAgentOutput);
         }
     }

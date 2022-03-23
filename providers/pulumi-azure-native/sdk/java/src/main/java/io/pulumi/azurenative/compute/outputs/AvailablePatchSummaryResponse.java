@@ -168,42 +168,34 @@ public final class AvailablePatchSummaryResponse {
             this.assessmentActivityId = Objects.requireNonNull(assessmentActivityId);
             return this;
         }
-
         public Builder criticalAndSecurityPatchCount(Integer criticalAndSecurityPatchCount) {
             this.criticalAndSecurityPatchCount = Objects.requireNonNull(criticalAndSecurityPatchCount);
             return this;
         }
-
         public Builder error(ApiErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder otherPatchCount(Integer otherPatchCount) {
             this.otherPatchCount = Objects.requireNonNull(otherPatchCount);
             return this;
         }
-
         public Builder rebootPending(Boolean rebootPending) {
             this.rebootPending = Objects.requireNonNull(rebootPending);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public AvailablePatchSummaryResponse build() {
+        }        public AvailablePatchSummaryResponse build() {
             return new AvailablePatchSummaryResponse(assessmentActivityId, criticalAndSecurityPatchCount, error, lastModifiedTime, otherPatchCount, rebootPending, startTime, status);
         }
     }

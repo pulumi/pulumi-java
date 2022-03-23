@@ -52,12 +52,10 @@ public final class LicenseProvisionalConfigurationArgs extends io.pulumi.resourc
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }
-
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Output.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
             return this;
-        }
-        public LicenseProvisionalConfigurationArgs build() {
+        }        public LicenseProvisionalConfigurationArgs build() {
             return new LicenseProvisionalConfigurationArgs(maxTimeToLiveInMinutes);
         }
     }

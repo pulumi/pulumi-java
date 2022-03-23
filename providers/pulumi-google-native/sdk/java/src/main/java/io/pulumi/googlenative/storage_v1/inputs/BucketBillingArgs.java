@@ -61,12 +61,10 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
             this.requesterPays = requesterPays;
             return this;
         }
-
         public Builder requesterPays(@Nullable Boolean requesterPays) {
             this.requesterPays = Output.ofNullable(requesterPays);
             return this;
-        }
-        public BucketBillingArgs build() {
+        }        public BucketBillingArgs build() {
             return new BucketBillingArgs(requesterPays);
         }
     }

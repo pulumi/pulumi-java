@@ -104,22 +104,18 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecification {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
-
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
-
         public Builder timeoutAction(String timeoutAction) {
             this.timeoutAction = Objects.requireNonNull(timeoutAction);
             return this;
         }
-
         public Builder timeoutDurationMinutes(Integer timeoutDurationMinutes) {
             this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes);
             return this;
-        }
-        public InstanceFleetLaunchSpecificationsSpotSpecification build() {
+        }        public InstanceFleetLaunchSpecificationsSpotSpecification build() {
             return new InstanceFleetLaunchSpecificationsSpotSpecification(allocationStrategy, blockDurationMinutes, timeoutAction, timeoutDurationMinutes);
         }
     }

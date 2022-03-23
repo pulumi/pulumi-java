@@ -175,82 +175,66 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             this.allowedValues = allowedValues;
             return this;
         }
-
         public Builder allowedValues(@Nullable String allowedValues) {
             this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
-
         public Builder applyMethod(@Nullable Output<String> applyMethod) {
             this.applyMethod = applyMethod;
             return this;
         }
-
         public Builder applyMethod(@Nullable String applyMethod) {
             this.applyMethod = Output.ofNullable(applyMethod);
             return this;
         }
-
         public Builder applyType(@Nullable Output<String> applyType) {
             this.applyType = applyType;
             return this;
         }
-
         public Builder applyType(@Nullable String applyType) {
             this.applyType = Output.ofNullable(applyType);
             return this;
         }
-
         public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isModifiable(@Nullable Output<Boolean> isModifiable) {
             this.isModifiable = isModifiable;
             return this;
         }
-
         public Builder isModifiable(@Nullable Boolean isModifiable) {
             this.isModifiable = Output.ofNullable(isModifiable);
             return this;
         }
-
         public Builder parameterName(@Nullable Output<String> parameterName) {
             this.parameterName = parameterName;
             return this;
         }
-
         public Builder parameterName(@Nullable String parameterName) {
             this.parameterName = Output.ofNullable(parameterName);
             return this;
         }
-
         public Builder parameterValue(@Nullable Output<String> parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }
-
         public Builder parameterValue(@Nullable String parameterValue) {
             this.parameterValue = Output.ofNullable(parameterValue);
             return this;
-        }
-        public DatabaseRelationalDatabaseParameterArgs build() {
+        }        public DatabaseRelationalDatabaseParameterArgs build() {
             return new DatabaseRelationalDatabaseParameterArgs(allowedValues, applyMethod, applyType, dataType, description, isModifiable, parameterName, parameterValue);
         }
     }

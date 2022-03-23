@@ -86,17 +86,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
             this.cardContent = Objects.requireNonNull(cardContent);
             return this;
         }
-
         public Builder cardOrientation(String cardOrientation) {
             this.cardOrientation = Objects.requireNonNull(cardOrientation);
             return this;
         }
-
         public Builder thumbnailImageAlignment(String thumbnailImageAlignment) {
             this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(cardContent, cardOrientation, thumbnailImageAlignment);
         }
     }

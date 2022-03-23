@@ -106,37 +106,30 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             this.parentId = parentId;
             return this;
         }
-
         public Builder parentId(@Nullable String parentId) {
             this.parentId = Output.ofNullable(parentId);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder pathPart(@Nullable Output<String> pathPart) {
             this.pathPart = pathPart;
             return this;
         }
-
         public Builder pathPart(@Nullable String pathPart) {
             this.pathPart = Output.ofNullable(pathPart);
             return this;
         }
-
         public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
-        }
-        public ResourceState build() {
+        }        public ResourceState build() {
             return new ResourceState(parentId, path, pathPart, restApi);
         }
     }

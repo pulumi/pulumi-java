@@ -63,12 +63,10 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ManagedIdentityTypes> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public IdentityPropertiesArgs build() {
+        }        public IdentityPropertiesArgs build() {
             return new IdentityPropertiesArgs(type);
         }
     }

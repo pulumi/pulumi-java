@@ -103,22 +103,18 @@ public final class SecretKeySelectorResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
             this.localObjectReference = Objects.requireNonNull(localObjectReference);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
-        }
-        public SecretKeySelectorResponse build() {
+        }        public SecretKeySelectorResponse build() {
             return new SecretKeySelectorResponse(key, localObjectReference, name, optional);
         }
     }

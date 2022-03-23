@@ -198,92 +198,74 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudRunConfig = cloudRunConfig;
             return this;
         }
-
         public Builder cloudRunConfig(@Nullable CloudRunConfigArgs cloudRunConfig) {
             this.cloudRunConfig = Output.ofNullable(cloudRunConfig);
             return this;
         }
-
         public Builder configConnectorConfig(@Nullable Output<ConfigConnectorConfigArgs> configConnectorConfig) {
             this.configConnectorConfig = configConnectorConfig;
             return this;
         }
-
         public Builder configConnectorConfig(@Nullable ConfigConnectorConfigArgs configConnectorConfig) {
             this.configConnectorConfig = Output.ofNullable(configConnectorConfig);
             return this;
         }
-
         public Builder dnsCacheConfig(@Nullable Output<DnsCacheConfigArgs> dnsCacheConfig) {
             this.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
-
         public Builder dnsCacheConfig(@Nullable DnsCacheConfigArgs dnsCacheConfig) {
             this.dnsCacheConfig = Output.ofNullable(dnsCacheConfig);
             return this;
         }
-
         public Builder gcePersistentDiskCsiDriverConfig(@Nullable Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
-
         public Builder gcePersistentDiskCsiDriverConfig(@Nullable GcePersistentDiskCsiDriverConfigArgs gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = Output.ofNullable(gcePersistentDiskCsiDriverConfig);
             return this;
         }
-
         public Builder gcpFilestoreCsiDriverConfig(@Nullable Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
-
         public Builder gcpFilestoreCsiDriverConfig(@Nullable GcpFilestoreCsiDriverConfigArgs gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = Output.ofNullable(gcpFilestoreCsiDriverConfig);
             return this;
         }
-
         public Builder horizontalPodAutoscaling(@Nullable Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
-
         public Builder horizontalPodAutoscaling(@Nullable HorizontalPodAutoscalingArgs horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = Output.ofNullable(horizontalPodAutoscaling);
             return this;
         }
-
         public Builder httpLoadBalancing(@Nullable Output<HttpLoadBalancingArgs> httpLoadBalancing) {
             this.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
-
         public Builder httpLoadBalancing(@Nullable HttpLoadBalancingArgs httpLoadBalancing) {
             this.httpLoadBalancing = Output.ofNullable(httpLoadBalancing);
             return this;
         }
-
         public Builder kubernetesDashboard(@Nullable Output<KubernetesDashboardArgs> kubernetesDashboard) {
             this.kubernetesDashboard = kubernetesDashboard;
             return this;
         }
-
         public Builder kubernetesDashboard(@Nullable KubernetesDashboardArgs kubernetesDashboard) {
             this.kubernetesDashboard = Output.ofNullable(kubernetesDashboard);
             return this;
         }
-
         public Builder networkPolicyConfig(@Nullable Output<NetworkPolicyConfigArgs> networkPolicyConfig) {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
-
         public Builder networkPolicyConfig(@Nullable NetworkPolicyConfigArgs networkPolicyConfig) {
             this.networkPolicyConfig = Output.ofNullable(networkPolicyConfig);
             return this;
-        }
-        public AddonsConfigArgs build() {
+        }        public AddonsConfigArgs build() {
             return new AddonsConfigArgs(cloudRunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, kubernetesDashboard, networkPolicyConfig);
         }
     }

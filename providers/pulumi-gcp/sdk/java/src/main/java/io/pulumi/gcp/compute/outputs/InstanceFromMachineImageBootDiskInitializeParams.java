@@ -74,22 +74,18 @@ public final class InstanceFromMachineImageBootDiskInitializeParams {
             this.image = image;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = size;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public InstanceFromMachineImageBootDiskInitializeParams build() {
+        }        public InstanceFromMachineImageBootDiskInitializeParams build() {
             return new InstanceFromMachineImageBootDiskInitializeParams(image, labels, size, type);
         }
     }

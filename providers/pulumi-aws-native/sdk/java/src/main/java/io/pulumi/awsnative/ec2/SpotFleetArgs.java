@@ -52,12 +52,10 @@ public final class SpotFleetArgs extends io.pulumi.resources.ResourceArgs {
             this.spotFleetRequestConfigData = Objects.requireNonNull(spotFleetRequestConfigData);
             return this;
         }
-
         public Builder spotFleetRequestConfigData(SpotFleetRequestConfigDataArgs spotFleetRequestConfigData) {
             this.spotFleetRequestConfigData = Output.of(Objects.requireNonNull(spotFleetRequestConfigData));
             return this;
-        }
-        public SpotFleetArgs build() {
+        }        public SpotFleetArgs build() {
             return new SpotFleetArgs(spotFleetRequestConfigData);
         }
     }

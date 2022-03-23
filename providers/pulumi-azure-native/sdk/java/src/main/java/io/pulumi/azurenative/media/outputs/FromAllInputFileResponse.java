@@ -80,12 +80,13 @@ public final class FromAllInputFileResponse {
             this.includedTracks = includedTracks;
             return this;
         }
-
+        public Builder includedTracks(Object... includedTracks) {
+            return includedTracks(List.of(includedTracks));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public FromAllInputFileResponse build() {
+        }        public FromAllInputFileResponse build() {
             return new FromAllInputFileResponse(includedTracks, odataType);
         }
     }

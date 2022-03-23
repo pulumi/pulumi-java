@@ -172,82 +172,66 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
             this.clientInfo = clientInfo;
             return this;
         }
-
         public Builder clientInfo(@Nullable ClientInfoArgs clientInfo) {
             this.clientInfo = Output.ofNullable(clientInfo);
             return this;
         }
-
         public Builder environmentMatrix(Output<EnvironmentMatrixArgs> environmentMatrix) {
             this.environmentMatrix = Objects.requireNonNull(environmentMatrix);
             return this;
         }
-
         public Builder environmentMatrix(EnvironmentMatrixArgs environmentMatrix) {
             this.environmentMatrix = Output.of(Objects.requireNonNull(environmentMatrix));
             return this;
         }
-
         public Builder failFast(@Nullable Output<Boolean> failFast) {
             this.failFast = failFast;
             return this;
         }
-
         public Builder failFast(@Nullable Boolean failFast) {
             this.failFast = Output.ofNullable(failFast);
             return this;
         }
-
         public Builder flakyTestAttempts(@Nullable Output<Integer> flakyTestAttempts) {
             this.flakyTestAttempts = flakyTestAttempts;
             return this;
         }
-
         public Builder flakyTestAttempts(@Nullable Integer flakyTestAttempts) {
             this.flakyTestAttempts = Output.ofNullable(flakyTestAttempts);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder resultStorage(Output<ResultStorageArgs> resultStorage) {
             this.resultStorage = Objects.requireNonNull(resultStorage);
             return this;
         }
-
         public Builder resultStorage(ResultStorageArgs resultStorage) {
             this.resultStorage = Output.of(Objects.requireNonNull(resultStorage));
             return this;
         }
-
         public Builder testSpecification(Output<TestSpecificationArgs> testSpecification) {
             this.testSpecification = Objects.requireNonNull(testSpecification);
             return this;
         }
-
         public Builder testSpecification(TestSpecificationArgs testSpecification) {
             this.testSpecification = Output.of(Objects.requireNonNull(testSpecification));
             return this;
-        }
-        public TestMatrixArgs build() {
+        }        public TestMatrixArgs build() {
             return new TestMatrixArgs(clientInfo, environmentMatrix, failFast, flakyTestAttempts, project, requestId, resultStorage, testSpecification);
         }
     }

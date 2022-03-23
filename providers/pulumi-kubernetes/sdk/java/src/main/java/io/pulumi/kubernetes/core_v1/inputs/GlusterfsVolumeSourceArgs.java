@@ -95,32 +95,26 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder endpoints(String endpoints) {
             this.endpoints = Output.of(Objects.requireNonNull(endpoints));
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
-        }
-        public GlusterfsVolumeSourceArgs build() {
+        }        public GlusterfsVolumeSourceArgs build() {
             return new GlusterfsVolumeSourceArgs(endpoints, path, readOnly);
         }
     }

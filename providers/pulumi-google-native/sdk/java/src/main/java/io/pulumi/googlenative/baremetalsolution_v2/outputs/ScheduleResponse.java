@@ -86,17 +86,14 @@ public final class ScheduleResponse {
             this.crontabSpec = Objects.requireNonNull(crontabSpec);
             return this;
         }
-
         public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public Builder retentionCount(Integer retentionCount) {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
-        }
-        public ScheduleResponse build() {
+        }        public ScheduleResponse build() {
             return new ScheduleResponse(crontabSpec, prefix, retentionCount);
         }
     }

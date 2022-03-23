@@ -190,92 +190,74 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hub(Output<String> hub) {
             this.hub = Objects.requireNonNull(hub);
             return this;
         }
-
         public Builder hub(String hub) {
             this.hub = Output.of(Objects.requireNonNull(hub));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder linkedInterconnectAttachments(@Nullable Output<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
-
         public Builder linkedInterconnectAttachments(@Nullable SpokeLinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = Output.ofNullable(linkedInterconnectAttachments);
             return this;
         }
-
         public Builder linkedRouterApplianceInstances(@Nullable Output<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
-
         public Builder linkedRouterApplianceInstances(@Nullable SpokeLinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = Output.ofNullable(linkedRouterApplianceInstances);
             return this;
         }
-
         public Builder linkedVpnTunnels(@Nullable Output<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels) {
             this.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
-
         public Builder linkedVpnTunnels(@Nullable SpokeLinkedVpnTunnelsArgs linkedVpnTunnels) {
             this.linkedVpnTunnels = Output.ofNullable(linkedVpnTunnels);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public SpokeArgs build() {
+        }        public SpokeArgs build() {
             return new SpokeArgs(description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, location, name, project);
         }
     }

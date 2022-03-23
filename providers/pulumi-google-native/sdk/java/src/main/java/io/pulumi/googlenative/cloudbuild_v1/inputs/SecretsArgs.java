@@ -80,22 +80,24 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
             this.inline = inline;
             return this;
         }
-
         public Builder inline(@Nullable List<InlineSecretArgs> inline) {
             this.inline = Output.ofNullable(inline);
             return this;
         }
-
+        public Builder inline(InlineSecretArgs... inline) {
+            return inline(List.of(inline));
+        }
         public Builder secretManager(@Nullable Output<List<SecretManagerSecretArgs>> secretManager) {
             this.secretManager = secretManager;
             return this;
         }
-
         public Builder secretManager(@Nullable List<SecretManagerSecretArgs> secretManager) {
             this.secretManager = Output.ofNullable(secretManager);
             return this;
         }
-        public SecretsArgs build() {
+        public Builder secretManager(SecretManagerSecretArgs... secretManager) {
+            return secretManager(List.of(secretManager));
+        }        public SecretsArgs build() {
             return new SecretsArgs(inline, secretManager);
         }
     }

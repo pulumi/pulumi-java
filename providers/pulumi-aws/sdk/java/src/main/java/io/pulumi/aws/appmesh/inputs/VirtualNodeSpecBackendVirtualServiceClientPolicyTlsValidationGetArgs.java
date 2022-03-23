@@ -75,22 +75,18 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
         public Builder trust(Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }
-
         public Builder trust(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs trust) {
             this.trust = Output.of(Objects.requireNonNull(trust));
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs(subjectAlternativeNames, trust);
         }
     }

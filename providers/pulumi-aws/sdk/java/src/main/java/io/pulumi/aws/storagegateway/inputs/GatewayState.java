@@ -416,232 +416,189 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             this.activationKey = activationKey;
             return this;
         }
-
         public Builder activationKey(@Nullable String activationKey) {
             this.activationKey = Output.ofNullable(activationKey);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec) {
             this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
             return this;
         }
-
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Integer averageDownloadRateLimitInBitsPerSec) {
             this.averageDownloadRateLimitInBitsPerSec = Output.ofNullable(averageDownloadRateLimitInBitsPerSec);
             return this;
         }
-
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Output<Integer> averageUploadRateLimitInBitsPerSec) {
             this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
             return this;
         }
-
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Integer averageUploadRateLimitInBitsPerSec) {
             this.averageUploadRateLimitInBitsPerSec = Output.ofNullable(averageUploadRateLimitInBitsPerSec);
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder ec2InstanceId(@Nullable Output<String> ec2InstanceId) {
             this.ec2InstanceId = ec2InstanceId;
             return this;
         }
-
         public Builder ec2InstanceId(@Nullable String ec2InstanceId) {
             this.ec2InstanceId = Output.ofNullable(ec2InstanceId);
             return this;
         }
-
         public Builder endpointType(@Nullable Output<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
-
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
-
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
-
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             this.gatewayIpAddress = Output.ofNullable(gatewayIpAddress);
             return this;
         }
-
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
-
         public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = Output.ofNullable(gatewayName);
             return this;
         }
-
         public Builder gatewayNetworkInterfaces(@Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces) {
             this.gatewayNetworkInterfaces = gatewayNetworkInterfaces;
             return this;
         }
-
         public Builder gatewayNetworkInterfaces(@Nullable List<GatewayGatewayNetworkInterfaceGetArgs> gatewayNetworkInterfaces) {
             this.gatewayNetworkInterfaces = Output.ofNullable(gatewayNetworkInterfaces);
             return this;
         }
-
+        public Builder gatewayNetworkInterfaces(GatewayGatewayNetworkInterfaceGetArgs... gatewayNetworkInterfaces) {
+            return gatewayNetworkInterfaces(List.of(gatewayNetworkInterfaces));
+        }
         public Builder gatewayTimezone(@Nullable Output<String> gatewayTimezone) {
             this.gatewayTimezone = gatewayTimezone;
             return this;
         }
-
         public Builder gatewayTimezone(@Nullable String gatewayTimezone) {
             this.gatewayTimezone = Output.ofNullable(gatewayTimezone);
             return this;
         }
-
         public Builder gatewayType(@Nullable Output<String> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
-
         public Builder gatewayType(@Nullable String gatewayType) {
             this.gatewayType = Output.ofNullable(gatewayType);
             return this;
         }
-
         public Builder gatewayVpcEndpoint(@Nullable Output<String> gatewayVpcEndpoint) {
             this.gatewayVpcEndpoint = gatewayVpcEndpoint;
             return this;
         }
-
         public Builder gatewayVpcEndpoint(@Nullable String gatewayVpcEndpoint) {
             this.gatewayVpcEndpoint = Output.ofNullable(gatewayVpcEndpoint);
             return this;
         }
-
         public Builder hostEnvironment(@Nullable Output<String> hostEnvironment) {
             this.hostEnvironment = hostEnvironment;
             return this;
         }
-
         public Builder hostEnvironment(@Nullable String hostEnvironment) {
             this.hostEnvironment = Output.ofNullable(hostEnvironment);
             return this;
         }
-
         public Builder mediumChangerType(@Nullable Output<String> mediumChangerType) {
             this.mediumChangerType = mediumChangerType;
             return this;
         }
-
         public Builder mediumChangerType(@Nullable String mediumChangerType) {
             this.mediumChangerType = Output.ofNullable(mediumChangerType);
             return this;
         }
-
         public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings) {
             this.smbActiveDirectorySettings = smbActiveDirectorySettings;
             return this;
         }
-
         public Builder smbActiveDirectorySettings(@Nullable GatewaySmbActiveDirectorySettingsGetArgs smbActiveDirectorySettings) {
             this.smbActiveDirectorySettings = Output.ofNullable(smbActiveDirectorySettings);
             return this;
         }
-
         public Builder smbFileShareVisibility(@Nullable Output<Boolean> smbFileShareVisibility) {
             this.smbFileShareVisibility = smbFileShareVisibility;
             return this;
         }
-
         public Builder smbFileShareVisibility(@Nullable Boolean smbFileShareVisibility) {
             this.smbFileShareVisibility = Output.ofNullable(smbFileShareVisibility);
             return this;
         }
-
         public Builder smbGuestPassword(@Nullable Output<String> smbGuestPassword) {
             this.smbGuestPassword = smbGuestPassword;
             return this;
         }
-
         public Builder smbGuestPassword(@Nullable String smbGuestPassword) {
             this.smbGuestPassword = Output.ofNullable(smbGuestPassword);
             return this;
         }
-
         public Builder smbSecurityStrategy(@Nullable Output<String> smbSecurityStrategy) {
             this.smbSecurityStrategy = smbSecurityStrategy;
             return this;
         }
-
         public Builder smbSecurityStrategy(@Nullable String smbSecurityStrategy) {
             this.smbSecurityStrategy = Output.ofNullable(smbSecurityStrategy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder tapeDriveType(@Nullable Output<String> tapeDriveType) {
             this.tapeDriveType = tapeDriveType;
             return this;
         }
-
         public Builder tapeDriveType(@Nullable String tapeDriveType) {
             this.tapeDriveType = Output.ofNullable(tapeDriveType);
             return this;
-        }
-        public GatewayState build() {
+        }        public GatewayState build() {
             return new GatewayState(activationKey, arn, averageDownloadRateLimitInBitsPerSec, averageUploadRateLimitInBitsPerSec, cloudwatchLogGroupArn, ec2InstanceId, endpointType, gatewayId, gatewayIpAddress, gatewayName, gatewayNetworkInterfaces, gatewayTimezone, gatewayType, gatewayVpcEndpoint, hostEnvironment, mediumChangerType, smbActiveDirectorySettings, smbFileShareVisibility, smbGuestPassword, smbSecurityStrategy, tags, tagsAll, tapeDriveType);
         }
     }

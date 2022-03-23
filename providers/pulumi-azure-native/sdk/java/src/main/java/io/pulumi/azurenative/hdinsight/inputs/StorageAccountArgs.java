@@ -191,92 +191,74 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable String container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder fileSystem(@Nullable Output<String> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public Builder fileSystem(@Nullable String fileSystem) {
             this.fileSystem = Output.ofNullable(fileSystem);
             return this;
         }
-
         public Builder fileshare(@Nullable Output<String> fileshare) {
             this.fileshare = fileshare;
             return this;
         }
-
         public Builder fileshare(@Nullable String fileshare) {
             this.fileshare = Output.ofNullable(fileshare);
             return this;
         }
-
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
-
         public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = Output.ofNullable(msiResourceId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder saskey(@Nullable Output<String> saskey) {
             this.saskey = saskey;
             return this;
         }
-
         public Builder saskey(@Nullable String saskey) {
             this.saskey = Output.ofNullable(saskey);
             return this;
-        }
-        public StorageAccountArgs build() {
+        }        public StorageAccountArgs build() {
             return new StorageAccountArgs(container, fileSystem, fileshare, isDefault, key, msiResourceId, name, resourceId, saskey);
         }
     }

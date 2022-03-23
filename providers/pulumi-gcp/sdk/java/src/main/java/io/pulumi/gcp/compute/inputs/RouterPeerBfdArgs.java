@@ -122,42 +122,34 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
             this.minReceiveInterval = minReceiveInterval;
             return this;
         }
-
         public Builder minReceiveInterval(@Nullable Integer minReceiveInterval) {
             this.minReceiveInterval = Output.ofNullable(minReceiveInterval);
             return this;
         }
-
         public Builder minTransmitInterval(@Nullable Output<Integer> minTransmitInterval) {
             this.minTransmitInterval = minTransmitInterval;
             return this;
         }
-
         public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
             this.minTransmitInterval = Output.ofNullable(minTransmitInterval);
             return this;
         }
-
         public Builder multiplier(@Nullable Output<Integer> multiplier) {
             this.multiplier = multiplier;
             return this;
         }
-
         public Builder multiplier(@Nullable Integer multiplier) {
             this.multiplier = Output.ofNullable(multiplier);
             return this;
         }
-
         public Builder sessionInitializationMode(Output<String> sessionInitializationMode) {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
         }
-
         public Builder sessionInitializationMode(String sessionInitializationMode) {
             this.sessionInitializationMode = Output.of(Objects.requireNonNull(sessionInitializationMode));
             return this;
-        }
-        public RouterPeerBfdArgs build() {
+        }        public RouterPeerBfdArgs build() {
             return new RouterPeerBfdArgs(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
         }
     }

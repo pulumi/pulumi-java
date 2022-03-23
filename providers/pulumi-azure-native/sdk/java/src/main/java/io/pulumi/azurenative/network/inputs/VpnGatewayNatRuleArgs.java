@@ -163,72 +163,64 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
             this.externalMappings = externalMappings;
             return this;
         }
-
         public Builder externalMappings(@Nullable List<VpnNatRuleMappingArgs> externalMappings) {
             this.externalMappings = Output.ofNullable(externalMappings);
             return this;
         }
-
+        public Builder externalMappings(VpnNatRuleMappingArgs... externalMappings) {
+            return externalMappings(List.of(externalMappings));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder internalMappings(@Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings) {
             this.internalMappings = internalMappings;
             return this;
         }
-
         public Builder internalMappings(@Nullable List<VpnNatRuleMappingArgs> internalMappings) {
             this.internalMappings = Output.ofNullable(internalMappings);
             return this;
         }
-
+        public Builder internalMappings(VpnNatRuleMappingArgs... internalMappings) {
+            return internalMappings(List.of(internalMappings));
+        }
         public Builder ipConfigurationId(@Nullable Output<String> ipConfigurationId) {
             this.ipConfigurationId = ipConfigurationId;
             return this;
         }
-
         public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
             this.ipConfigurationId = Output.ofNullable(ipConfigurationId);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,VpnNatRuleMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,VpnNatRuleMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,VpnNatRuleType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,VpnNatRuleType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public VpnGatewayNatRuleArgs build() {
+        }        public VpnGatewayNatRuleArgs build() {
             return new VpnGatewayNatRuleArgs(externalMappings, id, internalMappings, ipConfigurationId, mode, name, type);
         }
     }

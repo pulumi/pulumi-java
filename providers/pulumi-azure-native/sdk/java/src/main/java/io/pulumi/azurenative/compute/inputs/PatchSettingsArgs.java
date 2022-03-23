@@ -98,32 +98,26 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.assessmentMode = assessmentMode;
             return this;
         }
-
         public Builder assessmentMode(@Nullable Either<String,WindowsPatchAssessmentMode> assessmentMode) {
             this.assessmentMode = Output.ofNullable(assessmentMode);
             return this;
         }
-
         public Builder enableHotpatching(@Nullable Output<Boolean> enableHotpatching) {
             this.enableHotpatching = enableHotpatching;
             return this;
         }
-
         public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
             this.enableHotpatching = Output.ofNullable(enableHotpatching);
             return this;
         }
-
         public Builder patchMode(@Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode) {
             this.patchMode = patchMode;
             return this;
         }
-
         public Builder patchMode(@Nullable Either<String,WindowsVMGuestPatchMode> patchMode) {
             this.patchMode = Output.ofNullable(patchMode);
             return this;
-        }
-        public PatchSettingsArgs build() {
+        }        public PatchSettingsArgs build() {
             return new PatchSettingsArgs(assessmentMode, enableHotpatching, patchMode);
         }
     }

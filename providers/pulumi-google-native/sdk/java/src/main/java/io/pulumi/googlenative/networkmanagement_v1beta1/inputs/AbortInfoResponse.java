@@ -76,12 +76,10 @@ public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.cause = Objects.requireNonNull(cause);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public AbortInfoResponse build() {
+        }        public AbortInfoResponse build() {
             return new AbortInfoResponse(cause, resourceUri);
         }
     }

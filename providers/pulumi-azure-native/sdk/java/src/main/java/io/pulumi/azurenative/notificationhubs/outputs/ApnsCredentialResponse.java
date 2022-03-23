@@ -167,42 +167,34 @@ public final class ApnsCredentialResponse {
             this.apnsCertificate = apnsCertificate;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
-
         public Builder appName(@Nullable String appName) {
             this.appName = appName;
             return this;
         }
-
         public Builder certificateKey(@Nullable String certificateKey) {
             this.certificateKey = certificateKey;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = token;
             return this;
-        }
-        public ApnsCredentialResponse build() {
+        }        public ApnsCredentialResponse build() {
             return new ApnsCredentialResponse(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);
         }
     }

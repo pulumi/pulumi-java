@@ -67,22 +67,18 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable GroupQueryArgs query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder type(@Nullable Output<GroupResourceQueryType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GroupResourceQueryType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GroupResourceQueryArgs build() {
+        }        public GroupResourceQueryArgs build() {
             return new GroupResourceQueryArgs(query, type);
         }
     }

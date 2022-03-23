@@ -129,37 +129,39 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration extends io.
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
-
+        public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
+            return excludeAttachmentFilePatterns(List.of(excludeAttachmentFilePatterns));
+        }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder filterQuery(@Nullable String filterQuery) {
             this.filterQuery = filterQuery;
             return this;
         }
-
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
-        public DataSourceServiceNowKnowledgeArticleConfiguration build() {
+        public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {
+            return includeAttachmentFilePatterns(List.of(includeAttachmentFilePatterns));
+        }        public DataSourceServiceNowKnowledgeArticleConfiguration build() {
             return new DataSourceServiceNowKnowledgeArticleConfiguration(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, filterQuery, includeAttachmentFilePatterns);
         }
     }

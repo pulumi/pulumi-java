@@ -71,12 +71,10 @@ public final class DataStoreIndexProperty {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DataStoreIndexProperty build() {
+        }        public DataStoreIndexProperty build() {
             return new DataStoreIndexProperty(direction, name);
         }
     }

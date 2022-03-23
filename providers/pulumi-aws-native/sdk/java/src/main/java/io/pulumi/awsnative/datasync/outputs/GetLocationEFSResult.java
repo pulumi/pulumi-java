@@ -89,17 +89,17 @@ public final class GetLocationEFSResult {
             this.locationArn = locationArn;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder tags(@Nullable List<LocationEFSTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetLocationEFSResult build() {
+        public Builder tags(LocationEFSTag... tags) {
+            return tags(List.of(tags));
+        }        public GetLocationEFSResult build() {
             return new GetLocationEFSResult(locationArn, locationUri, tags);
         }
     }

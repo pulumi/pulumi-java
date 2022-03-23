@@ -94,32 +94,26 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder labelReferenceInStreamingPolicy(@Nullable Output<String> labelReferenceInStreamingPolicy) {
             this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
-
         public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
             this.labelReferenceInStreamingPolicy = Output.ofNullable(labelReferenceInStreamingPolicy);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public StreamingLocatorContentKeyArgs build() {
+        }        public StreamingLocatorContentKeyArgs build() {
             return new StreamingLocatorContentKeyArgs(id, labelReferenceInStreamingPolicy, value);
         }
     }

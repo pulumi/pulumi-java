@@ -191,92 +191,80 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder creatorComment(@Nullable Output<String> creatorComment) {
             this.creatorComment = creatorComment;
             return this;
         }
-
         public Builder creatorComment(@Nullable String creatorComment) {
             this.creatorComment = Output.ofNullable(creatorComment);
             return this;
         }
-
         public Builder creators(@Nullable Output<List<String>> creators) {
             this.creators = creators;
             return this;
         }
-
         public Builder creators(@Nullable List<String> creators) {
             this.creators = Output.ofNullable(creators);
             return this;
         }
-
+        public Builder creators(String... creators) {
+            return creators(List.of(creators));
+        }
         public Builder documentComment(@Nullable Output<String> documentComment) {
             this.documentComment = documentComment;
             return this;
         }
-
         public Builder documentComment(@Nullable String documentComment) {
             this.documentComment = Output.ofNullable(documentComment);
             return this;
         }
-
         public Builder externalDocumentRefs(@Nullable Output<List<String>> externalDocumentRefs) {
             this.externalDocumentRefs = externalDocumentRefs;
             return this;
         }
-
         public Builder externalDocumentRefs(@Nullable List<String> externalDocumentRefs) {
             this.externalDocumentRefs = Output.ofNullable(externalDocumentRefs);
             return this;
         }
-
+        public Builder externalDocumentRefs(String... externalDocumentRefs) {
+            return externalDocumentRefs(List.of(externalDocumentRefs));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder licenseListVersion(@Nullable Output<String> licenseListVersion) {
             this.licenseListVersion = licenseListVersion;
             return this;
         }
-
         public Builder licenseListVersion(@Nullable String licenseListVersion) {
             this.licenseListVersion = Output.ofNullable(licenseListVersion);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public DocumentOccurrenceArgs build() {
+        }        public DocumentOccurrenceArgs build() {
             return new DocumentOccurrenceArgs(createTime, creatorComment, creators, documentComment, externalDocumentRefs, id, licenseListVersion, namespace, title);
         }
     }

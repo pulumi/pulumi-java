@@ -86,17 +86,14 @@ public final class RuntimeConfigResponse {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public RuntimeConfigResponse build() {
+        }        public RuntimeConfigResponse build() {
             return new RuntimeConfigResponse(containerImage, properties, version);
         }
     }

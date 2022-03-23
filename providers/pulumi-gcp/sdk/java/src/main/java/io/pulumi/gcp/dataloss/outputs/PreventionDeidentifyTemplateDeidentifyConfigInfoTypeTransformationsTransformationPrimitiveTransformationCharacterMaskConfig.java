@@ -115,22 +115,21 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.charactersToIgnores = charactersToIgnores;
             return this;
         }
-
+        public Builder charactersToIgnores(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore... charactersToIgnores) {
+            return charactersToIgnores(List.of(charactersToIgnores));
+        }
         public Builder maskingCharacter(@Nullable String maskingCharacter) {
             this.maskingCharacter = maskingCharacter;
             return this;
         }
-
         public Builder numberToMask(@Nullable Integer numberToMask) {
             this.numberToMask = numberToMask;
             return this;
         }
-
         public Builder reverseOrder(@Nullable Boolean reverseOrder) {
             this.reverseOrder = reverseOrder;
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig(charactersToIgnores, maskingCharacter, numberToMask, reverseOrder);
         }
     }

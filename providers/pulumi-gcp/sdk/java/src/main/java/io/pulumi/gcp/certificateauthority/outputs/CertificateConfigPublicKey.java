@@ -73,12 +73,10 @@ public final class CertificateConfigPublicKey {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public CertificateConfigPublicKey build() {
+        }        public CertificateConfigPublicKey build() {
             return new CertificateConfigPublicKey(format, key);
         }
     }

@@ -72,12 +72,10 @@ public final class MongoDBDatabaseGetPropertiesResponseOptions {
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public MongoDBDatabaseGetPropertiesResponseOptions build() {
+        }        public MongoDBDatabaseGetPropertiesResponseOptions build() {
             return new MongoDBDatabaseGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

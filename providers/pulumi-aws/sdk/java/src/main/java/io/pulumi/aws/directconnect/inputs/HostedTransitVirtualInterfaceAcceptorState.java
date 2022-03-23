@@ -123,52 +123,42 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
-
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = Output.ofNullable(dxGatewayId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder virtualInterfaceId(@Nullable Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
-
         public Builder virtualInterfaceId(@Nullable String virtualInterfaceId) {
             this.virtualInterfaceId = Output.ofNullable(virtualInterfaceId);
             return this;
-        }
-        public HostedTransitVirtualInterfaceAcceptorState build() {
+        }        public HostedTransitVirtualInterfaceAcceptorState build() {
             return new HostedTransitVirtualInterfaceAcceptorState(arn, dxGatewayId, tags, tagsAll, virtualInterfaceId);
         }
     }

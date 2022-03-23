@@ -269,87 +269,73 @@ public final class DatabaseInstanceSettings {
             this.activationPolicy = activationPolicy;
             return this;
         }
-
         public Builder availabilityType(@Nullable String availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
-
         public Builder backupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder databaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
-
+        public Builder databaseFlags(DatabaseInstanceSettingsDatabaseFlag... databaseFlags) {
+            return databaseFlags(List.of(databaseFlags));
+        }
         public Builder diskAutoresize(@Nullable Boolean diskAutoresize) {
             this.diskAutoresize = diskAutoresize;
             return this;
         }
-
         public Builder diskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
             this.diskAutoresizeLimit = diskAutoresizeLimit;
             return this;
         }
-
         public Builder diskSize(@Nullable Integer diskSize) {
             this.diskSize = diskSize;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder insightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
-
         public Builder ipConfiguration(@Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public Builder locationPreference(@Nullable DatabaseInstanceSettingsLocationPreference locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder pricingPlan(@Nullable String pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public DatabaseInstanceSettings build() {
+        }        public DatabaseInstanceSettings build() {
             return new DatabaseInstanceSettings(activationPolicy, availabilityType, backupConfiguration, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfig, ipConfiguration, locationPreference, maintenanceWindow, pricingPlan, tier, userLabels, version);
         }
     }

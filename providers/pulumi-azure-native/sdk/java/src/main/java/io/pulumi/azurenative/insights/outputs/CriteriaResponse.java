@@ -72,12 +72,13 @@ public final class CriteriaResponse {
             this.dimensions = dimensions;
             return this;
         }
-
+        public Builder dimensions(DimensionResponse... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
-        }
-        public CriteriaResponse build() {
+        }        public CriteriaResponse build() {
             return new CriteriaResponse(dimensions, metricName);
         }
     }

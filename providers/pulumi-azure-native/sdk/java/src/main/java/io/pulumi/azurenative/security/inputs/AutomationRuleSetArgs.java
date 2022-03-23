@@ -58,12 +58,13 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<AutomationTriggeringRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public AutomationRuleSetArgs build() {
+        public Builder rules(AutomationTriggeringRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public AutomationRuleSetArgs build() {
             return new AutomationRuleSetArgs(rules);
         }
     }

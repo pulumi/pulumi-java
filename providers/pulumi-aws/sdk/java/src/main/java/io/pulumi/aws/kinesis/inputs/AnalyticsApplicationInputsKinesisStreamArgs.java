@@ -73,22 +73,18 @@ public final class AnalyticsApplicationInputsKinesisStreamArgs extends io.pulumi
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public AnalyticsApplicationInputsKinesisStreamArgs build() {
+        }        public AnalyticsApplicationInputsKinesisStreamArgs build() {
             return new AnalyticsApplicationInputsKinesisStreamArgs(resourceArn, roleArn);
         }
     }

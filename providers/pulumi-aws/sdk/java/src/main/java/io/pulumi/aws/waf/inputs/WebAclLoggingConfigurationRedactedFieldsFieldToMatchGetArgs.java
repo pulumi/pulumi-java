@@ -74,22 +74,18 @@ public final class WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs e
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs build() {
+        }        public WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs build() {
             return new WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs(data, type);
         }
     }

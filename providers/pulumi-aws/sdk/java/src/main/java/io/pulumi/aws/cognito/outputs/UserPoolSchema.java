@@ -154,37 +154,30 @@ public final class UserPoolSchema {
             this.attributeDataType = Objects.requireNonNull(attributeDataType);
             return this;
         }
-
         public Builder developerOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
             this.developerOnlyAttribute = developerOnlyAttribute;
             return this;
         }
-
         public Builder mutable(@Nullable Boolean mutable) {
             this.mutable = mutable;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints) {
             this.numberAttributeConstraints = numberAttributeConstraints;
             return this;
         }
-
         public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
-
         public Builder stringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
             this.stringAttributeConstraints = stringAttributeConstraints;
             return this;
-        }
-        public UserPoolSchema build() {
+        }        public UserPoolSchema build() {
             return new UserPoolSchema(attributeDataType, developerOnlyAttribute, mutable, name, numberAttributeConstraints, required, stringAttributeConstraints);
         }
     }

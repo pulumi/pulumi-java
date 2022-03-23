@@ -201,52 +201,48 @@ public final class GetModelResult {
             this.activeOperations = Objects.requireNonNull(activeOperations);
             return this;
         }
-
+        public Builder activeOperations(OperationResponse... activeOperations) {
+            return activeOperations(List.of(activeOperations));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder modelHash(String modelHash) {
             this.modelHash = Objects.requireNonNull(modelHash);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(ModelStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tfliteModel(TfLiteModelResponse tfliteModel) {
             this.tfliteModel = Objects.requireNonNull(tfliteModel);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetModelResult build() {
+        }        public GetModelResult build() {
             return new GetModelResult(activeOperations, createTime, displayName, etag, modelHash, name, state, tags, tfliteModel, updateTime);
         }
     }

@@ -79,22 +79,18 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder coreCount(@Nullable String coreCount) {
             this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
-
         public Builder type(@Nullable Output<SchedulerAcceleratorConfigType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable SchedulerAcceleratorConfigType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SchedulerAcceleratorConfigArgs build() {
+        }        public SchedulerAcceleratorConfigArgs build() {
             return new SchedulerAcceleratorConfigArgs(coreCount, type);
         }
     }

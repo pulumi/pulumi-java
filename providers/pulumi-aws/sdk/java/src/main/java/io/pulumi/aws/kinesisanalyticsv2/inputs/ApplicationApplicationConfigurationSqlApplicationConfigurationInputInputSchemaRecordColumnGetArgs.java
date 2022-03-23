@@ -90,32 +90,26 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.mapping = mapping;
             return this;
         }
-
         public Builder mapping(@Nullable String mapping) {
             this.mapping = Output.ofNullable(mapping);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder sqlType(Output<String> sqlType) {
             this.sqlType = Objects.requireNonNull(sqlType);
             return this;
         }
-
         public Builder sqlType(String sqlType) {
             this.sqlType = Output.of(Objects.requireNonNull(sqlType));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs(mapping, name, sqlType);
         }
     }

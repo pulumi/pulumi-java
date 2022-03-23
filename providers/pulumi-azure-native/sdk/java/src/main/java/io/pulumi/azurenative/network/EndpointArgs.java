@@ -369,202 +369,171 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.customHeaders = customHeaders;
             return this;
         }
-
         public Builder customHeaders(@Nullable List<EndpointPropertiesCustomHeadersArgs> customHeaders) {
             this.customHeaders = Output.ofNullable(customHeaders);
             return this;
         }
-
+        public Builder customHeaders(EndpointPropertiesCustomHeadersArgs... customHeaders) {
+            return customHeaders(List.of(customHeaders));
+        }
         public Builder endpointLocation(@Nullable Output<String> endpointLocation) {
             this.endpointLocation = endpointLocation;
             return this;
         }
-
         public Builder endpointLocation(@Nullable String endpointLocation) {
             this.endpointLocation = Output.ofNullable(endpointLocation);
             return this;
         }
-
         public Builder endpointMonitorStatus(@Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus) {
             this.endpointMonitorStatus = endpointMonitorStatus;
             return this;
         }
-
         public Builder endpointMonitorStatus(@Nullable Either<String,EndpointMonitorStatus> endpointMonitorStatus) {
             this.endpointMonitorStatus = Output.ofNullable(endpointMonitorStatus);
             return this;
         }
-
         public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
-
         public Builder endpointStatus(@Nullable Output<Either<String,EndpointStatus>> endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
-
         public Builder endpointStatus(@Nullable Either<String,EndpointStatus> endpointStatus) {
             this.endpointStatus = Output.ofNullable(endpointStatus);
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder geoMapping(@Nullable Output<List<String>> geoMapping) {
             this.geoMapping = geoMapping;
             return this;
         }
-
         public Builder geoMapping(@Nullable List<String> geoMapping) {
             this.geoMapping = Output.ofNullable(geoMapping);
             return this;
         }
-
+        public Builder geoMapping(String... geoMapping) {
+            return geoMapping(List.of(geoMapping));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder minChildEndpoints(@Nullable Output<Double> minChildEndpoints) {
             this.minChildEndpoints = minChildEndpoints;
             return this;
         }
-
         public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
             this.minChildEndpoints = Output.ofNullable(minChildEndpoints);
             return this;
         }
-
         public Builder minChildEndpointsIPv4(@Nullable Output<Double> minChildEndpointsIPv4) {
             this.minChildEndpointsIPv4 = minChildEndpointsIPv4;
             return this;
         }
-
         public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
             this.minChildEndpointsIPv4 = Output.ofNullable(minChildEndpointsIPv4);
             return this;
         }
-
         public Builder minChildEndpointsIPv6(@Nullable Output<Double> minChildEndpointsIPv6) {
             this.minChildEndpointsIPv6 = minChildEndpointsIPv6;
             return this;
         }
-
         public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
             this.minChildEndpointsIPv6 = Output.ofNullable(minChildEndpointsIPv6);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Double> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Double priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subnets(@Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<EndpointPropertiesSubnetsArgs> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(EndpointPropertiesSubnetsArgs... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
-
         public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = Output.ofNullable(targetResourceId);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder weight(@Nullable Output<Double> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Double weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(customHeaders, endpointLocation, endpointMonitorStatus, endpointName, endpointStatus, endpointType, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, profileName, resourceGroupName, subnets, target, targetResourceId, type, weight);
         }
     }

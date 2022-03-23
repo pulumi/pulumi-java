@@ -72,12 +72,10 @@ public final class EncryptionSettingsElementResponse {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder keyEncryptionKey(@Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
-        }
-        public EncryptionSettingsElementResponse build() {
+        }        public EncryptionSettingsElementResponse build() {
             return new EncryptionSettingsElementResponse(diskEncryptionKey, keyEncryptionKey);
         }
     }

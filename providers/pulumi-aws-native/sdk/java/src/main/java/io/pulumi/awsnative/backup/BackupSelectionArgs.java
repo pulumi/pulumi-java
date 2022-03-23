@@ -66,22 +66,18 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
             this.backupPlanId = Objects.requireNonNull(backupPlanId);
             return this;
         }
-
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = Output.of(Objects.requireNonNull(backupPlanId));
             return this;
         }
-
         public Builder backupSelection(Output<BackupSelectionResourceTypeArgs> backupSelection) {
             this.backupSelection = Objects.requireNonNull(backupSelection);
             return this;
         }
-
         public Builder backupSelection(BackupSelectionResourceTypeArgs backupSelection) {
             this.backupSelection = Output.of(Objects.requireNonNull(backupSelection));
             return this;
-        }
-        public BackupSelectionArgs build() {
+        }        public BackupSelectionArgs build() {
             return new BackupSelectionArgs(backupPlanId, backupSelection);
         }
     }

@@ -88,17 +88,14 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
             this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
             return this;
-        }
-        public ListControllerConnectionDetailsArgs build() {
+        }        public ListControllerConnectionDetailsArgs build() {
             return new ListControllerConnectionDetailsArgs(name, resourceGroupName, targetContainerHostResourceId);
         }
     }

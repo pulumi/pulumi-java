@@ -143,32 +143,26 @@ public final class MetricAlarmMetricQueryMetric {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder period(Integer period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
-
         public Builder stat(String stat) {
             this.stat = Objects.requireNonNull(stat);
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
-        }
-        public MetricAlarmMetricQueryMetric build() {
+        }        public MetricAlarmMetricQueryMetric build() {
             return new MetricAlarmMetricQueryMetric(dimensions, metricName, namespace, period, stat, unit);
         }
     }

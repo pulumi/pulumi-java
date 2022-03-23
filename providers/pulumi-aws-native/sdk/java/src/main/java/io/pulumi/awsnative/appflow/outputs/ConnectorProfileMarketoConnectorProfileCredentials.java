@@ -104,22 +104,18 @@ public final class ConnectorProfileMarketoConnectorProfileCredentials {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
-        }
-        public ConnectorProfileMarketoConnectorProfileCredentials build() {
+        }        public ConnectorProfileMarketoConnectorProfileCredentials build() {
             return new ConnectorProfileMarketoConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }
     }

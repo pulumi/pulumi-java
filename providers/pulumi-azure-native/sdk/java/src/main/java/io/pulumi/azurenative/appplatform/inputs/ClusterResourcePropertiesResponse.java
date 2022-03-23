@@ -112,22 +112,18 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ClusterResourcePropertiesResponse build() {
+        }        public ClusterResourcePropertiesResponse build() {
             return new ClusterResourcePropertiesResponse(networkProfile, provisioningState, serviceId, version);
         }
     }

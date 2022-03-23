@@ -60,7 +60,9 @@ public final class StandardSqlTableTypeResponse extends io.pulumi.resources.Invo
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-        public StandardSqlTableTypeResponse build() {
+        public Builder columns(StandardSqlFieldResponse... columns) {
+            return columns(List.of(columns));
+        }        public StandardSqlTableTypeResponse build() {
             return new StandardSqlTableTypeResponse(columns);
         }
     }

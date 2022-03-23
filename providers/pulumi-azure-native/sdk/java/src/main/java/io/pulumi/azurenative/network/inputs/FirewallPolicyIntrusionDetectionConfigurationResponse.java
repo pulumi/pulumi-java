@@ -80,12 +80,16 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
             this.bypassTrafficSettings = bypassTrafficSettings;
             return this;
         }
-
+        public Builder bypassTrafficSettings(FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse... bypassTrafficSettings) {
+            return bypassTrafficSettings(List.of(bypassTrafficSettings));
+        }
         public Builder signatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
             this.signatureOverrides = signatureOverrides;
             return this;
         }
-        public FirewallPolicyIntrusionDetectionConfigurationResponse build() {
+        public Builder signatureOverrides(FirewallPolicyIntrusionDetectionSignatureSpecificationResponse... signatureOverrides) {
+            return signatureOverrides(List.of(signatureOverrides));
+        }        public FirewallPolicyIntrusionDetectionConfigurationResponse build() {
             return new FirewallPolicyIntrusionDetectionConfigurationResponse(bypassTrafficSettings, signatureOverrides);
         }
     }

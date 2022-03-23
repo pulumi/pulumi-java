@@ -157,72 +157,58 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.attributeDataType = Objects.requireNonNull(attributeDataType);
             return this;
         }
-
         public Builder attributeDataType(String attributeDataType) {
             this.attributeDataType = Output.of(Objects.requireNonNull(attributeDataType));
             return this;
         }
-
         public Builder developerOnlyAttribute(@Nullable Output<Boolean> developerOnlyAttribute) {
             this.developerOnlyAttribute = developerOnlyAttribute;
             return this;
         }
-
         public Builder developerOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
             this.developerOnlyAttribute = Output.ofNullable(developerOnlyAttribute);
             return this;
         }
-
         public Builder mutable(@Nullable Output<Boolean> mutable) {
             this.mutable = mutable;
             return this;
         }
-
         public Builder mutable(@Nullable Boolean mutable) {
             this.mutable = Output.ofNullable(mutable);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder numberAttributeConstraints(@Nullable Output<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints) {
             this.numberAttributeConstraints = numberAttributeConstraints;
             return this;
         }
-
         public Builder numberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraintsArgs numberAttributeConstraints) {
             this.numberAttributeConstraints = Output.ofNullable(numberAttributeConstraints);
             return this;
         }
-
         public Builder required(@Nullable Output<Boolean> required) {
             this.required = required;
             return this;
         }
-
         public Builder required(@Nullable Boolean required) {
             this.required = Output.ofNullable(required);
             return this;
         }
-
         public Builder stringAttributeConstraints(@Nullable Output<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints) {
             this.stringAttributeConstraints = stringAttributeConstraints;
             return this;
         }
-
         public Builder stringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraintsArgs stringAttributeConstraints) {
             this.stringAttributeConstraints = Output.ofNullable(stringAttributeConstraints);
             return this;
-        }
-        public UserPoolSchemaArgs build() {
+        }        public UserPoolSchemaArgs build() {
             return new UserPoolSchemaArgs(attributeDataType, developerOnlyAttribute, mutable, name, numberAttributeConstraints, required, stringAttributeConstraints);
         }
     }

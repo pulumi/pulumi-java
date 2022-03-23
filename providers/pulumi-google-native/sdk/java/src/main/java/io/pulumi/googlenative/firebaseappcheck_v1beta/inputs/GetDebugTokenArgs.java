@@ -78,17 +78,14 @@ public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder debugTokenId(String debugTokenId) {
             this.debugTokenId = Objects.requireNonNull(debugTokenId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDebugTokenArgs build() {
+        }        public GetDebugTokenArgs build() {
             return new GetDebugTokenArgs(appId, debugTokenId, project);
         }
     }

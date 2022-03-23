@@ -120,27 +120,22 @@ public final class SkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(capacity, family, name, size, tier);
         }
     }

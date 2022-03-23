@@ -154,72 +154,58 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder alternateId(@Nullable Output<String> alternateId) {
             this.alternateId = alternateId;
             return this;
         }
-
         public Builder alternateId(@Nullable String alternateId) {
             this.alternateId = Output.ofNullable(alternateId);
             return this;
         }
-
         public Builder assetName(@Nullable Output<String> assetName) {
             this.assetName = assetName;
             return this;
         }
-
         public Builder assetName(@Nullable String assetName) {
             this.assetName = Output.ofNullable(assetName);
             return this;
         }
-
         public Builder container(@Nullable Output<String> container) {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable String container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
-        }
-        public AssetArgs build() {
+        }        public AssetArgs build() {
             return new AssetArgs(accountName, alternateId, assetName, container, description, resourceGroupName, storageAccountName);
         }
     }

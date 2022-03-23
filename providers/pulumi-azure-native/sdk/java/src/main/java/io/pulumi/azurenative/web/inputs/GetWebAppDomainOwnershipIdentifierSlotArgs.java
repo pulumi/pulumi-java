@@ -104,22 +104,18 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.
             this.domainOwnershipIdentifierName = Objects.requireNonNull(domainOwnershipIdentifierName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppDomainOwnershipIdentifierSlotArgs build() {
+        }        public GetWebAppDomainOwnershipIdentifierSlotArgs build() {
             return new GetWebAppDomainOwnershipIdentifierSlotArgs(domainOwnershipIdentifierName, name, resourceGroupName, slot);
         }
     }

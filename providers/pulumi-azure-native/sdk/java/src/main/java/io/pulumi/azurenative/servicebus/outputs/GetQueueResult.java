@@ -427,122 +427,98 @@ public final class GetQueueResult {
             this.accessedAt = Objects.requireNonNull(accessedAt);
             return this;
         }
-
         public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
             this.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
-
         public Builder countDetails(MessageCountDetailsResponse countDetails) {
             this.countDetails = Objects.requireNonNull(countDetails);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder deadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
             return this;
         }
-
         public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
-
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
-
         public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
             this.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
-
         public Builder enableExpress(@Nullable Boolean enableExpress) {
             this.enableExpress = enableExpress;
             return this;
         }
-
         public Builder enablePartitioning(@Nullable Boolean enablePartitioning) {
             this.enablePartitioning = enablePartitioning;
             return this;
         }
-
         public Builder forwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
             return this;
         }
-
         public Builder forwardTo(@Nullable String forwardTo) {
             this.forwardTo = forwardTo;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lockDuration(@Nullable String lockDuration) {
             this.lockDuration = lockDuration;
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public Builder maxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
             this.maxSizeInMegabytes = maxSizeInMegabytes;
             return this;
         }
-
         public Builder messageCount(Double messageCount) {
             this.messageCount = Objects.requireNonNull(messageCount);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
             this.requiresDuplicateDetection = requiresDuplicateDetection;
             return this;
         }
-
         public Builder requiresSession(@Nullable Boolean requiresSession) {
             this.requiresSession = requiresSession;
             return this;
         }
-
         public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
-        }
-        public GetQueueResult build() {
+        }        public GetQueueResult build() {
             return new GetQueueResult(accessedAt, autoDeleteOnIdle, countDetails, createdAt, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, forwardDeadLetteredMessagesTo, forwardTo, id, lockDuration, maxDeliveryCount, maxSizeInMegabytes, messageCount, name, requiresDuplicateDetection, requiresSession, sizeInBytes, status, type, updatedAt);
         }
     }

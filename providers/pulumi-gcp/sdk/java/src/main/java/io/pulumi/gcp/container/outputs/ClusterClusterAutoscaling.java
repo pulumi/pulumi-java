@@ -123,22 +123,21 @@ public final class ClusterClusterAutoscaling {
             this.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
-
         public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
             this.autoscalingProfile = autoscalingProfile;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }
-        public ClusterClusterAutoscaling build() {
+        public Builder resourceLimits(ClusterClusterAutoscalingResourceLimit... resourceLimits) {
+            return resourceLimits(List.of(resourceLimits));
+        }        public ClusterClusterAutoscaling build() {
             return new ClusterClusterAutoscaling(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }
     }

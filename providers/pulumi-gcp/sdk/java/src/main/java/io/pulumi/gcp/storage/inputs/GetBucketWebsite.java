@@ -64,12 +64,10 @@ public final class GetBucketWebsite extends io.pulumi.resources.InvokeArgs {
             this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix);
             return this;
         }
-
         public Builder notFoundPage(String notFoundPage) {
             this.notFoundPage = Objects.requireNonNull(notFoundPage);
             return this;
-        }
-        public GetBucketWebsite build() {
+        }        public GetBucketWebsite build() {
             return new GetBucketWebsite(mainPageSuffix, notFoundPage);
         }
     }

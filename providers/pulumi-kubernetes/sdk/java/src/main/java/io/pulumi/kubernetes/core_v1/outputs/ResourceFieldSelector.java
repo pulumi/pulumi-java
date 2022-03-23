@@ -87,17 +87,14 @@ public final class ResourceFieldSelector {
             this.containerName = containerName;
             return this;
         }
-
         public Builder divisor(@Nullable String divisor) {
             this.divisor = divisor;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public ResourceFieldSelector build() {
+        }        public ResourceFieldSelector build() {
             return new ResourceFieldSelector(containerName, divisor, resource);
         }
     }

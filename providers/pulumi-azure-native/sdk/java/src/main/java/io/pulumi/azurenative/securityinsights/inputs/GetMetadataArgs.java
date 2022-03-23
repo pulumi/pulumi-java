@@ -104,22 +104,18 @@ public final class GetMetadataArgs extends io.pulumi.resources.InvokeArgs {
             this.metadataName = Objects.requireNonNull(metadataName);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetMetadataArgs build() {
+        }        public GetMetadataArgs build() {
             return new GetMetadataArgs(metadataName, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }
     }

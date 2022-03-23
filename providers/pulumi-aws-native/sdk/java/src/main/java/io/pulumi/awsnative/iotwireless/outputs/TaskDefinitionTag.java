@@ -55,12 +55,10 @@ public final class TaskDefinitionTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TaskDefinitionTag build() {
+        }        public TaskDefinitionTag build() {
             return new TaskDefinitionTag(key, value);
         }
     }

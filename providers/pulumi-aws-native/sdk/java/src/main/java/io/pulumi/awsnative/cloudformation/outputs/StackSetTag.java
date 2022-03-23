@@ -69,12 +69,10 @@ public final class StackSetTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StackSetTag build() {
+        }        public StackSetTag build() {
             return new StackSetTag(key, value);
         }
     }

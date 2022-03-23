@@ -53,8 +53,7 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
         public Builder secretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvValueFrom build() {
+        }        public ServiceTemplateSpecContainerEnvValueFrom build() {
             return new ServiceTemplateSpecContainerEnvValueFrom(secretKeyRef);
         }
     }

@@ -85,17 +85,14 @@ public final class DeviceDetailsResponse {
             this.managementResourceId = Objects.requireNonNull(managementResourceId);
             return this;
         }
-
         public Builder managementResourceTenantId(String managementResourceTenantId) {
             this.managementResourceTenantId = Objects.requireNonNull(managementResourceTenantId);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
-        }
-        public DeviceDetailsResponse build() {
+        }        public DeviceDetailsResponse build() {
             return new DeviceDetailsResponse(managementResourceId, managementResourceTenantId, serialNumber);
         }
     }

@@ -281,77 +281,65 @@ public final class GetCanaryResult {
             this.artifactConfig = artifactConfig;
             return this;
         }
-
         public Builder artifactS3Location(@Nullable String artifactS3Location) {
             this.artifactS3Location = artifactS3Location;
             return this;
         }
-
         public Builder code(@Nullable CanaryCode code) {
             this.code = code;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
             this.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder runConfig(@Nullable CanaryRunConfig runConfig) {
             this.runConfig = runConfig;
             return this;
         }
-
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public Builder schedule(@Nullable CanarySchedule schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder startCanaryAfterCreation(@Nullable Boolean startCanaryAfterCreation) {
             this.startCanaryAfterCreation = startCanaryAfterCreation;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
             this.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
-
         public Builder tags(@Nullable List<CanaryTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(CanaryTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vPCConfig(@Nullable CanaryVPCConfig vPCConfig) {
             this.vPCConfig = vPCConfig;
             return this;
         }
-
         public Builder visualReference(@Nullable CanaryVisualReference visualReference) {
             this.visualReference = visualReference;
             return this;
-        }
-        public GetCanaryResult build() {
+        }        public GetCanaryResult build() {
             return new GetCanaryResult(artifactConfig, artifactS3Location, code, executionRoleArn, failureRetentionPeriod, id, runConfig, runtimeVersion, schedule, startCanaryAfterCreation, state, successRetentionPeriod, tags, vPCConfig, visualReference);
         }
     }

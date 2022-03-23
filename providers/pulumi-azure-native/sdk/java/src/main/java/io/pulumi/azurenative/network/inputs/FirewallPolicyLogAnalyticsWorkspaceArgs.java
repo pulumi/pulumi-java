@@ -79,22 +79,18 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<SubResourceArgs> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable SubResourceArgs workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
-        }
-        public FirewallPolicyLogAnalyticsWorkspaceArgs build() {
+        }        public FirewallPolicyLogAnalyticsWorkspaceArgs build() {
             return new FirewallPolicyLogAnalyticsWorkspaceArgs(region, workspaceId);
         }
     }

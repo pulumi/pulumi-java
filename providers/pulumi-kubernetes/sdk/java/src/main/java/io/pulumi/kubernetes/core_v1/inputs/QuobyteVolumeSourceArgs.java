@@ -143,62 +143,50 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
             this.group = group;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = Output.ofNullable(group);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder registry(Output<String> registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
-
         public Builder registry(String registry) {
             this.registry = Output.of(Objects.requireNonNull(registry));
             return this;
         }
-
         public Builder tenant(@Nullable Output<String> tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder tenant(@Nullable String tenant) {
             this.tenant = Output.ofNullable(tenant);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
         }
-
         public Builder volume(Output<String> volume) {
             this.volume = Objects.requireNonNull(volume);
             return this;
         }
-
         public Builder volume(String volume) {
             this.volume = Output.of(Objects.requireNonNull(volume));
             return this;
-        }
-        public QuobyteVolumeSourceArgs build() {
+        }        public QuobyteVolumeSourceArgs build() {
             return new QuobyteVolumeSourceArgs(group, readOnly, registry, tenant, user, volume);
         }
     }

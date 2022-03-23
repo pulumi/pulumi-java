@@ -178,82 +178,66 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
             this.boolValue = boolValue;
             return this;
         }
-
         public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Output.ofNullable(boolValue);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
-
         public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
-
         public Builder enumValue(@Nullable Output<String> enumValue) {
             this.enumValue = enumValue;
             return this;
         }
-
         public Builder enumValue(@Nullable String enumValue) {
             this.enumValue = Output.ofNullable(enumValue);
             return this;
         }
-
         public Builder fieldName(Output<String> fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public Builder fieldName(String fieldName) {
             this.fieldName = Output.of(Objects.requireNonNull(fieldName));
             return this;
         }
-
         public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
-
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
-
         public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Output.ofNullable(timestampValue);
             return this;
-        }
-        public TagFieldGetArgs build() {
+        }        public TagFieldGetArgs build() {
             return new TagFieldGetArgs(boolValue, displayName, doubleValue, enumValue, fieldName, order, stringValue, timestampValue);
         }
     }

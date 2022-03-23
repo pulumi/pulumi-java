@@ -69,12 +69,10 @@ public final class ParticipantPropertyReferenceResponse {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
-
         public Builder targetPropertyName(String targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
-        }
-        public ParticipantPropertyReferenceResponse build() {
+        }        public ParticipantPropertyReferenceResponse build() {
             return new ParticipantPropertyReferenceResponse(sourcePropertyName, targetPropertyName);
         }
     }

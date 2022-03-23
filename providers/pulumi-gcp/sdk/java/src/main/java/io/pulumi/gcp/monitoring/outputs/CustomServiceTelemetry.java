@@ -57,8 +57,7 @@ public final class CustomServiceTelemetry {
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
-        }
-        public CustomServiceTelemetry build() {
+        }        public CustomServiceTelemetry build() {
             return new CustomServiceTelemetry(resourceName);
         }
     }

@@ -58,8 +58,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
         public Builder exactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig) {
             this.exactMatchConfig = Objects.requireNonNull(exactMatchConfig);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(exactMatchConfig);
         }
     }

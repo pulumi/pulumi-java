@@ -214,102 +214,88 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationOutpostArn(@Nullable Output<String> destinationOutpostArn) {
             this.destinationOutpostArn = destinationOutpostArn;
             return this;
         }
-
         public Builder destinationOutpostArn(@Nullable String destinationOutpostArn) {
             this.destinationOutpostArn = Output.ofNullable(destinationOutpostArn);
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<AmiCopyEbsBlockDeviceArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(AmiCopyEbsBlockDeviceArgs... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<AmiCopyEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(AmiCopyEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sourceAmiId(Output<String> sourceAmiId) {
             this.sourceAmiId = Objects.requireNonNull(sourceAmiId);
             return this;
         }
-
         public Builder sourceAmiId(String sourceAmiId) {
             this.sourceAmiId = Output.of(Objects.requireNonNull(sourceAmiId));
             return this;
         }
-
         public Builder sourceAmiRegion(Output<String> sourceAmiRegion) {
             this.sourceAmiRegion = Objects.requireNonNull(sourceAmiRegion);
             return this;
         }
-
         public Builder sourceAmiRegion(String sourceAmiRegion) {
             this.sourceAmiRegion = Output.of(Objects.requireNonNull(sourceAmiRegion));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AmiCopyArgs build() {
+        }        public AmiCopyArgs build() {
             return new AmiCopyArgs(description, destinationOutpostArn, ebsBlockDevices, encrypted, ephemeralBlockDevices, kmsKeyId, name, sourceAmiId, sourceAmiRegion, tags);
         }
     }

@@ -103,52 +103,42 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
             this.collectionName = Objects.requireNonNull(collectionName);
             return this;
         }
-
         public Builder collectionName(String collectionName) {
             this.collectionName = Output.of(Objects.requireNonNull(collectionName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<GeofenceCollectionPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable GeofenceCollectionPricingPlan pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
-
         public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
             this.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
-
         public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
             this.pricingPlanDataSource = Output.ofNullable(pricingPlanDataSource);
             return this;
-        }
-        public GeofenceCollectionArgs build() {
+        }        public GeofenceCollectionArgs build() {
             return new GeofenceCollectionArgs(collectionName, description, kmsKeyId, pricingPlan, pricingPlanDataSource);
         }
     }

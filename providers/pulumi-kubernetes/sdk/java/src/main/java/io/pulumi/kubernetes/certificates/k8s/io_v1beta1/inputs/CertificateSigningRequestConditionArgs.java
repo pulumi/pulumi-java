@@ -138,62 +138,50 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
-
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
             this.lastTransitionTime = Output.ofNullable(lastTransitionTime);
             return this;
         }
-
         public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
-
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
             this.lastUpdateTime = Output.ofNullable(lastUpdateTime);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public CertificateSigningRequestConditionArgs build() {
+        }        public CertificateSigningRequestConditionArgs build() {
             return new CertificateSigningRequestConditionArgs(lastTransitionTime, lastUpdateTime, message, reason, status, type);
         }
     }

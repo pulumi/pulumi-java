@@ -92,17 +92,14 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
             this.allocationMethod = Objects.requireNonNull(allocationMethod);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder subnetMask(String subnetMask) {
             this.subnetMask = Objects.requireNonNull(subnetMask);
             return this;
-        }
-        public NicIPAddressSettingsResponse build() {
+        }        public NicIPAddressSettingsResponse build() {
             return new NicIPAddressSettingsResponse(allocationMethod, ipAddress, subnetMask);
         }
     }

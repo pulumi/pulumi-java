@@ -108,22 +108,21 @@ public final class DataboxJobSecretsResponse {
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
-
         public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
-
         public Builder podSecrets(@Nullable List<DataBoxSecretResponse> podSecrets) {
             this.podSecrets = podSecrets;
             return this;
         }
-        public DataboxJobSecretsResponse build() {
+        public Builder podSecrets(DataBoxSecretResponse... podSecrets) {
+            return podSecrets(List.of(podSecrets));
+        }        public DataboxJobSecretsResponse build() {
             return new DataboxJobSecretsResponse(dcAccessSecurityCode, error, jobSecretsType, podSecrets);
         }
     }

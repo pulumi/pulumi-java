@@ -52,12 +52,10 @@ public final class AssistantAssociationAssociationDataArgs extends io.pulumi.res
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
         }
-
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = Output.of(Objects.requireNonNull(knowledgeBaseId));
             return this;
-        }
-        public AssistantAssociationAssociationDataArgs build() {
+        }        public AssistantAssociationAssociationDataArgs build() {
             return new AssistantAssociationAssociationDataArgs(knowledgeBaseId);
         }
     }

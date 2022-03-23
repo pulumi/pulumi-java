@@ -140,32 +140,32 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfig {
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
-
         public Builder configurations(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigConfiguration> configurations) {
             this.configurations = configurations;
             return this;
         }
-
+        public Builder configurations(ClusterMasterInstanceFleetInstanceTypeConfigConfiguration... configurations) {
+            return configurations(List.of(configurations));
+        }
         public Builder ebsConfigs(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
+        public Builder ebsConfigs(ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public ClusterMasterInstanceFleetInstanceTypeConfig build() {
+        }        public ClusterMasterInstanceFleetInstanceTypeConfig build() {
             return new ClusterMasterInstanceFleetInstanceTypeConfig(bidPrice, bidPriceAsPercentageOfOnDemandPrice, configurations, ebsConfigs, instanceType, weightedCapacity);
         }
     }

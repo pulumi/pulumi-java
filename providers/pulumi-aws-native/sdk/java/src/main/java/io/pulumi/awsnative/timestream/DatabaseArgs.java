@@ -92,32 +92,29 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DatabaseTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DatabaseTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DatabaseArgs build() {
+        public Builder tags(DatabaseTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DatabaseArgs build() {
             return new DatabaseArgs(databaseName, kmsKeyId, tags);
         }
     }

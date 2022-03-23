@@ -201,52 +201,42 @@ public final class GetStorageAccountResult {
             this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
             return this;
         }
-
         public Builder containerCount(Integer containerCount) {
             this.containerCount = Objects.requireNonNull(containerCount);
             return this;
         }
-
         public Builder dataPolicy(String dataPolicy) {
             this.dataPolicy = Objects.requireNonNull(dataPolicy);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder storageAccountCredentialId(@Nullable String storageAccountCredentialId) {
             this.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
-
         public Builder storageAccountStatus(@Nullable String storageAccountStatus) {
             this.storageAccountStatus = storageAccountStatus;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStorageAccountResult build() {
+        }        public GetStorageAccountResult build() {
             return new GetStorageAccountResult(blobEndpoint, containerCount, dataPolicy, description, id, name, storageAccountCredentialId, storageAccountStatus, systemData, type);
         }
     }

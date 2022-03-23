@@ -50,8 +50,7 @@ public final class GetClusterIstioServiceTelemetry extends io.pulumi.resources.I
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetClusterIstioServiceTelemetry build() {
+        }        public GetClusterIstioServiceTelemetry build() {
             return new GetClusterIstioServiceTelemetry(resourceName);
         }
     }

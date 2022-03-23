@@ -82,32 +82,26 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public ModelDockerSectionBaseImageRegistryArgs build() {
+        }        public ModelDockerSectionBaseImageRegistryArgs build() {
             return new ModelDockerSectionBaseImageRegistryArgs(address, password, username);
         }
     }

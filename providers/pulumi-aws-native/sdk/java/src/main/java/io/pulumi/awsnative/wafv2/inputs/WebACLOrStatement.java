@@ -52,7 +52,9 @@ public final class WebACLOrStatement extends io.pulumi.resources.InvokeArgs {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public WebACLOrStatement build() {
+        public Builder statements(WebACLStatement... statements) {
+            return statements(List.of(statements));
+        }        public WebACLOrStatement build() {
             return new WebACLOrStatement(statements);
         }
     }

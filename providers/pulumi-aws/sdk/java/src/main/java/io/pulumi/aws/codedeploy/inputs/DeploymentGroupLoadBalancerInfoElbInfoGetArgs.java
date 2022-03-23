@@ -57,12 +57,10 @@ public final class DeploymentGroupLoadBalancerInfoElbInfoGetArgs extends io.pulu
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfoElbInfoGetArgs build() {
+        }        public DeploymentGroupLoadBalancerInfoElbInfoGetArgs build() {
             return new DeploymentGroupLoadBalancerInfoElbInfoGetArgs(name);
         }
     }

@@ -64,17 +64,17 @@ public final class GetBackendServiceConsistentHash {
             this.httpCookies = Objects.requireNonNull(httpCookies);
             return this;
         }
-
+        public Builder httpCookies(GetBackendServiceConsistentHashHttpCooky... httpCookies) {
+            return httpCookies(List.of(httpCookies));
+        }
         public Builder httpHeaderName(String httpHeaderName) {
             this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
             return this;
         }
-
         public Builder minimumRingSize(Integer minimumRingSize) {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
-        }
-        public GetBackendServiceConsistentHash build() {
+        }        public GetBackendServiceConsistentHash build() {
             return new GetBackendServiceConsistentHash(httpCookies, httpHeaderName, minimumRingSize);
         }
     }

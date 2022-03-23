@@ -80,12 +80,10 @@ public final class AlertPolicyConditionConditionThresholdTrigger {
             this.count = count;
             return this;
         }
-
         public Builder percent(@Nullable Double percent) {
             this.percent = percent;
             return this;
-        }
-        public AlertPolicyConditionConditionThresholdTrigger build() {
+        }        public AlertPolicyConditionConditionThresholdTrigger build() {
             return new AlertPolicyConditionConditionThresholdTrigger(count, percent);
         }
     }

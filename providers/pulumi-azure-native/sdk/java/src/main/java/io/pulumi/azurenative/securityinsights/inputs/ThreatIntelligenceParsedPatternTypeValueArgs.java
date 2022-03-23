@@ -78,22 +78,18 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder valueType(@Nullable Output<String> valueType) {
             this.valueType = valueType;
             return this;
         }
-
         public Builder valueType(@Nullable String valueType) {
             this.valueType = Output.ofNullable(valueType);
             return this;
-        }
-        public ThreatIntelligenceParsedPatternTypeValueArgs build() {
+        }        public ThreatIntelligenceParsedPatternTypeValueArgs build() {
             return new ThreatIntelligenceParsedPatternTypeValueArgs(value, valueType);
         }
     }

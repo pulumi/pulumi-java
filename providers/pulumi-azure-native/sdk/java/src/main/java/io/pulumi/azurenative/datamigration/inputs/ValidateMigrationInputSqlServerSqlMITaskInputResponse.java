@@ -163,37 +163,36 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
             this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
             return this;
         }
-
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
-
         public Builder backupMode(@Nullable String backupMode) {
             this.backupMode = backupMode;
             return this;
         }
-
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder selectedLogins(@Nullable List<String> selectedLogins) {
             this.selectedLogins = selectedLogins;
             return this;
         }
-
+        public Builder selectedLogins(String... selectedLogins) {
+            return selectedLogins(List.of(selectedLogins));
+        }
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public ValidateMigrationInputSqlServerSqlMITaskInputResponse build() {
+        }        public ValidateMigrationInputSqlServerSqlMITaskInputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }
     }

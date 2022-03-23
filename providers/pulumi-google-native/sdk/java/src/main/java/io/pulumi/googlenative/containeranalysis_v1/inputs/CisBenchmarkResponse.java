@@ -69,12 +69,10 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
             this.profileLevel = Objects.requireNonNull(profileLevel);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
-        }
-        public CisBenchmarkResponse build() {
+        }        public CisBenchmarkResponse build() {
             return new CisBenchmarkResponse(profileLevel, severity);
         }
     }

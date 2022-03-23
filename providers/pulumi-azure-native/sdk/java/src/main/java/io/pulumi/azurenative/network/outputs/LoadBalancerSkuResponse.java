@@ -71,12 +71,10 @@ public final class LoadBalancerSkuResponse {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public LoadBalancerSkuResponse build() {
+        }        public LoadBalancerSkuResponse build() {
             return new LoadBalancerSkuResponse(name, tier);
         }
     }

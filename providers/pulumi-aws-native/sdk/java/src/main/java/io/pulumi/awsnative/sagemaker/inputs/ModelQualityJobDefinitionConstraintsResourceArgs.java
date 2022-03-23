@@ -61,12 +61,10 @@ public final class ModelQualityJobDefinitionConstraintsResourceArgs extends io.p
             this.s3Uri = s3Uri;
             return this;
         }
-
         public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = Output.ofNullable(s3Uri);
             return this;
-        }
-        public ModelQualityJobDefinitionConstraintsResourceArgs build() {
+        }        public ModelQualityJobDefinitionConstraintsResourceArgs build() {
             return new ModelQualityJobDefinitionConstraintsResourceArgs(s3Uri);
         }
     }

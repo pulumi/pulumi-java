@@ -58,8 +58,7 @@ public final class EndpointMatcherResponse extends io.pulumi.resources.InvokeArg
         public Builder metadataLabelMatcher(EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
             this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
             return this;
-        }
-        public EndpointMatcherResponse build() {
+        }        public EndpointMatcherResponse build() {
             return new EndpointMatcherResponse(metadataLabelMatcher);
         }
     }

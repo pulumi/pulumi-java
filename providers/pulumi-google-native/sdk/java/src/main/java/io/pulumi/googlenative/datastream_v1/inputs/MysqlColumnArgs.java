@@ -160,72 +160,58 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder column(@Nullable Output<String> column) {
             this.column = column;
             return this;
         }
-
         public Builder column(@Nullable String column) {
             this.column = Output.ofNullable(column);
             return this;
         }
-
         public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder length(@Nullable Output<Integer> length) {
             this.length = length;
             return this;
         }
-
         public Builder length(@Nullable Integer length) {
             this.length = Output.ofNullable(length);
             return this;
         }
-
         public Builder nullable(@Nullable Output<Boolean> nullable) {
             this.nullable = nullable;
             return this;
         }
-
         public Builder nullable(@Nullable Boolean nullable) {
             this.nullable = Output.ofNullable(nullable);
             return this;
         }
-
         public Builder ordinalPosition(@Nullable Output<Integer> ordinalPosition) {
             this.ordinalPosition = ordinalPosition;
             return this;
         }
-
         public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
             this.ordinalPosition = Output.ofNullable(ordinalPosition);
             return this;
         }
-
         public Builder primaryKey(@Nullable Output<Boolean> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder primaryKey(@Nullable Boolean primaryKey) {
             this.primaryKey = Output.ofNullable(primaryKey);
             return this;
-        }
-        public MysqlColumnArgs build() {
+        }        public MysqlColumnArgs build() {
             return new MysqlColumnArgs(collation, column, dataType, length, nullable, ordinalPosition, primaryKey);
         }
     }

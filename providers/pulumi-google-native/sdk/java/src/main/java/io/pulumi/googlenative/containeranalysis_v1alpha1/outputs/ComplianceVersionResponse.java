@@ -69,12 +69,10 @@ public final class ComplianceVersionResponse {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ComplianceVersionResponse build() {
+        }        public ComplianceVersionResponse build() {
             return new ComplianceVersionResponse(cpeUri, version);
         }
     }

@@ -135,32 +135,26 @@ public final class AudioMappingResponse {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
-
         public Builder gainDb(Double gainDb) {
             this.gainDb = Objects.requireNonNull(gainDb);
             return this;
         }
-
         public Builder inputChannel(Integer inputChannel) {
             this.inputChannel = Objects.requireNonNull(inputChannel);
             return this;
         }
-
         public Builder inputKey(String inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
-
         public Builder inputTrack(Integer inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
-
         public Builder outputChannel(Integer outputChannel) {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
-        }
-        public AudioMappingResponse build() {
+        }        public AudioMappingResponse build() {
             return new AudioMappingResponse(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
         }
     }

@@ -96,17 +96,17 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
             this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
             return this;
         }
-
+        public Builder allowedAadTenantIdsForLinking(String... allowedAadTenantIdsForLinking) {
+            return allowedAadTenantIdsForLinking(List.of(allowedAadTenantIdsForLinking));
+        }
         public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
             this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
             return this;
         }
-
         public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
             this.preventDataExfiltration = preventDataExfiltration;
             return this;
-        }
-        public ManagedVirtualNetworkSettingsResponse build() {
+        }        public ManagedVirtualNetworkSettingsResponse build() {
             return new ManagedVirtualNetworkSettingsResponse(allowedAadTenantIdsForLinking, linkedAccessCheckOnTargetResource, preventDataExfiltration);
         }
     }

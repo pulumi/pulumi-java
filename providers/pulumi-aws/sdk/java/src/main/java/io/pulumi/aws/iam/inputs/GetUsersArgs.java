@@ -76,12 +76,10 @@ public final class GetUsersArgs extends io.pulumi.resources.InvokeArgs {
             this.nameRegex = nameRegex;
             return this;
         }
-
         public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
-        }
-        public GetUsersArgs build() {
+        }        public GetUsersArgs build() {
             return new GetUsersArgs(nameRegex, pathPrefix);
         }
     }

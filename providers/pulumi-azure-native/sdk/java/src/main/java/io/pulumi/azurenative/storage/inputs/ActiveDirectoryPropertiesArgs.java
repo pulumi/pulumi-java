@@ -141,62 +141,50 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
             this.azureStorageSid = Objects.requireNonNull(azureStorageSid);
             return this;
         }
-
         public Builder azureStorageSid(String azureStorageSid) {
             this.azureStorageSid = Output.of(Objects.requireNonNull(azureStorageSid));
             return this;
         }
-
         public Builder domainGuid(Output<String> domainGuid) {
             this.domainGuid = Objects.requireNonNull(domainGuid);
             return this;
         }
-
         public Builder domainGuid(String domainGuid) {
             this.domainGuid = Output.of(Objects.requireNonNull(domainGuid));
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder domainSid(Output<String> domainSid) {
             this.domainSid = Objects.requireNonNull(domainSid);
             return this;
         }
-
         public Builder domainSid(String domainSid) {
             this.domainSid = Output.of(Objects.requireNonNull(domainSid));
             return this;
         }
-
         public Builder forestName(Output<String> forestName) {
             this.forestName = Objects.requireNonNull(forestName);
             return this;
         }
-
         public Builder forestName(String forestName) {
             this.forestName = Output.of(Objects.requireNonNull(forestName));
             return this;
         }
-
         public Builder netBiosDomainName(Output<String> netBiosDomainName) {
             this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
             return this;
         }
-
         public Builder netBiosDomainName(String netBiosDomainName) {
             this.netBiosDomainName = Output.of(Objects.requireNonNull(netBiosDomainName));
             return this;
-        }
-        public ActiveDirectoryPropertiesArgs build() {
+        }        public ActiveDirectoryPropertiesArgs build() {
             return new ActiveDirectoryPropertiesArgs(azureStorageSid, domainGuid, domainName, domainSid, forestName, netBiosDomainName);
         }
     }

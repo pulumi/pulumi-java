@@ -52,7 +52,9 @@ public final class GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod ex
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod build() {
             return new GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod(items);
         }
     }

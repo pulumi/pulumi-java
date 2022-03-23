@@ -58,12 +58,10 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
-        }
-        public AiMetadataStoreEncryptionSpecGetArgs build() {
+        }        public AiMetadataStoreEncryptionSpecGetArgs build() {
             return new AiMetadataStoreEncryptionSpecGetArgs(kmsKeyName);
         }
     }

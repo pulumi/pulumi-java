@@ -107,42 +107,34 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder containerPort(Output<Integer> containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder containerPort(Integer containerPort) {
             this.containerPort = Output.of(Objects.requireNonNull(containerPort));
             return this;
         }
-
         public Builder elbName(@Nullable Output<String> elbName) {
             this.elbName = elbName;
             return this;
         }
-
         public Builder elbName(@Nullable String elbName) {
             this.elbName = Output.ofNullable(elbName);
             return this;
         }
-
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
-        }
-        public ServiceLoadBalancerArgs build() {
+        }        public ServiceLoadBalancerArgs build() {
             return new ServiceLoadBalancerArgs(containerName, containerPort, elbName, targetGroupArn);
         }
     }

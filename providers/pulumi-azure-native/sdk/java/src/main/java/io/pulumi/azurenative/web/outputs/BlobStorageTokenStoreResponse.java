@@ -53,8 +53,7 @@ public final class BlobStorageTokenStoreResponse {
         public Builder sasUrlSettingName(@Nullable String sasUrlSettingName) {
             this.sasUrlSettingName = sasUrlSettingName;
             return this;
-        }
-        public BlobStorageTokenStoreResponse build() {
+        }        public BlobStorageTokenStoreResponse build() {
             return new BlobStorageTokenStoreResponse(sasUrlSettingName);
         }
     }

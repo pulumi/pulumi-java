@@ -58,8 +58,7 @@ public final class PlacementPolicyResponse extends io.pulumi.resources.InvokeArg
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PlacementPolicyResponse build() {
+        }        public PlacementPolicyResponse build() {
             return new PlacementPolicyResponse(type);
         }
     }

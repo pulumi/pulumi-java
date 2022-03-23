@@ -107,32 +107,26 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
             return this;
         }
-
         public Builder sourceUriPrefix(@Nullable Output<String> sourceUriPrefix) {
             this.sourceUriPrefix = sourceUriPrefix;
             return this;
         }
-
         public Builder sourceUriPrefix(@Nullable String sourceUriPrefix) {
             this.sourceUriPrefix = Output.ofNullable(sourceUriPrefix);
             return this;
-        }
-        public TableExternalDataConfigurationHivePartitioningOptionsArgs build() {
+        }        public TableExternalDataConfigurationHivePartitioningOptionsArgs build() {
             return new TableExternalDataConfigurationHivePartitioningOptionsArgs(mode, requirePartitionFilter, sourceUriPrefix);
         }
     }

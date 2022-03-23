@@ -92,32 +92,26 @@ public final class ConfigIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(String config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ConfigIamPolicyArgs build() {
+        }        public ConfigIamPolicyArgs build() {
             return new ConfigIamPolicyArgs(config, policyData, project);
         }
     }

@@ -72,12 +72,10 @@ public final class ListWebAppConnectionStringsArgs extends io.pulumi.resources.I
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppConnectionStringsArgs build() {
+        }        public ListWebAppConnectionStringsArgs build() {
             return new ListWebAppConnectionStringsArgs(name, resourceGroupName);
         }
     }

@@ -105,22 +105,18 @@ public final class FleetSpotOptions {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
-        }
-        public FleetSpotOptions build() {
+        }        public FleetSpotOptions build() {
             return new FleetSpotOptions(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies);
         }
     }

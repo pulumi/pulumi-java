@@ -78,17 +78,14 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPipelineArgs build() {
+        }        public GetPipelineArgs build() {
             return new GetPipelineArgs(location, pipelineId, project);
         }
     }

@@ -73,12 +73,10 @@ public final class AzureClusterFleet {
             this.membership = membership;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public AzureClusterFleet build() {
+        }        public AzureClusterFleet build() {
             return new AzureClusterFleet(membership, project);
         }
     }

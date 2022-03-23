@@ -94,32 +94,26 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
             this.configOverrides = configOverrides;
             return this;
         }
-
         public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
             this.configOverrides = Output.ofNullable(configOverrides);
             return this;
         }
-
         public Builder kerberosConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
-
         public Builder kerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Output.ofNullable(kerberosConfig);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public MetastoreServiceHiveMetastoreConfigArgs build() {
+        }        public MetastoreServiceHiveMetastoreConfigArgs build() {
             return new MetastoreServiceHiveMetastoreConfigArgs(configOverrides, kerberosConfig, version);
         }
     }

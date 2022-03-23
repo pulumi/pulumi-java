@@ -91,32 +91,29 @@ public final class UserPosixProfileArgs extends io.pulumi.resources.ResourceArgs
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
-
         public Builder gid(Integer gid) {
             this.gid = Output.of(Objects.requireNonNull(gid));
             return this;
         }
-
         public Builder secondaryGids(@Nullable Output<List<Integer>> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
-
         public Builder secondaryGids(@Nullable List<Integer> secondaryGids) {
             this.secondaryGids = Output.ofNullable(secondaryGids);
             return this;
         }
-
+        public Builder secondaryGids(Integer... secondaryGids) {
+            return secondaryGids(List.of(secondaryGids));
+        }
         public Builder uid(Output<Integer> uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public Builder uid(Integer uid) {
             this.uid = Output.of(Objects.requireNonNull(uid));
             return this;
-        }
-        public UserPosixProfileArgs build() {
+        }        public UserPosixProfileArgs build() {
             return new UserPosixProfileArgs(gid, secondaryGids, uid);
         }
     }

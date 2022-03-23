@@ -53,8 +53,7 @@ public final class WindowsConfigurationResponse {
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
-        }
-        public WindowsConfigurationResponse build() {
+        }        public WindowsConfigurationResponse build() {
             return new WindowsConfigurationResponse(enableAutomaticUpdates);
         }
     }

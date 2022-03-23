@@ -216,112 +216,99 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             this.accessType = accessType;
             return this;
         }
-
         public Builder accessType(@Nullable String accessType) {
             this.accessType = Output.ofNullable(accessType);
             return this;
         }
-
         public Builder appFamily(@Nullable Output<String> appFamily) {
             this.appFamily = appFamily;
             return this;
         }
-
         public Builder appFamily(@Nullable String appFamily) {
             this.appFamily = Output.ofNullable(appFamily);
             return this;
         }
-
         public Builder apps(@Nullable Output<List<String>> apps) {
             this.apps = apps;
             return this;
         }
-
         public Builder apps(@Nullable List<String> apps) {
             this.apps = Output.ofNullable(apps);
             return this;
         }
-
+        public Builder apps(String... apps) {
+            return apps(List.of(apps));
+        }
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder companies(@Nullable Output<List<String>> companies) {
             this.companies = companies;
             return this;
         }
-
         public Builder companies(@Nullable List<String> companies) {
             this.companies = Output.ofNullable(companies);
             return this;
         }
-
+        public Builder companies(String... companies) {
+            return companies(List.of(companies));
+        }
         public Builder developerId(@Nullable Output<String> developerId) {
             this.developerId = developerId;
             return this;
         }
-
         public Builder developerId(@Nullable String developerId) {
             this.developerId = Output.ofNullable(developerId);
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder firstName(Output<String> firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
-
         public Builder firstName(String firstName) {
             this.firstName = Output.of(Objects.requireNonNull(firstName));
             return this;
         }
-
         public Builder lastName(Output<String> lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
-
         public Builder lastName(String lastName) {
             this.lastName = Output.of(Objects.requireNonNull(lastName));
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public DeveloperArgs build() {
+        }        public DeveloperArgs build() {
             return new DeveloperArgs(accessType, appFamily, apps, attributes, companies, developerId, email, firstName, lastName, organizationId, userName);
         }
     }

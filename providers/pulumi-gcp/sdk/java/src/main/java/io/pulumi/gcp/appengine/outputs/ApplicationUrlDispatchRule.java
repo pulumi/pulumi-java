@@ -63,17 +63,14 @@ public final class ApplicationUrlDispatchRule {
             this.domain = domain;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
-        }
-        public ApplicationUrlDispatchRule build() {
+        }        public ApplicationUrlDispatchRule build() {
             return new ApplicationUrlDispatchRule(domain, path, service);
         }
     }

@@ -133,57 +133,49 @@ public final class GetApplicationInstanceResult {
             this.applicationInstanceId = applicationInstanceId;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable Integer createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder defaultRuntimeContextDeviceName(@Nullable String defaultRuntimeContextDeviceName) {
             this.defaultRuntimeContextDeviceName = defaultRuntimeContextDeviceName;
             return this;
         }
-
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
-
         public Builder healthStatus(@Nullable ApplicationInstanceHealthStatus healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable Integer lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder status(@Nullable ApplicationInstanceStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }
-
         public Builder statusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
             this.statusFilter = statusFilter;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationInstanceTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetApplicationInstanceResult build() {
+        public Builder tags(ApplicationInstanceTag... tags) {
+            return tags(List.of(tags));
+        }        public GetApplicationInstanceResult build() {
             return new GetApplicationInstanceResult(applicationInstanceId, arn, createdTime, defaultRuntimeContextDeviceName, deviceId, healthStatus, lastUpdatedTime, status, statusDescription, statusFilter, tags);
         }
     }

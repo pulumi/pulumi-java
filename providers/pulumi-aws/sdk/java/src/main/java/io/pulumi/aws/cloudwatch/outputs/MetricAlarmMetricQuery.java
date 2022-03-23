@@ -137,32 +137,26 @@ public final class MetricAlarmMetricQuery {
             this.accountId = accountId;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder metric(@Nullable MetricAlarmMetricQueryMetric metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder returnData(@Nullable Boolean returnData) {
             this.returnData = returnData;
             return this;
-        }
-        public MetricAlarmMetricQuery build() {
+        }        public MetricAlarmMetricQuery build() {
             return new MetricAlarmMetricQuery(accountId, expression, id, label, metric, returnData);
         }
     }

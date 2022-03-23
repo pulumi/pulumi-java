@@ -77,12 +77,10 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public UserPasswordResponse build() {
+        }        public UserPasswordResponse build() {
             return new UserPasswordResponse(password, username);
         }
     }

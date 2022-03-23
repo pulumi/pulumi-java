@@ -53,8 +53,7 @@ public final class CxPageEntryFulfillmentMessage {
         public Builder text(@Nullable CxPageEntryFulfillmentMessageText text) {
             this.text = text;
             return this;
-        }
-        public CxPageEntryFulfillmentMessage build() {
+        }        public CxPageEntryFulfillmentMessage build() {
             return new CxPageEntryFulfillmentMessage(text);
         }
     }

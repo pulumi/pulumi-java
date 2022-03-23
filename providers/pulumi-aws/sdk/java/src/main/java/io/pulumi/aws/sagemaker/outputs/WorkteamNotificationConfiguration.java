@@ -53,8 +53,7 @@ public final class WorkteamNotificationConfiguration {
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
-        }
-        public WorkteamNotificationConfiguration build() {
+        }        public WorkteamNotificationConfiguration build() {
             return new WorkteamNotificationConfiguration(notificationTopicArn);
         }
     }

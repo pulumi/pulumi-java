@@ -203,102 +203,82 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder firewallPolicyId(@Nullable Output<String> firewallPolicyId) {
             this.firewallPolicyId = firewallPolicyId;
             return this;
         }
-
         public Builder firewallPolicyId(@Nullable String firewallPolicyId) {
             this.firewallPolicyId = Output.ofNullable(firewallPolicyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder ruleTupleCount(@Nullable Output<Integer> ruleTupleCount) {
             this.ruleTupleCount = ruleTupleCount;
             return this;
         }
-
         public Builder ruleTupleCount(@Nullable Integer ruleTupleCount) {
             this.ruleTupleCount = Output.ofNullable(ruleTupleCount);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(@Nullable Output<String> selfLinkWithId) {
             this.selfLinkWithId = selfLinkWithId;
             return this;
         }
-
         public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
             this.selfLinkWithId = Output.ofNullable(selfLinkWithId);
             return this;
         }
-
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
-        }
-        public FirewallPolicyState build() {
+        }        public FirewallPolicyState build() {
             return new FirewallPolicyState(creationTimestamp, description, fingerprint, firewallPolicyId, name, parent, ruleTupleCount, selfLink, selfLinkWithId, shortName);
         }
     }

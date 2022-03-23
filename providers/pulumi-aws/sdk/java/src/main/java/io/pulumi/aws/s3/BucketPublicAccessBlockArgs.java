@@ -128,52 +128,42 @@ public final class BucketPublicAccessBlockArgs extends io.pulumi.resources.Resou
             this.blockPublicAcls = blockPublicAcls;
             return this;
         }
-
         public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
             this.blockPublicAcls = Output.ofNullable(blockPublicAcls);
             return this;
         }
-
         public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
             this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
             return this;
         }
-
         public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder ignorePublicAcls(@Nullable Output<Boolean> ignorePublicAcls) {
             this.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
-
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
             this.ignorePublicAcls = Output.ofNullable(ignorePublicAcls);
             return this;
         }
-
         public Builder restrictPublicBuckets(@Nullable Output<Boolean> restrictPublicBuckets) {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
             this.restrictPublicBuckets = Output.ofNullable(restrictPublicBuckets);
             return this;
-        }
-        public BucketPublicAccessBlockArgs build() {
+        }        public BucketPublicAccessBlockArgs build() {
             return new BucketPublicAccessBlockArgs(blockPublicAcls, blockPublicPolicy, bucket, ignorePublicAcls, restrictPublicBuckets);
         }
     }

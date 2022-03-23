@@ -54,12 +54,13 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
             this.keyUsageOptions = keyUsageOptions;
             return this;
         }
-
         public Builder keyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs> keyUsageOptions) {
             this.keyUsageOptions = Output.ofNullable(keyUsageOptions);
             return this;
         }
-        public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs build() {
+        public Builder keyUsageOptions(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs... keyUsageOptions) {
+            return keyUsageOptions(List.of(keyUsageOptions));
+        }        public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs(keyUsageOptions);
         }
     }

@@ -92,17 +92,14 @@ public final class RegexMatchSetRegexMatchTuple {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder regexPatternSetId(String regexPatternSetId) {
             this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
-        }
-        public RegexMatchSetRegexMatchTuple build() {
+        }        public RegexMatchSetRegexMatchTuple build() {
             return new RegexMatchSetRegexMatchTuple(fieldToMatch, regexPatternSetId, textTransformation);
         }
     }

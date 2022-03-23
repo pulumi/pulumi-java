@@ -126,27 +126,22 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
             this.isMaster = Objects.requireNonNull(isMaster);
             return this;
         }
-
         public Builder nonSslPort(Integer nonSslPort) {
             this.nonSslPort = Objects.requireNonNull(nonSslPort);
             return this;
         }
-
         public Builder shardId(Integer shardId) {
             this.shardId = Objects.requireNonNull(shardId);
             return this;
         }
-
         public Builder sslPort(Integer sslPort) {
             this.sslPort = Objects.requireNonNull(sslPort);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public RedisInstanceDetailsResponse build() {
+        }        public RedisInstanceDetailsResponse build() {
             return new RedisInstanceDetailsResponse(isMaster, nonSslPort, shardId, sslPort, zone);
         }
     }

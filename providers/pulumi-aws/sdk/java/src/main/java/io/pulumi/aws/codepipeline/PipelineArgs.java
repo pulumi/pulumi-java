@@ -126,52 +126,45 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactStore = Objects.requireNonNull(artifactStore);
             return this;
         }
-
         public Builder artifactStore(PipelineArtifactStoreArgs artifactStore) {
             this.artifactStore = Output.of(Objects.requireNonNull(artifactStore));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder stages(Output<List<PipelineStageArgs>> stages) {
             this.stages = Objects.requireNonNull(stages);
             return this;
         }
-
         public Builder stages(List<PipelineStageArgs> stages) {
             this.stages = Output.of(Objects.requireNonNull(stages));
             return this;
         }
-
+        public Builder stages(PipelineStageArgs... stages) {
+            return stages(List.of(stages));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PipelineArgs build() {
+        }        public PipelineArgs build() {
             return new PipelineArgs(artifactStore, name, roleArn, stages, tags);
         }
     }

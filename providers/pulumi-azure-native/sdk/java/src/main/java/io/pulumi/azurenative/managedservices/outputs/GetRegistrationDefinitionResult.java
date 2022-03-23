@@ -121,27 +121,22 @@ public final class GetRegistrationDefinitionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder properties(RegistrationDefinitionPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRegistrationDefinitionResult build() {
+        }        public GetRegistrationDefinitionResult build() {
             return new GetRegistrationDefinitionResult(id, name, plan, properties, type);
         }
     }

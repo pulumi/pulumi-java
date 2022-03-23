@@ -71,12 +71,13 @@ public final class ListTopLevelDomainAgreementsResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<TldLegalAgreementResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListTopLevelDomainAgreementsResult build() {
+        public Builder value(TldLegalAgreementResponse... value) {
+            return value(List.of(value));
+        }        public ListTopLevelDomainAgreementsResult build() {
             return new ListTopLevelDomainAgreementsResult(nextLink, value);
         }
     }

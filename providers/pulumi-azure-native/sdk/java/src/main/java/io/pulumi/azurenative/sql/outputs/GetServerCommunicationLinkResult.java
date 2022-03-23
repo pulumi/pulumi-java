@@ -149,37 +149,30 @@ public final class GetServerCommunicationLinkResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerServer(String partnerServer) {
             this.partnerServer = Objects.requireNonNull(partnerServer);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServerCommunicationLinkResult build() {
+        }        public GetServerCommunicationLinkResult build() {
             return new GetServerCommunicationLinkResult(id, kind, location, name, partnerServer, state, type);
         }
     }

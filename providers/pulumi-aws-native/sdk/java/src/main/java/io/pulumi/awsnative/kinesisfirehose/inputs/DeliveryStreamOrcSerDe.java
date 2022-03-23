@@ -166,52 +166,45 @@ public final class DeliveryStreamOrcSerDe extends io.pulumi.resources.InvokeArgs
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
-
         public Builder bloomFilterColumns(@Nullable List<String> bloomFilterColumns) {
             this.bloomFilterColumns = bloomFilterColumns;
             return this;
         }
-
+        public Builder bloomFilterColumns(String... bloomFilterColumns) {
+            return bloomFilterColumns(List.of(bloomFilterColumns));
+        }
         public Builder bloomFilterFalsePositiveProbability(@Nullable Double bloomFilterFalsePositiveProbability) {
             this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder dictionaryKeyThreshold(@Nullable Double dictionaryKeyThreshold) {
             this.dictionaryKeyThreshold = dictionaryKeyThreshold;
             return this;
         }
-
         public Builder enablePadding(@Nullable Boolean enablePadding) {
             this.enablePadding = enablePadding;
             return this;
         }
-
         public Builder formatVersion(@Nullable String formatVersion) {
             this.formatVersion = formatVersion;
             return this;
         }
-
         public Builder paddingTolerance(@Nullable Double paddingTolerance) {
             this.paddingTolerance = paddingTolerance;
             return this;
         }
-
         public Builder rowIndexStride(@Nullable Integer rowIndexStride) {
             this.rowIndexStride = rowIndexStride;
             return this;
         }
-
         public Builder stripeSizeBytes(@Nullable Integer stripeSizeBytes) {
             this.stripeSizeBytes = stripeSizeBytes;
             return this;
-        }
-        public DeliveryStreamOrcSerDe build() {
+        }        public DeliveryStreamOrcSerDe build() {
             return new DeliveryStreamOrcSerDe(blockSizeBytes, bloomFilterColumns, bloomFilterFalsePositiveProbability, compression, dictionaryKeyThreshold, enablePadding, formatVersion, paddingTolerance, rowIndexStride, stripeSizeBytes);
         }
     }

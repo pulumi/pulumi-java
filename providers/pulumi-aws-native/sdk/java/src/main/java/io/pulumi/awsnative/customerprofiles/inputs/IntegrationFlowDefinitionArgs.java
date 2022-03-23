@@ -118,62 +118,53 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder flowName(Output<String> flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
-
         public Builder flowName(String flowName) {
             this.flowName = Output.of(Objects.requireNonNull(flowName));
             return this;
         }
-
         public Builder kmsArn(Output<String> kmsArn) {
             this.kmsArn = Objects.requireNonNull(kmsArn);
             return this;
         }
-
         public Builder kmsArn(String kmsArn) {
             this.kmsArn = Output.of(Objects.requireNonNull(kmsArn));
             return this;
         }
-
         public Builder sourceFlowConfig(Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
-
         public Builder sourceFlowConfig(IntegrationSourceFlowConfigArgs sourceFlowConfig) {
             this.sourceFlowConfig = Output.of(Objects.requireNonNull(sourceFlowConfig));
             return this;
         }
-
         public Builder tasks(Output<List<IntegrationTaskArgs>> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
-
         public Builder tasks(List<IntegrationTaskArgs> tasks) {
             this.tasks = Output.of(Objects.requireNonNull(tasks));
             return this;
         }
-
+        public Builder tasks(IntegrationTaskArgs... tasks) {
+            return tasks(List.of(tasks));
+        }
         public Builder triggerConfig(Output<IntegrationTriggerConfigArgs> triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
-
         public Builder triggerConfig(IntegrationTriggerConfigArgs triggerConfig) {
             this.triggerConfig = Output.of(Objects.requireNonNull(triggerConfig));
             return this;
-        }
-        public IntegrationFlowDefinitionArgs build() {
+        }        public IntegrationFlowDefinitionArgs build() {
             return new IntegrationFlowDefinitionArgs(description, flowName, kmsArn, sourceFlowConfig, tasks, triggerConfig);
         }
     }

@@ -168,42 +168,34 @@ public final class GetVirtualHubBgpConnectionResult {
             this.connectionState = Objects.requireNonNull(connectionState);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder peerAsn(@Nullable Double peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public Builder peerIp(@Nullable String peerIp) {
             this.peerIp = peerIp;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVirtualHubBgpConnectionResult build() {
+        }        public GetVirtualHubBgpConnectionResult build() {
             return new GetVirtualHubBgpConnectionResult(connectionState, etag, id, name, peerAsn, peerIp, provisioningState, type);
         }
     }

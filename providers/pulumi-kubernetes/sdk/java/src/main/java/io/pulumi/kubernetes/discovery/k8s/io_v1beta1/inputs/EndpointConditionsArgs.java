@@ -94,32 +94,26 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
             this.ready = ready;
             return this;
         }
-
         public Builder ready(@Nullable Boolean ready) {
             this.ready = Output.ofNullable(ready);
             return this;
         }
-
         public Builder serving(@Nullable Output<Boolean> serving) {
             this.serving = serving;
             return this;
         }
-
         public Builder serving(@Nullable Boolean serving) {
             this.serving = Output.ofNullable(serving);
             return this;
         }
-
         public Builder terminating(@Nullable Output<Boolean> terminating) {
             this.terminating = terminating;
             return this;
         }
-
         public Builder terminating(@Nullable Boolean terminating) {
             this.terminating = Output.ofNullable(terminating);
             return this;
-        }
-        public EndpointConditionsArgs build() {
+        }        public EndpointConditionsArgs build() {
             return new EndpointConditionsArgs(ready, serving, terminating);
         }
     }

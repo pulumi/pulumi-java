@@ -204,47 +204,41 @@ public final class IntentSlot {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
-
+        public Builder sampleUtterances(String... sampleUtterances) {
+            return sampleUtterances(List.of(sampleUtterances));
+        }
         public Builder slotConstraint(String slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
-
         public Builder slotType(String slotType) {
             this.slotType = Objects.requireNonNull(slotType);
             return this;
         }
-
         public Builder slotTypeVersion(@Nullable String slotTypeVersion) {
             this.slotTypeVersion = slotTypeVersion;
             return this;
         }
-
         public Builder valueElicitationPrompt(@Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
             this.valueElicitationPrompt = valueElicitationPrompt;
             return this;
-        }
-        public IntentSlot build() {
+        }        public IntentSlot build() {
             return new IntentSlot(description, name, priority, responseCard, sampleUtterances, slotConstraint, slotType, slotTypeVersion, valueElicitationPrompt);
         }
     }

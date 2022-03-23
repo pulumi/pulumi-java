@@ -96,32 +96,26 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
-
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
             this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
             return this;
         }
-
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
-
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             this.requiresPreprocessing = Output.ofNullable(requiresPreprocessing);
             return this;
         }
-
         public Builder sqlExpression(@Nullable Output<String> sqlExpression) {
             this.sqlExpression = sqlExpression;
             return this;
         }
-
         public Builder sqlExpression(@Nullable String sqlExpression) {
             this.sqlExpression = Output.ofNullable(sqlExpression);
             return this;
-        }
-        public SqlFilterArgs build() {
+        }        public SqlFilterArgs build() {
             return new SqlFilterArgs(compatibilityLevel, requiresPreprocessing, sqlExpression);
         }
     }

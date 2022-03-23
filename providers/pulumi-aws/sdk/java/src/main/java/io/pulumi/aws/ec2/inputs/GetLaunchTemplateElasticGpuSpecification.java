@@ -50,8 +50,7 @@ public final class GetLaunchTemplateElasticGpuSpecification extends io.pulumi.re
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLaunchTemplateElasticGpuSpecification build() {
+        }        public GetLaunchTemplateElasticGpuSpecification build() {
             return new GetLaunchTemplateElasticGpuSpecification(type);
         }
     }

@@ -51,8 +51,7 @@ public final class BucketSseKmsEncryptedObjects {
         public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BucketSseKmsEncryptedObjects build() {
+        }        public BucketSseKmsEncryptedObjects build() {
             return new BucketSseKmsEncryptedObjects(status);
         }
     }

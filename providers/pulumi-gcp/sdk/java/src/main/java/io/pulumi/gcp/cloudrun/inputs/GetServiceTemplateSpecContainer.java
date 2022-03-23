@@ -154,47 +154,59 @@ public final class GetServiceTemplateSpecContainer extends io.pulumi.resources.I
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder commands(List<String> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder envFroms(List<GetServiceTemplateSpecContainerEnvFrom> envFroms) {
             this.envFroms = Objects.requireNonNull(envFroms);
             return this;
         }
-
+        public Builder envFroms(GetServiceTemplateSpecContainerEnvFrom... envFroms) {
+            return envFroms(List.of(envFroms));
+        }
         public Builder envs(List<GetServiceTemplateSpecContainerEnv> envs) {
             this.envs = Objects.requireNonNull(envs);
             return this;
         }
-
+        public Builder envs(GetServiceTemplateSpecContainerEnv... envs) {
+            return envs(List.of(envs));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder ports(List<GetServiceTemplateSpecContainerPort> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
+        public Builder ports(GetServiceTemplateSpecContainerPort... ports) {
+            return ports(List.of(ports));
+        }
         public Builder resources(List<GetServiceTemplateSpecContainerResource> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(GetServiceTemplateSpecContainerResource... resources) {
+            return resources(List.of(resources));
+        }
         public Builder volumeMounts(List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts) {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
-
+        public Builder volumeMounts(GetServiceTemplateSpecContainerVolumeMount... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder workingDir(String workingDir) {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
-        }
-        public GetServiceTemplateSpecContainer build() {
+        }        public GetServiceTemplateSpecContainer build() {
             return new GetServiceTemplateSpecContainer(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }
     }

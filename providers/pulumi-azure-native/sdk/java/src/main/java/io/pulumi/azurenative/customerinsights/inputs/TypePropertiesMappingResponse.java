@@ -94,17 +94,14 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
             this.linkType = linkType;
             return this;
         }
-
         public Builder sourcePropertyName(String sourcePropertyName) {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
-
         public Builder targetPropertyName(String targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
-        }
-        public TypePropertiesMappingResponse build() {
+        }        public TypePropertiesMappingResponse build() {
             return new TypePropertiesMappingResponse(linkType, sourcePropertyName, targetPropertyName);
         }
     }

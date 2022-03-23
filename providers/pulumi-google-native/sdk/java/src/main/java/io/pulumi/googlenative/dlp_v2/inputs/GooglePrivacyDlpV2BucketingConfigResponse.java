@@ -60,7 +60,9 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse extends io.pulumi.r
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
-        public GooglePrivacyDlpV2BucketingConfigResponse build() {
+        public Builder buckets(GooglePrivacyDlpV2BucketResponse... buckets) {
+            return buckets(List.of(buckets));
+        }        public GooglePrivacyDlpV2BucketingConfigResponse build() {
             return new GooglePrivacyDlpV2BucketingConfigResponse(buckets);
         }
     }

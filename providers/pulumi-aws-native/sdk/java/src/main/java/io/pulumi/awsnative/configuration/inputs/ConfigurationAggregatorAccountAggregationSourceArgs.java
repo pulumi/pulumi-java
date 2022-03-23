@@ -80,32 +80,32 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
-
         public Builder accountIds(List<String> accountIds) {
             this.accountIds = Output.of(Objects.requireNonNull(accountIds));
             return this;
         }
-
+        public Builder accountIds(String... accountIds) {
+            return accountIds(List.of(accountIds));
+        }
         public Builder allAwsRegions(@Nullable Output<Boolean> allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
-
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
             this.allAwsRegions = Output.ofNullable(allAwsRegions);
             return this;
         }
-
         public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
-
         public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = Output.ofNullable(awsRegions);
             return this;
         }
-        public ConfigurationAggregatorAccountAggregationSourceArgs build() {
+        public Builder awsRegions(String... awsRegions) {
+            return awsRegions(List.of(awsRegions));
+        }        public ConfigurationAggregatorAccountAggregationSourceArgs build() {
             return new ConfigurationAggregatorAccountAggregationSourceArgs(accountIds, allAwsRegions, awsRegions);
         }
     }

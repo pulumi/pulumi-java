@@ -57,12 +57,10 @@ public final class DataSourceParametersAthenaGetArgs extends io.pulumi.resources
             this.workGroup = workGroup;
             return this;
         }
-
         public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = Output.ofNullable(workGroup);
             return this;
-        }
-        public DataSourceParametersAthenaGetArgs build() {
+        }        public DataSourceParametersAthenaGetArgs build() {
             return new DataSourceParametersAthenaGetArgs(workGroup);
         }
     }

@@ -72,12 +72,10 @@ public final class SqlContainerGetPropertiesResponseOptions {
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public SqlContainerGetPropertiesResponseOptions build() {
+        }        public SqlContainerGetPropertiesResponseOptions build() {
             return new SqlContainerGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

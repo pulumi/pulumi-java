@@ -51,8 +51,7 @@ public final class ExportDeliveryInfoResponse {
         public Builder destination(ExportDeliveryDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
-        }
-        public ExportDeliveryInfoResponse build() {
+        }        public ExportDeliveryInfoResponse build() {
             return new ExportDeliveryInfoResponse(destination);
         }
     }

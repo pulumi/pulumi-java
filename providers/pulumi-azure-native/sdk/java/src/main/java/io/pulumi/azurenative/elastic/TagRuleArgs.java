@@ -107,42 +107,34 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder monitorName(String monitorName) {
             this.monitorName = Output.of(Objects.requireNonNull(monitorName));
             return this;
         }
-
         public Builder properties(@Nullable Output<MonitoringTagRulesPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable MonitoringTagRulesPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
-
         public Builder ruleSetName(@Nullable String ruleSetName) {
             this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
-        }
-        public TagRuleArgs build() {
+        }        public TagRuleArgs build() {
             return new TagRuleArgs(monitorName, properties, resourceGroupName, ruleSetName);
         }
     }

@@ -90,22 +90,18 @@ public final class GetRegionBackendServiceIamPolicyArgs extends io.pulumi.resour
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetRegionBackendServiceIamPolicyArgs build() {
+        }        public GetRegionBackendServiceIamPolicyArgs build() {
             return new GetRegionBackendServiceIamPolicyArgs(optionsRequestedPolicyVersion, project, region, resource);
         }
     }

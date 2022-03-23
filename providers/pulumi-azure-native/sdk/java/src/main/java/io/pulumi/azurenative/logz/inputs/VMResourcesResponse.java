@@ -78,12 +78,10 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public VMResourcesResponse build() {
+        }        public VMResourcesResponse build() {
             return new VMResourcesResponse(agentVersion, id);
         }
     }

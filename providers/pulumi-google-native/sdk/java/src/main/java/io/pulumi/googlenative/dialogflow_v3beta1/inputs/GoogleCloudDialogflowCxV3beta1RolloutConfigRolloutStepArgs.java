@@ -95,32 +95,26 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder minDuration(@Nullable Output<String> minDuration) {
             this.minDuration = minDuration;
             return this;
         }
-
         public Builder minDuration(@Nullable String minDuration) {
             this.minDuration = Output.ofNullable(minDuration);
             return this;
         }
-
         public Builder trafficPercent(@Nullable Output<Integer> trafficPercent) {
             this.trafficPercent = trafficPercent;
             return this;
         }
-
         public Builder trafficPercent(@Nullable Integer trafficPercent) {
             this.trafficPercent = Output.ofNullable(trafficPercent);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs(displayName, minDuration, trafficPercent);
         }
     }

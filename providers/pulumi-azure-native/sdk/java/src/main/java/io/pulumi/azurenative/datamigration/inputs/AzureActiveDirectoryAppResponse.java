@@ -92,17 +92,14 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public AzureActiveDirectoryAppResponse build() {
+        }        public AzureActiveDirectoryAppResponse build() {
             return new AzureActiveDirectoryAppResponse(appKey, applicationId, tenantId);
         }
     }

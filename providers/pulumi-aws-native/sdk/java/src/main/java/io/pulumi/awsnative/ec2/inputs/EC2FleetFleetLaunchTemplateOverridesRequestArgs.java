@@ -141,82 +141,66 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder instanceRequirements(@Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
-
         public Builder instanceRequirements(@Nullable EC2FleetInstanceRequirementsRequestArgs instanceRequirements) {
             this.instanceRequirements = Output.ofNullable(instanceRequirements);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder maxPrice(@Nullable Output<String> maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
-
         public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = Output.ofNullable(maxPrice);
             return this;
         }
-
         public Builder placement(@Nullable Output<EC2FleetPlacementArgs> placement) {
             this.placement = placement;
             return this;
         }
-
         public Builder placement(@Nullable EC2FleetPlacementArgs placement) {
             this.placement = Output.ofNullable(placement);
             return this;
         }
-
         public Builder priority(@Nullable Output<Double> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Double priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
-        }
-        public EC2FleetFleetLaunchTemplateOverridesRequestArgs build() {
+        }        public EC2FleetFleetLaunchTemplateOverridesRequestArgs build() {
             return new EC2FleetFleetLaunchTemplateOverridesRequestArgs(availabilityZone, instanceRequirements, instanceType, maxPrice, placement, priority, subnetId, weightedCapacity);
         }
     }

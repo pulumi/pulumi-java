@@ -198,52 +198,51 @@ public final class DashboardVersion {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder dataSetArns(@Nullable List<String> dataSetArns) {
             this.dataSetArns = dataSetArns;
             return this;
         }
-
+        public Builder dataSetArns(String... dataSetArns) {
+            return dataSetArns(List.of(dataSetArns));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder errors(@Nullable List<DashboardError> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(DashboardError... errors) {
+            return errors(List.of(errors));
+        }
         public Builder sheets(@Nullable List<DashboardSheet> sheets) {
             this.sheets = sheets;
             return this;
         }
-
+        public Builder sheets(DashboardSheet... sheets) {
+            return sheets(List.of(sheets));
+        }
         public Builder sourceEntityArn(@Nullable String sourceEntityArn) {
             this.sourceEntityArn = sourceEntityArn;
             return this;
         }
-
         public Builder status(@Nullable DashboardResourceStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = themeArn;
             return this;
         }
-
         public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
-        }
-        public DashboardVersion build() {
+        }        public DashboardVersion build() {
             return new DashboardVersion(arn, createdTime, dataSetArns, description, errors, sheets, sourceEntityArn, status, themeArn, versionNumber);
         }
     }

@@ -101,22 +101,18 @@ public final class NetworkUtilizationResponse {
             this.targetReceivedBytesPerSecond = Objects.requireNonNull(targetReceivedBytesPerSecond);
             return this;
         }
-
         public Builder targetReceivedPacketsPerSecond(Integer targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = Objects.requireNonNull(targetReceivedPacketsPerSecond);
             return this;
         }
-
         public Builder targetSentBytesPerSecond(Integer targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = Objects.requireNonNull(targetSentBytesPerSecond);
             return this;
         }
-
         public Builder targetSentPacketsPerSecond(Integer targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond);
             return this;
-        }
-        public NetworkUtilizationResponse build() {
+        }        public NetworkUtilizationResponse build() {
             return new NetworkUtilizationResponse(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }
     }

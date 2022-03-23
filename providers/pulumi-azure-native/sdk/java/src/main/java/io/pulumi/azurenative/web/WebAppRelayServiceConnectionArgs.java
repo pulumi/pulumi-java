@@ -175,102 +175,82 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             this.biztalkUri = biztalkUri;
             return this;
         }
-
         public Builder biztalkUri(@Nullable String biztalkUri) {
             this.biztalkUri = Output.ofNullable(biztalkUri);
             return this;
         }
-
         public Builder entityConnectionString(@Nullable Output<String> entityConnectionString) {
             this.entityConnectionString = entityConnectionString;
             return this;
         }
-
         public Builder entityConnectionString(@Nullable String entityConnectionString) {
             this.entityConnectionString = Output.ofNullable(entityConnectionString);
             return this;
         }
-
         public Builder entityName(@Nullable Output<String> entityName) {
             this.entityName = entityName;
             return this;
         }
-
         public Builder entityName(@Nullable String entityName) {
             this.entityName = Output.ofNullable(entityName);
             return this;
         }
-
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder resourceConnectionString(@Nullable Output<String> resourceConnectionString) {
             this.resourceConnectionString = resourceConnectionString;
             return this;
         }
-
         public Builder resourceConnectionString(@Nullable String resourceConnectionString) {
             this.resourceConnectionString = Output.ofNullable(resourceConnectionString);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public WebAppRelayServiceConnectionArgs build() {
+        }        public WebAppRelayServiceConnectionArgs build() {
             return new WebAppRelayServiceConnectionArgs(biztalkUri, entityConnectionString, entityName, hostname, kind, name, port, resourceConnectionString, resourceGroupName, resourceType);
         }
     }

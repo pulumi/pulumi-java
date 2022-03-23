@@ -142,52 +142,51 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
             this.availability = availability;
             return this;
         }
-
         public Builder availability(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs availability) {
             this.availability = Output.ofNullable(availability);
             return this;
         }
-
         public Builder latency(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs> latency) {
             this.latency = latency;
             return this;
         }
-
         public Builder latency(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs latency) {
             this.latency = Output.ofNullable(latency);
             return this;
         }
-
         public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<String> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder versions(@Nullable Output<List<String>> versions) {
             this.versions = versions;
             return this;
         }
-
         public Builder versions(@Nullable List<String> versions) {
             this.versions = Output.ofNullable(versions);
             return this;
         }
-        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs build() {
+        public Builder versions(String... versions) {
+            return versions(List.of(versions));
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs(availability, latency, locations, methods, versions);
         }
     }

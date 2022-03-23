@@ -107,42 +107,34 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
             this.hubName = hubName;
             return this;
         }
-
         public Builder hubName(@Nullable String hubName) {
             this.hubName = Output.ofNullable(hubName);
             return this;
         }
-
         public Builder properties(Output<WebPubSubHubPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(WebPubSubHubPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public WebPubSubHubArgs build() {
+        }        public WebPubSubHubArgs build() {
             return new WebPubSubHubArgs(hubName, properties, resourceGroupName, resourceName);
         }
     }

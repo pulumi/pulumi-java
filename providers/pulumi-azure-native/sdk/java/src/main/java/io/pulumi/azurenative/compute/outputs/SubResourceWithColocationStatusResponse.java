@@ -72,12 +72,10 @@ public final class SubResourceWithColocationStatusResponse {
             this.colocationStatus = colocationStatus;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public SubResourceWithColocationStatusResponse build() {
+        }        public SubResourceWithColocationStatusResponse build() {
             return new SubResourceWithColocationStatusResponse(colocationStatus, id);
         }
     }

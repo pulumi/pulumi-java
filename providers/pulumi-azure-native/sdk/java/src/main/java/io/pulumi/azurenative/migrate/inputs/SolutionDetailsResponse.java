@@ -96,17 +96,14 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
             this.assessmentCount = assessmentCount;
             return this;
         }
-
         public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
             this.extendedDetails = extendedDetails;
             return this;
         }
-
         public Builder groupCount(@Nullable Integer groupCount) {
             this.groupCount = groupCount;
             return this;
-        }
-        public SolutionDetailsResponse build() {
+        }        public SolutionDetailsResponse build() {
             return new SolutionDetailsResponse(assessmentCount, extendedDetails, groupCount);
         }
     }

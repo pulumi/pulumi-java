@@ -199,52 +199,42 @@ public final class TopicRuleErrorActionDynamodb {
             this.hashKeyField = Objects.requireNonNull(hashKeyField);
             return this;
         }
-
         public Builder hashKeyType(@Nullable String hashKeyType) {
             this.hashKeyType = hashKeyType;
             return this;
         }
-
         public Builder hashKeyValue(String hashKeyValue) {
             this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder payloadField(@Nullable String payloadField) {
             this.payloadField = payloadField;
             return this;
         }
-
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
             this.rangeKeyField = rangeKeyField;
             return this;
         }
-
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
             this.rangeKeyType = rangeKeyType;
             return this;
         }
-
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
             this.rangeKeyValue = rangeKeyValue;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public TopicRuleErrorActionDynamodb build() {
+        }        public TopicRuleErrorActionDynamodb build() {
             return new TopicRuleErrorActionDynamodb(hashKeyField, hashKeyType, hashKeyValue, operation, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, roleArn, tableName);
         }
     }

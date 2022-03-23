@@ -104,22 +104,18 @@ public final class GetBatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetBatchDeploymentArgs build() {
+        }        public GetBatchDeploymentArgs build() {
             return new GetBatchDeploymentArgs(deploymentName, endpointName, resourceGroupName, workspaceName);
         }
     }

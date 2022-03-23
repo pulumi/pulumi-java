@@ -158,72 +158,58 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder error(@Nullable Output<ErrorResponseArgs> error) {
             this.error = error;
             return this;
         }
-
         public Builder error(@Nullable ErrorResponseArgs error) {
             this.error = Output.ofNullable(error);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scheduleInfo(Output<SUCSchedulePropertiesArgs> scheduleInfo) {
             this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
             return this;
         }
-
         public Builder scheduleInfo(SUCSchedulePropertiesArgs scheduleInfo) {
             this.scheduleInfo = Output.of(Objects.requireNonNull(scheduleInfo));
             return this;
         }
-
         public Builder softwareUpdateConfigurationName(@Nullable Output<String> softwareUpdateConfigurationName) {
             this.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
             return this;
         }
-
         public Builder softwareUpdateConfigurationName(@Nullable String softwareUpdateConfigurationName) {
             this.softwareUpdateConfigurationName = Output.ofNullable(softwareUpdateConfigurationName);
             return this;
         }
-
         public Builder tasks(@Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks) {
             this.tasks = tasks;
             return this;
         }
-
         public Builder tasks(@Nullable SoftwareUpdateConfigurationTasksArgs tasks) {
             this.tasks = Output.ofNullable(tasks);
             return this;
         }
-
         public Builder updateConfiguration(Output<UpdateConfigurationArgs> updateConfiguration) {
             this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
             return this;
         }
-
         public Builder updateConfiguration(UpdateConfigurationArgs updateConfiguration) {
             this.updateConfiguration = Output.of(Objects.requireNonNull(updateConfiguration));
             return this;
-        }
-        public SoftwareUpdateConfigurationByNameArgs build() {
+        }        public SoftwareUpdateConfigurationByNameArgs build() {
             return new SoftwareUpdateConfigurationByNameArgs(automationAccountName, error, resourceGroupName, scheduleInfo, softwareUpdateConfigurationName, tasks, updateConfiguration);
         }
     }

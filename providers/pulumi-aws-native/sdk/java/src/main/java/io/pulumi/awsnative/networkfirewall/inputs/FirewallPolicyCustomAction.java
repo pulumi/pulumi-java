@@ -65,12 +65,10 @@ public final class FirewallPolicyCustomAction extends io.pulumi.resources.Invoke
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
-
         public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
-        }
-        public FirewallPolicyCustomAction build() {
+        }        public FirewallPolicyCustomAction build() {
             return new FirewallPolicyCustomAction(actionDefinition, actionName);
         }
     }

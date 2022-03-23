@@ -72,12 +72,10 @@ public final class ConnectorMappingAvailabilityResponse {
             this.frequency = frequency;
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
-        }
-        public ConnectorMappingAvailabilityResponse build() {
+        }        public ConnectorMappingAvailabilityResponse build() {
             return new ConnectorMappingAvailabilityResponse(frequency, interval);
         }
     }

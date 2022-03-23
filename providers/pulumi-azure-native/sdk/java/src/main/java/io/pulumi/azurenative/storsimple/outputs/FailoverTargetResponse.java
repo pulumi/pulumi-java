@@ -218,57 +218,46 @@ public final class FailoverTargetResponse {
             this.availableLocalStorageInBytes = availableLocalStorageInBytes;
             return this;
         }
-
         public Builder availableTieredStorageInBytes(@Nullable Double availableTieredStorageInBytes) {
             this.availableTieredStorageInBytes = availableTieredStorageInBytes;
             return this;
         }
-
         public Builder dataContainersCount(@Nullable Integer dataContainersCount) {
             this.dataContainersCount = dataContainersCount;
             return this;
         }
-
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
-
         public Builder deviceLocation(@Nullable String deviceLocation) {
             this.deviceLocation = deviceLocation;
             return this;
         }
-
         public Builder deviceSoftwareVersion(@Nullable String deviceSoftwareVersion) {
             this.deviceSoftwareVersion = deviceSoftwareVersion;
             return this;
         }
-
         public Builder deviceStatus(@Nullable String deviceStatus) {
             this.deviceStatus = deviceStatus;
             return this;
         }
-
         public Builder eligibilityResult(@Nullable TargetEligibilityResultResponse eligibilityResult) {
             this.eligibilityResult = eligibilityResult;
             return this;
         }
-
         public Builder friendlyDeviceSoftwareVersion(@Nullable String friendlyDeviceSoftwareVersion) {
             this.friendlyDeviceSoftwareVersion = friendlyDeviceSoftwareVersion;
             return this;
         }
-
         public Builder modelDescription(@Nullable String modelDescription) {
             this.modelDescription = modelDescription;
             return this;
         }
-
         public Builder volumesCount(@Nullable Integer volumesCount) {
             this.volumesCount = volumesCount;
             return this;
-        }
-        public FailoverTargetResponse build() {
+        }        public FailoverTargetResponse build() {
             return new FailoverTargetResponse(availableLocalStorageInBytes, availableTieredStorageInBytes, dataContainersCount, deviceId, deviceLocation, deviceSoftwareVersion, deviceStatus, eligibilityResult, friendlyDeviceSoftwareVersion, modelDescription, volumesCount);
         }
     }

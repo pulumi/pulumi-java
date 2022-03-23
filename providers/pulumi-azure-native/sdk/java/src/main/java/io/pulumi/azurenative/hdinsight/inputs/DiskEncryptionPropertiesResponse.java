@@ -143,32 +143,26 @@ public final class DiskEncryptionPropertiesResponse extends io.pulumi.resources.
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
-
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
-
         public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = vaultUri;
             return this;
-        }
-        public DiskEncryptionPropertiesResponse build() {
+        }        public DiskEncryptionPropertiesResponse build() {
             return new DiskEncryptionPropertiesResponse(encryptionAlgorithm, encryptionAtHost, keyName, keyVersion, msiResourceId, vaultUri);
         }
     }

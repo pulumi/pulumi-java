@@ -127,52 +127,42 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder displayStatus(@Nullable Output<String> displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
-
         public Builder displayStatus(@Nullable String displayStatus) {
             this.displayStatus = Output.ofNullable(displayStatus);
             return this;
         }
-
         public Builder level(@Nullable Output<StatusLevelTypes> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable StatusLevelTypes level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
-        }
-        public InstanceViewStatusArgs build() {
+        }        public InstanceViewStatusArgs build() {
             return new InstanceViewStatusArgs(code, displayStatus, level, message, time);
         }
     }

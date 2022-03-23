@@ -72,12 +72,10 @@ public final class TriggerDestination {
             this.cloudFunction = cloudFunction;
             return this;
         }
-
         public Builder cloudRunService(@Nullable TriggerDestinationCloudRunService cloudRunService) {
             this.cloudRunService = cloudRunService;
             return this;
-        }
-        public TriggerDestination build() {
+        }        public TriggerDestination build() {
             return new TriggerDestination(cloudFunction, cloudRunService);
         }
     }

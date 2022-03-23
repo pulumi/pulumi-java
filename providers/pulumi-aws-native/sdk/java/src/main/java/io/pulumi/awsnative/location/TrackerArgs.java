@@ -116,62 +116,50 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder positionFiltering(@Nullable Output<TrackerPositionFiltering> positionFiltering) {
             this.positionFiltering = positionFiltering;
             return this;
         }
-
         public Builder positionFiltering(@Nullable TrackerPositionFiltering positionFiltering) {
             this.positionFiltering = Output.ofNullable(positionFiltering);
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<TrackerPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable TrackerPricingPlan pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
-
         public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
             this.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
-
         public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
             this.pricingPlanDataSource = Output.ofNullable(pricingPlanDataSource);
             return this;
         }
-
         public Builder trackerName(@Nullable Output<String> trackerName) {
             this.trackerName = trackerName;
             return this;
         }
-
         public Builder trackerName(@Nullable String trackerName) {
             this.trackerName = Output.ofNullable(trackerName);
             return this;
-        }
-        public TrackerArgs build() {
+        }        public TrackerArgs build() {
             return new TrackerArgs(description, kmsKeyId, positionFiltering, pricingPlan, pricingPlanDataSource, trackerName);
         }
     }

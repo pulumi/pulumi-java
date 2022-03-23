@@ -71,12 +71,10 @@ public final class NodeGroupUpdateConfig {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public Builder maxUnavailablePercentage(@Nullable Integer maxUnavailablePercentage) {
             this.maxUnavailablePercentage = maxUnavailablePercentage;
             return this;
-        }
-        public NodeGroupUpdateConfig build() {
+        }        public NodeGroupUpdateConfig build() {
             return new NodeGroupUpdateConfig(maxUnavailable, maxUnavailablePercentage);
         }
     }

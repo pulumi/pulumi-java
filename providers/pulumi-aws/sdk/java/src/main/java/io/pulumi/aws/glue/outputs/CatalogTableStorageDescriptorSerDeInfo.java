@@ -88,17 +88,14 @@ public final class CatalogTableStorageDescriptorSerDeInfo {
             this.name = name;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder serializationLibrary(@Nullable String serializationLibrary) {
             this.serializationLibrary = serializationLibrary;
             return this;
-        }
-        public CatalogTableStorageDescriptorSerDeInfo build() {
+        }        public CatalogTableStorageDescriptorSerDeInfo build() {
             return new CatalogTableStorageDescriptorSerDeInfo(name, parameters, serializationLibrary);
         }
     }

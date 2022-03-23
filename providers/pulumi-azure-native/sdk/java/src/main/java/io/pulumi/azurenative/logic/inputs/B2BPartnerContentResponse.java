@@ -62,7 +62,9 @@ public final class B2BPartnerContentResponse extends io.pulumi.resources.InvokeA
             this.businessIdentities = businessIdentities;
             return this;
         }
-        public B2BPartnerContentResponse build() {
+        public Builder businessIdentities(BusinessIdentityResponse... businessIdentities) {
+            return businessIdentities(List.of(businessIdentities));
+        }        public B2BPartnerContentResponse build() {
             return new B2BPartnerContentResponse(businessIdentities);
         }
     }

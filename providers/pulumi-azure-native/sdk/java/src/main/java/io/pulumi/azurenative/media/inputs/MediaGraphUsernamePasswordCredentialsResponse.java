@@ -93,17 +93,14 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends io.pulu
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public MediaGraphUsernamePasswordCredentialsResponse build() {
+        }        public MediaGraphUsernamePasswordCredentialsResponse build() {
             return new MediaGraphUsernamePasswordCredentialsResponse(odataType, password, username);
         }
     }

@@ -91,32 +91,26 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Output.of(Objects.requireNonNull(cloudwatchLogGroupArn));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
-        }
-        public DomainLogPublishingOptionGetArgs build() {
+        }        public DomainLogPublishingOptionGetArgs build() {
             return new DomainLogPublishingOptionGetArgs(cloudwatchLogGroupArn, enabled, logType);
         }
     }

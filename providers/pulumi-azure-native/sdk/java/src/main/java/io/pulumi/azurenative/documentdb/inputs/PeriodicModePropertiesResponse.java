@@ -78,12 +78,10 @@ public final class PeriodicModePropertiesResponse extends io.pulumi.resources.In
             this.backupIntervalInMinutes = backupIntervalInMinutes;
             return this;
         }
-
         public Builder backupRetentionIntervalInHours(@Nullable Integer backupRetentionIntervalInHours) {
             this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;
-        }
-        public PeriodicModePropertiesResponse build() {
+        }        public PeriodicModePropertiesResponse build() {
             return new PeriodicModePropertiesResponse(backupIntervalInMinutes, backupRetentionIntervalInHours);
         }
     }

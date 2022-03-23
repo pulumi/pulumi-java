@@ -155,72 +155,58 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
-
         public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
-
         public Builder invitationMessage(@Nullable String invitationMessage) {
             this.invitationMessage = Output.ofNullable(invitationMessage);
             return this;
         }
-
         public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
-
         public Builder invite(@Nullable Boolean invite) {
             this.invite = Output.ofNullable(invite);
             return this;
         }
-
         public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
             this.relationshipStatus = relationshipStatus;
             return this;
         }
-
         public Builder relationshipStatus(@Nullable String relationshipStatus) {
             this.relationshipStatus = Output.ofNullable(relationshipStatus);
             return this;
-        }
-        public MemberState build() {
+        }        public MemberState build() {
             return new MemberState(accountId, detectorId, disableEmailNotification, email, invitationMessage, invite, relationshipStatus);
         }
     }

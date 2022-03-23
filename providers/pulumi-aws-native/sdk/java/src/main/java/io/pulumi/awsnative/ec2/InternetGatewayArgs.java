@@ -58,12 +58,13 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<InternetGatewayTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public InternetGatewayArgs build() {
+        public Builder tags(InternetGatewayTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public InternetGatewayArgs build() {
             return new InternetGatewayArgs(tags);
         }
     }

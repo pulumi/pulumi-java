@@ -246,132 +246,112 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
-
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
             this.csvDelimiter = Output.ofNullable(csvDelimiter);
             return this;
         }
-
         public Builder dimensions(@Nullable Output<List<String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable List<String> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
+        public Builder dimensions(String... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder envgroupHostname(@Nullable Output<String> envgroupHostname) {
             this.envgroupHostname = envgroupHostname;
             return this;
         }
-
         public Builder envgroupHostname(@Nullable String envgroupHostname) {
             this.envgroupHostname = Output.ofNullable(envgroupHostname);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder groupByTimeUnit(@Nullable Output<String> groupByTimeUnit) {
             this.groupByTimeUnit = groupByTimeUnit;
             return this;
         }
-
         public Builder groupByTimeUnit(@Nullable String groupByTimeUnit) {
             this.groupByTimeUnit = Output.ofNullable(groupByTimeUnit);
             return this;
         }
-
         public Builder limit(@Nullable Output<Integer> limit) {
             this.limit = limit;
             return this;
         }
-
         public Builder limit(@Nullable Integer limit) {
             this.limit = Output.ofNullable(limit);
             return this;
         }
-
         public Builder metrics(@Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<GoogleCloudApigeeV1QueryMetricArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudApigeeV1QueryMetricArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
-
         public Builder reportDefinitionId(@Nullable Output<String> reportDefinitionId) {
             this.reportDefinitionId = reportDefinitionId;
             return this;
         }
-
         public Builder reportDefinitionId(@Nullable String reportDefinitionId) {
             this.reportDefinitionId = Output.ofNullable(reportDefinitionId);
             return this;
         }
-
         public Builder timeRange(Output<Object> timeRange) {
             this.timeRange = Objects.requireNonNull(timeRange);
             return this;
         }
-
         public Builder timeRange(Object timeRange) {
             this.timeRange = Output.of(Objects.requireNonNull(timeRange));
             return this;
-        }
-        public QueryArgs build() {
+        }        public QueryArgs build() {
             return new QueryArgs(csvDelimiter, dimensions, envgroupHostname, environmentId, filter, groupByTimeUnit, limit, metrics, name, organizationId, outputFormat, reportDefinitionId, timeRange);
         }
     }

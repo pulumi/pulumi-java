@@ -205,102 +205,85 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder emailRecipient(@Nullable Output<String> emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
-
         public Builder emailRecipient(@Nullable String emailRecipient) {
             this.emailRecipient = Output.ofNullable(emailRecipient);
             return this;
         }
-
         public Builder events(@Nullable Output<List<EventArgs>> events) {
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable List<EventArgs> events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-
+        public Builder events(EventArgs... events) {
+            return events(List.of(events));
+        }
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
-
         public Builder notificationLocale(@Nullable String notificationLocale) {
             this.notificationLocale = Output.ofNullable(notificationLocale);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder webHookUrl(@Nullable Output<String> webHookUrl) {
             this.webHookUrl = webHookUrl;
             return this;
         }
-
         public Builder webHookUrl(@Nullable String webHookUrl) {
             this.webHookUrl = Output.ofNullable(webHookUrl);
             return this;
-        }
-        public NotificationChannelArgs build() {
+        }        public NotificationChannelArgs build() {
             return new NotificationChannelArgs(description, emailRecipient, events, labName, location, name, notificationLocale, resourceGroupName, tags, webHookUrl);
         }
     }

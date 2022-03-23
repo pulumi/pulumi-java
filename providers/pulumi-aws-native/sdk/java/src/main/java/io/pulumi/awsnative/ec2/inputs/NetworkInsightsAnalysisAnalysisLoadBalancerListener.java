@@ -66,12 +66,10 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener extends i
             this.instancePort = instancePort;
             return this;
         }
-
         public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
             this.loadBalancerPort = loadBalancerPort;
             return this;
-        }
-        public NetworkInsightsAnalysisAnalysisLoadBalancerListener build() {
+        }        public NetworkInsightsAnalysisAnalysisLoadBalancerListener build() {
             return new NetworkInsightsAnalysisAnalysisLoadBalancerListener(instancePort, loadBalancerPort);
         }
     }

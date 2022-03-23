@@ -55,12 +55,10 @@ public final class WirelessGatewayTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public WirelessGatewayTag build() {
+        }        public WirelessGatewayTag build() {
             return new WirelessGatewayTag(key, value);
         }
     }

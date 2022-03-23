@@ -120,52 +120,42 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable IngressRuleAction action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder sourceRange(@Nullable Output<String> sourceRange) {
             this.sourceRange = sourceRange;
             return this;
         }
-
         public Builder sourceRange(@Nullable String sourceRange) {
             this.sourceRange = Output.ofNullable(sourceRange);
             return this;
-        }
-        public IngressRuleArgs build() {
+        }        public IngressRuleArgs build() {
             return new IngressRuleArgs(action, appId, description, priority, sourceRange);
         }
     }

@@ -55,12 +55,10 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptions {
             this.mode = mode;
             return this;
         }
-
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMountTmpfsOptions build() {
+        }        public ServiceTaskSpecContainerSpecMountTmpfsOptions build() {
             return new ServiceTaskSpecContainerSpecMountTmpfsOptions(mode, sizeBytes);
         }
     }

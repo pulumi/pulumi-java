@@ -85,17 +85,14 @@ public final class OperationErrorErrorsItemResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public OperationErrorErrorsItemResponse build() {
+        }        public OperationErrorErrorsItemResponse build() {
             return new OperationErrorErrorsItemResponse(code, location, message);
         }
     }

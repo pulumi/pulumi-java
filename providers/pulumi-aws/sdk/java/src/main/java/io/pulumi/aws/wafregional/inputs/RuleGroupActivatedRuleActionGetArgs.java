@@ -56,12 +56,10 @@ public final class RuleGroupActivatedRuleActionGetArgs extends io.pulumi.resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RuleGroupActivatedRuleActionGetArgs build() {
+        }        public RuleGroupActivatedRuleActionGetArgs build() {
             return new RuleGroupActivatedRuleActionGetArgs(type);
         }
     }

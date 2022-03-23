@@ -153,37 +153,30 @@ public final class AzureResourceProtectionIntentResponse {
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder protectionIntentItemType(String protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
-
         public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
-        }
-        public AzureResourceProtectionIntentResponse build() {
+        }        public AzureResourceProtectionIntentResponse build() {
             return new AzureResourceProtectionIntentResponse(backupManagementType, friendlyName, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }
     }

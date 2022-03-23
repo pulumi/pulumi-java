@@ -54,8 +54,7 @@ public final class GetHostArgs extends io.pulumi.resources.InvokeArgs {
         public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
-        }
-        public GetHostArgs build() {
+        }        public GetHostArgs build() {
             return new GetHostArgs(hostId);
         }
     }

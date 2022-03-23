@@ -111,42 +111,34 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public Builder carrierName(String carrierName) {
             this.carrierName = Output.of(Objects.requireNonNull(carrierName));
             return this;
         }
-
         public Builder driveCount(@Nullable Output<Double> driveCount) {
             this.driveCount = driveCount;
             return this;
         }
-
         public Builder driveCount(@Nullable Double driveCount) {
             this.driveCount = Output.ofNullable(driveCount);
             return this;
         }
-
         public Builder shipDate(@Nullable Output<String> shipDate) {
             this.shipDate = shipDate;
             return this;
         }
-
         public Builder shipDate(@Nullable String shipDate) {
             this.shipDate = Output.ofNullable(shipDate);
             return this;
         }
-
         public Builder trackingNumber(Output<String> trackingNumber) {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
-
         public Builder trackingNumber(String trackingNumber) {
             this.trackingNumber = Output.of(Objects.requireNonNull(trackingNumber));
             return this;
-        }
-        public DeliveryPackageInformationArgs build() {
+        }        public DeliveryPackageInformationArgs build() {
             return new DeliveryPackageInformationArgs(carrierName, driveCount, shipDate, trackingNumber);
         }
     }

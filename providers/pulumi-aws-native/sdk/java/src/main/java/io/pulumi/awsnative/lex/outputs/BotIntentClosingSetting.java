@@ -56,12 +56,10 @@ public final class BotIntentClosingSetting {
             this.closingResponse = Objects.requireNonNull(closingResponse);
             return this;
         }
-
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
-        }
-        public BotIntentClosingSetting build() {
+        }        public BotIntentClosingSetting build() {
             return new BotIntentClosingSetting(closingResponse, isActive);
         }
     }

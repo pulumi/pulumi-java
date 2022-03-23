@@ -64,12 +64,10 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
             this.netbiosName = netbiosName;
             return this;
         }
-
         public Builder selfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
             this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
             return this;
-        }
-        public OntapStorageVirtualMachineActiveDirectoryConfiguration build() {
+        }        public OntapStorageVirtualMachineActiveDirectoryConfiguration build() {
             return new OntapStorageVirtualMachineActiveDirectoryConfiguration(netbiosName, selfManagedActiveDirectoryConfiguration);
         }
     }

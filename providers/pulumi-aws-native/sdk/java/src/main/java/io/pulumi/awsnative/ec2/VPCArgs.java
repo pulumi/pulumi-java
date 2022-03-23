@@ -131,52 +131,45 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
-
         public Builder enableDnsHostnames(@Nullable Output<Boolean> enableDnsHostnames) {
             this.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
-
         public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
             this.enableDnsHostnames = Output.ofNullable(enableDnsHostnames);
             return this;
         }
-
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
             this.enableDnsSupport = enableDnsSupport;
             return this;
         }
-
         public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
             this.enableDnsSupport = Output.ofNullable(enableDnsSupport);
             return this;
         }
-
         public Builder instanceTenancy(@Nullable Output<String> instanceTenancy) {
             this.instanceTenancy = instanceTenancy;
             return this;
         }
-
         public Builder instanceTenancy(@Nullable String instanceTenancy) {
             this.instanceTenancy = Output.ofNullable(instanceTenancy);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<VPCTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<VPCTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public VPCArgs build() {
+        public Builder tags(VPCTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public VPCArgs build() {
             return new VPCArgs(cidrBlock, enableDnsHostnames, enableDnsSupport, instanceTenancy, tags);
         }
     }

@@ -54,8 +54,7 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends io
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
-        }
-        public GetInstanceAccessControlAttributeConfigurationArgs build() {
+        }        public GetInstanceAccessControlAttributeConfigurationArgs build() {
             return new GetInstanceAccessControlAttributeConfigurationArgs(instanceArn);
         }
     }

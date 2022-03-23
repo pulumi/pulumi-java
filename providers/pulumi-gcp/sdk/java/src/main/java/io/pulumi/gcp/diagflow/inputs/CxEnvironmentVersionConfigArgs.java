@@ -56,12 +56,10 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public CxEnvironmentVersionConfigArgs build() {
+        }        public CxEnvironmentVersionConfigArgs build() {
             return new CxEnvironmentVersionConfigArgs(version);
         }
     }

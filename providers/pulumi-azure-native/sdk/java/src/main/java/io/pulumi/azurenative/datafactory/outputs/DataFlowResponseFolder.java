@@ -53,8 +53,7 @@ public final class DataFlowResponseFolder {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DataFlowResponseFolder build() {
+        }        public DataFlowResponseFolder build() {
             return new DataFlowResponseFolder(name);
         }
     }

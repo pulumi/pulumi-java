@@ -58,8 +58,7 @@ public final class PubsubDestinationResponse extends io.pulumi.resources.InvokeA
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public PubsubDestinationResponse build() {
+        }        public PubsubDestinationResponse build() {
             return new PubsubDestinationResponse(topic);
         }
     }

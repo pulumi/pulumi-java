@@ -189,52 +189,45 @@ public final class GetKeyResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enableKeyRotation(@Nullable Boolean enableKeyRotation) {
             this.enableKeyRotation = enableKeyRotation;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyPolicy(@Nullable Object keyPolicy) {
             this.keyPolicy = keyPolicy;
             return this;
         }
-
         public Builder keySpec(@Nullable KeySpec keySpec) {
             this.keySpec = keySpec;
             return this;
         }
-
         public Builder keyUsage(@Nullable KeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder multiRegion(@Nullable Boolean multiRegion) {
             this.multiRegion = multiRegion;
             return this;
         }
-
         public Builder tags(@Nullable List<KeyTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetKeyResult build() {
+        public Builder tags(KeyTag... tags) {
+            return tags(List.of(tags));
+        }        public GetKeyResult build() {
             return new GetKeyResult(arn, description, enableKeyRotation, enabled, keyId, keyPolicy, keySpec, keyUsage, multiRegion, tags);
         }
     }

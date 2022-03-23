@@ -107,42 +107,34 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.allocationId = allocationId;
             return this;
         }
-
         public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
-
         public Builder connectivityType(@Nullable Output<String> connectivityType) {
             this.connectivityType = connectivityType;
             return this;
         }
-
         public Builder connectivityType(@Nullable String connectivityType) {
             this.connectivityType = Output.ofNullable(connectivityType);
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NatGatewayArgs build() {
+        }        public NatGatewayArgs build() {
             return new NatGatewayArgs(allocationId, connectivityType, subnetId, tags);
         }
     }

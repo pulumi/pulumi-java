@@ -64,17 +64,14 @@ public final class ScheduledQueryS3Configuration {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder encryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
-        }
-        public ScheduledQueryS3Configuration build() {
+        }        public ScheduledQueryS3Configuration build() {
             return new ScheduledQueryS3Configuration(bucketName, encryptionOption, objectKeyPrefix);
         }
     }

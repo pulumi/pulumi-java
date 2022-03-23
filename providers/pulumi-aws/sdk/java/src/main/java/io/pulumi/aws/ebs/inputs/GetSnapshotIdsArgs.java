@@ -94,17 +94,23 @@ public final class GetSnapshotIdsArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSnapshotIdsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder owners(@Nullable List<String> owners) {
             this.owners = owners;
             return this;
         }
-
+        public Builder owners(String... owners) {
+            return owners(List.of(owners));
+        }
         public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
             this.restorableByUserIds = restorableByUserIds;
             return this;
         }
-        public GetSnapshotIdsArgs build() {
+        public Builder restorableByUserIds(String... restorableByUserIds) {
+            return restorableByUserIds(List.of(restorableByUserIds));
+        }        public GetSnapshotIdsArgs build() {
             return new GetSnapshotIdsArgs(filters, owners, restorableByUserIds);
         }
     }

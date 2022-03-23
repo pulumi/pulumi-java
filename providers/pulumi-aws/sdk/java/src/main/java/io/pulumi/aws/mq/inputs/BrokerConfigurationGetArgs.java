@@ -75,22 +75,18 @@ public final class BrokerConfigurationGetArgs extends io.pulumi.resources.Resour
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Integer revision) {
             this.revision = Output.ofNullable(revision);
             return this;
-        }
-        public BrokerConfigurationGetArgs build() {
+        }        public BrokerConfigurationGetArgs build() {
             return new BrokerConfigurationGetArgs(id, revision);
         }
     }

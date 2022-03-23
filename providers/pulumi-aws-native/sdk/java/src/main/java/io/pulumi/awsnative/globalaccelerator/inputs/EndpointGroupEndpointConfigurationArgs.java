@@ -96,32 +96,26 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
             this.clientIPPreservationEnabled = clientIPPreservationEnabled;
             return this;
         }
-
         public Builder clientIPPreservationEnabled(@Nullable Boolean clientIPPreservationEnabled) {
             this.clientIPPreservationEnabled = Output.ofNullable(clientIPPreservationEnabled);
             return this;
         }
-
         public Builder endpointId(Output<String> endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
-
         public Builder endpointId(String endpointId) {
             this.endpointId = Output.of(Objects.requireNonNull(endpointId));
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public EndpointGroupEndpointConfigurationArgs build() {
+        }        public EndpointGroupEndpointConfigurationArgs build() {
             return new EndpointGroupEndpointConfigurationArgs(clientIPPreservationEnabled, endpointId, weight);
         }
     }

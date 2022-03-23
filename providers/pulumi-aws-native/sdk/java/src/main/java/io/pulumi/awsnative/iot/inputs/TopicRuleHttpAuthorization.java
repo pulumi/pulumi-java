@@ -52,8 +52,7 @@ public final class TopicRuleHttpAuthorization extends io.pulumi.resources.Invoke
         public Builder sigv4(@Nullable TopicRuleSigV4Authorization sigv4) {
             this.sigv4 = sigv4;
             return this;
-        }
-        public TopicRuleHttpAuthorization build() {
+        }        public TopicRuleHttpAuthorization build() {
             return new TopicRuleHttpAuthorization(sigv4);
         }
     }

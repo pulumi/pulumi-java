@@ -69,12 +69,10 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
             this.connector = Objects.requireNonNull(connector);
             return this;
         }
-
         public Builder egress(String egress) {
             this.egress = Objects.requireNonNull(egress);
             return this;
-        }
-        public GoogleCloudRunOpV2VpcAccessResponse build() {
+        }        public GoogleCloudRunOpV2VpcAccessResponse build() {
             return new GoogleCloudRunOpV2VpcAccessResponse(connector, egress);
         }
     }

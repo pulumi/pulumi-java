@@ -71,12 +71,10 @@ public final class CustomRPValidationsResponse {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
-
         public Builder validationType(@Nullable String validationType) {
             this.validationType = validationType;
             return this;
-        }
-        public CustomRPValidationsResponse build() {
+        }        public CustomRPValidationsResponse build() {
             return new CustomRPValidationsResponse(specification, validationType);
         }
     }

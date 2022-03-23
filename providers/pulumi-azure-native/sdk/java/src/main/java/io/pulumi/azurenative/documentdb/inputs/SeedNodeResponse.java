@@ -56,8 +56,7 @@ public final class SeedNodeResponse extends io.pulumi.resources.InvokeArgs {
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
-        }
-        public SeedNodeResponse build() {
+        }        public SeedNodeResponse build() {
             return new SeedNodeResponse(ipAddress);
         }
     }

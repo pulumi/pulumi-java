@@ -62,12 +62,13 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = Output.ofNullable(allowedAudiences);
             return this;
         }
-        public AllowedAudiencesValidationArgs build() {
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }        public AllowedAudiencesValidationArgs build() {
             return new AllowedAudiencesValidationArgs(allowedAudiences);
         }
     }

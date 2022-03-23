@@ -66,22 +66,18 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
             this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
             return this;
         }
-
         public Builder azureBackupRGNamePrefix(@Nullable String azureBackupRGNamePrefix) {
             this.azureBackupRGNamePrefix = Output.ofNullable(azureBackupRGNamePrefix);
             return this;
         }
-
         public Builder azureBackupRGNameSuffix(@Nullable Output<String> azureBackupRGNameSuffix) {
             this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
             return this;
         }
-
         public Builder azureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
             this.azureBackupRGNameSuffix = Output.ofNullable(azureBackupRGNameSuffix);
             return this;
-        }
-        public InstantRPAdditionalDetailsArgs build() {
+        }        public InstantRPAdditionalDetailsArgs build() {
             return new InstantRPAdditionalDetailsArgs(azureBackupRGNamePrefix, azureBackupRGNameSuffix);
         }
     }

@@ -122,27 +122,22 @@ public final class GetVirtualMachineScheduleArgs extends io.pulumi.resources.Inv
             this.expand = expand;
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
-        }
-        public GetVirtualMachineScheduleArgs build() {
+        }        public GetVirtualMachineScheduleArgs build() {
             return new GetVirtualMachineScheduleArgs(expand, labName, name, resourceGroupName, virtualMachineName);
         }
     }

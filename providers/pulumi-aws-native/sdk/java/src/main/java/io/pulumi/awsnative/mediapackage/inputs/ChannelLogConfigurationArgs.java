@@ -57,12 +57,10 @@ public final class ChannelLogConfigurationArgs extends io.pulumi.resources.Resou
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Output.ofNullable(logGroupName);
             return this;
-        }
-        public ChannelLogConfigurationArgs build() {
+        }        public ChannelLogConfigurationArgs build() {
             return new ChannelLogConfigurationArgs(logGroupName);
         }
     }

@@ -86,17 +86,14 @@ public final class StackTraceElementResponse {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder routine(String routine) {
             this.routine = Objects.requireNonNull(routine);
             return this;
         }
-
         public Builder step(String step) {
             this.step = Objects.requireNonNull(step);
             return this;
-        }
-        public StackTraceElementResponse build() {
+        }        public StackTraceElementResponse build() {
             return new StackTraceElementResponse(position, routine, step);
         }
     }

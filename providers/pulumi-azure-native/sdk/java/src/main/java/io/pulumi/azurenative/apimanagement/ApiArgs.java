@@ -439,242 +439,197 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder apiRevision(@Nullable Output<String> apiRevision) {
             this.apiRevision = apiRevision;
             return this;
         }
-
         public Builder apiRevision(@Nullable String apiRevision) {
             this.apiRevision = Output.ofNullable(apiRevision);
             return this;
         }
-
         public Builder apiRevisionDescription(@Nullable Output<String> apiRevisionDescription) {
             this.apiRevisionDescription = apiRevisionDescription;
             return this;
         }
-
         public Builder apiRevisionDescription(@Nullable String apiRevisionDescription) {
             this.apiRevisionDescription = Output.ofNullable(apiRevisionDescription);
             return this;
         }
-
         public Builder apiType(@Nullable Output<Either<String,ApiType>> apiType) {
             this.apiType = apiType;
             return this;
         }
-
         public Builder apiType(@Nullable Either<String,ApiType> apiType) {
             this.apiType = Output.ofNullable(apiType);
             return this;
         }
-
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder apiVersionDescription(@Nullable Output<String> apiVersionDescription) {
             this.apiVersionDescription = apiVersionDescription;
             return this;
         }
-
         public Builder apiVersionDescription(@Nullable String apiVersionDescription) {
             this.apiVersionDescription = Output.ofNullable(apiVersionDescription);
             return this;
         }
-
         public Builder apiVersionSet(@Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet) {
             this.apiVersionSet = apiVersionSet;
             return this;
         }
-
         public Builder apiVersionSet(@Nullable ApiVersionSetContractDetailsArgs apiVersionSet) {
             this.apiVersionSet = Output.ofNullable(apiVersionSet);
             return this;
         }
-
         public Builder apiVersionSetId(@Nullable Output<String> apiVersionSetId) {
             this.apiVersionSetId = apiVersionSetId;
             return this;
         }
-
         public Builder apiVersionSetId(@Nullable String apiVersionSetId) {
             this.apiVersionSetId = Output.ofNullable(apiVersionSetId);
             return this;
         }
-
         public Builder authenticationSettings(@Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings) {
             this.authenticationSettings = authenticationSettings;
             return this;
         }
-
         public Builder authenticationSettings(@Nullable AuthenticationSettingsContractArgs authenticationSettings) {
             this.authenticationSettings = Output.ofNullable(authenticationSettings);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder format(@Nullable Output<Either<String,ContentFormat>> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,ContentFormat> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder isCurrent(@Nullable Output<Boolean> isCurrent) {
             this.isCurrent = isCurrent;
             return this;
         }
-
         public Builder isCurrent(@Nullable Boolean isCurrent) {
             this.isCurrent = Output.ofNullable(isCurrent);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder protocols(@Nullable Output<List<Protocol>> protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder protocols(@Nullable List<Protocol> protocols) {
             this.protocols = Output.ofNullable(protocols);
             return this;
         }
-
+        public Builder protocols(Protocol... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder serviceUrl(@Nullable Output<String> serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = Output.ofNullable(serviceUrl);
             return this;
         }
-
         public Builder soapApiType(@Nullable Output<Either<String,SoapApiType>> soapApiType) {
             this.soapApiType = soapApiType;
             return this;
         }
-
         public Builder soapApiType(@Nullable Either<String,SoapApiType> soapApiType) {
             this.soapApiType = Output.ofNullable(soapApiType);
             return this;
         }
-
         public Builder sourceApiId(@Nullable Output<String> sourceApiId) {
             this.sourceApiId = sourceApiId;
             return this;
         }
-
         public Builder sourceApiId(@Nullable String sourceApiId) {
             this.sourceApiId = Output.ofNullable(sourceApiId);
             return this;
         }
-
         public Builder subscriptionKeyParameterNames(@Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames) {
             this.subscriptionKeyParameterNames = subscriptionKeyParameterNames;
             return this;
         }
-
         public Builder subscriptionKeyParameterNames(@Nullable SubscriptionKeyParameterNamesContractArgs subscriptionKeyParameterNames) {
             this.subscriptionKeyParameterNames = Output.ofNullable(subscriptionKeyParameterNames);
             return this;
         }
-
         public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
-
         public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
             this.subscriptionRequired = Output.ofNullable(subscriptionRequired);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder wsdlSelector(@Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector) {
             this.wsdlSelector = wsdlSelector;
             return this;
         }
-
         public Builder wsdlSelector(@Nullable ApiCreateOrUpdatePropertiesWsdlSelectorArgs wsdlSelector) {
             this.wsdlSelector = Output.ofNullable(wsdlSelector);
             return this;
-        }
-        public ApiArgs build() {
+        }        public ApiArgs build() {
             return new ApiArgs(apiId, apiRevision, apiRevisionDescription, apiType, apiVersion, apiVersionDescription, apiVersionSet, apiVersionSetId, authenticationSettings, description, displayName, format, isCurrent, path, protocols, resourceGroupName, serviceName, serviceUrl, soapApiType, sourceApiId, subscriptionKeyParameterNames, subscriptionRequired, value, wsdlSelector);
         }
     }

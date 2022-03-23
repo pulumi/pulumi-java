@@ -54,8 +54,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRuleArgs build() {
+        }        public GetRuleArgs build() {
             return new GetRuleArgs(name);
         }
     }

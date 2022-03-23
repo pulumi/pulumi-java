@@ -234,62 +234,50 @@ public final class GetWebAppHybridConnectionResult {
             this.hostname = hostname;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder relayArmUri(@Nullable String relayArmUri) {
             this.relayArmUri = relayArmUri;
             return this;
         }
-
         public Builder relayName(@Nullable String relayName) {
             this.relayName = relayName;
             return this;
         }
-
         public Builder sendKeyName(@Nullable String sendKeyName) {
             this.sendKeyName = sendKeyName;
             return this;
         }
-
         public Builder sendKeyValue(@Nullable String sendKeyValue) {
             this.sendKeyValue = sendKeyValue;
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
-
         public Builder serviceBusSuffix(@Nullable String serviceBusSuffix) {
             this.serviceBusSuffix = serviceBusSuffix;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppHybridConnectionResult build() {
+        }        public GetWebAppHybridConnectionResult build() {
             return new GetWebAppHybridConnectionResult(hostname, id, kind, name, port, relayArmUri, relayName, sendKeyName, sendKeyValue, serviceBusNamespace, serviceBusSuffix, type);
         }
     }

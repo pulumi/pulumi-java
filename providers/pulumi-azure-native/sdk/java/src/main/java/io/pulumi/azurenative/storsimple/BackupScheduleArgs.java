@@ -223,112 +223,90 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
             return this;
         }
-
         public Builder backupPolicyName(String backupPolicyName) {
             this.backupPolicyName = Output.of(Objects.requireNonNull(backupPolicyName));
             return this;
         }
-
         public Builder backupScheduleName(@Nullable Output<String> backupScheduleName) {
             this.backupScheduleName = backupScheduleName;
             return this;
         }
-
         public Builder backupScheduleName(@Nullable String backupScheduleName) {
             this.backupScheduleName = Output.ofNullable(backupScheduleName);
             return this;
         }
-
         public Builder backupType(Output<BackupType> backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
-
         public Builder backupType(BackupType backupType) {
             this.backupType = Output.of(Objects.requireNonNull(backupType));
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retentionCount(Output<Double> retentionCount) {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }
-
         public Builder retentionCount(Double retentionCount) {
             this.retentionCount = Output.of(Objects.requireNonNull(retentionCount));
             return this;
         }
-
         public Builder scheduleRecurrence(Output<ScheduleRecurrenceArgs> scheduleRecurrence) {
             this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence);
             return this;
         }
-
         public Builder scheduleRecurrence(ScheduleRecurrenceArgs scheduleRecurrence) {
             this.scheduleRecurrence = Output.of(Objects.requireNonNull(scheduleRecurrence));
             return this;
         }
-
         public Builder scheduleStatus(Output<ScheduleStatus> scheduleStatus) {
             this.scheduleStatus = Objects.requireNonNull(scheduleStatus);
             return this;
         }
-
         public Builder scheduleStatus(ScheduleStatus scheduleStatus) {
             this.scheduleStatus = Output.of(Objects.requireNonNull(scheduleStatus));
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public BackupScheduleArgs build() {
+        }        public BackupScheduleArgs build() {
             return new BackupScheduleArgs(backupPolicyName, backupScheduleName, backupType, deviceName, kind, managerName, resourceGroupName, retentionCount, scheduleRecurrence, scheduleStatus, startTime);
         }
     }

@@ -80,12 +80,10 @@ public final class GCPolicyMaxAge {
             this.days = days;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
-        }
-        public GCPolicyMaxAge build() {
+        }        public GCPolicyMaxAge build() {
             return new GCPolicyMaxAge(days, duration);
         }
     }

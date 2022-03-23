@@ -60,12 +60,10 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public KeyVaultReferenceArgs build() {
+        }        public KeyVaultReferenceArgs build() {
             return new KeyVaultReferenceArgs(id);
         }
     }

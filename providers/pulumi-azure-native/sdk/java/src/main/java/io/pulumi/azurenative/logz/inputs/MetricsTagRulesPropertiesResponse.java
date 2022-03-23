@@ -110,22 +110,21 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
             this.metricRules = metricRules;
             return this;
         }
-
+        public Builder metricRules(MetricRulesResponse... metricRules) {
+            return metricRules(List.of(metricRules));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sendMetrics(@Nullable Boolean sendMetrics) {
             this.sendMetrics = sendMetrics;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
-        }
-        public MetricsTagRulesPropertiesResponse build() {
+        }        public MetricsTagRulesPropertiesResponse build() {
             return new MetricsTagRulesPropertiesResponse(metricRules, provisioningState, sendMetrics, systemData);
         }
     }

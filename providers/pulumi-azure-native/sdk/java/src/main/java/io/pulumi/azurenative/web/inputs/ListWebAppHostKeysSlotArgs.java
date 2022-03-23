@@ -88,17 +88,14 @@ public final class ListWebAppHostKeysSlotArgs extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppHostKeysSlotArgs build() {
+        }        public ListWebAppHostKeysSlotArgs build() {
             return new ListWebAppHostKeysSlotArgs(name, resourceGroupName, slot);
         }
     }

@@ -54,8 +54,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
-        }
-        public GetFunctionArgs build() {
+        }        public GetFunctionArgs build() {
             return new GetFunctionArgs(functionName);
         }
     }

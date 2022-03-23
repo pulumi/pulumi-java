@@ -90,22 +90,18 @@ public final class GetPolicyTagArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder policyTagId(String policyTagId) {
             this.policyTagId = Objects.requireNonNull(policyTagId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder taxonomyId(String taxonomyId) {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
-        }
-        public GetPolicyTagArgs build() {
+        }        public GetPolicyTagArgs build() {
             return new GetPolicyTagArgs(location, policyTagId, project, taxonomyId);
         }
     }

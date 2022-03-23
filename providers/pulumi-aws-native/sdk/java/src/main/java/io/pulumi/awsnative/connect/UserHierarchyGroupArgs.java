@@ -90,32 +90,26 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentGroupArn(@Nullable Output<String> parentGroupArn) {
             this.parentGroupArn = parentGroupArn;
             return this;
         }
-
         public Builder parentGroupArn(@Nullable String parentGroupArn) {
             this.parentGroupArn = Output.ofNullable(parentGroupArn);
             return this;
-        }
-        public UserHierarchyGroupArgs build() {
+        }        public UserHierarchyGroupArgs build() {
             return new UserHierarchyGroupArgs(instanceArn, name, parentGroupArn);
         }
     }

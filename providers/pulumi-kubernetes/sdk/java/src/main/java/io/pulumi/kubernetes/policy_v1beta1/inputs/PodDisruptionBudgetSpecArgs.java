@@ -97,32 +97,26 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = Output.ofNullable(maxUnavailable);
             return this;
         }
-
         public Builder minAvailable(@Nullable Output<Either<Integer,String>> minAvailable) {
             this.minAvailable = minAvailable;
             return this;
         }
-
         public Builder minAvailable(@Nullable Either<Integer,String> minAvailable) {
             this.minAvailable = Output.ofNullable(minAvailable);
             return this;
         }
-
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public PodDisruptionBudgetSpecArgs build() {
+        }        public PodDisruptionBudgetSpecArgs build() {
             return new PodDisruptionBudgetSpecArgs(maxUnavailable, minAvailable, selector);
         }
     }

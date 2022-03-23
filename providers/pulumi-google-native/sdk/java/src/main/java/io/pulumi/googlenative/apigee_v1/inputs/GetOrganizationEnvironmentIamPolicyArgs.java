@@ -78,17 +78,14 @@ public final class GetOrganizationEnvironmentIamPolicyArgs extends io.pulumi.res
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetOrganizationEnvironmentIamPolicyArgs build() {
+        }        public GetOrganizationEnvironmentIamPolicyArgs build() {
             return new GetOrganizationEnvironmentIamPolicyArgs(environmentId, optionsRequestedPolicyVersion, organizationId);
         }
     }

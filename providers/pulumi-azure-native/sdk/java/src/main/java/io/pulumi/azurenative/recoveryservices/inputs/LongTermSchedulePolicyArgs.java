@@ -61,12 +61,10 @@ public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.Resour
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
-
         public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Output.of(Objects.requireNonNull(schedulePolicyType));
             return this;
-        }
-        public LongTermSchedulePolicyArgs build() {
+        }        public LongTermSchedulePolicyArgs build() {
             return new LongTermSchedulePolicyArgs(schedulePolicyType);
         }
     }

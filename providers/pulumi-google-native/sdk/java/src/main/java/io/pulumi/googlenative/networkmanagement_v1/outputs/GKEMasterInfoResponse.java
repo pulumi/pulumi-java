@@ -101,22 +101,18 @@ public final class GKEMasterInfoResponse {
             this.clusterNetworkUri = Objects.requireNonNull(clusterNetworkUri);
             return this;
         }
-
         public Builder clusterUri(String clusterUri) {
             this.clusterUri = Objects.requireNonNull(clusterUri);
             return this;
         }
-
         public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-
         public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
-        }
-        public GKEMasterInfoResponse build() {
+        }        public GKEMasterInfoResponse build() {
             return new GKEMasterInfoResponse(clusterNetworkUri, clusterUri, externalIp, internalIp);
         }
     }

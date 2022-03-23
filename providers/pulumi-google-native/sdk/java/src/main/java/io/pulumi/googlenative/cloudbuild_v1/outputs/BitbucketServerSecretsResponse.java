@@ -85,17 +85,14 @@ public final class BitbucketServerSecretsResponse {
             this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName);
             return this;
         }
-
         public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
             this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName);
             return this;
         }
-
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
-        }
-        public BitbucketServerSecretsResponse build() {
+        }        public BitbucketServerSecretsResponse build() {
             return new BitbucketServerSecretsResponse(adminAccessTokenVersionName, readAccessTokenVersionName, webhookSecretVersionName);
         }
     }

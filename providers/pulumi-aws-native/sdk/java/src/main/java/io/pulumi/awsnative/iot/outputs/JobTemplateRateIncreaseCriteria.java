@@ -55,12 +55,10 @@ public final class JobTemplateRateIncreaseCriteria {
             this.numberOfNotifiedThings = numberOfNotifiedThings;
             return this;
         }
-
         public Builder numberOfSucceededThings(@Nullable Integer numberOfSucceededThings) {
             this.numberOfSucceededThings = numberOfSucceededThings;
             return this;
-        }
-        public JobTemplateRateIncreaseCriteria build() {
+        }        public JobTemplateRateIncreaseCriteria build() {
             return new JobTemplateRateIncreaseCriteria(numberOfNotifiedThings, numberOfSucceededThings);
         }
     }

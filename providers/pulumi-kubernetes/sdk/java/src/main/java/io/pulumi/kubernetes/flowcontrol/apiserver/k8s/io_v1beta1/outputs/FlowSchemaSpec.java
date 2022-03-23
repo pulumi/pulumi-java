@@ -107,22 +107,21 @@ public final class FlowSchemaSpec {
             this.distinguisherMethod = distinguisherMethod;
             return this;
         }
-
         public Builder matchingPrecedence(@Nullable Integer matchingPrecedence) {
             this.matchingPrecedence = matchingPrecedence;
             return this;
         }
-
         public Builder priorityLevelConfiguration(PriorityLevelConfigurationReference priorityLevelConfiguration) {
             this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration);
             return this;
         }
-
         public Builder rules(@Nullable List<PolicyRulesWithSubjects> rules) {
             this.rules = rules;
             return this;
         }
-        public FlowSchemaSpec build() {
+        public Builder rules(PolicyRulesWithSubjects... rules) {
+            return rules(List.of(rules));
+        }        public FlowSchemaSpec build() {
             return new FlowSchemaSpec(distinguisherMethod, matchingPrecedence, priorityLevelConfiguration, rules);
         }
     }

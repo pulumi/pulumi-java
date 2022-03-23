@@ -86,32 +86,26 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder linkState(Output<ChannelPartnerLinkLinkState> linkState) {
             this.linkState = Objects.requireNonNull(linkState);
             return this;
         }
-
         public Builder linkState(ChannelPartnerLinkLinkState linkState) {
             this.linkState = Output.of(Objects.requireNonNull(linkState));
             return this;
         }
-
         public Builder resellerCloudIdentityId(Output<String> resellerCloudIdentityId) {
             this.resellerCloudIdentityId = Objects.requireNonNull(resellerCloudIdentityId);
             return this;
         }
-
         public Builder resellerCloudIdentityId(String resellerCloudIdentityId) {
             this.resellerCloudIdentityId = Output.of(Objects.requireNonNull(resellerCloudIdentityId));
             return this;
-        }
-        public ChannelPartnerLinkArgs build() {
+        }        public ChannelPartnerLinkArgs build() {
             return new ChannelPartnerLinkArgs(accountId, linkState, resellerCloudIdentityId);
         }
     }

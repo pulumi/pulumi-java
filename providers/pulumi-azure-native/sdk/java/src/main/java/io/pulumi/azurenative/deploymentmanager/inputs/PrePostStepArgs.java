@@ -60,12 +60,10 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Output.of(Objects.requireNonNull(stepId));
             return this;
-        }
-        public PrePostStepArgs build() {
+        }        public PrePostStepArgs build() {
             return new PrePostStepArgs(stepId);
         }
     }

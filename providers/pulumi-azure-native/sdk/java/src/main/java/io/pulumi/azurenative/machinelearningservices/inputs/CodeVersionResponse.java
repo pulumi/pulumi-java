@@ -144,32 +144,26 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public CodeVersionResponse build() {
+        }        public CodeVersionResponse build() {
             return new CodeVersionResponse(datastoreId, description, isAnonymous, path, properties, tags);
         }
     }

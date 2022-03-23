@@ -57,12 +57,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends io.p
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
-
         public Builder infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs infoTypeTransformations) {
             this.infoTypeTransformations = Output.of(Objects.requireNonNull(infoTypeTransformations));
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigArgs(infoTypeTransformations);
         }
     }

@@ -91,32 +91,26 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
             this.gid = gid;
             return this;
         }
-
         public Builder gid(@Nullable Integer gid) {
             this.gid = Output.ofNullable(gid);
             return this;
         }
-
         public Builder sshPrivateKey(@Nullable Output<String> sshPrivateKey) {
             this.sshPrivateKey = sshPrivateKey;
             return this;
         }
-
         public Builder sshPrivateKey(@Nullable String sshPrivateKey) {
             this.sshPrivateKey = Output.ofNullable(sshPrivateKey);
             return this;
         }
-
         public Builder uid(@Nullable Output<Integer> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable Integer uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public LinuxUserConfigurationArgs build() {
+        }        public LinuxUserConfigurationArgs build() {
             return new LinuxUserConfigurationArgs(gid, sshPrivateKey, uid);
         }
     }

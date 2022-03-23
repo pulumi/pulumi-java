@@ -53,8 +53,7 @@ public final class CapabilityResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public CapabilityResponse build() {
+        }        public CapabilityResponse build() {
             return new CapabilityResponse(name);
         }
     }

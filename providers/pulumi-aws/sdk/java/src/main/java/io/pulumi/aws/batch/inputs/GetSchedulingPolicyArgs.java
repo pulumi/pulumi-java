@@ -75,12 +75,10 @@ public final class GetSchedulingPolicyArgs extends io.pulumi.resources.InvokeArg
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetSchedulingPolicyArgs build() {
+        }        public GetSchedulingPolicyArgs build() {
             return new GetSchedulingPolicyArgs(arn, tags);
         }
     }

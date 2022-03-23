@@ -65,17 +65,14 @@ public final class WebACLJsonBody {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
-
         public Builder matchPattern(WebACLJsonMatchPattern matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
-
         public Builder matchScope(WebACLJsonMatchScope matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
-        }
-        public WebACLJsonBody build() {
+        }        public WebACLJsonBody build() {
             return new WebACLJsonBody(invalidFallbackBehavior, matchPattern, matchScope);
         }
     }

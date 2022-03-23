@@ -69,22 +69,18 @@ public final class ListenerPortRangeArgs extends io.pulumi.resources.ResourceArg
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
-
         public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
-        }
-        public ListenerPortRangeArgs build() {
+        }        public ListenerPortRangeArgs build() {
             return new ListenerPortRangeArgs(fromPort, toPort);
         }
     }

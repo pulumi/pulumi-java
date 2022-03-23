@@ -95,17 +95,17 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
             this.customEmailSubject = customEmailSubject;
             return this;
         }
-
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
-
         public Builder groupIds(List<String> groupIds) {
             this.groupIds = Objects.requireNonNull(groupIds);
             return this;
         }
-        public ActionGroupsInformationResponse build() {
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }        public ActionGroupsInformationResponse build() {
             return new ActionGroupsInformationResponse(customEmailSubject, customWebhookPayload, groupIds);
         }
     }

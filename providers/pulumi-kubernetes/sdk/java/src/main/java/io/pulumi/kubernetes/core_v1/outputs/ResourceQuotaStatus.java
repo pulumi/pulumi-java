@@ -71,12 +71,10 @@ public final class ResourceQuotaStatus {
             this.hard = hard;
             return this;
         }
-
         public Builder used(@Nullable Map<String,String> used) {
             this.used = used;
             return this;
-        }
-        public ResourceQuotaStatus build() {
+        }        public ResourceQuotaStatus build() {
             return new ResourceQuotaStatus(hard, used);
         }
     }

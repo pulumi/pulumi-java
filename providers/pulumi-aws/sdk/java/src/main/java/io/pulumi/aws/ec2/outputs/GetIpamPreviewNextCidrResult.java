@@ -97,27 +97,25 @@ public final class GetIpamPreviewNextCidrResult {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
-
+        public Builder disallowedCidrs(String... disallowedCidrs) {
+            return disallowedCidrs(List.of(disallowedCidrs));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
-
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
-        }
-        public GetIpamPreviewNextCidrResult build() {
+        }        public GetIpamPreviewNextCidrResult build() {
             return new GetIpamPreviewNextCidrResult(cidr, disallowedCidrs, id, ipamPoolId, netmaskLength);
         }
     }

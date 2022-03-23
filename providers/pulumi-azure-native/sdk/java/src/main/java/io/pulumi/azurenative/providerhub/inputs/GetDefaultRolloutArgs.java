@@ -72,12 +72,10 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
-
         public Builder rolloutName(String rolloutName) {
             this.rolloutName = Objects.requireNonNull(rolloutName);
             return this;
-        }
-        public GetDefaultRolloutArgs build() {
+        }        public GetDefaultRolloutArgs build() {
             return new GetDefaultRolloutArgs(providerNamespace, rolloutName);
         }
     }

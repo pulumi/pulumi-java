@@ -203,102 +203,82 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder active(@Nullable Output<Boolean> active) {
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable Boolean active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disableTemplateValidation(@Nullable Output<Boolean> disableTemplateValidation) {
             this.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
-
         public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
             this.disableTemplateValidation = Output.ofNullable(disableTemplateValidation);
             return this;
         }
-
         public Builder guidance(@Nullable Output<String> guidance) {
             this.guidance = guidance;
             return this;
         }
-
         public Builder guidance(@Nullable String guidance) {
             this.guidance = Output.ofNullable(guidance);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder templatePhysicalId(@Nullable Output<String> templatePhysicalId) {
             this.templatePhysicalId = templatePhysicalId;
             return this;
         }
-
         public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
             this.templatePhysicalId = Output.ofNullable(templatePhysicalId);
             return this;
         }
-
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
-
         public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = Output.ofNullable(templateUrl);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ProvisioningArtifactArgs build() {
+        }        public ProvisioningArtifactArgs build() {
             return new ProvisioningArtifactArgs(acceptLanguage, active, description, disableTemplateValidation, guidance, name, productId, templatePhysicalId, templateUrl, type);
         }
     }

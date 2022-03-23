@@ -193,92 +193,77 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime);
             return this;
         }
-
         public Builder dataRetentionTime(String dataRetentionTime) {
             this.dataRetentionTime = Output.of(Objects.requireNonNull(dataRetentionTime));
             return this;
         }
-
         public Builder environmentName(@Nullable Output<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
-
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Output.ofNullable(environmentName);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder partitionKeyProperties(@Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties) {
             this.partitionKeyProperties = partitionKeyProperties;
             return this;
         }
-
         public Builder partitionKeyProperties(@Nullable List<TimeSeriesIdPropertyArgs> partitionKeyProperties) {
             this.partitionKeyProperties = Output.ofNullable(partitionKeyProperties);
             return this;
         }
-
+        public Builder partitionKeyProperties(TimeSeriesIdPropertyArgs... partitionKeyProperties) {
+            return partitionKeyProperties(List.of(partitionKeyProperties));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder storageLimitExceededBehavior(@Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior) {
             this.storageLimitExceededBehavior = storageLimitExceededBehavior;
             return this;
         }
-
         public Builder storageLimitExceededBehavior(@Nullable Either<String,StorageLimitExceededBehavior> storageLimitExceededBehavior) {
             this.storageLimitExceededBehavior = Output.ofNullable(storageLimitExceededBehavior);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public Gen1EnvironmentArgs build() {
+        }        public Gen1EnvironmentArgs build() {
             return new Gen1EnvironmentArgs(dataRetentionTime, environmentName, kind, location, partitionKeyProperties, resourceGroupName, sku, storageLimitExceededBehavior, tags);
         }
     }

@@ -440,242 +440,206 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
-
         public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
             this.actionsEnabled = Output.ofNullable(actionsEnabled);
             return this;
         }
-
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
-
         public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = Output.ofNullable(alarmActions);
             return this;
         }
-
+        public Builder alarmActions(String... alarmActions) {
+            return alarmActions(List.of(alarmActions));
+        }
         public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
-
         public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = Output.ofNullable(alarmDescription);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder comparisonOperator(@Nullable Output<String> comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
             return this;
         }
-
         public Builder comparisonOperator(@Nullable String comparisonOperator) {
             this.comparisonOperator = Output.ofNullable(comparisonOperator);
             return this;
         }
-
         public Builder datapointsToAlarm(@Nullable Output<Integer> datapointsToAlarm) {
             this.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
-
         public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
             this.datapointsToAlarm = Output.ofNullable(datapointsToAlarm);
             return this;
         }
-
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
         public Builder evaluateLowSampleCountPercentiles(@Nullable Output<String> evaluateLowSampleCountPercentiles) {
             this.evaluateLowSampleCountPercentiles = evaluateLowSampleCountPercentiles;
             return this;
         }
-
         public Builder evaluateLowSampleCountPercentiles(@Nullable String evaluateLowSampleCountPercentiles) {
             this.evaluateLowSampleCountPercentiles = Output.ofNullable(evaluateLowSampleCountPercentiles);
             return this;
         }
-
         public Builder evaluationPeriods(@Nullable Output<Integer> evaluationPeriods) {
             this.evaluationPeriods = evaluationPeriods;
             return this;
         }
-
         public Builder evaluationPeriods(@Nullable Integer evaluationPeriods) {
             this.evaluationPeriods = Output.ofNullable(evaluationPeriods);
             return this;
         }
-
         public Builder extendedStatistic(@Nullable Output<String> extendedStatistic) {
             this.extendedStatistic = extendedStatistic;
             return this;
         }
-
         public Builder extendedStatistic(@Nullable String extendedStatistic) {
             this.extendedStatistic = Output.ofNullable(extendedStatistic);
             return this;
         }
-
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
-
         public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = Output.ofNullable(insufficientDataActions);
             return this;
         }
-
+        public Builder insufficientDataActions(String... insufficientDataActions) {
+            return insufficientDataActions(List.of(insufficientDataActions));
+        }
         public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = Output.ofNullable(metricName);
             return this;
         }
-
         public Builder metricQueries(@Nullable Output<List<MetricAlarmMetricQueryGetArgs>> metricQueries) {
             this.metricQueries = metricQueries;
             return this;
         }
-
         public Builder metricQueries(@Nullable List<MetricAlarmMetricQueryGetArgs> metricQueries) {
             this.metricQueries = Output.ofNullable(metricQueries);
             return this;
         }
-
+        public Builder metricQueries(MetricAlarmMetricQueryGetArgs... metricQueries) {
+            return metricQueries(List.of(metricQueries));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder okActions(@Nullable Output<List<String>> okActions) {
             this.okActions = okActions;
             return this;
         }
-
         public Builder okActions(@Nullable List<String> okActions) {
             this.okActions = Output.ofNullable(okActions);
             return this;
         }
-
+        public Builder okActions(String... okActions) {
+            return okActions(List.of(okActions));
+        }
         public Builder period(@Nullable Output<Integer> period) {
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable Integer period) {
             this.period = Output.ofNullable(period);
             return this;
         }
-
         public Builder statistic(@Nullable Output<String> statistic) {
             this.statistic = statistic;
             return this;
         }
-
         public Builder statistic(@Nullable String statistic) {
             this.statistic = Output.ofNullable(statistic);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder threshold(@Nullable Double threshold) {
             this.threshold = Output.ofNullable(threshold);
             return this;
         }
-
         public Builder thresholdMetricId(@Nullable Output<String> thresholdMetricId) {
             this.thresholdMetricId = thresholdMetricId;
             return this;
         }
-
         public Builder thresholdMetricId(@Nullable String thresholdMetricId) {
             this.thresholdMetricId = Output.ofNullable(thresholdMetricId);
             return this;
         }
-
         public Builder treatMissingData(@Nullable Output<String> treatMissingData) {
             this.treatMissingData = treatMissingData;
             return this;
         }
-
         public Builder treatMissingData(@Nullable String treatMissingData) {
             this.treatMissingData = Output.ofNullable(treatMissingData);
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
-        }
-        public MetricAlarmState build() {
+        }        public MetricAlarmState build() {
             return new MetricAlarmState(actionsEnabled, alarmActions, alarmDescription, arn, comparisonOperator, datapointsToAlarm, dimensions, evaluateLowSampleCountPercentiles, evaluationPeriods, extendedStatistic, insufficientDataActions, metricName, metricQueries, name, namespace, okActions, period, statistic, tags, tagsAll, threshold, thresholdMetricId, treatMissingData, unit);
         }
     }

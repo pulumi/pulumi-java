@@ -170,82 +170,66 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder commentId(@Nullable Output<String> commentId) {
             this.commentId = commentId;
             return this;
         }
-
         public Builder commentId(@Nullable String commentId) {
             this.commentId = Output.ofNullable(commentId);
             return this;
         }
-
         public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder issueId(Output<String> issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
-
         public Builder issueId(String issueId) {
             this.issueId = Output.of(Objects.requireNonNull(issueId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
-        }
-        public ApiIssueCommentArgs build() {
+        }        public ApiIssueCommentArgs build() {
             return new ApiIssueCommentArgs(apiId, commentId, createdDate, issueId, resourceGroupName, serviceName, text, userId);
         }
     }

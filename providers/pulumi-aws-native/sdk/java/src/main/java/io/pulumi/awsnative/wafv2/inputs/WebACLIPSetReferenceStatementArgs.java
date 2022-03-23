@@ -67,22 +67,18 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder iPSetForwardedIPConfig(@Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig) {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }
-
         public Builder iPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
             this.iPSetForwardedIPConfig = Output.ofNullable(iPSetForwardedIPConfig);
             return this;
-        }
-        public WebACLIPSetReferenceStatementArgs build() {
+        }        public WebACLIPSetReferenceStatementArgs build() {
             return new WebACLIPSetReferenceStatementArgs(arn, iPSetForwardedIPConfig);
         }
     }

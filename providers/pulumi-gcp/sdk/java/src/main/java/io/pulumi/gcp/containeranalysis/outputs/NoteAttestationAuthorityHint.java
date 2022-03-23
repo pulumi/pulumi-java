@@ -53,8 +53,7 @@ public final class NoteAttestationAuthorityHint {
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
-        }
-        public NoteAttestationAuthorityHint build() {
+        }        public NoteAttestationAuthorityHint build() {
             return new NoteAttestationAuthorityHint(humanReadableName);
         }
     }

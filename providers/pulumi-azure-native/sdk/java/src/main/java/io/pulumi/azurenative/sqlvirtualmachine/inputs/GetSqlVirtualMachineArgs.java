@@ -90,17 +90,14 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlVirtualMachineName(String sqlVirtualMachineName) {
             this.sqlVirtualMachineName = Objects.requireNonNull(sqlVirtualMachineName);
             return this;
-        }
-        public GetSqlVirtualMachineArgs build() {
+        }        public GetSqlVirtualMachineArgs build() {
             return new GetSqlVirtualMachineArgs(expand, resourceGroupName, sqlVirtualMachineName);
         }
     }

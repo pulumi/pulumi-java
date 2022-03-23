@@ -60,8 +60,7 @@ public final class SymmetricKeyResponse extends io.pulumi.resources.InvokeArgs {
         public Builder connectionString(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
             this.connectionString = connectionString;
             return this;
-        }
-        public SymmetricKeyResponse build() {
+        }        public SymmetricKeyResponse build() {
             return new SymmetricKeyResponse(connectionString);
         }
     }

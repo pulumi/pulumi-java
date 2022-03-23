@@ -78,12 +78,10 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DatasetReferenceResponse build() {
+        }        public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(id, name);
         }
     }

@@ -69,12 +69,10 @@ public final class ReportAggregationResponse {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ReportAggregationResponse build() {
+        }        public ReportAggregationResponse build() {
             return new ReportAggregationResponse(function, name);
         }
     }

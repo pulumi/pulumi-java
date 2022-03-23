@@ -66,12 +66,10 @@ public final class GetFirewallArgs extends io.pulumi.resources.InvokeArgs {
             this.firewall = Objects.requireNonNull(firewall);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetFirewallArgs build() {
+        }        public GetFirewallArgs build() {
             return new GetFirewallArgs(firewall, project);
         }
     }

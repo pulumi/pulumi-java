@@ -62,12 +62,10 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,AppSku> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public AppSkuInfoArgs build() {
+        }        public AppSkuInfoArgs build() {
             return new AppSkuInfoArgs(name);
         }
     }

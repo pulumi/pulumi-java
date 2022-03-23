@@ -93,17 +93,14 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
             this.cpuCfsQuota = Objects.requireNonNull(cpuCfsQuota);
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Objects.requireNonNull(cpuCfsQuotaPeriod);
             return this;
         }
-
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
-        }
-        public NodeKubeletConfigResponse build() {
+        }        public NodeKubeletConfigResponse build() {
             return new NodeKubeletConfigResponse(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }
     }

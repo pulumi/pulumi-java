@@ -53,8 +53,7 @@ public final class NameIdentifierResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public NameIdentifierResponse build() {
+        }        public NameIdentifierResponse build() {
             return new NameIdentifierResponse(name);
         }
     }

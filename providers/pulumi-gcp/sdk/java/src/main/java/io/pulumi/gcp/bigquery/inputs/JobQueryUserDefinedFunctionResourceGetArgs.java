@@ -75,22 +75,18 @@ public final class JobQueryUserDefinedFunctionResourceGetArgs extends io.pulumi.
             this.inlineCode = inlineCode;
             return this;
         }
-
         public Builder inlineCode(@Nullable String inlineCode) {
             this.inlineCode = Output.ofNullable(inlineCode);
             return this;
         }
-
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Output.ofNullable(resourceUri);
             return this;
-        }
-        public JobQueryUserDefinedFunctionResourceGetArgs build() {
+        }        public JobQueryUserDefinedFunctionResourceGetArgs build() {
             return new JobQueryUserDefinedFunctionResourceGetArgs(inlineCode, resourceUri);
         }
     }

@@ -110,42 +110,34 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.htmlPart = htmlPart;
             return this;
         }
-
         public Builder htmlPart(@Nullable String htmlPart) {
             this.htmlPart = Output.ofNullable(htmlPart);
             return this;
         }
-
         public Builder subjectPart(Output<String> subjectPart) {
             this.subjectPart = Objects.requireNonNull(subjectPart);
             return this;
         }
-
         public Builder subjectPart(String subjectPart) {
             this.subjectPart = Output.of(Objects.requireNonNull(subjectPart));
             return this;
         }
-
         public Builder templateName(@Nullable Output<String> templateName) {
             this.templateName = templateName;
             return this;
         }
-
         public Builder templateName(@Nullable String templateName) {
             this.templateName = Output.ofNullable(templateName);
             return this;
         }
-
         public Builder textPart(@Nullable Output<String> textPart) {
             this.textPart = textPart;
             return this;
         }
-
         public Builder textPart(@Nullable String textPart) {
             this.textPart = Output.ofNullable(textPart);
             return this;
-        }
-        public TemplateArgs build() {
+        }        public TemplateArgs build() {
             return new TemplateArgs(htmlPart, subjectPart, templateName, textPart);
         }
     }

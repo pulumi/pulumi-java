@@ -139,62 +139,50 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
             this.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
-
         public Builder certificateExpirationDate(@Nullable String certificateExpirationDate) {
             this.certificateExpirationDate = Output.ofNullable(certificateExpirationDate);
             return this;
         }
-
         public Builder certificateSubjectName(@Nullable Output<String> certificateSubjectName) {
             this.certificateSubjectName = certificateSubjectName;
             return this;
         }
-
         public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
             this.certificateSubjectName = Output.ofNullable(certificateSubjectName);
             return this;
         }
-
         public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
-
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             this.certificateThumbprint = Output.ofNullable(certificateThumbprint);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder pfx(@Nullable Output<String> pfx) {
             this.pfx = pfx;
             return this;
         }
-
         public Builder pfx(@Nullable String pfx) {
             this.pfx = Output.ofNullable(pfx);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ClientCertAuthenticationArgs build() {
+        }        public ClientCertAuthenticationArgs build() {
             return new ClientCertAuthenticationArgs(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
         }
     }

@@ -72,12 +72,10 @@ public final class GetprivateLinkServicesForO365ManagementActivityAPIArgs extend
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetprivateLinkServicesForO365ManagementActivityAPIArgs build() {
+        }        public GetprivateLinkServicesForO365ManagementActivityAPIArgs build() {
             return new GetprivateLinkServicesForO365ManagementActivityAPIArgs(resourceGroupName, resourceName);
         }
     }

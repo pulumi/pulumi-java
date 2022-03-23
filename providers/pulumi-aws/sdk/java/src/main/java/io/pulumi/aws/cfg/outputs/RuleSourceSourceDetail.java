@@ -87,17 +87,14 @@ public final class RuleSourceSourceDetail {
             this.eventSource = eventSource;
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
-
         public Builder messageType(@Nullable String messageType) {
             this.messageType = messageType;
             return this;
-        }
-        public RuleSourceSourceDetail build() {
+        }        public RuleSourceSourceDetail build() {
             return new RuleSourceSourceDetail(eventSource, maximumExecutionFrequency, messageType);
         }
     }

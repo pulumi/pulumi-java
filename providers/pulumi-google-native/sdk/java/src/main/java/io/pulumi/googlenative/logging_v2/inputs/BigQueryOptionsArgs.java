@@ -61,12 +61,10 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.usePartitionedTables = usePartitionedTables;
             return this;
         }
-
         public Builder usePartitionedTables(@Nullable Boolean usePartitionedTables) {
             this.usePartitionedTables = Output.ofNullable(usePartitionedTables);
             return this;
-        }
-        public BigQueryOptionsArgs build() {
+        }        public BigQueryOptionsArgs build() {
             return new BigQueryOptionsArgs(usePartitionedTables);
         }
     }

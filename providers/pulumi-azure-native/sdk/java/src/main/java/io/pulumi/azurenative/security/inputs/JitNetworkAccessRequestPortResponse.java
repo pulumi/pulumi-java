@@ -152,37 +152,33 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
-
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
-
+        public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
+            return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
+        }
         public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
-
         public Builder mappedPort(@Nullable Integer mappedPort) {
             this.mappedPort = mappedPort;
             return this;
         }
-
         public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusReason(String statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
-        }
-        public JitNetworkAccessRequestPortResponse build() {
+        }        public JitNetworkAccessRequestPortResponse build() {
             return new JitNetworkAccessRequestPortResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, endTimeUtc, mappedPort, number, status, statusReason);
         }
     }

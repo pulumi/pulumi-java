@@ -113,42 +113,40 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
-
         public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Output.of(Objects.requireNonNull(fleetAutoscalerSpec));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
-
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
             this.schedules = Output.ofNullable(schedules);
             return this;
         }
-
+        public Builder schedules(ScheduleArgs... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder selectors(@Nullable Output<List<LabelSelectorArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
-
         public Builder selectors(@Nullable List<LabelSelectorArgs> selectors) {
             this.selectors = Output.ofNullable(selectors);
             return this;
         }
-        public ScalingConfigArgs build() {
+        public Builder selectors(LabelSelectorArgs... selectors) {
+            return selectors(List.of(selectors));
+        }        public ScalingConfigArgs build() {
             return new ScalingConfigArgs(fleetAutoscalerSpec, name, schedules, selectors);
         }
     }

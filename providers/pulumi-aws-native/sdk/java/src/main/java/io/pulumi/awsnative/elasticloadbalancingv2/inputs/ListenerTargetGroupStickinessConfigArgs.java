@@ -67,22 +67,18 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = Output.ofNullable(durationSeconds);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ListenerTargetGroupStickinessConfigArgs build() {
+        }        public ListenerTargetGroupStickinessConfigArgs build() {
             return new ListenerTargetGroupStickinessConfigArgs(durationSeconds, enabled);
         }
     }

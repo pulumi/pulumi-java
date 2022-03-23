@@ -123,52 +123,42 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder pipelineRunName(@Nullable Output<String> pipelineRunName) {
             this.pipelineRunName = pipelineRunName;
             return this;
         }
-
         public Builder pipelineRunName(@Nullable String pipelineRunName) {
             this.pipelineRunName = Output.ofNullable(pipelineRunName);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder request(@Nullable Output<PipelineRunRequestArgs> request) {
             this.request = request;
             return this;
         }
-
         public Builder request(@Nullable PipelineRunRequestArgs request) {
             this.request = Output.ofNullable(request);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PipelineRunArgs build() {
+        }        public PipelineRunArgs build() {
             return new PipelineRunArgs(forceUpdateTag, pipelineRunName, registryName, request, resourceGroupName);
         }
     }

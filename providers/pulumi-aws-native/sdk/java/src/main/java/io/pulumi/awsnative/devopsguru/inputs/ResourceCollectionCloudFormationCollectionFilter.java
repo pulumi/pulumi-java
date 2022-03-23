@@ -62,7 +62,9 @@ public final class ResourceCollectionCloudFormationCollectionFilter extends io.p
             this.stackNames = stackNames;
             return this;
         }
-        public ResourceCollectionCloudFormationCollectionFilter build() {
+        public Builder stackNames(String... stackNames) {
+            return stackNames(List.of(stackNames));
+        }        public ResourceCollectionCloudFormationCollectionFilter build() {
             return new ResourceCollectionCloudFormationCollectionFilter(stackNames);
         }
     }

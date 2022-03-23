@@ -61,17 +61,14 @@ public final class EnvironmentConfigMaintenanceWindow {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder recurrence(String recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public EnvironmentConfigMaintenanceWindow build() {
+        }        public EnvironmentConfigMaintenanceWindow build() {
             return new EnvironmentConfigMaintenanceWindow(endTime, recurrence, startTime);
         }
     }

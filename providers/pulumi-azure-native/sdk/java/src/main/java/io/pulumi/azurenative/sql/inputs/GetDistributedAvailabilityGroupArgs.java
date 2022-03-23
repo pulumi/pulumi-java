@@ -88,17 +88,14 @@ public final class GetDistributedAvailabilityGroupArgs extends io.pulumi.resourc
             this.distributedAvailabilityGroupName = Objects.requireNonNull(distributedAvailabilityGroupName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDistributedAvailabilityGroupArgs build() {
+        }        public GetDistributedAvailabilityGroupArgs build() {
             return new GetDistributedAvailabilityGroupArgs(distributedAvailabilityGroupName, managedInstanceName, resourceGroupName);
         }
     }

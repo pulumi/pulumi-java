@@ -79,22 +79,18 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder autoscaleSettings(@Nullable AutoscaleSettingsArgs autoscaleSettings) {
             this.autoscaleSettings = Output.ofNullable(autoscaleSettings);
             return this;
         }
-
         public Builder throughput(@Nullable Output<Integer> throughput) {
             this.throughput = throughput;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = Output.ofNullable(throughput);
             return this;
-        }
-        public CreateUpdateOptionsArgs build() {
+        }        public CreateUpdateOptionsArgs build() {
             return new CreateUpdateOptionsArgs(autoscaleSettings, throughput);
         }
     }

@@ -193,47 +193,38 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
             this.activeDeploymentName = activeDeploymentName;
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
-
         public Builder persistentDisk(@Nullable PersistentDiskResponse persistentDisk) {
             this.persistentDisk = persistentDisk;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder $public(@Nullable Boolean $public) {
             this.$public = $public;
             return this;
         }
-
         public Builder temporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
             this.temporaryDisk = temporaryDisk;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public AppResourcePropertiesResponse build() {
+        }        public AppResourcePropertiesResponse build() {
             return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, $public, temporaryDisk, url);
         }
     }

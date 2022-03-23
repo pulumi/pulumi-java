@@ -139,62 +139,50 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
-
         public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Output.of(Objects.requireNonNull(maxCapacity));
             return this;
         }
-
         public Builder minCapacity(Output<Integer> minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder scalableDimension(Output<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
-
         public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
-
         public Builder serviceNamespace(Output<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
             return this;
-        }
-        public TargetArgs build() {
+        }        public TargetArgs build() {
             return new TargetArgs(maxCapacity, minCapacity, resourceId, roleArn, scalableDimension, serviceNamespace);
         }
     }

@@ -69,12 +69,10 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThreshold {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder intervalSec(Integer intervalSec) {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
-        }
-        public SecurityPolicyRuleRateLimitOptionsRateLimitThreshold build() {
+        }        public SecurityPolicyRuleRateLimitOptionsRateLimitThreshold build() {
             return new SecurityPolicyRuleRateLimitOptionsRateLimitThreshold(count, intervalSec);
         }
     }

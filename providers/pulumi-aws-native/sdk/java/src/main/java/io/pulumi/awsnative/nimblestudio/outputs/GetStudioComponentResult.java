@@ -148,42 +148,43 @@ public final class GetStudioComponentResult {
             this.configuration = configuration;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder ec2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
             this.ec2SecurityGroupIds = ec2SecurityGroupIds;
             return this;
         }
-
+        public Builder ec2SecurityGroupIds(String... ec2SecurityGroupIds) {
+            return ec2SecurityGroupIds(List.of(ec2SecurityGroupIds));
+        }
         public Builder initializationScripts(@Nullable List<StudioComponentInitializationScript> initializationScripts) {
             this.initializationScripts = initializationScripts;
             return this;
         }
-
+        public Builder initializationScripts(StudioComponentInitializationScript... initializationScripts) {
+            return initializationScripts(List.of(initializationScripts));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder scriptParameters(@Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
-
+        public Builder scriptParameters(StudioComponentScriptParameterKeyValue... scriptParameters) {
+            return scriptParameters(List.of(scriptParameters));
+        }
         public Builder studioComponentId(@Nullable String studioComponentId) {
             this.studioComponentId = studioComponentId;
             return this;
         }
-
         public Builder type(@Nullable StudioComponentType type) {
             this.type = type;
             return this;
-        }
-        public GetStudioComponentResult build() {
+        }        public GetStudioComponentResult build() {
             return new GetStudioComponentResult(configuration, description, ec2SecurityGroupIds, initializationScripts, name, scriptParameters, studioComponentId, type);
         }
     }

@@ -51,8 +51,7 @@ public final class WorkloadIdentityPoolProviderAws {
         public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
-        }
-        public WorkloadIdentityPoolProviderAws build() {
+        }        public WorkloadIdentityPoolProviderAws build() {
             return new WorkloadIdentityPoolProviderAws(accountId);
         }
     }

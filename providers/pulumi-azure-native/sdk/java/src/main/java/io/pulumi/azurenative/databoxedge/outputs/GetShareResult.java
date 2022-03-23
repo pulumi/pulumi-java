@@ -270,72 +270,67 @@ public final class GetShareResult {
             this.accessProtocol = Objects.requireNonNull(accessProtocol);
             return this;
         }
-
         public Builder azureContainerInfo(@Nullable AzureContainerInfoResponse azureContainerInfo) {
             this.azureContainerInfo = azureContainerInfo;
             return this;
         }
-
         public Builder clientAccessRights(@Nullable List<ClientAccessRightResponse> clientAccessRights) {
             this.clientAccessRights = clientAccessRights;
             return this;
         }
-
+        public Builder clientAccessRights(ClientAccessRightResponse... clientAccessRights) {
+            return clientAccessRights(List.of(clientAccessRights));
+        }
         public Builder dataPolicy(@Nullable String dataPolicy) {
             this.dataPolicy = dataPolicy;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder monitoringStatus(String monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder refreshDetails(@Nullable RefreshDetailsResponse refreshDetails) {
             this.refreshDetails = refreshDetails;
             return this;
         }
-
         public Builder shareMappings(List<MountPointMapResponse> shareMappings) {
             this.shareMappings = Objects.requireNonNull(shareMappings);
             return this;
         }
-
+        public Builder shareMappings(MountPointMapResponse... shareMappings) {
+            return shareMappings(List.of(shareMappings));
+        }
         public Builder shareStatus(String shareStatus) {
             this.shareStatus = Objects.requireNonNull(shareStatus);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAccessRights(@Nullable List<UserAccessRightResponse> userAccessRights) {
             this.userAccessRights = userAccessRights;
             return this;
         }
-        public GetShareResult build() {
+        public Builder userAccessRights(UserAccessRightResponse... userAccessRights) {
+            return userAccessRights(List.of(userAccessRights));
+        }        public GetShareResult build() {
             return new GetShareResult(accessProtocol, azureContainerInfo, clientAccessRights, dataPolicy, description, id, monitoringStatus, name, refreshDetails, shareMappings, shareStatus, systemData, type, userAccessRights);
         }
     }

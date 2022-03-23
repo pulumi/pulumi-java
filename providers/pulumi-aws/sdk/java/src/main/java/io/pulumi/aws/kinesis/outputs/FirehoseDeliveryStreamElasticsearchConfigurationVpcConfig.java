@@ -96,22 +96,24 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig build() {
+        }        public FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig(roleArn, securityGroupIds, subnetIds, vpcId);
         }
     }

@@ -88,17 +88,17 @@ public final class PipelineContentConfigPermission {
             this.accesses = accesses;
             return this;
         }
-
+        public Builder accesses(String... accesses) {
+            return accesses(List.of(accesses));
+        }
         public Builder grantee(@Nullable String grantee) {
             this.grantee = grantee;
             return this;
         }
-
         public Builder granteeType(@Nullable String granteeType) {
             this.granteeType = granteeType;
             return this;
-        }
-        public PipelineContentConfigPermission build() {
+        }        public PipelineContentConfigPermission build() {
             return new PipelineContentConfigPermission(accesses, grantee, granteeType);
         }
     }

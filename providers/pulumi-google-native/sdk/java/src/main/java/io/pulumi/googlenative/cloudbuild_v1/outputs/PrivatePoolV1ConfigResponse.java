@@ -70,12 +70,10 @@ public final class PrivatePoolV1ConfigResponse {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
-
         public Builder workerConfig(WorkerConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
-        }
-        public PrivatePoolV1ConfigResponse build() {
+        }        public PrivatePoolV1ConfigResponse build() {
             return new PrivatePoolV1ConfigResponse(networkConfig, workerConfig);
         }
     }

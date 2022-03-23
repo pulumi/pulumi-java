@@ -78,22 +78,18 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
             this.agentChannel = agentChannel;
             return this;
         }
-
         public Builder agentChannel(@Nullable Integer agentChannel) {
             this.agentChannel = Output.ofNullable(agentChannel);
             return this;
         }
-
         public Builder customerChannel(@Nullable Output<Integer> customerChannel) {
             this.customerChannel = customerChannel;
             return this;
         }
-
         public Builder customerChannel(@Nullable Integer customerChannel) {
             this.customerChannel = Output.ofNullable(customerChannel);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs build() {
             return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(agentChannel, customerChannel);
         }
     }

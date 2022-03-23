@@ -79,22 +79,18 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.configMapKeyRef = configMapKeyRef;
             return this;
         }
-
         public Builder configMapKeyRef(@Nullable ConfigMapKeySelectorArgs configMapKeyRef) {
             this.configMapKeyRef = Output.ofNullable(configMapKeyRef);
             return this;
         }
-
         public Builder secretKeyRef(@Nullable Output<SecretKeySelectorArgs> secretKeyRef) {
             this.secretKeyRef = secretKeyRef;
             return this;
         }
-
         public Builder secretKeyRef(@Nullable SecretKeySelectorArgs secretKeyRef) {
             this.secretKeyRef = Output.ofNullable(secretKeyRef);
             return this;
-        }
-        public EnvVarSourceArgs build() {
+        }        public EnvVarSourceArgs build() {
             return new EnvVarSourceArgs(configMapKeyRef, secretKeyRef);
         }
     }

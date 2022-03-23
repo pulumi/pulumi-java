@@ -380,107 +380,89 @@ public final class GetApiResult {
             this.apiRevision = apiRevision;
             return this;
         }
-
         public Builder apiRevisionDescription(@Nullable String apiRevisionDescription) {
             this.apiRevisionDescription = apiRevisionDescription;
             return this;
         }
-
         public Builder apiType(@Nullable String apiType) {
             this.apiType = apiType;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersionDescription(@Nullable String apiVersionDescription) {
             this.apiVersionDescription = apiVersionDescription;
             return this;
         }
-
         public Builder apiVersionSet(@Nullable ApiVersionSetContractDetailsResponse apiVersionSet) {
             this.apiVersionSet = apiVersionSet;
             return this;
         }
-
         public Builder apiVersionSetId(@Nullable String apiVersionSetId) {
             this.apiVersionSetId = apiVersionSetId;
             return this;
         }
-
         public Builder authenticationSettings(@Nullable AuthenticationSettingsContractResponse authenticationSettings) {
             this.authenticationSettings = authenticationSettings;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isCurrent(@Nullable Boolean isCurrent) {
             this.isCurrent = isCurrent;
             return this;
         }
-
         public Builder isOnline(Boolean isOnline) {
             this.isOnline = Objects.requireNonNull(isOnline);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(String... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder sourceApiId(@Nullable String sourceApiId) {
             this.sourceApiId = sourceApiId;
             return this;
         }
-
         public Builder subscriptionKeyParameterNames(@Nullable SubscriptionKeyParameterNamesContractResponse subscriptionKeyParameterNames) {
             this.subscriptionKeyParameterNames = subscriptionKeyParameterNames;
             return this;
         }
-
         public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApiResult build() {
+        }        public GetApiResult build() {
             return new GetApiResult(apiRevision, apiRevisionDescription, apiType, apiVersion, apiVersionDescription, apiVersionSet, apiVersionSetId, authenticationSettings, description, displayName, id, isCurrent, isOnline, name, path, protocols, serviceUrl, sourceApiId, subscriptionKeyParameterNames, subscriptionRequired, type);
         }
     }

@@ -126,27 +126,25 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
             this.conversationTurns = Objects.requireNonNull(conversationTurns);
             return this;
         }
-
+        public Builder conversationTurns(GoogleCloudDialogflowCxV3ConversationTurnResponse... conversationTurns) {
+            return conversationTurns(List.of(conversationTurns));
+        }
         public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder testResult(String testResult) {
             this.testResult = Objects.requireNonNull(testResult);
             return this;
         }
-
         public Builder testTime(String testTime) {
             this.testTime = Objects.requireNonNull(testTime);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3TestCaseResultResponse build() {
+        }        public GoogleCloudDialogflowCxV3TestCaseResultResponse build() {
             return new GoogleCloudDialogflowCxV3TestCaseResultResponse(conversationTurns, environment, name, testResult, testTime);
         }
     }

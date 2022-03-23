@@ -128,52 +128,42 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder blockPublicAcls(@Nullable Output<Boolean> blockPublicAcls) {
             this.blockPublicAcls = blockPublicAcls;
             return this;
         }
-
         public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
             this.blockPublicAcls = Output.ofNullable(blockPublicAcls);
             return this;
         }
-
         public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
             this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
             return this;
         }
-
         public Builder ignorePublicAcls(@Nullable Output<Boolean> ignorePublicAcls) {
             this.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
-
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
             this.ignorePublicAcls = Output.ofNullable(ignorePublicAcls);
             return this;
         }
-
         public Builder restrictPublicBuckets(@Nullable Output<Boolean> restrictPublicBuckets) {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
             this.restrictPublicBuckets = Output.ofNullable(restrictPublicBuckets);
             return this;
-        }
-        public AccountPublicAccessBlockState build() {
+        }        public AccountPublicAccessBlockState build() {
             return new AccountPublicAccessBlockState(accountId, blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }
     }

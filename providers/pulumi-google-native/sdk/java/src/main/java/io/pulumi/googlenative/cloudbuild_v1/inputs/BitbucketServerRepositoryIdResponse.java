@@ -93,17 +93,14 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
             this.projectKey = Objects.requireNonNull(projectKey);
             return this;
         }
-
         public Builder repoSlug(String repoSlug) {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
-
         public Builder webhookId(Integer webhookId) {
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
-        }
-        public BitbucketServerRepositoryIdResponse build() {
+        }        public BitbucketServerRepositoryIdResponse build() {
             return new BitbucketServerRepositoryIdResponse(projectKey, repoSlug, webhookId);
         }
     }

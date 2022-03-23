@@ -71,12 +71,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter(osShortName, osVersion);
         }
     }

@@ -53,8 +53,7 @@ public final class RoutingRuleLinkResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public RoutingRuleLinkResponse build() {
+        }        public RoutingRuleLinkResponse build() {
             return new RoutingRuleLinkResponse(id);
         }
     }

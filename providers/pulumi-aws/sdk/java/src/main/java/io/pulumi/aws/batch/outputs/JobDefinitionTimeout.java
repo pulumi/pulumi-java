@@ -53,8 +53,7 @@ public final class JobDefinitionTimeout {
         public Builder attemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
             this.attemptDurationSeconds = attemptDurationSeconds;
             return this;
-        }
-        public JobDefinitionTimeout build() {
+        }        public JobDefinitionTimeout build() {
             return new JobDefinitionTimeout(attemptDurationSeconds);
         }
     }

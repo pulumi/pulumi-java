@@ -188,47 +188,41 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
-
         public Builder destinationFormat(String destinationFormat) {
             this.destinationFormat = Objects.requireNonNull(destinationFormat);
             return this;
         }
-
         public Builder destinationUri(String destinationUri) {
             this.destinationUri = Objects.requireNonNull(destinationUri);
             return this;
         }
-
         public Builder destinationUris(List<String> destinationUris) {
             this.destinationUris = Objects.requireNonNull(destinationUris);
             return this;
         }
-
+        public Builder destinationUris(String... destinationUris) {
+            return destinationUris(List.of(destinationUris));
+        }
         public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
-
         public Builder printHeader(Boolean printHeader) {
             this.printHeader = Objects.requireNonNull(printHeader);
             return this;
         }
-
         public Builder sourceModel(ModelReferenceResponse sourceModel) {
             this.sourceModel = Objects.requireNonNull(sourceModel);
             return this;
         }
-
         public Builder sourceTable(TableReferenceResponse sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
-
         public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
-        }
-        public JobConfigurationExtractResponse build() {
+        }        public JobConfigurationExtractResponse build() {
             return new JobConfigurationExtractResponse(compression, destinationFormat, destinationUri, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }
     }

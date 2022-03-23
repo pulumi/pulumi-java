@@ -131,52 +131,45 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
             this.accessControl = accessControl;
             return this;
         }
-
         public Builder accessControl(@Nullable LiveEventInputAccessControlArgs accessControl) {
             this.accessControl = Output.ofNullable(accessControl);
             return this;
         }
-
         public Builder accessToken(@Nullable Output<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<LiveEventEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(LiveEventEndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder keyFrameIntervalDuration(@Nullable Output<String> keyFrameIntervalDuration) {
             this.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
-
         public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
             this.keyFrameIntervalDuration = Output.ofNullable(keyFrameIntervalDuration);
             return this;
         }
-
         public Builder streamingProtocol(Output<Either<String,LiveEventInputProtocol>> streamingProtocol) {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }
-
         public Builder streamingProtocol(Either<String,LiveEventInputProtocol> streamingProtocol) {
             this.streamingProtocol = Output.of(Objects.requireNonNull(streamingProtocol));
             return this;
-        }
-        public LiveEventInputArgs build() {
+        }        public LiveEventInputArgs build() {
             return new LiveEventInputArgs(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
         }
     }

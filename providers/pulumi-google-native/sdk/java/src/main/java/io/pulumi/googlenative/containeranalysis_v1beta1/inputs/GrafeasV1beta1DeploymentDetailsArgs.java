@@ -60,12 +60,10 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends io.pulumi.resourc
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder deployment(DeploymentArgs deployment) {
             this.deployment = Output.of(Objects.requireNonNull(deployment));
             return this;
-        }
-        public GrafeasV1beta1DeploymentDetailsArgs build() {
+        }        public GrafeasV1beta1DeploymentDetailsArgs build() {
             return new GrafeasV1beta1DeploymentDetailsArgs(deployment);
         }
     }

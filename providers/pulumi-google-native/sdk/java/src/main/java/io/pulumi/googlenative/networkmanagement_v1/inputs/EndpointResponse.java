@@ -173,42 +173,34 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
             this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
             return this;
         }
-
         public Builder gkeMasterCluster(String gkeMasterCluster) {
             this.gkeMasterCluster = Objects.requireNonNull(gkeMasterCluster);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkType(String networkType) {
             this.networkType = Objects.requireNonNull(networkType);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public EndpointResponse build() {
+        }        public EndpointResponse build() {
             return new EndpointResponse(cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
         }
     }

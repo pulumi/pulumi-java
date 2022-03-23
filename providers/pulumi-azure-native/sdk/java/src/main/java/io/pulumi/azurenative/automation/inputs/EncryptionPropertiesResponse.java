@@ -96,17 +96,14 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
             this.identity = identity;
             return this;
         }
-
         public Builder keySource(@Nullable String keySource) {
             this.keySource = keySource;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
-        }
-        public EncryptionPropertiesResponse build() {
+        }        public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(identity, keySource, keyVaultProperties);
         }
     }

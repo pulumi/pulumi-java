@@ -298,82 +298,69 @@ public final class GetSourceControlResult {
             this.contentTypes = Objects.requireNonNull(contentTypes);
             return this;
         }
-
+        public Builder contentTypes(String... contentTypes) {
+            return contentTypes(List.of(contentTypes));
+        }
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdByType(@Nullable String createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder repoType(String repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
-
         public Builder repository(RepositoryResponse repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSourceControlResult build() {
+        }        public GetSourceControlResult build() {
             return new GetSourceControlResult(contentTypes, createdAt, createdBy, createdByType, description, displayName, etag, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, repoType, repository, systemData, type);
         }
     }

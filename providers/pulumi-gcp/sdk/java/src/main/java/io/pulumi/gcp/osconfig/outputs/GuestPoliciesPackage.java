@@ -117,17 +117,14 @@ public final class GuestPoliciesPackage {
             this.desiredState = desiredState;
             return this;
         }
-
         public Builder manager(@Nullable String manager) {
             this.manager = manager;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GuestPoliciesPackage build() {
+        }        public GuestPoliciesPackage build() {
             return new GuestPoliciesPackage(desiredState, manager, name);
         }
     }

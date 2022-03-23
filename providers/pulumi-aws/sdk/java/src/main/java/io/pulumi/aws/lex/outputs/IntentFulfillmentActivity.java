@@ -76,12 +76,10 @@ public final class IntentFulfillmentActivity {
             this.codeHook = codeHook;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public IntentFulfillmentActivity build() {
+        }        public IntentFulfillmentActivity build() {
             return new IntentFulfillmentActivity(codeHook, type);
         }
     }

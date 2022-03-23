@@ -59,12 +59,13 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
             this.keyUsages = keyUsages;
             return this;
         }
-
         public Builder keyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageArgs> keyUsages) {
             this.keyUsages = Output.ofNullable(keyUsages);
             return this;
         }
-        public CertificateCertificateDescriptionConfigValueArgs build() {
+        public Builder keyUsages(CertificateCertificateDescriptionConfigValueKeyUsageArgs... keyUsages) {
+            return keyUsages(List.of(keyUsages));
+        }        public CertificateCertificateDescriptionConfigValueArgs build() {
             return new CertificateCertificateDescriptionConfigValueArgs(keyUsages);
         }
     }

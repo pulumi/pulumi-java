@@ -57,12 +57,10 @@ public final class EncryptionByDefaultArgs extends io.pulumi.resources.ResourceA
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public EncryptionByDefaultArgs build() {
+        }        public EncryptionByDefaultArgs build() {
             return new EncryptionByDefaultArgs(enabled);
         }
     }

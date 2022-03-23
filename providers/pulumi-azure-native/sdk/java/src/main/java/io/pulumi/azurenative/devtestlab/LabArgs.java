@@ -244,122 +244,104 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             this.announcement = announcement;
             return this;
         }
-
         public Builder announcement(@Nullable LabAnnouncementPropertiesArgs announcement) {
             this.announcement = Output.ofNullable(announcement);
             return this;
         }
-
         public Builder environmentPermission(@Nullable Output<Either<String,EnvironmentPermission>> environmentPermission) {
             this.environmentPermission = environmentPermission;
             return this;
         }
-
         public Builder environmentPermission(@Nullable Either<String,EnvironmentPermission> environmentPermission) {
             this.environmentPermission = Output.ofNullable(environmentPermission);
             return this;
         }
-
         public Builder extendedProperties(@Nullable Output<Map<String,String>> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder extendedProperties(@Nullable Map<String,String> extendedProperties) {
             this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
-
         public Builder labStorageType(@Nullable Output<Either<String,StorageType>> labStorageType) {
             this.labStorageType = labStorageType;
             return this;
         }
-
         public Builder labStorageType(@Nullable Either<String,StorageType> labStorageType) {
             this.labStorageType = Output.ofNullable(labStorageType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux) {
             this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
             return this;
         }
-
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
             this.mandatoryArtifactsResourceIdsLinux = Output.ofNullable(mandatoryArtifactsResourceIdsLinux);
             return this;
         }
-
+        public Builder mandatoryArtifactsResourceIdsLinux(String... mandatoryArtifactsResourceIdsLinux) {
+            return mandatoryArtifactsResourceIdsLinux(List.of(mandatoryArtifactsResourceIdsLinux));
+        }
         public Builder mandatoryArtifactsResourceIdsWindows(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows) {
             this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
             return this;
         }
-
         public Builder mandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
             this.mandatoryArtifactsResourceIdsWindows = Output.ofNullable(mandatoryArtifactsResourceIdsWindows);
             return this;
         }
-
+        public Builder mandatoryArtifactsResourceIdsWindows(String... mandatoryArtifactsResourceIdsWindows) {
+            return mandatoryArtifactsResourceIdsWindows(List.of(mandatoryArtifactsResourceIdsWindows));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder premiumDataDisks(@Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks) {
             this.premiumDataDisks = premiumDataDisks;
             return this;
         }
-
         public Builder premiumDataDisks(@Nullable Either<String,PremiumDataDisk> premiumDataDisks) {
             this.premiumDataDisks = Output.ofNullable(premiumDataDisks);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder support(@Nullable Output<LabSupportPropertiesArgs> support) {
             this.support = support;
             return this;
         }
-
         public Builder support(@Nullable LabSupportPropertiesArgs support) {
             this.support = Output.ofNullable(support);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LabArgs build() {
+        }        public LabArgs build() {
             return new LabArgs(announcement, environmentPermission, extendedProperties, labStorageType, location, mandatoryArtifactsResourceIdsLinux, mandatoryArtifactsResourceIdsWindows, name, premiumDataDisks, resourceGroupName, support, tags);
         }
     }

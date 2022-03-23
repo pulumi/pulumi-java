@@ -189,47 +189,41 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse {
             this.deleteOption = deleteOption;
             return this;
         }
-
         public Builder dnsSettings(@Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder ipTags(@Nullable List<VirtualMachineIpTagResponse> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
-
+        public Builder ipTags(VirtualMachineIpTagResponse... ipTags) {
+            return ipTags(List.of(ipTags));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
-
         public Builder publicIPAllocationMethod(@Nullable String publicIPAllocationMethod) {
             this.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
-
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
-
         public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
             this.sku = sku;
             return this;
-        }
-        public VirtualMachinePublicIPAddressConfigurationResponse build() {
+        }        public VirtualMachinePublicIPAddressConfigurationResponse build() {
             return new VirtualMachinePublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, sku);
         }
     }

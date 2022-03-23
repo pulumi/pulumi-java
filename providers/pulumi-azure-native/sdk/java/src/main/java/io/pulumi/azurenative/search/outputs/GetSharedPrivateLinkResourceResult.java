@@ -102,22 +102,18 @@ public final class GetSharedPrivateLinkResourceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(SharedPrivateLinkResourcePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSharedPrivateLinkResourceResult build() {
+        }        public GetSharedPrivateLinkResourceResult build() {
             return new GetSharedPrivateLinkResourceResult(id, name, properties, type);
         }
     }

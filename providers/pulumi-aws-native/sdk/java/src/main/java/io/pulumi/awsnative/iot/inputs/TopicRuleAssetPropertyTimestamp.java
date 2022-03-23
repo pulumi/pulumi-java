@@ -66,12 +66,10 @@ public final class TopicRuleAssetPropertyTimestamp extends io.pulumi.resources.I
             this.offsetInNanos = offsetInNanos;
             return this;
         }
-
         public Builder timeInSeconds(String timeInSeconds) {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
-        }
-        public TopicRuleAssetPropertyTimestamp build() {
+        }        public TopicRuleAssetPropertyTimestamp build() {
             return new TopicRuleAssetPropertyTimestamp(offsetInNanos, timeInSeconds);
         }
     }

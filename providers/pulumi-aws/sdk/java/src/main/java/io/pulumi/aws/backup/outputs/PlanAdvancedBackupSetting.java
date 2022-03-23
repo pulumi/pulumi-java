@@ -70,12 +70,10 @@ public final class PlanAdvancedBackupSetting {
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public PlanAdvancedBackupSetting build() {
+        }        public PlanAdvancedBackupSetting build() {
             return new PlanAdvancedBackupSetting(backupOptions, resourceType);
         }
     }

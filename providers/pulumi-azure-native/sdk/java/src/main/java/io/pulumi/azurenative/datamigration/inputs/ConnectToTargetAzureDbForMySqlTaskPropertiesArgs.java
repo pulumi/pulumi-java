@@ -80,22 +80,18 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends io.p
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ConnectToTargetAzureDbForMySqlTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public ConnectToTargetAzureDbForMySqlTaskPropertiesArgs build() {
+        }        public ConnectToTargetAzureDbForMySqlTaskPropertiesArgs build() {
             return new ConnectToTargetAzureDbForMySqlTaskPropertiesArgs(input, taskType);
         }
     }

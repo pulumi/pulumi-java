@@ -91,32 +91,29 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
             this.directoryId = directoryId;
             return this;
         }
-
         public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
-
         public Builder dnsIps(@Nullable Output<List<String>> dnsIps) {
             this.dnsIps = dnsIps;
             return this;
         }
-
         public Builder dnsIps(@Nullable List<String> dnsIps) {
             this.dnsIps = Output.ofNullable(dnsIps);
             return this;
         }
-
+        public Builder dnsIps(String... dnsIps) {
+            return dnsIps(List.of(dnsIps));
+        }
         public Builder remoteDomainName(@Nullable Output<String> remoteDomainName) {
             this.remoteDomainName = remoteDomainName;
             return this;
         }
-
         public Builder remoteDomainName(@Nullable String remoteDomainName) {
             this.remoteDomainName = Output.ofNullable(remoteDomainName);
             return this;
-        }
-        public ConditionalForwaderState build() {
+        }        public ConditionalForwaderState build() {
             return new ConditionalForwaderState(directoryId, dnsIps, remoteDomainName);
         }
     }

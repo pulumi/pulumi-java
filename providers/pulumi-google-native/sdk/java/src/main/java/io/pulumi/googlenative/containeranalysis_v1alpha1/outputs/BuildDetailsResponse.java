@@ -87,17 +87,14 @@ public final class BuildDetailsResponse {
             this.intotoStatement = Objects.requireNonNull(intotoStatement);
             return this;
         }
-
         public Builder provenance(BuildProvenanceResponse provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
-
         public Builder provenanceBytes(String provenanceBytes) {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
-        }
-        public BuildDetailsResponse build() {
+        }        public BuildDetailsResponse build() {
             return new BuildDetailsResponse(intotoStatement, provenance, provenanceBytes);
         }
     }

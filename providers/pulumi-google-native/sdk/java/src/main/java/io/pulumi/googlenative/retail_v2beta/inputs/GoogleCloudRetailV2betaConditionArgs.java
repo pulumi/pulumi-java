@@ -80,22 +80,24 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
             this.activeTimeRange = activeTimeRange;
             return this;
         }
-
         public Builder activeTimeRange(@Nullable List<GoogleCloudRetailV2betaConditionTimeRangeArgs> activeTimeRange) {
             this.activeTimeRange = Output.ofNullable(activeTimeRange);
             return this;
         }
-
+        public Builder activeTimeRange(GoogleCloudRetailV2betaConditionTimeRangeArgs... activeTimeRange) {
+            return activeTimeRange(List.of(activeTimeRange));
+        }
         public Builder queryTerms(@Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
-
         public Builder queryTerms(@Nullable List<GoogleCloudRetailV2betaConditionQueryTermArgs> queryTerms) {
             this.queryTerms = Output.ofNullable(queryTerms);
             return this;
         }
-        public GoogleCloudRetailV2betaConditionArgs build() {
+        public Builder queryTerms(GoogleCloudRetailV2betaConditionQueryTermArgs... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }        public GoogleCloudRetailV2betaConditionArgs build() {
             return new GoogleCloudRetailV2betaConditionArgs(activeTimeRange, queryTerms);
         }
     }

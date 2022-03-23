@@ -57,12 +57,10 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends io.pulumi.resou
             this.clientPolicy = clientPolicy;
             return this;
         }
-
         public Builder clientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyGetArgs clientPolicy) {
             this.clientPolicy = Output.ofNullable(clientPolicy);
             return this;
-        }
-        public VirtualNodeSpecBackendDefaultsGetArgs build() {
+        }        public VirtualNodeSpecBackendDefaultsGetArgs build() {
             return new VirtualNodeSpecBackendDefaultsGetArgs(clientPolicy);
         }
     }

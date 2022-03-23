@@ -73,22 +73,18 @@ public final class EventSourceMappingSourceAccessConfigurationGetArgs extends io
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public EventSourceMappingSourceAccessConfigurationGetArgs build() {
+        }        public EventSourceMappingSourceAccessConfigurationGetArgs build() {
             return new EventSourceMappingSourceAccessConfigurationGetArgs(type, uri);
         }
     }

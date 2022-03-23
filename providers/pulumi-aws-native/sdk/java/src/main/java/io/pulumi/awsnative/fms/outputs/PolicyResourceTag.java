@@ -55,12 +55,10 @@ public final class PolicyResourceTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public PolicyResourceTag build() {
+        }        public PolicyResourceTag build() {
             return new PolicyResourceTag(key, value);
         }
     }

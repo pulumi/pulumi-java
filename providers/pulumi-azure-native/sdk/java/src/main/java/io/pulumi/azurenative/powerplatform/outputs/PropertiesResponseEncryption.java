@@ -72,12 +72,10 @@ public final class PropertiesResponseEncryption {
             this.keyVault = keyVault;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public PropertiesResponseEncryption build() {
+        }        public PropertiesResponseEncryption build() {
             return new PropertiesResponseEncryption(keyVault, state);
         }
     }

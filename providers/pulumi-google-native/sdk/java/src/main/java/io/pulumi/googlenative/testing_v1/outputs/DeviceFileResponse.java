@@ -70,12 +70,10 @@ public final class DeviceFileResponse {
             this.obbFile = Objects.requireNonNull(obbFile);
             return this;
         }
-
         public Builder regularFile(RegularFileResponse regularFile) {
             this.regularFile = Objects.requireNonNull(regularFile);
             return this;
-        }
-        public DeviceFileResponse build() {
+        }        public DeviceFileResponse build() {
             return new DeviceFileResponse(obbFile, regularFile);
         }
     }

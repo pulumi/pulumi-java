@@ -69,12 +69,10 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GoogleDatastoreAdminV1IndexedPropertyResponse build() {
+        }        public GoogleDatastoreAdminV1IndexedPropertyResponse build() {
             return new GoogleDatastoreAdminV1IndexedPropertyResponse(direction, name);
         }
     }

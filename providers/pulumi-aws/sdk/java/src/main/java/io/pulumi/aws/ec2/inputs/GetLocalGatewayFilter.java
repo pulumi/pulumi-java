@@ -75,12 +75,13 @@ public final class GetLocalGatewayFilter extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetLocalGatewayFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetLocalGatewayFilter build() {
             return new GetLocalGatewayFilter(name, values);
         }
     }

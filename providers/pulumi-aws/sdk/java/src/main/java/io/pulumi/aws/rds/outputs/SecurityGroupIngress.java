@@ -105,22 +105,18 @@ public final class SecurityGroupIngress {
             this.cidr = cidr;
             return this;
         }
-
         public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public Builder securityGroupName(@Nullable String securityGroupName) {
             this.securityGroupName = securityGroupName;
             return this;
         }
-
         public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
             this.securityGroupOwnerId = securityGroupOwnerId;
             return this;
-        }
-        public SecurityGroupIngress build() {
+        }        public SecurityGroupIngress build() {
             return new SecurityGroupIngress(cidr, securityGroupId, securityGroupName, securityGroupOwnerId);
         }
     }

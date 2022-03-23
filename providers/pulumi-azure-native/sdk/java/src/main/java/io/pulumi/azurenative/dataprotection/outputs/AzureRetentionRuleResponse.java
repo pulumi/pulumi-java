@@ -82,22 +82,21 @@ public final class AzureRetentionRuleResponse {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder lifecycles(List<SourceLifeCycleResponse> lifecycles) {
             this.lifecycles = Objects.requireNonNull(lifecycles);
             return this;
         }
-
+        public Builder lifecycles(SourceLifeCycleResponse... lifecycles) {
+            return lifecycles(List.of(lifecycles));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
-        }
-        public AzureRetentionRuleResponse build() {
+        }        public AzureRetentionRuleResponse build() {
             return new AzureRetentionRuleResponse(isDefault, lifecycles, name, objectType);
         }
     }

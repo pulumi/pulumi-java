@@ -88,17 +88,14 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetStaticSiteCustomDomainArgs build() {
+        }        public GetStaticSiteCustomDomainArgs build() {
             return new GetStaticSiteCustomDomainArgs(domainName, name, resourceGroupName);
         }
     }

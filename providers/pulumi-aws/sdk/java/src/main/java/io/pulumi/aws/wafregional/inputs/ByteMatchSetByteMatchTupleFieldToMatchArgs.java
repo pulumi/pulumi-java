@@ -74,22 +74,18 @@ public final class ByteMatchSetByteMatchTupleFieldToMatchArgs extends io.pulumi.
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ByteMatchSetByteMatchTupleFieldToMatchArgs build() {
+        }        public ByteMatchSetByteMatchTupleFieldToMatchArgs build() {
             return new ByteMatchSetByteMatchTupleFieldToMatchArgs(data, type);
         }
     }

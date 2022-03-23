@@ -104,22 +104,24 @@ public final class HostVpcConfiguration {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tlsCertificate(@Nullable String tlsCertificate) {
             this.tlsCertificate = tlsCertificate;
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public HostVpcConfiguration build() {
+        }        public HostVpcConfiguration build() {
             return new HostVpcConfiguration(securityGroupIds, subnetIds, tlsCertificate, vpcId);
         }
     }

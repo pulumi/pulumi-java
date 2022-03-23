@@ -111,42 +111,34 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable NodeConfigSourceArgs active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
         public Builder assigned(@Nullable Output<NodeConfigSourceArgs> assigned) {
             this.assigned = assigned;
             return this;
         }
-
         public Builder assigned(@Nullable NodeConfigSourceArgs assigned) {
             this.assigned = Output.ofNullable(assigned);
             return this;
         }
-
         public Builder error(@Nullable Output<String> error) {
             this.error = error;
             return this;
         }
-
         public Builder error(@Nullable String error) {
             this.error = Output.ofNullable(error);
             return this;
         }
-
         public Builder lastKnownGood(@Nullable Output<NodeConfigSourceArgs> lastKnownGood) {
             this.lastKnownGood = lastKnownGood;
             return this;
         }
-
         public Builder lastKnownGood(@Nullable NodeConfigSourceArgs lastKnownGood) {
             this.lastKnownGood = Output.ofNullable(lastKnownGood);
             return this;
-        }
-        public NodeConfigStatusArgs build() {
+        }        public NodeConfigStatusArgs build() {
             return new NodeConfigStatusArgs(active, assigned, error, lastKnownGood);
         }
     }

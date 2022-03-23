@@ -78,17 +78,14 @@ public final class GetTableIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public GetTableIamPolicyArgs build() {
+        }        public GetTableIamPolicyArgs build() {
             return new GetTableIamPolicyArgs(datasetId, project, tableId);
         }
     }

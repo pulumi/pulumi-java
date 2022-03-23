@@ -242,122 +242,98 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.bitLockerKey = bitLockerKey;
             return this;
         }
-
         public Builder bitLockerKey(@Nullable String bitLockerKey) {
             this.bitLockerKey = Output.ofNullable(bitLockerKey);
             return this;
         }
-
         public Builder bytesSucceeded(@Nullable Output<Double> bytesSucceeded) {
             this.bytesSucceeded = bytesSucceeded;
             return this;
         }
-
         public Builder bytesSucceeded(@Nullable Double bytesSucceeded) {
             this.bytesSucceeded = Output.ofNullable(bytesSucceeded);
             return this;
         }
-
         public Builder copyStatus(@Nullable Output<String> copyStatus) {
             this.copyStatus = copyStatus;
             return this;
         }
-
         public Builder copyStatus(@Nullable String copyStatus) {
             this.copyStatus = Output.ofNullable(copyStatus);
             return this;
         }
-
         public Builder driveHeaderHash(@Nullable Output<String> driveHeaderHash) {
             this.driveHeaderHash = driveHeaderHash;
             return this;
         }
-
         public Builder driveHeaderHash(@Nullable String driveHeaderHash) {
             this.driveHeaderHash = Output.ofNullable(driveHeaderHash);
             return this;
         }
-
         public Builder driveId(@Nullable Output<String> driveId) {
             this.driveId = driveId;
             return this;
         }
-
         public Builder driveId(@Nullable String driveId) {
             this.driveId = Output.ofNullable(driveId);
             return this;
         }
-
         public Builder errorLogUri(@Nullable Output<String> errorLogUri) {
             this.errorLogUri = errorLogUri;
             return this;
         }
-
         public Builder errorLogUri(@Nullable String errorLogUri) {
             this.errorLogUri = Output.ofNullable(errorLogUri);
             return this;
         }
-
         public Builder manifestFile(@Nullable Output<String> manifestFile) {
             this.manifestFile = manifestFile;
             return this;
         }
-
         public Builder manifestFile(@Nullable String manifestFile) {
             this.manifestFile = Output.ofNullable(manifestFile);
             return this;
         }
-
         public Builder manifestHash(@Nullable Output<String> manifestHash) {
             this.manifestHash = manifestHash;
             return this;
         }
-
         public Builder manifestHash(@Nullable String manifestHash) {
             this.manifestHash = Output.ofNullable(manifestHash);
             return this;
         }
-
         public Builder manifestUri(@Nullable Output<String> manifestUri) {
             this.manifestUri = manifestUri;
             return this;
         }
-
         public Builder manifestUri(@Nullable String manifestUri) {
             this.manifestUri = Output.ofNullable(manifestUri);
             return this;
         }
-
         public Builder percentComplete(@Nullable Output<Integer> percentComplete) {
             this.percentComplete = percentComplete;
             return this;
         }
-
         public Builder percentComplete(@Nullable Integer percentComplete) {
             this.percentComplete = Output.ofNullable(percentComplete);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,DriveState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,DriveState> state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder verboseLogUri(@Nullable Output<String> verboseLogUri) {
             this.verboseLogUri = verboseLogUri;
             return this;
         }
-
         public Builder verboseLogUri(@Nullable String verboseLogUri) {
             this.verboseLogUri = Output.ofNullable(verboseLogUri);
             return this;
-        }
-        public DriveStatusArgs build() {
+        }        public DriveStatusArgs build() {
             return new DriveStatusArgs(bitLockerKey, bytesSucceeded, copyStatus, driveHeaderHash, driveId, errorLogUri, manifestFile, manifestHash, manifestUri, percentComplete, state, verboseLogUri);
         }
     }

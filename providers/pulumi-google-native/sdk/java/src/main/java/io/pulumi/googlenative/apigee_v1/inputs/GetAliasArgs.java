@@ -88,22 +88,18 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
             this.aliasId = Objects.requireNonNull(aliasId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder keystoreId(String keystoreId) {
             this.keystoreId = Objects.requireNonNull(keystoreId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetAliasArgs build() {
+        }        public GetAliasArgs build() {
             return new GetAliasArgs(aliasId, environmentId, keystoreId, organizationId);
         }
     }

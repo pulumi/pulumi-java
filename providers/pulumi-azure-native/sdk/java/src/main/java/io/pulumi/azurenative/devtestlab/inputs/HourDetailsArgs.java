@@ -61,12 +61,10 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.minute = minute;
             return this;
         }
-
         public Builder minute(@Nullable Integer minute) {
             this.minute = Output.ofNullable(minute);
             return this;
-        }
-        public HourDetailsArgs build() {
+        }        public HourDetailsArgs build() {
             return new HourDetailsArgs(minute);
         }
     }

@@ -54,8 +54,7 @@ public final class GetReportArgs extends io.pulumi.resources.InvokeArgs {
         public Builder reportName(String reportName) {
             this.reportName = Objects.requireNonNull(reportName);
             return this;
-        }
-        public GetReportArgs build() {
+        }        public GetReportArgs build() {
             return new GetReportArgs(reportName);
         }
     }

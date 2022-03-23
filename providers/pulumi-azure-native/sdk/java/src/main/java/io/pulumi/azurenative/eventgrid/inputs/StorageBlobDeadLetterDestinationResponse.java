@@ -95,17 +95,14 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
             this.blobContainerName = blobContainerName;
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public StorageBlobDeadLetterDestinationResponse build() {
+        }        public StorageBlobDeadLetterDestinationResponse build() {
             return new StorageBlobDeadLetterDestinationResponse(blobContainerName, endpointType, resourceId);
         }
     }

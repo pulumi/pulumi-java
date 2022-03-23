@@ -82,32 +82,26 @@ public final class JobStatusErrorResultGetArgs extends io.pulumi.resources.Resou
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
-        }
-        public JobStatusErrorResultGetArgs build() {
+        }        public JobStatusErrorResultGetArgs build() {
             return new JobStatusErrorResultGetArgs(location, message, reason);
         }
     }

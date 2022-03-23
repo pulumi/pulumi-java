@@ -121,32 +121,32 @@ public final class PermissionsTableWithColumns {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder columnNames(@Nullable List<String> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
-
+        public Builder columnNames(String... columnNames) {
+            return columnNames(List.of(columnNames));
+        }
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder excludedColumnNames(@Nullable List<String> excludedColumnNames) {
             this.excludedColumnNames = excludedColumnNames;
             return this;
         }
-
+        public Builder excludedColumnNames(String... excludedColumnNames) {
+            return excludedColumnNames(List.of(excludedColumnNames));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = wildcard;
             return this;
-        }
-        public PermissionsTableWithColumns build() {
+        }        public PermissionsTableWithColumns build() {
             return new PermissionsTableWithColumns(catalogId, columnNames, databaseName, excludedColumnNames, name, wildcard);
         }
     }

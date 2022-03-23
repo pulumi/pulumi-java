@@ -63,17 +63,14 @@ public final class FeatureStateState {
             this.code = code;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public FeatureStateState build() {
+        }        public FeatureStateState build() {
             return new FeatureStateState(code, description, updateTime);
         }
     }

@@ -74,22 +74,18 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = Output.ofNullable(targetId);
             return this;
-        }
-        public PolicyAttachmentState build() {
+        }        public PolicyAttachmentState build() {
             return new PolicyAttachmentState(policyId, targetId);
         }
     }

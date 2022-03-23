@@ -322,172 +322,144 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             this.analyzed = analyzed;
             return this;
         }
-
         public Builder analyzed(@Nullable Boolean analyzed) {
             this.analyzed = Output.ofNullable(analyzed);
             return this;
         }
-
         public Builder attribution(@Nullable Output<String> attribution) {
             this.attribution = attribution;
             return this;
         }
-
         public Builder attribution(@Nullable String attribution) {
             this.attribution = Output.ofNullable(attribution);
             return this;
         }
-
         public Builder checksum(@Nullable Output<String> checksum) {
             this.checksum = checksum;
             return this;
         }
-
         public Builder checksum(@Nullable String checksum) {
             this.checksum = Output.ofNullable(checksum);
             return this;
         }
-
         public Builder copyright(@Nullable Output<String> copyright) {
             this.copyright = copyright;
             return this;
         }
-
         public Builder copyright(@Nullable String copyright) {
             this.copyright = Output.ofNullable(copyright);
             return this;
         }
-
         public Builder detailedDescription(@Nullable Output<String> detailedDescription) {
             this.detailedDescription = detailedDescription;
             return this;
         }
-
         public Builder detailedDescription(@Nullable String detailedDescription) {
             this.detailedDescription = Output.ofNullable(detailedDescription);
             return this;
         }
-
         public Builder downloadLocation(@Nullable Output<String> downloadLocation) {
             this.downloadLocation = downloadLocation;
             return this;
         }
-
         public Builder downloadLocation(@Nullable String downloadLocation) {
             this.downloadLocation = Output.ofNullable(downloadLocation);
             return this;
         }
-
         public Builder externalRefs(@Nullable Output<List<ExternalRefArgs>> externalRefs) {
             this.externalRefs = externalRefs;
             return this;
         }
-
         public Builder externalRefs(@Nullable List<ExternalRefArgs> externalRefs) {
             this.externalRefs = Output.ofNullable(externalRefs);
             return this;
         }
-
+        public Builder externalRefs(ExternalRefArgs... externalRefs) {
+            return externalRefs(List.of(externalRefs));
+        }
         public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
             this.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
-
         public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
             this.filesLicenseInfo = Output.ofNullable(filesLicenseInfo);
             return this;
         }
-
+        public Builder filesLicenseInfo(String... filesLicenseInfo) {
+            return filesLicenseInfo(List.of(filesLicenseInfo));
+        }
         public Builder homePage(@Nullable Output<String> homePage) {
             this.homePage = homePage;
             return this;
         }
-
         public Builder homePage(@Nullable String homePage) {
             this.homePage = Output.ofNullable(homePage);
             return this;
         }
-
         public Builder licenseDeclared(@Nullable Output<LicenseArgs> licenseDeclared) {
             this.licenseDeclared = licenseDeclared;
             return this;
         }
-
         public Builder licenseDeclared(@Nullable LicenseArgs licenseDeclared) {
             this.licenseDeclared = Output.ofNullable(licenseDeclared);
             return this;
         }
-
         public Builder originator(@Nullable Output<String> originator) {
             this.originator = originator;
             return this;
         }
-
         public Builder originator(@Nullable String originator) {
             this.originator = Output.ofNullable(originator);
             return this;
         }
-
         public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder packageType(@Nullable String packageType) {
             this.packageType = Output.ofNullable(packageType);
             return this;
         }
-
         public Builder summaryDescription(@Nullable Output<String> summaryDescription) {
             this.summaryDescription = summaryDescription;
             return this;
         }
-
         public Builder summaryDescription(@Nullable String summaryDescription) {
             this.summaryDescription = Output.ofNullable(summaryDescription);
             return this;
         }
-
         public Builder supplier(@Nullable Output<String> supplier) {
             this.supplier = supplier;
             return this;
         }
-
         public Builder supplier(@Nullable String supplier) {
             this.supplier = Output.ofNullable(supplier);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder verificationCode(@Nullable Output<String> verificationCode) {
             this.verificationCode = verificationCode;
             return this;
         }
-
         public Builder verificationCode(@Nullable String verificationCode) {
             this.verificationCode = Output.ofNullable(verificationCode);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public PackageInfoNoteArgs build() {
+        }        public PackageInfoNoteArgs build() {
             return new PackageInfoNoteArgs(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);
         }
     }

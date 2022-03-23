@@ -83,32 +83,26 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder mode(@Nullable Output<BucketDefaultRetentionMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable BucketDefaultRetentionMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder years(@Nullable Output<Integer> years) {
             this.years = years;
             return this;
         }
-
         public Builder years(@Nullable Integer years) {
             this.years = Output.ofNullable(years);
             return this;
-        }
-        public BucketDefaultRetentionArgs build() {
+        }        public BucketDefaultRetentionArgs build() {
             return new BucketDefaultRetentionArgs(days, mode, years);
         }
     }

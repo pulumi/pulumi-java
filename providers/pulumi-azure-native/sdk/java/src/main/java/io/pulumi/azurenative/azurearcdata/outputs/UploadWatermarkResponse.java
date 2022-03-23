@@ -87,17 +87,14 @@ public final class UploadWatermarkResponse {
             this.logs = logs;
             return this;
         }
-
         public Builder metrics(@Nullable String metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder usages(@Nullable String usages) {
             this.usages = usages;
             return this;
-        }
-        public UploadWatermarkResponse build() {
+        }        public UploadWatermarkResponse build() {
             return new UploadWatermarkResponse(logs, metrics, usages);
         }
     }

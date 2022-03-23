@@ -190,92 +190,77 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable AcceleratorAttributesGetArgs attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
-
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
-
         public Builder ipAddressType(@Nullable String ipAddressType) {
             this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
-
         public Builder ipSets(@Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets) {
             this.ipSets = ipSets;
             return this;
         }
-
         public Builder ipSets(@Nullable List<AcceleratorIpSetGetArgs> ipSets) {
             this.ipSets = Output.ofNullable(ipSets);
             return this;
         }
-
+        public Builder ipSets(AcceleratorIpSetGetArgs... ipSets) {
+            return ipSets(List.of(ipSets));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public AcceleratorState build() {
+        }        public AcceleratorState build() {
             return new AcceleratorState(attributes, dnsName, enabled, hostedZoneId, ipAddressType, ipSets, name, tags, tagsAll);
         }
     }

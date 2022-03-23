@@ -75,22 +75,18 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
             this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
-
         public Builder status(@Nullable Output<SessionStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable SessionStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public SessionArgs build() {
+        }        public SessionArgs build() {
             return new SessionArgs(findingPublishingFrequency, status);
         }
     }

@@ -61,12 +61,10 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable MaintenanceExclusionOptionsScope scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public MaintenanceExclusionOptionsArgs build() {
+        }        public MaintenanceExclusionOptionsArgs build() {
             return new MaintenanceExclusionOptionsArgs(scope);
         }
     }

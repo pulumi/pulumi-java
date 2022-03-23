@@ -89,17 +89,20 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
             this.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
-
+        public Builder requestHeaderConfigurations(ApplicationGatewayHeaderConfigurationResponse... requestHeaderConfigurations) {
+            return requestHeaderConfigurations(List.of(requestHeaderConfigurations));
+        }
         public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
-
+        public Builder responseHeaderConfigurations(ApplicationGatewayHeaderConfigurationResponse... responseHeaderConfigurations) {
+            return responseHeaderConfigurations(List.of(responseHeaderConfigurations));
+        }
         public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
             this.urlConfiguration = urlConfiguration;
             return this;
-        }
-        public ApplicationGatewayRewriteRuleActionSetResponse build() {
+        }        public ApplicationGatewayRewriteRuleActionSetResponse build() {
             return new ApplicationGatewayRewriteRuleActionSetResponse(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);
         }
     }

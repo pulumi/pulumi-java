@@ -143,62 +143,50 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder deployTime(Output<String> deployTime) {
             this.deployTime = Objects.requireNonNull(deployTime);
             return this;
         }
-
         public Builder deployTime(String deployTime) {
             this.deployTime = Output.of(Objects.requireNonNull(deployTime));
             return this;
         }
-
         public Builder platform(@Nullable Output<DeploymentOccurrencePlatform> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable DeploymentOccurrencePlatform platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder undeployTime(@Nullable Output<String> undeployTime) {
             this.undeployTime = undeployTime;
             return this;
         }
-
         public Builder undeployTime(@Nullable String undeployTime) {
             this.undeployTime = Output.ofNullable(undeployTime);
             return this;
         }
-
         public Builder userEmail(@Nullable Output<String> userEmail) {
             this.userEmail = userEmail;
             return this;
         }
-
         public Builder userEmail(@Nullable String userEmail) {
             this.userEmail = Output.ofNullable(userEmail);
             return this;
-        }
-        public DeploymentOccurrenceArgs build() {
+        }        public DeploymentOccurrenceArgs build() {
             return new DeploymentOccurrenceArgs(address, config, deployTime, platform, undeployTime, userEmail);
         }
     }

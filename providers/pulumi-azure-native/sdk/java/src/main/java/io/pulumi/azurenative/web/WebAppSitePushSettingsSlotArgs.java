@@ -174,82 +174,66 @@ public final class WebAppSitePushSettingsSlotArgs extends io.pulumi.resources.Re
             this.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
-
         public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
             this.dynamicTagsJson = Output.ofNullable(dynamicTagsJson);
             return this;
         }
-
         public Builder isPushEnabled(Output<Boolean> isPushEnabled) {
             this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
             return this;
         }
-
         public Builder isPushEnabled(Boolean isPushEnabled) {
             this.isPushEnabled = Output.of(Objects.requireNonNull(isPushEnabled));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public Builder tagWhitelistJson(@Nullable Output<String> tagWhitelistJson) {
             this.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
-
         public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
             this.tagWhitelistJson = Output.ofNullable(tagWhitelistJson);
             return this;
         }
-
         public Builder tagsRequiringAuth(@Nullable Output<String> tagsRequiringAuth) {
             this.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
-
         public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
             this.tagsRequiringAuth = Output.ofNullable(tagsRequiringAuth);
             return this;
-        }
-        public WebAppSitePushSettingsSlotArgs build() {
+        }        public WebAppSitePushSettingsSlotArgs build() {
             return new WebAppSitePushSettingsSlotArgs(dynamicTagsJson, isPushEnabled, kind, name, resourceGroupName, slot, tagWhitelistJson, tagsRequiringAuth);
         }
     }

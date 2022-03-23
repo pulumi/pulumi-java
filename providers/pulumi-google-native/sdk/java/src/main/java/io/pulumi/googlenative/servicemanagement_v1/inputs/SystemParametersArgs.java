@@ -62,12 +62,13 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<SystemParameterRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public SystemParametersArgs build() {
+        public Builder rules(SystemParameterRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public SystemParametersArgs build() {
             return new SystemParametersArgs(rules);
         }
     }

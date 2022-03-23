@@ -102,22 +102,18 @@ public final class GetAgentPoolResult {
             this.bandwidthLimit = Objects.requireNonNull(bandwidthLimit);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetAgentPoolResult build() {
+        }        public GetAgentPoolResult build() {
             return new GetAgentPoolResult(bandwidthLimit, displayName, name, state);
         }
     }

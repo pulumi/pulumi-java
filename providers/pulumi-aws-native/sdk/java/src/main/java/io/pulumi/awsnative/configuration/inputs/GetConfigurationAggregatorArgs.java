@@ -54,8 +54,7 @@ public final class GetConfigurationAggregatorArgs extends io.pulumi.resources.In
         public Builder configurationAggregatorName(String configurationAggregatorName) {
             this.configurationAggregatorName = Objects.requireNonNull(configurationAggregatorName);
             return this;
-        }
-        public GetConfigurationAggregatorArgs build() {
+        }        public GetConfigurationAggregatorArgs build() {
             return new GetConfigurationAggregatorArgs(configurationAggregatorName);
         }
     }

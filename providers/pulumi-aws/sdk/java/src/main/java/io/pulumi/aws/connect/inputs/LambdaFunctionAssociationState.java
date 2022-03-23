@@ -74,22 +74,18 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
             this.functionArn = functionArn;
             return this;
         }
-
         public Builder functionArn(@Nullable String functionArn) {
             this.functionArn = Output.ofNullable(functionArn);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
-        }
-        public LambdaFunctionAssociationState build() {
+        }        public LambdaFunctionAssociationState build() {
             return new LambdaFunctionAssociationState(functionArn, instanceId);
         }
     }

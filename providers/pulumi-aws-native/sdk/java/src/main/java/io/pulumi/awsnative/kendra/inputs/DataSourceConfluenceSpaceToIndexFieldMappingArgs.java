@@ -79,32 +79,26 @@ public final class DataSourceConfluenceSpaceToIndexFieldMappingArgs extends io.p
             this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
             return this;
         }
-
         public Builder dataSourceFieldName(DataSourceConfluenceSpaceFieldName dataSourceFieldName) {
             this.dataSourceFieldName = Output.of(Objects.requireNonNull(dataSourceFieldName));
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable Output<String> dateFieldFormat) {
             this.dateFieldFormat = dateFieldFormat;
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
             this.dateFieldFormat = Output.ofNullable(dateFieldFormat);
             return this;
         }
-
         public Builder indexFieldName(Output<String> indexFieldName) {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public Builder indexFieldName(String indexFieldName) {
             this.indexFieldName = Output.of(Objects.requireNonNull(indexFieldName));
             return this;
-        }
-        public DataSourceConfluenceSpaceToIndexFieldMappingArgs build() {
+        }        public DataSourceConfluenceSpaceToIndexFieldMappingArgs build() {
             return new DataSourceConfluenceSpaceToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }
     }

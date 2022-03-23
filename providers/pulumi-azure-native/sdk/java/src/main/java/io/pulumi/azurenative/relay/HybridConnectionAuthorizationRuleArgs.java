@@ -124,52 +124,45 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
-
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
-
         public Builder hybridConnectionName(Output<String> hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
-
         public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Output.of(Objects.requireNonNull(hybridConnectionName));
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rights(Output<List<AccessRights>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
-
         public Builder rights(List<AccessRights> rights) {
             this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
-        public HybridConnectionAuthorizationRuleArgs build() {
+        public Builder rights(AccessRights... rights) {
+            return rights(List.of(rights));
+        }        public HybridConnectionAuthorizationRuleArgs build() {
             return new HybridConnectionAuthorizationRuleArgs(authorizationRuleName, hybridConnectionName, namespaceName, resourceGroupName, rights);
         }
     }

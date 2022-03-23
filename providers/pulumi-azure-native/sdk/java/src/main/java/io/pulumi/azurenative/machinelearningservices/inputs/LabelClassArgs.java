@@ -79,22 +79,18 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder subclasses(@Nullable Output<Map<String,LabelClassArgs>> subclasses) {
             this.subclasses = subclasses;
             return this;
         }
-
         public Builder subclasses(@Nullable Map<String,LabelClassArgs> subclasses) {
             this.subclasses = Output.ofNullable(subclasses);
             return this;
-        }
-        public LabelClassArgs build() {
+        }        public LabelClassArgs build() {
             return new LabelClassArgs(displayName, subclasses);
         }
     }

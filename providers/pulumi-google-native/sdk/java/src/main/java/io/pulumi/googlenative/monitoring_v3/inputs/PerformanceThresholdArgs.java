@@ -96,32 +96,26 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
             this.basicSliPerformance = basicSliPerformance;
             return this;
         }
-
         public Builder basicSliPerformance(@Nullable BasicSliArgs basicSliPerformance) {
             this.basicSliPerformance = Output.ofNullable(basicSliPerformance);
             return this;
         }
-
         public Builder performance(@Nullable Output<RequestBasedSliArgs> performance) {
             this.performance = performance;
             return this;
         }
-
         public Builder performance(@Nullable RequestBasedSliArgs performance) {
             this.performance = Output.ofNullable(performance);
             return this;
         }
-
         public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder threshold(@Nullable Double threshold) {
             this.threshold = Output.ofNullable(threshold);
             return this;
-        }
-        public PerformanceThresholdArgs build() {
+        }        public PerformanceThresholdArgs build() {
             return new PerformanceThresholdArgs(basicSliPerformance, performance, threshold);
         }
     }

@@ -78,22 +78,21 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
             this.sizes = sizes;
             return this;
         }
-
         public Builder sizes(@Nullable Map<String,TreeSize> sizes) {
             this.sizes = Output.ofNullable(sizes);
             return this;
         }
-
         public Builder varieties(Output<List<RubberTreeVariety>> varieties) {
             this.varieties = Objects.requireNonNull(varieties);
             return this;
         }
-
         public Builder varieties(List<RubberTreeVariety> varieties) {
             this.varieties = Output.of(Objects.requireNonNull(varieties));
             return this;
         }
-        public NurseryArgs build() {
+        public Builder varieties(RubberTreeVariety... varieties) {
+            return varieties(List.of(varieties));
+        }        public NurseryArgs build() {
             return new NurseryArgs(sizes, varieties);
         }
     }

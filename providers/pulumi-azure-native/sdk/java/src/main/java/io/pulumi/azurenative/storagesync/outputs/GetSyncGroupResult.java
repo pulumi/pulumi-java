@@ -117,27 +117,22 @@ public final class GetSyncGroupResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder syncGroupStatus(String syncGroupStatus) {
             this.syncGroupStatus = Objects.requireNonNull(syncGroupStatus);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
-        }
-        public GetSyncGroupResult build() {
+        }        public GetSyncGroupResult build() {
             return new GetSyncGroupResult(id, name, syncGroupStatus, type, uniqueId);
         }
     }

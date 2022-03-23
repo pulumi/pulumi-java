@@ -88,17 +88,14 @@ public final class GetConnectionTypeArgs extends io.pulumi.resources.InvokeArgs 
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder connectionTypeName(String connectionTypeName) {
             this.connectionTypeName = Objects.requireNonNull(connectionTypeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConnectionTypeArgs build() {
+        }        public GetConnectionTypeArgs build() {
             return new GetConnectionTypeArgs(automationAccountName, connectionTypeName, resourceGroupName);
         }
     }

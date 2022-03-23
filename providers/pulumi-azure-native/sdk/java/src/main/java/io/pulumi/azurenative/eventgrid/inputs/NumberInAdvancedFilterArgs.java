@@ -97,32 +97,29 @@ public final class NumberInAdvancedFilterArgs extends io.pulumi.resources.Resour
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder operatorType(Output<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Output.of(Objects.requireNonNull(operatorType));
             return this;
         }
-
         public Builder values(@Nullable Output<List<Double>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<Double> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public NumberInAdvancedFilterArgs build() {
+        public Builder values(Double... values) {
+            return values(List.of(values));
+        }        public NumberInAdvancedFilterArgs build() {
             return new NumberInAdvancedFilterArgs(key, operatorType, values);
         }
     }

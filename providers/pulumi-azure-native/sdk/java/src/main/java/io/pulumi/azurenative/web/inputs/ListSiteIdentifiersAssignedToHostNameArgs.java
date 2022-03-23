@@ -56,8 +56,7 @@ public final class ListSiteIdentifiersAssignedToHostNameArgs extends io.pulumi.r
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ListSiteIdentifiersAssignedToHostNameArgs build() {
+        }        public ListSiteIdentifiersAssignedToHostNameArgs build() {
             return new ListSiteIdentifiersAssignedToHostNameArgs(name);
         }
     }

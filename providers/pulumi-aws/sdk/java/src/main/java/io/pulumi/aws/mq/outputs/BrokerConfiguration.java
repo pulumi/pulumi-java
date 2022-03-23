@@ -72,12 +72,10 @@ public final class BrokerConfiguration {
             this.id = id;
             return this;
         }
-
         public Builder revision(@Nullable Integer revision) {
             this.revision = revision;
             return this;
-        }
-        public BrokerConfiguration build() {
+        }        public BrokerConfiguration build() {
             return new BrokerConfiguration(id, revision);
         }
     }

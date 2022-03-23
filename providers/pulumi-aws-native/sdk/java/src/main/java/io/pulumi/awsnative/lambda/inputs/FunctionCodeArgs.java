@@ -122,52 +122,42 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
-
         public Builder zipFile(@Nullable Output<String> zipFile) {
             this.zipFile = zipFile;
             return this;
         }
-
         public Builder zipFile(@Nullable String zipFile) {
             this.zipFile = Output.ofNullable(zipFile);
             return this;
-        }
-        public FunctionCodeArgs build() {
+        }        public FunctionCodeArgs build() {
             return new FunctionCodeArgs(imageUri, s3Bucket, s3Key, s3ObjectVersion, zipFile);
         }
     }

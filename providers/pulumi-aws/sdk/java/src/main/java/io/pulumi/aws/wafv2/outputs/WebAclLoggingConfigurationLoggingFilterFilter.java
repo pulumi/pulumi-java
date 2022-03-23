@@ -87,17 +87,17 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
-
         public Builder conditions(List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
+        public Builder conditions(WebAclLoggingConfigurationLoggingFilterFilterCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder requirement(String requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
-        }
-        public WebAclLoggingConfigurationLoggingFilterFilter build() {
+        }        public WebAclLoggingConfigurationLoggingFilterFilter build() {
             return new WebAclLoggingConfigurationLoggingFilterFilter(behavior, conditions, requirement);
         }
     }

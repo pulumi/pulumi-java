@@ -108,42 +108,34 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
             this.accuracyCostTradeOff = accuracyCostTradeOff;
             return this;
         }
-
         public Builder accuracyCostTradeOff(@Nullable Double accuracyCostTradeOff) {
             this.accuracyCostTradeOff = Output.ofNullable(accuracyCostTradeOff);
             return this;
         }
-
         public Builder enforceProvidedLabels(@Nullable Output<Boolean> enforceProvidedLabels) {
             this.enforceProvidedLabels = enforceProvidedLabels;
             return this;
         }
-
         public Builder enforceProvidedLabels(@Nullable Boolean enforceProvidedLabels) {
             this.enforceProvidedLabels = Output.ofNullable(enforceProvidedLabels);
             return this;
         }
-
         public Builder precisionRecallTradeOff(@Nullable Output<Double> precisionRecallTradeOff) {
             this.precisionRecallTradeOff = precisionRecallTradeOff;
             return this;
         }
-
         public Builder precisionRecallTradeOff(@Nullable Double precisionRecallTradeOff) {
             this.precisionRecallTradeOff = Output.ofNullable(precisionRecallTradeOff);
             return this;
         }
-
         public Builder primaryKeyColumnName(@Nullable Output<String> primaryKeyColumnName) {
             this.primaryKeyColumnName = primaryKeyColumnName;
             return this;
         }
-
         public Builder primaryKeyColumnName(@Nullable String primaryKeyColumnName) {
             this.primaryKeyColumnName = Output.ofNullable(primaryKeyColumnName);
             return this;
-        }
-        public MLTransformParametersFindMatchesParametersArgs build() {
+        }        public MLTransformParametersFindMatchesParametersArgs build() {
             return new MLTransformParametersFindMatchesParametersArgs(accuracyCostTradeOff, enforceProvidedLabels, precisionRecallTradeOff, primaryKeyColumnName);
         }
     }

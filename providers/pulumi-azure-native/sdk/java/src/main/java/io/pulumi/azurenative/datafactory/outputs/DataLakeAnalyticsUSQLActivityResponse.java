@@ -272,72 +272,64 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
             this.compilationMode = compilationMode;
             return this;
         }
-
         public Builder degreeOfParallelism(@Nullable Object degreeOfParallelism) {
             this.degreeOfParallelism = degreeOfParallelism;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder priority(@Nullable Object priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder runtimeVersion(@Nullable Object runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public Builder scriptLinkedService(LinkedServiceReferenceResponse scriptLinkedService) {
             this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService);
             return this;
         }
-
         public Builder scriptPath(Object scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public DataLakeAnalyticsUSQLActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public DataLakeAnalyticsUSQLActivityResponse build() {
             return new DataLakeAnalyticsUSQLActivityResponse(compilationMode, degreeOfParallelism, dependsOn, description, linkedServiceName, name, parameters, policy, priority, runtimeVersion, scriptLinkedService, scriptPath, type, userProperties);
         }
     }

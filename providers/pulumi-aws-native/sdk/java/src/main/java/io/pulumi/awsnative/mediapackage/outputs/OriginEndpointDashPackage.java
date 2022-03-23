@@ -266,77 +266,68 @@ public final class OriginEndpointDashPackage {
             this.adTriggers = adTriggers;
             return this;
         }
-
+        public Builder adTriggers(OriginEndpointDashPackageAdTriggersItem... adTriggers) {
+            return adTriggers(List.of(adTriggers));
+        }
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
-
         public Builder encryption(@Nullable OriginEndpointDashEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder manifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
             this.manifestLayout = manifestLayout;
             return this;
         }
-
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
-
         public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
-
         public Builder minUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
             this.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
             return this;
         }
-
         public Builder periodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
-
+        public Builder periodTriggers(OriginEndpointDashPackagePeriodTriggersItem... periodTriggers) {
+            return periodTriggers(List.of(periodTriggers));
+        }
         public Builder profile(@Nullable OriginEndpointDashPackageProfile profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
-
         public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder suggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
             this.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
             return this;
         }
-
         public Builder utcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
             this.utcTiming = utcTiming;
             return this;
         }
-
         public Builder utcTimingUri(@Nullable String utcTimingUri) {
             this.utcTimingUri = utcTimingUri;
             return this;
-        }
-        public OriginEndpointDashPackage build() {
+        }        public OriginEndpointDashPackage build() {
             return new OriginEndpointDashPackage(adTriggers, adsOnDeliveryRestrictions, encryption, manifestLayout, manifestWindowSeconds, minBufferTimeSeconds, minUpdatePeriodSeconds, periodTriggers, profile, segmentDurationSeconds, segmentTemplateFormat, streamSelection, suggestedPresentationDelaySeconds, utcTiming, utcTimingUri);
         }
     }

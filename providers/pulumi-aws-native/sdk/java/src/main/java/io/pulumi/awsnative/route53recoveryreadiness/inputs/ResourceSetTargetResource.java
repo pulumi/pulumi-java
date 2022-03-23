@@ -71,12 +71,10 @@ public final class ResourceSetTargetResource extends io.pulumi.resources.InvokeA
             this.nLBResource = nLBResource;
             return this;
         }
-
         public Builder r53Resource(@Nullable ResourceSetR53ResourceRecord r53Resource) {
             this.r53Resource = r53Resource;
             return this;
-        }
-        public ResourceSetTargetResource build() {
+        }        public ResourceSetTargetResource build() {
             return new ResourceSetTargetResource(nLBResource, r53Resource);
         }
     }

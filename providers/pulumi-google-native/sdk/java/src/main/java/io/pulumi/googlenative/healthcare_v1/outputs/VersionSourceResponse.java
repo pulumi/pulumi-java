@@ -69,12 +69,10 @@ public final class VersionSourceResponse {
             this.mshField = Objects.requireNonNull(mshField);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public VersionSourceResponse build() {
+        }        public VersionSourceResponse build() {
             return new VersionSourceResponse(mshField, value);
         }
     }

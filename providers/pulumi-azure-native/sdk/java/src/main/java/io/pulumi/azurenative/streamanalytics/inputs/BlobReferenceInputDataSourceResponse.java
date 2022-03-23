@@ -145,32 +145,29 @@ public final class BlobReferenceInputDataSourceResponse extends io.pulumi.resour
             this.container = container;
             return this;
         }
-
         public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
-
         public Builder pathPattern(@Nullable String pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
-
         public Builder storageAccounts(@Nullable List<StorageAccountResponse> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
-
+        public Builder storageAccounts(StorageAccountResponse... storageAccounts) {
+            return storageAccounts(List.of(storageAccounts));
+        }
         public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BlobReferenceInputDataSourceResponse build() {
+        }        public BlobReferenceInputDataSourceResponse build() {
             return new BlobReferenceInputDataSourceResponse(container, dateFormat, pathPattern, storageAccounts, timeFormat, type);
         }
     }

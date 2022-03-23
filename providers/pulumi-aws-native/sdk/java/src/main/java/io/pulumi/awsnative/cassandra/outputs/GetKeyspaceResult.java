@@ -46,7 +46,9 @@ public final class GetKeyspaceResult {
             this.tags = tags;
             return this;
         }
-        public GetKeyspaceResult build() {
+        public Builder tags(KeyspaceTag... tags) {
+            return tags(List.of(tags));
+        }        public GetKeyspaceResult build() {
             return new GetKeyspaceResult(tags);
         }
     }

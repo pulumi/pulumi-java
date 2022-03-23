@@ -78,22 +78,18 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
             this.preemptible = preemptible;
             return this;
         }
-
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Output.ofNullable(preemptible);
             return this;
         }
-
         public Builder reserved(@Nullable Output<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
-
         public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = Output.ofNullable(reserved);
             return this;
-        }
-        public SchedulingConfigArgs build() {
+        }        public SchedulingConfigArgs build() {
             return new SchedulingConfigArgs(preemptible, reserved);
         }
     }

@@ -299,82 +299,78 @@ public final class RecoveryPlanPropertiesResponse {
             this.allowedOperations = allowedOperations;
             return this;
         }
-
+        public Builder allowedOperations(String... allowedOperations) {
+            return allowedOperations(List.of(allowedOperations));
+        }
         public Builder currentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
             this.currentScenario = currentScenario;
             return this;
         }
-
         public Builder currentScenarioStatus(@Nullable String currentScenarioStatus) {
             this.currentScenarioStatus = currentScenarioStatus;
             return this;
         }
-
         public Builder currentScenarioStatusDescription(@Nullable String currentScenarioStatusDescription) {
             this.currentScenarioStatusDescription = currentScenarioStatusDescription;
             return this;
         }
-
         public Builder failoverDeploymentModel(@Nullable String failoverDeploymentModel) {
             this.failoverDeploymentModel = failoverDeploymentModel;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder groups(@Nullable List<RecoveryPlanGroupResponse> groups) {
             this.groups = groups;
             return this;
         }
-
+        public Builder groups(RecoveryPlanGroupResponse... groups) {
+            return groups(List.of(groups));
+        }
         public Builder lastPlannedFailoverTime(@Nullable String lastPlannedFailoverTime) {
             this.lastPlannedFailoverTime = lastPlannedFailoverTime;
             return this;
         }
-
         public Builder lastTestFailoverTime(@Nullable String lastTestFailoverTime) {
             this.lastTestFailoverTime = lastTestFailoverTime;
             return this;
         }
-
         public Builder lastUnplannedFailoverTime(@Nullable String lastUnplannedFailoverTime) {
             this.lastUnplannedFailoverTime = lastUnplannedFailoverTime;
             return this;
         }
-
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             this.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
-
         public Builder primaryFabricId(@Nullable String primaryFabricId) {
             this.primaryFabricId = primaryFabricId;
             return this;
         }
-
         public Builder providerSpecificDetails(List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails) {
             this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails);
             return this;
         }
-
+        public Builder providerSpecificDetails(RecoveryPlanA2ADetailsResponse... providerSpecificDetails) {
+            return providerSpecificDetails(List.of(providerSpecificDetails));
+        }
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
-
         public Builder recoveryFabricId(@Nullable String recoveryFabricId) {
             this.recoveryFabricId = recoveryFabricId;
             return this;
         }
-
         public Builder replicationProviders(@Nullable List<String> replicationProviders) {
             this.replicationProviders = replicationProviders;
             return this;
         }
-        public RecoveryPlanPropertiesResponse build() {
+        public Builder replicationProviders(String... replicationProviders) {
+            return replicationProviders(List.of(replicationProviders));
+        }        public RecoveryPlanPropertiesResponse build() {
             return new RecoveryPlanPropertiesResponse(allowedOperations, currentScenario, currentScenarioStatus, currentScenarioStatusDescription, failoverDeploymentModel, friendlyName, groups, lastPlannedFailoverTime, lastTestFailoverTime, lastUnplannedFailoverTime, primaryFabricFriendlyName, primaryFabricId, providerSpecificDetails, recoveryFabricFriendlyName, recoveryFabricId, replicationProviders);
         }
     }

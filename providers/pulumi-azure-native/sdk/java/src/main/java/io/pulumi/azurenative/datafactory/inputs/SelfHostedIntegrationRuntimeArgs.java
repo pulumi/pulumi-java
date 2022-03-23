@@ -98,32 +98,26 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder linkedInfo(@Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo) {
             this.linkedInfo = linkedInfo;
             return this;
         }
-
         public Builder linkedInfo(@Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs> linkedInfo) {
             this.linkedInfo = Output.ofNullable(linkedInfo);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SelfHostedIntegrationRuntimeArgs build() {
+        }        public SelfHostedIntegrationRuntimeArgs build() {
             return new SelfHostedIntegrationRuntimeArgs(description, linkedInfo, type);
         }
     }

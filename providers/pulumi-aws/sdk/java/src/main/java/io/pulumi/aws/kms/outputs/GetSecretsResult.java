@@ -80,17 +80,17 @@ public final class GetSecretsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder plaintext(Map<String,String> plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public Builder secrets(List<GetSecretsSecret> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
-        public GetSecretsResult build() {
+        public Builder secrets(GetSecretsSecret... secrets) {
+            return secrets(List.of(secrets));
+        }        public GetSecretsResult build() {
             return new GetSecretsResult(id, plaintext, secrets);
         }
     }

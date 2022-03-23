@@ -71,12 +71,10 @@ public final class NetworkPropertiesResponse {
             this.privateLink = privateLink;
             return this;
         }
-
         public Builder resourceProviderConnection(@Nullable String resourceProviderConnection) {
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
-        }
-        public NetworkPropertiesResponse build() {
+        }        public NetworkPropertiesResponse build() {
             return new NetworkPropertiesResponse(privateLink, resourceProviderConnection);
         }
     }

@@ -53,12 +53,10 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
         }
-
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
             this.unvalidatedJSON = Output.ofNullable(unvalidatedJSON);
             return this;
-        }
-        public ConfigDemodulationConfigArgs build() {
+        }        public ConfigDemodulationConfigArgs build() {
             return new ConfigDemodulationConfigArgs(unvalidatedJSON);
         }
     }

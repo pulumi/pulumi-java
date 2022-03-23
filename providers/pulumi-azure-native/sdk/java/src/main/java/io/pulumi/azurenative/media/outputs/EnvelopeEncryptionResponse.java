@@ -107,22 +107,21 @@ public final class EnvelopeEncryptionResponse {
             this.clearTracks = clearTracks;
             return this;
         }
-
+        public Builder clearTracks(TrackSelectionResponse... clearTracks) {
+            return clearTracks(List.of(clearTracks));
+        }
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
-
         public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
             this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
-
         public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
-        }
-        public EnvelopeEncryptionResponse build() {
+        }        public EnvelopeEncryptionResponse build() {
             return new EnvelopeEncryptionResponse(clearTracks, contentKeys, customKeyAcquisitionUrlTemplate, enabledProtocols);
         }
     }

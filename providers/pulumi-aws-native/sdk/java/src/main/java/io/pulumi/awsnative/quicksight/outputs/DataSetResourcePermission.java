@@ -98,12 +98,13 @@ public final class DataSetResourcePermission {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
-        }
-        public DataSetResourcePermission build() {
+        }        public DataSetResourcePermission build() {
             return new DataSetResourcePermission(actions, principal);
         }
     }

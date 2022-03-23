@@ -51,8 +51,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementExcludedRule {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementExcludedRule build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementExcludedRule build() {
             return new WebAclRuleStatementManagedRuleGroupStatementExcludedRule(name);
         }
     }

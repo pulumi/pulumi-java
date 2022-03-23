@@ -73,22 +73,18 @@ public final class ComponentVersionLambdaVolumeMount {
             this.addGroupOwner = addGroupOwner;
             return this;
         }
-
         public Builder destinationPath(@Nullable String destinationPath) {
             this.destinationPath = destinationPath;
             return this;
         }
-
         public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
             this.permission = permission;
             return this;
         }
-
         public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = sourcePath;
             return this;
-        }
-        public ComponentVersionLambdaVolumeMount build() {
+        }        public ComponentVersionLambdaVolumeMount build() {
             return new ComponentVersionLambdaVolumeMount(addGroupOwner, destinationPath, permission, sourcePath);
         }
     }

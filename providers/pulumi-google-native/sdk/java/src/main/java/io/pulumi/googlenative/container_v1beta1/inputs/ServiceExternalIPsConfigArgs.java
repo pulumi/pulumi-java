@@ -61,12 +61,10 @@ public final class ServiceExternalIPsConfigArgs extends io.pulumi.resources.Reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ServiceExternalIPsConfigArgs build() {
+        }        public ServiceExternalIPsConfigArgs build() {
             return new ServiceExternalIPsConfigArgs(enabled);
         }
     }

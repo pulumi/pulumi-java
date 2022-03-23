@@ -112,42 +112,34 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             this.testSpecialEntitlements = testSpecialEntitlements;
             return this;
         }
-
         public Builder testSpecialEntitlements(@Nullable Boolean testSpecialEntitlements) {
             this.testSpecialEntitlements = Output.ofNullable(testSpecialEntitlements);
             return this;
         }
-
         public Builder testsZip(Output<FileReferenceArgs> testsZip) {
             this.testsZip = Objects.requireNonNull(testsZip);
             return this;
         }
-
         public Builder testsZip(FileReferenceArgs testsZip) {
             this.testsZip = Output.of(Objects.requireNonNull(testsZip));
             return this;
         }
-
         public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
             this.xcodeVersion = xcodeVersion;
             return this;
         }
-
         public Builder xcodeVersion(@Nullable String xcodeVersion) {
             this.xcodeVersion = Output.ofNullable(xcodeVersion);
             return this;
         }
-
         public Builder xctestrun(@Nullable Output<FileReferenceArgs> xctestrun) {
             this.xctestrun = xctestrun;
             return this;
         }
-
         public Builder xctestrun(@Nullable FileReferenceArgs xctestrun) {
             this.xctestrun = Output.ofNullable(xctestrun);
             return this;
-        }
-        public IosXcTestArgs build() {
+        }        public IosXcTestArgs build() {
             return new IosXcTestArgs(testSpecialEntitlements, testsZip, xcodeVersion, xctestrun);
         }
     }

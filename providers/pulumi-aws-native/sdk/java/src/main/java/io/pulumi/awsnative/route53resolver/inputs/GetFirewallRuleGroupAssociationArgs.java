@@ -54,8 +54,7 @@ public final class GetFirewallRuleGroupAssociationArgs extends io.pulumi.resourc
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetFirewallRuleGroupAssociationArgs build() {
+        }        public GetFirewallRuleGroupAssociationArgs build() {
             return new GetFirewallRuleGroupAssociationArgs(id);
         }
     }

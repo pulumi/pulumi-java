@@ -72,12 +72,10 @@ public final class BucketServerSideEncryptionConfigurationRule {
             this.applyServerSideEncryptionByDefault = Objects.requireNonNull(applyServerSideEncryptionByDefault);
             return this;
         }
-
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
-        }
-        public BucketServerSideEncryptionConfigurationRule build() {
+        }        public BucketServerSideEncryptionConfigurationRule build() {
             return new BucketServerSideEncryptionConfigurationRule(applyServerSideEncryptionByDefault, bucketKeyEnabled);
         }
     }

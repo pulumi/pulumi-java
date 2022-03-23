@@ -96,32 +96,26 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable PublicKeyArgs publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder reusableConfig(Output<ReusableConfigWrapperArgs> reusableConfig) {
             this.reusableConfig = Objects.requireNonNull(reusableConfig);
             return this;
         }
-
         public Builder reusableConfig(ReusableConfigWrapperArgs reusableConfig) {
             this.reusableConfig = Output.of(Objects.requireNonNull(reusableConfig));
             return this;
         }
-
         public Builder subjectConfig(Output<SubjectConfigArgs> subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
-
         public Builder subjectConfig(SubjectConfigArgs subjectConfig) {
             this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
             return this;
-        }
-        public CertificateConfigArgs build() {
+        }        public CertificateConfigArgs build() {
             return new CertificateConfigArgs(publicKey, reusableConfig, subjectConfig);
         }
     }

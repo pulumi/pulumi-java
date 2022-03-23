@@ -204,102 +204,82 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder consumerGroup(Output<String> consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
-
         public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = Output.of(Objects.requireNonNull(consumerGroup));
             return this;
         }
-
         public Builder dataFormat(@Nullable Output<Either<String,DataFormat>> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
-
         public Builder dataFormat(@Nullable Either<String,DataFormat> dataFormat) {
             this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder eventHubConnectionName(@Nullable Output<String> eventHubConnectionName) {
             this.eventHubConnectionName = eventHubConnectionName;
             return this;
         }
-
         public Builder eventHubConnectionName(@Nullable String eventHubConnectionName) {
             this.eventHubConnectionName = Output.ofNullable(eventHubConnectionName);
             return this;
         }
-
         public Builder eventHubResourceId(Output<String> eventHubResourceId) {
             this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
             return this;
         }
-
         public Builder eventHubResourceId(String eventHubResourceId) {
             this.eventHubResourceId = Output.of(Objects.requireNonNull(eventHubResourceId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
-
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = Output.ofNullable(mappingRuleName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
-        }
-        public EventHubConnectionArgs build() {
+        }        public EventHubConnectionArgs build() {
             return new EventHubConnectionArgs(clusterName, consumerGroup, dataFormat, databaseName, eventHubConnectionName, eventHubResourceId, location, mappingRuleName, resourceGroupName, tableName);
         }
     }

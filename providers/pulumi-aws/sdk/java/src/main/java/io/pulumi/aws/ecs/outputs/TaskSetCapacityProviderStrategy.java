@@ -88,17 +88,14 @@ public final class TaskSetCapacityProviderStrategy {
             this.base = base;
             return this;
         }
-
         public Builder capacityProvider(String capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public TaskSetCapacityProviderStrategy build() {
+        }        public TaskSetCapacityProviderStrategy build() {
             return new TaskSetCapacityProviderStrategy(base, capacityProvider, weight);
         }
     }

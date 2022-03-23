@@ -169,82 +169,66 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             this.clientPublicKey = clientPublicKey;
             return this;
         }
-
         public Builder clientPublicKey(@Nullable String clientPublicKey) {
             this.clientPublicKey = Output.ofNullable(clientPublicKey);
             return this;
         }
-
         public Builder identity(@Nullable Output<MachineIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable MachineIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder locationData(@Nullable Output<LocationDataArgs> locationData) {
             this.locationData = locationData;
             return this;
         }
-
         public Builder locationData(@Nullable LocationDataArgs locationData) {
             this.locationData = Output.ofNullable(locationData);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = Output.ofNullable(vmId);
             return this;
-        }
-        public MachineArgs build() {
+        }        public MachineArgs build() {
             return new MachineArgs(clientPublicKey, identity, location, locationData, name, resourceGroupName, tags, vmId);
         }
     }

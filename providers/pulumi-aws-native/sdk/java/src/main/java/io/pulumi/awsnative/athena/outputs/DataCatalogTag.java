@@ -53,12 +53,10 @@ public final class DataCatalogTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DataCatalogTag build() {
+        }        public DataCatalogTag build() {
             return new DataCatalogTag(key, value);
         }
     }

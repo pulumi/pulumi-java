@@ -69,12 +69,10 @@ public final class ReplicaKeyTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ReplicaKeyTag build() {
+        }        public ReplicaKeyTag build() {
             return new ReplicaKeyTag(key, value);
         }
     }

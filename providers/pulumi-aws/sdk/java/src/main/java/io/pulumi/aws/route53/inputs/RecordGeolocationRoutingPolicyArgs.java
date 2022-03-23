@@ -90,32 +90,26 @@ public final class RecordGeolocationRoutingPolicyArgs extends io.pulumi.resource
             this.continent = continent;
             return this;
         }
-
         public Builder continent(@Nullable String continent) {
             this.continent = Output.ofNullable(continent);
             return this;
         }
-
         public Builder country(@Nullable Output<String> country) {
             this.country = country;
             return this;
         }
-
         public Builder country(@Nullable String country) {
             this.country = Output.ofNullable(country);
             return this;
         }
-
         public Builder subdivision(@Nullable Output<String> subdivision) {
             this.subdivision = subdivision;
             return this;
         }
-
         public Builder subdivision(@Nullable String subdivision) {
             this.subdivision = Output.ofNullable(subdivision);
             return this;
-        }
-        public RecordGeolocationRoutingPolicyArgs build() {
+        }        public RecordGeolocationRoutingPolicyArgs build() {
             return new RecordGeolocationRoutingPolicyArgs(continent, country, subdivision);
         }
     }

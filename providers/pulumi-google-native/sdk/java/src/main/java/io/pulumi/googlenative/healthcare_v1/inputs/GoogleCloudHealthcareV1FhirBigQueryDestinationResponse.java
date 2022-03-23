@@ -110,22 +110,18 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse extend
             this.datasetUri = Objects.requireNonNull(datasetUri);
             return this;
         }
-
         public Builder force(Boolean force) {
             this.force = Objects.requireNonNull(force);
             return this;
         }
-
         public Builder schemaConfig(SchemaConfigResponse schemaConfig) {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }
-
         public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
-        }
-        public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse build() {
+        }        public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse build() {
             return new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(datasetUri, force, schemaConfig, writeDisposition);
         }
     }

@@ -114,42 +114,40 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultBackend = defaultBackend;
             return this;
         }
-
         public Builder defaultBackend(@Nullable IngressBackendArgs defaultBackend) {
             this.defaultBackend = Output.ofNullable(defaultBackend);
             return this;
         }
-
         public Builder ingressClassName(@Nullable Output<String> ingressClassName) {
             this.ingressClassName = ingressClassName;
             return this;
         }
-
         public Builder ingressClassName(@Nullable String ingressClassName) {
             this.ingressClassName = Output.ofNullable(ingressClassName);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<IngressRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<IngressRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(IngressRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tls(@Nullable Output<List<IngressTLSArgs>> tls) {
             this.tls = tls;
             return this;
         }
-
         public Builder tls(@Nullable List<IngressTLSArgs> tls) {
             this.tls = Output.ofNullable(tls);
             return this;
         }
-        public IngressSpecArgs build() {
+        public Builder tls(IngressTLSArgs... tls) {
+            return tls(List.of(tls));
+        }        public IngressSpecArgs build() {
             return new IngressSpecArgs(defaultBackend, ingressClassName, rules, tls);
         }
     }

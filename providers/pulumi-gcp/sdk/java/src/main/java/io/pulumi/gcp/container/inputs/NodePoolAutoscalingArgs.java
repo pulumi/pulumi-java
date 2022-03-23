@@ -74,22 +74,18 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
             return this;
         }
-
         public Builder minNodeCount(Output<Integer> minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Output.of(Objects.requireNonNull(minNodeCount));
             return this;
-        }
-        public NodePoolAutoscalingArgs build() {
+        }        public NodePoolAutoscalingArgs build() {
             return new NodePoolAutoscalingArgs(maxNodeCount, minNodeCount);
         }
     }

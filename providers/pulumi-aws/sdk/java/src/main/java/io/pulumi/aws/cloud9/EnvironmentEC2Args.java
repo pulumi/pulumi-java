@@ -156,72 +156,58 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
             this.automaticStopTimeMinutes = automaticStopTimeMinutes;
             return this;
         }
-
         public Builder automaticStopTimeMinutes(@Nullable Integer automaticStopTimeMinutes) {
             this.automaticStopTimeMinutes = Output.ofNullable(automaticStopTimeMinutes);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerArn(@Nullable Output<String> ownerArn) {
             this.ownerArn = ownerArn;
             return this;
         }
-
         public Builder ownerArn(@Nullable String ownerArn) {
             this.ownerArn = Output.ofNullable(ownerArn);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EnvironmentEC2Args build() {
+        }        public EnvironmentEC2Args build() {
             return new EnvironmentEC2Args(automaticStopTimeMinutes, description, instanceType, name, ownerArn, subnetId, tags);
         }
     }

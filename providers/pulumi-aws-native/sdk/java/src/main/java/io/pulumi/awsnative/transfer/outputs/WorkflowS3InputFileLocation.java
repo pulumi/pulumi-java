@@ -71,12 +71,10 @@ public final class WorkflowS3InputFileLocation {
             this.bucket = bucket;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public WorkflowS3InputFileLocation build() {
+        }        public WorkflowS3InputFileLocation build() {
             return new WorkflowS3InputFileLocation(bucket, key);
         }
     }

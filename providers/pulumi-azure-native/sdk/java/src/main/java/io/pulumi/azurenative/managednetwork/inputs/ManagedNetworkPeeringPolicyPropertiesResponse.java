@@ -144,32 +144,32 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder hub(@Nullable ResourceIdResponse hub) {
             this.hub = hub;
             return this;
         }
-
         public Builder mesh(@Nullable List<ResourceIdResponse> mesh) {
             this.mesh = mesh;
             return this;
         }
-
+        public Builder mesh(ResourceIdResponse... mesh) {
+            return mesh(List.of(mesh));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder spokes(@Nullable List<ResourceIdResponse> spokes) {
             this.spokes = spokes;
             return this;
         }
-
+        public Builder spokes(ResourceIdResponse... spokes) {
+            return spokes(List.of(spokes));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagedNetworkPeeringPolicyPropertiesResponse build() {
+        }        public ManagedNetworkPeeringPolicyPropertiesResponse build() {
             return new ManagedNetworkPeeringPolicyPropertiesResponse(etag, hub, mesh, provisioningState, spokes, type);
         }
     }

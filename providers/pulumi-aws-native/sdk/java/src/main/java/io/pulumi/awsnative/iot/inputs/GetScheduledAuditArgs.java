@@ -54,8 +54,7 @@ public final class GetScheduledAuditArgs extends io.pulumi.resources.InvokeArgs 
         public Builder scheduledAuditName(String scheduledAuditName) {
             this.scheduledAuditName = Objects.requireNonNull(scheduledAuditName);
             return this;
-        }
-        public GetScheduledAuditArgs build() {
+        }        public GetScheduledAuditArgs build() {
             return new GetScheduledAuditArgs(scheduledAuditName);
         }
     }

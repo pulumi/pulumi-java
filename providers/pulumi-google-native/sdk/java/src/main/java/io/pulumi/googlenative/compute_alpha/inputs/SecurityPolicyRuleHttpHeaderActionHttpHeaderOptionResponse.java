@@ -72,12 +72,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
-        }
-        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse build() {
+        }        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(headerName, headerValue);
         }
     }

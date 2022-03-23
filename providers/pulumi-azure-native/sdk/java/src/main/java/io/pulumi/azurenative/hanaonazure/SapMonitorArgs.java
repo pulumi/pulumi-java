@@ -188,92 +188,74 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
             this.enableCustomerAnalytics = enableCustomerAnalytics;
             return this;
         }
-
         public Builder enableCustomerAnalytics(@Nullable Boolean enableCustomerAnalytics) {
             this.enableCustomerAnalytics = Output.ofNullable(enableCustomerAnalytics);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logAnalyticsWorkspaceArmId(@Nullable Output<String> logAnalyticsWorkspaceArmId) {
             this.logAnalyticsWorkspaceArmId = logAnalyticsWorkspaceArmId;
             return this;
         }
-
         public Builder logAnalyticsWorkspaceArmId(@Nullable String logAnalyticsWorkspaceArmId) {
             this.logAnalyticsWorkspaceArmId = Output.ofNullable(logAnalyticsWorkspaceArmId);
             return this;
         }
-
         public Builder logAnalyticsWorkspaceId(@Nullable Output<String> logAnalyticsWorkspaceId) {
             this.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
             return this;
         }
-
         public Builder logAnalyticsWorkspaceId(@Nullable String logAnalyticsWorkspaceId) {
             this.logAnalyticsWorkspaceId = Output.ofNullable(logAnalyticsWorkspaceId);
             return this;
         }
-
         public Builder logAnalyticsWorkspaceSharedKey(@Nullable Output<String> logAnalyticsWorkspaceSharedKey) {
             this.logAnalyticsWorkspaceSharedKey = logAnalyticsWorkspaceSharedKey;
             return this;
         }
-
         public Builder logAnalyticsWorkspaceSharedKey(@Nullable String logAnalyticsWorkspaceSharedKey) {
             this.logAnalyticsWorkspaceSharedKey = Output.ofNullable(logAnalyticsWorkspaceSharedKey);
             return this;
         }
-
         public Builder monitorSubnet(@Nullable Output<String> monitorSubnet) {
             this.monitorSubnet = monitorSubnet;
             return this;
         }
-
         public Builder monitorSubnet(@Nullable String monitorSubnet) {
             this.monitorSubnet = Output.ofNullable(monitorSubnet);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sapMonitorName(@Nullable Output<String> sapMonitorName) {
             this.sapMonitorName = sapMonitorName;
             return this;
         }
-
         public Builder sapMonitorName(@Nullable String sapMonitorName) {
             this.sapMonitorName = Output.ofNullable(sapMonitorName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SapMonitorArgs build() {
+        }        public SapMonitorArgs build() {
             return new SapMonitorArgs(enableCustomerAnalytics, location, logAnalyticsWorkspaceArmId, logAnalyticsWorkspaceId, logAnalyticsWorkspaceSharedKey, monitorSubnet, resourceGroupName, sapMonitorName, tags);
         }
     }

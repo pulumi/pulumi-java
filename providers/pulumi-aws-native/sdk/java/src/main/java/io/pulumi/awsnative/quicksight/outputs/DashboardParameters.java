@@ -106,22 +106,30 @@ public final class DashboardParameters {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
-
+        public Builder dateTimeParameters(DashboardDateTimeParameter... dateTimeParameters) {
+            return dateTimeParameters(List.of(dateTimeParameters));
+        }
         public Builder decimalParameters(@Nullable List<DashboardDecimalParameter> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
-
+        public Builder decimalParameters(DashboardDecimalParameter... decimalParameters) {
+            return decimalParameters(List.of(decimalParameters));
+        }
         public Builder integerParameters(@Nullable List<DashboardIntegerParameter> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
-
+        public Builder integerParameters(DashboardIntegerParameter... integerParameters) {
+            return integerParameters(List.of(integerParameters));
+        }
         public Builder stringParameters(@Nullable List<DashboardStringParameter> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
-        public DashboardParameters build() {
+        public Builder stringParameters(DashboardStringParameter... stringParameters) {
+            return stringParameters(List.of(stringParameters));
+        }        public DashboardParameters build() {
             return new DashboardParameters(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }
     }

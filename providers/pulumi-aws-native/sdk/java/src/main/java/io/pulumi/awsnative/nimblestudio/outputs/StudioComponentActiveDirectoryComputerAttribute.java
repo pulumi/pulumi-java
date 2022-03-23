@@ -71,12 +71,10 @@ public final class StudioComponentActiveDirectoryComputerAttribute {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public StudioComponentActiveDirectoryComputerAttribute build() {
+        }        public StudioComponentActiveDirectoryComputerAttribute build() {
             return new StudioComponentActiveDirectoryComputerAttribute(name, value);
         }
     }

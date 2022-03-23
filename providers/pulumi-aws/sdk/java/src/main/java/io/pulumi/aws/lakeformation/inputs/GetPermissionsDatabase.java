@@ -72,12 +72,10 @@ public final class GetPermissionsDatabase extends io.pulumi.resources.InvokeArgs
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetPermissionsDatabase build() {
+        }        public GetPermissionsDatabase build() {
             return new GetPermissionsDatabase(catalogId, name);
         }
     }

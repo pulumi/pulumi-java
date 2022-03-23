@@ -106,22 +106,18 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
             this.capacityReservationGroupName = Objects.requireNonNull(capacityReservationGroupName);
             return this;
         }
-
         public Builder capacityReservationName(String capacityReservationName) {
             this.capacityReservationName = Objects.requireNonNull(capacityReservationName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCapacityReservationArgs build() {
+        }        public GetCapacityReservationArgs build() {
             return new GetCapacityReservationArgs(capacityReservationGroupName, capacityReservationName, expand, resourceGroupName);
         }
     }

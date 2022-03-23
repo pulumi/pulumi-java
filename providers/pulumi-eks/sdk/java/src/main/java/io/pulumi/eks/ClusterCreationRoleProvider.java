@@ -31,22 +31,6 @@ public class ClusterCreationRoleProvider extends io.pulumi.resources.ComponentRe
         return this.role;
     }
 
-    public interface BuilderApplicator {
-        public void apply(@Nullable ClusterCreationRoleProviderArgs.Builder a);
-    }
-    private static io.pulumi.eks.ClusterCreationRoleProviderArgs buildArgs(BuilderApplicator argsBuilder) {
-        final var builder = io.pulumi.eks.ClusterCreationRoleProviderArgs.builder();
-        argsBuilder.apply(builder);
-        return builder.build();
-    }
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param argsBuilder A function that configures a passed builder.
-     */
-    public ClusterCreationRoleProvider(String name, BuilderApplicator argsBuilder) {
-        this(name, buildArgs(argsBuilder), null);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

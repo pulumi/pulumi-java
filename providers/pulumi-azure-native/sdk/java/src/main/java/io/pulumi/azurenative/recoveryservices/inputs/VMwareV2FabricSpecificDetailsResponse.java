@@ -125,27 +125,22 @@ public final class VMwareV2FabricSpecificDetailsResponse extends io.pulumi.resou
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder migrationSolutionId(String migrationSolutionId) {
             this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId);
             return this;
         }
-
         public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
-
         public Builder serviceResourceId(String serviceResourceId) {
             this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
             return this;
         }
-
         public Builder vmwareSiteId(String vmwareSiteId) {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
-        }
-        public VMwareV2FabricSpecificDetailsResponse build() {
+        }        public VMwareV2FabricSpecificDetailsResponse build() {
             return new VMwareV2FabricSpecificDetailsResponse(instanceType, migrationSolutionId, serviceEndpoint, serviceResourceId, vmwareSiteId);
         }
     }

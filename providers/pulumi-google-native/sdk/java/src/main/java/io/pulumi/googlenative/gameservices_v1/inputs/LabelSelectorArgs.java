@@ -62,12 +62,10 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public LabelSelectorArgs build() {
+        }        public LabelSelectorArgs build() {
             return new LabelSelectorArgs(labels);
         }
     }

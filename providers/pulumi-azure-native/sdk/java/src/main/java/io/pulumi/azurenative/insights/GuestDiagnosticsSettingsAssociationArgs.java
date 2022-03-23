@@ -123,52 +123,42 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
             this.associationName = associationName;
             return this;
         }
-
         public Builder associationName(@Nullable String associationName) {
             this.associationName = Output.ofNullable(associationName);
             return this;
         }
-
         public Builder guestDiagnosticSettingsName(Output<String> guestDiagnosticSettingsName) {
             this.guestDiagnosticSettingsName = Objects.requireNonNull(guestDiagnosticSettingsName);
             return this;
         }
-
         public Builder guestDiagnosticSettingsName(String guestDiagnosticSettingsName) {
             this.guestDiagnosticSettingsName = Output.of(Objects.requireNonNull(guestDiagnosticSettingsName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GuestDiagnosticsSettingsAssociationArgs build() {
+        }        public GuestDiagnosticsSettingsAssociationArgs build() {
             return new GuestDiagnosticsSettingsAssociationArgs(associationName, guestDiagnosticSettingsName, location, resourceUri, tags);
         }
     }

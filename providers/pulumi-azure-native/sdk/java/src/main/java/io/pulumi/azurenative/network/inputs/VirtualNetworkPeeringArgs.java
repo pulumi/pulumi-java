@@ -244,122 +244,98 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             this.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
-
         public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
             this.allowForwardedTraffic = Output.ofNullable(allowForwardedTraffic);
             return this;
         }
-
         public Builder allowGatewayTransit(@Nullable Output<Boolean> allowGatewayTransit) {
             this.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
-
         public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
             this.allowGatewayTransit = Output.ofNullable(allowGatewayTransit);
             return this;
         }
-
         public Builder allowVirtualNetworkAccess(@Nullable Output<Boolean> allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
-
         public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = Output.ofNullable(allowVirtualNetworkAccess);
             return this;
         }
-
         public Builder doNotVerifyRemoteGateways(@Nullable Output<Boolean> doNotVerifyRemoteGateways) {
             this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
             return this;
         }
-
         public Builder doNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
             this.doNotVerifyRemoteGateways = Output.ofNullable(doNotVerifyRemoteGateways);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder peeringState(@Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState) {
             this.peeringState = peeringState;
             return this;
         }
-
         public Builder peeringState(@Nullable Either<String,VirtualNetworkPeeringState> peeringState) {
             this.peeringState = Output.ofNullable(peeringState);
             return this;
         }
-
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
             this.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
-
         public Builder remoteAddressSpace(@Nullable AddressSpaceArgs remoteAddressSpace) {
             this.remoteAddressSpace = Output.ofNullable(remoteAddressSpace);
             return this;
         }
-
         public Builder remoteBgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities) {
             this.remoteBgpCommunities = remoteBgpCommunities;
             return this;
         }
-
         public Builder remoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs remoteBgpCommunities) {
             this.remoteBgpCommunities = Output.ofNullable(remoteBgpCommunities);
             return this;
         }
-
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
-
         public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
             this.remoteVirtualNetwork = Output.ofNullable(remoteVirtualNetwork);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder useRemoteGateways(@Nullable Output<Boolean> useRemoteGateways) {
             this.useRemoteGateways = useRemoteGateways;
             return this;
         }
-
         public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
             this.useRemoteGateways = Output.ofNullable(useRemoteGateways);
             return this;
-        }
-        public VirtualNetworkPeeringArgs build() {
+        }        public VirtualNetworkPeeringArgs build() {
             return new VirtualNetworkPeeringArgs(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, doNotVerifyRemoteGateways, id, name, peeringState, remoteAddressSpace, remoteBgpCommunities, remoteVirtualNetwork, type, useRemoteGateways);
         }
     }

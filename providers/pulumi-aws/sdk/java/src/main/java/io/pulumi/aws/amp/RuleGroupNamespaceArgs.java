@@ -90,32 +90,26 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
-        }
-        public RuleGroupNamespaceArgs build() {
+        }        public RuleGroupNamespaceArgs build() {
             return new RuleGroupNamespaceArgs(data, name, workspaceId);
         }
     }

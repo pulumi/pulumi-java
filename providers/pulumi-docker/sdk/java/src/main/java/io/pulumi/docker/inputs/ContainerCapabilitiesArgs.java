@@ -67,22 +67,24 @@ public final class ContainerCapabilitiesArgs extends io.pulumi.resources.Resourc
             this.adds = adds;
             return this;
         }
-
         public Builder adds(@Nullable List<String> adds) {
             this.adds = Output.ofNullable(adds);
             return this;
         }
-
+        public Builder adds(String... adds) {
+            return adds(List.of(adds));
+        }
         public Builder drops(@Nullable Output<List<String>> drops) {
             this.drops = drops;
             return this;
         }
-
         public Builder drops(@Nullable List<String> drops) {
             this.drops = Output.ofNullable(drops);
             return this;
         }
-        public ContainerCapabilitiesArgs build() {
+        public Builder drops(String... drops) {
+            return drops(List.of(drops));
+        }        public ContainerCapabilitiesArgs build() {
             return new ContainerCapabilitiesArgs(adds, drops);
         }
     }

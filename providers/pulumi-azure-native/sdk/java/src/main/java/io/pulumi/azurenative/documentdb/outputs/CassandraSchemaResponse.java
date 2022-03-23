@@ -89,17 +89,23 @@ public final class CassandraSchemaResponse {
             this.clusterKeys = clusterKeys;
             return this;
         }
-
+        public Builder clusterKeys(ClusterKeyResponse... clusterKeys) {
+            return clusterKeys(List.of(clusterKeys));
+        }
         public Builder columns(@Nullable List<ColumnResponse> columns) {
             this.columns = columns;
             return this;
         }
-
+        public Builder columns(ColumnResponse... columns) {
+            return columns(List.of(columns));
+        }
         public Builder partitionKeys(@Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
-        public CassandraSchemaResponse build() {
+        public Builder partitionKeys(CassandraPartitionKeyResponse... partitionKeys) {
+            return partitionKeys(List.of(partitionKeys));
+        }        public CassandraSchemaResponse build() {
             return new CassandraSchemaResponse(clusterKeys, columns, partitionKeys);
         }
     }

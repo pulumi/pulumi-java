@@ -87,17 +87,14 @@ public final class GuestPoliciesAssignmentOsType {
             this.osArchitecture = osArchitecture;
             return this;
         }
-
         public Builder osShortName(@Nullable String osShortName) {
             this.osShortName = osShortName;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
-        }
-        public GuestPoliciesAssignmentOsType build() {
+        }        public GuestPoliciesAssignmentOsType build() {
             return new GuestPoliciesAssignmentOsType(osArchitecture, osShortName, osVersion);
         }
     }

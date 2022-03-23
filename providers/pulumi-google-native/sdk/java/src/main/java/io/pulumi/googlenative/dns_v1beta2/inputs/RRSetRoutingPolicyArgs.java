@@ -108,52 +108,42 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
             this.geo = geo;
             return this;
         }
-
         public Builder geo(@Nullable RRSetRoutingPolicyGeoPolicyArgs geo) {
             this.geo = Output.ofNullable(geo);
             return this;
         }
-
         public Builder geoPolicy(@Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy) {
             this.geoPolicy = geoPolicy;
             return this;
         }
-
         public Builder geoPolicy(@Nullable RRSetRoutingPolicyGeoPolicyArgs geoPolicy) {
             this.geoPolicy = Output.ofNullable(geoPolicy);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder wrr(@Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
             this.wrr = wrr;
             return this;
         }
-
         public Builder wrr(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrr) {
             this.wrr = Output.ofNullable(wrr);
             return this;
         }
-
         public Builder wrrPolicy(@Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy) {
             this.wrrPolicy = wrrPolicy;
             return this;
         }
-
         public Builder wrrPolicy(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrrPolicy) {
             this.wrrPolicy = Output.ofNullable(wrrPolicy);
             return this;
-        }
-        public RRSetRoutingPolicyArgs build() {
+        }        public RRSetRoutingPolicyArgs build() {
             return new RRSetRoutingPolicyArgs(geo, geoPolicy, kind, wrr, wrrPolicy);
         }
     }

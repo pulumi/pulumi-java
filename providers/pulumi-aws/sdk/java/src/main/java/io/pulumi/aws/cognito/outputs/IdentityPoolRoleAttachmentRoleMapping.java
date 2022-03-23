@@ -105,22 +105,21 @@ public final class IdentityPoolRoleAttachmentRoleMapping {
             this.ambiguousRoleResolution = ambiguousRoleResolution;
             return this;
         }
-
         public Builder identityProvider(String identityProvider) {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
-
         public Builder mappingRules(@Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRule> mappingRules) {
             this.mappingRules = mappingRules;
             return this;
         }
-
+        public Builder mappingRules(IdentityPoolRoleAttachmentRoleMappingMappingRule... mappingRules) {
+            return mappingRules(List.of(mappingRules));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public IdentityPoolRoleAttachmentRoleMapping build() {
+        }        public IdentityPoolRoleAttachmentRoleMapping build() {
             return new IdentityPoolRoleAttachmentRoleMapping(ambiguousRoleResolution, identityProvider, mappingRules, type);
         }
     }

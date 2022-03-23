@@ -129,57 +129,52 @@ public final class GetTransitGatewayResult {
             this.associationDefaultRouteTableId = associationDefaultRouteTableId;
             return this;
         }
-
         public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
-
         public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
-
         public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder propagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
             return this;
         }
-
         public Builder tags(@Nullable List<TransitGatewayTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TransitGatewayTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
             this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
             return this;
         }
-
+        public Builder transitGatewayCidrBlocks(String... transitGatewayCidrBlocks) {
+            return transitGatewayCidrBlocks(List.of(transitGatewayCidrBlocks));
+        }
         public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
-        }
-        public GetTransitGatewayResult build() {
+        }        public GetTransitGatewayResult build() {
             return new GetTransitGatewayResult(associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, id, propagationDefaultRouteTableId, tags, transitGatewayCidrBlocks, vpnEcmpSupport);
         }
     }

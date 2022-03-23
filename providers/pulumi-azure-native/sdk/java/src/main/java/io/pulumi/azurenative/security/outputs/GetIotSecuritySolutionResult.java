@@ -317,87 +317,88 @@ public final class GetIotSecuritySolutionResult {
             this.additionalWorkspaces = additionalWorkspaces;
             return this;
         }
-
+        public Builder additionalWorkspaces(AdditionalWorkspacesPropertiesResponse... additionalWorkspaces) {
+            return additionalWorkspaces(List.of(additionalWorkspaces));
+        }
         public Builder autoDiscoveredResources(List<String> autoDiscoveredResources) {
             this.autoDiscoveredResources = Objects.requireNonNull(autoDiscoveredResources);
             return this;
         }
-
+        public Builder autoDiscoveredResources(String... autoDiscoveredResources) {
+            return autoDiscoveredResources(List.of(autoDiscoveredResources));
+        }
         public Builder disabledDataSources(@Nullable List<String> disabledDataSources) {
             this.disabledDataSources = disabledDataSources;
             return this;
         }
-
+        public Builder disabledDataSources(String... disabledDataSources) {
+            return disabledDataSources(List.of(disabledDataSources));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder export(@Nullable List<String> export) {
             this.export = export;
             return this;
         }
-
+        public Builder export(String... export) {
+            return export(List.of(export));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder iotHubs(List<String> iotHubs) {
             this.iotHubs = Objects.requireNonNull(iotHubs);
             return this;
         }
-
+        public Builder iotHubs(String... iotHubs) {
+            return iotHubs(List.of(iotHubs));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder recommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration) {
             this.recommendationsConfiguration = recommendationsConfiguration;
             return this;
         }
-
+        public Builder recommendationsConfiguration(RecommendationConfigurationPropertiesResponse... recommendationsConfiguration) {
+            return recommendationsConfiguration(List.of(recommendationsConfiguration));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unmaskedIpLoggingStatus(@Nullable String unmaskedIpLoggingStatus) {
             this.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus;
             return this;
         }
-
         public Builder userDefinedResources(@Nullable UserDefinedResourcesPropertiesResponse userDefinedResources) {
             this.userDefinedResources = userDefinedResources;
             return this;
         }
-
         public Builder workspace(@Nullable String workspace) {
             this.workspace = workspace;
             return this;
-        }
-        public GetIotSecuritySolutionResult build() {
+        }        public GetIotSecuritySolutionResult build() {
             return new GetIotSecuritySolutionResult(additionalWorkspaces, autoDiscoveredResources, disabledDataSources, displayName, export, id, iotHubs, location, name, recommendationsConfiguration, status, systemData, tags, type, unmaskedIpLoggingStatus, userDefinedResources, workspace);
         }
     }

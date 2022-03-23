@@ -55,12 +55,13 @@ public final class BotSlotTypeValue {
             this.sampleValue = Objects.requireNonNull(sampleValue);
             return this;
         }
-
         public Builder synonyms(@Nullable List<BotSampleValue> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
-        public BotSlotTypeValue build() {
+        public Builder synonyms(BotSampleValue... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public BotSlotTypeValue build() {
             return new BotSlotTypeValue(sampleValue, synonyms);
         }
     }

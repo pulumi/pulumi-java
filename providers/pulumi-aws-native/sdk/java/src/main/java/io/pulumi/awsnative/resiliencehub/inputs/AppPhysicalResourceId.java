@@ -90,22 +90,18 @@ public final class AppPhysicalResourceId extends io.pulumi.resources.InvokeArgs 
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
-
         public Builder identifier(String identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AppPhysicalResourceId build() {
+        }        public AppPhysicalResourceId build() {
             return new AppPhysicalResourceId(awsAccountId, awsRegion, identifier, type);
         }
     }

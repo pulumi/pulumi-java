@@ -64,17 +64,14 @@ public final class DeliveryStreamOpenXJsonSerDe {
             this.caseInsensitive = caseInsensitive;
             return this;
         }
-
         public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
-
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
-        }
-        public DeliveryStreamOpenXJsonSerDe build() {
+        }        public DeliveryStreamOpenXJsonSerDe build() {
             return new DeliveryStreamOpenXJsonSerDe(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
         }
     }

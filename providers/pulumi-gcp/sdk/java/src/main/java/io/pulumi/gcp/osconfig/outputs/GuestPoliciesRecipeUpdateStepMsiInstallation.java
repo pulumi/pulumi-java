@@ -88,17 +88,20 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallation {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder flags(@Nullable List<String> flags) {
             this.flags = flags;
             return this;
         }
-        public GuestPoliciesRecipeUpdateStepMsiInstallation build() {
+        public Builder flags(String... flags) {
+            return flags(List.of(flags));
+        }        public GuestPoliciesRecipeUpdateStepMsiInstallation build() {
             return new GuestPoliciesRecipeUpdateStepMsiInstallation(allowedExitCodes, artifactId, flags);
         }
     }

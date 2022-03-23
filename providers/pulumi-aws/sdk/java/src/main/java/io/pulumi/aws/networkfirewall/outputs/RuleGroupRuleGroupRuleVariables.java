@@ -72,12 +72,16 @@ public final class RuleGroupRuleGroupRuleVariables {
             this.ipSets = ipSets;
             return this;
         }
-
+        public Builder ipSets(RuleGroupRuleGroupRuleVariablesIpSet... ipSets) {
+            return ipSets(List.of(ipSets));
+        }
         public Builder portSets(@Nullable List<RuleGroupRuleGroupRuleVariablesPortSet> portSets) {
             this.portSets = portSets;
             return this;
         }
-        public RuleGroupRuleGroupRuleVariables build() {
+        public Builder portSets(RuleGroupRuleGroupRuleVariablesPortSet... portSets) {
+            return portSets(List.of(portSets));
+        }        public RuleGroupRuleGroupRuleVariables build() {
             return new RuleGroupRuleGroupRuleVariables(ipSets, portSets);
         }
     }

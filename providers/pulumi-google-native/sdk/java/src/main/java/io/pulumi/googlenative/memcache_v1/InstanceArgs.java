@@ -245,132 +245,112 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder instanceMessages(@Nullable Output<List<InstanceMessageArgs>> instanceMessages) {
             this.instanceMessages = instanceMessages;
             return this;
         }
-
         public Builder instanceMessages(@Nullable List<InstanceMessageArgs> instanceMessages) {
             this.instanceMessages = Output.ofNullable(instanceMessages);
             return this;
         }
-
+        public Builder instanceMessages(InstanceMessageArgs... instanceMessages) {
+            return instanceMessages(List.of(instanceMessages));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder memcacheVersion(@Nullable Output<InstanceMemcacheVersion> memcacheVersion) {
             this.memcacheVersion = memcacheVersion;
             return this;
         }
-
         public Builder memcacheVersion(@Nullable InstanceMemcacheVersion memcacheVersion) {
             this.memcacheVersion = Output.ofNullable(memcacheVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeConfig(Output<NodeConfigArgs> nodeConfig) {
             this.nodeConfig = Objects.requireNonNull(nodeConfig);
             return this;
         }
-
         public Builder nodeConfig(NodeConfigArgs nodeConfig) {
             this.nodeConfig = Output.of(Objects.requireNonNull(nodeConfig));
             return this;
         }
-
         public Builder nodeCount(Output<Integer> nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Output.of(Objects.requireNonNull(nodeCount));
             return this;
         }
-
         public Builder parameters(@Nullable Output<MemcacheParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable MemcacheParametersArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public InstanceArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public InstanceArgs build() {
             return new InstanceArgs(authorizedNetwork, displayName, instanceId, instanceMessages, labels, location, memcacheVersion, name, nodeConfig, nodeCount, parameters, project, zones);
         }
     }

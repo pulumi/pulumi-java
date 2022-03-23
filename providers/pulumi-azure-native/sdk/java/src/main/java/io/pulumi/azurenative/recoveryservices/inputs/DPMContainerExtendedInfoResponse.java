@@ -60,8 +60,7 @@ public final class DPMContainerExtendedInfoResponse extends io.pulumi.resources.
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
-        }
-        public DPMContainerExtendedInfoResponse build() {
+        }        public DPMContainerExtendedInfoResponse build() {
             return new DPMContainerExtendedInfoResponse(lastRefreshedAt);
         }
     }

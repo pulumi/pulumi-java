@@ -88,17 +88,14 @@ public final class ServiceTemplateSpecContainerPort {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public ServiceTemplateSpecContainerPort build() {
+        }        public ServiceTemplateSpecContainerPort build() {
             return new ServiceTemplateSpecContainerPort(containerPort, name, protocol);
         }
     }

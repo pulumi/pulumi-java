@@ -129,52 +129,42 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
-
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Output.ofNullable(targetAvailabilitySetId);
             return this;
         }
-
         public Builder targetAvailabilityZone(@Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
-
         public Builder targetAvailabilityZone(@Nullable Either<String,TargetAvailabilityZone> targetAvailabilityZone) {
             this.targetAvailabilityZone = Output.ofNullable(targetAvailabilityZone);
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
-
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
-
         public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = Output.ofNullable(targetVmSize);
             return this;
-        }
-        public VirtualMachineResourceSettingsArgs build() {
+        }        public VirtualMachineResourceSettingsArgs build() {
             return new VirtualMachineResourceSettingsArgs(resourceType, targetAvailabilitySetId, targetAvailabilityZone, targetResourceName, targetVmSize);
         }
     }

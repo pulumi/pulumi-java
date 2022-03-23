@@ -126,27 +126,25 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(List<JobErrorDetailResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
+        public Builder details(JobErrorDetailResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder retry(String retry) {
             this.retry = Objects.requireNonNull(retry);
             return this;
-        }
-        public JobErrorResponse build() {
+        }        public JobErrorResponse build() {
             return new JobErrorResponse(category, code, details, message, retry);
         }
     }

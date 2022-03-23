@@ -157,72 +157,58 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
-
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
             this.recurrenceInterval = Output.of(Objects.requireNonNull(recurrenceInterval));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
-
         public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
             this.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
-
         public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
             this.synchronizationSettingName = Output.ofNullable(synchronizationSettingName);
             return this;
         }
-
         public Builder synchronizationTime(Output<String> synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
-
         public Builder synchronizationTime(String synchronizationTime) {
             this.synchronizationTime = Output.of(Objects.requireNonNull(synchronizationTime));
             return this;
-        }
-        public ScheduledSynchronizationSettingArgs build() {
+        }        public ScheduledSynchronizationSettingArgs build() {
             return new ScheduledSynchronizationSettingArgs(accountName, kind, recurrenceInterval, resourceGroupName, shareName, synchronizationSettingName, synchronizationTime);
         }
     }

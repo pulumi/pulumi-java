@@ -74,22 +74,18 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
             this.signingRegion = signingRegion;
             return this;
         }
-
         public Builder signingRegion(@Nullable String signingRegion) {
             this.signingRegion = Output.ofNullable(signingRegion);
             return this;
         }
-
         public Builder signingServiceName(@Nullable Output<String> signingServiceName) {
             this.signingServiceName = signingServiceName;
             return this;
         }
-
         public Builder signingServiceName(@Nullable String signingServiceName) {
             this.signingServiceName = Output.ofNullable(signingServiceName);
             return this;
-        }
-        public DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs build() {
+        }        public DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs build() {
             return new DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs(signingRegion, signingServiceName);
         }
     }

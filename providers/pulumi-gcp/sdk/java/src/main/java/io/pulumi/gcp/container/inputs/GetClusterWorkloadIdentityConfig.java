@@ -50,8 +50,7 @@ public final class GetClusterWorkloadIdentityConfig extends io.pulumi.resources.
         public Builder workloadPool(String workloadPool) {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
-        }
-        public GetClusterWorkloadIdentityConfig build() {
+        }        public GetClusterWorkloadIdentityConfig build() {
             return new GetClusterWorkloadIdentityConfig(workloadPool);
         }
     }

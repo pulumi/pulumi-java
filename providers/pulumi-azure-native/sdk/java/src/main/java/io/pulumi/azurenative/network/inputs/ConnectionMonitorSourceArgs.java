@@ -79,22 +79,18 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public ConnectionMonitorSourceArgs build() {
+        }        public ConnectionMonitorSourceArgs build() {
             return new ConnectionMonitorSourceArgs(port, resourceId);
         }
     }

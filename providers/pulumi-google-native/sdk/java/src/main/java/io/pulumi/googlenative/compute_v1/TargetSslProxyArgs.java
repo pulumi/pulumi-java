@@ -164,82 +164,69 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder proxyHeader(@Nullable Output<TargetSslProxyProxyHeader> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
-
         public Builder proxyHeader(@Nullable TargetSslProxyProxyHeader proxyHeader) {
             this.proxyHeader = Output.ofNullable(proxyHeader);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
-
         public Builder sslCertificates(@Nullable List<String> sslCertificates) {
             this.sslCertificates = Output.ofNullable(sslCertificates);
             return this;
         }
-
+        public Builder sslCertificates(String... sslCertificates) {
+            return sslCertificates(List.of(sslCertificates));
+        }
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
-        }
-        public TargetSslProxyArgs build() {
+        }        public TargetSslProxyArgs build() {
             return new TargetSslProxyArgs(description, name, project, proxyHeader, requestId, service, sslCertificates, sslPolicy);
         }
     }

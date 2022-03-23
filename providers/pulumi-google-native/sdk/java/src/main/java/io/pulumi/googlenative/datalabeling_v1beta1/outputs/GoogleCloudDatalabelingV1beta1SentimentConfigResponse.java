@@ -51,8 +51,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse {
         public Builder enableLabelSentimentSelection(Boolean enableLabelSentimentSelection) {
             this.enableLabelSentimentSelection = Objects.requireNonNull(enableLabelSentimentSelection);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1SentimentConfigResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1SentimentConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1SentimentConfigResponse(enableLabelSentimentSelection);
         }
     }

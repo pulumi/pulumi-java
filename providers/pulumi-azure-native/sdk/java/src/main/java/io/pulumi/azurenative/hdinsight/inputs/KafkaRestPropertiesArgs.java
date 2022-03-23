@@ -80,22 +80,18 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
             this.clientGroupInfo = clientGroupInfo;
             return this;
         }
-
         public Builder clientGroupInfo(@Nullable ClientGroupInfoArgs clientGroupInfo) {
             this.clientGroupInfo = Output.ofNullable(clientGroupInfo);
             return this;
         }
-
         public Builder configurationOverride(@Nullable Output<Map<String,String>> configurationOverride) {
             this.configurationOverride = configurationOverride;
             return this;
         }
-
         public Builder configurationOverride(@Nullable Map<String,String> configurationOverride) {
             this.configurationOverride = Output.ofNullable(configurationOverride);
             return this;
-        }
-        public KafkaRestPropertiesArgs build() {
+        }        public KafkaRestPropertiesArgs build() {
             return new KafkaRestPropertiesArgs(clientGroupInfo, configurationOverride);
         }
     }

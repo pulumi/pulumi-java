@@ -137,32 +137,32 @@ public final class MatchConditionResponse {
             this.matchValue = Objects.requireNonNull(matchValue);
             return this;
         }
-
+        public Builder matchValue(String... matchValue) {
+            return matchValue(List.of(matchValue));
+        }
         public Builder matchVariable(String matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
-
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder transforms(@Nullable List<String> transforms) {
             this.transforms = transforms;
             return this;
         }
-        public MatchConditionResponse build() {
+        public Builder transforms(String... transforms) {
+            return transforms(List.of(transforms));
+        }        public MatchConditionResponse build() {
             return new MatchConditionResponse(matchValue, matchVariable, negateCondition, operator, selector, transforms);
         }
     }

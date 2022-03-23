@@ -92,17 +92,14 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
             this.displayCommand = Objects.requireNonNull(displayCommand);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
-        }
-        public NonCompliantFileResponse build() {
+        }        public NonCompliantFileResponse build() {
             return new NonCompliantFileResponse(displayCommand, path, reason);
         }
     }

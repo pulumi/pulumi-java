@@ -97,32 +97,32 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
             this.identities = identities;
             return this;
         }
-
         public Builder identities(@Nullable List<String> identities) {
             this.identities = Output.ofNullable(identities);
             return this;
         }
-
+        public Builder identities(String... identities) {
+            return identities(List.of(identities));
+        }
         public Builder identityType(@Nullable Output<IngressFromIdentityType> identityType) {
             this.identityType = identityType;
             return this;
         }
-
         public Builder identityType(@Nullable IngressFromIdentityType identityType) {
             this.identityType = Output.ofNullable(identityType);
             return this;
         }
-
         public Builder sources(@Nullable Output<List<IngressSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<IngressSourceArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-        public IngressFromArgs build() {
+        public Builder sources(IngressSourceArgs... sources) {
+            return sources(List.of(sources));
+        }        public IngressFromArgs build() {
             return new IngressFromArgs(identities, identityType, sources);
         }
     }

@@ -81,27 +81,25 @@ public final class GetNetworkInsightsAccessScopeResult {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder networkInsightsAccessScopeArn(@Nullable String networkInsightsAccessScopeArn) {
             this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
             return this;
         }
-
         public Builder networkInsightsAccessScopeId(@Nullable String networkInsightsAccessScopeId) {
             this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsAccessScopeTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(NetworkInsightsAccessScopeTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder updatedDate(@Nullable String updatedDate) {
             this.updatedDate = updatedDate;
             return this;
-        }
-        public GetNetworkInsightsAccessScopeResult build() {
+        }        public GetNetworkInsightsAccessScopeResult build() {
             return new GetNetworkInsightsAccessScopeResult(createdDate, networkInsightsAccessScopeArn, networkInsightsAccessScopeId, tags, updatedDate);
         }
     }

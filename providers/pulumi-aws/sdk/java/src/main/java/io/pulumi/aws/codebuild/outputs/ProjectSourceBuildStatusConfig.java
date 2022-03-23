@@ -71,12 +71,10 @@ public final class ProjectSourceBuildStatusConfig {
             this.context = context;
             return this;
         }
-
         public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = targetUrl;
             return this;
-        }
-        public ProjectSourceBuildStatusConfig build() {
+        }        public ProjectSourceBuildStatusConfig build() {
             return new ProjectSourceBuildStatusConfig(context, targetUrl);
         }
     }

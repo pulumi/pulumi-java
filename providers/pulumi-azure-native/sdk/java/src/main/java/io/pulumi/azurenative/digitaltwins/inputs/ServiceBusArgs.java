@@ -177,82 +177,66 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
-
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = Output.ofNullable(deadLetterSecret);
             return this;
         }
-
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
-
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = Output.ofNullable(deadLetterUri);
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Output.ofNullable(endpointUri);
             return this;
         }
-
         public Builder entityPath(@Nullable Output<String> entityPath) {
             this.entityPath = entityPath;
             return this;
         }
-
         public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = Output.ofNullable(entityPath);
             return this;
         }
-
         public Builder primaryConnectionString(@Nullable Output<String> primaryConnectionString) {
             this.primaryConnectionString = primaryConnectionString;
             return this;
         }
-
         public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
             this.primaryConnectionString = Output.ofNullable(primaryConnectionString);
             return this;
         }
-
         public Builder secondaryConnectionString(@Nullable Output<String> secondaryConnectionString) {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
-
         public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
             this.secondaryConnectionString = Output.ofNullable(secondaryConnectionString);
             return this;
-        }
-        public ServiceBusArgs build() {
+        }        public ServiceBusArgs build() {
             return new ServiceBusArgs(authenticationType, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, primaryConnectionString, secondaryConnectionString);
         }
     }

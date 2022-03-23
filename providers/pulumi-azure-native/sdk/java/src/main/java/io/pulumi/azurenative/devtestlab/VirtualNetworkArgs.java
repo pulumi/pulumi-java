@@ -190,92 +190,80 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedSubnets = allowedSubnets;
             return this;
         }
-
         public Builder allowedSubnets(@Nullable List<SubnetArgs> allowedSubnets) {
             this.allowedSubnets = Output.ofNullable(allowedSubnets);
             return this;
         }
-
+        public Builder allowedSubnets(SubnetArgs... allowedSubnets) {
+            return allowedSubnets(List.of(allowedSubnets));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder externalProviderResourceId(@Nullable Output<String> externalProviderResourceId) {
             this.externalProviderResourceId = externalProviderResourceId;
             return this;
         }
-
         public Builder externalProviderResourceId(@Nullable String externalProviderResourceId) {
             this.externalProviderResourceId = Output.ofNullable(externalProviderResourceId);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subnetOverrides(@Nullable Output<List<SubnetOverrideArgs>> subnetOverrides) {
             this.subnetOverrides = subnetOverrides;
             return this;
         }
-
         public Builder subnetOverrides(@Nullable List<SubnetOverrideArgs> subnetOverrides) {
             this.subnetOverrides = Output.ofNullable(subnetOverrides);
             return this;
         }
-
+        public Builder subnetOverrides(SubnetOverrideArgs... subnetOverrides) {
+            return subnetOverrides(List.of(subnetOverrides));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VirtualNetworkArgs build() {
+        }        public VirtualNetworkArgs build() {
             return new VirtualNetworkArgs(allowedSubnets, description, externalProviderResourceId, labName, location, name, resourceGroupName, subnetOverrides, tags);
         }
     }

@@ -78,22 +78,18 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
             this.namespaceId = namespaceId;
             return this;
         }
-
         public Builder namespaceId(@Nullable String namespaceId) {
             this.namespaceId = Output.ofNullable(namespaceId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GooglePrivacyDlpV2PartitionIdArgs build() {
+        }        public GooglePrivacyDlpV2PartitionIdArgs build() {
             return new GooglePrivacyDlpV2PartitionIdArgs(namespaceId, project);
         }
     }

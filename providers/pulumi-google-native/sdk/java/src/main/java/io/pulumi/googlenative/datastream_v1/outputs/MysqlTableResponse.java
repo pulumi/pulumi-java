@@ -71,12 +71,13 @@ public final class MysqlTableResponse {
             this.mysqlColumns = Objects.requireNonNull(mysqlColumns);
             return this;
         }
-
+        public Builder mysqlColumns(MysqlColumnResponse... mysqlColumns) {
+            return mysqlColumns(List.of(mysqlColumns));
+        }
         public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
-        }
-        public MysqlTableResponse build() {
+        }        public MysqlTableResponse build() {
             return new MysqlTableResponse(mysqlColumns, table);
         }
     }

@@ -74,22 +74,18 @@ public final class UserPoolSchemaNumberAttributeConstraintsArgs extends io.pulum
             this.maxValue = maxValue;
             return this;
         }
-
         public Builder maxValue(@Nullable String maxValue) {
             this.maxValue = Output.ofNullable(maxValue);
             return this;
         }
-
         public Builder minValue(@Nullable Output<String> minValue) {
             this.minValue = minValue;
             return this;
         }
-
         public Builder minValue(@Nullable String minValue) {
             this.minValue = Output.ofNullable(minValue);
             return this;
-        }
-        public UserPoolSchemaNumberAttributeConstraintsArgs build() {
+        }        public UserPoolSchemaNumberAttributeConstraintsArgs build() {
             return new UserPoolSchemaNumberAttributeConstraintsArgs(maxValue, minValue);
         }
     }

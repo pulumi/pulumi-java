@@ -71,22 +71,18 @@ public final class LaunchGroupObject {
             this.description = description;
             return this;
         }
-
         public Builder feature(String feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder variation(String variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
-        }
-        public LaunchGroupObject build() {
+        }        public LaunchGroupObject build() {
             return new LaunchGroupObject(description, feature, groupName, variation);
         }
     }

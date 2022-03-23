@@ -43,8 +43,7 @@ public final class StatefulPolicyResponse {
         public Builder preservedState(StatefulPolicyPreservedStateResponse preservedState) {
             this.preservedState = Objects.requireNonNull(preservedState);
             return this;
-        }
-        public StatefulPolicyResponse build() {
+        }        public StatefulPolicyResponse build() {
             return new StatefulPolicyResponse(preservedState);
         }
     }

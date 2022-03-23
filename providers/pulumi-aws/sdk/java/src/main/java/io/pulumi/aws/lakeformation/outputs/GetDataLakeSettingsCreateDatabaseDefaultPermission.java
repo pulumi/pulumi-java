@@ -70,12 +70,13 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
-        }
-        public GetDataLakeSettingsCreateDatabaseDefaultPermission build() {
+        }        public GetDataLakeSettingsCreateDatabaseDefaultPermission build() {
             return new GetDataLakeSettingsCreateDatabaseDefaultPermission(permissions, principal);
         }
     }

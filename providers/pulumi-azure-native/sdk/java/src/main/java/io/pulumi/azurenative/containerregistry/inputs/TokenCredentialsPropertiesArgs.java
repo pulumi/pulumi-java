@@ -72,22 +72,24 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
             this.certificates = certificates;
             return this;
         }
-
         public Builder certificates(@Nullable List<TokenCertificateArgs> certificates) {
             this.certificates = Output.ofNullable(certificates);
             return this;
         }
-
+        public Builder certificates(TokenCertificateArgs... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder passwords(@Nullable Output<List<TokenPasswordArgs>> passwords) {
             this.passwords = passwords;
             return this;
         }
-
         public Builder passwords(@Nullable List<TokenPasswordArgs> passwords) {
             this.passwords = Output.ofNullable(passwords);
             return this;
         }
-        public TokenCredentialsPropertiesArgs build() {
+        public Builder passwords(TokenPasswordArgs... passwords) {
+            return passwords(List.of(passwords));
+        }        public TokenCredentialsPropertiesArgs build() {
             return new TokenCredentialsPropertiesArgs(certificates, passwords);
         }
     }

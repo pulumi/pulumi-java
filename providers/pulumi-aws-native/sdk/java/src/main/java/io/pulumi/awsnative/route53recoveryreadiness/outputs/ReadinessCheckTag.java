@@ -54,12 +54,13 @@ public final class ReadinessCheckTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ReadinessCheckTag build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public ReadinessCheckTag build() {
             return new ReadinessCheckTag(key, value);
         }
     }

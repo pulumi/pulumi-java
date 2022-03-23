@@ -105,22 +105,18 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
             this.modeBlock = Objects.requireNonNull(modeBlock);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder protection(Boolean protection) {
             this.protection = Objects.requireNonNull(protection);
             return this;
         }
-
         public Builder reportUri(String reportUri) {
             this.reportUri = Objects.requireNonNull(reportUri);
             return this;
-        }
-        public GetResponseHeadersPolicySecurityHeadersConfigXssProtection build() {
+        }        public GetResponseHeadersPolicySecurityHeadersConfigXssProtection build() {
             return new GetResponseHeadersPolicySecurityHeadersConfigXssProtection(modeBlock, override, protection, reportUri);
         }
     }

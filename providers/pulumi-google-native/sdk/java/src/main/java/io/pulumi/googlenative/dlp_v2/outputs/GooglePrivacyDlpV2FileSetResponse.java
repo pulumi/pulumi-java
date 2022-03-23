@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2FileSetResponse {
             this.regexFileSet = Objects.requireNonNull(regexFileSet);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GooglePrivacyDlpV2FileSetResponse build() {
+        }        public GooglePrivacyDlpV2FileSetResponse build() {
             return new GooglePrivacyDlpV2FileSetResponse(regexFileSet, url);
         }
     }

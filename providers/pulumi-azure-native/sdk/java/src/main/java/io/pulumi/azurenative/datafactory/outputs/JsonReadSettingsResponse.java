@@ -77,12 +77,10 @@ public final class JsonReadSettingsResponse {
             this.compressionProperties = compressionProperties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JsonReadSettingsResponse build() {
+        }        public JsonReadSettingsResponse build() {
             return new JsonReadSettingsResponse(compressionProperties, type);
         }
     }

@@ -146,82 +146,69 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             this.canary = canary;
             return this;
         }
-
         public Builder canary(@Nullable DefaultRolloutSpecificationCanaryArgs canary) {
             this.canary = Output.ofNullable(canary);
             return this;
         }
-
         public Builder highTraffic(@Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic) {
             this.highTraffic = highTraffic;
             return this;
         }
-
         public Builder highTraffic(@Nullable DefaultRolloutSpecificationHighTrafficArgs highTraffic) {
             this.highTraffic = Output.ofNullable(highTraffic);
             return this;
         }
-
         public Builder lowTraffic(@Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic) {
             this.lowTraffic = lowTraffic;
             return this;
         }
-
         public Builder lowTraffic(@Nullable DefaultRolloutSpecificationLowTrafficArgs lowTraffic) {
             this.lowTraffic = Output.ofNullable(lowTraffic);
             return this;
         }
-
         public Builder mediumTraffic(@Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic) {
             this.mediumTraffic = mediumTraffic;
             return this;
         }
-
         public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationMediumTrafficArgs mediumTraffic) {
             this.mediumTraffic = Output.ofNullable(mediumTraffic);
             return this;
         }
-
         public Builder providerRegistration(@Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration) {
             this.providerRegistration = providerRegistration;
             return this;
         }
-
         public Builder providerRegistration(@Nullable DefaultRolloutSpecificationProviderRegistrationArgs providerRegistration) {
             this.providerRegistration = Output.ofNullable(providerRegistration);
             return this;
         }
-
         public Builder resourceTypeRegistrations(@Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations) {
             this.resourceTypeRegistrations = resourceTypeRegistrations;
             return this;
         }
-
         public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationArgs> resourceTypeRegistrations) {
             this.resourceTypeRegistrations = Output.ofNullable(resourceTypeRegistrations);
             return this;
         }
-
+        public Builder resourceTypeRegistrations(ResourceTypeRegistrationArgs... resourceTypeRegistrations) {
+            return resourceTypeRegistrations(List.of(resourceTypeRegistrations));
+        }
         public Builder restOfTheWorldGroupOne(@Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne) {
             this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
             return this;
         }
-
         public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs restOfTheWorldGroupOne) {
             this.restOfTheWorldGroupOne = Output.ofNullable(restOfTheWorldGroupOne);
             return this;
         }
-
         public Builder restOfTheWorldGroupTwo(@Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo) {
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }
-
         public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs restOfTheWorldGroupTwo) {
             this.restOfTheWorldGroupTwo = Output.ofNullable(restOfTheWorldGroupTwo);
             return this;
-        }
-        public DefaultRolloutPropertiesSpecificationArgs build() {
+        }        public DefaultRolloutPropertiesSpecificationArgs build() {
             return new DefaultRolloutPropertiesSpecificationArgs(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
         }
     }

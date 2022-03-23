@@ -109,42 +109,40 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
             this.contactListName = contactListName;
             return this;
         }
-
         public Builder contactListName(@Nullable String contactListName) {
             this.contactListName = Output.ofNullable(contactListName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ContactListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ContactListTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ContactListTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder topics(@Nullable Output<List<ContactListTopicArgs>> topics) {
             this.topics = topics;
             return this;
         }
-
         public Builder topics(@Nullable List<ContactListTopicArgs> topics) {
             this.topics = Output.ofNullable(topics);
             return this;
         }
-        public ContactListArgs build() {
+        public Builder topics(ContactListTopicArgs... topics) {
+            return topics(List.of(topics));
+        }        public ContactListArgs build() {
             return new ContactListArgs(contactListName, description, tags, topics);
         }
     }

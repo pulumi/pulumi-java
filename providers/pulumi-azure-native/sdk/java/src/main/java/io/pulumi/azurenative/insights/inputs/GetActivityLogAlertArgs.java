@@ -72,12 +72,10 @@ public final class GetActivityLogAlertArgs extends io.pulumi.resources.InvokeArg
             this.activityLogAlertName = Objects.requireNonNull(activityLogAlertName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetActivityLogAlertArgs build() {
+        }        public GetActivityLogAlertArgs build() {
             return new GetActivityLogAlertArgs(activityLogAlertName, resourceGroupName);
         }
     }

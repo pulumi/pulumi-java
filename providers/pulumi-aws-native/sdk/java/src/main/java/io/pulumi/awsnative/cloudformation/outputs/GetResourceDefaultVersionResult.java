@@ -107,22 +107,18 @@ public final class GetResourceDefaultVersionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeVersionArn(@Nullable String typeVersionArn) {
             this.typeVersionArn = typeVersionArn;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
-        }
-        public GetResourceDefaultVersionResult build() {
+        }        public GetResourceDefaultVersionResult build() {
             return new GetResourceDefaultVersionResult(arn, typeName, typeVersionArn, versionId);
         }
     }

@@ -193,102 +193,82 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder managed(@Nullable Output<SslCertificateManagedSslCertificateArgs> managed) {
             this.managed = managed;
             return this;
         }
-
         public Builder managed(@Nullable SslCertificateManagedSslCertificateArgs managed) {
             this.managed = Output.ofNullable(managed);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder selfManaged(@Nullable Output<SslCertificateSelfManagedSslCertificateArgs> selfManaged) {
             this.selfManaged = selfManaged;
             return this;
         }
-
         public Builder selfManaged(@Nullable SslCertificateSelfManagedSslCertificateArgs selfManaged) {
             this.selfManaged = Output.ofNullable(selfManaged);
             return this;
         }
-
         public Builder type(@Nullable Output<RegionSslCertificateType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable RegionSslCertificateType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public RegionSslCertificateArgs build() {
+        }        public RegionSslCertificateArgs build() {
             return new RegionSslCertificateArgs(certificate, description, managed, name, privateKey, project, region, requestId, selfManaged, type);
         }
     }

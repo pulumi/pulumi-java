@@ -70,12 +70,10 @@ public final class GoogleCloudDialogflowCxV3AudioInputResponse {
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
-
         public Builder config(GoogleCloudDialogflowCxV3InputAudioConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3AudioInputResponse build() {
+        }        public GoogleCloudDialogflowCxV3AudioInputResponse build() {
             return new GoogleCloudDialogflowCxV3AudioInputResponse(audio, config);
         }
     }

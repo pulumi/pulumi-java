@@ -73,12 +73,13 @@ public final class FlowAccessControlConfigurationPolicyResponse {
             this.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
-
+        public Builder allowedCallerIpAddresses(IpAddressRangeResponse... allowedCallerIpAddresses) {
+            return allowedCallerIpAddresses(List.of(allowedCallerIpAddresses));
+        }
         public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
-        }
-        public FlowAccessControlConfigurationPolicyResponse build() {
+        }        public FlowAccessControlConfigurationPolicyResponse build() {
             return new FlowAccessControlConfigurationPolicyResponse(allowedCallerIpAddresses, openAuthenticationPolicies);
         }
     }

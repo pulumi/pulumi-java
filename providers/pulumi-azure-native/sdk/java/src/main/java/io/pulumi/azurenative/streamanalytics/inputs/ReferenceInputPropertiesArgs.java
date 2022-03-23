@@ -100,32 +100,26 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
             this.datasource = datasource;
             return this;
         }
-
         public Builder datasource(@Nullable BlobReferenceInputDataSourceArgs datasource) {
             this.datasource = Output.ofNullable(datasource);
             return this;
         }
-
         public Builder serialization(@Nullable Output<Object> serialization) {
             this.serialization = serialization;
             return this;
         }
-
         public Builder serialization(@Nullable Object serialization) {
             this.serialization = Output.ofNullable(serialization);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ReferenceInputPropertiesArgs build() {
+        }        public ReferenceInputPropertiesArgs build() {
             return new ReferenceInputPropertiesArgs(datasource, serialization, type);
         }
     }

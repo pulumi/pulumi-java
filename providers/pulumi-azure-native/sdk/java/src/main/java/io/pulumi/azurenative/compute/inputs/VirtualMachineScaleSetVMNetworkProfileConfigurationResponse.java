@@ -62,7 +62,9 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse e
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-        public VirtualMachineScaleSetVMNetworkProfileConfigurationResponse build() {
+        public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationResponse... networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
+        }        public VirtualMachineScaleSetVMNetworkProfileConfigurationResponse build() {
             return new VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(networkInterfaceConfigurations);
         }
     }

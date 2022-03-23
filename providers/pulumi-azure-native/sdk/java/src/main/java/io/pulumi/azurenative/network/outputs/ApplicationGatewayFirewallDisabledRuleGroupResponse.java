@@ -72,12 +72,13 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
-
         public Builder rules(@Nullable List<Integer> rules) {
             this.rules = rules;
             return this;
         }
-        public ApplicationGatewayFirewallDisabledRuleGroupResponse build() {
+        public Builder rules(Integer... rules) {
+            return rules(List.of(rules));
+        }        public ApplicationGatewayFirewallDisabledRuleGroupResponse build() {
             return new ApplicationGatewayFirewallDisabledRuleGroupResponse(ruleGroupName, rules);
         }
     }

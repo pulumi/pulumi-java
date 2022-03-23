@@ -93,32 +93,29 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable OptionsPropertiesArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TransitGatewayMulticastDomainTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TransitGatewayMulticastDomainTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transitGatewayId(Output<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
-
         public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
             return this;
-        }
-        public TransitGatewayMulticastDomainArgs build() {
+        }        public TransitGatewayMulticastDomainArgs build() {
             return new TransitGatewayMulticastDomainArgs(options, tags, transitGatewayId);
         }
     }

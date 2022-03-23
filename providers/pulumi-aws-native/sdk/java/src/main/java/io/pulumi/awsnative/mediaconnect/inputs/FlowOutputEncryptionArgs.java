@@ -112,42 +112,34 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder algorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
             this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
-
         public Builder keyType(@Nullable Output<FlowOutputEncryptionKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable FlowOutputEncryptionKeyType keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
-        }
-        public FlowOutputEncryptionArgs build() {
+        }        public FlowOutputEncryptionArgs build() {
             return new FlowOutputEncryptionArgs(algorithm, keyType, roleArn, secretArn);
         }
     }

@@ -73,12 +73,13 @@ public final class JobDefinitionRetryStrategy {
             this.attempts = attempts;
             return this;
         }
-
         public Builder evaluateOnExits(@Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits) {
             this.evaluateOnExits = evaluateOnExits;
             return this;
         }
-        public JobDefinitionRetryStrategy build() {
+        public Builder evaluateOnExits(JobDefinitionRetryStrategyEvaluateOnExit... evaluateOnExits) {
+            return evaluateOnExits(List.of(evaluateOnExits));
+        }        public JobDefinitionRetryStrategy build() {
             return new JobDefinitionRetryStrategy(attempts, evaluateOnExits);
         }
     }

@@ -72,12 +72,10 @@ public final class NotificationEventReceiverResponse {
             this.receiverType = receiverType;
             return this;
         }
-
         public Builder receiverValue(@Nullable NotificationReceiverValueResponse receiverValue) {
             this.receiverValue = receiverValue;
             return this;
-        }
-        public NotificationEventReceiverResponse build() {
+        }        public NotificationEventReceiverResponse build() {
             return new NotificationEventReceiverResponse(receiverType, receiverValue);
         }
     }

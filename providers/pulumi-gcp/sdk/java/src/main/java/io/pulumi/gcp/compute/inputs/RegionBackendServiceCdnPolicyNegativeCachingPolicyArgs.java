@@ -76,22 +76,18 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs extend
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Integer code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs build() {
+        }        public RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs build() {
             return new RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs(code, ttl);
         }
     }

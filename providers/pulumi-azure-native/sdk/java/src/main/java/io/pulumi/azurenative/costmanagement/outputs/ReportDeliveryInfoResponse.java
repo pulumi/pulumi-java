@@ -51,8 +51,7 @@ public final class ReportDeliveryInfoResponse {
         public Builder destination(ReportDeliveryDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
-        }
-        public ReportDeliveryInfoResponse build() {
+        }        public ReportDeliveryInfoResponse build() {
             return new ReportDeliveryInfoResponse(destination);
         }
     }

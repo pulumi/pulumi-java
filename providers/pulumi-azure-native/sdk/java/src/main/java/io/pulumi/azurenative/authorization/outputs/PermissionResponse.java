@@ -103,22 +103,30 @@ public final class PermissionResponse {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder dataActions(@Nullable List<String> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
-
+        public Builder dataActions(String... dataActions) {
+            return dataActions(List.of(dataActions));
+        }
         public Builder notActions(@Nullable List<String> notActions) {
             this.notActions = notActions;
             return this;
         }
-
+        public Builder notActions(String... notActions) {
+            return notActions(List.of(notActions));
+        }
         public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }
-        public PermissionResponse build() {
+        public Builder notDataActions(String... notDataActions) {
+            return notDataActions(List.of(notDataActions));
+        }        public PermissionResponse build() {
             return new PermissionResponse(actions, dataActions, notActions, notDataActions);
         }
     }

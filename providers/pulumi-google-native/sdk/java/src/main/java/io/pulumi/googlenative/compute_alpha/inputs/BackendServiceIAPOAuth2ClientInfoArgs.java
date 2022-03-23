@@ -90,32 +90,26 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder clientName(@Nullable Output<String> clientName) {
             this.clientName = clientName;
             return this;
         }
-
         public Builder clientName(@Nullable String clientName) {
             this.clientName = Output.ofNullable(clientName);
             return this;
         }
-
         public Builder developerEmailAddress(@Nullable Output<String> developerEmailAddress) {
             this.developerEmailAddress = developerEmailAddress;
             return this;
         }
-
         public Builder developerEmailAddress(@Nullable String developerEmailAddress) {
             this.developerEmailAddress = Output.ofNullable(developerEmailAddress);
             return this;
-        }
-        public BackendServiceIAPOAuth2ClientInfoArgs build() {
+        }        public BackendServiceIAPOAuth2ClientInfoArgs build() {
             return new BackendServiceIAPOAuth2ClientInfoArgs(applicationName, clientName, developerEmailAddress);
         }
     }

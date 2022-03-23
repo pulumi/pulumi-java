@@ -134,32 +134,29 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
             this.activityId = Objects.requireNonNull(activityId);
             return this;
         }
-
         public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder parameters(List<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(String... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagedIntegrationRuntimeOperationResultResponse build() {
+        }        public ManagedIntegrationRuntimeOperationResultResponse build() {
             return new ManagedIntegrationRuntimeOperationResultResponse(activityId, errorCode, parameters, result, startTime, type);
         }
     }

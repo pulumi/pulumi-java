@@ -173,82 +173,72 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<String> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(String... containers) {
+            return containers(List.of(containers));
+        }
         public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccount(Output<StorageAccountArgs> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public Builder storageAccount(StorageAccountArgs storageAccount) {
             this.storageAccount = Output.of(Objects.requireNonNull(storageAccount));
             return this;
         }
-
         public Builder storageInsightName(@Nullable Output<String> storageInsightName) {
             this.storageInsightName = storageInsightName;
             return this;
         }
-
         public Builder storageInsightName(@Nullable String storageInsightName) {
             this.storageInsightName = Output.ofNullable(storageInsightName);
             return this;
         }
-
         public Builder tables(@Nullable Output<List<String>> tables) {
             this.tables = tables;
             return this;
         }
-
         public Builder tables(@Nullable List<String> tables) {
             this.tables = Output.ofNullable(tables);
             return this;
         }
-
+        public Builder tables(String... tables) {
+            return tables(List.of(tables));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public StorageInsightConfigArgs build() {
+        }        public StorageInsightConfigArgs build() {
             return new StorageInsightConfigArgs(containers, eTag, resourceGroupName, storageAccount, storageInsightName, tables, tags, workspaceName);
         }
     }

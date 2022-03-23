@@ -147,62 +147,56 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
-
         public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = Output.ofNullable(automountServiceAccountToken);
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
             this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
             return this;
         }
-
+        public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
+            return imagePullSecrets(List.of(imagePullSecrets));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder secrets(@Nullable Output<List<ObjectReferenceArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<ObjectReferenceArgs> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-        public ServiceAccountArgs build() {
+        public Builder secrets(ObjectReferenceArgs... secrets) {
+            return secrets(List.of(secrets));
+        }        public ServiceAccountArgs build() {
             return new ServiceAccountArgs(apiVersion, automountServiceAccountToken, imagePullSecrets, kind, metadata, secrets);
         }
     }

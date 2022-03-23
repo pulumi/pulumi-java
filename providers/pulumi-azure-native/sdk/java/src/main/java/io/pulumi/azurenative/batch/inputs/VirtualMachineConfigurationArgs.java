@@ -193,92 +193,80 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             this.containerConfiguration = containerConfiguration;
             return this;
         }
-
         public Builder containerConfiguration(@Nullable ContainerConfigurationArgs containerConfiguration) {
             this.containerConfiguration = Output.ofNullable(containerConfiguration);
             return this;
         }
-
         public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
-
         public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
             this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
-
+        public Builder dataDisks(DataDiskArgs... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
-
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Output.ofNullable(diskEncryptionConfiguration);
             return this;
         }
-
         public Builder extensions(@Nullable Output<List<VMExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable List<VMExtensionArgs> extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-
+        public Builder extensions(VMExtensionArgs... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder imageReference(Output<ImageReferenceArgs> imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
-
         public Builder imageReference(ImageReferenceArgs imageReference) {
             this.imageReference = Output.of(Objects.requireNonNull(imageReference));
             return this;
         }
-
         public Builder licenseType(@Nullable Output<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder nodeAgentSkuId(Output<String> nodeAgentSkuId) {
             this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
             return this;
         }
-
         public Builder nodeAgentSkuId(String nodeAgentSkuId) {
             this.nodeAgentSkuId = Output.of(Objects.requireNonNull(nodeAgentSkuId));
             return this;
         }
-
         public Builder nodePlacementConfiguration(@Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration) {
             this.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
-
         public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationArgs nodePlacementConfiguration) {
             this.nodePlacementConfiguration = Output.ofNullable(nodePlacementConfiguration);
             return this;
         }
-
         public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
             this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
             return this;
-        }
-        public VirtualMachineConfigurationArgs build() {
+        }        public VirtualMachineConfigurationArgs build() {
             return new VirtualMachineConfigurationArgs(containerConfiguration, dataDisks, diskEncryptionConfiguration, extensions, imageReference, licenseType, nodeAgentSkuId, nodePlacementConfiguration, windowsConfiguration);
         }
     }

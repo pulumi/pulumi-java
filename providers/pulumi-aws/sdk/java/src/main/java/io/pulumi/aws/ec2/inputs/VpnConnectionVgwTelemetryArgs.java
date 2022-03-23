@@ -139,62 +139,50 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
             this.acceptedRouteCount = acceptedRouteCount;
             return this;
         }
-
         public Builder acceptedRouteCount(@Nullable Integer acceptedRouteCount) {
             this.acceptedRouteCount = Output.ofNullable(acceptedRouteCount);
             return this;
         }
-
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder lastStatusChange(@Nullable Output<String> lastStatusChange) {
             this.lastStatusChange = lastStatusChange;
             return this;
         }
-
         public Builder lastStatusChange(@Nullable String lastStatusChange) {
             this.lastStatusChange = Output.ofNullable(lastStatusChange);
             return this;
         }
-
         public Builder outsideIpAddress(@Nullable Output<String> outsideIpAddress) {
             this.outsideIpAddress = outsideIpAddress;
             return this;
         }
-
         public Builder outsideIpAddress(@Nullable String outsideIpAddress) {
             this.outsideIpAddress = Output.ofNullable(outsideIpAddress);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder statusMessage(@Nullable Output<String> statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = Output.ofNullable(statusMessage);
             return this;
-        }
-        public VpnConnectionVgwTelemetryArgs build() {
+        }        public VpnConnectionVgwTelemetryArgs build() {
             return new VpnConnectionVgwTelemetryArgs(acceptedRouteCount, certificateArn, lastStatusChange, outsideIpAddress, status, statusMessage);
         }
     }

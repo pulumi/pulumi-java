@@ -96,17 +96,17 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
             this.description = description;
             return this;
         }
-
         public Builder links(List<GraphParameterLinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
-
+        public Builder links(GraphParameterLinkResponse... links) {
+            return links(List.of(links));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GraphParameterResponse build() {
+        }        public GraphParameterResponse build() {
             return new GraphParameterResponse(description, links, type);
         }
     }

@@ -111,22 +111,18 @@ public final class IdentityPropertiesResponse {
             this.principalId = principalId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public IdentityPropertiesResponse build() {
+        }        public IdentityPropertiesResponse build() {
             return new IdentityPropertiesResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

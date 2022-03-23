@@ -54,8 +54,7 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse extends io.pulum
         public Builder maxUnusedVersionsToKeep(Double maxUnusedVersionsToKeep) {
             this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep);
             return this;
-        }
-        public ApplicationTypeVersionsCleanupPolicyResponse build() {
+        }        public ApplicationTypeVersionsCleanupPolicyResponse build() {
             return new ApplicationTypeVersionsCleanupPolicyResponse(maxUnusedVersionsToKeep);
         }
     }

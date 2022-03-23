@@ -78,12 +78,13 @@ public final class GetLocalGatewayRouteTablesArgs extends io.pulumi.resources.In
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayRouteTablesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetLocalGatewayRouteTablesArgs build() {
+        }        public GetLocalGatewayRouteTablesArgs build() {
             return new GetLocalGatewayRouteTablesArgs(filters, tags);
         }
     }

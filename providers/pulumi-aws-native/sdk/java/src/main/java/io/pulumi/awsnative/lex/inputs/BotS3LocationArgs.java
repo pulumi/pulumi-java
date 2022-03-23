@@ -94,32 +94,26 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
-
         public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Output.of(Objects.requireNonNull(s3Bucket));
             return this;
         }
-
         public Builder s3ObjectKey(Output<String> s3ObjectKey) {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }
-
         public Builder s3ObjectKey(String s3ObjectKey) {
             this.s3ObjectKey = Output.of(Objects.requireNonNull(s3ObjectKey));
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
-        }
-        public BotS3LocationArgs build() {
+        }        public BotS3LocationArgs build() {
             return new BotS3LocationArgs(s3Bucket, s3ObjectKey, s3ObjectVersion);
         }
     }

@@ -54,8 +54,7 @@ public final class DistributionPolicyZoneConfigurationResponse extends io.pulumi
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public DistributionPolicyZoneConfigurationResponse build() {
+        }        public DistributionPolicyZoneConfigurationResponse build() {
             return new DistributionPolicyZoneConfigurationResponse(zone);
         }
     }

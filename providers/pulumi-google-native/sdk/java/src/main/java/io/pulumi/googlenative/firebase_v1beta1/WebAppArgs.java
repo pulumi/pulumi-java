@@ -123,52 +123,45 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder appUrls(@Nullable Output<List<String>> appUrls) {
             this.appUrls = appUrls;
             return this;
         }
-
         public Builder appUrls(@Nullable List<String> appUrls) {
             this.appUrls = Output.ofNullable(appUrls);
             return this;
         }
-
+        public Builder appUrls(String... appUrls) {
+            return appUrls(List.of(appUrls));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public WebAppArgs build() {
+        }        public WebAppArgs build() {
             return new WebAppArgs(appId, appUrls, displayName, name, project);
         }
     }

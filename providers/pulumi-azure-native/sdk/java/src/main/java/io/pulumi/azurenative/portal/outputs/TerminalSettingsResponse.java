@@ -71,12 +71,10 @@ public final class TerminalSettingsResponse {
             this.fontSize = fontSize;
             return this;
         }
-
         public Builder fontStyle(@Nullable String fontStyle) {
             this.fontStyle = fontStyle;
             return this;
-        }
-        public TerminalSettingsResponse build() {
+        }        public TerminalSettingsResponse build() {
             return new TerminalSettingsResponse(fontSize, fontStyle);
         }
     }

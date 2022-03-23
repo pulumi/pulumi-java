@@ -106,22 +106,21 @@ public final class Role {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder rules(@Nullable List<PolicyRule> rules) {
             this.rules = rules;
             return this;
         }
-        public Role build() {
+        public Builder rules(PolicyRule... rules) {
+            return rules(List.of(rules));
+        }        public Role build() {
             return new Role(apiVersion, kind, metadata, rules);
         }
     }

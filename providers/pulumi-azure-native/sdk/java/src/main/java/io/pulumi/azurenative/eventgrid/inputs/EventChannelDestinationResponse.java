@@ -96,17 +96,14 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
             this.azureSubscriptionId = azureSubscriptionId;
             return this;
         }
-
         public Builder partnerTopicName(@Nullable String partnerTopicName) {
             this.partnerTopicName = partnerTopicName;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
-        }
-        public EventChannelDestinationResponse build() {
+        }        public EventChannelDestinationResponse build() {
             return new EventChannelDestinationResponse(azureSubscriptionId, partnerTopicName, resourceGroup);
         }
     }

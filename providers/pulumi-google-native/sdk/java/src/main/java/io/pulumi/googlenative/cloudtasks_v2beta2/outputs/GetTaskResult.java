@@ -152,37 +152,30 @@ public final class GetTaskResult {
             this.appEngineHttpRequest = Objects.requireNonNull(appEngineHttpRequest);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pullMessage(PullMessageResponse pullMessage) {
             this.pullMessage = Objects.requireNonNull(pullMessage);
             return this;
         }
-
         public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
-
         public Builder status(TaskStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder view(String view) {
             this.view = Objects.requireNonNull(view);
             return this;
-        }
-        public GetTaskResult build() {
+        }        public GetTaskResult build() {
             return new GetTaskResult(appEngineHttpRequest, createTime, name, pullMessage, scheduleTime, status, view);
         }
     }

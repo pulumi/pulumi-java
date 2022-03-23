@@ -71,12 +71,10 @@ public final class GameSessionQueuePlayerLatencyPolicy {
             this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds);
             return this;
         }
-
         public Builder policyDurationSeconds(@Nullable Integer policyDurationSeconds) {
             this.policyDurationSeconds = policyDurationSeconds;
             return this;
-        }
-        public GameSessionQueuePlayerLatencyPolicy build() {
+        }        public GameSessionQueuePlayerLatencyPolicy build() {
             return new GameSessionQueuePlayerLatencyPolicy(maximumIndividualPlayerLatencyMilliseconds, policyDurationSeconds);
         }
     }

@@ -134,52 +134,42 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder idpId(Output<String> idpId) {
             this.idpId = Objects.requireNonNull(idpId);
             return this;
         }
-
         public Builder idpId(String idpId) {
             this.idpId = Output.of(Objects.requireNonNull(idpId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DefaultSupportedIdpConfigArgs build() {
+        }        public DefaultSupportedIdpConfigArgs build() {
             return new DefaultSupportedIdpConfigArgs(clientId, clientSecret, enabled, idpId, project);
         }
     }

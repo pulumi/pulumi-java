@@ -134,32 +134,26 @@ public final class VirtualNetworkResponse {
             this.assignable = Objects.requireNonNull(assignable);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VirtualNetworkResponse build() {
+        }        public VirtualNetworkResponse build() {
             return new VirtualNetworkResponse(assignable, id, location, name, privateCloudId, type);
         }
     }

@@ -143,62 +143,53 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
             this.bytesLimitPerFile = bytesLimitPerFile;
             return this;
         }
-
         public Builder bytesLimitPerFile(@Nullable String bytesLimitPerFile) {
             this.bytesLimitPerFile = Output.ofNullable(bytesLimitPerFile);
             return this;
         }
-
         public Builder bytesLimitPerFilePercent(@Nullable Output<Integer> bytesLimitPerFilePercent) {
             this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
             return this;
         }
-
         public Builder bytesLimitPerFilePercent(@Nullable Integer bytesLimitPerFilePercent) {
             this.bytesLimitPerFilePercent = Output.ofNullable(bytesLimitPerFilePercent);
             return this;
         }
-
         public Builder fileSet(@Nullable Output<GooglePrivacyDlpV2FileSetArgs> fileSet) {
             this.fileSet = fileSet;
             return this;
         }
-
         public Builder fileSet(@Nullable GooglePrivacyDlpV2FileSetArgs fileSet) {
             this.fileSet = Output.ofNullable(fileSet);
             return this;
         }
-
         public Builder fileTypes(@Nullable Output<List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem>> fileTypes) {
             this.fileTypes = fileTypes;
             return this;
         }
-
         public Builder fileTypes(@Nullable List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem> fileTypes) {
             this.fileTypes = Output.ofNullable(fileTypes);
             return this;
         }
-
+        public Builder fileTypes(GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem... fileTypes) {
+            return fileTypes(List.of(fileTypes));
+        }
         public Builder filesLimitPercent(@Nullable Output<Integer> filesLimitPercent) {
             this.filesLimitPercent = filesLimitPercent;
             return this;
         }
-
         public Builder filesLimitPercent(@Nullable Integer filesLimitPercent) {
             this.filesLimitPercent = Output.ofNullable(filesLimitPercent);
             return this;
         }
-
         public Builder sampleMethod(@Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsSampleMethod> sampleMethod) {
             this.sampleMethod = sampleMethod;
             return this;
         }
-
         public Builder sampleMethod(@Nullable GooglePrivacyDlpV2CloudStorageOptionsSampleMethod sampleMethod) {
             this.sampleMethod = Output.ofNullable(sampleMethod);
             return this;
-        }
-        public GooglePrivacyDlpV2CloudStorageOptionsArgs build() {
+        }        public GooglePrivacyDlpV2CloudStorageOptionsArgs build() {
             return new GooglePrivacyDlpV2CloudStorageOptionsArgs(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }
     }

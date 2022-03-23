@@ -51,8 +51,7 @@ public final class QuickConnectQuickConnectConfigPhoneConfig {
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
-        }
-        public QuickConnectQuickConnectConfigPhoneConfig build() {
+        }        public QuickConnectQuickConnectConfigPhoneConfig build() {
             return new QuickConnectQuickConnectConfigPhoneConfig(phoneNumber);
         }
     }

@@ -79,22 +79,18 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable ScopeClusterArgs cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder namespace(@Nullable Output<ScopeNamespaceArgs> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable ScopeNamespaceArgs namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public ScopeArgs build() {
+        }        public ScopeArgs build() {
             return new ScopeArgs(cluster, namespace);
         }
     }

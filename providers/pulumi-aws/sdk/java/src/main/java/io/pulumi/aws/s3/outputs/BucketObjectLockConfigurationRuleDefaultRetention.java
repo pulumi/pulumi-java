@@ -88,17 +88,14 @@ public final class BucketObjectLockConfigurationRuleDefaultRetention {
             this.days = days;
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder years(@Nullable Integer years) {
             this.years = years;
             return this;
-        }
-        public BucketObjectLockConfigurationRuleDefaultRetention build() {
+        }        public BucketObjectLockConfigurationRuleDefaultRetention build() {
             return new BucketObjectLockConfigurationRuleDefaultRetention(days, mode, years);
         }
     }

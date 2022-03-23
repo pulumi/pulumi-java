@@ -78,17 +78,14 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDatabaseArgs build() {
+        }        public GetDatabaseArgs build() {
             return new GetDatabaseArgs(databaseId, instanceId, project);
         }
     }

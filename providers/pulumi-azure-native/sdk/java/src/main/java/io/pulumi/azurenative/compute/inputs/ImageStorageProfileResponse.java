@@ -97,17 +97,17 @@ public final class ImageStorageProfileResponse extends io.pulumi.resources.Invok
             this.dataDisks = dataDisks;
             return this;
         }
-
+        public Builder dataDisks(ImageDataDiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder osDisk(@Nullable ImageOSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
         }
-
         public Builder zoneResilient(@Nullable Boolean zoneResilient) {
             this.zoneResilient = zoneResilient;
             return this;
-        }
-        public ImageStorageProfileResponse build() {
+        }        public ImageStorageProfileResponse build() {
             return new ImageStorageProfileResponse(dataDisks, osDisk, zoneResilient);
         }
     }

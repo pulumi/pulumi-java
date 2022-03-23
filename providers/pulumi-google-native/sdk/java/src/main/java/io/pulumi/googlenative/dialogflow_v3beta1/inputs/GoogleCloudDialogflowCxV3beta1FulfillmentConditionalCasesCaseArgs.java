@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
             this.caseContent = caseContent;
             return this;
         }
-
         public Builder caseContent(@Nullable List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs> caseContent) {
             this.caseContent = Output.ofNullable(caseContent);
             return this;
         }
-
+        public Builder caseContent(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs... caseContent) {
+            return caseContent(List.of(caseContent));
+        }
         public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs(caseContent, condition);
         }
     }

@@ -111,22 +111,18 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder privatePort(@Nullable Integer privatePort) {
             this.privatePort = privatePort;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder publicPort(@Nullable Integer publicPort) {
             this.publicPort = publicPort;
             return this;
-        }
-        public InputEndpointResponse build() {
+        }        public InputEndpointResponse build() {
             return new InputEndpointResponse(endpointName, privatePort, protocol, publicPort);
         }
     }

@@ -105,22 +105,24 @@ public final class OptionsResponse {
             this.asyncOptions = Objects.requireNonNull(asyncOptions);
             return this;
         }
-
+        public Builder asyncOptions(AsyncOptionsResponse... asyncOptions) {
+            return asyncOptions(List.of(asyncOptions));
+        }
         public Builder inputMappings(List<InputMappingResponse> inputMappings) {
             this.inputMappings = Objects.requireNonNull(inputMappings);
             return this;
         }
-
+        public Builder inputMappings(InputMappingResponse... inputMappings) {
+            return inputMappings(List.of(inputMappings));
+        }
         public Builder validationOptions(ValidationOptionsResponse validationOptions) {
             this.validationOptions = Objects.requireNonNull(validationOptions);
             return this;
         }
-
         public Builder virtualProperties(String virtualProperties) {
             this.virtualProperties = Objects.requireNonNull(virtualProperties);
             return this;
-        }
-        public OptionsResponse build() {
+        }        public OptionsResponse build() {
             return new OptionsResponse(asyncOptions, inputMappings, validationOptions, virtualProperties);
         }
     }

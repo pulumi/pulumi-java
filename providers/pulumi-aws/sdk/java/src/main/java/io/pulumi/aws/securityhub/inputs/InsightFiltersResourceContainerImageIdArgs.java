@@ -73,22 +73,18 @@ public final class InsightFiltersResourceContainerImageIdArgs extends io.pulumi.
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder comparison(String comparison) {
             this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public InsightFiltersResourceContainerImageIdArgs build() {
+        }        public InsightFiltersResourceContainerImageIdArgs build() {
             return new InsightFiltersResourceContainerImageIdArgs(comparison, value);
         }
     }

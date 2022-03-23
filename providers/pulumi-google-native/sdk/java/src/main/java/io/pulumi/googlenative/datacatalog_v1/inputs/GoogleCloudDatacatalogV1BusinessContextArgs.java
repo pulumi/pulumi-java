@@ -79,22 +79,18 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
             this.contacts = contacts;
             return this;
         }
-
         public Builder contacts(@Nullable GoogleCloudDatacatalogV1ContactsArgs contacts) {
             this.contacts = Output.ofNullable(contacts);
             return this;
         }
-
         public Builder entryOverview(@Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
             this.entryOverview = entryOverview;
             return this;
         }
-
         public Builder entryOverview(@Nullable GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
             this.entryOverview = Output.ofNullable(entryOverview);
             return this;
-        }
-        public GoogleCloudDatacatalogV1BusinessContextArgs build() {
+        }        public GoogleCloudDatacatalogV1BusinessContextArgs build() {
             return new GoogleCloudDatacatalogV1BusinessContextArgs(contacts, entryOverview);
         }
     }

@@ -138,32 +138,26 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
             this.expand = expand;
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceFabricName(String serviceFabricName) {
             this.serviceFabricName = Objects.requireNonNull(serviceFabricName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetServiceFabricScheduleArgs build() {
+        }        public GetServiceFabricScheduleArgs build() {
             return new GetServiceFabricScheduleArgs(expand, labName, name, resourceGroupName, serviceFabricName, userName);
         }
     }

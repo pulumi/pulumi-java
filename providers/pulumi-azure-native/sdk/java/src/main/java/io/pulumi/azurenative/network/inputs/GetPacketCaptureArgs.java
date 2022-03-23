@@ -88,17 +88,14 @@ public final class GetPacketCaptureArgs extends io.pulumi.resources.InvokeArgs {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
-
         public Builder packetCaptureName(String packetCaptureName) {
             this.packetCaptureName = Objects.requireNonNull(packetCaptureName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPacketCaptureArgs build() {
+        }        public GetPacketCaptureArgs build() {
             return new GetPacketCaptureArgs(networkWatcherName, packetCaptureName, resourceGroupName);
         }
     }

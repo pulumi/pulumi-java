@@ -85,17 +85,14 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder subType(String subType) {
             this.subType = Objects.requireNonNull(subType);
             return this;
-        }
-        public GoogleCloudApigeeV1EntityMetadataResponse build() {
+        }        public GoogleCloudApigeeV1EntityMetadataResponse build() {
             return new GoogleCloudApigeeV1EntityMetadataResponse(createdAt, lastModifiedAt, subType);
         }
     }

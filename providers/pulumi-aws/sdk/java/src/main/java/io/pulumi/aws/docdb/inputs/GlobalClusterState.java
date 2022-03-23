@@ -206,112 +206,93 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
             this.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
-
         public Builder globalClusterIdentifier(@Nullable String globalClusterIdentifier) {
             this.globalClusterIdentifier = Output.ofNullable(globalClusterIdentifier);
             return this;
         }
-
         public Builder globalClusterMembers(@Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers) {
             this.globalClusterMembers = globalClusterMembers;
             return this;
         }
-
         public Builder globalClusterMembers(@Nullable List<GlobalClusterGlobalClusterMemberGetArgs> globalClusterMembers) {
             this.globalClusterMembers = Output.ofNullable(globalClusterMembers);
             return this;
         }
-
+        public Builder globalClusterMembers(GlobalClusterGlobalClusterMemberGetArgs... globalClusterMembers) {
+            return globalClusterMembers(List.of(globalClusterMembers));
+        }
         public Builder globalClusterResourceId(@Nullable Output<String> globalClusterResourceId) {
             this.globalClusterResourceId = globalClusterResourceId;
             return this;
         }
-
         public Builder globalClusterResourceId(@Nullable String globalClusterResourceId) {
             this.globalClusterResourceId = Output.ofNullable(globalClusterResourceId);
             return this;
         }
-
         public Builder sourceDbClusterIdentifier(@Nullable Output<String> sourceDbClusterIdentifier) {
             this.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
             return this;
         }
-
         public Builder sourceDbClusterIdentifier(@Nullable String sourceDbClusterIdentifier) {
             this.sourceDbClusterIdentifier = Output.ofNullable(sourceDbClusterIdentifier);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
-
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
-        }
-        public GlobalClusterState build() {
+        }        public GlobalClusterState build() {
             return new GlobalClusterState(arn, databaseName, deletionProtection, engine, engineVersion, globalClusterIdentifier, globalClusterMembers, globalClusterResourceId, sourceDbClusterIdentifier, status, storageEncrypted);
         }
     }

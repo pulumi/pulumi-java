@@ -57,12 +57,10 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
             this.pgpSignedAttestation = pgpSignedAttestation;
             return this;
         }
-
         public Builder pgpSignedAttestation(@Nullable PgpSignedAttestationArgs pgpSignedAttestation) {
             this.pgpSignedAttestation = Output.ofNullable(pgpSignedAttestation);
             return this;
-        }
-        public AttestationArgs build() {
+        }        public AttestationArgs build() {
             return new AttestationArgs(pgpSignedAttestation);
         }
     }

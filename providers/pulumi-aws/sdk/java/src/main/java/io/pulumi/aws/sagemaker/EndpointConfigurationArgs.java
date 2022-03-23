@@ -143,62 +143,53 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
             this.asyncInferenceConfig = asyncInferenceConfig;
             return this;
         }
-
         public Builder asyncInferenceConfig(@Nullable EndpointConfigurationAsyncInferenceConfigArgs asyncInferenceConfig) {
             this.asyncInferenceConfig = Output.ofNullable(asyncInferenceConfig);
             return this;
         }
-
         public Builder dataCaptureConfig(@Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig) {
             this.dataCaptureConfig = dataCaptureConfig;
             return this;
         }
-
         public Builder dataCaptureConfig(@Nullable EndpointConfigurationDataCaptureConfigArgs dataCaptureConfig) {
             this.dataCaptureConfig = Output.ofNullable(dataCaptureConfig);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder productionVariants(Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants) {
             this.productionVariants = Objects.requireNonNull(productionVariants);
             return this;
         }
-
         public Builder productionVariants(List<EndpointConfigurationProductionVariantArgs> productionVariants) {
             this.productionVariants = Output.of(Objects.requireNonNull(productionVariants));
             return this;
         }
-
+        public Builder productionVariants(EndpointConfigurationProductionVariantArgs... productionVariants) {
+            return productionVariants(List.of(productionVariants));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EndpointConfigurationArgs build() {
+        }        public EndpointConfigurationArgs build() {
             return new EndpointConfigurationArgs(asyncInferenceConfig, dataCaptureConfig, kmsKeyArn, name, productionVariants, tags);
         }
     }

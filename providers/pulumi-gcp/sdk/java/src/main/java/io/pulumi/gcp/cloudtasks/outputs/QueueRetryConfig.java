@@ -156,27 +156,22 @@ public final class QueueRetryConfig {
             this.maxAttempts = maxAttempts;
             return this;
         }
-
         public Builder maxBackoff(@Nullable String maxBackoff) {
             this.maxBackoff = maxBackoff;
             return this;
         }
-
         public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
-
         public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
-
         public Builder minBackoff(@Nullable String minBackoff) {
             this.minBackoff = minBackoff;
             return this;
-        }
-        public QueueRetryConfig build() {
+        }        public QueueRetryConfig build() {
             return new QueueRetryConfig(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff);
         }
     }

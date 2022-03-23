@@ -51,8 +51,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse build() {
+        }        public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse(phoneNumber);
         }
     }

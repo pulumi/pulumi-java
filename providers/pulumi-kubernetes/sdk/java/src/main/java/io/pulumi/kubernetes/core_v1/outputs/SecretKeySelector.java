@@ -88,17 +88,14 @@ public final class SecretKeySelector {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public SecretKeySelector build() {
+        }        public SecretKeySelector build() {
             return new SecretKeySelector(key, name, optional);
         }
     }

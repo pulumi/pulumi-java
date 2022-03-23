@@ -113,42 +113,34 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
             this.advancedApiOpsConfig = advancedApiOpsConfig;
             return this;
         }
-
         public Builder advancedApiOpsConfig(@Nullable GoogleCloudApigeeV1AdvancedApiOpsConfigArgs advancedApiOpsConfig) {
             this.advancedApiOpsConfig = Output.ofNullable(advancedApiOpsConfig);
             return this;
         }
-
         public Builder connectorsPlatformConfig(@Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig) {
             this.connectorsPlatformConfig = connectorsPlatformConfig;
             return this;
         }
-
         public Builder connectorsPlatformConfig(@Nullable GoogleCloudApigeeV1ConnectorsPlatformConfigArgs connectorsPlatformConfig) {
             this.connectorsPlatformConfig = Output.ofNullable(connectorsPlatformConfig);
             return this;
         }
-
         public Builder integrationConfig(@Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig) {
             this.integrationConfig = integrationConfig;
             return this;
         }
-
         public Builder integrationConfig(@Nullable GoogleCloudApigeeV1IntegrationConfigArgs integrationConfig) {
             this.integrationConfig = Output.ofNullable(integrationConfig);
             return this;
         }
-
         public Builder monetizationConfig(@Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig) {
             this.monetizationConfig = monetizationConfig;
             return this;
         }
-
         public Builder monetizationConfig(@Nullable GoogleCloudApigeeV1MonetizationConfigArgs monetizationConfig) {
             this.monetizationConfig = Output.ofNullable(monetizationConfig);
             return this;
-        }
-        public GoogleCloudApigeeV1AddonsConfigArgs build() {
+        }        public GoogleCloudApigeeV1AddonsConfigArgs build() {
             return new GoogleCloudApigeeV1AddonsConfigArgs(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
         }
     }

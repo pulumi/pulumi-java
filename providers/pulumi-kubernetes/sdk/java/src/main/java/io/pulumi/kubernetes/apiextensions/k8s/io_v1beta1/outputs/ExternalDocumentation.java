@@ -55,12 +55,10 @@ public final class ExternalDocumentation {
             this.description = description;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public ExternalDocumentation build() {
+        }        public ExternalDocumentation build() {
             return new ExternalDocumentation(description, url);
         }
     }

@@ -76,12 +76,10 @@ public final class BlueprintStatusResponse extends io.pulumi.resources.InvokeArg
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
-        }
-        public BlueprintStatusResponse build() {
+        }        public BlueprintStatusResponse build() {
             return new BlueprintStatusResponse(lastModified, timeCreated);
         }
     }

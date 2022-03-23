@@ -90,32 +90,26 @@ public final class RemediationConfigurationParameterArgs extends io.pulumi.resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceValue(@Nullable Output<String> resourceValue) {
             this.resourceValue = resourceValue;
             return this;
         }
-
         public Builder resourceValue(@Nullable String resourceValue) {
             this.resourceValue = Output.ofNullable(resourceValue);
             return this;
         }
-
         public Builder staticValue(@Nullable Output<String> staticValue) {
             this.staticValue = staticValue;
             return this;
         }
-
         public Builder staticValue(@Nullable String staticValue) {
             this.staticValue = Output.ofNullable(staticValue);
             return this;
-        }
-        public RemediationConfigurationParameterArgs build() {
+        }        public RemediationConfigurationParameterArgs build() {
             return new RemediationConfigurationParameterArgs(name, resourceValue, staticValue);
         }
     }

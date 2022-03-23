@@ -104,22 +104,21 @@ public final class AmazonRdsForOraclePartitionSettingsResponse {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
-
         public Builder partitionNames(@Nullable List<Object> partitionNames) {
             this.partitionNames = partitionNames;
             return this;
         }
-
+        public Builder partitionNames(Object... partitionNames) {
+            return partitionNames(List.of(partitionNames));
+        }
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
-        }
-        public AmazonRdsForOraclePartitionSettingsResponse build() {
+        }        public AmazonRdsForOraclePartitionSettingsResponse build() {
             return new AmazonRdsForOraclePartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionNames, partitionUpperBound);
         }
     }

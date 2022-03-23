@@ -51,8 +51,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse {
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
-        }
-        public ConnectToSourcePostgreSqlSyncTaskInputResponse build() {
+        }        public ConnectToSourcePostgreSqlSyncTaskInputResponse build() {
             return new ConnectToSourcePostgreSqlSyncTaskInputResponse(sourceConnectionInfo);
         }
     }

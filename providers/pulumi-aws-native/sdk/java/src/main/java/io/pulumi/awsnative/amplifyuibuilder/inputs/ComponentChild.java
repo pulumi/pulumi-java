@@ -92,22 +92,21 @@ public final class ComponentChild extends io.pulumi.resources.InvokeArgs {
             this.children = children;
             return this;
         }
-
+        public Builder children(ComponentChild... children) {
+            return children(List.of(children));
+        }
         public Builder componentType(String componentType) {
             this.componentType = Objects.requireNonNull(componentType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(ComponentProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public ComponentChild build() {
+        }        public ComponentChild build() {
             return new ComponentChild(children, componentType, name, properties);
         }
     }

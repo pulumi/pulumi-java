@@ -173,42 +173,40 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder creatorComment(String creatorComment) {
             this.creatorComment = Objects.requireNonNull(creatorComment);
             return this;
         }
-
         public Builder creators(List<String> creators) {
             this.creators = Objects.requireNonNull(creators);
             return this;
         }
-
+        public Builder creators(String... creators) {
+            return creators(List.of(creators));
+        }
         public Builder documentComment(String documentComment) {
             this.documentComment = Objects.requireNonNull(documentComment);
             return this;
         }
-
         public Builder externalDocumentRefs(List<String> externalDocumentRefs) {
             this.externalDocumentRefs = Objects.requireNonNull(externalDocumentRefs);
             return this;
         }
-
+        public Builder externalDocumentRefs(String... externalDocumentRefs) {
+            return externalDocumentRefs(List.of(externalDocumentRefs));
+        }
         public Builder licenseListVersion(String licenseListVersion) {
             this.licenseListVersion = Objects.requireNonNull(licenseListVersion);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public DocumentOccurrenceResponse build() {
+        }        public DocumentOccurrenceResponse build() {
             return new DocumentOccurrenceResponse(createTime, creatorComment, creators, documentComment, externalDocumentRefs, licenseListVersion, namespace, title);
         }
     }

@@ -240,62 +240,50 @@ public final class AddonsConfigResponse {
             this.cloudRunConfig = Objects.requireNonNull(cloudRunConfig);
             return this;
         }
-
         public Builder configConnectorConfig(ConfigConnectorConfigResponse configConnectorConfig) {
             this.configConnectorConfig = Objects.requireNonNull(configConnectorConfig);
             return this;
         }
-
         public Builder dnsCacheConfig(DnsCacheConfigResponse dnsCacheConfig) {
             this.dnsCacheConfig = Objects.requireNonNull(dnsCacheConfig);
             return this;
         }
-
         public Builder gcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = Objects.requireNonNull(gcePersistentDiskCsiDriverConfig);
             return this;
         }
-
         public Builder gcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = Objects.requireNonNull(gcpFilestoreCsiDriverConfig);
             return this;
         }
-
         public Builder gkeBackupAgentConfig(GkeBackupAgentConfigResponse gkeBackupAgentConfig) {
             this.gkeBackupAgentConfig = Objects.requireNonNull(gkeBackupAgentConfig);
             return this;
         }
-
         public Builder horizontalPodAutoscaling(HorizontalPodAutoscalingResponse horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = Objects.requireNonNull(horizontalPodAutoscaling);
             return this;
         }
-
         public Builder httpLoadBalancing(HttpLoadBalancingResponse httpLoadBalancing) {
             this.httpLoadBalancing = Objects.requireNonNull(httpLoadBalancing);
             return this;
         }
-
         public Builder istioConfig(IstioConfigResponse istioConfig) {
             this.istioConfig = Objects.requireNonNull(istioConfig);
             return this;
         }
-
         public Builder kalmConfig(KalmConfigResponse kalmConfig) {
             this.kalmConfig = Objects.requireNonNull(kalmConfig);
             return this;
         }
-
         public Builder kubernetesDashboard(KubernetesDashboardResponse kubernetesDashboard) {
             this.kubernetesDashboard = Objects.requireNonNull(kubernetesDashboard);
             return this;
         }
-
         public Builder networkPolicyConfig(NetworkPolicyConfigResponse networkPolicyConfig) {
             this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig);
             return this;
-        }
-        public AddonsConfigResponse build() {
+        }        public AddonsConfigResponse build() {
             return new AddonsConfigResponse(cloudRunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, gkeBackupAgentConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, kubernetesDashboard, networkPolicyConfig);
         }
     }

@@ -66,12 +66,10 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public ClusterEndpoint build() {
+        }        public ClusterEndpoint build() {
             return new ClusterEndpoint(endpoint, region);
         }
     }

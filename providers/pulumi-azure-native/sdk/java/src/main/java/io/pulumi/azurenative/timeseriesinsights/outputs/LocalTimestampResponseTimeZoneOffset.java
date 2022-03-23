@@ -53,8 +53,7 @@ public final class LocalTimestampResponseTimeZoneOffset {
         public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = propertyName;
             return this;
-        }
-        public LocalTimestampResponseTimeZoneOffset build() {
+        }        public LocalTimestampResponseTimeZoneOffset build() {
             return new LocalTimestampResponseTimeZoneOffset(propertyName);
         }
     }

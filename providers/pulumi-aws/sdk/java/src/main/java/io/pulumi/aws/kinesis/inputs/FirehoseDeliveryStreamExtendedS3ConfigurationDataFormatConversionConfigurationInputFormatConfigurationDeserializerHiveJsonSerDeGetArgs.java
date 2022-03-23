@@ -58,12 +58,13 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.timestampFormats = timestampFormats;
             return this;
         }
-
         public Builder timestampFormats(@Nullable List<String> timestampFormats) {
             this.timestampFormats = Output.ofNullable(timestampFormats);
             return this;
         }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs build() {
+        public Builder timestampFormats(String... timestampFormats) {
+            return timestampFormats(List.of(timestampFormats));
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs(timestampFormats);
         }
     }

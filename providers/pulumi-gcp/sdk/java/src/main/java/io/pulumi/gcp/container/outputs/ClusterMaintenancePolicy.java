@@ -94,17 +94,17 @@ public final class ClusterMaintenancePolicy {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
-
         public Builder maintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
-
+        public Builder maintenanceExclusions(ClusterMaintenancePolicyMaintenanceExclusion... maintenanceExclusions) {
+            return maintenanceExclusions(List.of(maintenanceExclusions));
+        }
         public Builder recurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
-        }
-        public ClusterMaintenancePolicy build() {
+        }        public ClusterMaintenancePolicy build() {
             return new ClusterMaintenancePolicy(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }
     }

@@ -222,52 +222,42 @@ public final class NsgSecurityRuleResponse {
             this.access = access;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
-
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
-
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
-        }
-        public NsgSecurityRuleResponse build() {
+        }        public NsgSecurityRuleResponse build() {
             return new NsgSecurityRuleResponse(access, description, destinationAddressPrefix, destinationPortRange, direction, name, priority, protocol, sourceAddressPrefix, sourcePortRange);
         }
     }

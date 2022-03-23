@@ -86,17 +86,14 @@ public final class DataSourceParametersSqlServer {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersSqlServer build() {
+        }        public DataSourceParametersSqlServer build() {
             return new DataSourceParametersSqlServer(database, host, port);
         }
     }

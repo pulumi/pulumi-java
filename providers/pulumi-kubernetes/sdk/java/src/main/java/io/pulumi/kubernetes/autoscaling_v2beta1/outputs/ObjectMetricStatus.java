@@ -121,27 +121,22 @@ public final class ObjectMetricStatus {
             this.averageValue = averageValue;
             return this;
         }
-
         public Builder currentValue(String currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder target(CrossVersionObjectReference target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ObjectMetricStatus build() {
+        }        public ObjectMetricStatus build() {
             return new ObjectMetricStatus(averageValue, currentValue, metricName, selector, target);
         }
     }

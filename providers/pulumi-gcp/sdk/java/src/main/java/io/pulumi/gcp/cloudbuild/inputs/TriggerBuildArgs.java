@@ -259,122 +259,110 @@ public final class TriggerBuildArgs extends io.pulumi.resources.ResourceArgs {
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder artifacts(@Nullable TriggerBuildArtifactsArgs artifacts) {
             this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
-
         public Builder availableSecrets(@Nullable Output<TriggerBuildAvailableSecretsArgs> availableSecrets) {
             this.availableSecrets = availableSecrets;
             return this;
         }
-
         public Builder availableSecrets(@Nullable TriggerBuildAvailableSecretsArgs availableSecrets) {
             this.availableSecrets = Output.ofNullable(availableSecrets);
             return this;
         }
-
         public Builder images(@Nullable Output<List<String>> images) {
             this.images = images;
             return this;
         }
-
         public Builder images(@Nullable List<String> images) {
             this.images = Output.ofNullable(images);
             return this;
         }
-
+        public Builder images(String... images) {
+            return images(List.of(images));
+        }
         public Builder logsBucket(@Nullable Output<String> logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
-
         public Builder logsBucket(@Nullable String logsBucket) {
             this.logsBucket = Output.ofNullable(logsBucket);
             return this;
         }
-
         public Builder options(@Nullable Output<TriggerBuildOptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable TriggerBuildOptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder queueTtl(@Nullable Output<String> queueTtl) {
             this.queueTtl = queueTtl;
             return this;
         }
-
         public Builder queueTtl(@Nullable String queueTtl) {
             this.queueTtl = Output.ofNullable(queueTtl);
             return this;
         }
-
         public Builder secrets(@Nullable Output<List<TriggerBuildSecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<TriggerBuildSecretArgs> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-
+        public Builder secrets(TriggerBuildSecretArgs... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder source(@Nullable Output<TriggerBuildSourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable TriggerBuildSourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder steps(Output<List<TriggerBuildStepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
         public Builder steps(List<TriggerBuildStepArgs> steps) {
             this.steps = Output.of(Objects.requireNonNull(steps));
             return this;
         }
-
+        public Builder steps(TriggerBuildStepArgs... steps) {
+            return steps(List.of(steps));
+        }
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
-
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = Output.ofNullable(substitutions);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public TriggerBuildArgs build() {
+        }        public TriggerBuildArgs build() {
             return new TriggerBuildArgs(artifacts, availableSecrets, images, logsBucket, options, queueTtl, secrets, source, steps, substitutions, tags, timeout);
         }
     }

@@ -74,22 +74,18 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
             this.consoleName = consoleName;
             return this;
         }
-
         public Builder consoleName(@Nullable String consoleName) {
             this.consoleName = Output.ofNullable(consoleName);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
-        }
-        public ConsoleWithLocationArgs build() {
+        }        public ConsoleWithLocationArgs build() {
             return new ConsoleWithLocationArgs(consoleName, location);
         }
     }

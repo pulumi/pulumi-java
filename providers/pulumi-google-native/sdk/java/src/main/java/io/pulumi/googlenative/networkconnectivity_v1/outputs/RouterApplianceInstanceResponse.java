@@ -69,12 +69,10 @@ public final class RouterApplianceInstanceResponse {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder virtualMachine(String virtualMachine) {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
-        }
-        public RouterApplianceInstanceResponse build() {
+        }        public RouterApplianceInstanceResponse build() {
             return new RouterApplianceInstanceResponse(ipAddress, virtualMachine);
         }
     }

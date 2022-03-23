@@ -247,67 +247,54 @@ public final class GetDistributedAvailabilityGroupResult {
             this.distributedAvailabilityGroupId = Objects.requireNonNull(distributedAvailabilityGroupId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastHardenedLsn(String lastHardenedLsn) {
             this.lastHardenedLsn = Objects.requireNonNull(lastHardenedLsn);
             return this;
         }
-
         public Builder linkState(String linkState) {
             this.linkState = Objects.requireNonNull(linkState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
             this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
             return this;
         }
-
         public Builder replicationMode(@Nullable String replicationMode) {
             this.replicationMode = replicationMode;
             return this;
         }
-
         public Builder secondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
             this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
             return this;
         }
-
         public Builder sourceEndpoint(@Nullable String sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
-
         public Builder sourceReplicaId(String sourceReplicaId) {
             this.sourceReplicaId = Objects.requireNonNull(sourceReplicaId);
             return this;
         }
-
         public Builder targetDatabase(@Nullable String targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
-
         public Builder targetReplicaId(String targetReplicaId) {
             this.targetReplicaId = Objects.requireNonNull(targetReplicaId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDistributedAvailabilityGroupResult build() {
+        }        public GetDistributedAvailabilityGroupResult build() {
             return new GetDistributedAvailabilityGroupResult(distributedAvailabilityGroupId, id, lastHardenedLsn, linkState, name, primaryAvailabilityGroupName, replicationMode, secondaryAvailabilityGroupName, sourceEndpoint, sourceReplicaId, targetDatabase, targetReplicaId, type);
         }
     }

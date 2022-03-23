@@ -96,32 +96,29 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-
+        public Builder items(GoogleCloudDialogflowV2IntentMessageListSelectItemArgs... items) {
+            return items(List.of(items));
+        }
         public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageListSelectArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageListSelectArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageListSelectArgs(items, subtitle, title);
         }
     }

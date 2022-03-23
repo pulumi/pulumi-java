@@ -61,12 +61,10 @@ public final class ConnectionTypeAssociationPropertyArgs extends io.pulumi.resou
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ConnectionTypeAssociationPropertyArgs build() {
+        }        public ConnectionTypeAssociationPropertyArgs build() {
             return new ConnectionTypeAssociationPropertyArgs(name);
         }
     }

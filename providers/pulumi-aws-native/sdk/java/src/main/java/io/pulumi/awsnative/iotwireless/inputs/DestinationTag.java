@@ -66,12 +66,10 @@ public final class DestinationTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DestinationTag build() {
+        }        public DestinationTag build() {
             return new DestinationTag(key, value);
         }
     }

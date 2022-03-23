@@ -130,32 +130,26 @@ public final class StorageLensS3BucketDestination {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder encryption(@Nullable StorageLensEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder format(StorageLensS3BucketDestinationFormat format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder outputSchemaVersion(StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public StorageLensS3BucketDestination build() {
+        }        public StorageLensS3BucketDestination build() {
             return new StorageLensS3BucketDestination(accountId, arn, encryption, format, outputSchemaVersion, prefix);
         }
     }

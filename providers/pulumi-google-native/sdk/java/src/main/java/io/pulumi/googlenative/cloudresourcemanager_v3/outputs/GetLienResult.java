@@ -134,32 +134,29 @@ public final class GetLienResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder restrictions(List<String> restrictions) {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }
-        public GetLienResult build() {
+        public Builder restrictions(String... restrictions) {
+            return restrictions(List.of(restrictions));
+        }        public GetLienResult build() {
             return new GetLienResult(createTime, name, origin, parent, reason, restrictions);
         }
     }

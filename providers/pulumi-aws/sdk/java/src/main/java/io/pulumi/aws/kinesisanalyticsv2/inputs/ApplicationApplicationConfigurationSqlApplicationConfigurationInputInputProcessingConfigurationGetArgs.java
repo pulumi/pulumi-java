@@ -56,12 +56,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.inputLambdaProcessor = Objects.requireNonNull(inputLambdaProcessor);
             return this;
         }
-
         public Builder inputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorGetArgs inputLambdaProcessor) {
             this.inputLambdaProcessor = Output.of(Objects.requireNonNull(inputLambdaProcessor));
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs(inputLambdaProcessor);
         }
     }

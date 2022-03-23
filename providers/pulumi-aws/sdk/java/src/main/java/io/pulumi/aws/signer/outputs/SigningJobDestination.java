@@ -51,8 +51,7 @@ public final class SigningJobDestination {
         public Builder s3(SigningJobDestinationS3 s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
-        }
-        public SigningJobDestination build() {
+        }        public SigningJobDestination build() {
             return new SigningJobDestination(s3);
         }
     }

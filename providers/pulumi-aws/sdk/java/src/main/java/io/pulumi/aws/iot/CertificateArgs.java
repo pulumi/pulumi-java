@@ -79,22 +79,18 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.active = Objects.requireNonNull(active);
             return this;
         }
-
         public Builder active(Boolean active) {
             this.active = Output.of(Objects.requireNonNull(active));
             return this;
         }
-
         public Builder csr(@Nullable Output<String> csr) {
             this.csr = csr;
             return this;
         }
-
         public Builder csr(@Nullable String csr) {
             this.csr = Output.ofNullable(csr);
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(active, csr);
         }
     }

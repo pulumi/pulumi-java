@@ -450,127 +450,117 @@ public final class GetEndpointResult {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
-
+        public Builder contentTypesToCompress(String... contentTypesToCompress) {
+            return contentTypesToCompress(List.of(contentTypesToCompress));
+        }
         public Builder defaultOriginGroup(@Nullable ResourceReferenceResponse defaultOriginGroup) {
             this.defaultOriginGroup = defaultOriginGroup;
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable EndpointPropertiesUpdateParametersResponseDeliveryPolicy deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
-
         public Builder geoFilters(@Nullable List<GeoFilterResponse> geoFilters) {
             this.geoFilters = geoFilters;
             return this;
         }
-
+        public Builder geoFilters(GeoFilterResponse... geoFilters) {
+            return geoFilters(List.of(geoFilters));
+        }
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
-
         public Builder isHttpAllowed(@Nullable Boolean isHttpAllowed) {
             this.isHttpAllowed = isHttpAllowed;
             return this;
         }
-
         public Builder isHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
             this.isHttpsAllowed = isHttpsAllowed;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder optimizationType(@Nullable String optimizationType) {
             this.optimizationType = optimizationType;
             return this;
         }
-
         public Builder originGroups(@Nullable List<DeepCreatedOriginGroupResponse> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
-
+        public Builder originGroups(DeepCreatedOriginGroupResponse... originGroups) {
+            return originGroups(List.of(originGroups));
+        }
         public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
-
         public Builder originPath(@Nullable String originPath) {
             this.originPath = originPath;
             return this;
         }
-
         public Builder origins(List<DeepCreatedOriginResponse> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
-
+        public Builder origins(DeepCreatedOriginResponse... origins) {
+            return origins(List.of(origins));
+        }
         public Builder probePath(@Nullable String probePath) {
             this.probePath = probePath;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder queryStringCachingBehavior(@Nullable String queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder urlSigningKeys(@Nullable List<UrlSigningKeyResponse> urlSigningKeys) {
             this.urlSigningKeys = urlSigningKeys;
             return this;
         }
-
+        public Builder urlSigningKeys(UrlSigningKeyResponse... urlSigningKeys) {
+            return urlSigningKeys(List.of(urlSigningKeys));
+        }
         public Builder webApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
-        }
-        public GetEndpointResult build() {
+        }        public GetEndpointResult build() {
             return new GetEndpointResult(contentTypesToCompress, defaultOriginGroup, deliveryPolicy, geoFilters, hostName, id, isCompressionEnabled, isHttpAllowed, isHttpsAllowed, location, name, optimizationType, originGroups, originHostHeader, originPath, origins, probePath, provisioningState, queryStringCachingBehavior, resourceState, systemData, tags, type, urlSigningKeys, webApplicationFirewallPolicyLink);
         }
     }

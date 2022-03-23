@@ -98,17 +98,14 @@ public final class ClusterResourceUsageExportConfig {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
-
         public Builder enableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
-        }
-        public ClusterResourceUsageExportConfig build() {
+        }        public ClusterResourceUsageExportConfig build() {
             return new ClusterResourceUsageExportConfig(bigqueryDestination, enableNetworkEgressMetering, enableResourceConsumptionMetering);
         }
     }

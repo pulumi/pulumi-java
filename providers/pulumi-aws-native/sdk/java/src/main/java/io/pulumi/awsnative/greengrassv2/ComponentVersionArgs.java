@@ -80,32 +80,26 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
             this.inlineRecipe = inlineRecipe;
             return this;
         }
-
         public Builder inlineRecipe(@Nullable String inlineRecipe) {
             this.inlineRecipe = Output.ofNullable(inlineRecipe);
             return this;
         }
-
         public Builder lambdaFunction(@Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction) {
             this.lambdaFunction = lambdaFunction;
             return this;
         }
-
         public Builder lambdaFunction(@Nullable ComponentVersionLambdaFunctionRecipeSourceArgs lambdaFunction) {
             this.lambdaFunction = Output.ofNullable(lambdaFunction);
             return this;
         }
-
         public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ComponentVersionArgs build() {
+        }        public ComponentVersionArgs build() {
             return new ComponentVersionArgs(inlineRecipe, lambdaFunction, tags);
         }
     }

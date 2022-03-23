@@ -128,52 +128,42 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
             this.gcsPath = gcsPath;
             return this;
         }
-
         public Builder gcsPath(@Nullable String gcsPath) {
             this.gcsPath = Output.ofNullable(gcsPath);
             return this;
         }
-
         public Builder launchParameters(@Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters) {
             this.launchParameters = launchParameters;
             return this;
         }
-
         public Builder launchParameters(@Nullable GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs launchParameters) {
             this.launchParameters = Output.ofNullable(launchParameters);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable Boolean validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs build() {
+        }        public GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs(gcsPath, launchParameters, location, project, validateOnly);
         }
     }

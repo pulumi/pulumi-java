@@ -96,32 +96,29 @@ public final class GoogleCloudMlV1__AutoScalingArgs extends io.pulumi.resources.
             this.maxNodes = maxNodes;
             return this;
         }
-
         public Builder maxNodes(@Nullable Integer maxNodes) {
             this.maxNodes = Output.ofNullable(maxNodes);
             return this;
         }
-
         public Builder metrics(@Nullable Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<GoogleCloudMlV1__MetricSpecArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudMlV1__MetricSpecArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minNodes(@Nullable Output<Integer> minNodes) {
             this.minNodes = minNodes;
             return this;
         }
-
         public Builder minNodes(@Nullable Integer minNodes) {
             this.minNodes = Output.ofNullable(minNodes);
             return this;
-        }
-        public GoogleCloudMlV1__AutoScalingArgs build() {
+        }        public GoogleCloudMlV1__AutoScalingArgs build() {
             return new GoogleCloudMlV1__AutoScalingArgs(maxNodes, metrics, minNodes);
         }
     }

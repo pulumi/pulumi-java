@@ -69,12 +69,10 @@ public final class ApplicationInstanceTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ApplicationInstanceTag build() {
+        }        public ApplicationInstanceTag build() {
             return new ApplicationInstanceTag(key, value);
         }
     }

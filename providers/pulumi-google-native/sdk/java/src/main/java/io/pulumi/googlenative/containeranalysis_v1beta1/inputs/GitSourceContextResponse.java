@@ -76,12 +76,10 @@ public final class GitSourceContextResponse extends io.pulumi.resources.InvokeAr
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GitSourceContextResponse build() {
+        }        public GitSourceContextResponse build() {
             return new GitSourceContextResponse(revisionId, url);
         }
     }

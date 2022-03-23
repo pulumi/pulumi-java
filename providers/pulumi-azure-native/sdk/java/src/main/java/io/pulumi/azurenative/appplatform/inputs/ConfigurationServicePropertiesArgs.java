@@ -61,12 +61,10 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable ConfigurationServiceSettingsArgs settings) {
             this.settings = Output.ofNullable(settings);
             return this;
-        }
-        public ConfigurationServicePropertiesArgs build() {
+        }        public ConfigurationServicePropertiesArgs build() {
             return new ConfigurationServicePropertiesArgs(settings);
         }
     }

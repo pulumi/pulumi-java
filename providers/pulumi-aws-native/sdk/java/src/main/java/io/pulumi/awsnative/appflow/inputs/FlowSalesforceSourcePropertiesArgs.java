@@ -79,32 +79,26 @@ public final class FlowSalesforceSourcePropertiesArgs extends io.pulumi.resource
             this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
-
         public Builder enableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
             this.enableDynamicFieldUpdate = Output.ofNullable(enableDynamicFieldUpdate);
             return this;
         }
-
         public Builder includeDeletedRecords(@Nullable Output<Boolean> includeDeletedRecords) {
             this.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
-
         public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
             this.includeDeletedRecords = Output.ofNullable(includeDeletedRecords);
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowSalesforceSourcePropertiesArgs build() {
+        }        public FlowSalesforceSourcePropertiesArgs build() {
             return new FlowSalesforceSourcePropertiesArgs(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }
     }

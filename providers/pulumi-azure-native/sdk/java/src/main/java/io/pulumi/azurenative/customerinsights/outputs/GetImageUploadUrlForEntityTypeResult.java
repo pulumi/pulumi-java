@@ -88,17 +88,14 @@ public final class GetImageUploadUrlForEntityTypeResult {
             this.contentUrl = contentUrl;
             return this;
         }
-
         public Builder imageExists(@Nullable Boolean imageExists) {
             this.imageExists = imageExists;
             return this;
         }
-
         public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
-        }
-        public GetImageUploadUrlForEntityTypeResult build() {
+        }        public GetImageUploadUrlForEntityTypeResult build() {
             return new GetImageUploadUrlForEntityTypeResult(contentUrl, imageExists, relativePath);
         }
     }

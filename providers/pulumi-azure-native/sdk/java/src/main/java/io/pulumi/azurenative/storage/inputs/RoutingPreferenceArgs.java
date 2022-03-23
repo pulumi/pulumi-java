@@ -97,32 +97,26 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
             this.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
-
         public Builder publishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
             this.publishInternetEndpoints = Output.ofNullable(publishInternetEndpoints);
             return this;
         }
-
         public Builder publishMicrosoftEndpoints(@Nullable Output<Boolean> publishMicrosoftEndpoints) {
             this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
-
         public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
             this.publishMicrosoftEndpoints = Output.ofNullable(publishMicrosoftEndpoints);
             return this;
         }
-
         public Builder routingChoice(@Nullable Output<Either<String,RoutingChoice>> routingChoice) {
             this.routingChoice = routingChoice;
             return this;
         }
-
         public Builder routingChoice(@Nullable Either<String,RoutingChoice> routingChoice) {
             this.routingChoice = Output.ofNullable(routingChoice);
             return this;
-        }
-        public RoutingPreferenceArgs build() {
+        }        public RoutingPreferenceArgs build() {
             return new RoutingPreferenceArgs(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);
         }
     }

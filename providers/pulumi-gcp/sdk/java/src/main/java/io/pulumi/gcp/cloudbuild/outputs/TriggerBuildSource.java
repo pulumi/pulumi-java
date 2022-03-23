@@ -76,12 +76,10 @@ public final class TriggerBuildSource {
             this.repoSource = repoSource;
             return this;
         }
-
         public Builder storageSource(@Nullable TriggerBuildSourceStorageSource storageSource) {
             this.storageSource = storageSource;
             return this;
-        }
-        public TriggerBuildSource build() {
+        }        public TriggerBuildSource build() {
             return new TriggerBuildSource(repoSource, storageSource);
         }
     }

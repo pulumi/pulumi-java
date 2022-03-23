@@ -61,12 +61,13 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
             return this;
         }
-
         public Builder knowledgeBases(List<String> knowledgeBases) {
             this.knowledgeBases = Output.of(Objects.requireNonNull(knowledgeBases));
             return this;
         }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs build() {
+        public Builder knowledgeBases(String... knowledgeBases) {
+            return knowledgeBases(List.of(knowledgeBases));
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs(knowledgeBases);
         }
     }

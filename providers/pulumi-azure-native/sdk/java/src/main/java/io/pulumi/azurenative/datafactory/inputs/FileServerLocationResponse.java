@@ -96,17 +96,14 @@ public final class FileServerLocationResponse extends io.pulumi.resources.Invoke
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FileServerLocationResponse build() {
+        }        public FileServerLocationResponse build() {
             return new FileServerLocationResponse(fileName, folderPath, type);
         }
     }

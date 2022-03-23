@@ -191,92 +191,77 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
             this.bytesToCapturePerPacket = bytesToCapturePerPacket;
             return this;
         }
-
         public Builder bytesToCapturePerPacket(@Nullable Double bytesToCapturePerPacket) {
             this.bytesToCapturePerPacket = Output.ofNullable(bytesToCapturePerPacket);
             return this;
         }
-
         public Builder filters(@Nullable Output<List<PacketCaptureFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable List<PacketCaptureFilterArgs> filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
+        public Builder filters(PacketCaptureFilterArgs... filters) {
+            return filters(List.of(filters));
+        }
         public Builder networkWatcherName(Output<String> networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
-
         public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Output.of(Objects.requireNonNull(networkWatcherName));
             return this;
         }
-
         public Builder packetCaptureName(@Nullable Output<String> packetCaptureName) {
             this.packetCaptureName = packetCaptureName;
             return this;
         }
-
         public Builder packetCaptureName(@Nullable String packetCaptureName) {
             this.packetCaptureName = Output.ofNullable(packetCaptureName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageLocation(Output<PacketCaptureStorageLocationArgs> storageLocation) {
             this.storageLocation = Objects.requireNonNull(storageLocation);
             return this;
         }
-
         public Builder storageLocation(PacketCaptureStorageLocationArgs storageLocation) {
             this.storageLocation = Output.of(Objects.requireNonNull(storageLocation));
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
-
         public Builder timeLimitInSeconds(@Nullable Output<Integer> timeLimitInSeconds) {
             this.timeLimitInSeconds = timeLimitInSeconds;
             return this;
         }
-
         public Builder timeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
             this.timeLimitInSeconds = Output.ofNullable(timeLimitInSeconds);
             return this;
         }
-
         public Builder totalBytesPerSession(@Nullable Output<Double> totalBytesPerSession) {
             this.totalBytesPerSession = totalBytesPerSession;
             return this;
         }
-
         public Builder totalBytesPerSession(@Nullable Double totalBytesPerSession) {
             this.totalBytesPerSession = Output.ofNullable(totalBytesPerSession);
             return this;
-        }
-        public PacketCaptureArgs build() {
+        }        public PacketCaptureArgs build() {
             return new PacketCaptureArgs(bytesToCapturePerPacket, filters, networkWatcherName, packetCaptureName, resourceGroupName, storageLocation, target, timeLimitInSeconds, totalBytesPerSession);
         }
     }

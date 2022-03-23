@@ -69,12 +69,10 @@ public final class EventConnectionAuthParametersApiKey {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EventConnectionAuthParametersApiKey build() {
+        }        public EventConnectionAuthParametersApiKey build() {
             return new EventConnectionAuthParametersApiKey(key, value);
         }
     }

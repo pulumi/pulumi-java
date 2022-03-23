@@ -127,62 +127,50 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
             this.desiredChange = Objects.requireNonNull(desiredChange);
             return this;
         }
-
         public Builder desiredChange(ExperimentMetricGoalObjectDesiredChange desiredChange) {
             this.desiredChange = Output.of(Objects.requireNonNull(desiredChange));
             return this;
         }
-
         public Builder entityIdKey(Output<String> entityIdKey) {
             this.entityIdKey = Objects.requireNonNull(entityIdKey);
             return this;
         }
-
         public Builder entityIdKey(String entityIdKey) {
             this.entityIdKey = Output.of(Objects.requireNonNull(entityIdKey));
             return this;
         }
-
         public Builder eventPattern(Output<String> eventPattern) {
             this.eventPattern = Objects.requireNonNull(eventPattern);
             return this;
         }
-
         public Builder eventPattern(String eventPattern) {
             this.eventPattern = Output.of(Objects.requireNonNull(eventPattern));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder unitLabel(@Nullable Output<String> unitLabel) {
             this.unitLabel = unitLabel;
             return this;
         }
-
         public Builder unitLabel(@Nullable String unitLabel) {
             this.unitLabel = Output.ofNullable(unitLabel);
             return this;
         }
-
         public Builder valueKey(Output<String> valueKey) {
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
         }
-
         public Builder valueKey(String valueKey) {
             this.valueKey = Output.of(Objects.requireNonNull(valueKey));
             return this;
-        }
-        public ExperimentMetricGoalObjectArgs build() {
+        }        public ExperimentMetricGoalObjectArgs build() {
             return new ExperimentMetricGoalObjectArgs(desiredChange, entityIdKey, eventPattern, metricName, unitLabel, valueKey);
         }
     }

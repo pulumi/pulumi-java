@@ -80,32 +80,29 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
+        public Builder mountOptions(String... mountOptions) {
+            return mountOptions(List.of(mountOptions));
+        }
         public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
-        }
-        public TaskDefinitionTmpfsArgs build() {
+        }        public TaskDefinitionTmpfsArgs build() {
             return new TaskDefinitionTmpfsArgs(containerPath, mountOptions, size);
         }
     }

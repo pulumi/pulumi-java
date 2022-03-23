@@ -432,232 +432,201 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.addOnFeatures = addOnFeatures;
             return this;
         }
-
         public Builder addOnFeatures(@Nullable List<String> addOnFeatures) {
             this.addOnFeatures = Output.ofNullable(addOnFeatures);
             return this;
         }
-
+        public Builder addOnFeatures(String... addOnFeatures) {
+            return addOnFeatures(List.of(addOnFeatures));
+        }
         public Builder applicationTypeVersionsCleanupPolicy(@Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy) {
             this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
             return this;
         }
-
         public Builder applicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyArgs applicationTypeVersionsCleanupPolicy) {
             this.applicationTypeVersionsCleanupPolicy = Output.ofNullable(applicationTypeVersionsCleanupPolicy);
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
-
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
             this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
             return this;
         }
-
         public Builder certificate(@Nullable Output<CertificateDescriptionArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable CertificateDescriptionArgs certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder certificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames) {
             this.certificateCommonNames = certificateCommonNames;
             return this;
         }
-
         public Builder certificateCommonNames(@Nullable ServerCertificateCommonNamesArgs certificateCommonNames) {
             this.certificateCommonNames = Output.ofNullable(certificateCommonNames);
             return this;
         }
-
         public Builder clientCertificateCommonNames(@Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames) {
             this.clientCertificateCommonNames = clientCertificateCommonNames;
             return this;
         }
-
         public Builder clientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameArgs> clientCertificateCommonNames) {
             this.clientCertificateCommonNames = Output.ofNullable(clientCertificateCommonNames);
             return this;
         }
-
+        public Builder clientCertificateCommonNames(ClientCertificateCommonNameArgs... clientCertificateCommonNames) {
+            return clientCertificateCommonNames(List.of(clientCertificateCommonNames));
+        }
         public Builder clientCertificateThumbprints(@Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints) {
             this.clientCertificateThumbprints = clientCertificateThumbprints;
             return this;
         }
-
         public Builder clientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintArgs> clientCertificateThumbprints) {
             this.clientCertificateThumbprints = Output.ofNullable(clientCertificateThumbprints);
             return this;
         }
-
+        public Builder clientCertificateThumbprints(ClientCertificateThumbprintArgs... clientCertificateThumbprints) {
+            return clientCertificateThumbprints(List.of(clientCertificateThumbprints));
+        }
         public Builder clusterCodeVersion(@Nullable Output<String> clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
-
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = Output.ofNullable(clusterCodeVersion);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder diagnosticsStorageAccountConfig(@Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig) {
             this.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
             return this;
         }
-
         public Builder diagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigArgs diagnosticsStorageAccountConfig) {
             this.diagnosticsStorageAccountConfig = Output.ofNullable(diagnosticsStorageAccountConfig);
             return this;
         }
-
         public Builder eventStoreServiceEnabled(@Nullable Output<Boolean> eventStoreServiceEnabled) {
             this.eventStoreServiceEnabled = eventStoreServiceEnabled;
             return this;
         }
-
         public Builder eventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
             this.eventStoreServiceEnabled = Output.ofNullable(eventStoreServiceEnabled);
             return this;
         }
-
         public Builder fabricSettings(@Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
-
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
             this.fabricSettings = Output.ofNullable(fabricSettings);
             return this;
         }
-
+        public Builder fabricSettings(SettingsSectionDescriptionArgs... fabricSettings) {
+            return fabricSettings(List.of(fabricSettings));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managementEndpoint(Output<String> managementEndpoint) {
             this.managementEndpoint = Objects.requireNonNull(managementEndpoint);
             return this;
         }
-
         public Builder managementEndpoint(String managementEndpoint) {
             this.managementEndpoint = Output.of(Objects.requireNonNull(managementEndpoint));
             return this;
         }
-
         public Builder nodeTypes(Output<List<NodeTypeDescriptionArgs>> nodeTypes) {
             this.nodeTypes = Objects.requireNonNull(nodeTypes);
             return this;
         }
-
         public Builder nodeTypes(List<NodeTypeDescriptionArgs> nodeTypes) {
             this.nodeTypes = Output.of(Objects.requireNonNull(nodeTypes));
             return this;
         }
-
+        public Builder nodeTypes(NodeTypeDescriptionArgs... nodeTypes) {
+            return nodeTypes(List.of(nodeTypes));
+        }
         public Builder reliabilityLevel(@Nullable Output<String> reliabilityLevel) {
             this.reliabilityLevel = reliabilityLevel;
             return this;
         }
-
         public Builder reliabilityLevel(@Nullable String reliabilityLevel) {
             this.reliabilityLevel = Output.ofNullable(reliabilityLevel);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder reverseProxyCertificate(@Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate) {
             this.reverseProxyCertificate = reverseProxyCertificate;
             return this;
         }
-
         public Builder reverseProxyCertificate(@Nullable CertificateDescriptionArgs reverseProxyCertificate) {
             this.reverseProxyCertificate = Output.ofNullable(reverseProxyCertificate);
             return this;
         }
-
         public Builder reverseProxyCertificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames) {
             this.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
             return this;
         }
-
         public Builder reverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesArgs reverseProxyCertificateCommonNames) {
             this.reverseProxyCertificateCommonNames = Output.ofNullable(reverseProxyCertificateCommonNames);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder upgradeDescription(@Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription) {
             this.upgradeDescription = upgradeDescription;
             return this;
         }
-
         public Builder upgradeDescription(@Nullable ClusterUpgradePolicyArgs upgradeDescription) {
             this.upgradeDescription = Output.ofNullable(upgradeDescription);
             return this;
         }
-
         public Builder upgradeMode(@Nullable Output<String> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
-
         public Builder upgradeMode(@Nullable String upgradeMode) {
             this.upgradeMode = Output.ofNullable(upgradeMode);
             return this;
         }
-
         public Builder vmImage(@Nullable Output<String> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
-
         public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = Output.ofNullable(vmImage);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(addOnFeatures, applicationTypeVersionsCleanupPolicy, azureActiveDirectory, certificate, certificateCommonNames, clientCertificateCommonNames, clientCertificateThumbprints, clusterCodeVersion, clusterName, diagnosticsStorageAccountConfig, eventStoreServiceEnabled, fabricSettings, location, managementEndpoint, nodeTypes, reliabilityLevel, resourceGroupName, reverseProxyCertificate, reverseProxyCertificateCommonNames, tags, upgradeDescription, upgradeMode, vmImage);
         }
     }

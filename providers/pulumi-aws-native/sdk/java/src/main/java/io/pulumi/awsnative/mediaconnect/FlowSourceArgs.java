@@ -237,122 +237,98 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.decryption = decryption;
             return this;
         }
-
         public Builder decryption(@Nullable FlowSourceEncryptionArgs decryption) {
             this.decryption = Output.ofNullable(decryption);
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder entitlementArn(@Nullable Output<String> entitlementArn) {
             this.entitlementArn = entitlementArn;
             return this;
         }
-
         public Builder entitlementArn(@Nullable String entitlementArn) {
             this.entitlementArn = Output.ofNullable(entitlementArn);
             return this;
         }
-
         public Builder flowArn(@Nullable Output<String> flowArn) {
             this.flowArn = flowArn;
             return this;
         }
-
         public Builder flowArn(@Nullable String flowArn) {
             this.flowArn = Output.ofNullable(flowArn);
             return this;
         }
-
         public Builder ingestPort(@Nullable Output<Integer> ingestPort) {
             this.ingestPort = ingestPort;
             return this;
         }
-
         public Builder ingestPort(@Nullable Integer ingestPort) {
             this.ingestPort = Output.ofNullable(ingestPort);
             return this;
         }
-
         public Builder maxBitrate(@Nullable Output<Integer> maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
-
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = Output.ofNullable(maxBitrate);
             return this;
         }
-
         public Builder maxLatency(@Nullable Output<Integer> maxLatency) {
             this.maxLatency = maxLatency;
             return this;
         }
-
         public Builder maxLatency(@Nullable Integer maxLatency) {
             this.maxLatency = Output.ofNullable(maxLatency);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<FlowSourceProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable FlowSourceProtocol protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder streamId(@Nullable Output<String> streamId) {
             this.streamId = streamId;
             return this;
         }
-
         public Builder streamId(@Nullable String streamId) {
             this.streamId = Output.ofNullable(streamId);
             return this;
         }
-
         public Builder vpcInterfaceName(@Nullable Output<String> vpcInterfaceName) {
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
-
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             this.vpcInterfaceName = Output.ofNullable(vpcInterfaceName);
             return this;
         }
-
         public Builder whitelistCidr(@Nullable Output<String> whitelistCidr) {
             this.whitelistCidr = whitelistCidr;
             return this;
         }
-
         public Builder whitelistCidr(@Nullable String whitelistCidr) {
             this.whitelistCidr = Output.ofNullable(whitelistCidr);
             return this;
-        }
-        public FlowSourceArgs build() {
+        }        public FlowSourceArgs build() {
             return new FlowSourceArgs(decryption, description, entitlementArn, flowArn, ingestPort, maxBitrate, maxLatency, name, protocol, streamId, vpcInterfaceName, whitelistCidr);
         }
     }

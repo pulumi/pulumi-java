@@ -123,62 +123,62 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.capacityProviders = capacityProviders;
             return this;
         }
-
         public Builder capacityProviders(@Nullable List<String> capacityProviders) {
             this.capacityProviders = Output.ofNullable(capacityProviders);
             return this;
         }
-
+        public Builder capacityProviders(String... capacityProviders) {
+            return capacityProviders(List.of(capacityProviders));
+        }
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder clusterSettings(@Nullable Output<List<ClusterSettingsArgs>> clusterSettings) {
             this.clusterSettings = clusterSettings;
             return this;
         }
-
         public Builder clusterSettings(@Nullable List<ClusterSettingsArgs> clusterSettings) {
             this.clusterSettings = Output.ofNullable(clusterSettings);
             return this;
         }
-
+        public Builder clusterSettings(ClusterSettingsArgs... clusterSettings) {
+            return clusterSettings(List.of(clusterSettings));
+        }
         public Builder configuration(@Nullable Output<ClusterConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable ClusterConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder defaultCapacityProviderStrategy(@Nullable Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
             return this;
         }
-
         public Builder defaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderStrategyItemArgs> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = Output.ofNullable(defaultCapacityProviderStrategy);
             return this;
         }
-
+        public Builder defaultCapacityProviderStrategy(ClusterCapacityProviderStrategyItemArgs... defaultCapacityProviderStrategy) {
+            return defaultCapacityProviderStrategy(List.of(defaultCapacityProviderStrategy));
+        }
         public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ClusterTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ClusterArgs build() {
+        public Builder tags(ClusterTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ClusterArgs build() {
             return new ClusterArgs(capacityProviders, clusterName, clusterSettings, configuration, defaultCapacityProviderStrategy, tags);
         }
     }

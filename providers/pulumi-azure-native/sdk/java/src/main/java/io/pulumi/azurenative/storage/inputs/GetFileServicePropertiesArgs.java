@@ -88,17 +88,14 @@ public final class GetFileServicePropertiesArgs extends io.pulumi.resources.Invo
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder fileServicesName(String fileServicesName) {
             this.fileServicesName = Objects.requireNonNull(fileServicesName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFileServicePropertiesArgs build() {
+        }        public GetFileServicePropertiesArgs build() {
             return new GetFileServicePropertiesArgs(accountName, fileServicesName, resourceGroupName);
         }
     }

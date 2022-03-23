@@ -95,32 +95,26 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
-
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
             return this;
         }
-
         public Builder enableUefiNetworking(@Nullable Output<Boolean> enableUefiNetworking) {
             this.enableUefiNetworking = enableUefiNetworking;
             return this;
         }
-
         public Builder enableUefiNetworking(@Nullable Boolean enableUefiNetworking) {
             this.enableUefiNetworking = Output.ofNullable(enableUefiNetworking);
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
-        }
-        public AdvancedMachineFeaturesArgs build() {
+        }        public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);
         }
     }

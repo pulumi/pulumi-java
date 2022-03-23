@@ -73,22 +73,18 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
-
         public Builder securityGroupId(Output<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
-
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Output.of(Objects.requireNonNull(securityGroupId));
             return this;
-        }
-        public NetworkInterfaceSecurityGroupAttachmentArgs build() {
+        }        public NetworkInterfaceSecurityGroupAttachmentArgs build() {
             return new NetworkInterfaceSecurityGroupAttachmentArgs(networkInterfaceId, securityGroupId);
         }
     }

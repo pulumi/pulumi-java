@@ -63,17 +63,14 @@ public final class InstanceFromMachineImageNetworkInterfaceAccessConfig {
             this.natIp = natIp;
             return this;
         }
-
         public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
-        }
-        public InstanceFromMachineImageNetworkInterfaceAccessConfig build() {
+        }        public InstanceFromMachineImageNetworkInterfaceAccessConfig build() {
             return new InstanceFromMachineImageNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }
     }

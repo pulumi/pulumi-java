@@ -74,22 +74,18 @@ public final class RouteSpecHttpRouteActionWeightedTargetGetArgs extends io.pulu
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
-
         public Builder virtualNode(String virtualNode) {
             this.virtualNode = Output.of(Objects.requireNonNull(virtualNode));
             return this;
         }
-
         public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
-        }
-        public RouteSpecHttpRouteActionWeightedTargetGetArgs build() {
+        }        public RouteSpecHttpRouteActionWeightedTargetGetArgs build() {
             return new RouteSpecHttpRouteActionWeightedTargetGetArgs(virtualNode, weight);
         }
     }

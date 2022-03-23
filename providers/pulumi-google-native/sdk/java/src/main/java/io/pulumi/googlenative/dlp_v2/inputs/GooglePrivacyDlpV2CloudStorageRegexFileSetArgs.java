@@ -95,32 +95,32 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder excludeRegex(@Nullable Output<List<String>> excludeRegex) {
             this.excludeRegex = excludeRegex;
             return this;
         }
-
         public Builder excludeRegex(@Nullable List<String> excludeRegex) {
             this.excludeRegex = Output.ofNullable(excludeRegex);
             return this;
         }
-
+        public Builder excludeRegex(String... excludeRegex) {
+            return excludeRegex(List.of(excludeRegex));
+        }
         public Builder includeRegex(@Nullable Output<List<String>> includeRegex) {
             this.includeRegex = includeRegex;
             return this;
         }
-
         public Builder includeRegex(@Nullable List<String> includeRegex) {
             this.includeRegex = Output.ofNullable(includeRegex);
             return this;
         }
-        public GooglePrivacyDlpV2CloudStorageRegexFileSetArgs build() {
+        public Builder includeRegex(String... includeRegex) {
+            return includeRegex(List.of(includeRegex));
+        }        public GooglePrivacyDlpV2CloudStorageRegexFileSetArgs build() {
             return new GooglePrivacyDlpV2CloudStorageRegexFileSetArgs(bucketName, excludeRegex, includeRegex);
         }
     }

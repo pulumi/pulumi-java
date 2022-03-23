@@ -112,22 +112,18 @@ public final class AudioAnalyzerPresetResponse extends io.pulumi.resources.Invok
             this.audioLanguage = audioLanguage;
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public AudioAnalyzerPresetResponse build() {
+        }        public AudioAnalyzerPresetResponse build() {
             return new AudioAnalyzerPresetResponse(audioLanguage, experimentalOptions, mode, odataType);
         }
     }

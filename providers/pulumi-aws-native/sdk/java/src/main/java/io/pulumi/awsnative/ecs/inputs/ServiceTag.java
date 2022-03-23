@@ -66,12 +66,10 @@ public final class ServiceTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ServiceTag build() {
+        }        public ServiceTag build() {
             return new ServiceTag(key, value);
         }
     }

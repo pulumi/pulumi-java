@@ -147,32 +147,29 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
             this.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
-
         public Builder effectiveOutboundIPs(@Nullable List<ResourceReferenceResponse> effectiveOutboundIPs) {
             this.effectiveOutboundIPs = effectiveOutboundIPs;
             return this;
         }
-
+        public Builder effectiveOutboundIPs(ResourceReferenceResponse... effectiveOutboundIPs) {
+            return effectiveOutboundIPs(List.of(effectiveOutboundIPs));
+        }
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder managedOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs) {
             this.managedOutboundIPs = managedOutboundIPs;
             return this;
         }
-
         public Builder outboundIPPrefixes(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes) {
             this.outboundIPPrefixes = outboundIPPrefixes;
             return this;
         }
-
         public Builder outboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
             this.outboundIPs = outboundIPs;
             return this;
-        }
-        public ManagedClusterLoadBalancerProfileResponse build() {
+        }        public ManagedClusterLoadBalancerProfileResponse build() {
             return new ManagedClusterLoadBalancerProfileResponse(allocatedOutboundPorts, effectiveOutboundIPs, idleTimeoutInMinutes, managedOutboundIPs, outboundIPPrefixes, outboundIPs);
         }
     }

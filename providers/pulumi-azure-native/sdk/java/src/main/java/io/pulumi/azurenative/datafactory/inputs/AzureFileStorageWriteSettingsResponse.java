@@ -112,22 +112,18 @@ public final class AzureFileStorageWriteSettingsResponse extends io.pulumi.resou
             this.copyBehavior = copyBehavior;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureFileStorageWriteSettingsResponse build() {
+        }        public AzureFileStorageWriteSettingsResponse build() {
             return new AzureFileStorageWriteSettingsResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }
     }

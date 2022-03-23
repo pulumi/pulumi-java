@@ -258,132 +258,106 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             this.alwaysLog = alwaysLog;
             return this;
         }
-
         public Builder alwaysLog(@Nullable Either<String,AlwaysLog> alwaysLog) {
             this.alwaysLog = Output.ofNullable(alwaysLog);
             return this;
         }
-
         public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder backend(@Nullable Output<PipelineDiagnosticSettingsArgs> backend) {
             this.backend = backend;
             return this;
         }
-
         public Builder backend(@Nullable PipelineDiagnosticSettingsArgs backend) {
             this.backend = Output.ofNullable(backend);
             return this;
         }
-
         public Builder diagnosticId(@Nullable Output<String> diagnosticId) {
             this.diagnosticId = diagnosticId;
             return this;
         }
-
         public Builder diagnosticId(@Nullable String diagnosticId) {
             this.diagnosticId = Output.ofNullable(diagnosticId);
             return this;
         }
-
         public Builder frontend(@Nullable Output<PipelineDiagnosticSettingsArgs> frontend) {
             this.frontend = frontend;
             return this;
         }
-
         public Builder frontend(@Nullable PipelineDiagnosticSettingsArgs frontend) {
             this.frontend = Output.ofNullable(frontend);
             return this;
         }
-
         public Builder httpCorrelationProtocol(@Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol) {
             this.httpCorrelationProtocol = httpCorrelationProtocol;
             return this;
         }
-
         public Builder httpCorrelationProtocol(@Nullable Either<String,HttpCorrelationProtocol> httpCorrelationProtocol) {
             this.httpCorrelationProtocol = Output.ofNullable(httpCorrelationProtocol);
             return this;
         }
-
         public Builder logClientIp(@Nullable Output<Boolean> logClientIp) {
             this.logClientIp = logClientIp;
             return this;
         }
-
         public Builder logClientIp(@Nullable Boolean logClientIp) {
             this.logClientIp = Output.ofNullable(logClientIp);
             return this;
         }
-
         public Builder loggerId(Output<String> loggerId) {
             this.loggerId = Objects.requireNonNull(loggerId);
             return this;
         }
-
         public Builder loggerId(String loggerId) {
             this.loggerId = Output.of(Objects.requireNonNull(loggerId));
             return this;
         }
-
         public Builder operationNameFormat(@Nullable Output<Either<String,OperationNameFormat>> operationNameFormat) {
             this.operationNameFormat = operationNameFormat;
             return this;
         }
-
         public Builder operationNameFormat(@Nullable Either<String,OperationNameFormat> operationNameFormat) {
             this.operationNameFormat = Output.ofNullable(operationNameFormat);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sampling(@Nullable Output<SamplingSettingsArgs> sampling) {
             this.sampling = sampling;
             return this;
         }
-
         public Builder sampling(@Nullable SamplingSettingsArgs sampling) {
             this.sampling = Output.ofNullable(sampling);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder verbosity(@Nullable Output<Either<String,Verbosity>> verbosity) {
             this.verbosity = verbosity;
             return this;
         }
-
         public Builder verbosity(@Nullable Either<String,Verbosity> verbosity) {
             this.verbosity = Output.ofNullable(verbosity);
             return this;
-        }
-        public ApiDiagnosticArgs build() {
+        }        public ApiDiagnosticArgs build() {
             return new ApiDiagnosticArgs(alwaysLog, apiId, backend, diagnosticId, frontend, httpCorrelationProtocol, logClientIp, loggerId, operationNameFormat, resourceGroupName, sampling, serviceName, verbosity);
         }
     }

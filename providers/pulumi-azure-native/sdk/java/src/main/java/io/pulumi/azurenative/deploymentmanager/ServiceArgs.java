@@ -155,72 +155,58 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceTopologyName(Output<String> serviceTopologyName) {
             this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
             return this;
         }
-
         public Builder serviceTopologyName(String serviceTopologyName) {
             this.serviceTopologyName = Output.of(Objects.requireNonNull(serviceTopologyName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetLocation(Output<String> targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
-
         public Builder targetLocation(String targetLocation) {
             this.targetLocation = Output.of(Objects.requireNonNull(targetLocation));
             return this;
         }
-
         public Builder targetSubscriptionId(Output<String> targetSubscriptionId) {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }
-
         public Builder targetSubscriptionId(String targetSubscriptionId) {
             this.targetSubscriptionId = Output.of(Objects.requireNonNull(targetSubscriptionId));
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(location, resourceGroupName, serviceName, serviceTopologyName, tags, targetLocation, targetSubscriptionId);
         }
     }

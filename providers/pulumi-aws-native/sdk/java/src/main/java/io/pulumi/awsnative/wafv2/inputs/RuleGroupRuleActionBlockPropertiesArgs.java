@@ -57,12 +57,10 @@ public final class RuleGroupRuleActionBlockPropertiesArgs extends io.pulumi.reso
             this.customResponse = customResponse;
             return this;
         }
-
         public Builder customResponse(@Nullable RuleGroupCustomResponseArgs customResponse) {
             this.customResponse = Output.ofNullable(customResponse);
             return this;
-        }
-        public RuleGroupRuleActionBlockPropertiesArgs build() {
+        }        public RuleGroupRuleActionBlockPropertiesArgs build() {
             return new RuleGroupRuleActionBlockPropertiesArgs(customResponse);
         }
     }

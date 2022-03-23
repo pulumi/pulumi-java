@@ -79,22 +79,18 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable String count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
             this.instanceProperties = instanceProperties;
             return this;
         }
-
         public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
             this.instanceProperties = Output.ofNullable(instanceProperties);
             return this;
-        }
-        public AllocationSpecificSKUReservationArgs build() {
+        }        public AllocationSpecificSKUReservationArgs build() {
             return new AllocationSpecificSKUReservationArgs(count, instanceProperties);
         }
     }

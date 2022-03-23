@@ -160,82 +160,69 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder productCategory(@Nullable Output<String> productCategory) {
             this.productCategory = productCategory;
             return this;
         }
-
         public Builder productCategory(@Nullable String productCategory) {
             this.productCategory = Output.ofNullable(productCategory);
             return this;
         }
-
         public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = Output.ofNullable(productId);
             return this;
         }
-
         public Builder productLabels(@Nullable Output<List<KeyValueArgs>> productLabels) {
             this.productLabels = productLabels;
             return this;
         }
-
         public Builder productLabels(@Nullable List<KeyValueArgs> productLabels) {
             this.productLabels = Output.ofNullable(productLabels);
             return this;
         }
-
+        public Builder productLabels(KeyValueArgs... productLabels) {
+            return productLabels(List.of(productLabels));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProductArgs build() {
+        }        public ProductArgs build() {
             return new ProductArgs(description, displayName, location, name, productCategory, productId, productLabels, project);
         }
     }

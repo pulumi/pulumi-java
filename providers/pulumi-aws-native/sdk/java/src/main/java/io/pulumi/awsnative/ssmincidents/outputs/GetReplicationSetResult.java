@@ -82,17 +82,17 @@ public final class GetReplicationSetResult {
             this.arn = arn;
             return this;
         }
-
         public Builder deletionProtected(@Nullable Boolean deletionProtected) {
             this.deletionProtected = deletionProtected;
             return this;
         }
-
         public Builder regions(@Nullable List<ReplicationSetReplicationRegion> regions) {
             this.regions = regions;
             return this;
         }
-        public GetReplicationSetResult build() {
+        public Builder regions(ReplicationSetReplicationRegion... regions) {
+            return regions(List.of(regions));
+        }        public GetReplicationSetResult build() {
             return new GetReplicationSetResult(arn, deletionProtected, regions);
         }
     }

@@ -79,22 +79,18 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
             this.akamai = akamai;
             return this;
         }
-
         public Builder akamai(@Nullable AkamaiAccessControlArgs akamai) {
             this.akamai = Output.ofNullable(akamai);
             return this;
         }
-
         public Builder ip(@Nullable Output<IPAccessControlArgs> ip) {
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable IPAccessControlArgs ip) {
             this.ip = Output.ofNullable(ip);
             return this;
-        }
-        public StreamingEndpointAccessControlArgs build() {
+        }        public StreamingEndpointAccessControlArgs build() {
             return new StreamingEndpointAccessControlArgs(akamai, ip);
         }
     }

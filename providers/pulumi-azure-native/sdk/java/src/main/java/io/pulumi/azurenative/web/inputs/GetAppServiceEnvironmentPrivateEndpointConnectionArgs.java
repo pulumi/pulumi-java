@@ -88,17 +88,14 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAppServiceEnvironmentPrivateEndpointConnectionArgs build() {
+        }        public GetAppServiceEnvironmentPrivateEndpointConnectionArgs build() {
             return new GetAppServiceEnvironmentPrivateEndpointConnectionArgs(name, privateEndpointConnectionName, resourceGroupName);
         }
     }

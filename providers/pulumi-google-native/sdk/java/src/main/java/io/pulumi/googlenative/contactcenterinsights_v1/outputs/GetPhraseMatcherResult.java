@@ -216,57 +216,49 @@ public final class GetPhraseMatcherResult {
             this.activationUpdateTime = Objects.requireNonNull(activationUpdateTime);
             return this;
         }
-
         public Builder active(Boolean active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder phraseMatchRuleGroups(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = Objects.requireNonNull(phraseMatchRuleGroups);
             return this;
         }
-
+        public Builder phraseMatchRuleGroups(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse... phraseMatchRuleGroups) {
+            return phraseMatchRuleGroups(List.of(phraseMatchRuleGroups));
+        }
         public Builder revisionCreateTime(String revisionCreateTime) {
             this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public Builder roleMatch(String roleMatch) {
             this.roleMatch = Objects.requireNonNull(roleMatch);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder versionTag(String versionTag) {
             this.versionTag = Objects.requireNonNull(versionTag);
             return this;
-        }
-        public GetPhraseMatcherResult build() {
+        }        public GetPhraseMatcherResult build() {
             return new GetPhraseMatcherResult(activationUpdateTime, active, displayName, name, phraseMatchRuleGroups, revisionCreateTime, revisionId, roleMatch, type, updateTime, versionTag);
         }
     }

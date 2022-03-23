@@ -73,22 +73,18 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
-
         public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
-        }
-        public GatewayRouteTableAssociationArgs build() {
+        }        public GatewayRouteTableAssociationArgs build() {
             return new GatewayRouteTableAssociationArgs(gatewayId, routeTableId);
         }
     }

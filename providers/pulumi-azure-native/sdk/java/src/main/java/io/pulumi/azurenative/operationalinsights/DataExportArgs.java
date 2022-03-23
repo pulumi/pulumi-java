@@ -204,102 +204,85 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder dataExportId(@Nullable Output<String> dataExportId) {
             this.dataExportId = dataExportId;
             return this;
         }
-
         public Builder dataExportId(@Nullable String dataExportId) {
             this.dataExportId = Output.ofNullable(dataExportId);
             return this;
         }
-
         public Builder dataExportName(@Nullable Output<String> dataExportName) {
             this.dataExportName = dataExportName;
             return this;
         }
-
         public Builder dataExportName(@Nullable String dataExportName) {
             this.dataExportName = Output.ofNullable(dataExportName);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
-
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = Output.ofNullable(lastModifiedDate);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder tableNames(Output<List<String>> tableNames) {
             this.tableNames = Objects.requireNonNull(tableNames);
             return this;
         }
-
         public Builder tableNames(List<String> tableNames) {
             this.tableNames = Output.of(Objects.requireNonNull(tableNames));
             return this;
         }
-
+        public Builder tableNames(String... tableNames) {
+            return tableNames(List.of(tableNames));
+        }
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public DataExportArgs build() {
+        }        public DataExportArgs build() {
             return new DataExportArgs(createdDate, dataExportId, dataExportName, enable, eventHubName, lastModifiedDate, resourceGroupName, resourceId, tableNames, workspaceName);
         }
     }

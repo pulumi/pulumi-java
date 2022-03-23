@@ -90,17 +90,14 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder includeBody(@Nullable Boolean includeBody) {
             this.includeBody = includeBody;
             return this;
         }
-
         public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
-        }
-        public DistributionDefaultCacheBehaviorLambdaFunctionAssociation build() {
+        }        public DistributionDefaultCacheBehaviorLambdaFunctionAssociation build() {
             return new DistributionDefaultCacheBehaviorLambdaFunctionAssociation(eventType, includeBody, lambdaArn);
         }
     }

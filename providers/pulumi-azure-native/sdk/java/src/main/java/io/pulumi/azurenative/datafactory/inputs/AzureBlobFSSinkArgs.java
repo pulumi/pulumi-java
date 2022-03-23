@@ -194,92 +194,77 @@ public final class AzureBlobFSSinkArgs extends io.pulumi.resources.ResourceArgs 
             this.copyBehavior = copyBehavior;
             return this;
         }
-
         public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = Output.ofNullable(copyBehavior);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder metadata(@Nullable Output<List<MetadataItemArgs>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable List<MetadataItemArgs> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
+        public Builder metadata(MetadataItemArgs... metadata) {
+            return metadata(List.of(metadata));
+        }
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Output.ofNullable(writeBatchSize);
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
             return this;
-        }
-        public AzureBlobFSSinkArgs build() {
+        }        public AzureBlobFSSinkArgs build() {
             return new AzureBlobFSSinkArgs(copyBehavior, disableMetricsCollection, maxConcurrentConnections, metadata, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }
     }

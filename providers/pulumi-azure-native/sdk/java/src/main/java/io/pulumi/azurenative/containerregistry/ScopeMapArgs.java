@@ -125,52 +125,45 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<String> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scopeMapName(@Nullable Output<String> scopeMapName) {
             this.scopeMapName = scopeMapName;
             return this;
         }
-
         public Builder scopeMapName(@Nullable String scopeMapName) {
             this.scopeMapName = Output.ofNullable(scopeMapName);
             return this;
-        }
-        public ScopeMapArgs build() {
+        }        public ScopeMapArgs build() {
             return new ScopeMapArgs(actions, description, registryName, resourceGroupName, scopeMapName);
         }
     }

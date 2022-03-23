@@ -158,72 +158,61 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationResourceId = Objects.requireNonNull(applicationResourceId);
             return this;
         }
-
         public Builder applicationResourceId(String applicationResourceId) {
             this.applicationResourceId = Output.of(Objects.requireNonNull(applicationResourceId));
             return this;
         }
-
         public Builder jitAuthorizationPolicies(Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies) {
             this.jitAuthorizationPolicies = Objects.requireNonNull(jitAuthorizationPolicies);
             return this;
         }
-
         public Builder jitAuthorizationPolicies(List<JitAuthorizationPoliciesArgs> jitAuthorizationPolicies) {
             this.jitAuthorizationPolicies = Output.of(Objects.requireNonNull(jitAuthorizationPolicies));
             return this;
         }
-
+        public Builder jitAuthorizationPolicies(JitAuthorizationPoliciesArgs... jitAuthorizationPolicies) {
+            return jitAuthorizationPolicies(List.of(jitAuthorizationPolicies));
+        }
         public Builder jitRequestName(@Nullable Output<String> jitRequestName) {
             this.jitRequestName = jitRequestName;
             return this;
         }
-
         public Builder jitRequestName(@Nullable String jitRequestName) {
             this.jitRequestName = Output.ofNullable(jitRequestName);
             return this;
         }
-
         public Builder jitSchedulingPolicy(Output<JitSchedulingPolicyArgs> jitSchedulingPolicy) {
             this.jitSchedulingPolicy = Objects.requireNonNull(jitSchedulingPolicy);
             return this;
         }
-
         public Builder jitSchedulingPolicy(JitSchedulingPolicyArgs jitSchedulingPolicy) {
             this.jitSchedulingPolicy = Output.of(Objects.requireNonNull(jitSchedulingPolicy));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public JitRequestArgs build() {
+        }        public JitRequestArgs build() {
             return new JitRequestArgs(applicationResourceId, jitAuthorizationPolicies, jitRequestName, jitSchedulingPolicy, location, resourceGroupName, tags);
         }
     }

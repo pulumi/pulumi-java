@@ -61,12 +61,10 @@ public final class IpRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public IpRuleArgs build() {
+        }        public IpRuleArgs build() {
             return new IpRuleArgs(value);
         }
     }

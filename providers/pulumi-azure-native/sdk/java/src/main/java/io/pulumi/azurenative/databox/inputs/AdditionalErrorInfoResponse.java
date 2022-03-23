@@ -79,12 +79,10 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
             this.info = info;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AdditionalErrorInfoResponse build() {
+        }        public AdditionalErrorInfoResponse build() {
             return new AdditionalErrorInfoResponse(info, type);
         }
     }

@@ -52,12 +52,10 @@ public final class FirewallPolicyDimensionArgs extends io.pulumi.resources.Resou
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public FirewallPolicyDimensionArgs build() {
+        }        public FirewallPolicyDimensionArgs build() {
             return new FirewallPolicyDimensionArgs(value);
         }
     }

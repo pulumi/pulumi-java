@@ -82,22 +82,18 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ManagedIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public ManagedIdentityArgs build() {
+        }        public ManagedIdentityArgs build() {
             return new ManagedIdentityArgs(type, userAssignedIdentities);
         }
     }

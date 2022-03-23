@@ -77,22 +77,21 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
-
         public Builder roleEntities(@Nullable List<String> roleEntities) {
             this.roleEntities = Output.ofNullable(roleEntities);
             return this;
         }
-        public DefaultObjectACLArgs build() {
+        public Builder roleEntities(String... roleEntities) {
+            return roleEntities(List.of(roleEntities));
+        }        public DefaultObjectACLArgs build() {
             return new DefaultObjectACLArgs(bucket, roleEntities);
         }
     }

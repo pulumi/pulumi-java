@@ -81,22 +81,18 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
             this.backendPort = backendPort;
             return this;
         }
-
         public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = Output.ofNullable(backendPort);
             return this;
         }
-
         public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public Builder transportProtocol(@Nullable Either<String,TransportProtocol> transportProtocol) {
             this.transportProtocol = Output.ofNullable(transportProtocol);
             return this;
-        }
-        public PortArgs build() {
+        }        public PortArgs build() {
             return new PortArgs(backendPort, transportProtocol);
         }
     }

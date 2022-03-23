@@ -56,12 +56,10 @@ public final class FunctionEventInvokeConfigDestinationConfigOnFailureArgs exten
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
-        }
-        public FunctionEventInvokeConfigDestinationConfigOnFailureArgs build() {
+        }        public FunctionEventInvokeConfigDestinationConfigOnFailureArgs build() {
             return new FunctionEventInvokeConfigDestinationConfigOnFailureArgs(destination);
         }
     }

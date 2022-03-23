@@ -104,22 +104,18 @@ public final class Pav2MeterDetailsResponse {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
-
         public Builder chargingType(String chargingType) {
             this.chargingType = Objects.requireNonNull(chargingType);
             return this;
         }
-
         public Builder meterGuid(String meterGuid) {
             this.meterGuid = Objects.requireNonNull(meterGuid);
             return this;
         }
-
         public Builder multiplier(Double multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
-        }
-        public Pav2MeterDetailsResponse build() {
+        }        public Pav2MeterDetailsResponse build() {
             return new Pav2MeterDetailsResponse(billingType, chargingType, meterGuid, multiplier);
         }
     }

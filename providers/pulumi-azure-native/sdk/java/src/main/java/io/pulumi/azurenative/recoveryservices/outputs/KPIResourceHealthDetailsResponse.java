@@ -73,12 +73,13 @@ public final class KPIResourceHealthDetailsResponse {
             this.resourceHealthDetails = resourceHealthDetails;
             return this;
         }
-
+        public Builder resourceHealthDetails(ResourceHealthDetailsResponse... resourceHealthDetails) {
+            return resourceHealthDetails(List.of(resourceHealthDetails));
+        }
         public Builder resourceHealthStatus(@Nullable String resourceHealthStatus) {
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
-        }
-        public KPIResourceHealthDetailsResponse build() {
+        }        public KPIResourceHealthDetailsResponse build() {
             return new KPIResourceHealthDetailsResponse(resourceHealthDetails, resourceHealthStatus);
         }
     }

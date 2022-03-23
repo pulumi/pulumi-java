@@ -56,12 +56,10 @@ public final class ConnectorProfileZendeskConnectorProfilePropertiesArgs extends
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
-
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
             return this;
-        }
-        public ConnectorProfileZendeskConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileZendeskConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileZendeskConnectorProfilePropertiesArgs(instanceUrl);
         }
     }

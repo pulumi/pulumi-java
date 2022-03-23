@@ -91,32 +91,26 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             this.modelPackageGroupDescription = modelPackageGroupDescription;
             return this;
         }
-
         public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
             this.modelPackageGroupDescription = Output.ofNullable(modelPackageGroupDescription);
             return this;
         }
-
         public Builder modelPackageGroupName(Output<String> modelPackageGroupName) {
             this.modelPackageGroupName = Objects.requireNonNull(modelPackageGroupName);
             return this;
         }
-
         public Builder modelPackageGroupName(String modelPackageGroupName) {
             this.modelPackageGroupName = Output.of(Objects.requireNonNull(modelPackageGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ModelPackageGroupArgs build() {
+        }        public ModelPackageGroupArgs build() {
             return new ModelPackageGroupArgs(modelPackageGroupDescription, modelPackageGroupName, tags);
         }
     }

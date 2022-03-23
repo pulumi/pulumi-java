@@ -61,12 +61,10 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.membership = membership;
             return this;
         }
-
         public Builder membership(@Nullable String membership) {
             this.membership = Output.ofNullable(membership);
             return this;
-        }
-        public AnthosClusterArgs build() {
+        }        public AnthosClusterArgs build() {
             return new AnthosClusterArgs(membership);
         }
     }

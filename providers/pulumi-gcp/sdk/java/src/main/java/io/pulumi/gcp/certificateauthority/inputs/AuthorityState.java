@@ -344,172 +344,144 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
             this.accessUrls = accessUrls;
             return this;
         }
-
         public Builder accessUrls(@Nullable List<AuthorityAccessUrlGetArgs> accessUrls) {
             this.accessUrls = Output.ofNullable(accessUrls);
             return this;
         }
-
+        public Builder accessUrls(AuthorityAccessUrlGetArgs... accessUrls) {
+            return accessUrls(List.of(accessUrls));
+        }
         public Builder certificateAuthorityId(@Nullable Output<String> certificateAuthorityId) {
             this.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
-
         public Builder certificateAuthorityId(@Nullable String certificateAuthorityId) {
             this.certificateAuthorityId = Output.ofNullable(certificateAuthorityId);
             return this;
         }
-
         public Builder config(@Nullable Output<AuthorityConfigGetArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable AuthorityConfigGetArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder gcsBucket(@Nullable Output<String> gcsBucket) {
             this.gcsBucket = gcsBucket;
             return this;
         }
-
         public Builder gcsBucket(@Nullable String gcsBucket) {
             this.gcsBucket = Output.ofNullable(gcsBucket);
             return this;
         }
-
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion) {
             this.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
             return this;
         }
-
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Boolean ignoreActiveCertificatesOnDeletion) {
             this.ignoreActiveCertificatesOnDeletion = Output.ofNullable(ignoreActiveCertificatesOnDeletion);
             return this;
         }
-
         public Builder keySpec(@Nullable Output<AuthorityKeySpecGetArgs> keySpec) {
             this.keySpec = keySpec;
             return this;
         }
-
         public Builder keySpec(@Nullable AuthorityKeySpecGetArgs keySpec) {
             this.keySpec = Output.ofNullable(keySpec);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder lifetime(@Nullable Output<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
-
         public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = Output.ofNullable(lifetime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pemCaCertificates(@Nullable Output<List<String>> pemCaCertificates) {
             this.pemCaCertificates = pemCaCertificates;
             return this;
         }
-
         public Builder pemCaCertificates(@Nullable List<String> pemCaCertificates) {
             this.pemCaCertificates = Output.ofNullable(pemCaCertificates);
             return this;
         }
-
+        public Builder pemCaCertificates(String... pemCaCertificates) {
+            return pemCaCertificates(List.of(pemCaCertificates));
+        }
         public Builder pool(@Nullable Output<String> pool) {
             this.pool = pool;
             return this;
         }
-
         public Builder pool(@Nullable String pool) {
             this.pool = Output.ofNullable(pool);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public AuthorityState build() {
+        }        public AuthorityState build() {
             return new AuthorityState(accessUrls, certificateAuthorityId, config, createTime, gcsBucket, ignoreActiveCertificatesOnDeletion, keySpec, labels, lifetime, location, name, pemCaCertificates, pool, project, state, type, updateTime);
         }
     }

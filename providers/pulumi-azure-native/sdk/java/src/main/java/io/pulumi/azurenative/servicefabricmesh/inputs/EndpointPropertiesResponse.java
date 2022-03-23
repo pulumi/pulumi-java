@@ -79,12 +79,10 @@ public final class EndpointPropertiesResponse extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public EndpointPropertiesResponse build() {
+        }        public EndpointPropertiesResponse build() {
             return new EndpointPropertiesResponse(name, port);
         }
     }

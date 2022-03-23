@@ -89,17 +89,14 @@ public final class GenericContainerExtendedInfoResponse {
             this.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
-
         public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
-
         public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
-        }
-        public GenericContainerExtendedInfoResponse build() {
+        }        public GenericContainerExtendedInfoResponse build() {
             return new GenericContainerExtendedInfoResponse(containerIdentityInfo, rawCertData, serviceEndpoints);
         }
     }

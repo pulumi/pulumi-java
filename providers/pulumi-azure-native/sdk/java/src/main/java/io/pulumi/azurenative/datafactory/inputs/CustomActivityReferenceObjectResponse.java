@@ -80,12 +80,16 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
             this.datasets = datasets;
             return this;
         }
-
+        public Builder datasets(DatasetReferenceResponse... datasets) {
+            return datasets(List.of(datasets));
+        }
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
-        public CustomActivityReferenceObjectResponse build() {
+        public Builder linkedServices(LinkedServiceReferenceResponse... linkedServices) {
+            return linkedServices(List.of(linkedServices));
+        }        public CustomActivityReferenceObjectResponse build() {
             return new CustomActivityReferenceObjectResponse(datasets, linkedServices);
         }
     }

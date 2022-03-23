@@ -54,12 +54,13 @@ public final class GetInstanceReservationAffinitySpecificReservation {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetInstanceReservationAffinitySpecificReservation build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetInstanceReservationAffinitySpecificReservation build() {
             return new GetInstanceReservationAffinitySpecificReservation(key, values);
         }
     }

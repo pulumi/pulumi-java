@@ -51,8 +51,7 @@ public final class RepositoryImageScanningConfiguration {
         public Builder scanOnPush(Boolean scanOnPush) {
             this.scanOnPush = Objects.requireNonNull(scanOnPush);
             return this;
-        }
-        public RepositoryImageScanningConfiguration build() {
+        }        public RepositoryImageScanningConfiguration build() {
             return new RepositoryImageScanningConfiguration(scanOnPush);
         }
     }

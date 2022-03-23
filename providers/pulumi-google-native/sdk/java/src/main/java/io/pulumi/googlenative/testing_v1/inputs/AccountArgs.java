@@ -61,12 +61,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.googleAuto = googleAuto;
             return this;
         }
-
         public Builder googleAuto(@Nullable GoogleAutoArgs googleAuto) {
             this.googleAuto = Output.ofNullable(googleAuto);
             return this;
-        }
-        public AccountArgs build() {
+        }        public AccountArgs build() {
             return new AccountArgs(googleAuto);
         }
     }

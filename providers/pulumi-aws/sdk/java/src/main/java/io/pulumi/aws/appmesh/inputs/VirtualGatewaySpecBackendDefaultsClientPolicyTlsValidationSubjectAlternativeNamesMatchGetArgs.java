@@ -57,12 +57,13 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
-
         public Builder exacts(List<String> exacts) {
             this.exacts = Output.of(Objects.requireNonNull(exacts));
             return this;
         }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs build() {
+        public Builder exacts(String... exacts) {
+            return exacts(List.of(exacts));
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs(exacts);
         }
     }

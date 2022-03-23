@@ -288,152 +288,134 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             this.administrationRoleARN = administrationRoleARN;
             return this;
         }
-
         public Builder administrationRoleARN(@Nullable String administrationRoleARN) {
             this.administrationRoleARN = Output.ofNullable(administrationRoleARN);
             return this;
         }
-
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
             this.autoDeployment = autoDeployment;
             return this;
         }
-
         public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
             this.autoDeployment = Output.ofNullable(autoDeployment);
             return this;
         }
-
         public Builder callAs(@Nullable Output<StackSetCallAs> callAs) {
             this.callAs = callAs;
             return this;
         }
-
         public Builder callAs(@Nullable StackSetCallAs callAs) {
             this.callAs = Output.ofNullable(callAs);
             return this;
         }
-
         public Builder capabilities(@Nullable Output<List<StackSetCapability>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<StackSetCapability> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(StackSetCapability... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
             this.executionRoleName = executionRoleName;
             return this;
         }
-
         public Builder executionRoleName(@Nullable String executionRoleName) {
             this.executionRoleName = Output.ofNullable(executionRoleName);
             return this;
         }
-
         public Builder managedExecution(@Nullable Output<ManagedExecutionPropertiesArgs> managedExecution) {
             this.managedExecution = managedExecution;
             return this;
         }
-
         public Builder managedExecution(@Nullable ManagedExecutionPropertiesArgs managedExecution) {
             this.managedExecution = Output.ofNullable(managedExecution);
             return this;
         }
-
         public Builder operationPreferences(@Nullable Output<StackSetOperationPreferencesArgs> operationPreferences) {
             this.operationPreferences = operationPreferences;
             return this;
         }
-
         public Builder operationPreferences(@Nullable StackSetOperationPreferencesArgs operationPreferences) {
             this.operationPreferences = Output.ofNullable(operationPreferences);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<StackSetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<StackSetParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(StackSetParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder permissionModel(Output<StackSetPermissionModel> permissionModel) {
             this.permissionModel = Objects.requireNonNull(permissionModel);
             return this;
         }
-
         public Builder permissionModel(StackSetPermissionModel permissionModel) {
             this.permissionModel = Output.of(Objects.requireNonNull(permissionModel));
             return this;
         }
-
         public Builder stackInstancesGroup(@Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup) {
             this.stackInstancesGroup = stackInstancesGroup;
             return this;
         }
-
         public Builder stackInstancesGroup(@Nullable List<StackSetStackInstancesArgs> stackInstancesGroup) {
             this.stackInstancesGroup = Output.ofNullable(stackInstancesGroup);
             return this;
         }
-
+        public Builder stackInstancesGroup(StackSetStackInstancesArgs... stackInstancesGroup) {
+            return stackInstancesGroup(List.of(stackInstancesGroup));
+        }
         public Builder stackSetName(@Nullable Output<String> stackSetName) {
             this.stackSetName = stackSetName;
             return this;
         }
-
         public Builder stackSetName(@Nullable String stackSetName) {
             this.stackSetName = Output.ofNullable(stackSetName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<StackSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<StackSetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(StackSetTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder templateBody(@Nullable Output<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
-
         public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Output.ofNullable(templateBody);
             return this;
         }
-
         public Builder templateURL(@Nullable Output<String> templateURL) {
             this.templateURL = templateURL;
             return this;
         }
-
         public Builder templateURL(@Nullable String templateURL) {
             this.templateURL = Output.ofNullable(templateURL);
             return this;
-        }
-        public StackSetArgs build() {
+        }        public StackSetArgs build() {
             return new StackSetArgs(administrationRoleARN, autoDeployment, callAs, capabilities, description, executionRoleName, managedExecution, operationPreferences, parameters, permissionModel, stackInstancesGroup, stackSetName, tags, templateBody, templateURL);
         }
     }

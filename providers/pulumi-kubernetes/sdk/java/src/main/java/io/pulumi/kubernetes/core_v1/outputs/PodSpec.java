@@ -661,182 +661,173 @@ public final class PodSpec {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-
         public Builder affinity(@Nullable Affinity affinity) {
             this.affinity = affinity;
             return this;
         }
-
         public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
-
         public Builder containers(List<Container> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
+        public Builder containers(Container... containers) {
+            return containers(List.of(containers));
+        }
         public Builder dnsConfig(@Nullable PodDNSConfig dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-
         public Builder dnsPolicy(@Nullable String dnsPolicy) {
             this.dnsPolicy = dnsPolicy;
             return this;
         }
-
         public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
-
         public Builder ephemeralContainers(@Nullable List<EphemeralContainer> ephemeralContainers) {
             this.ephemeralContainers = ephemeralContainers;
             return this;
         }
-
+        public Builder ephemeralContainers(EphemeralContainer... ephemeralContainers) {
+            return ephemeralContainers(List.of(ephemeralContainers));
+        }
         public Builder hostAliases(@Nullable List<HostAlias> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
         }
-
+        public Builder hostAliases(HostAlias... hostAliases) {
+            return hostAliases(List.of(hostAliases));
+        }
         public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
-
         public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
-
         public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = hostPID;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
-
+        public Builder imagePullSecrets(LocalObjectReference... imagePullSecrets) {
+            return imagePullSecrets(List.of(imagePullSecrets));
+        }
         public Builder initContainers(@Nullable List<Container> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
-
+        public Builder initContainers(Container... initContainers) {
+            return initContainers(List.of(initContainers));
+        }
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
-
         public Builder os(@Nullable PodOS os) {
             this.os = os;
             return this;
         }
-
         public Builder overhead(@Nullable Map<String,String> overhead) {
             this.overhead = overhead;
             return this;
         }
-
         public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priorityClassName(@Nullable String priorityClassName) {
             this.priorityClassName = priorityClassName;
             return this;
         }
-
         public Builder readinessGates(@Nullable List<PodReadinessGate> readinessGates) {
             this.readinessGates = readinessGates;
             return this;
         }
-
+        public Builder readinessGates(PodReadinessGate... readinessGates) {
+            return readinessGates(List.of(readinessGates));
+        }
         public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
-
         public Builder runtimeClassName(@Nullable String runtimeClassName) {
             this.runtimeClassName = runtimeClassName;
             return this;
         }
-
         public Builder schedulerName(@Nullable String schedulerName) {
             this.schedulerName = schedulerName;
             return this;
         }
-
         public Builder securityContext(@Nullable PodSecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
             this.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
-
         public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
             this.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
-
         public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = subdomain;
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-
         public Builder tolerations(@Nullable List<Toleration> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
-
+        public Builder tolerations(Toleration... tolerations) {
+            return tolerations(List.of(tolerations));
+        }
         public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraint> topologySpreadConstraints) {
             this.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
-
+        public Builder topologySpreadConstraints(TopologySpreadConstraint... topologySpreadConstraints) {
+            return topologySpreadConstraints(List.of(topologySpreadConstraints));
+        }
         public Builder volumes(@Nullable List<Volume> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public PodSpec build() {
+        public Builder volumes(Volume... volumes) {
+            return volumes(List.of(volumes));
+        }        public PodSpec build() {
             return new PodSpec(activeDeadlineSeconds, affinity, automountServiceAccountToken, containers, dnsConfig, dnsPolicy, enableServiceLinks, ephemeralContainers, hostAliases, hostIPC, hostNetwork, hostPID, hostname, imagePullSecrets, initContainers, nodeName, nodeSelector, os, overhead, preemptionPolicy, priority, priorityClassName, readinessGates, restartPolicy, runtimeClassName, schedulerName, securityContext, serviceAccount, serviceAccountName, setHostnameAsFQDN, shareProcessNamespace, subdomain, terminationGracePeriodSeconds, tolerations, topologySpreadConstraints, volumes);
         }
     }

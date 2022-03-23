@@ -94,32 +94,26 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends io.pulumi.re
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public InstanceGroupAutoscalingPolicyConfigArgs build() {
+        }        public InstanceGroupAutoscalingPolicyConfigArgs build() {
             return new InstanceGroupAutoscalingPolicyConfigArgs(maxInstances, minInstances, weight);
         }
     }

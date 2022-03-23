@@ -95,32 +95,26 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.enableCompression = enableCompression;
             return this;
         }
-
         public Builder enableCompression(@Nullable Object enableCompression) {
             this.enableCompression = Output.ofNullable(enableCompression);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder path(@Nullable Output<Object> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable Object path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public StagingSettingsArgs build() {
+        }        public StagingSettingsArgs build() {
             return new StagingSettingsArgs(enableCompression, linkedServiceName, path);
         }
     }

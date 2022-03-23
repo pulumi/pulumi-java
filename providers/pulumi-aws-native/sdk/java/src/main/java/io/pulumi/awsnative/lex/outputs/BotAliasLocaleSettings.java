@@ -64,12 +64,10 @@ public final class BotAliasLocaleSettings {
             this.codeHookSpecification = codeHookSpecification;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public BotAliasLocaleSettings build() {
+        }        public BotAliasLocaleSettings build() {
             return new BotAliasLocaleSettings(codeHookSpecification, enabled);
         }
     }

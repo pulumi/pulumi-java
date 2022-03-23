@@ -103,52 +103,42 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs e
             this.disable = disable;
             return this;
         }
-
         public Builder disable(@Nullable Boolean disable) {
             this.disable = Output.ofNullable(disable);
             return this;
         }
-
         public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs build() {
             return new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs(disable, level, role, type, user);
         }
     }

@@ -132,52 +132,45 @@ public final class EdgeCacheKeysetArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder publicKeys(Output<List<EdgeCacheKeysetPublicKeyArgs>> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public Builder publicKeys(List<EdgeCacheKeysetPublicKeyArgs> publicKeys) {
             this.publicKeys = Output.of(Objects.requireNonNull(publicKeys));
             return this;
         }
-        public EdgeCacheKeysetArgs build() {
+        public Builder publicKeys(EdgeCacheKeysetPublicKeyArgs... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public EdgeCacheKeysetArgs build() {
             return new EdgeCacheKeysetArgs(description, labels, name, project, publicKeys);
         }
     }

@@ -105,22 +105,21 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder fields(List<GooglePrivacyDlpV2FieldIdResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
+        public Builder fields(GooglePrivacyDlpV2FieldIdResponse... fields) {
+            return fields(List.of(fields));
+        }
         public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
-
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
-        }
-        public GooglePrivacyDlpV2FieldTransformationResponse build() {
+        }        public GooglePrivacyDlpV2FieldTransformationResponse build() {
             return new GooglePrivacyDlpV2FieldTransformationResponse(condition, fields, infoTypeTransformations, primitiveTransformation);
         }
     }

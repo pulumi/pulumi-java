@@ -104,22 +104,18 @@ public final class GetApiReleaseArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder releaseId(String releaseId) {
             this.releaseId = Objects.requireNonNull(releaseId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiReleaseArgs build() {
+        }        public GetApiReleaseArgs build() {
             return new GetApiReleaseArgs(apiId, releaseId, resourceGroupName, serviceName);
         }
     }

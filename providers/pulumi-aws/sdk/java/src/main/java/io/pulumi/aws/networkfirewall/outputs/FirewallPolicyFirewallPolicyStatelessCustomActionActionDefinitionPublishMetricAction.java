@@ -53,7 +53,9 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction build() {
+        public Builder dimensions(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension... dimensions) {
+            return dimensions(List.of(dimensions));
+        }        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction build() {
             return new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction(dimensions);
         }
     }

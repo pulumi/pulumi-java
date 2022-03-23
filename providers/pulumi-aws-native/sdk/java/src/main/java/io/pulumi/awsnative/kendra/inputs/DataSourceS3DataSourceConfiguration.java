@@ -121,32 +121,35 @@ public final class DataSourceS3DataSourceConfiguration extends io.pulumi.resourc
             this.accessControlListConfiguration = accessControlListConfiguration;
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder documentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration) {
             this.documentsMetadataConfiguration = documentsMetadataConfiguration;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder inclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
             this.inclusionPrefixes = inclusionPrefixes;
             return this;
         }
-        public DataSourceS3DataSourceConfiguration build() {
+        public Builder inclusionPrefixes(String... inclusionPrefixes) {
+            return inclusionPrefixes(List.of(inclusionPrefixes));
+        }        public DataSourceS3DataSourceConfiguration build() {
             return new DataSourceS3DataSourceConfiguration(accessControlListConfiguration, bucketName, documentsMetadataConfiguration, exclusionPatterns, inclusionPatterns, inclusionPrefixes);
         }
     }

@@ -72,12 +72,10 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public InstanceMessageResponse build() {
+        }        public InstanceMessageResponse build() {
             return new InstanceMessageResponse(code, message);
         }
     }

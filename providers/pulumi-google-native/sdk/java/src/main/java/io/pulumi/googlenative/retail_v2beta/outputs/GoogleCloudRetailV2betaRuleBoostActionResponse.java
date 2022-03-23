@@ -70,12 +70,10 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
-
         public Builder productsFilter(String productsFilter) {
             this.productsFilter = Objects.requireNonNull(productsFilter);
             return this;
-        }
-        public GoogleCloudRetailV2betaRuleBoostActionResponse build() {
+        }        public GoogleCloudRetailV2betaRuleBoostActionResponse build() {
             return new GoogleCloudRetailV2betaRuleBoostActionResponse(boost, productsFilter);
         }
     }

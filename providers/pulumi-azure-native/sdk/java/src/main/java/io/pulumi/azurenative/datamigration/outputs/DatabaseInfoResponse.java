@@ -51,8 +51,7 @@ public final class DatabaseInfoResponse {
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
-        }
-        public DatabaseInfoResponse build() {
+        }        public DatabaseInfoResponse build() {
             return new DatabaseInfoResponse(sourceDatabaseName);
         }
     }

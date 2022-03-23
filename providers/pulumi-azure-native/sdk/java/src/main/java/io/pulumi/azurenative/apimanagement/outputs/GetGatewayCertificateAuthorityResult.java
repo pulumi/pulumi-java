@@ -104,22 +104,18 @@ public final class GetGatewayCertificateAuthorityResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isTrusted(@Nullable Boolean isTrusted) {
             this.isTrusted = isTrusted;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGatewayCertificateAuthorityResult build() {
+        }        public GetGatewayCertificateAuthorityResult build() {
             return new GetGatewayCertificateAuthorityResult(id, isTrusted, name, type);
         }
     }

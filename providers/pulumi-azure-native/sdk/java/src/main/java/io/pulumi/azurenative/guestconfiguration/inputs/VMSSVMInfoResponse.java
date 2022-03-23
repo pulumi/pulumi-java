@@ -124,27 +124,22 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
-
         public Builder lastComplianceChecked(String lastComplianceChecked) {
             this.lastComplianceChecked = Objects.requireNonNull(lastComplianceChecked);
             return this;
         }
-
         public Builder latestReportId(String latestReportId) {
             this.latestReportId = Objects.requireNonNull(latestReportId);
             return this;
         }
-
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public Builder vmResourceId(String vmResourceId) {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
-        }
-        public VMSSVMInfoResponse build() {
+        }        public VMSSVMInfoResponse build() {
             return new VMSSVMInfoResponse(complianceStatus, lastComplianceChecked, latestReportId, vmId, vmResourceId);
         }
     }

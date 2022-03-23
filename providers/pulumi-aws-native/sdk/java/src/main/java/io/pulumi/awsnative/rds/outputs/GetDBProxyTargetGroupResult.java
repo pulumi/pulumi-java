@@ -81,22 +81,24 @@ public final class GetDBProxyTargetGroupResult {
             this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
             return this;
         }
-
         public Builder dBClusterIdentifiers(@Nullable List<String> dBClusterIdentifiers) {
             this.dBClusterIdentifiers = dBClusterIdentifiers;
             return this;
         }
-
+        public Builder dBClusterIdentifiers(String... dBClusterIdentifiers) {
+            return dBClusterIdentifiers(List.of(dBClusterIdentifiers));
+        }
         public Builder dBInstanceIdentifiers(@Nullable List<String> dBInstanceIdentifiers) {
             this.dBInstanceIdentifiers = dBInstanceIdentifiers;
             return this;
         }
-
+        public Builder dBInstanceIdentifiers(String... dBInstanceIdentifiers) {
+            return dBInstanceIdentifiers(List.of(dBInstanceIdentifiers));
+        }
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
-        }
-        public GetDBProxyTargetGroupResult build() {
+        }        public GetDBProxyTargetGroupResult build() {
             return new GetDBProxyTargetGroupResult(connectionPoolConfigurationInfo, dBClusterIdentifiers, dBInstanceIdentifiers, targetGroupArn);
         }
     }

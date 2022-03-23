@@ -387,107 +387,92 @@ public final class GetNoteResult {
             this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
             return this;
         }
-
         public Builder baseImage(BasisResponse baseImage) {
             this.baseImage = Objects.requireNonNull(baseImage);
             return this;
         }
-
         public Builder build(BuildResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deployable(DeployableResponse deployable) {
             this.deployable = Objects.requireNonNull(deployable);
             return this;
         }
-
         public Builder discovery(DiscoveryResponse discovery) {
             this.discovery = Objects.requireNonNull(discovery);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder intoto(InTotoResponse intoto) {
             this.intoto = Objects.requireNonNull(intoto);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder $package(PackageResponse $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
-
         public Builder relatedNoteNames(List<String> relatedNoteNames) {
             this.relatedNoteNames = Objects.requireNonNull(relatedNoteNames);
             return this;
         }
-
+        public Builder relatedNoteNames(String... relatedNoteNames) {
+            return relatedNoteNames(List.of(relatedNoteNames));
+        }
         public Builder relatedUrl(List<RelatedUrlResponse> relatedUrl) {
             this.relatedUrl = Objects.requireNonNull(relatedUrl);
             return this;
         }
-
+        public Builder relatedUrl(RelatedUrlResponse... relatedUrl) {
+            return relatedUrl(List.of(relatedUrl));
+        }
         public Builder sbom(DocumentNoteResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
-
         public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public Builder spdxFile(FileNoteResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(PackageInfoNoteResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(RelationshipNoteResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder vulnerability(VulnerabilityResponse vulnerability) {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
-        }
-        public GetNoteResult build() {
+        }        public GetNoteResult build() {
             return new GetNoteResult(attestationAuthority, baseImage, build, createTime, deployable, discovery, expirationTime, intoto, kind, longDescription, name, $package, relatedNoteNames, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, updateTime, vulnerability);
         }
     }

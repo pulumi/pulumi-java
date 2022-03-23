@@ -129,52 +129,42 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.expiresIn = expiresIn;
             return this;
         }
-
         public Builder expiresIn(@Nullable Integer expiresIn) {
             this.expiresIn = Output.ofNullable(expiresIn);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder token(Output<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Output.of(Objects.requireNonNull(token));
             return this;
         }
-
         public Builder tokenType(Output<Either<String,TokenType>> tokenType) {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }
-
         public Builder tokenType(Either<String,TokenType> tokenType) {
             this.tokenType = Output.of(Objects.requireNonNull(tokenType));
             return this;
-        }
-        public AuthInfoArgs build() {
+        }        public AuthInfoArgs build() {
             return new AuthInfoArgs(expiresIn, refreshToken, scope, token, tokenType);
         }
     }

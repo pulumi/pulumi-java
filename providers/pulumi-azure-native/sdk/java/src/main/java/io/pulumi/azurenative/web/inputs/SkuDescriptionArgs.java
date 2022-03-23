@@ -178,82 +178,72 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(CapabilityArgs... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder skuCapacity(@Nullable Output<SkuCapacityArgs> skuCapacity) {
             this.skuCapacity = skuCapacity;
             return this;
         }
-
         public Builder skuCapacity(@Nullable SkuCapacityArgs skuCapacity) {
             this.skuCapacity = Output.ofNullable(skuCapacity);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public SkuDescriptionArgs build() {
+        }        public SkuDescriptionArgs build() {
             return new SkuDescriptionArgs(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
         }
     }

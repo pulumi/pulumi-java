@@ -69,12 +69,10 @@ public final class SourceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder predefinedSource(String predefinedSource) {
             this.predefinedSource = Objects.requireNonNull(predefinedSource);
             return this;
-        }
-        public SourceResponse build() {
+        }        public SourceResponse build() {
             return new SourceResponse(name, predefinedSource);
         }
     }

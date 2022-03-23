@@ -76,12 +76,10 @@ public final class NormalizedCoordinateResponse extends io.pulumi.resources.Invo
             this.x = Objects.requireNonNull(x);
             return this;
         }
-
         public Builder y(Double y) {
             this.y = Objects.requireNonNull(y);
             return this;
-        }
-        public NormalizedCoordinateResponse build() {
+        }        public NormalizedCoordinateResponse build() {
             return new NormalizedCoordinateResponse(x, y);
         }
     }

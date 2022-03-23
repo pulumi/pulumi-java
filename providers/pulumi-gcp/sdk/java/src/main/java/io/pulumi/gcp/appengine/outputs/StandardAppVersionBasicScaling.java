@@ -74,12 +74,10 @@ public final class StandardAppVersionBasicScaling {
             this.idleTimeout = idleTimeout;
             return this;
         }
-
         public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
-        }
-        public StandardAppVersionBasicScaling build() {
+        }        public StandardAppVersionBasicScaling build() {
             return new StandardAppVersionBasicScaling(idleTimeout, maxInstances);
         }
     }

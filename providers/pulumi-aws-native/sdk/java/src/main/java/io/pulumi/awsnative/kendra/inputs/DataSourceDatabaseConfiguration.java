@@ -119,32 +119,26 @@ public final class DataSourceDatabaseConfiguration extends io.pulumi.resources.I
             this.aclConfiguration = aclConfiguration;
             return this;
         }
-
         public Builder columnConfiguration(DataSourceColumnConfiguration columnConfiguration) {
             this.columnConfiguration = Objects.requireNonNull(columnConfiguration);
             return this;
         }
-
         public Builder connectionConfiguration(DataSourceConnectionConfiguration connectionConfiguration) {
             this.connectionConfiguration = Objects.requireNonNull(connectionConfiguration);
             return this;
         }
-
         public Builder databaseEngineType(DataSourceDatabaseEngineType databaseEngineType) {
             this.databaseEngineType = Objects.requireNonNull(databaseEngineType);
             return this;
         }
-
         public Builder sqlConfiguration(@Nullable DataSourceSqlConfiguration sqlConfiguration) {
             this.sqlConfiguration = sqlConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
-        }
-        public DataSourceDatabaseConfiguration build() {
+        }        public DataSourceDatabaseConfiguration build() {
             return new DataSourceDatabaseConfiguration(aclConfiguration, columnConfiguration, connectionConfiguration, databaseEngineType, sqlConfiguration, vpcConfiguration);
         }
     }

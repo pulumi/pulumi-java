@@ -83,12 +83,10 @@ public final class PolicyPropertiesResponse {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
-        }
-        public PolicyPropertiesResponse build() {
+        }        public PolicyPropertiesResponse build() {
             return new PolicyPropertiesResponse(friendlyName, providerSpecificDetails);
         }
     }

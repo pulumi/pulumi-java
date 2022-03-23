@@ -84,12 +84,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
             this.fixedLikelihood = fixedLikelihood;
             return this;
         }
-
         public Builder relativeLikelihood(@Nullable Integer relativeLikelihood) {
             this.relativeLikelihood = relativeLikelihood;
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment(fixedLikelihood, relativeLikelihood);
         }
     }

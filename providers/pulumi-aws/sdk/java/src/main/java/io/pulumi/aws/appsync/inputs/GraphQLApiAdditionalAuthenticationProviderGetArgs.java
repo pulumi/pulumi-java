@@ -109,42 +109,34 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends io.
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder lambdaAuthorizerConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
-
         public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = Output.ofNullable(lambdaAuthorizerConfig);
             return this;
         }
-
         public Builder openidConnectConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig) {
             this.openidConnectConfig = openidConnectConfig;
             return this;
         }
-
         public Builder openidConnectConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs openidConnectConfig) {
             this.openidConnectConfig = Output.ofNullable(openidConnectConfig);
             return this;
         }
-
         public Builder userPoolConfig(@Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig) {
             this.userPoolConfig = userPoolConfig;
             return this;
         }
-
         public Builder userPoolConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs userPoolConfig) {
             this.userPoolConfig = Output.ofNullable(userPoolConfig);
             return this;
-        }
-        public GraphQLApiAdditionalAuthenticationProviderGetArgs build() {
+        }        public GraphQLApiAdditionalAuthenticationProviderGetArgs build() {
             return new GraphQLApiAdditionalAuthenticationProviderGetArgs(authenticationType, lambdaAuthorizerConfig, openidConnectConfig, userPoolConfig);
         }
     }

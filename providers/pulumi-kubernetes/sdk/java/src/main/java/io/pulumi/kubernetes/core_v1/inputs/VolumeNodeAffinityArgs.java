@@ -61,12 +61,10 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
             this.required = required;
             return this;
         }
-
         public Builder required(@Nullable NodeSelectorArgs required) {
             this.required = Output.ofNullable(required);
             return this;
-        }
-        public VolumeNodeAffinityArgs build() {
+        }        public VolumeNodeAffinityArgs build() {
             return new VolumeNodeAffinityArgs(required);
         }
     }

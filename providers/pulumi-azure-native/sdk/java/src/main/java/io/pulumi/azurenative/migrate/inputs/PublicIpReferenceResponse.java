@@ -58,8 +58,7 @@ public final class PublicIpReferenceResponse extends io.pulumi.resources.InvokeA
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
-        }
-        public PublicIpReferenceResponse build() {
+        }        public PublicIpReferenceResponse build() {
             return new PublicIpReferenceResponse(sourceArmResourceId);
         }
     }

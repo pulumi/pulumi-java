@@ -74,22 +74,18 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
             return this;
         }
-
         public Builder amazonSideAsn(String amazonSideAsn) {
             this.amazonSideAsn = Output.of(Objects.requireNonNull(amazonSideAsn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GatewayArgs build() {
+        }        public GatewayArgs build() {
             return new GatewayArgs(amazonSideAsn, name);
         }
     }

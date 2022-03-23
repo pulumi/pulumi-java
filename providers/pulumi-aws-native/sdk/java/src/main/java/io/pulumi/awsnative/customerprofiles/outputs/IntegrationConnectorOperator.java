@@ -83,27 +83,22 @@ public final class IntegrationConnectorOperator {
             this.marketo = marketo;
             return this;
         }
-
         public Builder s3(@Nullable IntegrationS3ConnectorOperator s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder salesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder serviceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder zendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
             this.zendesk = zendesk;
             return this;
-        }
-        public IntegrationConnectorOperator build() {
+        }        public IntegrationConnectorOperator build() {
             return new IntegrationConnectorOperator(marketo, s3, salesforce, serviceNow, zendesk);
         }
     }

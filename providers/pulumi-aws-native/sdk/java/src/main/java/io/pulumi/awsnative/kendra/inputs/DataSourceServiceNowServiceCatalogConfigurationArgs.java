@@ -117,62 +117,59 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = Output.ofNullable(crawlAttachments);
             return this;
         }
-
         public Builder documentDataFieldName(Output<String> documentDataFieldName) {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Output.of(Objects.requireNonNull(documentDataFieldName));
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable Output<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
             return this;
         }
-
         public Builder excludeAttachmentFilePatterns(@Nullable Output<List<String>> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
-
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = Output.ofNullable(excludeAttachmentFilePatterns);
             return this;
         }
-
+        public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
+            return excludeAttachmentFilePatterns(List.of(excludeAttachmentFilePatterns));
+        }
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder includeAttachmentFilePatterns(@Nullable Output<List<String>> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
-
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = Output.ofNullable(includeAttachmentFilePatterns);
             return this;
         }
-        public DataSourceServiceNowServiceCatalogConfigurationArgs build() {
+        public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {
+            return includeAttachmentFilePatterns(List.of(includeAttachmentFilePatterns));
+        }        public DataSourceServiceNowServiceCatalogConfigurationArgs build() {
             return new DataSourceServiceNowServiceCatalogConfigurationArgs(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, includeAttachmentFilePatterns);
         }
     }

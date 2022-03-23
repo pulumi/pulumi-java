@@ -110,42 +110,34 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.binaryName = binaryName;
             return this;
         }
-
         public Builder binaryName(@Nullable String binaryName) {
             this.binaryName = Output.ofNullable(binaryName);
             return this;
         }
-
         public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = Output.ofNullable(productName);
             return this;
         }
-
         public Builder publisherName(@Nullable Output<String> publisherName) {
             this.publisherName = publisherName;
             return this;
         }
-
         public Builder publisherName(@Nullable String publisherName) {
             this.publisherName = Output.ofNullable(publisherName);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public PublisherInfoArgs build() {
+        }        public PublisherInfoArgs build() {
             return new PublisherInfoArgs(binaryName, productName, publisherName, version);
         }
     }

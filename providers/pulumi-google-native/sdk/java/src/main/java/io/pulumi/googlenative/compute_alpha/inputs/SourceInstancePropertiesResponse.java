@@ -294,77 +294,74 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
-
         public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disks(List<SavedAttachedDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(SavedAttachedDiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder keyRevocationActionType(String keyRevocationActionType) {
             this.keyRevocationActionType = Objects.requireNonNull(keyRevocationActionType);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder postKeyRevocationActionType(String postKeyRevocationActionType) {
             this.postKeyRevocationActionType = Objects.requireNonNull(postKeyRevocationActionType);
             return this;
         }
-
         public Builder scheduling(SchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
-
         public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
-
+        public Builder serviceAccounts(ServiceAccountResponse... serviceAccounts) {
+            return serviceAccounts(List.of(serviceAccounts));
+        }
         public Builder tags(TagsResponse tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public SourceInstancePropertiesResponse build() {
+        }        public SourceInstancePropertiesResponse build() {
             return new SourceInstancePropertiesResponse(canIpForward, deletionProtection, description, disks, guestAccelerators, keyRevocationActionType, labels, machineType, metadata, minCpuPlatform, networkInterfaces, postKeyRevocationActionType, scheduling, serviceAccounts, tags);
         }
     }

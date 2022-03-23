@@ -55,12 +55,16 @@ public final class LoggingRuleResponseHiddenPropertyPaths {
             this.hiddenPathsOnRequest = hiddenPathsOnRequest;
             return this;
         }
-
+        public Builder hiddenPathsOnRequest(String... hiddenPathsOnRequest) {
+            return hiddenPathsOnRequest(List.of(hiddenPathsOnRequest));
+        }
         public Builder hiddenPathsOnResponse(@Nullable List<String> hiddenPathsOnResponse) {
             this.hiddenPathsOnResponse = hiddenPathsOnResponse;
             return this;
         }
-        public LoggingRuleResponseHiddenPropertyPaths build() {
+        public Builder hiddenPathsOnResponse(String... hiddenPathsOnResponse) {
+            return hiddenPathsOnResponse(List.of(hiddenPathsOnResponse));
+        }        public LoggingRuleResponseHiddenPropertyPaths build() {
             return new LoggingRuleResponseHiddenPropertyPaths(hiddenPathsOnRequest, hiddenPathsOnResponse);
         }
     }

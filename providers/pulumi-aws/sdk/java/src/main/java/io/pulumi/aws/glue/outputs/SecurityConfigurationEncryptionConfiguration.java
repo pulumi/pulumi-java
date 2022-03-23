@@ -71,17 +71,14 @@ public final class SecurityConfigurationEncryptionConfiguration {
             this.cloudwatchEncryption = Objects.requireNonNull(cloudwatchEncryption);
             return this;
         }
-
         public Builder jobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption) {
             this.jobBookmarksEncryption = Objects.requireNonNull(jobBookmarksEncryption);
             return this;
         }
-
         public Builder s3Encryption(SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
             this.s3Encryption = Objects.requireNonNull(s3Encryption);
             return this;
-        }
-        public SecurityConfigurationEncryptionConfiguration build() {
+        }        public SecurityConfigurationEncryptionConfiguration build() {
             return new SecurityConfigurationEncryptionConfiguration(cloudwatchEncryption, jobBookmarksEncryption, s3Encryption);
         }
     }

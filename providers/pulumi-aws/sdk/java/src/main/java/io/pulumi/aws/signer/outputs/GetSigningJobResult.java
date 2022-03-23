@@ -305,87 +305,79 @@ public final class GetSigningJobResult {
             this.completedAt = Objects.requireNonNull(completedAt);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder jobInvoker(String jobInvoker) {
             this.jobInvoker = Objects.requireNonNull(jobInvoker);
             return this;
         }
-
         public Builder jobOwner(String jobOwner) {
             this.jobOwner = Objects.requireNonNull(jobOwner);
             return this;
         }
-
         public Builder platformDisplayName(String platformDisplayName) {
             this.platformDisplayName = Objects.requireNonNull(platformDisplayName);
             return this;
         }
-
         public Builder platformId(String platformId) {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileVersion(String profileVersion) {
             this.profileVersion = Objects.requireNonNull(profileVersion);
             return this;
         }
-
         public Builder requestedBy(String requestedBy) {
             this.requestedBy = Objects.requireNonNull(requestedBy);
             return this;
         }
-
         public Builder revocationRecords(List<GetSigningJobRevocationRecord> revocationRecords) {
             this.revocationRecords = Objects.requireNonNull(revocationRecords);
             return this;
         }
-
+        public Builder revocationRecords(GetSigningJobRevocationRecord... revocationRecords) {
+            return revocationRecords(List.of(revocationRecords));
+        }
         public Builder signatureExpiresAt(String signatureExpiresAt) {
             this.signatureExpiresAt = Objects.requireNonNull(signatureExpiresAt);
             return this;
         }
-
         public Builder signedObjects(List<GetSigningJobSignedObject> signedObjects) {
             this.signedObjects = Objects.requireNonNull(signedObjects);
             return this;
         }
-
+        public Builder signedObjects(GetSigningJobSignedObject... signedObjects) {
+            return signedObjects(List.of(signedObjects));
+        }
         public Builder sources(List<GetSigningJobSource> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
+        public Builder sources(GetSigningJobSource... sources) {
+            return sources(List.of(sources));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusReason(String statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
-        }
-        public GetSigningJobResult build() {
+        }        public GetSigningJobResult build() {
             return new GetSigningJobResult(completedAt, createdAt, id, jobId, jobInvoker, jobOwner, platformDisplayName, platformId, profileName, profileVersion, requestedBy, revocationRecords, signatureExpiresAt, signedObjects, sources, status, statusReason);
         }
     }

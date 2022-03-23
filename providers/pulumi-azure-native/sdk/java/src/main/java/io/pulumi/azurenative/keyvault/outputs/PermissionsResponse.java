@@ -103,22 +103,30 @@ public final class PermissionsResponse {
             this.certificates = certificates;
             return this;
         }
-
+        public Builder certificates(String... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder keys(@Nullable List<String> keys) {
             this.keys = keys;
             return this;
         }
-
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }
         public Builder secrets(@Nullable List<String> secrets) {
             this.secrets = secrets;
             return this;
         }
-
+        public Builder secrets(String... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder storage(@Nullable List<String> storage) {
             this.storage = storage;
             return this;
         }
-        public PermissionsResponse build() {
+        public Builder storage(String... storage) {
+            return storage(List.of(storage));
+        }        public PermissionsResponse build() {
             return new PermissionsResponse(certificates, keys, secrets, storage);
         }
     }

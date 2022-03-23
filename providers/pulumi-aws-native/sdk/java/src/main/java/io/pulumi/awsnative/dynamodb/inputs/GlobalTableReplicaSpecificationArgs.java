@@ -133,72 +133,64 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
-
         public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
             this.contributorInsightsSpecification = Output.ofNullable(contributorInsightsSpecification);
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = Output.ofNullable(globalSecondaryIndexes);
             return this;
         }
-
+        public Builder globalSecondaryIndexes(GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs... globalSecondaryIndexes) {
+            return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
+        }
         public Builder pointInTimeRecoverySpecification(@Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification) {
             this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
             return this;
         }
-
         public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecificationArgs pointInTimeRecoverySpecification) {
             this.pointInTimeRecoverySpecification = Output.ofNullable(pointInTimeRecoverySpecification);
             return this;
         }
-
         public Builder readProvisionedThroughputSettings(@Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
-
         public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = Output.ofNullable(readProvisionedThroughputSettings);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder sSESpecification(@Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
-
         public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecificationArgs sSESpecification) {
             this.sSESpecification = Output.ofNullable(sSESpecification);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<GlobalTableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<GlobalTableTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public GlobalTableReplicaSpecificationArgs build() {
+        public Builder tags(GlobalTableTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public GlobalTableReplicaSpecificationArgs build() {
             return new GlobalTableReplicaSpecificationArgs(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
         }
     }

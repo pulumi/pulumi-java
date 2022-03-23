@@ -76,22 +76,18 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             this.retainedBackups = Objects.requireNonNull(retainedBackups);
             return this;
         }
-
         public Builder retainedBackups(Integer retainedBackups) {
             this.retainedBackups = Output.of(Objects.requireNonNull(retainedBackups));
             return this;
         }
-
         public Builder retentionUnit(@Nullable Output<String> retentionUnit) {
             this.retentionUnit = retentionUnit;
             return this;
         }
-
         public Builder retentionUnit(@Nullable String retentionUnit) {
             this.retentionUnit = Output.ofNullable(retentionUnit);
             return this;
-        }
-        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs build() {
+        }        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs build() {
             return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs(retainedBackups, retentionUnit);
         }
     }

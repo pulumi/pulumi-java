@@ -51,8 +51,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
         public Builder realtimeMetricsSubscriptionStatus(String realtimeMetricsSubscriptionStatus) {
             this.realtimeMetricsSubscriptionStatus = Objects.requireNonNull(realtimeMetricsSubscriptionStatus);
             return this;
-        }
-        public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig build() {
+        }        public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig build() {
             return new MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionStatus);
         }
     }

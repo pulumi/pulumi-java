@@ -57,12 +57,10 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public ClusterIdentityUserAssignedIdentitiesArgs build() {
+        }        public ClusterIdentityUserAssignedIdentitiesArgs build() {
             return new ClusterIdentityUserAssignedIdentitiesArgs(tenantId);
         }
     }

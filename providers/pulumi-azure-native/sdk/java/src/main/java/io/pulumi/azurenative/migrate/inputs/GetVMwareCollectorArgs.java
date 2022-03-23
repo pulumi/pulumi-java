@@ -88,17 +88,14 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vmWareCollectorName(String vmWareCollectorName) {
             this.vmWareCollectorName = Objects.requireNonNull(vmWareCollectorName);
             return this;
-        }
-        public GetVMwareCollectorArgs build() {
+        }        public GetVMwareCollectorArgs build() {
             return new GetVMwareCollectorArgs(projectName, resourceGroupName, vmWareCollectorName);
         }
     }

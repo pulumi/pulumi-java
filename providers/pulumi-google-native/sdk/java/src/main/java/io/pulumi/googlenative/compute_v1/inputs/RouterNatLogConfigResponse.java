@@ -77,12 +77,10 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
-        }
-        public RouterNatLogConfigResponse build() {
+        }        public RouterNatLogConfigResponse build() {
             return new RouterNatLogConfigResponse(enable, filter);
         }
     }

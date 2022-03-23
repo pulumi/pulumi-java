@@ -71,12 +71,10 @@ public final class InboundIpRuleResponse {
             this.action = action;
             return this;
         }
-
         public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = ipMask;
             return this;
-        }
-        public InboundIpRuleResponse build() {
+        }        public InboundIpRuleResponse build() {
             return new InboundIpRuleResponse(action, ipMask);
         }
     }

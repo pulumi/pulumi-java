@@ -88,17 +88,14 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage 
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
             this.imageVersionNumber = imageVersionNumber;
             return this;
-        }
-        public DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage build() {
+        }        public DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage build() {
             return new DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage(appImageConfigName, imageName, imageVersionNumber);
         }
     }

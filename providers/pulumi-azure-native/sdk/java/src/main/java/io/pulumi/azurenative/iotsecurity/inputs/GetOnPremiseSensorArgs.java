@@ -54,8 +54,7 @@ public final class GetOnPremiseSensorArgs extends io.pulumi.resources.InvokeArgs
         public Builder onPremiseSensorName(String onPremiseSensorName) {
             this.onPremiseSensorName = Objects.requireNonNull(onPremiseSensorName);
             return this;
-        }
-        public GetOnPremiseSensorArgs build() {
+        }        public GetOnPremiseSensorArgs build() {
             return new GetOnPremiseSensorArgs(onPremiseSensorName);
         }
     }

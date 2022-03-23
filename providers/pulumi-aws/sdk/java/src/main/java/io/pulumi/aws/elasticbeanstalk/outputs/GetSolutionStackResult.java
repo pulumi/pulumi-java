@@ -88,22 +88,18 @@ public final class GetSolutionStackResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nameRegex(String nameRegex) {
             this.nameRegex = Objects.requireNonNull(nameRegex);
             return this;
-        }
-        public GetSolutionStackResult build() {
+        }        public GetSolutionStackResult build() {
             return new GetSolutionStackResult(id, mostRecent, name, nameRegex);
         }
     }

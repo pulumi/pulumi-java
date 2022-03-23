@@ -129,52 +129,42 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
             this.routingConfiguration = Output.ofNullable(routingConfiguration);
             return this;
         }
-
         public Builder vpnClientAddressPool(@Nullable Output<AddressSpaceArgs> vpnClientAddressPool) {
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }
-
         public Builder vpnClientAddressPool(@Nullable AddressSpaceArgs vpnClientAddressPool) {
             this.vpnClientAddressPool = Output.ofNullable(vpnClientAddressPool);
             return this;
-        }
-        public P2SConnectionConfigurationArgs build() {
+        }        public P2SConnectionConfigurationArgs build() {
             return new P2SConnectionConfigurationArgs(enableInternetSecurity, id, name, routingConfiguration, vpnClientAddressPool);
         }
     }

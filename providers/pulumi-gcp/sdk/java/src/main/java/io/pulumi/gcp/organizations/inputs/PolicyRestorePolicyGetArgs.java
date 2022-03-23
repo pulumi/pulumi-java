@@ -56,12 +56,10 @@ public final class PolicyRestorePolicyGetArgs extends io.pulumi.resources.Resour
             this.$default = Objects.requireNonNull($default);
             return this;
         }
-
         public Builder $default(Boolean $default) {
             this.$default = Output.of(Objects.requireNonNull($default));
             return this;
-        }
-        public PolicyRestorePolicyGetArgs build() {
+        }        public PolicyRestorePolicyGetArgs build() {
             return new PolicyRestorePolicyGetArgs($default);
         }
     }

@@ -141,62 +141,53 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder channelId(@Nullable Output<String> channelId) {
             this.channelId = channelId;
             return this;
         }
-
         public Builder channelId(@Nullable String channelId) {
             this.channelId = Output.ofNullable(channelId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hlsIngests(@Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests) {
             this.hlsIngests = hlsIngests;
             return this;
         }
-
         public Builder hlsIngests(@Nullable List<ChannelHlsIngestGetArgs> hlsIngests) {
             this.hlsIngests = Output.ofNullable(hlsIngests);
             return this;
         }
-
+        public Builder hlsIngests(ChannelHlsIngestGetArgs... hlsIngests) {
+            return hlsIngests(List.of(hlsIngests));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ChannelState build() {
+        }        public ChannelState build() {
             return new ChannelState(arn, channelId, description, hlsIngests, tags, tagsAll);
         }
     }

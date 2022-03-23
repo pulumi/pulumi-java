@@ -70,12 +70,10 @@ public final class DataSourceParametersTwitter {
             this.maxRows = Objects.requireNonNull(maxRows);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
-        }
-        public DataSourceParametersTwitter build() {
+        }        public DataSourceParametersTwitter build() {
             return new DataSourceParametersTwitter(maxRows, query);
         }
     }

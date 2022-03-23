@@ -135,32 +135,29 @@ public final class GetBrokerNodesNodeInfoList {
             this.attachedEniId = Objects.requireNonNull(attachedEniId);
             return this;
         }
-
         public Builder brokerId(Double brokerId) {
             this.brokerId = Objects.requireNonNull(brokerId);
             return this;
         }
-
         public Builder clientSubnet(String clientSubnet) {
             this.clientSubnet = Objects.requireNonNull(clientSubnet);
             return this;
         }
-
         public Builder clientVpcIpAddress(String clientVpcIpAddress) {
             this.clientVpcIpAddress = Objects.requireNonNull(clientVpcIpAddress);
             return this;
         }
-
         public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(String... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder nodeArn(String nodeArn) {
             this.nodeArn = Objects.requireNonNull(nodeArn);
             return this;
-        }
-        public GetBrokerNodesNodeInfoList build() {
+        }        public GetBrokerNodesNodeInfoList build() {
             return new GetBrokerNodesNodeInfoList(attachedEniId, brokerId, clientSubnet, clientVpcIpAddress, endpoints, nodeArn);
         }
     }

@@ -151,37 +151,30 @@ public final class EdifactSchemaReferenceResponse {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder messageRelease(String messageRelease) {
             this.messageRelease = Objects.requireNonNull(messageRelease);
             return this;
         }
-
         public Builder messageVersion(String messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
-
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
-        }
-        public EdifactSchemaReferenceResponse build() {
+        }        public EdifactSchemaReferenceResponse build() {
             return new EdifactSchemaReferenceResponse(associationAssignedCode, messageId, messageRelease, messageVersion, schemaName, senderApplicationId, senderApplicationQualifier);
         }
     }

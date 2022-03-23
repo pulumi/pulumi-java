@@ -57,12 +57,10 @@ public final class VirtualRouterSpecGetArgs extends io.pulumi.resources.Resource
             this.listener = Objects.requireNonNull(listener);
             return this;
         }
-
         public Builder listener(VirtualRouterSpecListenerGetArgs listener) {
             this.listener = Output.of(Objects.requireNonNull(listener));
             return this;
-        }
-        public VirtualRouterSpecGetArgs build() {
+        }        public VirtualRouterSpecGetArgs build() {
             return new VirtualRouterSpecGetArgs(listener);
         }
     }

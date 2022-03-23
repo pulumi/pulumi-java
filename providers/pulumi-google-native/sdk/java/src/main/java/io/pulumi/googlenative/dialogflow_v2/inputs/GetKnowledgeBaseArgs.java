@@ -78,17 +78,14 @@ public final class GetKnowledgeBaseArgs extends io.pulumi.resources.InvokeArgs {
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetKnowledgeBaseArgs build() {
+        }        public GetKnowledgeBaseArgs build() {
             return new GetKnowledgeBaseArgs(knowledgeBaseId, location, project);
         }
     }

@@ -216,102 +216,85 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             this.cors = cors;
             return this;
         }
-
         public Builder cors(@Nullable SignalRCorsSettingsArgs cors) {
             this.cors = Output.ofNullable(cors);
             return this;
         }
-
         public Builder features(@Nullable Output<List<SignalRFeatureArgs>> features) {
             this.features = features;
             return this;
         }
-
         public Builder features(@Nullable List<SignalRFeatureArgs> features) {
             this.features = Output.ofNullable(features);
             return this;
         }
-
+        public Builder features(SignalRFeatureArgs... features) {
+            return features(List.of(features));
+        }
         public Builder kind(@Nullable Output<Either<String,ServiceKind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,ServiceKind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkACLs(@Nullable Output<SignalRNetworkACLsArgs> networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
-
         public Builder networkACLs(@Nullable SignalRNetworkACLsArgs networkACLs) {
             this.networkACLs = Output.ofNullable(networkACLs);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ResourceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder upstream(@Nullable Output<ServerlessUpstreamSettingsArgs> upstream) {
             this.upstream = upstream;
             return this;
         }
-
         public Builder upstream(@Nullable ServerlessUpstreamSettingsArgs upstream) {
             this.upstream = Output.ofNullable(upstream);
             return this;
-        }
-        public SignalRArgs build() {
+        }        public SignalRArgs build() {
             return new SignalRArgs(cors, features, kind, location, networkACLs, resourceGroupName, resourceName, sku, tags, upstream);
         }
     }

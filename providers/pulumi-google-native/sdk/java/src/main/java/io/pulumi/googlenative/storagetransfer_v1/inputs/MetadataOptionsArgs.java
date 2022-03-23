@@ -181,82 +181,66 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.acl = acl;
             return this;
         }
-
         public Builder acl(@Nullable MetadataOptionsAcl acl) {
             this.acl = Output.ofNullable(acl);
             return this;
         }
-
         public Builder gid(@Nullable Output<MetadataOptionsGid> gid) {
             this.gid = gid;
             return this;
         }
-
         public Builder gid(@Nullable MetadataOptionsGid gid) {
             this.gid = Output.ofNullable(gid);
             return this;
         }
-
         public Builder kmsKey(@Nullable Output<MetadataOptionsKmsKey> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable MetadataOptionsKmsKey kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
-
         public Builder mode(@Nullable Output<MetadataOptionsMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable MetadataOptionsMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<MetadataOptionsStorageClass> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable MetadataOptionsStorageClass storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
-
         public Builder symlink(@Nullable Output<MetadataOptionsSymlink> symlink) {
             this.symlink = symlink;
             return this;
         }
-
         public Builder symlink(@Nullable MetadataOptionsSymlink symlink) {
             this.symlink = Output.ofNullable(symlink);
             return this;
         }
-
         public Builder temporaryHold(@Nullable Output<MetadataOptionsTemporaryHold> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
-
         public Builder temporaryHold(@Nullable MetadataOptionsTemporaryHold temporaryHold) {
             this.temporaryHold = Output.ofNullable(temporaryHold);
             return this;
         }
-
         public Builder uid(@Nullable Output<MetadataOptionsUid> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable MetadataOptionsUid uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public MetadataOptionsArgs build() {
+        }        public MetadataOptionsArgs build() {
             return new MetadataOptionsArgs(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
         }
     }

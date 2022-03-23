@@ -78,17 +78,14 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetBackupRunArgs build() {
+        }        public GetBackupRunArgs build() {
             return new GetBackupRunArgs(id, instance, project);
         }
     }

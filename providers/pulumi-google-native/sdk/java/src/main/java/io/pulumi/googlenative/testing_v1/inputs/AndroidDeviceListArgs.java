@@ -61,12 +61,13 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }
-
         public Builder androidDevices(List<AndroidDeviceArgs> androidDevices) {
             this.androidDevices = Output.of(Objects.requireNonNull(androidDevices));
             return this;
         }
-        public AndroidDeviceListArgs build() {
+        public Builder androidDevices(AndroidDeviceArgs... androidDevices) {
+            return androidDevices(List.of(androidDevices));
+        }        public AndroidDeviceListArgs build() {
             return new AndroidDeviceListArgs(androidDevices);
         }
     }

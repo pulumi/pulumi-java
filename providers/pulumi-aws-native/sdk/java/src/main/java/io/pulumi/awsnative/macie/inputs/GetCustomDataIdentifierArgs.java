@@ -54,8 +54,7 @@ public final class GetCustomDataIdentifierArgs extends io.pulumi.resources.Invok
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetCustomDataIdentifierArgs build() {
+        }        public GetCustomDataIdentifierArgs build() {
             return new GetCustomDataIdentifierArgs(id);
         }
     }

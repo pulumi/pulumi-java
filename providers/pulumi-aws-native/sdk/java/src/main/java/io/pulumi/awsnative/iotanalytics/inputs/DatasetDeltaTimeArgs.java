@@ -66,22 +66,18 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
             this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
             return this;
         }
-
         public Builder offsetSeconds(Integer offsetSeconds) {
             this.offsetSeconds = Output.of(Objects.requireNonNull(offsetSeconds));
             return this;
         }
-
         public Builder timeExpression(Output<String> timeExpression) {
             this.timeExpression = Objects.requireNonNull(timeExpression);
             return this;
         }
-
         public Builder timeExpression(String timeExpression) {
             this.timeExpression = Output.of(Objects.requireNonNull(timeExpression));
             return this;
-        }
-        public DatasetDeltaTimeArgs build() {
+        }        public DatasetDeltaTimeArgs build() {
             return new DatasetDeltaTimeArgs(offsetSeconds, timeExpression);
         }
     }

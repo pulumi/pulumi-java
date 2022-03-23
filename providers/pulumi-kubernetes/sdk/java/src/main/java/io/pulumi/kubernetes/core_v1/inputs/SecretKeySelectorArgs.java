@@ -95,32 +95,26 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
-        }
-        public SecretKeySelectorArgs build() {
+        }        public SecretKeySelectorArgs build() {
             return new SecretKeySelectorArgs(key, name, optional);
         }
     }

@@ -77,12 +77,10 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends io.pulumi.re
             this.ranges = Objects.requireNonNull(ranges);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VideoSequenceAbsoluteTimeMarkersResponse build() {
+        }        public VideoSequenceAbsoluteTimeMarkersResponse build() {
             return new VideoSequenceAbsoluteTimeMarkersResponse(ranges, type);
         }
     }

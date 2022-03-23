@@ -104,22 +104,18 @@ public final class ComputeInstanceSshSettingsResponse {
             this.adminPublicKey = adminPublicKey;
             return this;
         }
-
         public Builder adminUserName(String adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
-
         public Builder sshPort(Integer sshPort) {
             this.sshPort = Objects.requireNonNull(sshPort);
             return this;
         }
-
         public Builder sshPublicAccess(@Nullable String sshPublicAccess) {
             this.sshPublicAccess = sshPublicAccess;
             return this;
-        }
-        public ComputeInstanceSshSettingsResponse build() {
+        }        public ComputeInstanceSshSettingsResponse build() {
             return new ComputeInstanceSshSettingsResponse(adminPublicKey, adminUserName, sshPort, sshPublicAccess);
         }
     }

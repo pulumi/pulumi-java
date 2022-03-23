@@ -75,22 +75,18 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder objectLambdaConfiguration(Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
             this.objectLambdaConfiguration = Objects.requireNonNull(objectLambdaConfiguration);
             return this;
         }
-
         public Builder objectLambdaConfiguration(AccessPointObjectLambdaConfigurationArgs objectLambdaConfiguration) {
             this.objectLambdaConfiguration = Output.of(Objects.requireNonNull(objectLambdaConfiguration));
             return this;
-        }
-        public AccessPointArgs build() {
+        }        public AccessPointArgs build() {
             return new AccessPointArgs(name, objectLambdaConfiguration);
         }
     }

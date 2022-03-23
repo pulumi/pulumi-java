@@ -122,52 +122,42 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
-
         public Builder peeringServiceName(String peeringServiceName) {
             this.peeringServiceName = Output.of(Objects.requireNonNull(peeringServiceName));
             return this;
         }
-
         public Builder peeringServicePrefixKey(@Nullable Output<String> peeringServicePrefixKey) {
             this.peeringServicePrefixKey = peeringServicePrefixKey;
             return this;
         }
-
         public Builder peeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
             this.peeringServicePrefixKey = Output.ofNullable(peeringServicePrefixKey);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder prefixName(@Nullable Output<String> prefixName) {
             this.prefixName = prefixName;
             return this;
         }
-
         public Builder prefixName(@Nullable String prefixName) {
             this.prefixName = Output.ofNullable(prefixName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrefixArgs build() {
+        }        public PrefixArgs build() {
             return new PrefixArgs(peeringServiceName, peeringServicePrefixKey, prefix, prefixName, resourceGroupName);
         }
     }

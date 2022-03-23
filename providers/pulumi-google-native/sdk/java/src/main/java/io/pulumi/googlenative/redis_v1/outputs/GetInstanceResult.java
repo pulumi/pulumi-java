@@ -542,157 +542,132 @@ public final class GetInstanceResult {
             this.alternativeLocationId = Objects.requireNonNull(alternativeLocationId);
             return this;
         }
-
         public Builder authEnabled(Boolean authEnabled) {
             this.authEnabled = Objects.requireNonNull(authEnabled);
             return this;
         }
-
         public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
-
         public Builder connectMode(String connectMode) {
             this.connectMode = Objects.requireNonNull(connectMode);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder currentLocationId(String currentLocationId) {
             this.currentLocationId = Objects.requireNonNull(currentLocationId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maintenancePolicy(MaintenancePolicyResponse maintenancePolicy) {
             this.maintenancePolicy = Objects.requireNonNull(maintenancePolicy);
             return this;
         }
-
         public Builder maintenanceSchedule(MaintenanceScheduleResponse maintenanceSchedule) {
             this.maintenanceSchedule = Objects.requireNonNull(maintenanceSchedule);
             return this;
         }
-
         public Builder memorySizeGb(Integer memorySizeGb) {
             this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodes(List<NodeInfoResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
+        public Builder nodes(NodeInfoResponse... nodes) {
+            return nodes(List.of(nodes));
+        }
         public Builder persistenceConfig(PersistenceConfigResponse persistenceConfig) {
             this.persistenceConfig = Objects.requireNonNull(persistenceConfig);
             return this;
         }
-
         public Builder persistenceIamIdentity(String persistenceIamIdentity) {
             this.persistenceIamIdentity = Objects.requireNonNull(persistenceIamIdentity);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder readEndpoint(String readEndpoint) {
             this.readEndpoint = Objects.requireNonNull(readEndpoint);
             return this;
         }
-
         public Builder readEndpointPort(Integer readEndpointPort) {
             this.readEndpointPort = Objects.requireNonNull(readEndpointPort);
             return this;
         }
-
         public Builder readReplicasMode(String readReplicasMode) {
             this.readReplicasMode = Objects.requireNonNull(readReplicasMode);
             return this;
         }
-
         public Builder redisConfigs(Map<String,String> redisConfigs) {
             this.redisConfigs = Objects.requireNonNull(redisConfigs);
             return this;
         }
-
         public Builder redisVersion(String redisVersion) {
             this.redisVersion = Objects.requireNonNull(redisVersion);
             return this;
         }
-
         public Builder replicaCount(Integer replicaCount) {
             this.replicaCount = Objects.requireNonNull(replicaCount);
             return this;
         }
-
         public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
-
         public Builder secondaryIpRange(String secondaryIpRange) {
             this.secondaryIpRange = Objects.requireNonNull(secondaryIpRange);
             return this;
         }
-
         public Builder serverCaCerts(List<TlsCertificateResponse> serverCaCerts) {
             this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
             return this;
         }
-
+        public Builder serverCaCerts(TlsCertificateResponse... serverCaCerts) {
+            return serverCaCerts(List.of(serverCaCerts));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder transitEncryptionMode(String transitEncryptionMode) {
             this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(alternativeLocationId, authEnabled, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, labels, location, maintenancePolicy, maintenanceSchedule, memorySizeGb, name, nodes, persistenceConfig, persistenceIamIdentity, port, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, replicaCount, reservedIpRange, secondaryIpRange, serverCaCerts, state, statusMessage, tier, transitEncryptionMode);
         }
     }

@@ -73,12 +73,13 @@ public final class GetAvailabilityZoneFilter extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetAvailabilityZoneFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetAvailabilityZoneFilter build() {
             return new GetAvailabilityZoneFilter(name, values);
         }
     }

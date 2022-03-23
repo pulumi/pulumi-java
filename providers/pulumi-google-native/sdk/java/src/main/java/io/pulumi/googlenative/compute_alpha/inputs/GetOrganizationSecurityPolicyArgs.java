@@ -50,8 +50,7 @@ public final class GetOrganizationSecurityPolicyArgs extends io.pulumi.resources
         public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
-        }
-        public GetOrganizationSecurityPolicyArgs build() {
+        }        public GetOrganizationSecurityPolicyArgs build() {
             return new GetOrganizationSecurityPolicyArgs(securityPolicy);
         }
     }

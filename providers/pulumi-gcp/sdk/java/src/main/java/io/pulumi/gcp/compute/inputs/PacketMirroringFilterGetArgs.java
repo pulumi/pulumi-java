@@ -95,32 +95,32 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
             this.cidrRanges = cidrRanges;
             return this;
         }
-
         public Builder cidrRanges(@Nullable List<String> cidrRanges) {
             this.cidrRanges = Output.ofNullable(cidrRanges);
             return this;
         }
-
+        public Builder cidrRanges(String... cidrRanges) {
+            return cidrRanges(List.of(cidrRanges));
+        }
         public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder ipProtocols(@Nullable Output<List<String>> ipProtocols) {
             this.ipProtocols = ipProtocols;
             return this;
         }
-
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
             this.ipProtocols = Output.ofNullable(ipProtocols);
             return this;
         }
-        public PacketMirroringFilterGetArgs build() {
+        public Builder ipProtocols(String... ipProtocols) {
+            return ipProtocols(List.of(ipProtocols));
+        }        public PacketMirroringFilterGetArgs build() {
             return new PacketMirroringFilterGetArgs(cidrRanges, direction, ipProtocols);
         }
     }

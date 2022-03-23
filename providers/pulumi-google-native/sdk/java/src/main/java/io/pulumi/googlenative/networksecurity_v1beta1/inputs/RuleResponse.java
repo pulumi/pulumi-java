@@ -78,12 +78,16 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
-
+        public Builder destinations(DestinationResponse... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder sources(List<SourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-        public RuleResponse build() {
+        public Builder sources(SourceResponse... sources) {
+            return sources(List.of(sources));
+        }        public RuleResponse build() {
             return new RuleResponse(destinations, sources);
         }
     }

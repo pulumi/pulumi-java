@@ -385,212 +385,170 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder elasticsearchSettings(@Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings) {
             this.elasticsearchSettings = elasticsearchSettings;
             return this;
         }
-
         public Builder elasticsearchSettings(@Nullable EndpointElasticsearchSettingsArgs elasticsearchSettings) {
             this.elasticsearchSettings = Output.ofNullable(elasticsearchSettings);
             return this;
         }
-
         public Builder endpointId(Output<String> endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
-
         public Builder endpointId(String endpointId) {
             this.endpointId = Output.of(Objects.requireNonNull(endpointId));
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder engineName(Output<String> engineName) {
             this.engineName = Objects.requireNonNull(engineName);
             return this;
         }
-
         public Builder engineName(String engineName) {
             this.engineName = Output.of(Objects.requireNonNull(engineName));
             return this;
         }
-
         public Builder extraConnectionAttributes(@Nullable Output<String> extraConnectionAttributes) {
             this.extraConnectionAttributes = extraConnectionAttributes;
             return this;
         }
-
         public Builder extraConnectionAttributes(@Nullable String extraConnectionAttributes) {
             this.extraConnectionAttributes = Output.ofNullable(extraConnectionAttributes);
             return this;
         }
-
         public Builder kafkaSettings(@Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings) {
             this.kafkaSettings = kafkaSettings;
             return this;
         }
-
         public Builder kafkaSettings(@Nullable EndpointKafkaSettingsArgs kafkaSettings) {
             this.kafkaSettings = Output.ofNullable(kafkaSettings);
             return this;
         }
-
         public Builder kinesisSettings(@Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings) {
             this.kinesisSettings = kinesisSettings;
             return this;
         }
-
         public Builder kinesisSettings(@Nullable EndpointKinesisSettingsArgs kinesisSettings) {
             this.kinesisSettings = Output.ofNullable(kinesisSettings);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder mongodbSettings(@Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings) {
             this.mongodbSettings = mongodbSettings;
             return this;
         }
-
         public Builder mongodbSettings(@Nullable EndpointMongodbSettingsArgs mongodbSettings) {
             this.mongodbSettings = Output.ofNullable(mongodbSettings);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder s3Settings(@Nullable Output<EndpointS3SettingsArgs> s3Settings) {
             this.s3Settings = s3Settings;
             return this;
         }
-
         public Builder s3Settings(@Nullable EndpointS3SettingsArgs s3Settings) {
             this.s3Settings = Output.ofNullable(s3Settings);
             return this;
         }
-
         public Builder secretsManagerAccessRoleArn(@Nullable Output<String> secretsManagerAccessRoleArn) {
             this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
             return this;
         }
-
         public Builder secretsManagerAccessRoleArn(@Nullable String secretsManagerAccessRoleArn) {
             this.secretsManagerAccessRoleArn = Output.ofNullable(secretsManagerAccessRoleArn);
             return this;
         }
-
         public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
-
         public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
             this.secretsManagerArn = Output.ofNullable(secretsManagerArn);
             return this;
         }
-
         public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = Output.ofNullable(serverName);
             return this;
         }
-
         public Builder serviceAccessRole(@Nullable Output<String> serviceAccessRole) {
             this.serviceAccessRole = serviceAccessRole;
             return this;
         }
-
         public Builder serviceAccessRole(@Nullable String serviceAccessRole) {
             this.serviceAccessRole = Output.ofNullable(serviceAccessRole);
             return this;
         }
-
         public Builder sslMode(@Nullable Output<String> sslMode) {
             this.sslMode = sslMode;
             return this;
         }
-
         public Builder sslMode(@Nullable String sslMode) {
             this.sslMode = Output.ofNullable(sslMode);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(certificateArn, databaseName, elasticsearchSettings, endpointId, endpointType, engineName, extraConnectionAttributes, kafkaSettings, kinesisSettings, kmsKeyArn, mongodbSettings, password, port, s3Settings, secretsManagerAccessRoleArn, secretsManagerArn, serverName, serviceAccessRole, sslMode, tags, username);
         }
     }

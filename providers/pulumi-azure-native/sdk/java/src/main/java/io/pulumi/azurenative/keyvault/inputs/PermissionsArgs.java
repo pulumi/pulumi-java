@@ -116,42 +116,46 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
             this.certificates = certificates;
             return this;
         }
-
         public Builder certificates(@Nullable List<Either<String,CertificatePermissions>> certificates) {
             this.certificates = Output.ofNullable(certificates);
             return this;
         }
-
+        public Builder certificates(Either<String,CertificatePermissions>... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder keys(@Nullable Output<List<Either<String,KeyPermissions>>> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable List<Either<String,KeyPermissions>> keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
+        public Builder keys(Either<String,KeyPermissions>... keys) {
+            return keys(List.of(keys));
+        }
         public Builder secrets(@Nullable Output<List<Either<String,SecretPermissions>>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<Either<String,SecretPermissions>> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-
+        public Builder secrets(Either<String,SecretPermissions>... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder storage(@Nullable Output<List<Either<String,StoragePermissions>>> storage) {
             this.storage = storage;
             return this;
         }
-
         public Builder storage(@Nullable List<Either<String,StoragePermissions>> storage) {
             this.storage = Output.ofNullable(storage);
             return this;
         }
-        public PermissionsArgs build() {
+        public Builder storage(Either<String,StoragePermissions>... storage) {
+            return storage(List.of(storage));
+        }        public PermissionsArgs build() {
             return new PermissionsArgs(certificates, keys, secrets, storage);
         }
     }

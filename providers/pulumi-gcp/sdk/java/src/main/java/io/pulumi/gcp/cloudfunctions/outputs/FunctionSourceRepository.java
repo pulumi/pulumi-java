@@ -63,12 +63,10 @@ public final class FunctionSourceRepository {
             this.deployedUrl = deployedUrl;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public FunctionSourceRepository build() {
+        }        public FunctionSourceRepository build() {
             return new FunctionSourceRepository(deployedUrl, url);
         }
     }

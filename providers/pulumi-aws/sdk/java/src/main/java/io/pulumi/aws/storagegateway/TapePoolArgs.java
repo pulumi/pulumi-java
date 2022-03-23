@@ -124,52 +124,42 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
-
         public Builder poolName(String poolName) {
             this.poolName = Output.of(Objects.requireNonNull(poolName));
             return this;
         }
-
         public Builder retentionLockTimeInDays(@Nullable Output<Integer> retentionLockTimeInDays) {
             this.retentionLockTimeInDays = retentionLockTimeInDays;
             return this;
         }
-
         public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
             this.retentionLockTimeInDays = Output.ofNullable(retentionLockTimeInDays);
             return this;
         }
-
         public Builder retentionLockType(@Nullable Output<String> retentionLockType) {
             this.retentionLockType = retentionLockType;
             return this;
         }
-
         public Builder retentionLockType(@Nullable String retentionLockType) {
             this.retentionLockType = Output.ofNullable(retentionLockType);
             return this;
         }
-
         public Builder storageClass(Output<String> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public TapePoolArgs build() {
+        }        public TapePoolArgs build() {
             return new TapePoolArgs(poolName, retentionLockTimeInDays, retentionLockType, storageClass, tags);
         }
     }

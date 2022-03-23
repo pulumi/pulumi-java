@@ -72,12 +72,10 @@ public final class ClusterSkuResponse {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ClusterSkuResponse build() {
+        }        public ClusterSkuResponse build() {
             return new ClusterSkuResponse(capacity, name);
         }
     }

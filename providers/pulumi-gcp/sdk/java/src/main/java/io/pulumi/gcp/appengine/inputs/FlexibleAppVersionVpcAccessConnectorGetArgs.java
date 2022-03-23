@@ -56,12 +56,10 @@ public final class FlexibleAppVersionVpcAccessConnectorGetArgs extends io.pulumi
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public FlexibleAppVersionVpcAccessConnectorGetArgs build() {
+        }        public FlexibleAppVersionVpcAccessConnectorGetArgs build() {
             return new FlexibleAppVersionVpcAccessConnectorGetArgs(name);
         }
     }

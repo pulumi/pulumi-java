@@ -88,17 +88,14 @@ public final class PermissionScopeResponse extends io.pulumi.resources.InvokeArg
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public PermissionScopeResponse build() {
+        }        public PermissionScopeResponse build() {
             return new PermissionScopeResponse(permissions, resourceName, service);
         }
     }

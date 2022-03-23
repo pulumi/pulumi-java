@@ -70,12 +70,10 @@ public final class TimestampResponse {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public TimestampResponse build() {
+        }        public TimestampResponse build() {
             return new TimestampResponse(nanos, seconds);
         }
     }

@@ -332,82 +332,75 @@ public final class ObjectMeta {
             this.annotations = annotations;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder deletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
             return this;
         }
-
         public Builder deletionTimestamp(@Nullable String deletionTimestamp) {
             this.deletionTimestamp = deletionTimestamp;
             return this;
         }
-
         public Builder finalizers(@Nullable List<String> finalizers) {
             this.finalizers = finalizers;
             return this;
         }
-
+        public Builder finalizers(String... finalizers) {
+            return finalizers(List.of(finalizers));
+        }
         public Builder generateName(@Nullable String generateName) {
             this.generateName = generateName;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder managedFields(@Nullable List<ManagedFieldsEntry> managedFields) {
             this.managedFields = managedFields;
             return this;
         }
-
+        public Builder managedFields(ManagedFieldsEntry... managedFields) {
+            return managedFields(List.of(managedFields));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder ownerReferences(@Nullable List<OwnerReference> ownerReferences) {
             this.ownerReferences = ownerReferences;
             return this;
         }
-
+        public Builder ownerReferences(OwnerReference... ownerReferences) {
+            return ownerReferences(List.of(ownerReferences));
+        }
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
-        }
-        public ObjectMeta build() {
+        }        public ObjectMeta build() {
             return new ObjectMeta(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, managedFields, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }
     }

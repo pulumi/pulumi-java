@@ -109,42 +109,34 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder entityType(String entityType) {
             this.entityType = Output.of(Objects.requireNonNull(entityType));
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder isList(@Nullable Output<Boolean> isList) {
             this.isList = isList;
             return this;
         }
-
         public Builder isList(@Nullable Boolean isList) {
             this.isList = Output.ofNullable(isList);
             return this;
         }
-
         public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
-
         public Builder redact(@Nullable Boolean redact) {
             this.redact = Output.ofNullable(redact);
             return this;
-        }
-        public CxIntentParameterArgs build() {
+        }        public CxIntentParameterArgs build() {
             return new CxIntentParameterArgs(entityType, id, isList, redact);
         }
     }

@@ -54,8 +54,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetNotificationChannelArgs build() {
+        }        public GetNotificationChannelArgs build() {
             return new GetNotificationChannelArgs(id);
         }
     }

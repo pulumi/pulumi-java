@@ -104,22 +104,21 @@ public final class GetQueryDefinitionResult {
             this.logGroupNames = logGroupNames;
             return this;
         }
-
+        public Builder logGroupNames(String... logGroupNames) {
+            return logGroupNames(List.of(logGroupNames));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder queryDefinitionId(@Nullable String queryDefinitionId) {
             this.queryDefinitionId = queryDefinitionId;
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
-        }
-        public GetQueryDefinitionResult build() {
+        }        public GetQueryDefinitionResult build() {
             return new GetQueryDefinitionResult(logGroupNames, name, queryDefinitionId, queryString);
         }
     }

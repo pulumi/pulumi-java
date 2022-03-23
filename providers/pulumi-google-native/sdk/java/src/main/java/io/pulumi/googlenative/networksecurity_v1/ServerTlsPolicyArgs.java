@@ -178,92 +178,74 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.allowOpen = allowOpen;
             return this;
         }
-
         public Builder allowOpen(@Nullable Boolean allowOpen) {
             this.allowOpen = Output.ofNullable(allowOpen);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mtlsPolicy(@Nullable Output<MTLSPolicyArgs> mtlsPolicy) {
             this.mtlsPolicy = mtlsPolicy;
             return this;
         }
-
         public Builder mtlsPolicy(@Nullable MTLSPolicyArgs mtlsPolicy) {
             this.mtlsPolicy = Output.ofNullable(mtlsPolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serverCertificate(@Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
-
         public Builder serverCertificate(@Nullable GoogleCloudNetworksecurityV1CertificateProviderArgs serverCertificate) {
             this.serverCertificate = Output.ofNullable(serverCertificate);
             return this;
         }
-
         public Builder serverTlsPolicyId(Output<String> serverTlsPolicyId) {
             this.serverTlsPolicyId = Objects.requireNonNull(serverTlsPolicyId);
             return this;
         }
-
         public Builder serverTlsPolicyId(String serverTlsPolicyId) {
             this.serverTlsPolicyId = Output.of(Objects.requireNonNull(serverTlsPolicyId));
             return this;
-        }
-        public ServerTlsPolicyArgs build() {
+        }        public ServerTlsPolicyArgs build() {
             return new ServerTlsPolicyArgs(allowOpen, description, labels, location, mtlsPolicy, name, project, serverCertificate, serverTlsPolicyId);
         }
     }

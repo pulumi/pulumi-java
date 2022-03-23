@@ -88,17 +88,14 @@ public final class PodsMetricStatus {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
-        }
-        public PodsMetricStatus build() {
+        }        public PodsMetricStatus build() {
             return new PodsMetricStatus(currentAverageValue, metricName, selector);
         }
     }

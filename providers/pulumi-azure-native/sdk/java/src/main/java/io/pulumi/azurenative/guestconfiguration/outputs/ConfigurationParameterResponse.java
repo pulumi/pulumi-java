@@ -71,12 +71,10 @@ public final class ConfigurationParameterResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ConfigurationParameterResponse build() {
+        }        public ConfigurationParameterResponse build() {
             return new ConfigurationParameterResponse(name, value);
         }
     }

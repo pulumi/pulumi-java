@@ -4,7 +4,6 @@ import java.text.MessageFormat;
 import java.util.List;
 import java.util.Map;
 
-import io.pulumi.Config;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
@@ -92,12 +91,12 @@ public final class MyStack extends Stack {
             .nodeConfig(NodePoolNodeConfigArgs.builder()
                 .preemptible(true)
                 .machineType("n1-standard-1")
-                .oauthScopes(List.of(
+                .oauthScopes(
                     "https://www.googleapis.com/auth/compute",
                     "https://www.googleapis.com/auth/devstorage.read_only",
                     "https://www.googleapis.com/auth/logging.write",
                     "https://www.googleapis.com/auth/monitoring"
-                ))
+                )
                 .build()
             )
             .management(NodePoolManagementArgs.builder()
@@ -106,7 +105,7 @@ public final class MyStack extends Stack {
             )
             .build(),
             CustomResourceOptions.builder()
-            .dependsOn(List.of(cluster))
+            .dependsOn(cluster)
             .build());
         this.clusterName = cluster.getName();
 
@@ -156,7 +155,7 @@ public final class MyStack extends Stack {
                 .kubeconfig(this.kubeconfig)
                 .build(),
             CustomResourceOptions.builder()
-                .dependsOn(List.of(nodePool, cluster))
+                .dependsOn(nodePool, cluster)
                 .build());
         final var clusterResourceOptions = CustomResourceOptions.builder()
             .provider(clusterProvider)
@@ -189,14 +188,14 @@ public final class MyStack extends Stack {
                 .template(PodTemplateSpecArgs.builder()
                     .metadata(metadata)
                     .spec(PodSpecArgs.builder()
-                        .containers(List.of(ContainerArgs.builder()
+                        .containers(ContainerArgs.builder()
                             .name(name)
                             .image("nginx:latest")
-                            .ports(List.of(ContainerPortArgs.builder()
+                            .ports(ContainerPortArgs.builder()
                                 .name("http")
                                 .containerPort(80)
-                                .build()))
-                            .build()))
+                                .build())
+                            .build())
                         .build())
                     .build())
                 .build())
@@ -210,10 +209,10 @@ public final class MyStack extends Stack {
             .metadata(metadata)
             .spec(ServiceSpecArgs.builder()
                 .type(Output.ofRight(ServiceSpecType.LoadBalancer))
-                .ports(List.of(ServicePortArgs.builder()
+                .ports(ServicePortArgs.builder()
                     .port(80)
                     .targetPort(Output.ofRight("http"))
-                    .build()))
+                    .build())
                 .selector(appLabels)
                 .build())
             .build(), clusterResourceOptions);

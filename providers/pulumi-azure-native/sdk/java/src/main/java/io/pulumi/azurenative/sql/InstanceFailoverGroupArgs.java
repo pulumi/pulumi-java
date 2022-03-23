@@ -159,72 +159,64 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
             this.failoverGroupName = failoverGroupName;
             return this;
         }
-
         public Builder failoverGroupName(@Nullable String failoverGroupName) {
             this.failoverGroupName = Output.ofNullable(failoverGroupName);
             return this;
         }
-
         public Builder locationName(Output<String> locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
-
         public Builder locationName(String locationName) {
             this.locationName = Output.of(Objects.requireNonNull(locationName));
             return this;
         }
-
         public Builder managedInstancePairs(Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs) {
             this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs);
             return this;
         }
-
         public Builder managedInstancePairs(List<ManagedInstancePairInfoArgs> managedInstancePairs) {
             this.managedInstancePairs = Output.of(Objects.requireNonNull(managedInstancePairs));
             return this;
         }
-
+        public Builder managedInstancePairs(ManagedInstancePairInfoArgs... managedInstancePairs) {
+            return managedInstancePairs(List.of(managedInstancePairs));
+        }
         public Builder partnerRegions(Output<List<PartnerRegionInfoArgs>> partnerRegions) {
             this.partnerRegions = Objects.requireNonNull(partnerRegions);
             return this;
         }
-
         public Builder partnerRegions(List<PartnerRegionInfoArgs> partnerRegions) {
             this.partnerRegions = Output.of(Objects.requireNonNull(partnerRegions));
             return this;
         }
-
+        public Builder partnerRegions(PartnerRegionInfoArgs... partnerRegions) {
+            return partnerRegions(List.of(partnerRegions));
+        }
         public Builder readOnlyEndpoint(@Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
-
         public Builder readOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
             this.readOnlyEndpoint = Output.ofNullable(readOnlyEndpoint);
             return this;
         }
-
         public Builder readWriteEndpoint(Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
-
         public Builder readWriteEndpoint(InstanceFailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
             this.readWriteEndpoint = Output.of(Objects.requireNonNull(readWriteEndpoint));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public InstanceFailoverGroupArgs build() {
+        }        public InstanceFailoverGroupArgs build() {
             return new InstanceFailoverGroupArgs(failoverGroupName, locationName, managedInstancePairs, partnerRegions, readOnlyEndpoint, readWriteEndpoint, resourceGroupName);
         }
     }

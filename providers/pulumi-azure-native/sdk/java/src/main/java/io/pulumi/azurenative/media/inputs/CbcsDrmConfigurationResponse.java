@@ -96,17 +96,14 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
             this.fairPlay = fairPlay;
             return this;
         }
-
         public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
             this.playReady = playReady;
             return this;
         }
-
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
             this.widevine = widevine;
             return this;
-        }
-        public CbcsDrmConfigurationResponse build() {
+        }        public CbcsDrmConfigurationResponse build() {
             return new CbcsDrmConfigurationResponse(fairPlay, playReady, widevine);
         }
     }

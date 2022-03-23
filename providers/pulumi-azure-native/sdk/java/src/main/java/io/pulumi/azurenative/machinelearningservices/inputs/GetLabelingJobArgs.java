@@ -123,27 +123,22 @@ public final class GetLabelingJobArgs extends io.pulumi.resources.InvokeArgs {
             this.includeJobInstructions = includeJobInstructions;
             return this;
         }
-
         public Builder includeLabelCategories(@Nullable Boolean includeLabelCategories) {
             this.includeLabelCategories = includeLabelCategories;
             return this;
         }
-
         public Builder labelingJobId(String labelingJobId) {
             this.labelingJobId = Objects.requireNonNull(labelingJobId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetLabelingJobArgs build() {
+        }        public GetLabelingJobArgs build() {
             return new GetLabelingJobArgs(includeJobInstructions, includeLabelCategories, labelingJobId, resourceGroupName, workspaceName);
         }
     }

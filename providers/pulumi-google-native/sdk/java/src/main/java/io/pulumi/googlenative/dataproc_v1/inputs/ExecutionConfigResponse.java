@@ -125,27 +125,25 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public Builder networkTags(List<String> networkTags) {
             this.networkTags = Objects.requireNonNull(networkTags);
             return this;
         }
-
+        public Builder networkTags(String... networkTags) {
+            return networkTags(List.of(networkTags));
+        }
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder subnetworkUri(String subnetworkUri) {
             this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
             return this;
-        }
-        public ExecutionConfigResponse build() {
+        }        public ExecutionConfigResponse build() {
             return new ExecutionConfigResponse(kmsKey, networkTags, networkUri, serviceAccount, subnetworkUri);
         }
     }

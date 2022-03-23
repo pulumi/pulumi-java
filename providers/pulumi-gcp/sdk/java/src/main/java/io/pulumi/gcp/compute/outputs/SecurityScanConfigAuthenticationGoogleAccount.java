@@ -73,12 +73,10 @@ public final class SecurityScanConfigAuthenticationGoogleAccount {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public SecurityScanConfigAuthenticationGoogleAccount build() {
+        }        public SecurityScanConfigAuthenticationGoogleAccount build() {
             return new SecurityScanConfigAuthenticationGoogleAccount(password, username);
         }
     }

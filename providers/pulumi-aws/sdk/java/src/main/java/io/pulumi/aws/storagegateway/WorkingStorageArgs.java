@@ -73,22 +73,18 @@ public final class WorkingStorageArgs extends io.pulumi.resources.ResourceArgs {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
-
         public Builder diskId(String diskId) {
             this.diskId = Output.of(Objects.requireNonNull(diskId));
             return this;
         }
-
         public Builder gatewayArn(Output<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
-
         public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
             return this;
-        }
-        public WorkingStorageArgs build() {
+        }        public WorkingStorageArgs build() {
             return new WorkingStorageArgs(diskId, gatewayArn);
         }
     }

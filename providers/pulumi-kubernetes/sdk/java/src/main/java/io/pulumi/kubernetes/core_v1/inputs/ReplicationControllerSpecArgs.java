@@ -113,42 +113,34 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = Output.ofNullable(minReadySeconds);
             return this;
         }
-
         public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
         public Builder selector(@Nullable Output<Map<String,String>> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable Map<String,String> selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder template(@Nullable Output<PodTemplateSpecArgs> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable PodTemplateSpecArgs template) {
             this.template = Output.ofNullable(template);
             return this;
-        }
-        public ReplicationControllerSpecArgs build() {
+        }        public ReplicationControllerSpecArgs build() {
             return new ReplicationControllerSpecArgs(minReadySeconds, replicas, selector, template);
         }
     }

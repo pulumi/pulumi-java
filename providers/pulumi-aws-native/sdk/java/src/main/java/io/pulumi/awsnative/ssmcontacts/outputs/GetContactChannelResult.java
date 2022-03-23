@@ -104,22 +104,18 @@ public final class GetContactChannelResult {
             this.arn = arn;
             return this;
         }
-
         public Builder channelAddress(@Nullable String channelAddress) {
             this.channelAddress = channelAddress;
             return this;
         }
-
         public Builder channelName(@Nullable String channelName) {
             this.channelName = channelName;
             return this;
         }
-
         public Builder deferActivation(@Nullable Boolean deferActivation) {
             this.deferActivation = deferActivation;
             return this;
-        }
-        public GetContactChannelResult build() {
+        }        public GetContactChannelResult build() {
             return new GetContactChannelResult(arn, channelAddress, channelName, deferActivation);
         }
     }

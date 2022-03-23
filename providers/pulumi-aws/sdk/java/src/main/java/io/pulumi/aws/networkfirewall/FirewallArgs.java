@@ -190,92 +190,77 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             this.deleteProtection = deleteProtection;
             return this;
         }
-
         public Builder deleteProtection(@Nullable Boolean deleteProtection) {
             this.deleteProtection = Output.ofNullable(deleteProtection);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder firewallPolicyArn(Output<String> firewallPolicyArn) {
             this.firewallPolicyArn = Objects.requireNonNull(firewallPolicyArn);
             return this;
         }
-
         public Builder firewallPolicyArn(String firewallPolicyArn) {
             this.firewallPolicyArn = Output.of(Objects.requireNonNull(firewallPolicyArn));
             return this;
         }
-
         public Builder firewallPolicyChangeProtection(@Nullable Output<Boolean> firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
             return this;
         }
-
         public Builder firewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = Output.ofNullable(firewallPolicyChangeProtection);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder subnetChangeProtection(@Nullable Output<Boolean> subnetChangeProtection) {
             this.subnetChangeProtection = subnetChangeProtection;
             return this;
         }
-
         public Builder subnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
             this.subnetChangeProtection = Output.ofNullable(subnetChangeProtection);
             return this;
         }
-
         public Builder subnetMappings(Output<List<FirewallSubnetMappingArgs>> subnetMappings) {
             this.subnetMappings = Objects.requireNonNull(subnetMappings);
             return this;
         }
-
         public Builder subnetMappings(List<FirewallSubnetMappingArgs> subnetMappings) {
             this.subnetMappings = Output.of(Objects.requireNonNull(subnetMappings));
             return this;
         }
-
+        public Builder subnetMappings(FirewallSubnetMappingArgs... subnetMappings) {
+            return subnetMappings(List.of(subnetMappings));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public FirewallArgs build() {
+        }        public FirewallArgs build() {
             return new FirewallArgs(deleteProtection, description, firewallPolicyArn, firewallPolicyChangeProtection, name, subnetChangeProtection, subnetMappings, tags, vpcId);
         }
     }

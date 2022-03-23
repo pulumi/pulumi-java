@@ -116,22 +116,18 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
             this.blockPublicAcls = blockPublicAcls;
             return this;
         }
-
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
             this.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
-
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
-        }
-        public BucketPublicAccessBlockConfiguration build() {
+        }        public BucketPublicAccessBlockConfiguration build() {
             return new BucketPublicAccessBlockConfiguration(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }
     }

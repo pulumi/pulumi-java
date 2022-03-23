@@ -236,122 +236,104 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder alternativeMediaId(@Nullable Output<String> alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
-
         public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
             this.alternativeMediaId = Output.ofNullable(alternativeMediaId);
             return this;
         }
-
         public Builder assetName(Output<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
-
         public Builder contentKeys(@Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
-
         public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyArgs> contentKeys) {
             this.contentKeys = Output.ofNullable(contentKeys);
             return this;
         }
-
+        public Builder contentKeys(StreamingLocatorContentKeyArgs... contentKeys) {
+            return contentKeys(List.of(contentKeys));
+        }
         public Builder defaultContentKeyPolicyName(@Nullable Output<String> defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
-
         public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = Output.ofNullable(defaultContentKeyPolicyName);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder filters(@Nullable Output<List<String>> filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable List<String> filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
+        public Builder filters(String... filters) {
+            return filters(List.of(filters));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder streamingLocatorId(@Nullable Output<String> streamingLocatorId) {
             this.streamingLocatorId = streamingLocatorId;
             return this;
         }
-
         public Builder streamingLocatorId(@Nullable String streamingLocatorId) {
             this.streamingLocatorId = Output.ofNullable(streamingLocatorId);
             return this;
         }
-
         public Builder streamingLocatorName(@Nullable Output<String> streamingLocatorName) {
             this.streamingLocatorName = streamingLocatorName;
             return this;
         }
-
         public Builder streamingLocatorName(@Nullable String streamingLocatorName) {
             this.streamingLocatorName = Output.ofNullable(streamingLocatorName);
             return this;
         }
-
         public Builder streamingPolicyName(Output<String> streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
-
         public Builder streamingPolicyName(String streamingPolicyName) {
             this.streamingPolicyName = Output.of(Objects.requireNonNull(streamingPolicyName));
             return this;
-        }
-        public StreamingLocatorArgs build() {
+        }        public StreamingLocatorArgs build() {
             return new StreamingLocatorArgs(accountName, alternativeMediaId, assetName, contentKeys, defaultContentKeyPolicyName, endTime, filters, resourceGroupName, startTime, streamingLocatorId, streamingLocatorName, streamingPolicyName);
         }
     }

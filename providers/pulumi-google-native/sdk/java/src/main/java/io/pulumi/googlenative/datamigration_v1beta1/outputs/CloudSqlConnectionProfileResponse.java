@@ -102,22 +102,18 @@ public final class CloudSqlConnectionProfileResponse {
             this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
             return this;
         }
-
         public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
-
         public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }
-
         public Builder settings(CloudSqlSettingsResponse settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
-        }
-        public CloudSqlConnectionProfileResponse build() {
+        }        public CloudSqlConnectionProfileResponse build() {
             return new CloudSqlConnectionProfileResponse(cloudSqlId, privateIp, publicIp, settings);
         }
     }

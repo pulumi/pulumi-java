@@ -113,42 +113,34 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder graphApiVersion(@Nullable Output<String> graphApiVersion) {
             this.graphApiVersion = graphApiVersion;
             return this;
         }
-
         public Builder graphApiVersion(@Nullable String graphApiVersion) {
             this.graphApiVersion = Output.ofNullable(graphApiVersion);
             return this;
         }
-
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable LoginScopesArgs login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder registration(@Nullable Output<AppRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder registration(@Nullable AppRegistrationArgs registration) {
             this.registration = Output.ofNullable(registration);
             return this;
-        }
-        public FacebookArgs build() {
+        }        public FacebookArgs build() {
             return new FacebookArgs(enabled, graphApiVersion, login, registration);
         }
     }

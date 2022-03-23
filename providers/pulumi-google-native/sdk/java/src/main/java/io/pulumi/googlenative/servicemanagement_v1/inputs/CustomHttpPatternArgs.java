@@ -78,22 +78,18 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public CustomHttpPatternArgs build() {
+        }        public CustomHttpPatternArgs build() {
             return new CustomHttpPatternArgs(kind, path);
         }
     }

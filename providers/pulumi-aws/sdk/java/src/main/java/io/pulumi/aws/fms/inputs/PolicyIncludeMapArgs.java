@@ -75,22 +75,24 @@ public final class PolicyIncludeMapArgs extends io.pulumi.resources.ResourceArgs
             this.accounts = accounts;
             return this;
         }
-
         public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = Output.ofNullable(accounts);
             return this;
         }
-
+        public Builder accounts(String... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder orgunits(@Nullable Output<List<String>> orgunits) {
             this.orgunits = orgunits;
             return this;
         }
-
         public Builder orgunits(@Nullable List<String> orgunits) {
             this.orgunits = Output.ofNullable(orgunits);
             return this;
         }
-        public PolicyIncludeMapArgs build() {
+        public Builder orgunits(String... orgunits) {
+            return orgunits(List.of(orgunits));
+        }        public PolicyIncludeMapArgs build() {
             return new PolicyIncludeMapArgs(accounts, orgunits);
         }
     }

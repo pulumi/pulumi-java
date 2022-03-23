@@ -85,17 +85,14 @@ public final class BigTableIODetailsResponse {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public BigTableIODetailsResponse build() {
+        }        public BigTableIODetailsResponse build() {
             return new BigTableIODetailsResponse(instanceId, project, tableId);
         }
     }

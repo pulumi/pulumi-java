@@ -89,32 +89,26 @@ public final class TopicRuleErrorActionS3GetArgs extends io.pulumi.resources.Res
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public TopicRuleErrorActionS3GetArgs build() {
+        }        public TopicRuleErrorActionS3GetArgs build() {
             return new TopicRuleErrorActionS3GetArgs(bucketName, key, roleArn);
         }
     }

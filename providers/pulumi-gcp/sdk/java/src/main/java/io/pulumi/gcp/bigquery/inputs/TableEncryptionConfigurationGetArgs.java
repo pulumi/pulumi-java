@@ -78,22 +78,18 @@ public final class TableEncryptionConfigurationGetArgs extends io.pulumi.resourc
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public Builder kmsKeyVersion(@Nullable Output<String> kmsKeyVersion) {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
-
         public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
             this.kmsKeyVersion = Output.ofNullable(kmsKeyVersion);
             return this;
-        }
-        public TableEncryptionConfigurationGetArgs build() {
+        }        public TableEncryptionConfigurationGetArgs build() {
             return new TableEncryptionConfigurationGetArgs(kmsKeyName, kmsKeyVersion);
         }
     }

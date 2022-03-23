@@ -279,142 +279,120 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.autoUserSpecification = autoUserSpecification;
             return this;
         }
-
         public Builder autoUserSpecification(@Nullable Object autoUserSpecification) {
             this.autoUserSpecification = Output.ofNullable(autoUserSpecification);
             return this;
         }
-
         public Builder command(Output<Object> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public Builder command(Object command) {
             this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder extendedProperties(@Nullable Output<Map<String,Object>> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
-
         public Builder extendedProperties(@Nullable Map<String,Object> extendedProperties) {
             this.extendedProperties = Output.ofNullable(extendedProperties);
             return this;
         }
-
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder referenceObjects(@Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects) {
             this.referenceObjects = referenceObjects;
             return this;
         }
-
         public Builder referenceObjects(@Nullable CustomActivityReferenceObjectArgs referenceObjects) {
             this.referenceObjects = Output.ofNullable(referenceObjects);
             return this;
         }
-
         public Builder resourceLinkedService(@Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService) {
             this.resourceLinkedService = resourceLinkedService;
             return this;
         }
-
         public Builder resourceLinkedService(@Nullable LinkedServiceReferenceArgs resourceLinkedService) {
             this.resourceLinkedService = Output.ofNullable(resourceLinkedService);
             return this;
         }
-
         public Builder retentionTimeInDays(@Nullable Output<Object> retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-
         public Builder retentionTimeInDays(@Nullable Object retentionTimeInDays) {
             this.retentionTimeInDays = Output.ofNullable(retentionTimeInDays);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public CustomActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public CustomActivityArgs build() {
             return new CustomActivityArgs(autoUserSpecification, command, dependsOn, description, extendedProperties, folderPath, linkedServiceName, name, policy, referenceObjects, resourceLinkedService, retentionTimeInDays, type, userProperties);
         }
     }

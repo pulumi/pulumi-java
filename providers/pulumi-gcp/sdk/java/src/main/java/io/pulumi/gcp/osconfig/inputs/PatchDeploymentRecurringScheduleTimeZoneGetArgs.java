@@ -74,22 +74,18 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends io.pu
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public PatchDeploymentRecurringScheduleTimeZoneGetArgs build() {
+        }        public PatchDeploymentRecurringScheduleTimeZoneGetArgs build() {
             return new PatchDeploymentRecurringScheduleTimeZoneGetArgs(id, version);
         }
     }

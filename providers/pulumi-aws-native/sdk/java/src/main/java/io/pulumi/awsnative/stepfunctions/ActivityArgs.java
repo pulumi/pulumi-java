@@ -68,22 +68,21 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ActivityTagsEntryArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ActivityTagsEntryArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ActivityArgs build() {
+        public Builder tags(ActivityTagsEntryArgs... tags) {
+            return tags(List.of(tags));
+        }        public ActivityArgs build() {
             return new ActivityArgs(name, tags);
         }
     }

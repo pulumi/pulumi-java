@@ -62,12 +62,13 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
             this.property = property;
             return this;
         }
-
         public Builder property(@Nullable List<GoogleCloudApigeeV1PropertyArgs> property) {
             this.property = Output.ofNullable(property);
             return this;
         }
-        public GoogleCloudApigeeV1PropertiesArgs build() {
+        public Builder property(GoogleCloudApigeeV1PropertyArgs... property) {
+            return property(List.of(property));
+        }        public GoogleCloudApigeeV1PropertiesArgs build() {
             return new GoogleCloudApigeeV1PropertiesArgs(property);
         }
     }

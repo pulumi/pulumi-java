@@ -50,8 +50,7 @@ public final class GetClusterCapacityProviderAssociationsArgs extends io.pulumi.
         public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
-        }
-        public GetClusterCapacityProviderAssociationsArgs build() {
+        }        public GetClusterCapacityProviderAssociationsArgs build() {
             return new GetClusterCapacityProviderAssociationsArgs(cluster);
         }
     }

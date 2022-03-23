@@ -90,17 +90,17 @@ public final class StringNotContainsAdvancedFilterResponse {
             this.key = key;
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public StringNotContainsAdvancedFilterResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public StringNotContainsAdvancedFilterResponse build() {
             return new StringNotContainsAdvancedFilterResponse(key, operatorType, values);
         }
     }

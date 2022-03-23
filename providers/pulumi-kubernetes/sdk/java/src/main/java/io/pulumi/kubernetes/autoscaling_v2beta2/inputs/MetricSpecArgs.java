@@ -147,62 +147,50 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.containerResource = containerResource;
             return this;
         }
-
         public Builder containerResource(@Nullable ContainerResourceMetricSourceArgs containerResource) {
             this.containerResource = Output.ofNullable(containerResource);
             return this;
         }
-
         public Builder external(@Nullable Output<ExternalMetricSourceArgs> external) {
             this.external = external;
             return this;
         }
-
         public Builder external(@Nullable ExternalMetricSourceArgs external) {
             this.external = Output.ofNullable(external);
             return this;
         }
-
         public Builder object(@Nullable Output<ObjectMetricSourceArgs> object) {
             this.object = object;
             return this;
         }
-
         public Builder object(@Nullable ObjectMetricSourceArgs object) {
             this.object = Output.ofNullable(object);
             return this;
         }
-
         public Builder pods(@Nullable Output<PodsMetricSourceArgs> pods) {
             this.pods = pods;
             return this;
         }
-
         public Builder pods(@Nullable PodsMetricSourceArgs pods) {
             this.pods = Output.ofNullable(pods);
             return this;
         }
-
         public Builder resource(@Nullable Output<ResourceMetricSourceArgs> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable ResourceMetricSourceArgs resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public MetricSpecArgs build() {
+        }        public MetricSpecArgs build() {
             return new MetricSpecArgs(containerResource, external, object, pods, resource, type);
         }
     }

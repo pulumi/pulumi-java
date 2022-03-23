@@ -109,22 +109,18 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
             this.azureCredentials = Objects.requireNonNull(azureCredentials);
             return this;
         }
-
         public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder storageAccount(String storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
-        }
-        public AzureBlobStorageDataResponse build() {
+        }        public AzureBlobStorageDataResponse build() {
             return new AzureBlobStorageDataResponse(azureCredentials, container, path, storageAccount);
         }
     }

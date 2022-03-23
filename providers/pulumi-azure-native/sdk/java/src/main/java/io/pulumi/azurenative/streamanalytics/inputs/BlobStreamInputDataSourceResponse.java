@@ -162,37 +162,33 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
             this.container = container;
             return this;
         }
-
         public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
-
         public Builder pathPattern(@Nullable String pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
-
         public Builder sourcePartitionCount(@Nullable Integer sourcePartitionCount) {
             this.sourcePartitionCount = sourcePartitionCount;
             return this;
         }
-
         public Builder storageAccounts(@Nullable List<StorageAccountResponse> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
-
+        public Builder storageAccounts(StorageAccountResponse... storageAccounts) {
+            return storageAccounts(List.of(storageAccounts));
+        }
         public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BlobStreamInputDataSourceResponse build() {
+        }        public BlobStreamInputDataSourceResponse build() {
             return new BlobStreamInputDataSourceResponse(container, dateFormat, pathPattern, sourcePartitionCount, storageAccounts, timeFormat, type);
         }
     }

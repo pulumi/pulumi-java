@@ -54,8 +54,7 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
         public Builder queueUrl(String queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
-        }
-        public GetQueueArgs build() {
+        }        public GetQueueArgs build() {
             return new GetQueueArgs(queueUrl);
         }
     }

@@ -76,12 +76,10 @@ public final class AzureFirewallIpGroupsResponse extends io.pulumi.resources.Inv
             this.changeNumber = Objects.requireNonNull(changeNumber);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public AzureFirewallIpGroupsResponse build() {
+        }        public AzureFirewallIpGroupsResponse build() {
             return new AzureFirewallIpGroupsResponse(changeNumber, id);
         }
     }

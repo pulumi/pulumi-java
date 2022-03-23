@@ -71,12 +71,16 @@ public final class StackSetDeploymentTargets {
             this.accounts = accounts;
             return this;
         }
-
+        public Builder accounts(String... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-        public StackSetDeploymentTargets build() {
+        public Builder organizationalUnitIds(String... organizationalUnitIds) {
+            return organizationalUnitIds(List.of(organizationalUnitIds));
+        }        public StackSetDeploymentTargets build() {
             return new StackSetDeploymentTargets(accounts, organizationalUnitIds);
         }
     }

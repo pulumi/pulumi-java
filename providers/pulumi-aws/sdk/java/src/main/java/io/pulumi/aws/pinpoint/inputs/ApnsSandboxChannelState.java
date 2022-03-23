@@ -190,92 +190,74 @@ public final class ApnsSandboxChannelState extends io.pulumi.resources.ResourceA
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
-
         public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder defaultAuthenticationMethod(@Nullable Output<String> defaultAuthenticationMethod) {
             this.defaultAuthenticationMethod = defaultAuthenticationMethod;
             return this;
         }
-
         public Builder defaultAuthenticationMethod(@Nullable String defaultAuthenticationMethod) {
             this.defaultAuthenticationMethod = Output.ofNullable(defaultAuthenticationMethod);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder teamId(@Nullable Output<String> teamId) {
             this.teamId = teamId;
             return this;
         }
-
         public Builder teamId(@Nullable String teamId) {
             this.teamId = Output.ofNullable(teamId);
             return this;
         }
-
         public Builder tokenKey(@Nullable Output<String> tokenKey) {
             this.tokenKey = tokenKey;
             return this;
         }
-
         public Builder tokenKey(@Nullable String tokenKey) {
             this.tokenKey = Output.ofNullable(tokenKey);
             return this;
         }
-
         public Builder tokenKeyId(@Nullable Output<String> tokenKeyId) {
             this.tokenKeyId = tokenKeyId;
             return this;
         }
-
         public Builder tokenKeyId(@Nullable String tokenKeyId) {
             this.tokenKeyId = Output.ofNullable(tokenKeyId);
             return this;
-        }
-        public ApnsSandboxChannelState build() {
+        }        public ApnsSandboxChannelState build() {
             return new ApnsSandboxChannelState(applicationId, bundleId, certificate, defaultAuthenticationMethod, enabled, privateKey, teamId, tokenKey, tokenKeyId);
         }
     }

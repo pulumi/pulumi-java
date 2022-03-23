@@ -91,32 +91,26 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
             this.loginUrl = Objects.requireNonNull(loginUrl);
             return this;
         }
-
         public Builder loginUrl(String loginUrl) {
             this.loginUrl = Output.of(Objects.requireNonNull(loginUrl));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public SecurityScanConfigAuthenticationCustomAccountGetArgs build() {
+        }        public SecurityScanConfigAuthenticationCustomAccountGetArgs build() {
             return new SecurityScanConfigAuthenticationCustomAccountGetArgs(loginUrl, password, username);
         }
     }

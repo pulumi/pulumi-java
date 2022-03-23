@@ -72,12 +72,10 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
-
         public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
-        }
-        public GetDeploymentAtManagementGroupScopeArgs build() {
+        }        public GetDeploymentAtManagementGroupScopeArgs build() {
             return new GetDeploymentAtManagementGroupScopeArgs(deploymentName, groupId);
         }
     }

@@ -145,62 +145,53 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
-
         public Builder monitors(List<String> monitors) {
             this.monitors = Output.of(Objects.requireNonNull(monitors));
             return this;
         }
-
+        public Builder monitors(String... monitors) {
+            return monitors(List.of(monitors));
+        }
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretFile(@Nullable Output<String> secretFile) {
             this.secretFile = secretFile;
             return this;
         }
-
         public Builder secretFile(@Nullable String secretFile) {
             this.secretFile = Output.ofNullable(secretFile);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public CephFSVolumeSourceArgs build() {
+        }        public CephFSVolumeSourceArgs build() {
             return new CephFSVolumeSourceArgs(monitors, path, readOnly, secretFile, secretRef, user);
         }
     }

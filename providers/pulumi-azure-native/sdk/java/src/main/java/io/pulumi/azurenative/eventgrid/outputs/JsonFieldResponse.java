@@ -53,8 +53,7 @@ public final class JsonFieldResponse {
         public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = sourceField;
             return this;
-        }
-        public JsonFieldResponse build() {
+        }        public JsonFieldResponse build() {
             return new JsonFieldResponse(sourceField);
         }
     }

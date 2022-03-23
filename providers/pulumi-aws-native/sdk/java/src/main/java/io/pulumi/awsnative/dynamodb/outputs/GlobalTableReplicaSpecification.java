@@ -102,37 +102,36 @@ public final class GlobalTableReplicaSpecification {
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
-
         public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-
+        public Builder globalSecondaryIndexes(GlobalTableReplicaGlobalSecondaryIndexSpecification... globalSecondaryIndexes) {
+            return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
+        }
         public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification) {
             this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
             return this;
         }
-
         public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecification sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
-
         public Builder tags(@Nullable List<GlobalTableTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GlobalTableReplicaSpecification build() {
+        public Builder tags(GlobalTableTag... tags) {
+            return tags(List.of(tags));
+        }        public GlobalTableReplicaSpecification build() {
             return new GlobalTableReplicaSpecification(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
         }
     }

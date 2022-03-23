@@ -88,17 +88,17 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
             this.backupFileShare = Objects.requireNonNull(backupFileShare);
             return this;
         }
-
         public Builder connectionInfo(SqlConnectionInfoResponse connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
-
         public Builder selectedCertificates(List<SelectedCertificateInputResponse> selectedCertificates) {
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }
-        public GetTdeCertificatesSqlTaskInputResponse build() {
+        public Builder selectedCertificates(SelectedCertificateInputResponse... selectedCertificates) {
+            return selectedCertificates(List.of(selectedCertificates));
+        }        public GetTdeCertificatesSqlTaskInputResponse build() {
             return new GetTdeCertificatesSqlTaskInputResponse(backupFileShare, connectionInfo, selectedCertificates);
         }
     }

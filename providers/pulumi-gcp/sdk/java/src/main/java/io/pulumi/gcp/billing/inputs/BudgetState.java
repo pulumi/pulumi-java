@@ -169,72 +169,61 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             this.allUpdatesRule = allUpdatesRule;
             return this;
         }
-
         public Builder allUpdatesRule(@Nullable BudgetAllUpdatesRuleGetArgs allUpdatesRule) {
             this.allUpdatesRule = Output.ofNullable(allUpdatesRule);
             return this;
         }
-
         public Builder amount(@Nullable Output<BudgetAmountGetArgs> amount) {
             this.amount = amount;
             return this;
         }
-
         public Builder amount(@Nullable BudgetAmountGetArgs amount) {
             this.amount = Output.ofNullable(amount);
             return this;
         }
-
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
-
         public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
-
         public Builder budgetFilter(@Nullable Output<BudgetBudgetFilterGetArgs> budgetFilter) {
             this.budgetFilter = budgetFilter;
             return this;
         }
-
         public Builder budgetFilter(@Nullable BudgetBudgetFilterGetArgs budgetFilter) {
             this.budgetFilter = Output.ofNullable(budgetFilter);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder thresholdRules(@Nullable Output<List<BudgetThresholdRuleGetArgs>> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
-
         public Builder thresholdRules(@Nullable List<BudgetThresholdRuleGetArgs> thresholdRules) {
             this.thresholdRules = Output.ofNullable(thresholdRules);
             return this;
         }
-        public BudgetState build() {
+        public Builder thresholdRules(BudgetThresholdRuleGetArgs... thresholdRules) {
+            return thresholdRules(List.of(thresholdRules));
+        }        public BudgetState build() {
             return new BudgetState(allUpdatesRule, amount, billingAccount, budgetFilter, displayName, name, thresholdRules);
         }
     }

@@ -162,37 +162,30 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
             this.caching = caching;
             return this;
         }
-
         public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
             this.diskRestorePoint = diskRestorePoint;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
-
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
-        }
-        public RestorePointSourceVMOSDiskResponse build() {
+        }        public RestorePointSourceVMOSDiskResponse build() {
             return new RestorePointSourceVMOSDiskResponse(caching, diskRestorePoint, diskSizeGB, encryptionSettings, managedDisk, name, osType);
         }
     }

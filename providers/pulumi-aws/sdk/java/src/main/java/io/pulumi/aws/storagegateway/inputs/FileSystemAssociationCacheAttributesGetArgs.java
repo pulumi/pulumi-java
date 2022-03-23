@@ -59,12 +59,10 @@ public final class FileSystemAssociationCacheAttributesGetArgs extends io.pulumi
             this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
         }
-
         public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
             this.cacheStaleTimeoutInSeconds = Output.ofNullable(cacheStaleTimeoutInSeconds);
             return this;
-        }
-        public FileSystemAssociationCacheAttributesGetArgs build() {
+        }        public FileSystemAssociationCacheAttributesGetArgs build() {
             return new FileSystemAssociationCacheAttributesGetArgs(cacheStaleTimeoutInSeconds);
         }
     }

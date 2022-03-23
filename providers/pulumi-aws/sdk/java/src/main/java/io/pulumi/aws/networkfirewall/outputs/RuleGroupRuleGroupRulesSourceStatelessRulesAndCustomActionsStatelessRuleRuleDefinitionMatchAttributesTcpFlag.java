@@ -75,12 +75,16 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
-
+        public Builder flags(String... flags) {
+            return flags(List.of(flags));
+        }
         public Builder masks(@Nullable List<String> masks) {
             this.masks = masks;
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag build() {
+        public Builder masks(String... masks) {
+            return masks(List.of(masks));
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag(flags, masks);
         }
     }

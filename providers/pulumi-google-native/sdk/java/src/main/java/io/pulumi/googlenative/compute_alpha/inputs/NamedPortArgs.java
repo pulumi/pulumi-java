@@ -79,22 +79,18 @@ public final class NamedPortArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public NamedPortArgs build() {
+        }        public NamedPortArgs build() {
             return new NamedPortArgs(name, port);
         }
     }

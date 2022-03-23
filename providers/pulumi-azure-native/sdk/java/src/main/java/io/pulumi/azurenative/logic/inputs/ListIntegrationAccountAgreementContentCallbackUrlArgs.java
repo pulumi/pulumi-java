@@ -124,27 +124,22 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
             this.agreementName = Objects.requireNonNull(agreementName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListIntegrationAccountAgreementContentCallbackUrlArgs build() {
+        }        public ListIntegrationAccountAgreementContentCallbackUrlArgs build() {
             return new ListIntegrationAccountAgreementContentCallbackUrlArgs(agreementName, integrationAccountName, keyType, notAfter, resourceGroupName);
         }
     }

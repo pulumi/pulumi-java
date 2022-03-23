@@ -80,12 +80,13 @@ public final class CloudServiceNetworkProfileResponse extends io.pulumi.resource
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
-
+        public Builder loadBalancerConfigurations(LoadBalancerConfigurationResponse... loadBalancerConfigurations) {
+            return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
+        }
         public Builder swappableCloudService(@Nullable SubResourceResponse swappableCloudService) {
             this.swappableCloudService = swappableCloudService;
             return this;
-        }
-        public CloudServiceNetworkProfileResponse build() {
+        }        public CloudServiceNetworkProfileResponse build() {
             return new CloudServiceNetworkProfileResponse(loadBalancerConfigurations, swappableCloudService);
         }
     }

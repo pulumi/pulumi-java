@@ -76,12 +76,10 @@ public final class PatchDeploymentPatchConfigPostStep {
             this.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
-
         public Builder windowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfig windowsExecStepConfig) {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
-        }
-        public PatchDeploymentPatchConfigPostStep build() {
+        }        public PatchDeploymentPatchConfigPostStep build() {
             return new PatchDeploymentPatchConfigPostStep(linuxExecStepConfig, windowsExecStepConfig);
         }
     }

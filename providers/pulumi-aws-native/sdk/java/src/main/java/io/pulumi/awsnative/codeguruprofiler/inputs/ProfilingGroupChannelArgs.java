@@ -70,22 +70,18 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
             this.channelId = channelId;
             return this;
         }
-
         public Builder channelId(@Nullable String channelId) {
             this.channelId = Output.ofNullable(channelId);
             return this;
         }
-
         public Builder channelUri(Output<String> channelUri) {
             this.channelUri = Objects.requireNonNull(channelUri);
             return this;
         }
-
         public Builder channelUri(String channelUri) {
             this.channelUri = Output.of(Objects.requireNonNull(channelUri));
             return this;
-        }
-        public ProfilingGroupChannelArgs build() {
+        }        public ProfilingGroupChannelArgs build() {
             return new ProfilingGroupChannelArgs(channelId, channelUri);
         }
     }

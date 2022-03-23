@@ -91,32 +91,26 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ProjectMetadataItemState build() {
+        }        public ProjectMetadataItemState build() {
             return new ProjectMetadataItemState(key, project, value);
         }
     }

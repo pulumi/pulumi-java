@@ -136,32 +136,26 @@ public final class ContainerEventResponse {
             this.count = count;
             return this;
         }
-
         public Builder firstTimestamp(@Nullable String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
-
         public Builder lastTimestamp(@Nullable String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ContainerEventResponse build() {
+        }        public ContainerEventResponse build() {
             return new ContainerEventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }
     }

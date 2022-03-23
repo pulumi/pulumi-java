@@ -125,52 +125,45 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder family(Output<String> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder family(String family) {
             this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
-
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
-
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Object parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ParameterGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ParameterGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ParameterGroupArgs build() {
+        public Builder tags(ParameterGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ParameterGroupArgs build() {
             return new ParameterGroupArgs(description, family, parameterGroupName, parameters, tags);
         }
     }

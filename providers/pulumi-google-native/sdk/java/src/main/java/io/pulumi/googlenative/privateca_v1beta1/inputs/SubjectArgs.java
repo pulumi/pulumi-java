@@ -158,72 +158,58 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             this.countryCode = countryCode;
             return this;
         }
-
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = Output.ofNullable(countryCode);
             return this;
         }
-
         public Builder locality(@Nullable Output<String> locality) {
             this.locality = locality;
             return this;
         }
-
         public Builder locality(@Nullable String locality) {
             this.locality = Output.ofNullable(locality);
             return this;
         }
-
         public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = Output.ofNullable(organization);
             return this;
         }
-
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
-
         public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
-
         public Builder province(@Nullable Output<String> province) {
             this.province = province;
             return this;
         }
-
         public Builder province(@Nullable String province) {
             this.province = Output.ofNullable(province);
             return this;
         }
-
         public Builder streetAddress(@Nullable Output<String> streetAddress) {
             this.streetAddress = streetAddress;
             return this;
         }
-
         public Builder streetAddress(@Nullable String streetAddress) {
             this.streetAddress = Output.ofNullable(streetAddress);
             return this;
-        }
-        public SubjectArgs build() {
+        }        public SubjectArgs build() {
             return new SubjectArgs(countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }
     }

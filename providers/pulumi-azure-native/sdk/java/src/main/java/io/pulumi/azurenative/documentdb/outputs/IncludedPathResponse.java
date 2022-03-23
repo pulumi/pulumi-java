@@ -73,12 +73,13 @@ public final class IncludedPathResponse {
             this.indexes = indexes;
             return this;
         }
-
+        public Builder indexes(IndexesResponse... indexes) {
+            return indexes(List.of(indexes));
+        }
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
-        }
-        public IncludedPathResponse build() {
+        }        public IncludedPathResponse build() {
             return new IncludedPathResponse(indexes, path);
         }
     }

@@ -78,22 +78,18 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
-
         public Builder providerSpecificDetails(Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
             this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails);
             return this;
         }
-
         public Builder providerSpecificDetails(VMwareCbtEnableMigrationInputArgs providerSpecificDetails) {
             this.providerSpecificDetails = Output.of(Objects.requireNonNull(providerSpecificDetails));
             return this;
-        }
-        public EnableMigrationInputPropertiesArgs build() {
+        }        public EnableMigrationInputPropertiesArgs build() {
             return new EnableMigrationInputPropertiesArgs(policyId, providerSpecificDetails);
         }
     }

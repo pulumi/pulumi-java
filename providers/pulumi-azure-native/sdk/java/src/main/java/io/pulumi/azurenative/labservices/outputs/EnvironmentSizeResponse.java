@@ -123,27 +123,25 @@ public final class EnvironmentSizeResponse {
             this.maxPrice = Objects.requireNonNull(maxPrice);
             return this;
         }
-
         public Builder minMemory(Double minMemory) {
             this.minMemory = Objects.requireNonNull(minMemory);
             return this;
         }
-
         public Builder minNumberOfCores(Integer minNumberOfCores) {
             this.minNumberOfCores = Objects.requireNonNull(minNumberOfCores);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder vmSizes(@Nullable List<SizeInfoResponse> vmSizes) {
             this.vmSizes = vmSizes;
             return this;
         }
-        public EnvironmentSizeResponse build() {
+        public Builder vmSizes(SizeInfoResponse... vmSizes) {
+            return vmSizes(List.of(vmSizes));
+        }        public EnvironmentSizeResponse build() {
             return new EnvironmentSizeResponse(maxPrice, minMemory, minNumberOfCores, name, vmSizes);
         }
     }

@@ -57,12 +57,10 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }
-
         public Builder googleServiceAccount(String googleServiceAccount) {
             this.googleServiceAccount = Output.of(Objects.requireNonNull(googleServiceAccount));
             return this;
-        }
-        public ApiConfigGatewayConfigBackendConfigGetArgs build() {
+        }        public ApiConfigGatewayConfigBackendConfigGetArgs build() {
             return new ApiConfigGatewayConfigBackendConfigGetArgs(googleServiceAccount);
         }
     }

@@ -90,17 +90,14 @@ public final class IngressBackend {
             this.resource = resource;
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder servicePort(Either<Integer,String> servicePort) {
             this.servicePort = Objects.requireNonNull(servicePort);
             return this;
-        }
-        public IngressBackend build() {
+        }        public IngressBackend build() {
             return new IngressBackend(resource, serviceName, servicePort);
         }
     }

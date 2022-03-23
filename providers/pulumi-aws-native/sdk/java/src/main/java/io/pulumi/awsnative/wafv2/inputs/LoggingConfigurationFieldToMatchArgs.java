@@ -128,52 +128,42 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
             this.jsonBody = jsonBody;
             return this;
         }
-
         public Builder jsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs jsonBody) {
             this.jsonBody = Output.ofNullable(jsonBody);
             return this;
         }
-
         public Builder method(@Nullable Output<Object> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable Object method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder queryString(@Nullable Output<Object> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable Object queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder singleHeader(@Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
             this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
-
         public Builder uriPath(@Nullable Output<Object> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
-
         public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = Output.ofNullable(uriPath);
             return this;
-        }
-        public LoggingConfigurationFieldToMatchArgs build() {
+        }        public LoggingConfigurationFieldToMatchArgs build() {
             return new LoggingConfigurationFieldToMatchArgs(jsonBody, method, queryString, singleHeader, uriPath);
         }
     }

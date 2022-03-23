@@ -96,32 +96,26 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = Output.ofNullable(delimiter);
             return this;
         }
-
         public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
             this.maxDepth = maxDepth;
             return this;
         }
-
         public Builder maxDepth(@Nullable Integer maxDepth) {
             this.maxDepth = Output.ofNullable(maxDepth);
             return this;
         }
-
         public Builder minStorageBytesPercentage(@Nullable Output<Double> minStorageBytesPercentage) {
             this.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
         }
-
         public Builder minStorageBytesPercentage(@Nullable Double minStorageBytesPercentage) {
             this.minStorageBytesPercentage = Output.ofNullable(minStorageBytesPercentage);
             return this;
-        }
-        public StorageLensSelectionCriteriaArgs build() {
+        }        public StorageLensSelectionCriteriaArgs build() {
             return new StorageLensSelectionCriteriaArgs(delimiter, maxDepth, minStorageBytesPercentage);
         }
     }

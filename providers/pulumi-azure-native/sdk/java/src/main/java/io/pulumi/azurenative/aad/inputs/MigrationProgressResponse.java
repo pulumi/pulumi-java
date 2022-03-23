@@ -79,12 +79,10 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
             this.completionPercentage = completionPercentage;
             return this;
         }
-
         public Builder progressMessage(@Nullable String progressMessage) {
             this.progressMessage = progressMessage;
             return this;
-        }
-        public MigrationProgressResponse build() {
+        }        public MigrationProgressResponse build() {
             return new MigrationProgressResponse(completionPercentage, progressMessage);
         }
     }

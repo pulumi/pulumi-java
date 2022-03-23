@@ -110,22 +110,18 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
             this.imageName = imageName;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public GitHubActionContainerConfigurationResponse build() {
+        }        public GitHubActionContainerConfigurationResponse build() {
             return new GitHubActionContainerConfigurationResponse(imageName, password, serverUrl, username);
         }
     }

@@ -147,62 +147,50 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
             return this;
         }
-
         public Builder autoscalingPolicy(RegionAutoscalerAutoscalingPolicyArgs autoscalingPolicy) {
             this.autoscalingPolicy = Output.of(Objects.requireNonNull(autoscalingPolicy));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public RegionAutoscalerArgs build() {
+        }        public RegionAutoscalerArgs build() {
             return new RegionAutoscalerArgs(autoscalingPolicy, description, name, project, region, target);
         }
     }

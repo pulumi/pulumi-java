@@ -53,8 +53,7 @@ public final class GetBuildServiceBuildResultLogResult {
         public Builder blobUrl(@Nullable String blobUrl) {
             this.blobUrl = blobUrl;
             return this;
-        }
-        public GetBuildServiceBuildResultLogResult build() {
+        }        public GetBuildServiceBuildResultLogResult build() {
             return new GetBuildServiceBuildResultLogResult(blobUrl);
         }
     }

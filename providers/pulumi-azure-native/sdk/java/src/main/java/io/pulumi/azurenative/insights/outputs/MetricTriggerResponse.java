@@ -235,62 +235,53 @@ public final class MetricTriggerResponse {
             this.dimensions = dimensions;
             return this;
         }
-
+        public Builder dimensions(ScaleRuleMetricDimensionResponse... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
             this.dividePerInstance = dividePerInstance;
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
             this.metricResourceLocation = metricResourceLocation;
             return this;
         }
-
         public Builder metricResourceUri(String metricResourceUri) {
             this.metricResourceUri = Objects.requireNonNull(metricResourceUri);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder timeAggregation(String timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public Builder timeGrain(String timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
-
         public Builder timeWindow(String timeWindow) {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
-        }
-        public MetricTriggerResponse build() {
+        }        public MetricTriggerResponse build() {
             return new MetricTriggerResponse(dimensions, dividePerInstance, metricName, metricNamespace, metricResourceLocation, metricResourceUri, operator, statistic, threshold, timeAggregation, timeGrain, timeWindow);
         }
     }

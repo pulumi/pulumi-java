@@ -105,42 +105,37 @@ public final class GetVpnGatewayResult {
             this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder attachedVpcId(String attachedVpcId) {
             this.attachedVpcId = Objects.requireNonNull(attachedVpcId);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpnGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpnGatewayFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetVpnGatewayResult build() {
+        }        public GetVpnGatewayResult build() {
             return new GetVpnGatewayResult(amazonSideAsn, arn, attachedVpcId, availabilityZone, filters, id, state, tags);
         }
     }

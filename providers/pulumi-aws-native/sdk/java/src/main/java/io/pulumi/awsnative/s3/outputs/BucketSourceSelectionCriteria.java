@@ -72,12 +72,10 @@ public final class BucketSourceSelectionCriteria {
             this.replicaModifications = replicaModifications;
             return this;
         }
-
         public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
-        }
-        public BucketSourceSelectionCriteria build() {
+        }        public BucketSourceSelectionCriteria build() {
             return new BucketSourceSelectionCriteria(replicaModifications, sseKmsEncryptedObjects);
         }
     }

@@ -143,32 +143,32 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
             this.documentationRootUrl = Objects.requireNonNull(documentationRootUrl);
             return this;
         }
-
         public Builder overview(String overview) {
             this.overview = Objects.requireNonNull(overview);
             return this;
         }
-
         public Builder pages(List<PageResponse> pages) {
             this.pages = Objects.requireNonNull(pages);
             return this;
         }
-
+        public Builder pages(PageResponse... pages) {
+            return pages(List.of(pages));
+        }
         public Builder rules(List<DocumentationRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(DocumentationRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder serviceRootUrl(String serviceRootUrl) {
             this.serviceRootUrl = Objects.requireNonNull(serviceRootUrl);
             return this;
         }
-
         public Builder summary(String summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
-        }
-        public DocumentationResponse build() {
+        }        public DocumentationResponse build() {
             return new DocumentationResponse(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);
         }
     }

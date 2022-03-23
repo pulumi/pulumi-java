@@ -74,22 +74,18 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EncryptionConfigArgs build() {
+        }        public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(keyId, type);
         }
     }

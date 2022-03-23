@@ -193,92 +193,74 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
             this.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
-
         public Builder backupRetentionSettings(@Nullable BackupRetentionSettingsArgs backupRetentionSettings) {
             this.backupRetentionSettings = Output.ofNullable(backupRetentionSettings);
             return this;
         }
-
         public Builder binaryLogEnabled(@Nullable Output<Boolean> binaryLogEnabled) {
             this.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
-
         public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
             this.binaryLogEnabled = Output.ofNullable(binaryLogEnabled);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
-
         public Builder replicationLogArchivingEnabled(@Nullable Output<Boolean> replicationLogArchivingEnabled) {
             this.replicationLogArchivingEnabled = replicationLogArchivingEnabled;
             return this;
         }
-
         public Builder replicationLogArchivingEnabled(@Nullable Boolean replicationLogArchivingEnabled) {
             this.replicationLogArchivingEnabled = Output.ofNullable(replicationLogArchivingEnabled);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder transactionLogRetentionDays(@Nullable Output<Integer> transactionLogRetentionDays) {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }
-
         public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = Output.ofNullable(transactionLogRetentionDays);
             return this;
-        }
-        public BackupConfigurationArgs build() {
+        }        public BackupConfigurationArgs build() {
             return new BackupConfigurationArgs(backupRetentionSettings, binaryLogEnabled, enabled, kind, location, pointInTimeRecoveryEnabled, replicationLogArchivingEnabled, startTime, transactionLogRetentionDays);
         }
     }

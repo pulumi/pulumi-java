@@ -62,12 +62,13 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<RateLimitRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public RateLimitRuleListArgs build() {
+        public Builder rules(RateLimitRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public RateLimitRuleListArgs build() {
             return new RateLimitRuleListArgs(rules);
         }
     }

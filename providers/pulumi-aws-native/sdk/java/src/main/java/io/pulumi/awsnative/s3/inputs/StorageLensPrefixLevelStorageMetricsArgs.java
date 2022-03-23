@@ -71,22 +71,18 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder selectionCriteria(@Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria) {
             this.selectionCriteria = selectionCriteria;
             return this;
         }
-
         public Builder selectionCriteria(@Nullable StorageLensSelectionCriteriaArgs selectionCriteria) {
             this.selectionCriteria = Output.ofNullable(selectionCriteria);
             return this;
-        }
-        public StorageLensPrefixLevelStorageMetricsArgs build() {
+        }        public StorageLensPrefixLevelStorageMetricsArgs build() {
             return new StorageLensPrefixLevelStorageMetricsArgs(isEnabled, selectionCriteria);
         }
     }

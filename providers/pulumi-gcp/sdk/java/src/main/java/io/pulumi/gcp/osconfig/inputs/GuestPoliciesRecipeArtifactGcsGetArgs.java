@@ -94,32 +94,26 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder object(@Nullable Output<String> object) {
             this.object = object;
             return this;
         }
-
         public Builder object(@Nullable String object) {
             this.object = Output.ofNullable(object);
             return this;
-        }
-        public GuestPoliciesRecipeArtifactGcsGetArgs build() {
+        }        public GuestPoliciesRecipeArtifactGcsGetArgs build() {
             return new GuestPoliciesRecipeArtifactGcsGetArgs(bucket, generation, object);
         }
     }

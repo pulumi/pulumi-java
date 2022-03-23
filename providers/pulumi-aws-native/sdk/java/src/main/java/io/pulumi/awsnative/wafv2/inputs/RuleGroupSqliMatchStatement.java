@@ -70,12 +70,13 @@ public final class RuleGroupSqliMatchStatement extends io.pulumi.resources.Invok
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupSqliMatchStatement build() {
+        public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupSqliMatchStatement build() {
             return new RuleGroupSqliMatchStatement(fieldToMatch, textTransformations);
         }
     }

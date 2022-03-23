@@ -175,42 +175,34 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
             this.id = id;
             return this;
         }
-
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
             this.migrationSetting = migrationSetting;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = schemaName;
             return this;
         }
-
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
-
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
-        }
-        public MigrateSqlServerSqlDbSyncDatabaseInputResponse build() {
+        }        public MigrateSqlServerSqlDbSyncDatabaseInputResponse build() {
             return new MigrateSqlServerSqlDbSyncDatabaseInputResponse(id, migrationSetting, name, schemaName, sourceSetting, tableMap, targetDatabaseName, targetSetting);
         }
     }

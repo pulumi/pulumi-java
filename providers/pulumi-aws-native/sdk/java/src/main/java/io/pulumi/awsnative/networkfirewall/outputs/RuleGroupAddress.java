@@ -43,8 +43,7 @@ public final class RuleGroupAddress {
         public Builder addressDefinition(String addressDefinition) {
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
-        }
-        public RuleGroupAddress build() {
+        }        public RuleGroupAddress build() {
             return new RuleGroupAddress(addressDefinition);
         }
     }

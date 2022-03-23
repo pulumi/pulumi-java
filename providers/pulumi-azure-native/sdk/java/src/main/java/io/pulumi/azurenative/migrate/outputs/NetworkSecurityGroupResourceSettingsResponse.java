@@ -90,17 +90,17 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder securityRules(@Nullable List<NsgSecurityRuleResponse> securityRules) {
             this.securityRules = securityRules;
             return this;
         }
-
+        public Builder securityRules(NsgSecurityRuleResponse... securityRules) {
+            return securityRules(List.of(securityRules));
+        }
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
-        }
-        public NetworkSecurityGroupResourceSettingsResponse build() {
+        }        public NetworkSecurityGroupResourceSettingsResponse build() {
             return new NetworkSecurityGroupResourceSettingsResponse(resourceType, securityRules, targetResourceName);
         }
     }

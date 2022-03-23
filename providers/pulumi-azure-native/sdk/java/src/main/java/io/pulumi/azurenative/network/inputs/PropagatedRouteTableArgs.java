@@ -80,22 +80,24 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
             this.ids = ids;
             return this;
         }
-
         public Builder ids(@Nullable List<SubResourceArgs> ids) {
             this.ids = Output.ofNullable(ids);
             return this;
         }
-
+        public Builder ids(SubResourceArgs... ids) {
+            return ids(List.of(ids));
+        }
         public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-        public PropagatedRouteTableArgs build() {
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }        public PropagatedRouteTableArgs build() {
             return new PropagatedRouteTableArgs(ids, labels);
         }
     }

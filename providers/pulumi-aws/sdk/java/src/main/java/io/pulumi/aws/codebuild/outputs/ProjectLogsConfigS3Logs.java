@@ -104,22 +104,18 @@ public final class ProjectLogsConfigS3Logs {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
-
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ProjectLogsConfigS3Logs build() {
+        }        public ProjectLogsConfigS3Logs build() {
             return new ProjectLogsConfigS3Logs(bucketOwnerAccess, encryptionDisabled, location, status);
         }
     }

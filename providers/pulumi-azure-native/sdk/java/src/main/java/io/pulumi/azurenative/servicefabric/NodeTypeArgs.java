@@ -337,182 +337,152 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationPorts = applicationPorts;
             return this;
         }
-
         public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
             this.applicationPorts = Output.ofNullable(applicationPorts);
             return this;
         }
-
         public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
             this.capacities = capacities;
             return this;
         }
-
         public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = Output.ofNullable(capacities);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder dataDiskSizeGB(Output<Integer> dataDiskSizeGB) {
             this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
             return this;
         }
-
         public Builder dataDiskSizeGB(Integer dataDiskSizeGB) {
             this.dataDiskSizeGB = Output.of(Objects.requireNonNull(dataDiskSizeGB));
             return this;
         }
-
         public Builder ephemeralPorts(@Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
-
         public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
             this.ephemeralPorts = Output.ofNullable(ephemeralPorts);
             return this;
         }
-
         public Builder isPrimary(Output<Boolean> isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
-
         public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Output.of(Objects.requireNonNull(isPrimary));
             return this;
         }
-
         public Builder nodeTypeName(@Nullable Output<String> nodeTypeName) {
             this.nodeTypeName = nodeTypeName;
             return this;
         }
-
         public Builder nodeTypeName(@Nullable String nodeTypeName) {
             this.nodeTypeName = Output.ofNullable(nodeTypeName);
             return this;
         }
-
         public Builder placementProperties(@Nullable Output<Map<String,String>> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
-
         public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = Output.ofNullable(placementProperties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vmExtensions(@Nullable Output<List<VMSSExtensionArgs>> vmExtensions) {
             this.vmExtensions = vmExtensions;
             return this;
         }
-
         public Builder vmExtensions(@Nullable List<VMSSExtensionArgs> vmExtensions) {
             this.vmExtensions = Output.ofNullable(vmExtensions);
             return this;
         }
-
+        public Builder vmExtensions(VMSSExtensionArgs... vmExtensions) {
+            return vmExtensions(List.of(vmExtensions));
+        }
         public Builder vmImageOffer(@Nullable Output<String> vmImageOffer) {
             this.vmImageOffer = vmImageOffer;
             return this;
         }
-
         public Builder vmImageOffer(@Nullable String vmImageOffer) {
             this.vmImageOffer = Output.ofNullable(vmImageOffer);
             return this;
         }
-
         public Builder vmImagePublisher(@Nullable Output<String> vmImagePublisher) {
             this.vmImagePublisher = vmImagePublisher;
             return this;
         }
-
         public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
             this.vmImagePublisher = Output.ofNullable(vmImagePublisher);
             return this;
         }
-
         public Builder vmImageSku(@Nullable Output<String> vmImageSku) {
             this.vmImageSku = vmImageSku;
             return this;
         }
-
         public Builder vmImageSku(@Nullable String vmImageSku) {
             this.vmImageSku = Output.ofNullable(vmImageSku);
             return this;
         }
-
         public Builder vmImageVersion(@Nullable Output<String> vmImageVersion) {
             this.vmImageVersion = vmImageVersion;
             return this;
         }
-
         public Builder vmImageVersion(@Nullable String vmImageVersion) {
             this.vmImageVersion = Output.ofNullable(vmImageVersion);
             return this;
         }
-
         public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
-
         public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Output.of(Objects.requireNonNull(vmInstanceCount));
             return this;
         }
-
         public Builder vmSecrets(@Nullable Output<List<VaultSecretGroupArgs>> vmSecrets) {
             this.vmSecrets = vmSecrets;
             return this;
         }
-
         public Builder vmSecrets(@Nullable List<VaultSecretGroupArgs> vmSecrets) {
             this.vmSecrets = Output.ofNullable(vmSecrets);
             return this;
         }
-
+        public Builder vmSecrets(VaultSecretGroupArgs... vmSecrets) {
+            return vmSecrets(List.of(vmSecrets));
+        }
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
-        }
-        public NodeTypeArgs build() {
+        }        public NodeTypeArgs build() {
             return new NodeTypeArgs(applicationPorts, capacities, clusterName, dataDiskSizeGB, ephemeralPorts, isPrimary, nodeTypeName, placementProperties, resourceGroupName, tags, vmExtensions, vmImageOffer, vmImagePublisher, vmImageSku, vmImageVersion, vmInstanceCount, vmSecrets, vmSize);
         }
     }

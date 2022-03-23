@@ -283,77 +283,68 @@ public final class GetApplicationResult {
             this.debugParams = debugParams;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder diagnostics(@Nullable DiagnosticsDescriptionResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder healthState(String healthState) {
             this.healthState = Objects.requireNonNull(healthState);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceNames(List<String> serviceNames) {
             this.serviceNames = Objects.requireNonNull(serviceNames);
             return this;
         }
-
+        public Builder serviceNames(String... serviceNames) {
+            return serviceNames(List.of(serviceNames));
+        }
         public Builder services(@Nullable List<ServiceResourceDescriptionResponse> services) {
             this.services = services;
             return this;
         }
-
+        public Builder services(ServiceResourceDescriptionResponse... services) {
+            return services(List.of(services));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder unhealthyEvaluation(String unhealthyEvaluation) {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(debugParams, description, diagnostics, healthState, id, location, name, provisioningState, serviceNames, services, status, statusDetails, tags, type, unhealthyEvaluation);
         }
     }

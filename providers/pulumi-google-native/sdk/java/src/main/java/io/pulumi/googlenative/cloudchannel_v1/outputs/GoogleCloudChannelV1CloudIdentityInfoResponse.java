@@ -167,42 +167,34 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
             this.adminConsoleUri = Objects.requireNonNull(adminConsoleUri);
             return this;
         }
-
         public Builder alternateEmail(String alternateEmail) {
             this.alternateEmail = Objects.requireNonNull(alternateEmail);
             return this;
         }
-
         public Builder customerType(String customerType) {
             this.customerType = Objects.requireNonNull(customerType);
             return this;
         }
-
         public Builder eduData(GoogleCloudChannelV1EduDataResponse eduData) {
             this.eduData = Objects.requireNonNull(eduData);
             return this;
         }
-
         public Builder isDomainVerified(Boolean isDomainVerified) {
             this.isDomainVerified = Objects.requireNonNull(isDomainVerified);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder primaryDomain(String primaryDomain) {
             this.primaryDomain = Objects.requireNonNull(primaryDomain);
             return this;
-        }
-        public GoogleCloudChannelV1CloudIdentityInfoResponse build() {
+        }        public GoogleCloudChannelV1CloudIdentityInfoResponse build() {
             return new GoogleCloudChannelV1CloudIdentityInfoResponse(adminConsoleUri, alternateEmail, customerType, eduData, isDomainVerified, languageCode, phoneNumber, primaryDomain);
         }
     }

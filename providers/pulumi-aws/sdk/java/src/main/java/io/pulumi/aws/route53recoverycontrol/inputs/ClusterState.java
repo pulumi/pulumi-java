@@ -108,42 +108,37 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
             this.clusterEndpoints = clusterEndpoints;
             return this;
         }
-
         public Builder clusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
             this.clusterEndpoints = Output.ofNullable(clusterEndpoints);
             return this;
         }
-
+        public Builder clusterEndpoints(ClusterClusterEndpointGetArgs... clusterEndpoints) {
+            return clusterEndpoints(List.of(clusterEndpoints));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(arn, clusterEndpoints, name, status);
         }
     }

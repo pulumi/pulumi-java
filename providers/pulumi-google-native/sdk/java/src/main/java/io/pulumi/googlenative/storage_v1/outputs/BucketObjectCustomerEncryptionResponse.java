@@ -69,12 +69,10 @@ public final class BucketObjectCustomerEncryptionResponse {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
-
         public Builder keySha256(String keySha256) {
             this.keySha256 = Objects.requireNonNull(keySha256);
             return this;
-        }
-        public BucketObjectCustomerEncryptionResponse build() {
+        }        public BucketObjectCustomerEncryptionResponse build() {
             return new BucketObjectCustomerEncryptionResponse(encryptionAlgorithm, keySha256);
         }
     }

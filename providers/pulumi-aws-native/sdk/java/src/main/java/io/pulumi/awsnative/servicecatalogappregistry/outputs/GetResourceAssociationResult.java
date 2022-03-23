@@ -112,32 +112,26 @@ public final class GetResourceAssociationResult {
             this.application = application;
             return this;
         }
-
         public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceType(@Nullable ResourceAssociationResourceType resourceType) {
             this.resourceType = resourceType;
             return this;
-        }
-        public GetResourceAssociationResult build() {
+        }        public GetResourceAssociationResult build() {
             return new GetResourceAssociationResult(application, applicationArn, id, resource, resourceArn, resourceType);
         }
     }

@@ -75,22 +75,21 @@ public final class FindingAggregatorArgs extends io.pulumi.resources.ResourceArg
             this.linkingMode = Objects.requireNonNull(linkingMode);
             return this;
         }
-
         public Builder linkingMode(String linkingMode) {
             this.linkingMode = Output.of(Objects.requireNonNull(linkingMode));
             return this;
         }
-
         public Builder specifiedRegions(@Nullable Output<List<String>> specifiedRegions) {
             this.specifiedRegions = specifiedRegions;
             return this;
         }
-
         public Builder specifiedRegions(@Nullable List<String> specifiedRegions) {
             this.specifiedRegions = Output.ofNullable(specifiedRegions);
             return this;
         }
-        public FindingAggregatorArgs build() {
+        public Builder specifiedRegions(String... specifiedRegions) {
+            return specifiedRegions(List.of(specifiedRegions));
+        }        public FindingAggregatorArgs build() {
             return new FindingAggregatorArgs(linkingMode, specifiedRegions);
         }
     }

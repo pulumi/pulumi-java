@@ -114,42 +114,40 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends io.pulumi.reso
             this.apiSource = Objects.requireNonNull(apiSource);
             return this;
         }
-
         public Builder apiSource(String apiSource) {
             this.apiSource = Output.of(Objects.requireNonNull(apiSource));
             return this;
         }
-
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder operations(@Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations) {
             this.operations = operations;
             return this;
         }
-
         public Builder operations(@Nullable List<GoogleCloudApigeeV1OperationArgs> operations) {
             this.operations = Output.ofNullable(operations);
             return this;
         }
-
+        public Builder operations(GoogleCloudApigeeV1OperationArgs... operations) {
+            return operations(List.of(operations));
+        }
         public Builder quota(@Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
-
         public Builder quota(@Nullable GoogleCloudApigeeV1QuotaArgs quota) {
             this.quota = Output.ofNullable(quota);
             return this;
-        }
-        public GoogleCloudApigeeV1OperationConfigArgs build() {
+        }        public GoogleCloudApigeeV1OperationConfigArgs build() {
             return new GoogleCloudApigeeV1OperationConfigArgs(apiSource, attributes, operations, quota);
         }
     }

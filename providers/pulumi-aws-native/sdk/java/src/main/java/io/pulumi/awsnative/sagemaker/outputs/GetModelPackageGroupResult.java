@@ -107,27 +107,25 @@ public final class GetModelPackageGroupResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder modelPackageGroupArn(@Nullable String modelPackageGroupArn) {
             this.modelPackageGroupArn = modelPackageGroupArn;
             return this;
         }
-
         public Builder modelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
             this.modelPackageGroupPolicy = modelPackageGroupPolicy;
             return this;
         }
-
         public Builder modelPackageGroupStatus(@Nullable ModelPackageGroupStatus modelPackageGroupStatus) {
             this.modelPackageGroupStatus = modelPackageGroupStatus;
             return this;
         }
-
         public Builder tags(@Nullable List<ModelPackageGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetModelPackageGroupResult build() {
+        public Builder tags(ModelPackageGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetModelPackageGroupResult build() {
             return new GetModelPackageGroupResult(creationTime, modelPackageGroupArn, modelPackageGroupPolicy, modelPackageGroupStatus, tags);
         }
     }

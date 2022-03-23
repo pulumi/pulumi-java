@@ -53,8 +53,7 @@ public final class FolderFeedFeedOutputConfig {
         public Builder pubsubDestination(FolderFeedFeedOutputConfigPubsubDestination pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
-        }
-        public FolderFeedFeedOutputConfig build() {
+        }        public FolderFeedFeedOutputConfig build() {
             return new FolderFeedFeedOutputConfig(pubsubDestination);
         }
     }

@@ -138,62 +138,50 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder alternateContactType(Output<String> alternateContactType) {
             this.alternateContactType = Objects.requireNonNull(alternateContactType);
             return this;
         }
-
         public Builder alternateContactType(String alternateContactType) {
             this.alternateContactType = Output.of(Objects.requireNonNull(alternateContactType));
             return this;
         }
-
         public Builder emailAddress(Output<String> emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder emailAddress(String emailAddress) {
             this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public AlternativeContactArgs build() {
+        }        public AlternativeContactArgs build() {
             return new AlternativeContactArgs(accountId, alternateContactType, emailAddress, name, phoneNumber, title);
         }
     }

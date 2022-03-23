@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsArgs extends io.pulu
             this.loggingSettings = loggingSettings;
             return this;
         }
-
         public Builder loggingSettings(@Nullable GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs loggingSettings) {
             this.loggingSettings = Output.ofNullable(loggingSettings);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3AdvancedSettingsArgs build() {
+        }        public GoogleCloudDialogflowCxV3AdvancedSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3AdvancedSettingsArgs(loggingSettings);
         }
     }

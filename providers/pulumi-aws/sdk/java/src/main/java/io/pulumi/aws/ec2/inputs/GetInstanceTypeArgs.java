@@ -251,62 +251,62 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
             this.defaultCores = defaultCores;
             return this;
         }
-
         public Builder defaultThreadsPerCore(@Nullable Integer defaultThreadsPerCore) {
             this.defaultThreadsPerCore = defaultThreadsPerCore;
             return this;
         }
-
         public Builder fpgas(@Nullable List<GetInstanceTypeFpga> fpgas) {
             this.fpgas = fpgas;
             return this;
         }
-
+        public Builder fpgas(GetInstanceTypeFpga... fpgas) {
+            return fpgas(List.of(fpgas));
+        }
         public Builder gpuses(@Nullable List<GetInstanceTypeGpus> gpuses) {
             this.gpuses = gpuses;
             return this;
         }
-
+        public Builder gpuses(GetInstanceTypeGpus... gpuses) {
+            return gpuses(List.of(gpuses));
+        }
         public Builder hypervisor(@Nullable String hypervisor) {
             this.hypervisor = hypervisor;
             return this;
         }
-
         public Builder inferenceAccelerators(@Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators) {
             this.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
-
+        public Builder inferenceAccelerators(GetInstanceTypeInferenceAccelerator... inferenceAccelerators) {
+            return inferenceAccelerators(List.of(inferenceAccelerators));
+        }
         public Builder instanceDisks(@Nullable List<GetInstanceTypeInstanceDisk> instanceDisks) {
             this.instanceDisks = instanceDisks;
             return this;
         }
-
+        public Builder instanceDisks(GetInstanceTypeInstanceDisk... instanceDisks) {
+            return instanceDisks(List.of(instanceDisks));
+        }
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder maximumIpv6AddressesPerInterface(@Nullable Integer maximumIpv6AddressesPerInterface) {
             this.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
             return this;
         }
-
         public Builder totalFpgaMemory(@Nullable Integer totalFpgaMemory) {
             this.totalFpgaMemory = totalFpgaMemory;
             return this;
         }
-
         public Builder totalGpuMemory(@Nullable Integer totalGpuMemory) {
             this.totalGpuMemory = totalGpuMemory;
             return this;
         }
-
         public Builder totalInstanceStorage(@Nullable Integer totalInstanceStorage) {
             this.totalInstanceStorage = totalInstanceStorage;
             return this;
-        }
-        public GetInstanceTypeArgs build() {
+        }        public GetInstanceTypeArgs build() {
             return new GetInstanceTypeArgs(defaultCores, defaultThreadsPerCore, fpgas, gpuses, hypervisor, inferenceAccelerators, instanceDisks, instanceType, maximumIpv6AddressesPerInterface, totalFpgaMemory, totalGpuMemory, totalInstanceStorage);
         }
     }

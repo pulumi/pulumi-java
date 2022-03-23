@@ -78,32 +78,26 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder samplingPeriod(Output<String> samplingPeriod) {
             this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
             return this;
         }
-
         public Builder samplingPeriod(String samplingPeriod) {
             this.samplingPeriod = Output.of(Objects.requireNonNull(samplingPeriod));
             return this;
-        }
-        public PerformanceCounterConfigurationArgs build() {
+        }        public PerformanceCounterConfigurationArgs build() {
             return new PerformanceCounterConfigurationArgs(instance, name, samplingPeriod);
         }
     }

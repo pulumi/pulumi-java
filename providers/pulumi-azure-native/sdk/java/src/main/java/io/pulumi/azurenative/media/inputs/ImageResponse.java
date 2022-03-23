@@ -175,42 +175,34 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder range(@Nullable String range) {
             this.range = range;
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder step(@Nullable String step) {
             this.step = step;
             return this;
         }
-
         public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
-        }
-        public ImageResponse build() {
+        }        public ImageResponse build() {
             return new ImageResponse(keyFrameInterval, label, odataType, range, start, step, stretchMode, syncMode);
         }
     }

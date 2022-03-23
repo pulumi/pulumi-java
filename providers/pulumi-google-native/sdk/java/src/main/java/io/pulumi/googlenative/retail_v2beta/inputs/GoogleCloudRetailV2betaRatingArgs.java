@@ -96,32 +96,29 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
             this.averageRating = averageRating;
             return this;
         }
-
         public Builder averageRating(@Nullable Double averageRating) {
             this.averageRating = Output.ofNullable(averageRating);
             return this;
         }
-
         public Builder ratingCount(@Nullable Output<Integer> ratingCount) {
             this.ratingCount = ratingCount;
             return this;
         }
-
         public Builder ratingCount(@Nullable Integer ratingCount) {
             this.ratingCount = Output.ofNullable(ratingCount);
             return this;
         }
-
         public Builder ratingHistogram(@Nullable Output<List<Integer>> ratingHistogram) {
             this.ratingHistogram = ratingHistogram;
             return this;
         }
-
         public Builder ratingHistogram(@Nullable List<Integer> ratingHistogram) {
             this.ratingHistogram = Output.ofNullable(ratingHistogram);
             return this;
         }
-        public GoogleCloudRetailV2betaRatingArgs build() {
+        public Builder ratingHistogram(Integer... ratingHistogram) {
+            return ratingHistogram(List.of(ratingHistogram));
+        }        public GoogleCloudRetailV2betaRatingArgs build() {
             return new GoogleCloudRetailV2betaRatingArgs(averageRating, ratingCount, ratingHistogram);
         }
     }

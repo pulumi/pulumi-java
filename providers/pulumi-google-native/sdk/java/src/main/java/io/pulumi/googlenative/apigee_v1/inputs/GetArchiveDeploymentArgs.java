@@ -76,17 +76,14 @@ public final class GetArchiveDeploymentArgs extends io.pulumi.resources.InvokeAr
             this.archiveDeploymentId = Objects.requireNonNull(archiveDeploymentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetArchiveDeploymentArgs build() {
+        }        public GetArchiveDeploymentArgs build() {
             return new GetArchiveDeploymentArgs(archiveDeploymentId, environmentId, organizationId);
         }
     }

@@ -75,12 +75,10 @@ public final class CassandraKeyspaceGetPropertiesResponseOptions extends io.pulu
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public CassandraKeyspaceGetPropertiesResponseOptions build() {
+        }        public CassandraKeyspaceGetPropertiesResponseOptions build() {
             return new CassandraKeyspaceGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

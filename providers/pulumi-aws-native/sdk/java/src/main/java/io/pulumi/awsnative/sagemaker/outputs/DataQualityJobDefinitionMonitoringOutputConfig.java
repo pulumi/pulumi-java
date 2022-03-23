@@ -73,12 +73,13 @@ public final class DataQualityJobDefinitionMonitoringOutputConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder monitoringOutputs(List<DataQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-        public DataQualityJobDefinitionMonitoringOutputConfig build() {
+        public Builder monitoringOutputs(DataQualityJobDefinitionMonitoringOutput... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public DataQualityJobDefinitionMonitoringOutputConfig build() {
             return new DataQualityJobDefinitionMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }
     }

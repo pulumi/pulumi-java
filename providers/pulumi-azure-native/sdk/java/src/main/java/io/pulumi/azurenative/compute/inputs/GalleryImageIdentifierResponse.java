@@ -92,17 +92,14 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
-        }
-        public GalleryImageIdentifierResponse build() {
+        }        public GalleryImageIdentifierResponse build() {
             return new GalleryImageIdentifierResponse(offer, publisher, sku);
         }
     }

@@ -111,42 +111,34 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder permissions(Output<PermissionsArgs> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public Builder permissions(PermissionsArgs permissions) {
             this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
-        }
-        public AccessPolicyEntryArgs build() {
+        }        public AccessPolicyEntryArgs build() {
             return new AccessPolicyEntryArgs(applicationId, objectId, permissions, tenantId);
         }
     }

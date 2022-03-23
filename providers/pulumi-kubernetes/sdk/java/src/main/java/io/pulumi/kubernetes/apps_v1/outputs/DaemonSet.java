@@ -122,27 +122,22 @@ public final class DaemonSet {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable DaemonSetSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable DaemonSetStatus status) {
             this.status = status;
             return this;
-        }
-        public DaemonSet build() {
+        }        public DaemonSet build() {
             return new DaemonSet(apiVersion, kind, metadata, spec, status);
         }
     }

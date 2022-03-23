@@ -156,37 +156,36 @@ public final class GetUsagePlanResult {
             this.apiStages = apiStages;
             return this;
         }
-
+        public Builder apiStages(UsagePlanApiStage... apiStages) {
+            return apiStages(List.of(apiStages));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder quota(@Nullable UsagePlanQuotaSettings quota) {
             this.quota = quota;
             return this;
         }
-
         public Builder tags(@Nullable List<UsagePlanTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(UsagePlanTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder throttle(@Nullable UsagePlanThrottleSettings throttle) {
             this.throttle = throttle;
             return this;
         }
-
         public Builder usagePlanName(@Nullable String usagePlanName) {
             this.usagePlanName = usagePlanName;
             return this;
-        }
-        public GetUsagePlanResult build() {
+        }        public GetUsagePlanResult build() {
             return new GetUsagePlanResult(apiStages, description, id, quota, tags, throttle, usagePlanName);
         }
     }

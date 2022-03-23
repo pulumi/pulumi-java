@@ -58,8 +58,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public WorkloadMetadataConfigResponse build() {
+        }        public WorkloadMetadataConfigResponse build() {
             return new WorkloadMetadataConfigResponse(mode);
         }
     }

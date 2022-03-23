@@ -63,17 +63,14 @@ public final class ApiIamMemberCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public ApiIamMemberCondition build() {
+        }        public ApiIamMemberCondition build() {
             return new ApiIamMemberCondition(description, expression, title);
         }
     }

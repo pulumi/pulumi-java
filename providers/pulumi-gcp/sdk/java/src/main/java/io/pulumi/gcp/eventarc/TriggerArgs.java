@@ -175,82 +175,72 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(TriggerDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder matchingCriterias(Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias) {
             this.matchingCriterias = Objects.requireNonNull(matchingCriterias);
             return this;
         }
-
         public Builder matchingCriterias(List<TriggerMatchingCriteriaArgs> matchingCriterias) {
             this.matchingCriterias = Output.of(Objects.requireNonNull(matchingCriterias));
             return this;
         }
-
+        public Builder matchingCriterias(TriggerMatchingCriteriaArgs... matchingCriterias) {
+            return matchingCriterias(List.of(matchingCriterias));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder transports(@Nullable Output<List<TriggerTransportArgs>> transports) {
             this.transports = transports;
             return this;
         }
-
         public Builder transports(@Nullable List<TriggerTransportArgs> transports) {
             this.transports = Output.ofNullable(transports);
             return this;
         }
-        public TriggerArgs build() {
+        public Builder transports(TriggerTransportArgs... transports) {
+            return transports(List.of(transports));
+        }        public TriggerArgs build() {
             return new TriggerArgs(destination, labels, location, matchingCriterias, name, project, serviceAccount, transports);
         }
     }

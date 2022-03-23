@@ -90,17 +90,14 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
             this.clientId = clientId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public UserAssignedIdentityResponse build() {
+        }        public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, objectId, resourceId);
         }
     }

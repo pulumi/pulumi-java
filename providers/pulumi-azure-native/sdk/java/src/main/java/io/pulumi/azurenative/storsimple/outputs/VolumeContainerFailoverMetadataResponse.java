@@ -73,12 +73,13 @@ public final class VolumeContainerFailoverMetadataResponse {
             this.volumeContainerId = volumeContainerId;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeFailoverMetadataResponse> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public VolumeContainerFailoverMetadataResponse build() {
+        public Builder volumes(VolumeFailoverMetadataResponse... volumes) {
+            return volumes(List.of(volumes));
+        }        public VolumeContainerFailoverMetadataResponse build() {
             return new VolumeContainerFailoverMetadataResponse(volumeContainerId, volumes);
         }
     }

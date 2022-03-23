@@ -104,22 +104,18 @@ public final class GetTenantConfigurationResult {
             this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetTenantConfigurationResult build() {
+        }        public GetTenantConfigurationResult build() {
             return new GetTenantConfigurationResult(enforcePrivateMarkdownStorage, id, name, type);
         }
     }

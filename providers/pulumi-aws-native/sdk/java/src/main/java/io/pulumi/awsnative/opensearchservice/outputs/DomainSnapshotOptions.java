@@ -45,8 +45,7 @@ public final class DomainSnapshotOptions {
         public Builder automatedSnapshotStartHour(@Nullable Integer automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
-        }
-        public DomainSnapshotOptions build() {
+        }        public DomainSnapshotOptions build() {
             return new DomainSnapshotOptions(automatedSnapshotStartHour);
         }
     }

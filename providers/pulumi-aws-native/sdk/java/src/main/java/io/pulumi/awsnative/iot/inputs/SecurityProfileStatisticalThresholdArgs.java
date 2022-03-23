@@ -61,12 +61,10 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
             this.statistic = statistic;
             return this;
         }
-
         public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
             this.statistic = Output.ofNullable(statistic);
             return this;
-        }
-        public SecurityProfileStatisticalThresholdArgs build() {
+        }        public SecurityProfileStatisticalThresholdArgs build() {
             return new SecurityProfileStatisticalThresholdArgs(statistic);
         }
     }

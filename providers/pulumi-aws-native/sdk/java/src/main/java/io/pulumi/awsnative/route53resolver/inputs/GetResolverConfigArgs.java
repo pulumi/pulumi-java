@@ -54,8 +54,7 @@ public final class GetResolverConfigArgs extends io.pulumi.resources.InvokeArgs 
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetResolverConfigArgs build() {
+        }        public GetResolverConfigArgs build() {
             return new GetResolverConfigArgs(id);
         }
     }

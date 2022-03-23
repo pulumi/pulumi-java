@@ -72,12 +72,10 @@ public final class ListServiceTestKeysArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public ListServiceTestKeysArgs build() {
+        }        public ListServiceTestKeysArgs build() {
             return new ListServiceTestKeysArgs(resourceGroupName, serviceName);
         }
     }

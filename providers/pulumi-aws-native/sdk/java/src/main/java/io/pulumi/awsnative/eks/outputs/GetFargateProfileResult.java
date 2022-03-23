@@ -65,12 +65,13 @@ public final class GetFargateProfileResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<FargateProfileTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFargateProfileResult build() {
+        public Builder tags(FargateProfileTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFargateProfileResult build() {
             return new GetFargateProfileResult(arn, tags);
         }
     }

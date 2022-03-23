@@ -72,12 +72,10 @@ public final class DedicatedHostAllocatableVMResponse {
             this.count = count;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public DedicatedHostAllocatableVMResponse build() {
+        }        public DedicatedHostAllocatableVMResponse build() {
             return new DedicatedHostAllocatableVMResponse(count, vmSize);
         }
     }

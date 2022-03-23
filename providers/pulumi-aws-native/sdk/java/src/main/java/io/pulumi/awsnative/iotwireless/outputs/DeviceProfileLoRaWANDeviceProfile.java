@@ -153,72 +153,58 @@ public final class DeviceProfileLoRaWANDeviceProfile {
             this.classBTimeout = classBTimeout;
             return this;
         }
-
         public Builder classCTimeout(@Nullable Integer classCTimeout) {
             this.classCTimeout = classCTimeout;
             return this;
         }
-
         public Builder macVersion(@Nullable String macVersion) {
             this.macVersion = macVersion;
             return this;
         }
-
         public Builder maxDutyCycle(@Nullable Integer maxDutyCycle) {
             this.maxDutyCycle = maxDutyCycle;
             return this;
         }
-
         public Builder maxEirp(@Nullable Integer maxEirp) {
             this.maxEirp = maxEirp;
             return this;
         }
-
         public Builder pingSlotDr(@Nullable Integer pingSlotDr) {
             this.pingSlotDr = pingSlotDr;
             return this;
         }
-
         public Builder pingSlotFreq(@Nullable Integer pingSlotFreq) {
             this.pingSlotFreq = pingSlotFreq;
             return this;
         }
-
         public Builder pingSlotPeriod(@Nullable Integer pingSlotPeriod) {
             this.pingSlotPeriod = pingSlotPeriod;
             return this;
         }
-
         public Builder regParamsRevision(@Nullable String regParamsRevision) {
             this.regParamsRevision = regParamsRevision;
             return this;
         }
-
         public Builder rfRegion(@Nullable String rfRegion) {
             this.rfRegion = rfRegion;
             return this;
         }
-
         public Builder supports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
             this.supports32BitFCnt = supports32BitFCnt;
             return this;
         }
-
         public Builder supportsClassB(@Nullable Boolean supportsClassB) {
             this.supportsClassB = supportsClassB;
             return this;
         }
-
         public Builder supportsClassC(@Nullable Boolean supportsClassC) {
             this.supportsClassC = supportsClassC;
             return this;
         }
-
         public Builder supportsJoin(@Nullable Boolean supportsJoin) {
             this.supportsJoin = supportsJoin;
             return this;
-        }
-        public DeviceProfileLoRaWANDeviceProfile build() {
+        }        public DeviceProfileLoRaWANDeviceProfile build() {
             return new DeviceProfileLoRaWANDeviceProfile(classBTimeout, classCTimeout, macVersion, maxDutyCycle, maxEirp, pingSlotDr, pingSlotFreq, pingSlotPeriod, regParamsRevision, rfRegion, supports32BitFCnt, supportsClassB, supportsClassC, supportsJoin);
         }
     }

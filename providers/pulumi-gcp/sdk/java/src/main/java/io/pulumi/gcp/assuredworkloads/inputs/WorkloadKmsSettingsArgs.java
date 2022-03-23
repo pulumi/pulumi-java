@@ -73,22 +73,18 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
-
         public Builder nextRotationTime(String nextRotationTime) {
             this.nextRotationTime = Output.of(Objects.requireNonNull(nextRotationTime));
             return this;
         }
-
         public Builder rotationPeriod(Output<String> rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Output.of(Objects.requireNonNull(rotationPeriod));
             return this;
-        }
-        public WorkloadKmsSettingsArgs build() {
+        }        public WorkloadKmsSettingsArgs build() {
             return new WorkloadKmsSettingsArgs(nextRotationTime, rotationPeriod);
         }
     }

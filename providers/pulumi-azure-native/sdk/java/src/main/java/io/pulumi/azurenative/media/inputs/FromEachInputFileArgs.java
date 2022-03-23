@@ -87,22 +87,21 @@ public final class FromEachInputFileArgs extends io.pulumi.resources.ResourceArg
             this.includedTracks = includedTracks;
             return this;
         }
-
         public Builder includedTracks(@Nullable List<Object> includedTracks) {
             this.includedTracks = Output.ofNullable(includedTracks);
             return this;
         }
-
+        public Builder includedTracks(Object... includedTracks) {
+            return includedTracks(List.of(includedTracks));
+        }
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public FromEachInputFileArgs build() {
+        }        public FromEachInputFileArgs build() {
             return new FromEachInputFileArgs(includedTracks, odataType);
         }
     }

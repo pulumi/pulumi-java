@@ -54,8 +54,7 @@ public final class GetMeshSpecEgressFilter extends io.pulumi.resources.InvokeArg
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMeshSpecEgressFilter build() {
+        }        public GetMeshSpecEgressFilter build() {
             return new GetMeshSpecEgressFilter(type);
         }
     }

@@ -76,12 +76,10 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
-        }
-        public ResourceRequestsResponse build() {
+        }        public ResourceRequestsResponse build() {
             return new ResourceRequestsResponse(cpu, memoryInGB);
         }
     }

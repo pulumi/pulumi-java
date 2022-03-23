@@ -139,62 +139,50 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
             this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId);
             return this;
         }
-
         public Builder linkedRedisCacheId(String linkedRedisCacheId) {
             this.linkedRedisCacheId = Output.of(Objects.requireNonNull(linkedRedisCacheId));
             return this;
         }
-
         public Builder linkedRedisCacheLocation(Output<String> linkedRedisCacheLocation) {
             this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation);
             return this;
         }
-
         public Builder linkedRedisCacheLocation(String linkedRedisCacheLocation) {
             this.linkedRedisCacheLocation = Output.of(Objects.requireNonNull(linkedRedisCacheLocation));
             return this;
         }
-
         public Builder linkedServerName(@Nullable Output<String> linkedServerName) {
             this.linkedServerName = linkedServerName;
             return this;
         }
-
         public Builder linkedServerName(@Nullable String linkedServerName) {
             this.linkedServerName = Output.ofNullable(linkedServerName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverRole(Output<ReplicationRole> serverRole) {
             this.serverRole = Objects.requireNonNull(serverRole);
             return this;
         }
-
         public Builder serverRole(ReplicationRole serverRole) {
             this.serverRole = Output.of(Objects.requireNonNull(serverRole));
             return this;
-        }
-        public LinkedServerArgs build() {
+        }        public LinkedServerArgs build() {
             return new LinkedServerArgs(linkedRedisCacheId, linkedRedisCacheLocation, linkedServerName, name, resourceGroupName, serverRole);
         }
     }

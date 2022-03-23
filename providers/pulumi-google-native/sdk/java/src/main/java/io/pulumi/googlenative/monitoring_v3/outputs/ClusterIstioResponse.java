@@ -101,22 +101,18 @@ public final class ClusterIstioResponse {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
-        }
-        public ClusterIstioResponse build() {
+        }        public ClusterIstioResponse build() {
             return new ClusterIstioResponse(clusterName, location, serviceName, serviceNamespace);
         }
     }

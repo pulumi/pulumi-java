@@ -97,17 +97,20 @@ public final class TriggerBuildArtifactsObjects {
             this.location = location;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder timings(@Nullable List<TriggerBuildArtifactsObjectsTiming> timings) {
             this.timings = timings;
             return this;
         }
-        public TriggerBuildArtifactsObjects build() {
+        public Builder timings(TriggerBuildArtifactsObjectsTiming... timings) {
+            return timings(List.of(timings));
+        }        public TriggerBuildArtifactsObjects build() {
             return new TriggerBuildArtifactsObjects(location, paths, timings);
         }
     }

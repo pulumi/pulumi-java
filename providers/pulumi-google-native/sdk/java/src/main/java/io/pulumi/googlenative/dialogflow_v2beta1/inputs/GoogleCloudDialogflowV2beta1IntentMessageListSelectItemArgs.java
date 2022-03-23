@@ -112,42 +112,34 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder info(Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
-
         public Builder info(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs info) {
             this.info = Output.of(Objects.requireNonNull(info));
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs(description, image, info, title);
         }
     }

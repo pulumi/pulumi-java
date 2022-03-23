@@ -78,17 +78,14 @@ public final class DeliveryStreamCopyCommand extends io.pulumi.resources.InvokeA
             this.copyOptions = copyOptions;
             return this;
         }
-
         public Builder dataTableColumns(@Nullable String dataTableColumns) {
             this.dataTableColumns = dataTableColumns;
             return this;
         }
-
         public Builder dataTableName(String dataTableName) {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
-        }
-        public DeliveryStreamCopyCommand build() {
+        }        public DeliveryStreamCopyCommand build() {
             return new DeliveryStreamCopyCommand(copyOptions, dataTableColumns, dataTableName);
         }
     }

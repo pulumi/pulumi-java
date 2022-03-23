@@ -120,27 +120,22 @@ public final class GetIncidentRelationArgs extends io.pulumi.resources.InvokeArg
             this.incidentId = Objects.requireNonNull(incidentId);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder relationName(String relationName) {
             this.relationName = Objects.requireNonNull(relationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIncidentRelationArgs build() {
+        }        public GetIncidentRelationArgs build() {
             return new GetIncidentRelationArgs(incidentId, operationalInsightsResourceProvider, relationName, resourceGroupName, workspaceName);
         }
     }

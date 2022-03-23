@@ -193,92 +193,74 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
             this.containerID = containerID;
             return this;
         }
-
         public Builder containerID(@Nullable String containerID) {
             this.containerID = Output.ofNullable(containerID);
             return this;
         }
-
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder imageID(Output<String> imageID) {
             this.imageID = Objects.requireNonNull(imageID);
             return this;
         }
-
         public Builder imageID(String imageID) {
             this.imageID = Output.of(Objects.requireNonNull(imageID));
             return this;
         }
-
         public Builder lastState(@Nullable Output<ContainerStateArgs> lastState) {
             this.lastState = lastState;
             return this;
         }
-
         public Builder lastState(@Nullable ContainerStateArgs lastState) {
             this.lastState = Output.ofNullable(lastState);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder ready(Output<Boolean> ready) {
             this.ready = Objects.requireNonNull(ready);
             return this;
         }
-
         public Builder ready(Boolean ready) {
             this.ready = Output.of(Objects.requireNonNull(ready));
             return this;
         }
-
         public Builder restartCount(Output<Integer> restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }
-
         public Builder restartCount(Integer restartCount) {
             this.restartCount = Output.of(Objects.requireNonNull(restartCount));
             return this;
         }
-
         public Builder started(@Nullable Output<Boolean> started) {
             this.started = started;
             return this;
         }
-
         public Builder started(@Nullable Boolean started) {
             this.started = Output.ofNullable(started);
             return this;
         }
-
         public Builder state(@Nullable Output<ContainerStateArgs> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ContainerStateArgs state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public ContainerStatusArgs build() {
+        }        public ContainerStatusArgs build() {
             return new ContainerStatusArgs(containerID, image, imageID, lastState, name, ready, restartCount, started, state);
         }
     }

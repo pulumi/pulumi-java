@@ -294,152 +294,131 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder defaultGroup(@Nullable Output<String> defaultGroup) {
             this.defaultGroup = defaultGroup;
             return this;
         }
-
         public Builder defaultGroup(@Nullable String defaultGroup) {
             this.defaultGroup = Output.ofNullable(defaultGroup);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder encryptionState(@Nullable Output<EncryptionState> encryptionState) {
             this.encryptionState = encryptionState;
             return this;
         }
-
         public Builder encryptionState(@Nullable EncryptionState encryptionState) {
             this.encryptionState = Output.ofNullable(encryptionState);
             return this;
         }
-
         public Builder firewallAllowAzureIps(@Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
             this.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
-
         public Builder firewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
             this.firewallAllowAzureIps = Output.ofNullable(firewallAllowAzureIps);
             return this;
         }
-
         public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public Builder firewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
             this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
-
+        public Builder firewallRules(CreateFirewallRuleWithAccountParametersArgs... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder firewallState(@Nullable Output<FirewallState> firewallState) {
             this.firewallState = firewallState;
             return this;
         }
-
         public Builder firewallState(@Nullable FirewallState firewallState) {
             this.firewallState = Output.ofNullable(firewallState);
             return this;
         }
-
         public Builder identity(@Nullable Output<EncryptionIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable EncryptionIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder newTier(@Nullable Output<TierType> newTier) {
             this.newTier = newTier;
             return this;
         }
-
         public Builder newTier(@Nullable TierType newTier) {
             this.newTier = Output.ofNullable(newTier);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder trustedIdProviderState(@Nullable Output<TrustedIdProviderState> trustedIdProviderState) {
             this.trustedIdProviderState = trustedIdProviderState;
             return this;
         }
-
         public Builder trustedIdProviderState(@Nullable TrustedIdProviderState trustedIdProviderState) {
             this.trustedIdProviderState = Output.ofNullable(trustedIdProviderState);
             return this;
         }
-
         public Builder trustedIdProviders(@Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders) {
             this.trustedIdProviders = trustedIdProviders;
             return this;
         }
-
         public Builder trustedIdProviders(@Nullable List<CreateTrustedIdProviderWithAccountParametersArgs> trustedIdProviders) {
             this.trustedIdProviders = Output.ofNullable(trustedIdProviders);
             return this;
         }
-
+        public Builder trustedIdProviders(CreateTrustedIdProviderWithAccountParametersArgs... trustedIdProviders) {
+            return trustedIdProviders(List.of(trustedIdProviders));
+        }
         public Builder virtualNetworkRules(@Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable List<CreateVirtualNetworkRuleWithAccountParametersArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
-        public AccountArgs build() {
+        public Builder virtualNetworkRules(CreateVirtualNetworkRuleWithAccountParametersArgs... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public AccountArgs build() {
             return new AccountArgs(accountName, defaultGroup, encryptionConfig, encryptionState, firewallAllowAzureIps, firewallRules, firewallState, identity, location, newTier, resourceGroupName, tags, trustedIdProviderState, trustedIdProviders, virtualNetworkRules);
         }
     }

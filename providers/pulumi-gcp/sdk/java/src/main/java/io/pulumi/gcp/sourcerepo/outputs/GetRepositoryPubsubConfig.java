@@ -61,17 +61,14 @@ public final class GetRepositoryPubsubConfig {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GetRepositoryPubsubConfig build() {
+        }        public GetRepositoryPubsubConfig build() {
             return new GetRepositoryPubsubConfig(messageFormat, serviceAccountEmail, topic);
         }
     }

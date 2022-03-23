@@ -122,27 +122,22 @@ public final class GoogleCloudStorageLocationResponse {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
-        }
-        public GoogleCloudStorageLocationResponse build() {
+        }        public GoogleCloudStorageLocationResponse build() {
             return new GoogleCloudStorageLocationResponse(bucketName, fileName, folderPath, type, version);
         }
     }

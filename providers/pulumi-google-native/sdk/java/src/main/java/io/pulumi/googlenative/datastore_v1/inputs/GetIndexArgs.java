@@ -66,12 +66,10 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetIndexArgs build() {
+        }        public GetIndexArgs build() {
             return new GetIndexArgs(indexId, project);
         }
     }

@@ -326,132 +326,109 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
             this.auditActionsAndGroups = auditActionsAndGroups;
             return this;
         }
-
         public Builder auditActionsAndGroups(@Nullable List<String> auditActionsAndGroups) {
             this.auditActionsAndGroups = Output.ofNullable(auditActionsAndGroups);
             return this;
         }
-
+        public Builder auditActionsAndGroups(String... auditActionsAndGroups) {
+            return auditActionsAndGroups(List.of(auditActionsAndGroups));
+        }
         public Builder blobAuditingPolicyName(@Nullable Output<String> blobAuditingPolicyName) {
             this.blobAuditingPolicyName = blobAuditingPolicyName;
             return this;
         }
-
         public Builder blobAuditingPolicyName(@Nullable String blobAuditingPolicyName) {
             this.blobAuditingPolicyName = Output.ofNullable(blobAuditingPolicyName);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder isAzureMonitorTargetEnabled(@Nullable Output<Boolean> isAzureMonitorTargetEnabled) {
             this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;
             return this;
         }
-
         public Builder isAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
             this.isAzureMonitorTargetEnabled = Output.ofNullable(isAzureMonitorTargetEnabled);
             return this;
         }
-
         public Builder isStorageSecondaryKeyInUse(@Nullable Output<Boolean> isStorageSecondaryKeyInUse) {
             this.isStorageSecondaryKeyInUse = isStorageSecondaryKeyInUse;
             return this;
         }
-
         public Builder isStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
             this.isStorageSecondaryKeyInUse = Output.ofNullable(isStorageSecondaryKeyInUse);
             return this;
         }
-
         public Builder queueDelayMs(@Nullable Output<Integer> queueDelayMs) {
             this.queueDelayMs = queueDelayMs;
             return this;
         }
-
         public Builder queueDelayMs(@Nullable Integer queueDelayMs) {
             this.queueDelayMs = Output.ofNullable(queueDelayMs);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder state(Output<BlobAuditingPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(BlobAuditingPolicyState state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder storageAccountAccessKey(@Nullable Output<String> storageAccountAccessKey) {
             this.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
-
         public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
             this.storageAccountAccessKey = Output.ofNullable(storageAccountAccessKey);
             return this;
         }
-
         public Builder storageAccountSubscriptionId(@Nullable Output<String> storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
-
         public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = Output.ofNullable(storageAccountSubscriptionId);
             return this;
         }
-
         public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
-
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
             this.storageEndpoint = Output.ofNullable(storageEndpoint);
             return this;
-        }
-        public DatabaseBlobAuditingPolicyArgs build() {
+        }        public DatabaseBlobAuditingPolicyArgs build() {
             return new DatabaseBlobAuditingPolicyArgs(auditActionsAndGroups, blobAuditingPolicyName, databaseName, isAzureMonitorTargetEnabled, isStorageSecondaryKeyInUse, queueDelayMs, resourceGroupName, retentionDays, serverName, state, storageAccountAccessKey, storageAccountSubscriptionId, storageEndpoint);
         }
     }

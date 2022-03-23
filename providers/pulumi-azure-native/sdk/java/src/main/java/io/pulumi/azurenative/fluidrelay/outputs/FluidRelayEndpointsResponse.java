@@ -70,12 +70,16 @@ public final class FluidRelayEndpointsResponse {
             this.ordererEndpoints = Objects.requireNonNull(ordererEndpoints);
             return this;
         }
-
+        public Builder ordererEndpoints(String... ordererEndpoints) {
+            return ordererEndpoints(List.of(ordererEndpoints));
+        }
         public Builder storageEndpoints(List<String> storageEndpoints) {
             this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
             return this;
         }
-        public FluidRelayEndpointsResponse build() {
+        public Builder storageEndpoints(String... storageEndpoints) {
+            return storageEndpoints(List.of(storageEndpoints));
+        }        public FluidRelayEndpointsResponse build() {
             return new FluidRelayEndpointsResponse(ordererEndpoints, storageEndpoints);
         }
     }

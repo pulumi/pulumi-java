@@ -53,12 +53,10 @@ public final class ApplicationInstanceManifestPayloadArgs extends io.pulumi.reso
             this.payloadData = payloadData;
             return this;
         }
-
         public Builder payloadData(@Nullable String payloadData) {
             this.payloadData = Output.ofNullable(payloadData);
             return this;
-        }
-        public ApplicationInstanceManifestPayloadArgs build() {
+        }        public ApplicationInstanceManifestPayloadArgs build() {
             return new ApplicationInstanceManifestPayloadArgs(payloadData);
         }
     }

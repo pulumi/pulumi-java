@@ -176,42 +176,34 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
             this.deserializer = deserializer;
             return this;
         }
-
         public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = encodingName;
             return this;
         }
-
         public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = filePattern;
             return this;
         }
-
         public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
             this.jsonNodeReference = jsonNodeReference;
             return this;
         }
-
         public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
             this.jsonPathDefinition = jsonPathDefinition;
             return this;
         }
-
         public Builder nestingSeparator(@Nullable Object nestingSeparator) {
             this.nestingSeparator = nestingSeparator;
             return this;
         }
-
         public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JsonFormatResponse build() {
+        }        public JsonFormatResponse build() {
             return new JsonFormatResponse(deserializer, encodingName, filePattern, jsonNodeReference, jsonPathDefinition, nestingSeparator, serializer, type);
         }
     }

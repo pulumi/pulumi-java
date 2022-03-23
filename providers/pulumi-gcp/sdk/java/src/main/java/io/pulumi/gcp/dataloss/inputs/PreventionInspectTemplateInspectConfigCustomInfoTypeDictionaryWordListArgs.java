@@ -58,12 +58,13 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public Builder words(List<String> words) {
             this.words = Output.of(Objects.requireNonNull(words));
             return this;
         }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs build() {
+        public Builder words(String... words) {
+            return words(List.of(words));
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs(words);
         }
     }

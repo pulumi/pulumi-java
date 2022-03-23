@@ -161,37 +161,33 @@ public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
             this.clientTags = Objects.requireNonNull(clientTags);
             return this;
         }
-
+        public Builder clientTags(String... clientTags) {
+            return clientTags(List.of(clientTags));
+        }
         public Builder continueOnFailure(Boolean continueOnFailure) {
             this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
             return this;
         }
-
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
-
         public Builder outputFormat(String outputFormat) {
             this.outputFormat = Objects.requireNonNull(outputFormat);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
-
         public Builder queryList(QueryListResponse queryList) {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
-        }
-        public PrestoJobResponse build() {
+        }        public PrestoJobResponse build() {
             return new PrestoJobResponse(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
         }
     }

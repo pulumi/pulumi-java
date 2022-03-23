@@ -143,62 +143,53 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
-
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Output.ofNullable(customAttributes);
             return this;
         }
-
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
-
         public Builder eventTypes(@Nullable List<String> eventTypes) {
             this.eventTypes = Output.ofNullable(eventTypes);
             return this;
         }
-
+        public Builder eventTypes(String... eventTypes) {
+            return eventTypes(List.of(eventTypes));
+        }
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
-
         public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
             this.objectNamePrefix = Output.ofNullable(objectNamePrefix);
             return this;
         }
-
         public Builder payloadFormat(Output<String> payloadFormat) {
             this.payloadFormat = Objects.requireNonNull(payloadFormat);
             return this;
         }
-
         public Builder payloadFormat(String payloadFormat) {
             this.payloadFormat = Output.of(Objects.requireNonNull(payloadFormat));
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public NotificationArgs build() {
+        }        public NotificationArgs build() {
             return new NotificationArgs(bucket, customAttributes, eventTypes, objectNamePrefix, payloadFormat, topic);
         }
     }

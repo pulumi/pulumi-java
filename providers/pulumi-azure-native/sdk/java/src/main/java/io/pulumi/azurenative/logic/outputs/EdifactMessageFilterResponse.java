@@ -51,8 +51,7 @@ public final class EdifactMessageFilterResponse {
         public Builder messageFilterType(String messageFilterType) {
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
-        }
-        public EdifactMessageFilterResponse build() {
+        }        public EdifactMessageFilterResponse build() {
             return new EdifactMessageFilterResponse(messageFilterType);
         }
     }

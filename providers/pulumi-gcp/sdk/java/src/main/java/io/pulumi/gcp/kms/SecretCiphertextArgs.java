@@ -93,32 +93,26 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
-
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
             this.additionalAuthenticatedData = Output.ofNullable(additionalAuthenticatedData);
             return this;
         }
-
         public Builder cryptoKey(Output<String> cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Output.of(Objects.requireNonNull(cryptoKey));
             return this;
         }
-
         public Builder plaintext(Output<String> plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Output.of(Objects.requireNonNull(plaintext));
             return this;
-        }
-        public SecretCiphertextArgs build() {
+        }        public SecretCiphertextArgs build() {
             return new SecretCiphertextArgs(additionalAuthenticatedData, cryptoKey, plaintext);
         }
     }

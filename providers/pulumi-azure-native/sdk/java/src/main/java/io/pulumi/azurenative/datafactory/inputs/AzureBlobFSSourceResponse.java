@@ -176,42 +176,34 @@ public final class AzureBlobFSSourceResponse extends io.pulumi.resources.InvokeA
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder skipHeaderLineCount(@Nullable Object skipHeaderLineCount) {
             this.skipHeaderLineCount = skipHeaderLineCount;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
             this.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureBlobFSSourceResponse build() {
+        }        public AzureBlobFSSourceResponse build() {
             return new AzureBlobFSSourceResponse(disableMetricsCollection, maxConcurrentConnections, recursive, skipHeaderLineCount, sourceRetryCount, sourceRetryWait, treatEmptyAsNull, type);
         }
     }

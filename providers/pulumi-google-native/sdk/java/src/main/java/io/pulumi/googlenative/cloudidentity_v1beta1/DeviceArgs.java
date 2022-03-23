@@ -107,42 +107,37 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.assetTag = assetTag;
             return this;
         }
-
         public Builder assetTag(@Nullable String assetTag) {
             this.assetTag = Output.ofNullable(assetTag);
             return this;
         }
-
         public Builder lastSyncTime(@Nullable Output<String> lastSyncTime) {
             this.lastSyncTime = lastSyncTime;
             return this;
         }
-
         public Builder lastSyncTime(@Nullable String lastSyncTime) {
             this.lastSyncTime = Output.ofNullable(lastSyncTime);
             return this;
         }
-
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = Output.ofNullable(serialNumber);
             return this;
         }
-
         public Builder wifiMacAddresses(@Nullable Output<List<String>> wifiMacAddresses) {
             this.wifiMacAddresses = wifiMacAddresses;
             return this;
         }
-
         public Builder wifiMacAddresses(@Nullable List<String> wifiMacAddresses) {
             this.wifiMacAddresses = Output.ofNullable(wifiMacAddresses);
             return this;
         }
-        public DeviceArgs build() {
+        public Builder wifiMacAddresses(String... wifiMacAddresses) {
+            return wifiMacAddresses(List.of(wifiMacAddresses));
+        }        public DeviceArgs build() {
             return new DeviceArgs(assetTag, lastSyncTime, serialNumber, wifiMacAddresses);
         }
     }

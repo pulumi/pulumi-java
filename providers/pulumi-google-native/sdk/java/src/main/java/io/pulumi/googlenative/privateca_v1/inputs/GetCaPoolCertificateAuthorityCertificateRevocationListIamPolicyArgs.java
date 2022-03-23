@@ -114,32 +114,26 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
             this.caPoolId = Objects.requireNonNull(caPoolId);
             return this;
         }
-
         public Builder certificateAuthorityId(String certificateAuthorityId) {
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
-
         public Builder certificateRevocationListId(String certificateRevocationListId) {
             this.certificateRevocationListId = Objects.requireNonNull(certificateRevocationListId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs build() {
+        }        public GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs build() {
             return new GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs(caPoolId, certificateAuthorityId, certificateRevocationListId, location, optionsRequestedPolicyVersion, project);
         }
     }

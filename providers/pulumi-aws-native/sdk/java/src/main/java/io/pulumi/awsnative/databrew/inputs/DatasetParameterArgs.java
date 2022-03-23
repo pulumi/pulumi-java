@@ -114,52 +114,42 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
             this.createColumn = createColumn;
             return this;
         }
-
         public Builder createColumn(@Nullable Boolean createColumn) {
             this.createColumn = Output.ofNullable(createColumn);
             return this;
         }
-
         public Builder datetimeOptions(@Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions) {
             this.datetimeOptions = datetimeOptions;
             return this;
         }
-
         public Builder datetimeOptions(@Nullable DatasetDatetimeOptionsArgs datetimeOptions) {
             this.datetimeOptions = Output.ofNullable(datetimeOptions);
             return this;
         }
-
         public Builder filter(@Nullable Output<DatasetFilterExpressionArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable DatasetFilterExpressionArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<DatasetParameterType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(DatasetParameterType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DatasetParameterArgs build() {
+        }        public DatasetParameterArgs build() {
             return new DatasetParameterArgs(createColumn, datetimeOptions, filter, name, type);
         }
     }

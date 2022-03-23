@@ -90,32 +90,26 @@ public final class DomainDefaultUserSettingsSharingSettingsArgs extends io.pulum
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
-
         public Builder notebookOutputOption(@Nullable String notebookOutputOption) {
             this.notebookOutputOption = Output.ofNullable(notebookOutputOption);
             return this;
         }
-
         public Builder s3KmsKeyId(@Nullable Output<String> s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
-
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = Output.ofNullable(s3KmsKeyId);
             return this;
         }
-
         public Builder s3OutputPath(@Nullable Output<String> s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
         }
-
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = Output.ofNullable(s3OutputPath);
             return this;
-        }
-        public DomainDefaultUserSettingsSharingSettingsArgs build() {
+        }        public DomainDefaultUserSettingsSharingSettingsArgs build() {
             return new DomainDefaultUserSettingsSharingSettingsArgs(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }
     }

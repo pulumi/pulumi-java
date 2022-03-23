@@ -134,57 +134,52 @@ public final class GetServiceResult {
             this.capacityProviderStrategy = capacityProviderStrategy;
             return this;
         }
-
+        public Builder capacityProviderStrategy(ServiceCapacityProviderStrategyItem... capacityProviderStrategy) {
+            return capacityProviderStrategy(List.of(capacityProviderStrategy));
+        }
         public Builder deploymentConfiguration(@Nullable ServiceDeploymentConfiguration deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
-
         public Builder desiredCount(@Nullable Integer desiredCount) {
             this.desiredCount = desiredCount;
             return this;
         }
-
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
-
         public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable ServiceNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
-
         public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
-
         public Builder tags(@Nullable List<ServiceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ServiceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taskDefinition(@Nullable String taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(capacityProviderStrategy, deploymentConfiguration, desiredCount, enableExecuteCommand, healthCheckGracePeriodSeconds, name, networkConfiguration, platformVersion, serviceArn, tags, taskDefinition);
         }
     }

@@ -286,77 +286,62 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
             this.applicationPassword = applicationPassword;
             return this;
         }
-
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
-
         public Builder controllingAgencyCode(@Nullable String controllingAgencyCode) {
             this.controllingAgencyCode = controllingAgencyCode;
             return this;
         }
-
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
-
         public Builder groupHeaderMessageRelease(@Nullable String groupHeaderMessageRelease) {
             this.groupHeaderMessageRelease = groupHeaderMessageRelease;
             return this;
         }
-
         public Builder groupHeaderMessageVersion(@Nullable String groupHeaderMessageVersion) {
             this.groupHeaderMessageVersion = groupHeaderMessageVersion;
             return this;
         }
-
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder messageRelease(@Nullable String messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
-
         public Builder messageVersion(@Nullable String messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
-
         public Builder receiverApplicationId(@Nullable String receiverApplicationId) {
             this.receiverApplicationId = receiverApplicationId;
             return this;
         }
-
         public Builder receiverApplicationQualifier(@Nullable String receiverApplicationQualifier) {
             this.receiverApplicationQualifier = receiverApplicationQualifier;
             return this;
         }
-
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
-
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
-
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
-        }
-        public EdifactEnvelopeOverrideResponse build() {
+        }        public EdifactEnvelopeOverrideResponse build() {
             return new EdifactEnvelopeOverrideResponse(applicationPassword, associationAssignedCode, controllingAgencyCode, functionalGroupId, groupHeaderMessageRelease, groupHeaderMessageVersion, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, receiverApplicationId, receiverApplicationQualifier, senderApplicationId, senderApplicationQualifier, targetNamespace);
         }
     }

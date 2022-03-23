@@ -57,12 +57,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             this.timeoutSec = timeoutSec;
             return this;
         }
-
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
-        }
-        public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {
+        }        public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(timeoutSec);
         }
     }

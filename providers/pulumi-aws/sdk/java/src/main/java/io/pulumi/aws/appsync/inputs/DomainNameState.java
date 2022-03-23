@@ -122,52 +122,42 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             this.appsyncDomainName = appsyncDomainName;
             return this;
         }
-
         public Builder appsyncDomainName(@Nullable String appsyncDomainName) {
             this.appsyncDomainName = Output.ofNullable(appsyncDomainName);
             return this;
         }
-
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
-        }
-        public DomainNameState build() {
+        }        public DomainNameState build() {
             return new DomainNameState(appsyncDomainName, certificateArn, description, domainName, hostedZoneId);
         }
     }

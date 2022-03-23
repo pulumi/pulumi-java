@@ -84,32 +84,26 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
             this.baseliningJobName = baseliningJobName;
             return this;
         }
-
         public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = Output.ofNullable(baseliningJobName);
             return this;
         }
-
         public Builder constraintsResource(@Nullable Output<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public Builder constraintsResource(@Nullable DataQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
             this.constraintsResource = Output.ofNullable(constraintsResource);
             return this;
         }
-
         public Builder statisticsResource(@Nullable Output<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }
-
         public Builder statisticsResource(@Nullable DataQualityJobDefinitionStatisticsResourceArgs statisticsResource) {
             this.statisticsResource = Output.ofNullable(statisticsResource);
             return this;
-        }
-        public DataQualityJobDefinitionDataQualityBaselineConfigArgs build() {
+        }        public DataQualityJobDefinitionDataQualityBaselineConfigArgs build() {
             return new DataQualityJobDefinitionDataQualityBaselineConfigArgs(baseliningJobName, constraintsResource, statisticsResource);
         }
     }

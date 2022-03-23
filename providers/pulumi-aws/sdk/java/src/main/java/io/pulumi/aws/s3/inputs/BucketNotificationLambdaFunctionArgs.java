@@ -123,52 +123,45 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
         public Builder events(List<String> events) {
             this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder filterPrefix(@Nullable Output<String> filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
-
         public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = Output.ofNullable(filterPrefix);
             return this;
         }
-
         public Builder filterSuffix(@Nullable Output<String> filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
-
         public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = Output.ofNullable(filterSuffix);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder lambdaFunctionArn(@Nullable Output<String> lambdaFunctionArn) {
             this.lambdaFunctionArn = lambdaFunctionArn;
             return this;
         }
-
         public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
             this.lambdaFunctionArn = Output.ofNullable(lambdaFunctionArn);
             return this;
-        }
-        public BucketNotificationLambdaFunctionArgs build() {
+        }        public BucketNotificationLambdaFunctionArgs build() {
             return new BucketNotificationLambdaFunctionArgs(events, filterPrefix, filterSuffix, id, lambdaFunctionArn);
         }
     }

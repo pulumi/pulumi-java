@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
             this.outputConfig = outputConfig;
             return this;
         }
-
         public Builder outputConfig(@Nullable GooglePrivacyDlpV2OutputStorageConfigArgs outputConfig) {
             this.outputConfig = Output.ofNullable(outputConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2SaveFindingsArgs build() {
+        }        public GooglePrivacyDlpV2SaveFindingsArgs build() {
             return new GooglePrivacyDlpV2SaveFindingsArgs(outputConfig);
         }
     }

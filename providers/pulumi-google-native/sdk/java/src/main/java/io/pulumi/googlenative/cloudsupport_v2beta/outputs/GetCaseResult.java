@@ -249,67 +249,57 @@ public final class GetCaseResult {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder creator(ActorResponse creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder escalated(Boolean escalated) {
             this.escalated = Objects.requireNonNull(escalated);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(String priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder subscriberEmailAddresses(List<String> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = Objects.requireNonNull(subscriberEmailAddresses);
             return this;
         }
-
+        public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
+            return subscriberEmailAddresses(List.of(subscriberEmailAddresses));
+        }
         public Builder testCase(Boolean testCase) {
             this.testCase = Objects.requireNonNull(testCase);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetCaseResult build() {
+        }        public GetCaseResult build() {
             return new GetCaseResult(classification, createTime, creator, description, displayName, escalated, name, priority, state, subscriberEmailAddresses, testCase, timeZone, updateTime);
         }
     }

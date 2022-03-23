@@ -215,102 +215,82 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             this.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
-
         public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
             this.enableNodePublicIp = Output.ofNullable(enableNodePublicIp);
             return this;
         }
-
         public Builder isolatedNetwork(@Nullable Output<Boolean> isolatedNetwork) {
             this.isolatedNetwork = isolatedNetwork;
             return this;
         }
-
         public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
             this.isolatedNetwork = Output.ofNullable(isolatedNetwork);
             return this;
         }
-
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable Either<String,OsType> osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder remoteLoginPortPublicAccess(@Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
-
         public Builder remoteLoginPortPublicAccess(@Nullable Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = Output.ofNullable(remoteLoginPortPublicAccess);
             return this;
         }
-
         public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
             this.scaleSettings = Output.ofNullable(scaleSettings);
             return this;
         }
-
         public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable ResourceIdArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder userAccountCredentials(@Nullable Output<UserAccountCredentialsArgs> userAccountCredentials) {
             this.userAccountCredentials = userAccountCredentials;
             return this;
         }
-
         public Builder userAccountCredentials(@Nullable UserAccountCredentialsArgs userAccountCredentials) {
             this.userAccountCredentials = Output.ofNullable(userAccountCredentials);
             return this;
         }
-
         public Builder virtualMachineImage(@Nullable Output<VirtualMachineImageArgs> virtualMachineImage) {
             this.virtualMachineImage = virtualMachineImage;
             return this;
         }
-
         public Builder virtualMachineImage(@Nullable VirtualMachineImageArgs virtualMachineImage) {
             this.virtualMachineImage = Output.ofNullable(virtualMachineImage);
             return this;
         }
-
         public Builder vmPriority(@Nullable Output<Either<String,VmPriority>> vmPriority) {
             this.vmPriority = vmPriority;
             return this;
         }
-
         public Builder vmPriority(@Nullable Either<String,VmPriority> vmPriority) {
             this.vmPriority = Output.ofNullable(vmPriority);
             return this;
         }
-
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
-        }
-        public AmlComputePropertiesArgs build() {
+        }        public AmlComputePropertiesArgs build() {
             return new AmlComputePropertiesArgs(enableNodePublicIp, isolatedNetwork, osType, remoteLoginPortPublicAccess, scaleSettings, subnet, userAccountCredentials, virtualMachineImage, vmPriority, vmSize);
         }
     }

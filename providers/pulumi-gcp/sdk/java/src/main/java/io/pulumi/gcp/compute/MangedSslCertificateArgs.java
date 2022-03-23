@@ -142,62 +142,50 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable Integer certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder managed(@Nullable Output<MangedSslCertificateManagedArgs> managed) {
             this.managed = managed;
             return this;
         }
-
         public Builder managed(@Nullable MangedSslCertificateManagedArgs managed) {
             this.managed = Output.ofNullable(managed);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public MangedSslCertificateArgs build() {
+        }        public MangedSslCertificateArgs build() {
             return new MangedSslCertificateArgs(certificateId, description, managed, name, project, type);
         }
     }

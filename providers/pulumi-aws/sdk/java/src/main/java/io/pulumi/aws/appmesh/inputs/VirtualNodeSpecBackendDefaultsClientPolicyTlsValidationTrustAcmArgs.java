@@ -57,12 +57,13 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
             this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
             return this;
         }
-
         public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
             this.certificateAuthorityArns = Output.of(Objects.requireNonNull(certificateAuthorityArns));
             return this;
         }
-        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs build() {
+        public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
+            return certificateAuthorityArns(List.of(certificateAuthorityArns));
+        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs build() {
             return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs(certificateAuthorityArns);
         }
     }

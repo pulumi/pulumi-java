@@ -76,12 +76,10 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SpecificationResponse build() {
+        }        public SpecificationResponse build() {
             return new SpecificationResponse(name, value);
         }
     }

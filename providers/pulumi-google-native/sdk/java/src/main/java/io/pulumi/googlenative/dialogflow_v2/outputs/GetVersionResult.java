@@ -118,27 +118,22 @@ public final class GetVersionResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder versionNumber(Integer versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
-        }
-        public GetVersionResult build() {
+        }        public GetVersionResult build() {
             return new GetVersionResult(createTime, description, name, status, versionNumber);
         }
     }

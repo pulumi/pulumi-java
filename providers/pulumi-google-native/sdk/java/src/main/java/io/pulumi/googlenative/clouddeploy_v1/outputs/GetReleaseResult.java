@@ -330,92 +330,80 @@ public final class GetReleaseResult {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder buildArtifacts(List<BuildArtifactResponse> buildArtifacts) {
             this.buildArtifacts = Objects.requireNonNull(buildArtifacts);
             return this;
         }
-
+        public Builder buildArtifacts(BuildArtifactResponse... buildArtifacts) {
+            return buildArtifacts(List.of(buildArtifacts));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deliveryPipelineSnapshot(DeliveryPipelineResponse deliveryPipelineSnapshot) {
             this.deliveryPipelineSnapshot = Objects.requireNonNull(deliveryPipelineSnapshot);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder renderEndTime(String renderEndTime) {
             this.renderEndTime = Objects.requireNonNull(renderEndTime);
             return this;
         }
-
         public Builder renderStartTime(String renderStartTime) {
             this.renderStartTime = Objects.requireNonNull(renderStartTime);
             return this;
         }
-
         public Builder renderState(String renderState) {
             this.renderState = Objects.requireNonNull(renderState);
             return this;
         }
-
         public Builder skaffoldConfigPath(String skaffoldConfigPath) {
             this.skaffoldConfigPath = Objects.requireNonNull(skaffoldConfigPath);
             return this;
         }
-
         public Builder skaffoldConfigUri(String skaffoldConfigUri) {
             this.skaffoldConfigUri = Objects.requireNonNull(skaffoldConfigUri);
             return this;
         }
-
         public Builder skaffoldVersion(String skaffoldVersion) {
             this.skaffoldVersion = Objects.requireNonNull(skaffoldVersion);
             return this;
         }
-
         public Builder targetArtifacts(Map<String,String> targetArtifacts) {
             this.targetArtifacts = Objects.requireNonNull(targetArtifacts);
             return this;
         }
-
         public Builder targetRenders(Map<String,String> targetRenders) {
             this.targetRenders = Objects.requireNonNull(targetRenders);
             return this;
         }
-
         public Builder targetSnapshots(List<TargetResponse> targetSnapshots) {
             this.targetSnapshots = Objects.requireNonNull(targetSnapshots);
             return this;
         }
-
+        public Builder targetSnapshots(TargetResponse... targetSnapshots) {
+            return targetSnapshots(List.of(targetSnapshots));
+        }
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public GetReleaseResult build() {
+        }        public GetReleaseResult build() {
             return new GetReleaseResult(annotations, buildArtifacts, createTime, deliveryPipelineSnapshot, description, etag, labels, name, renderEndTime, renderStartTime, renderState, skaffoldConfigPath, skaffoldConfigUri, skaffoldVersion, targetArtifacts, targetRenders, targetSnapshots, uid);
         }
     }

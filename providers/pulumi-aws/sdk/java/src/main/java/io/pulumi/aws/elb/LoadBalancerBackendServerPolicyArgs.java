@@ -92,32 +92,29 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
-
         public Builder instancePort(Integer instancePort) {
             this.instancePort = Output.of(Objects.requireNonNull(instancePort));
             return this;
         }
-
         public Builder loadBalancerName(Output<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
-
         public Builder policyNames(@Nullable Output<List<String>> policyNames) {
             this.policyNames = policyNames;
             return this;
         }
-
         public Builder policyNames(@Nullable List<String> policyNames) {
             this.policyNames = Output.ofNullable(policyNames);
             return this;
         }
-        public LoadBalancerBackendServerPolicyArgs build() {
+        public Builder policyNames(String... policyNames) {
+            return policyNames(List.of(policyNames));
+        }        public LoadBalancerBackendServerPolicyArgs build() {
             return new LoadBalancerBackendServerPolicyArgs(instancePort, loadBalancerName, policyNames);
         }
     }

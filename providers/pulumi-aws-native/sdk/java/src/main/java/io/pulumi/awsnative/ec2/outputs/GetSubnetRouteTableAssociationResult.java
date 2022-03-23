@@ -45,8 +45,7 @@ public final class GetSubnetRouteTableAssociationResult {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetSubnetRouteTableAssociationResult build() {
+        }        public GetSubnetRouteTableAssociationResult build() {
             return new GetSubnetRouteTableAssociationResult(id);
         }
     }

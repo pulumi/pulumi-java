@@ -215,102 +215,88 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalParameters(@Nullable Output<Map<String,Object>> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
-
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
             this.globalParameters = Output.ofNullable(globalParameters);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder webServiceInputs(@Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs) {
             this.webServiceInputs = webServiceInputs;
             return this;
         }
-
         public Builder webServiceInputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceInputs) {
             this.webServiceInputs = Output.ofNullable(webServiceInputs);
             return this;
         }
-
         public Builder webServiceOutputs(@Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs) {
             this.webServiceOutputs = webServiceOutputs;
             return this;
         }
-
         public Builder webServiceOutputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceOutputs) {
             this.webServiceOutputs = Output.ofNullable(webServiceOutputs);
             return this;
-        }
-        public AzureMLBatchExecutionActivityArgs build() {
+        }        public AzureMLBatchExecutionActivityArgs build() {
             return new AzureMLBatchExecutionActivityArgs(dependsOn, description, globalParameters, linkedServiceName, name, policy, type, userProperties, webServiceInputs, webServiceOutputs);
         }
     }

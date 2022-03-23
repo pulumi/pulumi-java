@@ -105,22 +105,18 @@ public final class CanaryRunConfig {
             this.activeTracing = activeTracing;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Object environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder memoryInMB(@Nullable Integer memoryInMB) {
             this.memoryInMB = memoryInMB;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
-        }
-        public CanaryRunConfig build() {
+        }        public CanaryRunConfig build() {
             return new CanaryRunConfig(activeTracing, environmentVariables, memoryInMB, timeoutInSeconds);
         }
     }

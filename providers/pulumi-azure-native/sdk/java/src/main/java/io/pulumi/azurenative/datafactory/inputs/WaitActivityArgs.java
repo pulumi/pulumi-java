@@ -147,62 +147,56 @@ public final class WaitActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder waitTimeInSeconds(Output<Object> waitTimeInSeconds) {
             this.waitTimeInSeconds = Objects.requireNonNull(waitTimeInSeconds);
             return this;
         }
-
         public Builder waitTimeInSeconds(Object waitTimeInSeconds) {
             this.waitTimeInSeconds = Output.of(Objects.requireNonNull(waitTimeInSeconds));
             return this;
-        }
-        public WaitActivityArgs build() {
+        }        public WaitActivityArgs build() {
             return new WaitActivityArgs(dependsOn, description, name, type, userProperties, waitTimeInSeconds);
         }
     }

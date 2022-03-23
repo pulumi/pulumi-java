@@ -74,22 +74,18 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
             this.featureName = featureName;
             return this;
         }
-
         public Builder featureName(@Nullable String featureName) {
             this.featureName = Output.ofNullable(featureName);
             return this;
         }
-
         public Builder featureType(@Nullable Output<String> featureType) {
             this.featureType = featureType;
             return this;
         }
-
         public Builder featureType(@Nullable String featureType) {
             this.featureType = Output.ofNullable(featureType);
             return this;
-        }
-        public FeatureGroupFeatureDefinitionArgs build() {
+        }        public FeatureGroupFeatureDefinitionArgs build() {
             return new FeatureGroupFeatureDefinitionArgs(featureName, featureType);
         }
     }

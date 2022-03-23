@@ -163,72 +163,64 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
             this.chartOptions = chartOptions;
             return this;
         }
-
         public Builder chartOptions(@Nullable ChartOptionsArgs chartOptions) {
             this.chartOptions = Output.ofNullable(chartOptions);
             return this;
         }
-
         public Builder dataSets(Output<List<DataSetArgs>> dataSets) {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
-
         public Builder dataSets(List<DataSetArgs> dataSets) {
             this.dataSets = Output.of(Objects.requireNonNull(dataSets));
             return this;
         }
-
+        public Builder dataSets(DataSetArgs... dataSets) {
+            return dataSets(List.of(dataSets));
+        }
         public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
             this.thresholds = thresholds;
             return this;
         }
-
         public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
             this.thresholds = Output.ofNullable(thresholds);
             return this;
         }
-
+        public Builder thresholds(ThresholdArgs... thresholds) {
+            return thresholds(List.of(thresholds));
+        }
         public Builder timeshiftDuration(@Nullable Output<String> timeshiftDuration) {
             this.timeshiftDuration = timeshiftDuration;
             return this;
         }
-
         public Builder timeshiftDuration(@Nullable String timeshiftDuration) {
             this.timeshiftDuration = Output.ofNullable(timeshiftDuration);
             return this;
         }
-
         public Builder xAxis(@Nullable Output<AxisArgs> xAxis) {
             this.xAxis = xAxis;
             return this;
         }
-
         public Builder xAxis(@Nullable AxisArgs xAxis) {
             this.xAxis = Output.ofNullable(xAxis);
             return this;
         }
-
         public Builder y2Axis(@Nullable Output<AxisArgs> y2Axis) {
             this.y2Axis = y2Axis;
             return this;
         }
-
         public Builder y2Axis(@Nullable AxisArgs y2Axis) {
             this.y2Axis = Output.ofNullable(y2Axis);
             return this;
         }
-
         public Builder yAxis(@Nullable Output<AxisArgs> yAxis) {
             this.yAxis = yAxis;
             return this;
         }
-
         public Builder yAxis(@Nullable AxisArgs yAxis) {
             this.yAxis = Output.ofNullable(yAxis);
             return this;
-        }
-        public XyChartArgs build() {
+        }        public XyChartArgs build() {
             return new XyChartArgs(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
         }
     }

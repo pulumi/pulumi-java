@@ -68,22 +68,21 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
             this.networkInsightsAccessScopeId = Objects.requireNonNull(networkInsightsAccessScopeId);
             return this;
         }
-
         public Builder networkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
             this.networkInsightsAccessScopeId = Output.of(Objects.requireNonNull(networkInsightsAccessScopeId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsAccessScopeAnalysisTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public NetworkInsightsAccessScopeAnalysisArgs build() {
+        public Builder tags(NetworkInsightsAccessScopeAnalysisTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public NetworkInsightsAccessScopeAnalysisArgs build() {
             return new NetworkInsightsAccessScopeAnalysisArgs(networkInsightsAccessScopeId, tags);
         }
     }

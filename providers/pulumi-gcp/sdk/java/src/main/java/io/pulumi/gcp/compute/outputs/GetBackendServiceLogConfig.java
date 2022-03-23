@@ -54,12 +54,10 @@ public final class GetBackendServiceLogConfig {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder sampleRate(Double sampleRate) {
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
-        }
-        public GetBackendServiceLogConfig build() {
+        }        public GetBackendServiceLogConfig build() {
             return new GetBackendServiceLogConfig(enable, sampleRate);
         }
     }

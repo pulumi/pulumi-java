@@ -127,52 +127,42 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder intent(@Nullable Output<String> intent) {
             this.intent = intent;
             return this;
         }
-
         public Builder intent(@Nullable String intent) {
             this.intent = Output.ofNullable(intent);
             return this;
         }
-
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
-
         public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = Output.ofNullable(targetFlow);
             return this;
         }
-
         public Builder targetPage(@Nullable Output<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
-
         public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = Output.ofNullable(targetPage);
             return this;
         }
-
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
-
         public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3FulfillmentArgs triggerFulfillment) {
             this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3TransitionRouteArgs build() {
+        }        public GoogleCloudDialogflowCxV3TransitionRouteArgs build() {
             return new GoogleCloudDialogflowCxV3TransitionRouteArgs(condition, intent, targetFlow, targetPage, triggerFulfillment);
         }
     }

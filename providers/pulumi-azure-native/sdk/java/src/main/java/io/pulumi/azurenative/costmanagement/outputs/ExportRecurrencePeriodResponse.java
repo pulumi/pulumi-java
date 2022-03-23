@@ -71,12 +71,10 @@ public final class ExportRecurrencePeriodResponse {
             this.from = Objects.requireNonNull(from);
             return this;
         }
-
         public Builder to(@Nullable String to) {
             this.to = to;
             return this;
-        }
-        public ExportRecurrencePeriodResponse build() {
+        }        public ExportRecurrencePeriodResponse build() {
             return new ExportRecurrencePeriodResponse(from, to);
         }
     }

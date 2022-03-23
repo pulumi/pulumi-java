@@ -107,42 +107,34 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
             this.authenticationName = authenticationName;
             return this;
         }
-
         public Builder authenticationName(@Nullable String authenticationName) {
             this.authenticationName = Output.ofNullable(authenticationName);
             return this;
         }
-
         public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
             return this;
         }
-
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Output.of(Objects.requireNonNull(azureADOnlyAuthentication));
             return this;
         }
-
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagedInstanceAzureADOnlyAuthenticationArgs build() {
+        }        public ManagedInstanceAzureADOnlyAuthenticationArgs build() {
             return new ManagedInstanceAzureADOnlyAuthenticationArgs(authenticationName, azureADOnlyAuthentication, managedInstanceName, resourceGroupName);
         }
     }

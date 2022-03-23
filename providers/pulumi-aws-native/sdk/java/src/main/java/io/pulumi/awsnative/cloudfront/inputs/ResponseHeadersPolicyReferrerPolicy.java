@@ -65,12 +65,10 @@ public final class ResponseHeadersPolicyReferrerPolicy extends io.pulumi.resourc
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder referrerPolicy(String referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
-        }
-        public ResponseHeadersPolicyReferrerPolicy build() {
+        }        public ResponseHeadersPolicyReferrerPolicy build() {
             return new ResponseHeadersPolicyReferrerPolicy(override, referrerPolicy);
         }
     }

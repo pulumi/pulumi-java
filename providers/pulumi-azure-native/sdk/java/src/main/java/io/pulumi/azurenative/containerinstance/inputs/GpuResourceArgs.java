@@ -80,22 +80,18 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder sku(Output<Either<String,GpuSku>> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(Either<String,GpuSku> sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
-        }
-        public GpuResourceArgs build() {
+        }        public GpuResourceArgs build() {
             return new GpuResourceArgs(count, sku);
         }
     }

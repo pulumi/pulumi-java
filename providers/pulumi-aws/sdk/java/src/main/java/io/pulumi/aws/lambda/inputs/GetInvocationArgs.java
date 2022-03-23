@@ -91,17 +91,14 @@ public final class GetInvocationArgs extends io.pulumi.resources.InvokeArgs {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder input(String input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = qualifier;
             return this;
-        }
-        public GetInvocationArgs build() {
+        }        public GetInvocationArgs build() {
             return new GetInvocationArgs(functionName, input, qualifier);
         }
     }

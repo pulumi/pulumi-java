@@ -70,12 +70,10 @@ public final class ApplicationGatewayConnectionDrainingResponse {
             this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ApplicationGatewayConnectionDrainingResponse build() {
+        }        public ApplicationGatewayConnectionDrainingResponse build() {
             return new ApplicationGatewayConnectionDrainingResponse(drainTimeoutInSec, enabled);
         }
     }

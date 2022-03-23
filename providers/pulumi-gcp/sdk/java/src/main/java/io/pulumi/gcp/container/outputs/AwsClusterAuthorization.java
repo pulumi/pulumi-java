@@ -53,7 +53,9 @@ public final class AwsClusterAuthorization {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
-        public AwsClusterAuthorization build() {
+        public Builder adminUsers(AwsClusterAuthorizationAdminUser... adminUsers) {
+            return adminUsers(List.of(adminUsers));
+        }        public AwsClusterAuthorization build() {
             return new AwsClusterAuthorization(adminUsers);
         }
     }

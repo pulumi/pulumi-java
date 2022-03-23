@@ -79,12 +79,10 @@ public final class StoredProcedureParameterResponse extends io.pulumi.resources.
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
-        }
-        public StoredProcedureParameterResponse build() {
+        }        public StoredProcedureParameterResponse build() {
             return new StoredProcedureParameterResponse(type, value);
         }
     }

@@ -283,77 +283,62 @@ public final class GetSyncGroupResult {
             this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
             return this;
         }
-
         public Builder conflictResolutionPolicy(@Nullable String conflictResolutionPolicy) {
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
-
         public Builder enableConflictLogging(@Nullable Boolean enableConflictLogging) {
             this.enableConflictLogging = enableConflictLogging;
             return this;
         }
-
         public Builder hubDatabaseUserName(@Nullable String hubDatabaseUserName) {
             this.hubDatabaseUserName = hubDatabaseUserName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
-
         public Builder schema(@Nullable SyncGroupSchemaResponse schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
-
         public Builder syncState(String syncState) {
             this.syncState = Objects.requireNonNull(syncState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
-        }
-        public GetSyncGroupResult build() {
+        }        public GetSyncGroupResult build() {
             return new GetSyncGroupResult(conflictLoggingRetentionInDays, conflictResolutionPolicy, enableConflictLogging, hubDatabaseUserName, id, interval, lastSyncTime, name, privateEndpointName, schema, sku, syncDatabaseId, syncState, type, usePrivateLinkConnection);
         }
     }

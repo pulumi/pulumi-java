@@ -74,12 +74,10 @@ public final class DataSourceCredentials {
             this.copySourceArn = copySourceArn;
             return this;
         }
-
         public Builder credentialPair(@Nullable DataSourceCredentialsCredentialPair credentialPair) {
             this.credentialPair = credentialPair;
             return this;
-        }
-        public DataSourceCredentials build() {
+        }        public DataSourceCredentials build() {
             return new DataSourceCredentials(copySourceArn, credentialPair);
         }
     }

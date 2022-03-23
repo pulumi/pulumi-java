@@ -121,27 +121,22 @@ public final class NetworkResourcePropertiesResponse {
             this.description = description;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
-        }
-        public NetworkResourcePropertiesResponse build() {
+        }        public NetworkResourcePropertiesResponse build() {
             return new NetworkResourcePropertiesResponse(description, kind, provisioningState, status, statusDetails);
         }
     }

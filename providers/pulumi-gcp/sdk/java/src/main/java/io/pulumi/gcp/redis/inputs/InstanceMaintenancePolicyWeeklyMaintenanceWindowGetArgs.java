@@ -107,32 +107,26 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder day(String day) {
             this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
-
         public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder startTime(Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs build() {
+        }        public InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs(day, duration, startTime);
         }
     }

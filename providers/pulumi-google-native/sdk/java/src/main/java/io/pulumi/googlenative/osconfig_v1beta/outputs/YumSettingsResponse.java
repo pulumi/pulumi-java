@@ -103,22 +103,24 @@ public final class YumSettingsResponse {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePackages(List<String> exclusivePackages) {
             this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
             return this;
         }
-
+        public Builder exclusivePackages(String... exclusivePackages) {
+            return exclusivePackages(List.of(exclusivePackages));
+        }
         public Builder minimal(Boolean minimal) {
             this.minimal = Objects.requireNonNull(minimal);
             return this;
         }
-
         public Builder security(Boolean security) {
             this.security = Objects.requireNonNull(security);
             return this;
-        }
-        public YumSettingsResponse build() {
+        }        public YumSettingsResponse build() {
             return new YumSettingsResponse(excludes, exclusivePackages, minimal, security);
         }
     }

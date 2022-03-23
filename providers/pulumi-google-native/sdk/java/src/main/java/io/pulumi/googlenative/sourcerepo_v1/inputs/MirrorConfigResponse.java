@@ -92,17 +92,14 @@ public final class MirrorConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.deployKeyId = Objects.requireNonNull(deployKeyId);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder webhookId(String webhookId) {
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
-        }
-        public MirrorConfigResponse build() {
+        }        public MirrorConfigResponse build() {
             return new MirrorConfigResponse(deployKeyId, url, webhookId);
         }
     }

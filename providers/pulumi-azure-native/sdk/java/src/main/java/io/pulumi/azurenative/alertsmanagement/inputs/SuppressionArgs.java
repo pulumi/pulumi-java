@@ -148,62 +148,50 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable ConditionsArgs conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable ScopeArgs scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,ActionRuleStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,ActionRuleStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder suppressionConfig(Output<SuppressionConfigArgs> suppressionConfig) {
             this.suppressionConfig = Objects.requireNonNull(suppressionConfig);
             return this;
         }
-
         public Builder suppressionConfig(SuppressionConfigArgs suppressionConfig) {
             this.suppressionConfig = Output.of(Objects.requireNonNull(suppressionConfig));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SuppressionArgs build() {
+        }        public SuppressionArgs build() {
             return new SuppressionArgs(conditions, description, scope, status, suppressionConfig, type);
         }
     }

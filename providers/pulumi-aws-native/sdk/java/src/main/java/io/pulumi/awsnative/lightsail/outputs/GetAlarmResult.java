@@ -195,52 +195,48 @@ public final class GetAlarmResult {
             this.alarmArn = alarmArn;
             return this;
         }
-
         public Builder comparisonOperator(@Nullable String comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
             return this;
         }
-
         public Builder contactProtocols(@Nullable List<String> contactProtocols) {
             this.contactProtocols = contactProtocols;
             return this;
         }
-
+        public Builder contactProtocols(String... contactProtocols) {
+            return contactProtocols(List.of(contactProtocols));
+        }
         public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
             this.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
-
         public Builder evaluationPeriods(@Nullable Integer evaluationPeriods) {
             this.evaluationPeriods = evaluationPeriods;
             return this;
         }
-
         public Builder notificationEnabled(@Nullable Boolean notificationEnabled) {
             this.notificationEnabled = notificationEnabled;
             return this;
         }
-
         public Builder notificationTriggers(@Nullable List<String> notificationTriggers) {
             this.notificationTriggers = notificationTriggers;
             return this;
         }
-
+        public Builder notificationTriggers(String... notificationTriggers) {
+            return notificationTriggers(List.of(notificationTriggers));
+        }
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder treatMissingData(@Nullable String treatMissingData) {
             this.treatMissingData = treatMissingData;
             return this;
-        }
-        public GetAlarmResult build() {
+        }        public GetAlarmResult build() {
             return new GetAlarmResult(alarmArn, comparisonOperator, contactProtocols, datapointsToAlarm, evaluationPeriods, notificationEnabled, notificationTriggers, state, threshold, treatMissingData);
         }
     }

@@ -145,37 +145,33 @@ public final class GetPolicyResult {
             this.alternativeNameServerConfig = Objects.requireNonNull(alternativeNameServerConfig);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enableInboundForwarding(Boolean enableInboundForwarding) {
             this.enableInboundForwarding = Objects.requireNonNull(enableInboundForwarding);
             return this;
         }
-
         public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networks(List<PolicyNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-        public GetPolicyResult build() {
+        public Builder networks(PolicyNetworkResponse... networks) {
+            return networks(List.of(networks));
+        }        public GetPolicyResult build() {
             return new GetPolicyResult(alternativeNameServerConfig, description, enableInboundForwarding, enableLogging, kind, name, networks);
         }
     }

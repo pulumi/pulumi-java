@@ -95,32 +95,26 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.crontabSpec = crontabSpec;
             return this;
         }
-
         public Builder crontabSpec(@Nullable String crontabSpec) {
             this.crontabSpec = Output.ofNullable(crontabSpec);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder retentionCount(@Nullable Output<Integer> retentionCount) {
             this.retentionCount = retentionCount;
             return this;
         }
-
         public Builder retentionCount(@Nullable Integer retentionCount) {
             this.retentionCount = Output.ofNullable(retentionCount);
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(crontabSpec, prefix, retentionCount);
         }
     }

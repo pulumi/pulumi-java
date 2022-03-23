@@ -107,22 +107,18 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
             this.autoscaler = Objects.requireNonNull(autoscaler);
             return this;
         }
-
         public Builder isStable(Boolean isStable) {
             this.isStable = Objects.requireNonNull(isStable);
             return this;
         }
-
         public Builder stateful(InstanceGroupManagerStatusStatefulResponse stateful) {
             this.stateful = Objects.requireNonNull(stateful);
             return this;
         }
-
         public Builder versionTarget(InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
-        }
-        public InstanceGroupManagerStatusResponse build() {
+        }        public InstanceGroupManagerStatusResponse build() {
             return new InstanceGroupManagerStatusResponse(autoscaler, isStable, stateful, versionTarget);
         }
     }

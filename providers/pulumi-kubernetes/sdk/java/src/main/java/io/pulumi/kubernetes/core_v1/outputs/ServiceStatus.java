@@ -73,12 +73,13 @@ public final class ServiceStatus {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(Condition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder loadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
-        }
-        public ServiceStatus build() {
+        }        public ServiceStatus build() {
             return new ServiceStatus(conditions, loadBalancer);
         }
     }

@@ -63,12 +63,13 @@ public final class BotMessageGroup {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder variations(@Nullable List<BotMessage> variations) {
             this.variations = variations;
             return this;
         }
-        public BotMessageGroup build() {
+        public Builder variations(BotMessage... variations) {
+            return variations(List.of(variations));
+        }        public BotMessageGroup build() {
             return new BotMessageGroup(message, variations);
         }
     }

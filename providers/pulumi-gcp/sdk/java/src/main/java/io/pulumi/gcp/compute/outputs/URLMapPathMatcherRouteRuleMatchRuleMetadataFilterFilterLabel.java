@@ -73,12 +73,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel build() {
+        }        public URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel build() {
             return new URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel(name, value);
         }
     }

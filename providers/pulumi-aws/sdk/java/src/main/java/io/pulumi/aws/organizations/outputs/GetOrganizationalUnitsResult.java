@@ -79,17 +79,17 @@ public final class GetOrganizationalUnitsResult {
             this.childrens = Objects.requireNonNull(childrens);
             return this;
         }
-
+        public Builder childrens(GetOrganizationalUnitsChildren... childrens) {
+            return childrens(List.of(childrens));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
-        }
-        public GetOrganizationalUnitsResult build() {
+        }        public GetOrganizationalUnitsResult build() {
             return new GetOrganizationalUnitsResult(childrens, id, parentId);
         }
     }

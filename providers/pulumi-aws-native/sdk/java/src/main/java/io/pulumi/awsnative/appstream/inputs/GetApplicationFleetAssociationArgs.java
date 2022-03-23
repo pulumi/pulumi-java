@@ -64,12 +64,10 @@ public final class GetApplicationFleetAssociationArgs extends io.pulumi.resource
             this.applicationArn = Objects.requireNonNull(applicationArn);
             return this;
         }
-
         public Builder fleetName(String fleetName) {
             this.fleetName = Objects.requireNonNull(fleetName);
             return this;
-        }
-        public GetApplicationFleetAssociationArgs build() {
+        }        public GetApplicationFleetAssociationArgs build() {
             return new GetApplicationFleetAssociationArgs(applicationArn, fleetName);
         }
     }

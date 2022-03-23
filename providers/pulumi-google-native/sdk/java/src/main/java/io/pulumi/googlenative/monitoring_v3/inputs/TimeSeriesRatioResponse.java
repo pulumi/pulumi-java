@@ -92,17 +92,14 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
             this.badServiceFilter = Objects.requireNonNull(badServiceFilter);
             return this;
         }
-
         public Builder goodServiceFilter(String goodServiceFilter) {
             this.goodServiceFilter = Objects.requireNonNull(goodServiceFilter);
             return this;
         }
-
         public Builder totalServiceFilter(String totalServiceFilter) {
             this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
             return this;
-        }
-        public TimeSeriesRatioResponse build() {
+        }        public TimeSeriesRatioResponse build() {
             return new TimeSeriesRatioResponse(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }
     }

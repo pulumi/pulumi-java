@@ -84,22 +84,21 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs e
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
-
         public Builder filterLabels(List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs> filterLabels) {
             this.filterLabels = Output.of(Objects.requireNonNull(filterLabels));
             return this;
         }
-
+        public Builder filterLabels(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs... filterLabels) {
+            return filterLabels(List.of(filterLabels));
+        }
         public Builder filterMatchCriteria(Output<String> filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Output.of(Objects.requireNonNull(filterMatchCriteria));
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs build() {
+        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(filterLabels, filterMatchCriteria);
         }
     }

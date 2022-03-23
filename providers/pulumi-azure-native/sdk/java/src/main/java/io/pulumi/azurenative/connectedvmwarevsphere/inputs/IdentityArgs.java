@@ -62,12 +62,10 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,IdentityType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public IdentityArgs build() {
+        }        public IdentityArgs build() {
             return new IdentityArgs(type);
         }
     }

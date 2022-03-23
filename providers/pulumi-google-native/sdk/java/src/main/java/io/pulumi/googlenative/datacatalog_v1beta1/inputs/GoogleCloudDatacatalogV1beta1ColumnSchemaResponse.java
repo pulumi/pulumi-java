@@ -125,27 +125,25 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder subcolumns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns) {
             this.subcolumns = Objects.requireNonNull(subcolumns);
             return this;
         }
-
+        public Builder subcolumns(GoogleCloudDatacatalogV1beta1ColumnSchemaResponse... subcolumns) {
+            return subcolumns(List.of(subcolumns));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse build() {
+        }        public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse build() {
             return new GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(column, description, mode, subcolumns, type);
         }
     }

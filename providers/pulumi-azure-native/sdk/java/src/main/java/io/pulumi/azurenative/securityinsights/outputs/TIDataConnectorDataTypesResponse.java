@@ -53,8 +53,7 @@ public final class TIDataConnectorDataTypesResponse {
         public Builder indicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
             this.indicators = indicators;
             return this;
-        }
-        public TIDataConnectorDataTypesResponse build() {
+        }        public TIDataConnectorDataTypesResponse build() {
             return new TIDataConnectorDataTypesResponse(indicators);
         }
     }

@@ -158,37 +158,42 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
             this.contains = Objects.requireNonNull(contains);
             return this;
         }
-
+        public Builder contains(String... contains) {
+            return contains(List.of(contains));
+        }
         public Builder intervals(List<GoogleCloudRetailV2betaIntervalResponse> intervals) {
             this.intervals = Objects.requireNonNull(intervals);
             return this;
         }
-
+        public Builder intervals(GoogleCloudRetailV2betaIntervalResponse... intervals) {
+            return intervals(List.of(intervals));
+        }
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder orderBy(String orderBy) {
             this.orderBy = Objects.requireNonNull(orderBy);
             return this;
         }
-
         public Builder prefixes(List<String> prefixes) {
             this.prefixes = Objects.requireNonNull(prefixes);
             return this;
         }
-
+        public Builder prefixes(String... prefixes) {
+            return prefixes(List.of(prefixes));
+        }
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder restrictedValues(List<String> restrictedValues) {
             this.restrictedValues = Objects.requireNonNull(restrictedValues);
             return this;
         }
-        public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse build() {
+        public Builder restrictedValues(String... restrictedValues) {
+            return restrictedValues(List.of(restrictedValues));
+        }        public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse build() {
             return new GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(contains, intervals, key, orderBy, prefixes, query, restrictedValues);
         }
     }

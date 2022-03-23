@@ -88,17 +88,14 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
             this.accountId = accountId;
             return this;
         }
-
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
             this.setDefaultVersion = setDefaultVersion;
             return this;
-        }
-        public DistributionConfigurationLaunchTemplateConfiguration build() {
+        }        public DistributionConfigurationLaunchTemplateConfiguration build() {
             return new DistributionConfigurationLaunchTemplateConfiguration(accountId, launchTemplateId, setDefaultVersion);
         }
     }

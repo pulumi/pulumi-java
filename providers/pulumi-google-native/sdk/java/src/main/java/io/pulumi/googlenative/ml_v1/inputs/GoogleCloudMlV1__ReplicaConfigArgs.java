@@ -145,62 +145,56 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
-
         public Builder acceleratorConfig(@Nullable GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
             return this;
         }
-
         public Builder containerArgs(@Nullable Output<List<String>> containerArgs) {
             this.containerArgs = containerArgs;
             return this;
         }
-
         public Builder containerArgs(@Nullable List<String> containerArgs) {
             this.containerArgs = Output.ofNullable(containerArgs);
             return this;
         }
-
+        public Builder containerArgs(String... containerArgs) {
+            return containerArgs(List.of(containerArgs));
+        }
         public Builder containerCommand(@Nullable Output<List<String>> containerCommand) {
             this.containerCommand = containerCommand;
             return this;
         }
-
         public Builder containerCommand(@Nullable List<String> containerCommand) {
             this.containerCommand = Output.ofNullable(containerCommand);
             return this;
         }
-
+        public Builder containerCommand(String... containerCommand) {
+            return containerCommand(List.of(containerCommand));
+        }
         public Builder diskConfig(@Nullable Output<GoogleCloudMlV1__DiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder diskConfig(@Nullable GoogleCloudMlV1__DiskConfigArgs diskConfig) {
             this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
-
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder tpuTfVersion(@Nullable Output<String> tpuTfVersion) {
             this.tpuTfVersion = tpuTfVersion;
             return this;
         }
-
         public Builder tpuTfVersion(@Nullable String tpuTfVersion) {
             this.tpuTfVersion = Output.ofNullable(tpuTfVersion);
             return this;
-        }
-        public GoogleCloudMlV1__ReplicaConfigArgs build() {
+        }        public GoogleCloudMlV1__ReplicaConfigArgs build() {
             return new GoogleCloudMlV1__ReplicaConfigArgs(acceleratorConfig, containerArgs, containerCommand, diskConfig, imageUri, tpuTfVersion);
         }
     }

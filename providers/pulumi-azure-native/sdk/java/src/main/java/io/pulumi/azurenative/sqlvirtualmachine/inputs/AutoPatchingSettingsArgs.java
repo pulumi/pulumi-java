@@ -112,42 +112,34 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
             this.dayOfWeek = dayOfWeek;
             return this;
         }
-
         public Builder dayOfWeek(@Nullable DayOfWeek dayOfWeek) {
             this.dayOfWeek = Output.ofNullable(dayOfWeek);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder maintenanceWindowDuration(@Nullable Output<Integer> maintenanceWindowDuration) {
             this.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
-
         public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
             this.maintenanceWindowDuration = Output.ofNullable(maintenanceWindowDuration);
             return this;
         }
-
         public Builder maintenanceWindowStartingHour(@Nullable Output<Integer> maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
-
         public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = Output.ofNullable(maintenanceWindowStartingHour);
             return this;
-        }
-        public AutoPatchingSettingsArgs build() {
+        }        public AutoPatchingSettingsArgs build() {
             return new AutoPatchingSettingsArgs(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
         }
     }

@@ -72,12 +72,10 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends io.pulumi
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GetQuickConnectQuickConnectConfigUserConfig build() {
+        }        public GetQuickConnectQuickConnectConfigUserConfig build() {
             return new GetQuickConnectQuickConnectConfigUserConfig(contactFlowId, userId);
         }
     }

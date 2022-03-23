@@ -120,62 +120,53 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.compressionFormat = compressionFormat;
             return this;
         }
-
         public Builder compressionFormat(@Nullable JobOutputCompressionFormat compressionFormat) {
             this.compressionFormat = Output.ofNullable(compressionFormat);
             return this;
         }
-
         public Builder format(@Nullable Output<JobOutputFormat> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable JobOutputFormat format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder formatOptions(@Nullable Output<JobOutputFormatOptionsArgs> formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
-
         public Builder formatOptions(@Nullable JobOutputFormatOptionsArgs formatOptions) {
             this.formatOptions = Output.ofNullable(formatOptions);
             return this;
         }
-
         public Builder location(Output<JobS3LocationArgs> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(JobS3LocationArgs location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
-
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Output.ofNullable(overwrite);
             return this;
         }
-
         public Builder partitionColumns(@Nullable Output<List<String>> partitionColumns) {
             this.partitionColumns = partitionColumns;
             return this;
         }
-
         public Builder partitionColumns(@Nullable List<String> partitionColumns) {
             this.partitionColumns = Output.ofNullable(partitionColumns);
             return this;
         }
-        public JobOutputArgs build() {
+        public Builder partitionColumns(String... partitionColumns) {
+            return partitionColumns(List.of(partitionColumns));
+        }        public JobOutputArgs build() {
             return new JobOutputArgs(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
         }
     }

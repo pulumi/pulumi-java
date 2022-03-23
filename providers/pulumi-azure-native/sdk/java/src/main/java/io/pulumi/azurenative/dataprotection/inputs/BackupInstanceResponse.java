@@ -191,47 +191,38 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
             this.currentProtectionState = Objects.requireNonNull(currentProtectionState);
             return this;
         }
-
         public Builder dataSourceInfo(DatasourceResponse dataSourceInfo) {
             this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
             return this;
         }
-
         public Builder dataSourceSetInfo(@Nullable DatasourceSetResponse dataSourceSetInfo) {
             this.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder policyInfo(PolicyInfoResponse policyInfo) {
             this.policyInfo = Objects.requireNonNull(policyInfo);
             return this;
         }
-
         public Builder protectionErrorDetails(UserFacingErrorResponse protectionErrorDetails) {
             this.protectionErrorDetails = Objects.requireNonNull(protectionErrorDetails);
             return this;
         }
-
         public Builder protectionStatus(ProtectionStatusDetailsResponse protectionStatus) {
             this.protectionStatus = Objects.requireNonNull(protectionStatus);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public BackupInstanceResponse build() {
+        }        public BackupInstanceResponse build() {
             return new BackupInstanceResponse(currentProtectionState, dataSourceInfo, dataSourceSetInfo, friendlyName, objectType, policyInfo, protectionErrorDetails, protectionStatus, provisioningState);
         }
     }

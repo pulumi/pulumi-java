@@ -128,52 +128,42 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.endTimeOfDay = endTimeOfDay;
             return this;
         }
-
         public Builder endTimeOfDay(@Nullable TimeOfDayArgs endTimeOfDay) {
             this.endTimeOfDay = Output.ofNullable(endTimeOfDay);
             return this;
         }
-
         public Builder repeatInterval(@Nullable Output<String> repeatInterval) {
             this.repeatInterval = repeatInterval;
             return this;
         }
-
         public Builder repeatInterval(@Nullable String repeatInterval) {
             this.repeatInterval = Output.ofNullable(repeatInterval);
             return this;
         }
-
         public Builder scheduleEndDate(@Nullable Output<DateArgs> scheduleEndDate) {
             this.scheduleEndDate = scheduleEndDate;
             return this;
         }
-
         public Builder scheduleEndDate(@Nullable DateArgs scheduleEndDate) {
             this.scheduleEndDate = Output.ofNullable(scheduleEndDate);
             return this;
         }
-
         public Builder scheduleStartDate(Output<DateArgs> scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
-
         public Builder scheduleStartDate(DateArgs scheduleStartDate) {
             this.scheduleStartDate = Output.of(Objects.requireNonNull(scheduleStartDate));
             return this;
         }
-
         public Builder startTimeOfDay(@Nullable Output<TimeOfDayArgs> startTimeOfDay) {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }
-
         public Builder startTimeOfDay(@Nullable TimeOfDayArgs startTimeOfDay) {
             this.startTimeOfDay = Output.ofNullable(startTimeOfDay);
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }
     }

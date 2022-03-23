@@ -66,22 +66,24 @@ public final class ModelVpcConfigGetArgs extends io.pulumi.resources.ResourceArg
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public Builder subnets(List<String> subnets) {
             this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
-        public ModelVpcConfigGetArgs build() {
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }        public ModelVpcConfigGetArgs build() {
             return new ModelVpcConfigGetArgs(securityGroupIds, subnets);
         }
     }

@@ -71,12 +71,10 @@ public final class GalleryImageFeatureResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GalleryImageFeatureResponse build() {
+        }        public GalleryImageFeatureResponse build() {
             return new GalleryImageFeatureResponse(name, value);
         }
     }

@@ -69,12 +69,10 @@ public final class ApigatewayApiConfigFileResponse {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public ApigatewayApiConfigFileResponse build() {
+        }        public ApigatewayApiConfigFileResponse build() {
             return new ApigatewayApiConfigFileResponse(contents, path);
         }
     }

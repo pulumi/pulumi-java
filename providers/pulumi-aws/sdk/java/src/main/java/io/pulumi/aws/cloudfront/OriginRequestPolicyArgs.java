@@ -125,52 +125,42 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder cookiesConfig(Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
-
         public Builder cookiesConfig(OriginRequestPolicyCookiesConfigArgs cookiesConfig) {
             this.cookiesConfig = Output.of(Objects.requireNonNull(cookiesConfig));
             return this;
         }
-
         public Builder headersConfig(Output<OriginRequestPolicyHeadersConfigArgs> headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
-
         public Builder headersConfig(OriginRequestPolicyHeadersConfigArgs headersConfig) {
             this.headersConfig = Output.of(Objects.requireNonNull(headersConfig));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder queryStringsConfig(Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
-
         public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfigArgs queryStringsConfig) {
             this.queryStringsConfig = Output.of(Objects.requireNonNull(queryStringsConfig));
             return this;
-        }
-        public OriginRequestPolicyArgs build() {
+        }        public OriginRequestPolicyArgs build() {
             return new OriginRequestPolicyArgs(comment, cookiesConfig, headersConfig, name, queryStringsConfig);
         }
     }

@@ -102,52 +102,42 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder address(String address) {
             this.address = Output.of(Objects.requireNonNull(address));
             return this;
         }
-
         public Builder configFile(@Nullable Output<String> configFile) {
             this.configFile = configFile;
             return this;
         }
-
         public Builder configFile(@Nullable String configFile) {
             this.configFile = Output.ofNullable(configFile);
             return this;
         }
-
         public Builder configFileContent(@Nullable Output<String> configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
-
         public Builder configFileContent(@Nullable String configFileContent) {
             this.configFileContent = Output.ofNullable(configFileContent);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public ProviderRegistryAuthArgs build() {
+        }        public ProviderRegistryAuthArgs build() {
             return new ProviderRegistryAuthArgs(address, configFile, configFileContent, password, username);
         }
     }

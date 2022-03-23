@@ -145,32 +145,38 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
             this.cidrs = cidrs;
             return this;
         }
-
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }
         public Builder count(@Nullable String count) {
             this.count = count;
             return this;
         }
-
         public Builder number(@Nullable Double number) {
             this.number = number;
             return this;
         }
-
         public Builder numbers(@Nullable List<Double> numbers) {
             this.numbers = numbers;
             return this;
         }
-
+        public Builder numbers(Double... numbers) {
+            return numbers(List.of(numbers));
+        }
         public Builder ports(@Nullable List<Integer> ports) {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(Integer... ports) {
+            return ports(List.of(ports));
+        }
         public Builder strings(@Nullable List<String> strings) {
             this.strings = strings;
             return this;
         }
-        public SecurityProfileMetricValue build() {
+        public Builder strings(String... strings) {
+            return strings(List.of(strings));
+        }        public SecurityProfileMetricValue build() {
             return new SecurityProfileMetricValue(cidrs, count, number, numbers, ports, strings);
         }
     }

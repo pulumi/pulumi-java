@@ -62,12 +62,13 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
             this.publicIPs = publicIPs;
             return this;
         }
-
         public Builder publicIPs(@Nullable List<ResourceReferenceArgs> publicIPs) {
             this.publicIPs = Output.ofNullable(publicIPs);
             return this;
         }
-        public ManagedClusterLoadBalancerProfileOutboundIPsArgs build() {
+        public Builder publicIPs(ResourceReferenceArgs... publicIPs) {
+            return publicIPs(List.of(publicIPs));
+        }        public ManagedClusterLoadBalancerProfileOutboundIPsArgs build() {
             return new ManagedClusterLoadBalancerProfileOutboundIPsArgs(publicIPs);
         }
     }

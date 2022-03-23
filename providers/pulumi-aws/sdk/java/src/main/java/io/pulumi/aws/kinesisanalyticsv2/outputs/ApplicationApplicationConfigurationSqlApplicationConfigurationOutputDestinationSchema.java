@@ -51,8 +51,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema(recordFormatType);
         }
     }

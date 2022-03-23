@@ -53,8 +53,7 @@ public final class WebAclRuleActionCount {
         public Builder customRequestHandling(@Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public WebAclRuleActionCount build() {
+        }        public WebAclRuleActionCount build() {
             return new WebAclRuleActionCount(customRequestHandling);
         }
     }

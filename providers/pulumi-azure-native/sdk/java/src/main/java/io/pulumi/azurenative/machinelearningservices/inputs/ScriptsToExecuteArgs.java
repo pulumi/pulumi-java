@@ -78,22 +78,18 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
             this.creationScript = creationScript;
             return this;
         }
-
         public Builder creationScript(@Nullable ScriptReferenceArgs creationScript) {
             this.creationScript = Output.ofNullable(creationScript);
             return this;
         }
-
         public Builder startupScript(@Nullable Output<ScriptReferenceArgs> startupScript) {
             this.startupScript = startupScript;
             return this;
         }
-
         public Builder startupScript(@Nullable ScriptReferenceArgs startupScript) {
             this.startupScript = Output.ofNullable(startupScript);
             return this;
-        }
-        public ScriptsToExecuteArgs build() {
+        }        public ScriptsToExecuteArgs build() {
             return new ScriptsToExecuteArgs(creationScript, startupScript);
         }
     }

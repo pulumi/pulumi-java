@@ -105,22 +105,18 @@ public final class GetInstanceMetadataOption extends io.pulumi.resources.InvokeA
             this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
             return this;
         }
-
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
             return this;
         }
-
         public Builder httpTokens(String httpTokens) {
             this.httpTokens = Objects.requireNonNull(httpTokens);
             return this;
         }
-
         public Builder instanceMetadataTags(String instanceMetadataTags) {
             this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags);
             return this;
-        }
-        public GetInstanceMetadataOption build() {
+        }        public GetInstanceMetadataOption build() {
             return new GetInstanceMetadataOption(httpEndpoint, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
         }
     }

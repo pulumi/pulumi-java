@@ -95,17 +95,14 @@ public final class AutoScaleVCoreSkuResponse extends io.pulumi.resources.InvokeA
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public AutoScaleVCoreSkuResponse build() {
+        }        public AutoScaleVCoreSkuResponse build() {
             return new AutoScaleVCoreSkuResponse(capacity, name, tier);
         }
     }

@@ -126,52 +126,42 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
             this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey);
             return this;
         }
-
         public Builder kubeletConfigKey(String kubeletConfigKey) {
             this.kubeletConfigKey = Output.of(Objects.requireNonNull(kubeletConfigKey));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
-
         public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public ConfigMapNodeConfigSourceArgs build() {
+        }        public ConfigMapNodeConfigSourceArgs build() {
             return new ConfigMapNodeConfigSourceArgs(kubeletConfigKey, name, namespace, resourceVersion, uid);
         }
     }

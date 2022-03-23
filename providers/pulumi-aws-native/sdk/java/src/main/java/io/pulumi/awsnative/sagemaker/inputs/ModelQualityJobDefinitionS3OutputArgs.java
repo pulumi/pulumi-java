@@ -95,32 +95,26 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends io.pulumi.resou
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
-
         public Builder s3UploadMode(@Nullable Output<ModelQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
-
         public Builder s3UploadMode(@Nullable ModelQualityJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = Output.ofNullable(s3UploadMode);
             return this;
         }
-
         public Builder s3Uri(Output<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
-        }
-        public ModelQualityJobDefinitionS3OutputArgs build() {
+        }        public ModelQualityJobDefinitionS3OutputArgs build() {
             return new ModelQualityJobDefinitionS3OutputArgs(localPath, s3UploadMode, s3Uri);
         }
     }

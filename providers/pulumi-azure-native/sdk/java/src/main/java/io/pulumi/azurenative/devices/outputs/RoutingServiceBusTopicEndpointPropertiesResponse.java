@@ -167,42 +167,34 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = entityPath;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
-        }
-        public RoutingServiceBusTopicEndpointPropertiesResponse build() {
+        }        public RoutingServiceBusTopicEndpointPropertiesResponse build() {
             return new RoutingServiceBusTopicEndpointPropertiesResponse(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
         }
     }

@@ -71,12 +71,13 @@ public final class ScalingPlanApplicationSourceTagFilter {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public ScalingPlanApplicationSourceTagFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ScalingPlanApplicationSourceTagFilter build() {
             return new ScalingPlanApplicationSourceTagFilter(key, values);
         }
     }

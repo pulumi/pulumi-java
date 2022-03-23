@@ -89,17 +89,14 @@ public final class BasicAuthenticationResponse {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public BasicAuthenticationResponse build() {
+        }        public BasicAuthenticationResponse build() {
             return new BasicAuthenticationResponse(password, type, username);
         }
     }

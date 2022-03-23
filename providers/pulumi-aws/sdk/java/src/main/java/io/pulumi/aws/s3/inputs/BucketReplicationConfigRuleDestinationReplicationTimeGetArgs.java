@@ -74,22 +74,18 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder time(Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public Builder time(BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs time) {
             this.time = Output.of(Objects.requireNonNull(time));
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationReplicationTimeGetArgs build() {
+        }        public BucketReplicationConfigRuleDestinationReplicationTimeGetArgs build() {
             return new BucketReplicationConfigRuleDestinationReplicationTimeGetArgs(status, time);
         }
     }

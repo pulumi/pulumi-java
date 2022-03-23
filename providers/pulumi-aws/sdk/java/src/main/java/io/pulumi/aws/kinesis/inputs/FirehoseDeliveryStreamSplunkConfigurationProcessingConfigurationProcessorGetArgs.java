@@ -76,22 +76,21 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorGetArgs build() {
+        }        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorGetArgs build() {
             return new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorGetArgs(parameters, type);
         }
     }

@@ -66,22 +66,18 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
             this.healthUrl = healthUrl;
             return this;
         }
-
         public Builder healthUrl(@Nullable String healthUrl) {
             this.healthUrl = Output.ofNullable(healthUrl);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public ServiceUrlEndpointInputArgs build() {
+        }        public ServiceUrlEndpointInputArgs build() {
             return new ServiceUrlEndpointInputArgs(healthUrl, url);
         }
     }

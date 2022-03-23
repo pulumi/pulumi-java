@@ -80,32 +80,26 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
             this.bar = bar;
             return this;
         }
-
         public Builder bar(@Nullable SomeOtherObjectArgs bar) {
             this.bar = Output.ofNullable(bar);
             return this;
         }
-
         public Builder baz(@Nullable Output<ObjectWithNodeOptionalInputsArgs> baz) {
             this.baz = baz;
             return this;
         }
-
         public Builder baz(@Nullable ObjectWithNodeOptionalInputsArgs baz) {
             this.baz = Output.ofNullable(baz);
             return this;
         }
-
         public Builder foo(@Nullable Output<ObjectArgs> foo) {
             this.foo = foo;
             return this;
         }
-
         public Builder foo(@Nullable ObjectArgs foo) {
             this.foo = Output.ofNullable(foo);
             return this;
-        }
-        public TypeUsesArgs build() {
+        }        public TypeUsesArgs build() {
             return new TypeUsesArgs(bar, baz, foo);
         }
     }

@@ -76,22 +76,18 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
             this.maximumBackoff = maximumBackoff;
             return this;
         }
-
         public Builder maximumBackoff(@Nullable String maximumBackoff) {
             this.maximumBackoff = Output.ofNullable(maximumBackoff);
             return this;
         }
-
         public Builder minimumBackoff(@Nullable Output<String> minimumBackoff) {
             this.minimumBackoff = minimumBackoff;
             return this;
         }
-
         public Builder minimumBackoff(@Nullable String minimumBackoff) {
             this.minimumBackoff = Output.ofNullable(minimumBackoff);
             return this;
-        }
-        public SubscriptionRetryPolicyGetArgs build() {
+        }        public SubscriptionRetryPolicyGetArgs build() {
             return new SubscriptionRetryPolicyGetArgs(maximumBackoff, minimumBackoff);
         }
     }

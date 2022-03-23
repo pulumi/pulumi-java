@@ -251,67 +251,60 @@ public final class MigrationItemPropertiesResponse {
             this.allowedOperations = Objects.requireNonNull(allowedOperations);
             return this;
         }
-
+        public Builder allowedOperations(String... allowedOperations) {
+            return allowedOperations(List.of(allowedOperations));
+        }
         public Builder currentJob(CurrentJobDetailsResponse currentJob) {
             this.currentJob = Objects.requireNonNull(currentJob);
             return this;
         }
-
         public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             this.healthErrors = Objects.requireNonNull(healthErrors);
             return this;
         }
-
+        public Builder healthErrors(HealthErrorResponse... healthErrors) {
+            return healthErrors(List.of(healthErrors));
+        }
         public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
-
         public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
-
         public Builder migrationStateDescription(String migrationStateDescription) {
             this.migrationStateDescription = Objects.requireNonNull(migrationStateDescription);
             return this;
         }
-
         public Builder policyFriendlyName(String policyFriendlyName) {
             this.policyFriendlyName = Objects.requireNonNull(policyFriendlyName);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder providerSpecificDetails(@Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
-
         public Builder recoveryServicesProviderId(String recoveryServicesProviderId) {
             this.recoveryServicesProviderId = Objects.requireNonNull(recoveryServicesProviderId);
             return this;
         }
-
         public Builder testMigrateState(String testMigrateState) {
             this.testMigrateState = Objects.requireNonNull(testMigrateState);
             return this;
         }
-
         public Builder testMigrateStateDescription(String testMigrateStateDescription) {
             this.testMigrateStateDescription = Objects.requireNonNull(testMigrateStateDescription);
             return this;
-        }
-        public MigrationItemPropertiesResponse build() {
+        }        public MigrationItemPropertiesResponse build() {
             return new MigrationItemPropertiesResponse(allowedOperations, currentJob, health, healthErrors, machineName, migrationState, migrationStateDescription, policyFriendlyName, policyId, providerSpecificDetails, recoveryServicesProviderId, testMigrateState, testMigrateStateDescription);
         }
     }

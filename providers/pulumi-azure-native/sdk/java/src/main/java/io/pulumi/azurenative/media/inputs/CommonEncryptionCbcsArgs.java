@@ -114,42 +114,37 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
             this.clearTracks = clearTracks;
             return this;
         }
-
         public Builder clearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
             this.clearTracks = Output.ofNullable(clearTracks);
             return this;
         }
-
+        public Builder clearTracks(TrackSelectionArgs... clearTracks) {
+            return clearTracks(List.of(clearTracks));
+        }
         public Builder contentKeys(@Nullable Output<StreamingPolicyContentKeysArgs> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
-
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
             this.contentKeys = Output.ofNullable(contentKeys);
             return this;
         }
-
         public Builder drm(@Nullable Output<CbcsDrmConfigurationArgs> drm) {
             this.drm = drm;
             return this;
         }
-
         public Builder drm(@Nullable CbcsDrmConfigurationArgs drm) {
             this.drm = Output.ofNullable(drm);
             return this;
         }
-
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
             this.enabledProtocols = Output.ofNullable(enabledProtocols);
             return this;
-        }
-        public CommonEncryptionCbcsArgs build() {
+        }        public CommonEncryptionCbcsArgs build() {
             return new CommonEncryptionCbcsArgs(clearTracks, contentKeys, drm, enabledProtocols);
         }
     }

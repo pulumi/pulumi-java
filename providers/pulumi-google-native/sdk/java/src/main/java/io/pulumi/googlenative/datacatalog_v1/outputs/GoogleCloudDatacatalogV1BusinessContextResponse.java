@@ -70,12 +70,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
             this.contacts = Objects.requireNonNull(contacts);
             return this;
         }
-
         public Builder entryOverview(GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
             this.entryOverview = Objects.requireNonNull(entryOverview);
             return this;
-        }
-        public GoogleCloudDatacatalogV1BusinessContextResponse build() {
+        }        public GoogleCloudDatacatalogV1BusinessContextResponse build() {
             return new GoogleCloudDatacatalogV1BusinessContextResponse(contacts, entryOverview);
         }
     }

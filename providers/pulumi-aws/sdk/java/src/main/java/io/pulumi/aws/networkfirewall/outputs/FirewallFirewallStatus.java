@@ -54,7 +54,9 @@ public final class FirewallFirewallStatus {
             this.syncStates = syncStates;
             return this;
         }
-        public FirewallFirewallStatus build() {
+        public Builder syncStates(FirewallFirewallStatusSyncState... syncStates) {
+            return syncStates(List.of(syncStates));
+        }        public FirewallFirewallStatus build() {
             return new FirewallFirewallStatus(syncStates);
         }
     }

@@ -113,42 +113,34 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
             this.configMap = configMap;
             return this;
         }
-
         public Builder configMap(@Nullable ConfigMapProjectionArgs configMap) {
             this.configMap = Output.ofNullable(configMap);
             return this;
         }
-
         public Builder downwardAPI(@Nullable Output<DownwardAPIProjectionArgs> downwardAPI) {
             this.downwardAPI = downwardAPI;
             return this;
         }
-
         public Builder downwardAPI(@Nullable DownwardAPIProjectionArgs downwardAPI) {
             this.downwardAPI = Output.ofNullable(downwardAPI);
             return this;
         }
-
         public Builder secret(@Nullable Output<SecretProjectionArgs> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable SecretProjectionArgs secret) {
             this.secret = Output.ofNullable(secret);
             return this;
         }
-
         public Builder serviceAccountToken(@Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken) {
             this.serviceAccountToken = serviceAccountToken;
             return this;
         }
-
         public Builder serviceAccountToken(@Nullable ServiceAccountTokenProjectionArgs serviceAccountToken) {
             this.serviceAccountToken = Output.ofNullable(serviceAccountToken);
             return this;
-        }
-        public VolumeProjectionArgs build() {
+        }        public VolumeProjectionArgs build() {
             return new VolumeProjectionArgs(configMap, downwardAPI, secret, serviceAccountToken);
         }
     }

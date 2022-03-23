@@ -126,27 +126,22 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
             this.aadAuthority = aadAuthority;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public IdentityProviderDetailsResponse build() {
+        }        public IdentityProviderDetailsResponse build() {
             return new IdentityProviderDetailsResponse(aadAuthority, applicationId, audience, objectId, tenantId);
         }
     }

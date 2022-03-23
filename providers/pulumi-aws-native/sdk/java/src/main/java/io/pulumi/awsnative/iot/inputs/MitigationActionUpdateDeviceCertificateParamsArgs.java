@@ -56,12 +56,10 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends io.
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(MitigationActionUpdateDeviceCertificateParamsAction action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
-        }
-        public MitigationActionUpdateDeviceCertificateParamsArgs build() {
+        }        public MitigationActionUpdateDeviceCertificateParamsArgs build() {
             return new MitigationActionUpdateDeviceCertificateParamsArgs(action);
         }
     }

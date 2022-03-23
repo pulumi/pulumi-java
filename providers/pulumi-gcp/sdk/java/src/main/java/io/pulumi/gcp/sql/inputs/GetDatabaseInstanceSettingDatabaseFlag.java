@@ -68,12 +68,10 @@ public final class GetDatabaseInstanceSettingDatabaseFlag extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetDatabaseInstanceSettingDatabaseFlag build() {
+        }        public GetDatabaseInstanceSettingDatabaseFlag build() {
             return new GetDatabaseInstanceSettingDatabaseFlag(name, value);
         }
     }

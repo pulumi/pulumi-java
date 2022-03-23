@@ -105,22 +105,21 @@ public final class GetConnectionResult {
             this.connectionArn = connectionArn;
             return this;
         }
-
         public Builder connectionStatus(@Nullable String connectionStatus) {
             this.connectionStatus = connectionStatus;
             return this;
         }
-
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
-
         public Builder tags(@Nullable List<ConnectionTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetConnectionResult build() {
+        public Builder tags(ConnectionTag... tags) {
+            return tags(List.of(tags));
+        }        public GetConnectionResult build() {
             return new GetConnectionResult(connectionArn, connectionStatus, ownerAccountId, tags);
         }
     }

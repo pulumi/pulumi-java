@@ -122,52 +122,42 @@ public final class DomainPermissionsState extends io.pulumi.resources.ResourceAr
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
-
         public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Output.ofNullable(domainOwner);
             return this;
         }
-
         public Builder policyDocument(@Nullable Output<String> policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public Builder policyDocument(@Nullable String policyDocument) {
             this.policyDocument = Output.ofNullable(policyDocument);
             return this;
         }
-
         public Builder policyRevision(@Nullable Output<String> policyRevision) {
             this.policyRevision = policyRevision;
             return this;
         }
-
         public Builder policyRevision(@Nullable String policyRevision) {
             this.policyRevision = Output.ofNullable(policyRevision);
             return this;
         }
-
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
-        }
-        public DomainPermissionsState build() {
+        }        public DomainPermissionsState build() {
             return new DomainPermissionsState(domain, domainOwner, policyDocument, policyRevision, resourceArn);
         }
     }

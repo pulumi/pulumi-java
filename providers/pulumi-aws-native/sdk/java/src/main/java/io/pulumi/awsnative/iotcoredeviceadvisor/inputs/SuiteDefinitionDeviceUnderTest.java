@@ -66,12 +66,10 @@ public final class SuiteDefinitionDeviceUnderTest extends io.pulumi.resources.In
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = thingArn;
             return this;
-        }
-        public SuiteDefinitionDeviceUnderTest build() {
+        }        public SuiteDefinitionDeviceUnderTest build() {
             return new SuiteDefinitionDeviceUnderTest(certificateArn, thingArn);
         }
     }

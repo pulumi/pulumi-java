@@ -56,12 +56,10 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs exte
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs build() {
+        }        public OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs build() {
             return new OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs(topic);
         }
     }

@@ -234,122 +234,98 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
-
         public Builder addressFamily(String addressFamily) {
             this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
             return this;
         }
-
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
-
         public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Output.ofNullable(amazonAddress);
             return this;
         }
-
         public Builder bgpAsn(Output<Integer> bgpAsn) {
             this.bgpAsn = Objects.requireNonNull(bgpAsn);
             return this;
         }
-
         public Builder bgpAsn(Integer bgpAsn) {
             this.bgpAsn = Output.of(Objects.requireNonNull(bgpAsn));
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
             return this;
         }
-
         public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder connectionId(String connectionId) {
             this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
-
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
-
         public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Output.ofNullable(customerAddress);
             return this;
         }
-
         public Builder dxGatewayId(Output<String> dxGatewayId) {
             this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
             return this;
         }
-
         public Builder dxGatewayId(String dxGatewayId) {
             this.dxGatewayId = Output.of(Objects.requireNonNull(dxGatewayId));
             return this;
         }
-
         public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Output.ofNullable(mtu);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sitelinkEnabled(@Nullable Output<Boolean> sitelinkEnabled) {
             this.sitelinkEnabled = sitelinkEnabled;
             return this;
         }
-
         public Builder sitelinkEnabled(@Nullable Boolean sitelinkEnabled) {
             this.sitelinkEnabled = Output.ofNullable(sitelinkEnabled);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vlan(Output<Integer> vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }
-
         public Builder vlan(Integer vlan) {
             this.vlan = Output.of(Objects.requireNonNull(vlan));
             return this;
-        }
-        public TransitVirtualInterfaceArgs build() {
+        }        public TransitVirtualInterfaceArgs build() {
             return new TransitVirtualInterfaceArgs(addressFamily, amazonAddress, bgpAsn, bgpAuthKey, connectionId, customerAddress, dxGatewayId, mtu, name, sitelinkEnabled, tags, vlan);
         }
     }

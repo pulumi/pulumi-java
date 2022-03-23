@@ -147,32 +147,26 @@ public final class ContainerResourceRequirementsResponse extends io.pulumi.resou
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpuLimit(@Nullable Double cpuLimit) {
             this.cpuLimit = cpuLimit;
             return this;
         }
-
         public Builder fpga(@Nullable Integer fpga) {
             this.fpga = fpga;
             return this;
         }
-
         public Builder gpu(@Nullable Integer gpu) {
             this.gpu = gpu;
             return this;
         }
-
         public Builder memoryInGB(@Nullable Double memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
-
         public Builder memoryInGBLimit(@Nullable Double memoryInGBLimit) {
             this.memoryInGBLimit = memoryInGBLimit;
             return this;
-        }
-        public ContainerResourceRequirementsResponse build() {
+        }        public ContainerResourceRequirementsResponse build() {
             return new ContainerResourceRequirementsResponse(cpu, cpuLimit, fpga, gpu, memoryInGB, memoryInGBLimit);
         }
     }

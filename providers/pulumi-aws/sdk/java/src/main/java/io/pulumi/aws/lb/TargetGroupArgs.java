@@ -319,172 +319,138 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionTermination = connectionTermination;
             return this;
         }
-
         public Builder connectionTermination(@Nullable Boolean connectionTermination) {
             this.connectionTermination = Output.ofNullable(connectionTermination);
             return this;
         }
-
         public Builder deregistrationDelay(@Nullable Output<Integer> deregistrationDelay) {
             this.deregistrationDelay = deregistrationDelay;
             return this;
         }
-
         public Builder deregistrationDelay(@Nullable Integer deregistrationDelay) {
             this.deregistrationDelay = Output.ofNullable(deregistrationDelay);
             return this;
         }
-
         public Builder healthCheck(@Nullable Output<TargetGroupHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder healthCheck(@Nullable TargetGroupHealthCheckArgs healthCheck) {
             this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
-
         public Builder lambdaMultiValueHeadersEnabled(@Nullable Output<Boolean> lambdaMultiValueHeadersEnabled) {
             this.lambdaMultiValueHeadersEnabled = lambdaMultiValueHeadersEnabled;
             return this;
         }
-
         public Builder lambdaMultiValueHeadersEnabled(@Nullable Boolean lambdaMultiValueHeadersEnabled) {
             this.lambdaMultiValueHeadersEnabled = Output.ofNullable(lambdaMultiValueHeadersEnabled);
             return this;
         }
-
         public Builder loadBalancingAlgorithmType(@Nullable Output<String> loadBalancingAlgorithmType) {
             this.loadBalancingAlgorithmType = loadBalancingAlgorithmType;
             return this;
         }
-
         public Builder loadBalancingAlgorithmType(@Nullable String loadBalancingAlgorithmType) {
             this.loadBalancingAlgorithmType = Output.ofNullable(loadBalancingAlgorithmType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder preserveClientIp(@Nullable Output<String> preserveClientIp) {
             this.preserveClientIp = preserveClientIp;
             return this;
         }
-
         public Builder preserveClientIp(@Nullable String preserveClientIp) {
             this.preserveClientIp = Output.ofNullable(preserveClientIp);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder protocolVersion(@Nullable Output<String> protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
-
         public Builder protocolVersion(@Nullable String protocolVersion) {
             this.protocolVersion = Output.ofNullable(protocolVersion);
             return this;
         }
-
         public Builder proxyProtocolV2(@Nullable Output<Boolean> proxyProtocolV2) {
             this.proxyProtocolV2 = proxyProtocolV2;
             return this;
         }
-
         public Builder proxyProtocolV2(@Nullable Boolean proxyProtocolV2) {
             this.proxyProtocolV2 = Output.ofNullable(proxyProtocolV2);
             return this;
         }
-
         public Builder slowStart(@Nullable Output<Integer> slowStart) {
             this.slowStart = slowStart;
             return this;
         }
-
         public Builder slowStart(@Nullable Integer slowStart) {
             this.slowStart = Output.ofNullable(slowStart);
             return this;
         }
-
         public Builder stickiness(@Nullable Output<TargetGroupStickinessArgs> stickiness) {
             this.stickiness = stickiness;
             return this;
         }
-
         public Builder stickiness(@Nullable TargetGroupStickinessArgs stickiness) {
             this.stickiness = Output.ofNullable(stickiness);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
-
         public Builder targetType(@Nullable String targetType) {
             this.targetType = Output.ofNullable(targetType);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public TargetGroupArgs build() {
+        }        public TargetGroupArgs build() {
             return new TargetGroupArgs(connectionTermination, deregistrationDelay, healthCheck, lambdaMultiValueHeadersEnabled, loadBalancingAlgorithmType, name, namePrefix, port, preserveClientIp, protocol, protocolVersion, proxyProtocolV2, slowStart, stickiness, tags, targetType, vpcId);
         }
     }

@@ -99,32 +99,29 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
             this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
             return this;
         }
-
         public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
             this.applyToBuiltInEventHubEndpoint = Output.of(Objects.requireNonNull(applyToBuiltInEventHubEndpoint));
             return this;
         }
-
         public Builder defaultAction(@Nullable Output<Either<String,DefaultAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
             this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
-
         public Builder ipRules(Output<List<NetworkRuleSetIpRuleArgs>> ipRules) {
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }
-
         public Builder ipRules(List<NetworkRuleSetIpRuleArgs> ipRules) {
             this.ipRules = Output.of(Objects.requireNonNull(ipRules));
             return this;
         }
-        public NetworkRuleSetPropertiesArgs build() {
+        public Builder ipRules(NetworkRuleSetIpRuleArgs... ipRules) {
+            return ipRules(List.of(ipRules));
+        }        public NetworkRuleSetPropertiesArgs build() {
             return new NetworkRuleSetPropertiesArgs(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
         }
     }

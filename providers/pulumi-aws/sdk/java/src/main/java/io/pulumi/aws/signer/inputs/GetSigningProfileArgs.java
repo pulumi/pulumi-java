@@ -75,12 +75,10 @@ public final class GetSigningProfileArgs extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetSigningProfileArgs build() {
+        }        public GetSigningProfileArgs build() {
             return new GetSigningProfileArgs(name, tags);
         }
     }

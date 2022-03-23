@@ -104,22 +104,18 @@ public final class GetReplicationRecoveryServicesProviderArgs extends io.pulumi.
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetReplicationRecoveryServicesProviderArgs build() {
+        }        public GetReplicationRecoveryServicesProviderArgs build() {
             return new GetReplicationRecoveryServicesProviderArgs(fabricName, providerName, resourceGroupName, resourceName);
         }
     }

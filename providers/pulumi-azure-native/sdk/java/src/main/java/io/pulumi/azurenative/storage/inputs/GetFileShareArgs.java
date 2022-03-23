@@ -106,22 +106,18 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public GetFileShareArgs build() {
+        }        public GetFileShareArgs build() {
             return new GetFileShareArgs(accountName, expand, resourceGroupName, shareName);
         }
     }

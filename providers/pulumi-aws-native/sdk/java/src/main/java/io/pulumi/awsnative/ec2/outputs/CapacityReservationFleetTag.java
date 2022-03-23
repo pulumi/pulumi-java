@@ -53,12 +53,10 @@ public final class CapacityReservationFleetTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CapacityReservationFleetTag build() {
+        }        public CapacityReservationFleetTag build() {
             return new CapacityReservationFleetTag(key, value);
         }
     }

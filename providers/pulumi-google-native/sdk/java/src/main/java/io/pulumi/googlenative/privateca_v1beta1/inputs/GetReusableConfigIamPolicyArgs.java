@@ -90,22 +90,18 @@ public final class GetReusableConfigIamPolicyArgs extends io.pulumi.resources.In
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder reusableConfigId(String reusableConfigId) {
             this.reusableConfigId = Objects.requireNonNull(reusableConfigId);
             return this;
-        }
-        public GetReusableConfigIamPolicyArgs build() {
+        }        public GetReusableConfigIamPolicyArgs build() {
             return new GetReusableConfigIamPolicyArgs(location, optionsRequestedPolicyVersion, project, reusableConfigId);
         }
     }

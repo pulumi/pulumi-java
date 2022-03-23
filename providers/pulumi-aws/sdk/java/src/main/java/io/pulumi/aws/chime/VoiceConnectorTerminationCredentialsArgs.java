@@ -75,22 +75,21 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
-
         public Builder credentials(List<VoiceConnectorTerminationCredentialsCredentialArgs> credentials) {
             this.credentials = Output.of(Objects.requireNonNull(credentials));
             return this;
         }
-
+        public Builder credentials(VoiceConnectorTerminationCredentialsCredentialArgs... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
-
         public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
-        }
-        public VoiceConnectorTerminationCredentialsArgs build() {
+        }        public VoiceConnectorTerminationCredentialsArgs build() {
             return new VoiceConnectorTerminationCredentialsArgs(credentials, voiceConnectorId);
         }
     }

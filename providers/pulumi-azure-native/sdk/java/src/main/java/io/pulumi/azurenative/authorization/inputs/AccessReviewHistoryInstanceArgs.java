@@ -142,62 +142,50 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder expiration(@Nullable Output<String> expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder expiration(@Nullable String expiration) {
             this.expiration = Output.ofNullable(expiration);
             return this;
         }
-
         public Builder fulfilledDateTime(@Nullable Output<String> fulfilledDateTime) {
             this.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
-
         public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
             this.fulfilledDateTime = Output.ofNullable(fulfilledDateTime);
             return this;
         }
-
         public Builder reviewHistoryPeriodEndDateTime(@Nullable Output<String> reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
-
         public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = Output.ofNullable(reviewHistoryPeriodEndDateTime);
             return this;
         }
-
         public Builder reviewHistoryPeriodStartDateTime(@Nullable Output<String> reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
-
         public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = Output.ofNullable(reviewHistoryPeriodStartDateTime);
             return this;
         }
-
         public Builder runDateTime(@Nullable Output<String> runDateTime) {
             this.runDateTime = runDateTime;
             return this;
         }
-
         public Builder runDateTime(@Nullable String runDateTime) {
             this.runDateTime = Output.ofNullable(runDateTime);
             return this;
-        }
-        public AccessReviewHistoryInstanceArgs build() {
+        }        public AccessReviewHistoryInstanceArgs build() {
             return new AccessReviewHistoryInstanceArgs(displayName, expiration, fulfilledDateTime, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, runDateTime);
         }
     }

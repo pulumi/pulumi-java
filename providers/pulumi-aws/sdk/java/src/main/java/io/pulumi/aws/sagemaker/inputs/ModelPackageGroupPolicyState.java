@@ -70,22 +70,18 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
             this.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
-
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
             this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
             return this;
         }
-
         public Builder resourcePolicy(@Nullable Output<String> resourcePolicy) {
             this.resourcePolicy = resourcePolicy;
             return this;
         }
-
         public Builder resourcePolicy(@Nullable String resourcePolicy) {
             this.resourcePolicy = Output.ofNullable(resourcePolicy);
             return this;
-        }
-        public ModelPackageGroupPolicyState build() {
+        }        public ModelPackageGroupPolicyState build() {
             return new ModelPackageGroupPolicyState(modelPackageGroupName, resourcePolicy);
         }
     }

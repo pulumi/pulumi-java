@@ -56,12 +56,10 @@ public final class StreamKinesisConfiguration {
             this.aggregationEnabled = aggregationEnabled;
             return this;
         }
-
         public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = streamArn;
             return this;
-        }
-        public StreamKinesisConfiguration build() {
+        }        public StreamKinesisConfiguration build() {
             return new StreamKinesisConfiguration(aggregationEnabled, streamArn);
         }
     }

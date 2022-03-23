@@ -53,12 +53,10 @@ public final class ConnectionClientParameters {
             this.clientID = Objects.requireNonNull(clientID);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
-        }
-        public ConnectionClientParameters build() {
+        }        public ConnectionClientParameters build() {
             return new ConnectionClientParameters(clientID, clientSecret);
         }
     }

@@ -77,12 +77,10 @@ public final class BackendServiceLogConfigResponse extends io.pulumi.resources.I
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder sampleRate(Double sampleRate) {
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
-        }
-        public BackendServiceLogConfigResponse build() {
+        }        public BackendServiceLogConfigResponse build() {
             return new BackendServiceLogConfigResponse(enable, sampleRate);
         }
     }

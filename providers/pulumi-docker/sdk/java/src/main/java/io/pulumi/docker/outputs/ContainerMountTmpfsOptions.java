@@ -55,12 +55,10 @@ public final class ContainerMountTmpfsOptions {
             this.mode = mode;
             return this;
         }
-
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
-        }
-        public ContainerMountTmpfsOptions build() {
+        }        public ContainerMountTmpfsOptions build() {
             return new ContainerMountTmpfsOptions(mode, sizeBytes);
         }
     }

@@ -88,17 +88,14 @@ public final class RetryPolicyResponse {
             this.retryCount = retryCount;
             return this;
         }
-
         public Builder retryInterval(@Nullable String retryInterval) {
             this.retryInterval = retryInterval;
             return this;
         }
-
         public Builder retryType(@Nullable String retryType) {
             this.retryType = retryType;
             return this;
-        }
-        public RetryPolicyResponse build() {
+        }        public RetryPolicyResponse build() {
             return new RetryPolicyResponse(retryCount, retryInterval, retryType);
         }
     }

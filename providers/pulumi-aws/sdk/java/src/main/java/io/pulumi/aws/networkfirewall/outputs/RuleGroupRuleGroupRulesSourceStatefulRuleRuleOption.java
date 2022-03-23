@@ -73,12 +73,13 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
             this.keyword = Objects.requireNonNull(keyword);
             return this;
         }
-
         public Builder settings(@Nullable List<String> settings) {
             this.settings = settings;
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption build() {
+        public Builder settings(String... settings) {
+            return settings(List.of(settings));
+        }        public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption build() {
             return new RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption(keyword, settings);
         }
     }

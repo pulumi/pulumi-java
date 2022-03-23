@@ -144,62 +144,50 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             this.architecture = architecture;
             return this;
         }
-
         public Builder architecture(@Nullable DistributionArchitecture architecture) {
             this.architecture = Output.ofNullable(architecture);
             return this;
         }
-
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
             this.cpeUri = cpeUri;
             return this;
         }
-
         public Builder cpeUri(@Nullable String cpeUri) {
             this.cpeUri = Output.ofNullable(cpeUri);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder latestVersion(@Nullable Output<VersionArgs> latestVersion) {
             this.latestVersion = latestVersion;
             return this;
         }
-
         public Builder latestVersion(@Nullable VersionArgs latestVersion) {
             this.latestVersion = Output.ofNullable(latestVersion);
             return this;
         }
-
         public Builder maintainer(@Nullable Output<String> maintainer) {
             this.maintainer = maintainer;
             return this;
         }
-
         public Builder maintainer(@Nullable String maintainer) {
             this.maintainer = Output.ofNullable(maintainer);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public DistributionArgs build() {
+        }        public DistributionArgs build() {
             return new DistributionArgs(architecture, cpeUri, description, latestVersion, maintainer, url);
         }
     }

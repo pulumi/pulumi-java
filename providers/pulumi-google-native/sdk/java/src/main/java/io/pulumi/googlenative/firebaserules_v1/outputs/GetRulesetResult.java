@@ -103,22 +103,18 @@ public final class GetRulesetResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public GetRulesetResult build() {
+        }        public GetRulesetResult build() {
             return new GetRulesetResult(createTime, metadata, name, source);
         }
     }

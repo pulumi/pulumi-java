@@ -63,12 +63,10 @@ public final class OrganizationRootPolicyType {
             this.status = status;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public OrganizationRootPolicyType build() {
+        }        public OrganizationRootPolicyType build() {
             return new OrganizationRootPolicyType(status, type);
         }
     }

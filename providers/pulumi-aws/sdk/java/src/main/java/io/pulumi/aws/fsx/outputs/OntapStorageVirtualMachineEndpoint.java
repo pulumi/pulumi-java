@@ -106,22 +106,30 @@ public final class OntapStorageVirtualMachineEndpoint {
             this.iscses = iscses;
             return this;
         }
-
+        public Builder iscses(OntapStorageVirtualMachineEndpointIscse... iscses) {
+            return iscses(List.of(iscses));
+        }
         public Builder managements(@Nullable List<OntapStorageVirtualMachineEndpointManagement> managements) {
             this.managements = managements;
             return this;
         }
-
+        public Builder managements(OntapStorageVirtualMachineEndpointManagement... managements) {
+            return managements(List.of(managements));
+        }
         public Builder nfs(@Nullable List<OntapStorageVirtualMachineEndpointNf> nfs) {
             this.nfs = nfs;
             return this;
         }
-
+        public Builder nfs(OntapStorageVirtualMachineEndpointNf... nfs) {
+            return nfs(List.of(nfs));
+        }
         public Builder smbs(@Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
             this.smbs = smbs;
             return this;
         }
-        public OntapStorageVirtualMachineEndpoint build() {
+        public Builder smbs(OntapStorageVirtualMachineEndpointSmb... smbs) {
+            return smbs(List.of(smbs));
+        }        public OntapStorageVirtualMachineEndpoint build() {
             return new OntapStorageVirtualMachineEndpoint(iscses, managements, nfs, smbs);
         }
     }

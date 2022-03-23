@@ -208,52 +208,42 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
             this.backupScheduleType = backupScheduleType;
             return this;
         }
-
         public Builder backupSystemDbs(@Nullable Boolean backupSystemDbs) {
             this.backupSystemDbs = backupSystemDbs;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enableEncryption(@Nullable Boolean enableEncryption) {
             this.enableEncryption = enableEncryption;
             return this;
         }
-
         public Builder fullBackupFrequency(@Nullable String fullBackupFrequency) {
             this.fullBackupFrequency = fullBackupFrequency;
             return this;
         }
-
         public Builder fullBackupStartTime(@Nullable Integer fullBackupStartTime) {
             this.fullBackupStartTime = fullBackupStartTime;
             return this;
         }
-
         public Builder fullBackupWindowHours(@Nullable Integer fullBackupWindowHours) {
             this.fullBackupWindowHours = fullBackupWindowHours;
             return this;
         }
-
         public Builder logBackupFrequency(@Nullable Integer logBackupFrequency) {
             this.logBackupFrequency = logBackupFrequency;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             this.storageAccountUrl = storageAccountUrl;
             return this;
-        }
-        public AutoBackupSettingsResponse build() {
+        }        public AutoBackupSettingsResponse build() {
             return new AutoBackupSettingsResponse(backupScheduleType, backupSystemDbs, enable, enableEncryption, fullBackupFrequency, fullBackupStartTime, fullBackupWindowHours, logBackupFrequency, retentionPeriod, storageAccountUrl);
         }
     }

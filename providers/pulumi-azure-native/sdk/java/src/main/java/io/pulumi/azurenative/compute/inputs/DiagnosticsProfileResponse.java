@@ -60,8 +60,7 @@ public final class DiagnosticsProfileResponse extends io.pulumi.resources.Invoke
         public Builder bootDiagnostics(@Nullable BootDiagnosticsResponse bootDiagnostics) {
             this.bootDiagnostics = bootDiagnostics;
             return this;
-        }
-        public DiagnosticsProfileResponse build() {
+        }        public DiagnosticsProfileResponse build() {
             return new DiagnosticsProfileResponse(bootDiagnostics);
         }
     }

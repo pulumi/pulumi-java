@@ -140,62 +140,53 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
             this.kafkaVersions = kafkaVersions;
             return this;
         }
-
         public Builder kafkaVersions(@Nullable List<String> kafkaVersions) {
             this.kafkaVersions = Output.ofNullable(kafkaVersions);
             return this;
         }
-
+        public Builder kafkaVersions(String... kafkaVersions) {
+            return kafkaVersions(List.of(kafkaVersions));
+        }
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder latestRevision(@Nullable Integer latestRevision) {
             this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serverProperties(@Nullable Output<String> serverProperties) {
             this.serverProperties = serverProperties;
             return this;
         }
-
         public Builder serverProperties(@Nullable String serverProperties) {
             this.serverProperties = Output.ofNullable(serverProperties);
             return this;
-        }
-        public ConfigurationState build() {
+        }        public ConfigurationState build() {
             return new ConfigurationState(arn, description, kafkaVersions, latestRevision, name, serverProperties);
         }
     }

@@ -58,8 +58,7 @@ public final class IdentityForCmkResponse extends io.pulumi.resources.InvokeArgs
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
-        }
-        public IdentityForCmkResponse build() {
+        }        public IdentityForCmkResponse build() {
             return new IdentityForCmkResponse(userAssignedIdentity);
         }
     }

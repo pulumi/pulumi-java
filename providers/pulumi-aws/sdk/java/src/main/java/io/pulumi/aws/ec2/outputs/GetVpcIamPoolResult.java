@@ -316,102 +316,85 @@ public final class GetVpcIamPoolResult {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
-
         public Builder allocationDefaultNetmaskLength(Integer allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = Objects.requireNonNull(allocationDefaultNetmaskLength);
             return this;
         }
-
         public Builder allocationMaxNetmaskLength(Integer allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = Objects.requireNonNull(allocationMaxNetmaskLength);
             return this;
         }
-
         public Builder allocationMinNetmaskLength(Integer allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = Objects.requireNonNull(allocationMinNetmaskLength);
             return this;
         }
-
         public Builder allocationResourceTags(Map<String,String> allocationResourceTags) {
             this.allocationResourceTags = Objects.requireNonNull(allocationResourceTags);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder autoImport(Boolean autoImport) {
             this.autoImport = Objects.requireNonNull(autoImport);
             return this;
         }
-
         public Builder awsService(String awsService) {
             this.awsService = Objects.requireNonNull(awsService);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpcIamPoolFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcIamPoolFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
-
         public Builder ipamScopeId(String ipamScopeId) {
             this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
             return this;
         }
-
         public Builder ipamScopeType(String ipamScopeType) {
             this.ipamScopeType = Objects.requireNonNull(ipamScopeType);
             return this;
         }
-
         public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
-
         public Builder poolDepth(Integer poolDepth) {
             this.poolDepth = Objects.requireNonNull(poolDepth);
             return this;
         }
-
         public Builder publiclyAdvertisable(Boolean publiclyAdvertisable) {
             this.publiclyAdvertisable = Objects.requireNonNull(publiclyAdvertisable);
             return this;
         }
-
         public Builder sourceIpamPoolId(String sourceIpamPoolId) {
             this.sourceIpamPoolId = Objects.requireNonNull(sourceIpamPoolId);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetVpcIamPoolResult build() {
+        }        public GetVpcIamPoolResult build() {
             return new GetVpcIamPoolResult(addressFamily, allocationDefaultNetmaskLength, allocationMaxNetmaskLength, allocationMinNetmaskLength, allocationResourceTags, arn, autoImport, awsService, description, filters, id, ipamPoolId, ipamScopeId, ipamScopeType, locale, poolDepth, publiclyAdvertisable, sourceIpamPoolId, state, tags);
         }
     }

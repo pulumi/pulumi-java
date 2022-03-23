@@ -61,12 +61,10 @@ public final class EndpointPropertiesUpdateParametersWebApplicationFirewallPolic
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs build() {
+        }        public EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs build() {
             return new EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs(id);
         }
     }

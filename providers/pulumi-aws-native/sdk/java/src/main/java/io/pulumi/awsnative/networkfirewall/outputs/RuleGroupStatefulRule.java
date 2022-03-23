@@ -64,17 +64,17 @@ public final class RuleGroupStatefulRule {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder header(RuleGroupHeader header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder ruleOptions(List<RuleGroupRuleOption> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
-        public RuleGroupStatefulRule build() {
+        public Builder ruleOptions(RuleGroupRuleOption... ruleOptions) {
+            return ruleOptions(List.of(ruleOptions));
+        }        public RuleGroupStatefulRule build() {
             return new RuleGroupStatefulRule(action, header, ruleOptions);
         }
     }

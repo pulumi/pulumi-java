@@ -69,12 +69,10 @@ public final class InsightFiltersComplianceStatus {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersComplianceStatus build() {
+        }        public InsightFiltersComplianceStatus build() {
             return new InsightFiltersComplianceStatus(comparison, value);
         }
     }

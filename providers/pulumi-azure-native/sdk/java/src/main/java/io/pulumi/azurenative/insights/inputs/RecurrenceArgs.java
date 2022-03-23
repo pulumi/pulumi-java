@@ -78,22 +78,18 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(RecurrenceFrequency frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
-
         public Builder schedule(Output<RecurrentScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(RecurrentScheduleArgs schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
-        }
-        public RecurrenceArgs build() {
+        }        public RecurrenceArgs build() {
             return new RecurrenceArgs(frequency, schedule);
         }
     }

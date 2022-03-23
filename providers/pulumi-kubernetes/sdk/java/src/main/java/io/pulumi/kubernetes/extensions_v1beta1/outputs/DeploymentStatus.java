@@ -169,42 +169,37 @@ public final class DeploymentStatus {
             this.availableReplicas = availableReplicas;
             return this;
         }
-
         public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
-
         public Builder conditions(@Nullable List<DeploymentCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(DeploymentCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder unavailableReplicas(@Nullable Integer unavailableReplicas) {
             this.unavailableReplicas = unavailableReplicas;
             return this;
         }
-
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
-        }
-        public DeploymentStatus build() {
+        }        public DeploymentStatus build() {
             return new DeploymentStatus(availableReplicas, collisionCount, conditions, observedGeneration, readyReplicas, replicas, unavailableReplicas, updatedReplicas);
         }
     }

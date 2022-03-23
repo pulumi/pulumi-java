@@ -110,42 +110,34 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
-
         public Builder productFamilyName(@Nullable Output<String> productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
-
         public Builder productFamilyName(@Nullable String productFamilyName) {
             this.productFamilyName = Output.ofNullable(productFamilyName);
             return this;
         }
-
         public Builder productLineName(@Nullable Output<String> productLineName) {
             this.productLineName = productLineName;
             return this;
         }
-
         public Builder productLineName(@Nullable String productLineName) {
             this.productLineName = Output.ofNullable(productLineName);
             return this;
         }
-
         public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = Output.ofNullable(productName);
             return this;
-        }
-        public HierarchyInformationArgs build() {
+        }        public HierarchyInformationArgs build() {
             return new HierarchyInformationArgs(configurationName, productFamilyName, productLineName, productName);
         }
     }

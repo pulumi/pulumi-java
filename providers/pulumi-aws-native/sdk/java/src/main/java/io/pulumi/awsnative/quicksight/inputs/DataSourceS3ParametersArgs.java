@@ -56,12 +56,10 @@ public final class DataSourceS3ParametersArgs extends io.pulumi.resources.Resour
             this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
             return this;
         }
-
         public Builder manifestFileLocation(DataSourceManifestFileLocationArgs manifestFileLocation) {
             this.manifestFileLocation = Output.of(Objects.requireNonNull(manifestFileLocation));
             return this;
-        }
-        public DataSourceS3ParametersArgs build() {
+        }        public DataSourceS3ParametersArgs build() {
             return new DataSourceS3ParametersArgs(manifestFileLocation);
         }
     }

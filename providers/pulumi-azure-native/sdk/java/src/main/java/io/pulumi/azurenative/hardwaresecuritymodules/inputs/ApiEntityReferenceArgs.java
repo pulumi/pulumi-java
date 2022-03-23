@@ -61,12 +61,10 @@ public final class ApiEntityReferenceArgs extends io.pulumi.resources.ResourceAr
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public ApiEntityReferenceArgs build() {
+        }        public ApiEntityReferenceArgs build() {
             return new ApiEntityReferenceArgs(id);
         }
     }

@@ -63,17 +63,17 @@ public final class GetClusterResourceUsageExportConfig {
             this.bigqueryDestinations = Objects.requireNonNull(bigqueryDestinations);
             return this;
         }
-
+        public Builder bigqueryDestinations(GetClusterResourceUsageExportConfigBigqueryDestination... bigqueryDestinations) {
+            return bigqueryDestinations(List.of(bigqueryDestinations));
+        }
         public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }
-
         public Builder enableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = Objects.requireNonNull(enableResourceConsumptionMetering);
             return this;
-        }
-        public GetClusterResourceUsageExportConfig build() {
+        }        public GetClusterResourceUsageExportConfig build() {
             return new GetClusterResourceUsageExportConfig(bigqueryDestinations, enableNetworkEgressMetering, enableResourceConsumptionMetering);
         }
     }

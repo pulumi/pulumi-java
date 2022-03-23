@@ -138,32 +138,26 @@ public final class GetStepResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Either<HealthCheckStepPropertiesResponse,WaitStepPropertiesResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStepResult build() {
+        }        public GetStepResult build() {
             return new GetStepResult(id, location, name, properties, tags, type);
         }
     }

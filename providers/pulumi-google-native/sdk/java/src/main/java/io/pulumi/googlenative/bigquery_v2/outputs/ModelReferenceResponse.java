@@ -85,17 +85,14 @@ public final class ModelReferenceResponse {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder modelId(String modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public ModelReferenceResponse build() {
+        }        public ModelReferenceResponse build() {
             return new ModelReferenceResponse(datasetId, modelId, project);
         }
     }

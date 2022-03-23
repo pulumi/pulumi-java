@@ -240,122 +240,98 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             this.boolValue = boolValue;
             return this;
         }
-
         public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Output.ofNullable(boolValue);
             return this;
         }
-
         public Builder durationValue(@Nullable Output<String> durationValue) {
             this.durationValue = durationValue;
             return this;
         }
-
         public Builder durationValue(@Nullable String durationValue) {
             this.durationValue = Output.ofNullable(durationValue);
             return this;
         }
-
         public Builder floatValue(@Nullable Output<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
-
         public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = Output.ofNullable(floatValue);
             return this;
         }
-
         public Builder int64Value(@Nullable Output<String> int64Value) {
             this.int64Value = int64Value;
             return this;
         }
-
         public Builder int64Value(@Nullable String int64Value) {
             this.int64Value = Output.ofNullable(int64Value);
             return this;
         }
-
         public Builder javaClassValue(@Nullable Output<String> javaClassValue) {
             this.javaClassValue = javaClassValue;
             return this;
         }
-
         public Builder javaClassValue(@Nullable String javaClassValue) {
             this.javaClassValue = Output.ofNullable(javaClassValue);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder shortStrValue(@Nullable Output<String> shortStrValue) {
             this.shortStrValue = shortStrValue;
             return this;
         }
-
         public Builder shortStrValue(@Nullable String shortStrValue) {
             this.shortStrValue = Output.ofNullable(shortStrValue);
             return this;
         }
-
         public Builder strValue(@Nullable Output<String> strValue) {
             this.strValue = strValue;
             return this;
         }
-
         public Builder strValue(@Nullable String strValue) {
             this.strValue = Output.ofNullable(strValue);
             return this;
         }
-
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
-
         public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Output.ofNullable(timestampValue);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public DisplayDataArgs build() {
+        }        public DisplayDataArgs build() {
             return new DisplayDataArgs(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);
         }
     }

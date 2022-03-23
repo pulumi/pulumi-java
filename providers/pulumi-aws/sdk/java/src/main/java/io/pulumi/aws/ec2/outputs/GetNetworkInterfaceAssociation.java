@@ -149,37 +149,30 @@ public final class GetNetworkInterfaceAssociation {
             this.allocationId = Objects.requireNonNull(allocationId);
             return this;
         }
-
         public Builder associationId(String associationId) {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
-
         public Builder carrierIp(String carrierIp) {
             this.carrierIp = Objects.requireNonNull(carrierIp);
             return this;
         }
-
         public Builder customerOwnedIp(String customerOwnedIp) {
             this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp);
             return this;
         }
-
         public Builder ipOwnerId(String ipOwnerId) {
             this.ipOwnerId = Objects.requireNonNull(ipOwnerId);
             return this;
         }
-
         public Builder publicDnsName(String publicDnsName) {
             this.publicDnsName = Objects.requireNonNull(publicDnsName);
             return this;
         }
-
         public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
-        }
-        public GetNetworkInterfaceAssociation build() {
+        }        public GetNetworkInterfaceAssociation build() {
             return new GetNetworkInterfaceAssociation(allocationId, associationId, carrierIp, customerOwnedIp, ipOwnerId, publicDnsName, publicIp);
         }
     }

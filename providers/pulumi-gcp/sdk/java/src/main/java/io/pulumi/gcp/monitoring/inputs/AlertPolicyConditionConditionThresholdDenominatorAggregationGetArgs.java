@@ -178,42 +178,37 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationG
             this.alignmentPeriod = alignmentPeriod;
             return this;
         }
-
         public Builder alignmentPeriod(@Nullable String alignmentPeriod) {
             this.alignmentPeriod = Output.ofNullable(alignmentPeriod);
             return this;
         }
-
         public Builder crossSeriesReducer(@Nullable Output<String> crossSeriesReducer) {
             this.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
-
         public Builder crossSeriesReducer(@Nullable String crossSeriesReducer) {
             this.crossSeriesReducer = Output.ofNullable(crossSeriesReducer);
             return this;
         }
-
         public Builder groupByFields(@Nullable Output<List<String>> groupByFields) {
             this.groupByFields = groupByFields;
             return this;
         }
-
         public Builder groupByFields(@Nullable List<String> groupByFields) {
             this.groupByFields = Output.ofNullable(groupByFields);
             return this;
         }
-
+        public Builder groupByFields(String... groupByFields) {
+            return groupByFields(List.of(groupByFields));
+        }
         public Builder perSeriesAligner(@Nullable Output<String> perSeriesAligner) {
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }
-
         public Builder perSeriesAligner(@Nullable String perSeriesAligner) {
             this.perSeriesAligner = Output.ofNullable(perSeriesAligner);
             return this;
-        }
-        public AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs build() {
+        }        public AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs build() {
             return new AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }
     }

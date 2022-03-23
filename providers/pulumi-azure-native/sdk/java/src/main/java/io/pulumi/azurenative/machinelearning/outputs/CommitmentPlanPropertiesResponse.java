@@ -201,52 +201,42 @@ public final class CommitmentPlanPropertiesResponse {
             this.chargeForOverage = Objects.requireNonNull(chargeForOverage);
             return this;
         }
-
         public Builder chargeForPlan(Boolean chargeForPlan) {
             this.chargeForPlan = Objects.requireNonNull(chargeForPlan);
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder includedQuantities(Map<String,PlanQuantityResponse> includedQuantities) {
             this.includedQuantities = Objects.requireNonNull(includedQuantities);
             return this;
         }
-
         public Builder maxAssociationLimit(Integer maxAssociationLimit) {
             this.maxAssociationLimit = Objects.requireNonNull(maxAssociationLimit);
             return this;
         }
-
         public Builder maxCapacityLimit(Integer maxCapacityLimit) {
             this.maxCapacityLimit = Objects.requireNonNull(maxCapacityLimit);
             return this;
         }
-
         public Builder minCapacityLimit(Integer minCapacityLimit) {
             this.minCapacityLimit = Objects.requireNonNull(minCapacityLimit);
             return this;
         }
-
         public Builder planMeter(String planMeter) {
             this.planMeter = Objects.requireNonNull(planMeter);
             return this;
         }
-
         public Builder refillFrequencyInDays(Integer refillFrequencyInDays) {
             this.refillFrequencyInDays = Objects.requireNonNull(refillFrequencyInDays);
             return this;
         }
-
         public Builder suspendPlanOnOverage(Boolean suspendPlanOnOverage) {
             this.suspendPlanOnOverage = Objects.requireNonNull(suspendPlanOnOverage);
             return this;
-        }
-        public CommitmentPlanPropertiesResponse build() {
+        }        public CommitmentPlanPropertiesResponse build() {
             return new CommitmentPlanPropertiesResponse(chargeForOverage, chargeForPlan, creationDate, includedQuantities, maxAssociationLimit, maxCapacityLimit, minCapacityLimit, planMeter, refillFrequencyInDays, suspendPlanOnOverage);
         }
     }

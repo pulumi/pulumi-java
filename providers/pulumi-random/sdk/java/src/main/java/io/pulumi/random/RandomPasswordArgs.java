@@ -222,112 +222,90 @@ public final class RandomPasswordArgs extends io.pulumi.resources.ResourceArgs {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder length(Output<Integer> length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
-
         public Builder length(Integer length) {
             this.length = Output.of(Objects.requireNonNull(length));
             return this;
         }
-
         public Builder lower(@Nullable Output<Boolean> lower) {
             this.lower = lower;
             return this;
         }
-
         public Builder lower(@Nullable Boolean lower) {
             this.lower = Output.ofNullable(lower);
             return this;
         }
-
         public Builder minLower(@Nullable Output<Integer> minLower) {
             this.minLower = minLower;
             return this;
         }
-
         public Builder minLower(@Nullable Integer minLower) {
             this.minLower = Output.ofNullable(minLower);
             return this;
         }
-
         public Builder minNumeric(@Nullable Output<Integer> minNumeric) {
             this.minNumeric = minNumeric;
             return this;
         }
-
         public Builder minNumeric(@Nullable Integer minNumeric) {
             this.minNumeric = Output.ofNullable(minNumeric);
             return this;
         }
-
         public Builder minSpecial(@Nullable Output<Integer> minSpecial) {
             this.minSpecial = minSpecial;
             return this;
         }
-
         public Builder minSpecial(@Nullable Integer minSpecial) {
             this.minSpecial = Output.ofNullable(minSpecial);
             return this;
         }
-
         public Builder minUpper(@Nullable Output<Integer> minUpper) {
             this.minUpper = minUpper;
             return this;
         }
-
         public Builder minUpper(@Nullable Integer minUpper) {
             this.minUpper = Output.ofNullable(minUpper);
             return this;
         }
-
         public Builder number(@Nullable Output<Boolean> number) {
             this.number = number;
             return this;
         }
-
         public Builder number(@Nullable Boolean number) {
             this.number = Output.ofNullable(number);
             return this;
         }
-
         public Builder overrideSpecial(@Nullable Output<String> overrideSpecial) {
             this.overrideSpecial = overrideSpecial;
             return this;
         }
-
         public Builder overrideSpecial(@Nullable String overrideSpecial) {
             this.overrideSpecial = Output.ofNullable(overrideSpecial);
             return this;
         }
-
         public Builder special(@Nullable Output<Boolean> special) {
             this.special = special;
             return this;
         }
-
         public Builder special(@Nullable Boolean special) {
             this.special = Output.ofNullable(special);
             return this;
         }
-
         public Builder upper(@Nullable Output<Boolean> upper) {
             this.upper = upper;
             return this;
         }
-
         public Builder upper(@Nullable Boolean upper) {
             this.upper = Output.ofNullable(upper);
             return this;
-        }
-        public RandomPasswordArgs build() {
+        }        public RandomPasswordArgs build() {
             return new RandomPasswordArgs(keepers, length, lower, minLower, minNumeric, minSpecial, minUpper, number, overrideSpecial, special, upper);
         }
     }

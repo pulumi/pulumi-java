@@ -89,17 +89,17 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
             this.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
-
+        public Builder authorizedIPRanges(String... authorizedIPRanges) {
+            return authorizedIPRanges(List.of(authorizedIPRanges));
+        }
         public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
             this.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
-
         public Builder privateDNSZone(@Nullable String privateDNSZone) {
             this.privateDNSZone = privateDNSZone;
             return this;
-        }
-        public ManagedClusterAPIServerAccessProfileResponse build() {
+        }        public ManagedClusterAPIServerAccessProfileResponse build() {
             return new ManagedClusterAPIServerAccessProfileResponse(authorizedIPRanges, enablePrivateCluster, privateDNSZone);
         }
     }

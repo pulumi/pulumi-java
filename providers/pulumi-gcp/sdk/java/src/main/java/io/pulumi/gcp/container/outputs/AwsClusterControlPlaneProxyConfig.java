@@ -69,12 +69,10 @@ public final class AwsClusterControlPlaneProxyConfig {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder secretVersion(String secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
-        }
-        public AwsClusterControlPlaneProxyConfig build() {
+        }        public AwsClusterControlPlaneProxyConfig build() {
             return new AwsClusterControlPlaneProxyConfig(secretArn, secretVersion);
         }
     }

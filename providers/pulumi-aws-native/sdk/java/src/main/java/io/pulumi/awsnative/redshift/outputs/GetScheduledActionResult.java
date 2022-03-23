@@ -187,47 +187,41 @@ public final class GetScheduledActionResult {
             this.enable = enable;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder iamRole(@Nullable String iamRole) {
             this.iamRole = iamRole;
             return this;
         }
-
         public Builder nextInvocations(@Nullable List<String> nextInvocations) {
             this.nextInvocations = nextInvocations;
             return this;
         }
-
+        public Builder nextInvocations(String... nextInvocations) {
+            return nextInvocations(List.of(nextInvocations));
+        }
         public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder scheduledActionDescription(@Nullable String scheduledActionDescription) {
             this.scheduledActionDescription = scheduledActionDescription;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder state(@Nullable ScheduledActionState state) {
             this.state = state;
             return this;
         }
-
         public Builder targetAction(@Nullable ScheduledActionType targetAction) {
             this.targetAction = targetAction;
             return this;
-        }
-        public GetScheduledActionResult build() {
+        }        public GetScheduledActionResult build() {
             return new GetScheduledActionResult(enable, endTime, iamRole, nextInvocations, schedule, scheduledActionDescription, startTime, state, targetAction);
         }
     }

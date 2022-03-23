@@ -185,42 +185,40 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
             this.catalogInfo = catalogInfo;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties) {
             this.customSetupScriptProperties = customSetupScriptProperties;
             return this;
         }
-
         public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties) {
             this.dataProxyProperties = dataProxyProperties;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
             this.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
         }
-
+        public Builder expressCustomSetupProperties(Object... expressCustomSetupProperties) {
+            return expressCustomSetupProperties(List.of(expressCustomSetupProperties));
+        }
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder packageStores(@Nullable List<PackageStoreResponse> packageStores) {
             this.packageStores = packageStores;
             return this;
         }
-        public IntegrationRuntimeSsisPropertiesResponse build() {
+        public Builder packageStores(PackageStoreResponse... packageStores) {
+            return packageStores(List.of(packageStores));
+        }        public IntegrationRuntimeSsisPropertiesResponse build() {
             return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, credential, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType, packageStores);
         }
     }

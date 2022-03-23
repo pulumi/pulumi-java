@@ -50,8 +50,7 @@ public final class GetSecretTopic extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSecretTopic build() {
+        }        public GetSecretTopic build() {
             return new GetSecretTopic(name);
         }
     }

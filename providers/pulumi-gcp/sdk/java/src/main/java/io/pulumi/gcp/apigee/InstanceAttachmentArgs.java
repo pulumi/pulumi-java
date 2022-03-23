@@ -74,22 +74,18 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder environment(String environment) {
             this.environment = Output.of(Objects.requireNonNull(environment));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
-        }
-        public InstanceAttachmentArgs build() {
+        }        public InstanceAttachmentArgs build() {
             return new InstanceAttachmentArgs(environment, instanceId);
         }
     }

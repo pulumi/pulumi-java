@@ -111,42 +111,37 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder roles(Output<List<String>> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
         public Builder roles(List<String> roles) {
             this.roles = Output.of(Objects.requireNonNull(roles));
             return this;
         }
-
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public RuntimeScriptActionArgs build() {
+        }        public RuntimeScriptActionArgs build() {
             return new RuntimeScriptActionArgs(name, parameters, roles, uri);
         }
     }

@@ -87,17 +87,14 @@ public final class TopicRuleErrorActionIotEvents {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleErrorActionIotEvents build() {
+        }        public TopicRuleErrorActionIotEvents build() {
             return new TopicRuleErrorActionIotEvents(inputName, messageId, roleArn);
         }
     }

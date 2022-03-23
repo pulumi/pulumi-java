@@ -80,22 +80,21 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
-
         public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Output.of(Objects.requireNonNull(ruleGroupName));
             return this;
         }
-
         public Builder rules(@Nullable Output<List<Integer>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<Integer> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public ApplicationGatewayFirewallDisabledRuleGroupArgs build() {
+        public Builder rules(Integer... rules) {
+            return rules(List.of(rules));
+        }        public ApplicationGatewayFirewallDisabledRuleGroupArgs build() {
             return new ApplicationGatewayFirewallDisabledRuleGroupArgs(ruleGroupName, rules);
         }
     }

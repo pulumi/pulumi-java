@@ -69,12 +69,10 @@ public final class ParquetOptionsResponse {
             this.enableListInference = Objects.requireNonNull(enableListInference);
             return this;
         }
-
         public Builder enumAsString(Boolean enumAsString) {
             this.enumAsString = Objects.requireNonNull(enumAsString);
             return this;
-        }
-        public ParquetOptionsResponse build() {
+        }        public ParquetOptionsResponse build() {
             return new ParquetOptionsResponse(enableListInference, enumAsString);
         }
     }

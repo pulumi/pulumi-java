@@ -64,12 +64,10 @@ public final class GetGroupsGroupGroupKey extends io.pulumi.resources.InvokeArgs
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public GetGroupsGroupGroupKey build() {
+        }        public GetGroupsGroupGroupKey build() {
             return new GetGroupsGroupGroupKey(id, namespace);
         }
     }

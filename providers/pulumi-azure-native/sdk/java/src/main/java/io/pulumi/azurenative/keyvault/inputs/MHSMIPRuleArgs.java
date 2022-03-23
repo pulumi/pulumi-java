@@ -60,12 +60,10 @@ public final class MHSMIPRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public MHSMIPRuleArgs build() {
+        }        public MHSMIPRuleArgs build() {
             return new MHSMIPRuleArgs(value);
         }
     }

@@ -147,32 +147,29 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
             this.additionalUnattendContent = additionalUnattendContent;
             return this;
         }
-
+        public Builder additionalUnattendContent(AdditionalUnattendContentResponse... additionalUnattendContent) {
+            return additionalUnattendContent(List.of(additionalUnattendContent));
+        }
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
-
         public Builder patchSettings(@Nullable PatchSettingsResponse patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
-
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder winRM(@Nullable WinRMConfigurationResponse winRM) {
             this.winRM = winRM;
             return this;
-        }
-        public WindowsConfigurationResponse build() {
+        }        public WindowsConfigurationResponse build() {
             return new WindowsConfigurationResponse(additionalUnattendContent, enableAutomaticUpdates, patchSettings, provisionVMAgent, timeZone, winRM);
         }
     }

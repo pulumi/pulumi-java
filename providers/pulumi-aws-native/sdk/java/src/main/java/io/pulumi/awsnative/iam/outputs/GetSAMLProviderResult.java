@@ -73,17 +73,17 @@ public final class GetSAMLProviderResult {
             this.arn = arn;
             return this;
         }
-
         public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
-
         public Builder tags(@Nullable List<SAMLProviderTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSAMLProviderResult build() {
+        public Builder tags(SAMLProviderTag... tags) {
+            return tags(List.of(tags));
+        }        public GetSAMLProviderResult build() {
             return new GetSAMLProviderResult(arn, samlMetadataDocument, tags);
         }
     }

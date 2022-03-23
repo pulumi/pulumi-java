@@ -72,12 +72,10 @@ public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualWANName(String virtualWANName) {
             this.virtualWANName = Objects.requireNonNull(virtualWANName);
             return this;
-        }
-        public GetVirtualWanArgs build() {
+        }        public GetVirtualWanArgs build() {
             return new GetVirtualWanArgs(resourceGroupName, virtualWANName);
         }
     }

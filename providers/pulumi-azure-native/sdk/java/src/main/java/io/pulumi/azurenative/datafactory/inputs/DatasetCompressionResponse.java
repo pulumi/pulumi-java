@@ -78,12 +78,10 @@ public final class DatasetCompressionResponse extends io.pulumi.resources.Invoke
             this.level = level;
             return this;
         }
-
         public Builder type(Object type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DatasetCompressionResponse build() {
+        }        public DatasetCompressionResponse build() {
             return new DatasetCompressionResponse(level, type);
         }
     }

@@ -374,202 +374,174 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             this.additionalLocations = additionalLocations;
             return this;
         }
-
         public Builder additionalLocations(@Nullable List<AdditionalLocationArgs> additionalLocations) {
             this.additionalLocations = Output.ofNullable(additionalLocations);
             return this;
         }
-
+        public Builder additionalLocations(AdditionalLocationArgs... additionalLocations) {
+            return additionalLocations(List.of(additionalLocations));
+        }
         public Builder apiVersionConstraint(@Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint) {
             this.apiVersionConstraint = apiVersionConstraint;
             return this;
         }
-
         public Builder apiVersionConstraint(@Nullable ApiVersionConstraintArgs apiVersionConstraint) {
             this.apiVersionConstraint = Output.ofNullable(apiVersionConstraint);
             return this;
         }
-
         public Builder certificates(@Nullable Output<List<CertificateConfigurationArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
-
         public Builder certificates(@Nullable List<CertificateConfigurationArgs> certificates) {
             this.certificates = Output.ofNullable(certificates);
             return this;
         }
-
+        public Builder certificates(CertificateConfigurationArgs... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder customProperties(@Nullable Output<Map<String,String>> customProperties) {
             this.customProperties = customProperties;
             return this;
         }
-
         public Builder customProperties(@Nullable Map<String,String> customProperties) {
             this.customProperties = Output.ofNullable(customProperties);
             return this;
         }
-
         public Builder disableGateway(@Nullable Output<Boolean> disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
-
         public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = Output.ofNullable(disableGateway);
             return this;
         }
-
         public Builder enableClientCertificate(@Nullable Output<Boolean> enableClientCertificate) {
             this.enableClientCertificate = enableClientCertificate;
             return this;
         }
-
         public Builder enableClientCertificate(@Nullable Boolean enableClientCertificate) {
             this.enableClientCertificate = Output.ofNullable(enableClientCertificate);
             return this;
         }
-
         public Builder hostnameConfigurations(@Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations) {
             this.hostnameConfigurations = hostnameConfigurations;
             return this;
         }
-
         public Builder hostnameConfigurations(@Nullable List<HostnameConfigurationArgs> hostnameConfigurations) {
             this.hostnameConfigurations = Output.ofNullable(hostnameConfigurations);
             return this;
         }
-
+        public Builder hostnameConfigurations(HostnameConfigurationArgs... hostnameConfigurations) {
+            return hostnameConfigurations(List.of(hostnameConfigurations));
+        }
         public Builder identity(@Nullable Output<ApiManagementServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ApiManagementServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
-
         public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = Output.ofNullable(notificationSenderEmail);
             return this;
         }
-
         public Builder publisherEmail(Output<String> publisherEmail) {
             this.publisherEmail = Objects.requireNonNull(publisherEmail);
             return this;
         }
-
         public Builder publisherEmail(String publisherEmail) {
             this.publisherEmail = Output.of(Objects.requireNonNull(publisherEmail));
             return this;
         }
-
         public Builder publisherName(Output<String> publisherName) {
             this.publisherName = Objects.requireNonNull(publisherName);
             return this;
         }
-
         public Builder publisherName(String publisherName) {
             this.publisherName = Output.of(Objects.requireNonNull(publisherName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restore(@Nullable Output<Boolean> restore) {
             this.restore = restore;
             return this;
         }
-
         public Builder restore(@Nullable Boolean restore) {
             this.restore = Output.ofNullable(restore);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder sku(Output<ApiManagementServiceSkuPropertiesArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(ApiManagementServiceSkuPropertiesArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = Output.ofNullable(virtualNetworkConfiguration);
             return this;
         }
-
         public Builder virtualNetworkType(@Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType) {
             this.virtualNetworkType = virtualNetworkType;
             return this;
         }
-
         public Builder virtualNetworkType(@Nullable Either<String,VirtualNetworkType> virtualNetworkType) {
             this.virtualNetworkType = Output.ofNullable(virtualNetworkType);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public ApiManagementServiceArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public ApiManagementServiceArgs build() {
             return new ApiManagementServiceArgs(additionalLocations, apiVersionConstraint, certificates, customProperties, disableGateway, enableClientCertificate, hostnameConfigurations, identity, location, notificationSenderEmail, publisherEmail, publisherName, resourceGroupName, restore, serviceName, sku, tags, virtualNetworkConfiguration, virtualNetworkType, zones);
         }
     }

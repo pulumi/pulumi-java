@@ -124,52 +124,48 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
             this.azDistribution = azDistribution;
             return this;
         }
-
         public Builder azDistribution(@Nullable String azDistribution) {
             this.azDistribution = Output.ofNullable(azDistribution);
             return this;
         }
-
         public Builder clientSubnets(Output<List<String>> clientSubnets) {
             this.clientSubnets = Objects.requireNonNull(clientSubnets);
             return this;
         }
-
         public Builder clientSubnets(List<String> clientSubnets) {
             this.clientSubnets = Output.of(Objects.requireNonNull(clientSubnets));
             return this;
         }
-
+        public Builder clientSubnets(String... clientSubnets) {
+            return clientSubnets(List.of(clientSubnets));
+        }
         public Builder ebsVolumeSize(Output<Integer> ebsVolumeSize) {
             this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize);
             return this;
         }
-
         public Builder ebsVolumeSize(Integer ebsVolumeSize) {
             this.ebsVolumeSize = Output.of(Objects.requireNonNull(ebsVolumeSize));
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder securityGroups(Output<List<String>> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
             return this;
         }
-        public ClusterBrokerNodeGroupInfoGetArgs build() {
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }        public ClusterBrokerNodeGroupInfoGetArgs build() {
             return new ClusterBrokerNodeGroupInfoGetArgs(azDistribution, clientSubnets, ebsVolumeSize, instanceType, securityGroups);
         }
     }

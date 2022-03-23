@@ -145,72 +145,58 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder partitionConfig(@Nullable Output<PartitionConfigArgs> partitionConfig) {
             this.partitionConfig = partitionConfig;
             return this;
         }
-
         public Builder partitionConfig(@Nullable PartitionConfigArgs partitionConfig) {
             this.partitionConfig = Output.ofNullable(partitionConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reservationConfig(@Nullable Output<ReservationConfigArgs> reservationConfig) {
             this.reservationConfig = reservationConfig;
             return this;
         }
-
         public Builder reservationConfig(@Nullable ReservationConfigArgs reservationConfig) {
             this.reservationConfig = Output.ofNullable(reservationConfig);
             return this;
         }
-
         public Builder retentionConfig(@Nullable Output<RetentionConfigArgs> retentionConfig) {
             this.retentionConfig = retentionConfig;
             return this;
         }
-
         public Builder retentionConfig(@Nullable RetentionConfigArgs retentionConfig) {
             this.retentionConfig = Output.ofNullable(retentionConfig);
             return this;
         }
-
         public Builder topicId(Output<String> topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
-
         public Builder topicId(String topicId) {
             this.topicId = Output.of(Objects.requireNonNull(topicId));
             return this;
-        }
-        public TopicArgs build() {
+        }        public TopicArgs build() {
             return new TopicArgs(location, name, partitionConfig, project, reservationConfig, retentionConfig, topicId);
         }
     }

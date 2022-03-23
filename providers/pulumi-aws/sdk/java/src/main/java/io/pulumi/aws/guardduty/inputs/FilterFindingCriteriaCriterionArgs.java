@@ -155,72 +155,64 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
             this.equals = equals;
             return this;
         }
-
         public Builder equals(@Nullable List<String> equals) {
             this.equals = Output.ofNullable(equals);
             return this;
         }
-
+        public Builder equals(String... equals) {
+            return equals(List.of(equals));
+        }
         public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder field(String field) {
             this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
-
         public Builder greaterThan(@Nullable Output<String> greaterThan) {
             this.greaterThan = greaterThan;
             return this;
         }
-
         public Builder greaterThan(@Nullable String greaterThan) {
             this.greaterThan = Output.ofNullable(greaterThan);
             return this;
         }
-
         public Builder greaterThanOrEqual(@Nullable Output<String> greaterThanOrEqual) {
             this.greaterThanOrEqual = greaterThanOrEqual;
             return this;
         }
-
         public Builder greaterThanOrEqual(@Nullable String greaterThanOrEqual) {
             this.greaterThanOrEqual = Output.ofNullable(greaterThanOrEqual);
             return this;
         }
-
         public Builder lessThan(@Nullable Output<String> lessThan) {
             this.lessThan = lessThan;
             return this;
         }
-
         public Builder lessThan(@Nullable String lessThan) {
             this.lessThan = Output.ofNullable(lessThan);
             return this;
         }
-
         public Builder lessThanOrEqual(@Nullable Output<String> lessThanOrEqual) {
             this.lessThanOrEqual = lessThanOrEqual;
             return this;
         }
-
         public Builder lessThanOrEqual(@Nullable String lessThanOrEqual) {
             this.lessThanOrEqual = Output.ofNullable(lessThanOrEqual);
             return this;
         }
-
         public Builder notEquals(@Nullable Output<List<String>> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
-
         public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = Output.ofNullable(notEquals);
             return this;
         }
-        public FilterFindingCriteriaCriterionArgs build() {
+        public Builder notEquals(String... notEquals) {
+            return notEquals(List.of(notEquals));
+        }        public FilterFindingCriteriaCriterionArgs build() {
             return new FilterFindingCriteriaCriterionArgs(equals, field, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual, notEquals);
         }
     }

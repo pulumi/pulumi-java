@@ -167,42 +167,34 @@ public final class AuthorityConfigSubjectConfigSubject {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
-
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
         }
-
         public Builder locality(@Nullable String locality) {
             this.locality = locality;
             return this;
         }
-
         public Builder organization(String organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder province(@Nullable String province) {
             this.province = province;
             return this;
         }
-
         public Builder streetAddress(@Nullable String streetAddress) {
             this.streetAddress = streetAddress;
             return this;
-        }
-        public AuthorityConfigSubjectConfigSubject build() {
+        }        public AuthorityConfigSubjectConfigSubject build() {
             return new AuthorityConfigSubjectConfigSubject(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }
     }

@@ -107,42 +107,34 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
             this.dxGatewayId = dxGatewayId;
             return this;
         }
-
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = Output.ofNullable(dxGatewayId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId);
             return this;
         }
-
         public Builder virtualInterfaceId(String virtualInterfaceId) {
             this.virtualInterfaceId = Output.of(Objects.requireNonNull(virtualInterfaceId));
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
-        }
-        public HostedPrivateVirtualInterfaceAccepterArgs build() {
+        }        public HostedPrivateVirtualInterfaceAccepterArgs build() {
             return new HostedPrivateVirtualInterfaceAccepterArgs(dxGatewayId, tags, virtualInterfaceId, vpnGatewayId);
         }
     }

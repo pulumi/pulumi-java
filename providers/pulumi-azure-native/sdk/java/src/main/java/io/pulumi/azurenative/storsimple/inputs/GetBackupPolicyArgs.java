@@ -104,22 +104,18 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBackupPolicyArgs build() {
+        }        public GetBackupPolicyArgs build() {
             return new GetBackupPolicyArgs(backupPolicyName, deviceName, managerName, resourceGroupName);
         }
     }

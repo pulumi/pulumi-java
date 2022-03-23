@@ -78,22 +78,18 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder day(WeeklyMaintenanceWindowDay day) {
             this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
-
         public Builder startTime(Output<TimeOfDayArgs> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(TimeOfDayArgs startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public WeeklyMaintenanceWindowArgs build() {
+        }        public WeeklyMaintenanceWindowArgs build() {
             return new WeeklyMaintenanceWindowArgs(day, startTime);
         }
     }

@@ -71,12 +71,10 @@ public final class StorageSettingResponse {
             this.datastoreType = datastoreType;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public StorageSettingResponse build() {
+        }        public StorageSettingResponse build() {
             return new StorageSettingResponse(datastoreType, type);
         }
     }

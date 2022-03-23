@@ -77,22 +77,18 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
-        }
-        public ToolResultsHistoryArgs build() {
+        }        public ToolResultsHistoryArgs build() {
             return new ToolResultsHistoryArgs(historyId, project);
         }
     }

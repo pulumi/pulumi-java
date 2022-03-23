@@ -70,12 +70,10 @@ public final class ClusterAutoscalingConfigResponse {
             this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits);
             return this;
         }
-
         public Builder autoscalingTargets(AutoscalingTargetsResponse autoscalingTargets) {
             this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
             return this;
-        }
-        public ClusterAutoscalingConfigResponse build() {
+        }        public ClusterAutoscalingConfigResponse build() {
             return new ClusterAutoscalingConfigResponse(autoscalingLimits, autoscalingTargets);
         }
     }

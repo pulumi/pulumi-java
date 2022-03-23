@@ -71,12 +71,10 @@ public final class ResourceRequirements {
             this.limits = limits;
             return this;
         }
-
         public Builder requests(@Nullable Map<String,String> requests) {
             this.requests = requests;
             return this;
-        }
-        public ResourceRequirements build() {
+        }        public ResourceRequirements build() {
             return new ResourceRequirements(limits, requests);
         }
     }

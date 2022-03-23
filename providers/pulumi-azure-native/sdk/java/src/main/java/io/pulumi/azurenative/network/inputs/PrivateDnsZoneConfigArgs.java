@@ -78,22 +78,18 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateDnsZoneId(@Nullable Output<String> privateDnsZoneId) {
             this.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
-
         public Builder privateDnsZoneId(@Nullable String privateDnsZoneId) {
             this.privateDnsZoneId = Output.ofNullable(privateDnsZoneId);
             return this;
-        }
-        public PrivateDnsZoneConfigArgs build() {
+        }        public PrivateDnsZoneConfigArgs build() {
             return new PrivateDnsZoneConfigArgs(name, privateDnsZoneId);
         }
     }

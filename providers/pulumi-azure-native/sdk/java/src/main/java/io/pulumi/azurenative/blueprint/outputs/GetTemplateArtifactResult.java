@@ -205,52 +205,45 @@ public final class GetTemplateArtifactResult {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(String... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(Map<String,ParameterValueResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder template(Object template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetTemplateArtifactResult build() {
+        }        public GetTemplateArtifactResult build() {
             return new GetTemplateArtifactResult(dependsOn, description, displayName, id, kind, name, parameters, resourceGroup, template, type);
         }
     }

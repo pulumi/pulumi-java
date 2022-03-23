@@ -61,12 +61,10 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.httpEnabledState = httpEnabledState;
             return this;
         }
-
         public Builder httpEnabledState(@Nullable HttpConfigHttpEnabledState httpEnabledState) {
             this.httpEnabledState = Output.ofNullable(httpEnabledState);
             return this;
-        }
-        public HttpConfigArgs build() {
+        }        public HttpConfigArgs build() {
             return new HttpConfigArgs(httpEnabledState);
         }
     }

@@ -87,17 +87,14 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
             this.bigQueryField = Objects.requireNonNull(bigQueryField);
             return this;
         }
-
         public Builder cloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet) {
             this.cloudStorageFileSet = Objects.requireNonNull(cloudStorageFileSet);
             return this;
         }
-
         public Builder outputPath(GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
-        }
-        public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
+        }        public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(bigQueryField, cloudStorageFileSet, outputPath);
         }
     }

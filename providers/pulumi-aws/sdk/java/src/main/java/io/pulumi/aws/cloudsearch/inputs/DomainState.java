@@ -191,92 +191,77 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder documentServiceEndpoint(@Nullable Output<String> documentServiceEndpoint) {
             this.documentServiceEndpoint = documentServiceEndpoint;
             return this;
         }
-
         public Builder documentServiceEndpoint(@Nullable String documentServiceEndpoint) {
             this.documentServiceEndpoint = Output.ofNullable(documentServiceEndpoint);
             return this;
         }
-
         public Builder domainId(@Nullable Output<String> domainId) {
             this.domainId = domainId;
             return this;
         }
-
         public Builder domainId(@Nullable String domainId) {
             this.domainId = Output.ofNullable(domainId);
             return this;
         }
-
         public Builder endpointOptions(@Nullable Output<DomainEndpointOptionsGetArgs> endpointOptions) {
             this.endpointOptions = endpointOptions;
             return this;
         }
-
         public Builder endpointOptions(@Nullable DomainEndpointOptionsGetArgs endpointOptions) {
             this.endpointOptions = Output.ofNullable(endpointOptions);
             return this;
         }
-
         public Builder indexFields(@Nullable Output<List<DomainIndexFieldGetArgs>> indexFields) {
             this.indexFields = indexFields;
             return this;
         }
-
         public Builder indexFields(@Nullable List<DomainIndexFieldGetArgs> indexFields) {
             this.indexFields = Output.ofNullable(indexFields);
             return this;
         }
-
+        public Builder indexFields(DomainIndexFieldGetArgs... indexFields) {
+            return indexFields(List.of(indexFields));
+        }
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
-
         public Builder multiAz(@Nullable Boolean multiAz) {
             this.multiAz = Output.ofNullable(multiAz);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scalingParameters(@Nullable Output<DomainScalingParametersGetArgs> scalingParameters) {
             this.scalingParameters = scalingParameters;
             return this;
         }
-
         public Builder scalingParameters(@Nullable DomainScalingParametersGetArgs scalingParameters) {
             this.scalingParameters = Output.ofNullable(scalingParameters);
             return this;
         }
-
         public Builder searchServiceEndpoint(@Nullable Output<String> searchServiceEndpoint) {
             this.searchServiceEndpoint = searchServiceEndpoint;
             return this;
         }
-
         public Builder searchServiceEndpoint(@Nullable String searchServiceEndpoint) {
             this.searchServiceEndpoint = Output.ofNullable(searchServiceEndpoint);
             return this;
-        }
-        public DomainState build() {
+        }        public DomainState build() {
             return new DomainState(arn, documentServiceEndpoint, domainId, endpointOptions, indexFields, multiAz, name, scalingParameters, searchServiceEndpoint);
         }
     }

@@ -119,27 +119,22 @@ public final class HelmReleaseSettingsArgs {
             this.driver = driver;
             return this;
         }
-
         public Builder pluginsPath(@Nullable Output<String> pluginsPath) {
             this.pluginsPath = pluginsPath;
             return this;
         }
-
         public Builder registryConfigPath(@Nullable Output<String> registryConfigPath) {
             this.registryConfigPath = registryConfigPath;
             return this;
         }
-
         public Builder repositoryCache(@Nullable Output<String> repositoryCache) {
             this.repositoryCache = repositoryCache;
             return this;
         }
-
         public Builder repositoryConfigPath(@Nullable Output<String> repositoryConfigPath) {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
-        }
-        public HelmReleaseSettingsArgs build() {
+        }        public HelmReleaseSettingsArgs build() {
             return new HelmReleaseSettingsArgs(driver, pluginsPath, registryConfigPath, repositoryCache, repositoryConfigPath);
         }
     }

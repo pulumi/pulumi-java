@@ -112,42 +112,34 @@ public final class ReplicaSetSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = Output.ofNullable(minReadySeconds);
             return this;
         }
-
         public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
         public Builder selector(Output<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selector(LabelSelectorArgs selector) {
             this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
-
         public Builder template(@Nullable Output<PodTemplateSpecArgs> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable PodTemplateSpecArgs template) {
             this.template = Output.ofNullable(template);
             return this;
-        }
-        public ReplicaSetSpecArgs build() {
+        }        public ReplicaSetSpecArgs build() {
             return new ReplicaSetSpecArgs(minReadySeconds, replicas, selector, template);
         }
     }

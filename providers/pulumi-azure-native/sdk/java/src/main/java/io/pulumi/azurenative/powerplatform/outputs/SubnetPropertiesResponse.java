@@ -53,8 +53,7 @@ public final class SubnetPropertiesResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public SubnetPropertiesResponse build() {
+        }        public SubnetPropertiesResponse build() {
             return new SubnetPropertiesResponse(name);
         }
     }

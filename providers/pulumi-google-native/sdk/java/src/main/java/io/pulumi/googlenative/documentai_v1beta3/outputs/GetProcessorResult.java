@@ -165,42 +165,34 @@ public final class GetProcessorResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder defaultProcessorVersion(String defaultProcessorVersion) {
             this.defaultProcessorVersion = Objects.requireNonNull(defaultProcessorVersion);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder processEndpoint(String processEndpoint) {
             this.processEndpoint = Objects.requireNonNull(processEndpoint);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetProcessorResult build() {
+        }        public GetProcessorResult build() {
             return new GetProcessorResult(createTime, defaultProcessorVersion, displayName, kmsKeyName, name, processEndpoint, state, type);
         }
     }

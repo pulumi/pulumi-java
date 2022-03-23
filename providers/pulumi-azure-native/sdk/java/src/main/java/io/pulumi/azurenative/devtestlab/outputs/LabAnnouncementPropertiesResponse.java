@@ -152,37 +152,30 @@ public final class LabAnnouncementPropertiesResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expired(@Nullable Boolean expired) {
             this.expired = expired;
             return this;
         }
-
         public Builder markdown(@Nullable String markdown) {
             this.markdown = markdown;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
-        }
-        public LabAnnouncementPropertiesResponse build() {
+        }        public LabAnnouncementPropertiesResponse build() {
             return new LabAnnouncementPropertiesResponse(enabled, expirationDate, expired, markdown, provisioningState, title, uniqueIdentifier);
         }
     }

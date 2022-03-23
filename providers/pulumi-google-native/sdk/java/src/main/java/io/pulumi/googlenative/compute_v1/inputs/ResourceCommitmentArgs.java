@@ -95,32 +95,26 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
-
         public Builder amount(@Nullable Output<String> amount) {
             this.amount = amount;
             return this;
         }
-
         public Builder amount(@Nullable String amount) {
             this.amount = Output.ofNullable(amount);
             return this;
         }
-
         public Builder type(@Nullable Output<ResourceCommitmentType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceCommitmentType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ResourceCommitmentArgs build() {
+        }        public ResourceCommitmentArgs build() {
             return new ResourceCommitmentArgs(acceleratorType, amount, type);
         }
     }

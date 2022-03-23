@@ -56,12 +56,10 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionA
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
-        }
-        public SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs build() {
+        }        public SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs build() {
             return new SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs(kmsKeyName);
         }
     }

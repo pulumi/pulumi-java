@@ -100,27 +100,22 @@ public final class TopicRuleOpenSearchAction extends io.pulumi.resources.InvokeA
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder index(String index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TopicRuleOpenSearchAction build() {
+        }        public TopicRuleOpenSearchAction build() {
             return new TopicRuleOpenSearchAction(endpoint, id, index, roleArn, type);
         }
     }

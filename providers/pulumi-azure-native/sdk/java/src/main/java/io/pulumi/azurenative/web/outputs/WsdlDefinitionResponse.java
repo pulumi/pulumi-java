@@ -104,22 +104,18 @@ public final class WsdlDefinitionResponse {
             this.content = content;
             return this;
         }
-
         public Builder importMethod(@Nullable String importMethod) {
             this.importMethod = importMethod;
             return this;
         }
-
         public Builder service(@Nullable WsdlServiceResponse service) {
             this.service = service;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public WsdlDefinitionResponse build() {
+        }        public WsdlDefinitionResponse build() {
             return new WsdlDefinitionResponse(content, importMethod, service, url);
         }
     }

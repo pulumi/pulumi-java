@@ -219,112 +219,93 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             this.creationRecord = creationRecord;
             return this;
         }
-
         public Builder creationRecord(@Nullable MutationRecordArgs creationRecord) {
             this.creationRecord = Output.ofNullable(creationRecord);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder mutationRecords(@Nullable Output<List<MutationRecordArgs>> mutationRecords) {
             this.mutationRecords = mutationRecords;
             return this;
         }
-
         public Builder mutationRecords(@Nullable List<MutationRecordArgs> mutationRecords) {
             this.mutationRecords = Output.ofNullable(mutationRecords);
             return this;
         }
-
+        public Builder mutationRecords(MutationRecordArgs... mutationRecords) {
+            return mutationRecords(List.of(mutationRecords));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
-
         public Builder verificationStatus(@Nullable Output<NotificationChannelVerificationStatus> verificationStatus) {
             this.verificationStatus = verificationStatus;
             return this;
         }
-
         public Builder verificationStatus(@Nullable NotificationChannelVerificationStatus verificationStatus) {
             this.verificationStatus = Output.ofNullable(verificationStatus);
             return this;
-        }
-        public NotificationChannelArgs build() {
+        }        public NotificationChannelArgs build() {
             return new NotificationChannelArgs(creationRecord, description, displayName, enabled, labels, mutationRecords, name, project, type, userLabels, verificationStatus);
         }
     }

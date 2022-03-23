@@ -79,22 +79,18 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder lockedTime(@Nullable Output<String> lockedTime) {
             this.lockedTime = lockedTime;
             return this;
         }
-
         public Builder lockedTime(@Nullable String lockedTime) {
             this.lockedTime = Output.ofNullable(lockedTime);
             return this;
-        }
-        public BucketIamConfigurationBucketPolicyOnlyArgs build() {
+        }        public BucketIamConfigurationBucketPolicyOnlyArgs build() {
             return new BucketIamConfigurationBucketPolicyOnlyArgs(enabled, lockedTime);
         }
     }

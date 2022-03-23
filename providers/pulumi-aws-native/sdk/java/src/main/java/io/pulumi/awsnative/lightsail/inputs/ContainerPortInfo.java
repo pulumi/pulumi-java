@@ -66,12 +66,10 @@ public final class ContainerPortInfo extends io.pulumi.resources.InvokeArgs {
             this.port = port;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public ContainerPortInfo build() {
+        }        public ContainerPortInfo build() {
             return new ContainerPortInfo(port, protocol);
         }
     }

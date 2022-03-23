@@ -95,32 +95,26 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder trigger(@Nullable Output<TriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
-
         public Builder trigger(@Nullable TriggerArgs trigger) {
             this.trigger = Output.ofNullable(trigger);
             return this;
-        }
-        public MonitoringQueryLanguageConditionArgs build() {
+        }        public MonitoringQueryLanguageConditionArgs build() {
             return new MonitoringQueryLanguageConditionArgs(duration, query, trigger);
         }
     }

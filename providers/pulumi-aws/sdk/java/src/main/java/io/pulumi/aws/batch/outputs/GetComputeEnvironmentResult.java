@@ -190,52 +190,42 @@ public final class GetComputeEnvironmentResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder computeEnvironmentName(String computeEnvironmentName) {
             this.computeEnvironmentName = Objects.requireNonNull(computeEnvironmentName);
             return this;
         }
-
         public Builder ecsClusterArn(String ecsClusterArn) {
             this.ecsClusterArn = Objects.requireNonNull(ecsClusterArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusReason(String statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetComputeEnvironmentResult build() {
+        }        public GetComputeEnvironmentResult build() {
             return new GetComputeEnvironmentResult(arn, computeEnvironmentName, ecsClusterArn, id, serviceRole, state, status, statusReason, tags, type);
         }
     }

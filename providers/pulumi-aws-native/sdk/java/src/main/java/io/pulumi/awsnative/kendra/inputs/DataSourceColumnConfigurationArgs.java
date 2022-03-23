@@ -104,52 +104,48 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
             this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns);
             return this;
         }
-
         public Builder changeDetectingColumns(List<String> changeDetectingColumns) {
             this.changeDetectingColumns = Output.of(Objects.requireNonNull(changeDetectingColumns));
             return this;
         }
-
+        public Builder changeDetectingColumns(String... changeDetectingColumns) {
+            return changeDetectingColumns(List.of(changeDetectingColumns));
+        }
         public Builder documentDataColumnName(Output<String> documentDataColumnName) {
             this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName);
             return this;
         }
-
         public Builder documentDataColumnName(String documentDataColumnName) {
             this.documentDataColumnName = Output.of(Objects.requireNonNull(documentDataColumnName));
             return this;
         }
-
         public Builder documentIdColumnName(Output<String> documentIdColumnName) {
             this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName);
             return this;
         }
-
         public Builder documentIdColumnName(String documentIdColumnName) {
             this.documentIdColumnName = Output.of(Objects.requireNonNull(documentIdColumnName));
             return this;
         }
-
         public Builder documentTitleColumnName(@Nullable Output<String> documentTitleColumnName) {
             this.documentTitleColumnName = documentTitleColumnName;
             return this;
         }
-
         public Builder documentTitleColumnName(@Nullable String documentTitleColumnName) {
             this.documentTitleColumnName = Output.ofNullable(documentTitleColumnName);
             return this;
         }
-
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-        public DataSourceColumnConfigurationArgs build() {
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }        public DataSourceColumnConfigurationArgs build() {
             return new DataSourceColumnConfigurationArgs(changeDetectingColumns, documentDataColumnName, documentIdColumnName, documentTitleColumnName, fieldMappings);
         }
     }

@@ -120,27 +120,22 @@ public final class UserPoolClientAnalyticsConfiguration {
             this.applicationArn = applicationArn;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder userDataShared(@Nullable Boolean userDataShared) {
             this.userDataShared = userDataShared;
             return this;
-        }
-        public UserPoolClientAnalyticsConfiguration build() {
+        }        public UserPoolClientAnalyticsConfiguration build() {
             return new UserPoolClientAnalyticsConfiguration(applicationArn, applicationId, externalId, roleArn, userDataShared);
         }
     }

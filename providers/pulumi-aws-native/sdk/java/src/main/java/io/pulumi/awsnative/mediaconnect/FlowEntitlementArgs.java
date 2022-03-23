@@ -158,72 +158,61 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
             this.dataTransferSubscriberFeePercent = dataTransferSubscriberFeePercent;
             return this;
         }
-
         public Builder dataTransferSubscriberFeePercent(@Nullable Integer dataTransferSubscriberFeePercent) {
             this.dataTransferSubscriberFeePercent = Output.ofNullable(dataTransferSubscriberFeePercent);
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder encryption(@Nullable Output<FlowEntitlementEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable FlowEntitlementEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder entitlementStatus(@Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus) {
             this.entitlementStatus = entitlementStatus;
             return this;
         }
-
         public Builder entitlementStatus(@Nullable FlowEntitlementEntitlementStatus entitlementStatus) {
             this.entitlementStatus = Output.ofNullable(entitlementStatus);
             return this;
         }
-
         public Builder flowArn(Output<String> flowArn) {
             this.flowArn = Objects.requireNonNull(flowArn);
             return this;
         }
-
         public Builder flowArn(String flowArn) {
             this.flowArn = Output.of(Objects.requireNonNull(flowArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder subscribers(Output<List<String>> subscribers) {
             this.subscribers = Objects.requireNonNull(subscribers);
             return this;
         }
-
         public Builder subscribers(List<String> subscribers) {
             this.subscribers = Output.of(Objects.requireNonNull(subscribers));
             return this;
         }
-        public FlowEntitlementArgs build() {
+        public Builder subscribers(String... subscribers) {
+            return subscribers(List.of(subscribers));
+        }        public FlowEntitlementArgs build() {
             return new FlowEntitlementArgs(dataTransferSubscriberFeePercent, description, encryption, entitlementStatus, flowArn, name, subscribers);
         }
     }

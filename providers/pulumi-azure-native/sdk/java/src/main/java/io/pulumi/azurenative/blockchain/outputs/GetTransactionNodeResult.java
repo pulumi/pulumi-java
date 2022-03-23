@@ -201,52 +201,45 @@ public final class GetTransactionNodeResult {
             this.dns = Objects.requireNonNull(dns);
             return this;
         }
-
         public Builder firewallRules(@Nullable List<FirewallRuleResponse> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
-
+        public Builder firewallRules(FirewallRuleResponse... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetTransactionNodeResult build() {
+        }        public GetTransactionNodeResult build() {
             return new GetTransactionNodeResult(dns, firewallRules, id, location, name, password, provisioningState, publicKey, type, userName);
         }
     }

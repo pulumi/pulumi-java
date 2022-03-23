@@ -60,8 +60,7 @@ public final class VirtualHubIdResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public VirtualHubIdResponse build() {
+        }        public VirtualHubIdResponse build() {
             return new VirtualHubIdResponse(id);
         }
     }

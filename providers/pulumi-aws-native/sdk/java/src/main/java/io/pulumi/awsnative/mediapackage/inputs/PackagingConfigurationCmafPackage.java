@@ -106,22 +106,21 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
             this.encryption = encryption;
             return this;
         }
-
         public Builder hlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
-
+        public Builder hlsManifests(PackagingConfigurationHlsManifest... hlsManifests) {
+            return hlsManifests(List.of(hlsManifests));
+        }
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
-        }
-        public PackagingConfigurationCmafPackage build() {
+        }        public PackagingConfigurationCmafPackage build() {
             return new PackagingConfigurationCmafPackage(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);
         }
     }

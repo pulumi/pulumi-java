@@ -53,8 +53,7 @@ public final class BucketOwnershipControlsRule {
         public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
             this.objectOwnership = objectOwnership;
             return this;
-        }
-        public BucketOwnershipControlsRule build() {
+        }        public BucketOwnershipControlsRule build() {
             return new BucketOwnershipControlsRule(objectOwnership);
         }
     }

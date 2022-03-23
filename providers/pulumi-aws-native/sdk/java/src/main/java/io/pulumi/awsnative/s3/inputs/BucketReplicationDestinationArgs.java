@@ -139,72 +139,58 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
-
         public Builder accessControlTranslation(@Nullable BucketAccessControlTranslationArgs accessControlTranslation) {
             this.accessControlTranslation = Output.ofNullable(accessControlTranslation);
             return this;
         }
-
         public Builder account(@Nullable Output<String> account) {
             this.account = account;
             return this;
         }
-
         public Builder account(@Nullable String account) {
             this.account = Output.ofNullable(account);
             return this;
         }
-
         public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable BucketEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder metrics(@Nullable Output<BucketMetricsArgs> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable BucketMetricsArgs metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
         public Builder replicationTime(@Nullable Output<BucketReplicationTimeArgs> replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
-
         public Builder replicationTime(@Nullable BucketReplicationTimeArgs replicationTime) {
             this.replicationTime = Output.ofNullable(replicationTime);
             return this;
         }
-
         public Builder storageClass(@Nullable Output<BucketReplicationDestinationStorageClass> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
-
         public Builder storageClass(@Nullable BucketReplicationDestinationStorageClass storageClass) {
             this.storageClass = Output.ofNullable(storageClass);
             return this;
-        }
-        public BucketReplicationDestinationArgs build() {
+        }        public BucketReplicationDestinationArgs build() {
             return new BucketReplicationDestinationArgs(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
         }
     }

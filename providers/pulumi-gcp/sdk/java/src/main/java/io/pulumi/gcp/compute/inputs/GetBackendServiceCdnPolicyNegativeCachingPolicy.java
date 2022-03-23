@@ -64,12 +64,10 @@ public final class GetBackendServiceCdnPolicyNegativeCachingPolicy extends io.pu
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public GetBackendServiceCdnPolicyNegativeCachingPolicy build() {
+        }        public GetBackendServiceCdnPolicyNegativeCachingPolicy build() {
             return new GetBackendServiceCdnPolicyNegativeCachingPolicy(code, ttl);
         }
     }

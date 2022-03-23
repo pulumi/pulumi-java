@@ -50,8 +50,7 @@ public final class GetFeatureArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetFeatureArgs build() {
+        }        public GetFeatureArgs build() {
             return new GetFeatureArgs(arn);
         }
     }

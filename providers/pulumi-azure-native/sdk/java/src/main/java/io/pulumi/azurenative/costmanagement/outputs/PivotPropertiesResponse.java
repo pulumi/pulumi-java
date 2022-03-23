@@ -71,12 +71,10 @@ public final class PivotPropertiesResponse {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PivotPropertiesResponse build() {
+        }        public PivotPropertiesResponse build() {
             return new PivotPropertiesResponse(name, type);
         }
     }

@@ -72,12 +72,10 @@ public final class IntegrationResponseParameter {
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public IntegrationResponseParameter build() {
+        }        public IntegrationResponseParameter build() {
             return new IntegrationResponseParameter(mappings, statusCode);
         }
     }

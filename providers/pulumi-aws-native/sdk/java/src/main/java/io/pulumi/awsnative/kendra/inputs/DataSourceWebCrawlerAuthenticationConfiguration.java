@@ -54,7 +54,9 @@ public final class DataSourceWebCrawlerAuthenticationConfiguration extends io.pu
             this.basicAuthentication = basicAuthentication;
             return this;
         }
-        public DataSourceWebCrawlerAuthenticationConfiguration build() {
+        public Builder basicAuthentication(DataSourceWebCrawlerBasicAuthentication... basicAuthentication) {
+            return basicAuthentication(List.of(basicAuthentication));
+        }        public DataSourceWebCrawlerAuthenticationConfiguration build() {
             return new DataSourceWebCrawlerAuthenticationConfiguration(basicAuthentication);
         }
     }

@@ -256,67 +256,66 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder dynamicSubstitutions(Boolean dynamicSubstitutions) {
             this.dynamicSubstitutions = Objects.requireNonNull(dynamicSubstitutions);
             return this;
         }
-
         public Builder env(List<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
+        public Builder env(String... env) {
+            return env(List.of(env));
+        }
         public Builder logStreamingOption(String logStreamingOption) {
             this.logStreamingOption = Objects.requireNonNull(logStreamingOption);
             return this;
         }
-
         public Builder logging(String logging) {
             this.logging = Objects.requireNonNull(logging);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder pool(PoolOptionResponse pool) {
             this.pool = Objects.requireNonNull(pool);
             return this;
         }
-
         public Builder requestedVerifyOption(String requestedVerifyOption) {
             this.requestedVerifyOption = Objects.requireNonNull(requestedVerifyOption);
             return this;
         }
-
         public Builder secretEnv(List<String> secretEnv) {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }
-
+        public Builder secretEnv(String... secretEnv) {
+            return secretEnv(List.of(secretEnv));
+        }
         public Builder sourceProvenanceHash(List<String> sourceProvenanceHash) {
             this.sourceProvenanceHash = Objects.requireNonNull(sourceProvenanceHash);
             return this;
         }
-
+        public Builder sourceProvenanceHash(String... sourceProvenanceHash) {
+            return sourceProvenanceHash(List.of(sourceProvenanceHash));
+        }
         public Builder substitutionOption(String substitutionOption) {
             this.substitutionOption = Objects.requireNonNull(substitutionOption);
             return this;
         }
-
         public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
+        public Builder volumes(VolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder workerPool(String workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
-        }
-        public BuildOptionsResponse build() {
+        }        public BuildOptionsResponse build() {
             return new BuildOptionsResponse(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);
         }
     }

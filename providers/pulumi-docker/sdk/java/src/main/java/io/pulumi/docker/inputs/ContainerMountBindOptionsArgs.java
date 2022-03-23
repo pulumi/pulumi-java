@@ -53,12 +53,10 @@ public final class ContainerMountBindOptionsArgs extends io.pulumi.resources.Res
             this.propagation = propagation;
             return this;
         }
-
         public Builder propagation(@Nullable String propagation) {
             this.propagation = Output.ofNullable(propagation);
             return this;
-        }
-        public ContainerMountBindOptionsArgs build() {
+        }        public ContainerMountBindOptionsArgs build() {
             return new ContainerMountBindOptionsArgs(propagation);
         }
     }

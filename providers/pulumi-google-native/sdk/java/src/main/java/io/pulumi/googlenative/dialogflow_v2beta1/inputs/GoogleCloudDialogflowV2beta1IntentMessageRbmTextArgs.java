@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
             this.rbmSuggestion = rbmSuggestion;
             return this;
         }
-
         public Builder rbmSuggestion(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
             this.rbmSuggestion = Output.ofNullable(rbmSuggestion);
             return this;
         }
-
+        public Builder rbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs... rbmSuggestion) {
+            return rbmSuggestion(List.of(rbmSuggestion));
+        }
         public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs(rbmSuggestion, text);
         }
     }

@@ -78,22 +78,18 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ExperimentEndpointArgs build() {
+        }        public ExperimentEndpointArgs build() {
             return new ExperimentEndpointArgs(endpoint, name);
         }
     }

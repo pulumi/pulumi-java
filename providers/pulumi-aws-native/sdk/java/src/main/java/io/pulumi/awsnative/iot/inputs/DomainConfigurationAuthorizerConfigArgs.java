@@ -67,22 +67,18 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
             this.allowAuthorizerOverride = allowAuthorizerOverride;
             return this;
         }
-
         public Builder allowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
             this.allowAuthorizerOverride = Output.ofNullable(allowAuthorizerOverride);
             return this;
         }
-
         public Builder defaultAuthorizerName(@Nullable Output<String> defaultAuthorizerName) {
             this.defaultAuthorizerName = defaultAuthorizerName;
             return this;
         }
-
         public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
             this.defaultAuthorizerName = Output.ofNullable(defaultAuthorizerName);
             return this;
-        }
-        public DomainConfigurationAuthorizerConfigArgs build() {
+        }        public DomainConfigurationAuthorizerConfigArgs build() {
             return new DomainConfigurationAuthorizerConfigArgs(allowAuthorizerOverride, defaultAuthorizerName);
         }
     }

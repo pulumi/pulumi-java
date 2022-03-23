@@ -110,27 +110,25 @@ public final class GetRuleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includedPermissions(List<String> includedPermissions) {
             this.includedPermissions = Objects.requireNonNull(includedPermissions);
             return this;
         }
-
+        public Builder includedPermissions(String... includedPermissions) {
+            return includedPermissions(List.of(includedPermissions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GetRuleResult build() {
+        }        public GetRuleResult build() {
             return new GetRuleResult(id, includedPermissions, name, stage, title);
         }
     }

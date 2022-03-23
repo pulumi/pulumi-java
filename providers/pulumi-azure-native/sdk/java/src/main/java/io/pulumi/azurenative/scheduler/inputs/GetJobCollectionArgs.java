@@ -72,12 +72,10 @@ public final class GetJobCollectionArgs extends io.pulumi.resources.InvokeArgs {
             this.jobCollectionName = Objects.requireNonNull(jobCollectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetJobCollectionArgs build() {
+        }        public GetJobCollectionArgs build() {
             return new GetJobCollectionArgs(jobCollectionName, resourceGroupName);
         }
     }

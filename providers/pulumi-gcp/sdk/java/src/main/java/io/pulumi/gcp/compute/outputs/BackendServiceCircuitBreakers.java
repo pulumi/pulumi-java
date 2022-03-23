@@ -152,32 +152,26 @@ public final class BackendServiceCircuitBreakers {
             this.connectTimeout = connectTimeout;
             return this;
         }
-
         public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
-
         public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }
-
         public Builder maxRequests(@Nullable Integer maxRequests) {
             this.maxRequests = maxRequests;
             return this;
         }
-
         public Builder maxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = maxRetries;
             return this;
-        }
-        public BackendServiceCircuitBreakers build() {
+        }        public BackendServiceCircuitBreakers build() {
             return new BackendServiceCircuitBreakers(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }
     }

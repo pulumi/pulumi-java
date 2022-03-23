@@ -72,12 +72,10 @@ public final class BrokerEncryptionOptions {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder useAwsOwnedKey(@Nullable Boolean useAwsOwnedKey) {
             this.useAwsOwnedKey = useAwsOwnedKey;
             return this;
-        }
-        public BrokerEncryptionOptions build() {
+        }        public BrokerEncryptionOptions build() {
             return new BrokerEncryptionOptions(kmsKeyId, useAwsOwnedKey);
         }
     }

@@ -293,152 +293,131 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             this.additionalLicenses = additionalLicenses;
             return this;
         }
-
         public Builder additionalLicenses(@Nullable List<String> additionalLicenses) {
             this.additionalLicenses = Output.ofNullable(additionalLicenses);
             return this;
         }
-
+        public Builder additionalLicenses(String... additionalLicenses) {
+            return additionalLicenses(List.of(additionalLicenses));
+        }
         public Builder computeScheduling(@Nullable Output<ComputeSchedulingArgs> computeScheduling) {
             this.computeScheduling = computeScheduling;
             return this;
         }
-
         public Builder computeScheduling(@Nullable ComputeSchedulingArgs computeScheduling) {
             this.computeScheduling = Output.ofNullable(computeScheduling);
             return this;
         }
-
         public Builder diskType(@Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable ComputeEngineTargetDefaultsDiskType diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable ComputeEngineTargetDefaultsLicenseType licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder machineTypeSeries(@Nullable Output<String> machineTypeSeries) {
             this.machineTypeSeries = machineTypeSeries;
             return this;
         }
-
         public Builder machineTypeSeries(@Nullable String machineTypeSeries) {
             this.machineTypeSeries = Output.ofNullable(machineTypeSeries);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder networkTags(@Nullable Output<List<String>> networkTags) {
             this.networkTags = networkTags;
             return this;
         }
-
         public Builder networkTags(@Nullable List<String> networkTags) {
             this.networkTags = Output.ofNullable(networkTags);
             return this;
         }
-
+        public Builder networkTags(String... networkTags) {
+            return networkTags(List.of(networkTags));
+        }
         public Builder secureBoot(@Nullable Output<Boolean> secureBoot) {
             this.secureBoot = secureBoot;
             return this;
         }
-
         public Builder secureBoot(@Nullable Boolean secureBoot) {
             this.secureBoot = Output.ofNullable(secureBoot);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder targetProject(@Nullable Output<String> targetProject) {
             this.targetProject = targetProject;
             return this;
         }
-
         public Builder targetProject(@Nullable String targetProject) {
             this.targetProject = Output.ofNullable(targetProject);
             return this;
         }
-
         public Builder vmName(@Nullable Output<String> vmName) {
             this.vmName = vmName;
             return this;
         }
-
         public Builder vmName(@Nullable String vmName) {
             this.vmName = Output.ofNullable(vmName);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public ComputeEngineTargetDefaultsArgs build() {
+        }        public ComputeEngineTargetDefaultsArgs build() {
             return new ComputeEngineTargetDefaultsArgs(additionalLicenses, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, secureBoot, serviceAccount, targetProject, vmName, zone);
         }
     }

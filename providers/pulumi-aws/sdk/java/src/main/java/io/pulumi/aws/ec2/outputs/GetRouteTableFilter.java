@@ -70,12 +70,13 @@ public final class GetRouteTableFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetRouteTableFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetRouteTableFilter build() {
             return new GetRouteTableFilter(name, values);
         }
     }

@@ -121,62 +121,53 @@ public final class StackSetOperationPreferencesArgs extends io.pulumi.resources.
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
-
         public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
             this.failureToleranceCount = Output.ofNullable(failureToleranceCount);
             return this;
         }
-
         public Builder failureTolerancePercentage(@Nullable Output<Integer> failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
-
         public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = Output.ofNullable(failureTolerancePercentage);
             return this;
         }
-
         public Builder maxConcurrentCount(@Nullable Output<Integer> maxConcurrentCount) {
             this.maxConcurrentCount = maxConcurrentCount;
             return this;
         }
-
         public Builder maxConcurrentCount(@Nullable Integer maxConcurrentCount) {
             this.maxConcurrentCount = Output.ofNullable(maxConcurrentCount);
             return this;
         }
-
         public Builder maxConcurrentPercentage(@Nullable Output<Integer> maxConcurrentPercentage) {
             this.maxConcurrentPercentage = maxConcurrentPercentage;
             return this;
         }
-
         public Builder maxConcurrentPercentage(@Nullable Integer maxConcurrentPercentage) {
             this.maxConcurrentPercentage = Output.ofNullable(maxConcurrentPercentage);
             return this;
         }
-
         public Builder regionConcurrencyType(@Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType) {
             this.regionConcurrencyType = regionConcurrencyType;
             return this;
         }
-
         public Builder regionConcurrencyType(@Nullable StackSetRegionConcurrencyType regionConcurrencyType) {
             this.regionConcurrencyType = Output.ofNullable(regionConcurrencyType);
             return this;
         }
-
         public Builder regionOrder(@Nullable Output<List<String>> regionOrder) {
             this.regionOrder = regionOrder;
             return this;
         }
-
         public Builder regionOrder(@Nullable List<String> regionOrder) {
             this.regionOrder = Output.ofNullable(regionOrder);
             return this;
         }
-        public StackSetOperationPreferencesArgs build() {
+        public Builder regionOrder(String... regionOrder) {
+            return regionOrder(List.of(regionOrder));
+        }        public StackSetOperationPreferencesArgs build() {
             return new StackSetOperationPreferencesArgs(failureToleranceCount, failureTolerancePercentage, maxConcurrentCount, maxConcurrentPercentage, regionConcurrencyType, regionOrder);
         }
     }

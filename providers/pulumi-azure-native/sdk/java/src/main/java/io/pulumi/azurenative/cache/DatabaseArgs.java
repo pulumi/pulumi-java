@@ -194,92 +194,77 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.clientProtocol = clientProtocol;
             return this;
         }
-
         public Builder clientProtocol(@Nullable Either<String,Protocol> clientProtocol) {
             this.clientProtocol = Output.ofNullable(clientProtocol);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder clusteringPolicy(@Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy) {
             this.clusteringPolicy = clusteringPolicy;
             return this;
         }
-
         public Builder clusteringPolicy(@Nullable Either<String,ClusteringPolicy> clusteringPolicy) {
             this.clusteringPolicy = Output.ofNullable(clusteringPolicy);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder evictionPolicy(@Nullable Output<Either<String,EvictionPolicy>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
-
         public Builder evictionPolicy(@Nullable Either<String,EvictionPolicy> evictionPolicy) {
             this.evictionPolicy = Output.ofNullable(evictionPolicy);
             return this;
         }
-
         public Builder modules(@Nullable Output<List<ModuleArgs>> modules) {
             this.modules = modules;
             return this;
         }
-
         public Builder modules(@Nullable List<ModuleArgs> modules) {
             this.modules = Output.ofNullable(modules);
             return this;
         }
-
+        public Builder modules(ModuleArgs... modules) {
+            return modules(List.of(modules));
+        }
         public Builder persistence(@Nullable Output<PersistenceArgs> persistence) {
             this.persistence = persistence;
             return this;
         }
-
         public Builder persistence(@Nullable PersistenceArgs persistence) {
             this.persistence = Output.ofNullable(persistence);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DatabaseArgs build() {
+        }        public DatabaseArgs build() {
             return new DatabaseArgs(clientProtocol, clusterName, clusteringPolicy, databaseName, evictionPolicy, modules, persistence, port, resourceGroupName);
         }
     }

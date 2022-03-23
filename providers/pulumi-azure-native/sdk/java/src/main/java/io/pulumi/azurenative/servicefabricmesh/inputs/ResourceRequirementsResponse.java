@@ -79,12 +79,10 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
             this.limits = limits;
             return this;
         }
-
         public Builder requests(ResourceRequestsResponse requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
-        }
-        public ResourceRequirementsResponse build() {
+        }        public ResourceRequirementsResponse build() {
             return new ResourceRequirementsResponse(limits, requests);
         }
     }

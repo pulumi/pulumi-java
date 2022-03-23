@@ -134,72 +134,58 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageId(Output<String> packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
-
         public Builder packageId(String packageId) {
             this.packageId = Output.of(Objects.requireNonNull(packageId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder repositoryId(Output<String> repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
-
         public Builder repositoryId(String repositoryId) {
             this.repositoryId = Output.of(Objects.requireNonNull(repositoryId));
             return this;
         }
-
         public Builder tagId(@Nullable Output<String> tagId) {
             this.tagId = tagId;
             return this;
         }
-
         public Builder tagId(@Nullable String tagId) {
             this.tagId = Output.ofNullable(tagId);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public TagArgs build() {
+        }        public TagArgs build() {
             return new TagArgs(location, name, packageId, project, repositoryId, tagId, version);
         }
     }

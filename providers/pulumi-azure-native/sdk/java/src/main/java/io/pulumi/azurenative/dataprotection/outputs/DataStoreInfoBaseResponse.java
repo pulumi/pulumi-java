@@ -69,12 +69,10 @@ public final class DataStoreInfoBaseResponse {
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
-        }
-        public DataStoreInfoBaseResponse build() {
+        }        public DataStoreInfoBaseResponse build() {
             return new DataStoreInfoBaseResponse(dataStoreType, objectType);
         }
     }

@@ -76,22 +76,18 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable LiteTopicPartitionConfigCapacityArgs capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
-        }
-        public LiteTopicPartitionConfigArgs build() {
+        }        public LiteTopicPartitionConfigArgs build() {
             return new LiteTopicPartitionConfigArgs(capacity, count);
         }
     }

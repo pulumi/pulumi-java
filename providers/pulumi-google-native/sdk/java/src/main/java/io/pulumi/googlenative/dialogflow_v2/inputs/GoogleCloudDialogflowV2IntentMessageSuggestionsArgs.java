@@ -61,12 +61,13 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
-
         public Builder suggestions(List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs> suggestions) {
             this.suggestions = Output.of(Objects.requireNonNull(suggestions));
             return this;
         }
-        public GoogleCloudDialogflowV2IntentMessageSuggestionsArgs build() {
+        public Builder suggestions(GoogleCloudDialogflowV2IntentMessageSuggestionArgs... suggestions) {
+            return suggestions(List.of(suggestions));
+        }        public GoogleCloudDialogflowV2IntentMessageSuggestionsArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSuggestionsArgs(suggestions);
         }
     }

@@ -169,42 +169,43 @@ public final class NicIPSettingsResponse {
             this.allocationMethod = allocationMethod;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder gateway(@Nullable List<String> gateway) {
             this.gateway = gateway;
             return this;
         }
-
+        public Builder gateway(String... gateway) {
+            return gateway(List.of(gateway));
+        }
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddressInfo(List<NicIPAddressSettingsResponse> ipAddressInfo) {
             this.ipAddressInfo = Objects.requireNonNull(ipAddressInfo);
             return this;
         }
-
+        public Builder ipAddressInfo(NicIPAddressSettingsResponse... ipAddressInfo) {
+            return ipAddressInfo(List.of(ipAddressInfo));
+        }
         public Builder primaryWinsServer(String primaryWinsServer) {
             this.primaryWinsServer = Objects.requireNonNull(primaryWinsServer);
             return this;
         }
-
         public Builder secondaryWinsServer(String secondaryWinsServer) {
             this.secondaryWinsServer = Objects.requireNonNull(secondaryWinsServer);
             return this;
         }
-
         public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = subnetMask;
             return this;
-        }
-        public NicIPSettingsResponse build() {
+        }        public NicIPSettingsResponse build() {
             return new NicIPSettingsResponse(allocationMethod, dnsServers, gateway, ipAddress, ipAddressInfo, primaryWinsServer, secondaryWinsServer, subnetMask);
         }
     }

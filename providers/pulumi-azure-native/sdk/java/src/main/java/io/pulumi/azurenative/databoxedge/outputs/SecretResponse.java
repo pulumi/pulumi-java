@@ -72,12 +72,10 @@ public final class SecretResponse {
             this.encryptedSecret = encryptedSecret;
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
-        }
-        public SecretResponse build() {
+        }        public SecretResponse build() {
             return new SecretResponse(encryptedSecret, keyVaultId);
         }
     }

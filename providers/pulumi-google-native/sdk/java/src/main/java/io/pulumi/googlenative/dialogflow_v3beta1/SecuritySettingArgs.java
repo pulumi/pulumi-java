@@ -216,112 +216,93 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             this.deidentifyTemplate = deidentifyTemplate;
             return this;
         }
-
         public Builder deidentifyTemplate(@Nullable String deidentifyTemplate) {
             this.deidentifyTemplate = Output.ofNullable(deidentifyTemplate);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder insightsExportSettings(@Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings) {
             this.insightsExportSettings = insightsExportSettings;
             return this;
         }
-
         public Builder insightsExportSettings(@Nullable GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs insightsExportSettings) {
             this.insightsExportSettings = Output.ofNullable(insightsExportSettings);
             return this;
         }
-
         public Builder inspectTemplate(@Nullable Output<String> inspectTemplate) {
             this.inspectTemplate = inspectTemplate;
             return this;
         }
-
         public Builder inspectTemplate(@Nullable String inspectTemplate) {
             this.inspectTemplate = Output.ofNullable(inspectTemplate);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder purgeDataTypes(@Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes) {
             this.purgeDataTypes = purgeDataTypes;
             return this;
         }
-
         public Builder purgeDataTypes(@Nullable List<SecuritySettingPurgeDataTypesItem> purgeDataTypes) {
             this.purgeDataTypes = Output.ofNullable(purgeDataTypes);
             return this;
         }
-
+        public Builder purgeDataTypes(SecuritySettingPurgeDataTypesItem... purgeDataTypes) {
+            return purgeDataTypes(List.of(purgeDataTypes));
+        }
         public Builder redactionScope(@Nullable Output<SecuritySettingRedactionScope> redactionScope) {
             this.redactionScope = redactionScope;
             return this;
         }
-
         public Builder redactionScope(@Nullable SecuritySettingRedactionScope redactionScope) {
             this.redactionScope = Output.ofNullable(redactionScope);
             return this;
         }
-
         public Builder redactionStrategy(@Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy) {
             this.redactionStrategy = redactionStrategy;
             return this;
         }
-
         public Builder redactionStrategy(@Nullable SecuritySettingRedactionStrategy redactionStrategy) {
             this.redactionStrategy = Output.ofNullable(redactionStrategy);
             return this;
         }
-
         public Builder retentionWindowDays(@Nullable Output<Integer> retentionWindowDays) {
             this.retentionWindowDays = retentionWindowDays;
             return this;
         }
-
         public Builder retentionWindowDays(@Nullable Integer retentionWindowDays) {
             this.retentionWindowDays = Output.ofNullable(retentionWindowDays);
             return this;
-        }
-        public SecuritySettingArgs build() {
+        }        public SecuritySettingArgs build() {
             return new SecuritySettingArgs(deidentifyTemplate, displayName, insightsExportSettings, inspectTemplate, location, name, project, purgeDataTypes, redactionScope, redactionStrategy, retentionWindowDays);
         }
     }

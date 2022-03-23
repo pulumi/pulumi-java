@@ -71,12 +71,10 @@ public final class JpgFormatResponse {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public JpgFormatResponse build() {
+        }        public JpgFormatResponse build() {
             return new JpgFormatResponse(filenamePattern, odataType);
         }
     }

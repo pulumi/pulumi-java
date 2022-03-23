@@ -106,42 +106,34 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder idProvider(Output<String> idProvider) {
             this.idProvider = Objects.requireNonNull(idProvider);
             return this;
         }
-
         public Builder idProvider(String idProvider) {
             this.idProvider = Output.of(Objects.requireNonNull(idProvider));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder trustedIdProviderName(@Nullable Output<String> trustedIdProviderName) {
             this.trustedIdProviderName = trustedIdProviderName;
             return this;
         }
-
         public Builder trustedIdProviderName(@Nullable String trustedIdProviderName) {
             this.trustedIdProviderName = Output.ofNullable(trustedIdProviderName);
             return this;
-        }
-        public TrustedIdProviderArgs build() {
+        }        public TrustedIdProviderArgs build() {
             return new TrustedIdProviderArgs(accountName, idProvider, resourceGroupName, trustedIdProviderName);
         }
     }

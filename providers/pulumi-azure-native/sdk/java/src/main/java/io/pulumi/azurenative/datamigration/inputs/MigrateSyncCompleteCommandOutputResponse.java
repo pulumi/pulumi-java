@@ -78,12 +78,13 @@ public final class MigrateSyncCompleteCommandOutputResponse extends io.pulumi.re
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(ReportableExceptionResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public MigrateSyncCompleteCommandOutputResponse build() {
+        }        public MigrateSyncCompleteCommandOutputResponse build() {
             return new MigrateSyncCompleteCommandOutputResponse(errors, id);
         }
     }

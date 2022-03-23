@@ -53,8 +53,7 @@ public final class GetPrimaryTaskSetResult {
         public Builder taskSetId(@Nullable String taskSetId) {
             this.taskSetId = taskSetId;
             return this;
-        }
-        public GetPrimaryTaskSetResult build() {
+        }        public GetPrimaryTaskSetResult build() {
             return new GetPrimaryTaskSetResult(taskSetId);
         }
     }

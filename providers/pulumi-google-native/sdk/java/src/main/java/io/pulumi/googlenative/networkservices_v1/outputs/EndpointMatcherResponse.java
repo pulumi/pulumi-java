@@ -51,8 +51,7 @@ public final class EndpointMatcherResponse {
         public Builder metadataLabelMatcher(EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
             this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
             return this;
-        }
-        public EndpointMatcherResponse build() {
+        }        public EndpointMatcherResponse build() {
             return new EndpointMatcherResponse(metadataLabelMatcher);
         }
     }

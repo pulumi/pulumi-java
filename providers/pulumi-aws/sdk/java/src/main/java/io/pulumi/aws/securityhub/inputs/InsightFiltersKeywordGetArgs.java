@@ -56,12 +56,10 @@ public final class InsightFiltersKeywordGetArgs extends io.pulumi.resources.Reso
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public InsightFiltersKeywordGetArgs build() {
+        }        public InsightFiltersKeywordGetArgs build() {
             return new InsightFiltersKeywordGetArgs(value);
         }
     }

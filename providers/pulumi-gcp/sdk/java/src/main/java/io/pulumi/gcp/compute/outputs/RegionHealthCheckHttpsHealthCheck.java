@@ -194,37 +194,30 @@ public final class RegionHealthCheckHttpsHealthCheck {
             this.host = host;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
-
         public Builder proxyHeader(@Nullable String proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
-
         public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = requestPath;
             return this;
         }
-
         public Builder response(@Nullable String response) {
             this.response = response;
             return this;
-        }
-        public RegionHealthCheckHttpsHealthCheck build() {
+        }        public RegionHealthCheckHttpsHealthCheck build() {
             return new RegionHealthCheckHttpsHealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }
     }

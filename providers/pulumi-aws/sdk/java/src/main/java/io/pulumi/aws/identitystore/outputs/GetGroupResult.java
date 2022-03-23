@@ -95,27 +95,25 @@ public final class GetGroupResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder filters(List<GetGroupFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
+        public Builder filters(GetGroupFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identityStoreId(String identityStoreId) {
             this.identityStoreId = Objects.requireNonNull(identityStoreId);
             return this;
-        }
-        public GetGroupResult build() {
+        }        public GetGroupResult build() {
             return new GetGroupResult(displayName, filters, groupId, id, identityStoreId);
         }
     }

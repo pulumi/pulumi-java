@@ -110,22 +110,18 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
             this.aggregation = Objects.requireNonNull(aggregation);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
             return this;
         }
-
         public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
-        }
-        public TimeSeriesFilterResponse build() {
+        }        public TimeSeriesFilterResponse build() {
             return new TimeSeriesFilterResponse(aggregation, filter, pickTimeSeriesFilter, secondaryAggregation);
         }
     }

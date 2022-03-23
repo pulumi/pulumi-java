@@ -96,17 +96,14 @@ public final class IntegrationRuntimeReferenceResponse extends io.pulumi.resourc
             this.parameters = parameters;
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public IntegrationRuntimeReferenceResponse build() {
+        }        public IntegrationRuntimeReferenceResponse build() {
             return new IntegrationRuntimeReferenceResponse(parameters, referenceName, type);
         }
     }

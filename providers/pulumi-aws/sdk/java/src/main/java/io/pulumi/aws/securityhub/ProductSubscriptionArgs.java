@@ -56,12 +56,10 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
             this.productArn = Objects.requireNonNull(productArn);
             return this;
         }
-
         public Builder productArn(String productArn) {
             this.productArn = Output.of(Objects.requireNonNull(productArn));
             return this;
-        }
-        public ProductSubscriptionArgs build() {
+        }        public ProductSubscriptionArgs build() {
             return new ProductSubscriptionArgs(productArn);
         }
     }

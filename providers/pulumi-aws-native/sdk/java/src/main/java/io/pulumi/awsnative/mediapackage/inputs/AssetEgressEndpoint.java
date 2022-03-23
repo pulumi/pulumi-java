@@ -76,12 +76,10 @@ public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
             this.packagingConfigurationId = Objects.requireNonNull(packagingConfigurationId);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public AssetEgressEndpoint build() {
+        }        public AssetEgressEndpoint build() {
             return new AssetEgressEndpoint(packagingConfigurationId, url);
         }
     }

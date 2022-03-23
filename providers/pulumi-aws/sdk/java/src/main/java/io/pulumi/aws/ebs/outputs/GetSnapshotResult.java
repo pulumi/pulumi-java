@@ -324,102 +324,94 @@ public final class GetSnapshotResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder dataEncryptionKeyId(String dataEncryptionKeyId) {
             this.dataEncryptionKeyId = Objects.requireNonNull(dataEncryptionKeyId);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder filters(@Nullable List<GetSnapshotFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSnapshotFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
-
         public Builder ownerAlias(String ownerAlias) {
             this.ownerAlias = Objects.requireNonNull(ownerAlias);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder owners(@Nullable List<String> owners) {
             this.owners = owners;
             return this;
         }
-
+        public Builder owners(String... owners) {
+            return owners(List.of(owners));
+        }
         public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
             this.restorableByUserIds = restorableByUserIds;
             return this;
         }
-
+        public Builder restorableByUserIds(String... restorableByUserIds) {
+            return restorableByUserIds(List.of(restorableByUserIds));
+        }
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
-
         public Builder snapshotIds(@Nullable List<String> snapshotIds) {
             this.snapshotIds = snapshotIds;
             return this;
         }
-
+        public Builder snapshotIds(String... snapshotIds) {
+            return snapshotIds(List.of(snapshotIds));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageTier(String storageTier) {
             this.storageTier = Objects.requireNonNull(storageTier);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder volumeId(String volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
-
         public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
-        }
-        public GetSnapshotResult build() {
+        }        public GetSnapshotResult build() {
             return new GetSnapshotResult(arn, dataEncryptionKeyId, description, encrypted, filters, id, kmsKeyId, mostRecent, outpostArn, ownerAlias, ownerId, owners, restorableByUserIds, snapshotId, snapshotIds, state, storageTier, tags, volumeId, volumeSize);
         }
     }

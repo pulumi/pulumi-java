@@ -73,12 +73,13 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder value(@Nullable List<KeyVaultKeyResponse> value) {
             this.value = value;
             return this;
         }
-        public ListIntegrationAccountKeyVaultKeysResult build() {
+        public Builder value(KeyVaultKeyResponse... value) {
+            return value(List.of(value));
+        }        public ListIntegrationAccountKeyVaultKeysResult build() {
             return new ListIntegrationAccountKeyVaultKeysResult(skipToken, value);
         }
     }

@@ -61,12 +61,13 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }
-
         public Builder objectIdPath(List<Integer> objectIdPath) {
             this.objectIdPath = Output.of(Objects.requireNonNull(objectIdPath));
             return this;
         }
-        public ObjectIdArgs build() {
+        public Builder objectIdPath(Integer... objectIdPath) {
+            return objectIdPath(List.of(objectIdPath));
+        }        public ObjectIdArgs build() {
             return new ObjectIdArgs(objectIdPath);
         }
     }

@@ -80,22 +80,21 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
             this.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
-
         public Builder overrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
             this.overrideDynamicGroups = Output.ofNullable(overrideDynamicGroups);
             return this;
         }
-
         public Builder thingGroupNames(Output<List<String>> thingGroupNames) {
             this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
             return this;
         }
-
         public Builder thingGroupNames(List<String> thingGroupNames) {
             this.thingGroupNames = Output.of(Objects.requireNonNull(thingGroupNames));
             return this;
         }
-        public MitigationActionAddThingsToThingGroupParamsArgs build() {
+        public Builder thingGroupNames(String... thingGroupNames) {
+            return thingGroupNames(List.of(thingGroupNames));
+        }        public MitigationActionAddThingsToThingGroupParamsArgs build() {
             return new MitigationActionAddThingsToThingGroupParamsArgs(overrideDynamicGroups, thingGroupNames);
         }
     }

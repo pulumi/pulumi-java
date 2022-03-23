@@ -60,8 +60,7 @@ public final class TransferConfigurationResponseTransferFilterDetails extends io
         public Builder include(@Nullable TransferFilterDetailsResponse include) {
             this.include = include;
             return this;
-        }
-        public TransferConfigurationResponseTransferFilterDetails build() {
+        }        public TransferConfigurationResponseTransferFilterDetails build() {
             return new TransferConfigurationResponseTransferFilterDetails(include);
         }
     }

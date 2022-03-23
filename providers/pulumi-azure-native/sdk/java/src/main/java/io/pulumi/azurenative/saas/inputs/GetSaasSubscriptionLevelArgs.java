@@ -72,12 +72,10 @@ public final class GetSaasSubscriptionLevelArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetSaasSubscriptionLevelArgs build() {
+        }        public GetSaasSubscriptionLevelArgs build() {
             return new GetSaasSubscriptionLevelArgs(resourceGroupName, resourceName);
         }
     }

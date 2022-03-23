@@ -66,12 +66,10 @@ public final class IPSetTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public IPSetTag build() {
+        }        public IPSetTag build() {
             return new IPSetTag(key, value);
         }
     }

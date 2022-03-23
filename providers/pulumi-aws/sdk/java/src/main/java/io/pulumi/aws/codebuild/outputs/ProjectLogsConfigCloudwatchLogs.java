@@ -87,17 +87,14 @@ public final class ProjectLogsConfigCloudwatchLogs {
             this.groupName = groupName;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder streamName(@Nullable String streamName) {
             this.streamName = streamName;
             return this;
-        }
-        public ProjectLogsConfigCloudwatchLogs build() {
+        }        public ProjectLogsConfigCloudwatchLogs build() {
             return new ProjectLogsConfigCloudwatchLogs(groupName, status, streamName);
         }
     }

@@ -97,32 +97,29 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.customDns = customDns;
             return this;
         }
-
         public Builder customDns(@Nullable CustomDnsArgs customDns) {
             this.customDns = Output.ofNullable(customDns);
             return this;
         }
-
         public Builder glueRecords(@Nullable Output<List<GlueRecordArgs>> glueRecords) {
             this.glueRecords = glueRecords;
             return this;
         }
-
         public Builder glueRecords(@Nullable List<GlueRecordArgs> glueRecords) {
             this.glueRecords = Output.ofNullable(glueRecords);
             return this;
         }
-
+        public Builder glueRecords(GlueRecordArgs... glueRecords) {
+            return glueRecords(List.of(glueRecords));
+        }
         public Builder googleDomainsDns(@Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns) {
             this.googleDomainsDns = googleDomainsDns;
             return this;
         }
-
         public Builder googleDomainsDns(@Nullable GoogleDomainsDnsArgs googleDomainsDns) {
             this.googleDomainsDns = Output.ofNullable(googleDomainsDns);
             return this;
-        }
-        public DnsSettingsArgs build() {
+        }        public DnsSettingsArgs build() {
             return new DnsSettingsArgs(customDns, glueRecords, googleDomainsDns);
         }
     }

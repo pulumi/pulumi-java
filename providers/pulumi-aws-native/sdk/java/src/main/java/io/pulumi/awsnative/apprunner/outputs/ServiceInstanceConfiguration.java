@@ -87,17 +87,14 @@ public final class ServiceInstanceConfiguration {
             this.cpu = cpu;
             return this;
         }
-
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
-
         public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
-        }
-        public ServiceInstanceConfiguration build() {
+        }        public ServiceInstanceConfiguration build() {
             return new ServiceInstanceConfiguration(cpu, instanceRoleArn, memory);
         }
     }

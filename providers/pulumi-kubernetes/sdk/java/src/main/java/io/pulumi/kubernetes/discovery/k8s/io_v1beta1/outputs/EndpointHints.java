@@ -54,7 +54,9 @@ public final class EndpointHints {
             this.forZones = forZones;
             return this;
         }
-        public EndpointHints build() {
+        public Builder forZones(ForZone... forZones) {
+            return forZones(List.of(forZones));
+        }        public EndpointHints build() {
             return new EndpointHints(forZones);
         }
     }

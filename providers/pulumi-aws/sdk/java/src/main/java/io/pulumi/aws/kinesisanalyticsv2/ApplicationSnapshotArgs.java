@@ -73,22 +73,18 @@ public final class ApplicationSnapshotArgs extends io.pulumi.resources.ResourceA
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder applicationName(String applicationName) {
             this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
-
         public Builder snapshotName(Output<String> snapshotName) {
             this.snapshotName = Objects.requireNonNull(snapshotName);
             return this;
         }
-
         public Builder snapshotName(String snapshotName) {
             this.snapshotName = Output.of(Objects.requireNonNull(snapshotName));
             return this;
-        }
-        public ApplicationSnapshotArgs build() {
+        }        public ApplicationSnapshotArgs build() {
             return new ApplicationSnapshotArgs(applicationName, snapshotName);
         }
     }

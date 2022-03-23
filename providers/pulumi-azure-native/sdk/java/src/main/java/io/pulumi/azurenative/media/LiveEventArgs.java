@@ -292,152 +292,128 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder autoStart(@Nullable Output<Boolean> autoStart) {
             this.autoStart = autoStart;
             return this;
         }
-
         public Builder autoStart(@Nullable Boolean autoStart) {
             this.autoStart = Output.ofNullable(autoStart);
             return this;
         }
-
         public Builder crossSiteAccessPolicies(@Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
-
         public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = Output.ofNullable(crossSiteAccessPolicies);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encoding(@Nullable Output<LiveEventEncodingArgs> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable LiveEventEncodingArgs encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder hostnamePrefix(@Nullable Output<String> hostnamePrefix) {
             this.hostnamePrefix = hostnamePrefix;
             return this;
         }
-
         public Builder hostnamePrefix(@Nullable String hostnamePrefix) {
             this.hostnamePrefix = Output.ofNullable(hostnamePrefix);
             return this;
         }
-
         public Builder input(Output<LiveEventInputArgs> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder input(LiveEventInputArgs input) {
             this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
-
         public Builder liveEventName(@Nullable Output<String> liveEventName) {
             this.liveEventName = liveEventName;
             return this;
         }
-
         public Builder liveEventName(@Nullable String liveEventName) {
             this.liveEventName = Output.ofNullable(liveEventName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder preview(@Nullable Output<LiveEventPreviewArgs> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable LiveEventPreviewArgs preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder streamOptions(@Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions) {
             this.streamOptions = streamOptions;
             return this;
         }
-
         public Builder streamOptions(@Nullable List<Either<String,StreamOptionsFlag>> streamOptions) {
             this.streamOptions = Output.ofNullable(streamOptions);
             return this;
         }
-
+        public Builder streamOptions(Either<String,StreamOptionsFlag>... streamOptions) {
+            return streamOptions(List.of(streamOptions));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transcriptions(@Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions) {
             this.transcriptions = transcriptions;
             return this;
         }
-
         public Builder transcriptions(@Nullable List<LiveEventTranscriptionArgs> transcriptions) {
             this.transcriptions = Output.ofNullable(transcriptions);
             return this;
         }
-
+        public Builder transcriptions(LiveEventTranscriptionArgs... transcriptions) {
+            return transcriptions(List.of(transcriptions));
+        }
         public Builder useStaticHostname(@Nullable Output<Boolean> useStaticHostname) {
             this.useStaticHostname = useStaticHostname;
             return this;
         }
-
         public Builder useStaticHostname(@Nullable Boolean useStaticHostname) {
             this.useStaticHostname = Output.ofNullable(useStaticHostname);
             return this;
-        }
-        public LiveEventArgs build() {
+        }        public LiveEventArgs build() {
             return new LiveEventArgs(accountName, autoStart, crossSiteAccessPolicies, description, encoding, hostnamePrefix, input, liveEventName, location, preview, resourceGroupName, streamOptions, tags, transcriptions, useStaticHostname);
         }
     }

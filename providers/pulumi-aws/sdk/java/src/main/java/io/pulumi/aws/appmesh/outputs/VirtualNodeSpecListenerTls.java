@@ -89,17 +89,14 @@ public final class VirtualNodeSpecListenerTls {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder validation(@Nullable VirtualNodeSpecListenerTlsValidation validation) {
             this.validation = validation;
             return this;
-        }
-        public VirtualNodeSpecListenerTls build() {
+        }        public VirtualNodeSpecListenerTls build() {
             return new VirtualNodeSpecListenerTls(certificate, mode, validation);
         }
     }

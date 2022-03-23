@@ -72,12 +72,10 @@ public final class CmkKekIdentityResponse {
             this.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }
-        public CmkKekIdentityResponse build() {
+        }        public CmkKekIdentityResponse build() {
             return new CmkKekIdentityResponse(useSystemAssignedIdentity, userAssignedIdentity);
         }
     }

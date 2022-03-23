@@ -86,17 +86,20 @@ public final class GetInstancesResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identityStoreIds(List<String> identityStoreIds) {
             this.identityStoreIds = Objects.requireNonNull(identityStoreIds);
             return this;
         }
-        public GetInstancesResult build() {
+        public Builder identityStoreIds(String... identityStoreIds) {
+            return identityStoreIds(List.of(identityStoreIds));
+        }        public GetInstancesResult build() {
             return new GetInstancesResult(arns, id, identityStoreIds);
         }
     }

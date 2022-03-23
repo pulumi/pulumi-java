@@ -78,22 +78,18 @@ public final class XssMatchSetXssMatchTupleFieldToMatchArgs extends io.pulumi.re
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public XssMatchSetXssMatchTupleFieldToMatchArgs build() {
+        }        public XssMatchSetXssMatchTupleFieldToMatchArgs build() {
             return new XssMatchSetXssMatchTupleFieldToMatchArgs(data, type);
         }
     }

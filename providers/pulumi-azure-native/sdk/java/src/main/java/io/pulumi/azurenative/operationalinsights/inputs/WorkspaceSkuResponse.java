@@ -95,17 +95,14 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
             this.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
-
         public Builder lastSkuUpdate(String lastSkuUpdate) {
             this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WorkspaceSkuResponse build() {
+        }        public WorkspaceSkuResponse build() {
             return new WorkspaceSkuResponse(capacityReservationLevel, lastSkuUpdate, name);
         }
     }

@@ -184,47 +184,41 @@ public final class GetHoursOfOperationResult {
             this.configs = Objects.requireNonNull(configs);
             return this;
         }
-
+        public Builder configs(GetHoursOfOperationConfig... configs) {
+            return configs(List.of(configs));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder hoursOfOperationArn(String hoursOfOperationArn) {
             this.hoursOfOperationArn = Objects.requireNonNull(hoursOfOperationArn);
             return this;
         }
-
         public Builder hoursOfOperationId(String hoursOfOperationId) {
             this.hoursOfOperationId = Objects.requireNonNull(hoursOfOperationId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
-        }
-        public GetHoursOfOperationResult build() {
+        }        public GetHoursOfOperationResult build() {
             return new GetHoursOfOperationResult(configs, description, hoursOfOperationArn, hoursOfOperationId, id, instanceId, name, tags, timeZone);
         }
     }

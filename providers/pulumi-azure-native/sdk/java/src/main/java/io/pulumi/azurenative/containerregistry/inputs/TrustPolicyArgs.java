@@ -81,22 +81,18 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,TrustPolicyType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,TrustPolicyType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public TrustPolicyArgs build() {
+        }        public TrustPolicyArgs build() {
             return new TrustPolicyArgs(status, type);
         }
     }

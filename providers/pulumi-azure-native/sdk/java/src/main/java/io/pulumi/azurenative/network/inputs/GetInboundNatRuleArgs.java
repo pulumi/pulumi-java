@@ -106,22 +106,18 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
             this.expand = expand;
             return this;
         }
-
         public Builder inboundNatRuleName(String inboundNatRuleName) {
             this.inboundNatRuleName = Objects.requireNonNull(inboundNatRuleName);
             return this;
         }
-
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetInboundNatRuleArgs build() {
+        }        public GetInboundNatRuleArgs build() {
             return new GetInboundNatRuleArgs(expand, inboundNatRuleName, loadBalancerName, resourceGroupName);
         }
     }

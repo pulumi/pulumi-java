@@ -51,8 +51,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcm {
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsCertificateAcm build() {
+        }        public VirtualGatewaySpecListenerTlsCertificateAcm build() {
             return new VirtualGatewaySpecListenerTlsCertificateAcm(certificateArn);
         }
     }

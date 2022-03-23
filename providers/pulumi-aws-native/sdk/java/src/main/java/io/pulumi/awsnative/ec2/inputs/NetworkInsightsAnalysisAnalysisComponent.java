@@ -66,12 +66,10 @@ public final class NetworkInsightsAnalysisAnalysisComponent extends io.pulumi.re
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public NetworkInsightsAnalysisAnalysisComponent build() {
+        }        public NetworkInsightsAnalysisAnalysisComponent build() {
             return new NetworkInsightsAnalysisAnalysisComponent(arn, id);
         }
     }

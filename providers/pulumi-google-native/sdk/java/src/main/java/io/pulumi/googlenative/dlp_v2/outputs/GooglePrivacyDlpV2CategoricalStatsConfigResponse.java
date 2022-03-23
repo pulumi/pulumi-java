@@ -51,8 +51,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
-        }
-        public GooglePrivacyDlpV2CategoricalStatsConfigResponse build() {
+        }        public GooglePrivacyDlpV2CategoricalStatsConfigResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsConfigResponse(field);
         }
     }

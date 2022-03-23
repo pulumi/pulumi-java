@@ -175,92 +175,77 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
-
         public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
             this.hl7V2StoreId = Output.ofNullable(hl7V2StoreId);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationConfigs(@Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs) {
             this.notificationConfigs = notificationConfigs;
             return this;
         }
-
         public Builder notificationConfigs(@Nullable List<Hl7V2NotificationConfigArgs> notificationConfigs) {
             this.notificationConfigs = Output.ofNullable(notificationConfigs);
             return this;
         }
-
+        public Builder notificationConfigs(Hl7V2NotificationConfigArgs... notificationConfigs) {
+            return notificationConfigs(List.of(notificationConfigs));
+        }
         public Builder parserConfig(@Nullable Output<ParserConfigArgs> parserConfig) {
             this.parserConfig = parserConfig;
             return this;
         }
-
         public Builder parserConfig(@Nullable ParserConfigArgs parserConfig) {
             this.parserConfig = Output.ofNullable(parserConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rejectDuplicateMessage(@Nullable Output<Boolean> rejectDuplicateMessage) {
             this.rejectDuplicateMessage = rejectDuplicateMessage;
             return this;
         }
-
         public Builder rejectDuplicateMessage(@Nullable Boolean rejectDuplicateMessage) {
             this.rejectDuplicateMessage = Output.ofNullable(rejectDuplicateMessage);
             return this;
-        }
-        public Hl7V2StoreArgs build() {
+        }        public Hl7V2StoreArgs build() {
             return new Hl7V2StoreArgs(datasetId, hl7V2StoreId, labels, location, name, notificationConfigs, parserConfig, project, rejectDuplicateMessage);
         }
     }

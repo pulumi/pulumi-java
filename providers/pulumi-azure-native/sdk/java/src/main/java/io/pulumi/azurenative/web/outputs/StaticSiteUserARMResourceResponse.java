@@ -167,42 +167,34 @@ public final class StaticSiteUserARMResourceResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder roles(@Nullable String roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public StaticSiteUserARMResourceResponse build() {
+        }        public StaticSiteUserARMResourceResponse build() {
             return new StaticSiteUserARMResourceResponse(displayName, id, kind, name, provider, roles, type, userId);
         }
     }

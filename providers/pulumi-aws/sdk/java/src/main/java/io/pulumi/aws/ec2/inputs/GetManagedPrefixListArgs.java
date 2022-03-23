@@ -109,22 +109,21 @@ public final class GetManagedPrefixListArgs extends io.pulumi.resources.InvokeAr
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetManagedPrefixListFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetManagedPrefixListArgs build() {
+        }        public GetManagedPrefixListArgs build() {
             return new GetManagedPrefixListArgs(filters, id, name, tags);
         }
     }

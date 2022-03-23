@@ -333,92 +333,86 @@ public final class MasterTargetServerResponse {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             this.agentVersionDetails = agentVersionDetails;
             return this;
         }
-
         public Builder dataStores(@Nullable List<DataStoreResponse> dataStores) {
             this.dataStores = dataStores;
             return this;
         }
-
+        public Builder dataStores(DataStoreResponse... dataStores) {
+            return dataStores(List.of(dataStores));
+        }
         public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = diskCount;
             return this;
         }
-
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             this.healthErrors = healthErrors;
             return this;
         }
-
+        public Builder healthErrors(HealthErrorResponse... healthErrors) {
+            return healthErrors(List.of(healthErrors));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
-
         public Builder marsAgentExpiryDate(@Nullable String marsAgentExpiryDate) {
             this.marsAgentExpiryDate = marsAgentExpiryDate;
             return this;
         }
-
         public Builder marsAgentVersion(@Nullable String marsAgentVersion) {
             this.marsAgentVersion = marsAgentVersion;
             return this;
         }
-
         public Builder marsAgentVersionDetails(@Nullable VersionDetailsResponse marsAgentVersionDetails) {
             this.marsAgentVersionDetails = marsAgentVersionDetails;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder retentionVolumes(@Nullable List<RetentionVolumeResponse> retentionVolumes) {
             this.retentionVolumes = retentionVolumes;
             return this;
         }
-
+        public Builder retentionVolumes(RetentionVolumeResponse... retentionVolumes) {
+            return retentionVolumes(List.of(retentionVolumes));
+        }
         public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
             this.validationErrors = validationErrors;
             return this;
         }
-
+        public Builder validationErrors(HealthErrorResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }
         public Builder versionStatus(@Nullable String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
-        }
-        public MasterTargetServerResponse build() {
+        }        public MasterTargetServerResponse build() {
             return new MasterTargetServerResponse(agentExpiryDate, agentVersion, agentVersionDetails, dataStores, diskCount, healthErrors, id, ipAddress, lastHeartbeat, marsAgentExpiryDate, marsAgentVersion, marsAgentVersionDetails, name, osType, osVersion, retentionVolumes, validationErrors, versionStatus);
         }
     }

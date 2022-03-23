@@ -141,32 +141,26 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
             this.kubernetesApiServerVersion = Objects.requireNonNull(kubernetesApiServerVersion);
             return this;
         }
-
         public Builder memoryMb(Integer memoryMb) {
             this.memoryMb = Objects.requireNonNull(memoryMb);
             return this;
         }
-
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder nodeProviderId(String nodeProviderId) {
             this.nodeProviderId = Objects.requireNonNull(nodeProviderId);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder vcpuCount(Integer vcpuCount) {
             this.vcpuCount = Objects.requireNonNull(vcpuCount);
             return this;
-        }
-        public KubernetesMetadataResponse build() {
+        }        public KubernetesMetadataResponse build() {
             return new KubernetesMetadataResponse(kubernetesApiServerVersion, memoryMb, nodeCount, nodeProviderId, updateTime, vcpuCount);
         }
     }

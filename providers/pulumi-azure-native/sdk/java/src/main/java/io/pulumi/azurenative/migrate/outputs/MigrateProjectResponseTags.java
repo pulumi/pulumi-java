@@ -45,8 +45,7 @@ public final class MigrateProjectResponseTags {
         public Builder additionalProperties(@Nullable String additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
-        }
-        public MigrateProjectResponseTags build() {
+        }        public MigrateProjectResponseTags build() {
             return new MigrateProjectResponseTags(additionalProperties);
         }
     }

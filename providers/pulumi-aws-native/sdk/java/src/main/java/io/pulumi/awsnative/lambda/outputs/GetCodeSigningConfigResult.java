@@ -121,27 +121,22 @@ public final class GetCodeSigningConfigResult {
             this.allowedPublishers = allowedPublishers;
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
-
         public Builder codeSigningConfigId(@Nullable String codeSigningConfigId) {
             this.codeSigningConfigId = codeSigningConfigId;
             return this;
         }
-
         public Builder codeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies) {
             this.codeSigningPolicies = codeSigningPolicies;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public GetCodeSigningConfigResult build() {
+        }        public GetCodeSigningConfigResult build() {
             return new GetCodeSigningConfigResult(allowedPublishers, codeSigningConfigArn, codeSigningConfigId, codeSigningPolicies, description);
         }
     }

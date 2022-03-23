@@ -257,132 +257,106 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.dailyRecurrence = dailyRecurrence;
             return this;
         }
-
         public Builder dailyRecurrence(@Nullable DayDetailsArgs dailyRecurrence) {
             this.dailyRecurrence = Output.ofNullable(dailyRecurrence);
             return this;
         }
-
         public Builder hourlyRecurrence(@Nullable Output<HourDetailsArgs> hourlyRecurrence) {
             this.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
-
         public Builder hourlyRecurrence(@Nullable HourDetailsArgs hourlyRecurrence) {
             this.hourlyRecurrence = Output.ofNullable(hourlyRecurrence);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
-
         public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
             this.notificationSettings = Output.ofNullable(notificationSettings);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,EnableStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
-
         public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = Output.ofNullable(targetResourceId);
             return this;
         }
-
         public Builder taskType(@Nullable Output<String> taskType) {
             this.taskType = taskType;
             return this;
         }
-
         public Builder taskType(@Nullable String taskType) {
             this.taskType = Output.ofNullable(taskType);
             return this;
         }
-
         public Builder timeZoneId(@Nullable Output<String> timeZoneId) {
             this.timeZoneId = timeZoneId;
             return this;
         }
-
         public Builder timeZoneId(@Nullable String timeZoneId) {
             this.timeZoneId = Output.ofNullable(timeZoneId);
             return this;
         }
-
         public Builder weeklyRecurrence(@Nullable Output<WeekDetailsArgs> weeklyRecurrence) {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public Builder weeklyRecurrence(@Nullable WeekDetailsArgs weeklyRecurrence) {
             this.weeklyRecurrence = Output.ofNullable(weeklyRecurrence);
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(dailyRecurrence, hourlyRecurrence, labName, location, name, notificationSettings, resourceGroupName, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);
         }
     }

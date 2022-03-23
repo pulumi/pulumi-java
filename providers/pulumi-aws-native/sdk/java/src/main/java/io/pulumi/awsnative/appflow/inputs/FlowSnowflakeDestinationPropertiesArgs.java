@@ -91,42 +91,34 @@ public final class FlowSnowflakeDestinationPropertiesArgs extends io.pulumi.reso
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder errorHandlingConfig(@Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
             this.errorHandlingConfig = Output.ofNullable(errorHandlingConfig);
             return this;
         }
-
         public Builder intermediateBucketName(Output<String> intermediateBucketName) {
             this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
             return this;
         }
-
         public Builder intermediateBucketName(String intermediateBucketName) {
             this.intermediateBucketName = Output.of(Objects.requireNonNull(intermediateBucketName));
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowSnowflakeDestinationPropertiesArgs build() {
+        }        public FlowSnowflakeDestinationPropertiesArgs build() {
             return new FlowSnowflakeDestinationPropertiesArgs(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
         }
     }

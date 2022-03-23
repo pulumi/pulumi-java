@@ -161,32 +161,26 @@ public final class TableExternalDataConfigurationCsvOptions {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
-
         public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
-
         public Builder quote(String quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
-        }
-        public TableExternalDataConfigurationCsvOptions build() {
+        }        public TableExternalDataConfigurationCsvOptions build() {
             return new TableExternalDataConfigurationCsvOptions(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, quote, skipLeadingRows);
         }
     }

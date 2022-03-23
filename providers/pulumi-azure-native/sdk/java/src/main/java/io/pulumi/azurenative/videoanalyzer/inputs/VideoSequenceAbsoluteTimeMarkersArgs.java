@@ -78,22 +78,18 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
             this.ranges = Objects.requireNonNull(ranges);
             return this;
         }
-
         public Builder ranges(String ranges) {
             this.ranges = Output.of(Objects.requireNonNull(ranges));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public VideoSequenceAbsoluteTimeMarkersArgs build() {
+        }        public VideoSequenceAbsoluteTimeMarkersArgs build() {
             return new VideoSequenceAbsoluteTimeMarkersArgs(ranges, type);
         }
     }

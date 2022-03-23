@@ -54,8 +54,7 @@ public final class GetFuotaTaskArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetFuotaTaskArgs build() {
+        }        public GetFuotaTaskArgs build() {
             return new GetFuotaTaskArgs(id);
         }
     }

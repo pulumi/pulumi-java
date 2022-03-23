@@ -58,8 +58,7 @@ public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs
         public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
-        }
-        public FileSourceInfoResponse build() {
+        }        public FileSourceInfoResponse build() {
             return new FileSourceInfoResponse(shareId);
         }
     }

@@ -73,12 +73,10 @@ public final class TemplateSheet {
             this.name = name;
             return this;
         }
-
         public Builder sheetId(@Nullable String sheetId) {
             this.sheetId = sheetId;
             return this;
-        }
-        public TemplateSheet build() {
+        }        public TemplateSheet build() {
             return new TemplateSheet(name, sheetId);
         }
     }

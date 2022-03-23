@@ -60,8 +60,7 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork build() {
+        }        public VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork build() {
             return new VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork(id);
         }
     }

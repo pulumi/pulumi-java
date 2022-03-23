@@ -80,32 +80,26 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
             this.decodeConfig = decodeConfig;
             return this;
         }
-
         public Builder decodeConfig(@Nullable ConfigDecodeConfigArgs decodeConfig) {
             this.decodeConfig = Output.ofNullable(decodeConfig);
             return this;
         }
-
         public Builder demodulationConfig(@Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig) {
             this.demodulationConfig = demodulationConfig;
             return this;
         }
-
         public Builder demodulationConfig(@Nullable ConfigDemodulationConfigArgs demodulationConfig) {
             this.demodulationConfig = Output.ofNullable(demodulationConfig);
             return this;
         }
-
         public Builder spectrumConfig(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
-
         public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
             this.spectrumConfig = Output.ofNullable(spectrumConfig);
             return this;
-        }
-        public ConfigAntennaDownlinkDemodDecodeConfigArgs build() {
+        }        public ConfigAntennaDownlinkDemodDecodeConfigArgs build() {
             return new ConfigAntennaDownlinkDemodDecodeConfigArgs(decodeConfig, demodulationConfig, spectrumConfig);
         }
     }

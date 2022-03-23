@@ -372,202 +372,165 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder authorization(@Nullable Output<AzureClusterAuthorizationGetArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
-
         public Builder authorization(@Nullable AzureClusterAuthorizationGetArgs authorization) {
             this.authorization = Output.ofNullable(authorization);
             return this;
         }
-
         public Builder azureRegion(@Nullable Output<String> azureRegion) {
             this.azureRegion = azureRegion;
             return this;
         }
-
         public Builder azureRegion(@Nullable String azureRegion) {
             this.azureRegion = Output.ofNullable(azureRegion);
             return this;
         }
-
         public Builder client(@Nullable Output<String> client) {
             this.client = client;
             return this;
         }
-
         public Builder client(@Nullable String client) {
             this.client = Output.ofNullable(client);
             return this;
         }
-
         public Builder controlPlane(@Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane) {
             this.controlPlane = controlPlane;
             return this;
         }
-
         public Builder controlPlane(@Nullable AzureClusterControlPlaneGetArgs controlPlane) {
             this.controlPlane = Output.ofNullable(controlPlane);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder fleet(@Nullable Output<AzureClusterFleetGetArgs> fleet) {
             this.fleet = fleet;
             return this;
         }
-
         public Builder fleet(@Nullable AzureClusterFleetGetArgs fleet) {
             this.fleet = Output.ofNullable(fleet);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networking(@Nullable Output<AzureClusterNetworkingGetArgs> networking) {
             this.networking = networking;
             return this;
         }
-
         public Builder networking(@Nullable AzureClusterNetworkingGetArgs networking) {
             this.networking = Output.ofNullable(networking);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
-
         public Builder reconciling(@Nullable Boolean reconciling) {
             this.reconciling = Output.ofNullable(reconciling);
             return this;
         }
-
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
-
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = Output.ofNullable(resourceGroupId);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder workloadIdentityConfigs(@Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
             this.workloadIdentityConfigs = workloadIdentityConfigs;
             return this;
         }
-
         public Builder workloadIdentityConfigs(@Nullable List<AzureClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
             this.workloadIdentityConfigs = Output.ofNullable(workloadIdentityConfigs);
             return this;
         }
-        public AzureClusterState build() {
+        public Builder workloadIdentityConfigs(AzureClusterWorkloadIdentityConfigGetArgs... workloadIdentityConfigs) {
+            return workloadIdentityConfigs(List.of(workloadIdentityConfigs));
+        }        public AzureClusterState build() {
             return new AzureClusterState(annotations, authorization, azureRegion, client, controlPlane, createTime, description, endpoint, etag, fleet, location, name, networking, project, reconciling, resourceGroupId, state, uid, updateTime, workloadIdentityConfigs);
         }
     }

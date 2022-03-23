@@ -88,17 +88,17 @@ public final class ServiceRegistryPropertiesResponse {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(ServiceRegistryInstanceResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceRequests(ServiceRegistryResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
-        }
-        public ServiceRegistryPropertiesResponse build() {
+        }        public ServiceRegistryPropertiesResponse build() {
             return new ServiceRegistryPropertiesResponse(instances, provisioningState, resourceRequests);
         }
     }

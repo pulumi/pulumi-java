@@ -45,8 +45,7 @@ public final class JobCsvOutputOptions {
         public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
-        }
-        public JobCsvOutputOptions build() {
+        }        public JobCsvOutputOptions build() {
             return new JobCsvOutputOptions(delimiter);
         }
     }

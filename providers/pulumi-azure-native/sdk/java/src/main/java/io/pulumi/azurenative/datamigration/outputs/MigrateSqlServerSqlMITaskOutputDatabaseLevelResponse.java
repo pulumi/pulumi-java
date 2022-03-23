@@ -202,52 +202,45 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
-
+        public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
+            return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder sizeMB(Double sizeMB) {
             this.sizeMB = Objects.requireNonNull(sizeMB);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse build() {
+        }        public MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(databaseName, endedOn, exceptionsAndWarnings, id, message, resultType, sizeMB, stage, startedOn, state);
         }
     }

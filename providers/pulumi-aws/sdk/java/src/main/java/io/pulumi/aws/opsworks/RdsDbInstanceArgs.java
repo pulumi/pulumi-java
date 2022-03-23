@@ -105,42 +105,34 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.dbPassword = Objects.requireNonNull(dbPassword);
             return this;
         }
-
         public Builder dbPassword(String dbPassword) {
             this.dbPassword = Output.of(Objects.requireNonNull(dbPassword));
             return this;
         }
-
         public Builder dbUser(Output<String> dbUser) {
             this.dbUser = Objects.requireNonNull(dbUser);
             return this;
         }
-
         public Builder dbUser(String dbUser) {
             this.dbUser = Output.of(Objects.requireNonNull(dbUser));
             return this;
         }
-
         public Builder rdsDbInstanceArn(Output<String> rdsDbInstanceArn) {
             this.rdsDbInstanceArn = Objects.requireNonNull(rdsDbInstanceArn);
             return this;
         }
-
         public Builder rdsDbInstanceArn(String rdsDbInstanceArn) {
             this.rdsDbInstanceArn = Output.of(Objects.requireNonNull(rdsDbInstanceArn));
             return this;
         }
-
         public Builder stackId(Output<String> stackId) {
             this.stackId = Objects.requireNonNull(stackId);
             return this;
         }
-
         public Builder stackId(String stackId) {
             this.stackId = Output.of(Objects.requireNonNull(stackId));
             return this;
-        }
-        public RdsDbInstanceArgs build() {
+        }        public RdsDbInstanceArgs build() {
             return new RdsDbInstanceArgs(dbPassword, dbUser, rdsDbInstanceArn, stackId);
         }
     }

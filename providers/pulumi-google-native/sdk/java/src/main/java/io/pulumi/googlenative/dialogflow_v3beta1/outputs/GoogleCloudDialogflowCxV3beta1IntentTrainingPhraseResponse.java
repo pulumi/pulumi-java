@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
+        public Builder parts(GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse... parts) {
+            return parts(List.of(parts));
+        }
         public Builder repeatCount(Integer repeatCount) {
             this.repeatCount = Objects.requireNonNull(repeatCount);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(parts, repeatCount);
         }
     }

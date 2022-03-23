@@ -294,142 +294,114 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.checkIntervalSec = checkIntervalSec;
             return this;
         }
-
         public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
             this.checkIntervalSec = Output.ofNullable(checkIntervalSec);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder grpcHealthCheck(@Nullable Output<HealthCheckGrpcHealthCheckArgs> grpcHealthCheck) {
             this.grpcHealthCheck = grpcHealthCheck;
             return this;
         }
-
         public Builder grpcHealthCheck(@Nullable HealthCheckGrpcHealthCheckArgs grpcHealthCheck) {
             this.grpcHealthCheck = Output.ofNullable(grpcHealthCheck);
             return this;
         }
-
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
-
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
-
         public Builder http2HealthCheck(@Nullable Output<HealthCheckHttp2HealthCheckArgs> http2HealthCheck) {
             this.http2HealthCheck = http2HealthCheck;
             return this;
         }
-
         public Builder http2HealthCheck(@Nullable HealthCheckHttp2HealthCheckArgs http2HealthCheck) {
             this.http2HealthCheck = Output.ofNullable(http2HealthCheck);
             return this;
         }
-
         public Builder httpHealthCheck(@Nullable Output<HealthCheckHttpHealthCheckArgs> httpHealthCheck) {
             this.httpHealthCheck = httpHealthCheck;
             return this;
         }
-
         public Builder httpHealthCheck(@Nullable HealthCheckHttpHealthCheckArgs httpHealthCheck) {
             this.httpHealthCheck = Output.ofNullable(httpHealthCheck);
             return this;
         }
-
         public Builder httpsHealthCheck(@Nullable Output<HealthCheckHttpsHealthCheckArgs> httpsHealthCheck) {
             this.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
-
         public Builder httpsHealthCheck(@Nullable HealthCheckHttpsHealthCheckArgs httpsHealthCheck) {
             this.httpsHealthCheck = Output.ofNullable(httpsHealthCheck);
             return this;
         }
-
         public Builder logConfig(@Nullable Output<HealthCheckLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
-
         public Builder logConfig(@Nullable HealthCheckLogConfigArgs logConfig) {
             this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sslHealthCheck(@Nullable Output<HealthCheckSslHealthCheckArgs> sslHealthCheck) {
             this.sslHealthCheck = sslHealthCheck;
             return this;
         }
-
         public Builder sslHealthCheck(@Nullable HealthCheckSslHealthCheckArgs sslHealthCheck) {
             this.sslHealthCheck = Output.ofNullable(sslHealthCheck);
             return this;
         }
-
         public Builder tcpHealthCheck(@Nullable Output<HealthCheckTcpHealthCheckArgs> tcpHealthCheck) {
             this.tcpHealthCheck = tcpHealthCheck;
             return this;
         }
-
         public Builder tcpHealthCheck(@Nullable HealthCheckTcpHealthCheckArgs tcpHealthCheck) {
             this.tcpHealthCheck = Output.ofNullable(tcpHealthCheck);
             return this;
         }
-
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
-
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
-        }
-        public HealthCheckArgs build() {
+        }        public HealthCheckArgs build() {
             return new HealthCheckArgs(checkIntervalSec, description, grpcHealthCheck, healthyThreshold, http2HealthCheck, httpHealthCheck, httpsHealthCheck, logConfig, name, project, sslHealthCheck, tcpHealthCheck, timeoutSec, unhealthyThreshold);
         }
     }

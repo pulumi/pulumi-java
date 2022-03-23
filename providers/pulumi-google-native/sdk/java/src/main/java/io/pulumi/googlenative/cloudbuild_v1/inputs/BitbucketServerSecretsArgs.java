@@ -93,32 +93,26 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
             this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName);
             return this;
         }
-
         public Builder adminAccessTokenVersionName(String adminAccessTokenVersionName) {
             this.adminAccessTokenVersionName = Output.of(Objects.requireNonNull(adminAccessTokenVersionName));
             return this;
         }
-
         public Builder readAccessTokenVersionName(Output<String> readAccessTokenVersionName) {
             this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName);
             return this;
         }
-
         public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
             this.readAccessTokenVersionName = Output.of(Objects.requireNonNull(readAccessTokenVersionName));
             return this;
         }
-
         public Builder webhookSecretVersionName(Output<String> webhookSecretVersionName) {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }
-
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             this.webhookSecretVersionName = Output.of(Objects.requireNonNull(webhookSecretVersionName));
             return this;
-        }
-        public BitbucketServerSecretsArgs build() {
+        }        public BitbucketServerSecretsArgs build() {
             return new BitbucketServerSecretsArgs(adminAccessTokenVersionName, readAccessTokenVersionName, webhookSecretVersionName);
         }
     }

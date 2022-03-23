@@ -57,12 +57,10 @@ public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArg
             this.logMode = logMode;
             return this;
         }
-
         public Builder logMode(@Nullable DataAccessOptionsLogMode logMode) {
             this.logMode = Output.ofNullable(logMode);
             return this;
-        }
-        public DataAccessOptionsArgs build() {
+        }        public DataAccessOptionsArgs build() {
             return new DataAccessOptionsArgs(logMode);
         }
     }

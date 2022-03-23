@@ -125,27 +125,28 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder healthCheckAllowingFirewallRules(List<String> healthCheckAllowingFirewallRules) {
             this.healthCheckAllowingFirewallRules = Objects.requireNonNull(healthCheckAllowingFirewallRules);
             return this;
         }
-
+        public Builder healthCheckAllowingFirewallRules(String... healthCheckAllowingFirewallRules) {
+            return healthCheckAllowingFirewallRules(List.of(healthCheckAllowingFirewallRules));
+        }
         public Builder healthCheckBlockingFirewallRules(List<String> healthCheckBlockingFirewallRules) {
             this.healthCheckBlockingFirewallRules = Objects.requireNonNull(healthCheckBlockingFirewallRules);
             return this;
         }
-
+        public Builder healthCheckBlockingFirewallRules(String... healthCheckBlockingFirewallRules) {
+            return healthCheckBlockingFirewallRules(List.of(healthCheckBlockingFirewallRules));
+        }
         public Builder healthCheckFirewallState(String healthCheckFirewallState) {
             this.healthCheckFirewallState = Objects.requireNonNull(healthCheckFirewallState);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public LoadBalancerBackendResponse build() {
+        }        public LoadBalancerBackendResponse build() {
             return new LoadBalancerBackendResponse(displayName, healthCheckAllowingFirewallRules, healthCheckBlockingFirewallRules, healthCheckFirewallState, uri);
         }
     }

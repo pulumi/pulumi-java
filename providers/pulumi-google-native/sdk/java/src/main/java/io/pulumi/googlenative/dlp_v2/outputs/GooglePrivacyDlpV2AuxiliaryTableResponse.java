@@ -88,17 +88,17 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2QuasiIdFieldResponse... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdResponse relativeFrequency) {
             this.relativeFrequency = Objects.requireNonNull(relativeFrequency);
             return this;
         }
-
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             this.table = Objects.requireNonNull(table);
             return this;
-        }
-        public GooglePrivacyDlpV2AuxiliaryTableResponse build() {
+        }        public GooglePrivacyDlpV2AuxiliaryTableResponse build() {
             return new GooglePrivacyDlpV2AuxiliaryTableResponse(quasiIds, relativeFrequency, table);
         }
     }

@@ -142,62 +142,50 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             this.apiKey = apiKey;
             return this;
         }
-
         public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Output.ofNullable(apiKey);
             return this;
         }
-
         public Builder applicationKey(@Nullable Output<String> applicationKey) {
             this.applicationKey = applicationKey;
             return this;
         }
-
         public Builder applicationKey(@Nullable String applicationKey) {
             this.applicationKey = Output.ofNullable(applicationKey);
             return this;
         }
-
         public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
             this.enterpriseAppId = enterpriseAppId;
             return this;
         }
-
         public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
             this.enterpriseAppId = Output.ofNullable(enterpriseAppId);
             return this;
         }
-
         public Builder linkingAuthCode(@Nullable Output<String> linkingAuthCode) {
             this.linkingAuthCode = linkingAuthCode;
             return this;
         }
-
         public Builder linkingAuthCode(@Nullable String linkingAuthCode) {
             this.linkingAuthCode = Output.ofNullable(linkingAuthCode);
             return this;
         }
-
         public Builder linkingClientId(@Nullable Output<String> linkingClientId) {
             this.linkingClientId = linkingClientId;
             return this;
         }
-
         public Builder linkingClientId(@Nullable String linkingClientId) {
             this.linkingClientId = Output.ofNullable(linkingClientId);
             return this;
         }
-
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }
-
         public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = Output.ofNullable(redirectUri);
             return this;
-        }
-        public DatadogOrganizationPropertiesArgs build() {
+        }        public DatadogOrganizationPropertiesArgs build() {
             return new DatadogOrganizationPropertiesArgs(apiKey, applicationKey, enterpriseAppId, linkingAuthCode, linkingClientId, redirectUri);
         }
     }

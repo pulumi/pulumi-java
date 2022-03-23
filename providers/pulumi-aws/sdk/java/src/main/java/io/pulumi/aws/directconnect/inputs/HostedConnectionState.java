@@ -284,152 +284,122 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             this.awsDevice = awsDevice;
             return this;
         }
-
         public Builder awsDevice(@Nullable String awsDevice) {
             this.awsDevice = Output.ofNullable(awsDevice);
             return this;
         }
-
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
-
         public Builder bandwidth(@Nullable String bandwidth) {
             this.bandwidth = Output.ofNullable(bandwidth);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
             this.hasLogicalRedundancy = hasLogicalRedundancy;
             return this;
         }
-
         public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
             this.hasLogicalRedundancy = Output.ofNullable(hasLogicalRedundancy);
             return this;
         }
-
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
-
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
             this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
             return this;
         }
-
         public Builder lagId(@Nullable Output<String> lagId) {
             this.lagId = lagId;
             return this;
         }
-
         public Builder lagId(@Nullable String lagId) {
             this.lagId = Output.ofNullable(lagId);
             return this;
         }
-
         public Builder loaIssueTime(@Nullable Output<String> loaIssueTime) {
             this.loaIssueTime = loaIssueTime;
             return this;
         }
-
         public Builder loaIssueTime(@Nullable String loaIssueTime) {
             this.loaIssueTime = Output.ofNullable(loaIssueTime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
-
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = Output.ofNullable(ownerAccountId);
             return this;
         }
-
         public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
-
         public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
-
         public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
-
         public Builder providerName(@Nullable String providerName) {
             this.providerName = Output.ofNullable(providerName);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder vlan(@Nullable Output<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
-
         public Builder vlan(@Nullable Integer vlan) {
             this.vlan = Output.ofNullable(vlan);
             return this;
-        }
-        public HostedConnectionState build() {
+        }        public HostedConnectionState build() {
             return new HostedConnectionState(awsDevice, bandwidth, connectionId, hasLogicalRedundancy, jumboFrameCapable, lagId, loaIssueTime, location, name, ownerAccountId, partnerName, providerName, region, state, vlan);
         }
     }

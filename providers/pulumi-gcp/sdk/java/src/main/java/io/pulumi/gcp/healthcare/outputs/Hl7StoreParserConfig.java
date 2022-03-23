@@ -112,22 +112,18 @@ public final class Hl7StoreParserConfig {
             this.allowNullHeader = allowNullHeader;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder segmentTerminator(@Nullable String segmentTerminator) {
             this.segmentTerminator = segmentTerminator;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public Hl7StoreParserConfig build() {
+        }        public Hl7StoreParserConfig build() {
             return new Hl7StoreParserConfig(allowNullHeader, schema, segmentTerminator, version);
         }
     }

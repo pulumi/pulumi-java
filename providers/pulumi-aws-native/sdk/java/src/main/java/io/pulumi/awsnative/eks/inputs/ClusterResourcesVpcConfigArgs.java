@@ -128,52 +128,51 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
             this.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
-
         public Builder endpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
             this.endpointPrivateAccess = Output.ofNullable(endpointPrivateAccess);
             return this;
         }
-
         public Builder endpointPublicAccess(@Nullable Output<Boolean> endpointPublicAccess) {
             this.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
-
         public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
             this.endpointPublicAccess = Output.ofNullable(endpointPublicAccess);
             return this;
         }
-
         public Builder publicAccessCidrs(@Nullable Output<List<String>> publicAccessCidrs) {
             this.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
-
         public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
             this.publicAccessCidrs = Output.ofNullable(publicAccessCidrs);
             return this;
         }
-
+        public Builder publicAccessCidrs(String... publicAccessCidrs) {
+            return publicAccessCidrs(List.of(publicAccessCidrs));
+        }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-        public ClusterResourcesVpcConfigArgs build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public ClusterResourcesVpcConfigArgs build() {
             return new ClusterResourcesVpcConfigArgs(endpointPrivateAccess, endpointPublicAccess, publicAccessCidrs, securityGroupIds, subnetIds);
         }
     }

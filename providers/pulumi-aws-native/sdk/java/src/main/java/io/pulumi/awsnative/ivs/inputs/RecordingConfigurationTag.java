@@ -64,12 +64,10 @@ public final class RecordingConfigurationTag extends io.pulumi.resources.InvokeA
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RecordingConfigurationTag build() {
+        }        public RecordingConfigurationTag build() {
             return new RecordingConfigurationTag(key, value);
         }
     }

@@ -154,72 +154,58 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             this.ipRange = ipRange;
             return this;
         }
-
         public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
-
         public Builder linkedInterconnectAttachment(@Nullable Output<String> linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = linkedInterconnectAttachment;
             return this;
         }
-
         public Builder linkedInterconnectAttachment(@Nullable String linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = Output.ofNullable(linkedInterconnectAttachment);
             return this;
         }
-
         public Builder linkedVpnTunnel(@Nullable Output<String> linkedVpnTunnel) {
             this.linkedVpnTunnel = linkedVpnTunnel;
             return this;
         }
-
         public Builder linkedVpnTunnel(@Nullable String linkedVpnTunnel) {
             this.linkedVpnTunnel = Output.ofNullable(linkedVpnTunnel);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder redundantInterface(@Nullable Output<String> redundantInterface) {
             this.redundantInterface = redundantInterface;
             return this;
         }
-
         public Builder redundantInterface(@Nullable String redundantInterface) {
             this.redundantInterface = Output.ofNullable(redundantInterface);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
-        }
-        public RouterInterfaceArgs build() {
+        }        public RouterInterfaceArgs build() {
             return new RouterInterfaceArgs(ipRange, linkedInterconnectAttachment, linkedVpnTunnel, name, privateIpAddress, redundantInterface, subnetwork);
         }
     }

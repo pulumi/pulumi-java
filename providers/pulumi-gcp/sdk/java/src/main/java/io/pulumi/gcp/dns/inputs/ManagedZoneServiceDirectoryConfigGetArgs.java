@@ -57,12 +57,10 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends io.pulumi.re
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceGetArgs namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
-        }
-        public ManagedZoneServiceDirectoryConfigGetArgs build() {
+        }        public ManagedZoneServiceDirectoryConfigGetArgs build() {
             return new ManagedZoneServiceDirectoryConfigGetArgs(namespace);
         }
     }

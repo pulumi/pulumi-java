@@ -92,32 +92,26 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder valueType(@Nullable Output<String> valueType) {
             this.valueType = valueType;
             return this;
         }
-
         public Builder valueType(@Nullable String valueType) {
             this.valueType = Output.ofNullable(valueType);
             return this;
-        }
-        public MetricDescriptorLabelGetArgs build() {
+        }        public MetricDescriptorLabelGetArgs build() {
             return new MetricDescriptorLabelGetArgs(description, key, valueType);
         }
     }

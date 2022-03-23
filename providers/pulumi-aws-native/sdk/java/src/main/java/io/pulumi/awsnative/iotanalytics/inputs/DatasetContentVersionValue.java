@@ -50,8 +50,7 @@ public final class DatasetContentVersionValue extends io.pulumi.resources.Invoke
         public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
-        }
-        public DatasetContentVersionValue build() {
+        }        public DatasetContentVersionValue build() {
             return new DatasetContentVersionValue(datasetName);
         }
     }

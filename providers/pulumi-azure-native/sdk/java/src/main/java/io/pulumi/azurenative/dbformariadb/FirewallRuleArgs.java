@@ -122,52 +122,42 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.endIpAddress = Objects.requireNonNull(endIpAddress);
             return this;
         }
-
         public Builder endIpAddress(String endIpAddress) {
             this.endIpAddress = Output.of(Objects.requireNonNull(endIpAddress));
             return this;
         }
-
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
-
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
             this.firewallRuleName = Output.ofNullable(firewallRuleName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder startIpAddress(Output<String> startIpAddress) {
             this.startIpAddress = Objects.requireNonNull(startIpAddress);
             return this;
         }
-
         public Builder startIpAddress(String startIpAddress) {
             this.startIpAddress = Output.of(Objects.requireNonNull(startIpAddress));
             return this;
-        }
-        public FirewallRuleArgs build() {
+        }        public FirewallRuleArgs build() {
             return new FirewallRuleArgs(endIpAddress, firewallRuleName, resourceGroupName, serverName, startIpAddress);
         }
     }

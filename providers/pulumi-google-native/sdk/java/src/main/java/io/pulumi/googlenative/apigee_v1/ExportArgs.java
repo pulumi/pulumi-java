@@ -163,82 +163,66 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
-
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
             this.csvDelimiter = Output.ofNullable(csvDelimiter);
             return this;
         }
-
         public Builder datastoreName(Output<String> datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
-
         public Builder datastoreName(String datastoreName) {
             this.datastoreName = Output.of(Objects.requireNonNull(datastoreName));
             return this;
         }
-
         public Builder dateRange(Output<GoogleCloudApigeeV1DateRangeArgs> dateRange) {
             this.dateRange = Objects.requireNonNull(dateRange);
             return this;
         }
-
         public Builder dateRange(GoogleCloudApigeeV1DateRangeArgs dateRange) {
             this.dateRange = Output.of(Objects.requireNonNull(dateRange));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Output.ofNullable(outputFormat);
             return this;
-        }
-        public ExportArgs build() {
+        }        public ExportArgs build() {
             return new ExportArgs(csvDelimiter, datastoreName, dateRange, description, environmentId, name, organizationId, outputFormat);
         }
     }

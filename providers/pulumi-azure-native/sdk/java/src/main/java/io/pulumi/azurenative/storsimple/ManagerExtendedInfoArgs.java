@@ -187,92 +187,74 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder algorithm(String algorithm) {
             this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
-
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder encryptionKeyThumbprint(@Nullable Output<String> encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
-
         public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = Output.ofNullable(encryptionKeyThumbprint);
             return this;
         }
-
         public Builder integrityKey(Output<String> integrityKey) {
             this.integrityKey = Objects.requireNonNull(integrityKey);
             return this;
         }
-
         public Builder integrityKey(String integrityKey) {
             this.integrityKey = Output.of(Objects.requireNonNull(integrityKey));
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder portalCertificateThumbprint(@Nullable Output<String> portalCertificateThumbprint) {
             this.portalCertificateThumbprint = portalCertificateThumbprint;
             return this;
         }
-
         public Builder portalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
             this.portalCertificateThumbprint = Output.ofNullable(portalCertificateThumbprint);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ManagerExtendedInfoArgs build() {
+        }        public ManagerExtendedInfoArgs build() {
             return new ManagerExtendedInfoArgs(algorithm, encryptionKey, encryptionKeyThumbprint, integrityKey, kind, managerName, portalCertificateThumbprint, resourceGroupName, version);
         }
     }

@@ -129,52 +129,48 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
             this.authorization = authorization;
             return this;
         }
-
         public Builder authorization(@Nullable BackendAuthorizationHeaderCredentialsArgs authorization) {
             this.authorization = Output.ofNullable(authorization);
             return this;
         }
-
         public Builder certificate(@Nullable Output<List<String>> certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable List<String> certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
+        public Builder certificate(String... certificate) {
+            return certificate(List.of(certificate));
+        }
         public Builder certificateIds(@Nullable Output<List<String>> certificateIds) {
             this.certificateIds = certificateIds;
             return this;
         }
-
         public Builder certificateIds(@Nullable List<String> certificateIds) {
             this.certificateIds = Output.ofNullable(certificateIds);
             return this;
         }
-
+        public Builder certificateIds(String... certificateIds) {
+            return certificateIds(List.of(certificateIds));
+        }
         public Builder header(@Nullable Output<Map<String,List<String>>> header) {
             this.header = header;
             return this;
         }
-
         public Builder header(@Nullable Map<String,List<String>> header) {
             this.header = Output.ofNullable(header);
             return this;
         }
-
         public Builder query(@Nullable Output<Map<String,List<String>>> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable Map<String,List<String>> query) {
             this.query = Output.ofNullable(query);
             return this;
-        }
-        public BackendCredentialsContractArgs build() {
+        }        public BackendCredentialsContractArgs build() {
             return new BackendCredentialsContractArgs(authorization, certificate, certificateIds, header, query);
         }
     }

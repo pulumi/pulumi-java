@@ -75,22 +75,21 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
             this.ignoreCoordinates = ignoreCoordinates;
             return this;
         }
-
         public Builder ignoreCoordinates(@Nullable List<String> ignoreCoordinates) {
             this.ignoreCoordinates = Output.ofNullable(ignoreCoordinates);
             return this;
         }
-
+        public Builder ignoreCoordinates(String... ignoreCoordinates) {
+            return ignoreCoordinates(List.of(ignoreCoordinates));
+        }
         public Builder screenshotName(Output<String> screenshotName) {
             this.screenshotName = Objects.requireNonNull(screenshotName);
             return this;
         }
-
         public Builder screenshotName(String screenshotName) {
             this.screenshotName = Output.of(Objects.requireNonNull(screenshotName));
             return this;
-        }
-        public CanaryBaseScreenshotArgs build() {
+        }        public CanaryBaseScreenshotArgs build() {
             return new CanaryBaseScreenshotArgs(ignoreCoordinates, screenshotName);
         }
     }

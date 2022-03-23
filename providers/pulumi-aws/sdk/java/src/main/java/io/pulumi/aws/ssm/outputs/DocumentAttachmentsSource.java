@@ -88,17 +88,17 @@ public final class DocumentAttachmentsSource {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public DocumentAttachmentsSource build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public DocumentAttachmentsSource build() {
             return new DocumentAttachmentsSource(key, name, values);
         }
     }

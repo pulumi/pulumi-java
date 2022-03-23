@@ -116,52 +116,42 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
             this.inspectJob = inspectJob;
             return this;
         }
-
         public Builder inspectJob(@Nullable GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
             this.inspectJob = Output.ofNullable(inspectJob);
             return this;
         }
-
         public Builder jobId(@Nullable Output<String> jobId) {
             this.jobId = jobId;
             return this;
         }
-
         public Builder jobId(@Nullable String jobId) {
             this.jobId = Output.ofNullable(jobId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder riskJob(@Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob) {
             this.riskJob = riskJob;
             return this;
         }
-
         public Builder riskJob(@Nullable GooglePrivacyDlpV2RiskAnalysisJobConfigArgs riskJob) {
             this.riskJob = Output.ofNullable(riskJob);
             return this;
-        }
-        public DlpJobArgs build() {
+        }        public DlpJobArgs build() {
             return new DlpJobArgs(inspectJob, jobId, location, project, riskJob);
         }
     }

@@ -79,22 +79,18 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
             this.dialogflowSource = dialogflowSource;
             return this;
         }
-
         public Builder dialogflowSource(@Nullable GoogleCloudContactcenterinsightsV1DialogflowSourceArgs dialogflowSource) {
             this.dialogflowSource = Output.ofNullable(dialogflowSource);
             return this;
         }
-
         public Builder gcsSource(@Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
             this.gcsSource = gcsSource;
             return this;
         }
-
         public Builder gcsSource(@Nullable GoogleCloudContactcenterinsightsV1GcsSourceArgs gcsSource) {
             this.gcsSource = Output.ofNullable(gcsSource);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs build() {
             return new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(dialogflowSource, gcsSource);
         }
     }

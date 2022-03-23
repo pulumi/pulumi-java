@@ -43,8 +43,7 @@ public final class DatasetSchedule {
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
-        }
-        public DatasetSchedule build() {
+        }        public DatasetSchedule build() {
             return new DatasetSchedule(scheduleExpression);
         }
     }

@@ -132,52 +132,42 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.encryptionIdentity = encryptionIdentity;
             return this;
         }
-
         public Builder encryptionIdentity(@Nullable EncryptionIdentityArgs encryptionIdentity) {
             this.encryptionIdentity = Output.ofNullable(encryptionIdentity);
             return this;
         }
-
         public Builder keySource(Output<Either<String,KeySource>> keySource) {
             this.keySource = Objects.requireNonNull(keySource);
             return this;
         }
-
         public Builder keySource(Either<String,KeySource> keySource) {
             this.keySource = Output.of(Objects.requireNonNull(keySource));
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
-
         public Builder requireInfrastructureEncryption(@Nullable Output<Boolean> requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
-
         public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = Output.ofNullable(requireInfrastructureEncryption);
             return this;
         }
-
         public Builder services(@Nullable Output<EncryptionServicesArgs> services) {
             this.services = services;
             return this;
         }
-
         public Builder services(@Nullable EncryptionServicesArgs services) {
             this.services = Output.ofNullable(services);
             return this;
-        }
-        public EncryptionArgs build() {
+        }        public EncryptionArgs build() {
             return new EncryptionArgs(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
         }
     }

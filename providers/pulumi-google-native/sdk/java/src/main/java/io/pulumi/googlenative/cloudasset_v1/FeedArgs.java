@@ -198,102 +198,91 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
             this.assetNames = assetNames;
             return this;
         }
-
         public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Output.ofNullable(assetNames);
             return this;
         }
-
+        public Builder assetNames(String... assetNames) {
+            return assetNames(List.of(assetNames));
+        }
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
-
         public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Output.ofNullable(assetTypes);
             return this;
         }
-
+        public Builder assetTypes(String... assetTypes) {
+            return assetTypes(List.of(assetTypes));
+        }
         public Builder condition(@Nullable Output<ExprArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ExprArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder contentType(@Nullable Output<FeedContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable FeedContentType contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder feedId(Output<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
-
         public Builder feedId(String feedId) {
             this.feedId = Output.of(Objects.requireNonNull(feedId));
             return this;
         }
-
         public Builder feedOutputConfig(Output<FeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
-
         public Builder feedOutputConfig(FeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder relationshipTypes(@Nullable Output<List<String>> relationshipTypes) {
             this.relationshipTypes = relationshipTypes;
             return this;
         }
-
         public Builder relationshipTypes(@Nullable List<String> relationshipTypes) {
             this.relationshipTypes = Output.ofNullable(relationshipTypes);
             return this;
         }
-
+        public Builder relationshipTypes(String... relationshipTypes) {
+            return relationshipTypes(List.of(relationshipTypes));
+        }
         public Builder v1Id(Output<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
-
         public Builder v1Id(String v1Id) {
             this.v1Id = Output.of(Objects.requireNonNull(v1Id));
             return this;
         }
-
         public Builder v1Id1(Output<String> v1Id1) {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
-
         public Builder v1Id1(String v1Id1) {
             this.v1Id1 = Output.of(Objects.requireNonNull(v1Id1));
             return this;
-        }
-        public FeedArgs build() {
+        }        public FeedArgs build() {
             return new FeedArgs(assetNames, assetTypes, condition, contentType, feedId, feedOutputConfig, name, relationshipTypes, v1Id, v1Id1);
         }
     }

@@ -352,97 +352,96 @@ public final class HDInsightStreamingActivityResponse {
             this.arguments = arguments;
             return this;
         }
-
+        public Builder arguments(Object... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder combiner(@Nullable Object combiner) {
             this.combiner = combiner;
             return this;
         }
-
         public Builder commandEnvironment(@Nullable List<Object> commandEnvironment) {
             this.commandEnvironment = commandEnvironment;
             return this;
         }
-
+        public Builder commandEnvironment(Object... commandEnvironment) {
+            return commandEnvironment(List.of(commandEnvironment));
+        }
         public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = defines;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder fileLinkedService(@Nullable LinkedServiceReferenceResponse fileLinkedService) {
             this.fileLinkedService = fileLinkedService;
             return this;
         }
-
         public Builder filePaths(List<Object> filePaths) {
             this.filePaths = Objects.requireNonNull(filePaths);
             return this;
         }
-
+        public Builder filePaths(Object... filePaths) {
+            return filePaths(List.of(filePaths));
+        }
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
-
         public Builder input(Object input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder mapper(Object mapper) {
             this.mapper = Objects.requireNonNull(mapper);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder output(Object output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder reducer(Object reducer) {
             this.reducer = Objects.requireNonNull(reducer);
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
-
+        public Builder storageLinkedServices(LinkedServiceReferenceResponse... storageLinkedServices) {
+            return storageLinkedServices(List.of(storageLinkedServices));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public HDInsightStreamingActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public HDInsightStreamingActivityResponse build() {
             return new HDInsightStreamingActivityResponse(arguments, combiner, commandEnvironment, defines, dependsOn, description, fileLinkedService, filePaths, getDebugInfo, input, linkedServiceName, mapper, name, output, policy, reducer, storageLinkedServices, type, userProperties);
         }
     }

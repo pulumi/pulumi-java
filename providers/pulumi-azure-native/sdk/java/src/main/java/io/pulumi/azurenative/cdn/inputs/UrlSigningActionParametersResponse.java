@@ -92,17 +92,17 @@ public final class UrlSigningActionParametersResponse extends io.pulumi.resource
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
             this.parameterNameOverride = parameterNameOverride;
             return this;
         }
-        public UrlSigningActionParametersResponse build() {
+        public Builder parameterNameOverride(UrlSigningParamIdentifierResponse... parameterNameOverride) {
+            return parameterNameOverride(List.of(parameterNameOverride));
+        }        public UrlSigningActionParametersResponse build() {
             return new UrlSigningActionParametersResponse(algorithm, odataType, parameterNameOverride);
         }
     }

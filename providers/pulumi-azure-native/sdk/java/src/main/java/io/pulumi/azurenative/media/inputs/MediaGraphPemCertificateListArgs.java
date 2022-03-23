@@ -79,22 +79,21 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
-
         public Builder certificates(List<String> certificates) {
             this.certificates = Output.of(Objects.requireNonNull(certificates));
             return this;
         }
-
+        public Builder certificates(String... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public MediaGraphPemCertificateListArgs build() {
+        }        public MediaGraphPemCertificateListArgs build() {
             return new MediaGraphPemCertificateListArgs(certificates, odataType);
         }
     }

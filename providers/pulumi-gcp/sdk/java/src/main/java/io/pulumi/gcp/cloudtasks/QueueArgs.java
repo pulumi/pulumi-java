@@ -170,72 +170,58 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
-
         public Builder appEngineRoutingOverride(@Nullable QueueAppEngineRoutingOverrideArgs appEngineRoutingOverride) {
             this.appEngineRoutingOverride = Output.ofNullable(appEngineRoutingOverride);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rateLimits(@Nullable Output<QueueRateLimitsArgs> rateLimits) {
             this.rateLimits = rateLimits;
             return this;
         }
-
         public Builder rateLimits(@Nullable QueueRateLimitsArgs rateLimits) {
             this.rateLimits = Output.ofNullable(rateLimits);
             return this;
         }
-
         public Builder retryConfig(@Nullable Output<QueueRetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
-
         public Builder retryConfig(@Nullable QueueRetryConfigArgs retryConfig) {
             this.retryConfig = Output.ofNullable(retryConfig);
             return this;
         }
-
         public Builder stackdriverLoggingConfig(@Nullable Output<QueueStackdriverLoggingConfigArgs> stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = stackdriverLoggingConfig;
             return this;
         }
-
         public Builder stackdriverLoggingConfig(@Nullable QueueStackdriverLoggingConfigArgs stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = Output.ofNullable(stackdriverLoggingConfig);
             return this;
-        }
-        public QueueArgs build() {
+        }        public QueueArgs build() {
             return new QueueArgs(appEngineRoutingOverride, location, name, project, rateLimits, retryConfig, stackdriverLoggingConfig);
         }
     }

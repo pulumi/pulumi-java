@@ -76,22 +76,21 @@ public final class DistributionTrustedKeyGroupGetArgs extends io.pulumi.resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder items(@Nullable Output<List<DistributionTrustedKeyGroupItemGetArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<DistributionTrustedKeyGroupItemGetArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public DistributionTrustedKeyGroupGetArgs build() {
+        public Builder items(DistributionTrustedKeyGroupItemGetArgs... items) {
+            return items(List.of(items));
+        }        public DistributionTrustedKeyGroupGetArgs build() {
             return new DistributionTrustedKeyGroupGetArgs(enabled, items);
         }
     }

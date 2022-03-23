@@ -53,8 +53,7 @@ public final class FunctionDeadLetterConfig {
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
-        }
-        public FunctionDeadLetterConfig build() {
+        }        public FunctionDeadLetterConfig build() {
             return new FunctionDeadLetterConfig(targetArn);
         }
     }

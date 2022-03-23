@@ -123,52 +123,42 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
             this.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
-
         public Builder instanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
             this.instanceWarmupPeriod = Output.ofNullable(instanceWarmupPeriod);
             return this;
         }
-
         public Builder maximumScalingStepSize(@Nullable Output<Integer> maximumScalingStepSize) {
             this.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
-
         public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
             this.maximumScalingStepSize = Output.ofNullable(maximumScalingStepSize);
             return this;
         }
-
         public Builder minimumScalingStepSize(@Nullable Output<Integer> minimumScalingStepSize) {
             this.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
-
         public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
             this.minimumScalingStepSize = Output.ofNullable(minimumScalingStepSize);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder targetCapacity(@Nullable Output<Integer> targetCapacity) {
             this.targetCapacity = targetCapacity;
             return this;
         }
-
         public Builder targetCapacity(@Nullable Integer targetCapacity) {
             this.targetCapacity = Output.ofNullable(targetCapacity);
             return this;
-        }
-        public CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs build() {
+        }        public CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs build() {
             return new CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs(instanceWarmupPeriod, maximumScalingStepSize, minimumScalingStepSize, status, targetCapacity);
         }
     }

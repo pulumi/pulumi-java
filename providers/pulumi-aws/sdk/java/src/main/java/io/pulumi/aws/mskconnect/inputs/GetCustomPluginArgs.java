@@ -54,8 +54,7 @@ public final class GetCustomPluginArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetCustomPluginArgs build() {
+        }        public GetCustomPluginArgs build() {
             return new GetCustomPluginArgs(name);
         }
     }

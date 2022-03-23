@@ -122,27 +122,22 @@ public final class FlexPersistentVolumeSource {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
-
         public Builder options(@Nullable Map<String,String> options) {
             this.options = options;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretRef(@Nullable SecretReference secretRef) {
             this.secretRef = secretRef;
             return this;
-        }
-        public FlexPersistentVolumeSource build() {
+        }        public FlexPersistentVolumeSource build() {
             return new FlexPersistentVolumeSource(driver, fsType, options, readOnly, secretRef);
         }
     }

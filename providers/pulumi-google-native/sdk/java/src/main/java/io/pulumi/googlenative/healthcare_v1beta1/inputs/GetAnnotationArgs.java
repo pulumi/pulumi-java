@@ -102,27 +102,22 @@ public final class GetAnnotationArgs extends io.pulumi.resources.InvokeArgs {
             this.annotationId = Objects.requireNonNull(annotationId);
             return this;
         }
-
         public Builder annotationStoreId(String annotationStoreId) {
             this.annotationStoreId = Objects.requireNonNull(annotationStoreId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAnnotationArgs build() {
+        }        public GetAnnotationArgs build() {
             return new GetAnnotationArgs(annotationId, annotationStoreId, datasetId, location, project);
         }
     }

@@ -81,17 +81,17 @@ public final class DataSetGeoSpatialColumnGroup {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
+        public Builder columns(String... columns) {
+            return columns(List.of(columns));
+        }
         public Builder countryCode(@Nullable DataSetGeoSpatialCountryCode countryCode) {
             this.countryCode = countryCode;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DataSetGeoSpatialColumnGroup build() {
+        }        public DataSetGeoSpatialColumnGroup build() {
             return new DataSetGeoSpatialColumnGroup(columns, countryCode, name);
         }
     }

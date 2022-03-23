@@ -50,8 +50,7 @@ public final class GetClusterConfidentialNode extends io.pulumi.resources.Invoke
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetClusterConfidentialNode build() {
+        }        public GetClusterConfidentialNode build() {
             return new GetClusterConfidentialNode(enabled);
         }
     }

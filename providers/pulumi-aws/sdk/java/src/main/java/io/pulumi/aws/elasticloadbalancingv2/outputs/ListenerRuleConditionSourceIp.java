@@ -53,7 +53,9 @@ public final class ListenerRuleConditionSourceIp {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ListenerRuleConditionSourceIp build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionSourceIp build() {
             return new ListenerRuleConditionSourceIp(values);
         }
     }

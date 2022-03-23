@@ -103,22 +103,18 @@ public final class ProtectionModeResponse {
             this.exe = exe;
             return this;
         }
-
         public Builder executable(@Nullable String executable) {
             this.executable = executable;
             return this;
         }
-
         public Builder msi(@Nullable String msi) {
             this.msi = msi;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
-        }
-        public ProtectionModeResponse build() {
+        }        public ProtectionModeResponse build() {
             return new ProtectionModeResponse(exe, executable, msi, script);
         }
     }

@@ -166,42 +166,34 @@ public final class GetMigrationConfigResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pendingReplicationOperationsCount(Double pendingReplicationOperationsCount) {
             this.pendingReplicationOperationsCount = Objects.requireNonNull(pendingReplicationOperationsCount);
             return this;
         }
-
         public Builder postMigrationName(String postMigrationName) {
             this.postMigrationName = Objects.requireNonNull(postMigrationName);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMigrationConfigResult build() {
+        }        public GetMigrationConfigResult build() {
             return new GetMigrationConfigResult(id, migrationState, name, pendingReplicationOperationsCount, postMigrationName, provisioningState, targetNamespace, type);
         }
     }

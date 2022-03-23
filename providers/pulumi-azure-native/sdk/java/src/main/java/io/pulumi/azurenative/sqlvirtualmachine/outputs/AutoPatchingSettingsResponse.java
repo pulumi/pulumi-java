@@ -105,22 +105,18 @@ public final class AutoPatchingSettingsResponse {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
             this.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
-
         public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
-        }
-        public AutoPatchingSettingsResponse build() {
+        }        public AutoPatchingSettingsResponse build() {
             return new AutoPatchingSettingsResponse(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
         }
     }

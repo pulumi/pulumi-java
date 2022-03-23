@@ -104,22 +104,18 @@ public final class VideoSourceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersResponse timeSequences) {
             this.timeSequences = Objects.requireNonNull(timeSequences);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder videoName(String videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
-        }
-        public VideoSourceResponse build() {
+        }        public VideoSourceResponse build() {
             return new VideoSourceResponse(name, timeSequences, type, videoName);
         }
     }

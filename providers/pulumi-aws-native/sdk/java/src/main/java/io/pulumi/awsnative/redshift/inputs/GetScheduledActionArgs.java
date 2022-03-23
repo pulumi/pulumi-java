@@ -54,8 +54,7 @@ public final class GetScheduledActionArgs extends io.pulumi.resources.InvokeArgs
         public Builder scheduledActionName(String scheduledActionName) {
             this.scheduledActionName = Objects.requireNonNull(scheduledActionName);
             return this;
-        }
-        public GetScheduledActionArgs build() {
+        }        public GetScheduledActionArgs build() {
             return new GetScheduledActionArgs(scheduledActionName);
         }
     }

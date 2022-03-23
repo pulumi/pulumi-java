@@ -112,22 +112,18 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
             this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
             return this;
         }
-
         public Builder databasesAssessedCount(@Nullable Integer databasesAssessedCount) {
             this.databasesAssessedCount = databasesAssessedCount;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder migrationReadyCount(@Nullable Integer migrationReadyCount) {
             this.migrationReadyCount = migrationReadyCount;
             return this;
-        }
-        public DatabasesSolutionSummaryResponse build() {
+        }        public DatabasesSolutionSummaryResponse build() {
             return new DatabasesSolutionSummaryResponse(databaseInstancesAssessedCount, databasesAssessedCount, instanceType, migrationReadyCount);
         }
     }

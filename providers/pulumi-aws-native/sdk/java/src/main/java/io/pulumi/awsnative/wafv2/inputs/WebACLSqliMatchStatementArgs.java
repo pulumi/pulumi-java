@@ -71,22 +71,21 @@ public final class WebACLSqliMatchStatementArgs extends io.pulumi.resources.Reso
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebACLSqliMatchStatementArgs build() {
+        public Builder textTransformations(WebACLTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLSqliMatchStatementArgs build() {
             return new WebACLSqliMatchStatementArgs(fieldToMatch, textTransformations);
         }
     }

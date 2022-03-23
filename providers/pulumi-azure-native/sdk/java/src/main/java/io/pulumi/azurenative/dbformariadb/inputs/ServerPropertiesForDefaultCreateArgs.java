@@ -181,82 +181,66 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
             this.administratorLogin = Objects.requireNonNull(administratorLogin);
             return this;
         }
-
         public Builder administratorLogin(String administratorLogin) {
             this.administratorLogin = Output.of(Objects.requireNonNull(administratorLogin));
             return this;
         }
-
         public Builder administratorLoginPassword(Output<String> administratorLoginPassword) {
             this.administratorLoginPassword = Objects.requireNonNull(administratorLoginPassword);
             return this;
         }
-
         public Builder administratorLoginPassword(String administratorLoginPassword) {
             this.administratorLoginPassword = Output.of(Objects.requireNonNull(administratorLoginPassword));
             return this;
         }
-
         public Builder createMode(Output<String> createMode) {
             this.createMode = Objects.requireNonNull(createMode);
             return this;
         }
-
         public Builder createMode(String createMode) {
             this.createMode = Output.of(Objects.requireNonNull(createMode));
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
             this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder sslEnforcement(@Nullable Output<SslEnforcementEnum> sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
-
         public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
             this.sslEnforcement = Output.ofNullable(sslEnforcement);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder version(@Nullable Output<Either<String,ServerVersion>> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Either<String,ServerVersion> version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ServerPropertiesForDefaultCreateArgs build() {
+        }        public ServerPropertiesForDefaultCreateArgs build() {
             return new ServerPropertiesForDefaultCreateArgs(administratorLogin, administratorLoginPassword, createMode, minimalTlsVersion, publicNetworkAccess, sslEnforcement, storageProfile, version);
         }
     }

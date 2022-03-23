@@ -53,8 +53,7 @@ public final class PrivateEndpointPropertyResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public PrivateEndpointPropertyResponse build() {
+        }        public PrivateEndpointPropertyResponse build() {
             return new PrivateEndpointPropertyResponse(id);
         }
     }

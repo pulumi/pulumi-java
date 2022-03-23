@@ -423,232 +423,198 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
             this.allowLargeResults = allowLargeResults;
             return this;
         }
-
         public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
             this.allowLargeResults = Output.ofNullable(allowLargeResults);
             return this;
         }
-
         public Builder clustering(@Nullable Output<ClusteringArgs> clustering) {
             this.clustering = clustering;
             return this;
         }
-
         public Builder clustering(@Nullable ClusteringArgs clustering) {
             this.clustering = Output.ofNullable(clustering);
             return this;
         }
-
         public Builder connectionProperties(@Nullable Output<List<ConnectionPropertyArgs>> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
-
         public Builder connectionProperties(@Nullable List<ConnectionPropertyArgs> connectionProperties) {
             this.connectionProperties = Output.ofNullable(connectionProperties);
             return this;
         }
-
+        public Builder connectionProperties(ConnectionPropertyArgs... connectionProperties) {
+            return connectionProperties(List.of(connectionProperties));
+        }
         public Builder createDisposition(@Nullable Output<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Output.ofNullable(createDisposition);
             return this;
         }
-
         public Builder createSession(@Nullable Output<Boolean> createSession) {
             this.createSession = createSession;
             return this;
         }
-
         public Builder createSession(@Nullable Boolean createSession) {
             this.createSession = Output.ofNullable(createSession);
             return this;
         }
-
         public Builder defaultDataset(@Nullable Output<DatasetReferenceArgs> defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
-
         public Builder defaultDataset(@Nullable DatasetReferenceArgs defaultDataset) {
             this.defaultDataset = Output.ofNullable(defaultDataset);
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
-
         public Builder destinationTable(@Nullable Output<TableReferenceArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
-
         public Builder destinationTable(@Nullable TableReferenceArgs destinationTable) {
             this.destinationTable = Output.ofNullable(destinationTable);
             return this;
         }
-
         public Builder flattenResults(@Nullable Output<Boolean> flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
-
         public Builder flattenResults(@Nullable Boolean flattenResults) {
             this.flattenResults = Output.ofNullable(flattenResults);
             return this;
         }
-
         public Builder maximumBillingTier(@Nullable Output<Integer> maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
-
         public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
             this.maximumBillingTier = Output.ofNullable(maximumBillingTier);
             return this;
         }
-
         public Builder maximumBytesBilled(@Nullable Output<String> maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
-
         public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
             this.maximumBytesBilled = Output.ofNullable(maximumBytesBilled);
             return this;
         }
-
         public Builder parameterMode(@Nullable Output<String> parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
-
         public Builder parameterMode(@Nullable String parameterMode) {
             this.parameterMode = Output.ofNullable(parameterMode);
             return this;
         }
-
         public Builder priority(@Nullable Output<String> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable String priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder queryParameters(@Nullable Output<List<QueryParameterArgs>> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
-
         public Builder queryParameters(@Nullable List<QueryParameterArgs> queryParameters) {
             this.queryParameters = Output.ofNullable(queryParameters);
             return this;
         }
-
+        public Builder queryParameters(QueryParameterArgs... queryParameters) {
+            return queryParameters(List.of(queryParameters));
+        }
         public Builder rangePartitioning(@Nullable Output<RangePartitioningArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
-
         public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
             this.rangePartitioning = Output.ofNullable(rangePartitioning);
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable Output<List<String>> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
-
         public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Output.ofNullable(schemaUpdateOptions);
             return this;
         }
-
+        public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
+            return schemaUpdateOptions(List.of(schemaUpdateOptions));
+        }
         public Builder tableDefinitions(@Nullable Output<Map<String,String>> tableDefinitions) {
             this.tableDefinitions = tableDefinitions;
             return this;
         }
-
         public Builder tableDefinitions(@Nullable Map<String,String> tableDefinitions) {
             this.tableDefinitions = Output.ofNullable(tableDefinitions);
             return this;
         }
-
         public Builder timePartitioning(@Nullable Output<TimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
-
         public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
             this.timePartitioning = Output.ofNullable(timePartitioning);
             return this;
         }
-
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
-
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = Output.ofNullable(useLegacySql);
             return this;
         }
-
         public Builder useQueryCache(@Nullable Output<Boolean> useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
-
         public Builder useQueryCache(@Nullable Boolean useQueryCache) {
             this.useQueryCache = Output.ofNullable(useQueryCache);
             return this;
         }
-
         public Builder userDefinedFunctionResources(@Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
-
         public Builder userDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Output.ofNullable(userDefinedFunctionResources);
             return this;
         }
-
+        public Builder userDefinedFunctionResources(UserDefinedFunctionResourceArgs... userDefinedFunctionResources) {
+            return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
+        }
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
-        }
-        public JobConfigurationQueryArgs build() {
+        }        public JobConfigurationQueryArgs build() {
             return new JobConfigurationQueryArgs(allowLargeResults, clustering, connectionProperties, createDisposition, createSession, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, queryParameters, rangePartitioning, schemaUpdateOptions, tableDefinitions, timePartitioning, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }
     }

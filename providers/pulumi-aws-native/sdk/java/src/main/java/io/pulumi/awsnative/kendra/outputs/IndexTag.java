@@ -69,12 +69,10 @@ public final class IndexTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public IndexTag build() {
+        }        public IndexTag build() {
             return new IndexTag(key, value);
         }
     }

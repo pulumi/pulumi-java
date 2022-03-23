@@ -139,32 +139,26 @@ public final class ModelContainer {
             this.containerHostname = containerHostname;
             return this;
         }
-
         public Builder environment(@Nullable Map<String,String> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder imageConfig(@Nullable ModelContainerImageConfig imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder modelDataUrl(@Nullable String modelDataUrl) {
             this.modelDataUrl = modelDataUrl;
             return this;
-        }
-        public ModelContainer build() {
+        }        public ModelContainer build() {
             return new ModelContainer(containerHostname, environment, image, imageConfig, mode, modelDataUrl);
         }
     }

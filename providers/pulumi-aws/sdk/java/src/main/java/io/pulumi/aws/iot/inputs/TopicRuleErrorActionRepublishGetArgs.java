@@ -91,32 +91,26 @@ public final class TopicRuleErrorActionRepublishGetArgs extends io.pulumi.resour
             this.qos = qos;
             return this;
         }
-
         public Builder qos(@Nullable Integer qos) {
             this.qos = Output.ofNullable(qos);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public TopicRuleErrorActionRepublishGetArgs build() {
+        }        public TopicRuleErrorActionRepublishGetArgs build() {
             return new TopicRuleErrorActionRepublishGetArgs(qos, roleArn, topic);
         }
     }

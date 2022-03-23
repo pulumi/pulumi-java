@@ -77,12 +77,10 @@ public final class ImageNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
-        }
-        public ImageNoteResponse build() {
+        }        public ImageNoteResponse build() {
             return new ImageNoteResponse(fingerprint, resourceUrl);
         }
     }

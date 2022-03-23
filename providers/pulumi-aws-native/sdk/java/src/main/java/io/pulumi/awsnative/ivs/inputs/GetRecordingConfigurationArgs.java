@@ -54,8 +54,7 @@ public final class GetRecordingConfigurationArgs extends io.pulumi.resources.Inv
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetRecordingConfigurationArgs build() {
+        }        public GetRecordingConfigurationArgs build() {
             return new GetRecordingConfigurationArgs(arn);
         }
     }

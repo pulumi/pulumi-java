@@ -76,22 +76,21 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
             this.geoMatchConstraints = geoMatchConstraints;
             return this;
         }
-
         public Builder geoMatchConstraints(@Nullable List<GeoMatchSetGeoMatchConstraintGetArgs> geoMatchConstraints) {
             this.geoMatchConstraints = Output.ofNullable(geoMatchConstraints);
             return this;
         }
-
+        public Builder geoMatchConstraints(GeoMatchSetGeoMatchConstraintGetArgs... geoMatchConstraints) {
+            return geoMatchConstraints(List.of(geoMatchConstraints));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GeoMatchSetState build() {
+        }        public GeoMatchSetState build() {
             return new GeoMatchSetState(geoMatchConstraints, name);
         }
     }

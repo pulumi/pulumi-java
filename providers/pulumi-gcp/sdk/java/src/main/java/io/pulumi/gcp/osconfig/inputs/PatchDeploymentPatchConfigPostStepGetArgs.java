@@ -77,22 +77,18 @@ public final class PatchDeploymentPatchConfigPostStepGetArgs extends io.pulumi.r
             this.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
-
         public Builder linuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs linuxExecStepConfig) {
             this.linuxExecStepConfig = Output.ofNullable(linuxExecStepConfig);
             return this;
         }
-
         public Builder windowsExecStepConfig(@Nullable Output<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs> windowsExecStepConfig) {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
-
         public Builder windowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs windowsExecStepConfig) {
             this.windowsExecStepConfig = Output.ofNullable(windowsExecStepConfig);
             return this;
-        }
-        public PatchDeploymentPatchConfigPostStepGetArgs build() {
+        }        public PatchDeploymentPatchConfigPostStepGetArgs build() {
             return new PatchDeploymentPatchConfigPostStepGetArgs(linuxExecStepConfig, windowsExecStepConfig);
         }
     }

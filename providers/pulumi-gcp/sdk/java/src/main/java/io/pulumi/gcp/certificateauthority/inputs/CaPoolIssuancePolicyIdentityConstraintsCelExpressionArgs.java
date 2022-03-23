@@ -106,42 +106,34 @@ public final class CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs exte
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs build() {
+        }        public CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs build() {
             return new CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs(description, expression, location, title);
         }
     }

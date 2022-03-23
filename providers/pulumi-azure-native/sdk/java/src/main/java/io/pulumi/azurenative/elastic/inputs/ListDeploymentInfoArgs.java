@@ -72,12 +72,10 @@ public final class ListDeploymentInfoArgs extends io.pulumi.resources.InvokeArgs
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListDeploymentInfoArgs build() {
+        }        public ListDeploymentInfoArgs build() {
             return new ListDeploymentInfoArgs(monitorName, resourceGroupName);
         }
     }

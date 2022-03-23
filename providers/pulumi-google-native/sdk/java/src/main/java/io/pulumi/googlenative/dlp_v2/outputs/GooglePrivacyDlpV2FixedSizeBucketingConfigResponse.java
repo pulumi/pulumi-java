@@ -86,17 +86,14 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
-
         public Builder lowerBound(GooglePrivacyDlpV2ValueResponse lowerBound) {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
-
         public Builder upperBound(GooglePrivacyDlpV2ValueResponse upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
-        }
-        public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse build() {
+        }        public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse build() {
             return new GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(bucketSize, lowerBound, upperBound);
         }
     }

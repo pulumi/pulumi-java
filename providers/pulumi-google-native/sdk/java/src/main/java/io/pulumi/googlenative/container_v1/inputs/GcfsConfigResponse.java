@@ -58,8 +58,7 @@ public final class GcfsConfigResponse extends io.pulumi.resources.InvokeArgs {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GcfsConfigResponse build() {
+        }        public GcfsConfigResponse build() {
             return new GcfsConfigResponse(enabled);
         }
     }

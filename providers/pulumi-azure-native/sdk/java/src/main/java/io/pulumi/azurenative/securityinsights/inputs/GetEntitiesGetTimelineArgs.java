@@ -174,42 +174,37 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public Builder kinds(@Nullable List<Either<String,EntityTimelineKind>> kinds) {
             this.kinds = kinds;
             return this;
         }
-
+        public Builder kinds(Either<String,EntityTimelineKind>... kinds) {
+            return kinds(List.of(kinds));
+        }
         public Builder numberOfBucket(@Nullable Integer numberOfBucket) {
             this.numberOfBucket = numberOfBucket;
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetEntitiesGetTimelineArgs build() {
+        }        public GetEntitiesGetTimelineArgs build() {
             return new GetEntitiesGetTimelineArgs(endTime, entityId, kinds, numberOfBucket, operationalInsightsResourceProvider, resourceGroupName, startTime, workspaceName);
         }
     }

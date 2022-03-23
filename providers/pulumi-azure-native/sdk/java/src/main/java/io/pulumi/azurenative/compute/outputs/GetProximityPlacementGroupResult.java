@@ -203,52 +203,51 @@ public final class GetProximityPlacementGroupResult {
             this.availabilitySets = Objects.requireNonNull(availabilitySets);
             return this;
         }
-
+        public Builder availabilitySets(SubResourceWithColocationStatusResponse... availabilitySets) {
+            return availabilitySets(List.of(availabilitySets));
+        }
         public Builder colocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
             this.colocationStatus = colocationStatus;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder proximityPlacementGroupType(@Nullable String proximityPlacementGroupType) {
             this.proximityPlacementGroupType = proximityPlacementGroupType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachineScaleSets(List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets) {
             this.virtualMachineScaleSets = Objects.requireNonNull(virtualMachineScaleSets);
             return this;
         }
-
+        public Builder virtualMachineScaleSets(SubResourceWithColocationStatusResponse... virtualMachineScaleSets) {
+            return virtualMachineScaleSets(List.of(virtualMachineScaleSets));
+        }
         public Builder virtualMachines(List<SubResourceWithColocationStatusResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-        public GetProximityPlacementGroupResult build() {
+        public Builder virtualMachines(SubResourceWithColocationStatusResponse... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public GetProximityPlacementGroupResult build() {
             return new GetProximityPlacementGroupResult(availabilitySets, colocationStatus, id, location, name, proximityPlacementGroupType, tags, type, virtualMachineScaleSets, virtualMachines);
         }
     }

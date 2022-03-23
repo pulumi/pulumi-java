@@ -295,152 +295,128 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
             this.agentConfiguration = agentConfiguration;
             return this;
         }
-
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
             this.agentConfiguration = Output.ofNullable(agentConfiguration);
             return this;
         }
-
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
-
         public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(ArgumentArgs... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable CredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder dockerFilePath(Output<String> dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
-
         public Builder dockerFilePath(String dockerFilePath) {
             this.dockerFilePath = Output.of(Objects.requireNonNull(dockerFilePath));
             return this;
         }
-
         public Builder imageNames(@Nullable Output<List<String>> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
-
         public Builder imageNames(@Nullable List<String> imageNames) {
             this.imageNames = Output.ofNullable(imageNames);
             return this;
         }
-
+        public Builder imageNames(String... imageNames) {
+            return imageNames(List.of(imageNames));
+        }
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
             return this;
         }
-
         public Builder isPushEnabled(@Nullable Output<Boolean> isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
-
         public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             this.isPushEnabled = Output.ofNullable(isPushEnabled);
             return this;
         }
-
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
-
         public Builder noCache(@Nullable Output<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
-
         public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = Output.ofNullable(noCache);
             return this;
         }
-
         public Builder platform(Output<PlatformPropertiesArgs> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder platform(PlatformPropertiesArgs platform) {
             this.platform = Output.of(Objects.requireNonNull(platform));
             return this;
         }
-
         public Builder sourceLocation(@Nullable Output<String> sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
-
         public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = Output.ofNullable(sourceLocation);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DockerBuildRequestArgs build() {
+        }        public DockerBuildRequestArgs build() {
             return new DockerBuildRequestArgs(agentConfiguration, agentPoolName, arguments, credentials, dockerFilePath, imageNames, isArchiveEnabled, isPushEnabled, logTemplate, noCache, platform, sourceLocation, target, timeout, type);
         }
     }

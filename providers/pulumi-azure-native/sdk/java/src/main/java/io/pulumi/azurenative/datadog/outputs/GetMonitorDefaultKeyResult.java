@@ -103,22 +103,18 @@ public final class GetMonitorDefaultKeyResult {
             this.created = created;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetMonitorDefaultKeyResult build() {
+        }        public GetMonitorDefaultKeyResult build() {
             return new GetMonitorDefaultKeyResult(created, createdBy, key, name);
         }
     }

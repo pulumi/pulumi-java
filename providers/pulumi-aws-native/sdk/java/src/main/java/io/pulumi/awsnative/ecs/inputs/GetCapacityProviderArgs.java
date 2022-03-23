@@ -50,8 +50,7 @@ public final class GetCapacityProviderArgs extends io.pulumi.resources.InvokeArg
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetCapacityProviderArgs build() {
+        }        public GetCapacityProviderArgs build() {
             return new GetCapacityProviderArgs(name);
         }
     }

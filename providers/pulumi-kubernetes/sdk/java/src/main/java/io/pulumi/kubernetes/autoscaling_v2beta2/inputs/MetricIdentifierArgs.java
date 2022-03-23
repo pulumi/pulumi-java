@@ -79,22 +79,18 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public MetricIdentifierArgs build() {
+        }        public MetricIdentifierArgs build() {
             return new MetricIdentifierArgs(name, selector);
         }
     }

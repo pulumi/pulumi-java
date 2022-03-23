@@ -81,22 +81,18 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.globalParameters = globalParameters;
             return this;
         }
-
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
             this.globalParameters = Output.ofNullable(globalParameters);
             return this;
         }
-
         public Builder inputs(@Nullable Output<Map<String,List<List<Object>>>> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
-        }
-        public ExampleRequestArgs build() {
+        }        public ExampleRequestArgs build() {
             return new ExampleRequestArgs(globalParameters, inputs);
         }
     }

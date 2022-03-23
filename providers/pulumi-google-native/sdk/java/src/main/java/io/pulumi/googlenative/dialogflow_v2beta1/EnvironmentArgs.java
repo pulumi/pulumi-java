@@ -144,72 +144,58 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder fulfillment(@Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment) {
             this.fulfillment = fulfillment;
             return this;
         }
-
         public Builder fulfillment(@Nullable GoogleCloudDialogflowV2beta1FulfillmentArgs fulfillment) {
             this.fulfillment = Output.ofNullable(fulfillment);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder textToSpeechSettings(@Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings) {
             this.textToSpeechSettings = textToSpeechSettings;
             return this;
         }
-
         public Builder textToSpeechSettings(@Nullable GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs textToSpeechSettings) {
             this.textToSpeechSettings = Output.ofNullable(textToSpeechSettings);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(agentVersion, description, environmentId, fulfillment, location, project, textToSpeechSettings);
         }
     }

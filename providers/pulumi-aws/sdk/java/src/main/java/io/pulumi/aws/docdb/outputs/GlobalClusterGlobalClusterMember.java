@@ -72,12 +72,10 @@ public final class GlobalClusterGlobalClusterMember {
             this.dbClusterArn = dbClusterArn;
             return this;
         }
-
         public Builder isWriter(@Nullable Boolean isWriter) {
             this.isWriter = isWriter;
             return this;
-        }
-        public GlobalClusterGlobalClusterMember build() {
+        }        public GlobalClusterGlobalClusterMember build() {
             return new GlobalClusterGlobalClusterMember(dbClusterArn, isWriter);
         }
     }

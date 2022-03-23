@@ -86,17 +86,14 @@ public final class ClientCertificateCommonNameResponse {
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
-
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
-
         public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
-        }
-        public ClientCertificateCommonNameResponse build() {
+        }        public ClientCertificateCommonNameResponse build() {
             return new ClientCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint, isAdmin);
         }
     }

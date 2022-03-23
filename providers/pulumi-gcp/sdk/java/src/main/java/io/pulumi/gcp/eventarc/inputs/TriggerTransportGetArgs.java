@@ -58,12 +58,13 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
             this.pubsubs = pubsubs;
             return this;
         }
-
         public Builder pubsubs(@Nullable List<TriggerTransportPubsubGetArgs> pubsubs) {
             this.pubsubs = Output.ofNullable(pubsubs);
             return this;
         }
-        public TriggerTransportGetArgs build() {
+        public Builder pubsubs(TriggerTransportPubsubGetArgs... pubsubs) {
+            return pubsubs(List.of(pubsubs));
+        }        public TriggerTransportGetArgs build() {
             return new TriggerTransportGetArgs(pubsubs);
         }
     }

@@ -51,8 +51,7 @@ public final class ManagementAssociationPropertiesResponse {
         public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
-        }
-        public ManagementAssociationPropertiesResponse build() {
+        }        public ManagementAssociationPropertiesResponse build() {
             return new ManagementAssociationPropertiesResponse(applicationId);
         }
     }

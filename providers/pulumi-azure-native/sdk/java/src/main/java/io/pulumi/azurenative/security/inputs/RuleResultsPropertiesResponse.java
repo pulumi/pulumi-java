@@ -61,8 +61,7 @@ public final class RuleResultsPropertiesResponse extends io.pulumi.resources.Inv
         public Builder results(@Nullable List<List<String>> results) {
             this.results = results;
             return this;
-        }
-        public RuleResultsPropertiesResponse build() {
+        }        public RuleResultsPropertiesResponse build() {
             return new RuleResultsPropertiesResponse(results);
         }
     }

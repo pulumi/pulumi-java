@@ -96,17 +96,14 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
             this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
-
         public Builder feedback(@Nullable FeedbackPropertiesResponse feedback) {
             this.feedback = feedback;
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
-        }
-        public CloudToDevicePropertiesResponse build() {
+        }        public CloudToDevicePropertiesResponse build() {
             return new CloudToDevicePropertiesResponse(defaultTtlAsIso8601, feedback, maxDeliveryCount);
         }
     }

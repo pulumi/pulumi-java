@@ -312,162 +312,130 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
-
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
             this.agentConfiguration = Output.ofNullable(agentConfiguration);
             return this;
         }
-
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
-
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable CredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder isSystemTask(@Nullable Output<Boolean> isSystemTask) {
             this.isSystemTask = isSystemTask;
             return this;
         }
-
         public Builder isSystemTask(@Nullable Boolean isSystemTask) {
             this.isSystemTask = Output.ofNullable(isSystemTask);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
-
         public Builder platform(@Nullable Output<PlatformPropertiesArgs> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable PlatformPropertiesArgs platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,TaskStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,TaskStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder step(@Nullable Output<Object> step) {
             this.step = step;
             return this;
         }
-
         public Builder step(@Nullable Object step) {
             this.step = Output.ofNullable(step);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder taskName(@Nullable Output<String> taskName) {
             this.taskName = taskName;
             return this;
         }
-
         public Builder taskName(@Nullable String taskName) {
             this.taskName = Output.ofNullable(taskName);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder trigger(@Nullable Output<TriggerPropertiesArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
-
         public Builder trigger(@Nullable TriggerPropertiesArgs trigger) {
             this.trigger = Output.ofNullable(trigger);
             return this;
-        }
-        public TaskArgs build() {
+        }        public TaskArgs build() {
             return new TaskArgs(agentConfiguration, agentPoolName, credentials, identity, isSystemTask, location, logTemplate, platform, registryName, resourceGroupName, status, step, tags, taskName, timeout, trigger);
         }
     }

@@ -52,12 +52,10 @@ public final class SpotFleetTargetGroupArgs extends io.pulumi.resources.Resource
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
-        }
-        public SpotFleetTargetGroupArgs build() {
+        }        public SpotFleetTargetGroupArgs build() {
             return new SpotFleetTargetGroupArgs(arn);
         }
     }

@@ -77,12 +77,10 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder sourceBlobSasUri(String sourceBlobSasUri) {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
-        }
-        public DataDiskImageResponse build() {
+        }        public DataDiskImageResponse build() {
             return new DataDiskImageResponse(lun, sourceBlobSasUri);
         }
     }

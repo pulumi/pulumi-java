@@ -123,52 +123,42 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
-
         public Builder securityPolicy(Output<String> securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
-
         public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Output.of(Objects.requireNonNull(securityPolicy));
             return this;
         }
-
         public Builder targetDomainName(@Nullable Output<String> targetDomainName) {
             this.targetDomainName = targetDomainName;
             return this;
         }
-
         public Builder targetDomainName(@Nullable String targetDomainName) {
             this.targetDomainName = Output.ofNullable(targetDomainName);
             return this;
-        }
-        public DomainNameDomainNameConfigurationArgs build() {
+        }        public DomainNameDomainNameConfigurationArgs build() {
             return new DomainNameDomainNameConfigurationArgs(certificateArn, endpointType, hostedZoneId, securityPolicy, targetDomainName);
         }
     }

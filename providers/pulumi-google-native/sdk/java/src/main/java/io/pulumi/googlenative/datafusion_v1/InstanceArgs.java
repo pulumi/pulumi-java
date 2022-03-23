@@ -342,192 +342,160 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.accelerators = accelerators;
             return this;
         }
-
         public Builder accelerators(@Nullable List<AcceleratorArgs> accelerators) {
             this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
-
+        public Builder accelerators(AcceleratorArgs... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder availableVersion(@Nullable Output<List<VersionArgs>> availableVersion) {
             this.availableVersion = availableVersion;
             return this;
         }
-
         public Builder availableVersion(@Nullable List<VersionArgs> availableVersion) {
             this.availableVersion = Output.ofNullable(availableVersion);
             return this;
         }
-
+        public Builder availableVersion(VersionArgs... availableVersion) {
+            return availableVersion(List.of(availableVersion));
+        }
         public Builder cryptoKeyConfig(@Nullable Output<CryptoKeyConfigArgs> cryptoKeyConfig) {
             this.cryptoKeyConfig = cryptoKeyConfig;
             return this;
         }
-
         public Builder cryptoKeyConfig(@Nullable CryptoKeyConfigArgs cryptoKeyConfig) {
             this.cryptoKeyConfig = Output.ofNullable(cryptoKeyConfig);
             return this;
         }
-
         public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
             this.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
-
         public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
             this.dataprocServiceAccount = Output.ofNullable(dataprocServiceAccount);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enableRbac(@Nullable Output<Boolean> enableRbac) {
             this.enableRbac = enableRbac;
             return this;
         }
-
         public Builder enableRbac(@Nullable Boolean enableRbac) {
             this.enableRbac = Output.ofNullable(enableRbac);
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
         }
-
         public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
-
         public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = Output.ofNullable(enableStackdriverMonitoring);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder options(@Nullable Output<Map<String,String>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable Map<String,String> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
             this.privateInstance = privateInstance;
             return this;
         }
-
         public Builder privateInstance(@Nullable Boolean privateInstance) {
             this.privateInstance = Output.ofNullable(privateInstance);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder type(Output<InstanceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(InstanceType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceArgs build() {
+        }        public InstanceArgs build() {
             return new InstanceArgs(accelerators, availableVersion, cryptoKeyConfig, dataprocServiceAccount, description, displayName, enableRbac, enableStackdriverLogging, enableStackdriverMonitoring, instanceId, labels, location, networkConfig, options, privateInstance, project, type, version, zone);
         }
     }

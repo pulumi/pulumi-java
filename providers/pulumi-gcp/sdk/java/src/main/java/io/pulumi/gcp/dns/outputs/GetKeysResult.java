@@ -104,27 +104,28 @@ public final class GetKeysResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keySigningKeys(List<GetKeysKeySigningKey> keySigningKeys) {
             this.keySigningKeys = Objects.requireNonNull(keySigningKeys);
             return this;
         }
-
+        public Builder keySigningKeys(GetKeysKeySigningKey... keySigningKeys) {
+            return keySigningKeys(List.of(keySigningKeys));
+        }
         public Builder managedZone(String managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder zoneSigningKeys(List<GetKeysZoneSigningKey> zoneSigningKeys) {
             this.zoneSigningKeys = Objects.requireNonNull(zoneSigningKeys);
             return this;
         }
-        public GetKeysResult build() {
+        public Builder zoneSigningKeys(GetKeysZoneSigningKey... zoneSigningKeys) {
+            return zoneSigningKeys(List.of(zoneSigningKeys));
+        }        public GetKeysResult build() {
             return new GetKeysResult(id, keySigningKeys, managedZone, project, zoneSigningKeys);
         }
     }

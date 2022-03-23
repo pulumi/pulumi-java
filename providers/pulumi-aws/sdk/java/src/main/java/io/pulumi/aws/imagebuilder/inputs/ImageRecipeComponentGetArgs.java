@@ -56,12 +56,10 @@ public final class ImageRecipeComponentGetArgs extends io.pulumi.resources.Resou
             this.componentArn = Objects.requireNonNull(componentArn);
             return this;
         }
-
         public Builder componentArn(String componentArn) {
             this.componentArn = Output.of(Objects.requireNonNull(componentArn));
             return this;
-        }
-        public ImageRecipeComponentGetArgs build() {
+        }        public ImageRecipeComponentGetArgs build() {
             return new ImageRecipeComponentGetArgs(componentArn);
         }
     }

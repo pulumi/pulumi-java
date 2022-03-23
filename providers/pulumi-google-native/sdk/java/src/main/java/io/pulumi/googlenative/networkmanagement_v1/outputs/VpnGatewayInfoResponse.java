@@ -133,32 +133,26 @@ public final class VpnGatewayInfoResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder vpnTunnelUri(String vpnTunnelUri) {
             this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri);
             return this;
-        }
-        public VpnGatewayInfoResponse build() {
+        }        public VpnGatewayInfoResponse build() {
             return new VpnGatewayInfoResponse(displayName, ipAddress, networkUri, region, uri, vpnTunnelUri);
         }
     }

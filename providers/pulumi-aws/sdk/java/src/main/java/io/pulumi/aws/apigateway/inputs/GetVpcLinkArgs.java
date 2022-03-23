@@ -76,12 +76,10 @@ public final class GetVpcLinkArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVpcLinkArgs build() {
+        }        public GetVpcLinkArgs build() {
             return new GetVpcLinkArgs(name, tags);
         }
     }

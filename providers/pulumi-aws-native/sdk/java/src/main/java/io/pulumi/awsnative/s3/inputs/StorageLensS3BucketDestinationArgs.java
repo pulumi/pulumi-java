@@ -141,62 +141,50 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder encryption(@Nullable Output<StorageLensEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable StorageLensEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder format(Output<StorageLensS3BucketDestinationFormat> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(StorageLensS3BucketDestinationFormat format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder outputSchemaVersion(Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }
-
         public Builder outputSchemaVersion(StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion) {
             this.outputSchemaVersion = Output.of(Objects.requireNonNull(outputSchemaVersion));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public StorageLensS3BucketDestinationArgs build() {
+        }        public StorageLensS3BucketDestinationArgs build() {
             return new StorageLensS3BucketDestinationArgs(accountId, arn, encryption, format, outputSchemaVersion, prefix);
         }
     }

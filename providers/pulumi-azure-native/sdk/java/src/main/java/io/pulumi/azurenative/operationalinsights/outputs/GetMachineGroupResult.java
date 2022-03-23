@@ -188,47 +188,41 @@ public final class GetMachineGroupResult {
             this.count = count;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder machines(@Nullable List<MachineReferenceWithHintsResponse> machines) {
             this.machines = machines;
             return this;
         }
-
+        public Builder machines(MachineReferenceWithHintsResponse... machines) {
+            return machines(List.of(machines));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMachineGroupResult build() {
+        }        public GetMachineGroupResult build() {
             return new GetMachineGroupResult(count, displayName, etag, groupType, id, kind, machines, name, type);
         }
     }

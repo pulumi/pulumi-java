@@ -51,8 +51,7 @@ public final class ModelExplainabilityJobDefinitionStoppingCondition {
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
-        }
-        public ModelExplainabilityJobDefinitionStoppingCondition build() {
+        }        public ModelExplainabilityJobDefinitionStoppingCondition build() {
             return new ModelExplainabilityJobDefinitionStoppingCondition(maxRuntimeInSeconds);
         }
     }

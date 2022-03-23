@@ -95,32 +95,26 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
             this.arrayElementType = arrayElementType;
             return this;
         }
-
         public Builder arrayElementType(@Nullable StandardSqlDataTypeArgs arrayElementType) {
             this.arrayElementType = Output.ofNullable(arrayElementType);
             return this;
         }
-
         public Builder structType(@Nullable Output<StandardSqlStructTypeArgs> structType) {
             this.structType = structType;
             return this;
         }
-
         public Builder structType(@Nullable StandardSqlStructTypeArgs structType) {
             this.structType = Output.ofNullable(structType);
             return this;
         }
-
         public Builder typeKind(Output<StandardSqlDataTypeTypeKind> typeKind) {
             this.typeKind = Objects.requireNonNull(typeKind);
             return this;
         }
-
         public Builder typeKind(StandardSqlDataTypeTypeKind typeKind) {
             this.typeKind = Output.of(Objects.requireNonNull(typeKind));
             return this;
-        }
-        public StandardSqlDataTypeArgs build() {
+        }        public StandardSqlDataTypeArgs build() {
             return new StandardSqlDataTypeArgs(arrayElementType, structType, typeKind);
         }
     }

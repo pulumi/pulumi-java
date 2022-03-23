@@ -88,17 +88,14 @@ public final class ListOnlineEndpointKeysArgs extends io.pulumi.resources.Invoke
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListOnlineEndpointKeysArgs build() {
+        }        public ListOnlineEndpointKeysArgs build() {
             return new ListOnlineEndpointKeysArgs(endpointName, resourceGroupName, workspaceName);
         }
     }

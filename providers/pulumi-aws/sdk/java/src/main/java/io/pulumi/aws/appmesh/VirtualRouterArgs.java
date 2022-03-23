@@ -124,52 +124,42 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             this.meshName = Objects.requireNonNull(meshName);
             return this;
         }
-
         public Builder meshName(String meshName) {
             this.meshName = Output.of(Objects.requireNonNull(meshName));
             return this;
         }
-
         public Builder meshOwner(@Nullable Output<String> meshOwner) {
             this.meshOwner = meshOwner;
             return this;
         }
-
         public Builder meshOwner(@Nullable String meshOwner) {
             this.meshOwner = Output.ofNullable(meshOwner);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder spec(Output<VirtualRouterSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder spec(VirtualRouterSpecArgs spec) {
             this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VirtualRouterArgs build() {
+        }        public VirtualRouterArgs build() {
             return new VirtualRouterArgs(meshName, meshOwner, name, spec, tags);
         }
     }

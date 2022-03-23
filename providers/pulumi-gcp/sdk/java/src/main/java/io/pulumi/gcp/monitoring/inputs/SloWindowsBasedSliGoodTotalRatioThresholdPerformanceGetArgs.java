@@ -85,22 +85,18 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs e
             this.distributionCut = distributionCut;
             return this;
         }
-
         public Builder distributionCut(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs distributionCut) {
             this.distributionCut = Output.ofNullable(distributionCut);
             return this;
         }
-
         public Builder goodTotalRatio(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
-
         public Builder goodTotalRatio(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs goodTotalRatio) {
             this.goodTotalRatio = Output.ofNullable(goodTotalRatio);
             return this;
-        }
-        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs build() {
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs(distributionCut, goodTotalRatio);
         }
     }

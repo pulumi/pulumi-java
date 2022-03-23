@@ -81,22 +81,18 @@ public final class AlertPolicyConditionConditionMatchedLogArgs extends io.pulumi
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
-
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = Output.ofNullable(labelExtractors);
             return this;
-        }
-        public AlertPolicyConditionConditionMatchedLogArgs build() {
+        }        public AlertPolicyConditionConditionMatchedLogArgs build() {
             return new AlertPolicyConditionConditionMatchedLogArgs(filter, labelExtractors);
         }
     }

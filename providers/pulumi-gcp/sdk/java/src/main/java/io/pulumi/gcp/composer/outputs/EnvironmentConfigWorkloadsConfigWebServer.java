@@ -63,17 +63,14 @@ public final class EnvironmentConfigWorkloadsConfigWebServer {
             this.cpu = cpu;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = storageGb;
             return this;
-        }
-        public EnvironmentConfigWorkloadsConfigWebServer build() {
+        }        public EnvironmentConfigWorkloadsConfigWebServer build() {
             return new EnvironmentConfigWorkloadsConfigWebServer(cpu, memoryGb, storageGb);
         }
     }

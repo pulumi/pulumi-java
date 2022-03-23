@@ -64,12 +64,10 @@ public final class AuthorizerTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AuthorizerTag build() {
+        }        public AuthorizerTag build() {
             return new AuthorizerTag(key, value);
         }
     }

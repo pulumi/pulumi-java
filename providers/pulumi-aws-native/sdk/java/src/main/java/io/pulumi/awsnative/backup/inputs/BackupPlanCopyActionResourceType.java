@@ -67,12 +67,10 @@ public final class BackupPlanCopyActionResourceType extends io.pulumi.resources.
             this.destinationBackupVaultArn = Objects.requireNonNull(destinationBackupVaultArn);
             return this;
         }
-
         public Builder lifecycle(@Nullable BackupPlanLifecycleResourceType lifecycle) {
             this.lifecycle = lifecycle;
             return this;
-        }
-        public BackupPlanCopyActionResourceType build() {
+        }        public BackupPlanCopyActionResourceType build() {
             return new BackupPlanCopyActionResourceType(destinationBackupVaultArn, lifecycle);
         }
     }

@@ -91,32 +91,26 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
-
         public Builder channelId(String channelId) {
             this.channelId = Output.of(Objects.requireNonNull(channelId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ChannelArgs build() {
+        }        public ChannelArgs build() {
             return new ChannelArgs(channelId, description, tags);
         }
     }

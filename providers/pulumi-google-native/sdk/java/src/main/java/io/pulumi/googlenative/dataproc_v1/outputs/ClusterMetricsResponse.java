@@ -70,12 +70,10 @@ public final class ClusterMetricsResponse {
             this.hdfsMetrics = Objects.requireNonNull(hdfsMetrics);
             return this;
         }
-
         public Builder yarnMetrics(Map<String,String> yarnMetrics) {
             this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
             return this;
-        }
-        public ClusterMetricsResponse build() {
+        }        public ClusterMetricsResponse build() {
             return new ClusterMetricsResponse(hdfsMetrics, yarnMetrics);
         }
     }

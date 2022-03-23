@@ -70,12 +70,10 @@ public final class GlobalNetworkTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GlobalNetworkTag build() {
+        }        public GlobalNetworkTag build() {
             return new GlobalNetworkTag(key, value);
         }
     }

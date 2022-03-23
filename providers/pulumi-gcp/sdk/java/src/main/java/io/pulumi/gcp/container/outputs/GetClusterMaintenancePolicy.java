@@ -64,17 +64,23 @@ public final class GetClusterMaintenancePolicy {
             this.dailyMaintenanceWindows = Objects.requireNonNull(dailyMaintenanceWindows);
             return this;
         }
-
+        public Builder dailyMaintenanceWindows(GetClusterMaintenancePolicyDailyMaintenanceWindow... dailyMaintenanceWindows) {
+            return dailyMaintenanceWindows(List.of(dailyMaintenanceWindows));
+        }
         public Builder maintenanceExclusions(List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
             this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
             return this;
         }
-
+        public Builder maintenanceExclusions(GetClusterMaintenancePolicyMaintenanceExclusion... maintenanceExclusions) {
+            return maintenanceExclusions(List.of(maintenanceExclusions));
+        }
         public Builder recurringWindows(List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
             this.recurringWindows = Objects.requireNonNull(recurringWindows);
             return this;
         }
-        public GetClusterMaintenancePolicy build() {
+        public Builder recurringWindows(GetClusterMaintenancePolicyRecurringWindow... recurringWindows) {
+            return recurringWindows(List.of(recurringWindows));
+        }        public GetClusterMaintenancePolicy build() {
             return new GetClusterMaintenancePolicy(dailyMaintenanceWindows, maintenanceExclusions, recurringWindows);
         }
     }

@@ -130,37 +130,33 @@ public final class GetKeyPairResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder filters(@Nullable List<GetKeyPairFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetKeyPairFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyPairId(@Nullable String keyPairId) {
             this.keyPairId = keyPairId;
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetKeyPairResult build() {
+        }        public GetKeyPairResult build() {
             return new GetKeyPairResult(arn, filters, fingerprint, id, keyName, keyPairId, tags);
         }
     }

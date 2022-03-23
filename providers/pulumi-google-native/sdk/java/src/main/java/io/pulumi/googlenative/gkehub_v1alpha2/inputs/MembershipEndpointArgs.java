@@ -130,52 +130,42 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
             this.edgeCluster = edgeCluster;
             return this;
         }
-
         public Builder edgeCluster(@Nullable EdgeClusterArgs edgeCluster) {
             this.edgeCluster = Output.ofNullable(edgeCluster);
             return this;
         }
-
         public Builder gkeCluster(@Nullable Output<GkeClusterArgs> gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
         }
-
         public Builder gkeCluster(@Nullable GkeClusterArgs gkeCluster) {
             this.gkeCluster = Output.ofNullable(gkeCluster);
             return this;
         }
-
         public Builder kubernetesResource(@Nullable Output<KubernetesResourceArgs> kubernetesResource) {
             this.kubernetesResource = kubernetesResource;
             return this;
         }
-
         public Builder kubernetesResource(@Nullable KubernetesResourceArgs kubernetesResource) {
             this.kubernetesResource = Output.ofNullable(kubernetesResource);
             return this;
         }
-
         public Builder multiCloudCluster(@Nullable Output<MultiCloudClusterArgs> multiCloudCluster) {
             this.multiCloudCluster = multiCloudCluster;
             return this;
         }
-
         public Builder multiCloudCluster(@Nullable MultiCloudClusterArgs multiCloudCluster) {
             this.multiCloudCluster = Output.ofNullable(multiCloudCluster);
             return this;
         }
-
         public Builder onPremCluster(@Nullable Output<OnPremClusterArgs> onPremCluster) {
             this.onPremCluster = onPremCluster;
             return this;
         }
-
         public Builder onPremCluster(@Nullable OnPremClusterArgs onPremCluster) {
             this.onPremCluster = Output.ofNullable(onPremCluster);
             return this;
-        }
-        public MembershipEndpointArgs build() {
+        }        public MembershipEndpointArgs build() {
             return new MembershipEndpointArgs(edgeCluster, gkeCluster, kubernetesResource, multiCloudCluster, onPremCluster);
         }
     }

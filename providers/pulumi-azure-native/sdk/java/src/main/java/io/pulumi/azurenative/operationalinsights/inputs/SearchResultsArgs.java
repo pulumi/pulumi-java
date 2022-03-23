@@ -127,52 +127,42 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endSearchTime(@Nullable Output<String> endSearchTime) {
             this.endSearchTime = endSearchTime;
             return this;
         }
-
         public Builder endSearchTime(@Nullable String endSearchTime) {
             this.endSearchTime = Output.ofNullable(endSearchTime);
             return this;
         }
-
         public Builder limit(@Nullable Output<Integer> limit) {
             this.limit = limit;
             return this;
         }
-
         public Builder limit(@Nullable Integer limit) {
             this.limit = Output.ofNullable(limit);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder startSearchTime(@Nullable Output<String> startSearchTime) {
             this.startSearchTime = startSearchTime;
             return this;
         }
-
         public Builder startSearchTime(@Nullable String startSearchTime) {
             this.startSearchTime = Output.ofNullable(startSearchTime);
             return this;
-        }
-        public SearchResultsArgs build() {
+        }        public SearchResultsArgs build() {
             return new SearchResultsArgs(description, endSearchTime, limit, query, startSearchTime);
         }
     }

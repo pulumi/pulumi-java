@@ -169,42 +169,34 @@ public final class GetCertificateTemplateResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder identityConstraints(CertificateIdentityConstraintsResponse identityConstraints) {
             this.identityConstraints = Objects.requireNonNull(identityConstraints);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder passthroughExtensions(CertificateExtensionConstraintsResponse passthroughExtensions) {
             this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
             return this;
         }
-
         public Builder predefinedValues(X509ParametersResponse predefinedValues) {
             this.predefinedValues = Objects.requireNonNull(predefinedValues);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetCertificateTemplateResult build() {
+        }        public GetCertificateTemplateResult build() {
             return new GetCertificateTemplateResult(createTime, description, identityConstraints, labels, name, passthroughExtensions, predefinedValues, updateTime);
         }
     }

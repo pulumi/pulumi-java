@@ -123,52 +123,51 @@ public final class GetFirewallResult {
             this.deleteProtection = deleteProtection;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder endpointIds(@Nullable List<String> endpointIds) {
             this.endpointIds = endpointIds;
             return this;
         }
-
+        public Builder endpointIds(String... endpointIds) {
+            return endpointIds(List.of(endpointIds));
+        }
         public Builder firewallArn(@Nullable String firewallArn) {
             this.firewallArn = firewallArn;
             return this;
         }
-
         public Builder firewallId(@Nullable String firewallId) {
             this.firewallId = firewallId;
             return this;
         }
-
         public Builder firewallPolicyArn(@Nullable String firewallPolicyArn) {
             this.firewallPolicyArn = firewallPolicyArn;
             return this;
         }
-
         public Builder firewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
             return this;
         }
-
         public Builder subnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
             this.subnetChangeProtection = subnetChangeProtection;
             return this;
         }
-
         public Builder subnetMappings(@Nullable List<FirewallSubnetMapping> subnetMappings) {
             this.subnetMappings = subnetMappings;
             return this;
         }
-
+        public Builder subnetMappings(FirewallSubnetMapping... subnetMappings) {
+            return subnetMappings(List.of(subnetMappings));
+        }
         public Builder tags(@Nullable List<FirewallTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFirewallResult build() {
+        public Builder tags(FirewallTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFirewallResult build() {
             return new GetFirewallResult(deleteProtection, description, endpointIds, firewallArn, firewallId, firewallPolicyArn, firewallPolicyChangeProtection, subnetChangeProtection, subnetMappings, tags);
         }
     }

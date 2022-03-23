@@ -122,27 +122,22 @@ public final class Job {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable JobSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable JobStatus status) {
             this.status = status;
             return this;
-        }
-        public Job build() {
+        }        public Job build() {
             return new Job(apiVersion, kind, metadata, spec, status);
         }
     }

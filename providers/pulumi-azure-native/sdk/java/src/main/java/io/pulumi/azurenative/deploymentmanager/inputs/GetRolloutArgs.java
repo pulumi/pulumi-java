@@ -91,17 +91,14 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder retryAttempt(@Nullable Integer retryAttempt) {
             this.retryAttempt = retryAttempt;
             return this;
         }
-
         public Builder rolloutName(String rolloutName) {
             this.rolloutName = Objects.requireNonNull(rolloutName);
             return this;
-        }
-        public GetRolloutArgs build() {
+        }        public GetRolloutArgs build() {
             return new GetRolloutArgs(resourceGroupName, retryAttempt, rolloutName);
         }
     }

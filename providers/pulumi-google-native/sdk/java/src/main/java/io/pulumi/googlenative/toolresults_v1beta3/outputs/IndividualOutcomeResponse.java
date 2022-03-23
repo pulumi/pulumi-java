@@ -87,22 +87,18 @@ public final class IndividualOutcomeResponse {
             this.multistepNumber = Objects.requireNonNull(multistepNumber);
             return this;
         }
-
         public Builder outcomeSummary(String outcomeSummary) {
             this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
             return this;
         }
-
         public Builder runDuration(DurationResponse runDuration) {
             this.runDuration = Objects.requireNonNull(runDuration);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
-        }
-        public IndividualOutcomeResponse build() {
+        }        public IndividualOutcomeResponse build() {
             return new IndividualOutcomeResponse(multistepNumber, outcomeSummary, runDuration, stepId);
         }
     }

@@ -78,17 +78,14 @@ public final class GetBitbucketServerConfigArgs extends io.pulumi.resources.Invo
             this.bitbucketServerConfigId = Objects.requireNonNull(bitbucketServerConfigId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetBitbucketServerConfigArgs build() {
+        }        public GetBitbucketServerConfigArgs build() {
             return new GetBitbucketServerConfigArgs(bitbucketServerConfigId, location, project);
         }
     }

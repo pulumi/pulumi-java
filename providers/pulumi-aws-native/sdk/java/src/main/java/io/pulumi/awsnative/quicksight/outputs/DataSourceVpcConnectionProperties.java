@@ -51,8 +51,7 @@ public final class DataSourceVpcConnectionProperties {
         public Builder vpcConnectionArn(String vpcConnectionArn) {
             this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
             return this;
-        }
-        public DataSourceVpcConnectionProperties build() {
+        }        public DataSourceVpcConnectionProperties build() {
             return new DataSourceVpcConnectionProperties(vpcConnectionArn);
         }
     }

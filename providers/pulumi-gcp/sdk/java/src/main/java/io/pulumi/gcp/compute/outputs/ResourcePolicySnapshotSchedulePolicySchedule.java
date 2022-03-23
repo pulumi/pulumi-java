@@ -95,17 +95,14 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
             this.dailySchedule = dailySchedule;
             return this;
         }
-
         public Builder hourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
-
         public Builder weeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicySchedule build() {
+        }        public ResourcePolicySnapshotSchedulePolicySchedule build() {
             return new ResourcePolicySnapshotSchedulePolicySchedule(dailySchedule, hourlySchedule, weeklySchedule);
         }
     }

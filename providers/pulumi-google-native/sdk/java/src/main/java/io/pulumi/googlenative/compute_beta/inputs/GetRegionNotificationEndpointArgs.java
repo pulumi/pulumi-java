@@ -78,17 +78,14 @@ public final class GetRegionNotificationEndpointArgs extends io.pulumi.resources
             this.notificationEndpoint = Objects.requireNonNull(notificationEndpoint);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionNotificationEndpointArgs build() {
+        }        public GetRegionNotificationEndpointArgs build() {
             return new GetRegionNotificationEndpointArgs(notificationEndpoint, project, region);
         }
     }

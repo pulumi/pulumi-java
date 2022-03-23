@@ -187,92 +187,74 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder liveStageEtag(@Nullable Output<String> liveStageEtag) {
             this.liveStageEtag = liveStageEtag;
             return this;
         }
-
         public Builder liveStageEtag(@Nullable String liveStageEtag) {
             this.liveStageEtag = Output.ofNullable(liveStageEtag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publish(@Nullable Output<Boolean> publish) {
             this.publish = publish;
             return this;
         }
-
         public Builder publish(@Nullable Boolean publish) {
             this.publish = Output.ofNullable(publish);
             return this;
         }
-
         public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable String runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public FunctionState build() {
+        }        public FunctionState build() {
             return new FunctionState(arn, code, comment, etag, liveStageEtag, name, publish, runtime, status);
         }
     }

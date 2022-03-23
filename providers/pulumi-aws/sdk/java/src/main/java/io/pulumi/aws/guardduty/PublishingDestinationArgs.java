@@ -106,42 +106,34 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
-
         public Builder destinationArn(String destinationArn) {
             this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
-
         public Builder destinationType(@Nullable Output<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
-
         public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Output.ofNullable(destinationType);
             return this;
         }
-
         public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
-
         public Builder detectorId(String detectorId) {
             this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
-
         public Builder kmsKeyArn(Output<String> kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
-
         public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Output.of(Objects.requireNonNull(kmsKeyArn));
             return this;
-        }
-        public PublishingDestinationArgs build() {
+        }        public PublishingDestinationArgs build() {
             return new PublishingDestinationArgs(destinationArn, destinationType, detectorId, kmsKeyArn);
         }
     }

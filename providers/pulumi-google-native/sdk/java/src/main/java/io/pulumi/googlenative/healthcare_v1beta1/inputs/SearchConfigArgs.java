@@ -62,12 +62,13 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.searchParameters = searchParameters;
             return this;
         }
-
         public Builder searchParameters(@Nullable List<SearchParameterArgs> searchParameters) {
             this.searchParameters = Output.ofNullable(searchParameters);
             return this;
         }
-        public SearchConfigArgs build() {
+        public Builder searchParameters(SearchParameterArgs... searchParameters) {
+            return searchParameters(List.of(searchParameters));
+        }        public SearchConfigArgs build() {
             return new SearchConfigArgs(searchParameters);
         }
     }

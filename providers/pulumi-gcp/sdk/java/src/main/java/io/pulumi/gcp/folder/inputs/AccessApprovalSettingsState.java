@@ -132,52 +132,48 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
             this.enrolledAncestor = enrolledAncestor;
             return this;
         }
-
         public Builder enrolledAncestor(@Nullable Boolean enrolledAncestor) {
             this.enrolledAncestor = Output.ofNullable(enrolledAncestor);
             return this;
         }
-
         public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
             this.enrolledServices = enrolledServices;
             return this;
         }
-
         public Builder enrolledServices(@Nullable List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
             this.enrolledServices = Output.ofNullable(enrolledServices);
             return this;
         }
-
+        public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceGetArgs... enrolledServices) {
+            return enrolledServices(List.of(enrolledServices));
+        }
         public Builder folderId(@Nullable Output<String> folderId) {
             this.folderId = folderId;
             return this;
         }
-
         public Builder folderId(@Nullable String folderId) {
             this.folderId = Output.ofNullable(folderId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
-
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
             this.notificationEmails = Output.ofNullable(notificationEmails);
             return this;
         }
-        public AccessApprovalSettingsState build() {
+        public Builder notificationEmails(String... notificationEmails) {
+            return notificationEmails(List.of(notificationEmails));
+        }        public AccessApprovalSettingsState build() {
             return new AccessApprovalSettingsState(enrolledAncestor, enrolledServices, folderId, name, notificationEmails);
         }
     }

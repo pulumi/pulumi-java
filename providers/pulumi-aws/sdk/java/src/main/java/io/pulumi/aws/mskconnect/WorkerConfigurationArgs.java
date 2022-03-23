@@ -90,32 +90,26 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder propertiesFileContent(Output<String> propertiesFileContent) {
             this.propertiesFileContent = Objects.requireNonNull(propertiesFileContent);
             return this;
         }
-
         public Builder propertiesFileContent(String propertiesFileContent) {
             this.propertiesFileContent = Output.of(Objects.requireNonNull(propertiesFileContent));
             return this;
-        }
-        public WorkerConfigurationArgs build() {
+        }        public WorkerConfigurationArgs build() {
             return new WorkerConfigurationArgs(description, name, propertiesFileContent);
         }
     }

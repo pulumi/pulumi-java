@@ -80,22 +80,18 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
             this.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
-
         public Builder customErrorPageUrl(@Nullable String customErrorPageUrl) {
             this.customErrorPageUrl = Output.ofNullable(customErrorPageUrl);
             return this;
         }
-
         public Builder statusCode(@Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder statusCode(@Nullable Either<String,ApplicationGatewayCustomErrorStatusCode> statusCode) {
             this.statusCode = Output.ofNullable(statusCode);
             return this;
-        }
-        public ApplicationGatewayCustomErrorArgs build() {
+        }        public ApplicationGatewayCustomErrorArgs build() {
             return new ApplicationGatewayCustomErrorArgs(customErrorPageUrl, statusCode);
         }
     }

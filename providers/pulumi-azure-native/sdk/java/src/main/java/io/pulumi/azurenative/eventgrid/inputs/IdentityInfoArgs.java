@@ -116,42 +116,34 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,IdentityType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,IdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public IdentityInfoArgs build() {
+        }        public IdentityInfoArgs build() {
             return new IdentityInfoArgs(principalId, tenantId, type, userAssignedIdentities);
         }
     }

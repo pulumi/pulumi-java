@@ -77,12 +77,13 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse extends io.pu
             this.placeIds = Objects.requireNonNull(placeIds);
             return this;
         }
-
+        public Builder placeIds(String... placeIds) {
+            return placeIds(List.of(placeIds));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudRetailV2alphaFulfillmentInfoResponse build() {
+        }        public GoogleCloudRetailV2alphaFulfillmentInfoResponse build() {
             return new GoogleCloudRetailV2alphaFulfillmentInfoResponse(placeIds, type);
         }
     }

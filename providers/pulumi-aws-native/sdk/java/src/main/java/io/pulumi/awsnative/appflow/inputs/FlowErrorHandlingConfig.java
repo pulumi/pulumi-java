@@ -79,17 +79,14 @@ public final class FlowErrorHandlingConfig extends io.pulumi.resources.InvokeArg
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder failOnFirstError(@Nullable Boolean failOnFirstError) {
             this.failOnFirstError = failOnFirstError;
             return this;
-        }
-        public FlowErrorHandlingConfig build() {
+        }        public FlowErrorHandlingConfig build() {
             return new FlowErrorHandlingConfig(bucketName, bucketPrefix, failOnFirstError);
         }
     }

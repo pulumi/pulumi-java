@@ -103,22 +103,21 @@ public final class MaintenancePolicyResponse {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder weeklyMaintenanceWindow(List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
             return this;
         }
-        public MaintenancePolicyResponse build() {
+        public Builder weeklyMaintenanceWindow(WeeklyMaintenanceWindowResponse... weeklyMaintenanceWindow) {
+            return weeklyMaintenanceWindow(List.of(weeklyMaintenanceWindow));
+        }        public MaintenancePolicyResponse build() {
             return new MaintenancePolicyResponse(createTime, description, updateTime, weeklyMaintenanceWindow);
         }
     }

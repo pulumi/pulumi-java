@@ -57,12 +57,13 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
             this.preflightOptions = preflightOptions;
             return this;
         }
-
+        public Builder preflightOptions(String... preflightOptions) {
+            return preflightOptions(List.of(preflightOptions));
+        }
         public Builder preflightSupported(@Nullable Boolean preflightSupported) {
             this.preflightSupported = preflightSupported;
             return this;
-        }
-        public ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions build() {
+        }        public ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions build() {
             return new ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions(preflightOptions, preflightSupported);
         }
     }

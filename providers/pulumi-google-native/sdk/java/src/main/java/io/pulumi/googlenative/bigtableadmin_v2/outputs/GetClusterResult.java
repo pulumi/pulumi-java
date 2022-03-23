@@ -152,37 +152,30 @@ public final class GetClusterResult {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
-
         public Builder defaultStorageType(String defaultStorageType) {
             this.defaultStorageType = Objects.requireNonNull(defaultStorageType);
             return this;
         }
-
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serveNodes(Integer serveNodes) {
             this.serveNodes = Objects.requireNonNull(serveNodes);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(clusterConfig, defaultStorageType, encryptionConfig, location, name, serveNodes, state);
         }
     }

@@ -53,12 +53,10 @@ public final class NetworkPerformanceConfigResponse {
             this.externalIpEgressBandwidthTier = Objects.requireNonNull(externalIpEgressBandwidthTier);
             return this;
         }
-
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
-        }
-        public NetworkPerformanceConfigResponse build() {
+        }        public NetworkPerformanceConfigResponse build() {
             return new NetworkPerformanceConfigResponse(externalIpEgressBandwidthTier, totalEgressBandwidthTier);
         }
     }

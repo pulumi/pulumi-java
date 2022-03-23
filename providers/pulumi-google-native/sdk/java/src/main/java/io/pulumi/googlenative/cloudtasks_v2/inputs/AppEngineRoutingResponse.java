@@ -108,22 +108,18 @@ public final class AppEngineRoutingResponse extends io.pulumi.resources.InvokeAr
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public AppEngineRoutingResponse build() {
+        }        public AppEngineRoutingResponse build() {
             return new AppEngineRoutingResponse(host, instance, service, version);
         }
     }

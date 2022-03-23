@@ -71,12 +71,10 @@ public final class GroupResourceQuery {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GroupResourceQuery build() {
+        }        public GroupResourceQuery build() {
             return new GroupResourceQuery(query, type);
         }
     }

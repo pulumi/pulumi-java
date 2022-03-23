@@ -107,6 +107,18 @@ func (ts TypeShape) ParameterTypesTransformed(f func(TypeShape) string) []string
 	return parameterTypes
 }
 
+func (ts TypeShape) ListType(ctx *classFileContext) string {
+	if ts.Type.String() == names.List.String() {
+		for _, a := range ts.Parameters {
+			if strings.HasPrefix(a.Type.String(), names.JavaUtil.Dot("").String()) {
+				continue
+			}
+			return a.ToCode(ctx.imports)
+		}
+	}
+	return ""
+}
+
 func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 	shape := fmt.Sprintf("%s.<%s>builder(%s)",
 		imports.Ref(names.TypeShape),

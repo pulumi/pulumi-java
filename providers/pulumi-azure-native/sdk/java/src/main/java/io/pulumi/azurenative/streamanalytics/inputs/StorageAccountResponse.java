@@ -78,12 +78,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
-        }
-        public StorageAccountResponse build() {
+        }        public StorageAccountResponse build() {
             return new StorageAccountResponse(accountKey, accountName);
         }
     }

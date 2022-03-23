@@ -183,32 +183,38 @@ public final class BudgetBudgetFilter {
             this.creditTypes = creditTypes;
             return this;
         }
-
+        public Builder creditTypes(String... creditTypes) {
+            return creditTypes(List.of(creditTypes));
+        }
         public Builder creditTypesTreatment(@Nullable String creditTypesTreatment) {
             this.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder projects(@Nullable List<String> projects) {
             this.projects = projects;
             return this;
         }
-
+        public Builder projects(String... projects) {
+            return projects(List.of(projects));
+        }
         public Builder services(@Nullable List<String> services) {
             this.services = services;
             return this;
         }
-
+        public Builder services(String... services) {
+            return services(List.of(services));
+        }
         public Builder subaccounts(@Nullable List<String> subaccounts) {
             this.subaccounts = subaccounts;
             return this;
         }
-        public BudgetBudgetFilter build() {
+        public Builder subaccounts(String... subaccounts) {
+            return subaccounts(List.of(subaccounts));
+        }        public BudgetBudgetFilter build() {
             return new BudgetBudgetFilter(creditTypes, creditTypesTreatment, labels, projects, services, subaccounts);
         }
     }

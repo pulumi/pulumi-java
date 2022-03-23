@@ -57,8 +57,7 @@ public final class BillingAccountSinkBigqueryOptions {
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
-        }
-        public BillingAccountSinkBigqueryOptions build() {
+        }        public BillingAccountSinkBigqueryOptions build() {
             return new BillingAccountSinkBigqueryOptions(usePartitionedTables);
         }
     }

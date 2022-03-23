@@ -206,57 +206,55 @@ public final class GetDetectorResult {
             this.arn = arn;
             return this;
         }
-
         public Builder associatedModels(@Nullable List<DetectorModel> associatedModels) {
             this.associatedModels = associatedModels;
             return this;
         }
-
+        public Builder associatedModels(DetectorModel... associatedModels) {
+            return associatedModels(List.of(associatedModels));
+        }
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder detectorVersionId(@Nullable String detectorVersionId) {
             this.detectorVersionId = detectorVersionId;
             return this;
         }
-
         public Builder detectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
             this.detectorVersionStatus = detectorVersionStatus;
             return this;
         }
-
         public Builder eventType(@Nullable DetectorEventType eventType) {
             this.eventType = eventType;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder ruleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
             this.ruleExecutionMode = ruleExecutionMode;
             return this;
         }
-
         public Builder rules(@Nullable List<DetectorRule> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(DetectorRule... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDetectorResult build() {
+        public Builder tags(DetectorTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDetectorResult build() {
             return new GetDetectorResult(arn, associatedModels, createdTime, description, detectorVersionId, detectorVersionStatus, eventType, lastUpdatedTime, ruleExecutionMode, rules, tags);
         }
     }

@@ -147,62 +147,59 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
             this.buttons = buttons;
             return this;
         }
-
         public Builder buttons(@Nullable List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs> buttons) {
             this.buttons = Output.ofNullable(buttons);
             return this;
         }
-
+        public Builder buttons(GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder columnProperties(@Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties) {
             this.columnProperties = columnProperties;
             return this;
         }
-
         public Builder columnProperties(@Nullable List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs> columnProperties) {
             this.columnProperties = Output.ofNullable(columnProperties);
             return this;
         }
-
+        public Builder columnProperties(GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs... columnProperties) {
+            return columnProperties(List.of(columnProperties));
+        }
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder rows(@Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows) {
             this.rows = rows;
             return this;
         }
-
         public Builder rows(@Nullable List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs> rows) {
             this.rows = Output.ofNullable(rows);
             return this;
         }
-
+        public Builder rows(GoogleCloudDialogflowV2IntentMessageTableCardRowArgs... rows) {
+            return rows(List.of(rows));
+        }
         public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageTableCardArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageTableCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardArgs(buttons, columnProperties, image, rows, subtitle, title);
         }
     }

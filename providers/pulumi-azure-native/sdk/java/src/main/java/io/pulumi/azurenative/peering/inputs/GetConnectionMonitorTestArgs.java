@@ -88,17 +88,14 @@ public final class GetConnectionMonitorTestArgs extends io.pulumi.resources.Invo
             this.connectionMonitorTestName = Objects.requireNonNull(connectionMonitorTestName);
             return this;
         }
-
         public Builder peeringServiceName(String peeringServiceName) {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConnectionMonitorTestArgs build() {
+        }        public GetConnectionMonitorTestArgs build() {
             return new GetConnectionMonitorTestArgs(connectionMonitorTestName, peeringServiceName, resourceGroupName);
         }
     }

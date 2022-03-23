@@ -61,12 +61,10 @@ public final class EventHubConsumerGroupNameArgs extends io.pulumi.resources.Res
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public EventHubConsumerGroupNameArgs build() {
+        }        public EventHubConsumerGroupNameArgs build() {
             return new EventHubConsumerGroupNameArgs(name);
         }
     }

@@ -291,122 +291,98 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             this.balancingMode = balancingMode;
             return this;
         }
-
         public Builder balancingMode(@Nullable String balancingMode) {
             this.balancingMode = Output.ofNullable(balancingMode);
             return this;
         }
-
         public Builder capacityScaler(@Nullable Output<Double> capacityScaler) {
             this.capacityScaler = capacityScaler;
             return this;
         }
-
         public Builder capacityScaler(@Nullable Double capacityScaler) {
             this.capacityScaler = Output.ofNullable(capacityScaler);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder failover(@Nullable Output<Boolean> failover) {
             this.failover = failover;
             return this;
         }
-
         public Builder failover(@Nullable Boolean failover) {
             this.failover = Output.ofNullable(failover);
             return this;
         }
-
         public Builder group(Output<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder group(String group) {
             this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
-
         public Builder maxConnections(@Nullable Output<Integer> maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
-
         public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = Output.ofNullable(maxConnections);
             return this;
         }
-
         public Builder maxConnectionsPerEndpoint(@Nullable Output<Integer> maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
             return this;
         }
-
         public Builder maxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = Output.ofNullable(maxConnectionsPerEndpoint);
             return this;
         }
-
         public Builder maxConnectionsPerInstance(@Nullable Output<Integer> maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = maxConnectionsPerInstance;
             return this;
         }
-
         public Builder maxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = Output.ofNullable(maxConnectionsPerInstance);
             return this;
         }
-
         public Builder maxRate(@Nullable Output<Integer> maxRate) {
             this.maxRate = maxRate;
             return this;
         }
-
         public Builder maxRate(@Nullable Integer maxRate) {
             this.maxRate = Output.ofNullable(maxRate);
             return this;
         }
-
         public Builder maxRatePerEndpoint(@Nullable Output<Double> maxRatePerEndpoint) {
             this.maxRatePerEndpoint = maxRatePerEndpoint;
             return this;
         }
-
         public Builder maxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
             this.maxRatePerEndpoint = Output.ofNullable(maxRatePerEndpoint);
             return this;
         }
-
         public Builder maxRatePerInstance(@Nullable Output<Double> maxRatePerInstance) {
             this.maxRatePerInstance = maxRatePerInstance;
             return this;
         }
-
         public Builder maxRatePerInstance(@Nullable Double maxRatePerInstance) {
             this.maxRatePerInstance = Output.ofNullable(maxRatePerInstance);
             return this;
         }
-
         public Builder maxUtilization(@Nullable Output<Double> maxUtilization) {
             this.maxUtilization = maxUtilization;
             return this;
         }
-
         public Builder maxUtilization(@Nullable Double maxUtilization) {
             this.maxUtilization = Output.ofNullable(maxUtilization);
             return this;
-        }
-        public RegionBackendServiceBackendArgs build() {
+        }        public RegionBackendServiceBackendArgs build() {
             return new RegionBackendServiceBackendArgs(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }
     }

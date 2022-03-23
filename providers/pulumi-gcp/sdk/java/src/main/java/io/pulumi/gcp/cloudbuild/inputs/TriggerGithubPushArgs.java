@@ -91,32 +91,26 @@ public final class TriggerGithubPushArgs extends io.pulumi.resources.ResourceArg
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Output.ofNullable(invertRegex);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public TriggerGithubPushArgs build() {
+        }        public TriggerGithubPushArgs build() {
             return new TriggerGithubPushArgs(branch, invertRegex, tag);
         }
     }

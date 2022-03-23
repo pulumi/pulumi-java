@@ -54,8 +54,7 @@ public final class GetLocationFSxWindowsArgs extends io.pulumi.resources.InvokeA
         public Builder locationArn(String locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
-        }
-        public GetLocationFSxWindowsArgs build() {
+        }        public GetLocationFSxWindowsArgs build() {
             return new GetLocationFSxWindowsArgs(locationArn);
         }
     }

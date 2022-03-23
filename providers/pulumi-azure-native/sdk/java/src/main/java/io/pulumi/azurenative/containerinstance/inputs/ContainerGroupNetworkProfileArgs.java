@@ -60,12 +60,10 @@ public final class ContainerGroupNetworkProfileArgs extends io.pulumi.resources.
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public ContainerGroupNetworkProfileArgs build() {
+        }        public ContainerGroupNetworkProfileArgs build() {
             return new ContainerGroupNetworkProfileArgs(id);
         }
     }

@@ -88,17 +88,14 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
-        }
-        public MabFileFolderProtectedItemExtendedInfoResponse build() {
+        }        public MabFileFolderProtectedItemExtendedInfoResponse build() {
             return new MabFileFolderProtectedItemExtendedInfoResponse(lastRefreshedAt, oldestRecoveryPoint, recoveryPointCount);
         }
     }

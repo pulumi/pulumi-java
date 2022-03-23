@@ -54,12 +54,10 @@ public final class RuleGroupCustomAction {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
-
         public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
-        }
-        public RuleGroupCustomAction build() {
+        }        public RuleGroupCustomAction build() {
             return new RuleGroupCustomAction(actionDefinition, actionName);
         }
     }

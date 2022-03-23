@@ -86,17 +86,14 @@ public final class ContainerResourceMetricSource {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public ContainerResourceMetricSource build() {
+        }        public ContainerResourceMetricSource build() {
             return new ContainerResourceMetricSource(container, name, target);
         }
     }

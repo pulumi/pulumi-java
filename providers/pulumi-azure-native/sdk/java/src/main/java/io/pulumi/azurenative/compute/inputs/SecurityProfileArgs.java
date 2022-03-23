@@ -98,32 +98,26 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
-
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = Output.ofNullable(encryptionAtHost);
             return this;
         }
-
         public Builder securityType(@Nullable Output<Either<String,SecurityTypes>> securityType) {
             this.securityType = securityType;
             return this;
         }
-
         public Builder securityType(@Nullable Either<String,SecurityTypes> securityType) {
             this.securityType = Output.ofNullable(securityType);
             return this;
         }
-
         public Builder uefiSettings(@Nullable Output<UefiSettingsArgs> uefiSettings) {
             this.uefiSettings = uefiSettings;
             return this;
         }
-
         public Builder uefiSettings(@Nullable UefiSettingsArgs uefiSettings) {
             this.uefiSettings = Output.ofNullable(uefiSettings);
             return this;
-        }
-        public SecurityProfileArgs build() {
+        }        public SecurityProfileArgs build() {
             return new SecurityProfileArgs(encryptionAtHost, securityType, uefiSettings);
         }
     }

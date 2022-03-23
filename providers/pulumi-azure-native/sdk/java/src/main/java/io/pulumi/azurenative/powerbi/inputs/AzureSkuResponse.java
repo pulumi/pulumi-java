@@ -72,12 +72,10 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public AzureSkuResponse build() {
+        }        public AzureSkuResponse build() {
             return new AzureSkuResponse(name, tier);
         }
     }

@@ -71,12 +71,10 @@ public final class GrantConstraint {
             this.encryptionContextEquals = encryptionContextEquals;
             return this;
         }
-
         public Builder encryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
             this.encryptionContextSubset = encryptionContextSubset;
             return this;
-        }
-        public GrantConstraint build() {
+        }        public GrantConstraint build() {
             return new GrantConstraint(encryptionContextEquals, encryptionContextSubset);
         }
     }

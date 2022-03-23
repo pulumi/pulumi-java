@@ -56,12 +56,10 @@ public final class AzureNodePoolConfigSshConfigArgs extends io.pulumi.resources.
             this.authorizedKey = Objects.requireNonNull(authorizedKey);
             return this;
         }
-
         public Builder authorizedKey(String authorizedKey) {
             this.authorizedKey = Output.of(Objects.requireNonNull(authorizedKey));
             return this;
-        }
-        public AzureNodePoolConfigSshConfigArgs build() {
+        }        public AzureNodePoolConfigSshConfigArgs build() {
             return new AzureNodePoolConfigSshConfigArgs(authorizedKey);
         }
     }

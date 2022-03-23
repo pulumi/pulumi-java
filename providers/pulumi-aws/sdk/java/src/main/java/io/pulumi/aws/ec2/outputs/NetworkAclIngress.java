@@ -188,47 +188,38 @@ public final class NetworkAclIngress {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder icmpCode(@Nullable Integer icmpCode) {
             this.icmpCode = icmpCode;
             return this;
         }
-
         public Builder icmpType(@Nullable Integer icmpType) {
             this.icmpType = icmpType;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder ruleNo(Integer ruleNo) {
             this.ruleNo = Objects.requireNonNull(ruleNo);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
-        }
-        public NetworkAclIngress build() {
+        }        public NetworkAclIngress build() {
             return new NetworkAclIngress(action, cidrBlock, fromPort, icmpCode, icmpType, ipv6CidrBlock, protocol, ruleNo, toPort);
         }
     }

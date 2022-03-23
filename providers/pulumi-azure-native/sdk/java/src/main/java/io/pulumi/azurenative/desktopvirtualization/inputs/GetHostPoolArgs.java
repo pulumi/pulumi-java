@@ -72,12 +72,10 @@ public final class GetHostPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.hostPoolName = Objects.requireNonNull(hostPoolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetHostPoolArgs build() {
+        }        public GetHostPoolArgs build() {
             return new GetHostPoolArgs(hostPoolName, resourceGroupName);
         }
     }

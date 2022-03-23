@@ -222,112 +222,90 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             this.autoSync = autoSync;
             return this;
         }
-
         public Builder autoSync(@Nullable Boolean autoSync) {
             this.autoSync = Output.ofNullable(autoSync);
             return this;
         }
-
         public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folderPath(@Nullable Output<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder publishRunbook(@Nullable Output<Boolean> publishRunbook) {
             this.publishRunbook = publishRunbook;
             return this;
         }
-
         public Builder publishRunbook(@Nullable Boolean publishRunbook) {
             this.publishRunbook = Output.ofNullable(publishRunbook);
             return this;
         }
-
         public Builder repoUrl(@Nullable Output<String> repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
-
         public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = Output.ofNullable(repoUrl);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityToken(@Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
-
         public Builder securityToken(@Nullable SourceControlSecurityTokenPropertiesArgs securityToken) {
             this.securityToken = Output.ofNullable(securityToken);
             return this;
         }
-
         public Builder sourceControlName(@Nullable Output<String> sourceControlName) {
             this.sourceControlName = sourceControlName;
             return this;
         }
-
         public Builder sourceControlName(@Nullable String sourceControlName) {
             this.sourceControlName = Output.ofNullable(sourceControlName);
             return this;
         }
-
         public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
             this.sourceType = Output.ofNullable(sourceType);
             return this;
-        }
-        public SourceControlArgs build() {
+        }        public SourceControlArgs build() {
             return new SourceControlArgs(autoSync, automationAccountName, branch, description, folderPath, publishRunbook, repoUrl, resourceGroupName, securityToken, sourceControlName, sourceType);
         }
     }

@@ -84,17 +84,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
             this.deletionTime = Objects.requireNonNull(deletionTime);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder namespaceUrl(String namespaceUrl) {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
-        }
-        public ManagedZoneServiceDirectoryConfigNamespaceResponse build() {
+        }        public ManagedZoneServiceDirectoryConfigNamespaceResponse build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceResponse(deletionTime, kind, namespaceUrl);
         }
     }

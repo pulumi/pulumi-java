@@ -75,12 +75,10 @@ public final class FlowFailoverConfig extends io.pulumi.resources.InvokeArgs {
             this.recoveryWindow = recoveryWindow;
             return this;
         }
-
         public Builder state(@Nullable FlowFailoverConfigState state) {
             this.state = state;
             return this;
-        }
-        public FlowFailoverConfig build() {
+        }        public FlowFailoverConfig build() {
             return new FlowFailoverConfig(recoveryWindow, state);
         }
     }

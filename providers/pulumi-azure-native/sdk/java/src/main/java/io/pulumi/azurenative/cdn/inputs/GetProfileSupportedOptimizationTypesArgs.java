@@ -72,12 +72,10 @@ public final class GetProfileSupportedOptimizationTypesArgs extends io.pulumi.re
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetProfileSupportedOptimizationTypesArgs build() {
+        }        public GetProfileSupportedOptimizationTypesArgs build() {
             return new GetProfileSupportedOptimizationTypesArgs(profileName, resourceGroupName);
         }
     }

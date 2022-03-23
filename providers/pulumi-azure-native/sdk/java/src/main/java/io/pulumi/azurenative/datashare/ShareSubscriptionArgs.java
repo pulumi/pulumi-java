@@ -138,62 +138,50 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder invitationId(Output<String> invitationId) {
             this.invitationId = Objects.requireNonNull(invitationId);
             return this;
         }
-
         public Builder invitationId(String invitationId) {
             this.invitationId = Output.of(Objects.requireNonNull(invitationId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareSubscriptionName(@Nullable Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
-
         public Builder shareSubscriptionName(@Nullable String shareSubscriptionName) {
             this.shareSubscriptionName = Output.ofNullable(shareSubscriptionName);
             return this;
         }
-
         public Builder sourceShareLocation(Output<String> sourceShareLocation) {
             this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation);
             return this;
         }
-
         public Builder sourceShareLocation(String sourceShareLocation) {
             this.sourceShareLocation = Output.of(Objects.requireNonNull(sourceShareLocation));
             return this;
-        }
-        public ShareSubscriptionArgs build() {
+        }        public ShareSubscriptionArgs build() {
             return new ShareSubscriptionArgs(accountName, expirationDate, invitationId, resourceGroupName, shareSubscriptionName, sourceShareLocation);
         }
     }

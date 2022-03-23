@@ -78,12 +78,10 @@ public final class SettingResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SettingResponse build() {
+        }        public SettingResponse build() {
             return new SettingResponse(name, value);
         }
     }

@@ -85,22 +85,21 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<Object> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(Object... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public JobInputsArgs build() {
+        }        public JobInputsArgs build() {
             return new JobInputsArgs(inputs, odataType);
         }
     }

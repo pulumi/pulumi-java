@@ -72,12 +72,10 @@ public final class BucketRedirectAllRequestsTo {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder protocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public BucketRedirectAllRequestsTo build() {
+        }        public BucketRedirectAllRequestsTo build() {
             return new BucketRedirectAllRequestsTo(hostName, protocol);
         }
     }

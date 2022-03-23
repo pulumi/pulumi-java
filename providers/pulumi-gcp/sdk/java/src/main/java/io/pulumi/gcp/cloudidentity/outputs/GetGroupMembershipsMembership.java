@@ -129,42 +129,43 @@ public final class GetGroupMembershipsMembership {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder memberKeys(List<GetGroupMembershipsMembershipMemberKey> memberKeys) {
             this.memberKeys = Objects.requireNonNull(memberKeys);
             return this;
         }
-
+        public Builder memberKeys(GetGroupMembershipsMembershipMemberKey... memberKeys) {
+            return memberKeys(List.of(memberKeys));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder preferredMemberKeys(List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys) {
             this.preferredMemberKeys = Objects.requireNonNull(preferredMemberKeys);
             return this;
         }
-
+        public Builder preferredMemberKeys(GetGroupMembershipsMembershipPreferredMemberKey... preferredMemberKeys) {
+            return preferredMemberKeys(List.of(preferredMemberKeys));
+        }
         public Builder roles(List<GetGroupMembershipsMembershipRole> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
+        public Builder roles(GetGroupMembershipsMembershipRole... roles) {
+            return roles(List.of(roles));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetGroupMembershipsMembership build() {
+        }        public GetGroupMembershipsMembership build() {
             return new GetGroupMembershipsMembership(createTime, group, memberKeys, name, preferredMemberKeys, roles, type, updateTime);
         }
     }

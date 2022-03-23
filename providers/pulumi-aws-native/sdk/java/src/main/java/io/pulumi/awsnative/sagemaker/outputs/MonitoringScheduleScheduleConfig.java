@@ -51,8 +51,7 @@ public final class MonitoringScheduleScheduleConfig {
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
-        }
-        public MonitoringScheduleScheduleConfig build() {
+        }        public MonitoringScheduleScheduleConfig build() {
             return new MonitoringScheduleScheduleConfig(scheduleExpression);
         }
     }

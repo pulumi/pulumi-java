@@ -97,32 +97,26 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
-
         public Builder attachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsArgs attachNewDataDiskOptions) {
             this.attachNewDataDiskOptions = Output.ofNullable(attachNewDataDiskOptions);
             return this;
         }
-
         public Builder existingLabDiskId(@Nullable Output<String> existingLabDiskId) {
             this.existingLabDiskId = existingLabDiskId;
             return this;
         }
-
         public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
             this.existingLabDiskId = Output.ofNullable(existingLabDiskId);
             return this;
         }
-
         public Builder hostCaching(@Nullable Output<Either<String,HostCachingOptions>> hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
-
         public Builder hostCaching(@Nullable Either<String,HostCachingOptions> hostCaching) {
             this.hostCaching = Output.ofNullable(hostCaching);
             return this;
-        }
-        public DataDiskPropertiesArgs build() {
+        }        public DataDiskPropertiesArgs build() {
             return new DataDiskPropertiesArgs(attachNewDataDiskOptions, existingLabDiskId, hostCaching);
         }
     }

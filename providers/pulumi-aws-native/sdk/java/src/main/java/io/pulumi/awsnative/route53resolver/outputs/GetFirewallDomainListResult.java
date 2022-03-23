@@ -203,52 +203,45 @@ public final class GetFirewallDomainListResult {
             this.arn = arn;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
-
         public Builder domainCount(@Nullable Integer domainCount) {
             this.domainCount = domainCount;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder managedOwnerName(@Nullable String managedOwnerName) {
             this.managedOwnerName = managedOwnerName;
             return this;
         }
-
         public Builder modificationTime(@Nullable String modificationTime) {
             this.modificationTime = modificationTime;
             return this;
         }
-
         public Builder status(@Nullable FirewallDomainListStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
-
         public Builder tags(@Nullable List<FirewallDomainListTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFirewallDomainListResult build() {
+        public Builder tags(FirewallDomainListTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFirewallDomainListResult build() {
             return new GetFirewallDomainListResult(arn, creationTime, creatorRequestId, domainCount, id, managedOwnerName, modificationTime, status, statusMessage, tags);
         }
     }

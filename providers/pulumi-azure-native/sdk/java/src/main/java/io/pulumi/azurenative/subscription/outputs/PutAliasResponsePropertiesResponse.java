@@ -71,12 +71,10 @@ public final class PutAliasResponsePropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
-        }
-        public PutAliasResponsePropertiesResponse build() {
+        }        public PutAliasResponsePropertiesResponse build() {
             return new PutAliasResponsePropertiesResponse(provisioningState, subscriptionId);
         }
     }

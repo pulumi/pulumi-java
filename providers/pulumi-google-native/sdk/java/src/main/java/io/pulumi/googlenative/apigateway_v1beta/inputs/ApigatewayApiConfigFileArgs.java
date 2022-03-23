@@ -78,22 +78,18 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
             this.contents = contents;
             return this;
         }
-
         public Builder contents(@Nullable String contents) {
             this.contents = Output.ofNullable(contents);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public ApigatewayApiConfigFileArgs build() {
+        }        public ApigatewayApiConfigFileArgs build() {
             return new ApigatewayApiConfigFileArgs(contents, path);
         }
     }

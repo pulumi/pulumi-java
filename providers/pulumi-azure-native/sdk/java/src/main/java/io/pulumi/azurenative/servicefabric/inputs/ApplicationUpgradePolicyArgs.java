@@ -147,62 +147,50 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
             this.applicationHealthPolicy = applicationHealthPolicy;
             return this;
         }
-
         public Builder applicationHealthPolicy(@Nullable ArmApplicationHealthPolicyArgs applicationHealthPolicy) {
             this.applicationHealthPolicy = Output.ofNullable(applicationHealthPolicy);
             return this;
         }
-
         public Builder forceRestart(@Nullable Output<Boolean> forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
-
         public Builder forceRestart(@Nullable Boolean forceRestart) {
             this.forceRestart = Output.ofNullable(forceRestart);
             return this;
         }
-
         public Builder recreateApplication(@Nullable Output<Boolean> recreateApplication) {
             this.recreateApplication = recreateApplication;
             return this;
         }
-
         public Builder recreateApplication(@Nullable Boolean recreateApplication) {
             this.recreateApplication = Output.ofNullable(recreateApplication);
             return this;
         }
-
         public Builder rollingUpgradeMonitoringPolicy(@Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy) {
             this.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
             return this;
         }
-
         public Builder rollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyArgs rollingUpgradeMonitoringPolicy) {
             this.rollingUpgradeMonitoringPolicy = Output.ofNullable(rollingUpgradeMonitoringPolicy);
             return this;
         }
-
         public Builder upgradeMode(@Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
-
         public Builder upgradeMode(@Nullable Either<String,RollingUpgradeMode> upgradeMode) {
             this.upgradeMode = Output.ofNullable(upgradeMode);
             return this;
         }
-
         public Builder upgradeReplicaSetCheckTimeout(@Nullable Output<String> upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
-
         public Builder upgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = Output.ofNullable(upgradeReplicaSetCheckTimeout);
             return this;
-        }
-        public ApplicationUpgradePolicyArgs build() {
+        }        public ApplicationUpgradePolicyArgs build() {
             return new ApplicationUpgradePolicyArgs(applicationHealthPolicy, forceRestart, recreateApplication, rollingUpgradeMonitoringPolicy, upgradeMode, upgradeReplicaSetCheckTimeout);
         }
     }

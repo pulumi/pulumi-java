@@ -87,32 +87,26 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
             this.kendraIndex = Objects.requireNonNull(kendraIndex);
             return this;
         }
-
         public Builder kendraIndex(String kendraIndex) {
             this.kendraIndex = Output.of(Objects.requireNonNull(kendraIndex));
             return this;
         }
-
         public Builder queryFilterString(@Nullable Output<String> queryFilterString) {
             this.queryFilterString = queryFilterString;
             return this;
         }
-
         public Builder queryFilterString(@Nullable String queryFilterString) {
             this.queryFilterString = Output.ofNullable(queryFilterString);
             return this;
         }
-
         public Builder queryFilterStringEnabled(@Nullable Output<Boolean> queryFilterStringEnabled) {
             this.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
         }
-
         public Builder queryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
             this.queryFilterStringEnabled = Output.ofNullable(queryFilterStringEnabled);
             return this;
-        }
-        public BotKendraConfigurationArgs build() {
+        }        public BotKendraConfigurationArgs build() {
             return new BotKendraConfigurationArgs(kendraIndex, queryFilterString, queryFilterStringEnabled);
         }
     }

@@ -102,22 +102,18 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder userDefined(Boolean userDefined) {
             this.userDefined = Objects.requireNonNull(userDefined);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse(alias, entityType, text, userDefined);
         }
     }

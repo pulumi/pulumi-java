@@ -71,12 +71,13 @@ public final class PipelineStage {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(PipelineStageAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PipelineStage build() {
+        }        public PipelineStage build() {
             return new PipelineStage(actions, name);
         }
     }

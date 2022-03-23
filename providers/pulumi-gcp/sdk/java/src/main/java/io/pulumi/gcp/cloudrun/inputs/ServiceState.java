@@ -194,82 +194,72 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             this.autogenerateRevisionName = autogenerateRevisionName;
             return this;
         }
-
         public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
             this.autogenerateRevisionName = Output.ofNullable(autogenerateRevisionName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ServiceMetadataGetArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ServiceMetadataGetArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder statuses(@Nullable Output<List<ServiceStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
-
         public Builder statuses(@Nullable List<ServiceStatusGetArgs> statuses) {
             this.statuses = Output.ofNullable(statuses);
             return this;
         }
-
+        public Builder statuses(ServiceStatusGetArgs... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder template(@Nullable Output<ServiceTemplateGetArgs> template) {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable ServiceTemplateGetArgs template) {
             this.template = Output.ofNullable(template);
             return this;
         }
-
         public Builder traffics(@Nullable Output<List<ServiceTrafficGetArgs>> traffics) {
             this.traffics = traffics;
             return this;
         }
-
         public Builder traffics(@Nullable List<ServiceTrafficGetArgs> traffics) {
             this.traffics = Output.ofNullable(traffics);
             return this;
         }
-        public ServiceState build() {
+        public Builder traffics(ServiceTrafficGetArgs... traffics) {
+            return traffics(List.of(traffics));
+        }        public ServiceState build() {
             return new ServiceState(autogenerateRevisionName, location, metadata, name, project, statuses, template, traffics);
         }
     }

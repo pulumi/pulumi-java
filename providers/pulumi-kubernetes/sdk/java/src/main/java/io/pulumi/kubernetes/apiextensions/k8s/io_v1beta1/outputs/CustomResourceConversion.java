@@ -91,17 +91,17 @@ public final class CustomResourceConversion {
             this.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
-
+        public Builder conversionReviewVersions(String... conversionReviewVersions) {
+            return conversionReviewVersions(List.of(conversionReviewVersions));
+        }
         public Builder strategy(String strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
-
         public Builder webhookClientConfig(@Nullable WebhookClientConfig webhookClientConfig) {
             this.webhookClientConfig = webhookClientConfig;
             return this;
-        }
-        public CustomResourceConversion build() {
+        }        public CustomResourceConversion build() {
             return new CustomResourceConversion(conversionReviewVersions, strategy, webhookClientConfig);
         }
     }

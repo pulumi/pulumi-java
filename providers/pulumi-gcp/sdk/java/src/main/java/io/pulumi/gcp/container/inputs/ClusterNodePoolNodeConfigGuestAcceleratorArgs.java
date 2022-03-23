@@ -91,32 +91,26 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorArgs extends io.pulu
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = Output.ofNullable(gpuPartitionSize);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ClusterNodePoolNodeConfigGuestAcceleratorArgs build() {
+        }        public ClusterNodePoolNodeConfigGuestAcceleratorArgs build() {
             return new ClusterNodePoolNodeConfigGuestAcceleratorArgs(count, gpuPartitionSize, type);
         }
     }

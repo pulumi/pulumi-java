@@ -179,82 +179,75 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publicIpAddresses(@Nullable Output<List<SubResourceArgs>> publicIpAddresses) {
             this.publicIpAddresses = publicIpAddresses;
             return this;
         }
-
         public Builder publicIpAddresses(@Nullable List<SubResourceArgs> publicIpAddresses) {
             this.publicIpAddresses = Output.ofNullable(publicIpAddresses);
             return this;
         }
-
+        public Builder publicIpAddresses(SubResourceArgs... publicIpAddresses) {
+            return publicIpAddresses(List.of(publicIpAddresses));
+        }
         public Builder publicIpPrefixes(@Nullable Output<List<SubResourceArgs>> publicIpPrefixes) {
             this.publicIpPrefixes = publicIpPrefixes;
             return this;
         }
-
         public Builder publicIpPrefixes(@Nullable List<SubResourceArgs> publicIpPrefixes) {
             this.publicIpPrefixes = Output.ofNullable(publicIpPrefixes);
             return this;
         }
-
+        public Builder publicIpPrefixes(SubResourceArgs... publicIpPrefixes) {
+            return publicIpPrefixes(List.of(publicIpPrefixes));
+        }
         public Builder sku(@Nullable Output<NatGatewaySkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable NatGatewaySkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public NatGatewayArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public NatGatewayArgs build() {
             return new NatGatewayArgs(id, idleTimeoutInMinutes, location, publicIpAddresses, publicIpPrefixes, sku, tags, zones);
         }
     }

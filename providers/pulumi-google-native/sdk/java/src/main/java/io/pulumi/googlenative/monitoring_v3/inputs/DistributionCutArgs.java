@@ -79,22 +79,18 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
             this.distributionFilter = distributionFilter;
             return this;
         }
-
         public Builder distributionFilter(@Nullable String distributionFilter) {
             this.distributionFilter = Output.ofNullable(distributionFilter);
             return this;
         }
-
         public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
             this.range = range;
             return this;
         }
-
         public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
             this.range = Output.ofNullable(range);
             return this;
-        }
-        public DistributionCutArgs build() {
+        }        public DistributionCutArgs build() {
             return new DistributionCutArgs(distributionFilter, range);
         }
     }

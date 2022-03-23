@@ -108,42 +108,34 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
-
         public Builder parentGroupName(@Nullable String parentGroupName) {
             this.parentGroupName = Output.ofNullable(parentGroupName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ThingGroupPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ThingGroupPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ThingGroupArgs build() {
+        }        public ThingGroupArgs build() {
             return new ThingGroupArgs(name, parentGroupName, properties, tags);
         }
     }

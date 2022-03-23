@@ -75,12 +75,10 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetPipelineArgs build() {
+        }        public GetPipelineArgs build() {
             return new GetPipelineArgs(pipelineId, tags);
         }
     }

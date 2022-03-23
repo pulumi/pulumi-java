@@ -75,22 +75,18 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable TaskSetScaleUnit unit) {
             this.unit = Output.ofNullable(unit);
             return this;
         }
-
         public Builder value(@Nullable Output<Double> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TaskSetScaleArgs build() {
+        }        public TaskSetScaleArgs build() {
             return new TaskSetScaleArgs(unit, value);
         }
     }

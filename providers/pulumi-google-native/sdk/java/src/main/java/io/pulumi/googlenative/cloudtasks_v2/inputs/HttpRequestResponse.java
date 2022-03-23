@@ -143,32 +143,26 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder oauthToken(OAuthTokenResponse oauthToken) {
             this.oauthToken = Objects.requireNonNull(oauthToken);
             return this;
         }
-
         public Builder oidcToken(OidcTokenResponse oidcToken) {
             this.oidcToken = Objects.requireNonNull(oidcToken);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public HttpRequestResponse build() {
+        }        public HttpRequestResponse build() {
             return new HttpRequestResponse(body, headers, httpMethod, oauthToken, oidcToken, url);
         }
     }

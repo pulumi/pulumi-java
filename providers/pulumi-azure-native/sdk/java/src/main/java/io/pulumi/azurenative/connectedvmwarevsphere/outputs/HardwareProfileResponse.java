@@ -136,32 +136,26 @@ public final class HardwareProfileResponse {
             this.cpuHotAddEnabled = Objects.requireNonNull(cpuHotAddEnabled);
             return this;
         }
-
         public Builder cpuHotRemoveEnabled(Boolean cpuHotRemoveEnabled) {
             this.cpuHotRemoveEnabled = Objects.requireNonNull(cpuHotRemoveEnabled);
             return this;
         }
-
         public Builder memoryHotAddEnabled(Boolean memoryHotAddEnabled) {
             this.memoryHotAddEnabled = Objects.requireNonNull(memoryHotAddEnabled);
             return this;
         }
-
         public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
             this.memorySizeMB = memorySizeMB;
             return this;
         }
-
         public Builder numCPUs(@Nullable Integer numCPUs) {
             this.numCPUs = numCPUs;
             return this;
         }
-
         public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
-        }
-        public HardwareProfileResponse build() {
+        }        public HardwareProfileResponse build() {
             return new HardwareProfileResponse(cpuHotAddEnabled, cpuHotRemoveEnabled, memoryHotAddEnabled, memorySizeMB, numCPUs, numCoresPerSocket);
         }
     }

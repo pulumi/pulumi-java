@@ -78,22 +78,18 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable String payload) {
             this.payload = Output.ofNullable(payload);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public PullMessageArgs build() {
+        }        public PullMessageArgs build() {
             return new PullMessageArgs(payload, tag);
         }
     }

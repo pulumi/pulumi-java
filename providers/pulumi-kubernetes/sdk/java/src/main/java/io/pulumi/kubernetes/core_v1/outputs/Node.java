@@ -122,27 +122,22 @@ public final class Node {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable NodeSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable NodeStatus status) {
             this.status = status;
             return this;
-        }
-        public Node build() {
+        }        public Node build() {
             return new Node(apiVersion, kind, metadata, spec, status);
         }
     }

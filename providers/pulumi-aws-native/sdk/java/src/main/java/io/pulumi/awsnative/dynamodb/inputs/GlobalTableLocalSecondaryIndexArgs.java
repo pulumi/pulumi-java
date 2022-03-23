@@ -80,32 +80,29 @@ public final class GlobalTableLocalSecondaryIndexArgs extends io.pulumi.resource
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder indexName(String indexName) {
             this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
-
         public Builder keySchema(Output<List<GlobalTableKeySchemaArgs>> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
-
         public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
             this.keySchema = Output.of(Objects.requireNonNull(keySchema));
             return this;
         }
-
+        public Builder keySchema(GlobalTableKeySchemaArgs... keySchema) {
+            return keySchema(List.of(keySchema));
+        }
         public Builder projection(Output<GlobalTableProjectionArgs> projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
-
         public Builder projection(GlobalTableProjectionArgs projection) {
             this.projection = Output.of(Objects.requireNonNull(projection));
             return this;
-        }
-        public GlobalTableLocalSecondaryIndexArgs build() {
+        }        public GlobalTableLocalSecondaryIndexArgs build() {
             return new GlobalTableLocalSecondaryIndexArgs(indexName, keySchema, projection);
         }
     }

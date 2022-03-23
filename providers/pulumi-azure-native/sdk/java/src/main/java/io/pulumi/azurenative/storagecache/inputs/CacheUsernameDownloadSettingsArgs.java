@@ -226,112 +226,90 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
             this.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
-
         public Builder autoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
             this.autoDownloadCertificate = Output.ofNullable(autoDownloadCertificate);
             return this;
         }
-
         public Builder caCertificateURI(@Nullable Output<String> caCertificateURI) {
             this.caCertificateURI = caCertificateURI;
             return this;
         }
-
         public Builder caCertificateURI(@Nullable String caCertificateURI) {
             this.caCertificateURI = Output.ofNullable(caCertificateURI);
             return this;
         }
-
         public Builder credentials(@Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable CacheUsernameDownloadSettingsCredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder encryptLdapConnection(@Nullable Output<Boolean> encryptLdapConnection) {
             this.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
-
         public Builder encryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
             this.encryptLdapConnection = Output.ofNullable(encryptLdapConnection);
             return this;
         }
-
         public Builder extendedGroups(@Nullable Output<Boolean> extendedGroups) {
             this.extendedGroups = extendedGroups;
             return this;
         }
-
         public Builder extendedGroups(@Nullable Boolean extendedGroups) {
             this.extendedGroups = Output.ofNullable(extendedGroups);
             return this;
         }
-
         public Builder groupFileURI(@Nullable Output<String> groupFileURI) {
             this.groupFileURI = groupFileURI;
             return this;
         }
-
         public Builder groupFileURI(@Nullable String groupFileURI) {
             this.groupFileURI = Output.ofNullable(groupFileURI);
             return this;
         }
-
         public Builder ldapBaseDN(@Nullable Output<String> ldapBaseDN) {
             this.ldapBaseDN = ldapBaseDN;
             return this;
         }
-
         public Builder ldapBaseDN(@Nullable String ldapBaseDN) {
             this.ldapBaseDN = Output.ofNullable(ldapBaseDN);
             return this;
         }
-
         public Builder ldapServer(@Nullable Output<String> ldapServer) {
             this.ldapServer = ldapServer;
             return this;
         }
-
         public Builder ldapServer(@Nullable String ldapServer) {
             this.ldapServer = Output.ofNullable(ldapServer);
             return this;
         }
-
         public Builder requireValidCertificate(@Nullable Output<Boolean> requireValidCertificate) {
             this.requireValidCertificate = requireValidCertificate;
             return this;
         }
-
         public Builder requireValidCertificate(@Nullable Boolean requireValidCertificate) {
             this.requireValidCertificate = Output.ofNullable(requireValidCertificate);
             return this;
         }
-
         public Builder userFileURI(@Nullable Output<String> userFileURI) {
             this.userFileURI = userFileURI;
             return this;
         }
-
         public Builder userFileURI(@Nullable String userFileURI) {
             this.userFileURI = Output.ofNullable(userFileURI);
             return this;
         }
-
         public Builder usernameSource(@Nullable Output<Either<String,UsernameSource>> usernameSource) {
             this.usernameSource = usernameSource;
             return this;
         }
-
         public Builder usernameSource(@Nullable Either<String,UsernameSource> usernameSource) {
             this.usernameSource = Output.ofNullable(usernameSource);
             return this;
-        }
-        public CacheUsernameDownloadSettingsArgs build() {
+        }        public CacheUsernameDownloadSettingsArgs build() {
             return new CacheUsernameDownloadSettingsArgs(autoDownloadCertificate, caCertificateURI, credentials, encryptLdapConnection, extendedGroups, groupFileURI, ldapBaseDN, ldapServer, requireValidCertificate, userFileURI, usernameSource);
         }
     }

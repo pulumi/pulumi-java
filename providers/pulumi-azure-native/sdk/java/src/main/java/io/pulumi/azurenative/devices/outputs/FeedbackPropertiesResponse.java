@@ -88,17 +88,14 @@ public final class FeedbackPropertiesResponse {
             this.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
-
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
-        }
-        public FeedbackPropertiesResponse build() {
+        }        public FeedbackPropertiesResponse build() {
             return new FeedbackPropertiesResponse(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
         }
     }

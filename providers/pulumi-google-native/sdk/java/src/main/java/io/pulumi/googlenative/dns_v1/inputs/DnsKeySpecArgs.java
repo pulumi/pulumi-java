@@ -109,42 +109,34 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder algorithm(@Nullable DnsKeySpecAlgorithm algorithm) {
             this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
-
         public Builder keyLength(@Nullable Output<Integer> keyLength) {
             this.keyLength = keyLength;
             return this;
         }
-
         public Builder keyLength(@Nullable Integer keyLength) {
             this.keyLength = Output.ofNullable(keyLength);
             return this;
         }
-
         public Builder keyType(@Nullable Output<DnsKeySpecKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable DnsKeySpecKeyType keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public DnsKeySpecArgs build() {
+        }        public DnsKeySpecArgs build() {
             return new DnsKeySpecArgs(algorithm, keyLength, keyType, kind);
         }
     }

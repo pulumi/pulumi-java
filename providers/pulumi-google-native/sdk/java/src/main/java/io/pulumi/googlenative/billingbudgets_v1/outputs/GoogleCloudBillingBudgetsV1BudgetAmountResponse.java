@@ -70,12 +70,10 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse {
             this.lastPeriodAmount = Objects.requireNonNull(lastPeriodAmount);
             return this;
         }
-
         public Builder specifiedAmount(GoogleTypeMoneyResponse specifiedAmount) {
             this.specifiedAmount = Objects.requireNonNull(specifiedAmount);
             return this;
-        }
-        public GoogleCloudBillingBudgetsV1BudgetAmountResponse build() {
+        }        public GoogleCloudBillingBudgetsV1BudgetAmountResponse build() {
             return new GoogleCloudBillingBudgetsV1BudgetAmountResponse(lastPeriodAmount, specifiedAmount);
         }
     }

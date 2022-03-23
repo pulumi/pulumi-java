@@ -102,22 +102,18 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
             this.enabledUnknownSources = Objects.requireNonNull(enabledUnknownSources);
             return this;
         }
-
         public Builder ownerProfileAccount(Boolean ownerProfileAccount) {
             this.ownerProfileAccount = Objects.requireNonNull(ownerProfileAccount);
             return this;
         }
-
         public Builder ownershipPrivilege(String ownershipPrivilege) {
             this.ownershipPrivilege = Objects.requireNonNull(ownershipPrivilege);
             return this;
         }
-
         public Builder supportsWorkProfile(Boolean supportsWorkProfile) {
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
-        }
-        public GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse build() {
+        }        public GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse build() {
             return new GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
         }
     }

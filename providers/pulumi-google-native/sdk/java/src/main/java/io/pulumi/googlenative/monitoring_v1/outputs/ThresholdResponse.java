@@ -118,27 +118,22 @@ public final class ThresholdResponse {
             this.color = Objects.requireNonNull(color);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder targetAxis(String targetAxis) {
             this.targetAxis = Objects.requireNonNull(targetAxis);
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ThresholdResponse build() {
+        }        public ThresholdResponse build() {
             return new ThresholdResponse(color, direction, label, targetAxis, value);
         }
     }

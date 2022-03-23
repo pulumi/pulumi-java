@@ -51,8 +51,7 @@ public final class VirtualServiceSpecProviderVirtualRouter {
         public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
-        }
-        public VirtualServiceSpecProviderVirtualRouter build() {
+        }        public VirtualServiceSpecProviderVirtualRouter build() {
             return new VirtualServiceSpecProviderVirtualRouter(virtualRouterName);
         }
     }

@@ -161,42 +161,34 @@ public final class SqlManagedInstancePropertiesResponse {
             this.admin = admin;
             return this;
         }
-
         public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
-
         public Builder dataControllerId(@Nullable String dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
-
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public SqlManagedInstancePropertiesResponse build() {
+        }        public SqlManagedInstancePropertiesResponse build() {
             return new SqlManagedInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, provisioningState, startTime);
         }
     }

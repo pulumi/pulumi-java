@@ -113,42 +113,34 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
             this.expectedValue = expectedValue;
             return this;
         }
-
         public Builder expectedValue(@Nullable String expectedValue) {
             this.expectedValue = Output.ofNullable(expectedValue);
             return this;
         }
-
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable Either<String,Operator> operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder propertyJPath(@Nullable Output<String> propertyJPath) {
             this.propertyJPath = propertyJPath;
             return this;
         }
-
         public Builder propertyJPath(@Nullable String propertyJPath) {
             this.propertyJPath = Output.ofNullable(propertyJPath);
             return this;
         }
-
         public Builder propertyType(@Nullable Output<Either<String,PropertyType>> propertyType) {
             this.propertyType = propertyType;
             return this;
         }
-
         public Builder propertyType(@Nullable Either<String,PropertyType> propertyType) {
             this.propertyType = Output.ofNullable(propertyType);
             return this;
-        }
-        public AutomationTriggeringRuleArgs build() {
+        }        public AutomationTriggeringRuleArgs build() {
             return new AutomationTriggeringRuleArgs(expectedValue, operator, propertyJPath, propertyType);
         }
     }

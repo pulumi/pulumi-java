@@ -231,62 +231,50 @@ public final class GetBackupResult {
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder downloadBytes(String downloadBytes) {
             this.downloadBytes = Objects.requireNonNull(downloadBytes);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder sourceFileShare(String sourceFileShare) {
             this.sourceFileShare = Objects.requireNonNull(sourceFileShare);
             return this;
         }
-
         public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
-
         public Builder sourceInstanceTier(String sourceInstanceTier) {
             this.sourceInstanceTier = Objects.requireNonNull(sourceInstanceTier);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
-        }
-        public GetBackupResult build() {
+        }        public GetBackupResult build() {
             return new GetBackupResult(capacityGb, createTime, description, downloadBytes, labels, name, satisfiesPzs, sourceFileShare, sourceInstance, sourceInstanceTier, state, storageBytes);
         }
     }

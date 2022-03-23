@@ -160,72 +160,61 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             this.artifactId = artifactId;
             return this;
         }
-
         public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = Output.ofNullable(artifactId);
             return this;
         }
-
         public Builder artifactTitle(@Nullable Output<String> artifactTitle) {
             this.artifactTitle = artifactTitle;
             return this;
         }
-
         public Builder artifactTitle(@Nullable String artifactTitle) {
             this.artifactTitle = Output.ofNullable(artifactTitle);
             return this;
         }
-
         public Builder deploymentStatusMessage(@Nullable Output<String> deploymentStatusMessage) {
             this.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
-
         public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
             this.deploymentStatusMessage = Output.ofNullable(deploymentStatusMessage);
             return this;
         }
-
         public Builder installTime(@Nullable Output<String> installTime) {
             this.installTime = installTime;
             return this;
         }
-
         public Builder installTime(@Nullable String installTime) {
             this.installTime = Output.ofNullable(installTime);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ArtifactParameterPropertiesArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(ArtifactParameterPropertiesArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder vmExtensionStatusMessage(@Nullable Output<String> vmExtensionStatusMessage) {
             this.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
         }
-
         public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
             this.vmExtensionStatusMessage = Output.ofNullable(vmExtensionStatusMessage);
             return this;
-        }
-        public ArtifactInstallPropertiesArgs build() {
+        }        public ArtifactInstallPropertiesArgs build() {
             return new ArtifactInstallPropertiesArgs(artifactId, artifactTitle, deploymentStatusMessage, installTime, parameters, status, vmExtensionStatusMessage);
         }
     }

@@ -61,12 +61,10 @@ public final class HttpLoadBalancingArgs extends io.pulumi.resources.ResourceArg
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
-        }
-        public HttpLoadBalancingArgs build() {
+        }        public HttpLoadBalancingArgs build() {
             return new HttpLoadBalancingArgs(disabled);
         }
     }

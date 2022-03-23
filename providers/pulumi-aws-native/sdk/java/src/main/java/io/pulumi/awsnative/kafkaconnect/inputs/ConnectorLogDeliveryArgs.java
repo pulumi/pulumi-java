@@ -56,12 +56,10 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
             this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery);
             return this;
         }
-
         public Builder workerLogDelivery(ConnectorWorkerLogDeliveryArgs workerLogDelivery) {
             this.workerLogDelivery = Output.of(Objects.requireNonNull(workerLogDelivery));
             return this;
-        }
-        public ConnectorLogDeliveryArgs build() {
+        }        public ConnectorLogDeliveryArgs build() {
             return new ConnectorLogDeliveryArgs(workerLogDelivery);
         }
     }

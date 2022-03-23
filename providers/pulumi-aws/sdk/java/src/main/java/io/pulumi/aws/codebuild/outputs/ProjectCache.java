@@ -88,17 +88,17 @@ public final class ProjectCache {
             this.location = location;
             return this;
         }
-
         public Builder modes(@Nullable List<String> modes) {
             this.modes = modes;
             return this;
         }
-
+        public Builder modes(String... modes) {
+            return modes(List.of(modes));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ProjectCache build() {
+        }        public ProjectCache build() {
             return new ProjectCache(location, modes, type);
         }
     }

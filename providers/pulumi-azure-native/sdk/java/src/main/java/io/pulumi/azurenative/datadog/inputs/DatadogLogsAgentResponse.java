@@ -56,8 +56,7 @@ public final class DatadogLogsAgentResponse extends io.pulumi.resources.InvokeAr
         public Builder transport(@Nullable String transport) {
             this.transport = transport;
             return this;
-        }
-        public DatadogLogsAgentResponse build() {
+        }        public DatadogLogsAgentResponse build() {
             return new DatadogLogsAgentResponse(transport);
         }
     }

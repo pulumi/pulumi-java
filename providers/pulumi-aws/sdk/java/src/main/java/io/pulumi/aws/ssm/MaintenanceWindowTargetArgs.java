@@ -141,62 +141,53 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerInformation(@Nullable Output<String> ownerInformation) {
             this.ownerInformation = ownerInformation;
             return this;
         }
-
         public Builder ownerInformation(@Nullable String ownerInformation) {
             this.ownerInformation = Output.ofNullable(ownerInformation);
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targets(Output<List<MaintenanceWindowTargetTargetArgs>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-
         public Builder targets(List<MaintenanceWindowTargetTargetArgs> targets) {
             this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
         }
-
+        public Builder targets(MaintenanceWindowTargetTargetArgs... targets) {
+            return targets(List.of(targets));
+        }
         public Builder windowId(Output<String> windowId) {
             this.windowId = Objects.requireNonNull(windowId);
             return this;
         }
-
         public Builder windowId(String windowId) {
             this.windowId = Output.of(Objects.requireNonNull(windowId));
             return this;
-        }
-        public MaintenanceWindowTargetArgs build() {
+        }        public MaintenanceWindowTargetArgs build() {
             return new MaintenanceWindowTargetArgs(description, name, ownerInformation, resourceType, targets, windowId);
         }
     }

@@ -70,12 +70,10 @@ public final class Oauth2JwtBearerResponse {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
-
         public Builder jwtClaims(JwtClaimsResponse jwtClaims) {
             this.jwtClaims = Objects.requireNonNull(jwtClaims);
             return this;
-        }
-        public Oauth2JwtBearerResponse build() {
+        }        public Oauth2JwtBearerResponse build() {
             return new Oauth2JwtBearerResponse(clientKey, jwtClaims);
         }
     }

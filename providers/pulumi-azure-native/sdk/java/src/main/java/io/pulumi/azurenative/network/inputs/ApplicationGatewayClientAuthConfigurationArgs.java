@@ -61,12 +61,10 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
             this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
         }
-
         public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
             this.verifyClientCertIssuerDN = Output.ofNullable(verifyClientCertIssuerDN);
             return this;
-        }
-        public ApplicationGatewayClientAuthConfigurationArgs build() {
+        }        public ApplicationGatewayClientAuthConfigurationArgs build() {
             return new ApplicationGatewayClientAuthConfigurationArgs(verifyClientCertIssuerDN);
         }
     }

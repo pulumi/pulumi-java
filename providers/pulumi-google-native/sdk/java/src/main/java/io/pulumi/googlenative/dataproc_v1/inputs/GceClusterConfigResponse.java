@@ -259,67 +259,60 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
             this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig);
             return this;
         }
-
         public Builder internalIpOnly(Boolean internalIpOnly) {
             this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder nodeGroupAffinity(NodeGroupAffinityResponse nodeGroupAffinity) {
             this.nodeGroupAffinity = Objects.requireNonNull(nodeGroupAffinity);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
             this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes);
             return this;
         }
-
+        public Builder serviceAccountScopes(String... serviceAccountScopes) {
+            return serviceAccountScopes(List.of(serviceAccountScopes));
+        }
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
-
         public Builder subnetworkUri(String subnetworkUri) {
             this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zoneUri(String zoneUri) {
             this.zoneUri = Objects.requireNonNull(zoneUri);
             return this;
-        }
-        public GceClusterConfigResponse build() {
+        }        public GceClusterConfigResponse build() {
             return new GceClusterConfigResponse(confidentialInstanceConfig, internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);
         }
     }

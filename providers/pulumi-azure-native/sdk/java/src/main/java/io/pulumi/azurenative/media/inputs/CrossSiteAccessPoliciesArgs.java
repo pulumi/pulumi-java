@@ -78,22 +78,18 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
             this.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
-
         public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
             this.clientAccessPolicy = Output.ofNullable(clientAccessPolicy);
             return this;
         }
-
         public Builder crossDomainPolicy(@Nullable Output<String> crossDomainPolicy) {
             this.crossDomainPolicy = crossDomainPolicy;
             return this;
         }
-
         public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
             this.crossDomainPolicy = Output.ofNullable(crossDomainPolicy);
             return this;
-        }
-        public CrossSiteAccessPoliciesArgs build() {
+        }        public CrossSiteAccessPoliciesArgs build() {
             return new CrossSiteAccessPoliciesArgs(clientAccessPolicy, crossDomainPolicy);
         }
     }

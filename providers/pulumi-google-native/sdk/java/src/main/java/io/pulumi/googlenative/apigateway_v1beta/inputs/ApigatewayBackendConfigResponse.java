@@ -58,8 +58,7 @@ public final class ApigatewayBackendConfigResponse extends io.pulumi.resources.I
         public Builder googleServiceAccount(String googleServiceAccount) {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
-        }
-        public ApigatewayBackendConfigResponse build() {
+        }        public ApigatewayBackendConfigResponse build() {
             return new ApigatewayBackendConfigResponse(googleServiceAccount);
         }
     }

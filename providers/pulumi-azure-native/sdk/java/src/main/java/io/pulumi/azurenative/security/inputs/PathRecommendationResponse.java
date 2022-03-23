@@ -186,47 +186,44 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
             this.action = action;
             return this;
         }
-
         public Builder common(@Nullable Boolean common) {
             this.common = common;
             return this;
         }
-
         public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
-
         public Builder fileType(@Nullable String fileType) {
             this.fileType = fileType;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder publisherInfo(@Nullable PublisherInfoResponse publisherInfo) {
             this.publisherInfo = publisherInfo;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userSids(@Nullable List<String> userSids) {
             this.userSids = userSids;
             return this;
         }
-
+        public Builder userSids(String... userSids) {
+            return userSids(List.of(userSids));
+        }
         public Builder usernames(@Nullable List<UserRecommendationResponse> usernames) {
             this.usernames = usernames;
             return this;
         }
-        public PathRecommendationResponse build() {
+        public Builder usernames(UserRecommendationResponse... usernames) {
+            return usernames(List.of(usernames));
+        }        public PathRecommendationResponse build() {
             return new PathRecommendationResponse(action, common, configurationStatus, fileType, path, publisherInfo, type, userSids, usernames);
         }
     }

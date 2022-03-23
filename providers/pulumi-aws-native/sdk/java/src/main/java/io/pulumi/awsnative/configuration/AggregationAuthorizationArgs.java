@@ -92,32 +92,29 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
             this.authorizedAccountId = Objects.requireNonNull(authorizedAccountId);
             return this;
         }
-
         public Builder authorizedAccountId(String authorizedAccountId) {
             this.authorizedAccountId = Output.of(Objects.requireNonNull(authorizedAccountId));
             return this;
         }
-
         public Builder authorizedAwsRegion(Output<String> authorizedAwsRegion) {
             this.authorizedAwsRegion = Objects.requireNonNull(authorizedAwsRegion);
             return this;
         }
-
         public Builder authorizedAwsRegion(String authorizedAwsRegion) {
             this.authorizedAwsRegion = Output.of(Objects.requireNonNull(authorizedAwsRegion));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<AggregationAuthorizationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AggregationAuthorizationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AggregationAuthorizationArgs build() {
+        public Builder tags(AggregationAuthorizationTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AggregationAuthorizationArgs build() {
             return new AggregationAuthorizationArgs(authorizedAccountId, authorizedAwsRegion, tags);
         }
     }

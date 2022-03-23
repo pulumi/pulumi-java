@@ -73,22 +73,18 @@ public final class SelectionConditionStringLikeGetArgs extends io.pulumi.resourc
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SelectionConditionStringLikeGetArgs build() {
+        }        public SelectionConditionStringLikeGetArgs build() {
             return new SelectionConditionStringLikeGetArgs(key, value);
         }
     }

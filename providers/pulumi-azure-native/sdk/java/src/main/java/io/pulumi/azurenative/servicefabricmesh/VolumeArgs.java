@@ -158,72 +158,58 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.azureFileParameters = azureFileParameters;
             return this;
         }
-
         public Builder azureFileParameters(@Nullable VolumeProviderParametersAzureFileArgs azureFileParameters) {
             this.azureFileParameters = Output.ofNullable(azureFileParameters);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder provider(Output<Either<String,VolumeProvider>> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder provider(Either<String,VolumeProvider> provider) {
             this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder volumeResourceName(@Nullable Output<String> volumeResourceName) {
             this.volumeResourceName = volumeResourceName;
             return this;
         }
-
         public Builder volumeResourceName(@Nullable String volumeResourceName) {
             this.volumeResourceName = Output.ofNullable(volumeResourceName);
             return this;
-        }
-        public VolumeArgs build() {
+        }        public VolumeArgs build() {
             return new VolumeArgs(azureFileParameters, description, location, provider, resourceGroupName, tags, volumeResourceName);
         }
     }

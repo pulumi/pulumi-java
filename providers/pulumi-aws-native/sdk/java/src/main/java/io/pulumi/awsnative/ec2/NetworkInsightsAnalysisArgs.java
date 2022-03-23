@@ -80,32 +80,32 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
             this.filterInArns = filterInArns;
             return this;
         }
-
         public Builder filterInArns(@Nullable List<String> filterInArns) {
             this.filterInArns = Output.ofNullable(filterInArns);
             return this;
         }
-
+        public Builder filterInArns(String... filterInArns) {
+            return filterInArns(List.of(filterInArns));
+        }
         public Builder networkInsightsPathId(Output<String> networkInsightsPathId) {
             this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId);
             return this;
         }
-
         public Builder networkInsightsPathId(String networkInsightsPathId) {
             this.networkInsightsPathId = Output.of(Objects.requireNonNull(networkInsightsPathId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInsightsAnalysisTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public NetworkInsightsAnalysisArgs build() {
+        public Builder tags(NetworkInsightsAnalysisTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public NetworkInsightsAnalysisArgs build() {
             return new NetworkInsightsAnalysisArgs(filterInArns, networkInsightsPathId, tags);
         }
     }

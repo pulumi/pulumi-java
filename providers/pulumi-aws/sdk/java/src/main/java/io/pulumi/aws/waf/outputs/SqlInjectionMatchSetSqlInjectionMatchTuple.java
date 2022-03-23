@@ -78,12 +78,10 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTuple {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
-        }
-        public SqlInjectionMatchSetSqlInjectionMatchTuple build() {
+        }        public SqlInjectionMatchSetSqlInjectionMatchTuple build() {
             return new SqlInjectionMatchSetSqlInjectionMatchTuple(fieldToMatch, textTransformation);
         }
     }

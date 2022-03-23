@@ -78,22 +78,18 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GoogleCloudRunOpV2SecretKeySelectorArgs build() {
+        }        public GoogleCloudRunOpV2SecretKeySelectorArgs build() {
             return new GoogleCloudRunOpV2SecretKeySelectorArgs(secret, version);
         }
     }

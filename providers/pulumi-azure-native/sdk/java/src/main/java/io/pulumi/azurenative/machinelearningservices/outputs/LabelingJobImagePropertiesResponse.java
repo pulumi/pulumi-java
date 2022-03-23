@@ -71,12 +71,10 @@ public final class LabelingJobImagePropertiesResponse {
             this.annotationType = annotationType;
             return this;
         }
-
         public Builder mediaType(String mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
-        }
-        public LabelingJobImagePropertiesResponse build() {
+        }        public LabelingJobImagePropertiesResponse build() {
             return new LabelingJobImagePropertiesResponse(annotationType, mediaType);
         }
     }

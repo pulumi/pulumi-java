@@ -77,17 +77,14 @@ public final class DataSourceOracleParameters extends io.pulumi.resources.Invoke
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceOracleParameters build() {
+        }        public DataSourceOracleParameters build() {
             return new DataSourceOracleParameters(database, host, port);
         }
     }

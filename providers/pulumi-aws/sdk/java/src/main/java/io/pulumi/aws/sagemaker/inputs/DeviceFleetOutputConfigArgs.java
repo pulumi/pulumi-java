@@ -74,22 +74,18 @@ public final class DeviceFleetOutputConfigArgs extends io.pulumi.resources.Resou
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder s3OutputLocation(Output<String> s3OutputLocation) {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
         }
-
         public Builder s3OutputLocation(String s3OutputLocation) {
             this.s3OutputLocation = Output.of(Objects.requireNonNull(s3OutputLocation));
             return this;
-        }
-        public DeviceFleetOutputConfigArgs build() {
+        }        public DeviceFleetOutputConfigArgs build() {
             return new DeviceFleetOutputConfigArgs(kmsKeyId, s3OutputLocation);
         }
     }

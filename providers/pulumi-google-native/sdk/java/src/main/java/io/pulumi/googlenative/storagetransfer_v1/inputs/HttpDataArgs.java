@@ -60,12 +60,10 @@ public final class HttpDataArgs extends io.pulumi.resources.ResourceArgs {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
-
         public Builder listUrl(String listUrl) {
             this.listUrl = Output.of(Objects.requireNonNull(listUrl));
             return this;
-        }
-        public HttpDataArgs build() {
+        }        public HttpDataArgs build() {
             return new HttpDataArgs(listUrl);
         }
     }

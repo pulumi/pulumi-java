@@ -73,12 +73,10 @@ public final class RollingUpdateDaemonSet {
             this.maxSurge = maxSurge;
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
-        }
-        public RollingUpdateDaemonSet build() {
+        }        public RollingUpdateDaemonSet build() {
             return new RollingUpdateDaemonSet(maxSurge, maxUnavailable);
         }
     }

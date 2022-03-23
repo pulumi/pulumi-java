@@ -162,72 +162,73 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable RuleAction action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(ConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder in(@Nullable Output<List<String>> in) {
             this.in = in;
             return this;
         }
-
         public Builder in(@Nullable List<String> in) {
             this.in = Output.ofNullable(in);
             return this;
         }
-
+        public Builder in(String... in) {
+            return in(List.of(in));
+        }
         public Builder logConfig(@Nullable Output<List<LogConfigArgs>> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
-
         public Builder logConfig(@Nullable List<LogConfigArgs> logConfig) {
             this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
-
+        public Builder logConfig(LogConfigArgs... logConfig) {
+            return logConfig(List.of(logConfig));
+        }
         public Builder notIn(@Nullable Output<List<String>> notIn) {
             this.notIn = notIn;
             return this;
         }
-
         public Builder notIn(@Nullable List<String> notIn) {
             this.notIn = Output.ofNullable(notIn);
             return this;
         }
-
+        public Builder notIn(String... notIn) {
+            return notIn(List.of(notIn));
+        }
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-        public RuleArgs build() {
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }        public RuleArgs build() {
             return new RuleArgs(action, conditions, description, in, logConfig, notIn, permissions);
         }
     }

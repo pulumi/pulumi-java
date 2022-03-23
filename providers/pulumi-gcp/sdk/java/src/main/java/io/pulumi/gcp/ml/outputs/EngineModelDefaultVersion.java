@@ -51,8 +51,7 @@ public final class EngineModelDefaultVersion {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public EngineModelDefaultVersion build() {
+        }        public EngineModelDefaultVersion build() {
             return new EngineModelDefaultVersion(name);
         }
     }

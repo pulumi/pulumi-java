@@ -54,8 +54,7 @@ public final class ListIngestionSettingTokensArgs extends io.pulumi.resources.In
         public Builder ingestionSettingName(String ingestionSettingName) {
             this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName);
             return this;
-        }
-        public ListIngestionSettingTokensArgs build() {
+        }        public ListIngestionSettingTokensArgs build() {
             return new ListIngestionSettingTokensArgs(ingestionSettingName);
         }
     }

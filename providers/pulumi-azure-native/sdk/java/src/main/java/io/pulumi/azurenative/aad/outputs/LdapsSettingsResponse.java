@@ -151,37 +151,30 @@ public final class LdapsSettingsResponse {
             this.certificateNotAfter = Objects.requireNonNull(certificateNotAfter);
             return this;
         }
-
         public Builder certificateThumbprint(String certificateThumbprint) {
             this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
             return this;
         }
-
         public Builder externalAccess(@Nullable String externalAccess) {
             this.externalAccess = externalAccess;
             return this;
         }
-
         public Builder ldaps(@Nullable String ldaps) {
             this.ldaps = ldaps;
             return this;
         }
-
         public Builder pfxCertificate(@Nullable String pfxCertificate) {
             this.pfxCertificate = pfxCertificate;
             return this;
         }
-
         public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
             this.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
-
         public Builder publicCertificate(String publicCertificate) {
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
-        }
-        public LdapsSettingsResponse build() {
+        }        public LdapsSettingsResponse build() {
             return new LdapsSettingsResponse(certificateNotAfter, certificateThumbprint, externalAccess, ldaps, pfxCertificate, pfxCertificatePassword, publicCertificate);
         }
     }

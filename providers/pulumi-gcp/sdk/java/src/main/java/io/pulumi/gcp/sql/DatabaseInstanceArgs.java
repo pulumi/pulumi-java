@@ -269,122 +269,98 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
             this.clone = clone;
             return this;
         }
-
         public Builder clone(@Nullable DatabaseInstanceCloneArgs clone) {
             this.clone = Output.ofNullable(clone);
             return this;
         }
-
         public Builder databaseVersion(Output<String> databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
-
         public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Output.of(Objects.requireNonNull(databaseVersion));
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder encryptionKeyName(@Nullable Output<String> encryptionKeyName) {
             this.encryptionKeyName = encryptionKeyName;
             return this;
         }
-
         public Builder encryptionKeyName(@Nullable String encryptionKeyName) {
             this.encryptionKeyName = Output.ofNullable(encryptionKeyName);
             return this;
         }
-
         public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
-
         public Builder masterInstanceName(@Nullable String masterInstanceName) {
             this.masterInstanceName = Output.ofNullable(masterInstanceName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
-
         public Builder replicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationArgs replicaConfiguration) {
             this.replicaConfiguration = Output.ofNullable(replicaConfiguration);
             return this;
         }
-
         public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext) {
             this.restoreBackupContext = restoreBackupContext;
             return this;
         }
-
         public Builder restoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextArgs restoreBackupContext) {
             this.restoreBackupContext = Output.ofNullable(restoreBackupContext);
             return this;
         }
-
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
-
         public Builder rootPassword(@Nullable String rootPassword) {
             this.rootPassword = Output.ofNullable(rootPassword);
             return this;
         }
-
         public Builder settings(@Nullable Output<DatabaseInstanceSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable DatabaseInstanceSettingsArgs settings) {
             this.settings = Output.ofNullable(settings);
             return this;
-        }
-        public DatabaseInstanceArgs build() {
+        }        public DatabaseInstanceArgs build() {
             return new DatabaseInstanceArgs(clone, databaseVersion, deletionProtection, encryptionKeyName, masterInstanceName, name, project, region, replicaConfiguration, restoreBackupContext, rootPassword, settings);
         }
     }

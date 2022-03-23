@@ -58,12 +58,10 @@ public final class CxPageFormParameterFillBehaviorArgs extends io.pulumi.resourc
             this.initialPromptFulfillment = initialPromptFulfillment;
             return this;
         }
-
         public Builder initialPromptFulfillment(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs initialPromptFulfillment) {
             this.initialPromptFulfillment = Output.ofNullable(initialPromptFulfillment);
             return this;
-        }
-        public CxPageFormParameterFillBehaviorArgs build() {
+        }        public CxPageFormParameterFillBehaviorArgs build() {
             return new CxPageFormParameterFillBehaviorArgs(initialPromptFulfillment);
         }
     }

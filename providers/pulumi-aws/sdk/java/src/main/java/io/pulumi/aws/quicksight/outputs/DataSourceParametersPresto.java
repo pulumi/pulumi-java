@@ -86,17 +86,14 @@ public final class DataSourceParametersPresto {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersPresto build() {
+        }        public DataSourceParametersPresto build() {
             return new DataSourceParametersPresto(catalog, host, port);
         }
     }

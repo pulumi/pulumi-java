@@ -72,12 +72,10 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetOrganizationPolicyArgs build() {
+        }        public GetOrganizationPolicyArgs build() {
             return new GetOrganizationPolicyArgs(constraint, project);
         }
     }

@@ -72,22 +72,21 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(RecipeActionArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder conditionExpressions(@Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions) {
             this.conditionExpressions = conditionExpressions;
             return this;
         }
-
         public Builder conditionExpressions(@Nullable List<RecipeConditionExpressionArgs> conditionExpressions) {
             this.conditionExpressions = Output.ofNullable(conditionExpressions);
             return this;
         }
-        public RecipeStepArgs build() {
+        public Builder conditionExpressions(RecipeConditionExpressionArgs... conditionExpressions) {
+            return conditionExpressions(List.of(conditionExpressions));
+        }        public RecipeStepArgs build() {
             return new RecipeStepArgs(action, conditionExpressions);
         }
     }

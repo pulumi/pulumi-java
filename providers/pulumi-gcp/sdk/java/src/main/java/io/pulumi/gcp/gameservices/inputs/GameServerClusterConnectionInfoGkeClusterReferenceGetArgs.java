@@ -63,12 +63,10 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceGetArgs ext
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(String cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
-        }
-        public GameServerClusterConnectionInfoGkeClusterReferenceGetArgs build() {
+        }        public GameServerClusterConnectionInfoGkeClusterReferenceGetArgs build() {
             return new GameServerClusterConnectionInfoGkeClusterReferenceGetArgs(cluster);
         }
     }

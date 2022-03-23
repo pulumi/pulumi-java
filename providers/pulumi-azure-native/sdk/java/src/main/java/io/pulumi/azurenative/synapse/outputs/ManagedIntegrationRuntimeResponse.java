@@ -123,27 +123,22 @@ public final class ManagedIntegrationRuntimeResponse {
             this.computeProperties = computeProperties;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
             this.ssisProperties = ssisProperties;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ManagedIntegrationRuntimeResponse build() {
+        }        public ManagedIntegrationRuntimeResponse build() {
             return new ManagedIntegrationRuntimeResponse(computeProperties, description, ssisProperties, state, type);
         }
     }

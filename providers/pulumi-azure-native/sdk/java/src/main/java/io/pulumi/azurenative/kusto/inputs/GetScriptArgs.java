@@ -104,22 +104,18 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder scriptName(String scriptName) {
             this.scriptName = Objects.requireNonNull(scriptName);
             return this;
-        }
-        public GetScriptArgs build() {
+        }        public GetScriptArgs build() {
             return new GetScriptArgs(clusterName, databaseName, resourceGroupName, scriptName);
         }
     }

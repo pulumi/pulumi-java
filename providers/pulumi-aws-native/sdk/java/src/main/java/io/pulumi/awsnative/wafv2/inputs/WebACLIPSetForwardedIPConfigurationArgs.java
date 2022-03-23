@@ -79,32 +79,26 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder fallbackBehavior(WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Output.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
-
         public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
-
         public Builder position(Output<WebACLIPSetForwardedIPConfigurationPosition> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder position(WebACLIPSetForwardedIPConfigurationPosition position) {
             this.position = Output.of(Objects.requireNonNull(position));
             return this;
-        }
-        public WebACLIPSetForwardedIPConfigurationArgs build() {
+        }        public WebACLIPSetForwardedIPConfigurationArgs build() {
             return new WebACLIPSetForwardedIPConfigurationArgs(fallbackBehavior, headerName, position);
         }
     }

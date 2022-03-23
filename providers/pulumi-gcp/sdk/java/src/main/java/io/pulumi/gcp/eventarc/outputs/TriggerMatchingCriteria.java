@@ -69,12 +69,10 @@ public final class TriggerMatchingCriteria {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TriggerMatchingCriteria build() {
+        }        public TriggerMatchingCriteria build() {
             return new TriggerMatchingCriteria(attribute, value);
         }
     }

@@ -87,17 +87,14 @@ public final class ApplicationSslConfiguration {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder chain(@Nullable String chain) {
             this.chain = chain;
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
-        }
-        public ApplicationSslConfiguration build() {
+        }        public ApplicationSslConfiguration build() {
             return new ApplicationSslConfiguration(certificate, chain, privateKey);
         }
     }

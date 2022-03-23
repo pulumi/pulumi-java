@@ -62,12 +62,13 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
             this.dataStoreParametersList = dataStoreParametersList;
             return this;
         }
-
         public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersArgs> dataStoreParametersList) {
             this.dataStoreParametersList = Output.ofNullable(dataStoreParametersList);
             return this;
         }
-        public PolicyParametersArgs build() {
+        public Builder dataStoreParametersList(AzureOperationalStoreParametersArgs... dataStoreParametersList) {
+            return dataStoreParametersList(List.of(dataStoreParametersList));
+        }        public PolicyParametersArgs build() {
             return new PolicyParametersArgs(dataStoreParametersList);
         }
     }

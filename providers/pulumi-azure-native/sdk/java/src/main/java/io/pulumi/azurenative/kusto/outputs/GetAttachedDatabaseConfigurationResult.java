@@ -201,52 +201,45 @@ public final class GetAttachedDatabaseConfigurationResult {
             this.attachedDatabaseNames = Objects.requireNonNull(attachedDatabaseNames);
             return this;
         }
-
+        public Builder attachedDatabaseNames(String... attachedDatabaseNames) {
+            return attachedDatabaseNames(List.of(attachedDatabaseNames));
+        }
         public Builder clusterResourceId(String clusterResourceId) {
             this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder defaultPrincipalsModificationKind(String defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties) {
             this.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAttachedDatabaseConfigurationResult build() {
+        }        public GetAttachedDatabaseConfigurationResult build() {
             return new GetAttachedDatabaseConfigurationResult(attachedDatabaseNames, clusterResourceId, databaseName, defaultPrincipalsModificationKind, id, location, name, provisioningState, tableLevelSharingProperties, type);
         }
     }

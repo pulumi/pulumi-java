@@ -71,12 +71,10 @@ public final class ManagedPrefixListEntry {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public ManagedPrefixListEntry build() {
+        }        public ManagedPrefixListEntry build() {
             return new ManagedPrefixListEntry(cidr, description);
         }
     }
