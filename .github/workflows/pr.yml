@@ -612,6 +612,15 @@ jobs:
         run: make provider.aws.install
       - name: Build EKS provider
         run: make provider.eks.install
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-duration-seconds: 3600
+          role-session-name: ${{ env.PROVIDER }}@githubActions
+          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Run eks-minimal example
         run: make test_cloud_example.eks-minimal
     strategy:
