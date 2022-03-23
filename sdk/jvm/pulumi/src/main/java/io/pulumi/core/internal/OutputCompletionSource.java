@@ -107,7 +107,7 @@ public class OutputCompletionSource<T> {
             OutputMetadata<T> metadata
     ) {
         var output = metadata.getFieldValue(resource).orElseGet(() -> {
-            var incomplete = Output.of(new CompletableFuture<T>());
+            var incomplete = Output.ofFuture(new CompletableFuture<T>());
             metadata.setFieldValue(resource, incomplete);
             return incomplete;
         });

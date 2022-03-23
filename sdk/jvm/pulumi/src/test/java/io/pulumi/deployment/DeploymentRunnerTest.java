@@ -57,8 +57,8 @@ public class DeploymentRunnerTest {
         public final Output<Integer> slowOutput;
 
         public TerminatesEarlyOnExceptionStack() {
-            Output.of(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
-            this.slowOutput = Output.of(new CompletableFuture<Integer>()
+            Output.ofFuture(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
+            this.slowOutput = Output.ofFuture(new CompletableFuture<Integer>()
                     .completeOnTimeout(1, 60, TimeUnit.SECONDS));
         }
     }

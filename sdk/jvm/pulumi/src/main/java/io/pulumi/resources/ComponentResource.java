@@ -90,7 +90,7 @@ public class ComponentResource extends Resource {
 
     protected void registerOutputs(CompletableFuture<Map<String, Optional<Object>>> outputs) {
         Objects.requireNonNull(outputs);
-        registerOutputs(Output.of(outputs));
+        registerOutputs(Output.ofFuture(outputs));
     }
 
     protected void registerOutputs(Output<Map<String, Optional<Object>>> outputs) {

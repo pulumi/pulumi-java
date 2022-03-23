@@ -74,7 +74,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#apply(Function) for more details.
      */
     default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
-        return apply(t -> Output.of(func.apply(t)));
+        return apply(t -> Output.ofFuture(func.apply(t)));
     }
 
     @CanIgnoreReturnValue
@@ -113,7 +113,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         return new OutputInternal<>(value);
     }
 
-    static <T> Output<T> of(CompletableFuture<T> value) {
+    static <T> Output<T> ofFuture(CompletableFuture<T> value) {
         return new OutputInternal<>(value, false);
     }
 
@@ -303,7 +303,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     private static <E> Output<List<E>> concatListInternal(Output</* @Nullable */ List<E>> left, Output</* @Nullable */List<E>> right) {
-        return Output.of(Internal.of(left).isEmpty().thenCompose(
+        return Output.ofFuture(Internal.of(left).isEmpty().thenCompose(
                 leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
                         rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
                                 l -> Internal.of(right).getValueNullable().thenApply(
@@ -526,7 +526,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     private static <V> Output<Map<String, V>> concatMapInternal(Output<Map<String, V>> left, Output<Map<String, V>> right) {
-        return Output.of(Internal.of(left).isEmpty().thenCompose(
+        return Output.ofFuture(Internal.of(left).isEmpty().thenCompose(
                 leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
                         rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
                                 l -> Internal.of(right).getValueNullable().thenApply(
