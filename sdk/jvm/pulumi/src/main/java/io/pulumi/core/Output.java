@@ -65,13 +65,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     /**
      * @see Output#apply(Function) for more details.
      */
-    default <U> Output<U> applyOptional(Function<T, Optional<U>> func) {
-        return apply(t -> Output.ofOptional(func.apply(t))); // TODO: a candidate to move to Output.ofOptional
-    }
-
-    /**
-     * @see Output#apply(Function) for more details.
-     */
     default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
         return apply(t -> Output.ofFuture(func.apply(t)));
     }
