@@ -119,6 +119,22 @@ func TestCloudExamples(t *testing.T) {
 			})
 		integration.ProgramTest(t, &test)
 	})
+
+	t.Run("eks-minimal", func(t *testing.T) {
+		test := getJvmBase(t, "eks-minimal").
+			With(integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region": "us-west-1",
+				},
+				Quick: true,
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					kubeconfig := o["kubeconfig"].(string)
+					assert.NotEmpty(t, kubeconfig)
+				},
+			})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
