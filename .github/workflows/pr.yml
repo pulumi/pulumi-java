@@ -608,6 +608,10 @@ jobs:
         run: make ensure_plugins
       - name: Build Java language provider
         run: make bin/pulumi-language-jvm
+      - name: Build AWS provider
+        run: make provider.aws.install
+      - name: Build EKS provider
+        run: make provider.eks.install
       - name: Run eks-minimal example
         run: make test_cloud_example.eks-minimal
     strategy:
