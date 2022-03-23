@@ -123,15 +123,6 @@ public interface Output<T> extends Copyable<Output<T>> {
         return Output.of(value);
     }
 
-    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // this is a converter method, so it's ok
-    static <T> Output<T> ofOptional(Optional<T> value) {
-        Objects.requireNonNull(value);
-        if (value.isEmpty()) {
-            return of(null);
-        }
-        return Output.of(value.get());
-    }
-
     /**
      * Combines all the @see {@link Output<T>} values in {@code outputs}
      * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
