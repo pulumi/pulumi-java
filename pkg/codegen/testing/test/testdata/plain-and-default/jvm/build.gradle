@@ -79,3 +79,10 @@ javadoc {
         options.addBooleanOption('html5', true)
     }
 }
+
+jar {
+    manifest {
+        attributes["Pulumi-ResourceProvider-Name"] = 'foobar'
+        attributes["Pulumi-ResourceProvider-Version"] = project.version
+    }
+}
