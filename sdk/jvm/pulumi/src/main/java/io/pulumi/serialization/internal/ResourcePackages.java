@@ -9,10 +9,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.Optionals;
-import io.pulumi.core.internal.Reflection;
-import io.pulumi.core.internal.SemanticVersion;
+import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
@@ -156,23 +153,21 @@ public class ResourcePackages {
         //     (String name, SomeResourceArgs args, CustomResourceOptions options)
         //
         // The search is approximate. We may need to consider using annotations instead in future versions.
-        var constructorCandidates =
+        var constructorInfo =
                 Arrays.stream(resourceType.get().getDeclaredConstructors())
                         .filter(c -> c.getParameterCount() == 3)
                         // Remove confusion of constructors with the second param of type:
                         //     Output<String> id
                         .filter(c -> !c.getParameterTypes()[1].equals(Output.class))
-                        .collect(Collectors.toList());
+                        .collect(PulumiCollectors.toSingleton(cause ->
+                                new IllegalArgumentException(String.format(
+                                        "Resource provider error. Could not find a constructor for resource %s" +
+                                                " with the following signature:" +
+                                                " `(String name, SomeResourceArgs args, CustomResourceOptions options)`" +
+                                                ", got: `%s`",
+                                        resourceType.get(), cause))
+                        ));
 
-        if (constructorCandidates.size() != 1) {
-            throw new IllegalArgumentException(String.format(
-                    "Resource provider error. Could not find a constructor for resource %s" +
-                            " with the following signature:" +
-                            " `(String name, SomeResourceArgs args, CustomResourceOptions options)`",
-                    resourceType.get()));
-        }
-
-        Constructor<?> constructorInfo = constructorCandidates.get(0);
         constructorInfo.setAccessible(true);
 
         var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
