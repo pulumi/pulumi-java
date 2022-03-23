@@ -5,13 +5,11 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
+import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.Optionals;
-import io.pulumi.core.internal.Reflection;
-import io.pulumi.core.internal.SemanticVersion;
+import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
@@ -26,7 +24,6 @@ import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import static io.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.collectingAndThen;
 
@@ -151,10 +148,27 @@ public class ResourcePackages {
         var urnParts = urn.split("::");
         var urnName = urnParts[3];
 
-        Constructor<?> constructorInfo = Arrays.stream(resourceType.get().getDeclaredConstructors())
-                .filter(c -> c.getParameterCount() == 3)
-                .peek(c -> c.setAccessible(true))
-                .collect(toSingleton());
+        // Looking for a constructor with the following signature:
+        //
+        //     (String name, SomeResourceArgs args, CustomResourceOptions options)
+        //
+        // The search is approximate. We may need to consider using annotations instead in future versions.
+        var constructorInfo =
+                Arrays.stream(resourceType.get().getDeclaredConstructors())
+                        .filter(c -> c.getParameterCount() == 3)
+                        // Remove confusion of constructors with the second param of type:
+                        //     Output<String> id
+                        .filter(c -> !c.getParameterTypes()[1].equals(Output.class))
+                        .collect(PulumiCollectors.toSingleton(cause ->
+                                new IllegalArgumentException(String.format(
+                                        "Resource provider error. Could not find a constructor for resource %s" +
+                                                " with the following signature:" +
+                                                " `(String name, SomeResourceArgs args, CustomResourceOptions options)`" +
+                                                ", got: `%s`",
+                                        resourceType.get(), cause))
+                        ));
+
+        constructorInfo.setAccessible(true);
 
         var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
         try {
