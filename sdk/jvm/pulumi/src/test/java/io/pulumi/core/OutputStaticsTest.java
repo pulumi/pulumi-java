@@ -23,7 +23,7 @@ public class OutputStaticsTest {
 
     @Test
     void testListConcatEmpty() {
-        var result = Output.concatList(Output.empty(), Output.empty());
+        var result = Output.concatList(Output.of(null), Output.of(null));
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -84,7 +84,7 @@ public class OutputStaticsTest {
 
     @Test
     void testMapConcatEmpty() {
-        var result = Output.concatMap(Output.empty(), Output.empty());
+        var result = Output.concatMap(Output.of(null), Output.of(null));
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isFalse();

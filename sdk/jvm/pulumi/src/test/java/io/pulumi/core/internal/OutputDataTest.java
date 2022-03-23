@@ -29,8 +29,8 @@ class OutputDataTest {
     @Test
     void testTupleEmpty() {
         var result = OutputData.tuple(
-                Output.empty(), Output.empty(), Output.empty(), Output.empty(),
-                Output.empty(), Output.empty(), Output.empty(), Output.empty()
+                Output.of(null), Output.of(null), Output.of(null), Output.of(null),
+                Output.of(null), Output.of(null), Output.of(null), Output.of(null)
         ).join();
 
         assertThat(result.getValueNullable()).isNotNull()

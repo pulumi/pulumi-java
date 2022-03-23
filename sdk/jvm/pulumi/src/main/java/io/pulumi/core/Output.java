@@ -80,7 +80,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     default Output<Void> applyVoid(Consumer<T> consumer) {
         return apply(t -> {
             consumer.accept(t);
-            return Output.empty();
+            return of(null);
         });
     }
 
@@ -105,7 +105,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     // Static section -----
 
     static <T> Output<T> of() {
-        return Output.empty();
+        return of(null);
     }
 
     static <T> Output<T> of(T value) {
@@ -120,20 +120,16 @@ public interface Output<T> extends Copyable<Output<T>> {
         return new OutputInternal<>(value, true);
     }
 
-    static <T> Output<T> empty() {
-        return new OutputInternal<>(OutputData.empty());
-    }
-
     static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
         if (value == null) {
-            return Output.empty();
+            return of(null);
         }
         return value;
     }
 
     static <T> Output<T> ofNullable(@Nullable T value) {
         if (value == null) {
-            return Output.empty();
+            return of(null);
         }
         return Output.of(value);
     }
@@ -142,7 +138,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     static <T> Output<T> ofOptional(Optional<T> value) {
         Objects.requireNonNull(value);
         if (value.isEmpty()) {
-            return Output.empty();
+            return of(null);
         }
         return Output.of(value.get());
     }

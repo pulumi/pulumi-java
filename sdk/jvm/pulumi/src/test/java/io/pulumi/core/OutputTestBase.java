@@ -235,7 +235,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyTupleHandlesEmpty() {
-        var output = Output.tuple(Output.empty(), Output.empty());
+        var output = Output.tuple(Output.of(null), Output.of(null));
         var data = OutputTests.waitFor(output);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo(Tuples.of(null, null));
