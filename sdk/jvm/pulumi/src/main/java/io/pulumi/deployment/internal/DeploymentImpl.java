@@ -32,10 +32,10 @@ import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
 import pulumirpc.Provider;
 import pulumirpc.Provider.CallRequest;
+import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeRequest;
-import pulumirpc.Resource.ReadResourceRequest;
-import pulumirpc.Resource.RegisterResourceRequest;
-import pulumirpc.Resource.SupportsFeatureRequest;
+import pulumirpc.Provider.InvokeResponse;
+import pulumirpc.Resource.*;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -1445,7 +1445,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         ));
 
                 return this.monitor.registerResourceOutputsAsync(
-                        pulumirpc.Resource.RegisterResourceOutputsRequest.newBuilder()
+                        RegisterResourceOutputsRequest.newBuilder()
                                 .setUrn(urn)
                                 .setOutputs(serialized)
                                 .build()
@@ -1991,32 +1991,32 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
-        public CompletableFuture<pulumirpc.Resource.SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request) {
+        public CompletableFuture<SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request) {
             return tracker.wrap(() -> this.monitor.supportsFeatureAsync(request));
         }
 
         @Override
-        public CompletableFuture<Provider.InvokeResponse> invokeAsync(InvokeRequest request) {
+        public CompletableFuture<InvokeResponse> invokeAsync(InvokeRequest request) {
             return tracker.wrap(() -> this.monitor.invokeAsync(request));
         }
 
         @Override
-        public CompletableFuture<Provider.CallResponse> callAsync(CallRequest request) {
+        public CompletableFuture<CallResponse> callAsync(CallRequest request) {
             return tracker.wrap(() -> this.monitor.callAsync(request));
         }
 
         @Override
-        public CompletableFuture<pulumirpc.Resource.ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
+        public CompletableFuture<ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
             return tracker.wrap(() -> this.monitor.readResourceAsync(resource, request));
         }
 
         @Override
-        public CompletableFuture<pulumirpc.Resource.RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
+        public CompletableFuture<RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
             return tracker.wrap(() -> this.monitor.registerResourceAsync(resource, request));
         }
 
         @Override
-        public CompletableFuture<Void> registerResourceOutputsAsync(pulumirpc.Resource.RegisterResourceOutputsRequest request) {
+        public CompletableFuture<Void> registerResourceOutputsAsync(RegisterResourceOutputsRequest request) {
             return tracker.wrap(() -> this.monitor.registerResourceOutputsAsync(request));
         }
     }
