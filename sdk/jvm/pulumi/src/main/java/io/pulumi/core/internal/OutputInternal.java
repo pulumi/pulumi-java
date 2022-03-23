@@ -127,16 +127,6 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
         return this.dataFuture.thenApply(OutputData::isSecret);
     }
 
-    @InternalUse
-    public CompletableFuture<Boolean> isEmpty() {
-        return this.dataFuture.thenApply(OutputData::isEmpty);
-    }
-
-    @InternalUse
-    public CompletableFuture<Boolean> isPresent() {
-        return this.dataFuture.thenApply(OutputData::isPresent);
-    }
-
     // Static section -----
 
     static <T> OutputInternal<T> cast(Output<T> output) {

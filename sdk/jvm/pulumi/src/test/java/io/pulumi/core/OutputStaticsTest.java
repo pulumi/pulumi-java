@@ -48,7 +48,6 @@ public class OutputStaticsTest {
         var result = Output.concatList(list1, list2);
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).hasSize(4);
@@ -87,7 +86,6 @@ public class OutputStaticsTest {
         var result = Output.concatMap(Output.of(null), Output.of(null));
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEmpty();
@@ -112,7 +110,6 @@ public class OutputStaticsTest {
         var result = Output.concatMap(map1, map2);
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).hasSize(4);
@@ -205,7 +202,6 @@ public class OutputStaticsTest {
         var data0 = OutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
         assertThat(data0.isSecret()).isTrue();
-        assertThat(data0.isPresent()).isFalse();
         assertThat(data0.isKnown()).isTrue();
 
         // stringify should not modify the original Output
@@ -216,7 +212,6 @@ public class OutputStaticsTest {
         var data1 = OutputTests.waitFor(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
-        assertThat(data1.isPresent()).isTrue();
         assertThat(data1.isKnown()).isTrue();
     }
 }

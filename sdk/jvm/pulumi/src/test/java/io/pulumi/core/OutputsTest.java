@@ -13,7 +13,6 @@ public class OutputsTest {
         var data0 = OutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
         assertThat(data0.isSecret()).isTrue();
-        assertThat(data0.isPresent()).isFalse();
         assertThat(data0.isKnown()).isTrue();
 
         // stringify should not modify the original Input
@@ -24,7 +23,6 @@ public class OutputsTest {
         var data1 = OutputTests.waitFor(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
-        assertThat(data1.isPresent()).isTrue();
         assertThat(data1.isKnown()).isTrue();
     }
 }
