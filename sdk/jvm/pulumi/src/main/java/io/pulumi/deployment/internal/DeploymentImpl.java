@@ -2043,20 +2043,18 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> CompletableFuture<T> wrap(Supplier<CompletableFuture<T>> func) {
-            return CompletableFuture.completedFuture(0)
-                    .thenApply(__ -> func.get())
-                    .thenCompose(this::throwIfDeploymentCancelled)
-                    .thenCompose(x -> x)
-                    .thenCompose(this::throwIfDeploymentCancelled);
+            return throwIfDeploymentCancelled()
+                    .thenCompose(__ -> func.get())
+                    .thenCompose(result -> throwIfDeploymentCancelled().thenApply(__ -> result));
         }
 
-        public <T> CompletableFuture<T> throwIfDeploymentCancelled(T value) {
+        public CompletableFuture<Void> throwIfDeploymentCancelled()  {
             var currentId = getCurrentDeploymentId();
-            if (!isDeploymentCancelled(currentId)) {
-                return CompletableFuture.completedFuture(value);
-            } else {
+            if (isDeploymentCancelled(currentId)) {
                 return CompletableFuture.failedFuture(new DeploymentCancelledException(
                         originalDeploymentId, currentId));
+            } else {
+                return CompletableFuture.completedFuture(null);
             }
         }
     }
