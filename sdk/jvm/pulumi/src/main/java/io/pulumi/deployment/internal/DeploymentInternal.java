@@ -35,6 +35,8 @@ public interface DeploymentInternal extends Deployment {
 
     void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs);
 
+    int getDeploymentId();
+
     @InternalUse
     static DeploymentInternal getInstance() {
         return DeploymentInternal.cast(Deployment.getInstance()).getInternal();
