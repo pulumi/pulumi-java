@@ -97,10 +97,6 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     // Static section -----
 
-    static <T> Output<T> of() {
-        return of(null);
-    }
-
     static <T> Output<T> of(T value) {
         return new OutputInternal<>(value);
     }
