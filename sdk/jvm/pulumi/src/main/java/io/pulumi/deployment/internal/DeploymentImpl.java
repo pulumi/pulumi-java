@@ -43,10 +43,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -107,7 +104,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.call = new Call(this.log, trackingMonitor, this.prepare, this.serialization, this.converter);
         this.readResource = new ReadResource(this.log, this.prepare, trackingMonitor);
         this.registerResource = new RegisterResource(this.log, this.prepare, trackingMonitor);
-        this.readOrRegisterResource = new ReadOrRegisterResource(state.runner, this.invoke, this.readResource, this.registerResource, this.converter, state.isDryRun);
+        this.readOrRegisterResource = new ReadOrRegisterResource(tracker, state.runner, this.invoke, this.readResource, this.registerResource, this.converter, state.isDryRun);
         this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, trackingMonitor, this.featureSupport, this.serialization);
     }
 
@@ -1025,6 +1022,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private static final class ReadOrRegisterResource {
 
+        private final DeploymentTracker tracker;
         private final Runner runner;
         private final Invoke invoke;
         private final ReadResource readResource;
@@ -1033,6 +1031,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final boolean isDryRun;
 
         private ReadOrRegisterResource(
+                DeploymentTracker tracker,
                 Runner runner,
                 Invoke invoke,
                 ReadResource readResource,
@@ -1040,6 +1039,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Converter converter,
                 boolean isDryRun
         ) {
+            this.tracker = Objects.requireNonNull(tracker);
             this.runner = Objects.requireNonNull(runner);
             this.invoke = Objects.requireNonNull(invoke);
             this.readResource = Objects.requireNonNull(readResource);
@@ -1086,6 +1086,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 var id = response.t2;
                                 var data = response.t3;
                                 var dependencies = response.t4;
+
+                                if (tracker.isDeploymentCancelled()) {
+                                    return null;
+                                }
 
                                 // Run in a try/catch/finally so that we always resolve all the outputs of the resource
                                 // regardless of whether we encounter an errors computing the action.
@@ -2024,6 +2028,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.originalDeploymentId = originalDeploymentId;
         }
 
+        public boolean isDeploymentCancelled() {
+            var currentId = getCurrentDeploymentId();
+            return currentId != originalDeploymentId;
+        }
+
         public <T> CompletableFuture<T> wrap(Supplier<CompletableFuture<T>> func) {
             return CompletableFuture.completedFuture(0)
                     .thenApply(__ -> func.get())
@@ -2033,8 +2042,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> CompletableFuture<T> throwIfDeploymentCancelled(T value) {
-            var currentId = getCurrentDeploymentId();
-            if (currentId == originalDeploymentId) {
+            if (!isDeploymentCancelled()) {
                 return CompletableFuture.completedFuture(value);
             } else {
                 return CompletableFuture.failedFuture(new DeploymentCancelledException());
