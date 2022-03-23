@@ -30,7 +30,6 @@ import io.pulumi.serialization.internal.Structs;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
-import pulumirpc.Provider;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeRequest;
@@ -43,7 +42,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -2028,9 +2030,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.originalDeploymentId = originalDeploymentId;
         }
 
+        private static Optional<Integer> getCurrentDeploymentId() {
+            return DeploymentInternal.getInstanceOptional().map(d -> d.getDeploymentId());
+        }
+
         public boolean isDeploymentCancelled() {
-            var currentId = getCurrentDeploymentId();
-            return currentId != originalDeploymentId;
+            return isDeploymentCancelled(getCurrentDeploymentId());
+        }
+
+        private boolean isDeploymentCancelled(Optional<Integer> currentId) {
+            return currentId.isEmpty() || currentId.get() != originalDeploymentId;
         }
 
         public <T> CompletableFuture<T> wrap(Supplier<CompletableFuture<T>> func) {
@@ -2042,22 +2051,23 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> CompletableFuture<T> throwIfDeploymentCancelled(T value) {
-            if (!isDeploymentCancelled()) {
+            var currentId = getCurrentDeploymentId();
+            if (!isDeploymentCancelled(currentId)) {
                 return CompletableFuture.completedFuture(value);
             } else {
-                return CompletableFuture.failedFuture(new DeploymentCancelledException());
-            }
-        }
-
-        private static int getCurrentDeploymentId() {
-            var deployment = DeploymentInternal.getInstanceOptional();
-            if (deployment.isPresent()) {
-                return deployment.get().getDeploymentId();
-            } else {
-                return -1;
+                return CompletableFuture.failedFuture(new DeploymentCancelledException(
+                        originalDeploymentId, currentId));
             }
         }
     }
 
-    private static final class DeploymentCancelledException extends Exception { }
+    private static final class DeploymentCancelledException extends Exception {
+        public DeploymentCancelledException(int originalDeploymentId,
+                                            Optional<Integer> currentDeploymentId) {
+            super(String.format("Terminating task from the cancelled deployment `#%d`", originalDeploymentId) +
+                    String.format(" since the current deployment changed to `%s`. ",
+                            currentDeploymentId.map(d -> String.format("#%d", d)).orElse("#none")) +
+                    "Concurrent deployments are not currently supported.");
+        }
+    }
 }
