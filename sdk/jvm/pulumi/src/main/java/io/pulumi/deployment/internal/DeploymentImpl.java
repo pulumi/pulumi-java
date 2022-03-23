@@ -1082,16 +1082,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ResourceOptions options, ImmutableMap<String, OutputCompletionSource<?>> completionSources
         ) {
             return readOrRegisterResourceAsync(resource, remote, newDependency, args, options)
+                    .thenCompose(response -> tracker.throwIfDeploymentCancelled().thenApply(__ -> response))
                     .thenCompose(response ->
                             CompletableFuture.supplyAsync(() -> {
                                 var urn = response.t1;
                                 var id = response.t2;
                                 var data = response.t3;
                                 var dependencies = response.t4;
-
-                                if (tracker.isDeploymentCancelled()) {
-                                    return null;
-                                }
 
                                 // Run in a try/catch/finally so that we always resolve all the outputs of the resource
                                 // regardless of whether we encounter an errors computing the action.
