@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"strings"
 	"syscall"
 
@@ -28,8 +29,10 @@ import (
 func main() {
 	var tracing string
 	var root string
+	var jar string
 	flag.StringVar(&tracing, "tracing", "", "Emit tracing to a Zipkin-compatible tracing endpoint")
 	flag.StringVar(&root, "root", "", "Project root path to use")
+	flag.StringVar(&jar, "jar", "", "A relative or an absolute path to a JAR to execute")
 
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
@@ -48,6 +51,16 @@ func main() {
 		logging.V(3).Infof("language host asked to use specific executor: `%s`", givenExecutor)
 		var err error
 		jvmExec, err = resolveExecutor(givenExecutor)
+		if err != nil {
+			cmdutil.Exit(err)
+		}
+	case jar != "":
+		logging.V(3).Infof("language host asked to use specific JAR: `%s`", jar)
+		cmd, err := lookupPath("java")
+		if err != nil {
+			cmdutil.Exit(err)
+		}
+		jvmExec, err = newJarExecutor(cmd, jar)
 		if err != nil {
 			cmdutil.Exit(err)
 		}
@@ -91,8 +104,8 @@ func main() {
 }
 
 type jvmExecutor struct {
-	cmd     string
-	runArgs []string
+	cmd  string
+	args []string
 }
 
 // jvmLanguageHost implements the LanguageRuntimeServer interface
@@ -140,7 +153,7 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 
 	// Run from source.
 	executable := host.exec.cmd
-	args := host.exec.runArgs
+	args := host.exec.args
 
 	if logging.V(5) {
 		commandStr := strings.Join(args, " ")
@@ -247,13 +260,28 @@ func probeExecutor() (string, error) {
 	if err != nil {
 		return "", errors.Wrap(err, "could not read the working directory")
 	}
+	mvn := "mvn"
+	// detect mvn wrapper
+	for _, file := range files {
+		if !file.IsDir() && file.Name() == "mvnw" {
+			mvn = "./mvnw"
+		}
+	}
+	gradle := "gradle"
+	// detect gradle wrapper
+	for _, file := range files {
+		if !file.IsDir() && file.Name() == "gradlew" {
+			gradle = "./gradlew"
+		}
+	}
+	// detect maven or gradle
 	for _, file := range files {
 		if !file.IsDir() {
 			switch file.Name() {
 			case "pom.xml":
-				return "mvn", nil
+				return mvn, nil
 			case "settings.gradle", "settings.gradle.kts":
-				return "gradle", nil
+				return gradle, nil
 			}
 		}
 	}
@@ -261,29 +289,44 @@ func probeExecutor() (string, error) {
 }
 
 func resolveExecutor(exec string) (*jvmExecutor, error) {
-	// TODO: we might want to look for gradlew and mvnw, before gradle and mvn
 	switch exec {
-	case "gradle":
-		cmd, err := lookupPath("gradle")
+	case "gradle", "./gradlew":
+		cmd, err := lookupPath(exec)
 		if err != nil {
 			return nil, err
 		}
-		return &jvmExecutor{
-			cmd:     cmd,
-			runArgs: []string{"run", "--console=plain"},
-		}, nil
-	case "maven", "mvn":
-		cmd, err := lookupPath("mvn")
+		return newGradleExecutor(cmd)
+	case "mvn", "./mvnw":
+		cmd, err := lookupPath(exec)
 		if err != nil {
 			return nil, err
 		}
-		return &jvmExecutor{
-			cmd:     cmd,
-			runArgs: []string{"--no-transfer-progress", "compile", "exec:java"},
-		}, nil
+		return newMavenExecutor(cmd)
 	default:
-		return nil, errors.Errorf("did not recognize the executor '%s', expected one of: gradle, maven", exec)
+		return nil, errors.Errorf("did not recognize executor '%s', "+
+			"expected one of: gradle, mvn, gradlew, mvnw", exec)
 	}
+}
+
+func newGradleExecutor(cmd string) (*jvmExecutor, error) {
+	return &jvmExecutor{
+		cmd:  cmd,
+		args: []string{"run", "--console=plain"},
+	}, nil
+}
+
+func newMavenExecutor(cmd string) (*jvmExecutor, error) {
+	return &jvmExecutor{
+		cmd:  cmd,
+		args: []string{"--no-transfer-progress", "compile", "exec:java"},
+	}, nil
+}
+
+func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
+	return &jvmExecutor{
+		cmd:  cmd,
+		args: []string{"-jar", filepath.Clean(path)},
+	}, nil
 }
 
 func lookupPath(file string) (string, error) {
