@@ -109,18 +109,15 @@ public interface Output<T> extends Copyable<Output<T>> {
         return new OutputInternal<>(value, true);
     }
 
-    static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
-        if (value == null) {
-            return of(null);
-        }
-        return value;
-    }
-
     static <T> Output<T> ofNullable(@Nullable T value) {
         if (value == null) {
             return of(null);
         }
         return Output.of(value);
+    }
+
+    static <T> Output<T> unknown() {
+        return new OutputInternal<>(OutputData.unknown());
     }
 
     /**

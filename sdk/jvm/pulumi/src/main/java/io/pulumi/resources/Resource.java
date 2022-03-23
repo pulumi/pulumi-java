@@ -18,6 +18,7 @@ import io.pulumi.exceptions.ResourceException;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
 
 import static io.pulumi.core.internal.Objects.exceptionSupplier;
 import static io.pulumi.core.internal.Objects.require;
@@ -29,9 +30,11 @@ import static java.util.Objects.requireNonNull;
  */
 @ParametersAreNonnullByDefault
 public abstract class Resource {
+    private final CompletableFuture<Output<String>> urnFuture = new CompletableFuture();
 
     @Export(name = Constants.UrnPropertyName, type = String.class)
-    private /* final-ish */ Output<String> urn; // this can be set only once with the setter or reflection
+    private final Output<String> urn = Output.ofFuture(urnFuture).apply(urn -> urn);
+
     private final String type;
     private final String name;
 
@@ -102,7 +105,6 @@ public abstract class Resource {
             return;
         }
 
-        this.urn = null; // this.urn can be set later with the setter or reflection
         var exceptionSupplier = exceptionSupplier(
                 () -> new ResourceException(this),
                 (String msg) -> new ResourceException(msg, this)
@@ -275,13 +277,12 @@ public abstract class Resource {
      * Urn is the stable logical URN used to distinctly address a resource, both before and after deployments.
      */
     public Output<String> getUrn() {
-        return Output.ofNullable(this.urn);
+        return this.urn;
     }
 
-    protected void setUrn(@Nullable Output<String> urn) {
-        if (this.urn == null) {
-            this.urn = urn;
-        } else {
+    @InternalUse
+    public void setUrn(@Nullable Output<String> urn) {
+        if (!this.urnFuture.complete(urn)) {
             throw new IllegalStateException("urn cannot be set twice, must be null for setUrn to work");
         }
     }

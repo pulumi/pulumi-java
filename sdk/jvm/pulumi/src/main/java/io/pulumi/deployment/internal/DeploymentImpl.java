@@ -1093,12 +1093,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 // Run in a try/catch/finally so that we always resolve all the outputs of the resource
                                 // regardless of whether we encounter an errors computing the action.
                                 try {
-                                    completionSources.get(Constants.UrnPropertyName).setStringValue(urn, true);
+                                    resource.setUrn(Output.of(urn));
 
                                     if (resource instanceof CustomResource) {
+                                        var customResource = (CustomResource)resource;
                                         var isKnown = isNonEmptyOrNull(id);
-                                        completionSources.get(Constants.IdPropertyName)
-                                                .setStringValue(isKnown ? id : null, isKnown);
+                                        customResource.setId(isKnown ? Output.of(id) : Output.unknown());
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
