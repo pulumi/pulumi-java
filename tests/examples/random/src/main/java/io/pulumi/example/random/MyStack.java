@@ -1,4 +1,4 @@
-package random;
+package io.pulumi.example.random;
 
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
