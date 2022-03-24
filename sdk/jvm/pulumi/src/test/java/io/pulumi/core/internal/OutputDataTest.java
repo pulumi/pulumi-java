@@ -28,11 +28,9 @@ class OutputDataTest {
 
     @Test
     void testTupleEmpty() {
-        var result = OutputData.tuple(
-                Output.of(null), Output.of(null), Output.of(null), Output.of(null),
-                Output.of(null), Output.of(null), Output.of(null), Output.of(null)
-        ).join();
-
+        var e = Output.of((Object)null);
+        Object nil = null;
+        var result = OutputData.tuple(e, e, e, e, e, e, e, e).join();
         assertThat(result.getValueNullable()).isNotNull()
                 .isEqualTo(Tuples.of(null, null, null, null, null, null, null, null));
     }

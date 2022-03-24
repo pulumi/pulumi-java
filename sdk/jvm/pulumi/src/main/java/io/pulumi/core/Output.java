@@ -65,14 +65,14 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#apply(Function) for more details.
      */
     default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
-        return apply(t -> Output.ofFuture(func.apply(t)));
+        return apply(t -> Output.of(func.apply(t)));
     }
 
     @CanIgnoreReturnValue
     default Output<Void> applyVoid(Consumer<T> consumer) {
         return apply(t -> {
             consumer.accept(t);
-            return Output.of(null);
+            return Output.of((Void)null);
         });
     }
 
@@ -100,7 +100,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         return new OutputInternal<>(value);
     }
 
-    static <T> Output<T> ofFuture(CompletableFuture<T> value) {
+    static <T> Output<T> of(CompletableFuture<T> value) {
         return new OutputInternal<>(value, false);
     }
 

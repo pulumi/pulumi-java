@@ -33,7 +33,7 @@ public abstract class Resource {
     private final CompletableFuture<Output<String>> urnFuture = new CompletableFuture();
 
     @Export(name = Constants.UrnPropertyName, type = String.class)
-    private final Output<String> urn = Output.ofFuture(urnFuture).apply(urn -> urn);
+    private final Output<String> urn = Output.of(urnFuture).apply(urn -> urn);
 
     private final String type;
     private final String name;

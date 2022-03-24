@@ -130,7 +130,7 @@ public class DeploymentTest {
         var cf = new CompletableFuture<Integer>();
         var runTaskOne = mock.runner.runAsyncFuture(() -> {
             //noinspection unused
-            Output<Integer> orphaned = Output.ofFuture(cf).applyValue(result::getAndSet); // the orphaned output
+            Output<Integer> orphaned = Output.of(cf).applyValue(result::getAndSet); // the orphaned output
             return CompletableFuture.completedFuture(Map.of()); // empty outputs
         }, null);
 

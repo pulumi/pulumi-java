@@ -67,7 +67,7 @@ public class Stack extends ComponentResource {
     private Stack(Supplier<CompletableFuture<Map<String, Optional<Object>>>> init, @Nullable StackOptions options) {
         this(options);
         try {
-            this.outputs = Output.ofFuture(runInitAsync(init));
+            this.outputs = Output.of(runInitAsync(init));
         } finally {
             this.registerOutputs(this.outputs);
         }

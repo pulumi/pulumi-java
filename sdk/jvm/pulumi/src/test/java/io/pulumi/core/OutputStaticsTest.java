@@ -22,8 +22,9 @@ public class OutputStaticsTest {
     }
 
     @Test
-    void testListConcatEmpty() {
-        var result = Output.concatList(Output.of(null), Output.of(null));
+    void testListConcatCoercesNullToEmpty() {
+        var nullList = Output.of((List<Object>)null);
+        var result = Output.concatList(nullList, nullList);
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -82,10 +83,11 @@ public class OutputStaticsTest {
     }
 
     @Test
-    void testMapConcatEmpty() {
-        var result = Output.concatMap(Output.of(null), Output.of(null));
+    void testMapConcatNullAsEmpty() {
+        var result = Output.concatMap(
+                Output.of((Map<String,Object>)null),
+                Output.of((Map<String,Object>)null));
         var data = OutputTests.waitFor(result);
-
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEmpty();

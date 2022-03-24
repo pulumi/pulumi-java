@@ -66,7 +66,7 @@ public class DeploymentInvokeTest {
         static Output<ImmutableList<ImmutableMap<String, Object>>> doStuff(
                 @SuppressWarnings("SameParameterValue") CustomArgs args,
                 @Nullable InvokeOptions options) {
-            return Output.ofFuture(
+            return Output.of(
                     Deployment.getInstance().invokeAsync(
                             "tests:custom:stuff",
                             TypeShape.of(CustomResult.class),

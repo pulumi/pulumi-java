@@ -18,7 +18,7 @@ public class CustomResource extends Resource {
     private final CompletableFuture<Output<String>> idFuture = new CompletableFuture<>();
 
     @Export(name = Constants.IdPropertyName, type = String.class)
-    private final Output<String> id = Output.ofFuture(idFuture).apply(id -> id);
+    private final Output<String> id = Output.of(idFuture).apply(id -> id);
 
 
     /**

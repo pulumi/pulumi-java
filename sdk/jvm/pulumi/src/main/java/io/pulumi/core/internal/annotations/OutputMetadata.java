@@ -134,6 +134,6 @@ public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<
 
     public Output<T> getOrSetIncompleteFieldValue(Object extractionObject) {
         // Used to inject OutputCompletionSource, must be completed manually before joining
-        return getOrSetFieldValue(extractionObject, Output.ofFuture(new CompletableFuture<>()));
+        return getOrSetFieldValue(extractionObject, Output.of(new CompletableFuture<>()));
     }
 }
