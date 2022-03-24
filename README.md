@@ -63,6 +63,7 @@ Once it is working you can add it to `java_examples_test.go` to run
 under `ProgramTest` framework, and write some assert in Go against the
 expected stack outputs.
 
+
 ## Git History
 
 This repo adapts code from `VirtusLab/pulumi` fork of `pulumi/pulumi`
