@@ -16,10 +16,9 @@ public class OutputStaticsTest {
         var result = Output.concatList(null, null);
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isTrue();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
-        assertThat(data.getValueNullable()).isNull();
+        assertThat(data.getValueNullable()).isNotNull().isEmpty();
     }
 
     @Test
@@ -27,10 +26,9 @@ public class OutputStaticsTest {
         var result = Output.concatList(Output.empty(), Output.empty());
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isTrue();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
-        assertThat(data.getValueNullable()).isNull();
+        assertThat(data.getValueNullable()).isNotNull().isEmpty();
     }
 
     @Test
@@ -79,10 +77,9 @@ public class OutputStaticsTest {
         var result = Output.concatMap(null, null);
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isTrue();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
-        assertThat(data.getValueNullable()).isNull();
+        assertThat(data.getValueNullable()).isNotNull().isEmpty();
     }
 
     @Test
@@ -90,10 +87,10 @@ public class OutputStaticsTest {
         var result = Output.concatMap(Output.empty(), Output.empty());
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isTrue();
+        assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
-        assertThat(data.getValueNullable()).isNull();
+        assertThat(data.getValueNullable()).isNotNull().isEmpty();
     }
 
     @Test
