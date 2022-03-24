@@ -1,4 +1,6 @@
 name: minimal
-description: A minimal gradle Pulumi program.
+description: A minimal Pulumi program using a JAR.
 runtime:
   name: jvm
+  options:
+    jar: target/minimal-1.0-SNAPSHOT-jar-with-dependencies.jar
