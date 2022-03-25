@@ -6,6 +6,7 @@ package io.pulumi.plant.tree_v1;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.plant.inputs.ContainerArgs;
 import io.pulumi.plant.tree_v1.enums.Diameter;
 import io.pulumi.plant.tree_v1.enums.Farm;
@@ -24,7 +25,7 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerArgs> container;
 
     public Output<ContainerArgs> getContainer() {
-        return this.container == null ? Output.empty() : this.container;
+        return this.container == null ? Codegen.empty() : this.container;
     }
 
     @Import(name="diameter", required=true)
@@ -38,14 +39,14 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<Farm,String>> farm;
 
     public Output<Either<Farm,String>> getFarm() {
-        return this.farm == null ? Output.empty() : this.farm;
+        return this.farm == null ? Codegen.empty() : this.farm;
     }
 
     @Import(name="size")
       private final @Nullable Output<TreeSize> size;
 
     public Output<TreeSize> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     @Import(name="type", required=true)
@@ -69,11 +70,11 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RubberTreeArgs() {
-        this.container = Output.empty();
-        this.diameter = Output.empty();
-        this.farm = Output.empty();
-        this.size = Output.empty();
-        this.type = Output.empty();
+        this.container = Codegen.empty();
+        this.diameter = Codegen.empty();
+        this.farm = Codegen.empty();
+        this.size = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder container(@Nullable ContainerArgs container) {
-            this.container = Output.ofNullable(container);
+            this.container = Codegen.ofNullable(container);
             return this;
         }
         public Builder diameter(Output<Diameter> diameter) {
@@ -125,7 +126,7 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder farm(@Nullable Either<Farm,String> farm) {
-            this.farm = Output.ofNullable(farm);
+            this.farm = Codegen.ofNullable(farm);
             return this;
         }
         public Builder size(@Nullable Output<TreeSize> size) {
@@ -133,7 +134,7 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable TreeSize size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder type(Output<RubberTreeVariety> type) {

@@ -6,6 +6,7 @@ package io.pulumi.plant.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.plant.enums.ContainerBrightness;
 import io.pulumi.plant.enums.ContainerColor;
 import io.pulumi.plant.enums.ContainerSize;
@@ -22,21 +23,21 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerBrightness> brightness;
 
     public Output<ContainerBrightness> getBrightness() {
-        return this.brightness == null ? Output.empty() : this.brightness;
+        return this.brightness == null ? Codegen.empty() : this.brightness;
     }
 
     @Import(name="color")
       private final @Nullable Output<Either<ContainerColor,String>> color;
 
     public Output<Either<ContainerColor,String>> getColor() {
-        return this.color == null ? Output.empty() : this.color;
+        return this.color == null ? Codegen.empty() : this.color;
     }
 
     @Import(name="material")
       private final @Nullable Output<String> material;
 
     public Output<String> getMaterial() {
-        return this.material == null ? Output.empty() : this.material;
+        return this.material == null ? Codegen.empty() : this.material;
     }
 
     @Import(name="size", required=true)
@@ -58,10 +59,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.brightness = Output.empty();
-        this.color = Output.empty();
-        this.material = Output.empty();
-        this.size = Output.empty();
+        this.brightness = Codegen.empty();
+        this.color = Codegen.empty();
+        this.material = Codegen.empty();
+        this.size = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder brightness(@Nullable ContainerBrightness brightness) {
-            this.brightness = Output.ofNullable(brightness);
+            this.brightness = Codegen.ofNullable(brightness);
             return this;
         }
         public Builder color(@Nullable Output<Either<ContainerColor,String>> color) {
@@ -103,7 +104,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder color(@Nullable Either<ContainerColor,String> color) {
-            this.color = Output.ofNullable(color);
+            this.color = Codegen.ofNullable(color);
             return this;
         }
         public Builder material(@Nullable Output<String> material) {
@@ -111,7 +112,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder material(@Nullable String material) {
-            this.material = Output.ofNullable(material);
+            this.material = Codegen.ofNullable(material);
             return this;
         }
         public Builder size(Output<ContainerSize> size) {

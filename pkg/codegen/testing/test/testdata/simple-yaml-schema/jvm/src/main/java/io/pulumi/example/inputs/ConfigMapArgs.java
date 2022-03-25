@@ -5,6 +5,7 @@ package io.pulumi.example.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> config;
 
     public Output<String> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     public ConfigMapArgs(@Nullable Output<String> config) {
@@ -26,7 +27,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigMapArgs() {
-        this.config = Output.empty();
+        this.config = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable String config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }        public ConfigMapArgs build() {
             return new ConfigMapArgs(config);
