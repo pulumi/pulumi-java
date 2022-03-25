@@ -2,9 +2,6 @@ package io.pulumi.core;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -14,14 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
 public class OutputStaticsTest {
-
-    private static final Deployment deployment = DeploymentTests.DeploymentMockBuilder.builder()
-            // .setMocks(new MocksTest.MyMocks())
-            .setOptions(new TestOptions(false))
-            .buildMockInstance()
-            .getDeployment();
-
-    private static final OutputBuilder output = OutputBuilder.forDeployment(deployment);
+    private static final OutputBuilder output = OutputTests.testContext().output;
 
     @Test
     void testListConcatNull() {

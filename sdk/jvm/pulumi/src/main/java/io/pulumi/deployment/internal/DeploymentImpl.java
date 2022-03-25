@@ -61,7 +61,7 @@ import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
-public final class DeploymentImpl implements Deployment, DeploymentInternal {
+public class DeploymentImpl implements Deployment, DeploymentInternal {
 
     private final DeploymentState state;
     private final Log log;

@@ -8,10 +8,13 @@ import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.OutputInternal;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.MocksTest;
+import io.pulumi.deployment.*;
 import io.pulumi.deployment.internal.DeploymentTests;
 import org.junit.jupiter.api.BeforeAll;
+
+import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 
 public class OutputTests {
 
@@ -59,10 +62,24 @@ public class OutputTests {
 
         public TestContext() {
             var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                    .setMocks(new MocksTest.MyMocks())
+                    .setMocks(new MocksThatAlwaysThrow())
                     .buildSpyInstance();
             this.deployment = mock.getDeployment();
             this.output = OutputBuilder.forDeployment(this.deployment);
+        }
+    }
+
+    public static class MocksThatAlwaysThrow implements Mocks {
+        @Override
+        public CompletableFuture<Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+            return CompletableFuture.failedFuture(new IllegalStateException(
+                    "MocksThatAlwaysThrow do not support resources"));
+        }
+
+        @Override
+        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+            return CompletableFuture.failedFuture(new IllegalStateException(
+                    "MocksThatAlwaysThrow do not support calls"));
         }
     }
 }
