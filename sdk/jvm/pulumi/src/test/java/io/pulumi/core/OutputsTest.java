@@ -24,12 +24,5 @@ public class OutputsTest {
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
         assertThat(data1.isKnown()).isTrue();
-
-        Output<String> res2 = Output.ofNullable(Output.of("test2")).asSecret();
-        var data2 = OutputTests.waitFor(res2);
-        assertThat(data2.getValueNullable()).isEqualTo("test2");
-        assertThat(data2.isSecret()).isTrue();
-        assertThat(data2.isPresent()).isTrue();
-        assertThat(data2.isKnown()).isTrue();
     }
 }
