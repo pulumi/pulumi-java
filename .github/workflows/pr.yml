@@ -125,7 +125,7 @@ jobs:
       - name: Get old JAR size
         id: oldJar
         run: |
-          size=$(du -s providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
           sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
           echo ::set-output name=size::${size}
           echo ::set-output name=sizeHuman::${sizeHuman}
@@ -142,7 +142,7 @@ jobs:
       - name: Get new JAR size
         id: newJar
         run: |
-          size=$(du -s providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
           sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
           echo ::set-output name=size::${size}
           echo ::set-output name=sizeHuman::${sizeHuman}
@@ -159,7 +159,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
-          issue-number: ${{ github.event.client_payload.github.payload.issue.number }}
+          issue-number: ${{ env.GITHUB_REF }}
           body: |
             Provider : ${{ matrix.provider }}
             New Size : ${{ steps.newJar.outputs.sizeHuman }}
