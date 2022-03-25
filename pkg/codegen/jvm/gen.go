@@ -1636,6 +1636,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		isComponent = ", true"
 	}
 	fprintf(w, "    /**\n")
+	for i := 1; i < 500; i++ {
+		fprintf(w, "*")
+	}
 	fprintf(w, "     *\n")
 	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
 	fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
