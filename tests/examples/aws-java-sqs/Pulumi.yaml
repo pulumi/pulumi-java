@@ -1,0 +1,4 @@
+name: aws-java-sqs
+description: An example provisioning SQS queues with Java
+runtime: jvm
+
