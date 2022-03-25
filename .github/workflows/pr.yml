@@ -158,8 +158,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
-          issue-number: ${{ env.GITHUB_REF }}
+          issue-number: ${{ github.event.client_payload.github.payload.issue.number }}
           body: |
             Provider : ${{ matrix.provider }}
             New Size : ${{ steps.newJar.outputs.sizeHuman }}
