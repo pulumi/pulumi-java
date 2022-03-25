@@ -36,7 +36,6 @@ class OutputDataTest {
 
 =======
         var e = Output.of((Object)null);
-        Object nil = null;
         var result = OutputData.tuple(e, e, e, e, e, e, e, e).join();
 >>>>>>> 6436cfd493 (Revert ofFuture, deal with null ambiguity)
         assertThat(result.getValueNullable()).isNotNull()
