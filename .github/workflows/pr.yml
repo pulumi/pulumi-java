@@ -79,7 +79,6 @@ jobs:
         - docker
         - eks
     steps:
-      - uses: actions/checkout@v2
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -114,10 +113,58 @@ jobs:
           build-root-directory: sdk/jvm
       - name: Publish Pulumi Java SDK to a local Maven repo
         run: make install_sdk
+      # build original
+      - uses: actions/checkout@v2
+        ref: main
       - name: Build JVM SDK provider
         run: make provider.${PROVIDER}.install
         env:
           PROVIDER: ${{ matrix.provider }}
+      - name: Get old JAR size
+        id: oldJar
+        run: |
+          size=$(du -s providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # clean up
+      - name: Remove old JARs
+        run: |
+          rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
+      # build new
+      - uses: actions/checkout@v2
+      - name: Build JVM SDK provider
+        run: make provider.${PROVIDER}.install
+        env:
+          PROVIDER: ${{ matrix.provider }}
+      - name: Get new JAR size
+        id: newJar
+        run: |
+          size=$(du -s providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # prepare output
+      - name: Get JAR size diff
+        id: diffJar
+        run: |
+          size=$((${{ steps.newJar.outputs.sizeHuman }} - ${{ steps.oldJar.outputs.sizeHuman }}))
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      - name: Update with Result
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          issue-number: ${{ github.event.client_payload.github.payload.issue.number }}
+          body: |
+            Provider : ${{ matrix.provider }}
+            New Size : ${{ steps.newJar.outputs.sizeHuman }}
+            Old Size : ${{ steps.oldJar.outputs.sizeHuman }}
+            Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}
+
+
   example1:
     runs-on: ubuntu-latest
     steps:
