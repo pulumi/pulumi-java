@@ -14,11 +14,11 @@ and Go that live in `pulumi/pulumi`. Its TBD how that will be
 accomplished technically but options include Git submodules and
 stitching releases via cross-repo GitHub Actions.
 
-The dependecy loop between `pulumi/pulumi` and `pulumi/java` should be
-avoided in favor of `pulumi/java` build-depending on `pulumi/pulumi`.
+The dependecy loop between `pulumi/pulumi` and `pulumi/jvm` should be
+avoided in favor of `pulumi/jvm` build-depending on `pulumi/pulumi`.
 Layers of indirection similar to plugin acquisition will need to be
 introduced in places where `pulumi/pulumi` currently build-depends on
-`pulumi/java`, for example:
+`pulumi/jvm`, for example:
 
 - `pkg/cmd/pulumi/import.go`: import command support needs
   jvm.GenerateProgram; instead figure out dynamic loading of program
@@ -28,25 +28,27 @@ introduced in places where `pulumi/pulumi` currently build-depends on
   dispatching the right build commands for a java project; instead
   figure out dynamic dispatch of builders per language
 
+## Install local depedencies
+
+```shell
+$ make install_sdk #installs io.pulumi:pulumi to local maven repository
+
+```
+
 ## Adding Examples
 
-Copy `tests/examples/random` to `tests/examples/your-example`.
-
-Update `rootProject.name` in `settings.gradle`.
-
-Update `name` in `Pulumi.yaml`.
-
-Update `mainClass` in `app/build.gradle`.
-
-Reference any providers your example needs in `dependencies` section
-of `app/build.gradle`.
-
-Edit sources in `app/src/main`.
+- Copy `tests/examples/random` to `tests/examples/your-example`.
+- Update `rootProject.name` in `settings.gradle`.
+- Update `name` in `Pulumi.yaml`.
+- Update `mainClass` in `app/build.gradle`.
+- Reference any providers your example needs in `dependencies` section of `app/build.gradle`.
+  - build and install the required provider, using something like `make provider.aws.install`, required for `implementation 'io.pulumi:aws:4.37.3'`
+- Edit sources in `app/src/main`.
 
 To run the example:
 
-```
-cd ~/pulumi-java
+```shell
+cd ~/pulumi-jvm
 make bin/pulumi-language-jvm
 export PATH=$PWD/bin:$PATH
 
