@@ -154,16 +154,12 @@ jobs:
           sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
           echo ::set-output name=size::${size}
           echo ::set-output name=sizeHuman::${sizeHuman}
-      - name: Update with Result
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.client_payload.github.payload.issue.number }}
-          body: |
-            Provider : ${{ matrix.provider }}
-            New Size : ${{ steps.newJar.outputs.sizeHuman }}
-            Old Size : ${{ steps.oldJar.outputs.sizeHuman }}
-            Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}
+      - name: Display provider size summary
+        run: |
+          echo Provider : ${{ matrix.provider }}
+          echo New Size : ${{ steps.newJar.outputs.sizeHuman }}
+          echo Old Size : ${{ steps.oldJar.outputs.sizeHuman }}
+          echo Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}
 
 
   example1:
