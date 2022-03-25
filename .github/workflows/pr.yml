@@ -115,7 +115,8 @@ jobs:
         run: make install_sdk
       # build original
       - uses: actions/checkout@v2
-        ref: main
+        with:
+          ref: main
       - name: Build JVM SDK provider
         run: make provider.${PROVIDER}.install
         env:
