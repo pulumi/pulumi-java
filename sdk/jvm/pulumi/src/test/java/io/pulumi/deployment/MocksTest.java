@@ -28,7 +28,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import static io.pulumi.core.TypeShape.of;
@@ -49,7 +48,6 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks())
-                .setStandardLogger(standardLogger())
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -69,7 +67,6 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyMocks())
-                .setStandardLogger(standardLogger())
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -93,7 +90,6 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks())
-                .setStandardLogger(standardLogger())
                 .setSpyGlobalInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -114,7 +110,6 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new ThrowingMocks())
-                .setStandardLogger(standardLogger())
                 .setSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
@@ -319,11 +314,5 @@ public class MocksTest {
         public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
             return CompletableFuture.completedFuture(null);
         }
-    }
-
-    private Logger standardLogger() {
-        var standardLogger = Logger.getLogger(MocksTest.class.getName());
-        standardLogger.setLevel(Level.FINE);
-        return standardLogger;
     }
 }
