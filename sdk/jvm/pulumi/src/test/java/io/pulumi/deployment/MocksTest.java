@@ -13,6 +13,7 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.deployment.internal.TestOptions;
@@ -27,6 +28,7 @@ import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
@@ -179,6 +181,10 @@ public class MocksTest {
 
         var ipFuture = Internal.of(stack.get().publicIp).getDataAsync();
         assertThat(ipFuture).isCompletedExceptionally();
+
+        // Wait for all exceptions to propagate. If we do not, these exceptions contaminate the next test.
+        // TODO properly isolate tests.
+        CompletableFuture.runAsync(() -> {}, CompletableFuture.delayedExecutor(1, TimeUnit.SECONDS)).join();
     }
 
     @ResourceType(type = "aws:ec2/instance:Instance")
