@@ -42,10 +42,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -57,8 +54,7 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
-import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
-import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
+import static io.pulumi.core.internal.Environment.*;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
 import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
@@ -1510,6 +1506,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     static class DeploymentState {
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
+        public static final int TaskTimeoutInMillis = getIntegerEnvironmentVariable("PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS").or(-1);
 
         public final DeploymentImpl.Config config;
         public final String projectName;
@@ -1646,15 +1643,27 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             standardLogger.log(Level.FINEST, String.format("Registering task: '%s', %s", description, task));
 
             // we don't need the result here, just the future itself
-            CompletableFuture<Void> key = task.thenApply(ignore -> null);
-            // TODO: should we enforce a timeout (with .orTimeout()) on the task (and make it configurable)?
+            CompletableFuture<Void> key = task.thenApply(__ -> null);
+            if (DeploymentState.TaskTimeoutInMillis > 0) {
+                key = key.orTimeout(DeploymentState.TaskTimeoutInMillis, TimeUnit.MILLISECONDS).handle(
+                        (value, throwable) -> {
+                            if (throwable != null) {
+                                throw new TaskFailure(String.format(
+                                        "Task (%s) '%s' failed with exception: %s",
+                                        task, description, throwable
+                                ), throwable);
+                            }
+                            return value;
+                        }
+                );
+            }
 
             // We may get several of the same tasks with different descriptions. That can
             // happen when the runtime reuses cached tasks that it knows are value-identical
             // (for example a completed future). In that case, we just store all the descriptions.
             // We'll print them all out as done once this task actually finishes.
             inFlightTasks.compute(key,
-                    (ignore, descriptions) -> {
+                    (__, descriptions) -> {
                         if (descriptions == null) {
                             return Lists.newArrayList(description);
                         } else {
@@ -1792,6 +1801,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 pid, command, Exceptions.getStackTrace(exception)))
                         .thenApply(exitMessageAndCode);
             }
+        }
+    }
+
+    private static final class TaskFailure extends RuntimeException {
+        public TaskFailure(String message, Throwable cause) {
+            super(message, cause);
         }
     }
 

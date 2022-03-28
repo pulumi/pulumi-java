@@ -44,6 +44,4 @@ public class ContainsNullableCondition<ELEMENT> extends Condition<Iterable<? ext
         }
         return true;
     }
-
-    ;
 }
