@@ -33,6 +33,7 @@ import pulumirpc.EngineOuterClass.LogSeverity;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Resource.ReadResourceRequest;
+import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
 
@@ -1078,7 +1079,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 var data = response.t3;
                                 var dependencies = response.t4;
 
-
                                 // Run in a try/catch/finally so that we always resolve all the outputs of the resource
                                 // regardless of whether we encounter an errors computing the action.
                                 try {
@@ -1426,7 +1426,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         ));
 
                 return this.monitor.registerResourceOutputsAsync(
-                        pulumirpc.Resource.RegisterResourceOutputsRequest.newBuilder()
+                        RegisterResourceOutputsRequest.newBuilder()
                                 .setUrn(urn)
                                 .setOutputs(serialized)
                                 .build()
@@ -1782,25 +1782,27 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // with a non-zero error which our host will handle
             // properly.
             if (exception instanceof RunException) {
-                // Always hide the stack for RunErrors.
+                // Always hide the stack for RunException.
                 return this.engineLogger
                         .errorAsync(exception.getMessage())
                         .thenApply(exitMessageAndCode);
-            } else if (exception instanceof ResourceException) {
+            }
+            if (exception instanceof ResourceException) {
                 var resourceEx = (ResourceException) exception;
                 var message = resourceEx.isHideStack() ? resourceEx.getMessage() : getStackTrace(resourceEx);
                 return this.engineLogger
                         .errorAsync(message, resourceEx.getResource().orElse(null))
                         .thenApply(exitMessageAndCode);
-            } else {
-                var pid = ProcessHandle.current().pid();
-                var command = ProcessHandle.current().info().commandLine().orElse("unknown");
-                return this.engineLogger
-                        .errorAsync(String.format(
-                                "Running program [PID: %d](%s) failed with an unhandled exception:\n%s",
-                                pid, command, Exceptions.getStackTrace(exception)))
-                        .thenApply(exitMessageAndCode);
             }
+
+            var pid = ProcessHandle.current().pid();
+            var command = ProcessHandle.current().info().commandLine().orElse("unknown");
+            return this.engineLogger
+                    .errorAsync(String.format(
+                            "Running program [PID: %d](%s) failed with an unhandled exception:\n%s",
+                            pid, command, Exceptions.getStackTrace(exception)))
+                    .thenApply(exitMessageAndCode);
+
         }
     }
 
