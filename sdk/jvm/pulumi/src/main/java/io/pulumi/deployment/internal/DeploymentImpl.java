@@ -37,6 +37,7 @@ import pulumirpc.Resource.*;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.lang.reflect.InvocationTargetException;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.*;
@@ -76,7 +77,6 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
 
     DeploymentImpl() {
         this(fromEnvironment());
-        this.state.setDeployment(this);
     }
 
     // TODO private Deployment(InlineDeploymentSettings settings)
@@ -86,19 +86,20 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
     DeploymentImpl(
             DeploymentState state
     ) {
+        Supplier<DeploymentInstanceInternal> deployment = () -> state.deployment;
         var monitor = state.monitor;
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(monitor);
         this.serialization = new PropertiesSerializer(this.log);
-        this.converter = new Converter(this, this.log);
-        this.invoke = new Invoke(this, this.log, monitor, this.featureSupport, this.serialization, this.converter);
-        this.rootResource = new RootResource(this, state.engine);
+        this.converter = new Converter(() -> deployment.get(), this.log);
+        this.invoke = new Invoke(deployment, this.log, monitor, this.featureSupport, this.serialization, this.converter);
+        this.rootResource = new RootResource(deployment, state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
-        this.call = new Call(this, this.log, monitor, this.prepare, this.serialization, this.converter);
+        this.call = new Call(deployment, this.log, monitor, this.prepare, this.serialization, this.converter);
         this.readResource = new ReadResource(this.log, this.prepare, monitor);
         this.registerResource = new RegisterResource(this.log, this.prepare, monitor);
-        this.readOrRegisterResource = new ReadOrRegisterResource(this, state.runner, this.invoke,
+        this.readOrRegisterResource = new ReadOrRegisterResource(deployment, state.runner, this.invoke,
                 this.readResource, this.registerResource, this.converter, state.isDryRun);
         this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, monitor, this.featureSupport, this.serialization);
     }
@@ -399,7 +400,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
     @ParametersAreNonnullByDefault
     private final static class Invoke {
 
-        private final Deployment deployment;
+        private final Supplier<DeploymentInstanceInternal> deployment;
         private final Log log;
         private final Monitor monitor;
         private final FeatureSupport featureSupport;
@@ -407,14 +408,15 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         private final Converter converter;
 
         private Invoke(
-                Deployment deployment,
+                Supplier<DeploymentInstanceInternal> deployment,
                 Log log,
                 Monitor monitor,
                 FeatureSupport featureSupport,
                 PropertiesSerializer serialization,
                 Converter converter
         ) {
-            this.deployment = deployment;
+            Objects.requireNonNull(deployment);
+            this.deployment = () -> Objects.requireNonNull(deployment.get());
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.featureSupport = Objects.requireNonNull(featureSupport);
@@ -427,7 +429,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return new OutputInternal<>(deployment, rawInvoke(token, targetType, args, options));
+            return new OutputInternal<>(deployment.get(), rawInvoke(token, targetType, args, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
@@ -595,7 +597,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
     @ParametersAreNonnullByDefault
     private final static class Call {
 
-        private final Deployment deployment;
+        private final Supplier<DeploymentInstanceInternal> deployment;
         private final Log log;
         private final Monitor monitor;
         private final Prepare prepare;
@@ -603,14 +605,15 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         private final Converter converter;
 
         public Call(
-                Deployment deployment,
+                Supplier<DeploymentInstanceInternal> deployment,
                 Log log,
                 Monitor monitor,
                 Prepare prepare,
                 PropertiesSerializer serialization,
                 Converter converter
         ) {
-            this.deployment = deployment;
+            Objects.requireNonNull(deployment);
+            this.deployment = () -> Objects.requireNonNull(deployment.get());
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.prepare = Objects.requireNonNull(prepare);
@@ -627,7 +630,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         }
 
         void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
-            new OutputInternal<>(deployment, callRawAsync(token, args, self, options).thenApply(unused -> null));
+            new OutputInternal<>(deployment.get(), callRawAsync(token, args, self, options).thenApply(unused -> null));
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
@@ -639,7 +642,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
-            return new OutputInternal<>(deployment, callAsync(token, targetType, args, self, options));
+            return new OutputInternal<>(deployment.get(), callAsync(token, targetType, args, self, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
@@ -740,7 +743,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                         // Unmarshal return dependencies.
                         var dependencies = response.getReturnDependenciesMap().values().stream()
                                 .flatMap(deps -> deps.getUrnsList().stream()
-                                        .map(urn -> new DependencyResource(deployment, urn)))
+                                        .map(urn -> new DependencyResource(deployment.get(), urn)))
                                 .map(r -> (Resource) r)
                                 .collect(toImmutableSet());
                         return new CallRawAsyncResult(response.getReturn(), dependencies);
@@ -1024,7 +1027,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
 
     private static final class ReadOrRegisterResource {
 
-        private final Deployment deployment;
+        private final Supplier<DeploymentInstanceInternal> deployment;
         private final Runner runner;
         private final Invoke invoke;
         private final ReadResource readResource;
@@ -1033,7 +1036,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         private final boolean isDryRun;
 
         private ReadOrRegisterResource(
-                Deployment deployment,
+                Supplier<DeploymentInstanceInternal> deployment,
                 Runner runner,
                 Invoke invoke,
                 ReadResource readResource,
@@ -1041,7 +1044,8 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                 Converter converter,
                 boolean isDryRun
         ) {
-            this.deployment = Objects.requireNonNull(deployment);
+            Objects.requireNonNull(deployment);
+            this.deployment = () -> Objects.requireNonNull(deployment.get());
             this.runner = Objects.requireNonNull(runner);
             this.invoke = Objects.requireNonNull(invoke);
             this.readResource = Objects.requireNonNull(readResource);
@@ -1069,7 +1073,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             // the `@Export(...) Output<T>` properties. We need those properties assigned by the
             // time the base 'Resource' constructor finishes so that both derived classes and
             // external consumers can use the Output properties of `resource`.
-            var completionSources = OutputCompletionSource.from(deployment, resource);
+            var completionSources = OutputCompletionSource.from(deployment.get(), resource);
 
             this.runner.registerTask(
                     String.format("readOrRegisterResource: %s-%s", resource.getResourceType(), resource.getResourceName()),
@@ -1085,7 +1089,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                 Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
                 ResourceOptions options, ImmutableMap<String, OutputCompletionSource<?>> completionSources
         ) {
-            var out = OutputBuilder.forDeployment(deployment);
+            var out = OutputBuilder.forDeployment(deployment.get());
             return readOrRegisterResourceAsync(resource, remote, newDependency, args, options)
                     .thenCompose(response ->
                             CompletableFuture.supplyAsync(() -> {
@@ -1104,7 +1108,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                                         var isKnown = isNonEmptyOrNull(id);
                                         customResource.setId(isKnown
                                                 ? out.of(id)
-                                                : new OutputInternal<>(deployment, OutputData.unknown()));
+                                                : new OutputInternal<>(deployment.get(), OutputData.unknown()));
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
@@ -1464,14 +1468,15 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
 
     private static final class RootResource {
 
-        private final Deployment deployment;
+        private final Supplier<DeploymentInstanceInternal> deployment;
         @Nullable
         private CompletableFuture<Optional<String>> rootResource;
         private final Object rootResourceLock = new Object();
         private final Engine engine;
 
-        private RootResource(Deployment deployment, Engine engine) {
-            this.deployment = deployment;
+        private RootResource(Supplier<DeploymentInstanceInternal> deployment, Engine engine) {
+            Objects.requireNonNull(deployment);
+            this.deployment = () -> Objects.requireNonNull(deployment.get());
             this.engine = Objects.requireNonNull(engine);
         }
 
@@ -1489,11 +1494,11 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             synchronized (rootResourceLock) {
                 if (rootResource == null) {
                     try {
-                        var di = DeploymentInternal.cast(deployment);
+                        DeploymentInternal di = DeploymentInternal.cast(deployment.get());
                         var stack = di.getStack();
                         rootResource = setRootResourceWorkerAsync(stack);
                     } catch (IllegalStateException ex) {
-                        throw new IllegalStateException("Calling getRootResourceAsync before the stack was registered!");
+                        throw new IllegalStateException("Calling getRootResourceAsync before the stack was registered!", ex);
                     }
                 }
             }
@@ -1537,7 +1542,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
 
         private final Logger standardLogger;
 
-        private Deployment deployment; // late init
+        private DeploymentInstanceInternal deployment; // late init
 
         @InternalUse
         @VisibleForTesting
@@ -1562,8 +1567,8 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         }
 
         @InternalUse
-        public void setDeployment(Deployment deployment) {
-            this.deployment = deployment;
+        public void setDeployment(DeploymentInstanceInternal deployment) {
+            this.deployment = Objects.requireNonNull(deployment);
         }
     }
 
@@ -1580,7 +1585,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         // 32 was picked so as to be very unlikely to collide with any other error codes.
         private static final int ProcessExitedAfterLoggingUserActionableMessage = 32;
 
-        private final Supplier<Deployment> deployment;
+        private final Supplier<DeploymentInstanceInternal> deployment;
         private final Logger standardLogger;
         private final EngineLogger engineLogger;
 
@@ -1599,8 +1604,9 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
         private final Queue<Exception> swallowedExceptions = new ConcurrentLinkedQueue<>();
 
-        public DefaultRunner(Supplier<Deployment> deployment, Logger standardLogger, EngineLogger engineLogger) {
-            this.deployment = Objects.requireNonNull(deployment);
+        public DefaultRunner(Supplier<DeploymentInstanceInternal> deployment, Logger standardLogger, EngineLogger engineLogger) {
+            Objects.requireNonNull(deployment);
+            this.deployment = () -> Objects.requireNonNull(deployment.get());
             this.standardLogger = Objects.requireNonNull(standardLogger);
             this.engineLogger = Objects.requireNonNull(engineLogger);
         }
@@ -1624,8 +1630,11 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             }
             return runAsync(() -> {
                 try {
-                    return stackType.newInstance();
-                } catch (InstantiationException | IllegalAccessException e) {
+                    var constructor = stackType.getDeclaredConstructor(Deployment.class);
+                    Deployment d = deployment.get();
+                    var instance = constructor.newInstance(d);
+                    return instance;
+                } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
                     throw new IllegalArgumentException(String.format(
                             "Couldn't create an instance of the stack type: '%s', error: %s",
                             stackType.getTypeName(), e

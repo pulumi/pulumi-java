@@ -123,7 +123,7 @@ class ConverterTests {
             var ctx = OutputTests.testContext();
             var gson = new Gson();
             var args = new ComplexInvokeArgs1(new SimpleInvokeArgs1("value1"));
-            var converter = new Converter(ctx.deployment, log);
+            var converter = new Converter(() -> ctx.deployment, log);
             serializeToValueAsync(args)
                     .thenApply(value -> converter.convertValue("ArgsConverterTests", value, JsonElement.class))
                     .thenAccept(data ->

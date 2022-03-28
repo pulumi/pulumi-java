@@ -20,6 +20,8 @@ import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.DeploymentInstanceInternal;
+import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -30,6 +32,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Parameter;
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.joining;
@@ -41,11 +44,16 @@ import static java.util.stream.Collectors.toSet;
 @ParametersAreNonnullByDefault
 public class Converter {
 
-    private final Deployment deployment;
+    private final Supplier<Deployment> deployment;
     private final Log log;
 
     public Converter(Deployment deployment, Log log) {
-        this.deployment = deployment;
+        this(() -> deployment, log);
+    }
+
+    public Converter(Supplier<Deployment> deployment, Log log) {
+        Objects.requireNonNull(deployment);
+        this.deployment = () -> Objects.requireNonNull(deployment.get());
         this.log = requireNonNull(log);
     }
 
@@ -67,7 +75,7 @@ public class Converter {
 
         checkTargetType(context, targetType);
 
-        var deserializer = new Deserializer(deployment);
+        var deserializer = new Deserializer(deployment.get());
         var data = deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
         //       but the Deserializer will wrap it in an OutputData, and we get them as a null here

@@ -156,10 +156,10 @@ public class ResourcePackages {
         // The search is approximate. We may need to consider using annotations instead in future versions.
         var constructorInfo =
                 Arrays.stream(resourceType.get().getDeclaredConstructors())
-                        .filter(c -> c.getParameterCount() == 3)
+                        .filter(c -> c.getParameterCount() == 4)
                         // Remove confusion of constructors with the second param of type:
                         //     Output<String> id
-                        .filter(c -> !c.getParameterTypes()[1].equals(Output.class))
+                        .filter(c -> !c.getParameterTypes()[2].equals(Output.class))
                         .collect(PulumiCollectors.toSingleton(cause ->
                                 new IllegalArgumentException(String.format(
                                         "Resource provider error. Could not find a constructor for resource %s" +
@@ -173,7 +173,7 @@ public class ResourcePackages {
 
         var resourceOptions = resolveResourceOptions(deployment, resourceType.get(), urn);
         try {
-            var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
+            var resource = (Resource) constructorInfo.newInstance(new Object[]{deployment, urnName, null, resourceOptions});
             return Optional.of(resource);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
             throw new IllegalArgumentException(String.format(
