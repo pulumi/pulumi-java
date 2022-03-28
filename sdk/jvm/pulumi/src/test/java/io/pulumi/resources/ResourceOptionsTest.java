@@ -19,7 +19,8 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class ResourceOptionsTest {
     @SuppressWarnings("unused")
-    private static Stream<Arguments> testMergeSharedOptions(Deployment deployment) {
+    private static Stream<Arguments> testMergeSharedOptions() {
+        var deployment = OutputTests.testContext().deployment;
         var output = OutputBuilder.forDeployment(deployment);
         return Stream.of(
                 arguments(new TestResourceOptions(deployment),
