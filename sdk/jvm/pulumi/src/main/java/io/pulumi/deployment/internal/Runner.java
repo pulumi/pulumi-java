@@ -21,6 +21,4 @@ public interface Runner {
     <T extends Stack> CompletableFuture<Integer> runAsync(Class<T> stackType);
 
     <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory);
-
-//    <T extends Stack> CompletableFuture<Integer> runAsync(ServiceProvider serviceProvider); // TODO: not sure how ServiceProvider translates to Java, is it needed?
 }
