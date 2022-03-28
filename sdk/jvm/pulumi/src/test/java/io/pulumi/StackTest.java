@@ -9,21 +9,24 @@ import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MocksTest;
+import io.pulumi.deployment.internal.DeploymentInternal;
+import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.exceptions.RunException;
+
 import io.pulumi.resources.Resource;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Map;
 import java.util.Optional;
-import java.util.function.Supplier;
+import java.util.function.Function;
 
 import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 
 class StackTest {
@@ -54,8 +57,7 @@ class StackTest {
 
     @Test
     void testValidStackInstantiationSucceeds() {
-        var ctx = OutputTests.testContext();
-        var result = run(() -> new ValidStack(ctx.deployment));
+        var result = run(mock -> new ValidStack(mock.getDeployment()));
         assertThat(result.t2).hasSize(3);
         assertThat(result.t2).containsKey("foo");
         assertThat(result.t2.get("foo")).isPresent();
@@ -87,8 +89,7 @@ class StackTest {
 
     @Test
     void testStackWithNullOutputsThrows() {
-        var ctx = OutputTests.testContext();
-        assertThatThrownBy(() -> run(() -> new NullOutputStack(ctx.deployment)))
+        assertThatThrownBy(() -> run(mock -> new NullOutputStack(mock.getDeployment())))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have no value assigned");
     }
@@ -105,29 +106,27 @@ class StackTest {
 
     @Test
     void testStackWithInvalidOutputTypeThrows() {
-        var ctx = OutputTests.testContext();
-        assertThatThrownBy(() -> run(() -> new InvalidOutputTypeStack(ctx.deployment)))
+        assertThatThrownBy(() -> run(mock -> new InvalidOutputTypeStack(mock.getDeployment())))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have incorrect type");
     }
 
-    private <T extends Stack> Tuple2<T, Map<String, Optional<Object>>> run(Supplier<T> factory) {
+    private <T extends Stack> Tuple2<T, Map<String, Optional<Object>>> run(Function<DeploymentTests.DeploymentMock, T> factory) {
         var mock = DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
                 .setOptions(new TestOptions("TestProject", "TestStack"))
                 .buildSpyInstance();
 
-        var stack = factory.get();
+        var stack = factory.apply(mock);
         Internal.from(stack).registerPropertyOutputs();
 
         //noinspection unchecked
         ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
 
+        var di = DeploymentInternal.cast(mock.deployment);
 
         // TODO: is this OK that we're called twice?
-
-        // TODO Uncomment
-        // verify(mock.deployment, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
+        verify(di, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
 
         var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
         return Tuples.of(stack, values);
