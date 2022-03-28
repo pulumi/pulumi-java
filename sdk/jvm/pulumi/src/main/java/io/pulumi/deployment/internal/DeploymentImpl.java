@@ -1083,69 +1083,75 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         ) {
             return readOrRegisterResourceAsync(resource, remote, newDependency, args, options)
                     .thenCompose(response -> tracker.throwIfDeploymentCancelled().thenApply(__ -> response))
-                    .thenCompose(response ->
-                            CompletableFuture.supplyAsync(() -> {
-                                var urn = response.t1;
-                                var id = response.t2;
-                                var data = response.t3;
-                                var dependencies = response.t4;
+                    .thenApplyAsync(response -> {
+                        var urn = response.t1;
+                        var id = response.t2;
+                        var data = response.t3;
+                        var dependencies = response.t4;
 
-                                // Run in a try/catch/finally so that we always resolve all the outputs of the resource
-                                // regardless of whether we encounter an errors computing the action.
-                                try {
-                                    resource.setUrn(Output.of(urn));
+                        resource.setUrn(Output.of(urn));
 
-                                    if (resource instanceof CustomResource) {
-                                        var customResource = (CustomResource) resource;
-                                        var isKnown = isNonEmptyOrNull(id);
-                                        customResource.setId(isKnown
-                                                ? Output.of(id)
-                                                : new OutputInternal<>(OutputData.unknown()));
-                                    }
+                        if (resource instanceof CustomResource) {
+                            var customResource = (CustomResource) resource;
+                            var isKnown = isNonEmptyOrNull(id);
+                            customResource.setId(isKnown
+                                    ? Output.of(id)
+                                    : new OutputInternal<>(OutputData.unknown()));
+                        }
 
-                                    // Go through all our output fields and lookup a corresponding value in the response
-                                    // object.  Allow the output field to deserialize the response.
-                                    for (var entry : completionSources.entrySet()) {
-                                        var fieldName = entry.getKey();
-                                        OutputCompletionSource<?> completionSource = entry.getValue();
+                        // Go through all our output fields and lookup a corresponding value in the response
+                        // object.  Allow the output field to deserialize the response.
+                        for (var entry : completionSources.entrySet()) {
+                            var fieldName = entry.getKey();
+                            OutputCompletionSource<?> completionSource = entry.getValue();
 
-                                        // We process and deserialize each field (instead of bulk processing
-                                        // 'response.data' so that each field can have independent isKnown/isSecret values.
-                                        // We do not want to bubble up isKnown/isSecret from one field to the rest.
-                                        var value = Structs.tryGetValue(data, fieldName);
-                                        if (value.isPresent()) {
-                                            var contextInfo = String.format("%s.%s", resource.getClass().getTypeName(), fieldName);
-                                            var depsOrEmpty = Maps.tryGetValue(dependencies, fieldName).orElse(ImmutableSet.of());
-                                            completionSource.setValue(
-                                                    this.converter,
-                                                    contextInfo,
-                                                    value.get(),
-                                                    depsOrEmpty
-                                            );
-                                        }
-                                    }
-                                } catch (Exception e) {
-                                    // Mark any unresolved output properties with this exception. That way we don't
-                                    // leave any outstanding tasks sitting around which might cause hangs.
-                                    for (var source : completionSources.values()) {
-                                        source.trySetException(e);
-                                    }
+                            // We process and deserialize each field (instead of bulk processing
+                            // 'response.data' so that each field can have independent isKnown/isSecret values.
+                            // We do not want to bubble up isKnown/isSecret from one field to the rest.
+                            var value = Structs.tryGetValue(data, fieldName);
+                            if (value.isPresent()) {
+                                var contextInfo = String.format("%s.%s", resource.getClass().getTypeName(), fieldName);
+                                var depsOrEmpty = Maps.tryGetValue(dependencies, fieldName).orElse(ImmutableSet.of());
+                                completionSource.setValue(
+                                        this.converter,
+                                        contextInfo,
+                                        value.get(),
+                                        depsOrEmpty
+                                );
+                            }
+                        }
 
-                                    throw e;
-                                } finally {
-                                    // Ensure that we've at least resolved all our completion sources. That way we
-                                    // don't leave any outstanding tasks sitting around which might cause hangs.
-                                    for (var source : completionSources.values()) {
-                                        // Didn't get a value for this field. Resolve it with a default value.
-                                        // If we're in preview, we'll consider this unknown and in a normal
-                                        // update we'll consider it known.
-                                        source.trySetDefaultResult(!this.isDryRun);
-                                    }
+                        //noinspection RedundantCast
+                        return (Void) null;
+                    })
+                    .whenComplete((__, throwable) -> {
+                        // If failed, mark any unresolved output properties with this exception. That way we do not
+                        // leave any outstanding tasks sitting around which might cause hangs.
+                        if (throwable != null) {
+                            Output<String> failed = Output.of(CompletableFuture.failedFuture(throwable));
+                            resource.trySetUrn(failed);
+
+                            if (resource instanceof CustomResource) {
+                                var custom = (CustomResource) resource;
+                                custom.trySetId(failed);
+                            }
+
+                            if (throwable instanceof Exception) {
+                                var e = (Exception) throwable;
+                                for (var entry : completionSources.entrySet()) {
+                                    entry.getValue().trySetException(e);
                                 }
-
-                                //noinspection RedundantCast
-                                return (Void) null;
-                            }));
+                            }
+                        }
+                        // Ensure that we've at least resolved all our completion sources. That way we
+                        // don't leave any outstanding tasks sitting around which might cause hangs.
+                        for (var source : completionSources.values()) {
+                            // Didn't get a value for this field. Resolve it with a default value.
+                            // If we're in preview, we'll consider this unknown and in a normal
+                            // update we'll consider it known.
+                            source.trySetDefaultResult(!this.isDryRun);
+                        }
+                    });
         }
 
         private CompletableFuture<Tuple4<String /* urn */, String /* id */, Struct, ImmutableMap<String, ImmutableSet<Resource>>>> readOrRegisterResourceAsync(

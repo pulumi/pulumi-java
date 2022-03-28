@@ -281,10 +281,16 @@ public abstract class Resource {
     }
 
     @InternalUse
-    public void setUrn(@Nullable Output<String> urn) {
-        if (!this.urnFuture.complete(urn)) {
-            throw new IllegalStateException("urn cannot be set twice, must be null for setUrn to work");
+    public void setUrn(Output<String> urn) {
+        if (!trySetUrn(urn)) {
+            throw new IllegalStateException("urn cannot be set twice");
         }
+    }
+
+    @InternalUse
+    public boolean trySetUrn(Output<String> urn) {
+        Objects.requireNonNull(urn);
+        return this.urnFuture.complete(urn);
     }
 
     private static ImmutableMap<String, ProviderResource> convertToProvidersMap(@Nullable List<ProviderResource> providers) {
