@@ -2,6 +2,7 @@ package io.pulumi.core.internal;
 
 import io.pulumi.core.internal.annotations.InternalUse;
 
+import javax.annotation.Nullable;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
@@ -15,10 +16,12 @@ public class Exceptions {
     /**
      * @return the stack trace from a Throwable as a String
      */
-    public static String getStackTrace(Throwable throwable) {
+    public static String getStackTrace(@Nullable Throwable throwable) {
         StringWriter stringWriter = new StringWriter();
         PrintWriter printWriter = new PrintWriter(stringWriter, true);
-        throwable.printStackTrace(printWriter);
+        if (throwable != null) {
+            throwable.printStackTrace(printWriter);
+        }
         return stringWriter.getBuffer().toString();
     }
 }
