@@ -121,19 +121,10 @@ func TestCloudExamples(t *testing.T) {
 	})
 
 	t.Run("eks-minimal", func(t *testing.T) {
-		test := getJvmBase(t, "eks-minimal").
+		test := previewOnlyJvmBase(t, "eks-minimal").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
 					"aws:region": "us-west-1",
-				},
-				SkipRefresh:            true,
-				SkipEmptyPreviewUpdate: true,
-				SkipExportImport:       true,
-				SkipUpdate:             true,
-				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-					o := stackInfo.Outputs
-					kubeconfig := o["kubeconfig"].(string)
-					assert.NotEmpty(t, kubeconfig)
 				},
 			})
 		integration.ProgramTest(t, &test)
@@ -148,4 +139,17 @@ func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
 				return nil
 			},
 		})
+}
+
+// For cloud examples that take a very long time to deploy, we only
+// run `pulumi preview` skipping the actual `pulumi up` part. This
+// verifies that the example compiles and interacts with the Pulumi
+// CLI as expected, but does not verify actual cloud interaction.
+func previewOnlyJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
+	return getJvmBase(t, dir).With(integration.ProgramTestOptions{
+		SkipRefresh:            true,
+		SkipEmptyPreviewUpdate: true,
+		SkipExportImport:       true,
+		SkipUpdate:             true,
+	})
 }
