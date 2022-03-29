@@ -121,6 +121,19 @@ func TestExamples(t *testing.T) {
 			})
 		integration.ProgramTest(t, &test)
 	})
+
+	t.Run("gcp-java-gke-hello-world", func(t *testing.T) {
+		test := previewOnlyJvmBase(t, "gcp-java-gke-hello-world").
+			With(integration.ProgramTestOptions{
+				Config: map[string]string{
+					// Try `gcloud projects list`
+					"gcp:project": "pulumi-development",
+					"gcp:zone":    "us-west1-a",
+				},
+			})
+
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
