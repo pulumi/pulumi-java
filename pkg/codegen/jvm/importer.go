@@ -29,10 +29,9 @@ type PackageInfo struct {
 }
 
 type GprPublishSettings struct {
-	ArtifactId     string `json:"artifactId"`
-	GroupId        string `json:"groupId"`
-	DefaultVersion string `json:"defaultVersion"`
-	RepositoryUrl  string `json:"repositoryUrl"`
+	ArtifactId    string `json:"artifactId"`
+	GroupId       string `json:"groupId"`
+	RepositoryUrl string `json:"repositoryUrl"`
 }
 
 func (i PackageInfo) BasePackageOrDefault() string {

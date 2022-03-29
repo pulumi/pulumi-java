@@ -330,11 +330,7 @@ var gprPublishTemplateText = `publishing {
         gpr(MavenPublication) {
             groupId = "{{ .GroupId }}"
             artifactId = "{{ .ArtifactId }}"
-            version = (
-              project.findProperty("version") == "unspecified"
-              ? "{{ .DefaultVersion }}"
-              : (project.findProperty("version") ?: "{{ .DefaultVersion }}")
-            )
+            version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
             from components.java
         }
     }
@@ -355,10 +351,9 @@ var gprPublishTemplateText = `publishing {
 var gprPublishTemplate = Template("GprPublish", gprPublishTemplateText)
 
 type gprPublishTemplateContext struct {
-	GroupId        string
-	ArtifactId     string
-	DefaultVersion string
-	RepositoryUrl  string
+	GroupId       string
+	ArtifactId    string
+	RepositoryUrl string
 }
 
 var defaultPublishTemplateText = `publishing {
