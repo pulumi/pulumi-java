@@ -16,7 +16,7 @@ env:
   PULUMI_API: https://api.pulumi-staging.io
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: us-west-2
-  PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 5000
+  PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 60000
 jobs:
   prerequisites:
     runs-on: ubuntu-latest
