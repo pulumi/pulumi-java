@@ -187,18 +187,7 @@ test {
     }
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = '{{ .BasePackageName }}'
-            artifactId = '{{ .Name }}'
-            version = project.version
-
-            from components.java
-        }
-        // TODO pom
-    }
-}
+{{ .Publishing }}
 
 javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
@@ -210,9 +199,8 @@ javadoc {
 var jvmBuildTemplate = Template("JavaBuild", jvmBuildTemplateText)
 
 type jvmBuildTemplateContext struct {
-	Name            string
-	BasePackageName string
-	PackageInfo     PackageInfo
+	Publishing  string
+	PackageInfo PackageInfo
 }
 
 // nolint:lll
@@ -330,4 +318,65 @@ type builderTemplateContext struct {
 	Setters    []builderSetterTemplateContext
 	ResultType string
 	Objects    string
+}
+
+var gprPublishTemplateText = `publishing {
+    publications {
+        // Publish to GitHub Packages like this:
+        //
+        // gradle publish
+        //
+        // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
+        gpr(MavenPublication) {
+            groupId = "{{ .GroupId }}"
+            artifactId = "{{ .ArtifactId }}"
+            version = (
+              project.findProperty("version") == "unspecified"
+              ? "{{ .DefaultVersion }}"
+              : (project.findProperty("version") ?: "{{ .DefaultVersion }}")
+            )
+            from components.java
+        }
+    }
+
+    // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("{{ .RepositoryUrl }}")
+            credentials {
+                username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
+                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+            }
+        }
+    }
+}`
+
+var gprPublishTemplate = Template("GprPublish", gprPublishTemplateText)
+
+type gprPublishTemplateContext struct {
+	GroupId        string
+	ArtifactId     string
+	DefaultVersion string
+	RepositoryUrl  string
+}
+
+var defaultPublishTemplateText = `publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = '{{ .BasePackageName }}'
+            artifactId = '{{ .Name }}'
+            version = project.version
+
+            from components.java
+        }
+        // TODO pom
+    }
+}`
+
+var defaultPublishTemplate = Template("DefaultPublish", defaultPublishTemplateText)
+
+type defaultPublishTemplateContext struct {
+	BasePackageName string
+	Name            string
 }

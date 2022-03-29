@@ -22,6 +22,17 @@ type PackageInfo struct {
 	Packages               map[string]string `json:"packages,omitempty"`
 	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
 	BasePackage            string            `json:"basePackage"`
+
+	// If configured, generates build code compatible with
+	// publishing artifacts to GitHub Package Registry (GPR).
+	GprPublishSettings *GprPublishSettings `json:"gprPublishSettings"`
+}
+
+type GprPublishSettings struct {
+	ArtifactId     string `json:"artifactId"`
+	GroupId        string `json:"groupId"`
+	DefaultVersion string `json:"defaultVersion"`
+	RepositoryUrl  string `json:"repositoryUrl"`
 }
 
 func (i PackageInfo) BasePackageOrDefault() string {

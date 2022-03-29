@@ -2671,11 +2671,33 @@ func genSettingsFile(packageName string) ([]byte, error) {
 
 // genBuildFile emits build.gradle
 func genBuildFile(name string, basePackageName string, pkgInfo PackageInfo) ([]byte, error) {
+	publishing := &bytes.Buffer{}
+
+	gprPublishSettings := pkgInfo.GprPublishSettings
+	if gprPublishSettings == nil {
+		ctx := defaultPublishTemplateContext{
+			Name:            name,
+			BasePackageName: strings.TrimSuffix(basePackageName, "."),
+		}
+		if err := defaultPublishTemplate.Execute(publishing, ctx); err != nil {
+			return nil, err
+		}
+	} else {
+		ctx := gprPublishTemplateContext{
+			ArtifactId:     gprPublishSettings.ArtifactId,
+			GroupId:        gprPublishSettings.GroupId,
+			DefaultVersion: gprPublishSettings.DefaultVersion,
+			RepositoryUrl:  gprPublishSettings.RepositoryUrl,
+		}
+		if err := gprPublishTemplate.Execute(publishing, ctx); err != nil {
+			return nil, err
+		}
+	}
+
 	w := &bytes.Buffer{}
 	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{
-		Name:            name,
-		BasePackageName: strings.TrimSuffix(basePackageName, "."),
-		PackageInfo:     pkgInfo,
+		Publishing:  publishing.String(),
+		PackageInfo: pkgInfo,
 	})
 	if err != nil {
 		return nil, err
