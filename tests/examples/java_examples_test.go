@@ -83,7 +83,6 @@ func TestCloudExamples(t *testing.T) {
 	})
 
 	t.Run("aws-java-webserver", func(t *testing.T) {
-		t.Skip("Need AWS creds in CI")
 		test := getJvmBase(t, "aws-java-webserver").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{

@@ -126,7 +126,7 @@ jobs:
         run: make provider.${PROVIDER}.install
         env:
           PROVIDER: ${{ matrix.provider }}
-  example1:
+  example-aws-java-webserver:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -173,24 +173,13 @@ jobs:
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
-      - name: run example aws-java-webserver
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.aws.build provider.aws.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            ss=0
-            cd tests/examples/aws-java-webserver &&
-            ./gradlew install || ((ss++))
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi preview || ((ss++))
-            exit $ss
+        run: make ensure_plugins
+      - name: Build AWS resource provider
+        run: make provider.aws.build provider.aws.install
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run aws-java-webserver example
+        run: make test_cloud_example.aws-java-webserver
   example2:
     runs-on: ubuntu-latest
     timeout-minutes: 10
