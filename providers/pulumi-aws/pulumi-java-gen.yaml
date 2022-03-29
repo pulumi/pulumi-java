@@ -2,3 +2,9 @@ version: 4.37.3
 schema: https://raw.githubusercontent.com/pulumi/pulumi-aws/v4.37.3/provider/cmd/pulumi-resource-aws/schema.json
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/aws/version.txt
+
+packageInfo:
+  gprPublishSettings:
+    groupId: io.pulumi
+    artifactId: aws
+    repositoryUrl: https://maven.pkg.github.com/pulumi/pulumi-jvm
