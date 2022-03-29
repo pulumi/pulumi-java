@@ -228,7 +228,7 @@ jobs:
       #  with:
       #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
       - name: Build Azure Native resource provider
-        run: provider.azure-native.install
+        run: make provider.azure-native.install
       - name: Build Java language provider
         run: make bin/pulumi-language-jvm
       - name: Run example azure-java-appservice-sql
@@ -285,9 +285,9 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - name: Build GCP resource provider
-        run: provider.gcp.install
+        run: make provider.gcp.install
       - name: Build Kubernetes resource provider
-        run: provider.kubernetes.install
+        run: make provider.kubernetes.install
       - name: Build Java language provider
         run: make bin/pulumi-language-jvm
       - name: Run example gcp-java-gke-hello-world
@@ -380,7 +380,7 @@ jobs:
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Install Pulumi Resource Plugins
-        run: ensure_plugins
+        run: make ensure_plugins
       - name: Build AWS provider
         run: make provider.aws.install
       - name: Build AWS Native provider
