@@ -142,6 +142,21 @@ func TestExamples(t *testing.T) {
 		integration.ProgramTest(t, &test)
 	})
 
+	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
+		test := getJvmBase(t, "aws-native-java-s3-folder").
+			With(integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region":        "us-west-2",
+					"aws-native:region": "us-west-2",
+				},
+
+				// TODO failing here, potentially a
+				// provider bug. We need to recheck
+				// after upgrading to latest.
+				SkipRefresh: true,
+			})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {

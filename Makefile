@@ -72,6 +72,7 @@ test_example.%:	bin/pulumi-language-jvm ensure_tests provider.random.install
 
 ensure_plugins::
 	pulumi plugin install resource aws v4.37.3
+	pulumi plugin install resource aws-native v0.12.0
 	pulumi plugin install resource azure-native v1.56.0
 	pulumi plugin install resource kubernetes v3.15.1
 	pulumi plugin install resource gcp v6.11.0
