@@ -235,7 +235,7 @@ jobs:
         run: make bin/pulumi-language-jvm
       - name: Run example azure-java-appservice-sql
         run: make test_example.azure-java-appservice-sql
-  example3:
+  example-gcp-java-gke-hello-world:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -284,20 +284,14 @@ jobs:
           project_id: pulumi-development
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-      - name: run example gcp-java-gke-hello-world
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.gcp.build provider.gcp.install
-          make provider.kubernetes.build provider.kubernetes.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/gcp-java-gke-hello-world &&
-            ss=0
-            ./gradlew install || ((ss++))
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi config set gcp:zone us-west1-a
-            pulumi preview || ((ss++))
-            exit $ss
+      - name: Build GCP resource provider
+        run: provider.gcp.install
+      - name: Build Kubernetes resource provider
+        run: provider.kubernetes.install
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run example gcp-java-gke-hello-world
+        run: make test_example.gcp-java-gke-hello-world
   example4:
     runs-on: ubuntu-latest
     timeout-minutes: 10
