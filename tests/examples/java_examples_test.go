@@ -30,36 +30,37 @@ func TestJavaAccMinimal(t *testing.T) {
 	integration.ProgramTest(t, &test)
 }
 
-func TestJavaRandomProvider(t *testing.T) {
-	test := getJvmBase(t, "random").
-		With(integration.ProgramTestOptions{
-			Quick: true,
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				assert.Greater(t, o["randomInteger"].(float64), -0.1)
-				assert.Len(t, o["randomString"].(string), 10)
-				assert.Len(t, o["randomUuid"].(string), 36)
-				assert.Len(t, o["randomIdHex"].(string), 20)
+func TestExamples(t *testing.T) {
+	t.Run("random", func(t *testing.T) {
+		test := getJvmBase(t, "random").
+			With(integration.ProgramTestOptions{
+				Quick: true,
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					assert.Greater(t, o["randomInteger"].(float64), -0.1)
+					assert.Len(t, o["randomString"].(string), 10)
+					assert.Len(t, o["randomUuid"].(string), 36)
+					assert.Len(t, o["randomIdHex"].(string), 20)
 
-				for _, s := range o["shuffled"].([]interface{}) {
-					s := s.(string)
-					assert.Contains(t, []string{"A", "B", "C"}, s)
-				}
-
-				hasCipherText := false
-				for k := range o["randomPassword"].(map[string]interface{}) {
-					if k == "ciphertext" {
-						hasCipherText = true
+					for _, s := range o["shuffled"].([]interface{}) {
+						s := s.(string)
+						assert.Contains(t, []string{"A", "B", "C"}, s)
 					}
-				}
-				assert.True(t, hasCipherText)
-			},
-		})
 
-	integration.ProgramTest(t, &test)
-}
+					hasCipherText := false
+					for k := range o["randomPassword"].(map[string]interface{}) {
+						if k == "ciphertext" {
+							hasCipherText = true
+						}
+					}
+					assert.True(t, hasCipherText)
+				},
+			})
 
-func TestCloudExamples(t *testing.T) {
+		integration.ProgramTest(t, &test)
+
+	})
+
 	t.Run("azure-java-static-website", func(t *testing.T) {
 		// Skipping as the example uses 340+s; in addition it
 		// may require additional CI setup to access an Azure

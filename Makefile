@@ -65,10 +65,10 @@ provider.%.install:	provider.%.build
 # stacks in Pulumi service.
 integration_tests::	bin/pulumi-language-jvm ensure_tests
 
-# Run a custom integration test.
-# Example: make test_cloud_example.aws-java-webserver
-test_cloud_example.%:	bin/pulumi-language-jvm ensure_tests provider.random.install
-	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestCloudExamples/$* -test.v
+# Run a custom integration test or example.
+# Example: make test_example.aws-java-webserver
+test_example.%:	bin/pulumi-language-jvm ensure_tests provider.random.install
+	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestExamples/$* -test.v
 
 ensure_plugins::
 	pulumi plugin install resource aws v4.37.3

@@ -179,7 +179,7 @@ jobs:
       - name: Build Java language provider
         run: make bin/pulumi-language-jvm
       - name: Run aws-java-webserver example
-        run: make test_cloud_example.aws-java-webserver
+        run: make test_example.aws-java-webserver
   example2:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -503,7 +503,7 @@ jobs:
             pulumi config set azure-native:location westus
             pulumi preview || ((ss++))
             exit $ss
-  example7:
+  example-random:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -539,26 +539,13 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
-      - name: run example random
-        run: |
-          make bin/pulumi-language-jvm
-          make provider.random.build provider.random.install
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/random &&
-            ss=0
-            pulumi destroy -s dev --yes || true
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi preview || ((ss++))
-            pulumi up -s dev --yes || ((ss++))
-            pulumi destroy -s dev --yes || ((ss++))
-            exit $ss
+        run: make ensure_plugins
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Build random provider
+        run: make provider.random.install
+      - name: Run random example
+        run: make test_example.random
     strategy:
       fail-fast: true
   example-eks-minimal:
@@ -614,7 +601,7 @@ jobs:
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Run eks-minimal example
-        run: make test_cloud_example.eks-minimal
+        run: make test_example.eks-minimal
     strategy:
       fail-fast: true
   go-lint:
