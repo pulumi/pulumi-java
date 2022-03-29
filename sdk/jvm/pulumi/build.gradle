@@ -106,7 +106,11 @@ publishing {
         gpr(MavenPublication) {
             groupId = "io.pulumi"
             artifactId = "pulumi"
-            version = project.findProperty("version") ?: "0.0.1-SNAPSHOT";
+            version = (
+              project.findProperty("version") == "unspecified"
+              ? "0.0.1-SNAPSHOT"
+              : (project.findProperty("version") ?: "0.0.1-SNAPSHOT")
+            )
             from components.java
         }
     }
