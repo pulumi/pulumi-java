@@ -3,6 +3,7 @@
 package examples
 
 import (
+	"os/exec"
 	"path/filepath"
 	"strings"
 	"testing"
@@ -12,23 +13,6 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 )
-
-func TestJavaAccMinimal(t *testing.T) {
-	test := getJvmBase(t, "minimal").
-		With(integration.ProgramTestOptions{
-			Config: map[string]string{
-				"name": "Pulumi",
-			},
-			Secrets: map[string]string{
-				"secret": "this is my secret message",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				// Simple runtime validation that just ensures the checkpoint was written and read.
-				assert.NotNil(t, stackInfo.Deployment)
-			},
-		})
-	integration.ProgramTest(t, &test)
-}
 
 func TestExamples(t *testing.T) {
 	t.Run("random", func(t *testing.T) {
@@ -134,6 +118,30 @@ func TestExamples(t *testing.T) {
 
 		integration.ProgramTest(t, &test)
 	})
+
+	t.Run("minimal", func(t *testing.T) {
+		test := getJvmBase(t, "minimal").
+			With(integration.ProgramTestOptions{
+				PrepareProject: func(info *engine.Projinfo) error {
+					cmd := exec.Command(filepath.Join(info.Root, "mvnw"),
+						"--no-transfer-progress", "package")
+					cmd.Dir = info.Root
+					return cmd.Run()
+				},
+				Config: map[string]string{
+					"name": "Pulumi",
+				},
+				Secrets: map[string]string{
+					"secret": "this is my secret message",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					// Simple runtime validation that just ensures the checkpoint was written and read.
+					assert.NotNil(t, stackInfo.Deployment)
+				},
+			})
+		integration.ProgramTest(t, &test)
+	})
+
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {

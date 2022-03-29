@@ -292,7 +292,7 @@ jobs:
         run: make bin/pulumi-language-jvm
       - name: Run example gcp-java-gke-hello-world
         run: make test_example.gcp-java-gke-hello-world
-  example4:
+  example-minimal:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -328,28 +328,11 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Install Pulumi Resource Plugins
-        run: |
-          pulumi plugin install resource aws v4.37.3;
-          pulumi plugin install resource azure-native v1.56.0;
-          pulumi plugin install resource kubernetes v3.15.1;
-          pulumi plugin install resource gcp v6.11.0;
-          pulumi plugin install resource random v4.3.1;
-      - name: run example minimal
-        run: |
-          make bin/pulumi-language-jvm
-          export PATH="$PATH:$(pwd)/bin/" &&
-            cd tests/examples/minimal &&
-            ss=0
-            mvn --no-transfer-progress package || ((ss++))
-            pulumi destroy -s dev --yes || true
-            pulumi stack rm dev --yes || true
-            pulumi stack init dev || ((ss++))
-            pulumi config set minimal:name foo
-            pulumi config set minimal:secret bar
-            pulumi preview || ((ss++))
-            pulumi up -s dev --yes || ((ss++))
-            pulumi destroy -s dev --yes || ((ss++))
-            exit $ss
+        run: make ensure_plugins
+      - name: Build Java language provider
+        run: make bin/pulumi-language-jvm
+      - name: Run example minimal
+        run: make test_example.minimal
   example5:
     runs-on: ubuntu-latest
     timeout-minutes: 10
