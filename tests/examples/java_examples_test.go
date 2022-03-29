@@ -46,10 +46,6 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-static-website", func(t *testing.T) {
-		// Skipping as the example uses 340+s; in addition it
-		// may require additional CI setup to access an Azure
-		// account.
-		t.Skip("Too slow")
 		test := getJvmBase(t, "azure-java-static-website").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
