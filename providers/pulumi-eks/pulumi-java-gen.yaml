@@ -6,3 +6,8 @@ packageInfo:
   packageReferences:
     "io.pulumi:aws": "4.37.3+"
     "io.pulumi:kubernetes": "3.15.1+"
+
+  gprPublishSettings:
+    groupId: io.pulumi
+    artifactId: eks
+    repositoryUrl: https://maven.pkg.github.com/pulumi/pulumi-jvm

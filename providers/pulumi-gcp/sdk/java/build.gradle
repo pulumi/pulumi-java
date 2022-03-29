@@ -63,14 +63,29 @@ test {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            groupId = 'io.pulumi'
-            artifactId = 'gcp'
-            version = project.version
-
+        // Publish to GitHub Packages like this:
+        //
+        // gradle publish
+        //
+        // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
+        gpr(MavenPublication) {
+            groupId = "io.pulumi"
+            artifactId = "gcp"
+            version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
             from components.java
         }
-        // TODO pom
+    }
+
+    // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
+            credentials {
+                username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
+                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+            }
+        }
     }
 }
 
