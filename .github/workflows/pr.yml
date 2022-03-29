@@ -33,6 +33,13 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
+      # Delete SNAPSHOT version before adding a new one, otherwise
+      # jars with different date stamps keep accumulating under the
+      # SNAPSHOT version.
+      - uses: actions/delete-package-versions@v3
+        with:
+          package-name: 'io.pulumi.pulumi'
+          delete-only-pre-release-versions: "true"
       - name: Publish sdk/jvm SNAPSHOT to Maven Repo
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
