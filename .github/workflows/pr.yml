@@ -17,8 +17,8 @@ env:
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: us-west-2
   PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 60000
-  GPR_USER: ${{ github.actor }}
-  GPR_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+  GPR_USER: ${{ secrets.GPR_USER }}
+  GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
 
 jobs:
 
