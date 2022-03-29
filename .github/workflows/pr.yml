@@ -17,6 +17,9 @@ env:
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: us-west-2
   PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 60000
+  GPR_USER: ${{ github.actor }}
+  GPR_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
 jobs:
 
   publish-java-sdk-snapshot:
@@ -30,7 +33,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
-      - name: Build and unit-test Pulumi Java SDK
+      - name: Publish sdk/jvm SNAPSHOT to Maven Repo
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: -Dversion=0.0.1-SNAPSHOT publish
