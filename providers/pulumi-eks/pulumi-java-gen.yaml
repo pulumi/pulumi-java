@@ -4,6 +4,7 @@ out: sdk/java
 versionFile: src/main/resources/io/pulumi/eks/version.txt
 packageInfo:
   packageReferences:
+    "io.pulumi:pulumi": "0.0.1-SNAPSHOT"
     "io.pulumi:aws": "4.37.3+"
     "io.pulumi:kubernetes": "3.15.1+"
 

@@ -4,6 +4,8 @@ out: sdk/java
 versionFile: src/main/resources/io/pulumi/kubernetes/version.txt
 
 packageInfo:
+  packageReferences:
+    "io.pulumi:pulumi": "0.0.1-SNAPSHOT"
   gprPublishSettings:
     groupId: io.pulumi
     artifactId: kubernetes

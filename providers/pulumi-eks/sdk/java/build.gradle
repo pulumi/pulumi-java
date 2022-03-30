@@ -26,7 +26,6 @@ repositories {
 }
 
 dependencies {
-    implementation("io.pulumi:pulumi:1.0.0")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     api("com.google.guava:guava:30.1-jre") // FIXME: do we really want to expose this dep?
     api("com.google.code.gson:gson:2.8.6") // make sure we don't clash with grpc deps
@@ -35,6 +34,7 @@ dependencies {
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
     implementation("io.pulumi:aws:4.37.3+")
     implementation("io.pulumi:kubernetes:3.15.1+")
+    implementation("io.pulumi:pulumi:0.0.1-SNAPSHOT")
 
     def junitVersion = "5.7.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
