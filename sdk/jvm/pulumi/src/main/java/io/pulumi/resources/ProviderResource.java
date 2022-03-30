@@ -1,6 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
@@ -62,8 +63,8 @@ public class ProviderResource extends CustomResource {
      * Fields urn and id can be set late, with reflection, so we need lazy init here
      */
     private CompletableFuture<String> registrationIdAsync() {
-        var providerUrn = io.pulumi.core.internal.Internal.of(this.getUrn()).getValueOrDefault("");
-        var providerId = io.pulumi.core.internal.Internal.of(this.getId()).getDataAsync()
+        var providerUrn = Internal.of(this.getUrn()).getValueOrDefault("");
+        var providerId = Internal.of(this.getId()).getDataAsync()
                 .thenApply(data -> data.filter(String::isBlank).orElse(Constants.UnknownValue));
 
         return providerUrn.thenCompose(
