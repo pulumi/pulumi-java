@@ -175,8 +175,6 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       - name: Build AWS resource provider
         run: make provider.aws.build provider.aws.install
       - name: Build Java language provider
@@ -221,8 +219,6 @@ jobs:
         run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       #- name: Auth
       #  uses: azure/login@v1
       #  with:
@@ -277,8 +273,6 @@ jobs:
         run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       - uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: pulumi-development
@@ -328,8 +322,6 @@ jobs:
         run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       - name: Build Java language provider
         run: make bin/pulumi-language-jvm
       - name: Run example minimal
@@ -379,8 +371,6 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       - name: Build AWS provider
         run: make provider.aws.install
       - name: Build AWS Native provider
@@ -427,8 +417,6 @@ jobs:
         run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       #- name: Auth
       #  uses: azure/login@v1
       #  with:
@@ -483,8 +471,6 @@ jobs:
         run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       - name: Build Java language provider
         run: make bin/pulumi-language-jvm
       - name: Build random provider
@@ -496,6 +482,7 @@ jobs:
 
   example-eks-minimal:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -529,8 +516,6 @@ jobs:
         run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Install Pulumi Resource Plugins
-        run: make ensure_plugins
       - name: Build Java language provider
         run: make bin/pulumi-language-jvm
       - name: Build AWS provider
