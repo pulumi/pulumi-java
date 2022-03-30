@@ -1,4 +1,9 @@
 */sdk/java/build
 */sdk/java/.gradle
-version.txt
+*/sdk/java/gradle
 */sdk/java/gradle.properties
+*/sdk/java/gradlew
+*/sdk/java/gradlew.bat
+*version.txt
+*plugin.json
+
