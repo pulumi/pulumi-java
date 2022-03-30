@@ -2701,7 +2701,7 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		}
 	}
 
-	// Finally emit the package metadata.
+	// Finally, emit the package metadata.
 	if err := genGradleProject(
 		pkg,
 		info.BasePackageOrDefault(),
