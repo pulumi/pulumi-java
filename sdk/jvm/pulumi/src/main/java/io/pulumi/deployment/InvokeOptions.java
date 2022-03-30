@@ -1,6 +1,7 @@
 package io.pulumi.deployment;
 
 import io.pulumi.core.TypeShape;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.InvokeArgs;
@@ -74,8 +75,8 @@ public final class InvokeOptions {
 
         public Optional<ProviderResource> getNestedProvider(String token) {
             return InvokeOptions.this.getProvider().or(
-                    () -> InvokeOptions.this.getParent().flatMap(p ->
-                            io.pulumi.core.internal.Internal.from(p).getProvider(token))
+                    () -> InvokeOptions.this.getParent()
+                            .flatMap(p -> Internal.from(p).getProvider(token))
             );
         }
     }
