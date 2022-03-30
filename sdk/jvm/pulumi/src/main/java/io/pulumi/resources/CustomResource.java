@@ -15,11 +15,10 @@ import java.util.concurrent.CompletableFuture;
  * in a dynamically loaded plugin for the defining package.
  */
 public class CustomResource extends Resource {
-    private final CompletableFuture<Output<String>> idFuture = new CompletableFuture<>();
+    private CompletableFuture<Output<String>> idFuture; // effectively final, lazy init
 
     @Export(name = Constants.IdPropertyName, type = String.class)
-    private final Output<String> id = Output.of(idFuture).apply(id -> id);
-
+    private Output<String> id; // effectively final, lazy init
 
     /**
      * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean)}
@@ -71,7 +70,19 @@ public class CustomResource extends Resource {
         super(type, name, true,
                 args == null ? ResourceArgs.Empty : args,
                 options == null ? CustomResourceOptions.Empty : options,
-                false, dependency);
+                false, dependency,
+                (self) -> {
+                    // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
+                    if (self instanceof CustomResource) {
+                        ((CustomResource) self).idFuture = new CompletableFuture<>();
+                        ((CustomResource) self).id = Output.of(((CustomResource) self).idFuture).apply(id -> id);
+                    } else {
+                        throw new IllegalStateException(String.format(
+                                "Expected self to be instance of CustomResource, got: '%s'",
+                                self.getClass().getTypeName()
+                        ));
+                    }
+                });
     }
 
     /**
