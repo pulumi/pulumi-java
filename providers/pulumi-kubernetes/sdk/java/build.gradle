@@ -23,6 +23,16 @@ repositories {
     }
     mavenCentral()
     mavenLocal()
+    if (project.findProperty("gpr.user") ?: System.getenv("GPR_USER")) {
+      maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
+        credentials {
+          username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
+          password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+        }
+     }
+   }
 }
 
 dependencies {
