@@ -15,7 +15,7 @@ public class DependencyResource extends CustomResource {
     public DependencyResource(String urn) {
         super("", "", ResourceArgs.Empty, true);
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
-        this.setUrn(new OutputInternal<>(resources, urn));
-        Internal.from(this).setId(Output.empty());
+        Internal.from(this).setUrn(new OutputInternal<>(resources, urn));
+        Internal.from(this).setId(Output.ofNullable(null));
     }
 }

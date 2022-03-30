@@ -119,13 +119,21 @@ public class CustomResource extends Resource {
 
         /**
          * More: @see {@link #getId()}
+         *
          * @param id the the provider-assigned unique ID to set
+         * @throws NullPointerException if id is null
          */
         @InternalUse
-        public void setId(@Nullable Output<String> id) {
-            if (!this.resource.idFuture.complete(id)) {
+        public void setId(Output<String> id) {
+            if (!trySetId(id)) {
                 throw new IllegalStateException("id cannot be set twice, must be 'null' for 'setId' to work");
             }
+        }
+
+        @InternalUse
+        public boolean trySetId(Output<String> id) {
+            requireNonNull(id);
+            return this.resource.idFuture.complete(id);
         }
     }
 }

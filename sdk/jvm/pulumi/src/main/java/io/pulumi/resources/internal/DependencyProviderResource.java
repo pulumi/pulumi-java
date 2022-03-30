@@ -21,7 +21,7 @@ public final class DependencyProviderResource extends ProviderResource {
         var urnAndId = parseReference(reference);
 
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
-        this.setUrn(new OutputInternal<>(resources, urnAndId.t1));
+        Internal.from(this).setUrn(new OutputInternal<>(resources, urnAndId.t1));
         Internal.from(this).setId(new OutputInternal<>(resources, urnAndId.t2));
     }
 
