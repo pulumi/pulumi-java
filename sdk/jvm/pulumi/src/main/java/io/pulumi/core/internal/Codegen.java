@@ -19,7 +19,7 @@ public final class Codegen {
     }
 
     public static <T> Output<T> empty() {
-        return new OutputInternal<>(OutputData.empty());
+        return new OutputInternal<>(OutputData.of((T)null));
     }
 
     public static <T> Output<T> ofNullable(@Nullable T value) {
