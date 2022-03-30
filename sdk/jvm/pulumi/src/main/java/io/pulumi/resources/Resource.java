@@ -264,6 +264,7 @@ public abstract class Resource {
         }
         this.aliases = aliases.build();
 
+        // Finish initialisation with reflection asynchronously
         DeploymentInternal.getInstance().readOrRegisterResource(this, remote, DependencyResource::new, args, options);
     }
 
