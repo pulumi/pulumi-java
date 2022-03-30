@@ -1645,7 +1645,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
 	fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty())%s);\n",
-		tok, argsOverride, ctx.imports.Ref(names.Output), isComponent)
+		tok, argsOverride, ctx.imports.Ref(names.Codegen), isComponent)
 	fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.
