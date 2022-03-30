@@ -8,6 +8,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -289,18 +290,11 @@ public abstract class Resource {
         return this.urn;
     }
 
-    @InternalUse
-    public void setUrn(@Nullable Output<String> urn) {
-        if (!this.urnFuture.complete(urn)) {
-            throw new IllegalStateException("urn cannot be set twice, must be null for setUrn to work");
-        }
-    }
-
     private static ImmutableMap<String, ProviderResource> convertToProvidersMap(@Nullable List<ProviderResource> providers) {
         var result = ImmutableMap.<String, ProviderResource>builder();
         if (providers != null) {
             for (var provider : providers) {
-                var pkg = io.pulumi.core.internal.Internal.from(provider, ProviderResource.ProviderResourceInternal.class).getPackage();
+                var pkg = Internal.from(provider, ProviderResource.ProviderResourceInternal.class).getPackage();
                 result.put(pkg, provider);
             }
         }
@@ -421,12 +415,12 @@ public abstract class Resource {
          */
         @InternalUse
         public List<Output<String>> getAliases() {
-            return resource.aliases;
+            return this.resource.aliases;
         }
 
         @InternalUse
         public boolean getRemote() {
-            return resource.remote;
+            return this.resource.remote;
         }
 
         /**
@@ -434,7 +428,7 @@ public abstract class Resource {
          */
         @InternalUse
         public Optional<ProviderResource> getProvider() {
-            return Optional.ofNullable(resource.provider);
+            return Optional.ofNullable(this.resource.provider);
         }
 
         /**
@@ -442,7 +436,7 @@ public abstract class Resource {
          */
         @InternalUse
         public Optional<ProviderResource> getProvider(String moduleMember) {
-            return Optional.ofNullable(getProvider(resource, moduleMember));
+            return Optional.ofNullable(getProvider(this.resource, moduleMember));
         }
 
         /**
@@ -450,7 +444,20 @@ public abstract class Resource {
          */
         @InternalUse
         public Optional<String> getVersion() {
-            return Optional.ofNullable(resource.version);
+            return Optional.ofNullable(this.resource.version);
+        }
+
+        @InternalUse
+        public void setUrn(Output<String> urn) {
+            if (!trySetUrn(urn)) {
+                throw new IllegalStateException("urn cannot be set twice, must be 'null' for 'setUrn' to work");
+            }
+        }
+
+        @InternalUse
+        public boolean trySetUrn(Output<String> urn) {
+            requireNonNull(urn);
+            return this.resource.urnFuture.complete(urn);
         }
 
         /**
@@ -469,22 +476,6 @@ public abstract class Resource {
             }
 
             return resource.providers.getOrDefault(memComponents[0], null);
-        }
-    }
-
-    protected interface LazyInitialization {
-        void lazy(Resource resource);
-
-        default void runLazy(Resource resource) {
-            if (this.getClass().isAssignableFrom(resource.getClass())) {
-                lazy(resource);
-            } else {
-                throw new IllegalStateException(String.format(
-                        "Expected 'this' to have type '%s', got: '%s'",
-                        resource.getClass().getTypeName(),
-                        this.getClass().getTypeName()
-                ));
-            }
         }
     }
 }
