@@ -1,4 +1,4 @@
-package eksminimal;
+package io.pulumi.example.eksminimal;
 
 import io.pulumi.Stack;
 import io.pulumi.aws.ec2.GetSubnetIds;

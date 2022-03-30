@@ -17,5 +17,7 @@ dependencies {
 }
 
 application {
-    mainClass = 's3site.App'
+    mainClass = project.hasProperty("mainClass")
+            ? project.getProperty("mainClass")
+            : 's3site.App'
 }
