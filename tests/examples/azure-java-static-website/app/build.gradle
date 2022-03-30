@@ -16,5 +16,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'staticwebsite.App'
+    mainClass = project.hasProperty("mainClass")
+            ? project.getProperty("mainClass")
+            : 'staticwebsite.App'
 }
