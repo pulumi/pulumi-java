@@ -16,6 +16,7 @@ import (
 
 	jvmgen "github.com/pulumi/pulumi-java/pkg/codegen/jvm"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 )
 
 type Config struct {
@@ -24,6 +25,7 @@ type Config struct {
 	Out         string      `yaml:"out"`
 	VersionFile string      `yaml:"versionFile"`
 	PackageInfo interface{} `yaml:"packageInfo"`
+	PluginFile  string      `yaml:"pluginFile"`
 }
 
 func main() {
@@ -145,6 +147,24 @@ func generateJava(configFile string) error {
 		bytes := []byte(cfg.Version)
 		if err := emitFile(f, bytes); err != nil {
 			return fmt.Errorf("Failed to generate version file at %s: %w", f, err)
+		}
+	}
+
+	if cfg.PluginFile != "" {
+		pulumiPlugin := &plugin.PulumiPluginJSON{
+			Resource: true,
+			Name:     pkg.Name,
+			Version:  cfg.Version,
+			Server:   pkg.PluginDownloadURL,
+		}
+
+		f := filepath.Join(outDir, cfg.PluginFile)
+		bytes, err := (pulumiPlugin).JSON()
+		if err != nil {
+			return fmt.Errorf("failed to serialize plugin file at %s: %w", f, err)
+		}
+		if err := emitFile(f, bytes); err != nil {
+			return fmt.Errorf("failed to generate plugin file at %s: %w", f, err)
 		}
 	}
 
