@@ -667,6 +667,7 @@ jobs:
         with:
           arguments: -Psnapshot=true publish
           build-root-directory: providers/pulumi-random/sdk/java
+          gradle-version: 7.4.1
 
   publish-java-sdk-snapshot:
     if: github.ref_name == 'main'
