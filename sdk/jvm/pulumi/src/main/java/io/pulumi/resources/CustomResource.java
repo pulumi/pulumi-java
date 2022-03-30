@@ -15,11 +15,10 @@ import java.util.concurrent.CompletableFuture;
  * in a dynamically loaded plugin for the defining package.
  */
 public class CustomResource extends Resource {
-    private final CompletableFuture<Output<String>> idFuture = new CompletableFuture<>();
+    private CompletableFuture<Output<String>> idFuture; // effectively final, lazy init
 
     @Export(name = Constants.IdPropertyName, type = String.class)
-    private final Output<String> id = Output.of(idFuture).apply(id -> id);
-
+    private Output<String> id; // effectively final, lazy init
 
     /**
      * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean)}
@@ -71,7 +70,13 @@ public class CustomResource extends Resource {
         super(type, name, true,
                 args == null ? ResourceArgs.Empty : args,
                 options == null ? CustomResourceOptions.Empty : options,
-                false, dependency);
+                false, dependency,
+                self -> ((CustomResource) self).init());
+    }
+
+    protected void init() {
+        this.idFuture = new CompletableFuture<>();
+        this.id = Output.of(this.idFuture).apply(id -> id);
     }
 
     /**
