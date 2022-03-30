@@ -74,7 +74,7 @@ public class CustomResource extends Resource {
                 self -> ((CustomResource) self).init());
     }
 
-    protected void init() {
+    private void init() {
         this.idFuture = new CompletableFuture<>();
         this.id = Output.of(this.idFuture).apply(id -> id);
     }
