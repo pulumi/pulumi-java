@@ -416,7 +416,7 @@ func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nested
 				fmt.Sprintf("%s.ofLeft", ctx.ref(names.Output)),
 				fmt.Sprintf("%s.ofRight", ctx.ref(names.Output)))
 		default:
-			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Output), nested)
+			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Codegen), nested)
 		}
 
 	case *schema.ArrayType:
