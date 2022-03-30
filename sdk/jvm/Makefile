@@ -1,5 +1,5 @@
 # TODO: use pulumictl to compute versions from repo tags
-VERSION := 1.0.0
+VERSION := 0.0.1-SNAPSHOT
 
 # Builds the project and runs unit tests.
 build::		ensure
