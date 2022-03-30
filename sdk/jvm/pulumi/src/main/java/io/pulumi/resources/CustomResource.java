@@ -6,6 +6,7 @@ import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -98,9 +99,15 @@ public class CustomResource extends Resource {
      * @param id the the provider-assigned unique ID to set
      */
     @InternalUse
-    public void setId(@Nullable Output<String> id) {
-        if (!this.idFuture.complete(id)) {
+    public void setId(Output<String> id) {
+        if (!trySetId(id)) {
             throw new IllegalStateException("id cannot be set twice, must be null for setId to work");
         }
+    }
+
+    @InternalUse
+    public boolean trySetId(Output<String> id) {
+        Objects.requireNonNull(id);
+        return this.idFuture.complete(id);
     }
 }
