@@ -19,6 +19,7 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 import static io.pulumi.core.internal.Objects.exceptionSupplier;
 import static io.pulumi.core.internal.Objects.require;
@@ -30,7 +31,7 @@ import static java.util.Objects.requireNonNull;
  */
 @ParametersAreNonnullByDefault
 public abstract class Resource {
-    private final CompletableFuture<Output<String>> urnFuture = new CompletableFuture();
+    private final CompletableFuture<Output<String>> urnFuture = new CompletableFuture<>();
 
     @Export(name = Constants.UrnPropertyName, type = String.class)
     private final Output<String> urn = Output.of(urnFuture).apply(urn -> urn);
@@ -90,6 +91,33 @@ public abstract class Resource {
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency
     ) {
+        this(type, name, custom, args, options, remote, dependency, null);
+    }
+
+    /**
+     * Creates and registers a new resource object. The "type" is the fully qualified type token
+     * and "name" is the "name" part to of a stable and globally unique URN for the object,
+     * "dependsOn" is an optional list of other resources that this resource depends on,
+     * controlling the order in which we perform resource operations.
+     *
+     * @param type       the type of the resource
+     * @param name       the unique name of the resource
+     * @param custom     true to indicate that this is a custom resource, managed by a plugin
+     * @param args       the arguments to use to populate the new resource
+     * @param options    a bag of options that control this resource's behavior
+     * @param remote     true if this is a remote component resource
+     * @param dependency true if this is a synthetic resource used internally for dependency tracking
+     * @param superInit  subclass initialization logic that needs to be run in superclass
+     */
+    protected Resource(
+            String type, String name, boolean custom,
+            ResourceArgs args, ResourceOptions options,
+            boolean remote, boolean dependency, @Nullable Consumer<Resource> superInit
+    ) {
+        if (superInit != null) {
+            superInit.accept(this);
+        }
+
         this.remote = remote;
 
         if (dependency) {
@@ -236,7 +264,7 @@ public abstract class Resource {
         }
         this.aliases = aliases.build();
 
-        // Finish initialisation with reflection
+        // Finish initialisation with reflection asynchronously
         DeploymentInternal.getInstance().readOrRegisterResource(this, remote, DependencyResource::new, args, options);
     }
 
