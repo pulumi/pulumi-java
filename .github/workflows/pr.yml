@@ -669,3 +669,40 @@ jobs:
         with:
           arguments: publish
           build-root-directory: sdk/jvm
+
+  publish-provider-sdk-snapshots:
+    # if: github.ref_name == 'main'
+    run-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        provider:
+        - aws
+        - aws-native
+        - azure-native
+        - docker
+        - eks
+        - gcp
+        - google-native
+        - kubernetes
+        - random
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: 'gradle'
+      # Delete SNAPSHOT version before adding a new one, otherwise
+      # jars with different date stamps keep accumulating under the
+      # SNAPSHOT version.
+      - uses: actions/delete-package-versions@v3
+        with:
+          package-name: io.pulumi.${{ matrix.provider }}
+          delete-only-pre-release-versions: "true"
+      - name: Publish provider SNAPSHOT to Maven Repo
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: publish
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
