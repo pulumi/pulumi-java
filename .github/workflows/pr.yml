@@ -645,6 +645,17 @@ jobs:
         run: |
           cd ${{ matrix.directory }} && golangci-lint run -c ../.golangci.yml
 
+  publish-providers-sdk-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: 'gradle'
+
   publish-java-sdk-snapshot:
     if: github.ref_name == 'main'
     runs-on: ubuntu-latest
@@ -669,8 +680,3 @@ jobs:
         with:
           arguments: publish
           build-root-directory: sdk/jvm
-
-  publish-provider-sdk-snapshots:
-    run-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
