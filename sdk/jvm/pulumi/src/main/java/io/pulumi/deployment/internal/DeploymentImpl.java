@@ -1123,6 +1123,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 source.trySetException(e);
                             }
                         }
+                        if (throwable != null) {
+                            Output<String> failed = Output.of(CompletableFuture.failedFuture(throwable));
+                            resource.trySetUrn(failed);
+                            if (resource instanceof CustomResource) {
+                                ((CustomResource)resource).trySetId(failed);
+                            }
+                        }
                         // Ensure that we've at least resolved all our completion sources. That way we
                         // don't leave any outstanding tasks sitting around which might cause hangs.
                         for (var source : completionSources.values()) {
@@ -1130,6 +1137,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             // If we're in preview, we'll consider this unknown and in a normal
                             // update we'll consider it known.
                             source.trySetDefaultResult(!this.isDryRun);
+                        }
+                        Output<String> defaultValue = this.isDryRun
+                                ? new OutputInternal<>(OutputData.unknown())
+                                : Output.of("");
+                        resource.trySetUrn(defaultValue);
+                        if (resource instanceof CustomResource) {
+                            ((CustomResource)resource).trySetId(defaultValue);
                         }
                     });
         }
