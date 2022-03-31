@@ -3,10 +3,14 @@ package io.pulumi.resources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.HasInternalMethods;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -15,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
  * how to diff and perform partial updates of them, and these CRUD operations are implemented
  * in a dynamically loaded plugin for the defining package.
  */
-public class CustomResource extends Resource {
+public class CustomResource extends Resource implements HasInternalMethods {
     private CompletableFuture<Output<String>> idFuture; // effectively final, lazy init
 
     @Export(name = Constants.IdPropertyName, type = String.class)
@@ -75,8 +79,9 @@ public class CustomResource extends Resource {
                 (self) -> {
                     // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
                     if (self instanceof CustomResource) {
-                        ((CustomResource) self).idFuture = new CompletableFuture<>();
-                        ((CustomResource) self).id = Output.of(((CustomResource) self).idFuture).apply(id -> id);
+                        var cr = (CustomResource) self;
+                        cr.idFuture = new CompletableFuture<>();
+                        cr.id = Output.of(cr.idFuture).apply(id -> id);
                     } else {
                         throw new IllegalStateException(String.format(
                                 "Expected self to be instance of CustomResource, got: '%s'",
@@ -94,20 +99,37 @@ public class CustomResource extends Resource {
         return this.id;
     }
 
-    /**
-     * More: @see {@link #getId()}
-     * @param id the the provider-assigned unique ID to set
-     */
     @InternalUse
-    public void setId(Output<String> id) {
-        if (!trySetId(id)) {
-            throw new IllegalStateException("id cannot be set twice, must be null for setId to work");
+    @Override
+    public <I> Optional<I> tryGetInternalHandle(Class<I> classHandle) {
+        if (classHandle.equals(CustomResource.Internal.class)) {
+            I handle = (I)(new CustomResource.Internal(this));
+            return Optional.of(handle);
         }
+        return Optional.empty();
     }
 
     @InternalUse
-    public boolean trySetId(Output<String> id) {
-        Objects.requireNonNull(id);
-        return this.idFuture.complete(id);
+    @ParametersAreNonnullByDefault
+    public static final class Internal {
+
+        private final CustomResource self;
+
+        private Internal(CustomResource self) {
+            this.self = self;
+        }
+
+        @InternalUse
+        public void setId(Output<String> id) {
+            if (!trySetId(id)) {
+                throw new IllegalStateException("id cannot be set twice, must be null for setId to work");
+            }
+        }
+
+        @InternalUse
+        public boolean trySetId(Output<String> id) {
+            Objects.requireNonNull(id);
+            return self.idFuture.complete(id);
+        }
     }
 }

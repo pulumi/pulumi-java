@@ -5,6 +5,7 @@ import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.InvokeOptions;
+import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.InputArgs;
 import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
@@ -50,11 +51,24 @@ public class Internal {
         return from(r, Resource.Internal.class);
     }
 
+    public static CustomResource.Internal fromCustomResource(CustomResource r) {
+        return from(r, CustomResource.Internal.class);
+    }
+
     public static AssetOrArchive.Internal from(AssetOrArchive a) {
         return from(a, AssetOrArchive.Internal.class);
     }
 
     public static <T, I> I from(T value, Class<I> internalType) {
+
+        if (value instanceof HasInternalMethods) {
+            var cast = (HasInternalMethods) value;
+            var handle = cast.tryGetInternalHandle(internalType);
+            if (handle.isPresent()) {
+                return handle.get();
+            }
+        }
+
         var type = value.getClass();
         var fieldAnnotation = Field.class;
         java.lang.reflect.Field internal = Reflection.allFields(type).stream()

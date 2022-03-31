@@ -1078,14 +1078,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var data = response.t3;
                         var dependencies = response.t4;
 
-                        resource.setUrn(Output.of(urn));
+                        io.pulumi.core.internal.Internal.from(resource)
+                                .setUrn(Output.of(urn));
 
                         if (resource instanceof CustomResource) {
                             var customResource = (CustomResource) resource;
                             var isKnown = isNonEmptyOrNull(id);
-                            customResource.setId(isKnown
-                                    ? Output.of(id)
-                                    : new OutputInternal<>(OutputData.unknown()));
+
+                            io.pulumi.core.internal.Internal.fromCustomResource(customResource)
+                                    .setId(isKnown
+                                            ? Output.of(id)
+                                            : new OutputInternal<>(OutputData.unknown()));
                         }
 
                         // Go through all our output fields and lookup a corresponding value in the response
@@ -1125,9 +1128,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         }
                         if (throwable != null) {
                             Output<String> failed = Output.of(CompletableFuture.failedFuture(throwable));
-                            resource.trySetUrn(failed);
+                            io.pulumi.core.internal.Internal.from(resource).trySetUrn(failed);
                             if (resource instanceof CustomResource) {
-                                ((CustomResource)resource).trySetId(failed);
+                                io.pulumi.core.internal.Internal.fromCustomResource((CustomResource) resource)
+                                        .trySetId(failed);
                             }
                         }
                         // Ensure that we've at least resolved all our completion sources. That way we
@@ -1141,9 +1145,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         Output<String> defaultValue = this.isDryRun
                                 ? new OutputInternal<>(OutputData.unknown())
                                 : Output.of("");
-                        resource.trySetUrn(defaultValue);
+                        io.pulumi.core.internal.Internal.from(resource).trySetUrn(defaultValue);
                         if (resource instanceof CustomResource) {
-                            ((CustomResource)resource).trySetId(defaultValue);
+                            io.pulumi.core.internal.Internal.fromCustomResource((CustomResource) resource)
+                                    .trySetId(defaultValue);
                         }
                     });
         }

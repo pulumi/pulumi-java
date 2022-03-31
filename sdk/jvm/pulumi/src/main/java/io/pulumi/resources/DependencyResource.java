@@ -13,7 +13,9 @@ public class DependencyResource extends CustomResource {
     public DependencyResource(String urn) {
         super("", "", ResourceArgs.Empty, true);
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
-        this.setUrn(new OutputInternal<>(resources, urn));
-        this.setId(Output.of((String)null));
+        io.pulumi.core.internal.Internal.from(this)
+            .setUrn(new OutputInternal<>(resources, urn));
+        io.pulumi.core.internal.Internal.fromCustomResource(this)
+            .setId(Output.of((String)null));
     }
 }
