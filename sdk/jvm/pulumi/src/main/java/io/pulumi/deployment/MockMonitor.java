@@ -7,6 +7,7 @@ import io.pulumi.Log;
 import io.pulumi.Stack;
 import io.pulumi.core.Urn;
 import io.pulumi.core.internal.Maps;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.internal.Monitor;
 import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.Deserializer;
@@ -22,6 +23,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class MockMonitor implements Monitor {
 
+    private Deployment deployment; // late init;
     private final Mocks mocks;
     private final Serializer serializer;
     private final Map<String, ImmutableMap<String, Object>> registeredResources;
@@ -32,6 +34,11 @@ public class MockMonitor implements Monitor {
         this.serializer = new Serializer(log);
         this.registeredResources = Collections.synchronizedMap(new HashMap<>());
         this.resources = Collections.synchronizedList(new LinkedList<>());
+    }
+
+    @InternalUse
+    public void setDeployment(Deployment deployment) {
+        this.deployment = deployment;
     }
 
     @Override
@@ -87,7 +94,7 @@ public class MockMonitor implements Monitor {
         )).thenCompose(idAndState -> {
             var id = idAndState.t1;
             var state = idAndState.t2;
-            var urn = Urn.create(request.getParent(), request.getType(), request.getName());
+            var urn = Urn.create(deployment, request.getParent(), request.getType(), request.getName());
             return serializeToMap(state)
                     .thenApply(serializedState -> {
                         var builder = ImmutableMap.<String, Object>builder();
@@ -114,7 +121,7 @@ public class MockMonitor implements Monitor {
         if (Stack.InternalStatic.RootPulumiStackTypeName.equals(request.getType())) {
             return CompletableFuture.completedFuture(
                     RegisterResourceResponse.newBuilder()
-                            .setUrn(Urn.create(request.getParent(), request.getType(), request.getName()))
+                            .setUrn(Urn.create(deployment, request.getParent(), request.getType(), request.getName()))
                             .setObject(Struct.newBuilder().build())
                             .build()
             );
@@ -129,7 +136,7 @@ public class MockMonitor implements Monitor {
         )).thenCompose(idAndState -> {
             var id = idAndState.t1;
             var state = idAndState.t2;
-            var urn = Urn.create(request.getParent(), request.getType(), request.getName());
+            var urn = Urn.create(deployment, request.getParent(), request.getType(), request.getName());
             return serializeToMap(state)
                     .thenApply(serializedState -> {
                         registeredResources.put(urn, ImmutableMap.of(
@@ -153,7 +160,7 @@ public class MockMonitor implements Monitor {
     }
 
     private ImmutableMap<String, Object> deserializeToMap(Struct args) {
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(deployment);
         var builder = ImmutableMap.<String, Object>builder();
         for (var entry : args.getFieldsMap().entrySet()) {
             var key = entry.getKey();

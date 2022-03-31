@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.annotations.InternalUse;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.resources.Resource;
 
@@ -19,50 +20,51 @@ import java.util.function.Function;
 @ParametersAreNonnullByDefault
 public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
-    @InternalUse
-    public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);
-
     private final CompletableFuture<OutputData<T>> dataFuture;
 
+    private final Deployment deployment;
+
     @InternalUse
-    public OutputInternal(@Nullable T value) {
-        this(value, false);
+    public OutputInternal(Deployment deployment, @Nullable T value) {
+        this(deployment, value, false);
     }
 
     @InternalUse
-    public OutputInternal(@Nullable T value, boolean isSecret) {
-        this(CompletableFuture.completedFuture(value), isSecret);
+    public OutputInternal(Deployment deployment, @Nullable T value, boolean isSecret) {
+        this(deployment, CompletableFuture.completedFuture(value), isSecret);
     }
 
     @InternalUse
-    public OutputInternal(CompletableFuture<T> value, boolean isSecret) {
-        this(OutputData.ofAsync(Objects.requireNonNull(value), isSecret));
+    public OutputInternal(Deployment deployment, CompletableFuture<T> value, boolean isSecret) {
+        this(deployment, OutputData.ofAsync(Objects.requireNonNull(value), isSecret));
     }
 
     @InternalUse
-    public OutputInternal(OutputData<T> dataFuture) {
-        this(CompletableFuture.completedFuture(Objects.requireNonNull(dataFuture)));
+    public OutputInternal(Deployment deployment, OutputData<T> dataFuture) {
+        this(deployment, CompletableFuture.completedFuture(Objects.requireNonNull(dataFuture)));
     }
 
     @InternalUse
-    public OutputInternal(CompletableFuture<OutputData<T>> dataFuture) {
+    public OutputInternal(Deployment deployment, CompletableFuture<OutputData<T>> dataFuture) {
+        this.deployment = Objects.requireNonNull(deployment);
         this.dataFuture = Objects.requireNonNull(dataFuture);
-
-        var deployment = DeploymentInternal.getInstanceOptional();
-        deployment.ifPresent(deploymentInternal -> deploymentInternal.getRunner().registerTask(
-                this.getClass().getTypeName() + " -> " + dataFuture, dataFuture
-        ));
+        if (deployment instanceof DeploymentInternal) {
+            var di = (DeploymentInternal) deployment;
+            di.getRunner().registerTask(
+                    this.getClass().getTypeName() + " -> " + dataFuture, dataFuture
+            );
+        }
     }
 
     @InternalUse
-    public OutputInternal(Set<Resource> resources, T value) {
-        this(CompletableFuture.completedFuture(
+    public OutputInternal(Deployment deployment, Set<Resource> resources, T value) {
+        this(deployment, CompletableFuture.completedFuture(
                 OutputData.of(ImmutableSet.copyOf(resources), value)));
     }
 
     @Override
     public <U> Output<U> apply(Function<T, Output<U>> func) {
-        return new OutputInternal<>(OutputData.apply(
+        return new OutputInternal<>(this.deployment, OutputData.apply(
                 dataFuture,
                 func.andThen(o -> Internal.of(o).getDataAsync())
         ));
@@ -70,7 +72,7 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     public Output<T> copy() {
         // we do not copy the OutputData, because it should be immutable
-        return new OutputInternal<>(this.dataFuture.copy()); // TODO: is the copy deep enough
+        return new OutputInternal<>(this.deployment, this.dataFuture.copy()); // TODO: is the copy deep enough
     }
 
     public Output<T> asPlaintext() { // TODO: this look very unsafe to be exposed, what are the use cases? do we need this?
@@ -83,7 +85,7 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @InternalUse
     public Output<T> withIsSecret(CompletableFuture<Boolean> isSecretFuture) {
-        return new OutputInternal<>(
+        return new OutputInternal<>(this.deployment,
                 isSecretFuture.thenCompose(
                         secret -> this.dataFuture.thenApply(
                                 d -> d.withIsSecret(secret)
@@ -149,5 +151,10 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
                     output.getClass().getSimpleName()
             ));
         }
+    }
+
+    @Override
+    public Deployment getDeployment() {
+        return deployment;
     }
 }

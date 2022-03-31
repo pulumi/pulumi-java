@@ -1,5 +1,7 @@
 package io.pulumi.core;
 
+import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -96,8 +98,8 @@ public class Alias {
         );
     }
 
-    public static Builder builder() {
-        return new Builder();
+    public static Builder builder(Deployment deployment) {
+        return new Builder(deployment);
     }
 
     public static final class Builder {
@@ -114,13 +116,19 @@ public class Alias {
         @Nullable
         private Output<String> parentUrn;
 
+        private final Deployment deployment;
+
+        public Builder(Deployment deployment) {
+            this.deployment = Objects.requireNonNull(deployment);
+        }
+
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = OutputBuilder.forDeployment(deployment).ofNullable(name);
             return this;
         }
 
@@ -130,7 +138,7 @@ public class Alias {
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = OutputBuilder.forDeployment(deployment).ofNullable(type);
             return this;
         }
 
@@ -140,7 +148,7 @@ public class Alias {
         }
 
         public Builder stack(@Nullable String stack) {
-            this.stack = Output.ofNullable(stack);
+            this.stack = OutputBuilder.forDeployment(deployment).ofNullable(stack);
             return this;
         }
 
@@ -150,7 +158,7 @@ public class Alias {
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = OutputBuilder.forDeployment(deployment).ofNullable(project);
             return this;
         }
 

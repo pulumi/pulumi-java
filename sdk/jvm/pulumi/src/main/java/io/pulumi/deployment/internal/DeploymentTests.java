@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.Log;
 import io.pulumi.Stack;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MockEngine;
 import io.pulumi.deployment.MockMonitor;
 import io.pulumi.deployment.Mocks;
@@ -277,8 +278,7 @@ public class DeploymentTests {
 
             this.deployment = Mockito.spy(new DeploymentImpl(this.state));
             this.runner = this.deployment.getRunner();
-
-            DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
+            wireDeployment();
             return new DeploymentMock(options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
         }
 
@@ -297,19 +297,17 @@ public class DeploymentTests {
                     this.state.config.isConfigSecret((String) invocation.getArguments()[0])
             );
             Mockito.when(mock.getRunner()).thenReturn(this.runner);
-
             this.deployment = mock;
-
-            DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
+            wireDeployment();
             return new DeploymentMock(
                     options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
         }
-    }
 
-    public static void cleanupDeploymentMocks() {
-        // ensure we don't get the error:
-        //   java.lang.IllegalStateException: Deployment.getInstance should only be set once at the beginning of a 'run' call.
-        DeploymentImpl.internalUnsafeDestroyInstance(); // FIXME: how to avoid this?
+        private void wireDeployment() {
+            var deploymentII = new DeploymentInstanceInternal(this.deployment);
+            state.setDeployment(deploymentII);
+            ((MockMonitor)this.monitor).setDeployment(deploymentII);
+        }
     }
 
     public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {

@@ -6,7 +6,9 @@ import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Optionals;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.Reflection;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
@@ -132,8 +134,9 @@ public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<
         });
     }
 
-    public Output<T> getOrSetIncompleteFieldValue(Object extractionObject) {
+    public Output<T> getOrSetIncompleteFieldValue(Deployment deployment, Object extractionObject) {
         // Used to inject OutputCompletionSource, must be completed manually before joining
-        return getOrSetFieldValue(extractionObject, Output.of(new CompletableFuture<>()));
+        return getOrSetFieldValue(extractionObject,
+                OutputBuilder.forDeployment(deployment).of(new CompletableFuture<>()));
     }
 }

@@ -1,6 +1,7 @@
 package io.pulumi.core;
 
 import com.google.common.base.Strings;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 
@@ -25,6 +26,7 @@ public class Urn {
      * optional project and optional stack.
      */
     public static Output<String> create(
+            @Nullable Deployment deployment,
             Output<String> name,
             Output<String> type,
             @Nullable Resource parent,
@@ -34,6 +36,8 @@ public class Urn {
     ) {
         Objects.requireNonNull(name);
         Objects.requireNonNull(type);
+
+        var out = OutputBuilder.forDeployment(deployment);
 
         if (parent != null && parentUrn != null) {
             throw new IllegalArgumentException("Only one of 'parent' and 'parentUrn' can be non-null.");
@@ -48,15 +52,15 @@ public class Urn {
             parentPrefix = parentUrnOutput.applyValue(
                     parentUrnString -> parentUrnString.substring(0, parentUrnString.lastIndexOf("::")) + "$");
         } else {
-            var stackName = stack == null ? Output.of(Deployment.getInstance().getStackName()) : stack;
-            var projectName = project == null ? Output.of(Deployment.getInstance().getProjectName()) : project;
-            parentPrefix = Output.format("urn:pulumi:%s::%s::", stackName, projectName);
+            var stackName = stack == null ? out.of(deployment.getStackName()) : stack;
+            var projectName = project == null ? out.of(deployment.getProjectName()) : project;
+            parentPrefix = out.format("urn:pulumi:%s::%s::", stackName, projectName);
         }
 
-        return Output.format("%s%s::%s", parentPrefix, type, name);
+        return out.format("%s%s::%s", parentPrefix, type, name);
     }
 
-    public static String create(@Nullable String parent, String type, String name) {
+    public static String create(Deployment deployment, @Nullable String parent, String type, String name) {
         Objects.requireNonNull(type);
         Objects.requireNonNull(name);
 
@@ -69,7 +73,7 @@ public class Urn {
             type = parentType.get() + "$" + type;
         }
         return "urn:pulumi:" + String.join("::",
-                Deployment.getInstance().getStackName(), Deployment.getInstance().getProjectName(), type, name
+                deployment.getStackName(), deployment.getProjectName(), type, name
         );
     }
 }

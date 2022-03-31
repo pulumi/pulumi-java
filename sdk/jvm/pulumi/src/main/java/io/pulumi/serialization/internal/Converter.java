@@ -19,6 +19,7 @@ import io.pulumi.core.annotations.CustomType;
 import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.OutputData;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -40,9 +41,11 @@ import static java.util.stream.Collectors.toSet;
 @ParametersAreNonnullByDefault
 public class Converter {
 
+    private final Deployment deployment;
     private final Log log;
 
-    public Converter(Log log) {
+    public Converter(Deployment deployment, Log log) {
+        this.deployment = deployment;
         this.log = requireNonNull(log);
     }
 
@@ -64,7 +67,7 @@ public class Converter {
 
         checkTargetType(context, targetType);
 
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(deployment);
         var data = deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
         //       but the Deserializer will wrap it in an OutputData, and we get them as a null here

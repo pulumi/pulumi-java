@@ -9,6 +9,7 @@ import io.pulumi.core.Urn;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
@@ -34,7 +35,7 @@ public abstract class Resource {
     private final CompletableFuture<Output<String>> urnFuture = new CompletableFuture<>();
 
     @Export(name = Constants.UrnPropertyName, type = String.class)
-    private final Output<String> urn = Output.of(urnFuture).apply(urn -> urn);
+    private final Output<String> urn;
 
     private final String type;
     private final String name;
@@ -67,9 +68,9 @@ public abstract class Resource {
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
      */
-    protected Resource(String type, String name, boolean custom,
+    protected Resource(Deployment deployment, String type, String name, boolean custom,
                        ResourceArgs args, ResourceOptions options) {
-        this(type, name, custom, args, options, false, false);
+        this(deployment, type, name, custom, args, options, false, false);
     }
 
     /**
@@ -87,6 +88,7 @@ public abstract class Resource {
      * @param dependency true if this is a synthetic resource used internally for dependency tracking
      */
     protected Resource(
+            Deployment deployment,
             String type, String name, boolean custom,
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency
@@ -120,6 +122,11 @@ public abstract class Resource {
 
         this.remote = remote;
 
+        var deploymentInternal = (DeploymentInternal) deployment;
+        var out = OutputBuilder.forDeployment(deployment);
+
+        this.urn = out.of(urnFuture).apply(urn -> urn);
+
         if (dependency) {
             // this.urn will be set using setter in the subtype constructor after this supertype constructor finishes
             this.type = "";
@@ -150,7 +157,7 @@ public abstract class Resource {
         // to transform the properties and options assigned to this resource.
         var parent = Objects.equals(type, Stack.InternalStatic.RootPulumiStackTypeName)
                 ? null
-                : (options.parent == null ? DeploymentInternal.getInstance().getStack() : options.parent);
+                : (options.parent == null ? deploymentInternal.getStack() : options.parent);
 
         var transformations = new ArrayList<>(options.getResourceTransformations());
         if (parent != null) {
@@ -211,7 +218,8 @@ public abstract class Resource {
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
                 options.aliases.add(
-                        urnInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type)
+                        urnInheritedChildAlias(deployment,
+                                this.name, options.parent.getResourceName(), parentAlias, this.type)
                 );
             }
 
@@ -260,12 +268,13 @@ public abstract class Resource {
         // resource constructor.
         var aliases = ImmutableList.<Output<String>>builder();
         for (var alias : options.getAliases()) {
-            aliases.add(collapseAliasToUrn(alias, name, type, options.parent));
+            aliases.add(collapseAliasToUrn(deployment, alias, name, type, options.parent));
         }
         this.aliases = aliases.build();
 
         // Finish initialisation with reflection asynchronously
-        DeploymentInternal.getInstance().readOrRegisterResource(this, remote, DependencyResource::new, args, options);
+        deploymentInternal.readOrRegisterResource(this, remote,
+                urn -> new DependencyResource(deployment, urn), args, options);
     }
 
     /**
@@ -328,21 +337,22 @@ public abstract class Resource {
     }
 
     private static Output<String> collapseAliasToUrn(
+            Deployment deployment,
             Output<Alias> alias,
             String defaultName,
             String defaultType,
             @Nullable Resource defaultParent
     ) {
+        var out = OutputBuilder.forDeployment(deployment);
         return alias.apply(a -> {
             if (a.getUrn().isPresent()) {
-                return Output.of(a.getUrn().get());
+                return out.of(a.getUrn().get());
             }
 
-            var name = a.getName().orElse(Output.of(defaultName));
-            var type = a.getType().orElse(Output.of(defaultType));
-            var project = a.getProject().orElse(Output.of(Deployment.getInstance().getProjectName()));
-            var stack = a.getStack().orElse(Output.of(Deployment.getInstance().getStackName()));
-
+            var name = a.getName().orElse(out.of(defaultName));
+            var type = a.getType().orElse(out.of(defaultType));
+            var project = a.getProject().orElse(out.of(deployment.getProjectName()));
+            var stack = a.getStack().orElse(out.of(deployment.getStackName()));
 
             var parentCount =
                     (a.getParent().isPresent() ? 1 : 0) +
@@ -356,7 +366,7 @@ public abstract class Resource {
 
             var parentInfo = getParentInfo(defaultParent, a);
 
-            return Urn.create(name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
+            return Urn.create(deployment, name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
         });
     }
 
@@ -393,12 +403,15 @@ public abstract class Resource {
      * and the parent name changed.
      */
     private static Output<Alias> urnInheritedChildAlias(
+            @Nullable Deployment deployment,
             String childName, String parentName, Output<String> parentAlias, String childType
     ) {
         Objects.requireNonNull(childName);
         Objects.requireNonNull(parentName);
         Objects.requireNonNull(parentAlias);
         Objects.requireNonNull(childType);
+
+        var out = OutputBuilder.forDeployment(deployment);
 
         // If the child name has the parent name as a prefix, then we make the assumption that
         // it was constructed from the convention of using '{name}-details' as the name of the
@@ -412,15 +425,15 @@ public abstract class Resource {
         // * parentAliasName: "app"
         // * aliasName: "app-function"
         // * childAlias: "urn:pulumi:stackname::projectname::aws:s3/bucket:Bucket::app-function"
-        var aliasName = Output.of(childName);
+        var aliasName = out.of(childName);
         if (childName.startsWith(parentName)) {
             aliasName = parentAlias.applyValue(
                     (String parentAliasUrn) -> parentAliasUrn.substring(
                             parentAliasUrn.lastIndexOf("::") + 2) + childName.substring(parentName.length()));
         }
 
-        var urn = Urn.create(
-                aliasName, Output.of(childType), null, parentAlias, null, null);
+        var urn = Urn.create(deployment, aliasName,
+                out.of(childType), null, parentAlias, null, null);
 
         return urn.applyValue(Alias::withUrn);
     }

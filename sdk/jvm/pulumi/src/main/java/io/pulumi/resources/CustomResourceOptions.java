@@ -3,6 +3,7 @@ package io.pulumi.resources;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.Copyable;
+import io.pulumi.deployment.Deployment;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,17 +16,18 @@ import static io.pulumi.resources.Resources.*;
  */
 public final class CustomResourceOptions extends ResourceOptions implements Copyable<CustomResourceOptions> {
 
-    public static final CustomResourceOptions Empty = CustomResourceOptions.builder().build();
-
     private boolean deleteBeforeReplace;
     @Nullable
     private List<String> additionalSecretOutputs;
     @Nullable
     private String importId;
 
-    private CustomResourceOptions() { /* empty */ }
+    private CustomResourceOptions(Deployment deployment) {
+        super(deployment);
+    }
 
     private CustomResourceOptions(
+            Deployment deployment,
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
@@ -42,15 +44,15 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable String importId,
             @Nullable List<String> replaceOnChanges
     ) {
-        super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
+        super(deployment, id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
                 resourceTransformations, aliases, urn, replaceOnChanges);
         this.deleteBeforeReplace = deleteBeforeReplace;
         this.additionalSecretOutputs = additionalSecretOutputs;
         this.importId = importId;
     }
 
-    public static Builder builder() {
-        return new Builder(new CustomResourceOptions());
+    public static Builder builder(Deployment deployment) {
+        return new Builder(new CustomResourceOptions(deployment));
     }
 
     public static final class Builder extends ResourceOptions.Builder<CustomResourceOptions, Builder> {
@@ -109,6 +111,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
 
     public CustomResourceOptions copy() {
         return new CustomResourceOptions(
+                deployment,
                 this.id,
                 this.parent,
                 this.getDependsOn().copy(),
@@ -152,8 +155,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable CustomResourceOptions options2,
             @Nullable Output<String> id
     ) {
-        options1 = options1 != null ? options1.copy() : Empty;
-        options2 = options2 != null ? options2.copy() : Empty;
+        options1 = options1 != null ? options1.copy() : CustomResourceOptions.builder(options1.deployment).build();
+        options2 = options2 != null ? options2.copy() : CustomResourceOptions.builder(options2.deployment).build();
 
         // first, merge all the normal option values over
         //noinspection ConstantConditions

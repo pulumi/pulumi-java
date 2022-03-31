@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.internal.OutputInternal;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
@@ -14,14 +15,14 @@ import io.pulumi.resources.ResourceArgs;
  * Its only valid properties are its URN and ID.
  */
 public final class DependencyProviderResource extends ProviderResource {
-    public DependencyProviderResource(String reference) {
-        super(parsePackage(reference), "", ResourceArgs.Empty, /* no options */ null, true);
+    public DependencyProviderResource(Deployment deployment, String reference) {
+        super(deployment, parsePackage(reference), "", ResourceArgs.Empty, /* no options */ null, true);
 
         var urnAndId = parseReference(reference);
 
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
-        this.setUrn(new OutputInternal<>(resources, urnAndId.t1));
-        this.setId(new OutputInternal<>(resources, urnAndId.t2));
+        this.setUrn(new OutputInternal<>(deployment, resources, urnAndId.t1));
+        this.setId(new OutputInternal<>(deployment, resources, urnAndId.t2));
     }
 
     private static String parsePackage(String reference) {

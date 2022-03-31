@@ -3,6 +3,7 @@ package io.pulumi.resources;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.annotations.InternalUse;
+import io.pulumi.deployment.Deployment;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -32,8 +33,12 @@ public class ProviderResource extends CustomResource {
      * @param args     The configuration to use for this provider
      * @param options  A bag of options that control this provider's behavior
      */
-    public ProviderResource(String aPackage, String name, ResourceArgs args, @Nullable CustomResourceOptions options) {
-        this(aPackage, name, args, options, false);
+    public ProviderResource(Deployment deployment,
+                            String aPackage,
+                            String name,
+                            ResourceArgs args,
+                            @Nullable CustomResourceOptions options) {
+        this(deployment, aPackage, name, args, options, false);
     }
 
     /**
@@ -45,9 +50,9 @@ public class ProviderResource extends CustomResource {
      * @param options    A bag of options that control this provider's behavior
      * @param dependency True if this is a synthetic resource used internally for dependency tracking
      */
-    protected ProviderResource(String aPackage, String name,
+    protected ProviderResource(Deployment deployment, String aPackage, String name,
                                ResourceArgs args, @Nullable CustomResourceOptions options, boolean dependency) {
-        super(providerResourceType(aPackage), name, args, options, dependency);
+        super(deployment, providerResourceType(aPackage), name, args, options, dependency);
         this.aPackage = aPackage;
         this.registrationId = registrationIdAsync();
     }

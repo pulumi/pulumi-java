@@ -11,6 +11,7 @@ import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.OutputData;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.DependencyResource;
 import io.pulumi.resources.Resource;
 
@@ -26,6 +27,12 @@ import static io.pulumi.serialization.internal.Structs.*;
  * Also @see {@link Serializer}
  */
 public class Deserializer {
+
+    private final Deployment deployment;
+
+    public Deserializer(Deployment deployment) {
+        this.deployment = deployment;
+    }
 
     public OutputData<Object> deserialize(Value value) {
         Objects.requireNonNull(value);
@@ -73,7 +80,7 @@ public class Deserializer {
             return OutputData.ofNullable(ImmutableSet.of(), (T) assetOrArchive.get(), true, isSecret);
         }
 
-        var resource = tryDeserializeResource(value);
+        var resource = tryDeserializeResource(deployment, value);
         if (resource.isPresent()) {
             //noinspection unchecked
             return OutputData.ofNullable(ImmutableSet.of(), (T) resource.get(), true, isSecret);
@@ -295,7 +302,7 @@ public class Deserializer {
         throw new UnsupportedOperationException("Value was marked as Asset, but did not conform to required shape.");
     }
 
-    private static Optional<Resource> tryDeserializeResource(Value value) {
+    private static Optional<Resource> tryDeserializeResource(Deployment deployment, Value value) {
         var sig = isSpecialStruct(value);
         if (sig.isEmpty() || !Constants.SpecialResourceSig.equals(sig.get())) {
             return Optional.empty();
@@ -318,11 +325,11 @@ public class Deserializer {
         var qualifiedTypeParts = qualifiedType.split("\\$");
         var type = qualifiedTypeParts[qualifiedTypeParts.length - 1];
 
-        var resource = ResourcePackages.tryConstruct(type, version, urn);
+        var resource = ResourcePackages.tryConstruct(deployment, type, version, urn);
         if (resource.isPresent()) {
             return resource;
         }
 
-        return Optional.of(new DependencyResource(urn));
+        return Optional.of(new DependencyResource(deployment, urn));
     }
 }

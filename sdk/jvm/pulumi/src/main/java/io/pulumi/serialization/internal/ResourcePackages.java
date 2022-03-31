@@ -11,6 +11,7 @@ import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
 
@@ -131,7 +132,7 @@ public class ResourcePackages {
     }
 
     @InternalUse
-    static Optional<Resource> tryConstruct(String type, String version, String urn) {
+    static Optional<Resource> tryConstruct(Deployment deployment, String type, String version, String urn) {
         var resourceType = tryGetResourceType(type, version);
         if (resourceType.isEmpty()) {
             return Optional.empty();
@@ -170,7 +171,7 @@ public class ResourcePackages {
 
         constructorInfo.setAccessible(true);
 
-        var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
+        var resourceOptions = resolveResourceOptions(deployment, resourceType.get(), urn);
         try {
             var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
             return Optional.of(resource);
@@ -182,12 +183,12 @@ public class ResourcePackages {
         }
     }
 
-    private static ResourceOptions resolveResourceOptions(Class<?> resourceType, String urn) {
+    private static ResourceOptions resolveResourceOptions(Deployment deployment, Class<?> resourceType, String urn) {
         if (CustomResource.class.isAssignableFrom(resourceType)) {
-            return CustomResourceOptions.builder().urn(urn).build();
+            return CustomResourceOptions.builder(deployment).urn(urn).build();
         }
         if (ComponentResource.class.isAssignableFrom(resourceType)) {
-            return ComponentResourceOptions.builder().urn(urn).build();
+            return ComponentResourceOptions.builder(deployment).urn(urn).build();
         }
         throw new IllegalStateException(String.format("Unexpected resource type: '%s'", resourceType.getTypeName()));
     }

@@ -2,7 +2,9 @@ package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.OutputInternal;
+import io.pulumi.deployment.Deployment;
 
 /**
  * A @see {@link Resource} that is used to indicate that an @see {@link io.pulumi.core.Output}
@@ -10,10 +12,10 @@ import io.pulumi.core.internal.OutputInternal;
  * with remote component resources.
  */
 public class DependencyResource extends CustomResource {
-    public DependencyResource(String urn) {
-        super("", "", ResourceArgs.Empty, true);
+    public DependencyResource(Deployment deployment, String urn) {
+        super(deployment, "", "", ResourceArgs.Empty, true);
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
-        this.setUrn(new OutputInternal<>(resources, urn));
-        this.setId(Output.of((String)null));
+        this.setUrn(new OutputInternal<>(deployment, resources, urn));
+        this.setId(OutputBuilder.forDeployment(deployment).of((String)null));
     }
 }

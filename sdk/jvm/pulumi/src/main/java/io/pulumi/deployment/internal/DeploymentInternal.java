@@ -36,18 +36,6 @@ public interface DeploymentInternal extends Deployment {
     void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs);
 
     @InternalUse
-    static DeploymentInternal getInstance() {
-        return DeploymentInternal.cast(Deployment.getInstance()).getInternal();
-    }
-
-    @InternalUse
-    static Optional<DeploymentInternal> getInstanceOptional() {
-        return DeploymentInstanceHolder.getInstanceOptional()
-                .map(DeploymentInternal::cast)
-                .map(DeploymentInstanceInternal::getInternal);
-    }
-
-    @InternalUse
     private static DeploymentInstanceInternal cast(DeploymentInstance instance) {
         Objects.requireNonNull(instance);
         if (instance instanceof DeploymentInstanceInternal) {
@@ -79,7 +67,6 @@ public interface DeploymentInternal extends Deployment {
         return CompletableFuture.supplyAsync(deploymentFactory)
                 .thenApply(deployment -> {
                     var newInstance = new DeploymentInstanceInternal(deployment);
-                    DeploymentInstanceHolder.setInstance(newInstance);
                     return newInstance.getInternal().getRunner();
                 })
                 .thenCompose(runAsync);

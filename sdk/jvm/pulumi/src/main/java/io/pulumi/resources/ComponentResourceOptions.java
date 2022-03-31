@@ -4,6 +4,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.Copyable;
 import io.pulumi.core.internal.Objects;
+import io.pulumi.deployment.Deployment;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -15,14 +16,15 @@ import static io.pulumi.resources.Resources.*;
  */
 public final class ComponentResourceOptions extends ResourceOptions implements Copyable<ComponentResourceOptions> {
 
-    public static final ComponentResourceOptions Empty = new ComponentResourceOptions();
-
     @Nullable
     private List<ProviderResource> providers;
 
-    protected ComponentResourceOptions() { /* empty */ }
+    protected ComponentResourceOptions(Deployment deployment) {
+        super(deployment);
+    }
 
     public ComponentResourceOptions(
+            Deployment deployment,
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
@@ -36,14 +38,14 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable List<String> replaceOnChanges,
             @Nullable List<ProviderResource> providers
     ) {
-        super(id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
+        super(deployment, id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
                 resourceTransformations, aliases, urn, replaceOnChanges);
         this.providers = providers;
         Objects.requireNullState(this.provider, () -> "expected 'provider' to be null, use 'providers' instead");
     }
 
-    public static Builder builder() {
-        return new Builder(new ComponentResourceOptions());
+    public static Builder builder(Deployment deployment) {
+        return new Builder(new ComponentResourceOptions(deployment));
     }
 
     public static final class Builder extends ResourceOptions.Builder<ComponentResourceOptions, Builder> {
@@ -73,6 +75,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
 
     public ComponentResourceOptions copy() {
         return new ComponentResourceOptions(
+                deployment,
                 this.id,
                 this.parent,
                 this.getDependsOn().copy(),
@@ -114,8 +117,8 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable ComponentResourceOptions options2,
             @Nullable Output<String> id
     ) {
-        options1 = options1 != null ? options1.copy() : Empty;
-        options2 = options2 != null ? options2.copy() : Empty;
+        options1 = options1 != null ? options1.copy() : ComponentResourceOptions.builder(options1.deployment).build();
+        options2 = options2 != null ? options2.copy() : ComponentResourceOptions.builder(options2.deployment).build();
 
         if (options1.provider != null) {
             throw new IllegalStateException("unexpected non-null 'provider', should use only 'providers'");

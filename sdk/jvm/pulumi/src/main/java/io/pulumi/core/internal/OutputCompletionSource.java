@@ -7,6 +7,7 @@ import com.google.protobuf.Value;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.annotations.OutputMetadata;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.Converter;
 
@@ -103,18 +104,19 @@ public class OutputCompletionSource<T> {
     }
 
     public static <T> OutputCompletionSource<T> from(
+            Deployment deployment,
             Resource resource,
             OutputMetadata<T> metadata
     ) {
         var output = metadata.getFieldValue(resource).orElseGet(() -> {
-            var incomplete = Output.of(new CompletableFuture<T>());
+            var incomplete = OutputBuilder.forDeployment(deployment).of(new CompletableFuture<T>());
             metadata.setFieldValue(resource, incomplete);
             return incomplete;
         });
         return of(output, ImmutableSet.of(resource), metadata.getDataShape());
     }
 
-    public static ImmutableMap<String, OutputCompletionSource<?>> from(Resource resource) {
+    public static ImmutableMap<String, OutputCompletionSource<?>> from(Deployment deployment, Resource resource) {
         return OutputMetadata.of(resource.getClass()).entrySet().stream()
                 .filter(x -> {
                     var name = x.getValue().getAnnotation().name();
@@ -122,7 +124,7 @@ public class OutputCompletionSource<T> {
                 })
                 .collect(toImmutableMap(
                         Map.Entry::getKey,
-                        entry -> OutputCompletionSource.from(resource, entry.getValue())
+                        entry -> OutputCompletionSource.from(deployment, resource, entry.getValue())
                 ));
     }
 }

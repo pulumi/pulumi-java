@@ -61,7 +61,7 @@ import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
-public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
+public final class DeploymentImpl implements Deployment, DeploymentInternal {
 
     private final DeploymentState state;
     private final Log log;
@@ -79,6 +79,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     DeploymentImpl() {
         this(fromEnvironment());
+        this.state.setDeployment(this);
     }
 
     // TODO private Deployment(InlineDeploymentSettings settings)
@@ -88,19 +89,21 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     DeploymentImpl(
             DeploymentState state
     ) {
+        var monitor = state.monitor;
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
-        this.featureSupport = new FeatureSupport(state.monitor);
+        this.featureSupport = new FeatureSupport(monitor);
         this.serialization = new PropertiesSerializer(this.log);
-        this.converter = new Converter(this.log);
-        this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
-        this.rootResource = new RootResource(state.engine);
+        this.converter = new Converter(this, this.log);
+        this.invoke = new Invoke(this, this.log, monitor, this.featureSupport, this.serialization, this.converter);
+        this.rootResource = new RootResource(this, state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
-        this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
-        this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
-        this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
-        this.readOrRegisterResource = new ReadOrRegisterResource(state.runner, this.invoke, this.readResource, this.registerResource, this.converter, state.isDryRun);
-        this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, state.monitor, this.featureSupport, this.serialization);
+        this.call = new Call(this, this.log, monitor, this.prepare, this.serialization, this.converter);
+        this.readResource = new ReadResource(this.log, this.prepare, monitor);
+        this.registerResource = new RegisterResource(this.log, this.prepare, monitor);
+        this.readOrRegisterResource = new ReadOrRegisterResource(this, state.runner, this.invoke,
+                this.readResource, this.registerResource, this.converter, state.isDryRun);
+        this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, monitor, this.featureSupport, this.serialization);
     }
 
     /**
@@ -399,6 +402,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @ParametersAreNonnullByDefault
     private final static class Invoke {
 
+        private final Deployment deployment;
         private final Log log;
         private final Monitor monitor;
         private final FeatureSupport featureSupport;
@@ -406,12 +410,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Converter converter;
 
         private Invoke(
+                Deployment deployment,
                 Log log,
                 Monitor monitor,
                 FeatureSupport featureSupport,
                 PropertiesSerializer serialization,
                 Converter converter
         ) {
+            this.deployment = deployment;
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.featureSupport = Objects.requireNonNull(featureSupport);
@@ -424,7 +430,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return new OutputInternal<>(rawInvoke(token, targetType, args, options));
+            return new OutputInternal<>(deployment, rawInvoke(token, targetType, args, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
@@ -592,6 +598,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @ParametersAreNonnullByDefault
     private final static class Call {
 
+        private final Deployment deployment;
         private final Log log;
         private final Monitor monitor;
         private final Prepare prepare;
@@ -599,12 +606,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Converter converter;
 
         public Call(
+                Deployment deployment,
                 Log log,
                 Monitor monitor,
                 Prepare prepare,
                 PropertiesSerializer serialization,
                 Converter converter
         ) {
+            this.deployment = deployment;
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.prepare = Objects.requireNonNull(prepare);
@@ -621,7 +630,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
-            new OutputInternal<>(callRawAsync(token, args, self, options).thenApply(unused -> null));
+            new OutputInternal<>(deployment, callRawAsync(token, args, self, options).thenApply(unused -> null));
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
@@ -633,7 +642,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
-            return new OutputInternal<>(callAsync(token, targetType, args, self, options));
+            return new OutputInternal<>(deployment, callAsync(token, targetType, args, self, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
@@ -733,7 +742,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                         // Unmarshal return dependencies.
                         var dependencies = response.getReturnDependenciesMap().values().stream()
-                                .flatMap(deps -> deps.getUrnsList().stream().map(DependencyResource::new))
+                                .flatMap(deps -> deps.getUrnsList().stream()
+                                        .map(urn -> new DependencyResource(deployment, urn)))
                                 .map(r -> (Resource) r)
                                 .collect(toImmutableSet());
                         return new CallRawAsyncResult(response.getReturn(), dependencies);
@@ -1017,6 +1027,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private static final class ReadOrRegisterResource {
 
+        private final Deployment deployment;
         private final Runner runner;
         private final Invoke invoke;
         private final ReadResource readResource;
@@ -1025,6 +1036,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final boolean isDryRun;
 
         private ReadOrRegisterResource(
+                Deployment deployment,
                 Runner runner,
                 Invoke invoke,
                 ReadResource readResource,
@@ -1032,6 +1044,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Converter converter,
                 boolean isDryRun
         ) {
+            this.deployment = Objects.requireNonNull(deployment);
             this.runner = Objects.requireNonNull(runner);
             this.invoke = Objects.requireNonNull(invoke);
             this.readResource = Objects.requireNonNull(readResource);
@@ -1040,7 +1053,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.isDryRun = isDryRun;
         }
 
-        public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options) {
+        public void readOrRegisterResource(Resource resource,
+                                           boolean remote,
+                                           Function<String, Resource> newDependency,
+                                           ResourceArgs args,
+                                           ResourceOptions options) {
             // readOrRegisterResource is called in a fire-and-forget manner. Make sure we keep
             // track of this task so that the application will not quit until this async work
             // completes.
@@ -1055,7 +1072,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // the `@Export(...) Output<T>` properties. We need those properties assigned by the
             // time the base 'Resource' constructor finishes so that both derived classes and
             // external consumers can use the Output properties of `resource`.
-            var completionSources = OutputCompletionSource.from(resource);
+            var completionSources = OutputCompletionSource.from(deployment, resource);
 
             this.runner.registerTask(
                     String.format("readOrRegisterResource: %s-%s", resource.getResourceType(), resource.getResourceName()),
@@ -1071,6 +1088,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
                 ResourceOptions options, ImmutableMap<String, OutputCompletionSource<?>> completionSources
         ) {
+            var out = OutputBuilder.forDeployment(deployment);
             return readOrRegisterResourceAsync(resource, remote, newDependency, args, options)
                     .thenCompose(response ->
                             CompletableFuture.supplyAsync(() -> {
@@ -1082,14 +1100,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 // Run in a try/catch/finally so that we always resolve all the outputs of the resource
                                 // regardless of whether we encounter an errors computing the action.
                                 try {
-                                    resource.setUrn(Output.of(urn));
+                                    resource.setUrn(out.of(urn));
 
                                     if (resource instanceof CustomResource) {
                                         var customResource = (CustomResource) resource;
                                         var isKnown = isNonEmptyOrNull(id);
                                         customResource.setId(isKnown
-                                                ? Output.of(id)
-                                                : new OutputInternal<>(OutputData.unknown()));
+                                                ? out.of(id)
+                                                : new OutputInternal<>(deployment, OutputData.unknown()));
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
@@ -1449,12 +1467,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private static final class RootResource {
 
+        private final Deployment deployment;
         @Nullable
         private CompletableFuture<Optional<String>> rootResource;
         private final Object rootResourceLock = new Object();
         private final Engine engine;
 
-        private RootResource(Engine engine) {
+        private RootResource(Deployment deployment, Engine engine) {
+            this.deployment = deployment;
             this.engine = Objects.requireNonNull(engine);
         }
 
@@ -1472,7 +1492,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             synchronized (rootResourceLock) {
                 if (rootResource == null) {
                     try {
-                        var stack = DeploymentInternal.getInstance().getStack();
+                        var di = (DeploymentInternal)deployment;
+                        var stack = di.getStack();
                         rootResource = setRootResourceWorkerAsync(stack);
                     } catch (IllegalStateException ex) {
                         throw new IllegalStateException("Calling getRootResourceAsync before the stack was registered!");
@@ -1519,6 +1540,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private final Logger standardLogger;
 
+        private Deployment deployment; // late init
+
         @InternalUse
         @VisibleForTesting
         DeploymentState(
@@ -1538,7 +1561,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.monitor = Objects.requireNonNull(monitor);
             // Use Suppliers to avoid problems with cyclic dependencies
             this.logger = new DefaultEngineLogger(standardLogger, () -> this.runner, () -> this.engine);
-            this.runner = new DefaultRunner(standardLogger, this.logger);
+            this.runner = new DefaultRunner(() -> this.deployment, standardLogger, this.logger);
+        }
+
+        @InternalUse
+        public void setDeployment(Deployment deployment) {
+            this.deployment = deployment;
         }
     }
 
@@ -1555,6 +1583,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // 32 was picked so as to be very unlikely to collide with any other error codes.
         private static final int ProcessExitedAfterLoggingUserActionableMessage = 32;
 
+        private final Supplier<Deployment> deployment;
         private final Logger standardLogger;
         private final EngineLogger engineLogger;
 
@@ -1573,7 +1602,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
         private final Queue<Exception> swallowedExceptions = new ConcurrentLinkedQueue<>();
 
-        public DefaultRunner(Logger standardLogger, EngineLogger engineLogger) {
+        public DefaultRunner(Supplier<Deployment> deployment, Logger standardLogger, EngineLogger engineLogger) {
+            this.deployment = Objects.requireNonNull(deployment);
             this.standardLogger = Objects.requireNonNull(standardLogger);
             this.engineLogger = Objects.requireNonNull(engineLogger);
         }
@@ -1629,8 +1659,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
-            var stack = Stack.InternalStatic.of(callback, options);
+        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
+                                                         StackOptions options) {
+            var stack = Stack.InternalStatic.of(deployment.get(), callback, options);
             registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
                     Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
             return whileRunningAsync();

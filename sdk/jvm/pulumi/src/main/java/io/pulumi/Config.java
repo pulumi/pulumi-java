@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -30,13 +31,16 @@ import java.util.Optional;
 public class Config {
 
     private final String name;
+    private final Deployment deployment;
 
-    private Config() {
-        this(Deployment.getInstance().getProjectName());
+    private Config(Deployment deployment) {
+        this(deployment, Objects.requireNonNull(deployment).getProjectName());
     }
 
-    private Config(String name) {
+    private Config(Deployment deployment, String name) {
         Objects.requireNonNull(name);
+
+        this.deployment = Objects.requireNonNull(deployment);
 
         if (name.endsWith(":config")) {
             name = name.replaceAll(":config$", "");
@@ -48,8 +52,8 @@ public class Config {
     /**
      * Creates a new @see {@link Config} instance, with default, the name of the current project.
      */
-    public static Config of() {
-        return new Config();
+    public static Config of(Deployment deployment) {
+        return new Config(deployment);
     }
 
     /**
@@ -57,8 +61,8 @@ public class Config {
      *
      * @param name unique logical name
      */
-    public static Config of(String name) {
-        return new Config(name);
+    public static Config of(Deployment deployment, String name) {
+        return new Config(deployment, name);
     }
 
     /**
@@ -77,7 +81,7 @@ public class Config {
      */
     public Optional<String> get(String key) {
         var fullKey = fullKey(key);
-        return DeploymentInternal.getInstance().getConfig(fullKey);
+        return ((DeploymentInternal)deployment).getConfig(fullKey);
     }
 
     /**
@@ -85,7 +89,7 @@ public class Config {
      * or empty if it doesn't exist.
      */
     public Output<Optional<String>> getSecret(String key) {
-        return Output.ofSecret(get(key));
+        return OutputBuilder.forDeployment(deployment).ofSecret(get(key));
     }
 
     /**
@@ -102,7 +106,7 @@ public class Config {
      * function will throw an error.
      */
     public Output<Optional<Boolean>> getSecretBoolean(String key) {
-        return Output.ofSecret(getBoolean(key));
+        return OutputBuilder.forDeployment(deployment).ofSecret(getBoolean(key));
     }
 
     /**
@@ -125,7 +129,7 @@ public class Config {
      * If the configuration value isn't a legal number, this function will throw an error.
      */
     public Output<Optional<Integer>> getSecretInteger(String key) {
-        return Output.ofSecret(getInteger(key));
+        return OutputBuilder.forDeployment(deployment).ofSecret(getInteger(key));
     }
 
     /**
@@ -151,7 +155,7 @@ public class Config {
      * and passing it to @see {@link Gson#fromJson(Reader, Class)}.
      */
     public <T> Output<Optional<T>> getSecretObject(String key, Class<T> classOfT) {
-        return Output.ofSecret(getObject(key, classOfT));
+        return OutputBuilder.forDeployment(deployment).ofSecret(getObject(key, classOfT));
     }
 
     /**
@@ -171,7 +175,7 @@ public class Config {
      * @see #getSecretObject(String, Class)
      */
     public <T> Output<Optional<T>> getSecretObject(String key, TypeShape<T> shapeOfT) {
-        return Output.ofSecret(getObject(key, shapeOfT));
+        return OutputBuilder.forDeployment(deployment).ofSecret(getObject(key, shapeOfT));
     }
 
     /**
@@ -186,7 +190,7 @@ public class Config {
      * is thrown.
      */
     public Output<String> requireSecret(String key) {
-        return Output.ofSecret(require(key));
+        return OutputBuilder.forDeployment(deployment).ofSecret(require(key));
     }
 
     /**
@@ -202,7 +206,7 @@ public class Config {
      * If it doesn't exist, or the configuration value is not a legal boolean, an error is thrown.
      */
     public Output<Boolean> requireSecretBoolean(String key) {
-        return Output.ofSecret(requireBoolean(key));
+        return OutputBuilder.forDeployment(deployment).ofSecret(requireBoolean(key));
     }
 
     /**
@@ -218,7 +222,7 @@ public class Config {
      * If it doesn't exist, or the configuration value is not a legal number, an error is thrown.
      */
     public Output<Integer> requireSecretInteger(String key) {
-        return Output.ofSecret(requireInteger(key));
+        return OutputBuilder.forDeployment(deployment).ofSecret(requireInteger(key));
     }
 
     /**
@@ -237,7 +241,7 @@ public class Config {
      * using @see {@link Gson#fromJson(Reader, Class)}, an error is thrown.
      */
     public <T> Output<T> requireSecretObject(String key, Class<T> classOfT) {
-        return Output.ofSecret(requireObject(key, classOfT));
+        return OutputBuilder.forDeployment(deployment).ofSecret(requireObject(key, classOfT));
     }
 
     /**

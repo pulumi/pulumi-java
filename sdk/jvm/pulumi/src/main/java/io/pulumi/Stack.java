@@ -3,6 +3,7 @@ package io.pulumi;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
@@ -29,7 +30,9 @@ public class Stack extends ComponentResource {
     /**
      * The outputs of this stack, if the <code>init</code> callback exited normally.
      */
-    private Output<Map<String, Optional<Object>>> outputs = Output.of(Map.of());
+    private Output<Map<String, Optional<Object>>> outputs;
+
+    private final Deployment deployment;
 
     @SuppressWarnings("unused")
     @Field
@@ -39,8 +42,8 @@ public class Stack extends ComponentResource {
      * Create a Stack with stack resources defined in derived class constructor.
      * Also @see {@link #Stack(StackOptions)}
      */
-    public Stack() {
-        this(null);
+    public Stack(Deployment deployment) {
+        this(deployment,null);
     }
 
     /**
@@ -48,14 +51,17 @@ public class Stack extends ComponentResource {
      *
      * @param options optional stack options
      */
-    public Stack(@Nullable StackOptions options) {
+    public Stack(Deployment deployment, @Nullable StackOptions options) {
         super(
+                deployment,
                 InternalStatic.RootPulumiStackTypeName,
-                String.format("%s-%s", Deployment.getInstance().getProjectName(), Deployment.getInstance().getStackName()),
-                convertOptions(options)
+                String.format("%s-%s", deployment.getProjectName(), deployment.getStackName()),
+                convertOptions(deployment, options)
         );
         // set a derived class as the deployment stack
-        DeploymentInternal.getInstance().setStack(this);
+        ((DeploymentInternal)deployment).setStack(this);
+        this.outputs = OutputBuilder.forDeployment(deployment).of(Map.of());
+        this.deployment = deployment;
     }
 
     /**
@@ -64,10 +70,12 @@ public class Stack extends ComponentResource {
      * any @see {@link Deployment#runAsync(Supplier)} overload is called.
      */
     @InternalUse
-    private Stack(Supplier<CompletableFuture<Map<String, Optional<Object>>>> init, @Nullable StackOptions options) {
-        this(options);
+    private Stack(Deployment deployment,
+                  Supplier<CompletableFuture<Map<String, Optional<Object>>>> init,
+                  @Nullable StackOptions options) {
+        this(deployment, options);
         try {
-            this.outputs = Output.of(runInitAsync(init));
+            this.outputs = OutputBuilder.forDeployment(deployment).of(runInitAsync(init));
         } finally {
             this.registerOutputs(this.outputs);
         }
@@ -80,12 +88,13 @@ public class Stack extends ComponentResource {
     }
 
     @Nullable
-    private static ComponentResourceOptions convertOptions(@Nullable StackOptions options) {
+    private static ComponentResourceOptions convertOptions(Deployment deployment, @Nullable StackOptions options) {
         if (options == null) {
             return null;
         }
 
         return new ComponentResourceOptions(
+                deployment,
                 null,
                 null,
                 null,
@@ -155,8 +164,9 @@ public class Stack extends ComponentResource {
                 ));
             }
 
+            var out = OutputBuilder.forDeployment(Stack.this.deployment);
 
-            Stack.this.outputs = Output.of(
+            Stack.this.outputs = out.of(
                     outputs.entrySet().stream()
                             .collect(toImmutableMap(Map.Entry::getKey, e -> e.getValue().map(o -> o)))
             );
@@ -180,8 +190,10 @@ public class Stack extends ComponentResource {
         public static final String RootPulumiStackTypeName = "pulumi:pulumi:Stack";
 
         @InternalUse
-        public static Stack of(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
-            return new Stack(callback, options);
+        public static Stack of(Deployment deployment,
+                               Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
+                               StackOptions options) {
+            return new Stack(deployment, callback, options);
         }
     }
 }

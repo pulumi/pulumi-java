@@ -6,8 +6,10 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Maps;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.annotations.InternalUse;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
@@ -49,17 +51,23 @@ public class StackReference extends CustomResource {
      * @param args    The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public StackReference(String name, @Nullable StackReferenceArgs args, @Nullable CustomResourceOptions options) {
+    public StackReference(Deployment deployment, String name,
+                          @Nullable StackReferenceArgs args,
+                          @Nullable CustomResourceOptions options) {
         super(
+                deployment,
                 "pulumi:pulumi:StackReference",
                 name,
-                new StackReferenceArgs(ensureName(args, name)),
-                CustomResourceOptions.merge(options, CustomResourceOptions.builder().id(ensureName(args, name)).build())
+                new StackReferenceArgs(ensureName(deployment, args, name)),
+                CustomResourceOptions.merge(options, CustomResourceOptions.builder(deployment)
+                        .id(ensureName(deployment, args, name))
+                        .build())
         );
     }
 
-    private static Output<String> ensureName(@Nullable StackReferenceArgs args, String name) {
-        return args == null ? Output.of(name) : args.getName().orElse(Output.of(name));
+    private static Output<String> ensureName(Deployment deployment, @Nullable StackReferenceArgs args, String name) {
+        var out = OutputBuilder.forDeployment(deployment);
+        return args == null ? out.of(name) : args.getName().orElse(out.of(name));
     }
 
     public Output<String> getName() {
@@ -85,7 +93,7 @@ public class StackReference extends CustomResource {
         // Note that this is subtly different from "apply" here. A default "apply" will set the secret bit if any
         // of the inputs are a secret, and this.outputs is always a secret if it contains any secrets.
         // We do this dance so we can ensure that the Output we return is not needlessly tainted as a secret.
-        var value = Output.tuple(name, this.outputs).applyValue(
+        var value = OutputBuilder.forDeployment(name.getDeployment()).tuple(name, this.outputs).applyValue(
                 v -> Maps.tryGetValue(v.t2, v.t1).orElse(null));
 
         return io.pulumi.core.internal.Internal.of(value).withIsSecret(isSecretOutputName(name));
@@ -99,7 +107,8 @@ public class StackReference extends CustomResource {
      * @return An @see {@link Output} containing the requested value.
      */
     public Output<Object> requireOutput(Output<String> name) {
-        var value = Output.tuple(name, this.name, this.outputs).applyValue(
+        var out = OutputBuilder.forDeployment(name.getDeployment());
+        var value = out.tuple(name, this.name, this.outputs).applyValue(
                 v -> Maps.tryGetValue(v.t3, v.t1).orElseThrow(
                         () -> new KeyMissingException(v.t1, v.t2)));
 
