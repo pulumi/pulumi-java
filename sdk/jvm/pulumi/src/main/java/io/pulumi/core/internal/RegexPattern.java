@@ -47,6 +47,10 @@ public class RegexPattern {
             this.pattern = requireNonNull(pattern);
         }
 
+        public boolean hasMatch() {
+            return matcher.matches();
+        }
+
         public Optional<String> namedMatch(String name) {
             if (matcher.matches()) {
                 try {
