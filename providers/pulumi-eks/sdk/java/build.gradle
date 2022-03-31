@@ -44,8 +44,8 @@ dependencies {
 
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
-    implementation("io.pulumi:aws:4.37.3+")
-    implementation("io.pulumi:kubernetes:3.15.1+")
+    implementation("io.pulumi:aws:4.37.3-SNAPSHOT")
+    implementation("io.pulumi:kubernetes:3.15.1-SNAPSHOT")
     implementation("io.pulumi:pulumi:0.0.1-SNAPSHOT")
 
     def junitVersion = "5.7.2"
