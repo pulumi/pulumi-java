@@ -74,13 +74,15 @@ public class CustomResource extends Resource {
     ) {
         super(deployment, type, name, true,
                 args == null ? ResourceArgs.Empty : args,
-                options == null ? CustomResourceOptions.builder(deployment).build() : options
+                options == null ? CustomResourceOptions.builder(deployment).build() : options,
                 false, dependency,
                 (self) -> {
                     // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
                     if (self instanceof CustomResource) {
                         ((CustomResource) self).idFuture = new CompletableFuture<>();
-                        ((CustomResource) self).id = Output.of(((CustomResource) self).idFuture).apply(id -> id);
+                        ((CustomResource) self).id = OutputBuilder.forDeployment(deployment)
+                                .of(((CustomResource) self).idFuture)
+                                .apply(id -> id);
                     } else {
                         throw new IllegalStateException(String.format(
                                 "Expected self to be instance of CustomResource, got: '%s'",

@@ -91,9 +91,8 @@ public abstract class Resource {
             Deployment deployment,
             String type, String name, boolean custom,
             ResourceArgs args, ResourceOptions options,
-            boolean remote, boolean dependency
-    ) {
-        this(type, name, custom, args, options, remote, dependency, null);
+            boolean remote, boolean dependency) {
+        this(deployment, type, name, custom, args, options, remote, dependency, null);
     }
 
     /**
@@ -102,6 +101,7 @@ public abstract class Resource {
      * "dependsOn" is an optional list of other resources that this resource depends on,
      * controlling the order in which we perform resource operations.
      *
+     * @param deployment current Deployment
      * @param type       the type of the resource
      * @param name       the unique name of the resource
      * @param custom     true to indicate that this is a custom resource, managed by a plugin
@@ -112,6 +112,7 @@ public abstract class Resource {
      * @param superInit  subclass initialization logic that needs to be run in superclass
      */
     protected Resource(
+            Deployment deployment,
             String type, String name, boolean custom,
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency, @Nullable Consumer<Resource> superInit

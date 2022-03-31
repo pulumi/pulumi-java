@@ -45,7 +45,7 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks())
-                .setStandardLogger(standardLogger())
+                .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
 
@@ -64,7 +64,6 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyMocks())
-                .setStandardLogger(standardLogger())
                 .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
@@ -88,7 +87,7 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
 
@@ -108,7 +107,6 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new ThrowingMocks())
-                .setStandardLogger(standardLogger())
                 .buildSpyInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
