@@ -128,6 +128,8 @@ plugins {
     id("maven-publish")
 }
 
+version = project.findProperty("version") == "unspecified" ? "{{ .PackageInfo.DefaultVersion }}" : project.findProperty("version");
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(11)

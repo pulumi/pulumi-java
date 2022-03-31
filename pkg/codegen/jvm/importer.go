@@ -18,6 +18,7 @@ type PropertyInfo struct {
 
 // JVMPackageInfo represents the a JVM language-specific info for a package.
 type PackageInfo struct {
+	DefaultVersion         string            `json:"defaultVersion,omitempty"`
 	PackageReferences      map[string]string `json:"packageReferences,omitempty"`
 	Packages               map[string]string `json:"packages,omitempty"`
 	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`

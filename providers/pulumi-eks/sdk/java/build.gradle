@@ -6,6 +6,8 @@ plugins {
     id("maven-publish")
 }
 
+version = project.findProperty("version") == "unspecified" ? "0.37.1" : project.findProperty("version");
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(11)

@@ -119,6 +119,14 @@ func generateJava(configFile string) error {
 		return err
 	}
 
+	if pkgInfo.DefaultVersion == "" {
+		if cfg.Version != "" {
+			pkgInfo.DefaultVersion = cfg.Version
+		} else {
+			pkgInfo.DefaultVersion = "unspecified"
+		}
+	}
+
 	pkg.Language["jvm"] = pkgInfo
 
 	// TODO handle overlays here?
@@ -146,11 +154,6 @@ func generateJava(configFile string) error {
 		if err := emitFile(f, bytes); err != nil {
 			return fmt.Errorf("Failed to generate version file at %s: %w", f, err)
 		}
-	}
-
-	if err := emitFile(filepath.Join(outDir, "gradle.properties"),
-		[]byte(fmt.Sprintf("version=%s", cfg.Version))); err != nil {
-		return fmt.Errorf("Failed to generate gradle.properties: %w", err)
 	}
 
 	return nil
