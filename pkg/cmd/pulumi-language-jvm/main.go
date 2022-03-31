@@ -163,17 +163,17 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 	for _, pulumiPackage := range pulumiPackages {
 		logging.V(3).Infof(
 			"GetRequiredPlugins: Determining plugin dependency: %v, %v",
-			pulumiPackage.Plugin.Name, pulumiPackage.Plugin.Version,
+			pulumiPackage.Name, pulumiPackage.Version,
 		)
 
-		if !pulumiPackage.Plugin.Resource {
+		if !pulumiPackage.Resource {
 			continue // the package has no associated resource plugin
 		}
 
 		plugins = append(plugins, &pulumirpc.PluginDependency{
-			Name:    pulumiPackage.Plugin.Name,
-			Version: pulumiPackage.Plugin.Version,
-			Server:  pulumiPackage.Plugin.Server,
+			Name:    pulumiPackage.Name,
+			Version: pulumiPackage.Version,
+			Server:  pulumiPackage.Server,
 			Kind:    "resource",
 		})
 	}
@@ -184,9 +184,9 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 }
 
 func (host *jvmLanguageHost) DeterminePulumiPackages(
-	ctx context.Context, engineClient pulumirpc.EngineClient) ([]PulumiPackage, error) {
+	ctx context.Context, engineClient pulumirpc.EngineClient) ([]plugin.PulumiPluginJSON, error) {
 
-	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi packages")
+	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := host.exec.cmd
@@ -198,8 +198,8 @@ func (host *jvmLanguageHost) DeterminePulumiPackages(
 
 	logging.V(5).Infof("GetRequiredPlugins: bootstrap raw output=%v", output)
 
-	var packagesTmp []pulumiPackageTmp
-	err = json.Unmarshal([]byte(output), &packagesTmp)
+	var plugins []plugin.PulumiPluginJSON
+	err = json.Unmarshal([]byte(output), &plugins)
 	if err != nil {
 		if e, ok := err.(*json.SyntaxError); ok {
 			logging.V(5).Infof("JSON syntax error at byte offset %d", e.Offset)
@@ -207,32 +207,7 @@ func (host *jvmLanguageHost) DeterminePulumiPackages(
 		return nil, errors.Wrapf(err, "language host could not unmarshall plugin package information")
 	}
 
-	var packages []PulumiPackage
-	for _, p := range packagesTmp {
-		var plug plugin.PulumiPluginJSON
-		err = json.Unmarshal([]byte(p.PluginJSON), &plug)
-		if err != nil {
-			if e, ok := err.(*json.SyntaxError); ok {
-				logging.V(5).Infof("JSON syntax error at byte offset %d", e.Offset)
-			}
-			return nil, errors.Wrapf(err, "language host could not unmarshall plugin field information")
-		}
-		packages = append(packages, PulumiPackage{
-			Version: p.Version,
-			Plugin:  plug,
-		})
-	}
-	return packages, nil
-}
-
-type pulumiPackageTmp struct {
-	Version    string `json:"version"`
-	PluginJSON string `json:"plugin"`
-}
-
-type PulumiPackage struct {
-	Version string                  `json:"version"`
-	Plugin  plugin.PulumiPluginJSON `json:"plugin"`
+	return plugins, nil
 }
 
 func (host *jvmLanguageHost) RunJvmCommand(
