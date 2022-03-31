@@ -5,7 +5,6 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.DeploymentInstance;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import io.pulumi.resources.ResourceOptions;
@@ -36,10 +35,10 @@ public interface DeploymentInternal extends Deployment {
     void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs);
 
     @InternalUse
-    private static DeploymentInstanceInternal cast(DeploymentInstance instance) {
+    static DeploymentInternal cast(Deployment instance) {
         Objects.requireNonNull(instance);
         if (instance instanceof DeploymentInstanceInternal) {
-            return (DeploymentInstanceInternal) instance;
+            return ((DeploymentInstanceInternal) instance).getInternal();
         } else {
             throw new IllegalArgumentException(
                     String.format(

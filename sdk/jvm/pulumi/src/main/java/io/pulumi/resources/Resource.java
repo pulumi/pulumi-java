@@ -122,7 +122,7 @@ public abstract class Resource {
 
         this.remote = remote;
 
-        var deploymentInternal = (DeploymentInternal) deployment;
+        var deploymentInternal = DeploymentInternal.cast(deployment);
         var out = OutputBuilder.forDeployment(deployment);
 
         this.urn = out.of(urnFuture).apply(urn -> urn);

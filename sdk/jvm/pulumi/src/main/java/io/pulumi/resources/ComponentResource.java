@@ -110,7 +110,7 @@ public class ComponentResource extends Resource {
 
     protected void registerOutputs(Output<Map<String, Optional<Object>>> outputs) {
         Objects.requireNonNull(outputs);
-        var di = (DeploymentInternal)this.deployment;
+        var di = DeploymentInternal.cast(this.deployment);
         di.registerResourceOutputs(this, outputs);
     }
 }

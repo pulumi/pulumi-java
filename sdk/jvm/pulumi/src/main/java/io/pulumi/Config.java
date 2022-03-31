@@ -81,7 +81,7 @@ public class Config {
      */
     public Optional<String> get(String key) {
         var fullKey = fullKey(key);
-        return ((DeploymentInternal)deployment).getConfig(fullKey);
+        return DeploymentInternal.cast(deployment).getConfig(fullKey);
     }
 
     /**

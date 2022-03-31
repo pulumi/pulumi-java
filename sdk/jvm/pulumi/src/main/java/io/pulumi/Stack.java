@@ -59,7 +59,7 @@ public class Stack extends ComponentResource {
                 convertOptions(deployment, options)
         );
         // set a derived class as the deployment stack
-        ((DeploymentInternal)deployment).setStack(this);
+        DeploymentInternal.cast(deployment).setStack(this);
         this.outputs = OutputBuilder.forDeployment(deployment).of(Map.of());
         this.deployment = deployment;
     }

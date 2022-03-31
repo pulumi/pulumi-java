@@ -32,10 +32,7 @@ import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.InvokeRequest;
-import pulumirpc.Resource.ReadResourceRequest;
-import pulumirpc.Resource.RegisterResourceOutputsRequest;
-import pulumirpc.Resource.RegisterResourceRequest;
-import pulumirpc.Resource.SupportsFeatureRequest;
+import pulumirpc.Resource.*;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -1492,7 +1489,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             synchronized (rootResourceLock) {
                 if (rootResource == null) {
                     try {
-                        var di = (DeploymentInternal)deployment;
+                        var di = DeploymentInternal.cast(deployment);
                         var stack = di.getStack();
                         rootResource = setRootResourceWorkerAsync(stack);
                     } catch (IllegalStateException ex) {

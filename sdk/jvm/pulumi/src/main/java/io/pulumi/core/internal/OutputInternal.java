@@ -2,7 +2,6 @@ package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
-import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -48,12 +47,8 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
     public OutputInternal(Deployment deployment, CompletableFuture<OutputData<T>> dataFuture) {
         this.deployment = Objects.requireNonNull(deployment);
         this.dataFuture = Objects.requireNonNull(dataFuture);
-        if (deployment instanceof DeploymentInternal) {
-            var di = (DeploymentInternal) deployment;
-            di.getRunner().registerTask(
-                    this.getClass().getTypeName() + " -> " + dataFuture, dataFuture
-            );
-        }
+        var di = DeploymentInternal.cast(deployment);
+        di.getRunner().registerTask(this.getClass().getTypeName() + " -> " + dataFuture, dataFuture);
     }
 
     @InternalUse
