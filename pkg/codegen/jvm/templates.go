@@ -339,8 +339,8 @@ var gprPublishTemplateText = `publishing {
         //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
-            groupId = "{{ .GroupId }}"
-            artifactId = "{{ .ArtifactId }}"
+            groupId = "{{ .GroupID }}"
+            artifactId = "{{ .ArtifactID }}"
             version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
             from components.java
         }
@@ -350,7 +350,7 @@ var gprPublishTemplateText = `publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("{{ .RepositoryUrl }}")
+            url = uri("{{ .RepositoryURL }}")
             credentials {
                 username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
                 password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
