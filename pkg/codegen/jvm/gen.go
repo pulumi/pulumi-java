@@ -2684,9 +2684,9 @@ func genBuildFile(name string, basePackageName string, pkgInfo PackageInfo) ([]b
 		}
 	} else {
 		ctx := gprPublishTemplateContext{
-			ArtifactId:    gprPublishSettings.ArtifactId,
-			GroupId:       gprPublishSettings.GroupId,
-			RepositoryUrl: gprPublishSettings.RepositoryUrl,
+			ArtifactID:    gprPublishSettings.ArtifactID,
+			GroupID:       gprPublishSettings.GroupID,
+			RepositoryURL: gprPublishSettings.RepositoryURL,
 		}
 		if err := gprPublishTemplate.Execute(publishing, ctx); err != nil {
 			return nil, err

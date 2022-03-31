@@ -362,9 +362,9 @@ var gprPublishTemplateText = `publishing {
 var gprPublishTemplate = Template("GprPublish", gprPublishTemplateText)
 
 type gprPublishTemplateContext struct {
-	GroupId       string
-	ArtifactId    string
-	RepositoryUrl string
+	GroupID       string
+	ArtifactID    string
+	RepositoryURL string
 }
 
 var defaultPublishTemplateText = `publishing {
