@@ -36,8 +36,8 @@ public final class MyStack extends Stack {
 // This in turn avoids having to disambiguate similarly named args classes.
 final class MyStackAlt extends Stack {
     public MyStackAlt() {
-        final var service = new Service("myservice", builder ->
-                builder
+        final var service = new Service("myservice", ServiceArgs.builder()
+
                         // Should we have lambda binder here also?
                         // .setMetadata(builder -> builder.setClusterName("clusterName").build())
                         // Name disambiguation and avoiding import is only really useful if this is done for nested
