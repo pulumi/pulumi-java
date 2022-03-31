@@ -5,6 +5,8 @@ package jvm
 import (
 	"testing"
 
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 )
@@ -88,7 +90,7 @@ func testGeneratedPackage(t *testing.T, pwd string) {
 
 func TestGeneratePackage(t *testing.T) {
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
-		GenPackage: GeneratePackage,
+		GenPackage: generateJvmPackage,
 		Language:   "jvm",
 		TestCases:  testCases(),
 		Checks: map[string]test.CodegenCheck{
@@ -96,4 +98,14 @@ func TestGeneratePackage(t *testing.T) {
 			"jvm/test":    testGeneratedPackage,
 		},
 	})
+}
+
+func generateJvmPackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
+	pkgInfo := PackageInfo{
+		PackageReferences: map[string]string{
+			"io.pulumi:pulumi": "0.0.1-SNAPSHOT",
+		},
+	}
+	pkg.Language["jvm"] = pkgInfo
+	return GeneratePackage(tool, pkg, extraFiles)
 }
