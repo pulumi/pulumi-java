@@ -10,45 +10,19 @@ import io.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ServiceSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 
-import java.util.List;
-
 public final class MyStack extends Stack {
     public MyStack() {
         final var service = new Service("myservice",
                 ServiceArgs.builder()
                         .metadata(ObjectMetaArgs.builder().clusterName("clusterName").build())
                         .spec(ServiceSpecArgs.builder()
+                                // TODO[pulumi/pulumi-jvm#138] unroll Either
                                 .type(Either.ofRight(ServiceSpecType.LoadBalancer))
-                                .ports(List.of(ServicePortArgs.builder()
+                                .ports(ServicePortArgs.builder()
                                         .port(80)
-                                        // We should build overloads to make ofRight / Either wrapper disappear.
+                                        // TODO[pulumi/pulumi-jvm#138] unroll Either
                                         .targetPort(Either.ofRight("http"))
-                                        .build()))
-                                .build())
-                        .build()
-        );
-        Output<String> apiVersion = service.getApiVersion();
-    }
-}
-
-// This version demonstrates currently supported lambda version to bind `ServiceArgs.builder`.
-// This helps avoid importing the args class.
-// This in turn avoids having to disambiguate similarly named args classes.
-final class MyStackAlt extends Stack {
-    public MyStackAlt() {
-        final var service = new Service("myservice", ServiceArgs.builder()
-
-                        // Should we have lambda binder here also?
-                        // .setMetadata(builder -> builder.setClusterName("clusterName").build())
-                        // Name disambiguation and avoiding import is only really useful if this is done for nested
-                        // types.
-                        .metadata(ObjectMetaArgs.builder().clusterName("clusterName").build())
-                        .spec(ServiceSpecArgs.builder()
-                                .type(Either.ofRight(ServiceSpecType.LoadBalancer))
-                                .ports(List.of(ServicePortArgs.builder()
-                                        .port(80)
-                                        .targetPort(Either.ofRight("http"))
-                                        .build()))
+                                        .build())
                                 .build())
                         .build()
         );
