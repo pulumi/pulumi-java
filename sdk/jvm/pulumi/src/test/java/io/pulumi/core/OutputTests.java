@@ -5,8 +5,13 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.Tuples.Tuple3;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.OutputInternal;
+import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.MocksTest;
+import io.pulumi.deployment.internal.DeploymentTests;
+import org.junit.jupiter.api.BeforeAll;
 
 public class OutputTests {
 
@@ -36,12 +41,28 @@ public class OutputTests {
         );
     }
 
-    public static <T> Output<T> unknown() {
-        return new OutputInternal<>(OutputData.ofNullable(ImmutableSet.of(), null, false, false));
+    public static <T> Output<T> unknown(Deployment deployment) {
+        return new OutputInternal<>(deployment, OutputData.ofNullable(ImmutableSet.of(), null, false, false));
     }
 
-    public static <T> Output<T> unknownSecret() {
-        return new OutputInternal<>(OutputData.ofNullable(ImmutableSet.of(), null, false, true));
+    public static <T> Output<T> unknownSecret(Deployment deployment) {
+        return new OutputInternal<>(deployment, OutputData.ofNullable(ImmutableSet.of(), null, false, true));
     }
 
+    public static TestContext testContext() {
+        return new TestContext();
+    }
+
+    public static class TestContext {
+        public final OutputBuilder output;
+        public final Deployment deployment;
+
+        public TestContext() {
+            var mock = DeploymentTests.DeploymentMockBuilder.builder()
+                    .setMocks(new MocksTest.MyMocks())
+                    .buildSpyInstance();
+            this.deployment = mock.getDeployment();
+            this.output = OutputBuilder.forDeployment(this.deployment);
+        }
+    }
 }

@@ -1,38 +1,30 @@
 package io.pulumi.core;
 
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class UrnTest {
 
-    private static DeploymentTests.DeploymentMock mock;
-
-    @BeforeAll
-    public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+    private static final Deployment deployment = DeploymentTests.DeploymentMockBuilder.builder()
             .setMocks(new MocksTest.MyMocks())
             .setOptions(new TestOptions(false))
-            .setMockGlobalInstance();
-    }
+            .buildMockInstance()
+            .getDeployment();
 
-    @AfterAll
-    static void cleanup() {
-        cleanupDeploymentMocks();
-    }
+    private static final OutputBuilder output = OutputBuilder.forDeployment(deployment);
 
     @Test
     void testCreateUrnInputOutput() {
-        var urn = Urn.create(
-                Output.of("name"),
-                Output.of("type"),
+        var urn = Urn.create(deployment,
+                output.of("name"),
+                output.of("type"),
                 null,
                 null,
                 null,
@@ -45,9 +37,9 @@ class UrnTest {
 
     @Test
     void testCreateUrnString() {
-        var urn = Urn.create(
-                Output.of("name"),
-                Output.of("type"),
+        var urn = Urn.create(deployment,
+                output.of("name"),
+                output.of("type"),
                 null,
                 null,
                 null,

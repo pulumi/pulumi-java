@@ -1,6 +1,5 @@
 package io.pulumi.core.internal;
 
-import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import org.junit.jupiter.api.Test;
@@ -8,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class OutputDataTest {
-
     @Test
     void testHashCodeEqualsContract() {
         assertThat(OutputData.empty()).isEqualTo(OutputData.empty());
@@ -17,9 +15,10 @@ class OutputDataTest {
 
     @Test
     void testTuple() {
+        var ctx = OutputTests.testContext();
         var result = OutputData.tuple(
-                Output.of(1), Output.of(2), Output.of(3), Output.of(4),
-                Output.of(5), Output.of(6), Output.of(7), Output.of(8)
+                ctx.output.of(1), ctx.output.of(2), ctx.output.of(3), ctx.output.of(4),
+                ctx.output.of(5), ctx.output.of(6), ctx.output.of(7), ctx.output.of(8)
         ).join();
 
         assertThat(result.getValueNullable()).isNotNull()
@@ -28,9 +27,10 @@ class OutputDataTest {
 
     @Test
     void testTupleEmpty() {
+        var ctx = OutputTests.testContext();
         var result = OutputData.tuple(
-                Output.empty(), Output.empty(), Output.empty(), Output.empty(),
-                Output.empty(), Output.empty(), Output.empty(), Output.empty()
+                ctx.output.empty(), ctx.output.empty(), ctx.output.empty(), ctx.output.empty(),
+                ctx.output.empty(), ctx.output.empty(), ctx.output.empty(), ctx.output.empty()
         ).join();
 
         assertThat(result.getValueNullable()).isNotNull()
@@ -39,11 +39,13 @@ class OutputDataTest {
 
     @Test
     void testTupleUnknown() {
+        var ctx = OutputTests.testContext();
+
         var result = OutputData.tuple(
-                OutputTests.unknown(), OutputTests.unknown(),
-                OutputTests.unknown(), OutputTests.unknown(),
-                OutputTests.unknown(), OutputTests.unknown(),
-                OutputTests.unknown(), OutputTests.unknown()
+                OutputTests.unknown(ctx.deployment), OutputTests.unknown(ctx.deployment),
+                OutputTests.unknown(ctx.deployment), OutputTests.unknown(ctx.deployment),
+                OutputTests.unknown(ctx.deployment), OutputTests.unknown(ctx.deployment),
+                OutputTests.unknown(ctx.deployment), OutputTests.unknown(ctx.deployment)
         ).join();
 
         assertThat(result.isKnown()).isFalse();

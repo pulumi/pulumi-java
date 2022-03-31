@@ -2,8 +2,11 @@ package io.pulumi.resources;
 
 import io.pulumi.Log;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentTests;
 import org.junit.jupiter.api.Test;
 
@@ -20,6 +23,12 @@ class ResourceArgsTest {
     private final static Log log = DeploymentTests.mockLog();
 
     public static class ComplexResourceArgs1 extends ResourceArgs {
+        private final Deployment deployment;
+
+        private ComplexResourceArgs1(Deployment deployment) {
+            this.deployment = deployment;
+        }
+
         @Import
         @Nullable
         public Output<String> s = null;
@@ -29,7 +38,7 @@ class ResourceArgsTest {
         private Output<List<Boolean>> array = null;
 
         public Output<List<Boolean>> getArray() {
-            return this.array == null ? Output.ofList() : this.array;
+            return this.array == null ? OutputBuilder.forDeployment(deployment).ofList() : this.array;
         }
 
         public void setArray(@Nullable Output<List<Boolean>> value) {
@@ -39,7 +48,8 @@ class ResourceArgsTest {
 
     @Test
     void testComplexResourceArgs1_emptyValues() {
-        var args = new ComplexResourceArgs1();
+        var ctx = OutputTests.testContext();
+        var args = new ComplexResourceArgs1(ctx.deployment);
         var map = Internal.from(args).toOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("s");
@@ -51,9 +61,10 @@ class ResourceArgsTest {
 
     @Test
     void testComplexResourceArgs1_simpleValues() {
-        var args = new ComplexResourceArgs1();
-        args.s = Output.of("s");
-        args.array = Output.of(List.of(true, false));
+        var ctx = OutputTests.testContext();
+        var args = new ComplexResourceArgs1(ctx.deployment);
+        args.s = ctx.output.of("s");
+        args.array = ctx.output.of(List.of(true, false));
         var map = Internal.from(args).toOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("s");
@@ -61,14 +72,20 @@ class ResourceArgsTest {
 
         var s = map.get("s").get();
         assertThat(s).isInstanceOf(Output.class);
-        assertThat(waitFor((Output) s)).isEqualTo(waitFor(Output.of("s")));
+        assertThat(waitFor((Output) s)).isEqualTo(waitFor(ctx.output.of("s")));
 
         var array = map.get("array").get();
         assertThat(array).isInstanceOf(Output.class);
-        assertThat(waitFor((Output) array)).isEqualTo(waitFor(Output.of(List.of(true, false))));
+        assertThat(waitFor((Output) array)).isEqualTo(waitFor(ctx.output.of(List.of(true, false))));
     }
 
     public static class JsonResourceArgs1 extends ResourceArgs {
+        private final Deployment deployment;
+
+        private JsonResourceArgs1(Deployment deployment) {
+            this.deployment = deployment;
+        }
+
         @Import(name = "array", json = true)
         @Nullable
         private Output<List<Boolean>> array = null;
@@ -78,7 +95,7 @@ class ResourceArgsTest {
         private Output<Map<String, Integer>> map = null;
 
         public Output<List<Boolean>> getArray() {
-            return this.array == null ? Output.ofList() : this.array;
+            return this.array == null ? OutputBuilder.forDeployment(deployment).ofList() : this.array;
         }
 
         public void setArray(@Nullable Output<List<Boolean>> value) {
@@ -86,7 +103,7 @@ class ResourceArgsTest {
         }
 
         public Output<Map<String, Integer>> getMap() {
-            return this.map == null ? Output.ofMap() : this.map;
+            return this.map == null ? OutputBuilder.forDeployment(deployment).ofMap() : this.map;
         }
 
         public void setMap(@Nullable Output<Map<String, Integer>> value) {
@@ -96,9 +113,10 @@ class ResourceArgsTest {
 
     @Test
     void testJsonMap() {
-        var args = new JsonResourceArgs1();
-        args.setArray(Output.ofList(true, false));
-        args.setMap(Output.ofMap("k1", 1, "k2", 2));
+        var ctx = OutputTests.testContext();
+        var args = new JsonResourceArgs1(ctx.deployment);
+        args.setArray(ctx.output.ofList(true, false));
+        args.setMap(ctx.output.ofMap("k1", 1, "k2", 2));
         var map = Internal.from(args).toOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("array");

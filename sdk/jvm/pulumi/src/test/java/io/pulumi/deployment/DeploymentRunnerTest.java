@@ -4,10 +4,10 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -17,22 +17,16 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentRunnerTest {
 
-    @AfterEach
-    public void cleanup() {
-        cleanupDeploymentMocks();
-    }
-
     @Test
     void testTerminatesEarlyOnException() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
             .setMocks(new MocksTest.MyMocks())
-            .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
         var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack.class).join();
@@ -56,9 +50,11 @@ public class DeploymentRunnerTest {
         @Export(type = Integer.class)
         public final Output<Integer> slowOutput;
 
-        public TerminatesEarlyOnExceptionStack() {
-            Output.of(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
-            this.slowOutput = Output.of(new CompletableFuture<Integer>()
+        public TerminatesEarlyOnExceptionStack(Deployment deployment) {
+            super(deployment);
+            var output = OutputBuilder.forDeployment(deployment);
+            output.of(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
+            this.slowOutput = output.of(new CompletableFuture<Integer>()
                     .completeOnTimeout(1, 60, TimeUnit.SECONDS));
         }
     }
@@ -69,9 +65,9 @@ public class DeploymentRunnerTest {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "DeploymentRunnerTest#testLogsTaskDescriptions");
 
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
-            .setStandardLogger(logger)
-            .setSpyGlobalInstance();
+                .setMocks(new MocksTest.MyMocks())
+                .setStandardLogger(logger)
+                .buildSpyInstance();
 
         for (var i = 0; i < 2; i++) {
             final var delay = 100L + i;

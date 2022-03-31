@@ -2,6 +2,7 @@ package io.pulumi.core.internal;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
@@ -19,45 +20,61 @@ class InputOutputMetadataTest {
 
     @SuppressWarnings("unused")
     public static class Tester {
+        private final OutputTests.TestContext ctx;
+
+        public Tester() {
+            this.ctx = OutputTests.testContext();
+            this.complex1 = ctx.output.of(Either.ofLeft(1));
+            this.complex2 = ctx.output.of(Either.ofRight("1"));
+            this.explicitFoo = ctx.output.of("");
+            this.implicitFoo = ctx.output.of("");
+            this.implicitBaz = ctx.output.of(Map.of());
+            this.explicitBar = ctx.output.of("");
+            this.implicitBar = ctx.output.of("");
+            this.inputMap = ctx.output.ofMap("k1", 1, "k2", 2);
+            this.inputMapNullsJson = ctx.output.of(nullfulMap("k1", null, "k2", null));
+            this.inputMapNulls = ctx.output.of(nullfulMap("k1", null, "k2", null));
+            this.inputList = ctx.output.ofList(true, false);;
+        }
 
         @Export(name = "complex1", type = Either.class, parameters = {Integer.class, String.class})
-        public final Output<Either<Integer, String>> complex1 = Output.of(Either.ofLeft(1));
+        public final Output<Either<Integer, String>> complex1;
 
         @Export(name = "complex2", type = Either.class, parameters = {Integer.class, String.class})
-        public final Output<Either<Integer, String>> complex2 = Output.of(Either.ofRight("1"));
+        public final Output<Either<Integer, String>> complex2;
 
         @Export(name = "foo", type = String.class)
-        final Output<String> explicitFoo = Output.of("");
+        final Output<String> explicitFoo;
 
         @Export(type = String.class)
-        private final Output<String> implicitFoo = Output.of("");
+        private final Output<String> implicitFoo;
 
         @Export(type = Map.class, parameters = {String.class, Integer.class})
-        public final Output<Map<String, Integer>> implicitBaz = Output.of(Map.of());
+        public final Output<Map<String, Integer>> implicitBaz;
 
         @Export(type = Double.class)
         private Output<Double> incomplete;
 
         @Import(name = "bar")
-        public final Output<String> explicitBar = Output.of("");
+        public final Output<String> explicitBar;
 
         @Import
-        final Output<String> implicitBar = Output.of("");
+        final Output<String> implicitBar;
 
         @SuppressWarnings("DefaultAnnotationParam")
         @Import(name = "", required = true, json = true)
-        public final Output<Map<String, Integer>> inputMap = Output.ofMap("k1", 1, "k2", 2);
+        public final Output<Map<String, Integer>> inputMap;
 
         @SuppressWarnings("DefaultAnnotationParam")
         @Import(name = "", required = true, json = true)
-        public final Output<Map<String, Integer>> inputMapNullsJson = Output.of(nullfulMap("k1", null, "k2", null));
+        public final Output<Map<String, Integer>> inputMapNullsJson;
 
         @SuppressWarnings("DefaultAnnotationParam")
         @Import(name = "", required = true, json = false)
-        public final Output<Map<String, Integer>> inputMapNulls = Output.of(nullfulMap("k1", null, "k2", null));
+        public final Output<Map<String, Integer>> inputMapNulls;
 
         @Import
-        public final Output<List<Boolean>> inputList = Output.ofList(true, false);
+        public final Output<List<Boolean>> inputList;
 
         @Import
         public final String inputless = "test";

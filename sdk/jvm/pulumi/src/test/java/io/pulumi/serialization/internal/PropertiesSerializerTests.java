@@ -5,6 +5,7 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.util.JsonFormat;
 import io.pulumi.Log;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.annotations.CustomType.Constructor;
 import io.pulumi.core.annotations.CustomType.Parameter;
 import io.pulumi.core.annotations.Import;
@@ -21,6 +22,7 @@ public class PropertiesSerializerTests {
 
     @Test
     void verifyJsonAttribute() {
+        var ctx = OutputTests.testContext();
         // Import can be marked with json=true.
         // This is currently only used on arguments to provider resources.
         // When serializing json=true properties to protobuf Struct, instead of sending their native
@@ -29,17 +31,17 @@ public class PropertiesSerializerTests {
         // against a JSON rendering of the proto struct.
         //
         // For a practical example of where this applies, see Provider resource in pulumi-kubernetes.
-        assertThat(showStruct(new ExampleResourceArgs().setB(Output.of(true))))
+        assertThat(showStruct(new ExampleResourceArgs().setB(ctx.output.of(true))))
                 .isEqualTo("{\"b\":true}");
-        assertThat(showStruct(new ExampleResourceArgs().setBJson(Output.of(true))))
+        assertThat(showStruct(new ExampleResourceArgs().setBJson(ctx.output.of(true))))
                 .isEqualTo("{\"bJson\":\"true\"}");
-        assertThat(showStruct(new ExampleResourceArgs().setStr(Output.of("x"))))
+        assertThat(showStruct(new ExampleResourceArgs().setStr(ctx.output.of("x"))))
                 .isEqualTo("{\"str\":\"x\"}");
-        assertThat(showStruct(new ExampleResourceArgs().setStrJson(Output.of("x"))))
+        assertThat(showStruct(new ExampleResourceArgs().setStrJson(ctx.output.of("x"))))
                 .isEqualTo("{\"strJson\":\"\\\"x\\\"\"}");
-        assertThat(showStruct(new ExampleResourceArgs().setHelper(Output.of(new HelperArgs(Output.of(1))))))
+        assertThat(showStruct(new ExampleResourceArgs().setHelper(ctx.output.of(new HelperArgs(ctx.output.of(1))))))
                 .isEqualTo("{\"helper\":{\"intProp\":1.0}}"); // 1 should work also, not 1.0 - Int in the source
-        assertThat(showStruct(new ExampleResourceArgs().setHelperJson(Output.of(new HelperArgs(Output.of(1))))))
+        assertThat(showStruct(new ExampleResourceArgs().setHelperJson(ctx.output.of(new HelperArgs(ctx.output.of(1))))))
                 .isEqualTo("{\"helperJson\":\"{\\\"intProp\\\":1.0}\"}"); // 1 should work also, not 1.0 - Int in the source
     }
 

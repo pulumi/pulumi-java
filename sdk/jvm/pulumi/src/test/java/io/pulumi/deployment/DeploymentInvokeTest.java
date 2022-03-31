@@ -10,6 +10,7 @@ import io.pulumi.core.annotations.CustomType.Constructor;
 import io.pulumi.core.annotations.CustomType.Parameter;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.InvokeArgs;
@@ -21,19 +22,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentInvokeTest {
 
-    @AfterEach
-    void cleanup() {
-        cleanupDeploymentMocks();
-    }
-
     @Test
     void testCustomInvokes() {
-        DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new Mocks() {
                     @Override
@@ -53,9 +48,10 @@ public class DeploymentInvokeTest {
                         );
                     }
                 })
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
-        var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyVoid(r -> {
+        var out = CustomInvokes.doStuff(mock.getDeployment(),
+                CustomArgs.Empty, InvokeOptions.Empty).applyVoid(r -> {
             assertThat(r).hasSize(1);
         });
 
@@ -64,10 +60,12 @@ public class DeploymentInvokeTest {
 
     static class CustomInvokes {
         static Output<ImmutableList<ImmutableMap<String, Object>>> doStuff(
+                Deployment deployment,
                 @SuppressWarnings("SameParameterValue") CustomArgs args,
                 @Nullable InvokeOptions options) {
-            return Output.of(
-                    Deployment.getInstance().invokeAsync(
+            var output = OutputBuilder.forDeployment(deployment);
+            return output.of(
+                    deployment.invokeAsync(
                             "tests:custom:stuff",
                             TypeShape.of(CustomResult.class),
                             args,

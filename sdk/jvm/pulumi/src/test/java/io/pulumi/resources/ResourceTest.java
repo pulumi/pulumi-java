@@ -5,6 +5,7 @@ import io.pulumi.Stack;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
@@ -19,7 +20,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ResourceTest {
@@ -31,12 +31,7 @@ public class ResourceTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
-    }
-
-    @AfterAll
-    static void cleanup() {
-        cleanupDeploymentMocks();
+                .buildSpyInstance();
     }
 
     @Test
@@ -58,15 +53,17 @@ public class ResourceTest {
     }
 
     public static class MyStack extends Stack {
-        public MyStack() {
+        public MyStack(Deployment deployment) {
+            super(deployment);
             var mod = "test";
             var provider = new ProviderResource(
-                    mod, "testProvider", ResourceArgs.Empty, CustomResourceOptions.Empty
+                    deployment, mod, "testProvider", ResourceArgs.Empty,
+                    CustomResourceOptions.builder(deployment).build()
             );
 
             var resource = new CustomResource(
-                    mod + ":a/b:c", "testResource", ResourceArgs.Empty,
-                    CustomResourceOptions.builder()
+                    deployment, mod + ":a/b:c", "testResource", ResourceArgs.Empty,
+                    CustomResourceOptions.builder(deployment)
                             .provider(provider)
                             .build()
             );

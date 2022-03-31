@@ -1,6 +1,7 @@
 package io.pulumi.serialization.internal;
 
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;
@@ -63,36 +64,36 @@ public class ResourcePackagesTest {
 
     @ResourceType(type = "test:index/TestResource", version = "1.0.1-alpha1")
     private static class Version101TestResource extends CustomResource {
-        public Version101TestResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
-            super(type, name, args, options);
+        public Version101TestResource(Deployment deployment, String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, type, name, args, options);
         }
     }
 
     @ResourceType(type = "test:index/TestResource", version = "1.0.2")
     private static class Version102TestResource extends CustomResource {
-        public Version102TestResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
-            super(type, name, args, options);
+        public Version102TestResource(Deployment deployment, String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, type, name, args, options);
         }
     }
 
     @ResourceType(type = "test:index/TestResource", version = "2.0.2")
     private static class Version202TestResource extends CustomResource {
-        public Version202TestResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
-            super(type, name, args, options);
+        public Version202TestResource(Deployment deployment, String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, type, name, args, options);
         }
     }
 
     @ResourceType(type = "test:index/TestResource", version = "")
     private static class WildcardTestResource extends CustomResource {
-        public WildcardTestResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
-            super(type, name, args, options);
+        public WildcardTestResource(Deployment deployment, String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, type, name, args, options);
         }
     }
 
     @ResourceType(type = "test:index/UnrelatedResource", version = "1.0.3")
     private static class OtherResource extends CustomResource {
-        public OtherResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
-            super(type, name, args, options);
+        public OtherResource(Deployment deployment, String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, type, name, args, options);
         }
     }
 }

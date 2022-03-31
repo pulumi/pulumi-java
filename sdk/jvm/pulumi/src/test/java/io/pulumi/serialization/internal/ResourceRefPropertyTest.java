@@ -10,6 +10,8 @@ import io.pulumi.core.Tuples;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
@@ -26,7 +28,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static io.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
 import static io.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -35,18 +36,13 @@ class ResourceRefPropertyTest {
 
     private static DeploymentTests.DeploymentMock mock;
 
-    @AfterEach
-    public void cleanup() {
-        cleanupDeploymentMocks();
-    }
-
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeCustomResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
         var res = resources.stream()
@@ -67,10 +63,10 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeCustomResourceDownlevel(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
         var res = resources.stream()
@@ -89,10 +85,10 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeCustomResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(DeserializeCustomResourceStack.class).join();
         var stack = resources.stream()
@@ -111,10 +107,10 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeMissingCustomResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(DeserializeMissingCustomResourceStack.class).join();
         var stack = resources.stream()
@@ -132,10 +128,10 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeComponentResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
         var res = resources.stream()
@@ -154,10 +150,10 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeComponentResourceDownlevel(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
         var res = resources.stream()
@@ -176,10 +172,10 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeComponentResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(DeserializeComponentResourceStack.class).join();
         var stack = resources.stream()
@@ -197,10 +193,10 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeMissingComponentResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var resources = mock.testAsync(DeserializeMissingComponentResourceStack.class).join();
         var stack = resources.stream()
@@ -221,34 +217,35 @@ class ResourceRefPropertyTest {
 
     @ResourceType(type = "test:index:resource")
     private static class MyCustomResource extends CustomResource {
-        public MyCustomResource(String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
-            super("test:index:resource", name, args == null ? new MyArgs() : args, options);
+        public MyCustomResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, "test:index:resource", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     @ResourceType(type = "test:index:component")
     private static class MyComponentResource extends ComponentResource {
-        public MyComponentResource(String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
-            super("test:index:component", name, args == null ? new MyArgs() : args, options);
+        public MyComponentResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
+            super(deployment,"test:index:component", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     private static class MissingCustomResource extends CustomResource {
-        public MissingCustomResource(String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
-            super("test:missing:resource", name, args == null ? new MyArgs() : args, options);
+        public MissingCustomResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, "test:missing:resource", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     private static class MissingComponentResource extends ComponentResource {
-        public MissingComponentResource(String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
-            super("test:missing:component", name, args == null ? new MyArgs() : args, options);
+        public MissingComponentResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
+            super(deployment,"test:missing:component", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     public static class MyStack extends Stack {
-        public MyStack() {
-            new MyCustomResource("test", null, null);
-            new MyComponentResource("test", null, null);
+        public MyStack(Deployment deployment) {
+            super(deployment);
+            new MyCustomResource(deployment,"test", null, null);
+            new MyComponentResource(deployment,"test", null, null);
         }
     }
 
@@ -257,18 +254,21 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
-        public DeserializeCustomResourceStack() {
-            var res = new MyCustomResource("test", null, null);
+        public DeserializeCustomResourceStack(Deployment deployment) {
+            super(deployment);
+            var res = new MyCustomResource(deployment,"test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueOrDefault("");
             var id = OutputTests.waitFor(res.getId()).getValueOrDefault("");
 
-            var v = deserializeFromValue(
+            var v = ConverterTests.deserializeFromValue(
+                    deployment,
                     createCustomResourceReference(urn, ""),
                     MyCustomResource.class
             );
+            var output = OutputBuilder.forDeployment(deployment);
 
-            this.values = Output.of(ImmutableMap.of(
+            this.values = output.of(ImmutableMap.of(
                     "expectedUrn", urn,
                     "expectedId", id,
                     "actualUrn", OutputTests.waitFor(v.getUrn()).getValueOrDefault(""),
@@ -282,17 +282,20 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
-        public DeserializeMissingCustomResourceStack() {
-            var res = new MissingCustomResource("test", null, null);
+        public DeserializeMissingCustomResourceStack(Deployment deployment) {
+            super(deployment);
+            var res = new MissingCustomResource(deployment,"test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
             var v = deserializeFromValue(
+                    deployment,
                     createCustomResourceReference(urn, ""),
                     Resource.class
             );
+            var output = OutputBuilder.forDeployment(deployment);
 
-            this.values = Output.of(ImmutableMap.of(
+            this.values = output.of(ImmutableMap.of(
                     "expectedUrn", urn,
                     "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
             ));
@@ -304,17 +307,21 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
-        public DeserializeComponentResourceStack() {
-            var res = new MyComponentResource("test", null, null);
+        public DeserializeComponentResourceStack(Deployment deployment) {
+            super(deployment);
+            var res = new MyComponentResource(deployment,"test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
-            var v = deserializeFromValue(
+            var v = ConverterTests.deserializeFromValue(
+                    deployment,
                     createComponentResourceReference(urn),
                     MyComponentResource.class
             );
 
-            this.values = Output.of(ImmutableMap.of(
+            var output = OutputBuilder.forDeployment(deployment);
+
+            this.values = output.of(ImmutableMap.of(
                     "expectedUrn", urn,
                     "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
             ));
@@ -326,17 +333,21 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public Output<ImmutableMap<String, String>> values;
 
-        public DeserializeMissingComponentResourceStack() {
-            var res = new MissingComponentResource("test", null, null);
+        public DeserializeMissingComponentResourceStack(Deployment deployment) {
+            super(deployment);
+            var res = new MissingComponentResource(deployment,"test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
-            var v = deserializeFromValue(
+            var v = ConverterTests.deserializeFromValue(
+                    deployment,
                     createComponentResourceReference(urn),
                     Resource.class
             );
 
-            this.values = Output.of(ImmutableMap.of(
+            var output = OutputBuilder.forDeployment(deployment);
+
+            this.values = output.of(ImmutableMap.of(
                     "expectedUrn", urn,
                     "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
             ));

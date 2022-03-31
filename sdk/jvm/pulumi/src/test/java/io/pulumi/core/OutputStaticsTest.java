@@ -1,6 +1,10 @@
 package io.pulumi.core;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.DeploymentTests;
+import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -11,9 +15,17 @@ import static org.assertj.core.api.Assertions.entry;
 
 public class OutputStaticsTest {
 
+    private static final Deployment deployment = DeploymentTests.DeploymentMockBuilder.builder()
+            // .setMocks(new MocksTest.MyMocks())
+            .setOptions(new TestOptions(false))
+            .buildMockInstance()
+            .getDeployment();
+
+    private static final OutputBuilder output = OutputBuilder.forDeployment(deployment);
+
     @Test
     void testListConcatNull() {
-        var result = Output.concatList(null, null);
+        var result = output.concatList(null, null);
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -23,7 +35,7 @@ public class OutputStaticsTest {
 
     @Test
     void testListConcatEmpty() {
-        var result = Output.concatList(Output.empty(), Output.empty());
+        var result = output.concatList(output.empty(), output.empty());
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -33,19 +45,19 @@ public class OutputStaticsTest {
 
     @Test
     void testListConcatSimple() {
-        final var outV2 = Output.of("V2");
-        final var outV3 = Output.of("V3");
-        final var list1 = Output.<String>listBuilder()
+        final var outV2 = output.of("V2");
+        final var outV3 = output.of("V3");
+        final var list1 = output.<String>listBuilder()
                 .add("V1")
                 .add(outV2)
                 .build();
 
-        final Output<List<String>> list2 = Output.<String>listBuilder()
+        final Output<List<String>> list2 = output.<String>listBuilder()
                 .add(outV3)
                 .add("V4")
                 .build();
 
-        var result = Output.concatList(list1, list2);
+        var result = output.concatList(list1, list2);
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isFalse();
@@ -61,11 +73,11 @@ public class OutputStaticsTest {
 
         // Check that the input maps haven't changed
         OutputTests.waitFor(
-                Output.tuple(list1, outV2).applyVoid(t -> {
+                output.tuple(list1, outV2).applyVoid(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains("V1", t.t2);
                 }),
-                Output.tuple(list2, outV3).applyVoid(t -> {
+                output.tuple(list2, outV3).applyVoid(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).containsOnly(t.t2, "V4");
                 })
@@ -74,7 +86,7 @@ public class OutputStaticsTest {
 
     @Test
     void testMapConcatNull() {
-        var result = Output.concatMap(null, null);
+        var result = output.concatMap(null, null);
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -84,7 +96,7 @@ public class OutputStaticsTest {
 
     @Test
     void testMapConcatEmpty() {
-        var result = Output.concatMap(Output.empty(), Output.empty());
+        var result = output.concatMap(output.empty(), output.empty());
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isFalse();
@@ -95,21 +107,21 @@ public class OutputStaticsTest {
 
     @Test
     void testMapConcatSimple() {
-        final var outV2 = Output.of("V2");
-        final var outV3 = Output.of("V3");
-        final var outV3wrong = Output.of("V3_wrong");
-        final var map1 = Output.<String>mapBuilder()
+        final var outV2 = output.of("V2");
+        final var outV3 = output.of("V3");
+        final var outV3wrong = output.of("V3_wrong");
+        final var map1 = output.<String>mapBuilder()
                 .put("K1", "V1")
                 .put("K2", outV2)
                 .put("K3", outV3wrong)
                 .build();
 
-        final var map2 = Output.<String>mapBuilder()
+        final var map2 = output.<String>mapBuilder()
                 .put("K3", outV3)
                 .put("K4", "V4")
                 .build();
 
-        var result = Output.concatMap(map1, map2);
+        var result = output.concatMap(map1, map2);
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isFalse();
@@ -122,11 +134,11 @@ public class OutputStaticsTest {
 
         // Check that the input maps haven't changed
         OutputTests.waitFor(
-                Output.tuple(map1, outV3wrong).applyVoid(t -> {
+                output.tuple(map1, outV3wrong).applyVoid(t -> {
                     assertThat(t.t1).hasSize(3);
                     assertThat(t.t1).contains(entry("K3", t.t2));
                 }),
-                Output.tuple(map2, outV3).applyVoid(t -> {
+                output.tuple(map2, outV3).applyVoid(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains(entry("K3", t.t2));
                 })
@@ -134,7 +146,7 @@ public class OutputStaticsTest {
     }
 
     @Test
-    void testOutputMapEitherInitializer() {
+    void testoutputMapEitherInitializer() {
         var sample = SampleArgs.builder()
                 .add(Map.of(
                         "left", Either.ofLeft("testValue"),
@@ -149,7 +161,7 @@ public class OutputStaticsTest {
     }
 
     @Test
-    void testOutputListEitherInitializer() {
+    void testoutputListEitherInitializer() {
         var sample = SampleArgs.builder()
                 .add(List.of(
                         Either.ofLeft("testValue"),
@@ -177,8 +189,8 @@ public class OutputStaticsTest {
         }
 
         public static final class Builder {
-            private final Output.ListBuilder<Either<String, Integer>> list = Output.listBuilder();
-            private final Output.MapBuilder<Either<String, Integer>> dict = Output.mapBuilder();
+            private final OutputBuilder.ListBuilder<Either<String, Integer>> list = output.listBuilder();
+            private final OutputBuilder.MapBuilder<Either<String, Integer>> dict = output.mapBuilder();
 
             @CanIgnoreReturnValue
             public Builder add(List<Either<String, Integer>> list) {
@@ -199,8 +211,8 @@ public class OutputStaticsTest {
     }
 
     @Test
-    public void testNullableSecretifyOutput() {
-        Output<String> res0_ = Output.ofNullable((String) null);
+    public void testNullableSecretifyoutput() {
+        Output<String> res0_ = output.ofNullable((String) null);
         Output<String> res0 = res0_.asSecret();
         var data0 = OutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
@@ -208,18 +220,18 @@ public class OutputStaticsTest {
         assertThat(data0.isPresent()).isFalse();
         assertThat(data0.isKnown()).isTrue();
 
-        // stringify should not modify the original Output
+        // stringify should not modify the original output
         var data0_ = OutputTests.waitFor(res0_);
         assertThat(data0_.isSecret()).isFalse();
 
-        Output<String> res1 = Output.ofNullable("test1").asSecret();
+        Output<String> res1 = output.ofNullable("test1").asSecret();
         var data1 = OutputTests.waitFor(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
         assertThat(data1.isPresent()).isTrue();
         assertThat(data1.isKnown()).isTrue();
 
-        Output<String> res2 = Output.ofNullable(Output.of("test2")).asSecret();
+        Output<String> res2 = output.ofNullable(output.of("test2")).asSecret();
         var data2 = OutputTests.waitFor(res2);
         assertThat(data2.getValueNullable()).isEqualTo("test2");
         assertThat(data2.isSecret()).isTrue();

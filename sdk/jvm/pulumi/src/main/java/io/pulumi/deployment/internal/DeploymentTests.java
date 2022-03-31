@@ -34,11 +34,12 @@ public class DeploymentTests {
     }
 
     public static final class DeploymentMock {
+        public final Deployment deployment;
         public final TestOptions options;
         public final Runner runner;
         public final Engine engine;
         public final Monitor monitor;
-        public final DeploymentImpl deployment;
+        //public final DeploymentImpl deployment;
         public final DeploymentImpl.Config config;
         public final DeploymentImpl.DeploymentState state;
         public final Logger standardLogger;
@@ -46,27 +47,33 @@ public class DeploymentTests {
         public final Log log;
 
         private DeploymentMock(
+                Deployment deployment,
                 TestOptions options,
                 Runner runner,
                 Engine engine,
                 Monitor monitor,
-                DeploymentImpl deployment,
+                //DeploymentImpl deployment,
                 DeploymentImpl.Config config,
                 DeploymentImpl.DeploymentState state,
                 Logger standardLogger,
                 EngineLogger logger,
                 Log log
         ) {
+            this.deployment = requireNonNull(deployment);
             this.options = requireNonNull(options);
             this.runner = requireNonNull(runner);
             this.engine = requireNonNull(engine);
             this.monitor = requireNonNull(monitor);
-            this.deployment = requireNonNull(deployment);
+            //this.deployment = requireNonNull(deployment);
             this.config = requireNonNull(config);
             this.state = requireNonNull(state);
             this.standardLogger = requireNonNull(standardLogger);
             this.logger = requireNonNull(logger);
             this.log = requireNonNull(log);
+        }
+
+        public Deployment getDeployment() {
+            return deployment;
         }
 
         public void overrideConfig(String key, String value) {
@@ -144,8 +151,6 @@ public class DeploymentTests {
         private Runner runner;
         @Nullable
         private Monitor monitor;
-        @Nullable
-        private DeploymentImpl deployment;
         @Nullable
         private DeploymentImpl.Config config;
         @Nullable
@@ -273,16 +278,16 @@ public class DeploymentTests {
             }
         }
 
-        public DeploymentMock setSpyGlobalInstance() {
+        public DeploymentMock buildSpyInstance() {
             initUnset();
 
-            this.deployment = Mockito.spy(new DeploymentImpl(this.state));
-            this.runner = this.deployment.getRunner();
-            wireDeployment();
-            return new DeploymentMock(options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
+            var innerDeployment = Mockito.spy(new DeploymentImpl(this.state));
+            this.runner = innerDeployment.getRunner();
+            var deployment = wireDeployment(innerDeployment);
+            return new DeploymentMock(deployment, options, runner, engine, monitor, config, state, standardLogger, logger, log);
         }
 
-        public DeploymentMock setMockGlobalInstance() {
+        public DeploymentMock buildMockInstance() {
             initUnset();
 
             var mock = Mockito.mock(DeploymentImpl.class);
@@ -297,16 +302,16 @@ public class DeploymentTests {
                     this.state.config.isConfigSecret((String) invocation.getArguments()[0])
             );
             Mockito.when(mock.getRunner()).thenReturn(this.runner);
-            this.deployment = mock;
-            wireDeployment();
-            return new DeploymentMock(
-                    options, runner, engine, monitor, deployment, config, state, standardLogger, logger, log);
+            var deployment = wireDeployment(mock);
+            return new DeploymentMock(deployment,
+                    options, runner, engine, monitor, config, state, standardLogger, logger, log);
         }
 
-        private void wireDeployment() {
-            var deploymentII = new DeploymentInstanceInternal(this.deployment);
+        private Deployment wireDeployment(DeploymentInternal innerDeployment) {
+            var deploymentII = new DeploymentInstanceInternal(innerDeployment);
             state.setDeployment(deploymentII);
             ((MockMonitor)this.monitor).setDeployment(deploymentII);
+            return deploymentII;
         }
     }
 

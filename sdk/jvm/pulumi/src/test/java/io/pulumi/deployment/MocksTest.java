@@ -14,6 +14,7 @@ import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentInternal;
+import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.deployment.internal.TestOptions;
@@ -33,24 +34,18 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import static io.pulumi.core.TypeShape.of;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MocksTest {
 
-    @AfterEach
-    public void printInternalErrorCount() {
-        cleanupDeploymentMocks();
-    }
-
     @Test
     void testCustomMocks() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .setStandardLogger(standardLogger())
 
         var resources = mock.testAsync(MyStack.class).join();
 
@@ -69,7 +64,8 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .setStandardLogger(standardLogger())
+                .buildSpyInstance();
 
         var resources = mock.testAsync(MyStack.class).join();
 
@@ -112,7 +108,8 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new ThrowingMocks())
-                .setSpyGlobalInstance();
+                .setStandardLogger(standardLogger())
+                .buildSpyInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
 
@@ -121,7 +118,7 @@ public class MocksTest {
                         "aws:iam/getRole:getRole",
                         of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
                 ).thenApply(ignore -> {
-                    var myInstance = new Instance("instance", new InstanceArgs(), null);
+                    var myInstance = new Instance(mock.getDeployment(),"instance", new InstanceArgs(), null);
 
                     return ImmutableMap.<String, Optional<Object>>builder()
                             .put("result", Optional.of("x"))
@@ -162,7 +159,7 @@ public class MocksTest {
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyInvalidMocks())
                 .setStandardLogger(log)
-                .setSpyGlobalInstance();
+                .buildSpyInstance();
 
         var result = mock.tryTestAsync(MyStack.class).join();
         var resources = result.resources;
@@ -192,8 +189,8 @@ public class MocksTest {
         @Export(type = String.class)
         public Output<String> publicIp;
 
-        public Instance(String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
-            super("aws:ec2/instance:Instance", name, args, options);
+        public Instance(Deployment deployment, String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, "aws:ec2/instance:Instance", name, args, options);
         }
     }
 
@@ -205,8 +202,8 @@ public class MocksTest {
         @Export(type = Instance.class)
         public Output<Instance> instance;
 
-        public MyCustom(String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {
-            super("pkg:index:MyCustom", name, args, options);
+        public MyCustom(Deployment deployment, String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {
+            super(deployment, "pkg:index:MyCustom", name, args, options);
         }
     }
 
@@ -215,8 +212,8 @@ public class MocksTest {
         @Nullable
         public final Output<Instance> instance;
 
-        public MyCustomArgs(@Nullable Instance instance) {
-            this.instance = Output.of(instance);
+        public MyCustomArgs(Deployment deployment, @Nullable Instance instance) {
+            this.instance = OutputBuilder.forDeployment(deployment).of(instance);
         }
     }
 
@@ -251,10 +248,11 @@ public class MocksTest {
         @Export(type = String.class)
         public final Output<String> publicIp;
 
-        public MyStack() {
-            var myInstance = new Instance("instance", new InstanceArgs(), null);
+        public MyStack(Deployment deployment) {
+            super(deployment);
+            var myInstance = new Instance(deployment,"instance", new InstanceArgs(), null);
             //noinspection unused
-            var res = new MyCustom("mycustom", new MyCustomArgs(myInstance), null);
+            var res = new MyCustom(deployment,"mycustom", new MyCustomArgs(deployment, myInstance), null);
             this.publicIp = myInstance.publicIp;
         }
     }

@@ -3,9 +3,11 @@ package io.pulumi.core.internal;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.annotations.OutputMetadata;
+import io.pulumi.deployment.Deployment;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -27,13 +29,14 @@ class OutputCompletionSourceTest {
 
     @Test
     void testConvertingSetValue() {
+        var ctx = OutputTests.testContext();
         var tester = new Tester();
         var infos = OutputMetadata.of(Tester.class);
 
         var sources = infos.entrySet().stream()
                 .collect(toImmutableMap(
                         Map.Entry::getKey,
-                        entry -> of(entry.getValue(), tester)
+                        entry -> of(ctx.deployment, entry.getValue(), tester)
                 ));
 
         var expectedFoo = "expected";
@@ -52,11 +55,12 @@ class OutputCompletionSourceTest {
     }
 
     private static <T, E> OutputCompletionSource<T> of(
+            Deployment deployment,
             OutputMetadata<T> metadata,
             E extractionObject
     ) {
         var shape = metadata.getDataShape();
-        var output = metadata.getOrSetIncompleteFieldValue(extractionObject);
+        var output = metadata.getOrSetIncompleteFieldValue(deployment, extractionObject);
         return OutputCompletionSource.of(output, ImmutableSet.of(), shape);
     }
 }

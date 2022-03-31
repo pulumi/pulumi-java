@@ -3,6 +3,7 @@ package io.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Log;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.annotations.CustomType;
 import io.pulumi.core.annotations.CustomType.Constructor;
 import io.pulumi.core.annotations.CustomType.Parameter;
@@ -66,7 +67,8 @@ class ComplexTypeConverterTest {
 
     @Test
     void testTestComplexType1() {
-        var converter = new Converter(log);
+        var ctx = OutputTests.testContext();
+        var converter = new Converter(ctx.deployment, log);
         var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
                 .put("s", "str")
                 .put("b", true)
@@ -117,7 +119,8 @@ class ComplexTypeConverterTest {
 
     @Test
     void testTestComplexType2() {
-        var converter = new Converter(log);
+        var ctx = OutputTests.testContext();
+        var converter = new Converter(ctx.deployment, log);
         var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
                 .put("c", ImmutableMap.<String, Object>builder()
                         .put("s", "str1")
@@ -218,9 +221,10 @@ class ComplexTypeConverterTest {
 
     @Test
     void testUnexpectedNullableComplexType() {
+        var ctx = OutputTests.testContext();
         var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testUnexpectedNullableComplexType");
         var inMemoryLog = DeploymentTests.mockLog(logger);
-        var converter = new Converter(inMemoryLog);
+        var converter = new Converter(ctx.deployment, inMemoryLog);
 
         var map = new HashMap<String, Object>();
         map.put("s", null);
@@ -253,9 +257,10 @@ class ComplexTypeConverterTest {
 
     @Test
     void testEscapedComplexType() {
+        var ctx = OutputTests.testContext();
         var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testEscapedComplexType");
         var inMemoryLog = DeploymentTests.mockLog(logger);
-        var converter = new Converter(inMemoryLog);
+        var converter = new Converter(ctx.deployment, inMemoryLog);
 
         var map = new HashMap<String, Object>();
         map.put("private", "test");
