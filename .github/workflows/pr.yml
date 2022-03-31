@@ -647,6 +647,19 @@ jobs:
 
   publish-providers-sdk-snapshot:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        provider:
+        - aws
+        - aws-native
+        - azure-native
+        - docker
+        - eks
+        - gcp
+        - google-native
+        - kubernetes
+        - random
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -660,13 +673,13 @@ jobs:
       # SNAPSHOT version.
       - uses: actions/delete-package-versions@v3
         with:
-          package-name: 'io.pulumi.random'
+          package-name: 'io.pulumi.${{ matrix.provider }}'
           delete-only-pre-release-versions: "true"
-      - name: Publish random provider SNAPSHOT to Maven Repo
+      - name: Publish ${{ matrix.provider }} provider SNAPSHOT to Maven Repo
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: -Psnapshot=true publish
-          build-root-directory: providers/pulumi-random/sdk/java
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
           gradle-version: 7.4.1
 
   publish-java-sdk-snapshot:
