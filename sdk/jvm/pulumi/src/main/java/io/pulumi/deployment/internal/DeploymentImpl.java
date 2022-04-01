@@ -87,6 +87,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             DeploymentState state
     ) {
         Supplier<DeploymentInstanceInternal> deployment = () -> state.deployment;
+        state.setDeployment(new DeploymentInstanceInternal(this));
         var monitor = state.monitor;
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
