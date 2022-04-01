@@ -10,6 +10,7 @@ import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.CustomResource;
@@ -57,18 +58,18 @@ public class ConstructorConfusionTest {
 
     @ResourceType(type = "test:index/MinifiedConfigMap")
     public static class MinifiedConfigMap extends CustomResource {
-        public MinifiedConfigMap(Deployment deployment, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment, "test:index/MinifiedConfigMap", name, ResourceArgs.Empty, CustomResourceOptions.builder(deployment).build());
+        public MinifiedConfigMap(String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
+            super("test:index/MinifiedConfigMap", name, ResourceArgs.Empty, CustomResourceOptions.builder().build());
         }
 
         private MinifiedConfigMap(Deployment deployment, String name, Output<String> id, @Nullable CustomResourceOptions options) {
-            super(deployment, "test:index/MinifiedConfigMap", name, null, options);
+            super("test:index/MinifiedConfigMap", name, null, options);
         }
     }
 
     public static class ConfusionStack extends Stack {
-        public ConfusionStack(Deployment deployment) {
-            super(deployment);
+        public ConfusionStack() {
+            var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
             ResourcePackages.tryConstruct(deployment,"test:index/MinifiedConfigMap", "0.0.1", "urn:pulumi:stack::project::test:index/MinifiedConfigMap::name");
         }
     }

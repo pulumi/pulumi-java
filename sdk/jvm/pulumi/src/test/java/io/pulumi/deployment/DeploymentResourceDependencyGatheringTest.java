@@ -41,9 +41,8 @@ public class DeploymentResourceDependencyGatheringTest {
     }
 
     public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
-        public DeploysResourcesWithUnknownDependsOnStack(Deployment deployment) {
-            super(deployment);
-            var r = new MyCustomResource(deployment,"r1", null, CustomResourceOptions.builder(deployment)
+        public DeploysResourcesWithUnknownDependsOnStack() {
+            var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
                     .dependsOn(OutputTests.unknown(deployment))
                     .build()
             );
@@ -55,10 +54,8 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @ResourceType(type = "test:DeploymentResourceDependencyGatheringTests:resource")
     private static class MyCustomResource extends CustomResource {
-        public MyCustomResource(Deployment deployment,
-                                String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment,
-                    "test:DeploymentResourceDependencyGatheringTests:resource",
+        public MyCustomResource(String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
+            super( "test:DeploymentResourceDependencyGatheringTests:resource",
                     name, args == null ? new MyArgs() : args, options);
         }
     }

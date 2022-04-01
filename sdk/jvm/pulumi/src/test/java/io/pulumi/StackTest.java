@@ -39,8 +39,7 @@ class StackTest {
         @Export(type = String.class)
         private final Output<String> implicitName;
 
-        public ValidStack(Deployment deployment) {
-            super(deployment);
+        public ValidStack() {
             var output = OutputBuilder.forDeployment(deployment);
             this.explicitName = output.of("bar");
             this.implicitName = output.of("buzz");
@@ -57,7 +56,7 @@ class StackTest {
 
     @Test
     void testValidStackInstantiationSucceeds() {
-        var result = run(mock -> new ValidStack(mock.getDeployment()));
+        var result = run(mock -> new ValidStack());
         assertThat(result.t2).hasSize(3);
         assertThat(result.t2).containsKey("foo");
         assertThat(result.t2.get("foo")).isPresent();
@@ -77,19 +76,14 @@ class StackTest {
     }
 
     private static class NullOutputStack extends Stack {
-        public NullOutputStack(Deployment deployment) {
-            super(deployment);
-        }
-
         @SuppressWarnings("unused")
         @Export(name = "foo", type = String.class)
         public Output<String> foo = null;
-
     }
 
     @Test
     void testStackWithNullOutputsThrows() {
-        assertThatThrownBy(() -> run(mock -> new NullOutputStack(mock.getDeployment())))
+        assertThatThrownBy(() -> run(mock -> new NullOutputStack()))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have no value assigned");
     }
@@ -98,15 +92,14 @@ class StackTest {
         @Export(name = "foo", type = String.class)
         public String foo;
 
-        public InvalidOutputTypeStack(Deployment deployment) {
-            super(deployment);
+        public InvalidOutputTypeStack() {
             this.foo = "bar";
         }
     }
 
     @Test
     void testStackWithInvalidOutputTypeThrows() {
-        assertThatThrownBy(() -> run(mock -> new InvalidOutputTypeStack(mock.getDeployment())))
+        assertThatThrownBy(() -> run(mock -> new InvalidOutputTypeStack()))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have incorrect type");
     }

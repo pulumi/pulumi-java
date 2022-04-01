@@ -53,17 +53,16 @@ public class ResourceTest {
     }
 
     public static class MyStack extends Stack {
-        public MyStack(Deployment deployment) {
-            super(deployment);
+        public MyStack() {
             var mod = "test";
             var provider = new ProviderResource(
-                    deployment, mod, "testProvider", ResourceArgs.Empty,
-                    CustomResourceOptions.builder(deployment).build()
+                    mod, "testProvider", ResourceArgs.Empty,
+                    CustomResourceOptions.builder().build()
             );
 
             var resource = new CustomResource(
-                    deployment, mod + ":a/b:c", "testResource", ResourceArgs.Empty,
-                    CustomResourceOptions.builder(deployment)
+                    mod + ":a/b:c", "testResource", ResourceArgs.Empty,
+                    CustomResourceOptions.builder()
                             .provider(provider)
                             .build()
             );

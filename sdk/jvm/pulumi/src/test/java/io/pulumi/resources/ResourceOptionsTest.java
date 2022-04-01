@@ -4,7 +4,6 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.Deployment;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -23,13 +22,13 @@ class ResourceOptionsTest {
         var deployment = OutputTests.testContext().deployment;
         var output = OutputBuilder.forDeployment(deployment);
         return Stream.of(
-                arguments(new TestResourceOptions(deployment),
-                        new TestResourceOptions(deployment),
-                        new TestResourceOptions(deployment,
-                        null, null, output.of(List.of()), false, null,
-                        null, null, null, null, null, null, null
-                )),
-                arguments(new TestResourceOptions(deployment,
+                arguments(new TestResourceOptions(),
+                        new TestResourceOptions(),
+                        new TestResourceOptions(
+                                null, null, output.of(List.of()), false, null,
+                                null, null, null, null, null, null, null
+                        )),
+                arguments(new TestResourceOptions(
                                 null,
                                 null,
                                 null,
@@ -43,7 +42,7 @@ class ResourceOptionsTest {
                                 null,
                                 null
                         ),
-                        new TestResourceOptions(deployment,
+                        new TestResourceOptions(
                                 output.of("id"),
                                 null,
                                 output.empty(),
@@ -57,7 +56,7 @@ class ResourceOptionsTest {
                                 "urn",
                                 List.of()
                         ),
-                        new TestResourceOptions(deployment,
+                        new TestResourceOptions(
                                 output.of("id"),
                                 null,
                                 output.of(List.of()),
@@ -98,12 +97,9 @@ class ResourceOptionsTest {
     }
 
     private static class TestResourceOptions extends ResourceOptions {
-        protected TestResourceOptions(Deployment deployment) {
-            super(deployment);
-        }
+        protected TestResourceOptions() {}
 
         public TestResourceOptions(
-                Deployment deployment,
                 @Nullable Output<String> id,
                 @Nullable Resource parent,
                 @Nullable Output<List<Resource>> dependsOn,
@@ -117,7 +113,7 @@ class ResourceOptionsTest {
                 @Nullable String urn,
                 @Nullable List<String> replaceOnChanges
         ) {
-            super(deployment, id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
+            super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
                     resourceTransformations, aliases, urn, replaceOnChanges);
         }
     }

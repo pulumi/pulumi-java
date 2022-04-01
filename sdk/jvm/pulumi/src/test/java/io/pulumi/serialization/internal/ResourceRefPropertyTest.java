@@ -216,35 +216,34 @@ class ResourceRefPropertyTest {
 
     @ResourceType(type = "test:index:resource")
     private static class MyCustomResource extends CustomResource {
-        public MyCustomResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment, "test:index:resource", name, args == null ? new MyArgs() : args, options);
+        public MyCustomResource(String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
+            super("test:index:resource", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     @ResourceType(type = "test:index:component")
     private static class MyComponentResource extends ComponentResource {
-        public MyComponentResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
-            super(deployment,"test:index:component", name, args == null ? new MyArgs() : args, options);
+        public MyComponentResource(String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
+            super("test:index:component", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     private static class MissingCustomResource extends CustomResource {
-        public MissingCustomResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment, "test:missing:resource", name, args == null ? new MyArgs() : args, options);
+        public MissingCustomResource(String name, @Nullable MyArgs args, @Nullable CustomResourceOptions options) {
+            super("test:missing:resource", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     private static class MissingComponentResource extends ComponentResource {
-        public MissingComponentResource(Deployment deployment, String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
-            super(deployment,"test:missing:component", name, args == null ? new MyArgs() : args, options);
+        public MissingComponentResource(String name, @Nullable MyArgs args, @Nullable ComponentResourceOptions options) {
+            super("test:missing:component", name, args == null ? new MyArgs() : args, options);
         }
     }
 
     public static class MyStack extends Stack {
-        public MyStack(Deployment deployment) {
-            super(deployment);
-            new MyCustomResource(deployment,"test", null, null);
-            new MyComponentResource(deployment,"test", null, null);
+        public MyStack() {
+            new MyCustomResource("test", null, null);
+            new MyComponentResource("test", null, null);
         }
     }
 
@@ -253,9 +252,8 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
-        public DeserializeCustomResourceStack(Deployment deployment) {
-            super(deployment);
-            var res = new MyCustomResource(deployment,"test", null, null);
+        public DeserializeCustomResourceStack() {
+            var res = new MyCustomResource("test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueOrDefault("");
             var id = OutputTests.waitFor(res.getId()).getValueOrDefault("");
@@ -281,9 +279,9 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
-        public DeserializeMissingCustomResourceStack(Deployment deployment) {
-            super(deployment);
-            var res = new MissingCustomResource(deployment,"test", null, null);
+        public DeserializeMissingCustomResourceStack() {
+
+            var res = new MissingCustomResource("test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
@@ -306,9 +304,9 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
-        public DeserializeComponentResourceStack(Deployment deployment) {
-            super(deployment);
-            var res = new MyComponentResource(deployment,"test", null, null);
+        public DeserializeComponentResourceStack() {
+            super();
+            var res = new MyComponentResource("test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
@@ -332,9 +330,8 @@ class ResourceRefPropertyTest {
         @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public Output<ImmutableMap<String, String>> values;
 
-        public DeserializeMissingComponentResourceStack(Deployment deployment) {
-            super(deployment);
-            var res = new MissingComponentResource(deployment,"test", null, null);
+        public DeserializeMissingComponentResourceStack() {
+            var res = new MissingComponentResource("test", null, null);
 
             var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 

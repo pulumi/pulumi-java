@@ -13,11 +13,8 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentInternal;
+import io.pulumi.deployment.internal.*;
 import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.InMemoryLogger;
-import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.InvokeArgs;
@@ -116,7 +113,7 @@ public class MocksTest {
                         "aws:iam/getRole:getRole",
                         of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
                 ).thenApply(ignore -> {
-                    var myInstance = new Instance(mock.getDeployment(),"instance", new InstanceArgs(), null);
+                    var myInstance = new Instance("instance", new InstanceArgs(), null);
 
                     return ImmutableMap.<String, Optional<Object>>builder()
                             .put("result", Optional.of("x"))
@@ -187,8 +184,8 @@ public class MocksTest {
         @Export(type = String.class)
         public Output<String> publicIp;
 
-        public Instance(Deployment deployment, String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment, "aws:ec2/instance:Instance", name, args, options);
+        public Instance(String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
+            super("aws:ec2/instance:Instance", name, args, options);
         }
     }
 
@@ -200,8 +197,8 @@ public class MocksTest {
         @Export(type = Instance.class)
         public Output<Instance> instance;
 
-        public MyCustom(Deployment deployment, String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {
-            super(deployment, "pkg:index:MyCustom", name, args, options);
+        public MyCustom(String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {
+            super("pkg:index:MyCustom", name, args, options);
         }
     }
 
@@ -210,8 +207,8 @@ public class MocksTest {
         @Nullable
         public final Output<Instance> instance;
 
-        public MyCustomArgs(Deployment deployment, @Nullable Instance instance) {
-            this.instance = OutputBuilder.forDeployment(deployment).of(instance);
+        public MyCustomArgs(@Nullable Instance instance) {
+            this.instance = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).of(instance);
         }
     }
 
@@ -246,11 +243,10 @@ public class MocksTest {
         @Export(type = String.class)
         public final Output<String> publicIp;
 
-        public MyStack(Deployment deployment) {
-            super(deployment);
-            var myInstance = new Instance(deployment,"instance", new InstanceArgs(), null);
+        public MyStack() {
+            var myInstance = new Instance("instance", new InstanceArgs(), null);
             //noinspection unused
-            var res = new MyCustom(deployment,"mycustom", new MyCustomArgs(deployment, myInstance), null);
+            var res = new MyCustom("mycustom", new MyCustomArgs(myInstance), null);
             this.publicIp = myInstance.publicIp;
         }
     }
