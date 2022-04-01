@@ -76,16 +76,19 @@ public class Stack extends ComponentResource {
                   @Nullable StackOptions options) {
         this(options);
         try {
-            this.outputs = OutputBuilder.forDeployment(deployment).of(runInitAsync(init));
+            this.outputs = OutputBuilder.forDeployment(deployment).of(runInitAsync(deployment, init));
         } finally {
             this.registerOutputs(this.outputs);
         }
     }
 
     private static CompletableFuture<Map<String, Optional<Object>>> runInitAsync(
+            Deployment deployment,
             Supplier<CompletableFuture<Map<String, Optional<Object>>>> init
     ) {
-        return CompletableFuture.supplyAsync(init).thenCompose(Function.identity());
+        return CompletableFuture.supplyAsync(() ->
+                        CurrentDeployment.withCurrentDeployment(deployment, () -> init.get()))
+                .thenCompose(Function.identity());
     }
 
     @Nullable
