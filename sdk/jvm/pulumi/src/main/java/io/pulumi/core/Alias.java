@@ -1,7 +1,5 @@
 package io.pulumi.core;
 
-import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.resources.Resource;
 
@@ -127,7 +125,7 @@ public class Alias {
         }
 
         public Builder name(@Nullable String name) {
-            this.name = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
@@ -137,7 +135,7 @@ public class Alias {
         }
 
         public Builder type(@Nullable String type) {
-            this.type = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(type);
+            this.type =Output.ofNullable(type);
             return this;
         }
 
@@ -147,7 +145,7 @@ public class Alias {
         }
 
         public Builder stack(@Nullable String stack) {
-            this.stack = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(stack);
+            this.stack = Output.ofNullable(stack);
             return this;
         }
 
@@ -157,7 +155,7 @@ public class Alias {
         }
 
         public Builder project(@Nullable String project) {
-            this.project = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
