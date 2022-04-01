@@ -8,6 +8,7 @@ import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.RunException;
 
@@ -33,14 +34,14 @@ public class Config {
     private final String name;
     private final Deployment deployment;
 
-    private Config(Deployment deployment) {
-        this(deployment, Objects.requireNonNull(deployment).getProjectName());
+    private Config() {
+        this(CurrentDeployment.getCurrentDeploymentOrThrow().getProjectName());
     }
 
-    private Config(Deployment deployment, String name) {
+    private Config(String name) {
         Objects.requireNonNull(name);
 
-        this.deployment = Objects.requireNonNull(deployment);
+        this.deployment = Objects.requireNonNull(CurrentDeployment.getCurrentDeploymentOrThrow());
 
         if (name.endsWith(":config")) {
             name = name.replaceAll(":config$", "");
@@ -52,8 +53,8 @@ public class Config {
     /**
      * Creates a new @see {@link Config} instance, with default, the name of the current project.
      */
-    public static Config of(Deployment deployment) {
-        return new Config(deployment);
+    public static Config of() {
+        return new Config();
     }
 
     /**
@@ -61,8 +62,8 @@ public class Config {
      *
      * @param name unique logical name
      */
-    public static Config of(Deployment deployment, String name) {
-        return new Config(deployment, name);
+    public static Config of(String name) {
+        return new Config(name);
     }
 
     /**
