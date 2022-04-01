@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.resources.Resource;
 
@@ -59,9 +60,11 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @Override
     public <U> Output<U> apply(Function<T, Output<U>> func) {
+        Function<T, Output<U>> funcWithDeployment = t ->
+                CurrentDeployment.withCurrentDeployment(this.deployment, () -> func.apply(t));
         return new OutputInternal<>(this.deployment, OutputData.apply(
                 dataFuture,
-                func.andThen(o -> Internal.of(o).getDataAsync())
+                funcWithDeployment.andThen(o -> Internal.of(o).getDataAsync())
         ));
     }
 
