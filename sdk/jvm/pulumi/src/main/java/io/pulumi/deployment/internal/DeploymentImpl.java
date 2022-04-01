@@ -1630,9 +1630,8 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
             }
             return runAsync(() -> {
                 try {
-                    var constructor = stackType.getDeclaredConstructor(Deployment.class);
-                    Deployment d = deployment.get();
-                    var instance = constructor.newInstance(d);
+                    var constructor = stackType.getDeclaredConstructor();
+                    var instance = constructor.newInstance();
                     return instance;
                 } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
                     throw new IllegalArgumentException(String.format(
@@ -1646,12 +1645,15 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         @Override
         public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
             try {
-                var stack = stackFactory.get();
-                var stackInternal = Internal.from(stack);
-                // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stackInternal.registerPropertyOutputs();
-                registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stackInternal.getOutputs()).getDataAsync());
+                CurrentDeployment.withCurrentDeployment(deployment.get(), () -> {
+                    var stack = stackFactory.get();
+                    var stackInternal = Internal.from(stack);
+                    // Stack doesn't call RegisterOutputs, so we register them on its behalf.
+                    stackInternal.registerPropertyOutputs();
+                    registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
+                            Internal.of(stackInternal.getOutputs()).getDataAsync());
+                    return (Void) null;
+                });
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
             }
