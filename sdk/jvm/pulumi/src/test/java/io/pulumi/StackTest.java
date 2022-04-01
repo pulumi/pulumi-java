@@ -9,6 +9,7 @@ import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MocksTest;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
@@ -110,19 +111,22 @@ class StackTest {
                 .setOptions(new TestOptions("TestProject", "TestStack"))
                 .buildSpyInstance();
 
-        var stack = factory.apply(mock);
-        Internal.from(stack).registerPropertyOutputs();
+        return CurrentDeployment.withCurrentDeployment(mock.getDeployment(), () -> {
 
-        //noinspection unchecked
-        ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
+            var stack = factory.apply(mock);
+            Internal.from(stack).registerPropertyOutputs();
 
-        var di = DeploymentInternal.cast(mock.deployment);
+            //noinspection unchecked
+            ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
 
-        // TODO: is this OK that we're called twice?
-        verify(di, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
+            var di = DeploymentInternal.cast(mock.deployment);
 
-        var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
-        return Tuples.of(stack, values);
+            // TODO: is this OK that we're called twice?
+            verify(di, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
+
+            var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
+            return Tuples.of(stack, values);
+        });
     }
 
 }
