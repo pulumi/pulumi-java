@@ -26,7 +26,6 @@ public class Urn {
      * optional project and optional stack.
      */
     public static Output<String> create(
-            @Nullable Deployment deployment,
             Output<String> name,
             Output<String> type,
             @Nullable Resource parent,
@@ -36,6 +35,8 @@ public class Urn {
     ) {
         Objects.requireNonNull(name);
         Objects.requireNonNull(type);
+
+        var deployment = project.getDeployment();
 
         var out = OutputBuilder.forDeployment(deployment);
 

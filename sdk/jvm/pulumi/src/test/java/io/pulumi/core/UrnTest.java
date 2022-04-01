@@ -22,7 +22,7 @@ class UrnTest {
 
     @Test
     void testCreateUrnInputOutput() {
-        var urn = Urn.create(deployment,
+        var urn = Urn.create(
                 output.of("name"),
                 output.of("type"),
                 null,
@@ -37,7 +37,7 @@ class UrnTest {
 
     @Test
     void testCreateUrnString() {
-        var urn = Urn.create(deployment,
+        var urn = Urn.create(
                 output.of("name"),
                 output.of("type"),
                 null,

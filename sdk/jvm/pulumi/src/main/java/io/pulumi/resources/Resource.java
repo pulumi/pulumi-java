@@ -222,7 +222,7 @@ public abstract class Resource {
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
                 options.aliases.add(
-                        urnInheritedChildAlias(deployment,
+                        urnInheritedChildAlias(
                                 this.name, options.parent.getResourceName(), parentAlias, this.type)
                 );
             }
@@ -370,7 +370,7 @@ public abstract class Resource {
 
             var parentInfo = getParentInfo(defaultParent, a);
 
-            return Urn.create(deployment, name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
+            return Urn.create(name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
         });
     }
 
@@ -407,14 +407,13 @@ public abstract class Resource {
      * and the parent name changed.
      */
     private static Output<Alias> urnInheritedChildAlias(
-            @Nullable Deployment deployment,
-            String childName, String parentName, Output<String> parentAlias, String childType
-    ) {
+            String childName, String parentName, Output<String> parentAlias, String childType) {
         Objects.requireNonNull(childName);
         Objects.requireNonNull(parentName);
         Objects.requireNonNull(parentAlias);
         Objects.requireNonNull(childType);
 
+        var deployment = parentAlias.getDeployment();
         var out = OutputBuilder.forDeployment(deployment);
 
         // If the child name has the parent name as a prefix, then we make the assumption that
@@ -436,8 +435,7 @@ public abstract class Resource {
                             parentAliasUrn.lastIndexOf("::") + 2) + childName.substring(parentName.length()));
         }
 
-        var urn = Urn.create(deployment, aliasName,
-                out.of(childType), null, parentAlias, null, null);
+        var urn = Urn.create(aliasName, out.of(childType), null, parentAlias, null, null);
 
         return urn.applyValue(Alias::withUrn);
     }
