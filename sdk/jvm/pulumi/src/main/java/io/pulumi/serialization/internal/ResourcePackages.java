@@ -12,6 +12,7 @@ import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
 
@@ -172,15 +173,19 @@ public class ResourcePackages {
         constructorInfo.setAccessible(true);
 
         var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
-        try {
-            var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
-            return Optional.of(resource);
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-            throw new IllegalArgumentException(String.format(
-                    "Couldn't instantiate the '%s' class using constructor: '%s', for resource type: '%s'",
-                    resourceType.get().getTypeName(), constructorInfo, type
-            ));
-        }
+
+        return CurrentDeployment.withCurrentDeployment(deployment, () -> {
+            try {
+                CurrentDeployment.withCurrentDeployment(deployment, () -> 1);
+                var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
+                return Optional.of(resource);
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
+                throw new IllegalArgumentException(String.format(
+                        "Couldn't instantiate the '%s' class using constructor: '%s', for resource type: '%s'",
+                        resourceType.get().getTypeName(), constructorInfo, type
+                ));
+            }
+        });
     }
 
     private static ResourceOptions resolveResourceOptions(Class<?> resourceType, String urn) {
