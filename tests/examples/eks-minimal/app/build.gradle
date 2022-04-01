@@ -12,9 +12,10 @@ repositories {
 
 dependencies {
     implementation 'io.pulumi:pulumi:1.0.0'
-    implementation 'io.pulumi:random:4.3.1'
+    implementation 'io.pulumi:aws:4.37.3'
+    implementation 'io.pulumi:eks:0.37.1'
 }
 
 application {
-    mainClass = 'random.App'
+    mainClass = 'eksminimal.App'
 }

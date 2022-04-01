@@ -1,4 +1,4 @@
-package random;
+package eksminimal;
 
 import io.pulumi.deployment.Deployment;
 

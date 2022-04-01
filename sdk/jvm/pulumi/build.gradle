@@ -100,12 +100,17 @@ publishing {
 
         // Publish to GitHub Packages like this
         //
-        // gradle -Pversion=0.0.1-SNAPSHOT publish
+        // gradle publish
         //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
             groupId = "io.pulumi"
             artifactId = "pulumi"
+            version = (
+              project.findProperty("version") == "unspecified"
+              ? "0.0.1-SNAPSHOT"
+              : (project.findProperty("version") ?: "0.0.1-SNAPSHOT")
+            )
             from components.java
         }
     }

@@ -116,6 +116,10 @@ public class OutputCompletionSource<T> {
 
     public static ImmutableMap<String, OutputCompletionSource<?>> from(Resource resource) {
         return OutputMetadata.of(resource.getClass()).entrySet().stream()
+                .filter(x -> {
+                    var name = x.getValue().getAnnotation().name();
+                    return !name.equals(Constants.UrnPropertyName) && !name.equals(Constants.IdPropertyName);
+                })
                 .collect(toImmutableMap(
                         Map.Entry::getKey,
                         entry -> OutputCompletionSource.from(resource, entry.getValue())

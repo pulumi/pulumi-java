@@ -3,8 +3,10 @@ package io.pulumi.resources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * CustomResource is a resource whose create, read, update, and delete (CRUD) operations are
@@ -13,9 +15,10 @@ import javax.annotation.Nullable;
  * in a dynamically loaded plugin for the defining package.
  */
 public class CustomResource extends Resource {
+    private CompletableFuture<Output<String>> idFuture; // effectively final, lazy init
 
     @Export(name = Constants.IdPropertyName, type = String.class)
-    private /* final-ish */ Output<String> id; // this can be set only once with the setter or reflection
+    private Output<String> id; // effectively final, lazy init
 
     /**
      * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean)}
@@ -67,7 +70,19 @@ public class CustomResource extends Resource {
         super(type, name, true,
                 args == null ? ResourceArgs.Empty : args,
                 options == null ? CustomResourceOptions.Empty : options,
-                false, dependency);
+                false, dependency,
+                (self) -> {
+                    // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
+                    if (self instanceof CustomResource) {
+                        ((CustomResource) self).idFuture = new CompletableFuture<>();
+                        ((CustomResource) self).id = Output.of(((CustomResource) self).idFuture).apply(id -> id);
+                    } else {
+                        throw new IllegalStateException(String.format(
+                                "Expected self to be instance of CustomResource, got: '%s'",
+                                self.getClass().getTypeName()
+                        ));
+                    }
+                });
     }
 
     /**
@@ -75,17 +90,16 @@ public class CustomResource extends Resource {
      * deployments and may be missing (unknown) during planning phases.
      */
     public Output<String> getId() {
-        return Output.ofNullable(this.id);
+        return this.id;
     }
 
     /**
      * More: @see {@link #getId()}
      * @param id the the provider-assigned unique ID to set
      */
-    protected void setId(@Nullable Output<String> id) {
-        if (this.id == null) {
-            this.id = id;
-        } else {
+    @InternalUse
+    public void setId(@Nullable Output<String> id) {
+        if (!this.idFuture.complete(id)) {
             throw new IllegalStateException("id cannot be set twice, must be null for setId to work");
         }
     }
