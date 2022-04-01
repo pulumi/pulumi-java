@@ -87,8 +87,7 @@ public abstract class ResourceOptions {
         }
 
         public B id(@Nullable String id) {
-            var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
-            options.id = OutputBuilder.forDeployment(deployment).ofNullable(id);
+            options.id = Output.ofNullable(id);
             return (B) this;
         }
 
@@ -107,8 +106,7 @@ public abstract class ResourceOptions {
         }
 
         public B dependsOn(@Nullable List<Resource> dependsOn) {
-            var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
-            options.dependsOn = OutputBuilder.forDeployment(deployment).ofNullable(dependsOn);
+            options.dependsOn = Output.ofNullable(dependsOn);
             return (B) this;
         }
 
@@ -193,7 +191,7 @@ public abstract class ResourceOptions {
      */
     public Output<List<Resource>> getDependsOn() {
         return this.dependsOn == null
-                ? OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofList()
+                ? Output.ofList()
                 : this.dependsOn;
     }
 

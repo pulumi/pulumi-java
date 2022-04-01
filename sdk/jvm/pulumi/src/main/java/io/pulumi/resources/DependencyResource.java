@@ -1,10 +1,8 @@
 package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.Output;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.OutputInternal;
-import io.pulumi.deployment.Deployment;
 
 /**
  * A @see {@link Resource} that is used to indicate that an @see {@link io.pulumi.core.Output}

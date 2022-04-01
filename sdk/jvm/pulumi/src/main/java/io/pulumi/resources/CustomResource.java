@@ -5,7 +5,6 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;

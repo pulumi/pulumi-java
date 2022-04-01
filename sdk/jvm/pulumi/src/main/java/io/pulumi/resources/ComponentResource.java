@@ -2,7 +2,6 @@ package io.pulumi.resources;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 
 import javax.annotation.Nullable;
