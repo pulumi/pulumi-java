@@ -12,7 +12,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.function.Function;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 import static io.pulumi.test.internal.assertj.PulumiAssertions.assertThatNullable;

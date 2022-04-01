@@ -11,7 +11,6 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;

@@ -4,7 +4,6 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
@@ -51,9 +50,8 @@ public class DeploymentRunnerTest {
         public final Output<Integer> slowOutput;
 
         public TerminatesEarlyOnExceptionStack() {
-            var output = OutputBuilder.forDeployment(deployment);
-            output.of(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
-            this.slowOutput = output.of(new CompletableFuture<Integer>()
+            Output.of(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
+            this.slowOutput = Output.of(new CompletableFuture<Integer>()
                     .completeOnTimeout(1, 60, TimeUnit.SECONDS));
         }
     }

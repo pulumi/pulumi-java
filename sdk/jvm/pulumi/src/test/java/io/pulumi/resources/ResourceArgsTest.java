@@ -5,7 +5,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentTests;
 import org.junit.jupiter.api.Test;
@@ -23,11 +22,8 @@ class ResourceArgsTest {
     private final static Log log = DeploymentTests.mockLog();
 
     public static class ComplexResourceArgs1 extends ResourceArgs {
-        private final Deployment deployment;
 
-        private ComplexResourceArgs1(Deployment deployment) {
-            this.deployment = deployment;
-        }
+        private ComplexResourceArgs1() {}
 
         @Import
         @Nullable
@@ -38,7 +34,7 @@ class ResourceArgsTest {
         private Output<List<Boolean>> array = null;
 
         public Output<List<Boolean>> getArray() {
-            return this.array == null ? OutputBuilder.forDeployment(deployment).ofList() : this.array;
+            return this.array == null ? Output.ofList() : this.array;
         }
 
         public void setArray(@Nullable Output<List<Boolean>> value) {
@@ -49,7 +45,7 @@ class ResourceArgsTest {
     @Test
     void testComplexResourceArgs1_emptyValues() {
         var ctx = OutputTests.testContext();
-        var args = new ComplexResourceArgs1(ctx.deployment);
+        var args = new ComplexResourceArgs1();
         var map = Internal.from(args).toOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("s");
@@ -62,7 +58,7 @@ class ResourceArgsTest {
     @Test
     void testComplexResourceArgs1_simpleValues() {
         var ctx = OutputTests.testContext();
-        var args = new ComplexResourceArgs1(ctx.deployment);
+        var args = new ComplexResourceArgs1();
         args.s = ctx.output.of("s");
         args.array = ctx.output.of(List.of(true, false));
         var map = Internal.from(args).toOptionalMapAsync(log).join();
@@ -80,11 +76,8 @@ class ResourceArgsTest {
     }
 
     public static class JsonResourceArgs1 extends ResourceArgs {
-        private final Deployment deployment;
 
-        private JsonResourceArgs1(Deployment deployment) {
-            this.deployment = deployment;
-        }
+        private JsonResourceArgs1() {}
 
         @Import(name = "array", json = true)
         @Nullable
@@ -95,7 +88,7 @@ class ResourceArgsTest {
         private Output<Map<String, Integer>> map = null;
 
         public Output<List<Boolean>> getArray() {
-            return this.array == null ? OutputBuilder.forDeployment(deployment).ofList() : this.array;
+            return this.array == null ? Output.ofList() : this.array;
         }
 
         public void setArray(@Nullable Output<List<Boolean>> value) {
@@ -103,7 +96,7 @@ class ResourceArgsTest {
         }
 
         public Output<Map<String, Integer>> getMap() {
-            return this.map == null ? OutputBuilder.forDeployment(deployment).ofMap() : this.map;
+            return this.map == null ? Output.ofMap() : this.map;
         }
 
         public void setMap(@Nullable Output<Map<String, Integer>> value) {
@@ -114,7 +107,7 @@ class ResourceArgsTest {
     @Test
     void testJsonMap() {
         var ctx = OutputTests.testContext();
-        var args = new JsonResourceArgs1(ctx.deployment);
+        var args = new JsonResourceArgs1();
         args.setArray(ctx.output.ofList(true, false));
         args.setMap(ctx.output.ofMap("k1", 1, "k2", 2));
         var map = Internal.from(args).toOptionalMapAsync(log).join();

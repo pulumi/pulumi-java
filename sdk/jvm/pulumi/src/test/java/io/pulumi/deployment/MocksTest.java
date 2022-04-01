@@ -13,7 +13,6 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
@@ -230,7 +229,7 @@ public class MocksTest {
         public final Output<Instance> instance;
 
         public MyCustomArgs(@Nullable Instance instance) {
-            this.instance = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).of(instance);
+            this.instance = Output.of(instance);
         }
     }
 
@@ -279,9 +278,8 @@ public class MocksTest {
 
         public MyStackResourceInApply() {
             System.out.println(Thread.currentThread());
-            var out = OutputBuilder.forDeployment(deployment);
             var later = CompletableFuture.delayedExecutor(1, TimeUnit.MILLISECONDS);
-            out.of(CompletableFuture.supplyAsync(() -> "instance")
+            Output.of(CompletableFuture.supplyAsync(() -> "instance")
                             .thenApplyAsync(Function.identity(), later))
                     .applyVoid(id -> {
                         var myInstance = new Instance(id, new InstanceArgs(), null);

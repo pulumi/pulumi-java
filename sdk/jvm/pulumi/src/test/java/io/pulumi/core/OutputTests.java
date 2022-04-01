@@ -10,7 +10,6 @@ import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.OutputInternal;
 import io.pulumi.deployment.*;
 import io.pulumi.deployment.internal.DeploymentTests;
-import org.junit.jupiter.api.BeforeAll;
 
 import java.util.Map;
 import java.util.Optional;

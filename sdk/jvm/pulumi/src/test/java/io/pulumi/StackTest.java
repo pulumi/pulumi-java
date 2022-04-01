@@ -6,8 +6,6 @@ import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputBuilder;
-import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -41,9 +39,8 @@ class StackTest {
         private final Output<String> implicitName;
 
         public ValidStack() {
-            var output = OutputBuilder.forDeployment(deployment);
-            this.explicitName = output.of("bar");
-            this.implicitName = output.of("buzz");
+            this.explicitName = Output.of("bar");
+            this.implicitName = Output.of("buzz");
         }
 
         public Output<String> getExplicitName() {
