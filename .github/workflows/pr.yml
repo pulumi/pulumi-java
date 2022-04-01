@@ -131,7 +131,7 @@ jobs:
 
   example-aws-java-webserver:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -184,7 +184,7 @@ jobs:
 
   example-azure-java-appservice-sql:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -238,7 +238,7 @@ jobs:
 
   example-gcp-java-gke-hello-world:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -329,7 +329,7 @@ jobs:
 
   example-aws-native-java-s3-folder:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -382,7 +382,7 @@ jobs:
 
   example-azure-java-static-website:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -482,7 +482,7 @@ jobs:
 
   example-eks-minimal:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -513,6 +513,7 @@ jobs:
       - name: Ensure dependencies
         run: make ensure
       - name: Publish Pulumi Java SDK to a local Maven repo
+        timeout-minutes: 2
         run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
