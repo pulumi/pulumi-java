@@ -36,7 +36,7 @@ public class Urn {
         Objects.requireNonNull(name);
         Objects.requireNonNull(type);
 
-        var deployment = project.getDeployment();
+        var deployment = name.getDeployment();
 
         var out = OutputBuilder.forDeployment(deployment);
 
