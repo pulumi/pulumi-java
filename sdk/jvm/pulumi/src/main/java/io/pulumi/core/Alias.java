@@ -2,6 +2,7 @@ package io.pulumi.core;
 
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -98,8 +99,8 @@ public class Alias {
         );
     }
 
-    public static Builder builder(Deployment deployment) {
-        return new Builder(deployment);
+    public static Builder builder() {
+        return new Builder();
     }
 
     public static final class Builder {
@@ -116,10 +117,8 @@ public class Alias {
         @Nullable
         private Output<String> parentUrn;
 
-        private final Deployment deployment;
-
-        public Builder(Deployment deployment) {
-            this.deployment = Objects.requireNonNull(deployment);
+        public Builder() {
+            /* empty */
         }
 
         public Builder name(@Nullable Output<String> name) {
@@ -128,7 +127,7 @@ public class Alias {
         }
 
         public Builder name(@Nullable String name) {
-            this.name = OutputBuilder.forDeployment(deployment).ofNullable(name);
+            this.name = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(name);
             return this;
         }
 
@@ -138,7 +137,7 @@ public class Alias {
         }
 
         public Builder type(@Nullable String type) {
-            this.type = OutputBuilder.forDeployment(deployment).ofNullable(type);
+            this.type = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(type);
             return this;
         }
 
@@ -148,7 +147,7 @@ public class Alias {
         }
 
         public Builder stack(@Nullable String stack) {
-            this.stack = OutputBuilder.forDeployment(deployment).ofNullable(stack);
+            this.stack = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(stack);
             return this;
         }
 
@@ -158,7 +157,7 @@ public class Alias {
         }
 
         public Builder project(@Nullable String project) {
-            this.project = OutputBuilder.forDeployment(deployment).ofNullable(project);
+            this.project = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofNullable(project);
             return this;
         }
 
