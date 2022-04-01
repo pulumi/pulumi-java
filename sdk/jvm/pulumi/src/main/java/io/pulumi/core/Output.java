@@ -9,6 +9,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import io.pulumi.core.internal.*;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 
 import javax.annotation.Nullable;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.OutputData.allHelperAsync;
-import static io.pulumi.core.internal.OutputInternal.TupleZeroOut;
+import static io.pulumi.core.internal.OutputInternal.tupleZeroOut;
 
 public interface Output<T> extends Copyable<Output<T>> {
 
@@ -117,19 +118,23 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     static <T> Output<T> of(T value) {
-        return new OutputInternal<>(value);
+        var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+        return new OutputInternal<>(deployment, value);
     }
 
     static <T> Output<T> of(CompletableFuture<T> value) {
-        return new OutputInternal<>(value, false);
+        var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+        return new OutputInternal<>(deployment, value, false);
     }
 
     static <T> Output<T> ofSecret(T value) {
-        return new OutputInternal<>(value, true);
+        var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+        return new OutputInternal<>(deployment, value, true);
     }
 
     static <T> Output<T> empty() {
-        return new OutputInternal<>(OutputData.empty());
+        var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+        return new OutputInternal<>(deployment, OutputData.empty());
     }
 
     static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
@@ -176,7 +181,11 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     private static <T> Output<List<T>> all(List<Output<T>> outputs) {
-        return new OutputInternal<>(
+        var deployment =
+                outputs.isEmpty()
+                ? CurrentDeployment.getCurrentDeploymentOrThrow()
+                : outputs.get(0).getDeployment();
+        return new OutputInternal<>(deployment,
                 allHelperAsync(outputs
                         .stream()
                         .map(output -> Internal.of(output).getDataAsync())
@@ -197,11 +206,14 @@ public interface Output<T> extends Copyable<Output<T>> {
      * then the final result will be a secret.
      */
     static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") Output... arguments) {
+        var deployment =
+                (arguments.length == 0)
+                        ? CurrentDeployment.getCurrentDeploymentOrThrow()
+                        : arguments[0].getDeployment();
         var data = Lists.newArrayList(arguments).stream()
                 .map(OutputData::copyInputOutputData)
                 .collect(Collectors.toList());
-
-        return new OutputInternal<>(
+        return new OutputInternal<>(deployment,
                 allHelperAsync(data)
                         .thenApply(objs -> objs.apply(
                                 v -> v == null ? null : String.format(formattableString, v.toArray())))
@@ -232,16 +244,14 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see #ofLeft(Object)
      */
     static <L, R> Output<Either<L, R>> ofLeft(Output<L> value) {
-        return new OutputInternal<>(Internal.of(value).getDataAsync()
-                .thenApply(ioData -> ioData.apply(Either::<L, R>ofLeft)));
+        return value.applyValue(Either::ofLeft);
     }
 
     /**
      * @see #ofLeft(Object)
      */
     static <L, R> Output<Either<L, R>> ofRight(Output<R> value) {
-        return new OutputInternal<>(Internal.of(value).getDataAsync()
-                .thenApply(ioData -> ioData.apply(Either::ofRight)));
+        return value.applyValue(Either::ofRight);
     }
 
     // Convenience methods for JSON
@@ -264,7 +274,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> ofJson(Output<JsonElement> json) {
-        return new OutputInternal<>(Internal.of(json).getDataAsync());
+        return json;
     }
 
     /**
@@ -418,6 +428,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     final class ListBuilder<E> {
         private final CompletableFutures.Builder<OutputData.Builder<ImmutableList.Builder<E>>> builder;
+        private Deployment deployment;
 
         public ListBuilder() {
             builder = CompletableFutures.builder(
@@ -427,6 +438,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
         @CanIgnoreReturnValue
         public Output.ListBuilder<E> add(Output<E> value) {
+            this.deployment = value.getDeployment();
             this.builder.accumulate(
                     Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
@@ -469,7 +481,11 @@ public interface Output<T> extends Copyable<Output<T>> {
         }
 
         public Output<List<E>> build() {
-            return new OutputInternal<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableList.Builder::build)));
+            var d = this.deployment == null
+                    ? CurrentDeployment.getCurrentDeploymentOrThrow()
+                    : this.deployment;
+            return new OutputInternal<>(d,
+                    builder.build(dataBuilder -> dataBuilder.build(ImmutableList.Builder::build)));
         }
     }
 
@@ -609,6 +625,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     final class MapBuilder<V> {
         private final CompletableFutures.Builder<OutputData.Builder<ImmutableMap.Builder<String, V>>> builder;
+        private Deployment deployment;
 
         public MapBuilder() {
             builder = CompletableFutures.builder(
@@ -618,6 +635,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> put(String key, Output<V> value) {
+            this.deployment = value.getDeployment();
             this.builder.accumulate(
                     Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data,
@@ -665,7 +683,11 @@ public interface Output<T> extends Copyable<Output<T>> {
         }
 
         public Output<Map<String, V>> build() {
-            return new OutputInternal<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableMap.Builder::build)));
+            var d = this.deployment == null
+                    ? CurrentDeployment.getCurrentDeploymentOrThrow()
+                    : this.deployment;
+            return new OutputInternal<>(d,
+                    builder.build(dataBuilder -> dataBuilder.build(ImmutableMap.Builder::build)));
         }
     }
 
@@ -675,7 +697,8 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#tuple(Output, Output, Output, Output, Output, Output, Output, Output)
      */
     static <T1, T2> Output<Tuples.Tuple2<T1, T2>> tuple(Output<T1> item1, Output<T2> item2) {
-        return tuple(item1, item2, TupleZeroOut, TupleZeroOut, TupleZeroOut, TupleZeroOut, TupleZeroOut, TupleZeroOut)
+        var z = tupleZeroOut(item1);
+        return tuple(item1, item2, z, z, z, z, z, z)
                 .applyValue(v -> Tuples.of(v.t1, v.t2));
     }
 
@@ -685,7 +708,8 @@ public interface Output<T> extends Copyable<Output<T>> {
     static <T1, T2, T3> Output<Tuples.Tuple3<T1, T2, T3>> tuple(
             Output<T1> item1, Output<T2> item2, Output<T3> item3
     ) {
-        return tuple(item1, item2, item3, TupleZeroOut, TupleZeroOut, TupleZeroOut, TupleZeroOut, TupleZeroOut)
+        var z = tupleZeroOut(item1);
+        return tuple(item1, item2, item3, z, z, z, z, z)
                 .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3));
     }
 
@@ -695,7 +719,8 @@ public interface Output<T> extends Copyable<Output<T>> {
     static <T1, T2, T3, T4> Output<Tuples.Tuple4<T1, T2, T3, T4>> tuple(
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4
     ) {
-        return tuple(item1, item2, item3, item4, TupleZeroOut, TupleZeroOut, TupleZeroOut, TupleZeroOut)
+        var z = tupleZeroOut(item1);
+        return tuple(item1, item2, item3, item4, z, z, z, z)
                 .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4));
     }
 
@@ -706,7 +731,8 @@ public interface Output<T> extends Copyable<Output<T>> {
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4,
             Output<T5> item5
     ) {
-        return tuple(item1, item2, item3, item4, item5, TupleZeroOut, TupleZeroOut, TupleZeroOut)
+        var z = tupleZeroOut(item1);
+        return tuple(item1, item2, item3, item4, item5, z, z, z)
                 .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5));
     }
 
@@ -717,7 +743,8 @@ public interface Output<T> extends Copyable<Output<T>> {
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4,
             Output<T5> item5, Output<T6> item6
     ) {
-        return tuple(item1, item2, item3, item4, item5, item6, TupleZeroOut, TupleZeroOut)
+        var z = tupleZeroOut(item1);
+        return tuple(item1, item2, item3, item4, item5, item6, z, z)
                 .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5, v.t6));
     }
 
@@ -728,7 +755,8 @@ public interface Output<T> extends Copyable<Output<T>> {
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4,
             Output<T5> item5, Output<T6> item6, Output<T7> item7
     ) {
-        return tuple(item1, item2, item3, item4, item5, item6, item7, TupleZeroOut)
+        var z = tupleZeroOut(item1);
+        return tuple(item1, item2, item3, item4, item5, item6, item7, z)
                 .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5, v.t6, v.t7));
     }
 
@@ -742,6 +770,7 @@ public interface Output<T> extends Copyable<Output<T>> {
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4,
             Output<T5> item5, Output<T6> item6, Output<T7> item7, Output<T8> item8
     ) {
-        return new OutputInternal<>(OutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
+        return new OutputInternal<>(item1.getDeployment(),
+                OutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
     }
 }

@@ -2,6 +2,7 @@ package io.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
+import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.CurrentDeployment;
@@ -154,5 +155,10 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
     @Override
     public Deployment getDeployment() {
         return deployment;
+    }
+
+    @InternalUse
+    public static final Output<Tuples.Tuple0> tupleZeroOut(Output baseOutput) {
+        return new OutputInternal<Tuples.Tuple0>(baseOutput.getDeployment(), Tuples.Tuple0.Empty);
     }
 }
