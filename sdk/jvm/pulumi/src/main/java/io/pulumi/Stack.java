@@ -72,8 +72,7 @@ public class Stack extends ComponentResource {
      * any @see {@link Deployment#runAsync(Supplier)} overload is called.
      */
     @InternalUse
-    private Stack(Deployment deployment,
-                  Supplier<CompletableFuture<Map<String, Optional<Object>>>> init,
+    private Stack(Supplier<CompletableFuture<Map<String, Optional<Object>>>> init,
                   @Nullable StackOptions options) {
         this(options);
         try {
@@ -191,10 +190,8 @@ public class Stack extends ComponentResource {
         public static final String RootPulumiStackTypeName = "pulumi:pulumi:Stack";
 
         @InternalUse
-        public static Stack of(Deployment deployment,
-                               Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
-                               StackOptions options) {
-            return new Stack(deployment, callback, options);
+        public static Stack of(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
+            return new Stack(callback, options);
         }
     }
 }

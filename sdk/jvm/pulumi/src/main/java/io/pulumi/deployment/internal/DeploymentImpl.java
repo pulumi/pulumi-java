@@ -1667,7 +1667,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         @Override
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
                                                          StackOptions options) {
-            var stack = Stack.InternalStatic.of(deployment.get(), callback, options);
+            var stack = Stack.InternalStatic.of(callback, options);
             registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
                     Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
             return whileRunningAsync();
