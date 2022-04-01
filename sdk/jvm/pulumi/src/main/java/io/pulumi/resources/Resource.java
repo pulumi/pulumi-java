@@ -272,7 +272,7 @@ public abstract class Resource {
         // resource constructor.
         var aliases = ImmutableList.<Output<String>>builder();
         for (var alias : options.getAliases()) {
-            aliases.add(collapseAliasToUrn(deployment, alias, name, type, options.parent));
+            aliases.add(collapseAliasToUrn(alias, name, type, options.parent));
         }
         this.aliases = aliases.build();
 
@@ -341,12 +341,12 @@ public abstract class Resource {
     }
 
     private static Output<String> collapseAliasToUrn(
-            Deployment deployment,
             Output<Alias> alias,
             String defaultName,
             String defaultType,
             @Nullable Resource defaultParent
     ) {
+        var deployment = alias.getDeployment();
         var out = OutputBuilder.forDeployment(deployment);
         return alias.apply(a -> {
             if (a.getUrn().isPresent()) {
