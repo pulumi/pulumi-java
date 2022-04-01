@@ -7,6 +7,7 @@ import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.ComponentResource;
@@ -32,8 +33,6 @@ public class Stack extends ComponentResource {
      */
     private Output<Map<String, Optional<Object>>> outputs;
 
-    private final Deployment deployment;
-
     @SuppressWarnings("unused")
     @Field
     private final Internal internal = new Internal();
@@ -42,8 +41,8 @@ public class Stack extends ComponentResource {
      * Create a Stack with stack resources defined in derived class constructor.
      * Also @see {@link #Stack(StackOptions)}
      */
-    public Stack(Deployment deployment) {
-        this(deployment,null);
+    public Stack() {
+        this(null);
     }
 
     /**
@@ -51,17 +50,20 @@ public class Stack extends ComponentResource {
      *
      * @param options optional stack options
      */
-    public Stack(Deployment deployment, @Nullable StackOptions options) {
+    public Stack(@Nullable StackOptions options) {
         super(
-                deployment,
                 InternalStatic.RootPulumiStackTypeName,
-                String.format("%s-%s", deployment.getProjectName(), deployment.getStackName()),
-                convertOptions(deployment, options)
+                buildStackName(),
+                convertOptions(options)
         );
         // set a derived class as the deployment stack
         DeploymentInternal.cast(deployment).setStack(this);
         this.outputs = OutputBuilder.forDeployment(deployment).of(Map.of());
-        this.deployment = deployment;
+    }
+
+    private static String buildStackName() {
+        var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+        return String.format("%s-%s", deployment.getProjectName(), deployment.getStackName());
     }
 
     /**
@@ -73,7 +75,7 @@ public class Stack extends ComponentResource {
     private Stack(Deployment deployment,
                   Supplier<CompletableFuture<Map<String, Optional<Object>>>> init,
                   @Nullable StackOptions options) {
-        this(deployment, options);
+        this(options);
         try {
             this.outputs = OutputBuilder.forDeployment(deployment).of(runInitAsync(init));
         } finally {
@@ -88,13 +90,12 @@ public class Stack extends ComponentResource {
     }
 
     @Nullable
-    private static ComponentResourceOptions convertOptions(Deployment deployment, @Nullable StackOptions options) {
+    private static ComponentResourceOptions convertOptions(@Nullable StackOptions options) {
         if (options == null) {
             return null;
         }
 
         return new ComponentResourceOptions(
-                deployment,
                 null,
                 null,
                 null,

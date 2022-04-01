@@ -330,6 +330,6 @@ public class Deserializer {
             return resource;
         }
 
-        return Optional.of(new DependencyResource(deployment, urn));
+        return Optional.of(new DependencyResource(urn));
     }
 }

@@ -18,16 +18,14 @@ import java.util.concurrent.CompletableFuture;
  */
 public class ComponentResource extends Resource {
 
-    private final Deployment deployment;
-
     /**
      * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
      *
      * @param type The type of the resource
      * @param name The unique name of the resource
      */
-    public ComponentResource(Deployment deployment, String type, String name) {
-        this(deployment, type, name, null /* no options */);
+    public ComponentResource(String type, String name) {
+        this(type, name, null /* no options */);
     }
 
     /**
@@ -37,8 +35,8 @@ public class ComponentResource extends Resource {
      * @param name    The unique name of the resource
      * @param options A bag of options that control this resource's behavior
      */
-    public ComponentResource(Deployment deployment, String type, String name, @Nullable ComponentResourceOptions options) {
-        this(deployment, type, name, options, false);
+    public ComponentResource(String type, String name, @Nullable ComponentResourceOptions options) {
+        this(type, name, options, false);
     }
 
     /**
@@ -49,12 +47,11 @@ public class ComponentResource extends Resource {
      * @param options A bag of options that control this resource's behavior
      * @param remote  True if this is a remote component resource
      */
-    public ComponentResource(Deployment deployment,
-                             String type,
+    public ComponentResource(String type,
                              String name,
                              @Nullable ComponentResourceOptions options,
                              boolean remote) {
-        this(deployment, type, name, ResourceArgs.Empty, options, remote);
+        this(type, name, ResourceArgs.Empty, options, remote);
     }
 
     /**
@@ -65,8 +62,8 @@ public class ComponentResource extends Resource {
      * @param args    The arguments to use to populate the new resource
      * @param options A bag of options that control this resource's behavior
      */
-    public ComponentResource(Deployment deployment, String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options) {
-        this(deployment, type, name, args, options, false);
+    public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options) {
+        this(type, name, args, options, false);
     }
 
     /**
@@ -84,14 +81,13 @@ public class ComponentResource extends Resource {
      * @param remote  True if this is a remote component resource
      */
     public ComponentResource(
-            Deployment deployment, String type, String name, @Nullable ResourceArgs args,
+            String type, String name, @Nullable ResourceArgs args,
             @Nullable ComponentResourceOptions options,
             boolean remote) {
-        super(Objects.requireNonNull(deployment), type, name, false,
+        super(type, name, false,
                 args == null ? ResourceArgs.Empty : args,
-                options == null ? ComponentResourceOptions.builder(deployment).build() : options,
+                options == null ? ComponentResourceOptions.builder().build() : options,
                 remote, false);
-        this.deployment = deployment;
     }
 
     protected void registerOutputs() {

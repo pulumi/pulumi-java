@@ -4,6 +4,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.OutputBuilder;
 import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.internal.CurrentDeployment;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -41,14 +42,11 @@ public abstract class ResourceOptions {
     @Nullable
     protected List<String> replaceOnChanges;
 
-    protected final Deployment deployment;
-
-    protected ResourceOptions(Deployment deployment) {
-        this.deployment = Objects.requireNonNull(deployment);
+    protected ResourceOptions() {
+        /* empty */
     }
 
     protected ResourceOptions(
-            Deployment deployment,
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
@@ -62,7 +60,6 @@ public abstract class ResourceOptions {
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges
     ) {
-        this(deployment);
         this.id = id;
         this.parent = parent;
         this.dependsOn = dependsOn;
@@ -90,7 +87,8 @@ public abstract class ResourceOptions {
         }
 
         public B id(@Nullable String id) {
-            options.id = OutputBuilder.forDeployment(options.deployment).ofNullable(id);
+            var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+            options.id = OutputBuilder.forDeployment(deployment).ofNullable(id);
             return (B) this;
         }
 
@@ -109,7 +107,8 @@ public abstract class ResourceOptions {
         }
 
         public B dependsOn(@Nullable List<Resource> dependsOn) {
-            options.dependsOn = OutputBuilder.forDeployment(options.deployment).ofNullable(dependsOn);
+            var deployment = CurrentDeployment.getCurrentDeploymentOrThrow();
+            options.dependsOn = OutputBuilder.forDeployment(deployment).ofNullable(dependsOn);
             return (B) this;
         }
 
@@ -193,7 +192,9 @@ public abstract class ResourceOptions {
      * Optional additional explicit dependencies on other resources.
      */
     public Output<List<Resource>> getDependsOn() {
-        return this.dependsOn == null ? OutputBuilder.forDeployment(deployment).ofList() : this.dependsOn;
+        return this.dependsOn == null
+                ? OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow()).ofList()
+                : this.dependsOn;
     }
 
     /**
@@ -292,7 +293,7 @@ public abstract class ResourceOptions {
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
         options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
 
-        options1.dependsOn = OutputBuilder.forDeployment(options1.deployment)
+        options1.dependsOn = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow())
                 .concatList(options1.dependsOn, options2.dependsOn);
 
         // Override the ID if one was specified for consistency with other language SDKs.

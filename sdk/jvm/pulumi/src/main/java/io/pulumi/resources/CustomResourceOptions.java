@@ -22,12 +22,11 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
     @Nullable
     private String importId;
 
-    private CustomResourceOptions(Deployment deployment) {
-        super(deployment);
+    private CustomResourceOptions() {
+        super();
     }
 
     private CustomResourceOptions(
-            Deployment deployment,
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
@@ -44,15 +43,15 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable String importId,
             @Nullable List<String> replaceOnChanges
     ) {
-        super(deployment, id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
+        super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
                 resourceTransformations, aliases, urn, replaceOnChanges);
         this.deleteBeforeReplace = deleteBeforeReplace;
         this.additionalSecretOutputs = additionalSecretOutputs;
         this.importId = importId;
     }
 
-    public static Builder builder(Deployment deployment) {
-        return new Builder(new CustomResourceOptions(deployment));
+    public static Builder builder() {
+        return new Builder(new CustomResourceOptions());
     }
 
     public static final class Builder extends ResourceOptions.Builder<CustomResourceOptions, Builder> {
@@ -111,7 +110,6 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
 
     public CustomResourceOptions copy() {
         return new CustomResourceOptions(
-                deployment,
                 this.id,
                 this.parent,
                 this.getDependsOn().copy(),
@@ -155,8 +153,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable CustomResourceOptions options2,
             @Nullable Output<String> id
     ) {
-        options1 = options1 != null ? options1.copy() : CustomResourceOptions.builder(options1.deployment).build();
-        options2 = options2 != null ? options2.copy() : CustomResourceOptions.builder(options2.deployment).build();
+        options1 = options1 != null ? options1.copy() : CustomResourceOptions.builder().build();
+        options2 = options2 != null ? options2.copy() : CustomResourceOptions.builder().build();
 
         // first, merge all the normal option values over
         //noinspection ConstantConditions

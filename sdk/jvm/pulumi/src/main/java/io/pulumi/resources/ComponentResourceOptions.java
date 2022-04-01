@@ -19,12 +19,11 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
     @Nullable
     private List<ProviderResource> providers;
 
-    protected ComponentResourceOptions(Deployment deployment) {
-        super(deployment);
+    protected ComponentResourceOptions() {
+        super();
     }
 
     public ComponentResourceOptions(
-            Deployment deployment,
             @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Output<List<Resource>> dependsOn,
@@ -38,14 +37,14 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable List<String> replaceOnChanges,
             @Nullable List<ProviderResource> providers
     ) {
-        super(deployment, id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
+        super(id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
                 resourceTransformations, aliases, urn, replaceOnChanges);
         this.providers = providers;
         Objects.requireNullState(this.provider, () -> "expected 'provider' to be null, use 'providers' instead");
     }
 
-    public static Builder builder(Deployment deployment) {
-        return new Builder(new ComponentResourceOptions(deployment));
+    public static Builder builder() {
+        return new Builder(new ComponentResourceOptions());
     }
 
     public static final class Builder extends ResourceOptions.Builder<ComponentResourceOptions, Builder> {
@@ -75,7 +74,6 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
 
     public ComponentResourceOptions copy() {
         return new ComponentResourceOptions(
-                deployment,
                 this.id,
                 this.parent,
                 this.getDependsOn().copy(),
@@ -117,8 +115,8 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable ComponentResourceOptions options2,
             @Nullable Output<String> id
     ) {
-        options1 = options1 != null ? options1.copy() : ComponentResourceOptions.builder(options1.deployment).build();
-        options2 = options2 != null ? options2.copy() : ComponentResourceOptions.builder(options2.deployment).build();
+        options1 = options1 != null ? options1.copy() : ComponentResourceOptions.builder().build();
+        options2 = options2 != null ? options2.copy() : ComponentResourceOptions.builder().build();
 
         if (options1.provider != null) {
             throw new IllegalStateException("unexpected non-null 'provider', should use only 'providers'");

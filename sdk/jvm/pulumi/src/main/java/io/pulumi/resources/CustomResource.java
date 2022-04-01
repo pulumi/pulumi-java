@@ -30,9 +30,8 @@ public class CustomResource extends Resource {
      * @param args       The arguments to use to populate the new resource.
      * @param dependency True if this is a synthetic resource used internally for dependency tracking.
      */
-    protected CustomResource(Deployment deployment,
-                             String type, String name, @Nullable ResourceArgs args, boolean dependency) {
-        this(deployment, type, name, args, null, dependency);
+    protected CustomResource(String type, String name, @Nullable ResourceArgs args, boolean dependency) {
+        this(type, name, args, null, dependency);
     }
 
     /**
@@ -43,9 +42,9 @@ public class CustomResource extends Resource {
      * @param args    The arguments to use to populate the new resource.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CustomResource(Deployment deployment, String type, String name, @Nullable ResourceArgs args,
+    public CustomResource(String type, String name, @Nullable ResourceArgs args,
                           @Nullable CustomResourceOptions options) {
-        this(deployment, type, name, args, options, false);
+        this(type, name, args, options, false);
     }
 
     /**
@@ -65,23 +64,23 @@ public class CustomResource extends Resource {
      * @param dependency True if this is a synthetic resource used internally for dependency tracking.
      */
     protected CustomResource(
-            Deployment deployment,
             String type,
             String name,
             @Nullable ResourceArgs args,
             @Nullable CustomResourceOptions options,
             boolean dependency
     ) {
-        super(deployment, type, name, true,
+        super(type, name, true,
                 args == null ? ResourceArgs.Empty : args,
-                options == null ? CustomResourceOptions.builder(deployment).build() : options,
+                options == null ? CustomResourceOptions.builder().build() : options,
                 false, dependency,
                 (self) -> {
                     // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
                     if (self instanceof CustomResource) {
-                        ((CustomResource) self).idFuture = new CompletableFuture<>();
-                        ((CustomResource) self).id = OutputBuilder.forDeployment(deployment)
-                                .of(((CustomResource) self).idFuture)
+                        var cr = (CustomResource) self;
+                        cr.idFuture = new CompletableFuture<>();
+                        cr.id = OutputBuilder.forDeployment(cr.deployment)
+                                .of(cr.idFuture)
                                 .apply(id -> id);
                     } else {
                         throw new IllegalStateException(String.format(

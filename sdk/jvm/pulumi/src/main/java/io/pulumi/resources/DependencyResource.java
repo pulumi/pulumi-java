@@ -12,8 +12,8 @@ import io.pulumi.deployment.Deployment;
  * with remote component resources.
  */
 public class DependencyResource extends CustomResource {
-    public DependencyResource(Deployment deployment, String urn) {
-        super(deployment, "", "", ResourceArgs.Empty, true);
+    public DependencyResource(String urn) {
+        super("", "", ResourceArgs.Empty, true);
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
         this.setUrn(new OutputInternal<>(deployment, resources, urn));
         this.setId(OutputBuilder.forDeployment(deployment).of((String)null));

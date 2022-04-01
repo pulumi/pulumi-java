@@ -743,7 +743,7 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                         // Unmarshal return dependencies.
                         var dependencies = response.getReturnDependenciesMap().values().stream()
                                 .flatMap(deps -> deps.getUrnsList().stream()
-                                        .map(urn -> new DependencyResource(deployment.get(), urn)))
+                                        .map(urn -> new DependencyResource(urn)))
                                 .map(r -> (Resource) r)
                                 .collect(toImmutableSet());
                         return new CallRawAsyncResult(response.getReturn(), dependencies);
