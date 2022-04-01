@@ -158,7 +158,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
 
         // first, merge all the normal option values over
         //noinspection ConstantConditions
-        options1 = mergeSharedOptions(options1, options2, id);
+        options1 = mergeSharedOptions(id.getDeployment(), options1, options2, id);
 
         options1.deleteBeforeReplace = options1.deleteBeforeReplace || options2.deleteBeforeReplace;
         options1.importId = options2.importId == null ? options1.importId : options2.importId;

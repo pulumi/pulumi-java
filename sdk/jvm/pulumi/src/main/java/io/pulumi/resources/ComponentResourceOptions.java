@@ -126,7 +126,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
         }
 
         // first, merge all the normal option values over
-        options1 = mergeSharedOptions(options1, options2, id);
+        options1 = mergeSharedOptions(id.getDeployment(), options1, options2, id);
 
         options1.providers = mergeNullableList(options1.providers, options2.providers);
 

@@ -272,11 +272,14 @@ public abstract class ResourceOptions {
         return this.replaceOnChanges == null ? List.of() : List.copyOf(this.replaceOnChanges);
     }
 
-    protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
-        return mergeSharedOptions(options1, options2, null);
+    protected static <T extends ResourceOptions> T mergeSharedOptions(Deployment deployment, T options1, T options2) {
+        return mergeSharedOptions(deployment, options1, options2, null);
     }
 
-    protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2, @Nullable Output<String> id) {
+    protected static <T extends ResourceOptions> T mergeSharedOptions(Deployment deployment,
+                                                                      T options1,
+                                                                      T options2,
+                                                                      @Nullable Output<String> id) {
         Objects.requireNonNull(options1);
         Objects.requireNonNull(options2);
 
@@ -293,7 +296,7 @@ public abstract class ResourceOptions {
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
         options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
 
-        options1.dependsOn = OutputBuilder.forDeployment(CurrentDeployment.getCurrentDeploymentOrThrow())
+        options1.dependsOn = OutputBuilder.forDeployment(deployment)
                 .concatList(options1.dependsOn, options2.dependsOn);
 
         // Override the ID if one was specified for consistency with other language SDKs.
