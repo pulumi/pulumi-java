@@ -10,8 +10,10 @@ import com.google.gson.JsonNull;
 import io.pulumi.core.internal.*;
 
 import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.*;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -21,7 +23,23 @@ import java.util.stream.Stream;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.OutputData.allHelperAsync;
 import static io.pulumi.core.internal.OutputInternal.TupleZeroOut;
+import static java.util.Objects.requireNonNull;
 
+/**
+ * {@code Output<T>} is a key part of how Pulumi tracks dependencies
+ * between @see {@link io.pulumi.resources.Resource}'s.
+ * Because the values of outputs are not available until resources are created,
+ * these are represented using the special {@code Output<T>} type,
+ * which internally represents two things:
+ * <ol>
+ *     <li>An eventually available value of the output</li>
+ *     <li>The dependency on the source(s) of the output value</li>
+ * </ol>
+ * In fact, {@code Output<T>} is quite similar to @see {@link CompletableFuture}.
+ * Additionally, they carry along dependency information.
+ * <p/>
+ * The output properties of all resource objects in Pulumi have type {@code Output<T>}.
+ */
 public interface Output<T> extends Copyable<Output<T>> {
 
     /**
@@ -66,7 +84,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#apply(Function) for more details.
      */
     default <U> Output<U> applyOptional(Function<T, Optional<U>> func) {
-        return apply(t -> Output.ofOptional(func.apply(t))); // TODO: a candidate to move to Output.ofOptional
+        return apply(t -> Output.ofOptional(func.apply(t)));
     }
 
     /**
@@ -76,6 +94,11 @@ public interface Output<T> extends Copyable<Output<T>> {
         return apply(t -> Output.of(func.apply(t)));
     }
 
+    /**
+     * A special case of {@link Output#apply(Function)} that takes {@link Consumer}
+     *
+     * @see Output#apply(Function) for more details.
+     */
     @CanIgnoreReturnValue
     default Output<Void> applyVoid(Consumer<T> consumer) {
         return apply(t -> {
@@ -86,6 +109,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * Creates a shallow copy (the underlying CompletableFuture is copied) of this @see {@link Output<T>}
+     *
      * @return a shallow copy of the @see {@link Output<T>}
      */
     Output<T> copy();
@@ -104,33 +128,88 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     // Static section -----
 
+    /**
+     * Returns an empty {@code Output<T>} instance. No value is present for this
+     * {@code Output<T>}.
+     * <p/>
+     * Equivalent of {@code Output.ofNullable((T) null)}
+     *
+     * @param <T> The type of the non-existent value
+     * @return an empty {@code Output<T>}
+     */
     static <T> Output<T> of() {
         return Output.empty();
     }
 
+    /**
+     * Returns an {@code Output<T>} describing the given non-{@code null} value.
+     *
+     * @param value the value to describe, which must be non-{@code null}
+     * @param <T>   the type of the value
+     * @return an {@code Output<T>} with the value present
+     * @throws NullPointerException if value is {@code null}
+     */
     static <T> Output<T> of(T value) {
+        requireNonNull(value);
         return new OutputInternal<>(value);
     }
 
-    static <T> Output<T> of(CompletableFuture<T> value) {
-        return new OutputInternal<>(value, false);
+    /**
+     * Returns an {@code Output<T>} describing a future value.
+     *
+     * @param future the future to describe, which must be non-{@code null}
+     * @param <T>    the type of the value
+     * @return an {@code Output<T>} with the value present
+     * @throws NullPointerException if future is {@code null}, but not the future value
+     */
+    static <T> Output<T> of(CompletableFuture<T> future) {
+        return new OutputInternal<>(future, false);
     }
 
+    /**
+     * Returns an {@code Output<T>} describing the given non-{@code null} secret value.
+     *
+     * @param value the secret value to describe, which must be non-{@code null}
+     * @param <T>   the type of the value
+     * @return an {@code Output<T>} with the value present
+     * @throws NullPointerException if value is {@code null}
+     */
     static <T> Output<T> ofSecret(T value) {
         return new OutputInternal<>(value, true);
     }
 
+    /**
+     * @see Output#of() for more details
+     */
     static <T> Output<T> empty() {
         return new OutputInternal<>(OutputData.empty());
     }
 
-    static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
-        if (value == null) {
+    /**
+     * Returns an {@code Output<T>} with given output, if
+     * non-{@code null}, otherwise returns an empty {@code Output<T>}.
+     *
+     * @param output the possibly-{@code null} output
+     * @param <T>    the type of the value
+     * @return an {@code Output<T>} if the specified output
+     * is non-{@code null}, otherwise an empty {@code Output<T>}
+     */
+    static <T> Output<T> ofNullable(@Nullable Output<T> output) {
+        if (output == null) {
             return Output.empty();
         }
-        return value;
+        return output;
     }
 
+    /**
+     * Returns an {@code Output<T>} describing the given value, if
+     * non-{@code null}, otherwise returns an empty {@code Output<T>}.
+     *
+     * @param value the possibly-{@code null} value to describe
+     * @param <T>   the type of the value
+     * @return an {@code Output<T>} with a present value if the specified value
+     * is non-{@code null}, otherwise an empty {@code Output<T>}
+     */
     static <T> Output<T> ofNullable(@Nullable T value) {
         if (value == null) {
             return Output.empty();
@@ -138,9 +217,18 @@ public interface Output<T> extends Copyable<Output<T>> {
         return Output.of(value);
     }
 
+    /**
+     * Returns an {@code Output<T>} describing the given value, if
+     * present, otherwise returns an empty {@code Output<T>}.
+     *
+     * @param value the possibly-empty value to describe
+     * @param <T>   the type of the value
+     * @return an {@code Output<T>} with a present value if the specified value
+     * is present, otherwise an empty {@code Output<T>}
+     */
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // this is a converter method, so it's ok
     static <T> Output<T> ofOptional(Optional<T> value) {
-        Objects.requireNonNull(value);
+        requireNonNull(value);
         if (value.isEmpty()) {
             return Output.empty();
         }
@@ -177,9 +265,9 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Takes in a "formattableString" with potential @see {@link Output}
+     * Takes in a {@code formattableString} with potential @see {@link Output}
      * in the 'placeholder holes'. Conceptually, this method unwraps all the underlying values in the holes,
-     * combines them appropriately with the "formattableString", and produces an @see {@link Output}
+     * combines them appropriately with the {@code formattableString}, and produces an @see {@link Output}
      * containing the final result.
      * <p>
      * If any of the {@link Output}s are not known, the
@@ -202,11 +290,9 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     // Convenience methods for Either (a.k.a. Union)
 
-    // TODO: maybe we can move this complexity to the codegen, since this is not very useful for an end user anyway
-
     /**
-     * Represents an @see {@link Output} value that can be one of two different types.
-     * For example, it might potentially be an "Integer" some of the time
+     * Represents an {@link Output} value that can be one of two different types.
+     * For example, it might potentially be an "Integer" some time
      * or a "String" in other cases.
      */
     static <L, R> Output<Either<L, R>> ofLeft(L value) {
@@ -240,13 +326,16 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofJson(JsonElement)
+     * @return a {@link JsonNull#INSTANCE}
      */
     static Output<JsonElement> ofJson() {
         return ofJson(JsonNull.INSTANCE);
     }
 
     /**
-     * Represents an @see {@link Output} value that wraps a @see {@link JsonElement}
+     * Represents an {@link Output} value that wraps a {@link JsonElement}
+     * @param json the {@link JsonElement} to wrap
+     * @return given {@link JsonElement} wrapped in an {@link Output}
      */
     static Output<JsonElement> ofJson(JsonElement json) {
         return Output.of(json);
@@ -254,13 +343,9 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofJson(JsonElement)
-     */
-    static Output<JsonElement> ofJson(Output<JsonElement> json) {
-        return new OutputInternal<>(Internal.of(json).getDataAsync());
-    }
-
-    /**
-     * @see #ofJson(JsonElement)
+     * @param json the json value to wrap
+     * @return given json value as a {@link JsonElement} wrapped in an {@link Output}
+     * @throws com.google.gson.JsonSyntaxException – if json is not valid
      */
     static Output<JsonElement> parseJson(String json) {
         var gson = new Gson();
@@ -269,10 +354,13 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofJson(JsonElement)
+     * @param json the json value wrapped in an {@link Output<String>}
+     * @return given json value as a {@link JsonElement} wrapped in an {@link Output}
+     * @throws com.google.gson.JsonSyntaxException – if json is not valid
      */
     static Output<JsonElement> parseJson(Output<String> json) {
         var gson = new Gson();
-        return ofJson(json.applyValue((String j) -> gson.fromJson(j, JsonElement.class)));
+        return json.applyValue((String j) -> gson.fromJson(j, JsonElement.class));
     }
 
     // Convenience methods for List
@@ -300,14 +388,17 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} with an empty {@link List}
      */
     static <E> Output<List<E>> ofList() {
         return Output.of(ImmutableList.of());
     }
 
     /**
-     * Returns an @see {@link Output} value that wraps a @see {@link List}.
-     * Also @see #listBuilder()
+     * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with one element.
      */
     static <E> Output<List<E>> ofList(E e1) {
         return Output.of(ImmutableList.of(e1));
@@ -315,6 +406,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with two elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2) {
         return Output.of(ImmutableList.of(e1, e2));
@@ -322,14 +415,17 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with three elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3) {
         return Output.of(ImmutableList.of(e1, e2, e3));
     }
 
-
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with four elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4));
@@ -337,6 +433,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with five elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5));
@@ -344,6 +442,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with six elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6));
@@ -351,6 +451,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with seven elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7));
@@ -358,6 +460,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with eight elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8));
@@ -365,6 +469,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with nine elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9));
@@ -372,6 +478,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with ten elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10));
@@ -379,6 +487,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with eleven elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11));
@@ -386,6 +496,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with twelve elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11, E e12) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12));
@@ -393,6 +505,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofList(Object)
+     * @see #listBuilder()
+     * @return an {@link Output} value that wraps a {@link List} with more than twelve elements.
      */
     @SafeVarargs
     static <E> Output<List<E>> ofList(
@@ -401,13 +515,17 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Builds an @see {@link Output} value that wraps a @see {@link List}.
-     * Also @see #ofList(Object)
+     * Helps to build an {@link Output} that wraps a {@link List}.
+     * @see #ofList(Object)
+     * @return an {@link Output.ListBuilder<E>} instance
      */
     static <E> Output.ListBuilder<E> listBuilder() {
         return new Output.ListBuilder<>();
     }
 
+    /**
+     * A {@link List} wrapped in an {@link Output} builder.
+     */
     final class ListBuilder<E> {
         private final CompletableFutures.Builder<OutputData.Builder<ImmutableList.Builder<E>>> builder;
 
@@ -503,47 +621,16 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofMap(String, Object)
+     * @see #mapBuilder()
+     * @return an {@link Output} with an empty {@link Map}
      */
     static <V> Output<Map<String, V>> ofMap() {
         return Output.of(ImmutableMap.of());
     }
 
     /**
-     * Returns an @see {@link Output} value that wraps a @see {@link Map}.
-     * </p>
-     * A mapping of {@code String}s to values that can be passed in as the arguments to
-     * a @see {@link io.pulumi.resources.Resource}.
-     * The individual values are themselves @see {@link Output<V>}s.
-     * <p/>
-     * <p>
-     * {@code Output<Map<String,V>>} differs from a normal @see {@link Map} in that it is
-     * wrapped in an @see {@link Output<V>}. For example, a @see {@link io.pulumi.resources.Resource}
-     * that accepts an {@code Output<Map<String,V>>} may accept not just a map but an @see {@link Output}
-     * of a map as well.
-     * This is important for cases where the @see {@link Output}
-     * map from some {@link io.pulumi.resources.Resource} needs to be passed
-     * into another {@link io.pulumi.resources.Resource}.
-     * Or for cases where creating the map invariably produces an {@link Output} because
-     * its resultant value is dependent on other {@link Output}s.
-     * <p/>
-     * This benefit of {@code Output<Map<String,V>>} is also a limitation. Because it represents
-     * a list of values that may eventually be created, there is no way to simply iterate over,
-     * or access the elements of the map synchronously.
-     * <p/>
-     * {@code Output<Map<String,V>>} is designed to be easily used in object and collection initializers.
-     * For example, a resource that accepts a map of values can be written easily in this form:
-     * <p/>
-     * <code>
-     * new SomeResource("name", new SomeResourceArgs(
-     * Output.ofMap(
-     * key1, value1,
-     * key2, value2,
-     * key3, value3,
-     * )
-     * ));
-     * </code>
-     * </p>
-     * Also @see #mapBuilder()
+     * @see #mapBuilder()
+     * @return an {@link Output} that wraps a {@link Map} with one pair.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1) {
         return Output.of(ImmutableMap.of(key1, value1));
@@ -551,6 +638,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofMap(String, Object)
+     * @see #mapBuilder()
+     * @return an {@link Output} that wraps a {@link Map} with two pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2) {
@@ -559,6 +648,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofMap(String, Object)
+     * @see #mapBuilder()
+     * @return an {@link Output} that wraps a {@link Map} with three pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2,
@@ -568,6 +659,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofMap(String, Object)
+     * @see #mapBuilder()
+     * @return an {@link Output} that wraps a {@link Map} with four pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2,
@@ -580,6 +673,8 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * @see #ofMap(String, Object)
+     * @see #mapBuilder()
+     * @return an {@link Output} that wraps a {@link Map} with five pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2,
@@ -592,13 +687,16 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Builds an @see {@link Output} value that wraps a @see {@link Map}.
-     * Also @see #ofMap(Object)
+     * Helps to build a {@link Map} wrapped in an {@link Output}.
+     * @see #ofMap(String, Object)
      */
     static <E> Output.MapBuilder<E> mapBuilder() {
         return new Output.MapBuilder<>();
     }
 
+    /**
+     * A {@link Map} wrapped in an {@link Output} builder.
+     */
     final class MapBuilder<V> {
         private final CompletableFutures.Builder<OutputData.Builder<ImmutableMap.Builder<String, V>>> builder;
 
