@@ -150,6 +150,12 @@ func generateJava(configFile string) error {
 		}
 	}
 
+	// TODO(t0yv0): Curious, should this be part of GeneratePackage rather than pulumi-java-gen? 
+	//              I think that everything under GeneratePackage will end up shipping as part of machinery 
+	//              the users will use to build Pulumi Packages (for Java). 
+	//              On the other hand, pulumi-java-gen is internal repository helper for us in here. 
+	//              I think the plugin.json is something quite official so perhaps we can move?
+	// TODO(pprazak): Would that also include version.txt above? The files are used together.
 	if cfg.PluginFile != "" {
 		pulumiPlugin := &plugin.PulumiPluginJSON{
 			Resource: true,
