@@ -1,6 +1,7 @@
 package io.pulumi.core;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import io.pulumi.core.internal.OutputInternal;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class OutputStaticsTest {
 
     @Test
     void testListConcatEmpty() {
-        var result = Output.concatList(Output.empty(), Output.empty());
+        var result = Output.concatList(OutputInternal.empty(), OutputInternal.empty());
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -86,7 +87,7 @@ public class OutputStaticsTest {
 
     @Test
     void testMapConcatEmpty() {
-        var result = Output.concatMap(Output.empty(), Output.empty());
+        var result = Output.concatMap(OutputInternal.empty(), OutputInternal.empty());
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isFalse();
@@ -236,12 +237,6 @@ public class OutputStaticsTest {
     void testExpectedNPEs() {
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
-                        Output.<Integer>empty().applyValue(x -> x + 1)
-                )
-        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
-
-        assertThatThrownBy(() ->
-                OutputTests.waitFor(
                         Output.<Integer>ofNullable(null)
                                 .applyValue(x -> x + 1)
                 )
@@ -258,6 +253,14 @@ public class OutputStaticsTest {
                 OutputTests.waitFor(
                         Output.of(1)
                                 .applyOptional(__ -> Optional.<Integer>ofNullable(null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        Output.of(1)
+                                .apply(__ -> Output.ofOptional(Optional.<Integer>ofNullable(null)))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);

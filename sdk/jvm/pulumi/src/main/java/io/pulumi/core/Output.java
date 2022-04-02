@@ -103,7 +103,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     default Output<Void> applyVoid(Consumer<T> consumer) {
         return apply(t -> {
             consumer.accept(t);
-            return Output.empty();
+            return OutputInternal.empty();
         });
     }
 
@@ -127,19 +127,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     Output<T> asSecret();
 
     // Static section -----
-
-    /**
-     * Returns an empty {@code Output<T>} instance. No value is present for this
-     * {@code Output<T>}.
-     * <p/>
-     * Equivalent of {@code Output.ofNullable((T) null)}
-     *
-     * @param <T> The type of the non-existent value
-     * @return an empty {@code Output<T>}
-     */
-    static <T> Output<T> of() {
-        return Output.empty();
-    }
 
     /**
      * Returns an {@code Output<T>} describing the given non-{@code null} value.
@@ -179,13 +166,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * @see Output#of() for more details
-     */
-    static <T> Output<T> empty() {
-        return new OutputInternal<>(OutputData.empty());
-    }
-
-    /**
      * Returns an {@code Output<T>} with given output, if
      * non-{@code null}, otherwise returns an empty {@code Output<T>}.
      *
@@ -196,7 +176,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      */
     static <T> Output<T> ofNullable(@Nullable Output<T> output) {
         if (output == null) {
-            return Output.empty();
+            return OutputInternal.empty();
         }
         return output;
     }
@@ -212,7 +192,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      */
     static <T> Output<T> ofNullable(@Nullable T value) {
         if (value == null) {
-            return Output.empty();
+            return OutputInternal.empty();
         }
         return Output.of(value);
     }
@@ -230,7 +210,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     static <T> Output<T> ofOptional(Optional<T> value) {
         requireNonNull(value);
         if (value.isEmpty()) {
-            return Output.empty();
+            return OutputInternal.empty();
         }
         return Output.of(value.get());
     }

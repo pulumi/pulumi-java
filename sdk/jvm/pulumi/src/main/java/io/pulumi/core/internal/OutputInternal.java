@@ -151,4 +151,18 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
             ));
         }
     }
+
+    /**
+     * Returns an empty {@code Output<T>} instance. No value is present for this
+     * {@code Output<T>}.
+     * <p/>
+     * Equivalent of {@code Output.ofNullable((T) null)}
+     *
+     * @param <T> The type of the non-existent value
+     * @return an empty {@code Output<T>}
+     */
+    @InternalUse
+    public static <T> Output<T> empty() {
+        return new OutputInternal<>(OutputData.empty());
+    }
 }

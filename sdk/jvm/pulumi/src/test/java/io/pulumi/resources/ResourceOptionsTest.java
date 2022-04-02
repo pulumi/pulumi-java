@@ -3,6 +3,7 @@ package io.pulumi.resources;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
+import io.pulumi.core.internal.OutputInternal;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -40,7 +41,7 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Output.empty(),
+                                OutputInternal.empty(),
                                 true,
                                 List.of("b"),
                                 "test",

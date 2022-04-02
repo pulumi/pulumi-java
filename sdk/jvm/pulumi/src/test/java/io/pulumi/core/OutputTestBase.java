@@ -1,6 +1,7 @@
 package io.pulumi.core;
 
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputInternal;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
@@ -235,7 +236,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyTupleHandlesEmpty() {
-        var output = Output.tuple(Output.empty(), Output.empty());
+        var output = Output.tuple(OutputInternal.empty(), OutputInternal.empty());
         var data = OutputTests.waitFor(output);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo(Tuples.of(null, null));
