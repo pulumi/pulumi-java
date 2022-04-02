@@ -27,7 +27,7 @@ import static java.util.Objects.requireNonNull;
 
 /**
  * {@code Output<T>} is a key part of how Pulumi tracks dependencies
- * between @see {@link io.pulumi.resources.Resource}'s.
+ * between @see {@link io.pulumi.resources.Resource}s.
  * Because the values of outputs are not available until resources are created,
  * these are represented using the special {@code Output<T>} type,
  * which internally represents two things:
