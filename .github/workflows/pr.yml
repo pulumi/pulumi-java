@@ -171,6 +171,7 @@ jobs:
           echo New Size : ${{ steps.newJar.outputs.sizeHuman }}
           echo Old Size : ${{ steps.oldJar.outputs.sizeHuman }}
           echo Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}
+          echo Change(%): ${{ steps.diffJar.outputs.sizePct }}
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v1
         with:
