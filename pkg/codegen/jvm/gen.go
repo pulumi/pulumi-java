@@ -1473,9 +1473,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	if r.Comment != "" || r.DeprecationMessage != "" {
 		fprintf(w, "/**\n")
-		for i := 1; i < 500000; i++ {
-			fprintf(w, "*")
-		}
 		if r.Comment != "" {
 			fprintf(w, "%s\n", formatBlockComment(r.Comment, ""))
 		}
