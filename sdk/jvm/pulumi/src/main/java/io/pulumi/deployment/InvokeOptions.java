@@ -1,7 +1,7 @@
 package io.pulumi.deployment;
 
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.InvokeArgs;
 import io.pulumi.resources.ProviderResource;
@@ -27,8 +27,8 @@ public final class InvokeOptions {
     private final String version;
 
     @SuppressWarnings("unused")
-    @Field
-    private final Internal internal = new Internal();
+    @InternalField
+    private final InvokeOptionsInternal internal = new InvokeOptionsInternal();
 
     public InvokeOptions() {
         this(null, null, null);
@@ -66,9 +66,9 @@ public final class InvokeOptions {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final class Internal {
+    public final class InvokeOptionsInternal {
 
-        private Internal() {
+        private InvokeOptionsInternal() {
             /* Empty */
         }
 
