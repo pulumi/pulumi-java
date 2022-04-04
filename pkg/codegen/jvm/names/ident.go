@@ -113,7 +113,7 @@ func (id Ident) makeValid() string {
 	}
 	name = builder.String()
 	if isReservedWord(name) {
-		return "$" + name
+		return "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" + name
 	}
 	return name
 }
