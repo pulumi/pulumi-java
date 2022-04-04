@@ -249,6 +249,7 @@ public interface Deployment {
      * @see #runAsyncFuture(Supplier, StackOptions) for more information.
      * @see #runAsyncStack(Supplier) for more information.
      */
+    @Deprecated
     static <S extends Stack> CompletableFuture<Integer> runAsyncStack(Class<S> stackType) {
         return DeploymentInternal.createRunnerAndRunAsync(
                 DeploymentInternal.deploymentFactory(),

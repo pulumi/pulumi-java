@@ -18,6 +18,7 @@ public interface Runner {
 
     CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options);
 
+    @Deprecated
     <T extends Stack> CompletableFuture<Integer> runAsync(Class<T> stackType);
 
     <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory);
