@@ -8,6 +8,7 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
 import io.pulumi.Stack;
+import io.pulumi.Stack.StackInternal;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple4;
@@ -493,13 +494,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
             return invokeRawAsync(token, args, options).thenApply(
-                    result -> this.converter.convertValue(
-                            String.format("%s result", token),
-                            Value.newBuilder()
-                                    .setStructValue(result.serialized)
-                                    .build(),
-                            targetType
-                    ))
+                            result -> this.converter.convertValue(
+                                    String.format("%s result", token),
+                                    Value.newBuilder()
+                                            .setStructValue(result.serialized)
+                                            .build(),
+                                    targetType
+                            ))
                     .thenApply(OutputData::getValueNullable);
         }
 
@@ -822,12 +823,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                 //       It would be great to add more tests and maybe remove 'provider' in favour of 'providers' only
 
                                                                                 providerFutures = CompletableFutures.allOf(
-                                                                                        componentOpts.getProviders().stream()
-                                                                                                .map(Internal::from)
-                                                                                                .collect(toMap(
-                                                                                                        ProviderResource.Internal::getPackage,
-                                                                                                        ProviderResource.Internal::getRegistrationId
-                                                                                                )))
+                                                                                                componentOpts.getProviders().stream()
+                                                                                                        .map(Internal::from)
+                                                                                                        .collect(toMap(
+                                                                                                                ProviderResource.ProviderResourceInternal::getPackage,
+                                                                                                                ProviderResource.ProviderResourceInternal::getRegistrationId
+                                                                                                        )))
                                                                                         .thenApply(ImmutableMap::copyOf);
                                                                             } else {
                                                                                 providerFutures = CompletableFuture.completedFuture(ImmutableMap.of());
@@ -869,9 +870,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                     // the former has been processed in the Resource constructor prior to calling
                                                                                                     // 'registerResource' - both adding new inherited aliases and simplifying aliases down to URNs.
                                                                                                     var aliasesFuture = CompletableFutures.allOf(
-                                                                                                            Internal.from(res).getAliases().stream()
-                                                                                                                    .map(alias -> Internal.of(alias).getValueOrDefault(""))
-                                                                                                                    .collect(toSet()))
+                                                                                                                    Internal.from(res).getAliases().stream()
+                                                                                                                            .map(alias -> Internal.of(alias).getValueOrDefault(""))
+                                                                                                                            .collect(toSet()))
                                                                                                             .thenApply(completed -> completed.stream()
                                                                                                                     .filter(Strings::isNonEmptyOrNull)
                                                                                                                     .collect(toImmutableSet())); // the Set will make sure the aliases de-duplicated
@@ -1087,9 +1088,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     if (resource instanceof CustomResource) {
                                         var customResource = (CustomResource) resource;
                                         var isKnown = isNonEmptyOrNull(id);
-                                        customResource.setId(isKnown
+                                        Internal.from(customResource).setId(isKnown
                                                 ? Output.of(id)
-                                                : new OutputInternal<>(OutputData.unknown()));
+                                                : new OutputInternal<>(OutputData.unknown())); // TODO: replace with OutputInternal.unknown()
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
@@ -1465,7 +1466,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         CompletableFuture<Optional<String>> getRootResourceAsync(String type) {
             // If we're calling this while creating the stack itself. No way to know its urn at this point.
-            if (Stack.InternalStatic.RootPulumiStackTypeName.equals(type)) {
+            if (StackInternal.RootPulumiStackTypeName.equals(type)) {
                 return CompletableFuture.completedFuture(Optional.empty());
             }
 
@@ -1630,7 +1631,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @Override
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
-            var stack = Stack.InternalStatic.of(callback, options);
+            var stack = StackInternal.of(callback, options);
             registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
                     Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
             return whileRunningAsync();

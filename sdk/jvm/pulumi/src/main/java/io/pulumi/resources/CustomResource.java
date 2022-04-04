@@ -3,10 +3,14 @@ package io.pulumi.resources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * CustomResource is a resource whose create, read, update, and delete (CRUD) operations are
@@ -14,11 +18,17 @@ import java.util.concurrent.CompletableFuture;
  * how to diff and perform partial updates of them, and these CRUD operations are implemented
  * in a dynamically loaded plugin for the defining package.
  */
+@ParametersAreNonnullByDefault
 public class CustomResource extends Resource {
+
     private CompletableFuture<Output<String>> idFuture; // effectively final, lazy init
 
     @Export(name = Constants.IdPropertyName, type = String.class)
     private Output<String> id; // effectively final, lazy init
+
+    @SuppressWarnings("unused")
+    @InternalField
+    private final CustomResourceInternal internal = new CustomResourceInternal(this);
 
     /**
      * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean)}
@@ -70,37 +80,52 @@ public class CustomResource extends Resource {
         super(type, name, true,
                 args == null ? ResourceArgs.Empty : args,
                 options == null ? CustomResourceOptions.Empty : options,
-                false, dependency,
-                (self) -> {
-                    // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
-                    if (self instanceof CustomResource) {
-                        ((CustomResource) self).idFuture = new CompletableFuture<>();
-                        ((CustomResource) self).id = Output.of(((CustomResource) self).idFuture).apply(id -> id);
-                    } else {
-                        throw new IllegalStateException(String.format(
-                                "Expected self to be instance of CustomResource, got: '%s'",
-                                self.getClass().getTypeName()
-                        ));
-                    }
-                });
+                false, dependency);
+    }
+
+    @Override
+    protected void superInit(Resource resource) {
+        // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
+        if (resource instanceof CustomResource) {
+            var customResource = (CustomResource) resource;
+            customResource.idFuture = new CompletableFuture<>();
+            customResource.id = Output.of(customResource.idFuture).apply(id -> id);
+        } else {
+            throw new IllegalStateException(String.format(
+                    "Expected self to be instance of CustomResource, got: '%s'",
+                    resource.getClass().getTypeName()
+            ));
+        }
     }
 
     /**
-     * Id is the provider-assigned unique ID for this managed resource. It is set during
+     * ID is the provider-assigned unique ID for this managed resource. It is set during
      * deployments and may be missing (unknown) during planning phases.
      */
     public Output<String> getId() {
         return this.id;
     }
 
-    /**
-     * More: @see {@link #getId()}
-     * @param id the the provider-assigned unique ID to set
-     */
     @InternalUse
-    public void setId(@Nullable Output<String> id) {
-        if (!this.idFuture.complete(id)) {
-            throw new IllegalStateException("id cannot be set twice, must be null for setId to work");
+    @ParametersAreNonnullByDefault
+    public static class CustomResourceInternal extends ResourceInternal {
+
+        private final CustomResource resource;
+
+        protected CustomResourceInternal(CustomResource resource) {
+            super(resource);
+            this.resource = requireNonNull(resource);
+        }
+
+        /**
+         * More: @see {@link #getId()}
+         * @param id the the provider-assigned unique ID to set
+         */
+        @InternalUse
+        public void setId(@Nullable Output<String> id) {
+            if (!this.resource.idFuture.complete(id)) {
+                throw new IllegalStateException("id cannot be set twice, must be 'null' for 'setId' to work");
+            }
         }
     }
 }
