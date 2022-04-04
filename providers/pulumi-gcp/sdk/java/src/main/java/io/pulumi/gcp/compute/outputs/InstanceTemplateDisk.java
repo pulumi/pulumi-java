@@ -64,7 +64,7 @@ public final class InstanceTemplateDisk {
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
      */
-    private final @Nullable String $interface;
+    private final @Nullable String interface_;
     /**
      * A set of ket/value label pairs to assign to disk created from
      * this template
@@ -116,7 +116,7 @@ public final class InstanceTemplateDisk {
         @CustomType.Parameter("diskName") @Nullable String diskName,
         @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
         @CustomType.Parameter("diskType") @Nullable String diskType,
-        @CustomType.Parameter("interface") @Nullable String $interface,
+        @CustomType.Parameter("interface") @Nullable String interface_,
         @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
         @CustomType.Parameter("mode") @Nullable String mode,
         @CustomType.Parameter("resourcePolicies") @Nullable String resourcePolicies,
@@ -130,7 +130,7 @@ public final class InstanceTemplateDisk {
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.labels = labels;
         this.mode = mode;
         this.resourcePolicies = resourcePolicies;
@@ -202,8 +202,8 @@ public final class InstanceTemplateDisk {
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
     */
-    public Optional<String> get$interface() {
-        return Optional.ofNullable(this.$interface);
+    public Optional<String> getInterface_() {
+        return Optional.ofNullable(this.interface_);
     }
     /**
      * A set of ket/value label pairs to assign to disk created from
@@ -275,7 +275,7 @@ public final class InstanceTemplateDisk {
         private @Nullable String diskName;
         private @Nullable Integer diskSizeGb;
         private @Nullable String diskType;
-        private @Nullable String $interface;
+        private @Nullable String interface_;
         private @Nullable Map<String,String> labels;
         private @Nullable String mode;
         private @Nullable String resourcePolicies;
@@ -296,7 +296,7 @@ public final class InstanceTemplateDisk {
     	      this.diskName = defaults.diskName;
     	      this.diskSizeGb = defaults.diskSizeGb;
     	      this.diskType = defaults.diskType;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.labels = defaults.labels;
     	      this.mode = defaults.mode;
     	      this.resourcePolicies = defaults.resourcePolicies;
@@ -333,8 +333,8 @@ public final class InstanceTemplateDisk {
             this.diskType = diskType;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = interface_;
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
@@ -361,7 +361,7 @@ public final class InstanceTemplateDisk {
             this.type = type;
             return this;
         }        public InstanceTemplateDisk build() {
-            return new InstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
+            return new InstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, interface_, labels, mode, resourcePolicies, source, sourceImage, type);
         }
     }
 }

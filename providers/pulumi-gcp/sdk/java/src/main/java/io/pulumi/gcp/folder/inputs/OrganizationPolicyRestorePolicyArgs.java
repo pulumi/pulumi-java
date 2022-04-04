@@ -18,18 +18,18 @@ public final class OrganizationPolicyRestorePolicyArgs extends io.pulumi.resourc
      * 
      */
     @Import(name="default", required=true)
-      private final Output<Boolean> $default;
+      private final Output<Boolean> default_;
 
-    public Output<Boolean> get$default() {
-        return this.$default;
+    public Output<Boolean> getDefault_() {
+        return this.default_;
     }
 
-    public OrganizationPolicyRestorePolicyArgs(Output<Boolean> $default) {
-        this.$default = Objects.requireNonNull($default, "expected parameter '$default' to be non-null");
+    public OrganizationPolicyRestorePolicyArgs(Output<Boolean> default_) {
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
     }
 
     private OrganizationPolicyRestorePolicyArgs() {
-        this.$default = Output.empty();
+        this.default_ = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class OrganizationPolicyRestorePolicyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Output<Boolean> $default;
+        private Output<Boolean> default_;
 
         public Builder() {
     	      // Empty
@@ -49,18 +49,18 @@ public final class OrganizationPolicyRestorePolicyArgs extends io.pulumi.resourc
 
         public Builder(OrganizationPolicyRestorePolicyArgs defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
         }
 
-        public Builder $default(Output<Boolean> $default) {
-            this.$default = Objects.requireNonNull($default);
+        public Builder default_(Output<Boolean> default_) {
+            this.default_ = Objects.requireNonNull(default_);
             return this;
         }
-        public Builder $default(Boolean $default) {
-            this.$default = Output.of(Objects.requireNonNull($default));
+        public Builder default_(Boolean default_) {
+            this.default_ = Output.of(Objects.requireNonNull(default_));
             return this;
         }        public OrganizationPolicyRestorePolicyArgs build() {
-            return new OrganizationPolicyRestorePolicyArgs($default);
+            return new OrganizationPolicyRestorePolicyArgs(default_);
         }
     }
 }

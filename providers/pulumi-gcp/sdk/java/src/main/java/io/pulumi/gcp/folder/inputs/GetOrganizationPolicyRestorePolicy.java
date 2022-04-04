@@ -13,18 +13,18 @@ public final class GetOrganizationPolicyRestorePolicy extends io.pulumi.resource
     public static final GetOrganizationPolicyRestorePolicy Empty = new GetOrganizationPolicyRestorePolicy();
 
     @Import(name="default", required=true)
-      private final Boolean $default;
+      private final Boolean default_;
 
-    public Boolean get$default() {
-        return this.$default;
+    public Boolean getDefault_() {
+        return this.default_;
     }
 
-    public GetOrganizationPolicyRestorePolicy(Boolean $default) {
-        this.$default = Objects.requireNonNull($default, "expected parameter '$default' to be non-null");
+    public GetOrganizationPolicyRestorePolicy(Boolean default_) {
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
     }
 
     private GetOrganizationPolicyRestorePolicy() {
-        this.$default = null;
+        this.default_ = null;
     }
 
     public static Builder builder() {
@@ -36,7 +36,7 @@ public final class GetOrganizationPolicyRestorePolicy extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Boolean $default;
+        private Boolean default_;
 
         public Builder() {
     	      // Empty
@@ -44,14 +44,14 @@ public final class GetOrganizationPolicyRestorePolicy extends io.pulumi.resource
 
         public Builder(GetOrganizationPolicyRestorePolicy defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
         }
 
-        public Builder $default(Boolean $default) {
-            this.$default = Objects.requireNonNull($default);
+        public Builder default_(Boolean default_) {
+            this.default_ = Objects.requireNonNull(default_);
             return this;
         }        public GetOrganizationPolicyRestorePolicy build() {
-            return new GetOrganizationPolicyRestorePolicy($default);
+            return new GetOrganizationPolicyRestorePolicy(default_);
         }
     }
 }
