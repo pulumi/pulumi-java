@@ -1,6 +1,6 @@
 package io.pulumi.core;
 
-import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Objects;
@@ -14,8 +14,8 @@ public abstract class AssetOrArchive {
     protected final String propName;
     protected final Object value;
 
-    @Field
-    protected final Internal internal = new Internal();
+    @InternalField
+    protected final AssetOrArchiveInternal internal = new AssetOrArchiveInternal();
 
     protected AssetOrArchive(String sigKey, String propName, Object value) {
         this.sigKey = Objects.requireNonNull(sigKey);
@@ -23,9 +23,9 @@ public abstract class AssetOrArchive {
         this.value = Objects.requireNonNull(value);
     }
 
-    public final class Internal {
+    public final class AssetOrArchiveInternal {
 
-        private Internal() {
+        private AssetOrArchiveInternal() {
             /* Empty */
         }
 

@@ -5,7 +5,7 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.Log;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InputMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.serialization.internal.JsonFormatter;
@@ -31,8 +31,8 @@ public abstract class InputArgs {
     private final ImmutableList<InputMetadata> inputInfos;
 
     @SuppressWarnings("unused")
-    @Field
-    private final Internal internal = new Internal();
+    @InternalField
+    private final InputArgsInternal internal = new InputArgsInternal();
 
     protected InputArgs() {
         this.inputInfos = extractInputInfos(this.getClass());
@@ -42,9 +42,9 @@ public abstract class InputArgs {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final class Internal {
+    public final class InputArgsInternal {
 
-        private Internal() { /* Emmpty */ }
+        private InputArgsInternal() { /* Emmpty */ }
 
         // TODO: try to remove, this only casts the type
         public CompletableFuture<Map<Object, /* @Nullable */ Object>> toNullableMapAsync(Log log) {
