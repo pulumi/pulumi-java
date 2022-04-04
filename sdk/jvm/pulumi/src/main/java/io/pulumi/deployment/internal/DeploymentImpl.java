@@ -1023,7 +1023,9 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
 
     @Override
     public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options) {
-        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options);
+        Function<String, Resource> newDependencyWrapped = urn ->
+                CurrentDeployment.withCurrentDeployment(this.state.deployment, () -> newDependency.apply(urn));
+        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependencyWrapped, args, options);
     }
 
     private static final class ReadOrRegisterResource {
