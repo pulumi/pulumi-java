@@ -267,7 +267,7 @@ type builderFieldTemplateContext struct {
 const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ .Indent }}    return new {{ .Name }}();
 {{ .Indent }}}
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 {{ .Indent }}public static {{ .Name }} builder({{ .ResultType }} defaults) {
 {{ .Indent }}    return new {{ .Name }}(defaults);
 {{ .Indent }}}
@@ -290,6 +290,7 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ range $setter := .Setters }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
 {{ $.Indent }}        {{ $setter.Assignment }};
+{{ $.Indent }}        final __myvar = 1+1;
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
 
