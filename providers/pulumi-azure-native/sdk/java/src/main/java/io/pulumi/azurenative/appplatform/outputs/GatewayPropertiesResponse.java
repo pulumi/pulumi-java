@@ -53,7 +53,7 @@ public final class GatewayPropertiesResponse {
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
      * 
      */
-    private final @Nullable Boolean $public;
+    private final @Nullable Boolean public_;
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
@@ -78,7 +78,7 @@ public final class GatewayPropertiesResponse {
         @CustomType.Parameter("instances") List<GatewayInstanceResponse> instances,
         @CustomType.Parameter("operatorProperties") GatewayOperatorPropertiesResponse operatorProperties,
         @CustomType.Parameter("provisioningState") String provisioningState,
-        @CustomType.Parameter("public") @Nullable Boolean $public,
+        @CustomType.Parameter("public") @Nullable Boolean public_,
         @CustomType.Parameter("resourceRequests") @Nullable GatewayResourceRequestsResponse resourceRequests,
         @CustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
         @CustomType.Parameter("url") String url) {
@@ -88,7 +88,7 @@ public final class GatewayPropertiesResponse {
         this.instances = instances;
         this.operatorProperties = operatorProperties;
         this.provisioningState = provisioningState;
-        this.$public = $public;
+        this.public_ = public_;
         this.resourceRequests = resourceRequests;
         this.ssoProperties = ssoProperties;
         this.url = url;
@@ -140,8 +140,8 @@ public final class GatewayPropertiesResponse {
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
      * 
     */
-    public Optional<Boolean> get$public() {
-        return Optional.ofNullable(this.$public);
+    public Optional<Boolean> getPublic_() {
+        return Optional.ofNullable(this.public_);
     }
     /**
      * The requested resource quantity for required CPU and Memory.
@@ -180,7 +180,7 @@ public final class GatewayPropertiesResponse {
         private List<GatewayInstanceResponse> instances;
         private GatewayOperatorPropertiesResponse operatorProperties;
         private String provisioningState;
-        private @Nullable Boolean $public;
+        private @Nullable Boolean public_;
         private @Nullable GatewayResourceRequestsResponse resourceRequests;
         private @Nullable SsoPropertiesResponse ssoProperties;
         private String url;
@@ -197,7 +197,7 @@ public final class GatewayPropertiesResponse {
     	      this.instances = defaults.instances;
     	      this.operatorProperties = defaults.operatorProperties;
     	      this.provisioningState = defaults.provisioningState;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.resourceRequests = defaults.resourceRequests;
     	      this.ssoProperties = defaults.ssoProperties;
     	      this.url = defaults.url;
@@ -230,8 +230,8 @@ public final class GatewayPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = public_;
             return this;
         }
         public Builder resourceRequests(@Nullable GatewayResourceRequestsResponse resourceRequests) {
@@ -246,7 +246,7 @@ public final class GatewayPropertiesResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }        public GatewayPropertiesResponse build() {
-            return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, $public, resourceRequests, ssoProperties, url);
+            return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, public_, resourceRequests, ssoProperties, url);
         }
     }
 }

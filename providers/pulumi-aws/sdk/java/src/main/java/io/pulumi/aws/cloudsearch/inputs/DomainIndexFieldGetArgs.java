@@ -75,10 +75,10 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @Import(name="return")
-      private final @Nullable Output<Boolean> $return;
+      private final @Nullable Output<Boolean> return_;
 
-    public Output<Boolean> get$return() {
-        return this.$return == null ? Output.empty() : this.$return;
+    public Output<Boolean> getReturn_() {
+        return this.return_ == null ? Output.empty() : this.return_;
     }
 
     /**
@@ -120,7 +120,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
         @Nullable Output<Boolean> facet,
         @Nullable Output<Boolean> highlight,
         Output<String> name,
-        @Nullable Output<Boolean> $return,
+        @Nullable Output<Boolean> return_,
         @Nullable Output<Boolean> search,
         @Nullable Output<Boolean> sort,
         Output<String> type) {
@@ -129,7 +129,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
         this.facet = facet;
         this.highlight = highlight;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.$return = $return;
+        this.return_ = return_;
         this.search = search;
         this.sort = sort;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -141,7 +141,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
         this.facet = Output.empty();
         this.highlight = Output.empty();
         this.name = Output.empty();
-        this.$return = Output.empty();
+        this.return_ = Output.empty();
         this.search = Output.empty();
         this.sort = Output.empty();
         this.type = Output.empty();
@@ -161,7 +161,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
         private @Nullable Output<Boolean> facet;
         private @Nullable Output<Boolean> highlight;
         private Output<String> name;
-        private @Nullable Output<Boolean> $return;
+        private @Nullable Output<Boolean> return_;
         private @Nullable Output<Boolean> search;
         private @Nullable Output<Boolean> sort;
         private Output<String> type;
@@ -177,7 +177,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
     	      this.facet = defaults.facet;
     	      this.highlight = defaults.highlight;
     	      this.name = defaults.name;
-    	      this.$return = defaults.$return;
+    	      this.return_ = defaults.return_;
     	      this.search = defaults.search;
     	      this.sort = defaults.sort;
     	      this.type = defaults.type;
@@ -223,12 +223,12 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-        public Builder $return(@Nullable Output<Boolean> $return) {
-            this.$return = $return;
+        public Builder return_(@Nullable Output<Boolean> return_) {
+            this.return_ = return_;
             return this;
         }
-        public Builder $return(@Nullable Boolean $return) {
-            this.$return = Output.ofNullable($return);
+        public Builder return_(@Nullable Boolean return_) {
+            this.return_ = Output.ofNullable(return_);
             return this;
         }
         public Builder search(@Nullable Output<Boolean> search) {
@@ -255,7 +255,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }        public DomainIndexFieldGetArgs build() {
-            return new DomainIndexFieldGetArgs(analysisScheme, defaultValue, facet, highlight, name, $return, search, sort, type);
+            return new DomainIndexFieldGetArgs(analysisScheme, defaultValue, facet, highlight, name, return_, search, sort, type);
         }
     }
 }

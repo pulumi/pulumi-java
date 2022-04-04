@@ -91,7 +91,7 @@ func (id Ident) String() string {
 }
 
 // makeValidIdentifier replaces characters that are not allowed in Java identifiers with underscores.
-// A reserved word is prefixed with $. No attempt is made to ensure that the result is unique.
+// A reserved word is prefixed with _. No attempt is made to ensure that the result is unique.
 func (id Ident) makeValid() string {
 	name := string(id)
 	var builder strings.Builder
@@ -113,7 +113,7 @@ func (id Ident) makeValid() string {
 	}
 	name = builder.String()
 	if isReservedWord(name) {
-		return "$" + name
+		return name + "_"
 	}
 	return name
 }

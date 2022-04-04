@@ -23,14 +23,14 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
      * Possible values are `SCSI` and `NVME`.
      * 
      */
-    private final @Nullable String $interface;
+    private final @Nullable String interface_;
 
     @CustomType.Constructor
     private ReservationSpecificReservationInstancePropertiesLocalSsd(
         @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @CustomType.Parameter("interface") @Nullable String $interface) {
+        @CustomType.Parameter("interface") @Nullable String interface_) {
         this.diskSizeGb = diskSizeGb;
-        this.$interface = $interface;
+        this.interface_ = interface_;
     }
 
     /**
@@ -46,8 +46,8 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
      * Possible values are `SCSI` and `NVME`.
      * 
     */
-    public Optional<String> get$interface() {
-        return Optional.ofNullable(this.$interface);
+    public Optional<String> getInterface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
     public static Builder builder() {
@@ -60,7 +60,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
 
     public static final class Builder {
         private Integer diskSizeGb;
-        private @Nullable String $interface;
+        private @Nullable String interface_;
 
         public Builder() {
     	      // Empty
@@ -69,18 +69,18 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
         public Builder(ReservationSpecificReservationInstancePropertiesLocalSsd defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
         }
 
         public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = interface_;
             return this;
         }        public ReservationSpecificReservationInstancePropertiesLocalSsd build() {
-            return new ReservationSpecificReservationInstancePropertiesLocalSsd(diskSizeGb, $interface);
+            return new ReservationSpecificReservationInstancePropertiesLocalSsd(diskSizeGb, interface_);
         }
     }
 }

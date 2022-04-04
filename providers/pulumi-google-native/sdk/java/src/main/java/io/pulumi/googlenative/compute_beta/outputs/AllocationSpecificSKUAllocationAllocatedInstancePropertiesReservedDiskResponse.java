@@ -18,14 +18,14 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
      */
-    private final String $interface;
+    private final String interface_;
 
     @CustomType.Constructor
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(
         @CustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @CustomType.Parameter("interface") String $interface) {
+        @CustomType.Parameter("interface") String interface_) {
         this.diskSizeGb = diskSizeGb;
-        this.$interface = $interface;
+        this.interface_ = interface_;
     }
 
     /**
@@ -39,8 +39,8 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
     */
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
 
     public static Builder builder() {
@@ -53,7 +53,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
     public static final class Builder {
         private String diskSizeGb;
-        private String $interface;
+        private String interface_;
 
         public Builder() {
     	      // Empty
@@ -62,18 +62,18 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
         public Builder(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
         }
 
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
-            return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, $interface);
+            return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, interface_);
         }
     }
 }

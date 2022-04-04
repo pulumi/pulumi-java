@@ -191,14 +191,14 @@ public class Note extends io.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="package", type=PackageResponse.class, parameters={})
-    private Output<PackageResponse> $package;
+    private Output<PackageResponse> package_;
 
     /**
      * @return A note describing a package hosted by various package managers.
      * 
      */
-    public Output<PackageResponse> get$package() {
-        return this.$package;
+    public Output<PackageResponse> getPackage_() {
+        return this.package_;
     }
     /**
      * Other notes related to this note.

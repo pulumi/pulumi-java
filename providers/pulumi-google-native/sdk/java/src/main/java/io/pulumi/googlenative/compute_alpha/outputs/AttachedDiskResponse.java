@@ -65,7 +65,7 @@ public final class AttachedDiskResponse {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
      */
-    private final String $interface;
+    private final String interface_;
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
      * 
@@ -123,7 +123,7 @@ public final class AttachedDiskResponse {
         @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
         @CustomType.Parameter("index") Integer index,
         @CustomType.Parameter("initializeParams") AttachedDiskInitializeParamsResponse initializeParams,
-        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("licenses") List<String> licenses,
         @CustomType.Parameter("locked") Boolean locked,
@@ -142,7 +142,7 @@ public final class AttachedDiskResponse {
         this.guestOsFeatures = guestOsFeatures;
         this.index = index;
         this.initializeParams = initializeParams;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.kind = kind;
         this.licenses = licenses;
         this.locked = locked;
@@ -221,8 +221,8 @@ public final class AttachedDiskResponse {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
     */
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
@@ -306,7 +306,7 @@ public final class AttachedDiskResponse {
         private List<GuestOsFeatureResponse> guestOsFeatures;
         private Integer index;
         private AttachedDiskInitializeParamsResponse initializeParams;
-        private String $interface;
+        private String interface_;
         private String kind;
         private List<String> licenses;
         private Boolean locked;
@@ -332,7 +332,7 @@ public final class AttachedDiskResponse {
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.index = defaults.index;
     	      this.initializeParams = defaults.initializeParams;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.licenses = defaults.licenses;
     	      this.locked = defaults.locked;
@@ -383,8 +383,8 @@ public final class AttachedDiskResponse {
             this.initializeParams = Objects.requireNonNull(initializeParams);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder kind(String kind) {
@@ -429,7 +429,7 @@ public final class AttachedDiskResponse {
         public Builder userLicenses(String... userLicenses) {
             return userLicenses(List.of(userLicenses));
         }        public AttachedDiskResponse build() {
-            return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, index, initializeParams, $interface, kind, licenses, locked, mode, savedState, shieldedInstanceInitialState, source, type, userLicenses);
+            return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, index, initializeParams, interface_, kind, licenses, locked, mode, savedState, shieldedInstanceInitialState, source, type, userLicenses);
         }
     }
 }

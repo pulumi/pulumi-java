@@ -34,10 +34,10 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
      * 
      */
     @Import(name="default")
-      private final @Nullable Boolean $default;
+      private final @Nullable Boolean default_;
 
-    public Optional<Boolean> get$default() {
-        return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
+    public Optional<Boolean> getDefault_() {
+        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
     /**
@@ -53,16 +53,16 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
 
     public BreakOutCategoryPoliciesResponse(
         @Nullable Boolean allow,
-        @Nullable Boolean $default,
+        @Nullable Boolean default_,
         @Nullable Boolean optimize) {
         this.allow = allow;
-        this.$default = $default;
+        this.default_ = default_;
         this.optimize = optimize;
     }
 
     private BreakOutCategoryPoliciesResponse() {
         this.allow = null;
-        this.$default = null;
+        this.default_ = null;
         this.optimize = null;
     }
 
@@ -76,7 +76,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
 
     public static final class Builder {
         private @Nullable Boolean allow;
-        private @Nullable Boolean $default;
+        private @Nullable Boolean default_;
         private @Nullable Boolean optimize;
 
         public Builder() {
@@ -86,7 +86,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
         public Builder(BreakOutCategoryPoliciesResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allow = defaults.allow;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.optimize = defaults.optimize;
         }
 
@@ -94,15 +94,15 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
             this.allow = allow;
             return this;
         }
-        public Builder $default(@Nullable Boolean $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Boolean default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder optimize(@Nullable Boolean optimize) {
             this.optimize = optimize;
             return this;
         }        public BreakOutCategoryPoliciesResponse build() {
-            return new BreakOutCategoryPoliciesResponse(allow, $default, optimize);
+            return new BreakOutCategoryPoliciesResponse(allow, default_, optimize);
         }
     }
 }

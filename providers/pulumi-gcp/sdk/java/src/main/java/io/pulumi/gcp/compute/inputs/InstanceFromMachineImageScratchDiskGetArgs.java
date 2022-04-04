@@ -14,18 +14,18 @@ public final class InstanceFromMachineImageScratchDiskGetArgs extends io.pulumi.
     public static final InstanceFromMachineImageScratchDiskGetArgs Empty = new InstanceFromMachineImageScratchDiskGetArgs();
 
     @Import(name="interface", required=true)
-      private final Output<String> $interface;
+      private final Output<String> interface_;
 
-    public Output<String> get$interface() {
-        return this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_;
     }
 
-    public InstanceFromMachineImageScratchDiskGetArgs(Output<String> $interface) {
-        this.$interface = Objects.requireNonNull($interface, "expected parameter '$interface' to be non-null");
+    public InstanceFromMachineImageScratchDiskGetArgs(Output<String> interface_) {
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
     }
 
     private InstanceFromMachineImageScratchDiskGetArgs() {
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class InstanceFromMachineImageScratchDiskGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Output<String> $interface;
+        private Output<String> interface_;
 
         public Builder() {
     	      // Empty
@@ -45,18 +45,18 @@ public final class InstanceFromMachineImageScratchDiskGetArgs extends io.pulumi.
 
         public Builder(InstanceFromMachineImageScratchDiskGetArgs defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
         }
 
-        public Builder $interface(Output<String> $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(Output<String> interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Output.of(Objects.requireNonNull($interface));
+        public Builder interface_(String interface_) {
+            this.interface_ = Output.of(Objects.requireNonNull(interface_));
             return this;
         }        public InstanceFromMachineImageScratchDiskGetArgs build() {
-            return new InstanceFromMachineImageScratchDiskGetArgs($interface);
+            return new InstanceFromMachineImageScratchDiskGetArgs(interface_);
         }
     }
 }

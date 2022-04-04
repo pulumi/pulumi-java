@@ -15,7 +15,7 @@ public final class ParameterDeclarationResponse {
      * The default value for the parameter to be used if the pipeline does not specify a value.
      * 
      */
-    private final @Nullable String $default;
+    private final @Nullable String default_;
     /**
      * Description of the parameter.
      * 
@@ -34,11 +34,11 @@ public final class ParameterDeclarationResponse {
 
     @CustomType.Constructor
     private ParameterDeclarationResponse(
-        @CustomType.Parameter("default") @Nullable String $default,
+        @CustomType.Parameter("default") @Nullable String default_,
         @CustomType.Parameter("description") @Nullable String description,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("type") String type) {
-        this.$default = $default;
+        this.default_ = default_;
         this.description = description;
         this.name = name;
         this.type = type;
@@ -48,8 +48,8 @@ public final class ParameterDeclarationResponse {
      * The default value for the parameter to be used if the pipeline does not specify a value.
      * 
     */
-    public Optional<String> get$default() {
-        return Optional.ofNullable(this.$default);
+    public Optional<String> getDefault_() {
+        return Optional.ofNullable(this.default_);
     }
     /**
      * Description of the parameter.
@@ -82,7 +82,7 @@ public final class ParameterDeclarationResponse {
     }
 
     public static final class Builder {
-        private @Nullable String $default;
+        private @Nullable String default_;
         private @Nullable String description;
         private String name;
         private String type;
@@ -93,14 +93,14 @@ public final class ParameterDeclarationResponse {
 
         public Builder(ParameterDeclarationResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.description = defaults.description;
     	      this.name = defaults.name;
     	      this.type = defaults.type;
         }
 
-        public Builder $default(@Nullable String $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable String default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder description(@Nullable String description) {
@@ -115,7 +115,7 @@ public final class ParameterDeclarationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public ParameterDeclarationResponse build() {
-            return new ParameterDeclarationResponse($default, description, name, type);
+            return new ParameterDeclarationResponse(default_, description, name, type);
         }
     }
 }

@@ -120,10 +120,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<AttachedDiskInterface> $interface;
+      private final @Nullable Output<AttachedDiskInterface> interface_;
 
-    public Output<AttachedDiskInterface> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<AttachedDiskInterface> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -179,7 +179,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> forceAttach,
         @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures,
         @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams,
-        @Nullable Output<AttachedDiskInterface> $interface,
+        @Nullable Output<AttachedDiskInterface> interface_,
         @Nullable Output<AttachedDiskMode> mode,
         @Nullable Output<AttachedDiskSavedState> savedState,
         @Nullable Output<String> source,
@@ -192,7 +192,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         this.forceAttach = forceAttach;
         this.guestOsFeatures = guestOsFeatures;
         this.initializeParams = initializeParams;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.mode = mode;
         this.savedState = savedState;
         this.source = source;
@@ -208,7 +208,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         this.forceAttach = Output.empty();
         this.guestOsFeatures = Output.empty();
         this.initializeParams = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.mode = Output.empty();
         this.savedState = Output.empty();
         this.source = Output.empty();
@@ -232,7 +232,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<Boolean> forceAttach;
         private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
         private @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams;
-        private @Nullable Output<AttachedDiskInterface> $interface;
+        private @Nullable Output<AttachedDiskInterface> interface_;
         private @Nullable Output<AttachedDiskMode> mode;
         private @Nullable Output<AttachedDiskSavedState> savedState;
         private @Nullable Output<String> source;
@@ -252,7 +252,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.forceAttach = defaults.forceAttach;
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.initializeParams = defaults.initializeParams;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.mode = defaults.mode;
     	      this.savedState = defaults.savedState;
     	      this.source = defaults.source;
@@ -326,12 +326,12 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
-        public Builder $interface(@Nullable Output<AttachedDiskInterface> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<AttachedDiskInterface> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable AttachedDiskInterface $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable AttachedDiskInterface interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder mode(@Nullable Output<AttachedDiskMode> mode) {
@@ -366,7 +366,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Output.ofNullable(type);
             return this;
         }        public AttachedDiskArgs build() {
-            return new AttachedDiskArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, initializeParams, $interface, mode, savedState, source, type);
+            return new AttachedDiskArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, initializeParams, interface_, mode, savedState, source, type);
         }
     }
 }

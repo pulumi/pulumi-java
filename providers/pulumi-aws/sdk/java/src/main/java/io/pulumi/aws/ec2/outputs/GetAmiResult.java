@@ -121,7 +121,7 @@ public final class GetAmiResult {
      * `true` if the image has public launch permissions.
      * 
      */
-    private final Boolean $public;
+    private final Boolean public_;
     /**
      * The RAM disk associated with the image, if any. Only applicable
      * for machine images.
@@ -206,7 +206,7 @@ public final class GetAmiResult {
         @CustomType.Parameter("platform") String platform,
         @CustomType.Parameter("platformDetails") String platformDetails,
         @CustomType.Parameter("productCodes") List<GetAmiProductCode> productCodes,
-        @CustomType.Parameter("public") Boolean $public,
+        @CustomType.Parameter("public") Boolean public_,
         @CustomType.Parameter("ramdiskId") String ramdiskId,
         @CustomType.Parameter("rootDeviceName") String rootDeviceName,
         @CustomType.Parameter("rootDeviceType") String rootDeviceType,
@@ -240,7 +240,7 @@ public final class GetAmiResult {
         this.platform = platform;
         this.platformDetails = platformDetails;
         this.productCodes = productCodes;
-        this.$public = $public;
+        this.public_ = public_;
         this.ramdiskId = ramdiskId;
         this.rootDeviceName = rootDeviceName;
         this.rootDeviceType = rootDeviceType;
@@ -403,8 +403,8 @@ public final class GetAmiResult {
      * `true` if the image has public launch permissions.
      * 
     */
-    public Boolean get$public() {
-        return this.$public;
+    public Boolean getPublic_() {
+        return this.public_;
     }
     /**
      * The RAM disk associated with the image, if any. Only applicable
@@ -517,7 +517,7 @@ public final class GetAmiResult {
         private String platform;
         private String platformDetails;
         private List<GetAmiProductCode> productCodes;
-        private Boolean $public;
+        private Boolean public_;
         private String ramdiskId;
         private String rootDeviceName;
         private String rootDeviceType;
@@ -558,7 +558,7 @@ public final class GetAmiResult {
     	      this.platform = defaults.platform;
     	      this.platformDetails = defaults.platformDetails;
     	      this.productCodes = defaults.productCodes;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.ramdiskId = defaults.ramdiskId;
     	      this.rootDeviceName = defaults.rootDeviceName;
     	      this.rootDeviceType = defaults.rootDeviceType;
@@ -678,8 +678,8 @@ public final class GetAmiResult {
         public Builder productCodes(GetAmiProductCode... productCodes) {
             return productCodes(List.of(productCodes));
         }
-        public Builder $public(Boolean $public) {
-            this.$public = Objects.requireNonNull($public);
+        public Builder public_(Boolean public_) {
+            this.public_ = Objects.requireNonNull(public_);
             return this;
         }
         public Builder ramdiskId(String ramdiskId) {
@@ -722,7 +722,7 @@ public final class GetAmiResult {
             this.virtualizationType = Objects.requireNonNull(virtualizationType);
             return this;
         }        public GetAmiResult build() {
-            return new GetAmiResult(architecture, arn, blockDeviceMappings, creationDate, description, enaSupport, executableUsers, filters, hypervisor, id, imageId, imageLocation, imageOwnerAlias, imageType, kernelId, mostRecent, name, nameRegex, ownerId, owners, platform, platformDetails, productCodes, $public, ramdiskId, rootDeviceName, rootDeviceType, rootSnapshotId, sriovNetSupport, state, stateReason, tags, usageOperation, virtualizationType);
+            return new GetAmiResult(architecture, arn, blockDeviceMappings, creationDate, description, enaSupport, executableUsers, filters, hypervisor, id, imageId, imageLocation, imageOwnerAlias, imageType, kernelId, mostRecent, name, nameRegex, ownerId, owners, platform, platformDetails, productCodes, public_, ramdiskId, rootDeviceName, rootDeviceType, rootSnapshotId, sriovNetSupport, state, stateReason, tags, usageOperation, virtualizationType);
         }
     }
 }

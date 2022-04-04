@@ -18,10 +18,10 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
     public static final SkuSettingCapacityArgs Empty = new SkuSettingCapacityArgs();
 
     @Import(name="default")
-      private final @Nullable Output<Integer> $default;
+      private final @Nullable Output<Integer> default_;
 
-    public Output<Integer> get$default() {
-        return this.$default == null ? Output.empty() : this.$default;
+    public Output<Integer> getDefault_() {
+        return this.default_ == null ? Output.empty() : this.default_;
     }
 
     @Import(name="maximum")
@@ -46,18 +46,18 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
     }
 
     public SkuSettingCapacityArgs(
-        @Nullable Output<Integer> $default,
+        @Nullable Output<Integer> default_,
         @Nullable Output<Integer> maximum,
         Output<Integer> minimum,
         @Nullable Output<Either<String,SkuScaleType>> scaleType) {
-        this.$default = $default;
+        this.default_ = default_;
         this.maximum = maximum;
         this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
         this.scaleType = scaleType;
     }
 
     private SkuSettingCapacityArgs() {
-        this.$default = Output.empty();
+        this.default_ = Output.empty();
         this.maximum = Output.empty();
         this.minimum = Output.empty();
         this.scaleType = Output.empty();
@@ -72,7 +72,7 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> $default;
+        private @Nullable Output<Integer> default_;
         private @Nullable Output<Integer> maximum;
         private Output<Integer> minimum;
         private @Nullable Output<Either<String,SkuScaleType>> scaleType;
@@ -83,18 +83,18 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
 
         public Builder(SkuSettingCapacityArgs defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.maximum = defaults.maximum;
     	      this.minimum = defaults.minimum;
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder $default(@Nullable Output<Integer> $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Output<Integer> default_) {
+            this.default_ = default_;
             return this;
         }
-        public Builder $default(@Nullable Integer $default) {
-            this.$default = Output.ofNullable($default);
+        public Builder default_(@Nullable Integer default_) {
+            this.default_ = Output.ofNullable(default_);
             return this;
         }
         public Builder maximum(@Nullable Output<Integer> maximum) {
@@ -121,7 +121,7 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
             this.scaleType = Output.ofNullable(scaleType);
             return this;
         }        public SkuSettingCapacityArgs build() {
-            return new SkuSettingCapacityArgs($default, maximum, minimum, scaleType);
+            return new SkuSettingCapacityArgs(default_, maximum, minimum, scaleType);
         }
     }
 }

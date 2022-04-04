@@ -15,7 +15,7 @@ import java.util.StringJoiner;
         List("list"),
         Delete("delete"),
         Create("create"),
-        $Import("import"),
+        Import_("import"),
         Update("update"),
         Managecontacts("managecontacts"),
         Getissuers("getissuers"),

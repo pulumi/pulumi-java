@@ -14,8 +14,8 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum Enabled {
-        $True("true"),
-        $False("false");
+        True_("true"),
+        False_("false");
 
         private final String value;
 

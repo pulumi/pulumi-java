@@ -14,7 +14,7 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum HostingMode {
-        $Default("default"),
+        Default_("default"),
         HighDensity("highDensity");
 
         private final String value;

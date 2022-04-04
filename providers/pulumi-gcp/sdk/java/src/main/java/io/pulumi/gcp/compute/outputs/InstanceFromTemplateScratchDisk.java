@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InstanceFromTemplateScratchDisk {
-    private final String $interface;
+    private final String interface_;
 
     @CustomType.Constructor
-    private InstanceFromTemplateScratchDisk(@CustomType.Parameter("interface") String $interface) {
-        this.$interface = $interface;
+    private InstanceFromTemplateScratchDisk(@CustomType.Parameter("interface") String interface_) {
+        this.interface_ = interface_;
     }
 
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
 
     public static Builder builder() {
@@ -29,7 +29,7 @@ public final class InstanceFromTemplateScratchDisk {
     }
 
     public static final class Builder {
-        private String $interface;
+        private String interface_;
 
         public Builder() {
     	      // Empty
@@ -37,14 +37,14 @@ public final class InstanceFromTemplateScratchDisk {
 
         public Builder(InstanceFromTemplateScratchDisk defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
         }
 
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }        public InstanceFromTemplateScratchDisk build() {
-            return new InstanceFromTemplateScratchDisk($interface);
+            return new InstanceFromTemplateScratchDisk(interface_);
         }
     }
 }
