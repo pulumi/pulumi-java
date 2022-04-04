@@ -48,7 +48,7 @@ public final class LocalDiskResponse {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
      * 
      */
-    private final String $interface;
+    private final String interface_;
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
      * 
@@ -83,7 +83,7 @@ public final class LocalDiskResponse {
         @CustomType.Parameter("guestOsFeatures") List<RuntimeGuestOsFeatureResponse> guestOsFeatures,
         @CustomType.Parameter("index") Integer index,
         @CustomType.Parameter("initializeParams") LocalDiskInitializeParamsResponse initializeParams,
-        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("licenses") List<String> licenses,
         @CustomType.Parameter("mode") String mode,
@@ -95,7 +95,7 @@ public final class LocalDiskResponse {
         this.guestOsFeatures = guestOsFeatures;
         this.index = index;
         this.initializeParams = initializeParams;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.kind = kind;
         this.licenses = licenses;
         this.mode = mode;
@@ -149,8 +149,8 @@ public final class LocalDiskResponse {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
      * 
     */
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
@@ -203,7 +203,7 @@ public final class LocalDiskResponse {
         private List<RuntimeGuestOsFeatureResponse> guestOsFeatures;
         private Integer index;
         private LocalDiskInitializeParamsResponse initializeParams;
-        private String $interface;
+        private String interface_;
         private String kind;
         private List<String> licenses;
         private String mode;
@@ -222,7 +222,7 @@ public final class LocalDiskResponse {
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.index = defaults.index;
     	      this.initializeParams = defaults.initializeParams;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.licenses = defaults.licenses;
     	      this.mode = defaults.mode;
@@ -257,8 +257,8 @@ public final class LocalDiskResponse {
             this.initializeParams = Objects.requireNonNull(initializeParams);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder kind(String kind) {
@@ -284,7 +284,7 @@ public final class LocalDiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public LocalDiskResponse build() {
-            return new LocalDiskResponse(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
+            return new LocalDiskResponse(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, interface_, kind, licenses, mode, source, type);
         }
     }
 }

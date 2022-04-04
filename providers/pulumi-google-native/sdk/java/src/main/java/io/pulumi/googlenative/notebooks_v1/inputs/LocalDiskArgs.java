@@ -35,10 +35,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> $interface;
+      private final @Nullable Output<String> interface_;
 
-    public Output<String> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -76,12 +76,12 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public LocalDiskArgs(
         @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams,
-        @Nullable Output<String> $interface,
+        @Nullable Output<String> interface_,
         @Nullable Output<String> mode,
         @Nullable Output<String> source,
         @Nullable Output<String> type) {
         this.initializeParams = initializeParams;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.mode = mode;
         this.source = source;
         this.type = type;
@@ -89,7 +89,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     private LocalDiskArgs() {
         this.initializeParams = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.mode = Output.empty();
         this.source = Output.empty();
         this.type = Output.empty();
@@ -105,7 +105,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final class Builder {
         private @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
-        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> interface_;
         private @Nullable Output<String> mode;
         private @Nullable Output<String> source;
         private @Nullable Output<String> type;
@@ -117,7 +117,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(LocalDiskArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.initializeParams = defaults.initializeParams;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.mode = defaults.mode;
     	      this.source = defaults.source;
     	      this.type = defaults.type;
@@ -131,12 +131,12 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
-        public Builder $interface(@Nullable Output<String> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<String> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -163,7 +163,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Output.ofNullable(type);
             return this;
         }        public LocalDiskArgs build() {
-            return new LocalDiskArgs(initializeParams, $interface, mode, source, type);
+            return new LocalDiskArgs(initializeParams, interface_, mode, source, type);
         }
     }
 }
