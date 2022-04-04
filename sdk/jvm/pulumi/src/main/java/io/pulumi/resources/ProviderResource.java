@@ -1,12 +1,14 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * A @see {@link Resource} that implements CRUD operations
@@ -21,8 +23,8 @@ public class ProviderResource extends CustomResource {
     private final CompletableFuture<String> registrationId;
 
     @SuppressWarnings("unused")
-    @Field
-    private final Internal internal = new Internal();
+    @InternalField
+    private final ProviderResourceInternal internal = new ProviderResourceInternal(this);
 
     /**
      * Creates and registers a new provider resource for a particular package.
@@ -72,20 +74,23 @@ public class ProviderResource extends CustomResource {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final class Internal {
+    public static final class ProviderResourceInternal extends CustomResourceInternal {
 
-        private Internal() {
-            /* Empty */
+        private final ProviderResource resource;
+
+        private ProviderResourceInternal(ProviderResource resource) {
+            super(resource);
+            this.resource = requireNonNull(resource);
         }
 
         @InternalUse
         public CompletableFuture<String> getRegistrationId() {
-            return ProviderResource.this.registrationId;
+            return this.resource.registrationId;
         }
 
         @InternalUse
         public String getPackage() {
-            return ProviderResource.this.aPackage;
+            return this.resource.aPackage;
         }
     }
 }

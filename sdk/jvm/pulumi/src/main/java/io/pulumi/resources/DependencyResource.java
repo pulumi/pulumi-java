@@ -2,6 +2,7 @@ package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.OutputInternal;
 
 /**
@@ -10,10 +11,11 @@ import io.pulumi.core.internal.OutputInternal;
  * with remote component resources.
  */
 public class DependencyResource extends CustomResource {
+
     public DependencyResource(String urn) {
         super("", "", ResourceArgs.Empty, true);
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
         this.setUrn(new OutputInternal<>(resources, urn));
-        this.setId(Output.empty());
+        Internal.from(this).setId(Output.empty());
     }
 }

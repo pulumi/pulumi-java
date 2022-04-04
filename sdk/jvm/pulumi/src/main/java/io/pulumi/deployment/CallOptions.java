@@ -1,7 +1,7 @@
 package io.pulumi.deployment;
 
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.ProviderResource;
@@ -26,8 +26,8 @@ public final class CallOptions {
     @Nullable
     private final String version;
 
-    @Field
-    public final Internal internal = new Internal();
+    @InternalField
+    public final CallOptionsInternal internal = new CallOptionsInternal();
 
     public CallOptions() {
         this(null, null, null);
@@ -64,9 +64,9 @@ public final class CallOptions {
     }
 
     @InternalUse
-    public final class Internal {
+    public final class CallOptionsInternal {
 
-        private Internal() {
+        private CallOptionsInternal() {
             /* Empty */
         }
 
