@@ -24,10 +24,10 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="continue")
-      private final @Nullable Output<String> $continue;
+      private final @Nullable Output<String> continue_;
 
-    public Output<String> get$continue() {
-        return this.$continue == null ? Output.empty() : this.$continue;
+    public Output<String> getContinue_() {
+        return this.continue_ == null ? Output.empty() : this.continue_;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public ListMetaArgs(
-        @Nullable Output<String> $continue,
+        @Nullable Output<String> continue_,
         @Nullable Output<Integer> remainingItemCount,
         @Nullable Output<String> resourceVersion,
         @Nullable Output<String> selfLink) {
-        this.$continue = $continue;
+        this.continue_ = continue_;
         this.remainingItemCount = remainingItemCount;
         this.resourceVersion = resourceVersion;
         this.selfLink = selfLink;
     }
 
     private ListMetaArgs() {
-        this.$continue = Output.empty();
+        this.continue_ = Output.empty();
         this.remainingItemCount = Output.empty();
         this.resourceVersion = Output.empty();
         this.selfLink = Output.empty();
@@ -92,7 +92,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Output<String> $continue;
+        private @Nullable Output<String> continue_;
         private @Nullable Output<Integer> remainingItemCount;
         private @Nullable Output<String> resourceVersion;
         private @Nullable Output<String> selfLink;
@@ -103,18 +103,18 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
 
         public Builder(ListMetaArgs defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$continue = defaults.$continue;
+    	      this.continue_ = defaults.continue_;
     	      this.remainingItemCount = defaults.remainingItemCount;
     	      this.resourceVersion = defaults.resourceVersion;
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder $continue(@Nullable Output<String> $continue) {
-            this.$continue = $continue;
+        public Builder continue_(@Nullable Output<String> continue_) {
+            this.continue_ = continue_;
             return this;
         }
-        public Builder $continue(@Nullable String $continue) {
-            this.$continue = Output.ofNullable($continue);
+        public Builder continue_(@Nullable String continue_) {
+            this.continue_ = Output.ofNullable(continue_);
             return this;
         }
         public Builder remainingItemCount(@Nullable Output<Integer> remainingItemCount) {
@@ -141,7 +141,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }        public ListMetaArgs build() {
-            return new ListMetaArgs($continue, remainingItemCount, resourceVersion, selfLink);
+            return new ListMetaArgs(continue_, remainingItemCount, resourceVersion, selfLink);
         }
     }
 }

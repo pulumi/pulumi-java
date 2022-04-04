@@ -15,7 +15,7 @@ public final class LimitRangeItem {
      * Default resource requirement limit value by resource name if resource limit is omitted.
      * 
      */
-    private final @Nullable Map<String,String> $default;
+    private final @Nullable Map<String,String> default_;
     /**
      * DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
      * 
@@ -49,13 +49,13 @@ public final class LimitRangeItem {
 
     @CustomType.Constructor
     private LimitRangeItem(
-        @CustomType.Parameter("default") @Nullable Map<String,String> $default,
+        @CustomType.Parameter("default") @Nullable Map<String,String> default_,
         @CustomType.Parameter("defaultRequest") @Nullable Map<String,String> defaultRequest,
         @CustomType.Parameter("max") @Nullable Map<String,String> max,
         @CustomType.Parameter("maxLimitRequestRatio") @Nullable Map<String,String> maxLimitRequestRatio,
         @CustomType.Parameter("min") @Nullable Map<String,String> min,
         @CustomType.Parameter("type") String type) {
-        this.$default = $default;
+        this.default_ = default_;
         this.defaultRequest = defaultRequest;
         this.max = max;
         this.maxLimitRequestRatio = maxLimitRequestRatio;
@@ -67,8 +67,8 @@ public final class LimitRangeItem {
      * Default resource requirement limit value by resource name if resource limit is omitted.
      * 
     */
-    public Map<String,String> get$default() {
-        return this.$default == null ? Map.of() : this.$default;
+    public Map<String,String> getDefault_() {
+        return this.default_ == null ? Map.of() : this.default_;
     }
     /**
      * DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
@@ -120,7 +120,7 @@ public final class LimitRangeItem {
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> $default;
+        private @Nullable Map<String,String> default_;
         private @Nullable Map<String,String> defaultRequest;
         private @Nullable Map<String,String> max;
         private @Nullable Map<String,String> maxLimitRequestRatio;
@@ -133,7 +133,7 @@ public final class LimitRangeItem {
 
         public Builder(LimitRangeItem defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.defaultRequest = defaults.defaultRequest;
     	      this.max = defaults.max;
     	      this.maxLimitRequestRatio = defaults.maxLimitRequestRatio;
@@ -141,8 +141,8 @@ public final class LimitRangeItem {
     	      this.type = defaults.type;
         }
 
-        public Builder $default(@Nullable Map<String,String> $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Map<String,String> default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
@@ -165,7 +165,7 @@ public final class LimitRangeItem {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public LimitRangeItem build() {
-            return new LimitRangeItem($default, defaultRequest, max, maxLimitRequestRatio, min, type);
+            return new LimitRangeItem(default_, defaultRequest, max, maxLimitRequestRatio, min, type);
         }
     }
 }

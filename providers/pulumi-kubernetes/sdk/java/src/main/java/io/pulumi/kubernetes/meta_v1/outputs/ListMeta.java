@@ -16,7 +16,7 @@ public final class ListMeta {
      * continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.
      * 
      */
-    private final @Nullable String $continue;
+    private final @Nullable String continue_;
     /**
      * remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.
      * 
@@ -37,11 +37,11 @@ public final class ListMeta {
 
     @CustomType.Constructor
     private ListMeta(
-        @CustomType.Parameter("continue") @Nullable String $continue,
+        @CustomType.Parameter("continue") @Nullable String continue_,
         @CustomType.Parameter("remainingItemCount") @Nullable Integer remainingItemCount,
         @CustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
         @CustomType.Parameter("selfLink") @Nullable String selfLink) {
-        this.$continue = $continue;
+        this.continue_ = continue_;
         this.remainingItemCount = remainingItemCount;
         this.resourceVersion = resourceVersion;
         this.selfLink = selfLink;
@@ -51,8 +51,8 @@ public final class ListMeta {
      * continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.
      * 
     */
-    public Optional<String> get$continue() {
-        return Optional.ofNullable(this.$continue);
+    public Optional<String> getContinue_() {
+        return Optional.ofNullable(this.continue_);
     }
     /**
      * remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.
@@ -87,7 +87,7 @@ public final class ListMeta {
     }
 
     public static final class Builder {
-        private @Nullable String $continue;
+        private @Nullable String continue_;
         private @Nullable Integer remainingItemCount;
         private @Nullable String resourceVersion;
         private @Nullable String selfLink;
@@ -98,14 +98,14 @@ public final class ListMeta {
 
         public Builder(ListMeta defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$continue = defaults.$continue;
+    	      this.continue_ = defaults.continue_;
     	      this.remainingItemCount = defaults.remainingItemCount;
     	      this.resourceVersion = defaults.resourceVersion;
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder $continue(@Nullable String $continue) {
-            this.$continue = $continue;
+        public Builder continue_(@Nullable String continue_) {
+            this.continue_ = continue_;
             return this;
         }
         public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
@@ -120,7 +120,7 @@ public final class ListMeta {
             this.selfLink = selfLink;
             return this;
         }        public ListMeta build() {
-            return new ListMeta($continue, remainingItemCount, resourceVersion, selfLink);
+            return new ListMeta(continue_, remainingItemCount, resourceVersion, selfLink);
         }
     }
 }

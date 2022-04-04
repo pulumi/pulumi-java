@@ -74,10 +74,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<JsonElement> $default;
+      private final @Nullable Output<JsonElement> default_;
 
-    public Output<JsonElement> get$default() {
-        return this.$default == null ? Output.empty() : this.$default;
+    public Output<JsonElement> getDefault_() {
+        return this.default_ == null ? Output.empty() : this.default_;
     }
 
     @Import(name="definitions")
@@ -102,10 +102,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     @Import(name="enum")
-      private final @Nullable Output<List<JsonElement>> $enum;
+      private final @Nullable Output<List<JsonElement>> enum_;
 
-    public Output<List<JsonElement>> get$enum() {
-        return this.$enum == null ? Output.empty() : this.$enum;
+    public Output<List<JsonElement>> getEnum_() {
+        return this.enum_ == null ? Output.empty() : this.enum_;
     }
 
     @Import(name="example")
@@ -413,11 +413,11 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
         @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties,
         @Nullable Output<List<JSONSchemaPropsArgs>> allOf,
         @Nullable Output<List<JSONSchemaPropsArgs>> anyOf,
-        @Nullable Output<JsonElement> $default,
+        @Nullable Output<JsonElement> default_,
         @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions,
         @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies,
         @Nullable Output<String> description,
-        @Nullable Output<List<JsonElement>> $enum,
+        @Nullable Output<List<JsonElement>> enum_,
         @Nullable Output<JsonElement> example,
         @Nullable Output<Boolean> exclusiveMaximum,
         @Nullable Output<Boolean> exclusiveMinimum,
@@ -457,11 +457,11 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
         this.additionalProperties = additionalProperties;
         this.allOf = allOf;
         this.anyOf = anyOf;
-        this.$default = $default;
+        this.default_ = default_;
         this.definitions = definitions;
         this.dependencies = dependencies;
         this.description = description;
-        this.$enum = $enum;
+        this.enum_ = enum_;
         this.example = example;
         this.exclusiveMaximum = exclusiveMaximum;
         this.exclusiveMinimum = exclusiveMinimum;
@@ -504,11 +504,11 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
         this.additionalProperties = Output.empty();
         this.allOf = Output.empty();
         this.anyOf = Output.empty();
-        this.$default = Output.empty();
+        this.default_ = Output.empty();
         this.definitions = Output.empty();
         this.dependencies = Output.empty();
         this.description = Output.empty();
-        this.$enum = Output.empty();
+        this.enum_ = Output.empty();
         this.example = Output.empty();
         this.exclusiveMaximum = Output.empty();
         this.exclusiveMinimum = Output.empty();
@@ -559,11 +559,11 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
         private @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
         private @Nullable Output<List<JSONSchemaPropsArgs>> allOf;
         private @Nullable Output<List<JSONSchemaPropsArgs>> anyOf;
-        private @Nullable Output<JsonElement> $default;
+        private @Nullable Output<JsonElement> default_;
         private @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions;
         private @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
         private @Nullable Output<String> description;
-        private @Nullable Output<List<JsonElement>> $enum;
+        private @Nullable Output<List<JsonElement>> enum_;
         private @Nullable Output<JsonElement> example;
         private @Nullable Output<Boolean> exclusiveMaximum;
         private @Nullable Output<Boolean> exclusiveMinimum;
@@ -610,11 +610,11 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.additionalProperties = defaults.additionalProperties;
     	      this.allOf = defaults.allOf;
     	      this.anyOf = defaults.anyOf;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.definitions = defaults.definitions;
     	      this.dependencies = defaults.dependencies;
     	      this.description = defaults.description;
-    	      this.$enum = defaults.$enum;
+    	      this.enum_ = defaults.enum_;
     	      this.example = defaults.example;
     	      this.exclusiveMaximum = defaults.exclusiveMaximum;
     	      this.exclusiveMinimum = defaults.exclusiveMinimum;
@@ -704,12 +704,12 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
         public Builder anyOf(JSONSchemaPropsArgs... anyOf) {
             return anyOf(List.of(anyOf));
         }
-        public Builder $default(@Nullable Output<JsonElement> $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Output<JsonElement> default_) {
+            this.default_ = default_;
             return this;
         }
-        public Builder $default(@Nullable JsonElement $default) {
-            this.$default = Output.ofNullable($default);
+        public Builder default_(@Nullable JsonElement default_) {
+            this.default_ = Output.ofNullable(default_);
             return this;
         }
         public Builder definitions(@Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions) {
@@ -736,16 +736,16 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             this.description = Output.ofNullable(description);
             return this;
         }
-        public Builder $enum(@Nullable Output<List<JsonElement>> $enum) {
-            this.$enum = $enum;
+        public Builder enum_(@Nullable Output<List<JsonElement>> enum_) {
+            this.enum_ = enum_;
             return this;
         }
-        public Builder $enum(@Nullable List<JsonElement> $enum) {
-            this.$enum = Output.ofNullable($enum);
+        public Builder enum_(@Nullable List<JsonElement> enum_) {
+            this.enum_ = Output.ofNullable(enum_);
             return this;
         }
-        public Builder $enum(JsonElement... $enum) {
-            return $enum(List.of($enum));
+        public Builder enum_(JsonElement... enum_) {
+            return enum_(List.of(enum_));
         }
         public Builder example(@Nullable Output<JsonElement> example) {
             this.example = example;
@@ -1023,7 +1023,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
         public Builder x_kubernetes_validations(ValidationRuleArgs... x_kubernetes_validations) {
             return x_kubernetes_validations(List.of(x_kubernetes_validations));
         }        public JSONSchemaPropsArgs build() {
-            return new JSONSchemaPropsArgs($ref, $schema, additionalItems, additionalProperties, allOf, anyOf, $default, definitions, dependencies, description, $enum, example, exclusiveMaximum, exclusiveMinimum, externalDocs, format, id, items, maxItems, maxLength, maxProperties, maximum, minItems, minLength, minProperties, minimum, multipleOf, not, nullable, oneOf, pattern, patternProperties, properties, required, title, type, uniqueItems, x_kubernetes_embedded_resource, x_kubernetes_int_or_string, x_kubernetes_list_map_keys, x_kubernetes_list_type, x_kubernetes_map_type, x_kubernetes_preserve_unknown_fields, x_kubernetes_validations);
+            return new JSONSchemaPropsArgs($ref, $schema, additionalItems, additionalProperties, allOf, anyOf, default_, definitions, dependencies, description, enum_, example, exclusiveMaximum, exclusiveMinimum, externalDocs, format, id, items, maxItems, maxLength, maxProperties, maximum, minItems, minLength, minProperties, minimum, multipleOf, not, nullable, oneOf, pattern, patternProperties, properties, required, title, type, uniqueItems, x_kubernetes_embedded_resource, x_kubernetes_int_or_string, x_kubernetes_list_map_keys, x_kubernetes_list_type, x_kubernetes_map_type, x_kubernetes_preserve_unknown_fields, x_kubernetes_validations);
         }
     }
 }
