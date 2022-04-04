@@ -238,27 +238,27 @@ public class OutputStaticsTest {
     void testExpectedNPEs() {
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
-                        Output.<Integer>empty().applyValue(x -> x + 1)
+                        output.<Integer>empty().applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
-                        Output.<Integer>ofNullable(null)
+                        output.<Integer>ofNullable(null)
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
-                        Output.<Integer>of(CompletableFuture.supplyAsync(() -> null))
+                        output.<Integer>of(CompletableFuture.supplyAsync(() -> null))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
-                        Output.of(1)
+                        output.of(1)
                                 .applyOptional(__ -> Optional.<Integer>ofNullable(null))
                                 .applyValue(x -> x + 1)
                 )
@@ -266,15 +266,15 @@ public class OutputStaticsTest {
 
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
-                        Output.of(1)
-                                .apply(__ -> Output.<Integer>ofNullable(null))
+                        output.of(1)
+                                .apply(__ -> output.<Integer>ofNullable(null))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
-                        Output.of(1)
+                        output.of(1)
                                 .applyFuture(__ -> CompletableFuture.<Integer>supplyAsync(() -> null))
                                 .applyValue(x -> x + 1)
                 )
