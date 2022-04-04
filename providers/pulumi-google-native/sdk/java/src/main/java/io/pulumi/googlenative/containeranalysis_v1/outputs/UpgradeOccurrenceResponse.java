@@ -21,7 +21,7 @@ public final class UpgradeOccurrenceResponse {
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
      */
-    private final String $package;
+    private final String package_;
     /**
      * Required for non-Windows OS. The version of the package in a machine + human readable form.
      * 
@@ -36,11 +36,11 @@ public final class UpgradeOccurrenceResponse {
     @CustomType.Constructor
     private UpgradeOccurrenceResponse(
         @CustomType.Parameter("distribution") UpgradeDistributionResponse distribution,
-        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("package") String package_,
         @CustomType.Parameter("parsedVersion") VersionResponse parsedVersion,
         @CustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
         this.distribution = distribution;
-        this.$package = $package;
+        this.package_ = package_;
         this.parsedVersion = parsedVersion;
         this.windowsUpdate = windowsUpdate;
     }
@@ -56,8 +56,8 @@ public final class UpgradeOccurrenceResponse {
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
     */
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
     /**
      * Required for non-Windows OS. The version of the package in a machine + human readable form.
@@ -84,7 +84,7 @@ public final class UpgradeOccurrenceResponse {
 
     public static final class Builder {
         private UpgradeDistributionResponse distribution;
-        private String $package;
+        private String package_;
         private VersionResponse parsedVersion;
         private WindowsUpdateResponse windowsUpdate;
 
@@ -95,7 +95,7 @@ public final class UpgradeOccurrenceResponse {
         public Builder(UpgradeOccurrenceResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distribution = defaults.distribution;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.parsedVersion = defaults.parsedVersion;
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
@@ -104,8 +104,8 @@ public final class UpgradeOccurrenceResponse {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder parsedVersion(VersionResponse parsedVersion) {
@@ -116,7 +116,7 @@ public final class UpgradeOccurrenceResponse {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }        public UpgradeOccurrenceResponse build() {
-            return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion, windowsUpdate);
+            return new UpgradeOccurrenceResponse(distribution, package_, parsedVersion, windowsUpdate);
         }
     }
 }

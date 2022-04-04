@@ -169,10 +169,10 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @Import(name="package")
-      private final @Nullable GraphPackageResponse $package;
+      private final @Nullable GraphPackageResponse package_;
 
-    public Optional<GraphPackageResponse> get$package() {
-        return this.$package == null ? Optional.empty() : Optional.ofNullable(this.$package);
+    public Optional<GraphPackageResponse> getPackage_() {
+        return this.package_ == null ? Optional.empty() : Optional.ofNullable(this.package_);
     }
 
     /**
@@ -299,7 +299,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
         @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace,
         String modifiedOn,
         @Nullable ServiceInputOutputSpecificationResponse output,
-        @Nullable GraphPackageResponse $package,
+        @Nullable GraphPackageResponse package_,
         String packageType,
         @Nullable Map<String,WebServiceParameterResponse> parameters,
         @Nullable Boolean payloadsInBlobStorage,
@@ -322,7 +322,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
         this.machineLearningWorkspace = machineLearningWorkspace;
         this.modifiedOn = Objects.requireNonNull(modifiedOn, "expected parameter 'modifiedOn' to be non-null");
         this.output = output;
-        this.$package = $package;
+        this.package_ = package_;
         this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
         this.parameters = parameters;
         this.payloadsInBlobStorage = payloadsInBlobStorage;
@@ -348,7 +348,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
         this.machineLearningWorkspace = null;
         this.modifiedOn = null;
         this.output = null;
-        this.$package = null;
+        this.package_ = null;
         this.packageType = null;
         this.parameters = Map.of();
         this.payloadsInBlobStorage = null;
@@ -382,7 +382,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
         private @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
         private String modifiedOn;
         private @Nullable ServiceInputOutputSpecificationResponse output;
-        private @Nullable GraphPackageResponse $package;
+        private @Nullable GraphPackageResponse package_;
         private String packageType;
         private @Nullable Map<String,WebServiceParameterResponse> parameters;
         private @Nullable Boolean payloadsInBlobStorage;
@@ -412,7 +412,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
     	      this.machineLearningWorkspace = defaults.machineLearningWorkspace;
     	      this.modifiedOn = defaults.modifiedOn;
     	      this.output = defaults.output;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.packageType = defaults.packageType;
     	      this.parameters = defaults.parameters;
     	      this.payloadsInBlobStorage = defaults.payloadsInBlobStorage;
@@ -473,8 +473,8 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
             this.output = output;
             return this;
         }
-        public Builder $package(@Nullable GraphPackageResponse $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable GraphPackageResponse package_) {
+            this.package_ = package_;
             return this;
         }
         public Builder packageType(String packageType) {
@@ -517,7 +517,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
             this.title = title;
             return this;
         }        public WebServicePropertiesForGraphResponse build() {
-            return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
+            return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, package_, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
         }
     }
 }

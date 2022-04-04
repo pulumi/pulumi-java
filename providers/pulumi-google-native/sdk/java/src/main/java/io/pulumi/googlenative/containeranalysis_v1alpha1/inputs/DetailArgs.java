@@ -92,10 +92,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<String> $package;
+      private final @Nullable Output<String> package_;
 
-    public Output<String> get$package() {
-        return this.$package == null ? Output.empty() : this.$package;
+    public Output<String> getPackage_() {
+        return this.package_ == null ? Output.empty() : this.package_;
     }
 
     /**
@@ -149,7 +149,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> isObsolete,
         @Nullable Output<VersionArgs> maxAffectedVersion,
         @Nullable Output<VersionArgs> minAffectedVersion,
-        @Nullable Output<String> $package,
+        @Nullable Output<String> package_,
         @Nullable Output<String> packageType,
         @Nullable Output<String> severityName,
         @Nullable Output<String> source,
@@ -160,7 +160,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         this.isObsolete = isObsolete;
         this.maxAffectedVersion = maxAffectedVersion;
         this.minAffectedVersion = minAffectedVersion;
-        this.$package = $package;
+        this.package_ = package_;
         this.packageType = packageType;
         this.severityName = severityName;
         this.source = source;
@@ -174,7 +174,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         this.isObsolete = Output.empty();
         this.maxAffectedVersion = Output.empty();
         this.minAffectedVersion = Output.empty();
-        this.$package = Output.empty();
+        this.package_ = Output.empty();
         this.packageType = Output.empty();
         this.severityName = Output.empty();
         this.source = Output.empty();
@@ -196,7 +196,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<Boolean> isObsolete;
         private @Nullable Output<VersionArgs> maxAffectedVersion;
         private @Nullable Output<VersionArgs> minAffectedVersion;
-        private @Nullable Output<String> $package;
+        private @Nullable Output<String> package_;
         private @Nullable Output<String> packageType;
         private @Nullable Output<String> severityName;
         private @Nullable Output<String> source;
@@ -214,7 +214,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.isObsolete = defaults.isObsolete;
     	      this.maxAffectedVersion = defaults.maxAffectedVersion;
     	      this.minAffectedVersion = defaults.minAffectedVersion;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.packageType = defaults.packageType;
     	      this.severityName = defaults.severityName;
     	      this.source = defaults.source;
@@ -269,12 +269,12 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             this.minAffectedVersion = Output.ofNullable(minAffectedVersion);
             return this;
         }
-        public Builder $package(@Nullable Output<String> $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable Output<String> package_) {
+            this.package_ = package_;
             return this;
         }
-        public Builder $package(@Nullable String $package) {
-            this.$package = Output.ofNullable($package);
+        public Builder package_(@Nullable String package_) {
+            this.package_ = Output.ofNullable(package_);
             return this;
         }
         public Builder packageType(@Nullable Output<String> packageType) {
@@ -309,7 +309,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             this.vendor = Output.ofNullable(vendor);
             return this;
         }        public DetailArgs build() {
-            return new DetailArgs(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, $package, packageType, severityName, source, vendor);
+            return new DetailArgs(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, package_, packageType, severityName, source, vendor);
         }
     }
 }

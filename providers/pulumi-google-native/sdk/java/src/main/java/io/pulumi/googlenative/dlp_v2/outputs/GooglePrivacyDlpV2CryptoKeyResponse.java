@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
      * Transient crypto key
      * 
      */
-    private final GooglePrivacyDlpV2TransientCryptoKeyResponse $transient;
+    private final GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
     /**
      * Unwrapped crypto key
      * 
@@ -30,10 +30,10 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
     @CustomType.Constructor
     private GooglePrivacyDlpV2CryptoKeyResponse(
         @CustomType.Parameter("kmsWrapped") GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped,
-        @CustomType.Parameter("transient") GooglePrivacyDlpV2TransientCryptoKeyResponse $transient,
+        @CustomType.Parameter("transient") GooglePrivacyDlpV2TransientCryptoKeyResponse transient_,
         @CustomType.Parameter("unwrapped") GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
         this.kmsWrapped = kmsWrapped;
-        this.$transient = $transient;
+        this.transient_ = transient_;
         this.unwrapped = unwrapped;
     }
 
@@ -48,8 +48,8 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
      * Transient crypto key
      * 
     */
-    public GooglePrivacyDlpV2TransientCryptoKeyResponse get$transient() {
-        return this.$transient;
+    public GooglePrivacyDlpV2TransientCryptoKeyResponse getTransient_() {
+        return this.transient_;
     }
     /**
      * Unwrapped crypto key
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
 
     public static final class Builder {
         private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
-        private GooglePrivacyDlpV2TransientCryptoKeyResponse $transient;
+        private GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
         private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
         public Builder() {
@@ -79,7 +79,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
         public Builder(GooglePrivacyDlpV2CryptoKeyResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.kmsWrapped = defaults.kmsWrapped;
-    	      this.$transient = defaults.$transient;
+    	      this.transient_ = defaults.transient_;
     	      this.unwrapped = defaults.unwrapped;
         }
 
@@ -87,15 +87,15 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
             this.kmsWrapped = Objects.requireNonNull(kmsWrapped);
             return this;
         }
-        public Builder $transient(GooglePrivacyDlpV2TransientCryptoKeyResponse $transient) {
-            this.$transient = Objects.requireNonNull($transient);
+        public Builder transient_(GooglePrivacyDlpV2TransientCryptoKeyResponse transient_) {
+            this.transient_ = Objects.requireNonNull(transient_);
             return this;
         }
         public Builder unwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
             this.unwrapped = Objects.requireNonNull(unwrapped);
             return this;
         }        public GooglePrivacyDlpV2CryptoKeyResponse build() {
-            return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, $transient, unwrapped);
+            return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, transient_, unwrapped);
         }
     }
 }

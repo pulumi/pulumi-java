@@ -208,10 +208,10 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="public")
-      private final @Nullable Output<Boolean> $public;
+      private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> get$public() {
-        return this.$public == null ? Output.empty() : this.$public;
+    public Output<Boolean> getPublic_() {
+        return this.public_ == null ? Output.empty() : this.public_;
     }
 
     /**
@@ -338,7 +338,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> ownerId,
         @Nullable Output<String> platform,
         @Nullable Output<String> platformDetails,
-        @Nullable Output<Boolean> $public,
+        @Nullable Output<Boolean> public_,
         @Nullable Output<String> ramdiskId,
         @Nullable Output<String> rootDeviceName,
         @Nullable Output<String> rootSnapshotId,
@@ -368,7 +368,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
         this.ownerId = ownerId;
         this.platform = platform;
         this.platformDetails = platformDetails;
-        this.$public = $public;
+        this.public_ = public_;
         this.ramdiskId = ramdiskId;
         this.rootDeviceName = rootDeviceName;
         this.rootSnapshotId = rootSnapshotId;
@@ -401,7 +401,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
         this.ownerId = Output.empty();
         this.platform = Output.empty();
         this.platformDetails = Output.empty();
-        this.$public = Output.empty();
+        this.public_ = Output.empty();
         this.ramdiskId = Output.empty();
         this.rootDeviceName = Output.empty();
         this.rootSnapshotId = Output.empty();
@@ -442,7 +442,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<String> ownerId;
         private @Nullable Output<String> platform;
         private @Nullable Output<String> platformDetails;
-        private @Nullable Output<Boolean> $public;
+        private @Nullable Output<Boolean> public_;
         private @Nullable Output<String> ramdiskId;
         private @Nullable Output<String> rootDeviceName;
         private @Nullable Output<String> rootSnapshotId;
@@ -479,7 +479,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     	      this.ownerId = defaults.ownerId;
     	      this.platform = defaults.platform;
     	      this.platformDetails = defaults.platformDetails;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.ramdiskId = defaults.ramdiskId;
     	      this.rootDeviceName = defaults.rootDeviceName;
     	      this.rootSnapshotId = defaults.rootSnapshotId;
@@ -650,12 +650,12 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
             this.platformDetails = Output.ofNullable(platformDetails);
             return this;
         }
-        public Builder $public(@Nullable Output<Boolean> $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Output<Boolean> public_) {
+            this.public_ = public_;
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = Output.ofNullable($public);
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = Output.ofNullable(public_);
             return this;
         }
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
@@ -738,7 +738,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
             this.virtualizationType = Output.ofNullable(virtualizationType);
             return this;
         }        public AmiCopyState build() {
-            return new AmiCopyState(architecture, arn, description, destinationOutpostArn, ebsBlockDevices, enaSupport, encrypted, ephemeralBlockDevices, hypervisor, imageLocation, imageOwnerAlias, imageType, kernelId, kmsKeyId, manageEbsSnapshots, name, ownerId, platform, platformDetails, $public, ramdiskId, rootDeviceName, rootSnapshotId, sourceAmiId, sourceAmiRegion, sriovNetSupport, tags, tagsAll, usageOperation, virtualizationType);
+            return new AmiCopyState(architecture, arn, description, destinationOutpostArn, ebsBlockDevices, enaSupport, encrypted, ephemeralBlockDevices, hypervisor, imageLocation, imageOwnerAlias, imageType, kernelId, kmsKeyId, manageEbsSnapshots, name, ownerId, platform, platformDetails, public_, ramdiskId, rootDeviceName, rootSnapshotId, sourceAmiId, sourceAmiRegion, sriovNetSupport, tags, tagsAll, usageOperation, virtualizationType);
         }
     }
 }

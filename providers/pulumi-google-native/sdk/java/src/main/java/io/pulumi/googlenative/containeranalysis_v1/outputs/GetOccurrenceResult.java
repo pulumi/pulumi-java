@@ -84,7 +84,7 @@ public final class GetOccurrenceResult {
      * Describes the installation of a package on the linked resource.
      * 
      */
-    private final PackageOccurrenceResponse $package;
+    private final PackageOccurrenceResponse package_;
     /**
      * A description of actions that can be taken to remedy the note.
      * 
@@ -125,7 +125,7 @@ public final class GetOccurrenceResult {
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("noteName") String noteName,
-        @CustomType.Parameter("package") PackageOccurrenceResponse $package,
+        @CustomType.Parameter("package") PackageOccurrenceResponse package_,
         @CustomType.Parameter("remediation") String remediation,
         @CustomType.Parameter("resourceUri") String resourceUri,
         @CustomType.Parameter("updateTime") String updateTime,
@@ -143,7 +143,7 @@ public final class GetOccurrenceResult {
         this.kind = kind;
         this.name = name;
         this.noteName = noteName;
-        this.$package = $package;
+        this.package_ = package_;
         this.remediation = remediation;
         this.resourceUri = resourceUri;
         this.updateTime = updateTime;
@@ -239,8 +239,8 @@ public final class GetOccurrenceResult {
      * Describes the installation of a package on the linked resource.
      * 
     */
-    public PackageOccurrenceResponse get$package() {
-        return this.$package;
+    public PackageOccurrenceResponse getPackage_() {
+        return this.package_;
     }
     /**
      * A description of actions that can be taken to remedy the note.
@@ -299,7 +299,7 @@ public final class GetOccurrenceResult {
         private String kind;
         private String name;
         private String noteName;
-        private PackageOccurrenceResponse $package;
+        private PackageOccurrenceResponse package_;
         private String remediation;
         private String resourceUri;
         private String updateTime;
@@ -324,7 +324,7 @@ public final class GetOccurrenceResult {
     	      this.kind = defaults.kind;
     	      this.name = defaults.name;
     	      this.noteName = defaults.noteName;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.remediation = defaults.remediation;
     	      this.resourceUri = defaults.resourceUri;
     	      this.updateTime = defaults.updateTime;
@@ -380,8 +380,8 @@ public final class GetOccurrenceResult {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
-        public Builder $package(PackageOccurrenceResponse $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(PackageOccurrenceResponse package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder remediation(String remediation) {
@@ -404,7 +404,7 @@ public final class GetOccurrenceResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }        public GetOccurrenceResult build() {
-            return new GetOccurrenceResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, envelope, image, kind, name, noteName, $package, remediation, resourceUri, updateTime, upgrade, vulnerability);
+            return new GetOccurrenceResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, envelope, image, kind, name, noteName, package_, remediation, resourceUri, updateTime, upgrade, vulnerability);
         }
     }
 }

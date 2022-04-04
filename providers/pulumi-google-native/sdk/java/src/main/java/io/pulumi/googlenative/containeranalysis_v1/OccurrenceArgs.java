@@ -129,10 +129,10 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<PackageOccurrenceArgs> $package;
+      private final @Nullable Output<PackageOccurrenceArgs> package_;
 
-    public Output<PackageOccurrenceArgs> get$package() {
-        return this.$package == null ? Output.empty() : this.$package;
+    public Output<PackageOccurrenceArgs> getPackage_() {
+        return this.package_ == null ? Output.empty() : this.package_;
     }
 
     @Import(name="project")
@@ -196,7 +196,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<EnvelopeArgs> envelope,
         @Nullable Output<ImageOccurrenceArgs> image,
         Output<String> noteName,
-        @Nullable Output<PackageOccurrenceArgs> $package,
+        @Nullable Output<PackageOccurrenceArgs> package_,
         @Nullable Output<String> project,
         @Nullable Output<String> remediation,
         Output<String> resourceUri,
@@ -211,7 +211,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         this.envelope = envelope;
         this.image = image;
         this.noteName = Objects.requireNonNull(noteName, "expected parameter 'noteName' to be non-null");
-        this.$package = $package;
+        this.package_ = package_;
         this.project = project;
         this.remediation = remediation;
         this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
@@ -229,7 +229,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         this.envelope = Output.empty();
         this.image = Output.empty();
         this.noteName = Output.empty();
-        this.$package = Output.empty();
+        this.package_ = Output.empty();
         this.project = Output.empty();
         this.remediation = Output.empty();
         this.resourceUri = Output.empty();
@@ -255,7 +255,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<EnvelopeArgs> envelope;
         private @Nullable Output<ImageOccurrenceArgs> image;
         private Output<String> noteName;
-        private @Nullable Output<PackageOccurrenceArgs> $package;
+        private @Nullable Output<PackageOccurrenceArgs> package_;
         private @Nullable Output<String> project;
         private @Nullable Output<String> remediation;
         private Output<String> resourceUri;
@@ -277,7 +277,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.envelope = defaults.envelope;
     	      this.image = defaults.image;
     	      this.noteName = defaults.noteName;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.project = defaults.project;
     	      this.remediation = defaults.remediation;
     	      this.resourceUri = defaults.resourceUri;
@@ -357,12 +357,12 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.noteName = Output.of(Objects.requireNonNull(noteName));
             return this;
         }
-        public Builder $package(@Nullable Output<PackageOccurrenceArgs> $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable Output<PackageOccurrenceArgs> package_) {
+            this.package_ = package_;
             return this;
         }
-        public Builder $package(@Nullable PackageOccurrenceArgs $package) {
-            this.$package = Output.ofNullable($package);
+        public Builder package_(@Nullable PackageOccurrenceArgs package_) {
+            this.package_ = Output.ofNullable(package_);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -405,7 +405,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.vulnerability = Output.ofNullable(vulnerability);
             return this;
         }        public OccurrenceArgs build() {
-            return new OccurrenceArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, envelope, image, noteName, $package, project, remediation, resourceUri, upgrade, vulnerability);
+            return new OccurrenceArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, envelope, image, noteName, package_, project, remediation, resourceUri, upgrade, vulnerability);
         }
     }
 }

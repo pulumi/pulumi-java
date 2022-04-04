@@ -108,10 +108,10 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> $interface;
+      private final @Nullable Output<String> interface_;
 
-    public Output<String> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -222,7 +222,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Integer> advertisedRoutePriority,
         @Nullable Output<RouterPeerBfdGetArgs> bfd,
         @Nullable Output<Boolean> enable,
-        @Nullable Output<String> $interface,
+        @Nullable Output<String> interface_,
         @Nullable Output<String> ipAddress,
         @Nullable Output<String> managementType,
         @Nullable Output<String> name,
@@ -237,7 +237,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         this.advertisedRoutePriority = advertisedRoutePriority;
         this.bfd = bfd;
         this.enable = enable;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.ipAddress = ipAddress;
         this.managementType = managementType;
         this.name = name;
@@ -255,7 +255,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         this.advertisedRoutePriority = Output.empty();
         this.bfd = Output.empty();
         this.enable = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.ipAddress = Output.empty();
         this.managementType = Output.empty();
         this.name = Output.empty();
@@ -281,7 +281,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<Integer> advertisedRoutePriority;
         private @Nullable Output<RouterPeerBfdGetArgs> bfd;
         private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> interface_;
         private @Nullable Output<String> ipAddress;
         private @Nullable Output<String> managementType;
         private @Nullable Output<String> name;
@@ -303,7 +303,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
     	      this.advertisedRoutePriority = defaults.advertisedRoutePriority;
     	      this.bfd = defaults.bfd;
     	      this.enable = defaults.enable;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.ipAddress = defaults.ipAddress;
     	      this.managementType = defaults.managementType;
     	      this.name = defaults.name;
@@ -368,12 +368,12 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-        public Builder $interface(@Nullable Output<String> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<String> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -440,7 +440,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
             this.router = Output.ofNullable(router);
             return this;
         }        public RouterPeerState build() {
-            return new RouterPeerState(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, $interface, ipAddress, managementType, name, peerAsn, peerIpAddress, project, region, router);
+            return new RouterPeerState(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, interface_, ipAddress, managementType, name, peerAsn, peerIpAddress, project, region, router);
         }
     }
 }

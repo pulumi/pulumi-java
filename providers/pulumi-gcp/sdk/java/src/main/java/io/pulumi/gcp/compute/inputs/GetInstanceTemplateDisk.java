@@ -109,10 +109,10 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="interface", required=true)
-      private final String $interface;
+      private final String interface_;
 
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
 
     /**
@@ -196,7 +196,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
         String diskName,
         Integer diskSizeGb,
         String diskType,
-        String $interface,
+        String interface_,
         Map<String,String> labels,
         String mode,
         List<String> resourcePolicies,
@@ -210,7 +210,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
         this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
         this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
         this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.$interface = Objects.requireNonNull($interface, "expected parameter '$interface' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
         this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
         this.resourcePolicies = Objects.requireNonNull(resourcePolicies, "expected parameter 'resourcePolicies' to be non-null");
@@ -227,7 +227,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
         this.diskName = null;
         this.diskSizeGb = null;
         this.diskType = null;
-        this.$interface = null;
+        this.interface_ = null;
         this.labels = Map.of();
         this.mode = null;
         this.resourcePolicies = List.of();
@@ -252,7 +252,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
         private String diskName;
         private Integer diskSizeGb;
         private String diskType;
-        private String $interface;
+        private String interface_;
         private Map<String,String> labels;
         private String mode;
         private List<String> resourcePolicies;
@@ -273,7 +273,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     	      this.diskName = defaults.diskName;
     	      this.diskSizeGb = defaults.diskSizeGb;
     	      this.diskType = defaults.diskType;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.labels = defaults.labels;
     	      this.mode = defaults.mode;
     	      this.resourcePolicies = defaults.resourcePolicies;
@@ -313,8 +313,8 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder labels(Map<String,String> labels) {
@@ -344,7 +344,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetInstanceTemplateDisk build() {
-            return new GetInstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKeys, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
+            return new GetInstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKeys, diskName, diskSizeGb, diskType, interface_, labels, mode, resourcePolicies, source, sourceImage, type);
         }
     }
 }

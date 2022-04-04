@@ -22,7 +22,7 @@ public final class UpgradeNoteResponse {
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
      */
-    private final String $package;
+    private final String package_;
     /**
      * Required for non-Windows OS. The version of the package in machine + human readable form.
      * 
@@ -37,11 +37,11 @@ public final class UpgradeNoteResponse {
     @CustomType.Constructor
     private UpgradeNoteResponse(
         @CustomType.Parameter("distributions") List<UpgradeDistributionResponse> distributions,
-        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("package") String package_,
         @CustomType.Parameter("version") VersionResponse version,
         @CustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
         this.distributions = distributions;
-        this.$package = $package;
+        this.package_ = package_;
         this.version = version;
         this.windowsUpdate = windowsUpdate;
     }
@@ -57,8 +57,8 @@ public final class UpgradeNoteResponse {
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
     */
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
     /**
      * Required for non-Windows OS. The version of the package in machine + human readable form.
@@ -85,7 +85,7 @@ public final class UpgradeNoteResponse {
 
     public static final class Builder {
         private List<UpgradeDistributionResponse> distributions;
-        private String $package;
+        private String package_;
         private VersionResponse version;
         private WindowsUpdateResponse windowsUpdate;
 
@@ -96,7 +96,7 @@ public final class UpgradeNoteResponse {
         public Builder(UpgradeNoteResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distributions = defaults.distributions;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.version = defaults.version;
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
@@ -108,8 +108,8 @@ public final class UpgradeNoteResponse {
         public Builder distributions(UpgradeDistributionResponse... distributions) {
             return distributions(List.of(distributions));
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder version(VersionResponse version) {
@@ -120,7 +120,7 @@ public final class UpgradeNoteResponse {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }        public UpgradeNoteResponse build() {
-            return new UpgradeNoteResponse(distributions, $package, version, windowsUpdate);
+            return new UpgradeNoteResponse(distributions, package_, version, windowsUpdate);
         }
     }
 }

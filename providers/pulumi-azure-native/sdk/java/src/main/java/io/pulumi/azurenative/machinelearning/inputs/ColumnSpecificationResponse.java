@@ -26,10 +26,10 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @Import(name="enum")
-      private final @Nullable List<Object> $enum;
+      private final @Nullable List<Object> enum_;
 
-    public List<Object> get$enum() {
-        return this.$enum == null ? List.of() : this.$enum;
+    public List<Object> getEnum_() {
+        return this.enum_ == null ? List.of() : this.enum_;
     }
 
     /**
@@ -77,12 +77,12 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
     }
 
     public ColumnSpecificationResponse(
-        @Nullable List<Object> $enum,
+        @Nullable List<Object> enum_,
         @Nullable String format,
         String type,
         @Nullable Boolean xMsIsnullable,
         @Nullable Boolean xMsIsordered) {
-        this.$enum = $enum;
+        this.enum_ = enum_;
         this.format = format;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.xMsIsnullable = xMsIsnullable;
@@ -90,7 +90,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
     }
 
     private ColumnSpecificationResponse() {
-        this.$enum = List.of();
+        this.enum_ = List.of();
         this.format = null;
         this.type = null;
         this.xMsIsnullable = null;
@@ -106,7 +106,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
     }
 
     public static final class Builder {
-        private @Nullable List<Object> $enum;
+        private @Nullable List<Object> enum_;
         private @Nullable String format;
         private String type;
         private @Nullable Boolean xMsIsnullable;
@@ -118,19 +118,19 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
 
         public Builder(ColumnSpecificationResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$enum = defaults.$enum;
+    	      this.enum_ = defaults.enum_;
     	      this.format = defaults.format;
     	      this.type = defaults.type;
     	      this.xMsIsnullable = defaults.xMsIsnullable;
     	      this.xMsIsordered = defaults.xMsIsordered;
         }
 
-        public Builder $enum(@Nullable List<Object> $enum) {
-            this.$enum = $enum;
+        public Builder enum_(@Nullable List<Object> enum_) {
+            this.enum_ = enum_;
             return this;
         }
-        public Builder $enum(Object... $enum) {
-            return $enum(List.of($enum));
+        public Builder enum_(Object... enum_) {
+            return enum_(List.of(enum_));
         }
         public Builder format(@Nullable String format) {
             this.format = format;
@@ -148,7 +148,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
             this.xMsIsordered = xMsIsordered;
             return this;
         }        public ColumnSpecificationResponse build() {
-            return new ColumnSpecificationResponse($enum, format, type, xMsIsnullable, xMsIsordered);
+            return new ColumnSpecificationResponse(enum_, format, type, xMsIsnullable, xMsIsordered);
         }
     }
 }

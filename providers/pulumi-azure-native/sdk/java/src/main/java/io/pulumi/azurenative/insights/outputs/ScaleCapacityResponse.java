@@ -13,7 +13,7 @@ public final class ScaleCapacityResponse {
      * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
      * 
      */
-    private final String $default;
+    private final String default_;
     /**
      * the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
      * 
@@ -27,10 +27,10 @@ public final class ScaleCapacityResponse {
 
     @CustomType.Constructor
     private ScaleCapacityResponse(
-        @CustomType.Parameter("default") String $default,
+        @CustomType.Parameter("default") String default_,
         @CustomType.Parameter("maximum") String maximum,
         @CustomType.Parameter("minimum") String minimum) {
-        this.$default = $default;
+        this.default_ = default_;
         this.maximum = maximum;
         this.minimum = minimum;
     }
@@ -39,8 +39,8 @@ public final class ScaleCapacityResponse {
      * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
      * 
     */
-    public String get$default() {
-        return this.$default;
+    public String getDefault_() {
+        return this.default_;
     }
     /**
      * the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
@@ -66,7 +66,7 @@ public final class ScaleCapacityResponse {
     }
 
     public static final class Builder {
-        private String $default;
+        private String default_;
         private String maximum;
         private String minimum;
 
@@ -76,13 +76,13 @@ public final class ScaleCapacityResponse {
 
         public Builder(ScaleCapacityResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.maximum = defaults.maximum;
     	      this.minimum = defaults.minimum;
         }
 
-        public Builder $default(String $default) {
-            this.$default = Objects.requireNonNull($default);
+        public Builder default_(String default_) {
+            this.default_ = Objects.requireNonNull(default_);
             return this;
         }
         public Builder maximum(String maximum) {
@@ -93,7 +93,7 @@ public final class ScaleCapacityResponse {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }        public ScaleCapacityResponse build() {
-            return new ScaleCapacityResponse($default, maximum, minimum);
+            return new ScaleCapacityResponse(default_, maximum, minimum);
         }
     }
 }

@@ -23,10 +23,10 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * 
      */
     @Import(name="default")
-      private final @Nullable String $default;
+      private final @Nullable String default_;
 
-    public Optional<String> get$default() {
-        return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
+    public Optional<String> getDefault_() {
+        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
     /**
@@ -63,18 +63,18 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
     }
 
     public ParameterDeclarationResponse(
-        @Nullable String $default,
+        @Nullable String default_,
         @Nullable String description,
         String name,
         String type) {
-        this.$default = $default;
+        this.default_ = default_;
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ParameterDeclarationResponse() {
-        this.$default = null;
+        this.default_ = null;
         this.description = null;
         this.name = null;
         this.type = null;
@@ -89,7 +89,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
     }
 
     public static final class Builder {
-        private @Nullable String $default;
+        private @Nullable String default_;
         private @Nullable String description;
         private String name;
         private String type;
@@ -100,14 +100,14 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
 
         public Builder(ParameterDeclarationResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.description = defaults.description;
     	      this.name = defaults.name;
     	      this.type = defaults.type;
         }
 
-        public Builder $default(@Nullable String $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable String default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder description(@Nullable String description) {
@@ -122,7 +122,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }        public ParameterDeclarationResponse build() {
-            return new ParameterDeclarationResponse($default, description, name, type);
+            return new ParameterDeclarationResponse(default_, description, name, type);
         }
     }
 }

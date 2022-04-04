@@ -26,7 +26,7 @@ public final class MyStack extends Stack {
 
     public MyStack() {
         var vpcIdOutput = Output.of(GetVpc.invokeAsync(GetVpcArgs.builder()
-                                .$default(true)
+                                .default_(true)
                                 .build(),
                         InvokeOptions.Empty)
                 .thenApply(getVpcResult -> getVpcResult.getId()));

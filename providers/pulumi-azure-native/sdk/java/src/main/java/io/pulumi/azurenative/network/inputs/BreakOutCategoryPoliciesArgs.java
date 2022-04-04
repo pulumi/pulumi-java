@@ -34,10 +34,10 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<Boolean> $default;
+      private final @Nullable Output<Boolean> default_;
 
-    public Output<Boolean> get$default() {
-        return this.$default == null ? Output.empty() : this.$default;
+    public Output<Boolean> getDefault_() {
+        return this.default_ == null ? Output.empty() : this.default_;
     }
 
     /**
@@ -53,16 +53,16 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
 
     public BreakOutCategoryPoliciesArgs(
         @Nullable Output<Boolean> allow,
-        @Nullable Output<Boolean> $default,
+        @Nullable Output<Boolean> default_,
         @Nullable Output<Boolean> optimize) {
         this.allow = allow;
-        this.$default = $default;
+        this.default_ = default_;
         this.optimize = optimize;
     }
 
     private BreakOutCategoryPoliciesArgs() {
         this.allow = Output.empty();
-        this.$default = Output.empty();
+        this.default_ = Output.empty();
         this.optimize = Output.empty();
     }
 
@@ -76,7 +76,7 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
 
     public static final class Builder {
         private @Nullable Output<Boolean> allow;
-        private @Nullable Output<Boolean> $default;
+        private @Nullable Output<Boolean> default_;
         private @Nullable Output<Boolean> optimize;
 
         public Builder() {
@@ -86,7 +86,7 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
         public Builder(BreakOutCategoryPoliciesArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allow = defaults.allow;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.optimize = defaults.optimize;
         }
 
@@ -98,12 +98,12 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
             this.allow = Output.ofNullable(allow);
             return this;
         }
-        public Builder $default(@Nullable Output<Boolean> $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Output<Boolean> default_) {
+            this.default_ = default_;
             return this;
         }
-        public Builder $default(@Nullable Boolean $default) {
-            this.$default = Output.ofNullable($default);
+        public Builder default_(@Nullable Boolean default_) {
+            this.default_ = Output.ofNullable(default_);
             return this;
         }
         public Builder optimize(@Nullable Output<Boolean> optimize) {
@@ -114,7 +114,7 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
             this.optimize = Output.ofNullable(optimize);
             return this;
         }        public BreakOutCategoryPoliciesArgs build() {
-            return new BreakOutCategoryPoliciesArgs(allow, $default, optimize);
+            return new BreakOutCategoryPoliciesArgs(allow, default_, optimize);
         }
     }
 }

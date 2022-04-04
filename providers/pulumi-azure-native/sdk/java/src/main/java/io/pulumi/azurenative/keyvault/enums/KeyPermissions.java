@@ -21,7 +21,7 @@ import java.util.StringJoiner;
         List("list"),
         Create("create"),
         Update("update"),
-        $Import("import"),
+        Import_("import"),
         Delete("delete"),
         Backup("backup"),
         Restore("restore"),

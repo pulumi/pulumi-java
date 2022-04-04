@@ -60,11 +60,11 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @Import(name="interface")
-      private final @Nullable Output<String> $interface;
+      private final @Nullable Output<String> interface_;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Output<String> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -207,7 +207,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     public RegionDiskArgs(
         @Nullable Output<String> description,
         @Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Output<String> $interface,
+        @Nullable Output<String> interface_,
         @Nullable Output<Map<String,String>> labels,
         @Nullable Output<String> name,
         @Nullable Output<Integer> physicalBlockSizeBytes,
@@ -220,7 +220,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> type) {
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.labels = labels;
         this.name = name;
         this.physicalBlockSizeBytes = physicalBlockSizeBytes;
@@ -236,7 +236,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     private RegionDiskArgs() {
         this.description = Output.empty();
         this.diskEncryptionKey = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.labels = Output.empty();
         this.name = Output.empty();
         this.physicalBlockSizeBytes = Output.empty();
@@ -260,7 +260,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     public static final class Builder {
         private @Nullable Output<String> description;
         private @Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> interface_;
         private @Nullable Output<Map<String,String>> labels;
         private @Nullable Output<String> name;
         private @Nullable Output<Integer> physicalBlockSizeBytes;
@@ -280,7 +280,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
     	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
     	      this.physicalBlockSizeBytes = defaults.physicalBlockSizeBytes;
@@ -309,12 +309,12 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
-        public Builder $interface(@Nullable Output<String> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<String> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -400,7 +400,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Output.ofNullable(type);
             return this;
         }        public RegionDiskArgs build() {
-            return new RegionDiskArgs(description, diskEncryptionKey, $interface, labels, name, physicalBlockSizeBytes, project, region, replicaZones, size, snapshot, sourceSnapshotEncryptionKey, type);
+            return new RegionDiskArgs(description, diskEncryptionKey, interface_, labels, name, physicalBlockSizeBytes, project, region, replicaZones, size, snapshot, sourceSnapshotEncryptionKey, type);
         }
     }
 }

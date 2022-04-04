@@ -136,10 +136,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
      * 
      */
     @Import(name="protected")
-      private final @Nullable Boolean $protected;
+      private final @Nullable Boolean protected_;
 
-    public Optional<Boolean> get$protected() {
-        return this.$protected == null ? Optional.empty() : Optional.ofNullable(this.$protected);
+    public Optional<Boolean> getProtected_() {
+        return this.protected_ == null ? Optional.empty() : Optional.ofNullable(this.protected_);
     }
 
     /**
@@ -186,7 +186,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
         @Nullable String onPremiseOldestRecoveryPoint,
         @Nullable Integer onPremiseRecoveryPointCount,
         @Nullable Map<String,String> protectableObjectLoadPath,
-        @Nullable Boolean $protected,
+        @Nullable Boolean protected_,
         @Nullable String protectionGroupName,
         @Nullable Integer recoveryPointCount,
         @Nullable String totalDiskStorageSizeInBytes) {
@@ -200,7 +200,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
         this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
         this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
         this.protectableObjectLoadPath = protectableObjectLoadPath;
-        this.$protected = $protected;
+        this.protected_ = protected_;
         this.protectionGroupName = protectionGroupName;
         this.recoveryPointCount = recoveryPointCount;
         this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
@@ -217,7 +217,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
         this.onPremiseOldestRecoveryPoint = null;
         this.onPremiseRecoveryPointCount = null;
         this.protectableObjectLoadPath = Map.of();
-        this.$protected = null;
+        this.protected_ = null;
         this.protectionGroupName = null;
         this.recoveryPointCount = null;
         this.totalDiskStorageSizeInBytes = null;
@@ -242,7 +242,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
         private @Nullable String onPremiseOldestRecoveryPoint;
         private @Nullable Integer onPremiseRecoveryPointCount;
         private @Nullable Map<String,String> protectableObjectLoadPath;
-        private @Nullable Boolean $protected;
+        private @Nullable Boolean protected_;
         private @Nullable String protectionGroupName;
         private @Nullable Integer recoveryPointCount;
         private @Nullable String totalDiskStorageSizeInBytes;
@@ -263,7 +263,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
     	      this.onPremiseOldestRecoveryPoint = defaults.onPremiseOldestRecoveryPoint;
     	      this.onPremiseRecoveryPointCount = defaults.onPremiseRecoveryPointCount;
     	      this.protectableObjectLoadPath = defaults.protectableObjectLoadPath;
-    	      this.$protected = defaults.$protected;
+    	      this.protected_ = defaults.protected_;
     	      this.protectionGroupName = defaults.protectionGroupName;
     	      this.recoveryPointCount = defaults.recoveryPointCount;
     	      this.totalDiskStorageSizeInBytes = defaults.totalDiskStorageSizeInBytes;
@@ -309,8 +309,8 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
             this.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
-        public Builder $protected(@Nullable Boolean $protected) {
-            this.$protected = $protected;
+        public Builder protected_(@Nullable Boolean protected_) {
+            this.protected_ = protected_;
             return this;
         }
         public Builder protectionGroupName(@Nullable String protectionGroupName) {
@@ -325,7 +325,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }        public DPMProtectedItemExtendedInfoResponse build() {
-            return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, $protected, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
+            return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, protected_, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
         }
     }
 }

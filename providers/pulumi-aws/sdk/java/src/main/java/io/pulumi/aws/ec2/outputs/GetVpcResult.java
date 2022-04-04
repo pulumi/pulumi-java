@@ -26,7 +26,7 @@ public final class GetVpcResult {
      */
     private final String cidrBlock;
     private final List<GetVpcCidrBlockAssociation> cidrBlockAssociations;
-    private final Boolean $default;
+    private final Boolean default_;
     private final String dhcpOptionsId;
     /**
      * Whether or not the VPC has DNS hostname support
@@ -78,7 +78,7 @@ public final class GetVpcResult {
         @CustomType.Parameter("arn") String arn,
         @CustomType.Parameter("cidrBlock") String cidrBlock,
         @CustomType.Parameter("cidrBlockAssociations") List<GetVpcCidrBlockAssociation> cidrBlockAssociations,
-        @CustomType.Parameter("default") Boolean $default,
+        @CustomType.Parameter("default") Boolean default_,
         @CustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
         @CustomType.Parameter("enableDnsHostnames") Boolean enableDnsHostnames,
         @CustomType.Parameter("enableDnsSupport") Boolean enableDnsSupport,
@@ -94,7 +94,7 @@ public final class GetVpcResult {
         this.arn = arn;
         this.cidrBlock = cidrBlock;
         this.cidrBlockAssociations = cidrBlockAssociations;
-        this.$default = $default;
+        this.default_ = default_;
         this.dhcpOptionsId = dhcpOptionsId;
         this.enableDnsHostnames = enableDnsHostnames;
         this.enableDnsSupport = enableDnsSupport;
@@ -126,8 +126,8 @@ public final class GetVpcResult {
     public List<GetVpcCidrBlockAssociation> getCidrBlockAssociations() {
         return this.cidrBlockAssociations;
     }
-    public Boolean get$default() {
-        return this.$default;
+    public Boolean getDefault_() {
+        return this.default_;
     }
     public String getDhcpOptionsId() {
         return this.dhcpOptionsId;
@@ -211,7 +211,7 @@ public final class GetVpcResult {
         private String arn;
         private String cidrBlock;
         private List<GetVpcCidrBlockAssociation> cidrBlockAssociations;
-        private Boolean $default;
+        private Boolean default_;
         private String dhcpOptionsId;
         private Boolean enableDnsHostnames;
         private Boolean enableDnsSupport;
@@ -234,7 +234,7 @@ public final class GetVpcResult {
     	      this.arn = defaults.arn;
     	      this.cidrBlock = defaults.cidrBlock;
     	      this.cidrBlockAssociations = defaults.cidrBlockAssociations;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.dhcpOptionsId = defaults.dhcpOptionsId;
     	      this.enableDnsHostnames = defaults.enableDnsHostnames;
     	      this.enableDnsSupport = defaults.enableDnsSupport;
@@ -264,8 +264,8 @@ public final class GetVpcResult {
         public Builder cidrBlockAssociations(GetVpcCidrBlockAssociation... cidrBlockAssociations) {
             return cidrBlockAssociations(List.of(cidrBlockAssociations));
         }
-        public Builder $default(Boolean $default) {
-            this.$default = Objects.requireNonNull($default);
+        public Builder default_(Boolean default_) {
+            this.default_ = Objects.requireNonNull(default_);
             return this;
         }
         public Builder dhcpOptionsId(String dhcpOptionsId) {
@@ -319,7 +319,7 @@ public final class GetVpcResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }        public GetVpcResult build() {
-            return new GetVpcResult(arn, cidrBlock, cidrBlockAssociations, $default, dhcpOptionsId, enableDnsHostnames, enableDnsSupport, filters, id, instanceTenancy, ipv6AssociationId, ipv6CidrBlock, mainRouteTableId, ownerId, state, tags);
+            return new GetVpcResult(arn, cidrBlock, cidrBlockAssociations, default_, dhcpOptionsId, enableDnsHostnames, enableDnsSupport, filters, id, instanceTenancy, ipv6AssociationId, ipv6CidrBlock, mainRouteTableId, ownerId, state, tags);
         }
     }
 }

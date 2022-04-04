@@ -42,10 +42,10 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<Boolean> $default;
+      private final @Nullable Output<Boolean> default_;
 
-    public Output<Boolean> get$default() {
-        return this.$default == null ? Output.empty() : this.$default;
+    public Output<Boolean> getDefault_() {
+        return this.default_ == null ? Output.empty() : this.default_;
     }
 
     /**
@@ -149,7 +149,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     public StorageClassArgs(
         @Nullable Output<Boolean> allowVolumeExpansion,
-        @Nullable Output<Boolean> $default,
+        @Nullable Output<Boolean> default_,
         @Nullable Output<Boolean> encrypted,
         @Nullable Output<Integer> iopsPerGb,
         @Nullable Output<String> kmsKeyId,
@@ -160,7 +160,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> volumeBindingMode,
         @Nullable Output<List<String>> zones) {
         this.allowVolumeExpansion = allowVolumeExpansion;
-        this.$default = $default;
+        this.default_ = default_;
         this.encrypted = encrypted;
         this.iopsPerGb = iopsPerGb;
         this.kmsKeyId = kmsKeyId;
@@ -174,7 +174,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     private StorageClassArgs() {
         this.allowVolumeExpansion = Output.empty();
-        this.$default = Output.empty();
+        this.default_ = Output.empty();
         this.encrypted = Output.empty();
         this.iopsPerGb = Output.empty();
         this.kmsKeyId = Output.empty();
@@ -196,7 +196,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final class Builder {
         private @Nullable Output<Boolean> allowVolumeExpansion;
-        private @Nullable Output<Boolean> $default;
+        private @Nullable Output<Boolean> default_;
         private @Nullable Output<Boolean> encrypted;
         private @Nullable Output<Integer> iopsPerGb;
         private @Nullable Output<String> kmsKeyId;
@@ -214,7 +214,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(StorageClassArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allowVolumeExpansion = defaults.allowVolumeExpansion;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.encrypted = defaults.encrypted;
     	      this.iopsPerGb = defaults.iopsPerGb;
     	      this.kmsKeyId = defaults.kmsKeyId;
@@ -234,12 +234,12 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             this.allowVolumeExpansion = Output.ofNullable(allowVolumeExpansion);
             return this;
         }
-        public Builder $default(@Nullable Output<Boolean> $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Output<Boolean> default_) {
+            this.default_ = default_;
             return this;
         }
-        public Builder $default(@Nullable Boolean $default) {
-            this.$default = Output.ofNullable($default);
+        public Builder default_(@Nullable Boolean default_) {
+            this.default_ = Output.ofNullable(default_);
             return this;
         }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
@@ -320,7 +320,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }        public StorageClassArgs build() {
-            return new StorageClassArgs(allowVolumeExpansion, $default, encrypted, iopsPerGb, kmsKeyId, metadata, mountOptions, reclaimPolicy, type, volumeBindingMode, zones);
+            return new StorageClassArgs(allowVolumeExpansion, default_, encrypted, iopsPerGb, kmsKeyId, metadata, mountOptions, reclaimPolicy, type, volumeBindingMode, zones);
         }
     }
 }

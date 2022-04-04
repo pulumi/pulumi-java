@@ -40,7 +40,7 @@ public final class ApiPortalPropertiesResponse {
      * Indicates whether the API portal exposes endpoint.
      * 
      */
-    private final @Nullable Boolean $public;
+    private final @Nullable Boolean public_;
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
@@ -68,7 +68,7 @@ public final class ApiPortalPropertiesResponse {
         @CustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
         @CustomType.Parameter("instances") List<ApiPortalInstanceResponse> instances,
         @CustomType.Parameter("provisioningState") String provisioningState,
-        @CustomType.Parameter("public") @Nullable Boolean $public,
+        @CustomType.Parameter("public") @Nullable Boolean public_,
         @CustomType.Parameter("resourceRequests") ApiPortalResourceRequestsResponse resourceRequests,
         @CustomType.Parameter("sourceUrls") @Nullable List<String> sourceUrls,
         @CustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
@@ -77,7 +77,7 @@ public final class ApiPortalPropertiesResponse {
         this.httpsOnly = httpsOnly;
         this.instances = instances;
         this.provisioningState = provisioningState;
-        this.$public = $public;
+        this.public_ = public_;
         this.resourceRequests = resourceRequests;
         this.sourceUrls = sourceUrls;
         this.ssoProperties = ssoProperties;
@@ -116,8 +116,8 @@ public final class ApiPortalPropertiesResponse {
      * Indicates whether the API portal exposes endpoint.
      * 
     */
-    public Optional<Boolean> get$public() {
-        return Optional.ofNullable(this.$public);
+    public Optional<Boolean> getPublic_() {
+        return Optional.ofNullable(this.public_);
     }
     /**
      * The requested resource quantity for required CPU and Memory.
@@ -161,7 +161,7 @@ public final class ApiPortalPropertiesResponse {
         private @Nullable Boolean httpsOnly;
         private List<ApiPortalInstanceResponse> instances;
         private String provisioningState;
-        private @Nullable Boolean $public;
+        private @Nullable Boolean public_;
         private ApiPortalResourceRequestsResponse resourceRequests;
         private @Nullable List<String> sourceUrls;
         private @Nullable SsoPropertiesResponse ssoProperties;
@@ -177,7 +177,7 @@ public final class ApiPortalPropertiesResponse {
     	      this.httpsOnly = defaults.httpsOnly;
     	      this.instances = defaults.instances;
     	      this.provisioningState = defaults.provisioningState;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.resourceRequests = defaults.resourceRequests;
     	      this.sourceUrls = defaults.sourceUrls;
     	      this.ssoProperties = defaults.ssoProperties;
@@ -206,8 +206,8 @@ public final class ApiPortalPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = public_;
             return this;
         }
         public Builder resourceRequests(ApiPortalResourceRequestsResponse resourceRequests) {
@@ -229,7 +229,7 @@ public final class ApiPortalPropertiesResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }        public ApiPortalPropertiesResponse build() {
-            return new ApiPortalPropertiesResponse(gatewayIds, httpsOnly, instances, provisioningState, $public, resourceRequests, sourceUrls, ssoProperties, url);
+            return new ApiPortalPropertiesResponse(gatewayIds, httpsOnly, instances, provisioningState, public_, resourceRequests, sourceUrls, ssoProperties, url);
         }
     }
 }

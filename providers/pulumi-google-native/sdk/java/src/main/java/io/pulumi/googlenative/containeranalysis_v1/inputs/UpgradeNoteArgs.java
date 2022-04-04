@@ -38,10 +38,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<String> $package;
+      private final @Nullable Output<String> package_;
 
-    public Output<String> get$package() {
-        return this.$package == null ? Output.empty() : this.$package;
+    public Output<String> getPackage_() {
+        return this.package_ == null ? Output.empty() : this.package_;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public UpgradeNoteArgs(
         @Nullable Output<List<UpgradeDistributionArgs>> distributions,
-        @Nullable Output<String> $package,
+        @Nullable Output<String> package_,
         @Nullable Output<VersionArgs> version,
         @Nullable Output<WindowsUpdateArgs> windowsUpdate) {
         this.distributions = distributions;
-        this.$package = $package;
+        this.package_ = package_;
         this.version = version;
         this.windowsUpdate = windowsUpdate;
     }
 
     private UpgradeNoteArgs() {
         this.distributions = Output.empty();
-        this.$package = Output.empty();
+        this.package_ = Output.empty();
         this.version = Output.empty();
         this.windowsUpdate = Output.empty();
     }
@@ -94,7 +94,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final class Builder {
         private @Nullable Output<List<UpgradeDistributionArgs>> distributions;
-        private @Nullable Output<String> $package;
+        private @Nullable Output<String> package_;
         private @Nullable Output<VersionArgs> version;
         private @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
@@ -105,7 +105,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(UpgradeNoteArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distributions = defaults.distributions;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.version = defaults.version;
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
@@ -121,12 +121,12 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
         public Builder distributions(UpgradeDistributionArgs... distributions) {
             return distributions(List.of(distributions));
         }
-        public Builder $package(@Nullable Output<String> $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable Output<String> package_) {
+            this.package_ = package_;
             return this;
         }
-        public Builder $package(@Nullable String $package) {
-            this.$package = Output.ofNullable($package);
+        public Builder package_(@Nullable String package_) {
+            this.package_ = Output.ofNullable(package_);
             return this;
         }
         public Builder version(@Nullable Output<VersionArgs> version) {
@@ -145,7 +145,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.windowsUpdate = Output.ofNullable(windowsUpdate);
             return this;
         }        public UpgradeNoteArgs build() {
-            return new UpgradeNoteArgs(distributions, $package, version, windowsUpdate);
+            return new UpgradeNoteArgs(distributions, package_, version, windowsUpdate);
         }
     }
 }

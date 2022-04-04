@@ -83,7 +83,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
      * 
      */
-    private final @Nullable String $interface;
+    private final @Nullable String interface_;
     /**
      * - 
      * Type of the resource. Always compute#attachedDisk for attached
@@ -126,7 +126,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
         @CustomType.Parameter("guestOsFeatures") @Nullable List<String> guestOsFeatures,
         @CustomType.Parameter("index") @Nullable Integer index,
         @CustomType.Parameter("initializeParams") @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams,
-        @CustomType.Parameter("interface") @Nullable String $interface,
+        @CustomType.Parameter("interface") @Nullable String interface_,
         @CustomType.Parameter("kind") @Nullable String kind,
         @CustomType.Parameter("licenses") @Nullable List<String> licenses,
         @CustomType.Parameter("mode") @Nullable String mode,
@@ -138,7 +138,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
         this.guestOsFeatures = guestOsFeatures;
         this.index = index;
         this.initializeParams = initializeParams;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.kind = kind;
         this.licenses = licenses;
         this.mode = mode;
@@ -226,8 +226,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
      * 
     */
-    public Optional<String> get$interface() {
-        return Optional.ofNullable(this.$interface);
+    public Optional<String> getInterface_() {
+        return Optional.ofNullable(this.interface_);
     }
     /**
      * - 
@@ -288,7 +288,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
         private @Nullable List<String> guestOsFeatures;
         private @Nullable Integer index;
         private @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams;
-        private @Nullable String $interface;
+        private @Nullable String interface_;
         private @Nullable String kind;
         private @Nullable List<String> licenses;
         private @Nullable String mode;
@@ -307,7 +307,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.index = defaults.index;
     	      this.initializeParams = defaults.initializeParams;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.licenses = defaults.licenses;
     	      this.mode = defaults.mode;
@@ -342,8 +342,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
             this.initializeParams = initializeParams;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = interface_;
             return this;
         }
         public Builder kind(@Nullable String kind) {
@@ -369,7 +369,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
             this.type = type;
             return this;
         }        public RuntimeVirtualMachineVirtualMachineConfigDataDisk build() {
-            return new RuntimeVirtualMachineVirtualMachineConfigDataDisk(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
+            return new RuntimeVirtualMachineVirtualMachineConfigDataDisk(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, interface_, kind, licenses, mode, source, type);
         }
     }
 }

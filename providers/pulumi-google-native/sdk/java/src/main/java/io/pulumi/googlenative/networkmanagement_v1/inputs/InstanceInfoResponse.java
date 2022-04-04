@@ -44,10 +44,10 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="interface", required=true)
-      private final String $interface;
+      private final String interface_;
 
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
 
     /**
@@ -108,7 +108,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     public InstanceInfoResponse(
         String displayName,
         String externalIp,
-        String $interface,
+        String interface_,
         String internalIp,
         List<String> networkTags,
         String networkUri,
@@ -116,7 +116,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
         String uri) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.externalIp = Objects.requireNonNull(externalIp, "expected parameter 'externalIp' to be non-null");
-        this.$interface = Objects.requireNonNull($interface, "expected parameter '$interface' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
         this.internalIp = Objects.requireNonNull(internalIp, "expected parameter 'internalIp' to be non-null");
         this.networkTags = Objects.requireNonNull(networkTags, "expected parameter 'networkTags' to be non-null");
         this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
@@ -127,7 +127,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     private InstanceInfoResponse() {
         this.displayName = null;
         this.externalIp = null;
-        this.$interface = null;
+        this.interface_ = null;
         this.internalIp = null;
         this.networkTags = List.of();
         this.networkUri = null;
@@ -146,7 +146,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     public static final class Builder {
         private String displayName;
         private String externalIp;
-        private String $interface;
+        private String interface_;
         private String internalIp;
         private List<String> networkTags;
         private String networkUri;
@@ -161,7 +161,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      Objects.requireNonNull(defaults);
     	      this.displayName = defaults.displayName;
     	      this.externalIp = defaults.externalIp;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.internalIp = defaults.internalIp;
     	      this.networkTags = defaults.networkTags;
     	      this.networkUri = defaults.networkUri;
@@ -177,8 +177,8 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder internalIp(String internalIp) {
@@ -204,7 +204,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }        public InstanceInfoResponse build() {
-            return new InstanceInfoResponse(displayName, externalIp, $interface, internalIp, networkTags, networkUri, serviceAccount, uri);
+            return new InstanceInfoResponse(displayName, externalIp, interface_, internalIp, networkTags, networkUri, serviceAccount, uri);
         }
     }
 }

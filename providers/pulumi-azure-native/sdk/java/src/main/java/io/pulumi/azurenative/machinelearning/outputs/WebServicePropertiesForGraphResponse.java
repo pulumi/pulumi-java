@@ -89,7 +89,7 @@ public final class WebServicePropertiesForGraphResponse {
      * The definition of the graph package making up this web service.
      * 
      */
-    private final @Nullable GraphPackageResponse $package;
+    private final @Nullable GraphPackageResponse package_;
     /**
      * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
      * Expected value is 'Graph'.
@@ -156,7 +156,7 @@ public final class WebServicePropertiesForGraphResponse {
         @CustomType.Parameter("machineLearningWorkspace") @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace,
         @CustomType.Parameter("modifiedOn") String modifiedOn,
         @CustomType.Parameter("output") @Nullable ServiceInputOutputSpecificationResponse output,
-        @CustomType.Parameter("package") @Nullable GraphPackageResponse $package,
+        @CustomType.Parameter("package") @Nullable GraphPackageResponse package_,
         @CustomType.Parameter("packageType") String packageType,
         @CustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters,
         @CustomType.Parameter("payloadsInBlobStorage") @Nullable Boolean payloadsInBlobStorage,
@@ -179,7 +179,7 @@ public final class WebServicePropertiesForGraphResponse {
         this.machineLearningWorkspace = machineLearningWorkspace;
         this.modifiedOn = modifiedOn;
         this.output = output;
-        this.$package = $package;
+        this.package_ = package_;
         this.packageType = packageType;
         this.parameters = parameters;
         this.payloadsInBlobStorage = payloadsInBlobStorage;
@@ -280,8 +280,8 @@ public final class WebServicePropertiesForGraphResponse {
      * The definition of the graph package making up this web service.
      * 
     */
-    public Optional<GraphPackageResponse> get$package() {
-        return Optional.ofNullable(this.$package);
+    public Optional<GraphPackageResponse> getPackage_() {
+        return Optional.ofNullable(this.package_);
     }
     /**
      * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
@@ -376,7 +376,7 @@ public final class WebServicePropertiesForGraphResponse {
         private @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
         private String modifiedOn;
         private @Nullable ServiceInputOutputSpecificationResponse output;
-        private @Nullable GraphPackageResponse $package;
+        private @Nullable GraphPackageResponse package_;
         private String packageType;
         private @Nullable Map<String,WebServiceParameterResponse> parameters;
         private @Nullable Boolean payloadsInBlobStorage;
@@ -406,7 +406,7 @@ public final class WebServicePropertiesForGraphResponse {
     	      this.machineLearningWorkspace = defaults.machineLearningWorkspace;
     	      this.modifiedOn = defaults.modifiedOn;
     	      this.output = defaults.output;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.packageType = defaults.packageType;
     	      this.parameters = defaults.parameters;
     	      this.payloadsInBlobStorage = defaults.payloadsInBlobStorage;
@@ -467,8 +467,8 @@ public final class WebServicePropertiesForGraphResponse {
             this.output = output;
             return this;
         }
-        public Builder $package(@Nullable GraphPackageResponse $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable GraphPackageResponse package_) {
+            this.package_ = package_;
             return this;
         }
         public Builder packageType(String packageType) {
@@ -511,7 +511,7 @@ public final class WebServicePropertiesForGraphResponse {
             this.title = title;
             return this;
         }        public WebServicePropertiesForGraphResponse build() {
-            return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
+            return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, package_, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
         }
     }
 }
