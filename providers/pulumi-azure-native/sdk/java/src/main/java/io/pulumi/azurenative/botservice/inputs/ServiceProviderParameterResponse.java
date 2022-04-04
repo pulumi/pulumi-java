@@ -22,10 +22,10 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @Import(name="default", required=true)
-      private final String $default;
+      private final String default_;
 
-    public String get$default() {
-        return this.$default;
+    public String getDefault_() {
+        return this.default_;
     }
 
     /**
@@ -95,14 +95,14 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
     }
 
     public ServiceProviderParameterResponse(
-        String $default,
+        String default_,
         String description,
         String displayName,
         String helpUrl,
         ServiceProviderParameterResponseMetadata metadata,
         String name,
         String type) {
-        this.$default = Objects.requireNonNull($default, "expected parameter '$default' to be non-null");
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.helpUrl = Objects.requireNonNull(helpUrl, "expected parameter 'helpUrl' to be non-null");
@@ -112,7 +112,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
     }
 
     private ServiceProviderParameterResponse() {
-        this.$default = null;
+        this.default_ = null;
         this.description = null;
         this.displayName = null;
         this.helpUrl = null;
@@ -130,7 +130,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private String $default;
+        private String default_;
         private String description;
         private String displayName;
         private String helpUrl;
@@ -144,7 +144,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
         public Builder(ServiceProviderParameterResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.description = defaults.description;
     	      this.displayName = defaults.displayName;
     	      this.helpUrl = defaults.helpUrl;
@@ -153,8 +153,8 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder $default(String $default) {
-            this.$default = Objects.requireNonNull($default);
+        public Builder default_(String default_) {
+            this.default_ = Objects.requireNonNull(default_);
             return this;
         }
         public Builder description(String description) {
@@ -181,7 +181,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }        public ServiceProviderParameterResponse build() {
-            return new ServiceProviderParameterResponse($default, description, displayName, helpUrl, metadata, name, type);
+            return new ServiceProviderParameterResponse(default_, description, displayName, helpUrl, metadata, name, type);
         }
     }
 }

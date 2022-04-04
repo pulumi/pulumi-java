@@ -18,7 +18,7 @@ public final class ColumnSpecificationResponse {
      * If the data type is categorical, this provides the list of accepted categories.
      * 
      */
-    private final @Nullable List<Object> $enum;
+    private final @Nullable List<Object> enum_;
     /**
      * Additional format information for the data type.
      * 
@@ -42,12 +42,12 @@ public final class ColumnSpecificationResponse {
 
     @CustomType.Constructor
     private ColumnSpecificationResponse(
-        @CustomType.Parameter("enum") @Nullable List<Object> $enum,
+        @CustomType.Parameter("enum") @Nullable List<Object> enum_,
         @CustomType.Parameter("format") @Nullable String format,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("xMsIsnullable") @Nullable Boolean xMsIsnullable,
         @CustomType.Parameter("xMsIsordered") @Nullable Boolean xMsIsordered) {
-        this.$enum = $enum;
+        this.enum_ = enum_;
         this.format = format;
         this.type = type;
         this.xMsIsnullable = xMsIsnullable;
@@ -58,8 +58,8 @@ public final class ColumnSpecificationResponse {
      * If the data type is categorical, this provides the list of accepted categories.
      * 
     */
-    public List<Object> get$enum() {
-        return this.$enum == null ? List.of() : this.$enum;
+    public List<Object> getEnum_() {
+        return this.enum_ == null ? List.of() : this.enum_;
     }
     /**
      * Additional format information for the data type.
@@ -99,7 +99,7 @@ public final class ColumnSpecificationResponse {
     }
 
     public static final class Builder {
-        private @Nullable List<Object> $enum;
+        private @Nullable List<Object> enum_;
         private @Nullable String format;
         private String type;
         private @Nullable Boolean xMsIsnullable;
@@ -111,19 +111,19 @@ public final class ColumnSpecificationResponse {
 
         public Builder(ColumnSpecificationResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$enum = defaults.$enum;
+    	      this.enum_ = defaults.enum_;
     	      this.format = defaults.format;
     	      this.type = defaults.type;
     	      this.xMsIsnullable = defaults.xMsIsnullable;
     	      this.xMsIsordered = defaults.xMsIsordered;
         }
 
-        public Builder $enum(@Nullable List<Object> $enum) {
-            this.$enum = $enum;
+        public Builder enum_(@Nullable List<Object> enum_) {
+            this.enum_ = enum_;
             return this;
         }
-        public Builder $enum(Object... $enum) {
-            return $enum(List.of($enum));
+        public Builder enum_(Object... enum_) {
+            return enum_(List.of(enum_));
         }
         public Builder format(@Nullable String format) {
             this.format = format;
@@ -141,7 +141,7 @@ public final class ColumnSpecificationResponse {
             this.xMsIsordered = xMsIsordered;
             return this;
         }        public ColumnSpecificationResponse build() {
-            return new ColumnSpecificationResponse($enum, format, type, xMsIsnullable, xMsIsordered);
+            return new ColumnSpecificationResponse(enum_, format, type, xMsIsnullable, xMsIsordered);
         }
     }
 }

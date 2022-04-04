@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum CreateMode {
         Recover("recover"),
-        $Default("default");
+        Default_("default");
 
         private final String value;
 

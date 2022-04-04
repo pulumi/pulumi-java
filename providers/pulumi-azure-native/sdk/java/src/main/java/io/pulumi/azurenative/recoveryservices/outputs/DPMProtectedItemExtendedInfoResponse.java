@@ -68,7 +68,7 @@ public final class DPMProtectedItemExtendedInfoResponse {
      * To check if backup item is disk protected.
      * 
      */
-    private final @Nullable Boolean $protected;
+    private final @Nullable Boolean protected_;
     /**
      * Protection group name of the backup item.
      * 
@@ -97,7 +97,7 @@ public final class DPMProtectedItemExtendedInfoResponse {
         @CustomType.Parameter("onPremiseOldestRecoveryPoint") @Nullable String onPremiseOldestRecoveryPoint,
         @CustomType.Parameter("onPremiseRecoveryPointCount") @Nullable Integer onPremiseRecoveryPointCount,
         @CustomType.Parameter("protectableObjectLoadPath") @Nullable Map<String,String> protectableObjectLoadPath,
-        @CustomType.Parameter("protected") @Nullable Boolean $protected,
+        @CustomType.Parameter("protected") @Nullable Boolean protected_,
         @CustomType.Parameter("protectionGroupName") @Nullable String protectionGroupName,
         @CustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
         @CustomType.Parameter("totalDiskStorageSizeInBytes") @Nullable String totalDiskStorageSizeInBytes) {
@@ -111,7 +111,7 @@ public final class DPMProtectedItemExtendedInfoResponse {
         this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
         this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
         this.protectableObjectLoadPath = protectableObjectLoadPath;
-        this.$protected = $protected;
+        this.protected_ = protected_;
         this.protectionGroupName = protectionGroupName;
         this.recoveryPointCount = recoveryPointCount;
         this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
@@ -191,8 +191,8 @@ public final class DPMProtectedItemExtendedInfoResponse {
      * To check if backup item is disk protected.
      * 
     */
-    public Optional<Boolean> get$protected() {
-        return Optional.ofNullable(this.$protected);
+    public Optional<Boolean> getProtected_() {
+        return Optional.ofNullable(this.protected_);
     }
     /**
      * Protection group name of the backup item.
@@ -235,7 +235,7 @@ public final class DPMProtectedItemExtendedInfoResponse {
         private @Nullable String onPremiseOldestRecoveryPoint;
         private @Nullable Integer onPremiseRecoveryPointCount;
         private @Nullable Map<String,String> protectableObjectLoadPath;
-        private @Nullable Boolean $protected;
+        private @Nullable Boolean protected_;
         private @Nullable String protectionGroupName;
         private @Nullable Integer recoveryPointCount;
         private @Nullable String totalDiskStorageSizeInBytes;
@@ -256,7 +256,7 @@ public final class DPMProtectedItemExtendedInfoResponse {
     	      this.onPremiseOldestRecoveryPoint = defaults.onPremiseOldestRecoveryPoint;
     	      this.onPremiseRecoveryPointCount = defaults.onPremiseRecoveryPointCount;
     	      this.protectableObjectLoadPath = defaults.protectableObjectLoadPath;
-    	      this.$protected = defaults.$protected;
+    	      this.protected_ = defaults.protected_;
     	      this.protectionGroupName = defaults.protectionGroupName;
     	      this.recoveryPointCount = defaults.recoveryPointCount;
     	      this.totalDiskStorageSizeInBytes = defaults.totalDiskStorageSizeInBytes;
@@ -302,8 +302,8 @@ public final class DPMProtectedItemExtendedInfoResponse {
             this.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
-        public Builder $protected(@Nullable Boolean $protected) {
-            this.$protected = $protected;
+        public Builder protected_(@Nullable Boolean protected_) {
+            this.protected_ = protected_;
             return this;
         }
         public Builder protectionGroupName(@Nullable String protectionGroupName) {
@@ -318,7 +318,7 @@ public final class DPMProtectedItemExtendedInfoResponse {
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }        public DPMProtectedItemExtendedInfoResponse build() {
-            return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, $protected, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
+            return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, protected_, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
         }
     }
 }
