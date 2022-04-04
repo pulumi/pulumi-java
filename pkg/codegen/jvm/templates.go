@@ -267,7 +267,7 @@ type builderFieldTemplateContext struct {
 const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ .Indent }}    return new {{ .Name }}();
 {{ .Indent }}}
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 {{ .Indent }}public static {{ .Name }} builder({{ .ResultType }} defaults) {
 {{ .Indent }}    return new {{ .Name }}(defaults);
 {{ .Indent }}}
