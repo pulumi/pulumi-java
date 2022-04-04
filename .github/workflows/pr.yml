@@ -124,11 +124,52 @@ jobs:
       - name: Publish Pulumi Java SDK to a local Maven repo
         timeout-minutes: 2
         run: make install_sdk
+      # build original
+      - uses: actions/checkout@v2
+        with:
+          ref: main
       - name: Build JVM SDK provider
         run: make provider.${PROVIDER}.install
         env:
           PROVIDER: ${{ matrix.provider }}
-
+      - name: Get old JAR size
+        id: oldJar
+        run: |
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # clean up
+      - name: Remove old JARs
+        run: |
+          rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
+      # build new
+      - uses: actions/checkout@v2
+      - name: Build JVM SDK provider
+        run: make provider.${PROVIDER}.install
+        env:
+          PROVIDER: ${{ matrix.provider }}
+      - name: Get new JAR size
+        id: newJar
+        run: |
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # prepare output
+      - name: Get JAR size diff
+        id: diffJar
+        run: |
+          size=$((${{ steps.newJar.outputs.sizeHuman }} - ${{ steps.oldJar.outputs.sizeHuman }}))
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      - name: Display provider size summary
+        run: |
+          echo Provider : ${{ matrix.provider }}
+          echo New Size : ${{ steps.newJar.outputs.sizeHuman }}
+          echo Old Size : ${{ steps.oldJar.outputs.sizeHuman }}
+          echo Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}
   example-aws-java-webserver:
     runs-on: ubuntu-latest
     timeout-minutes: 15
