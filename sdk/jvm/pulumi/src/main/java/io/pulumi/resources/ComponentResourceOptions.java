@@ -16,12 +16,12 @@ import static io.pulumi.resources.Resources.*;
  */
 public final class ComponentResourceOptions extends ResourceOptions implements Copyable<ComponentResourceOptions> {
 
+    public static final ComponentResourceOptions Empty = new ComponentResourceOptions();
+
     @Nullable
     private List<ProviderResource> providers;
 
-    protected ComponentResourceOptions() {
-        super();
-    }
+    protected ComponentResourceOptions() { /* empty */ }
 
     public ComponentResourceOptions(
             @Nullable Output<String> id,
@@ -115,8 +115,8 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable ComponentResourceOptions options2,
             @Nullable Output<String> id
     ) {
-        options1 = options1 != null ? options1.copy() : ComponentResourceOptions.builder().build();
-        options2 = options2 != null ? options2.copy() : ComponentResourceOptions.builder().build();
+        options1 = options1 != null ? options1.copy() : Empty;
+        options2 = options2 != null ? options2.copy() : Empty;
 
         if (options1.provider != null) {
             throw new IllegalStateException("unexpected non-null 'provider', should use only 'providers'");

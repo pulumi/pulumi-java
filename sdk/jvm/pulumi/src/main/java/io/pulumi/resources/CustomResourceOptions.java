@@ -16,15 +16,15 @@ import static io.pulumi.resources.Resources.*;
  */
 public final class CustomResourceOptions extends ResourceOptions implements Copyable<CustomResourceOptions> {
 
+    public static final CustomResourceOptions Empty = CustomResourceOptions.builder().build();
+
     private boolean deleteBeforeReplace;
     @Nullable
     private List<String> additionalSecretOutputs;
     @Nullable
     private String importId;
 
-    private CustomResourceOptions() {
-        super();
-    }
+    private CustomResourceOptions() { /* empty */ }
 
     private CustomResourceOptions(
             @Nullable Output<String> id,
@@ -153,8 +153,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable CustomResourceOptions options2,
             @Nullable Output<String> id
     ) {
-        options1 = options1 != null ? options1.copy() : CustomResourceOptions.builder().build();
-        options2 = options2 != null ? options2.copy() : CustomResourceOptions.builder().build();
+        options1 = options1 != null ? options1.copy() : Empty;
+        options2 = options2 != null ? options2.copy() : Empty;
 
         // first, merge all the normal option values over
         //noinspection ConstantConditions

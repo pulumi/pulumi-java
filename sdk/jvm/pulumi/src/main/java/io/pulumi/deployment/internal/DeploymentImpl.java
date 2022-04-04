@@ -1671,10 +1671,10 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
                                                          StackOptions options) {
             CurrentDeployment.withCurrentDeployment(deployment.get(), () -> {
-                var stack = Stack.InternalStatic.of(callback, options);
-                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
-                return (Void) null;
+                    var stack = StackInternal.of(callback, options);
+                    registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
+                                 Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+                    return (Void) null;
             });
             return whileRunningAsync();
         }
