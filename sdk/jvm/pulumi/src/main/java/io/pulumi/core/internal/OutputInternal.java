@@ -9,11 +9,12 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+
+import static java.util.Objects.requireNonNull;
 
 @InternalUse
 @ParametersAreNonnullByDefault
@@ -36,17 +37,17 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @InternalUse
     public OutputInternal(CompletableFuture<T> value, boolean isSecret) {
-        this(OutputData.ofAsync(Objects.requireNonNull(value), isSecret));
+        this(OutputData.ofAsync(requireNonNull(value), isSecret));
     }
 
     @InternalUse
     public OutputInternal(OutputData<T> dataFuture) {
-        this(CompletableFuture.completedFuture(Objects.requireNonNull(dataFuture)));
+        this(CompletableFuture.completedFuture(requireNonNull(dataFuture)));
     }
 
     @InternalUse
     public OutputInternal(CompletableFuture<OutputData<T>> dataFuture) {
-        this.dataFuture = Objects.requireNonNull(dataFuture);
+        this.dataFuture = requireNonNull(dataFuture);
 
         var deployment = DeploymentInternal.getInstanceOptional();
         deployment.ifPresent(deploymentInternal -> deploymentInternal.getRunner().registerTask(
@@ -140,7 +141,7 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
     // Static section -----
 
     static <T> OutputInternal<T> cast(Output<T> output) {
-        Objects.requireNonNull(output);
+        requireNonNull(output);
         if (output instanceof OutputInternal) {
             return (OutputInternal<T>) output;
         } else {
