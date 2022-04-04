@@ -123,10 +123,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> $interface;
+      private final @Nullable Output<String> interface_;
 
-    public Output<String> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -199,7 +199,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
         @Nullable Output<List<String>> guestOsFeatures,
         @Nullable Output<Integer> index,
         @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs> initializeParams,
-        @Nullable Output<String> $interface,
+        @Nullable Output<String> interface_,
         @Nullable Output<String> kind,
         @Nullable Output<List<String>> licenses,
         @Nullable Output<String> mode,
@@ -211,7 +211,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
         this.guestOsFeatures = guestOsFeatures;
         this.index = index;
         this.initializeParams = initializeParams;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.kind = kind;
         this.licenses = licenses;
         this.mode = mode;
@@ -226,7 +226,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
         this.guestOsFeatures = Output.empty();
         this.index = Output.empty();
         this.initializeParams = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.kind = Output.empty();
         this.licenses = Output.empty();
         this.mode = Output.empty();
@@ -249,7 +249,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
         private @Nullable Output<List<String>> guestOsFeatures;
         private @Nullable Output<Integer> index;
         private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs> initializeParams;
-        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> interface_;
         private @Nullable Output<String> kind;
         private @Nullable Output<List<String>> licenses;
         private @Nullable Output<String> mode;
@@ -268,7 +268,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.index = defaults.index;
     	      this.initializeParams = defaults.initializeParams;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.licenses = defaults.licenses;
     	      this.mode = defaults.mode;
@@ -327,12 +327,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
             this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
-        public Builder $interface(@Nullable Output<String> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<String> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -378,7 +378,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
             this.type = Output.ofNullable(type);
             return this;
         }        public RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs build() {
-            return new RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
+            return new RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, interface_, kind, licenses, mode, source, type);
         }
     }
 }

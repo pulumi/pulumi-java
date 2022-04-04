@@ -24,10 +24,10 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Integer $default;
+      private final @Nullable Integer default_;
 
-    public Optional<Integer> get$default() {
-        return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
+    public Optional<Integer> getDefault_() {
+        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
     /**
@@ -75,12 +75,12 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     public SkuCapacityResponse(
-        @Nullable Integer $default,
+        @Nullable Integer default_,
         @Nullable Integer elasticMaximum,
         @Nullable Integer maximum,
         @Nullable Integer minimum,
         @Nullable String scaleType) {
-        this.$default = $default;
+        this.default_ = default_;
         this.elasticMaximum = elasticMaximum;
         this.maximum = maximum;
         this.minimum = minimum;
@@ -88,7 +88,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     private SkuCapacityResponse() {
-        this.$default = null;
+        this.default_ = null;
         this.elasticMaximum = null;
         this.maximum = null;
         this.minimum = null;
@@ -104,7 +104,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     public static final class Builder {
-        private @Nullable Integer $default;
+        private @Nullable Integer default_;
         private @Nullable Integer elasticMaximum;
         private @Nullable Integer maximum;
         private @Nullable Integer minimum;
@@ -116,15 +116,15 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
 
         public Builder(SkuCapacityResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.elasticMaximum = defaults.elasticMaximum;
     	      this.maximum = defaults.maximum;
     	      this.minimum = defaults.minimum;
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder $default(@Nullable Integer $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Integer default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
@@ -143,7 +143,7 @@ public final class SkuCapacityResponse extends io.pulumi.resources.InvokeArgs {
             this.scaleType = scaleType;
             return this;
         }        public SkuCapacityResponse build() {
-            return new SkuCapacityResponse($default, elasticMaximum, maximum, minimum, scaleType);
+            return new SkuCapacityResponse(default_, elasticMaximum, maximum, minimum, scaleType);
         }
     }
 }

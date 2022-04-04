@@ -36,10 +36,10 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<String> $package;
+      private final @Nullable Output<String> package_;
 
-    public Output<String> get$package() {
-        return this.$package == null ? Output.empty() : this.$package;
+    public Output<String> getPackage_() {
+        return this.package_ == null ? Output.empty() : this.package_;
     }
 
     /**
@@ -55,16 +55,16 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
 
     public UpgradeOccurrenceArgs(
         @Nullable Output<UpgradeDistributionArgs> distribution,
-        @Nullable Output<String> $package,
+        @Nullable Output<String> package_,
         @Nullable Output<VersionArgs> parsedVersion) {
         this.distribution = distribution;
-        this.$package = $package;
+        this.package_ = package_;
         this.parsedVersion = parsedVersion;
     }
 
     private UpgradeOccurrenceArgs() {
         this.distribution = Output.empty();
-        this.$package = Output.empty();
+        this.package_ = Output.empty();
         this.parsedVersion = Output.empty();
     }
 
@@ -78,7 +78,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
 
     public static final class Builder {
         private @Nullable Output<UpgradeDistributionArgs> distribution;
-        private @Nullable Output<String> $package;
+        private @Nullable Output<String> package_;
         private @Nullable Output<VersionArgs> parsedVersion;
 
         public Builder() {
@@ -88,7 +88,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
         public Builder(UpgradeOccurrenceArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distribution = defaults.distribution;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.parsedVersion = defaults.parsedVersion;
         }
 
@@ -100,12 +100,12 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             this.distribution = Output.ofNullable(distribution);
             return this;
         }
-        public Builder $package(@Nullable Output<String> $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable Output<String> package_) {
+            this.package_ = package_;
             return this;
         }
-        public Builder $package(@Nullable String $package) {
-            this.$package = Output.ofNullable($package);
+        public Builder package_(@Nullable String package_) {
+            this.package_ = Output.ofNullable(package_);
             return this;
         }
         public Builder parsedVersion(@Nullable Output<VersionArgs> parsedVersion) {
@@ -116,7 +116,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             this.parsedVersion = Output.ofNullable(parsedVersion);
             return this;
         }        public UpgradeOccurrenceArgs build() {
-            return new UpgradeOccurrenceArgs(distribution, $package, parsedVersion);
+            return new UpgradeOccurrenceArgs(distribution, package_, parsedVersion);
         }
     }
 }

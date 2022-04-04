@@ -28,22 +28,22 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @Import(name="interface", required=true)
-      private final String $interface;
+      private final String interface_;
 
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
 
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(
         String diskSizeGb,
-        String $interface) {
+        String interface_) {
         this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.$interface = Objects.requireNonNull($interface, "expected parameter '$interface' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
     }
 
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse() {
         this.diskSizeGb = null;
-        this.$interface = null;
+        this.interface_ = null;
     }
 
     public static Builder builder() {
@@ -56,7 +56,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
     public static final class Builder {
         private String diskSizeGb;
-        private String $interface;
+        private String interface_;
 
         public Builder() {
     	      // Empty
@@ -65,18 +65,18 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
         public Builder(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
         }
 
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
-            return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, $interface);
+            return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, interface_);
         }
     }
 }

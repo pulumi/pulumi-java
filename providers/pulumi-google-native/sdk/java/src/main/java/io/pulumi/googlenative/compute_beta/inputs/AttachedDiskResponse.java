@@ -116,10 +116,10 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="interface", required=true)
-      private final String $interface;
+      private final String interface_;
 
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
 
     /**
@@ -219,7 +219,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
         List<GuestOsFeatureResponse> guestOsFeatures,
         Integer index,
         AttachedDiskInitializeParamsResponse initializeParams,
-        String $interface,
+        String interface_,
         String kind,
         List<String> licenses,
         Boolean locked,
@@ -236,7 +236,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
         this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures, "expected parameter 'guestOsFeatures' to be non-null");
         this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
         this.initializeParams = Objects.requireNonNull(initializeParams, "expected parameter 'initializeParams' to be non-null");
-        this.$interface = Objects.requireNonNull($interface, "expected parameter '$interface' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
         this.locked = Objects.requireNonNull(locked, "expected parameter 'locked' to be non-null");
@@ -256,7 +256,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
         this.guestOsFeatures = List.of();
         this.index = null;
         this.initializeParams = null;
-        this.$interface = null;
+        this.interface_ = null;
         this.kind = null;
         this.licenses = List.of();
         this.locked = null;
@@ -284,7 +284,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
         private List<GuestOsFeatureResponse> guestOsFeatures;
         private Integer index;
         private AttachedDiskInitializeParamsResponse initializeParams;
-        private String $interface;
+        private String interface_;
         private String kind;
         private List<String> licenses;
         private Boolean locked;
@@ -308,7 +308,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.index = defaults.index;
     	      this.initializeParams = defaults.initializeParams;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.licenses = defaults.licenses;
     	      this.locked = defaults.locked;
@@ -354,8 +354,8 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.initializeParams = Objects.requireNonNull(initializeParams);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder kind(String kind) {
@@ -396,7 +396,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
         public Builder userLicenses(String... userLicenses) {
             return userLicenses(List.of(userLicenses));
         }        public AttachedDiskResponse build() {
-            return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, guestOsFeatures, index, initializeParams, $interface, kind, licenses, locked, mode, shieldedInstanceInitialState, source, type, userLicenses);
+            return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, guestOsFeatures, index, initializeParams, interface_, kind, licenses, locked, mode, shieldedInstanceInitialState, source, type, userLicenses);
         }
     }
 }

@@ -41,7 +41,7 @@ public final class DomainIndexField {
      * You can enable returning the value of all searchable fields.
      * 
      */
-    private final @Nullable Boolean $return;
+    private final @Nullable Boolean return_;
     /**
      * You can set whether this index should be searchable or not.
      * 
@@ -65,7 +65,7 @@ public final class DomainIndexField {
         @CustomType.Parameter("facet") @Nullable Boolean facet,
         @CustomType.Parameter("highlight") @Nullable Boolean highlight,
         @CustomType.Parameter("name") String name,
-        @CustomType.Parameter("return") @Nullable Boolean $return,
+        @CustomType.Parameter("return") @Nullable Boolean return_,
         @CustomType.Parameter("search") @Nullable Boolean search,
         @CustomType.Parameter("sort") @Nullable Boolean sort,
         @CustomType.Parameter("type") String type) {
@@ -74,7 +74,7 @@ public final class DomainIndexField {
         this.facet = facet;
         this.highlight = highlight;
         this.name = name;
-        this.$return = $return;
+        this.return_ = return_;
         this.search = search;
         this.sort = sort;
         this.type = type;
@@ -119,8 +119,8 @@ public final class DomainIndexField {
      * You can enable returning the value of all searchable fields.
      * 
     */
-    public Optional<Boolean> get$return() {
-        return Optional.ofNullable(this.$return);
+    public Optional<Boolean> getReturn_() {
+        return Optional.ofNullable(this.return_);
     }
     /**
      * You can set whether this index should be searchable or not.
@@ -158,7 +158,7 @@ public final class DomainIndexField {
         private @Nullable Boolean facet;
         private @Nullable Boolean highlight;
         private String name;
-        private @Nullable Boolean $return;
+        private @Nullable Boolean return_;
         private @Nullable Boolean search;
         private @Nullable Boolean sort;
         private String type;
@@ -174,7 +174,7 @@ public final class DomainIndexField {
     	      this.facet = defaults.facet;
     	      this.highlight = defaults.highlight;
     	      this.name = defaults.name;
-    	      this.$return = defaults.$return;
+    	      this.return_ = defaults.return_;
     	      this.search = defaults.search;
     	      this.sort = defaults.sort;
     	      this.type = defaults.type;
@@ -200,8 +200,8 @@ public final class DomainIndexField {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-        public Builder $return(@Nullable Boolean $return) {
-            this.$return = $return;
+        public Builder return_(@Nullable Boolean return_) {
+            this.return_ = return_;
             return this;
         }
         public Builder search(@Nullable Boolean search) {
@@ -216,7 +216,7 @@ public final class DomainIndexField {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public DomainIndexField build() {
-            return new DomainIndexField(analysisScheme, defaultValue, facet, highlight, name, $return, search, sort, type);
+            return new DomainIndexField(analysisScheme, defaultValue, facet, highlight, name, return_, search, sort, type);
         }
     }
 }

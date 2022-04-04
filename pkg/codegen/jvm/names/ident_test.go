@@ -17,7 +17,7 @@ func TestMakeSafeEnumName(t *testing.T) {
 		{"11", "TypeName_11", false},
 		{"Microsoft-Windows-Shell-Startup", "MicrosoftWindowsShellStartup", false},
 		{"Microsoft.Batch", "Microsoft_Batch", false},
-		{"final", "$Final", false},
+		{"final", "Final_", false},
 		{"SystemAssigned, UserAssigned", "SystemAssigned_UserAssigned", false},
 		{"Dev(NoSLA)_Standard_D11_v2", "Dev_NoSLA_Standard_D11_v2", false},
 		{"Standard_E8as_v4+1TB_PS", "Standard_E8as_v4_1TB_PS", false},
@@ -42,11 +42,11 @@ func TestValidIdent(t *testing.T) {
 		expected string
 	}{
 		{"$default", "$default"},
-		{"default", "$default"},
+		{"default", "default_"},
 		{"@default", "_default"},
 		{"8", "_8"},
 		{"azure-native", "azurenative"},
-		{"package", "$package"},
+		{"package", "package_"},
 		{"foo", "foo"},
 	}
 	for _, tt := range tests {

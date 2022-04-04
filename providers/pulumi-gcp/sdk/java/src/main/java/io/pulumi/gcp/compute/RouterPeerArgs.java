@@ -108,10 +108,10 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interface", required=true)
-      private final Output<String> $interface;
+      private final Output<String> interface_;
 
-    public Output<String> get$interface() {
-        return this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_;
     }
 
     /**
@@ -208,7 +208,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Integer> advertisedRoutePriority,
         @Nullable Output<RouterPeerBfdArgs> bfd,
         @Nullable Output<Boolean> enable,
-        Output<String> $interface,
+        Output<String> interface_,
         @Nullable Output<String> ipAddress,
         @Nullable Output<String> name,
         Output<Integer> peerAsn,
@@ -222,7 +222,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
         this.advertisedRoutePriority = advertisedRoutePriority;
         this.bfd = bfd;
         this.enable = enable;
-        this.$interface = Objects.requireNonNull($interface, "expected parameter '$interface' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
         this.ipAddress = ipAddress;
         this.name = name;
         this.peerAsn = Objects.requireNonNull(peerAsn, "expected parameter 'peerAsn' to be non-null");
@@ -239,7 +239,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
         this.advertisedRoutePriority = Output.empty();
         this.bfd = Output.empty();
         this.enable = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.ipAddress = Output.empty();
         this.name = Output.empty();
         this.peerAsn = Output.empty();
@@ -264,7 +264,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<Integer> advertisedRoutePriority;
         private @Nullable Output<RouterPeerBfdArgs> bfd;
         private @Nullable Output<Boolean> enable;
-        private Output<String> $interface;
+        private Output<String> interface_;
         private @Nullable Output<String> ipAddress;
         private @Nullable Output<String> name;
         private Output<Integer> peerAsn;
@@ -285,7 +285,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.advertisedRoutePriority = defaults.advertisedRoutePriority;
     	      this.bfd = defaults.bfd;
     	      this.enable = defaults.enable;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.ipAddress = defaults.ipAddress;
     	      this.name = defaults.name;
     	      this.peerAsn = defaults.peerAsn;
@@ -349,12 +349,12 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-        public Builder $interface(Output<String> $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(Output<String> interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Output.of(Objects.requireNonNull($interface));
+        public Builder interface_(String interface_) {
+            this.interface_ = Output.of(Objects.requireNonNull(interface_));
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -413,7 +413,7 @@ public final class RouterPeerArgs extends io.pulumi.resources.ResourceArgs {
             this.router = Output.of(Objects.requireNonNull(router));
             return this;
         }        public RouterPeerArgs build() {
-            return new RouterPeerArgs(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, $interface, ipAddress, name, peerAsn, peerIpAddress, project, region, router);
+            return new RouterPeerArgs(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, interface_, ipAddress, name, peerAsn, peerIpAddress, project, region, router);
         }
     }
 }

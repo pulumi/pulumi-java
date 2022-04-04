@@ -154,7 +154,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> searchServiceName,
         @Nullable Output<SkuArgs> sku,
         @Nullable Output<Map<String,String>> tags) {
-        this.hostingMode = hostingMode == null ? Output.ofNullable(io.pulumi.azurenative.search.enums.HostingMode.$Default) : hostingMode;
+        this.hostingMode = hostingMode == null ? Output.ofNullable(io.pulumi.azurenative.search.enums.HostingMode.Default_) : hostingMode;
         this.identity = identity;
         this.location = location;
         this.networkRuleSet = networkRuleSet;

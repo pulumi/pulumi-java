@@ -29,11 +29,11 @@ public final class JSONSchemaProps {
      * default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. CustomResourceDefinitions with defaults must be created using the v1 (or newer) CustomResourceDefinition API.
      * 
      */
-    private final @Nullable JsonElement $default;
+    private final @Nullable JsonElement default_;
     private final @Nullable Map<String,JSONSchemaProps> definitions;
     private final @Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies;
     private final @Nullable String description;
-    private final @Nullable List<JsonElement> $enum;
+    private final @Nullable List<JsonElement> enum_;
     private final @Nullable JsonElement example;
     private final @Nullable Boolean exclusiveMaximum;
     private final @Nullable Boolean exclusiveMinimum;
@@ -136,11 +136,11 @@ public final class JSONSchemaProps {
         @CustomType.Parameter("additionalProperties") @Nullable Either<JSONSchemaProps,Boolean> additionalProperties,
         @CustomType.Parameter("allOf") @Nullable List<JSONSchemaProps> allOf,
         @CustomType.Parameter("anyOf") @Nullable List<JSONSchemaProps> anyOf,
-        @CustomType.Parameter("default") @Nullable JsonElement $default,
+        @CustomType.Parameter("default") @Nullable JsonElement default_,
         @CustomType.Parameter("definitions") @Nullable Map<String,JSONSchemaProps> definitions,
         @CustomType.Parameter("dependencies") @Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies,
         @CustomType.Parameter("description") @Nullable String description,
-        @CustomType.Parameter("enum") @Nullable List<JsonElement> $enum,
+        @CustomType.Parameter("enum") @Nullable List<JsonElement> enum_,
         @CustomType.Parameter("example") @Nullable JsonElement example,
         @CustomType.Parameter("exclusiveMaximum") @Nullable Boolean exclusiveMaximum,
         @CustomType.Parameter("exclusiveMinimum") @Nullable Boolean exclusiveMinimum,
@@ -179,11 +179,11 @@ public final class JSONSchemaProps {
         this.additionalProperties = additionalProperties;
         this.allOf = allOf;
         this.anyOf = anyOf;
-        this.$default = $default;
+        this.default_ = default_;
         this.definitions = definitions;
         this.dependencies = dependencies;
         this.description = description;
-        this.$enum = $enum;
+        this.enum_ = enum_;
         this.example = example;
         this.exclusiveMaximum = exclusiveMaximum;
         this.exclusiveMinimum = exclusiveMinimum;
@@ -240,8 +240,8 @@ public final class JSONSchemaProps {
      * default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. CustomResourceDefinitions with defaults must be created using the v1 (or newer) CustomResourceDefinition API.
      * 
     */
-    public Optional<JsonElement> get$default() {
-        return Optional.ofNullable(this.$default);
+    public Optional<JsonElement> getDefault_() {
+        return Optional.ofNullable(this.default_);
     }
     public Map<String,JSONSchemaProps> getDefinitions() {
         return this.definitions == null ? Map.of() : this.definitions;
@@ -252,8 +252,8 @@ public final class JSONSchemaProps {
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-    public List<JsonElement> get$enum() {
-        return this.$enum == null ? List.of() : this.$enum;
+    public List<JsonElement> getEnum_() {
+        return this.enum_ == null ? List.of() : this.enum_;
     }
     public Optional<JsonElement> getExample() {
         return Optional.ofNullable(this.example);
@@ -428,11 +428,11 @@ public final class JSONSchemaProps {
         private @Nullable Either<JSONSchemaProps,Boolean> additionalProperties;
         private @Nullable List<JSONSchemaProps> allOf;
         private @Nullable List<JSONSchemaProps> anyOf;
-        private @Nullable JsonElement $default;
+        private @Nullable JsonElement default_;
         private @Nullable Map<String,JSONSchemaProps> definitions;
         private @Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies;
         private @Nullable String description;
-        private @Nullable List<JsonElement> $enum;
+        private @Nullable List<JsonElement> enum_;
         private @Nullable JsonElement example;
         private @Nullable Boolean exclusiveMaximum;
         private @Nullable Boolean exclusiveMinimum;
@@ -478,11 +478,11 @@ public final class JSONSchemaProps {
     	      this.additionalProperties = defaults.additionalProperties;
     	      this.allOf = defaults.allOf;
     	      this.anyOf = defaults.anyOf;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.definitions = defaults.definitions;
     	      this.dependencies = defaults.dependencies;
     	      this.description = defaults.description;
-    	      this.$enum = defaults.$enum;
+    	      this.enum_ = defaults.enum_;
     	      this.example = defaults.example;
     	      this.exclusiveMaximum = defaults.exclusiveMaximum;
     	      this.exclusiveMinimum = defaults.exclusiveMinimum;
@@ -547,8 +547,8 @@ public final class JSONSchemaProps {
         public Builder anyOf(JSONSchemaProps... anyOf) {
             return anyOf(List.of(anyOf));
         }
-        public Builder $default(@Nullable JsonElement $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable JsonElement default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder definitions(@Nullable Map<String,JSONSchemaProps> definitions) {
@@ -563,12 +563,12 @@ public final class JSONSchemaProps {
             this.description = description;
             return this;
         }
-        public Builder $enum(@Nullable List<JsonElement> $enum) {
-            this.$enum = $enum;
+        public Builder enum_(@Nullable List<JsonElement> enum_) {
+            this.enum_ = enum_;
             return this;
         }
-        public Builder $enum(JsonElement... $enum) {
-            return $enum(List.of($enum));
+        public Builder enum_(JsonElement... enum_) {
+            return enum_(List.of(enum_));
         }
         public Builder example(@Nullable JsonElement example) {
             this.example = example;
@@ -707,7 +707,7 @@ public final class JSONSchemaProps {
             this.x_kubernetes_preserve_unknown_fields = x_kubernetes_preserve_unknown_fields;
             return this;
         }        public JSONSchemaProps build() {
-            return new JSONSchemaProps($ref, $schema, additionalItems, additionalProperties, allOf, anyOf, $default, definitions, dependencies, description, $enum, example, exclusiveMaximum, exclusiveMinimum, externalDocs, format, id, items, maxItems, maxLength, maxProperties, maximum, minItems, minLength, minProperties, minimum, multipleOf, not, nullable, oneOf, pattern, patternProperties, properties, required, title, type, uniqueItems, x_kubernetes_embedded_resource, x_kubernetes_int_or_string, x_kubernetes_list_map_keys, x_kubernetes_list_type, x_kubernetes_map_type, x_kubernetes_preserve_unknown_fields);
+            return new JSONSchemaProps($ref, $schema, additionalItems, additionalProperties, allOf, anyOf, default_, definitions, dependencies, description, enum_, example, exclusiveMaximum, exclusiveMinimum, externalDocs, format, id, items, maxItems, maxLength, maxProperties, maximum, minItems, minLength, minProperties, minimum, multipleOf, not, nullable, oneOf, pattern, patternProperties, properties, required, title, type, uniqueItems, x_kubernetes_embedded_resource, x_kubernetes_int_or_string, x_kubernetes_list_map_keys, x_kubernetes_list_type, x_kubernetes_map_type, x_kubernetes_preserve_unknown_fields);
         }
     }
 }

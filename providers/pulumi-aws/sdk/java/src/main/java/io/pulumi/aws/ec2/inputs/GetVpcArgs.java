@@ -35,10 +35,10 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Boolean $default;
+      private final @Nullable Boolean default_;
 
-    public Optional<Boolean> get$default() {
-        return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
+    public Optional<Boolean> getDefault_() {
+        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
     /**
@@ -100,14 +100,14 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
 
     public GetVpcArgs(
         @Nullable String cidrBlock,
-        @Nullable Boolean $default,
+        @Nullable Boolean default_,
         @Nullable String dhcpOptionsId,
         @Nullable List<GetVpcFilter> filters,
         @Nullable String id,
         @Nullable String state,
         @Nullable Map<String,String> tags) {
         this.cidrBlock = cidrBlock;
-        this.$default = $default;
+        this.default_ = default_;
         this.dhcpOptionsId = dhcpOptionsId;
         this.filters = filters;
         this.id = id;
@@ -117,7 +117,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
 
     private GetVpcArgs() {
         this.cidrBlock = null;
-        this.$default = null;
+        this.default_ = null;
         this.dhcpOptionsId = null;
         this.filters = List.of();
         this.id = null;
@@ -135,7 +135,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final class Builder {
         private @Nullable String cidrBlock;
-        private @Nullable Boolean $default;
+        private @Nullable Boolean default_;
         private @Nullable String dhcpOptionsId;
         private @Nullable List<GetVpcFilter> filters;
         private @Nullable String id;
@@ -149,7 +149,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
         public Builder(GetVpcArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.cidrBlock = defaults.cidrBlock;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.dhcpOptionsId = defaults.dhcpOptionsId;
     	      this.filters = defaults.filters;
     	      this.id = defaults.id;
@@ -161,8 +161,8 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
             this.cidrBlock = cidrBlock;
             return this;
         }
-        public Builder $default(@Nullable Boolean $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Boolean default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
@@ -188,7 +188,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }        public GetVpcArgs build() {
-            return new GetVpcArgs(cidrBlock, $default, dhcpOptionsId, filters, id, state, tags);
+            return new GetVpcArgs(cidrBlock, default_, dhcpOptionsId, filters, id, state, tags);
         }
     }
 }

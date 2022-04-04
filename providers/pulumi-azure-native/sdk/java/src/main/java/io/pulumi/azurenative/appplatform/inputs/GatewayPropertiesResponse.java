@@ -97,10 +97,10 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @Import(name="public")
-      private final @Nullable Boolean $public;
+      private final @Nullable Boolean public_;
 
-    public Optional<Boolean> get$public() {
-        return this.$public == null ? Optional.empty() : Optional.ofNullable(this.$public);
+    public Optional<Boolean> getPublic_() {
+        return this.public_ == null ? Optional.empty() : Optional.ofNullable(this.public_);
     }
 
     /**
@@ -143,7 +143,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
         List<GatewayInstanceResponse> instances,
         GatewayOperatorPropertiesResponse operatorProperties,
         String provisioningState,
-        @Nullable Boolean $public,
+        @Nullable Boolean public_,
         @Nullable GatewayResourceRequestsResponse resourceRequests,
         @Nullable SsoPropertiesResponse ssoProperties,
         String url) {
@@ -153,7 +153,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
         this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
         this.operatorProperties = Objects.requireNonNull(operatorProperties, "expected parameter 'operatorProperties' to be non-null");
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.$public = $public;
+        this.public_ = public_;
         this.resourceRequests = resourceRequests;
         this.ssoProperties = ssoProperties;
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
@@ -166,7 +166,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
         this.instances = List.of();
         this.operatorProperties = null;
         this.provisioningState = null;
-        this.$public = null;
+        this.public_ = null;
         this.resourceRequests = null;
         this.ssoProperties = null;
         this.url = null;
@@ -187,7 +187,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
         private List<GatewayInstanceResponse> instances;
         private GatewayOperatorPropertiesResponse operatorProperties;
         private String provisioningState;
-        private @Nullable Boolean $public;
+        private @Nullable Boolean public_;
         private @Nullable GatewayResourceRequestsResponse resourceRequests;
         private @Nullable SsoPropertiesResponse ssoProperties;
         private String url;
@@ -204,7 +204,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
     	      this.instances = defaults.instances;
     	      this.operatorProperties = defaults.operatorProperties;
     	      this.provisioningState = defaults.provisioningState;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.resourceRequests = defaults.resourceRequests;
     	      this.ssoProperties = defaults.ssoProperties;
     	      this.url = defaults.url;
@@ -237,8 +237,8 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = public_;
             return this;
         }
         public Builder resourceRequests(@Nullable GatewayResourceRequestsResponse resourceRequests) {
@@ -253,7 +253,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
             this.url = Objects.requireNonNull(url);
             return this;
         }        public GatewayPropertiesResponse build() {
-            return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, $public, resourceRequests, ssoProperties, url);
+            return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, public_, resourceRequests, ssoProperties, url);
         }
     }
 }

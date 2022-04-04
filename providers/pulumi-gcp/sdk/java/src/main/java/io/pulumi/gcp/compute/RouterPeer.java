@@ -179,14 +179,14 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="interface", type=String.class, parameters={})
-    private Output<String> $interface;
+    private Output<String> interface_;
 
     /**
      * @return Name of the interface the BGP peer is associated with.
      * 
      */
-    public Output<String> get$interface() {
-        return this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_;
     }
     /**
      * IP address of the interface inside Google Cloud Platform.

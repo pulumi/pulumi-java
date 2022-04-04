@@ -24,10 +24,10 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<Map<String,String>> $default;
+      private final @Nullable Output<Map<String,String>> default_;
 
-    public Output<Map<String,String>> get$default() {
-        return this.$default == null ? Output.empty() : this.$default;
+    public Output<Map<String,String>> getDefault_() {
+        return this.default_ == null ? Output.empty() : this.default_;
     }
 
     /**
@@ -91,13 +91,13 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public LimitRangeItemArgs(
-        @Nullable Output<Map<String,String>> $default,
+        @Nullable Output<Map<String,String>> default_,
         @Nullable Output<Map<String,String>> defaultRequest,
         @Nullable Output<Map<String,String>> max,
         @Nullable Output<Map<String,String>> maxLimitRequestRatio,
         @Nullable Output<Map<String,String>> min,
         Output<String> type) {
-        this.$default = $default;
+        this.default_ = default_;
         this.defaultRequest = defaultRequest;
         this.max = max;
         this.maxLimitRequestRatio = maxLimitRequestRatio;
@@ -106,7 +106,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LimitRangeItemArgs() {
-        this.$default = Output.empty();
+        this.default_ = Output.empty();
         this.defaultRequest = Output.empty();
         this.max = Output.empty();
         this.maxLimitRequestRatio = Output.empty();
@@ -123,7 +123,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> $default;
+        private @Nullable Output<Map<String,String>> default_;
         private @Nullable Output<Map<String,String>> defaultRequest;
         private @Nullable Output<Map<String,String>> max;
         private @Nullable Output<Map<String,String>> maxLimitRequestRatio;
@@ -136,7 +136,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
         public Builder(LimitRangeItemArgs defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.defaultRequest = defaults.defaultRequest;
     	      this.max = defaults.max;
     	      this.maxLimitRequestRatio = defaults.maxLimitRequestRatio;
@@ -144,12 +144,12 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder $default(@Nullable Output<Map<String,String>> $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Output<Map<String,String>> default_) {
+            this.default_ = default_;
             return this;
         }
-        public Builder $default(@Nullable Map<String,String> $default) {
-            this.$default = Output.ofNullable($default);
+        public Builder default_(@Nullable Map<String,String> default_) {
+            this.default_ = Output.ofNullable(default_);
             return this;
         }
         public Builder defaultRequest(@Nullable Output<Map<String,String>> defaultRequest) {
@@ -192,7 +192,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }        public LimitRangeItemArgs build() {
-            return new LimitRangeItemArgs($default, defaultRequest, max, maxLimitRequestRatio, min, type);
+            return new LimitRangeItemArgs(default_, defaultRequest, max, maxLimitRequestRatio, min, type);
         }
     }
 }
