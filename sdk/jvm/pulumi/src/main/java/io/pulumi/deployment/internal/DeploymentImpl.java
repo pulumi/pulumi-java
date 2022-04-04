@@ -1674,8 +1674,9 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                     var stack = StackInternal.of(callback, options);
                     registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
                                  Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
-                    return whileRunningAsync();
+                    return (Void) null;
             });
+            return whileRunningAsync();
         }
 
         @Override

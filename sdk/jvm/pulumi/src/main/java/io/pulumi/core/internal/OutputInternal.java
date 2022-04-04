@@ -49,9 +49,9 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
     @InternalUse
     public OutputInternal(Deployment deployment, CompletableFuture<OutputData<T>> dataFuture) {
         this.dataFuture = requireNonNull(dataFuture);
-        deployment.ifPresent(deploymentInternal -> deploymentInternal.getRunner().registerTask(
-                this.getClass().getTypeName() + " -> " + dataFuture, dataFuture
-        ));
+        this.deployment = requireNonNull(deployment);
+        DeploymentInternal.cast(deployment).getRunner().registerTask(
+                this.getClass().getTypeName() + " -> " + dataFuture, dataFuture);
     }
 
     @InternalUse

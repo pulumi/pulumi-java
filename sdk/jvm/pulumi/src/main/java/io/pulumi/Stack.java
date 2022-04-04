@@ -171,7 +171,7 @@ public class Stack extends ComponentResource {
                 ));
             }
 
-            var out = OutputBuilder.forDeployment(Stack.this.deployment);
+            var out = OutputBuilder.forDeployment(this.stack.deployment);
 
             this.stack.outputs = out.of(
                     outputs.entrySet().stream()
