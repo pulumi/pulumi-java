@@ -72,10 +72,10 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @Import(name="public")
-      private final @Nullable Boolean $public;
+      private final @Nullable Boolean public_;
 
-    public Optional<Boolean> get$public() {
-        return this.$public == null ? Optional.empty() : Optional.ofNullable(this.$public);
+    public Optional<Boolean> getPublic_() {
+        return this.public_ == null ? Optional.empty() : Optional.ofNullable(this.public_);
     }
 
     /**
@@ -127,7 +127,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
         @Nullable Boolean httpsOnly,
         List<ApiPortalInstanceResponse> instances,
         String provisioningState,
-        @Nullable Boolean $public,
+        @Nullable Boolean public_,
         ApiPortalResourceRequestsResponse resourceRequests,
         @Nullable List<String> sourceUrls,
         @Nullable SsoPropertiesResponse ssoProperties,
@@ -136,7 +136,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
         this.httpsOnly = httpsOnly;
         this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.$public = $public;
+        this.public_ = public_;
         this.resourceRequests = Objects.requireNonNull(resourceRequests, "expected parameter 'resourceRequests' to be non-null");
         this.sourceUrls = sourceUrls;
         this.ssoProperties = ssoProperties;
@@ -148,7 +148,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
         this.httpsOnly = null;
         this.instances = List.of();
         this.provisioningState = null;
-        this.$public = null;
+        this.public_ = null;
         this.resourceRequests = null;
         this.sourceUrls = List.of();
         this.ssoProperties = null;
@@ -168,7 +168,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
         private @Nullable Boolean httpsOnly;
         private List<ApiPortalInstanceResponse> instances;
         private String provisioningState;
-        private @Nullable Boolean $public;
+        private @Nullable Boolean public_;
         private ApiPortalResourceRequestsResponse resourceRequests;
         private @Nullable List<String> sourceUrls;
         private @Nullable SsoPropertiesResponse ssoProperties;
@@ -184,7 +184,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
     	      this.httpsOnly = defaults.httpsOnly;
     	      this.instances = defaults.instances;
     	      this.provisioningState = defaults.provisioningState;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.resourceRequests = defaults.resourceRequests;
     	      this.sourceUrls = defaults.sourceUrls;
     	      this.ssoProperties = defaults.ssoProperties;
@@ -213,8 +213,8 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = public_;
             return this;
         }
         public Builder resourceRequests(ApiPortalResourceRequestsResponse resourceRequests) {
@@ -236,7 +236,7 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
             this.url = Objects.requireNonNull(url);
             return this;
         }        public ApiPortalPropertiesResponse build() {
-            return new ApiPortalPropertiesResponse(gatewayIds, httpsOnly, instances, provisioningState, $public, resourceRequests, sourceUrls, ssoProperties, url);
+            return new ApiPortalPropertiesResponse(gatewayIds, httpsOnly, instances, provisioningState, public_, resourceRequests, sourceUrls, ssoProperties, url);
         }
     }
 }

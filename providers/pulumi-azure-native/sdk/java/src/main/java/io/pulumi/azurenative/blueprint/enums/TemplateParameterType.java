@@ -17,7 +17,7 @@ import java.util.StringJoiner;
         String("string"),
         Array("array"),
         Bool("bool"),
-        $Int("int"),
+        Int_("int"),
         Object("object"),
         SecureObject("secureObject"),
         SecureString("secureString");

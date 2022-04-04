@@ -15,10 +15,10 @@ import java.util.StringJoiner;
     @EnumType
     public enum ColumnTypeEnum {
         String("string"),
-        $Int("int"),
-        $Long("long"),
+        Int_("int"),
+        Long_("long"),
         Real("real"),
-        $Boolean("boolean"),
+        Boolean_("boolean"),
         DateTime("dateTime"),
         Guid("guid"),
         Dynamic("dynamic");

@@ -14,7 +14,7 @@ public final class ServiceProviderParameterResponse {
      * Default Name for the Service Provider
      * 
      */
-    private final String $default;
+    private final String default_;
     /**
      * Description of the Service Provider
      * 
@@ -48,14 +48,14 @@ public final class ServiceProviderParameterResponse {
 
     @CustomType.Constructor
     private ServiceProviderParameterResponse(
-        @CustomType.Parameter("default") String $default,
+        @CustomType.Parameter("default") String default_,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("helpUrl") String helpUrl,
         @CustomType.Parameter("metadata") ServiceProviderParameterResponseMetadata metadata,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("type") String type) {
-        this.$default = $default;
+        this.default_ = default_;
         this.description = description;
         this.displayName = displayName;
         this.helpUrl = helpUrl;
@@ -68,8 +68,8 @@ public final class ServiceProviderParameterResponse {
      * Default Name for the Service Provider
      * 
     */
-    public String get$default() {
-        return this.$default;
+    public String getDefault_() {
+        return this.default_;
     }
     /**
      * Description of the Service Provider
@@ -123,7 +123,7 @@ public final class ServiceProviderParameterResponse {
     }
 
     public static final class Builder {
-        private String $default;
+        private String default_;
         private String description;
         private String displayName;
         private String helpUrl;
@@ -137,7 +137,7 @@ public final class ServiceProviderParameterResponse {
 
         public Builder(ServiceProviderParameterResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.description = defaults.description;
     	      this.displayName = defaults.displayName;
     	      this.helpUrl = defaults.helpUrl;
@@ -146,8 +146,8 @@ public final class ServiceProviderParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder $default(String $default) {
-            this.$default = Objects.requireNonNull($default);
+        public Builder default_(String default_) {
+            this.default_ = Objects.requireNonNull(default_);
             return this;
         }
         public Builder description(String description) {
@@ -174,7 +174,7 @@ public final class ServiceProviderParameterResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public ServiceProviderParameterResponse build() {
-            return new ServiceProviderParameterResponse($default, description, displayName, helpUrl, metadata, name, type);
+            return new ServiceProviderParameterResponse(default_, description, displayName, helpUrl, metadata, name, type);
         }
     }
 }

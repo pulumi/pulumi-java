@@ -25,10 +25,10 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<String> $default;
+      private final @Nullable Output<String> default_;
 
-    public Output<String> get$default() {
-        return this.$default == null ? Output.empty() : this.$default;
+    public Output<String> getDefault_() {
+        return this.default_ == null ? Output.empty() : this.default_;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     }
 
     public ParameterDeclarationArgs(
-        @Nullable Output<String> $default,
+        @Nullable Output<String> default_,
         @Nullable Output<String> description,
         Output<String> name,
         Output<Either<String,ParameterType>> type) {
-        this.$default = $default;
+        this.default_ = default_;
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ParameterDeclarationArgs() {
-        this.$default = Output.empty();
+        this.default_ = Output.empty();
         this.description = Output.empty();
         this.name = Output.empty();
         this.type = Output.empty();
@@ -91,7 +91,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Output<String> $default;
+        private @Nullable Output<String> default_;
         private @Nullable Output<String> description;
         private Output<String> name;
         private Output<Either<String,ParameterType>> type;
@@ -102,18 +102,18 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
 
         public Builder(ParameterDeclarationArgs defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.description = defaults.description;
     	      this.name = defaults.name;
     	      this.type = defaults.type;
         }
 
-        public Builder $default(@Nullable Output<String> $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Output<String> default_) {
+            this.default_ = default_;
             return this;
         }
-        public Builder $default(@Nullable String $default) {
-            this.$default = Output.ofNullable($default);
+        public Builder default_(@Nullable String default_) {
+            this.default_ = Output.ofNullable(default_);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -140,7 +140,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }        public ParameterDeclarationArgs build() {
-            return new ParameterDeclarationArgs($default, description, name, type);
+            return new ParameterDeclarationArgs(default_, description, name, type);
         }
     }
 }

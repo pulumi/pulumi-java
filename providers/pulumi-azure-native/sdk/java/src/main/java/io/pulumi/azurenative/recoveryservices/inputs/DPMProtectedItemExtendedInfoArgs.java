@@ -136,10 +136,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @Import(name="protected")
-      private final @Nullable Output<Boolean> $protected;
+      private final @Nullable Output<Boolean> protected_;
 
-    public Output<Boolean> get$protected() {
-        return this.$protected == null ? Output.empty() : this.$protected;
+    public Output<Boolean> getProtected_() {
+        return this.protected_ == null ? Output.empty() : this.protected_;
     }
 
     /**
@@ -186,7 +186,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         @Nullable Output<String> onPremiseOldestRecoveryPoint,
         @Nullable Output<Integer> onPremiseRecoveryPointCount,
         @Nullable Output<Map<String,String>> protectableObjectLoadPath,
-        @Nullable Output<Boolean> $protected,
+        @Nullable Output<Boolean> protected_,
         @Nullable Output<String> protectionGroupName,
         @Nullable Output<Integer> recoveryPointCount,
         @Nullable Output<String> totalDiskStorageSizeInBytes) {
@@ -200,7 +200,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
         this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
         this.protectableObjectLoadPath = protectableObjectLoadPath;
-        this.$protected = $protected;
+        this.protected_ = protected_;
         this.protectionGroupName = protectionGroupName;
         this.recoveryPointCount = recoveryPointCount;
         this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
@@ -217,7 +217,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         this.onPremiseOldestRecoveryPoint = Output.empty();
         this.onPremiseRecoveryPointCount = Output.empty();
         this.protectableObjectLoadPath = Output.empty();
-        this.$protected = Output.empty();
+        this.protected_ = Output.empty();
         this.protectionGroupName = Output.empty();
         this.recoveryPointCount = Output.empty();
         this.totalDiskStorageSizeInBytes = Output.empty();
@@ -242,7 +242,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         private @Nullable Output<String> onPremiseOldestRecoveryPoint;
         private @Nullable Output<Integer> onPremiseRecoveryPointCount;
         private @Nullable Output<Map<String,String>> protectableObjectLoadPath;
-        private @Nullable Output<Boolean> $protected;
+        private @Nullable Output<Boolean> protected_;
         private @Nullable Output<String> protectionGroupName;
         private @Nullable Output<Integer> recoveryPointCount;
         private @Nullable Output<String> totalDiskStorageSizeInBytes;
@@ -263,7 +263,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
     	      this.onPremiseOldestRecoveryPoint = defaults.onPremiseOldestRecoveryPoint;
     	      this.onPremiseRecoveryPointCount = defaults.onPremiseRecoveryPointCount;
     	      this.protectableObjectLoadPath = defaults.protectableObjectLoadPath;
-    	      this.$protected = defaults.$protected;
+    	      this.protected_ = defaults.protected_;
     	      this.protectionGroupName = defaults.protectionGroupName;
     	      this.recoveryPointCount = defaults.recoveryPointCount;
     	      this.totalDiskStorageSizeInBytes = defaults.totalDiskStorageSizeInBytes;
@@ -349,12 +349,12 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
             this.protectableObjectLoadPath = Output.ofNullable(protectableObjectLoadPath);
             return this;
         }
-        public Builder $protected(@Nullable Output<Boolean> $protected) {
-            this.$protected = $protected;
+        public Builder protected_(@Nullable Output<Boolean> protected_) {
+            this.protected_ = protected_;
             return this;
         }
-        public Builder $protected(@Nullable Boolean $protected) {
-            this.$protected = Output.ofNullable($protected);
+        public Builder protected_(@Nullable Boolean protected_) {
+            this.protected_ = Output.ofNullable(protected_);
             return this;
         }
         public Builder protectionGroupName(@Nullable Output<String> protectionGroupName) {
@@ -381,7 +381,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
             this.totalDiskStorageSizeInBytes = Output.ofNullable(totalDiskStorageSizeInBytes);
             return this;
         }        public DPMProtectedItemExtendedInfoArgs build() {
-            return new DPMProtectedItemExtendedInfoArgs(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, $protected, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
+            return new DPMProtectedItemExtendedInfoArgs(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, protected_, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
         }
     }
 }

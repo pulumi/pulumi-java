@@ -60,10 +60,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="public")
-      private final @Nullable Output<Boolean> $public;
+      private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> get$public() {
-        return this.$public == null ? Output.empty() : this.$public;
+    public Output<Boolean> getPublic_() {
+        return this.public_ == null ? Output.empty() : this.public_;
     }
 
     /**
@@ -92,13 +92,13 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties,
         @Nullable Output<GatewayCorsPropertiesArgs> corsProperties,
         @Nullable Output<Boolean> httpsOnly,
-        @Nullable Output<Boolean> $public,
+        @Nullable Output<Boolean> public_,
         @Nullable Output<GatewayResourceRequestsArgs> resourceRequests,
         @Nullable Output<SsoPropertiesArgs> ssoProperties) {
         this.apiMetadataProperties = apiMetadataProperties;
         this.corsProperties = corsProperties;
         this.httpsOnly = httpsOnly;
-        this.$public = $public;
+        this.public_ = public_;
         this.resourceRequests = resourceRequests;
         this.ssoProperties = ssoProperties;
     }
@@ -107,7 +107,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         this.apiMetadataProperties = Output.empty();
         this.corsProperties = Output.empty();
         this.httpsOnly = Output.empty();
-        this.$public = Output.empty();
+        this.public_ = Output.empty();
         this.resourceRequests = Output.empty();
         this.ssoProperties = Output.empty();
     }
@@ -124,7 +124,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
         private @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
         private @Nullable Output<GatewayCorsPropertiesArgs> corsProperties;
         private @Nullable Output<Boolean> httpsOnly;
-        private @Nullable Output<Boolean> $public;
+        private @Nullable Output<Boolean> public_;
         private @Nullable Output<GatewayResourceRequestsArgs> resourceRequests;
         private @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
@@ -137,7 +137,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.apiMetadataProperties = defaults.apiMetadataProperties;
     	      this.corsProperties = defaults.corsProperties;
     	      this.httpsOnly = defaults.httpsOnly;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.resourceRequests = defaults.resourceRequests;
     	      this.ssoProperties = defaults.ssoProperties;
         }
@@ -166,12 +166,12 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
-        public Builder $public(@Nullable Output<Boolean> $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Output<Boolean> public_) {
+            this.public_ = public_;
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = Output.ofNullable($public);
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = Output.ofNullable(public_);
             return this;
         }
         public Builder resourceRequests(@Nullable Output<GatewayResourceRequestsArgs> resourceRequests) {
@@ -190,7 +190,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.ssoProperties = Output.ofNullable(ssoProperties);
             return this;
         }        public GatewayPropertiesArgs build() {
-            return new GatewayPropertiesArgs(apiMetadataProperties, corsProperties, httpsOnly, $public, resourceRequests, ssoProperties);
+            return new GatewayPropertiesArgs(apiMetadataProperties, corsProperties, httpsOnly, public_, resourceRequests, ssoProperties);
         }
     }
 }

@@ -17,10 +17,10 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="default", required=true)
-      private final String $default;
+      private final String default_;
 
-    public String get$default() {
-        return this.$default;
+    public String getDefault_() {
+        return this.default_;
     }
 
     /**
@@ -46,16 +46,16 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     public GetPatchScheduleArgs(
-        String $default,
+        String default_,
         String name,
         String resourceGroupName) {
-        this.$default = Objects.requireNonNull($default, "expected parameter '$default' to be non-null");
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }
 
     private GetPatchScheduleArgs() {
-        this.$default = null;
+        this.default_ = null;
         this.name = null;
         this.resourceGroupName = null;
     }
@@ -69,7 +69,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     public static final class Builder {
-        private String $default;
+        private String default_;
         private String name;
         private String resourceGroupName;
 
@@ -79,13 +79,13 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
         public Builder(GetPatchScheduleArgs defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.name = defaults.name;
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder $default(String $default) {
-            this.$default = Objects.requireNonNull($default);
+        public Builder default_(String default_) {
+            this.default_ = Objects.requireNonNull(default_);
             return this;
         }
         public Builder name(String name) {
@@ -96,7 +96,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }        public GetPatchScheduleArgs build() {
-            return new GetPatchScheduleArgs($default, name, resourceGroupName);
+            return new GetPatchScheduleArgs(default_, name, resourceGroupName);
         }
     }
 }
