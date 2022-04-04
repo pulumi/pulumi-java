@@ -161,17 +161,17 @@ jobs:
         id: diffJar
         run: |
           size=$((${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }}))
-          sizePct=$(( 100 * (${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }}) / ${{ steps.oldJar.outputs.size }} ))
+          sizePct=$(( 100 * ( ${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }} ) / ${{ steps.oldJar.outputs.size }} ))
           sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
           echo ::set-output name=size::${size}
           echo ::set-output name=sizeHuman::${sizeHuman}
       - name: Display provider size summary
         run: |
-          echo Provider : ${{ matrix.provider }}
-          echo New Size : ${{ steps.newJar.outputs.sizeHuman }}
-          echo Old Size : ${{ steps.oldJar.outputs.sizeHuman }}
-          echo Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}
-          echo Change(%): ${{ steps.diffJar.outputs.sizePct }}
+          echo "Provider : ${{ matrix.provider }}"
+          echo "New Size : ${{ steps.newJar.outputs.sizeHuman }}"
+          echo "Old Size : ${{ steps.oldJar.outputs.sizeHuman }}"
+          echo "Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}"
+          echo "Change(%): ${{ steps.diffJar.outputs.sizePct }}"
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v1
         with:
