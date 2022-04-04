@@ -20,7 +20,7 @@ public final class UpgradeOccurrenceResponse {
      * Required - The package this Upgrade is for.
      * 
      */
-    private final String $package;
+    private final String package_;
     /**
      * Required - The version of the package in a machine + human readable form.
      * 
@@ -30,10 +30,10 @@ public final class UpgradeOccurrenceResponse {
     @CustomType.Constructor
     private UpgradeOccurrenceResponse(
         @CustomType.Parameter("distribution") UpgradeDistributionResponse distribution,
-        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("package") String package_,
         @CustomType.Parameter("parsedVersion") VersionResponse parsedVersion) {
         this.distribution = distribution;
-        this.$package = $package;
+        this.package_ = package_;
         this.parsedVersion = parsedVersion;
     }
 
@@ -48,8 +48,8 @@ public final class UpgradeOccurrenceResponse {
      * Required - The package this Upgrade is for.
      * 
     */
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
     /**
      * Required - The version of the package in a machine + human readable form.
@@ -69,7 +69,7 @@ public final class UpgradeOccurrenceResponse {
 
     public static final class Builder {
         private UpgradeDistributionResponse distribution;
-        private String $package;
+        private String package_;
         private VersionResponse parsedVersion;
 
         public Builder() {
@@ -79,7 +79,7 @@ public final class UpgradeOccurrenceResponse {
         public Builder(UpgradeOccurrenceResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distribution = defaults.distribution;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.parsedVersion = defaults.parsedVersion;
         }
 
@@ -87,15 +87,15 @@ public final class UpgradeOccurrenceResponse {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder parsedVersion(VersionResponse parsedVersion) {
             this.parsedVersion = Objects.requireNonNull(parsedVersion);
             return this;
         }        public UpgradeOccurrenceResponse build() {
-            return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion);
+            return new UpgradeOccurrenceResponse(distribution, package_, parsedVersion);
         }
     }
 }

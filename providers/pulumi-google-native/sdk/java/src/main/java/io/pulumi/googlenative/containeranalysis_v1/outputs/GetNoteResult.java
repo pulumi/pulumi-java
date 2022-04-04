@@ -85,7 +85,7 @@ public final class GetNoteResult {
      * A note describing a package hosted by various package managers.
      * 
      */
-    private final PackageNoteResponse $package;
+    private final PackageNoteResponse package_;
     /**
      * Other notes related to this note.
      * 
@@ -131,7 +131,7 @@ public final class GetNoteResult {
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("longDescription") String longDescription,
         @CustomType.Parameter("name") String name,
-        @CustomType.Parameter("package") PackageNoteResponse $package,
+        @CustomType.Parameter("package") PackageNoteResponse package_,
         @CustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
         @CustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
         @CustomType.Parameter("shortDescription") String shortDescription,
@@ -150,7 +150,7 @@ public final class GetNoteResult {
         this.kind = kind;
         this.longDescription = longDescription;
         this.name = name;
-        this.$package = $package;
+        this.package_ = package_;
         this.relatedNoteNames = relatedNoteNames;
         this.relatedUrl = relatedUrl;
         this.shortDescription = shortDescription;
@@ -247,8 +247,8 @@ public final class GetNoteResult {
      * A note describing a package hosted by various package managers.
      * 
     */
-    public PackageNoteResponse get$package() {
-        return this.$package;
+    public PackageNoteResponse getPackage_() {
+        return this.package_;
     }
     /**
      * Other notes related to this note.
@@ -314,7 +314,7 @@ public final class GetNoteResult {
         private String kind;
         private String longDescription;
         private String name;
-        private PackageNoteResponse $package;
+        private PackageNoteResponse package_;
         private List<String> relatedNoteNames;
         private List<RelatedUrlResponse> relatedUrl;
         private String shortDescription;
@@ -340,7 +340,7 @@ public final class GetNoteResult {
     	      this.kind = defaults.kind;
     	      this.longDescription = defaults.longDescription;
     	      this.name = defaults.name;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.relatedNoteNames = defaults.relatedNoteNames;
     	      this.relatedUrl = defaults.relatedUrl;
     	      this.shortDescription = defaults.shortDescription;
@@ -397,8 +397,8 @@ public final class GetNoteResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-        public Builder $package(PackageNoteResponse $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(PackageNoteResponse package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder relatedNoteNames(List<String> relatedNoteNames) {
@@ -431,7 +431,7 @@ public final class GetNoteResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }        public GetNoteResult build() {
-            return new GetNoteResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, expirationTime, image, kind, longDescription, name, $package, relatedNoteNames, relatedUrl, shortDescription, updateTime, upgrade, vulnerability);
+            return new GetNoteResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, expirationTime, image, kind, longDescription, name, package_, relatedNoteNames, relatedUrl, shortDescription, updateTime, upgrade, vulnerability);
         }
     }
 }

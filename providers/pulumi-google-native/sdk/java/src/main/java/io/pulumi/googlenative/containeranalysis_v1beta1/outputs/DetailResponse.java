@@ -46,7 +46,7 @@ public final class DetailResponse {
      * The name of the package where the vulnerability was found.
      * 
      */
-    private final String $package;
+    private final String package_;
     /**
      * The type of package; whether native or non native(ruby gems, node.js packages etc).
      * 
@@ -81,7 +81,7 @@ public final class DetailResponse {
         @CustomType.Parameter("isObsolete") Boolean isObsolete,
         @CustomType.Parameter("maxAffectedVersion") VersionResponse maxAffectedVersion,
         @CustomType.Parameter("minAffectedVersion") VersionResponse minAffectedVersion,
-        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("package") String package_,
         @CustomType.Parameter("packageType") String packageType,
         @CustomType.Parameter("severityName") String severityName,
         @CustomType.Parameter("source") String source,
@@ -93,7 +93,7 @@ public final class DetailResponse {
         this.isObsolete = isObsolete;
         this.maxAffectedVersion = maxAffectedVersion;
         this.minAffectedVersion = minAffectedVersion;
-        this.$package = $package;
+        this.package_ = package_;
         this.packageType = packageType;
         this.severityName = severityName;
         this.source = source;
@@ -147,8 +147,8 @@ public final class DetailResponse {
      * The name of the package where the vulnerability was found.
      * 
     */
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
     /**
      * The type of package; whether native or non native(ruby gems, node.js packages etc).
@@ -201,7 +201,7 @@ public final class DetailResponse {
         private Boolean isObsolete;
         private VersionResponse maxAffectedVersion;
         private VersionResponse minAffectedVersion;
-        private String $package;
+        private String package_;
         private String packageType;
         private String severityName;
         private String source;
@@ -220,7 +220,7 @@ public final class DetailResponse {
     	      this.isObsolete = defaults.isObsolete;
     	      this.maxAffectedVersion = defaults.maxAffectedVersion;
     	      this.minAffectedVersion = defaults.minAffectedVersion;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.packageType = defaults.packageType;
     	      this.severityName = defaults.severityName;
     	      this.source = defaults.source;
@@ -252,8 +252,8 @@ public final class DetailResponse {
             this.minAffectedVersion = Objects.requireNonNull(minAffectedVersion);
             return this;
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder packageType(String packageType) {
@@ -276,7 +276,7 @@ public final class DetailResponse {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }        public DetailResponse build() {
-            return new DetailResponse(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, $package, packageType, severityName, source, sourceUpdateTime, vendor);
+            return new DetailResponse(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, package_, packageType, severityName, source, sourceUpdateTime, vendor);
         }
     }
 }

@@ -21,7 +21,7 @@ public final class UpgradeNoteResponse {
      * Required - The package this Upgrade is for.
      * 
      */
-    private final String $package;
+    private final String package_;
     /**
      * Required - The version of the package in machine + human readable form.
      * 
@@ -31,10 +31,10 @@ public final class UpgradeNoteResponse {
     @CustomType.Constructor
     private UpgradeNoteResponse(
         @CustomType.Parameter("distributions") List<UpgradeDistributionResponse> distributions,
-        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("package") String package_,
         @CustomType.Parameter("version") VersionResponse version) {
         this.distributions = distributions;
-        this.$package = $package;
+        this.package_ = package_;
         this.version = version;
     }
 
@@ -49,8 +49,8 @@ public final class UpgradeNoteResponse {
      * Required - The package this Upgrade is for.
      * 
     */
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
     /**
      * Required - The version of the package in machine + human readable form.
@@ -70,7 +70,7 @@ public final class UpgradeNoteResponse {
 
     public static final class Builder {
         private List<UpgradeDistributionResponse> distributions;
-        private String $package;
+        private String package_;
         private VersionResponse version;
 
         public Builder() {
@@ -80,7 +80,7 @@ public final class UpgradeNoteResponse {
         public Builder(UpgradeNoteResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distributions = defaults.distributions;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.version = defaults.version;
         }
 
@@ -91,15 +91,15 @@ public final class UpgradeNoteResponse {
         public Builder distributions(UpgradeDistributionResponse... distributions) {
             return distributions(List.of(distributions));
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public UpgradeNoteResponse build() {
-            return new UpgradeNoteResponse(distributions, $package, version);
+            return new UpgradeNoteResponse(distributions, package_, version);
         }
     }
 }

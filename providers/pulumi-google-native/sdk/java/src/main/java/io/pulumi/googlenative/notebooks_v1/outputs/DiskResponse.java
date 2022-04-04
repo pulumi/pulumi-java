@@ -46,7 +46,7 @@ public final class DiskResponse {
      * Indicates the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
      * 
      */
-    private final String $interface;
+    private final String interface_;
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
      * 
@@ -81,7 +81,7 @@ public final class DiskResponse {
         @CustomType.Parameter("diskSizeGb") String diskSizeGb,
         @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
         @CustomType.Parameter("index") String index,
-        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("licenses") List<String> licenses,
         @CustomType.Parameter("mode") String mode,
@@ -93,7 +93,7 @@ public final class DiskResponse {
         this.diskSizeGb = diskSizeGb;
         this.guestOsFeatures = guestOsFeatures;
         this.index = index;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.kind = kind;
         this.licenses = licenses;
         this.mode = mode;
@@ -147,8 +147,8 @@ public final class DiskResponse {
      * Indicates the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
      * 
     */
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
@@ -201,7 +201,7 @@ public final class DiskResponse {
         private String diskSizeGb;
         private List<GuestOsFeatureResponse> guestOsFeatures;
         private String index;
-        private String $interface;
+        private String interface_;
         private String kind;
         private List<String> licenses;
         private String mode;
@@ -220,7 +220,7 @@ public final class DiskResponse {
     	      this.diskSizeGb = defaults.diskSizeGb;
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.index = defaults.index;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.licenses = defaults.licenses;
     	      this.mode = defaults.mode;
@@ -255,8 +255,8 @@ public final class DiskResponse {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder kind(String kind) {
@@ -282,7 +282,7 @@ public final class DiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public DiskResponse build() {
-            return new DiskResponse(autoDelete, boot, deviceName, diskSizeGb, guestOsFeatures, index, $interface, kind, licenses, mode, source, type);
+            return new DiskResponse(autoDelete, boot, deviceName, diskSizeGb, guestOsFeatures, index, interface_, kind, licenses, mode, source, type);
         }
     }
 }

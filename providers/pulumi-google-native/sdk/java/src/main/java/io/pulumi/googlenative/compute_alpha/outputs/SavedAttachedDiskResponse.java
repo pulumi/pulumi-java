@@ -58,7 +58,7 @@ public final class SavedAttachedDiskResponse {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
      * 
      */
-    private final String $interface;
+    private final String interface_;
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
      * 
@@ -105,7 +105,7 @@ public final class SavedAttachedDiskResponse {
         @CustomType.Parameter("diskType") String diskType,
         @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
         @CustomType.Parameter("index") Integer index,
-        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("licenses") List<String> licenses,
         @CustomType.Parameter("mode") String mode,
@@ -121,7 +121,7 @@ public final class SavedAttachedDiskResponse {
         this.diskType = diskType;
         this.guestOsFeatures = guestOsFeatures;
         this.index = index;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.kind = kind;
         this.licenses = licenses;
         this.mode = mode;
@@ -191,8 +191,8 @@ public final class SavedAttachedDiskResponse {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
      * 
     */
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
@@ -261,7 +261,7 @@ public final class SavedAttachedDiskResponse {
         private String diskType;
         private List<GuestOsFeatureResponse> guestOsFeatures;
         private Integer index;
-        private String $interface;
+        private String interface_;
         private String kind;
         private List<String> licenses;
         private String mode;
@@ -284,7 +284,7 @@ public final class SavedAttachedDiskResponse {
     	      this.diskType = defaults.diskType;
     	      this.guestOsFeatures = defaults.guestOsFeatures;
     	      this.index = defaults.index;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.licenses = defaults.licenses;
     	      this.mode = defaults.mode;
@@ -329,8 +329,8 @@ public final class SavedAttachedDiskResponse {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder kind(String kind) {
@@ -364,7 +364,7 @@ public final class SavedAttachedDiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public SavedAttachedDiskResponse build() {
-            return new SavedAttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, diskType, guestOsFeatures, index, $interface, kind, licenses, mode, source, storageBytes, storageBytesStatus, type);
+            return new SavedAttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, diskType, guestOsFeatures, index, interface_, kind, licenses, mode, source, storageBytes, storageBytesStatus, type);
         }
     }
 }

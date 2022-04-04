@@ -35,10 +35,10 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @Import(name="package", required=true)
-      private final String $package;
+      private final String package_;
 
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
 
     public UpgradeOccurrenceResponse(
         UpgradeDistributionResponse distribution,
-        String $package,
+        String package_,
         VersionResponse parsedVersion,
         WindowsUpdateResponse windowsUpdate) {
         this.distribution = Objects.requireNonNull(distribution, "expected parameter 'distribution' to be non-null");
-        this.$package = Objects.requireNonNull($package, "expected parameter '$package' to be non-null");
+        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package_' to be non-null");
         this.parsedVersion = Objects.requireNonNull(parsedVersion, "expected parameter 'parsedVersion' to be non-null");
         this.windowsUpdate = Objects.requireNonNull(windowsUpdate, "expected parameter 'windowsUpdate' to be non-null");
     }
 
     private UpgradeOccurrenceResponse() {
         this.distribution = null;
-        this.$package = null;
+        this.package_ = null;
         this.parsedVersion = null;
         this.windowsUpdate = null;
     }
@@ -91,7 +91,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
 
     public static final class Builder {
         private UpgradeDistributionResponse distribution;
-        private String $package;
+        private String package_;
         private VersionResponse parsedVersion;
         private WindowsUpdateResponse windowsUpdate;
 
@@ -102,7 +102,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
         public Builder(UpgradeOccurrenceResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distribution = defaults.distribution;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.parsedVersion = defaults.parsedVersion;
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
@@ -111,8 +111,8 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder parsedVersion(VersionResponse parsedVersion) {
@@ -123,7 +123,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }        public UpgradeOccurrenceResponse build() {
-            return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion, windowsUpdate);
+            return new UpgradeOccurrenceResponse(distribution, package_, parsedVersion, windowsUpdate);
         }
     }
 }
