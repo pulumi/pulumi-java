@@ -10,6 +10,13 @@ import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.serialization.internal.Converter;
 import org.junit.jupiter.api.Test;
+import io.pulumi.deployment.*;
+import io.pulumi.deployment.internal.DeploymentTests;
+import io.pulumi.core.Tuples.Tuple2;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.Optional;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -20,7 +27,7 @@ class DeserializerTests {
     void testToleratingProviderNotReturningRequiredProps() {
         var json = "{}";
         TypeShape<GetAmiResult> typeShape = TypeShape.builder(GetAmiResult.class).build();
-        var converter = new Converter(Log.ignore());
+        var converter = new Converter(() -> buildDeployment(), Log.ignore());
         OutputData<GetAmiResult> responseOutput = converter.convertValue(
                 "testContext",
                 parseJsonValue(json),
@@ -38,6 +45,27 @@ class DeserializerTests {
         } catch (InvalidProtocolBufferException e) {
             assertThat(e).isNull();
             return null;
+        }
+    }
+
+    private static Deployment buildDeployment() {
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+                    .setMocks(new MocksThatAlwaysThrow())
+                    .buildSpyInstance();
+        return mock.getDeployment();
+    }
+
+    public static class MocksThatAlwaysThrow implements Mocks {
+        @Override
+        public CompletableFuture<Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+            return CompletableFuture.failedFuture(new IllegalStateException(
+                                                                            "MocksThatAlwaysThrow do not support resources"));
+        }
+
+        @Override
+        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+            return CompletableFuture.failedFuture(new IllegalStateException(
+                                                                            "MocksThatAlwaysThrow do not support calls"));
         }
     }
 }
