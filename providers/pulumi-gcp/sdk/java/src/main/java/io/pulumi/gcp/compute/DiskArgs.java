@@ -81,11 +81,11 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @Import(name="interface")
-      private final @Nullable Output<String> $interface;
+      private final @Nullable Output<String> interface_;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Output<String> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -274,7 +274,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> description,
         @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey,
         @Nullable Output<String> image,
-        @Nullable Output<String> $interface,
+        @Nullable Output<String> interface_,
         @Nullable Output<Map<String,String>> labels,
         @Nullable Output<Boolean> multiWriter,
         @Nullable Output<String> name,
@@ -291,7 +291,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
         this.image = image;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.labels = labels;
         this.multiWriter = multiWriter;
         this.name = name;
@@ -311,7 +311,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         this.description = Output.empty();
         this.diskEncryptionKey = Output.empty();
         this.image = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.labels = Output.empty();
         this.multiWriter = Output.empty();
         this.name = Output.empty();
@@ -339,7 +339,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<String> description;
         private @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
         private @Nullable Output<String> image;
-        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> interface_;
         private @Nullable Output<Map<String,String>> labels;
         private @Nullable Output<Boolean> multiWriter;
         private @Nullable Output<String> name;
@@ -363,7 +363,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.description = defaults.description;
     	      this.diskEncryptionKey = defaults.diskEncryptionKey;
     	      this.image = defaults.image;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.labels = defaults.labels;
     	      this.multiWriter = defaults.multiWriter;
     	      this.name = defaults.name;
@@ -403,12 +403,12 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.image = Output.ofNullable(image);
             return this;
         }
-        public Builder $interface(@Nullable Output<String> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<String> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -518,7 +518,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Output.ofNullable(zone);
             return this;
         }        public DiskArgs build() {
-            return new DiskArgs(description, diskEncryptionKey, image, $interface, labels, multiWriter, name, physicalBlockSizeBytes, project, provisionedIops, resourcePolicies, size, snapshot, sourceImageEncryptionKey, sourceSnapshotEncryptionKey, type, zone);
+            return new DiskArgs(description, diskEncryptionKey, image, interface_, labels, multiWriter, name, physicalBlockSizeBytes, project, provisionedIops, resourcePolicies, size, snapshot, sourceImageEncryptionKey, sourceSnapshotEncryptionKey, type, zone);
         }
     }
 }

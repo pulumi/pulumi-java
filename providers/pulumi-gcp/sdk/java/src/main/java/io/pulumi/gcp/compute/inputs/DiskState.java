@@ -92,11 +92,11 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @Import(name="interface")
-      private final @Nullable Output<String> $interface;
+      private final @Nullable Output<String> interface_;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Output<String> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -367,7 +367,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> description,
         @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey,
         @Nullable Output<String> image,
-        @Nullable Output<String> $interface,
+        @Nullable Output<String> interface_,
         @Nullable Output<String> labelFingerprint,
         @Nullable Output<Map<String,String>> labels,
         @Nullable Output<String> lastAttachTimestamp,
@@ -392,7 +392,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
         this.image = image;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.labelFingerprint = labelFingerprint;
         this.labels = labels;
         this.lastAttachTimestamp = lastAttachTimestamp;
@@ -420,7 +420,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         this.description = Output.empty();
         this.diskEncryptionKey = Output.empty();
         this.image = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.labelFingerprint = Output.empty();
         this.labels = Output.empty();
         this.lastAttachTimestamp = Output.empty();
@@ -456,7 +456,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<String> description;
         private @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
         private @Nullable Output<String> image;
-        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> interface_;
         private @Nullable Output<String> labelFingerprint;
         private @Nullable Output<Map<String,String>> labels;
         private @Nullable Output<String> lastAttachTimestamp;
@@ -488,7 +488,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
     	      this.description = defaults.description;
     	      this.diskEncryptionKey = defaults.diskEncryptionKey;
     	      this.image = defaults.image;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.labelFingerprint = defaults.labelFingerprint;
     	      this.labels = defaults.labels;
     	      this.lastAttachTimestamp = defaults.lastAttachTimestamp;
@@ -543,12 +543,12 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
             this.image = Output.ofNullable(image);
             return this;
         }
-        public Builder $interface(@Nullable Output<String> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<String> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
@@ -717,7 +717,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
             this.zone = Output.ofNullable(zone);
             return this;
         }        public DiskState build() {
-            return new DiskState(creationTimestamp, description, diskEncryptionKey, image, $interface, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, multiWriter, name, physicalBlockSizeBytes, project, provisionedIops, resourcePolicies, selfLink, size, snapshot, sourceImageEncryptionKey, sourceImageId, sourceSnapshotEncryptionKey, sourceSnapshotId, type, users, zone);
+            return new DiskState(creationTimestamp, description, diskEncryptionKey, image, interface_, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, multiWriter, name, physicalBlockSizeBytes, project, provisionedIops, resourcePolicies, selfLink, size, snapshot, sourceImageEncryptionKey, sourceImageId, sourceSnapshotEncryptionKey, sourceSnapshotId, type, users, zone);
         }
     }
 }
