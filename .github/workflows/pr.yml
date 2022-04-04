@@ -160,7 +160,7 @@ jobs:
       - name: Get JAR size diff
         id: diffJar
         run: |
-          size=$((${{ steps.newJar.outputs.sizeHuman }} - ${{ steps.oldJar.outputs.sizeHuman }}))
+          size=$((${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }}))
           sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
           echo ::set-output name=size::${size}
           echo ::set-output name=sizeHuman::${sizeHuman}
