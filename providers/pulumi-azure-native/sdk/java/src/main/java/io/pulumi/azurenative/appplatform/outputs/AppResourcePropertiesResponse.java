@@ -48,7 +48,7 @@ public final class AppResourcePropertiesResponse {
      * Indicates whether the App exposes public endpoint
      * 
      */
-    private final @Nullable Boolean $public;
+    private final @Nullable Boolean public_;
     /**
      * Temporary disk settings
      * 
@@ -68,7 +68,7 @@ public final class AppResourcePropertiesResponse {
         @CustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
         @CustomType.Parameter("persistentDisk") @Nullable PersistentDiskResponse persistentDisk,
         @CustomType.Parameter("provisioningState") String provisioningState,
-        @CustomType.Parameter("public") @Nullable Boolean $public,
+        @CustomType.Parameter("public") @Nullable Boolean public_,
         @CustomType.Parameter("temporaryDisk") @Nullable TemporaryDiskResponse temporaryDisk,
         @CustomType.Parameter("url") String url) {
         this.activeDeploymentName = activeDeploymentName;
@@ -77,7 +77,7 @@ public final class AppResourcePropertiesResponse {
         this.httpsOnly = httpsOnly;
         this.persistentDisk = persistentDisk;
         this.provisioningState = provisioningState;
-        this.$public = $public;
+        this.public_ = public_;
         this.temporaryDisk = temporaryDisk;
         this.url = url;
     }
@@ -128,8 +128,8 @@ public final class AppResourcePropertiesResponse {
      * Indicates whether the App exposes public endpoint
      * 
     */
-    public Optional<Boolean> get$public() {
-        return Optional.ofNullable(this.$public);
+    public Optional<Boolean> getPublic_() {
+        return Optional.ofNullable(this.public_);
     }
     /**
      * Temporary disk settings
@@ -161,7 +161,7 @@ public final class AppResourcePropertiesResponse {
         private @Nullable Boolean httpsOnly;
         private @Nullable PersistentDiskResponse persistentDisk;
         private String provisioningState;
-        private @Nullable Boolean $public;
+        private @Nullable Boolean public_;
         private @Nullable TemporaryDiskResponse temporaryDisk;
         private String url;
 
@@ -177,7 +177,7 @@ public final class AppResourcePropertiesResponse {
     	      this.httpsOnly = defaults.httpsOnly;
     	      this.persistentDisk = defaults.persistentDisk;
     	      this.provisioningState = defaults.provisioningState;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.temporaryDisk = defaults.temporaryDisk;
     	      this.url = defaults.url;
         }
@@ -206,8 +206,8 @@ public final class AppResourcePropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = public_;
             return this;
         }
         public Builder temporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
@@ -218,7 +218,7 @@ public final class AppResourcePropertiesResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }        public AppResourcePropertiesResponse build() {
-            return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, $public, temporaryDisk, url);
+            return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, public_, temporaryDisk, url);
         }
     }
 }

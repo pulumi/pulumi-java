@@ -16,7 +16,7 @@ import java.util.StringJoiner;
     public enum IPAddressAllocationMethod {
         Unset("unset"),
         Dynamic("dynamic"),
-        $Static("static"),
+        Static_("static"),
         Linklayer("linklayer"),
         Random("random"),
         Other("other");

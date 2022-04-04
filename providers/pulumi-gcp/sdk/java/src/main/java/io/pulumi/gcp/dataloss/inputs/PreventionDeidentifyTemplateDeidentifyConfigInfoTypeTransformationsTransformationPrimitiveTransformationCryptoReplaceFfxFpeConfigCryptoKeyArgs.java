@@ -34,10 +34,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="transient")
-      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> $transient;
+      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> transient_;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> get$transient() {
-        return this.$transient == null ? Output.empty() : this.$transient;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> getTransient_() {
+        return this.transient_ == null ? Output.empty() : this.transient_;
     }
 
     /**
@@ -54,16 +54,16 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs(
         @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs> kmsWrapped,
-        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> $transient,
+        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> transient_,
         @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedArgs> unwrapped) {
         this.kmsWrapped = kmsWrapped;
-        this.$transient = $transient;
+        this.transient_ = transient_;
         this.unwrapped = unwrapped;
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs() {
         this.kmsWrapped = Output.empty();
-        this.$transient = Output.empty();
+        this.transient_ = Output.empty();
         this.unwrapped = Output.empty();
     }
 
@@ -77,7 +77,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     public static final class Builder {
         private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs> kmsWrapped;
-        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> $transient;
+        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> transient_;
         private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedArgs> unwrapped;
 
         public Builder() {
@@ -87,7 +87,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.kmsWrapped = defaults.kmsWrapped;
-    	      this.$transient = defaults.$transient;
+    	      this.transient_ = defaults.transient_;
     	      this.unwrapped = defaults.unwrapped;
         }
 
@@ -99,12 +99,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.kmsWrapped = Output.ofNullable(kmsWrapped);
             return this;
         }
-        public Builder $transient(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> $transient) {
-            this.$transient = $transient;
+        public Builder transient_(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> transient_) {
+            this.transient_ = transient_;
             return this;
         }
-        public Builder $transient(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs $transient) {
-            this.$transient = Output.ofNullable($transient);
+        public Builder transient_(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs transient_) {
+            this.transient_ = Output.ofNullable(transient_);
             return this;
         }
         public Builder unwrapped(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedArgs> unwrapped) {
@@ -115,7 +115,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.unwrapped = Output.ofNullable(unwrapped);
             return this;
         }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs(kmsWrapped, $transient, unwrapped);
+            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs(kmsWrapped, transient_, unwrapped);
         }
     }
 }

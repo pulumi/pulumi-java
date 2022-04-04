@@ -70,10 +70,10 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @Import(name="public")
-      private final @Nullable Output<Boolean> $public;
+      private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> get$public() {
-        return this.$public == null ? Output.empty() : this.$public;
+    public Output<Boolean> getPublic_() {
+        return this.public_ == null ? Output.empty() : this.public_;
     }
 
     /**
@@ -92,13 +92,13 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         @Nullable Output<String> fqdn,
         @Nullable Output<Boolean> httpsOnly,
         @Nullable Output<PersistentDiskArgs> persistentDisk,
-        @Nullable Output<Boolean> $public,
+        @Nullable Output<Boolean> public_,
         @Nullable Output<TemporaryDiskArgs> temporaryDisk) {
         this.activeDeploymentName = activeDeploymentName;
         this.fqdn = fqdn;
         this.httpsOnly = httpsOnly == null ? Output.ofNullable(false) : httpsOnly;
         this.persistentDisk = persistentDisk;
-        this.$public = $public;
+        this.public_ = public_;
         this.temporaryDisk = temporaryDisk;
     }
 
@@ -107,7 +107,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         this.fqdn = Output.empty();
         this.httpsOnly = Output.empty();
         this.persistentDisk = Output.empty();
-        this.$public = Output.empty();
+        this.public_ = Output.empty();
         this.temporaryDisk = Output.empty();
     }
 
@@ -124,7 +124,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
         private @Nullable Output<String> fqdn;
         private @Nullable Output<Boolean> httpsOnly;
         private @Nullable Output<PersistentDiskArgs> persistentDisk;
-        private @Nullable Output<Boolean> $public;
+        private @Nullable Output<Boolean> public_;
         private @Nullable Output<TemporaryDiskArgs> temporaryDisk;
 
         public Builder() {
@@ -137,7 +137,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.fqdn = defaults.fqdn;
     	      this.httpsOnly = defaults.httpsOnly;
     	      this.persistentDisk = defaults.persistentDisk;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.temporaryDisk = defaults.temporaryDisk;
         }
 
@@ -173,12 +173,12 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
             this.persistentDisk = Output.ofNullable(persistentDisk);
             return this;
         }
-        public Builder $public(@Nullable Output<Boolean> $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Output<Boolean> public_) {
+            this.public_ = public_;
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = Output.ofNullable($public);
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = Output.ofNullable(public_);
             return this;
         }
         public Builder temporaryDisk(@Nullable Output<TemporaryDiskArgs> temporaryDisk) {
@@ -189,7 +189,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
             this.temporaryDisk = Output.ofNullable(temporaryDisk);
             return this;
         }        public AppResourcePropertiesArgs build() {
-            return new AppResourcePropertiesArgs(activeDeploymentName, fqdn, httpsOnly, persistentDisk, $public, temporaryDisk);
+            return new AppResourcePropertiesArgs(activeDeploymentName, fqdn, httpsOnly, persistentDisk, public_, temporaryDisk);
         }
     }
 }

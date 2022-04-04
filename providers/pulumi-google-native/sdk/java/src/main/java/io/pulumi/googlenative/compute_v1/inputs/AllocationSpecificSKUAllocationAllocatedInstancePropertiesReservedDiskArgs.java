@@ -31,22 +31,22 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
+      private final @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_;
 
-    public Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(
         @Nullable Output<String> diskSizeGb,
-        @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
+        @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_) {
         this.diskSizeGb = diskSizeGb;
-        this.$interface = $interface;
+        this.interface_ = interface_;
     }
 
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs() {
         this.diskSizeGb = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +59,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
     public static final class Builder {
         private @Nullable Output<String> diskSizeGb;
-        private @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
+        private @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_;
 
         public Builder() {
     	      // Empty
@@ -68,7 +68,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
         public Builder(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
         }
 
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
@@ -79,15 +79,15 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-        public Builder $interface(@Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs build() {
-            return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(diskSizeGb, $interface);
+            return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(diskSizeGb, interface_);
         }
     }
 }
