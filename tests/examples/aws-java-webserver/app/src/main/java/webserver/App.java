@@ -1,10 +1,10 @@
 package webserver;
 
-import io.pulumi.deployment.Deployment;
+import io.pulumi.Pulumi;
 
 public class App {
     public static void main(String[] args) {
-        Integer exitCode = Deployment.runAsyncStack(MyStack.class).join();
+        int exitCode = Pulumi.runStack(MyStack::new);
         System.exit(exitCode);
     }
 }
