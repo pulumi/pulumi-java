@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
 import io.pulumi.Log;
-import io.pulumi.Stack;
+import io.pulumi.Stack.StackInternal;
 import io.pulumi.core.Urn;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -118,7 +118,7 @@ public class MockMonitor implements Monitor {
     public CompletableFuture<RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
         this.resources.add(resource);
 
-        if (Stack.InternalStatic.RootPulumiStackTypeName.equals(request.getType())) {
+        if (StackInternal.RootPulumiStackTypeName.equals(request.getType())) {
             return CompletableFuture.completedFuture(
                     RegisterResourceResponse.newBuilder()
                             .setUrn(Urn.create(deployment, request.getParent(), request.getType(), request.getName()))

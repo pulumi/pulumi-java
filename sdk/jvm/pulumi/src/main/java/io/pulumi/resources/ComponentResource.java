@@ -2,13 +2,17 @@ package io.pulumi.resources;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.core.internal.Internal.InternalField;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.internal.DeploymentInternal;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * A @see {@link Resource} that aggregates one or more other child resources into a higher
@@ -16,6 +20,10 @@ import java.util.concurrent.CompletableFuture;
  * CRUD operations for provisioning.
  */
 public class ComponentResource extends Resource {
+
+    @SuppressWarnings("unused")
+    @InternalField
+    private final ComponentResourceInternal internal = new ComponentResourceInternal(this);
 
     /**
      * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
@@ -79,14 +87,12 @@ public class ComponentResource extends Resource {
      * @param options A bag of options that control this resource's behavior
      * @param remote  True if this is a remote component resource
      */
-    public ComponentResource(
-            String type, String name, @Nullable ResourceArgs args,
-            @Nullable ComponentResourceOptions options,
-            boolean remote) {
+    public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options, boolean remote) {
         super(type, name, false,
                 args == null ? ResourceArgs.Empty : args,
-                options == null ? ComponentResourceOptions.builder().build() : options,
-                remote, false);
+                options == null ? ComponentResourceOptions.Empty : options,
+                remote, false
+        );
     }
 
     protected void registerOutputs() {
@@ -94,18 +100,27 @@ public class ComponentResource extends Resource {
     }
 
     protected void registerOutputs(Map<String, Optional<Object>> outputs) {
-        Objects.requireNonNull(outputs);
+        requireNonNull(outputs);
         registerOutputs(CompletableFuture.completedFuture(outputs));
     }
 
     protected void registerOutputs(CompletableFuture<Map<String, Optional<Object>>> outputs) {
-        Objects.requireNonNull(outputs);
+        requireNonNull(outputs);
         registerOutputs(OutputBuilder.forDeployment(this.deployment).of(outputs));
     }
 
     protected void registerOutputs(Output<Map<String, Optional<Object>>> outputs) {
-        Objects.requireNonNull(outputs);
+        requireNonNull(outputs);
         var di = DeploymentInternal.cast(this.deployment);
         di.registerResourceOutputs(this, outputs);
+    }
+
+    @InternalUse
+    @ParametersAreNonnullByDefault
+    public static class ComponentResourceInternal extends ResourceInternal {
+
+        protected ComponentResourceInternal(ComponentResource resource) {
+            super(resource);
+        }
     }
 }

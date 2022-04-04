@@ -6,9 +6,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.entry;
+import static org.assertj.core.api.Assertions.*;
 
 public class OutputStaticsTest {
     private static final OutputBuilder output = OutputTests.testContext().output;
@@ -201,7 +203,7 @@ public class OutputStaticsTest {
     }
 
     @Test
-    public void testNullableSecretifyoutput() {
+    void testNullableSecretifyOutput() {
         Output<String> res0_ = output.ofNullable((String) null);
         Output<String> res0 = res0_.asSecret();
         var data0 = OutputTests.waitFor(res0);
@@ -227,5 +229,55 @@ public class OutputStaticsTest {
         assertThat(data2.isSecret()).isTrue();
         assertThat(data2.isPresent()).isTrue();
         assertThat(data2.isKnown()).isTrue();
+    }
+
+    /**
+     * If the user creates nulls through APIs we do not maintain that is fair game to throw NPE
+     */
+    @Test
+    void testExpectedNPEs() {
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        Output.<Integer>empty().applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        Output.<Integer>ofNullable(null)
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        Output.<Integer>of(CompletableFuture.supplyAsync(() -> null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        Output.of(1)
+                                .applyOptional(__ -> Optional.<Integer>ofNullable(null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        Output.of(1)
+                                .apply(__ -> Output.<Integer>ofNullable(null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
+
+        assertThatThrownBy(() ->
+                OutputTests.waitFor(
+                        Output.of(1)
+                                .applyFuture(__ -> CompletableFuture.<Integer>supplyAsync(() -> null))
+                                .applyValue(x -> x + 1)
+                )
+        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
     }
 }

@@ -11,11 +11,12 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+
+import static java.util.Objects.requireNonNull;
 
 @InternalUse
 @ParametersAreNonnullByDefault
@@ -37,20 +38,20 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @InternalUse
     public OutputInternal(Deployment deployment, CompletableFuture<T> value, boolean isSecret) {
-        this(deployment, OutputData.ofAsync(Objects.requireNonNull(value), isSecret));
+        this(deployment, OutputData.ofAsync(requireNonNull(value), isSecret));
     }
 
     @InternalUse
     public OutputInternal(Deployment deployment, OutputData<T> dataFuture) {
-        this(deployment, CompletableFuture.completedFuture(Objects.requireNonNull(dataFuture)));
+        this(deployment, CompletableFuture.completedFuture(requireNonNull(dataFuture)));
     }
 
     @InternalUse
     public OutputInternal(Deployment deployment, CompletableFuture<OutputData<T>> dataFuture) {
-        this.deployment = Objects.requireNonNull(deployment);
-        this.dataFuture = Objects.requireNonNull(dataFuture);
-        var di = DeploymentInternal.cast(deployment);
-        di.getRunner().registerTask(this.getClass().getTypeName() + " -> " + dataFuture, dataFuture);
+        this.dataFuture = requireNonNull(dataFuture);
+        deployment.ifPresent(deploymentInternal -> deploymentInternal.getRunner().registerTask(
+                this.getClass().getTypeName() + " -> " + dataFuture, dataFuture
+        ));
     }
 
     @InternalUse
@@ -141,7 +142,7 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
     // Static section -----
 
     static <T> OutputInternal<T> cast(Output<T> output) {
-        Objects.requireNonNull(output);
+        requireNonNull(output);
         if (output instanceof OutputInternal) {
             return (OutputInternal<T>) output;
         } else {

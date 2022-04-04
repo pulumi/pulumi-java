@@ -2,8 +2,8 @@ package io.pulumi;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
@@ -25,6 +25,7 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
+import static java.util.Objects.requireNonNull;
 
 public class Stack extends ComponentResource {
 
@@ -34,8 +35,8 @@ public class Stack extends ComponentResource {
     private Output<Map<String, Optional<Object>>> outputs;
 
     @SuppressWarnings("unused")
-    @Field
-    private final Internal internal = new Internal();
+    @InternalField
+    private final StackInternal internal = new StackInternal(this);
 
     /**
      * Create a Stack with stack resources defined in derived class constructor.
@@ -52,7 +53,7 @@ public class Stack extends ComponentResource {
      */
     public Stack(@Nullable StackOptions options) {
         super(
-                InternalStatic.RootPulumiStackTypeName,
+                StackInternal.RootPulumiStackTypeName,
                 buildStackName(),
                 convertOptions(options)
         );
@@ -115,15 +116,18 @@ public class Stack extends ComponentResource {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final class Internal {
+    public final static class StackInternal extends ComponentResourceInternal {
 
-        private Internal() {
-            /* Empty */
+        private final Stack stack;
+
+        private StackInternal(Stack stack) {
+            super(stack);
+            this.stack = requireNonNull(stack);
         }
 
         @InternalUse
         public Output<Map<String, Optional<Object>>> getOutputs() {
-            return Stack.this.outputs;
+            return this.stack.outputs;
         }
 
         /**
@@ -132,12 +136,12 @@ public class Stack extends ComponentResource {
          */
         @InternalUse
         public void registerPropertyOutputs() {
-            var infos = OutputMetadata.of(Stack.this.getClass()); // we need the subclass
+            var infos = OutputMetadata.of(this.stack.getClass()); // we need the nesting class
 
             var outputs = infos.entrySet().stream()
                     .collect(Collectors.toMap(
                             Map.Entry::getKey,
-                            entry -> entry.getValue().getFieldValue(Stack.this)
+                            entry -> entry.getValue().getFieldValue(this.stack)
                     ));
 
             var nulls = outputs.entrySet().stream()
@@ -169,19 +173,11 @@ public class Stack extends ComponentResource {
 
             var out = OutputBuilder.forDeployment(Stack.this.deployment);
 
-            Stack.this.outputs = out.of(
+            this.stack.outputs = out.of(
                     outputs.entrySet().stream()
                             .collect(toImmutableMap(Map.Entry::getKey, e -> e.getValue().map(o -> o)))
             );
-            Stack.this.registerOutputs(Stack.this.outputs);
-        }
-    }
-
-    @InternalUse
-    public static final class InternalStatic {
-
-        private InternalStatic() {
-            throw new UnsupportedOperationException("static class");
+            this.stack.registerOutputs(this.stack.outputs);
         }
 
         /**
