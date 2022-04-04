@@ -1107,9 +1107,9 @@ public class DeploymentImpl implements Deployment, DeploymentInternal {
                                     if (resource instanceof CustomResource) {
                                         var customResource = (CustomResource) resource;
                                         var isKnown = isNonEmptyOrNull(id);
-                                        customResource.setId(isKnown
-                                                ? out.of(id)
-                                                : new OutputInternal<>(deployment.get(), OutputData.unknown()));
+                                        Internal.from(customResource).setId(isKnown
+                                                ? new OutputInternal<>(deployment.get(), id)
+                                                : new OutputInternal<>(deployment.get(), OutputData.unknown())); // TODO: replace with OutputInternal.unknown()
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
