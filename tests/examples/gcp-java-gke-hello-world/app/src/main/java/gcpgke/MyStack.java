@@ -1,20 +1,14 @@
 package gcpgke;
 
-import java.text.MessageFormat;
-import java.util.List;
-import java.util.Map;
-
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.deployment.InvokeOptions;
-import io.pulumi.gcp.container.ClusterArgs;
-import io.pulumi.gcp.container.GetEngineVersions;
-import io.pulumi.gcp.container.NodePool;
-import io.pulumi.gcp.container.NodePoolArgs;
+import io.pulumi.gcp.container.*;
 import io.pulumi.gcp.container.inputs.GetEngineVersionsArgs;
 import io.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
+import io.pulumi.gcp.container.outputs.GetEngineVersionsResult;
 import io.pulumi.kubernetes.Provider;
 import io.pulumi.kubernetes.ProviderArgs;
 import io.pulumi.kubernetes.apps_v1.Deployment;
@@ -25,41 +19,38 @@ import io.pulumi.kubernetes.core_v1.NamespaceArgs;
 import io.pulumi.kubernetes.core_v1.Service;
 import io.pulumi.kubernetes.core_v1.ServiceArgs;
 import io.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
-import io.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
-import io.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
-import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ServiceSpecArgs;
+import io.pulumi.kubernetes.core_v1.inputs.*;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
-import io.pulumi.gcp.container.Cluster;
 import io.pulumi.resources.CustomResourceOptions;
+
+import java.text.MessageFormat;
+import java.util.Map;
 
 public final class MyStack extends Stack {
 
-    @Export(name="serviceName", type=String.class, parameters={})
-    private Output<String> serviceName;
+    @Export(name="serviceName", type=String.class)
+    private final Output<String> serviceName;
 
-    @Export(name="servicePublicIP", type=String.class, parameters={})
-    private Output<String> servicePublicIP;
+    @Export(name="servicePublicIP", type=String.class)
+    private final Output<String> servicePublicIP;
 
-    @Export(name="deploymentName", type=String.class, parameters={})
-    private Output<String> deploymentName;
+    @Export(name="deploymentName", type=String.class)
+    private final Output<String> deploymentName;
 
-    @Export(name="namespaceName", type=String.class, parameters={})
-    private Output<String> namespaceName;
+    @Export(name="namespaceName", type=String.class)
+    private final Output<String> namespaceName;
 
-    @Export(name="kubeconfig", type=String.class, parameters={})
-    private Output<String> kubeconfig;
+    @Export(name="kubeconfig", type=String.class)
+    private final Output<String> kubeconfig;
 
-    @Export(name="clusterName", type=String.class, parameters={})
-    private Output<String> clusterName;
+    @Export(name="clusterName", type=String.class)
+    private final Output<String> clusterName;
 
-    @Export(name="masterVersion", type=String.class, parameters={})
-    private Output<String> masterVersion;
+    @Export(name="masterVersion", type=String.class)
+    private final Output<String> masterVersion;
 
-    public MyStack() throws Exception {
+    public MyStack() {
         final String name = "helloworld";
 
         final var config = io.pulumi.Config.of();
@@ -67,7 +58,8 @@ public final class MyStack extends Stack {
             GetEngineVersions.invokeAsync(
                 GetEngineVersionsArgs.Empty,
                 InvokeOptions.Empty
-            ).thenApply(thing -> thing.getLatestMasterVersion()).get());
+            ).thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
+        );
 
         this.masterVersion = Output.of(masterVersion);
 
@@ -113,40 +105,43 @@ public final class MyStack extends Stack {
         // because of the way GKE requires gcloud to be in the picture for cluster
         // authentication (rather than using the client cert/key directly).
         final var gcpConfig = new io.pulumi.gcp.Config();
-        var clusterName = gcpConfig.project().get() + "_" + gcpConfig.zone().get() + "_" + name;
+        var clusterName = String.format("%s_%s_%s",
+                gcpConfig.project().orElseThrow(),
+                gcpConfig.zone().orElseThrow(),
+                name
+        );
 
-        var masterAuthClusterCaCertificate = cluster.getMasterAuth().applyOptional(args -> args.getClusterCaCertificate());
+        var masterAuthClusterCaCertificate = cluster.getMasterAuth()
+                .applyValue(a -> a.getClusterCaCertificate().orElseThrow());
+
         this.kubeconfig = cluster.getEndpoint()
             .apply(endpoint -> masterAuthClusterCaCertificate.applyValue(
-                caCert -> {
-                    var retval = MessageFormat.format(String.join("\n",
-                        "apiVersion: v1",
-                        "clusters:",
-                        "- cluster:",
-                        "    certificate-authority-data: {2}",
-                        "    server: https://{1}",
-                        "  name: {0}",
-                        "contexts:",
-                        "- context:",
-                        "    cluster: {0}",
-                        "    user: {0}",
-                        "  name: {0}",
-                        "current-context: {0}",
-                        "kind: Config",
-                        "preferences: '{}'",
-                        "users:",
-                        "- name: {0}",
-                        "  user:",
-                        "    auth-provider:",
-                        "      config:",
-                        "        cmd-args: config config-helper --format=json",
-                        "        cmd-path: gcloud",
-                        "        expiry-key: \"'{.credential.token_expiry}'\"",
-                        "        token-key: \"'{.credential.access_token}'\"",
-                        "      name: gcp"
-                    ), clusterName, endpoint, caCert);
-                    return retval;
-                }
+                caCert -> MessageFormat.format(String.join("\n",
+                    "apiVersion: v1",
+                    "clusters:",
+                    "- cluster:",
+                    "    certificate-authority-data: {2}",
+                    "    server: https://{1}",
+                    "  name: {0}",
+                    "contexts:",
+                    "- context:",
+                    "    cluster: {0}",
+                    "    user: {0}",
+                    "  name: {0}",
+                    "current-context: {0}",
+                    "kind: Config",
+                    "preferences: '{}'",
+                    "users:",
+                    "- name: {0}",
+                    "  user:",
+                    "    auth-provider:",
+                    "      config:",
+                    "        cmd-args: config config-helper --format=json",
+                    "        cmd-path: gcloud",
+                    "        expiry-key: \"'{.credential.token_expiry}'\"",
+                    "        token-key: \"'{.credential.access_token}'\"",
+                    "      name: gcp"
+                ), clusterName, endpoint, caCert)
             ));
 
         // Create a Kubernetes provider instance that uses our cluster from above.
@@ -156,7 +151,8 @@ public final class MyStack extends Stack {
                 .build(),
             CustomResourceOptions.builder()
                 .dependsOn(nodePool, cluster)
-                .build());
+                .build()
+        );
         final var clusterResourceOptions = CustomResourceOptions.builder()
             .provider(clusterProvider)
             .build();
@@ -168,7 +164,7 @@ public final class MyStack extends Stack {
         );
 
         // Export the Namespace name
-        this.namespaceName = ns.getMetadata().applyOptional(arg0 -> arg0.getName());
+        this.namespaceName = ns.getMetadata().apply(m -> Output.of(m.getName().orElseThrow()));
 
         final var appLabels = Map.of("appClass", name);
 
@@ -202,7 +198,7 @@ public final class MyStack extends Stack {
             .build(), clusterResourceOptions);
 
         // Export the Deployment name
-        this.deploymentName = deployment.getMetadata().applyOptional(arg0 -> arg0.getName());
+        this.deploymentName = deployment.getMetadata().apply(m -> Output.of(m.getName().orElseThrow()));
 
         // Create a LoadBalancer Service for the NGINX Deployment
         final var service = new Service(name, ServiceArgs.builder()
@@ -218,9 +214,9 @@ public final class MyStack extends Stack {
             .build(), clusterResourceOptions);
 
         // Export the Service name and public LoadBalancer endpoint
-        this.serviceName = service.getMetadata().applyOptional(arg0 -> arg0.getName());
+        this.serviceName = service.getMetadata().applyValue(m -> m.getName().orElseThrow());
         this.servicePublicIP = service.getStatus()
-            .applyOptional(arg0 -> arg0.getLoadBalancer())
-            .applyOptional(arg0 -> arg0.getIngress().get(0).getIp());
+            .applyValue(s -> s.getLoadBalancer().orElseThrow())
+            .applyValue(status -> status.getIngress().get(0).getIp().orElseThrow());
     }
 }

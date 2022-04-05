@@ -10,6 +10,12 @@ repositories {
     mavenLocal()
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17)) // showcase text blocks
+    }
+}
+
 dependencies {
     implementation 'io.pulumi:pulumi:1.0.0'
     implementation 'io.pulumi:aws-native:0.12.0'
