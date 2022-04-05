@@ -92,10 +92,10 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @Import(name="public")
-      private final @Nullable Boolean $public;
+      private final @Nullable Boolean public_;
 
-    public Optional<Boolean> get$public() {
-        return this.$public == null ? Optional.empty() : Optional.ofNullable(this.$public);
+    public Optional<Boolean> getPublic_() {
+        return this.public_ == null ? Optional.empty() : Optional.ofNullable(this.public_);
     }
 
     /**
@@ -127,7 +127,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         @Nullable Boolean httpsOnly,
         @Nullable PersistentDiskResponse persistentDisk,
         String provisioningState,
-        @Nullable Boolean $public,
+        @Nullable Boolean public_,
         @Nullable TemporaryDiskResponse temporaryDisk,
         String url) {
         this.activeDeploymentName = activeDeploymentName;
@@ -136,7 +136,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         this.httpsOnly = httpsOnly == null ? false : httpsOnly;
         this.persistentDisk = persistentDisk;
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.$public = $public;
+        this.public_ = public_;
         this.temporaryDisk = temporaryDisk;
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
@@ -148,7 +148,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         this.httpsOnly = null;
         this.persistentDisk = null;
         this.provisioningState = null;
-        this.$public = null;
+        this.public_ = null;
         this.temporaryDisk = null;
         this.url = null;
     }
@@ -168,7 +168,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         private @Nullable Boolean httpsOnly;
         private @Nullable PersistentDiskResponse persistentDisk;
         private String provisioningState;
-        private @Nullable Boolean $public;
+        private @Nullable Boolean public_;
         private @Nullable TemporaryDiskResponse temporaryDisk;
         private String url;
 
@@ -184,7 +184,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     	      this.httpsOnly = defaults.httpsOnly;
     	      this.persistentDisk = defaults.persistentDisk;
     	      this.provisioningState = defaults.provisioningState;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.temporaryDisk = defaults.temporaryDisk;
     	      this.url = defaults.url;
         }
@@ -213,8 +213,8 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = public_;
             return this;
         }
         public Builder temporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
@@ -225,7 +225,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
             this.url = Objects.requireNonNull(url);
             return this;
         }        public AppResourcePropertiesResponse build() {
-            return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, $public, temporaryDisk, url);
+            return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, public_, temporaryDisk, url);
         }
     }
 }

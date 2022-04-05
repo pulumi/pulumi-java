@@ -11,12 +11,12 @@ import (
 
 const defaultBasePackage = "io.pulumi."
 
-// JVMPropertyInfo represents the a JVM language-specific info for a property.
+// PropertyInfo represents a JVM language-specific info for a property.
 type PropertyInfo struct {
 	Name string `json:"name,omitempty"`
 }
 
-// JVMPackageInfo represents the a JVM language-specific info for a package.
+// PackageInfo represents a JVM language-specific info for a package.
 type PackageInfo struct {
 	DefaultVersion         string            `json:"defaultVersion,omitempty"`
 	PackageReferences      map[string]string `json:"packageReferences,omitempty"`

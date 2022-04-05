@@ -2,13 +2,14 @@ package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
+import io.pulumi.Stack.StackInternal;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Internal.Field;
+import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
@@ -19,7 +20,6 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 
 import static io.pulumi.core.internal.Objects.exceptionSupplier;
 import static io.pulumi.core.internal.Objects.require;
@@ -31,6 +31,7 @@ import static java.util.Objects.requireNonNull;
  */
 @ParametersAreNonnullByDefault
 public abstract class Resource {
+
     private final CompletableFuture<Output<String>> urnFuture = new CompletableFuture<>();
 
     @Export(name = Constants.UrnPropertyName, type = String.class)
@@ -60,9 +61,9 @@ public abstract class Resource {
     @Nullable
     private final String version;
 
-    @SuppressWarnings("unused")
-    @Field
-    private final Internal internal = new Internal();
+    @SuppressWarnings({"unused", "FieldCanBeLocal"})
+    @InternalField
+    private final ResourceInternal internal = new ResourceInternal(this);
 
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
@@ -91,33 +92,7 @@ public abstract class Resource {
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency
     ) {
-        this(type, name, custom, args, options, remote, dependency, null);
-    }
-
-    /**
-     * Creates and registers a new resource object. The "type" is the fully qualified type token
-     * and "name" is the "name" part to of a stable and globally unique URN for the object,
-     * "dependsOn" is an optional list of other resources that this resource depends on,
-     * controlling the order in which we perform resource operations.
-     *
-     * @param type       the type of the resource
-     * @param name       the unique name of the resource
-     * @param custom     true to indicate that this is a custom resource, managed by a plugin
-     * @param args       the arguments to use to populate the new resource
-     * @param options    a bag of options that control this resource's behavior
-     * @param remote     true if this is a remote component resource
-     * @param dependency true if this is a synthetic resource used internally for dependency tracking
-     * @param superInit  subclass initialization logic that needs to be run in superclass
-     */
-    protected Resource(
-            String type, String name, boolean custom,
-            ResourceArgs args, ResourceOptions options,
-            boolean remote, boolean dependency, @Nullable Consumer<Resource> superInit
-    ) {
-        if (superInit != null) {
-            superInit.accept(this);
-        }
-
+        this.superInit(this);
         this.remote = remote;
 
         if (dependency) {
@@ -148,7 +123,7 @@ public abstract class Resource {
 
         // Before anything else - if there are transformations registered, invoke them in order
         // to transform the properties and options assigned to this resource.
-        var parent = Objects.equals(type, Stack.InternalStatic.RootPulumiStackTypeName)
+        var parent = Objects.equals(type, StackInternal.RootPulumiStackTypeName)
                 ? null
                 : (options.parent == null ? DeploymentInternal.getInstance().getStack() : options.parent);
 
@@ -168,7 +143,7 @@ public abstract class Resource {
                     // establish what transformation to apply in the first place, and to compute
                     // inheritance of other resource options in the Resource constructor before
                     // transformations are run (so modifying it here would only even partially
-                    // take affect).
+                    // take effect).
                     // It's theoretically possible this restriction could be
                     // lifted in the future, but for now just disallow re-parenting resources in
                     // transformations to be safe.
@@ -224,7 +199,7 @@ public abstract class Resource {
             if (provider == null) {
                 if (options.parent != null) {
                     // If no provider was given, but we have a parent, then inherit the provider from our parent.
-                    options.provider = InternalStatic.getProvider(options.parent, this.type);
+                    options.provider = ResourceInternal.getProvider(options.parent, this.type);
                 }
             } else {
                 // If a provider was specified, add it to the providers map under this type's package so that
@@ -269,6 +244,13 @@ public abstract class Resource {
     }
 
     /**
+     * Initialization method called at the beginning of the constructor
+     */
+    protected void superInit(Resource resource) {
+        // Empty
+    }
+
+    /**
      * The type assigned to the resource at construction.
      */
     public String getResourceType() {
@@ -308,18 +290,11 @@ public abstract class Resource {
         return this.urn;
     }
 
-    @InternalUse
-    public void setUrn(@Nullable Output<String> urn) {
-        if (!this.urnFuture.complete(urn)) {
-            throw new IllegalStateException("urn cannot be set twice, must be null for setUrn to work");
-        }
-    }
-
     private static ImmutableMap<String, ProviderResource> convertToProvidersMap(@Nullable List<ProviderResource> providers) {
         var result = ImmutableMap.<String, ProviderResource>builder();
         if (providers != null) {
             for (var provider : providers) {
-                var pkg = io.pulumi.core.internal.Internal.from(provider, ProviderResource.Internal.class).getPackage();
+                var pkg = Internal.from(provider, ProviderResource.ProviderResourceInternal.class).getPackage();
                 result.put(pkg, provider);
             }
         }
@@ -427,10 +402,12 @@ public abstract class Resource {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final class Internal {
+    public static class ResourceInternal {
 
-        private Internal() {
-            /* Empty */
+        protected final Resource resource;
+
+        protected ResourceInternal(Resource resource) {
+            this.resource = requireNonNull(resource);
         }
 
         /**
@@ -438,12 +415,12 @@ public abstract class Resource {
          */
         @InternalUse
         public List<Output<String>> getAliases() {
-            return Resource.this.aliases;
+            return this.resource.aliases;
         }
 
         @InternalUse
         public boolean getRemote() {
-            return Resource.this.remote;
+            return this.resource.remote;
         }
 
         /**
@@ -451,7 +428,7 @@ public abstract class Resource {
          */
         @InternalUse
         public Optional<ProviderResource> getProvider() {
-            return Optional.ofNullable(Resource.this.provider);
+            return Optional.ofNullable(this.resource.provider);
         }
 
         /**
@@ -459,7 +436,7 @@ public abstract class Resource {
          */
         @InternalUse
         public Optional<ProviderResource> getProvider(String moduleMember) {
-            return Optional.ofNullable(InternalStatic.getProvider(Resource.this, moduleMember));
+            return Optional.ofNullable(getProvider(this.resource, moduleMember));
         }
 
         /**
@@ -467,11 +444,22 @@ public abstract class Resource {
          */
         @InternalUse
         public Optional<String> getVersion() {
-            return Optional.ofNullable(Resource.this.version);
+            return Optional.ofNullable(this.resource.version);
         }
-    }
 
-    private static final class InternalStatic {
+        @InternalUse
+        public void setUrn(Output<String> urn) {
+            if (!trySetUrn(urn)) {
+                throw new IllegalStateException("urn cannot be set twice, must be 'null' for 'setUrn' to work");
+            }
+        }
+
+        @InternalUse
+        public boolean trySetUrn(Output<String> urn) {
+            requireNonNull(urn);
+            return this.resource.urnFuture.complete(urn);
+        }
+
         /**
          * Fetches the provider for the given module member, if any.
          *

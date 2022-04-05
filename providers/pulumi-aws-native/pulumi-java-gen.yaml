@@ -2,6 +2,7 @@ version: 0.12.0
 schema: https://raw.githubusercontent.com/pulumi/pulumi-aws-native/v0.12.0/provider/cmd/pulumi-resource-aws-native/schema.json
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/aws-native/version.txt
+pluginFile: src/main/resources/io/pulumi/aws-native/plugin.json
 
 packageInfo:
   packageReferences:

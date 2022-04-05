@@ -16,7 +16,7 @@ public final class SkuCapacityResponse {
      * Default number of workers for this App Service plan SKU.
      * 
      */
-    private final @Nullable Integer $default;
+    private final @Nullable Integer default_;
     /**
      * Maximum number of Elastic workers for this App Service plan SKU.
      * 
@@ -40,12 +40,12 @@ public final class SkuCapacityResponse {
 
     @CustomType.Constructor
     private SkuCapacityResponse(
-        @CustomType.Parameter("default") @Nullable Integer $default,
+        @CustomType.Parameter("default") @Nullable Integer default_,
         @CustomType.Parameter("elasticMaximum") @Nullable Integer elasticMaximum,
         @CustomType.Parameter("maximum") @Nullable Integer maximum,
         @CustomType.Parameter("minimum") @Nullable Integer minimum,
         @CustomType.Parameter("scaleType") @Nullable String scaleType) {
-        this.$default = $default;
+        this.default_ = default_;
         this.elasticMaximum = elasticMaximum;
         this.maximum = maximum;
         this.minimum = minimum;
@@ -56,8 +56,8 @@ public final class SkuCapacityResponse {
      * Default number of workers for this App Service plan SKU.
      * 
     */
-    public Optional<Integer> get$default() {
-        return Optional.ofNullable(this.$default);
+    public Optional<Integer> getDefault_() {
+        return Optional.ofNullable(this.default_);
     }
     /**
      * Maximum number of Elastic workers for this App Service plan SKU.
@@ -97,7 +97,7 @@ public final class SkuCapacityResponse {
     }
 
     public static final class Builder {
-        private @Nullable Integer $default;
+        private @Nullable Integer default_;
         private @Nullable Integer elasticMaximum;
         private @Nullable Integer maximum;
         private @Nullable Integer minimum;
@@ -109,15 +109,15 @@ public final class SkuCapacityResponse {
 
         public Builder(SkuCapacityResponse defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.elasticMaximum = defaults.elasticMaximum;
     	      this.maximum = defaults.maximum;
     	      this.minimum = defaults.minimum;
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder $default(@Nullable Integer $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Integer default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
@@ -136,7 +136,7 @@ public final class SkuCapacityResponse {
             this.scaleType = scaleType;
             return this;
         }        public SkuCapacityResponse build() {
-            return new SkuCapacityResponse($default, elasticMaximum, maximum, minimum, scaleType);
+            return new SkuCapacityResponse(default_, elasticMaximum, maximum, minimum, scaleType);
         }
     }
 }

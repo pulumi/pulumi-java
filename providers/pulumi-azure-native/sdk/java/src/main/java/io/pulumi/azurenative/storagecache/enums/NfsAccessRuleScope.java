@@ -14,7 +14,7 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum NfsAccessRuleScope {
-        $Default("default"),
+        Default_("default"),
         Network("network"),
         Host("host");
 

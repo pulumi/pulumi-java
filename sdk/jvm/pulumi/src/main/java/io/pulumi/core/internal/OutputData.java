@@ -18,6 +18,8 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+import static java.util.Objects.requireNonNull;
+
 /**
  * Immutable internal data type
  */
@@ -36,34 +38,61 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
     private final boolean secret;
 
     private OutputData(ImmutableSet<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret) {
-        this.resources = Objects.requireNonNull(resources);
+        this.resources = requireNonNull(resources);
         if (!isKnown && value != null) {
-            throw new IllegalArgumentException(String.format("Expected unknown OutputData to not carry a non-null value, but got: '%s'", value));
+            throw new IllegalArgumentException(String.format("Expected an 'unknown' OutputData to not carry a non-null value, but got: '%s'", value));
         }
         this.value = value;
         this.known = isKnown; // can be true even with value == null (when empty)
         this.secret = isSecret;
     }
 
+    /**
+     * @throws NullPointerException on {@code null} value
+     */
     public static <T> OutputData<T> of(T value) {
-        return new OutputData<>(ImmutableSet.of(), value, true, false);
+        return new OutputData<>(ImmutableSet.of(), requireNonNull(value), true, false);
     }
 
+    /**
+     * @throws NullPointerException on {@code null} value
+     */
     public static <T> OutputData<T> of(ImmutableSet<Resource> resources, T value) {
-        return new OutputData<>(resources, value, true, false);
+        return new OutputData<>(resources, requireNonNull(value), true, false);
     }
 
+    /**
+     * @throws NullPointerException on {@code null} value
+     */
     public static <T> OutputData<T> of(ImmutableSet<Resource> resources, T value, boolean isSecret) {
-        return new OutputData<>(resources, value, true, isSecret);
+        return new OutputData<>(resources, requireNonNull(value), true, isSecret);
     }
 
+    /**
+     * @throws NullPointerException on {@code null} value
+     */
     public static <T> OutputData<T> of(T value, boolean isSecret) {
-        return new OutputData<>(ImmutableSet.of(), value, true, isSecret);
+        return new OutputData<>(ImmutableSet.of(), requireNonNull(value), true, isSecret);
     }
 
+    /**
+     * @throws NullPointerException on {@code null} value of the future, but not the value that future holds
+     */
     public static <T> CompletableFuture<OutputData<T>> ofAsync(CompletableFuture<T> value, boolean isSecret) {
-        Objects.requireNonNull(value);
+        requireNonNull(value);
         return value.thenApply(v -> ofNullable(ImmutableSet.of(), v, true, isSecret));
+    }
+
+    public static <T> OutputData<T> ofNullable(@Nullable T value) {
+        return ofNullable(ImmutableSet.of(), value, true, false);
+    }
+
+    public static <T> OutputData<T> ofNullable(ImmutableSet<Resource> resources, @Nullable T value) {
+        return ofNullable(resources, value, true, false);
+    }
+
+    public static <T> OutputData<T> ofNullable(ImmutableSet<Resource> resources, @Nullable T value, boolean isSecret) {
+        return ofNullable(resources, value, true, isSecret);
     }
 
     public static <T> OutputData<T> ofNullable(
@@ -259,7 +288,7 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         if (obj == null) {
             return CompletableFuture.completedFuture(OutputData.empty());
         }
-        //noinspection unchecked,rawtypes,rawtypes
+        //noinspection unchecked,rawtypes
         return ((OutputInternal<Object>) obj).getDataAsync().copy();
     }
 
@@ -309,7 +338,7 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         private OutputData<T> value;
 
         public Builder(@Nullable T start) {
-            this(OutputData.of(start));
+            this(OutputData.ofNullable(start));
         }
 
         public Builder(OutputData<T> start) {

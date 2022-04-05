@@ -63,7 +63,7 @@ public final class GetInstanceTemplateDisk {
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
      */
-    private final String $interface;
+    private final String interface_;
     /**
      * (Optional) A set of ket/value label pairs to assign to disk created from
      * this template
@@ -111,7 +111,7 @@ public final class GetInstanceTemplateDisk {
         @CustomType.Parameter("diskName") String diskName,
         @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
         @CustomType.Parameter("diskType") String diskType,
-        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("mode") String mode,
         @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
@@ -125,7 +125,7 @@ public final class GetInstanceTemplateDisk {
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.labels = labels;
         this.mode = mode;
         this.resourcePolicies = resourcePolicies;
@@ -197,8 +197,8 @@ public final class GetInstanceTemplateDisk {
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
     */
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
     /**
      * (Optional) A set of ket/value label pairs to assign to disk created from
@@ -266,7 +266,7 @@ public final class GetInstanceTemplateDisk {
         private String diskName;
         private Integer diskSizeGb;
         private String diskType;
-        private String $interface;
+        private String interface_;
         private Map<String,String> labels;
         private String mode;
         private List<String> resourcePolicies;
@@ -287,7 +287,7 @@ public final class GetInstanceTemplateDisk {
     	      this.diskName = defaults.diskName;
     	      this.diskSizeGb = defaults.diskSizeGb;
     	      this.diskType = defaults.diskType;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.labels = defaults.labels;
     	      this.mode = defaults.mode;
     	      this.resourcePolicies = defaults.resourcePolicies;
@@ -327,8 +327,8 @@ public final class GetInstanceTemplateDisk {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder labels(Map<String,String> labels) {
@@ -358,7 +358,7 @@ public final class GetInstanceTemplateDisk {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetInstanceTemplateDisk build() {
-            return new GetInstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKeys, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
+            return new GetInstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKeys, diskName, diskSizeGb, diskType, interface_, labels, mode, resourcePolicies, source, sourceImage, type);
         }
     }
 }

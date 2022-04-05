@@ -20,7 +20,7 @@ public final class BreakOutCategoryPoliciesResponse {
      * Flag to control breakout of o365 default category.
      * 
      */
-    private final @Nullable Boolean $default;
+    private final @Nullable Boolean default_;
     /**
      * Flag to control breakout of o365 optimize category.
      * 
@@ -30,10 +30,10 @@ public final class BreakOutCategoryPoliciesResponse {
     @CustomType.Constructor
     private BreakOutCategoryPoliciesResponse(
         @CustomType.Parameter("allow") @Nullable Boolean allow,
-        @CustomType.Parameter("default") @Nullable Boolean $default,
+        @CustomType.Parameter("default") @Nullable Boolean default_,
         @CustomType.Parameter("optimize") @Nullable Boolean optimize) {
         this.allow = allow;
-        this.$default = $default;
+        this.default_ = default_;
         this.optimize = optimize;
     }
 
@@ -48,8 +48,8 @@ public final class BreakOutCategoryPoliciesResponse {
      * Flag to control breakout of o365 default category.
      * 
     */
-    public Optional<Boolean> get$default() {
-        return Optional.ofNullable(this.$default);
+    public Optional<Boolean> getDefault_() {
+        return Optional.ofNullable(this.default_);
     }
     /**
      * Flag to control breakout of o365 optimize category.
@@ -69,7 +69,7 @@ public final class BreakOutCategoryPoliciesResponse {
 
     public static final class Builder {
         private @Nullable Boolean allow;
-        private @Nullable Boolean $default;
+        private @Nullable Boolean default_;
         private @Nullable Boolean optimize;
 
         public Builder() {
@@ -79,7 +79,7 @@ public final class BreakOutCategoryPoliciesResponse {
         public Builder(BreakOutCategoryPoliciesResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allow = defaults.allow;
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.optimize = defaults.optimize;
         }
 
@@ -87,15 +87,15 @@ public final class BreakOutCategoryPoliciesResponse {
             this.allow = allow;
             return this;
         }
-        public Builder $default(@Nullable Boolean $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Boolean default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder optimize(@Nullable Boolean optimize) {
             this.optimize = optimize;
             return this;
         }        public BreakOutCategoryPoliciesResponse build() {
-            return new BreakOutCategoryPoliciesResponse(allow, $default, optimize);
+            return new BreakOutCategoryPoliciesResponse(allow, default_, optimize);
         }
     }
 }

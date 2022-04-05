@@ -17,5 +17,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'gcpgke.App'
+    mainClass = project.hasProperty("mainClass")
+            ? project.getProperty("mainClass")
+            : 'gcpgke.App'
 }

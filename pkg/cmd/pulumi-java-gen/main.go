@@ -16,6 +16,7 @@ import (
 
 	jvmgen "github.com/pulumi/pulumi-java/pkg/codegen/jvm"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 )
 
 type Config struct {
@@ -24,6 +25,7 @@ type Config struct {
 	Out         string      `yaml:"out"`
 	VersionFile string      `yaml:"versionFile"`
 	PackageInfo interface{} `yaml:"packageInfo"`
+	PluginFile  string      `yaml:"pluginFile"`
 }
 
 func main() {
@@ -152,8 +154,37 @@ func generateJava(configFile string) error {
 		f := filepath.Join(outDir, cfg.VersionFile)
 		bytes := []byte(cfg.Version)
 		if err := emitFile(f, bytes); err != nil {
-			return fmt.Errorf("Failed to generate version file at %s: %w", f, err)
+			return fmt.Errorf("failed to generate version file at %s: %w", f, err)
 		}
+	}
+
+	// TODO(t0yv0): Curious, should this be part of GeneratePackage rather than pulumi-java-gen?
+	//              I think that everything under GeneratePackage will end up shipping as part of machinery
+	//              the users will use to build Pulumi Packages (for Java).
+	//              On the other hand, pulumi-java-gen is internal repository helper for us in here.
+	//              I think the plugin.json is something quite official so perhaps we can move?
+	// TODO(pprazak): Would that also include version.txt above? The files are used together.
+	if cfg.PluginFile != "" {
+		pulumiPlugin := &plugin.PulumiPluginJSON{
+			Resource: true,
+			Name:     pkg.Name,
+			Version:  cfg.Version,
+			Server:   pkg.PluginDownloadURL,
+		}
+
+		f := filepath.Join(outDir, cfg.PluginFile)
+		bytes, err := (pulumiPlugin).JSON()
+		if err != nil {
+			return fmt.Errorf("failed to serialize plugin file at %s: %w", f, err)
+		}
+		if err := emitFile(f, bytes); err != nil {
+			return fmt.Errorf("failed to generate plugin file at %s: %w", f, err)
+		}
+	}
+
+	if err := emitFile(filepath.Join(outDir, "gradle.properties"),
+		[]byte(fmt.Sprintf("version=%s", cfg.Version))); err != nil {
+		return fmt.Errorf("failed to generate gradle.properties: %w", err)
 	}
 
 	return nil

@@ -3,6 +3,8 @@ schema: https://raw.githubusercontent.com/pulumi/pulumi-aws/v4.37.3/provider/cmd
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/aws/version.txt
 
+pluginFile: src/main/resources/io/pulumi/aws/plugin.json
+
 packageInfo:
   packageReferences:
     "io.pulumi:pulumi": "0.0.1-SNAPSHOT"

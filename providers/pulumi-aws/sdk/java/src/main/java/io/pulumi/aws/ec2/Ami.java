@@ -269,14 +269,14 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="public", type=Boolean.class, parameters={})
-    private Output<Boolean> $public;
+    private Output<Boolean> public_;
 
     /**
      * @return Indicates whether the image has public launch permissions.
      * 
      */
-    public Output<Boolean> get$public() {
-        return this.$public;
+    public Output<Boolean> getPublic_() {
+        return this.public_;
     }
     /**
      * The id of an initrd image (ARI) that will be used when booting the

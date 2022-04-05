@@ -2,6 +2,7 @@ version: 4.3.1
 schema: https://raw.githubusercontent.com/pulumi/pulumi-random/v4.3.1/provider/cmd/pulumi-resource-random/schema.json
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/random/version.txt
+pluginFile: src/main/resources/io/pulumi/random/plugin.json
 
 packageInfo:
   packageReferences:

@@ -137,10 +137,10 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<PackageNoteArgs> $package;
+      private final @Nullable Output<PackageNoteArgs> package_;
 
-    public Output<PackageNoteArgs> get$package() {
-        return this.$package == null ? Output.empty() : this.$package;
+    public Output<PackageNoteArgs> getPackage_() {
+        return this.package_ == null ? Output.empty() : this.package_;
     }
 
     @Import(name="project")
@@ -216,7 +216,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<ImageNoteArgs> image,
         @Nullable Output<String> longDescription,
         Output<String> noteId,
-        @Nullable Output<PackageNoteArgs> $package,
+        @Nullable Output<PackageNoteArgs> package_,
         @Nullable Output<String> project,
         @Nullable Output<List<String>> relatedNoteNames,
         @Nullable Output<List<RelatedUrlArgs>> relatedUrl,
@@ -233,7 +233,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         this.image = image;
         this.longDescription = longDescription;
         this.noteId = Objects.requireNonNull(noteId, "expected parameter 'noteId' to be non-null");
-        this.$package = $package;
+        this.package_ = package_;
         this.project = project;
         this.relatedNoteNames = relatedNoteNames;
         this.relatedUrl = relatedUrl;
@@ -253,7 +253,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         this.image = Output.empty();
         this.longDescription = Output.empty();
         this.noteId = Output.empty();
-        this.$package = Output.empty();
+        this.package_ = Output.empty();
         this.project = Output.empty();
         this.relatedNoteNames = Output.empty();
         this.relatedUrl = Output.empty();
@@ -281,7 +281,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         private @Nullable Output<ImageNoteArgs> image;
         private @Nullable Output<String> longDescription;
         private Output<String> noteId;
-        private @Nullable Output<PackageNoteArgs> $package;
+        private @Nullable Output<PackageNoteArgs> package_;
         private @Nullable Output<String> project;
         private @Nullable Output<List<String>> relatedNoteNames;
         private @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
@@ -305,7 +305,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.image = defaults.image;
     	      this.longDescription = defaults.longDescription;
     	      this.noteId = defaults.noteId;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.project = defaults.project;
     	      this.relatedNoteNames = defaults.relatedNoteNames;
     	      this.relatedUrl = defaults.relatedUrl;
@@ -394,12 +394,12 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.noteId = Output.of(Objects.requireNonNull(noteId));
             return this;
         }
-        public Builder $package(@Nullable Output<PackageNoteArgs> $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable Output<PackageNoteArgs> package_) {
+            this.package_ = package_;
             return this;
         }
-        public Builder $package(@Nullable PackageNoteArgs $package) {
-            this.$package = Output.ofNullable($package);
+        public Builder package_(@Nullable PackageNoteArgs package_) {
+            this.package_ = Output.ofNullable(package_);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -456,7 +456,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.vulnerability = Output.ofNullable(vulnerability);
             return this;
         }        public NoteArgs build() {
-            return new NoteArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, expirationTime, image, longDescription, noteId, $package, project, relatedNoteNames, relatedUrl, shortDescription, upgrade, vulnerability);
+            return new NoteArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, expirationTime, image, longDescription, noteId, package_, project, relatedNoteNames, relatedUrl, shortDescription, upgrade, vulnerability);
         }
     }
 }

@@ -24,7 +24,7 @@ public final class InstanceInfoResponse {
      * Name of the network interface of a Compute Engine instance.
      * 
      */
-    private final String $interface;
+    private final String interface_;
     /**
      * Internal IP address of the network interface.
      * 
@@ -55,7 +55,7 @@ public final class InstanceInfoResponse {
     private InstanceInfoResponse(
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("externalIp") String externalIp,
-        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("internalIp") String internalIp,
         @CustomType.Parameter("networkTags") List<String> networkTags,
         @CustomType.Parameter("networkUri") String networkUri,
@@ -63,7 +63,7 @@ public final class InstanceInfoResponse {
         @CustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.externalIp = externalIp;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.internalIp = internalIp;
         this.networkTags = networkTags;
         this.networkUri = networkUri;
@@ -89,8 +89,8 @@ public final class InstanceInfoResponse {
      * Name of the network interface of a Compute Engine instance.
      * 
     */
-    public String get$interface() {
-        return this.$interface;
+    public String getInterface_() {
+        return this.interface_;
     }
     /**
      * Internal IP address of the network interface.
@@ -139,7 +139,7 @@ public final class InstanceInfoResponse {
     public static final class Builder {
         private String displayName;
         private String externalIp;
-        private String $interface;
+        private String interface_;
         private String internalIp;
         private List<String> networkTags;
         private String networkUri;
@@ -154,7 +154,7 @@ public final class InstanceInfoResponse {
     	      Objects.requireNonNull(defaults);
     	      this.displayName = defaults.displayName;
     	      this.externalIp = defaults.externalIp;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.internalIp = defaults.internalIp;
     	      this.networkTags = defaults.networkTags;
     	      this.networkUri = defaults.networkUri;
@@ -170,8 +170,8 @@ public final class InstanceInfoResponse {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-        public Builder $interface(String $interface) {
-            this.$interface = Objects.requireNonNull($interface);
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
             return this;
         }
         public Builder internalIp(String internalIp) {
@@ -197,7 +197,7 @@ public final class InstanceInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }        public InstanceInfoResponse build() {
-            return new InstanceInfoResponse(displayName, externalIp, $interface, internalIp, networkTags, networkUri, serviceAccount, uri);
+            return new InstanceInfoResponse(displayName, externalIp, interface_, internalIp, networkTags, networkUri, serviceAccount, uri);
         }
     }
 }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuSettingResponseCapacity {
-    private final @Nullable Integer $default;
+    private final @Nullable Integer default_;
     private final @Nullable Integer maximum;
     private final Integer minimum;
     private final @Nullable String scaleType;
 
     @CustomType.Constructor
     private SkuSettingResponseCapacity(
-        @CustomType.Parameter("default") @Nullable Integer $default,
+        @CustomType.Parameter("default") @Nullable Integer default_,
         @CustomType.Parameter("maximum") @Nullable Integer maximum,
         @CustomType.Parameter("minimum") Integer minimum,
         @CustomType.Parameter("scaleType") @Nullable String scaleType) {
-        this.$default = $default;
+        this.default_ = default_;
         this.maximum = maximum;
         this.minimum = minimum;
         this.scaleType = scaleType;
     }
 
-    public Optional<Integer> get$default() {
-        return Optional.ofNullable(this.$default);
+    public Optional<Integer> getDefault_() {
+        return Optional.ofNullable(this.default_);
     }
     public Optional<Integer> getMaximum() {
         return Optional.ofNullable(this.maximum);
@@ -51,7 +51,7 @@ public final class SkuSettingResponseCapacity {
     }
 
     public static final class Builder {
-        private @Nullable Integer $default;
+        private @Nullable Integer default_;
         private @Nullable Integer maximum;
         private Integer minimum;
         private @Nullable String scaleType;
@@ -62,14 +62,14 @@ public final class SkuSettingResponseCapacity {
 
         public Builder(SkuSettingResponseCapacity defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.$default = defaults.$default;
+    	      this.default_ = defaults.default_;
     	      this.maximum = defaults.maximum;
     	      this.minimum = defaults.minimum;
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder $default(@Nullable Integer $default) {
-            this.$default = $default;
+        public Builder default_(@Nullable Integer default_) {
+            this.default_ = default_;
             return this;
         }
         public Builder maximum(@Nullable Integer maximum) {
@@ -84,7 +84,7 @@ public final class SkuSettingResponseCapacity {
             this.scaleType = scaleType;
             return this;
         }        public SkuSettingResponseCapacity build() {
-            return new SkuSettingResponseCapacity($default, maximum, minimum, scaleType);
+            return new SkuSettingResponseCapacity(default_, maximum, minimum, scaleType);
         }
     }
 }

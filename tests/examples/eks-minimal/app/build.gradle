@@ -17,5 +17,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'eksminimal.App'
+    mainClass = project.hasProperty("mainClass")
+            ? project.getProperty("mainClass")
+            : 'io.pulumi.example.eksminimal.App'
 }

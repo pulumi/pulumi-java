@@ -139,14 +139,14 @@ public class RegionDisk extends io.pulumi.resources.CustomResource {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @Export(name="interface", type=String.class, parameters={})
-    private Output</* @Nullable */ String> $interface;
+    private Output</* @Nullable */ String> interface_;
 
     /**
      * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
      * 
      */
-    public Output</* @Nullable */ String> get$interface() {
-        return this.$interface;
+    public Output</* @Nullable */ String> getInterface_() {
+        return this.interface_;
     }
     /**
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.

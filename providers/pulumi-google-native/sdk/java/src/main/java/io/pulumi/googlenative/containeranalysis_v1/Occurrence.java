@@ -202,14 +202,14 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="package", type=PackageOccurrenceResponse.class, parameters={})
-    private Output<PackageOccurrenceResponse> $package;
+    private Output<PackageOccurrenceResponse> package_;
 
     /**
      * @return Describes the installation of a package on the linked resource.
      * 
      */
-    public Output<PackageOccurrenceResponse> get$package() {
-        return this.$package;
+    public Output<PackageOccurrenceResponse> getPackage_() {
+        return this.package_;
     }
     /**
      * A description of actions that can be taken to remedy the note.

@@ -35,10 +35,10 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="package", required=true)
-      private final String $package;
+      private final String package_;
 
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
 
     /**
@@ -54,16 +54,16 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public UpgradeNoteResponse(
         List<UpgradeDistributionResponse> distributions,
-        String $package,
+        String package_,
         VersionResponse version) {
         this.distributions = Objects.requireNonNull(distributions, "expected parameter 'distributions' to be non-null");
-        this.$package = Objects.requireNonNull($package, "expected parameter '$package' to be non-null");
+        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package_' to be non-null");
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 
     private UpgradeNoteResponse() {
         this.distributions = List.of();
-        this.$package = null;
+        this.package_ = null;
         this.version = null;
     }
 
@@ -77,7 +77,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final class Builder {
         private List<UpgradeDistributionResponse> distributions;
-        private String $package;
+        private String package_;
         private VersionResponse version;
 
         public Builder() {
@@ -87,7 +87,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(UpgradeNoteResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.distributions = defaults.distributions;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.version = defaults.version;
         }
 
@@ -98,15 +98,15 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
         public Builder distributions(UpgradeDistributionResponse... distributions) {
             return distributions(List.of(distributions));
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public UpgradeNoteResponse build() {
-            return new UpgradeNoteResponse(distributions, $package, version);
+            return new UpgradeNoteResponse(distributions, package_, version);
         }
     }
 }

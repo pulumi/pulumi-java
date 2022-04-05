@@ -90,10 +90,10 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="package", required=true)
-      private final String $package;
+      private final String package_;
 
-    public String get$package() {
-        return this.$package;
+    public String getPackage_() {
+        return this.package_;
     }
 
     /**
@@ -158,7 +158,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
         Boolean isObsolete,
         VersionResponse maxAffectedVersion,
         VersionResponse minAffectedVersion,
-        String $package,
+        String package_,
         String packageType,
         String severityName,
         String source,
@@ -170,7 +170,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
         this.isObsolete = Objects.requireNonNull(isObsolete, "expected parameter 'isObsolete' to be non-null");
         this.maxAffectedVersion = Objects.requireNonNull(maxAffectedVersion, "expected parameter 'maxAffectedVersion' to be non-null");
         this.minAffectedVersion = Objects.requireNonNull(minAffectedVersion, "expected parameter 'minAffectedVersion' to be non-null");
-        this.$package = Objects.requireNonNull($package, "expected parameter '$package' to be non-null");
+        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package_' to be non-null");
         this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
         this.severityName = Objects.requireNonNull(severityName, "expected parameter 'severityName' to be non-null");
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
@@ -185,7 +185,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
         this.isObsolete = null;
         this.maxAffectedVersion = null;
         this.minAffectedVersion = null;
-        this.$package = null;
+        this.package_ = null;
         this.packageType = null;
         this.severityName = null;
         this.source = null;
@@ -208,7 +208,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
         private Boolean isObsolete;
         private VersionResponse maxAffectedVersion;
         private VersionResponse minAffectedVersion;
-        private String $package;
+        private String package_;
         private String packageType;
         private String severityName;
         private String source;
@@ -227,7 +227,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
     	      this.isObsolete = defaults.isObsolete;
     	      this.maxAffectedVersion = defaults.maxAffectedVersion;
     	      this.minAffectedVersion = defaults.minAffectedVersion;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.packageType = defaults.packageType;
     	      this.severityName = defaults.severityName;
     	      this.source = defaults.source;
@@ -259,8 +259,8 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
             this.minAffectedVersion = Objects.requireNonNull(minAffectedVersion);
             return this;
         }
-        public Builder $package(String $package) {
-            this.$package = Objects.requireNonNull($package);
+        public Builder package_(String package_) {
+            this.package_ = Objects.requireNonNull(package_);
             return this;
         }
         public Builder packageType(String packageType) {
@@ -283,7 +283,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }        public DetailResponse build() {
-            return new DetailResponse(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, $package, packageType, severityName, source, sourceUpdateTime, vendor);
+            return new DetailResponse(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, package_, packageType, severityName, source, sourceUpdateTime, vendor);
         }
     }
 }

@@ -16,5 +16,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'appservice.App'
+    mainClass = project.hasProperty("mainClass")
+            ? project.getProperty("mainClass")
+            : 'appservice.App'
 }

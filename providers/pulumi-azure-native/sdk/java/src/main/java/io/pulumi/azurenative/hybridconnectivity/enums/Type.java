@@ -14,7 +14,7 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum Type {
-        $Default("default"),
+        Default_("default"),
         Custom("custom");
 
         private final String value;

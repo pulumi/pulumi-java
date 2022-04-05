@@ -147,10 +147,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<GraphPackageArgs> $package;
+      private final @Nullable Output<GraphPackageArgs> package_;
 
-    public Output<GraphPackageArgs> get$package() {
-        return this.$package == null ? Output.empty() : this.$package;
+    public Output<GraphPackageArgs> getPackage_() {
+        return this.package_ == null ? Output.empty() : this.package_;
     }
 
     /**
@@ -253,7 +253,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         @Nullable Output<WebServiceKeysArgs> keys,
         @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace,
         @Nullable Output<ServiceInputOutputSpecificationArgs> output,
-        @Nullable Output<GraphPackageArgs> $package,
+        @Nullable Output<GraphPackageArgs> package_,
         Output<String> packageType,
         @Nullable Output<Map<String,WebServiceParameterArgs>> parameters,
         @Nullable Output<Boolean> payloadsInBlobStorage,
@@ -272,7 +272,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         this.keys = keys;
         this.machineLearningWorkspace = machineLearningWorkspace;
         this.output = output;
-        this.$package = $package;
+        this.package_ = package_;
         this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
         this.parameters = parameters;
         this.payloadsInBlobStorage = payloadsInBlobStorage;
@@ -294,7 +294,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         this.keys = Output.empty();
         this.machineLearningWorkspace = Output.empty();
         this.output = Output.empty();
-        this.$package = Output.empty();
+        this.package_ = Output.empty();
         this.packageType = Output.empty();
         this.parameters = Output.empty();
         this.payloadsInBlobStorage = Output.empty();
@@ -324,7 +324,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         private @Nullable Output<WebServiceKeysArgs> keys;
         private @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace;
         private @Nullable Output<ServiceInputOutputSpecificationArgs> output;
-        private @Nullable Output<GraphPackageArgs> $package;
+        private @Nullable Output<GraphPackageArgs> package_;
         private Output<String> packageType;
         private @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
         private @Nullable Output<Boolean> payloadsInBlobStorage;
@@ -350,7 +350,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     	      this.keys = defaults.keys;
     	      this.machineLearningWorkspace = defaults.machineLearningWorkspace;
     	      this.output = defaults.output;
-    	      this.$package = defaults.$package;
+    	      this.package_ = defaults.package_;
     	      this.packageType = defaults.packageType;
     	      this.parameters = defaults.parameters;
     	      this.payloadsInBlobStorage = defaults.payloadsInBlobStorage;
@@ -441,12 +441,12 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
             this.output = Output.ofNullable(output);
             return this;
         }
-        public Builder $package(@Nullable Output<GraphPackageArgs> $package) {
-            this.$package = $package;
+        public Builder package_(@Nullable Output<GraphPackageArgs> package_) {
+            this.package_ = package_;
             return this;
         }
-        public Builder $package(@Nullable GraphPackageArgs $package) {
-            this.$package = Output.ofNullable($package);
+        public Builder package_(@Nullable GraphPackageArgs package_) {
+            this.package_ = Output.ofNullable(package_);
             return this;
         }
         public Builder packageType(Output<String> packageType) {
@@ -513,7 +513,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
             this.title = Output.ofNullable(title);
             return this;
         }        public WebServicePropertiesForGraphArgs build() {
-            return new WebServicePropertiesForGraphArgs(assets, commitmentPlan, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, readOnly, realtimeConfiguration, storageAccount, title);
+            return new WebServicePropertiesForGraphArgs(assets, commitmentPlan, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, output, package_, packageType, parameters, payloadsInBlobStorage, payloadsLocation, readOnly, realtimeConfiguration, storageAccount, title);
         }
     }
 }

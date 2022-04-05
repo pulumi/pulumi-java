@@ -110,10 +110,10 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> $interface;
+      private final @Nullable Output<String> interface_;
 
-    public Output<String> get$interface() {
-        return this.$interface == null ? Output.empty() : this.$interface;
+    public Output<String> getInterface_() {
+        return this.interface_ == null ? Output.empty() : this.interface_;
     }
 
     /**
@@ -201,7 +201,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
         @Nullable Output<String> diskName,
         @Nullable Output<Integer> diskSizeGb,
         @Nullable Output<String> diskType,
-        @Nullable Output<String> $interface,
+        @Nullable Output<String> interface_,
         @Nullable Output<Map<String,String>> labels,
         @Nullable Output<String> mode,
         @Nullable Output<String> resourcePolicies,
@@ -215,7 +215,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
-        this.$interface = $interface;
+        this.interface_ = interface_;
         this.labels = labels;
         this.mode = mode;
         this.resourcePolicies = resourcePolicies;
@@ -232,7 +232,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
         this.diskName = Output.empty();
         this.diskSizeGb = Output.empty();
         this.diskType = Output.empty();
-        this.$interface = Output.empty();
+        this.interface_ = Output.empty();
         this.labels = Output.empty();
         this.mode = Output.empty();
         this.resourcePolicies = Output.empty();
@@ -257,7 +257,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
         private @Nullable Output<String> diskName;
         private @Nullable Output<Integer> diskSizeGb;
         private @Nullable Output<String> diskType;
-        private @Nullable Output<String> $interface;
+        private @Nullable Output<String> interface_;
         private @Nullable Output<Map<String,String>> labels;
         private @Nullable Output<String> mode;
         private @Nullable Output<String> resourcePolicies;
@@ -278,7 +278,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
     	      this.diskName = defaults.diskName;
     	      this.diskSizeGb = defaults.diskSizeGb;
     	      this.diskType = defaults.diskType;
-    	      this.$interface = defaults.$interface;
+    	      this.interface_ = defaults.interface_;
     	      this.labels = defaults.labels;
     	      this.mode = defaults.mode;
     	      this.resourcePolicies = defaults.resourcePolicies;
@@ -343,12 +343,12 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-        public Builder $interface(@Nullable Output<String> $interface) {
-            this.$interface = $interface;
+        public Builder interface_(@Nullable Output<String> interface_) {
+            this.interface_ = interface_;
             return this;
         }
-        public Builder $interface(@Nullable String $interface) {
-            this.$interface = Output.ofNullable($interface);
+        public Builder interface_(@Nullable String interface_) {
+            this.interface_ = Output.ofNullable(interface_);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -399,7 +399,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             this.type = Output.ofNullable(type);
             return this;
         }        public InstanceTemplateDiskGetArgs build() {
-            return new InstanceTemplateDiskGetArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
+            return new InstanceTemplateDiskGetArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, interface_, labels, mode, resourcePolicies, source, sourceImage, type);
         }
     }
 }

@@ -48,10 +48,10 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @Import(name="public")
-      private final @Nullable Output<Boolean> $public;
+      private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> get$public() {
-        return this.$public == null ? Output.empty() : this.$public;
+    public Output<Boolean> getPublic_() {
+        return this.public_ == null ? Output.empty() : this.public_;
     }
 
     /**
@@ -79,12 +79,12 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     public ApiPortalPropertiesArgs(
         @Nullable Output<List<String>> gatewayIds,
         @Nullable Output<Boolean> httpsOnly,
-        @Nullable Output<Boolean> $public,
+        @Nullable Output<Boolean> public_,
         @Nullable Output<List<String>> sourceUrls,
         @Nullable Output<SsoPropertiesArgs> ssoProperties) {
         this.gatewayIds = gatewayIds;
         this.httpsOnly = httpsOnly;
-        this.$public = $public;
+        this.public_ = public_;
         this.sourceUrls = sourceUrls;
         this.ssoProperties = ssoProperties;
     }
@@ -92,7 +92,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     private ApiPortalPropertiesArgs() {
         this.gatewayIds = Output.empty();
         this.httpsOnly = Output.empty();
-        this.$public = Output.empty();
+        this.public_ = Output.empty();
         this.sourceUrls = Output.empty();
         this.ssoProperties = Output.empty();
     }
@@ -108,7 +108,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     public static final class Builder {
         private @Nullable Output<List<String>> gatewayIds;
         private @Nullable Output<Boolean> httpsOnly;
-        private @Nullable Output<Boolean> $public;
+        private @Nullable Output<Boolean> public_;
         private @Nullable Output<List<String>> sourceUrls;
         private @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
@@ -120,7 +120,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     	      Objects.requireNonNull(defaults);
     	      this.gatewayIds = defaults.gatewayIds;
     	      this.httpsOnly = defaults.httpsOnly;
-    	      this.$public = defaults.$public;
+    	      this.public_ = defaults.public_;
     	      this.sourceUrls = defaults.sourceUrls;
     	      this.ssoProperties = defaults.ssoProperties;
         }
@@ -144,12 +144,12 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
-        public Builder $public(@Nullable Output<Boolean> $public) {
-            this.$public = $public;
+        public Builder public_(@Nullable Output<Boolean> public_) {
+            this.public_ = public_;
             return this;
         }
-        public Builder $public(@Nullable Boolean $public) {
-            this.$public = Output.ofNullable($public);
+        public Builder public_(@Nullable Boolean public_) {
+            this.public_ = Output.ofNullable(public_);
             return this;
         }
         public Builder sourceUrls(@Nullable Output<List<String>> sourceUrls) {
@@ -171,7 +171,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             this.ssoProperties = Output.ofNullable(ssoProperties);
             return this;
         }        public ApiPortalPropertiesArgs build() {
-            return new ApiPortalPropertiesArgs(gatewayIds, httpsOnly, $public, sourceUrls, ssoProperties);
+            return new ApiPortalPropertiesArgs(gatewayIds, httpsOnly, public_, sourceUrls, ssoProperties);
         }
     }
 }

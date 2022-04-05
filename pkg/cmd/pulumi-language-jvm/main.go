@@ -3,11 +3,13 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -16,6 +18,7 @@ import (
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
@@ -104,8 +107,9 @@ func main() {
 }
 
 type jvmExecutor struct {
-	cmd  string
-	args []string
+	cmd        string
+	runArgs    []string
+	pluginArgs []string
 }
 
 // jvmLanguageHost implements the LanguageRuntimeServer interface
@@ -129,17 +133,197 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 	ctx context.Context,
 	req *pulumirpc.GetRequiredPluginsRequest) (*pulumirpc.GetRequiredPluginsResponse, error) {
 
-	logging.V(5).Infof("GetRequiredPlugins: %v", req.GetProgram())
+	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram())
 
-	// TODO
+	// Make a connection to the real engine that we will log messages to.
+	conn, err := grpc.Dial(
+		host.engineAddress,
+		grpc.WithInsecure(),
+		rpcutil.GrpcChannelOptions(),
+	)
+	if err != nil {
+		return nil, errors.Wrapf(err, "language host could not make connection to engine")
+	}
+
+	// Make a client around that connection.
+	// We can then make our own server that will act as a
+	// monitor for the SDK and forward to the real monitor.
+	engineClient := pulumirpc.NewEngineClient(conn)
+
+	// now, introspect the user project to see which pulumi resource packages it references.
+	pulumiPackages, err := host.DeterminePulumiPackages(ctx, engineClient)
+	if err != nil {
+		return nil, errors.Wrapf(err, "language host could not determine Pulumi packages")
+	}
+
+	// Now that we know the set of pulumi packages referenced, and we know where packages have been restored to,
+	// we can examine each package to determine the corresponding resource-plugin for it.
+
 	plugins := []*pulumirpc.PluginDependency{}
+	for _, pulumiPackage := range pulumiPackages {
+		logging.V(3).Infof(
+			"GetRequiredPlugins: Determining plugin dependency: %v, %v",
+			pulumiPackage.Name, pulumiPackage.Version,
+		)
 
-	// TODO
+		if !pulumiPackage.Resource {
+			continue // the package has no associated resource plugin
+		}
+
+		plugins = append(plugins, &pulumirpc.PluginDependency{
+			Name:    pulumiPackage.Name,
+			Version: pulumiPackage.Version,
+			Server:  pulumiPackage.Server,
+			Kind:    "resource",
+		})
+	}
+
+	logging.V(5).Infof("GetRequiredPlugins: plugins=%v", plugins)
+
 	return &pulumirpc.GetRequiredPluginsResponse{Plugins: plugins}, nil
+}
+
+func (host *jvmLanguageHost) DeterminePulumiPackages(
+	ctx context.Context, engineClient pulumirpc.EngineClient) ([]plugin.PulumiPluginJSON, error) {
+
+	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
+
+	// Run our classpath introspection from the SDK and parse the resulting JSON
+	cmd := host.exec.cmd
+	args := host.exec.pluginArgs
+	output, err := host.RunJvmCommand(ctx, engineClient, cmd, args, false /*logToUser*/)
+	if err != nil {
+		return nil, errors.Wrapf(err, "language host counld not run plugin discovery command successfully")
+	}
+
+	logging.V(5).Infof("GetRequiredPlugins: bootstrap raw output=%v", output)
+
+	var plugins []plugin.PulumiPluginJSON
+	err = json.Unmarshal([]byte(output), &plugins)
+	if err != nil {
+		if e, ok := err.(*json.SyntaxError); ok {
+			logging.V(5).Infof("JSON syntax error at byte offset %d", e.Offset)
+		}
+		return nil, errors.Wrapf(err, "language host could not unmarshall plugin package information")
+	}
+
+	return plugins, nil
+}
+
+func (host *jvmLanguageHost) RunJvmCommand(
+	ctx context.Context, engineClient pulumirpc.EngineClient, name string, args []string, logToUser bool) (string, error) {
+
+	commandStr := strings.Join(args, " ")
+	if logging.V(5) {
+		logging.V(5).Infoln("Language host launching process: ", name, commandStr)
+	}
+
+	// Buffer the writes we see from build tool, from its stdout and stderr streams.
+	// We will display these ephemerally to the user. If the build does fail though, we will dump
+	// messages back to our own stdout/stderr, so they get picked up and displayed to the user.
+	streamID := rand.Int31() //nolint:gosec
+
+	infoBuffer := &bytes.Buffer{}
+	errorBuffer := &bytes.Buffer{}
+
+	infoWriter := &logWriter{
+		ctx:          ctx,
+		logToUser:    logToUser,
+		engineClient: engineClient,
+		streamID:     streamID,
+		buffer:       infoBuffer,
+		severity:     pulumirpc.LogSeverity_INFO,
+	}
+
+	errorWriter := &logWriter{
+		ctx:          ctx,
+		logToUser:    logToUser,
+		engineClient: engineClient,
+		streamID:     streamID,
+		buffer:       errorBuffer,
+		severity:     pulumirpc.LogSeverity_ERROR,
+	}
+
+	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
+	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
+
+	cmd.Stdout = infoWriter
+	cmd.Stderr = errorWriter
+
+	_, err := infoWriter.LogToUser(fmt.Sprintf("running '%v %v'", name, commandStr))
+	if err != nil {
+		return "", err
+	}
+
+	if err := cmd.Run(); err != nil {
+		// The command failed. Dump any data we collected to the actual stdout/stderr streams,
+		// so they get displayed to the user.
+		os.Stdout.Write(infoBuffer.Bytes())
+		os.Stderr.Write(errorBuffer.Bytes())
+
+		if exiterr, ok := err.(*exec.ExitError); ok {
+			// If the program ran, but exited with a non-zero error code.
+			// This will happen often, since user errors will trigger this.
+			// So, the error message should look as nice as possible.
+			if status, stok := exiterr.Sys().(syscall.WaitStatus); stok {
+				return "", errors.Errorf(
+					"'%v %v' exited with non-zero exit code: %d", name, commandStr, status.ExitStatus())
+			}
+
+			return "", errors.Wrapf(exiterr, "'%v %v' exited unexpectedly", name, commandStr)
+		}
+
+		// Otherwise, we didn't even get to run the program.
+		// This ought to never happen unless there's a bug
+		// or system condition that prevented us from running the language exec.
+		// Issue a scarier error.
+		return "", errors.Wrapf(err, "Problem executing '%v %v'", name, commandStr)
+	}
+
+	_, err = infoWriter.LogToUser(fmt.Sprintf("'%v %v' completed successfully", name, commandStr))
+	return infoBuffer.String(), err
+}
+
+type logWriter struct {
+	ctx          context.Context
+	logToUser    bool
+	engineClient pulumirpc.EngineClient
+	streamID     int32
+	severity     pulumirpc.LogSeverity
+	buffer       *bytes.Buffer
+}
+
+func (w *logWriter) Write(p []byte) (n int, err error) {
+	n, err = w.buffer.Write(p)
+	if err != nil {
+		return
+	}
+
+	return w.LogToUser(string(p))
+}
+
+func (w *logWriter) LogToUser(val string) (int, error) {
+	if w.logToUser {
+		_, err := w.engineClient.Log(w.ctx, &pulumirpc.LogRequest{
+			Message:   strings.ToValidUTF8(val, "�"),
+			Urn:       "",
+			Ephemeral: true,
+			StreamId:  w.streamID,
+			Severity:  w.severity,
+		})
+
+		if err != nil {
+			return 0, err
+		}
+	}
+
+	return len(val), nil
 }
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
 func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
+	logging.V(5).Infof("Run: program=%v", req.GetProgram())
+
 	config, err := host.constructConfig(req)
 	if err != nil {
 		err = errors.Wrap(err, "failed to serialize configuration")
@@ -153,11 +337,11 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 
 	// Run from source.
 	executable := host.exec.cmd
-	args := host.exec.args
+	args := host.exec.runArgs
 
 	if logging.V(5) {
 		commandStr := strings.Join(args, " ")
-		logging.V(5).Infoln("Language host launching process: ", host.exec, commandStr)
+		logging.V(5).Infoln("Language host launching process: ", executable, commandStr)
 	}
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
@@ -310,22 +494,34 @@ func resolveExecutor(exec string) (*jvmExecutor, error) {
 
 func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:  cmd,
-		args: []string{"run", "--console=plain"},
+		cmd:     cmd,
+		runArgs: []string{"run", "--console=plain"},
+		pluginArgs: []string{
+			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
+			"run", "--console=plain",
+			"-PmainClass=io.pulumi.bootstrap.internal.Main",
+			"--args=packages",
+		},
 	}, nil
 }
 
 func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:  cmd,
-		args: []string{"--no-transfer-progress", "compile", "exec:java"},
+		cmd:     cmd,
+		runArgs: []string{"--no-transfer-progress", "compile", "exec:java"},
+		pluginArgs: []string{
+			"--quiet", "--no-transfer-progress", "compile", "exec:java",
+			"-DmainClass=io.pulumi.bootstrap.internal.Main",
+			"-DmainArgs=packages",
+		},
 	}, nil
 }
 
 func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:  cmd,
-		args: []string{"-jar", filepath.Clean(path)},
+		cmd:        cmd,
+		runArgs:    []string{"-jar", filepath.Clean(path)},
+		pluginArgs: []string{"-cp", filepath.Clean(path), "io.pulumi.bootstrap.internal.Main", "packages"},
 	}, nil
 }
 
