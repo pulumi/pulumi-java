@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import static io.pulumi.core.OutputTests.waitFor;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -40,13 +39,13 @@ class ResourceArgsTest {
     @Test
     void testComplexResourceArgs1_emptyValues() {
         var args = new ComplexResourceArgs1();
-        var map = Internal.from(args).toOptionalMapAsync(log).join();
+        var map = Internal.from(args).toMapAsync(log).join();
 
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
 
-        assertThat(map).containsEntry("s", Optional.empty());
-        assertThat(map).containsEntry("array", Optional.empty());
+        assertThat(waitFor(map.get("s")).getValueNullable()).isNull();
+        assertThat(waitFor(map.get("array")).getValueNullable()).isNull();
     }
 
     @Test
@@ -54,18 +53,13 @@ class ResourceArgsTest {
         var args = new ComplexResourceArgs1();
         args.s = Output.of("s");
         args.array = Output.of(List.of(true, false));
-        var map = Internal.from(args).toOptionalMapAsync(log).join();
+        var map = Internal.from(args).toMapAsync(log).join();
 
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
 
-        var s = map.get("s").get();
-        assertThat(s).isInstanceOf(Output.class);
-        assertThat(waitFor((Output) s)).isEqualTo(waitFor(Output.of("s")));
-
-        var array = map.get("array").get();
-        assertThat(array).isInstanceOf(Output.class);
-        assertThat(waitFor((Output) array)).isEqualTo(waitFor(Output.of(List.of(true, false))));
+        assertThat(waitFor(map.get("s")).getValueNullable()).isEqualTo("s");
+        assertThat(waitFor(map.get("array")).getValueNullable()).isEqualTo(List.of(true, false));
     }
 
     public static class JsonResourceArgs1 extends ResourceArgs {
@@ -99,12 +93,12 @@ class ResourceArgsTest {
         var args = new JsonResourceArgs1();
         args.setArray(Output.ofList(true, false));
         args.setMap(Output.ofMap("k1", 1, "k2", 2));
-        var map = Internal.from(args).toOptionalMapAsync(log).join();
+        var map = Internal.from(args).toMapAsync(log).join();
 
         assertThat(map).containsKey("array");
         assertThat(map).containsKey("map");
 
-        assertThat(map.get("array")).isPresent().contains("[true,false]");
-        assertThat(map.get("map")).isPresent().contains("{\"k1\":1.0,\"k2\":2.0}");
+        assertThat(waitFor(map.get("array")).getValueNullable()).isNotNull().isEqualTo("[true,false]");
+        assertThat(waitFor(map.get("map")).getValueNullable()).isNotNull().isEqualTo("{\"k1\":1.0,\"k2\":2.0}");
     }
 }

@@ -33,7 +33,7 @@ public interface DeploymentInternal extends Deployment {
     void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency,
                                 ResourceArgs args, ResourceOptions opts);
 
-    void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs);
+    void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs);
 
     @InternalUse
     static DeploymentInternal getInstance() {
