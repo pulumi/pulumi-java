@@ -6,7 +6,9 @@ import java.util.Optional;
 
 import io.pulumi.Log;
 import io.pulumi.example.inputs.*;
+import io.pulumi.core.Output;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputData;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -14,11 +16,15 @@ import static org.mockito.Mockito.mock;
 
 class InputTests {
 
+    static <T> OutputData<T> waitFor(Output<T> io) {
+        return Internal.of(io).getDataAsync().join();
+    }
+
     @Test
     void testInputsFooArgs_nullValues() {
         assertThatThrownBy(() -> {
             var args = FooArgs.Empty;
-            var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
+            var map = Internal.from(args).toMapAsync(mock(Log.class)).join();
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -33,7 +39,7 @@ class InputTests {
                 .f("test2")
                 .build();
 
-        var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
+        var map = Internal.from(args).toMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("a");
         assertThat(map).containsKey("b");
@@ -42,11 +48,11 @@ class InputTests {
         assertThat(map).containsKey("e");
         assertThat(map).containsKey("f");
 
-        assertThat(map).containsEntry("a", Optional.of(true));
-        assertThat(map).containsEntry("b", Optional.of(true));
-        assertThat(map).containsEntry("c", Optional.of(1));
-        assertThat(map).containsEntry("d", Optional.of(2));
-        assertThat(map).containsEntry("e", Optional.of("test1"));
-        assertThat(map).containsEntry("f", Optional.of("test2"));
+        assertThat(waitFor(map.get("a")).getValueNullable()).isNotNull().isEqualTo(true);
+        assertThat(waitFor(map.get("b")).getValueNullable()).isNotNull().isEqualTo(true);
+        assertThat(waitFor(map.get("c")).getValueNullable()).isNotNull().isEqualTo(1);
+        assertThat(waitFor(map.get("d")).getValueNullable()).isNotNull().isEqualTo(2);
+        assertThat(waitFor(map.get("e")).getValueNullable()).isNotNull().isEqualTo("test1");
+        assertThat(waitFor(map.get("f")).getValueNullable()).isNotNull().isEqualTo("test2");
     }
 }
