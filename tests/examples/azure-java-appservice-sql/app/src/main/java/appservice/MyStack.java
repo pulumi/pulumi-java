@@ -126,7 +126,7 @@ public final class MyStack extends Stack {
     private Output<String> getSASToken(Output<String> storageAccountName, Output<String> storageContainerName,
                                        Output<String> blobName, Output<String> resourceGroupName) {
         var blobSAS = Output.tuple(resourceGroupName, storageAccountName, storageContainerName).applyFuture(t ->
-            ListStorageAccountServiceSAS.invokeAsync(
+            Methods.ListStorageAccountServiceSAS(
                 ListStorageAccountServiceSASArgs.builder().resourceGroupName(t.t1)
                         .accountName(t.t2)
                         .protocols(HttpProtocol.Https)
