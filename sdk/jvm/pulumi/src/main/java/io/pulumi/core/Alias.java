@@ -1,6 +1,5 @@
 package io.pulumi.core;
 
-import io.pulumi.deployment.internal.CurrentDeployment;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -115,10 +114,6 @@ public class Alias {
         @Nullable
         private Output<String> parentUrn;
 
-        public Builder() {
-            /* empty */
-        }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
@@ -135,7 +130,7 @@ public class Alias {
         }
 
         public Builder type(@Nullable String type) {
-            this.type =Output.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 

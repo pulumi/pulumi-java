@@ -176,7 +176,6 @@ public class ResourcePackages {
 
         return CurrentDeployment.withCurrentDeployment(deployment, () -> {
             try {
-                CurrentDeployment.withCurrentDeployment(deployment, () -> 1);
                 var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
                 return Optional.of(resource);
             } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
