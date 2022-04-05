@@ -3,7 +3,6 @@ package io.pulumi.resources;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -33,10 +32,7 @@ public class ProviderResource extends CustomResource {
      * @param args     The configuration to use for this provider
      * @param options  A bag of options that control this provider's behavior
      */
-    public ProviderResource(String aPackage,
-                            String name,
-                            ResourceArgs args,
-                            @Nullable CustomResourceOptions options) {
+    public ProviderResource(String aPackage, String name, ResourceArgs args, @Nullable CustomResourceOptions options) {
         this(aPackage, name, args, options, false);
     }
 

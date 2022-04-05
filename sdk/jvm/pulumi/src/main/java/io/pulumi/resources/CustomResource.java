@@ -3,7 +3,7 @@ package io.pulumi.resources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.OutputBuilder;
+import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
@@ -41,8 +41,7 @@ public class CustomResource extends Resource {
      * @param args    The arguments to use to populate the new resource.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CustomResource(String type, String name, @Nullable ResourceArgs args,
-                          @Nullable CustomResourceOptions options) {
+    public CustomResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
         this(type, name, args, options, false);
     }
 
