@@ -27,8 +27,7 @@ public final class MyStack extends Stack {
     public MyStack() {
         var vpcIdOutput = Output.of(Methods.GetVpc(GetVpcArgs.builder()
                                 .default_(true)
-                                .build(),
-                        InvokeOptions.Empty)
+                                .build())
                 .thenApply(getVpcResult -> getVpcResult.getId()));
 
         this.vpcIdOutput = vpcIdOutput;
@@ -36,8 +35,7 @@ public final class MyStack extends Stack {
         var subnetIdsOutput = vpcIdOutput
                 .apply(vpcId -> Output.of(Methods.GetSubnetIds(GetSubnetIdsArgs.builder()
                                 .vpcId(vpcId)
-                                .build(),
-                        InvokeOptions.Empty)))
+                                .build())))
                 .applyValue(getSubnetIdsResult ->
                         getSubnetIdsResult.getIds()
                                 .stream()

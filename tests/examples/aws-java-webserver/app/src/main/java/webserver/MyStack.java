@@ -27,8 +27,7 @@ public final class MyStack extends Stack {
         final var ami = Methods.GetAmi(GetAmiArgs.builder()
                 .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
                 .owners("137112412989")
-                .mostRecent(true).build(),
-            null
+                .mostRecent(true).build()
         ).thenApply(GetAmiResult::getId);
 
         final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
