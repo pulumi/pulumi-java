@@ -47,9 +47,11 @@ import static java.util.stream.Collectors.toSet;
 public class Converter {
 
     private final Log log;
+    private final Deserializer deserializer;
 
-    public Converter(Log log) {
+    public Converter(Log log, Deserializer deserializer) {
         this.log = requireNonNull(log);
+        this.deserializer = requireNonNull(deserializer);
     }
 
     public <T> OutputData<T> convertValue(String context, Value value, Class<T> targetType) {
@@ -70,8 +72,7 @@ public class Converter {
 
         checkTargetType(context, targetType);
 
-        var deserializer = new Deserializer();
-        var data = deserializer.deserialize(value);
+        var data = this.deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
         //       but the Deserializer will wrap it in an OutputData, and we get them as a null here
         @Nullable
