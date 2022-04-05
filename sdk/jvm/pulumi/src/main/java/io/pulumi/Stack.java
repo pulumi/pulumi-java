@@ -3,8 +3,8 @@ package io.pulumi;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal.InternalField;
+import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.RunException;
@@ -123,7 +123,7 @@ public class Stack extends ComponentResource {
          */
         @InternalUse
         public void registerPropertyOutputs() {
-            var infos = OutputMetadata.of(this.stack.getClass()); // we need the outer class
+            var infos = ExportMetadata.of(this.stack.getClass()); // we need the outer class
 
             var outputs = infos.entrySet().stream()
                     .collect(toImmutableMap(

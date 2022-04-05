@@ -7,7 +7,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Internal.InternalField;
-import io.pulumi.core.internal.annotations.InputMetadata;
+import io.pulumi.core.internal.annotations.ImportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.serialization.internal.JsonFormatter;
 import io.pulumi.serialization.internal.Serializer;
@@ -28,7 +28,7 @@ import static java.util.stream.Collectors.toMap;
 @ParametersAreNonnullByDefault
 public abstract class InputArgs {
 
-    private final ImmutableList<InputMetadata<?, ?, ?>> inputInfos;
+    private final ImmutableList<ImportMetadata<?, ?, ?>> inputInfos;
 
     @SuppressWarnings("unused")
     @InternalField
@@ -100,13 +100,13 @@ public abstract class InputArgs {
         }
     }
 
-    private <T> ImmutableList<InputMetadata<?, ?, ?>> extractInputInfos(Class<T> type) {
-        return InputMetadata.of(type).values().stream()
+    private <T> ImmutableList<ImportMetadata<?, ?, ?>> extractInputInfos(Class<T> type) {
+        return ImportMetadata.of(type).values().stream()
                 .peek(info -> this.validateMember(info.getFieldType(), fullName(info)))
                 .collect(toImmutableList());
     }
 
-    private String fullName(InputMetadata<?, ?, ?> input) {
+    private String fullName(ImportMetadata<?, ?, ?> input) {
         return String.format("@%s %s", Import.class.getSimpleName(), input.generateFullName(this.getClass()));
     }
 }
