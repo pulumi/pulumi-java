@@ -6,7 +6,7 @@ import com.google.common.collect.Sets;
 import com.google.protobuf.Value;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.annotations.OutputMetadata;
+import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.Converter;
 
@@ -104,7 +104,7 @@ public class OutputCompletionSource<T> {
 
     public static <T> OutputCompletionSource<T> from(
             Resource resource,
-            OutputMetadata<T> metadata
+            ExportMetadata<T> metadata
     ) {
         var output = metadata.getFieldValueOrElse(resource, () -> {
             var incomplete = Output.of(new CompletableFuture<T>());
@@ -115,7 +115,7 @@ public class OutputCompletionSource<T> {
     }
 
     public static ImmutableMap<String, OutputCompletionSource<?>> from(Resource resource) {
-        return OutputMetadata.of(resource.getClass()).entrySet().stream()
+        return ExportMetadata.of(resource.getClass()).entrySet().stream()
                 .filter(x -> {
                     var name = x.getValue().getAnnotation().name();
                     return !name.equals(Constants.UrnPropertyName) && !name.equals(Constants.IdPropertyName);

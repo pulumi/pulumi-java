@@ -14,13 +14,12 @@ import java.util.function.Function;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 
-// TODO: rename to ImportMetadata
-public final class InputMetadata<F, T, O extends Output<T>> extends InputOutputMetadata<Import, F> {
+public final class ImportMetadata<F, T, O extends Output<T>> extends ImportExportMetadata<Import, F> {
 
     private final Import annotation;
     private final TypeShape<O> finalShape;
 
-    private InputMetadata(Field field, Import annotation, Class<F> fieldType, TypeShape<O> finalShape) {
+    private ImportMetadata(Field field, Import annotation, Class<F> fieldType, TypeShape<O> finalShape) {
         super(field, fieldType);
         this.annotation = requireNonNull(annotation);
         this.finalShape = requireNonNull(finalShape);
@@ -75,7 +74,7 @@ public final class InputMetadata<F, T, O extends Output<T>> extends InputOutputM
      * T (capture#2) - the final shape value type, will be F or Object
      * O (Output<F || T>) - the final shape type, will be 'Output<F>' or 'F extends Output<T>'
      */
-    public static ImmutableMap<String, InputMetadata<?, ?, ? extends Output<?>>> of(Class<?> extractionType) {
+    public static ImmutableMap<String, ImportMetadata<?, ?, ? extends Output<?>>> of(Class<?> extractionType) {
         return Reflection.allFields(extractionType).stream()
                 .filter(f -> f.isAnnotationPresent(Import.class))
                 .peek(f -> f.setAccessible(true))
@@ -92,7 +91,7 @@ public final class InputMetadata<F, T, O extends Output<T>> extends InputOutputM
                     }
                 })
                 .collect(toImmutableMap(
-                        InputOutputMetadata::getName,
+                        ImportExportMetadata::getName,
                         Function.identity()
                 ));
     }
@@ -100,7 +99,7 @@ public final class InputMetadata<F, T, O extends Output<T>> extends InputOutputM
     /**
      * Field is an Output, it does not need to be wrapped in an Output
      */
-    private static <F extends Output<Object>> InputMetadata<F, Object, F> unwrappedMetadata(
+    private static <F extends Output<Object>> ImportMetadata<F, Object, F> unwrappedMetadata(
             Field field,
             Import import_,
             Class<F> fieldType
@@ -118,7 +117,7 @@ public final class InputMetadata<F, T, O extends Output<T>> extends InputOutputM
     /**
      * Field is not an Output, it needs to be wrapped in an Output
      */
-    private static <F> InputMetadata<F, F, Output<F>> wrappedMetadata(
+    private static <F> ImportMetadata<F, F, Output<F>> wrappedMetadata(
             Field field,
             Import import_,
             Class<F> fieldType
@@ -135,12 +134,12 @@ public final class InputMetadata<F, T, O extends Output<T>> extends InputOutputM
         return of(field, import_, fieldType, finalShape);
     }
 
-    private static <F, T, O extends Output<T>> InputMetadata<F, T, O> of(
+    private static <F, T, O extends Output<T>> ImportMetadata<F, T, O> of(
             Field field,
             Import inputAnnotation,
             Class<F> fieldType,
             TypeShape<O> finalShape
     ) {
-        return new InputMetadata<>(field, inputAnnotation, fieldType, finalShape);
+        return new ImportMetadata<>(field, inputAnnotation, fieldType, finalShape);
     }
 }
