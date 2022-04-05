@@ -19,13 +19,12 @@ import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 
-// TODO: rename to ExportMetadata
-public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<T>> {
+public final class ExportMetadata<T> extends ImportExportMetadata<Export, Output<T>> {
 
     private final Export annotation;
     private final TypeShape<T> dataShape;
 
-    private OutputMetadata(Field field, Export annotation, Class<Output<T>> fieldType, TypeShape<T> dataShape) {
+    private ExportMetadata(Field field, Export annotation, Class<Output<T>> fieldType, TypeShape<T> dataShape) {
         super(field, fieldType);
         this.annotation = requireNonNull(annotation);
         this.dataShape = requireNonNull(dataShape);
@@ -55,11 +54,11 @@ public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<
                 .toString();
     }
 
-    public static ImmutableMap<String, OutputMetadata<?>> of(Class<?> extractionType) {
+    public static ImmutableMap<String, ExportMetadata<?>> of(Class<?> extractionType) {
         return of(extractionType, field -> true);
     }
 
-    public static ImmutableMap<String, OutputMetadata<?>> of(Class<?> extractionType, Predicate<Field> fieldFilter) {
+    public static ImmutableMap<String, ExportMetadata<?>> of(Class<?> extractionType, Predicate<Field> fieldFilter) {
         var fields = Reflection.allFields(extractionType).stream()
                 .filter(f -> f.isAnnotationPresent(Export.class))
                 .filter(fieldFilter)
@@ -101,19 +100,19 @@ public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<
                     return of(field, export, fieldType, exportType, parameters);
                 })
                 .collect(toImmutableMap(
-                        InputOutputMetadata::getName,
+                        ImportExportMetadata::getName,
                         Function.identity()
                 ));
     }
 
-    private static <T> OutputMetadata<T> of(
+    private static <T> ExportMetadata<T> of(
             Field field,
             Export exportAnnotation,
             Class<?> fieldType,
             Class<T> dataType, Class<?>[] dataTypeParameters
     ) {
         //noinspection unchecked
-        return new OutputMetadata<>(field, exportAnnotation, (Class<Output<T>>) fieldType,
+        return new ExportMetadata<>(field, exportAnnotation, (Class<Output<T>>) fieldType,
                 TypeShape.builder(dataType).addParameters(dataTypeParameters).build()
         );
     }
