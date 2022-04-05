@@ -26,17 +26,17 @@ class InputTests {
     @Test
     void testContainerArgs_nullValues() {
         var args = ContainerArgs.Empty;
-        var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
+        var map = Internal.from(args).toMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("brightness");
         assertThat(map).containsKey("color");
         assertThat(map).containsKey("material");
         assertThat(map).containsKey("size");
 
-        assertThat(waitFor((Output) map.get("brightness").get())).isEqualTo(waitFor(Output.empty()));
-        assertThat(waitFor((Output) map.get("color").get())).isEqualTo(waitFor(Output.empty()));
-        assertThat(waitFor((Output) map.get("material").get())).isEqualTo(waitFor(Output.empty()));
-        assertThat(waitFor((Output) map.get("size").get())).isEqualTo(waitFor(Output.empty()));
+        assertThat(waitFor(map.get("brightness")).getValueNullable()).isNull();
+        assertThat(waitFor(map.get("color")).getValueNullable()).isNull();
+        assertThat(waitFor(map.get("material")).getValueNullable()).isNull();
+        assertThat(waitFor(map.get("size")).getValueNullable()).isNull();
     }
 
     @Test
@@ -48,16 +48,16 @@ class InputTests {
                 .size(ContainerSize.FourInch)
                 .build();
 
-        var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();
+        var map = Internal.from(args).toMapAsync(mock(Log.class)).join();
 
         assertThat(map).containsKey("brightness");
         assertThat(map).containsKey("color");
         assertThat(map).containsKey("material");
         assertThat(map).containsKey("size");
 
-        assertThat(waitFor((Output) map.get("brightness").get())).isEqualTo(waitFor(Output.of(ContainerBrightness.ZeroPointOne)));
-        assertThat(waitFor((Output) map.get("color").get())).isEqualTo(waitFor(Output.ofLeft(ContainerColor.Red)));
-        assertThat(waitFor((Output) map.get("material").get())).isEqualTo(waitFor(Output.of("glass")));
-        assertThat(waitFor((Output) map.get("size").get())).isEqualTo(waitFor(Output.of(ContainerSize.FourInch)));
+        assertThat(waitFor(map.get("brightness")).getValueNullable()).isEqualTo(ContainerBrightness.ZeroPointOne);
+        assertThat(waitFor(map.get("color")).getValueNullable()).isEqualTo(Either.ofLeft(ContainerColor.Red));
+        assertThat(waitFor(map.get("material")).getValueNullable()).isEqualTo("glass");
+        assertThat(waitFor(map.get("size")).getValueNullable()).isEqualTo(ContainerSize.FourInch);
     }
 }
