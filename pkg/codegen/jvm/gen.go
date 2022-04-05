@@ -1792,7 +1792,7 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	// [pulumi/pulumi-java#197]
 	fprintf(w, "    private %s() {}\n", className)
 
-	indent := "    "
+	const indent = "    "
 	// Emit javadoc
 	if fun.Comment != "" || fun.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
