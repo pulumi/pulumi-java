@@ -45,6 +45,10 @@ import static io.pulumi.serialization.internal.Structs.tryGetValue;
  */
 public class Deserializer {
 
+    public Deserializer() {
+        // Empty
+    }
+
     public OutputData<Object> deserialize(Value value) {
         Objects.requireNonNull(value);
         return deserializeCore(value, v -> {
@@ -313,7 +317,7 @@ public class Deserializer {
         throw new UnsupportedOperationException("Value was marked as Asset, but did not conform to required shape.");
     }
 
-    private static Optional<Resource> tryDeserializeResource(Value value) {
+    private Optional<Resource> tryDeserializeResource(Value value) {
         var sig = isSpecialStruct(value);
         if (sig.isEmpty() || !Constants.SpecialResourceSig.equals(sig.get())) {
             return Optional.empty();
