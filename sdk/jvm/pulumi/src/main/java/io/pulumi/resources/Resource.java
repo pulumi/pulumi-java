@@ -11,16 +11,21 @@ import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.Strings;
+import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.ResourceException;
+import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
+import static com.google.common.collect.ImmutableList.toImmutableList;
+import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.Objects.exceptionSupplier;
 import static io.pulumi.core.internal.Objects.require;
 import static io.pulumi.resources.Resources.copyNullableList;
@@ -476,6 +481,52 @@ public abstract class Resource {
             }
 
             return resource.providers.getOrDefault(memComponents[0], null);
+        }
+
+        @InternalUse
+        public static Map<String, Output<?>> findOutputs(Object object) {
+            var infos = ExportMetadata.of(object.getClass());
+
+            var outputs = infos.entrySet().stream()
+                    .collect(toImmutableMap(
+                            Map.Entry::getKey,
+                            Map.Entry::getValue
+                    ));
+
+            var nulls = outputs.entrySet().stream()
+                    .filter(entry -> entry.getValue().isFieldNull(object))
+                    .map(Map.Entry::getKey)
+                    .collect(Collectors.toList());
+            if (!nulls.isEmpty()) {
+                throw new RunException(String.format(
+                        "Output(s) '%s' have no value assigned. %s annotated fields must be assigned inside Stack constructor.",
+                        String.join(", ", nulls), Export.class.getSimpleName()
+                ));
+            }
+
+            // check if annotated fields have the correct type;
+            // it would be easier to validate on construction,
+            // but we aggregate all errors here for user's convenience
+            var wrongFields = infos.entrySet().stream()
+                    // check if the field has type allowed by the annotation
+                    .filter(entry -> !Output.class.isAssignableFrom(entry.getValue().getFieldType()))
+                    .map(Map.Entry::getKey)
+                    .collect(toImmutableList());
+
+            if (!wrongFields.isEmpty()) {
+                throw new RunException(String.format(
+                        "Output(s) '%s' have incorrect type. %s annotated fields must be instances of Output<T>",
+                        String.join(", ", wrongFields), Export.class.getSimpleName()
+                ));
+            }
+
+            return outputs.entrySet().stream()
+                    .collect(toImmutableMap(
+                            Map.Entry::getKey,
+                            e -> e.getValue().getFieldValueOrThrow(object, () -> new IllegalStateException(
+                                    "Expected only non-null values at this point. This is a bug."
+                            ))
+                    ));
         }
     }
 }
