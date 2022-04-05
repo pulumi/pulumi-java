@@ -1,19 +1,19 @@
 package io.pulumi;
 
+import io.pulumi.core.Output;
 import io.pulumi.deployment.Deployment;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public interface Pulumi {
 
-    static Integer run(Supplier<Map<String, Optional<Object>>> callback) {
+    static Integer run(Supplier<Map<String, Output<?>>> callback) {
         return runAsync(callback).join();
     }
 
-    static CompletableFuture<Integer> runAsync(Supplier<Map<String, Optional<Object>>> callback) {
+    static CompletableFuture<Integer> runAsync(Supplier<Map<String, Output<?>>> callback) {
         return Deployment.runAsync(callback);
     }
 

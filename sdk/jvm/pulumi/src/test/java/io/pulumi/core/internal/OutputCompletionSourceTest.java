@@ -5,7 +5,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.annotations.OutputMetadata;
+import io.pulumi.core.internal.annotations.ExportMetadata;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -28,7 +28,7 @@ class OutputCompletionSourceTest {
     @Test
     void testConvertingSetValue() {
         var tester = new Tester();
-        var infos = OutputMetadata.of(Tester.class);
+        var infos = ExportMetadata.of(Tester.class);
 
         var sources = infos.entrySet().stream()
                 .collect(toImmutableMap(
@@ -52,7 +52,7 @@ class OutputCompletionSourceTest {
     }
 
     private static <T, E> OutputCompletionSource<T> of(
-            OutputMetadata<T> metadata,
+            ExportMetadata<T> metadata,
             E extractionObject
     ) {
         var shape = metadata.getDataShape();

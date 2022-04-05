@@ -5,11 +5,9 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.Optionals;
 import io.pulumi.core.internal.Reflection;
 import io.pulumi.exceptions.RunException;
 
-import javax.annotation.Nullable;
 import java.lang.reflect.Field;
 import java.util.Map;
 import java.util.Optional;
@@ -21,12 +19,12 @@ import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 
-public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<T>> {
+public final class ExportMetadata<T> extends ImportExportMetadata<Export, Output<T>> {
 
     private final Export annotation;
     private final TypeShape<T> dataShape;
 
-    private OutputMetadata(Field field, Export annotation, Class<Output<T>> fieldType, TypeShape<T> dataShape) {
+    private ExportMetadata(Field field, Export annotation, Class<Output<T>> fieldType, TypeShape<T> dataShape) {
         super(field, fieldType);
         this.annotation = requireNonNull(annotation);
         this.dataShape = requireNonNull(dataShape);
@@ -56,18 +54,17 @@ public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<
                 .toString();
     }
 
-    public static ImmutableMap<String, OutputMetadata<?>> of(Class<?> extractionType) {
+    public static ImmutableMap<String, ExportMetadata<?>> of(Class<?> extractionType) {
         return of(extractionType, field -> true);
     }
 
-    public static ImmutableMap<String, OutputMetadata<?>> of(Class<?> extractionType, Predicate<Field> fieldFilter) {
+    public static ImmutableMap<String, ExportMetadata<?>> of(Class<?> extractionType, Predicate<Field> fieldFilter) {
         var fields = Reflection.allFields(extractionType).stream()
-                .filter(field1 -> field1.isAnnotationPresent(Export.class))
+                .filter(f -> f.isAnnotationPresent(Export.class))
                 .filter(fieldFilter)
-                .peek(field1 -> field1.setAccessible(true))
+                .peek(f -> f.setAccessible(true))
                 .collect(toImmutableMap(
-                        f -> Optional.ofNullable(f.getAnnotation(Export.class))
-                                .flatMap(a -> Optionals.ofBlank(a.name())).orElse(f.getName()),
+                        Field::getName,
                         Function.identity()
                 ));
 
@@ -82,51 +79,46 @@ public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<
 
         if (!wrongFields.isEmpty()) {
             throw new RunException(String.format(
-                    "Output(s) '%s' have incorrect type. @%s annotated fields must be instances of Output<>",
+                    "Output field(s) '%s' have incorrect type. @%s annotated fields must be instances of Output<>",
                     String.join(", ", wrongFields),
                     Export.class.getSimpleName()
             ));
         }
 
         return fields.values().stream()
-                .map(f -> {
-                    @Nullable
-                    var export = f.getAnnotation(Export.class);
-                    if (export == null) {
-                        throw new IllegalArgumentException(String.format(
-                                "Expected field '%s' of class '%s' to be annotated with '%s'",
-                                f.getName(), f.getDeclaringClass().getTypeName(), Export.class
-                        ));
-                    }
-                    var fieldType = f.getType();
+                .map(field -> {
+                    var export = Optional.ofNullable(field.getAnnotation(Export.class))
+                            .orElseThrow(() -> new IllegalStateException(String.format(
+                                    "Expected field '%s' of class '%s' to be annotated with '%s'. This is a bug.",
+                                    field.getName(), field.getDeclaringClass().getTypeName(), Export.class.getTypeName()
+                            )));
+
+                    var fieldType = field.getType();
                     var exportType = export.type();
                     var parameters = export.parameters();
 
-                    return of(
-                            f, export, fieldType,
-                            exportType, parameters
-                    );
+                    return of(field, export, fieldType, exportType, parameters);
                 })
                 .collect(toImmutableMap(
-                        InputOutputMetadata::getName,
+                        ImportExportMetadata::getName,
                         Function.identity()
                 ));
     }
 
-    private static <T> OutputMetadata<T> of(
+    private static <T> ExportMetadata<T> of(
             Field field,
             Export exportAnnotation,
             Class<?> fieldType,
             Class<T> dataType, Class<?>[] dataTypeParameters
     ) {
         //noinspection unchecked
-        return new OutputMetadata<>(field, exportAnnotation, (Class<Output<T>>) fieldType,
+        return new ExportMetadata<>(field, exportAnnotation, (Class<Output<T>>) fieldType,
                 TypeShape.builder(dataType).addParameters(dataTypeParameters).build()
         );
     }
 
     public Output<T> getOrSetFieldValue(Object extractionObject, Output<T> defaultOutput) {
-        return getFieldValue(extractionObject).orElseGet(() -> {
+        return getFieldValueOrElse(extractionObject, () -> {
             setFieldValue(extractionObject, defaultOutput);
             return defaultOutput;
         });

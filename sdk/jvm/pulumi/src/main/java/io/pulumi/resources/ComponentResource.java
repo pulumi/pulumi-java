@@ -8,7 +8,6 @@ import io.pulumi.deployment.internal.DeploymentInternal;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static java.util.Objects.requireNonNull;
@@ -91,21 +90,17 @@ public class ComponentResource extends Resource {
         );
     }
 
-    protected void registerOutputs() {
-        registerOutputs(Map.of());
-    }
-
-    protected void registerOutputs(Map<String, Optional<Object>> outputs) {
+    protected void registerOutputs(Map<String, Output<?>> outputs) {
         requireNonNull(outputs);
         registerOutputs(CompletableFuture.completedFuture(outputs));
     }
 
-    protected void registerOutputs(CompletableFuture<Map<String, Optional<Object>>> outputs) {
+    protected void registerOutputs(CompletableFuture<Map<String, Output<?>>> outputs) {
         requireNonNull(outputs);
         registerOutputs(Output.of(outputs));
     }
 
-    protected void registerOutputs(Output<Map<String, Optional<Object>>> outputs) {
+    protected void registerOutputs(Output<Map<String, Output<?>>> outputs) {
         requireNonNull(outputs);
         DeploymentInternal.getInstance().registerResourceOutputs(this, outputs);
     }

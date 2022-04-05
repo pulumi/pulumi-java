@@ -5,8 +5,8 @@ import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.annotations.InputMetadata;
-import io.pulumi.core.internal.annotations.OutputMetadata;
+import io.pulumi.core.internal.annotations.ExportMetadata;
+import io.pulumi.core.internal.annotations.ImportMetadata;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -15,7 +15,7 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class InputOutputMetadataTest {
+class ImportExportMetadataTest {
 
     @SuppressWarnings("unused")
     public static class Tester {
@@ -72,7 +72,7 @@ class InputOutputMetadataTest {
     @Test
     void testImportInfos() {
         var tester = new Tester();
-        var infos = InputMetadata.of(Tester.class);
+        var infos = ImportMetadata.of(Tester.class);
         assertThat(infos).hasSize(9);
 
         var barInfo = infos.get("bar");
@@ -113,7 +113,7 @@ class InputOutputMetadataTest {
     @Test
     void testExportInfos() {
         var tester = new Tester();
-        var infos = OutputMetadata.of(Tester.class);
+        var infos = ExportMetadata.of(Tester.class);
         assertThat(infos).hasSize(6);
 
         var fooInfo = infos.get("foo");
