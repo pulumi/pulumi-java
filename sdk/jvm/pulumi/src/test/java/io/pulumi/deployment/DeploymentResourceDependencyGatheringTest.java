@@ -41,7 +41,7 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @Test
     void testDeploysResourcesWithUnknownDependsOn() {
-        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack.class).join();
+        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack::new).join();
         assertThat(result.exceptions).isNotNull();
         assertThat(result.exceptions).isEmpty();
     }
