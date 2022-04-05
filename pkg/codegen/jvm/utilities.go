@@ -58,7 +58,7 @@ func VisitPlainTypeClosure(properties []*schema.Property, visitor func(t schema.
 func formatBlockComment(comment string, indent string) string {
 	prefix := fmt.Sprintf("%s * ", indent)
 	comment = strings.ReplaceAll(comment, "*/", "*{@literal /}")
-	comment = codegen.FilterExamples(comment, "java")
+	//comment = codegen.FilterExamples(comment, "java") // TODO [pulumi/pulumi-jvm#339]
 	comment = strings.Join(strings.Split(comment, "\n"), "\n"+prefix)
 	return prefix + comment
 }
