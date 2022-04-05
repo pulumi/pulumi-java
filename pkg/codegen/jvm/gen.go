@@ -2277,11 +2277,12 @@ func (mod *modContext) gen(fs fs) error {
 	}
 
 	// Functions
-	if err := addClass(javaPkg, names.Ident("Methods"), func(ctx *classFileContext) error {
+	modMethodClass := names.Ident(names.Title(mod.mod) + "Methods")
+	if err := addClass(javaPkg, modMethodClass, func(ctx *classFileContext) error {
 		w := ctx.writer
 
 		// Open the config class.
-		fprintf(w, "public final class Methods {\n")
+		fprintf(w, "public final class %s {\n", modMethodClass)
 		for _, fun := range mod.functions {
 
 			// TODO[pulumi/pulumi-jvm#262]: Support proper codegen for methods

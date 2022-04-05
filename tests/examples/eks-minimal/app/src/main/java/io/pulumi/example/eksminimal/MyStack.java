@@ -2,7 +2,7 @@ package io.pulumi.example.eksminimal;
 
 import io.pulumi.Stack;
 import io.pulumi.aws.ec2.GetSubnetIds;
-import io.pulumi.aws.ec2.Methods;
+import io.pulumi.aws.ec2.Ec2Methods;
 import io.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
 import io.pulumi.aws.ec2.inputs.GetVpcArgs;
 import io.pulumi.core.Output;
@@ -25,7 +25,7 @@ public final class MyStack extends Stack {
     private Output<Object> kubeconfig;
 
     public MyStack() {
-        var vpcIdOutput = Output.of(Methods.GetVpc(GetVpcArgs.builder()
+        var vpcIdOutput = Output.of(Ec2Methods.GetVpc(GetVpcArgs.builder()
                                 .default_(true)
                                 .build())
                 .thenApply(getVpcResult -> getVpcResult.getId()));
@@ -33,7 +33,7 @@ public final class MyStack extends Stack {
         this.vpcIdOutput = vpcIdOutput;
 
         var subnetIdsOutput = vpcIdOutput
-                .apply(vpcId -> Output.of(Methods.GetSubnetIds(GetSubnetIdsArgs.builder()
+                .apply(vpcId -> Output.of(Ec2Methods.GetSubnetIds(GetSubnetIdsArgs.builder()
                                 .vpcId(vpcId)
                                 .build())))
                 .applyValue(getSubnetIdsResult ->

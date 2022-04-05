@@ -1,7 +1,7 @@
 package webserver;
 
 import io.pulumi.Stack;
-import io.pulumi.aws.ec2.Methods;
+import io.pulumi.aws.ec2.Ec2Methods;
 import io.pulumi.aws.ec2.Instance;
 import io.pulumi.aws.ec2.InstanceArgs;
 import io.pulumi.aws.ec2.SecurityGroup;
@@ -24,7 +24,7 @@ public final class MyStack extends Stack {
     private final Output<String> publicHostName;
 
     public MyStack() {
-        final var ami = Methods.GetAmi(GetAmiArgs.builder()
+        final var ami = Ec2Methods.GetAmi(GetAmiArgs.builder()
                 .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
                 .owners("137112412989")
                 .mostRecent(true).build()
