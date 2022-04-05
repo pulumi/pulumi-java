@@ -108,7 +108,6 @@ public class ComponentResource extends Resource {
     @InternalUse
     @ParametersAreNonnullByDefault
     public static class ComponentResourceInternal extends ResourceInternal {
-
         protected ComponentResourceInternal(ComponentResource resource) {
             super(resource);
         }
