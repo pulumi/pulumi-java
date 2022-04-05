@@ -37,7 +37,7 @@ public class DeploymentExceptionTest {
 
     @Test
     void testUrnFutureDoesNotHangOnException() {
-        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack.class).join())
+        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack::new).join())
                 .getRootCause()
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining(DeliberateException.class.getName());
