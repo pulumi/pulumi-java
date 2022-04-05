@@ -9,18 +9,17 @@ import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
 
-// TODO: rename to ImportExportMetadata
-public abstract class InputOutputMetadata<A extends Annotation, F> {
+public abstract class ImportExportMetadata<A extends Annotation, F> {
 
     protected final Field field;
     protected final Class<F> fieldType;
 
     @SuppressWarnings("unused")
-    private InputOutputMetadata() {
+    private ImportExportMetadata() {
         throw new UnsupportedOperationException("static class");
     }
 
-    protected InputOutputMetadata(Field field, Class<F> fieldType) {
+    protected ImportExportMetadata(Field field, Class<F> fieldType) {
         this.field = requireNonNull(field);
         this.fieldType = requireNonNull(fieldType);
     }
