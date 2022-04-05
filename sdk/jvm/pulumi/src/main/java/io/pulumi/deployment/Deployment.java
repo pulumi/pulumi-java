@@ -14,7 +14,6 @@ import io.pulumi.resources.StackOptions;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
@@ -146,7 +145,7 @@ public interface Deployment {
      * @return A dictionary of stack outputs.
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
      */
-    static CompletableFuture<Integer> runAsync(Supplier<Map<String, Optional<Object>>> callback) {
+    static CompletableFuture<Integer> runAsync(Supplier<Map<String, Output<?>>> callback) {
         return runAsyncFuture(() -> CompletableFuture.supplyAsync(callback));
     }
 
@@ -169,7 +168,7 @@ public interface Deployment {
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
      */
     static CompletableFuture<Integer> runAsyncFuture(
-            Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback
+            Supplier<CompletableFuture<Map<String, Output<?>>>> callback
     ) {
         return runAsyncFuture(callback, null);
     }
@@ -211,7 +210,7 @@ public interface Deployment {
      * @see #runAsyncStack(Supplier) for more information.
      */
     static CompletableFuture<Integer> runAsyncFuture(
-            Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
+            Supplier<CompletableFuture<Map<String, Output<?>>>> callback,
             @Nullable StackOptions options
     ) {
         return DeploymentInternal.createRunnerAndRunAsync(

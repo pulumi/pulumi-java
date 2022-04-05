@@ -13,7 +13,6 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.deployment.internal.TestOptions;
@@ -120,12 +119,12 @@ public class MocksTest {
                 () -> mock.deployment.invokeAsync(
                         "aws:iam/getRole:getRole",
                         of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
-                ).thenApply(ignore -> {
+                ).thenApply(__ -> {
                     var myInstance = new Instance("instance", new InstanceArgs(), null);
 
-                    return ImmutableMap.<String, Optional<Object>>builder()
-                            .put("result", Optional.of("x"))
-                            .put("instance", Optional.of(myInstance.publicIp))
+                    return ImmutableMap.<String, Output<?>>builder()
+                            .put("result", Output.of("x"))
+                            .put("instance", Output.of(myInstance.publicIp))
                             .build();
                 })).join();
 
