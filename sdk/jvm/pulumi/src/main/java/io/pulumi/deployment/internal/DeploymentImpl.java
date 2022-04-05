@@ -512,7 +512,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             log.debug(String.format("Invoking function: token='%s' asynchronously", token));
 
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = Internal.from(args).toOptionalMapAsync(this.log)
+            var serializedFuture = Internal.from(args).toMapAsync(this.log)
                     .thenCompose(argsDict ->
                             this.featureSupport.monitorSupportsResourceReferences()
                                     .thenCompose(keepResources ->
@@ -664,12 +664,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             log.debug(String.format("Calling function: token='%s' asynchronously", token));
 
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = Internal.from(args).toOptionalMapAsync(this.log)
+            var serializedFuture = Internal.from(args).toMapAsync(this.log)
                     .thenApply(argsDict -> self == null
                             ? argsDict
-                            : ImmutableMap.<String, Optional<Object>>builder()
+                            : ImmutableMap.<String, Output<?>>builder()
                             .putAll(argsDict)
-                            .put("__self__", Optional.of(self))
+                            .put("__self__", Output.of(self))
                             .build()
                     )
                     .thenCompose(
@@ -789,7 +789,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         // Serialize out all our props to their final values. In doing so, we'll also collect all
                         // the Resources pointed to by any Dependency objects we encounter, adding them to 'propertyDependencies'.
                         log.excessive("Serializing properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
-                        return Internal.from(args).toOptionalMapAsync(this.log).thenCompose(
+                        return Internal.from(args).toMapAsync(this.log).thenCompose(
                                 map -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
                                         supportsResourceReferences -> serialization.serializeResourcePropertiesAsync(label, map, supportsResourceReferences).thenCompose(
                                                 serializationResult -> {
@@ -1381,7 +1381,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
-    public void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs) {
+    public void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs) {
         this.registerResourceOutputs.registerResourceOutputs(resource, outputs);
     }
 
@@ -1407,7 +1407,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.serialization = Objects.requireNonNull(serialization);
         }
 
-        public void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs) {
+        public void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs) {
             // RegisterResourceOutputs is called in a fire-and-forget manner.  Make sure we keep track of
             // this task so that the application will not quit until this async work completes.
             this.runner.registerTask(
@@ -1416,7 +1416,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private CompletableFuture<Void> registerResourceOutputsAsync(
-                Resource resource, Output<Map<String, Optional<Object>>> outputs
+                Resource resource, Output<Map<String, Output<?>>> outputs
         ) {
             var opLabel = "monitor.registerResourceOutputs(...)";
 
@@ -1636,12 +1636,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback) {
+        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
             return runAsyncFuture(callback, StackOptions.Empty);
         }
 
         @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
+        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
             var stack = StackInternal.of(callback, options);
             registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
                     Internal.of(Internal.from(stack).getOutputs()).getDataAsync());

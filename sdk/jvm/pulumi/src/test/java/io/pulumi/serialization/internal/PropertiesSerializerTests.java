@@ -45,7 +45,7 @@ public class PropertiesSerializerTests {
 
     private static String showStruct(ResourceArgs resourceArgs) {
         var log = new Log(EngineLogger.ignore());
-        var args = Internal.from(resourceArgs).toOptionalMapAsync(log).join();
+        var args = Internal.from(resourceArgs).toMapAsync(log).join();
         var s = new PropertiesSerializer(log);
         var label = "LABEL";
         var struct = s.serializeAllPropertiesAsync(label, args, true).join();

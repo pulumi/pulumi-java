@@ -3,13 +3,17 @@ package io.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
 import io.pulumi.Log;
+import io.pulumi.core.Output;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Predicate;
 
@@ -30,14 +34,14 @@ public final class PropertiesSerializer {
      * creating a reasonable POJO object that can be remoted over to registerResource.
      */
     public CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(
-            String label, Map<String, Optional<Object>> args, boolean keepResources
+            String label, Map<String, Output<?>> args, boolean keepResources
     ) {
         Predicate<String> filter = key -> !Constants.IdPropertyName.equals(key) && !Constants.UrnPropertyName.equals(key);
         return serializeFilteredPropertiesAsync(label, args, filter, keepResources);
     }
 
     public CompletableFuture<Struct> serializeAllPropertiesAsync(
-            String label, Map<String, Optional<Object>> args, boolean keepResources
+            String label, Map<String, Output<?>> args, boolean keepResources
     ) {
         return serializeFilteredPropertiesAsync(label, args, unused -> true, keepResources)
                 .thenApply(result -> result.serialized);
@@ -49,16 +53,15 @@ public final class PropertiesSerializer {
      * can be remoted over to registerResource.
      */
     public CompletableFuture<SerializationResult> serializeFilteredPropertiesAsync(
-            String label, Map<String, Optional<Object>> args, Predicate<String> acceptKey, boolean keepResources) {
+            String label, Map<String, Output<?>> args, Predicate<String> acceptKey, boolean keepResources) {
         var resultFutures = new HashMap<String, CompletableFuture</* @Nullable */ Object>>();
         var temporaryResources = new HashMap<String, Set<Resource>>();
 
         // FIXME: this is ugly, try to factor out a method with named tuple as result type
         for (var arg : args.entrySet()) {
             var key = arg.getKey();
-            var valueOpt = arg.getValue();
-            if (acceptKey.test(key) && valueOpt.isPresent()) {
-                var value = valueOpt.get();
+            var value = arg.getValue();
+            if (acceptKey.test(key)) {
                 var serializer = new Serializer(this.log); // serializer is mutable, that's why it's inside the loop
                 var v = serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources);
                 resultFutures.put(key, v);

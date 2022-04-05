@@ -15,7 +15,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
@@ -40,14 +39,6 @@ class StackTest {
             this.explicitName = Output.of("bar");
             this.implicitName = Output.of("buzz");
         }
-
-        public Output<String> getExplicitName() {
-            return explicitName;
-        }
-
-        public Output<String> getImplicitName() {
-            return implicitName;
-        }
     }
 
     @Test
@@ -55,19 +46,17 @@ class StackTest {
         var result = run(ValidStack::new);
         assertThat(result.t2).hasSize(3);
         assertThat(result.t2).containsKey("foo");
-        assertThat(result.t2.get("foo")).isPresent();
         assertThat(
                 OutputTests.waitFor(result.t1.explicitName)
         ).isSameAs(
-                OutputTests.waitFor((Output) result.t2.get("foo").get())
+                OutputTests.waitFor(result.t2.get("foo"))
         );
 
         assertThat(result.t2).containsKey("implicitName");
-        assertThat(result.t2.get("implicitName")).isPresent();
         assertThat(
                 OutputTests.waitFor(result.t1.implicitName)
         ).isSameAs(
-                OutputTests.waitFor(((Output) result.t2.get("implicitName").get()))
+                OutputTests.waitFor(result.t2.get("implicitName"))
         );
     }
 
@@ -97,20 +86,20 @@ class StackTest {
     void testStackWithInvalidOutputTypeThrows() {
         assertThatThrownBy(() -> run(InvalidOutputTypeStack::new))
                 .isInstanceOf(RunException.class)
-                .hasMessageContaining("Output(s) 'foo' have incorrect type");
+                .hasMessageContaining("Output field(s) 'foo' have incorrect type");
     }
 
-    private <T extends Stack> Tuple2<T, Map<String, Optional<Object>>> run(Supplier<T> factory) {
+    private <T extends Stack> Tuple2<T, Map<String, Output<?>>> run(Supplier<T> factory) {
         var mock = DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
-            .setOptions(new TestOptions("TestProject", "TestStack"))
-            .setSpyGlobalInstance();
+                .setMocks(new MocksTest.MyMocks())
+                .setOptions(new TestOptions("TestProject", "TestStack"))
+                .setSpyGlobalInstance();
 
         var stack = factory.get();
         Internal.from(stack).registerPropertyOutputs();
 
         //noinspection unchecked
-        ArgumentCaptor<Output<Map<String, Optional<Object>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
+        ArgumentCaptor<Output<Map<String, Output<?>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
 
         // TODO: is this OK that we're called twice?
         verify(mock.deployment, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
