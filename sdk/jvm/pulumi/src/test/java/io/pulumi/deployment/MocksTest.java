@@ -51,7 +51,7 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack.class).join();
+        var resources = mock.testAsync(MyStack::new).join();
 
         var instance = resources.stream()
                 .filter(r -> r instanceof Instance)
@@ -70,7 +70,7 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack.class).join();
+        var resources = mock.testAsync(MyStack::new).join();
 
         var myCustom = resources.stream()
                 .filter(r -> r instanceof MyCustom)
@@ -93,7 +93,7 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack.class).join();
+        var resources = mock.testAsync(MyStack::new).join();
 
         var stack = resources.stream()
                 .filter(r -> r instanceof MyStack)
@@ -163,7 +163,7 @@ public class MocksTest {
                 .setStandardLogger(log)
                 .setSpyGlobalInstance();
 
-        var result = mock.tryTestAsync(MyStack.class).join();
+        var result = mock.tryTestAsync(MyStack::new).join();
         var resources = result.resources;
         assertThat(resources).isNotEmpty();
 
