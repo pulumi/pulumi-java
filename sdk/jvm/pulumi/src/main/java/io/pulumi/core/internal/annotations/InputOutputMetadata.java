@@ -1,13 +1,15 @@
 package io.pulumi.core.internal.annotations;
 
-import io.pulumi.core.internal.Strings;
+import io.pulumi.core.internal.Optionals;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.Optional;
+import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
 
+// TODO: rename to ImportExportMetadata
 public abstract class InputOutputMetadata<A extends Annotation, F> {
 
     protected final Field field;
@@ -28,7 +30,7 @@ public abstract class InputOutputMetadata<A extends Annotation, F> {
     protected abstract String getAnnotationName();
 
     public String getName() {
-        return Strings.emptyToOptional(getAnnotationName()).orElse(getFieldName());
+        return Optionals.ofBlank(getAnnotationName()).orElse(getFieldName());
     }
 
     public String getFieldName() {
@@ -44,10 +46,9 @@ public abstract class InputOutputMetadata<A extends Annotation, F> {
         return String.format("%s.%s", subtype.getTypeName(), this.getName());
     }
 
-    public Optional<F> getFieldValue(Object extractionObject) {
+    public boolean isFieldNull(Object extractedObject) {
         try {
-            //noinspection unchecked
-            return Optional.ofNullable((F) this.field.get(extractionObject));
+            return this.field.get(extractedObject) == null;
         } catch (IllegalArgumentException | IllegalAccessException e) {
             throw new IllegalStateException(String.format(
                     "Can't get the value of a field '%s' annotated with '%s', error: %s",
@@ -56,9 +57,30 @@ public abstract class InputOutputMetadata<A extends Annotation, F> {
         }
     }
 
-    public void setFieldValue(Object extractionObject, F output) {
+    public F getFieldValueOrElse(Object extractedObject, Supplier<F> defaultValue) {
+        return getFieldValue(extractedObject).orElseGet(defaultValue);
+    }
+
+    public <X extends RuntimeException> F getFieldValueOrThrow(Object extractedObject, Supplier<X> exceptionSupplier) {
+        return getFieldValue(extractedObject).orElseThrow(exceptionSupplier);
+    }
+
+    public Optional<F> getFieldValue(Object extractedObject) {
         try {
-            this.field.set(extractionObject, output);
+            //noinspection unchecked
+            var value = (F) this.field.get(extractedObject);
+            return Optional.ofNullable(value);
+        } catch (IllegalArgumentException | IllegalAccessException e) {
+            throw new IllegalStateException(String.format(
+                    "Can't get the value of a field '%s' annotated with '%s', error: %s",
+                    this.field.getName(), this.getAnnotation().annotationType(), e.getMessage()
+            ), e);
+        }
+    }
+
+    public void setFieldValue(Object extractedObject, F output) {
+        try {
+            this.field.set(extractedObject, output);
         } catch (IllegalArgumentException | IllegalAccessException e) {
             throw new IllegalStateException(String.format(
                     "Can't set the value of a field '%s' annotated with '%s', error: %s",
