@@ -17,16 +17,16 @@ git checkout -b "$codegen_branch"
 
 git checkout 'origin/main' 'pkg/codegen/testing'
 PULUMI_ACCEPT=true make install_sdk codegen_tests
-git add -u 'pkg/codegen/testing'
-git commit -m "[codegen] built and added added codegen_tests"
+git add -u 'pkg/codegen/testing' || true
+git commit -m "[codegen] built and added added codegen_tests" || true
 
 git checkout 'origin/main' 'providers'
 make providers_all
 
 for provider in `ls providers/*/ -d`; do
     echo adding $provider
-    git add -u "$provider" > /dev/null
-    git commit -m "[codegen] built and added added $provider"
+    git add -u "$provider" > /dev/null || true
+    git commit -m "[codegen] built and added added $provider" || true
 done;
 
 git push --set-upstream origin "$codegen_branch"

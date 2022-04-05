@@ -11,7 +11,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
@@ -77,7 +76,7 @@ public class DeploymentRunnerTest {
             final var delay = 100L + i;
             mock.runner.registerTask(String.format("task%d", i), new CompletableFuture<Void>().completeOnTimeout(null, delay, TimeUnit.MILLISECONDS));
         }
-        Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier =
+        Supplier<CompletableFuture<Map<String, Output<?>>>> supplier =
                 () -> CompletableFuture.completedFuture(Map.of());
         var code = mock.runner.runAsyncFuture(supplier, null).join();
         assertThat(code).isEqualTo(0);

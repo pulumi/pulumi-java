@@ -2,7 +2,6 @@ package io.pulumi.deployment;
 
 import io.pulumi.Config;
 import io.pulumi.core.Output;
-import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -11,7 +10,6 @@ import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,11 +39,11 @@ public class DeploymentTest {
     void testConfigRequire() {
         mock.overrideConfig("hello-jvm:name", "test");
 
-        Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
+        Supplier<CompletableFuture<Map<String, Output<?>>>> supplier = () -> {
             var config = Config.of("hello-jvm");
             //noinspection unused
             var ignore = config.require("name");
-            return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
+            return CompletableFuture.completedFuture(Map.<String, Output<?>>of());
         };
 
         var code = mock.runner.runAsyncFuture(supplier, null).join();
@@ -54,11 +52,11 @@ public class DeploymentTest {
 
     @Test
     void testConfigRequireMissing() {
-        Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier = () -> {
+        Supplier<CompletableFuture<Map<String, Output<?>>>> supplier = () -> {
             var config = Config.of("hello-jvm");
             //noinspection unused
             var ignore = config.require("missing");
-            return CompletableFuture.completedFuture(Map.<String, Optional<Object>>of());
+            return CompletableFuture.completedFuture(Map.<String, Output<?>>of());
         };
         mock.standardLogger.setLevel(Level.OFF);
         var code = mock.runner.runAsyncFuture(supplier, null).join();

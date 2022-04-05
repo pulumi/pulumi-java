@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.Log;
 import io.pulumi.Stack;
+import io.pulumi.core.Output;
 import io.pulumi.deployment.MockEngine;
 import io.pulumi.deployment.MockMonitor;
 import io.pulumi.deployment.Mocks;
@@ -16,7 +17,6 @@ import org.mockito.Mockito;
 
 import javax.annotation.Nullable;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 import java.util.logging.Level;
@@ -106,7 +106,7 @@ public class DeploymentTests {
                     ));
         }
 
-        public CompletableFuture<TestAsyncResult> runAsync(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback) {
+        public CompletableFuture<TestAsyncResult> runAsync(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
             }
