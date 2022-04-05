@@ -1,11 +1,7 @@
 package io.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
+import com.google.common.collect.*;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.protobuf.Struct;
@@ -18,18 +14,8 @@ import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple4;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Environment;
-import io.pulumi.core.internal.Exceptions;
-import io.pulumi.core.internal.GlobalLogging;
-import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.OutputCompletionSource;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.OutputInternal;
-import io.pulumi.core.internal.Reflection;
-import io.pulumi.core.internal.Strings;
+import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.Deployment;
@@ -37,24 +23,8 @@ import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.exceptions.LogException;
 import io.pulumi.exceptions.ResourceException;
 import io.pulumi.exceptions.RunException;
-import io.pulumi.resources.CallArgs;
-import io.pulumi.resources.ComponentResource;
-import io.pulumi.resources.ComponentResourceOptions;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.CustomResourceOptions;
-import io.pulumi.resources.CustomTimeouts;
-import io.pulumi.resources.DependencyResource;
-import io.pulumi.resources.InvokeArgs;
-import io.pulumi.resources.ProviderResource;
-import io.pulumi.resources.Resource;
-import io.pulumi.resources.ResourceArgs;
-import io.pulumi.resources.ResourceOptions;
-import io.pulumi.resources.StackOptions;
-import io.pulumi.serialization.internal.Converter;
-import io.pulumi.serialization.internal.Deserializer;
-import io.pulumi.serialization.internal.JsonFormatter;
-import io.pulumi.serialization.internal.PropertiesSerializer;
-import io.pulumi.serialization.internal.Structs;
+import io.pulumi.resources.*;
+import io.pulumi.serialization.internal.*;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
@@ -69,21 +39,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.time.Duration;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Queue;
-import java.util.Set;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.TimeUnit;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -95,9 +53,7 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
-import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
-import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
-import static io.pulumi.core.internal.Environment.getIntegerEnvironmentVariable;
+import static io.pulumi.core.internal.Environment.*;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
 import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
@@ -1635,31 +1591,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         public List<Exception> getSwallowedExceptions() {
             return ImmutableList.copyOf(this.swallowedExceptions);
-        }
-
-        /**
-         * @param stackType the Stack type class instance, if class is nested it must be static
-         * @param <T>       the Stack type, if class is nested it must be static
-         */
-        @Override
-        public <T extends Stack> CompletableFuture<Integer> runAsync(Class<T> stackType) {
-            Objects.requireNonNull(stackType);
-            if (Reflection.isNestedClass(stackType)) {
-                throw new IllegalArgumentException(String.format(
-                        "runAsync(Class<T>) cannot be used with nested classes, make class '%s' static, standalone or use runAsync(Supplier<T extends Stack>)",
-                        stackType.getTypeName()
-                ));
-            }
-            return runAsync(() -> {
-                try {
-                    return stackType.newInstance();
-                } catch (InstantiationException | IllegalAccessException e) {
-                    throw new IllegalArgumentException(String.format(
-                            "Couldn't create an instance of the stack type: '%s', error: %s",
-                            stackType.getTypeName(), e
-                    ), e);
-                }
-            });
         }
 
         @Override

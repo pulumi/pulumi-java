@@ -34,7 +34,7 @@ public class DeploymentRunnerTest {
             .setSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
-        var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack.class).join();
+        var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack::new).join();
 
         assertThat(mock.runner.getSwallowedExceptions()).hasSize(2);
 
