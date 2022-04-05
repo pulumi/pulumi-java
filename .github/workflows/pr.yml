@@ -173,18 +173,6 @@ jobs:
           echo "Old Size : ${{ steps.oldJar.outputs.sizeHuman }}"
           echo "Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}"
           echo "Change(%): ${{ steps.diffJar.outputs.sizePct }}%"
-      - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v1
-        with:
-          message: |
-            ```
-            Provider : ${{ matrix.provider }}
-            New Size : ${{ steps.newJar.outputs.sizeHuman }}
-            Old Size : ${{ steps.oldJar.outputs.sizeHuman }}
-            Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}
-            Change(%): ${{ steps.diffJar.outputs.sizePct }}%
-            ```
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   example-aws-java-webserver:
     runs-on: ubuntu-latest
     timeout-minutes: 15
