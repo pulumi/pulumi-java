@@ -66,7 +66,7 @@ integration_tests::	bin/pulumi-language-jvm
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
 test_example.%:	bin/pulumi-language-jvm
-	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run "TestExamples/^$*" -test.v
+	cd tests/examples && PATH="${PATH}:${PWD}/bin" go test -run "TestExamples/^$*" -test.v
 
 test_example.random: install_sdk provider.random.install
 test_example.minimal: install_sdk
