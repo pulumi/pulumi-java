@@ -575,6 +575,7 @@ public abstract class Resource {
         }
     }
 
+    @InternalUse
     public interface LazyField<T> {
         CompletableFuture<Output<T>> future();
 

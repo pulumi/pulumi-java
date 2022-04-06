@@ -155,18 +155,6 @@ public interface Deployment {
      * @param callback Callback that creates stack resources.
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
      */
-    static CompletableFuture<Integer> runAsyncFutureVoid(Supplier<CompletableFuture<Void>> callback) {
-        return runAsyncFuture(() -> callback.get()
-                .thenApply(ignore -> ImmutableMap.of())
-        );
-    }
-
-    /**
-     * An entry-point to a Pulumi application.
-     * Deployment will instantiate a default stack instance based on the callback passed as {@code callback} parameter.
-     * @param callback Callback that creates stack resources.
-     * @see #runAsyncFuture(Supplier, StackOptions) for more details.
-     */
     static CompletableFuture<Integer> runAsyncFuture(
             Supplier<CompletableFuture<Map<String, Output<?>>>> callback
     ) {
