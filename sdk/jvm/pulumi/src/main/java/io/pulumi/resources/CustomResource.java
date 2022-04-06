@@ -3,11 +3,11 @@ package io.pulumi.resources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static java.util.Objects.requireNonNull;
@@ -26,8 +26,6 @@ public class CustomResource extends Resource {
     @Export(name = Constants.IdPropertyName, type = String.class)
     private Output<String> id; // effectively final, lazy init
 
-    @SuppressWarnings("unused")
-    @InternalField
     private final CustomResourceInternal internal = new CustomResourceInternal(this);
 
     /**
@@ -60,7 +58,7 @@ public class CustomResource extends Resource {
      * stable and globally unique URN for the object. @see {@link ResourceOptions#getDependsOn()}
      * is an optional list of other resources that this resource depends on, controlling the
      * order in which we perform resource operations. Creating an instance does not necessarily
-     * perform a create on the physical entity which it represents, and instead, this is
+     * perform a creation on the physical entity which it represents, and instead, this is
      * dependent upon the diffing of the new goal state compared to the current known resource
      * state.
      *
@@ -83,19 +81,12 @@ public class CustomResource extends Resource {
                 false, dependency);
     }
 
-    @Override
-    protected void superInit(Resource resource) {
-        // Workaround for https://github.com/pulumi/pulumi-jvm/issues/314
-        if (resource instanceof CustomResource) {
-            var customResource = (CustomResource) resource;
-            customResource.idFuture = new CompletableFuture<>();
-            customResource.id = Output.of(customResource.idFuture).apply(id -> id);
-        } else {
-            throw new IllegalStateException(String.format(
-                    "Expected self to be instance of CustomResource, got: '%s'",
-                    resource.getClass().getTypeName()
-            ));
-        }
+    protected Optional<CompletableFuture<Output<String>>> idFuture() {
+        // TODO: move initialization to fields and make them final
+        //       if registration is ever moved outside of the constructor
+        this.idFuture = new CompletableFuture<>();
+        this.id = Output.of(idFuture).apply(id -> id);
+        return Optional.of(this.idFuture);
     }
 
     /**
@@ -117,8 +108,12 @@ public class CustomResource extends Resource {
             this.resource = requireNonNull(resource);
         }
 
+        public static CustomResourceInternal from(CustomResource r) {
+            return r.internal;
+        }
+
         /**
-         * More: @see {@link #getId()}
+         * More: {@link #getId()}
          *
          * @param id the the provider-assigned unique ID to set
          * @throws NullPointerException if id is null
@@ -126,7 +121,7 @@ public class CustomResource extends Resource {
         @InternalUse
         public void setId(Output<String> id) {
             if (!trySetId(id)) {
-                throw new IllegalStateException("id cannot be set twice, must be 'null' for 'setId' to work");
+                throw new IllegalStateException("'id' cannot be set twice, must be 'null' for 'setId' to work");
             }
         }
 

@@ -1011,8 +1011,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
-    public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options) {
-        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options);
+    public void readOrRegisterResource(
+            Resource resource, boolean remote, Function<String, Resource> newDependency,
+            ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy
+    ) {
+        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options, lazy);
     }
 
     private static final class ReadOrRegisterResource {
@@ -1040,7 +1043,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.isDryRun = isDryRun;
         }
 
-        public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options) {
+        public void readOrRegisterResource(
+                Resource resource, boolean remote, Function<String, Resource> newDependency,
+                ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy
+        ) {
             // readOrRegisterResource is called in a fire-and-forget manner. Make sure we keep
             // track of this task so that the application will not quit until this async work
             // completes.
@@ -1059,17 +1065,20 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             this.runner.registerTask(
                     String.format("readOrRegisterResource: %s-%s", resource.getResourceType(), resource.getResourceName()),
-                    completeResourceAsync(resource, remote, newDependency, args, options, completionSources));
+                    completeResourceAsync(resource, remote, newDependency, args, options, completionSources, lazy)
+            );
         }
 
         /**
-         * Calls @see {@link #readOrRegisterResource(Resource, boolean, Function, ResourceArgs, ResourceOptions)}"
+         * Calls @see {@link #readOrRegisterResource(Resource, boolean, Function, ResourceArgs, ResourceOptions, Resource.LazyFields)}"
          * then completes all the @see {@link OutputCompletionSource} sources on the {@code resource}
          * with the results of it.
          */
         private CompletableFuture<Void> completeResourceAsync(
-                Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
-                ResourceOptions options, ImmutableMap<String, OutputCompletionSource<?>> completionSources
+                Resource resource, boolean remote, Function<String, Resource> newDependency,
+                ResourceArgs args, ResourceOptions options,
+                ImmutableMap<String, OutputCompletionSource<?>> completionSources,
+                Resource.LazyFields lazy
         ) {
             return readOrRegisterResourceAsync(resource, remote, newDependency, args, options)
                     .thenApplyAsync(response -> {
@@ -1078,12 +1087,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var data = response.t3;
                         var dependencies = response.t4;
 
-                        Internal.from(resource).setUrn(Output.of(urn));
-
+                        lazy.urn().completeOrThrow(Output.of(urn));
                         if (resource instanceof CustomResource) {
-                            var customResource = (CustomResource) resource;
                             var isKnown = isNonEmptyOrNull(id);
-                            Internal.from(customResource).setId(isKnown
+                            lazy.id().orElseThrow().completeOrThrow(isKnown
                                     ? Output.of(id)
                                     : new OutputInternal<>(OutputData.unknown()));
                         }
@@ -1109,7 +1116,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 );
                             }
                         }
-                        //noinspection RedundantCast
                         return (Void) null;
                     })
                     // Wrap with `whenComplete` so that we always resolve all the outputs of the resource
@@ -1124,10 +1130,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             }
                         }
                         if (throwable != null) {
-                            Output<String> failed = Output.of(CompletableFuture.failedFuture(throwable));
-                            Internal.from(resource).trySetUrn(failed);
+                            lazy.urn().fail(throwable);
                             if (resource instanceof CustomResource) {
-                                Internal.from((CustomResource) resource).trySetId(failed);
+                                lazy.id().orElseThrow().fail(throwable);
                             }
                         }
                         // Ensure that we've at least resolved all our completion sources. That way we
@@ -1141,9 +1146,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         Output<String> defaultValue = this.isDryRun
                                 ? new OutputInternal<>(OutputData.unknown())
                                 : Output.of("");
-                        Internal.from(resource).trySetUrn(defaultValue);
+                        lazy.urn().complete(defaultValue);
                         if (resource instanceof CustomResource) {
-                            Internal.from((CustomResource) resource).trySetId(defaultValue);
+                            lazy.id().orElseThrow().complete(defaultValue);
                         }
                     });
         }
