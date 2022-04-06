@@ -600,6 +600,7 @@ jobs:
 
   publish-providers-sdk-snapshot:
     if: github.ref_name == 'main'
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     needs:
       - publish-java-sdk-snapshot
@@ -639,6 +640,7 @@ jobs:
 
   publish-providers-sdk-snapshot-2:
     if: github.ref_name == 'main'
+    timeout-minutes: 10
     needs:
       - publish-providers-sdk-snapshot
       - publish-java-sdk-snapshot
