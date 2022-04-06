@@ -12,15 +12,18 @@ import io.pulumi.resources.Resource;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 /**
  * Metadata of the deployment that is currently running. Accessible via @see {@link io.pulumi.deployment.Deployment#getInstance()}.
  */
+@InternalUse
 public final class DeploymentInstanceInternal implements DeploymentInstance {
 
     private final DeploymentInternal deployment;
 
+    @InternalUse
     DeploymentInstanceInternal(DeploymentInternal deployment) {
         this.deployment = deployment;
     }
@@ -105,5 +108,19 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     @Override
     public void call(String token, CallArgs args) {
         deployment.call(token, args);
+    }
+
+    @InternalUse
+    public static DeploymentInstanceInternal cast(DeploymentInstance instance) {
+        Objects.requireNonNull(instance);
+        if (instance instanceof DeploymentInstanceInternal) {
+            return (DeploymentInstanceInternal) instance;
+        } else {
+            throw new IllegalArgumentException(
+                    String.format(
+                            "Expected a 'DeploymentInstanceInternal' instance, got: %s",
+                            instance.getClass().getSimpleName())
+            );
+        }
     }
 }

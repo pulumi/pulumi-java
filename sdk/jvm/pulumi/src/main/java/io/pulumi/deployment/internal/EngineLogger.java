@@ -1,12 +1,14 @@
 package io.pulumi.deployment.internal;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import java.util.logging.Level;
 
+@InternalUse
 public interface EngineLogger extends CountingLogger {
 
     /**
