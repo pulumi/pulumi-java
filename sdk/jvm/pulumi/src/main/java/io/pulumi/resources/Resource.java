@@ -9,7 +9,6 @@ import io.pulumi.core.Urn;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -66,8 +65,6 @@ public abstract class Resource {
     @Nullable
     private final String version;
 
-    @SuppressWarnings({"unused", "FieldCanBeLocal"})
-    @InternalField
     private final ResourceInternal internal = new ResourceInternal(this);
 
     /**
@@ -97,7 +94,10 @@ public abstract class Resource {
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency
     ) {
-        this.superInit(this);
+        var lazy = new LazyFields(
+                () -> this.urnFuture,
+                this.idFuture().map(f -> () -> f) // this 'idFuture' call must be on top of this constructor to avoid NPEs
+        );
         this.remote = remote;
 
         if (dependency) {
@@ -245,14 +245,17 @@ public abstract class Resource {
         this.aliases = aliases.build();
 
         // Finish initialisation with reflection asynchronously
-        DeploymentInternal.getInstance().readOrRegisterResource(this, remote, DependencyResource::new, args, options);
+        DeploymentInternal.getInstance().readOrRegisterResource(
+                this, remote, DependencyResource::new, args, options, lazy
+        );
     }
 
     /**
-     * Initialization method called at the beginning of the constructor
+     * Lazy Initialization method called at the beginning of the constructor.
+     * Resources with the id field must override this method.
      */
-    protected void superInit(Resource resource) {
-        // Empty
+    protected Optional<CompletableFuture<Output<String>>> idFuture() {
+        return Optional.empty();
     }
 
     /**
@@ -299,7 +302,7 @@ public abstract class Resource {
         var result = ImmutableMap.<String, ProviderResource>builder();
         if (providers != null) {
             for (var provider : providers) {
-                var pkg = Internal.from(provider, ProviderResource.ProviderResourceInternal.class).getPackage();
+                var pkg = Internal.from(provider).getPackage();
                 result.put(pkg, provider);
             }
         }
@@ -415,6 +418,10 @@ public abstract class Resource {
             this.resource = requireNonNull(resource);
         }
 
+        public static ResourceInternal from(Resource r) {
+            return r.internal;
+        }
+
         /**
          * A list of aliases applied to this resource.
          */
@@ -527,6 +534,47 @@ public abstract class Resource {
                                     "Expected only non-null values at this point. This is a bug."
                             ))
                     ));
+        }
+    }
+
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
+    @InternalUse
+    @ParametersAreNonnullByDefault
+    public static class LazyFields {
+        private final LazyField<String> urn;
+        private final Optional<LazyField<String>> id;
+
+        protected LazyFields(LazyField<String> urn, Optional<LazyField<String>> id) {
+            this.urn = requireNonNull(urn);
+            this.id = requireNonNull(id);
+        }
+
+        public LazyField<String> urn() {
+            return this.urn;
+        }
+
+        public Optional<LazyField<String>> id() {
+            return this.id;
+        }
+    }
+
+    public interface LazyField<T> {
+        CompletableFuture<Output<T>> future();
+
+        default void completeOrThrow(Output<T> value) {
+            if (!complete(value)) {
+                throw new IllegalStateException("lazy field cannot be set twice, must be 'null' for 'set' to work");
+            }
+        }
+
+        default boolean complete(Output<T> value) {
+            requireNonNull(value);
+            return future().complete(value);
+        }
+
+        default boolean fail(Throwable throwable) {
+            requireNonNull(throwable);
+            return complete(Output.of(CompletableFuture.failedFuture(throwable)));
         }
     }
 }

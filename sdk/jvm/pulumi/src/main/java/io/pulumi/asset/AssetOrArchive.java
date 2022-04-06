@@ -1,9 +1,8 @@
 package io.pulumi.asset;
 
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
-import java.util.Objects;
+import static java.util.Objects.requireNonNull;
 
 /**
  * Base class of @see {@link Asset}s and @see {@link Archive}s.
@@ -14,34 +13,39 @@ public abstract class AssetOrArchive {
     protected final String propName;
     protected final Object value;
 
-    @InternalField
-    protected final AssetOrArchiveInternal internal = new AssetOrArchiveInternal();
+    protected final AssetOrArchiveInternal internal = new AssetOrArchiveInternal(this);
 
     protected AssetOrArchive(String sigKey, String propName, Object value) {
-        this.sigKey = Objects.requireNonNull(sigKey);
-        this.propName = Objects.requireNonNull(propName);
-        this.value = Objects.requireNonNull(value);
+        this.sigKey = requireNonNull(sigKey);
+        this.propName = requireNonNull(propName);
+        this.value = requireNonNull(value);
     }
 
-    public final class AssetOrArchiveInternal {
+    public static final class AssetOrArchiveInternal {
 
-        private AssetOrArchiveInternal() {
-            /* Empty */
+        private final AssetOrArchive assetOrArchive;
+
+        private AssetOrArchiveInternal(AssetOrArchive assetOrArchive) {
+            this.assetOrArchive = requireNonNull(assetOrArchive);
+        }
+
+        public static AssetOrArchiveInternal from(AssetOrArchive assetOrArchive) {
+            return assetOrArchive.internal;
         }
 
         @InternalUse
         public String getSigKey() {
-            return AssetOrArchive.this.sigKey;
+            return this.assetOrArchive.sigKey;
         }
 
         @InternalUse
         public Object getValue() {
-            return AssetOrArchive.this.value;
+            return this.assetOrArchive.value;
         }
 
         @InternalUse
         public String getPropName() {
-            return AssetOrArchive.this.propName;
+            return this.assetOrArchive.propName;
         }
     }
 }
