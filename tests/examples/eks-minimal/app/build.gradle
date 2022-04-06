@@ -11,9 +11,10 @@ repositories {
 }
 
 dependencies {
+    //implementation(project(':pulumi'))
     implementation 'io.pulumi:pulumi:0.0.1-SNAPSHOT'
-    implementation 'io.pulumi:aws:4.37.3'
-    implementation 'io.pulumi:eks:0.37.1'
+    implementation 'io.pulumi:aws:4.37.3-SNAPSHOT'
+    implementation 'io.pulumi:eks:0.37.1-SNAPSHOT'
 }
 
 application {
