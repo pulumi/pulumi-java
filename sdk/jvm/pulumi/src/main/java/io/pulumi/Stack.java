@@ -1,7 +1,6 @@
 package io.pulumi;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -18,6 +17,7 @@ import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
 
+@ParametersAreNonnullByDefault
 public class Stack extends ComponentResource {
 
     /**
@@ -25,8 +25,6 @@ public class Stack extends ComponentResource {
      */
     private Output<Map<String, Output<?>>> outputs = Output.of(Map.of());
 
-    @SuppressWarnings("unused")
-    @InternalField
     private final StackInternal internal = new StackInternal(this);
 
     /**
@@ -104,6 +102,10 @@ public class Stack extends ComponentResource {
         private StackInternal(Stack stack) {
             super(stack);
             this.stack = requireNonNull(stack);
+        }
+
+        public static StackInternal from(Stack r) {
+            return r.internal;
         }
 
         @InternalUse
