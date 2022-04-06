@@ -1,7 +1,6 @@
 package io.pulumi.example.eksminimal;
 
 import io.pulumi.Stack;
-import io.pulumi.aws.ec2.GetSubnetIds;
 import io.pulumi.aws.ec2.Ec2Methods;
 import io.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
 import io.pulumi.aws.ec2.inputs.GetVpcArgs;
