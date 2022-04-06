@@ -3,8 +3,8 @@ package io.pulumi;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal.InternalField;
+import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.RunException;
@@ -15,7 +15,6 @@ import io.pulumi.resources.StackOptions;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -30,7 +29,7 @@ public class Stack extends ComponentResource {
     /**
      * The outputs of this stack, if the <code>init</code> callback exited normally.
      */
-    private Output<Map<String, Optional<Object>>> outputs = Output.of(Map.of());
+    private Output<Map<String, Output<?>>> outputs = Output.of(Map.of());
 
     @SuppressWarnings("unused")
     @InternalField
@@ -65,7 +64,7 @@ public class Stack extends ComponentResource {
      * any @see {@link Deployment#runAsync(Supplier)} overload is called.
      */
     @InternalUse
-    private Stack(Supplier<CompletableFuture<Map<String, Optional<Object>>>> init, @Nullable StackOptions options) {
+    private Stack(Supplier<CompletableFuture<Map<String, Output<?>>>> init, @Nullable StackOptions options) {
         this(options);
         try {
             this.outputs = Output.of(runInitAsync(init));
@@ -74,8 +73,8 @@ public class Stack extends ComponentResource {
         }
     }
 
-    private static CompletableFuture<Map<String, Optional<Object>>> runInitAsync(
-            Supplier<CompletableFuture<Map<String, Optional<Object>>>> init
+    private static CompletableFuture<Map<String, Output<?>>> runInitAsync(
+            Supplier<CompletableFuture<Map<String, Output<?>>>> init
     ) {
         return CompletableFuture.supplyAsync(init).thenCompose(Function.identity());
     }
@@ -114,7 +113,7 @@ public class Stack extends ComponentResource {
         }
 
         @InternalUse
-        public Output<Map<String, Optional<Object>>> getOutputs() {
+        public Output<Map<String, Output<?>>> getOutputs() {
             return this.stack.outputs;
         }
 
@@ -124,16 +123,16 @@ public class Stack extends ComponentResource {
          */
         @InternalUse
         public void registerPropertyOutputs() {
-            var infos = OutputMetadata.of(this.stack.getClass()); // we need the nesting class
+            var infos = ExportMetadata.of(this.stack.getClass()); // we need the outer class
 
             var outputs = infos.entrySet().stream()
-                    .collect(Collectors.toMap(
+                    .collect(toImmutableMap(
                             Map.Entry::getKey,
-                            entry -> entry.getValue().getFieldValue(this.stack)
+                            Map.Entry::getValue
                     ));
 
             var nulls = outputs.entrySet().stream()
-                    .filter(entry -> entry.getValue().isEmpty())
+                    .filter(entry -> entry.getValue().isFieldNull(this.stack))
                     .map(Map.Entry::getKey)
                     .collect(Collectors.toList());
             if (!nulls.isEmpty()) {
@@ -162,7 +161,12 @@ public class Stack extends ComponentResource {
 
             this.stack.outputs = Output.of(
                     outputs.entrySet().stream()
-                            .collect(toImmutableMap(Map.Entry::getKey, e -> e.getValue().map(o -> o)))
+                            .collect(toImmutableMap(
+                                    Map.Entry::getKey,
+                                    e -> e.getValue().getFieldValueOrThrow(this.stack, () -> new IllegalStateException(
+                                            "Expected only non-null values at this point. This is a bug."
+                                    ))
+                            ))
             );
             this.stack.registerOutputs(this.stack.outputs);
         }
@@ -176,7 +180,7 @@ public class Stack extends ComponentResource {
         public static final String RootPulumiStackTypeName = "pulumi:pulumi:Stack";
 
         @InternalUse
-        public static Stack of(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
+        public static Stack of(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
             return new Stack(callback, options);
         }
     }

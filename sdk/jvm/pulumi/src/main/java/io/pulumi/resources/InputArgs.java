@@ -3,17 +3,17 @@ package io.pulumi.resources;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Log;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Internal.InternalField;
-import io.pulumi.core.internal.annotations.InputMetadata;
+import io.pulumi.core.internal.annotations.ImportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.serialization.internal.JsonFormatter;
 import io.pulumi.serialization.internal.Serializer;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -28,7 +28,7 @@ import static java.util.stream.Collectors.toMap;
 @ParametersAreNonnullByDefault
 public abstract class InputArgs {
 
-    private final ImmutableList<InputMetadata> inputInfos;
+    private final ImmutableList<ImportMetadata<?, ?, ?>> inputInfos;
 
     @SuppressWarnings("unused")
     @InternalField
@@ -44,11 +44,11 @@ public abstract class InputArgs {
     @ParametersAreNonnullByDefault
     public final class InputArgsInternal {
 
-        private InputArgsInternal() { /* Emmpty */ }
+        private InputArgsInternal() { /* Empty */ }
 
         // TODO: try to remove, this only casts the type
         public CompletableFuture<Map<Object, /* @Nullable */ Object>> toNullableMapAsync(Log log) {
-            return toOptionalMapAsync(log)
+            return toMapAsync(log)
                     .thenApply(map -> map.entrySet()
                             .stream()
                             .collect(toMap(Map.Entry::getKey, Map.Entry::getValue))
@@ -56,8 +56,8 @@ public abstract class InputArgs {
         }
 
         @InternalUse
-        public CompletableFuture<Map<String, Optional<Object>>> toOptionalMapAsync(Log log) {
-            BiFunction<String, Object, CompletableFuture<Optional<Object>>> convertToJson = (context, input) -> {
+        public CompletableFuture<ImmutableMap<String, Output<?>>> toMapAsync(Log log) {
+            BiFunction<String, Object, CompletableFuture<Output<String>>> convertToJson = (context, input) -> {
                 requireNonNull(context);
                 requireNonNull(input);
 
@@ -65,49 +65,48 @@ public abstract class InputArgs {
                 return serializer.serializeAsync(context, input, false)
                         .thenApply(Serializer::createValue)
                         .thenApply(value -> JsonFormatter.format(value)
-                                .mapOrThrow(Function.identity(), Optional::of));
+                                .mapOrThrow(Function.identity(), Output::of));
             };
 
             var builder = CompletableFutures.builder(
-                    CompletableFuture.completedFuture(ImmutableMap.<String, Optional<Object>>builder())
+                    CompletableFuture.completedFuture(ImmutableMap.<String, Output<?>>builder())
             );
 
             for (var info : InputArgs.this.inputInfos) {
                 var fullName = InputArgs.this.fullName(info);
 
-                var value = info.getFieldValue(InputArgs.this);
+                var value = info.getFieldOutput(InputArgs.this);
                 if (info.getAnnotation().required() && value.isEmpty()) {
                     throw new IllegalArgumentException(
                             String.format("%s is required but was not given a value", InputArgs.this.fullName(info)));
                 }
 
-                CompletableFuture<Optional<Object>> valueFuture;
                 if (info.getAnnotation().json()) {
-                    if (value.isPresent()) {
-                        valueFuture = convertToJson.apply(fullName, value.get());
-                    } else {
-                        valueFuture = CompletableFuture.completedFuture(Optional.empty());
-                    }
+                    var valueFuture = value.map(v -> convertToJson.apply(fullName, v))
+                            .orElse(CompletableFuture.completedFuture(Output.empty()));
+                    builder.accumulate(
+                            valueFuture, (b, m) -> b.put(info.getName(), m)
+                    );
                 } else {
-                    valueFuture = CompletableFuture.completedFuture(value);
+                    var valueFuture = value.map(CompletableFuture::completedFuture)
+                        .orElse(CompletableFuture.completedFuture(Output.empty()));
+                    builder.accumulate(
+                            valueFuture, (b, m) -> b.put(info.getName(), m)
+                    );
                 }
-
-                builder.accumulate(
-                        valueFuture, (b, m) -> b.put(info.getName(), m)
-                );
             }
 
             return builder.build(ImmutableMap.Builder::build);
         }
     }
 
-    private <T> ImmutableList<InputMetadata> extractInputInfos(Class<T> type) {
-        return InputMetadata.of(type).values().stream()
+    private <T> ImmutableList<ImportMetadata<?, ?, ?>> extractInputInfos(Class<T> type) {
+        return ImportMetadata.of(type).values().stream()
                 .peek(info -> this.validateMember(info.getFieldType(), fullName(info)))
                 .collect(toImmutableList());
     }
 
-    private String fullName(InputMetadata input) {
+    private String fullName(ImportMetadata<?, ?, ?> input) {
         return String.format("@%s %s", Import.class.getSimpleName(), input.generateFullName(this.getClass()));
     }
 }
