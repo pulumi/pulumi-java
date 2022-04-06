@@ -122,11 +122,7 @@ func generateJava(configFile string) error {
 	}
 
 	if pkgInfo.DefaultVersion == "" {
-		if cfg.Version != "" {
-			pkgInfo.DefaultVersion = cfg.Version
-		} else {
-			pkgInfo.DefaultVersion = "unspecified"
-		}
+		pkgInfo.DefaultVersion = cfg.Version
 	}
 
 	pkg.Language["jvm"] = pkgInfo
