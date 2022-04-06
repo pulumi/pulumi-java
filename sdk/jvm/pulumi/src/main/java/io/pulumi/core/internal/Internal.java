@@ -7,8 +7,10 @@ import io.pulumi.asset.AssetOrArchive.AssetOrArchiveInternal;
 import io.pulumi.core.Output;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.CallOptions.CallOptionsInternal;
+import io.pulumi.deployment.DeploymentInstance;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.deployment.InvokeOptions.InvokeOptionsInternal;
+import io.pulumi.deployment.internal.DeploymentInstanceInternal;
 import io.pulumi.resources.ComponentResource;
 import io.pulumi.resources.ComponentResource.ComponentResourceInternal;
 import io.pulumi.resources.CustomResource;
@@ -28,6 +30,10 @@ public class Internal {
 
     public static <T> OutputInternal<T> of(Output<T> output) {
         return OutputInternal.cast(output);
+    }
+
+    public static DeploymentInstanceInternal of(DeploymentInstance deployment) {
+        return DeploymentInstanceInternal.cast(deployment);
     }
 
     public static CallOptionsInternal from(CallOptions o) {

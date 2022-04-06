@@ -5,13 +5,11 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.DeploymentInstance;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import io.pulumi.resources.ResourceOptions;
 
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -37,28 +35,14 @@ public interface DeploymentInternal extends Deployment {
 
     @InternalUse
     static DeploymentInternal getInstance() {
-        return DeploymentInternal.cast(Deployment.getInstance()).getInternal();
+        return DeploymentInstanceInternal.cast(Deployment.getInstance()).getInternal();
     }
 
     @InternalUse
     static Optional<DeploymentInternal> getInstanceOptional() {
         return DeploymentInstanceHolder.getInstanceOptional()
-                .map(DeploymentInternal::cast)
+                .map(DeploymentInstanceInternal::cast)
                 .map(DeploymentInstanceInternal::getInternal);
-    }
-
-    @InternalUse
-    private static DeploymentInstanceInternal cast(DeploymentInstance instance) {
-        Objects.requireNonNull(instance);
-        if (instance instanceof DeploymentInstanceInternal) {
-            return (DeploymentInstanceInternal) instance;
-        } else {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected a 'DeploymentInstanceInternal' instance, got: %s",
-                            instance.getClass().getSimpleName())
-            );
-        }
     }
 
     @InternalUse
