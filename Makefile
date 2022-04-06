@@ -44,7 +44,7 @@ providers_all: provider.random.install provider.aws.install provider.aws-native.
 
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
-	cd providers/pulumi-$*/sdk/java && gradle build
+	cd providers/pulumi-$*/sdk/java && gradle --console=plain build
 
 # Example: make provider.random.generate
 provider.%.generate:	bin/pulumi-java-gen
@@ -57,7 +57,7 @@ lint_pkg:
 
 # Example: make provider.random.install
 provider.%.install:	provider.%.build
-	cd providers/pulumi-$*/sdk/java && gradle publishToMavenLocal
+	cd providers/pulumi-$*/sdk/java && gradle --console=plain publishToMavenLocal
 
 # Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
 # stacks in Pulumi service.
