@@ -569,6 +569,8 @@ jobs:
         run: make bin/pulumi-language-jvm
       - name: Build AWS provider
         run: make provider.aws.install
+      - name: Build Kubernetes provider
+        run: make provider.kubernetes.install
       - name: Build EKS provider
         run: make provider.eks.install
       - name: Configure AWS Credentials
