@@ -603,7 +603,7 @@ jobs:
           cd ${{ matrix.directory }} && golangci-lint run -c ../.golangci.yml
 
   publish-providers-sdk-snapshot:
-    if: github.ref_name == 'main'
+    # if: github.ref_name == 'main'
     timeout-minutes: 10
     runs-on: ubuntu-latest
     needs:
@@ -643,7 +643,7 @@ jobs:
           gradle-version: 7.4.1
 
   publish-providers-sdk-snapshot-2:
-    if: github.ref_name == 'main'
+    # if: github.ref_name == 'main'
     timeout-minutes: 10
     needs:
       - publish-providers-sdk-snapshot
@@ -677,7 +677,7 @@ jobs:
           gradle-version: 7.4.1
 
   publish-java-sdk-snapshot:
-    if: github.ref_name == 'main'
+    # if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
