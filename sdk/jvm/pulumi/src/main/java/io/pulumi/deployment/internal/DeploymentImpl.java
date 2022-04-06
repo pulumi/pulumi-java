@@ -101,6 +101,7 @@ import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
+@InternalUse
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
 
     private final DeploymentState state;
@@ -118,17 +119,30 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final RegisterResourceOutputs registerResourceOutputs;
     private final RootResource rootResource;
 
+    @InternalUse
     DeploymentImpl() {
-        this(fromEnvironment());
+        this(DeploymentState.fromEnvironment());
     }
 
     // TODO private Deployment(InlineDeploymentSettings settings)
 
     @InternalUse
     @VisibleForTesting
-    DeploymentImpl(
+    public DeploymentImpl(
             DeploymentState state
     ) {
+        this(state, false);
+    }
+
+    @InternalUse
+    @VisibleForTesting
+    public DeploymentImpl(
+            DeploymentState state, boolean autoSet
+    ) {
+        if (autoSet) { // FIXME: temporary quick hack
+            var newInstance = new DeploymentInstanceInternal(this);
+            DeploymentInstanceHolder.setInstance(newInstance);
+        }
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
@@ -148,46 +162,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.registerResourceOutputs = new RegisterResourceOutputs(
                 this.log, state.runner, state.monitor, this.featureSupport, this.serialization
         );
-    }
-
-    /**
-     * @throws IllegalArgumentException if an environment variable is not found
-     */
-    private static DeploymentState fromEnvironment() {
-        var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
-        standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
-
-        Function<Exception, RuntimeException> startErrorSupplier = (Exception e) ->
-                new IllegalArgumentException("Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e);
-
-        try {
-            var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
-            var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
-            var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
-            var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
-//            var pwd = getEnvironmentVariable("PULUMI_PWD");
-            var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
-//            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
-//            var parallel = getIntegerEnvironmentVariable("PULUMI_PARALLEL");
-//            var tracing = getEnvironmentVariable("PULUMI_TRACING");
-            // TODO what to do with all the unused envvars?
-
-            var config = Config.parse();
-            standardLogger.setLevel(GlobalLogging.GlobalLevel);
-
-            standardLogger.log(Level.FINEST, "Creating deployment engine");
-            var engine = new GrpcEngine(engineTarget);
-            standardLogger.log(Level.FINEST, "Created deployment engine");
-
-            standardLogger.log(Level.FINEST, "Creating deployment monitor");
-            var monitor = new GrpcMonitor(monitorTarget);
-            standardLogger.log(Level.FINEST, "Created deployment monitor");
-
-            return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
-        } catch (NullPointerException ex) {
-            throw new IllegalStateException(
-                    "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);
-        }
     }
 
     @Override
@@ -210,6 +184,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @InternalUse
     public Runner getRunner() {
         return this.state.runner;
+    }
+
+    public Log getLog() {
+        return this.log;
     }
 
     public Optional<String> getConfig(String fullKey) {
@@ -1588,8 +1566,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @ParametersAreNonnullByDefault
     @InternalUse
-    @VisibleForTesting
-    static class DeploymentState {
+    public static class DeploymentState {
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
         public static final int TaskTimeoutInMillis = getIntegerEnvironmentVariable("PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS").or(-1);
@@ -1626,6 +1603,46 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.logger = new DefaultEngineLogger(standardLogger, () -> this.runner, () -> this.engine);
             this.runner = new DefaultRunner(standardLogger, this.logger);
         }
+
+        /**
+         * @throws IllegalArgumentException if an environment variable is not found
+         */
+        public static DeploymentState fromEnvironment() {
+            var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
+            standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
+
+            Function<Exception, RuntimeException> startErrorSupplier = (Exception e) ->
+                    new IllegalArgumentException("Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e);
+
+            try {
+                var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
+                var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
+                var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
+                var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
+//            var pwd = getEnvironmentVariable("PULUMI_PWD");
+                var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
+//            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
+//            var parallel = getIntegerEnvironmentVariable("PULUMI_PARALLEL");
+//            var tracing = getEnvironmentVariable("PULUMI_TRACING");
+                // TODO what to do with all the unused envvars?
+
+                var config = Config.parse();
+                standardLogger.setLevel(GlobalLogging.GlobalLevel);
+
+                standardLogger.log(Level.FINEST, "Creating deployment engine");
+                var engine = new GrpcEngine(engineTarget);
+                standardLogger.log(Level.FINEST, "Created deployment engine");
+
+                standardLogger.log(Level.FINEST, "Creating deployment monitor");
+                var monitor = new GrpcMonitor(monitorTarget);
+                standardLogger.log(Level.FINEST, "Created deployment monitor");
+
+                return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
+            } catch (NullPointerException ex) {
+                throw new IllegalStateException(
+                        "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);
+            }
+        }
     }
 
     @ParametersAreNonnullByDefault
@@ -1638,7 +1655,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // If so, we end with a different exit code. The language host recognizes this and will not print
         // any further messages to the user since we already took care of it.
         //
-        // 32 was picked so as to be very unlikely to collide with any other error codes.
+        // 32 was picked to be very unlikely to collide with any other error codes.
         private static final int ProcessExitedAfterLoggingUserActionableMessage = 32;
 
         private final Logger standardLogger;
@@ -1691,9 +1708,15 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @Override
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-            var stack = StackInternal.of(callback, options);
-            registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                    Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+            try {
+                var stack = StackInternal.of(callback, options);
+                // no outputs to register here
+                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
+                        Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+            } catch (Exception ex) {
+                return handleExceptionAsync(ex);
+            }
+
             return whileRunningAsync();
         }
 
