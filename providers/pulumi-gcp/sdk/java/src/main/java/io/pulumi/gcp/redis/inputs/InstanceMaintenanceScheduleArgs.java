@@ -15,7 +15,7 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
     public static final InstanceMaintenanceScheduleArgs Empty = new InstanceMaintenanceScheduleArgs();
 
     /**
-     * - 
+     * -
      * Output only. The end time of any upcoming scheduled maintenance for this instance.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -29,7 +29,7 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
     }
 
     /**
-     * - 
+     * -
      * Output only. The deadline that the maintenance schedule start time
      * can not go beyond, including reschedule.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
@@ -44,7 +44,7 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
     }
 
     /**
-     * - 
+     * -
      * Output only. The start time of any upcoming scheduled maintenance for this instance.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.

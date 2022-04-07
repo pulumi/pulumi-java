@@ -38,7 +38,7 @@ public final class BackendServiceIapArgs extends io.pulumi.resources.ResourceArg
     }
 
     /**
-     * - 
+     * -
      * OAuth2 Client Secret SHA-256 for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 

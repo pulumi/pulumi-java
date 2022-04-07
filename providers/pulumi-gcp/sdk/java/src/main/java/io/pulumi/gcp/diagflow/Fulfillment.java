@@ -19,13 +19,144 @@ import javax.annotation.Nullable;
 /**
  * By default, your agent responds to a matched intent with a static response. If you're using one of the integration options, you can provide a more dynamic response by using fulfillment. When you enable fulfillment for an intent, Dialogflow responds to that intent by calling a service that you define. For example, if an end-user wants to schedule a haircut on Friday, your service can check your database and respond to the end-user with availability information for Friday.
  * 
+ * 
  * To get more information about Fulfillment, see:
  * 
  * * [API documentation](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2/projects.agent/getFulfillment)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/es/docs/fulfillment-overview)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflow Fulfillment Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basicAgent = new gcp.diagflow.Agent("basicAgent", {
+ *     displayName: "example_agent",
+ *     defaultLanguageCode: "en",
+ *     timeZone: "America/New_York",
+ * });
+ * const basicFulfillment = new gcp.diagflow.Fulfillment("basicFulfillment", {
+ *     displayName: "basic-fulfillment",
+ *     enabled: true,
+ *     genericWebService: {
+ *         uri: "https://google.com",
+ *         username: "admin",
+ *         password: "password",
+ *         requestHeaders: {
+ *             name: "wrench",
+ *         },
+ *     },
+ * }, {
+ *     dependsOn: [basicAgent],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic_agent = gcp.diagflow.Agent("basicAgent",
+ *     display_name="example_agent",
+ *     default_language_code="en",
+ *     time_zone="America/New_York")
+ * basic_fulfillment = gcp.diagflow.Fulfillment("basicFulfillment",
+ *     display_name="basic-fulfillment",
+ *     enabled=True,
+ *     generic_web_service=gcp.diagflow.FulfillmentGenericWebServiceArgs(
+ *         uri="https://google.com",
+ *         username="admin",
+ *         password="password",
+ *         request_headers={
+ *             "name": "wrench",
+ *         },
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[basic_agent]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicAgent = new Gcp.Diagflow.Agent("basicAgent", new Gcp.Diagflow.AgentArgs
+ *         {
+ *             DisplayName = "example_agent",
+ *             DefaultLanguageCode = "en",
+ *             TimeZone = "America/New_York",
+ *         });
+ *         var basicFulfillment = new Gcp.Diagflow.Fulfillment("basicFulfillment", new Gcp.Diagflow.FulfillmentArgs
+ *         {
+ *             DisplayName = "basic-fulfillment",
+ *             Enabled = true,
+ *             GenericWebService = new Gcp.Diagflow.Inputs.FulfillmentGenericWebServiceArgs
+ *             {
+ *                 Uri = "https://google.com",
+ *                 Username = "admin",
+ *                 Password = "password",
+ *                 RequestHeaders = 
+ *                 {
+ *                     { "name", "wrench" },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 basicAgent,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicAgent, err := diagflow.NewAgent(ctx, "basicAgent", &diagflow.AgentArgs{
+ * 			DisplayName:         pulumi.String("example_agent"),
+ * 			DefaultLanguageCode: pulumi.String("en"),
+ * 			TimeZone:            pulumi.String("America/New_York"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = diagflow.NewFulfillment(ctx, "basicFulfillment", &diagflow.FulfillmentArgs{
+ * 			DisplayName: pulumi.String("basic-fulfillment"),
+ * 			Enabled:     pulumi.Bool(true),
+ * 			GenericWebService: &diagflow.FulfillmentGenericWebServiceArgs{
+ * 				Uri:      pulumi.String("https://google.com"),
+ * 				Username: pulumi.String("admin"),
+ * 				Password: pulumi.String("password"),
+ * 				RequestHeaders: pulumi.StringMap{
+ * 					"name": pulumi.String("wrench"),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			basicAgent,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +166,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/fulfillment:Fulfillment default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/fulfillment:Fulfillment")
 public class Fulfillment extends io.pulumi.resources.CustomResource {

@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EntryGcsFilesetSpecSampleGcsFileSpec {
     /**
-     * - 
+     * -
      * The full file path
      * 
      */
     private final @Nullable String filePath;
     /**
-     * - 
+     * -
      * The size of the file, in bytes.
      * 
      */
@@ -34,7 +34,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
     }
 
     /**
-     * - 
+     * -
      * The full file path
      * 
     */
@@ -42,7 +42,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
         return Optional.ofNullable(this.filePath);
     }
     /**
-     * - 
+     * -
      * The size of the file, in bytes.
      * 
     */

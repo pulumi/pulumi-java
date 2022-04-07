@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QueueAppEngineRoutingOverride {
     /**
-     * - 
+     * -
      * The host that the task is sent to.
      * 
      */
@@ -49,7 +49,7 @@ public final class QueueAppEngineRoutingOverride {
     }
 
     /**
-     * - 
+     * -
      * The host that the task is sent to.
      * 
     */

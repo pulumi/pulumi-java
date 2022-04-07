@@ -116,7 +116,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * - 
+     * -
      * The unique resource name for this condition.
      * Its syntax is:
      * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]

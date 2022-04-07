@@ -67,7 +67,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
     }
 
     /**
-     * - 
+     * -
      * The time the last patch job ran successfully.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 

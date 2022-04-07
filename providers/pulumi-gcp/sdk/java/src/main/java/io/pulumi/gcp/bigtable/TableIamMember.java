@@ -26,9 +26,245 @@ import javax.annotation.Nullable;
  * 
  * ## google\_bigtable\_table\_iam\_policy
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/bigtable.user",
+ *         members: ["user:jane@example.com"],
+ *     }],
+ * });
+ * const editor = new gcp.bigtable.TableIamPolicy("editor", {
+ *     project: "your-project",
+ *     instance: "your-bigtable-instance",
+ *     table: "your-bigtable-table",
+ *     policyData: admin.then(admin => admin.policyData),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/bigtable.user",
+ *     members=["user:jane@example.com"],
+ * )])
+ * editor = gcp.bigtable.TableIamPolicy("editor",
+ *     project="your-project",
+ *     instance="your-bigtable-instance",
+ *     table="your-bigtable-table",
+ *     policy_data=admin.policy_data)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/bigtable.user",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var editor = new Gcp.BigTable.TableIamPolicy("editor", new Gcp.BigTable.TableIamPolicyArgs
+ *         {
+ *             Project = "your-project",
+ *             Instance = "your-bigtable-instance",
+ *             Table = "your-bigtable-table",
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigtable"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/bigtable.user",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = bigtable.NewTableIamPolicy(ctx, "editor", &bigtable.TableIamPolicyArgs{
+ * 			Project:    pulumi.String("your-project"),
+ * 			Instance:   pulumi.String("your-bigtable-instance"),
+ * 			Table:      pulumi.String("your-bigtable-table"),
+ * 			PolicyData: pulumi.String(admin.PolicyData),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_bigtable\_table\_iam\_binding
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const editor = new gcp.bigtable.TableIamBinding("editor", {
+ *     instance: "your-bigtable-instance",
+ *     members: ["user:jane@example.com"],
+ *     role: "roles/bigtable.user",
+ *     table: "your-bigtable-table",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * editor = gcp.bigtable.TableIamBinding("editor",
+ *     instance="your-bigtable-instance",
+ *     members=["user:jane@example.com"],
+ *     role="roles/bigtable.user",
+ *     table="your-bigtable-table")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var editor = new Gcp.BigTable.TableIamBinding("editor", new Gcp.BigTable.TableIamBindingArgs
+ *         {
+ *             Instance = "your-bigtable-instance",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *             Role = "roles/bigtable.user",
+ *             Table = "your-bigtable-table",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigtable"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := bigtable.NewTableIamBinding(ctx, "editor", &bigtable.TableIamBindingArgs{
+ * 			Instance: pulumi.String("your-bigtable-instance"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 			Role:  pulumi.String("roles/bigtable.user"),
+ * 			Table: pulumi.String("your-bigtable-table"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_bigtable\_table\_iam\_member
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const editor = new gcp.bigtable.TableIamMember("editor", {
+ *     instance: "your-bigtable-instance",
+ *     member: "user:jane@example.com",
+ *     role: "roles/bigtable.user",
+ *     table: "your-bigtable-table",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * editor = gcp.bigtable.TableIamMember("editor",
+ *     instance="your-bigtable-instance",
+ *     member="user:jane@example.com",
+ *     role="roles/bigtable.user",
+ *     table="your-bigtable-table")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var editor = new Gcp.BigTable.TableIamMember("editor", new Gcp.BigTable.TableIamMemberArgs
+ *         {
+ *             Instance = "your-bigtable-instance",
+ *             Member = "user:jane@example.com",
+ *             Role = "roles/bigtable.user",
+ *             Table = "your-bigtable-table",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigtable"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := bigtable.NewTableIamMember(ctx, "editor", &bigtable.TableIamMemberArgs{
+ * 			Instance: pulumi.String("your-bigtable-instance"),
+ * 			Member:   pulumi.String("user:jane@example.com"),
+ * 			Role:     pulumi.String("roles/bigtable.user"),
+ * 			Table:    pulumi.String("your-bigtable-table"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -38,9 +274,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor "projects/{project}/tables/{table}"
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor "projects/{project}/tables/{table} roles/editor"
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor "projects/{project}/tables/{table} roles/editor user:jane@example.com"
@@ -48,8 +288,7 @@ import javax.annotation.Nullable;
  * 
  *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
  * 
- * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
- * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. 
  */
 @ResourceType(type="gcp:bigtable/tableIamMember:TableIamMember")
 public class TableIamMember extends io.pulumi.resources.CustomResource {

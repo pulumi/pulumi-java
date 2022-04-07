@@ -22,7 +22,151 @@ import javax.annotation.Nullable;
  * [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
  * the marketplace prior to using this resource.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Identity Platform Tenant Inbound Saml Config Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+ * const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig", {
+ *     displayName: "Display Name",
+ *     tenant: tenant.name,
+ *     idpConfig: {
+ *         idpEntityId: "tf-idp",
+ *         signRequest: true,
+ *         ssoUrl: "https://example.com",
+ *         idpCertificates: [{
+ *             x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+ *         }],
+ *     },
+ *     spConfig: {
+ *         spEntityId: "tf-sp",
+ *         callbackUri: "https://example.com",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+ * tenant_saml_config = gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig",
+ *     display_name="Display Name",
+ *     tenant=tenant.name,
+ *     idp_config=gcp.identityplatform.TenantInboundSamlConfigIdpConfigArgs(
+ *         idp_entity_id="tf-idp",
+ *         sign_request=True,
+ *         sso_url="https://example.com",
+ *         idp_certificates=[gcp.identityplatform.TenantInboundSamlConfigIdpConfigIdpCertificateArgs(
+ *             x509_certificate=(lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+ *         )],
+ *     ),
+ *     sp_config=gcp.identityplatform.TenantInboundSamlConfigSpConfigArgs(
+ *         sp_entity_id="tf-sp",
+ *         callback_uri="https://example.com",
+ *     ))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tenant = new Gcp.IdentityPlatform.Tenant("tenant", new Gcp.IdentityPlatform.TenantArgs
+ *         {
+ *             DisplayName = "tenant",
+ *         });
+ *         var tenantSamlConfig = new Gcp.IdentityPlatform.TenantInboundSamlConfig("tenantSamlConfig", new Gcp.IdentityPlatform.TenantInboundSamlConfigArgs
+ *         {
+ *             DisplayName = "Display Name",
+ *             Tenant = tenant.Name,
+ *             IdpConfig = new Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigIdpConfigArgs
+ *             {
+ *                 IdpEntityId = "tf-idp",
+ *                 SignRequest = true,
+ *                 SsoUrl = "https://example.com",
+ *                 IdpCertificates = 
+ *                 {
+ *                     new Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigIdpConfigIdpCertificateArgs
+ *                     {
+ *                         X509Certificate = File.ReadAllText("test-fixtures/rsa_cert.pem"),
+ *                     },
+ *                 },
+ *             },
+ *             SpConfig = new Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigSpConfigArgs
+ *             {
+ *                 SpEntityId = "tf-sp",
+ *                 CallbackUri = "https://example.com",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/identityplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tenant, err := identityplatform.NewTenant(ctx, "tenant", &identityplatform.TenantArgs{
+ * 			DisplayName: pulumi.String("tenant"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = identityplatform.NewTenantInboundSamlConfig(ctx, "tenantSamlConfig", &identityplatform.TenantInboundSamlConfigArgs{
+ * 			DisplayName: pulumi.String("Display Name"),
+ * 			Tenant:      tenant.Name,
+ * 			IdpConfig: &identityplatform.TenantInboundSamlConfigIdpConfigArgs{
+ * 				IdpEntityId: pulumi.String("tf-idp"),
+ * 				SignRequest: pulumi.Bool(true),
+ * 				SsoUrl:      pulumi.String("https://example.com"),
+ * 				IdpCertificates: identityplatform.TenantInboundSamlConfigIdpConfigIdpCertificateArray{
+ * 					&identityplatform.TenantInboundSamlConfigIdpConfigIdpCertificateArgs{
+ * 						X509Certificate: readFileOrPanic("test-fixtures/rsa_cert.pem"),
+ * 					},
+ * 				},
+ * 			},
+ * 			SpConfig: &identityplatform.TenantInboundSamlConfigSpConfigArgs{
+ * 				SpEntityId:  pulumi.String("tf-sp"),
+ * 				CallbackUri: pulumi.String("https://example.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +176,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default projects/{{project}}/tenants/{{tenant}}/inboundSamlConfigs/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{project}}/{{tenant}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{tenant}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig")
 public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource {

@@ -24,7 +24,161 @@ import javax.annotation.Nullable;
  * key/value pairs within the project metadata rather than the entire set, then use
  * google_compute_project_metadata_item.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultProjectMetadata = new gcp.compute.ProjectMetadata("default", {
+ *     metadata: {
+ *         "13": "42",
+ *         fizz: "buzz",
+ *         foo: "bar",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.ProjectMetadata("default", metadata={
+ *     "13": "42",
+ *     "fizz": "buzz",
+ *     "foo": "bar",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.ProjectMetadata("default", new Gcp.Compute.ProjectMetadataArgs
+ *         {
+ *             Metadata = 
+ *             {
+ *                 { "13", "42" },
+ *                 { "fizz", "buzz" },
+ *                 { "foo", "bar" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewProjectMetadata(ctx, "default", &compute.ProjectMetadataArgs{
+ * 			Metadata: pulumi.StringMap{
+ * 				"13":   pulumi.String("42"),
+ * 				"fizz": pulumi.String("buzz"),
+ * 				"foo":  pulumi.String("bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Adding An SSH Key
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * //A key set in project metadata is propagated to every instance in the project.
+ * //This resource configuration is prone to causing frequent diffs as Google adds SSH Keys when the SSH Button is pressed in the console.
+ * //It is better to use OS Login instead.
+ * const mySshKey = new gcp.compute.ProjectMetadata("my_ssh_key", {
+ *     metadata: {
+ *         "ssh-keys": `      dev:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT dev
+ *       foo:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT bar
+ *     `,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * #A key set in project metadata is propagated to every instance in the project.
+ * #This resource configuration is prone to causing frequent diffs as Google adds SSH Keys when the SSH Button is pressed in the console.
+ * #It is better to use OS Login instead.
+ * my_ssh_key = gcp.compute.ProjectMetadata("mySshKey", metadata={
+ *     "ssh-keys": """      dev:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT dev
+ *       foo:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT bar
+ *     
+ * """,
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         //A key set in project metadata is propagated to every instance in the project.
+ *         //This resource configuration is prone to causing frequent diffs as Google adds SSH Keys when the SSH Button is pressed in the console.
+ *         //It is better to use OS Login instead.
+ *         var mySshKey = new Gcp.Compute.ProjectMetadata("mySshKey", new Gcp.Compute.ProjectMetadataArgs
+ *         {
+ *             Metadata = 
+ *             {
+ *                 { "ssh-keys", @"      dev:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT dev
+ *       foo:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT bar
+ *     
+ * " },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewProjectMetadata(ctx, "mySshKey", &compute.ProjectMetadataArgs{
+ * 			Metadata: pulumi.StringMap{
+ * 				"ssh-keys": pulumi.String(fmt.Sprintf("%v%v%v", "      dev:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT dev\n", "      foo:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT bar\n", "    \n")),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +188,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/projectMetadata:ProjectMetadata foo my-project-id`
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/projectMetadata:ProjectMetadata")
 public class ProjectMetadata extends io.pulumi.resources.CustomResource {

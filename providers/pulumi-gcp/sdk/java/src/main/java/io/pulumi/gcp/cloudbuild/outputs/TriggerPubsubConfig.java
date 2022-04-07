@@ -17,14 +17,14 @@ public final class TriggerPubsubConfig {
      */
     private final @Nullable String serviceAccountEmail;
     /**
-     * - 
+     * -
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 
      */
     private final @Nullable String state;
     /**
-     * - 
+     * -
      * Output only. Name of the subscription.
      * 
      */
@@ -55,7 +55,7 @@ public final class TriggerPubsubConfig {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
     /**
-     * - 
+     * -
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 
@@ -64,7 +64,7 @@ public final class TriggerPubsubConfig {
         return Optional.ofNullable(this.state);
     }
     /**
-     * - 
+     * -
      * Output only. Name of the subscription.
      * 
     */

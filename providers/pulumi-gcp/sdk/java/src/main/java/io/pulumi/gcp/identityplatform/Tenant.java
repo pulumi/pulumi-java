@@ -23,7 +23,71 @@ import javax.annotation.Nullable;
  * You must [enable multi-tenancy](https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart) via
  * the Cloud Console prior to creating tenants.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Identity Platform Tenant Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const tenant = new gcp.identityplatform.Tenant("tenant", {
+ *     allowPasswordSignup: true,
+ *     displayName: "tenant",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * tenant = gcp.identityplatform.Tenant("tenant",
+ *     allow_password_signup=True,
+ *     display_name="tenant")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tenant = new Gcp.IdentityPlatform.Tenant("tenant", new Gcp.IdentityPlatform.TenantArgs
+ *         {
+ *             AllowPasswordSignup = true,
+ *             DisplayName = "tenant",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/identityplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := identityplatform.NewTenant(ctx, "tenant", &identityplatform.TenantArgs{
+ * 			AllowPasswordSignup: pulumi.Bool(true),
+ * 			DisplayName:         pulumi.String("tenant"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +97,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:identityplatform/tenant:Tenant default projects/{{project}}/tenants/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/tenant:Tenant default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/tenant:Tenant default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:identityplatform/tenant:Tenant")
 public class Tenant extends io.pulumi.resources.CustomResource {

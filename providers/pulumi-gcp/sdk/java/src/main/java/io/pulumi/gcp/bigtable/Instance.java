@@ -23,7 +23,100 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/bigtable/docs)
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Production Instance
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const production_instance = new gcp.bigtable.Instance("production-instance", {
+ *     clusters: [{
+ *         clusterId: "tf-instance-cluster",
+ *         numNodes: 1,
+ *         storageType: "HDD",
+ *     }],
+ *     labels: {
+ *         "my-label": "prod-label",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * production_instance = gcp.bigtable.Instance("production-instance",
+ *     clusters=[gcp.bigtable.InstanceClusterArgs(
+ *         cluster_id="tf-instance-cluster",
+ *         num_nodes=1,
+ *         storage_type="HDD",
+ *     )],
+ *     labels={
+ *         "my-label": "prod-label",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var production_instance = new Gcp.BigTable.Instance("production-instance", new Gcp.BigTable.InstanceArgs
+ *         {
+ *             Clusters = 
+ *             {
+ *                 new Gcp.BigTable.Inputs.InstanceClusterArgs
+ *                 {
+ *                     ClusterId = "tf-instance-cluster",
+ *                     NumNodes = 1,
+ *                     StorageType = "HDD",
+ *                 },
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "my-label", "prod-label" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigtable"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := bigtable.NewInstance(ctx, "production-instance", &bigtable.InstanceArgs{
+ * 			Clusters: bigtable.InstanceClusterArray{
+ * 				&bigtable.InstanceClusterArgs{
+ * 					ClusterId:   pulumi.String("tf-instance-cluster"),
+ * 					NumNodes:    pulumi.Int(1),
+ * 					StorageType: pulumi.String("HDD"),
+ * 				},
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"my-label": pulumi.String("prod-label"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +126,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigtable/instance:Instance default projects/{{project}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:bigtable/instance:Instance default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:bigtable/instance:Instance default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:bigtable/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
@@ -99,7 +197,6 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * It is recommended to leave this field unspecified since the distinction between "DEVELOPMENT" and "PRODUCTION" instances is going away, and all instances will become "PRODUCTION" instances. This means that new and existing "DEVELOPMENT" instances will be converted to "PRODUCTION" instances. It is recommended for users to use "PRODUCTION" instances in any case, since a 1-node "PRODUCTION" instance is functionally identical to a "DEVELOPMENT" instance, but without the accompanying restrictions.
-     * 
      */
     @Deprecated /* It is recommended to leave this field unspecified since the distinction between ""DEVELOPMENT"" and ""PRODUCTION"" instances is going away, and all instances will become ""PRODUCTION"" instances. This means that new and existing ""DEVELOPMENT"" instances will be converted to ""PRODUCTION"" instances. It is recommended for users to use ""PRODUCTION"" instances in any case, since a 1-node ""PRODUCTION"" instance is functionally identical to a ""DEVELOPMENT"" instance, but without the accompanying restrictions. */
     @Export(name="instanceType", type=String.class, parameters={})

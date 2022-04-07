@@ -18,7 +18,81 @@ import javax.annotation.Nullable;
 /**
  * The NetworkConnectivity Hub resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic_hub
+ * A basic test of a networkconnectivity hub
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.networkconnectivity.Hub("primary", {
+ *     description: "A sample hub",
+ *     labels: {
+ *         "label-one": "value-one",
+ *     },
+ *     project: "my-project-name",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.networkconnectivity.Hub("primary",
+ *     description="A sample hub",
+ *     labels={
+ *         "label-one": "value-one",
+ *     },
+ *     project="my-project-name")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.NetworkConnectivity.Hub("primary", new Gcp.NetworkConnectivity.HubArgs
+ *         {
+ *             Description = "A sample hub",
+ *             Labels = 
+ *             {
+ *                 { "label-one", "value-one" },
+ *             },
+ *             Project = "my-project-name",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/networkconnectivity"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkconnectivity.NewHub(ctx, "primary", &networkconnectivity.HubArgs{
+ * 			Description: pulumi.String("A sample hub"),
+ * 			Labels: pulumi.StringMap{
+ * 				"label-one": pulumi.String("value-one"),
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,14 +102,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:networkconnectivity/hub:Hub default projects/{{project}}/locations/global/hubs/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:networkconnectivity/hub:Hub default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:networkconnectivity/hub:Hub default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:networkconnectivity/hub:Hub")
 public class Hub extends io.pulumi.resources.CustomResource {

@@ -15,13 +15,16 @@ import javax.annotation.Nullable;
 /**
  * An `Environment` in Apigee.
  * 
+ * 
  * To get more information about Environment, see:
  * 
  * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.environments/create)
  * * How-to Guides
  *     * [Creating an environment](https://cloud.google.com/apigee/docs/api-platform/get-started/create-environment)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +34,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:apigee/environment:Environment default {{org_id}}/environments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:apigee/environment:Environment default {{org_id}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:apigee/environment:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {

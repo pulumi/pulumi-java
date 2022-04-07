@@ -19,6 +19,7 @@ import javax.annotation.Nullable;
  *  This resource manages composite indexes and not single
  * field indexes.
  * 
+ * 
  * To get more information about Index, see:
  * 
  * * [API documentation](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes)
@@ -31,7 +32,112 @@ import javax.annotation.Nullable;
  * `"CLOUD_FIRESTORE"` to do so. Your Firestore location will be the same as
  * the App Engine location specified.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Firestore Index Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const my_index = new gcp.firestore.Index("my-index", {
+ *     collection: "chatrooms",
+ *     fields: [
+ *         {
+ *             fieldPath: "name",
+ *             order: "ASCENDING",
+ *         },
+ *         {
+ *             fieldPath: "description",
+ *             order: "DESCENDING",
+ *         },
+ *     ],
+ *     project: "my-project-name",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_index = gcp.firestore.Index("my-index",
+ *     collection="chatrooms",
+ *     fields=[
+ *         gcp.firestore.IndexFieldArgs(
+ *             field_path="name",
+ *             order="ASCENDING",
+ *         ),
+ *         gcp.firestore.IndexFieldArgs(
+ *             field_path="description",
+ *             order="DESCENDING",
+ *         ),
+ *     ],
+ *     project="my-project-name")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var my_index = new Gcp.Firestore.Index("my-index", new Gcp.Firestore.IndexArgs
+ *         {
+ *             Collection = "chatrooms",
+ *             Fields = 
+ *             {
+ *                 new Gcp.Firestore.Inputs.IndexFieldArgs
+ *                 {
+ *                     FieldPath = "name",
+ *                     Order = "ASCENDING",
+ *                 },
+ *                 new Gcp.Firestore.Inputs.IndexFieldArgs
+ *                 {
+ *                     FieldPath = "description",
+ *                     Order = "DESCENDING",
+ *                 },
+ *             },
+ *             Project = "my-project-name",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/firestore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := firestore.NewIndex(ctx, "my-index", &firestore.IndexArgs{
+ * 			Collection: pulumi.String("chatrooms"),
+ * 			Fields: firestore.IndexFieldArray{
+ * 				&firestore.IndexFieldArgs{
+ * 					FieldPath: pulumi.String("name"),
+ * 					Order:     pulumi.String("ASCENDING"),
+ * 				},
+ * 				&firestore.IndexFieldArgs{
+ * 					FieldPath: pulumi.String("description"),
+ * 					Order:     pulumi.String("DESCENDING"),
+ * 				},
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,6 +147,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:firestore/index:Index default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:firestore/index:Index")
 public class Index extends io.pulumi.resources.CustomResource {

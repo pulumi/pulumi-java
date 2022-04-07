@@ -17,7 +17,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     public static final InstanceMaintenancePolicyArgs Empty = new InstanceMaintenancePolicyArgs();
 
     /**
-     * - 
+     * -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -44,7 +44,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     }
 
     /**
-     * - 
+     * -
      * Output only. The time when the policy was last updated.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.

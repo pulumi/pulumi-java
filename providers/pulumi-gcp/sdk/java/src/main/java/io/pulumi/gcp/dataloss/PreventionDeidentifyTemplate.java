@@ -16,13 +16,482 @@ import javax.annotation.Nullable;
 /**
  * Allows creation of templates to de-identify content.
  * 
+ * 
  * To get more information about DeidentifyTemplate, see:
  * 
  * * [API documentation](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.deidentifyTemplates)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dlp/docs/concepts-templates)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dlp Deidentify Template Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
+ *     deidentifyConfig: {
+ *         infoTypeTransformations: {
+ *             transformations: [
+ *                 {
+ *                     infoTypes: [{
+ *                         name: "FIRST_NAME",
+ *                     }],
+ *                     primitiveTransformation: {
+ *                         replaceWithInfoTypeConfig: true,
+ *                     },
+ *                 },
+ *                 {
+ *                     infoTypes: [
+ *                         {
+ *                             name: "PHONE_NUMBER",
+ *                         },
+ *                         {
+ *                             name: "AGE",
+ *                         },
+ *                     ],
+ *                     primitiveTransformation: {
+ *                         replaceConfig: {
+ *                             newValue: {
+ *                                 integerValue: 9,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 {
+ *                     infoTypes: [
+ *                         {
+ *                             name: "EMAIL_ADDRESS",
+ *                         },
+ *                         {
+ *                             name: "LAST_NAME",
+ *                         },
+ *                     ],
+ *                     primitiveTransformation: {
+ *                         characterMaskConfig: {
+ *                             charactersToIgnores: [{
+ *                                 commonCharactersToIgnore: "PUNCTUATION",
+ *                             }],
+ *                             maskingCharacter: "X",
+ *                             numberToMask: 4,
+ *                             reverseOrder: true,
+ *                         },
+ *                     },
+ *                 },
+ *                 {
+ *                     infoTypes: [{
+ *                         name: "DATE_OF_BIRTH",
+ *                     }],
+ *                     primitiveTransformation: {
+ *                         replaceConfig: {
+ *                             newValue: {
+ *                                 dateValue: {
+ *                                     day: 1,
+ *                                     month: 1,
+ *                                     year: 2020,
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 {
+ *                     infoTypes: [{
+ *                         name: "CREDIT_CARD_NUMBER",
+ *                     }],
+ *                     primitiveTransformation: {
+ *                         cryptoDeterministicConfig: {
+ *                             context: {
+ *                                 name: "sometweak",
+ *                             },
+ *                             cryptoKey: {
+ *                                 transient: {
+ *                                     name: "beep",
+ *                                 },
+ *                             },
+ *                             surrogateInfoType: {
+ *                                 name: "abc",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *     },
+ *     description: "Description",
+ *     displayName: "Displayname",
+ *     parent: "projects/my-project-name",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.dataloss.PreventionDeidentifyTemplate("basic",
+ *     deidentify_config=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigArgs(
+ *         info_type_transformations=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs(
+ *             transformations=[
+ *                 gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
+ *                     info_types=[gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+ *                         name="FIRST_NAME",
+ *                     )],
+ *                     primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
+ *                         replace_with_info_type_config=True,
+ *                     ),
+ *                 ),
+ *                 gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
+ *                     info_types=[
+ *                         gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+ *                             name="PHONE_NUMBER",
+ *                         ),
+ *                         gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+ *                             name="AGE",
+ *                         ),
+ *                     ],
+ *                     primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
+ *                         replace_config=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs(
+ *                             new_value=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs(
+ *                                 integer_value=9,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ),
+ *                 gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
+ *                     info_types=[
+ *                         gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+ *                             name="EMAIL_ADDRESS",
+ *                         ),
+ *                         gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+ *                             name="LAST_NAME",
+ *                         ),
+ *                     ],
+ *                     primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
+ *                         character_mask_config=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs(
+ *                             characters_to_ignore=[{
+ *                                 "commonCharactersToIgnore": "PUNCTUATION",
+ *                             }],
+ *                             masking_character="X",
+ *                             number_to_mask=4,
+ *                             reverse_order=True,
+ *                         ),
+ *                     ),
+ *                 ),
+ *                 gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
+ *                     info_types=[gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+ *                         name="DATE_OF_BIRTH",
+ *                     )],
+ *                     primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
+ *                         replace_config=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs(
+ *                             new_value=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs(
+ *                                 date_value=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs(
+ *                                     day=1,
+ *                                     month=1,
+ *                                     year=2020,
+ *                                 ),
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ),
+ *                 gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
+ *                     info_types=[gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+ *                         name="CREDIT_CARD_NUMBER",
+ *                     )],
+ *                     primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
+ *                         crypto_deterministic_config=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs(
+ *                             context=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs(
+ *                                 name="sometweak",
+ *                             ),
+ *                             crypto_key=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs(
+ *                                 transient=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs(
+ *                                     name="beep",
+ *                                 ),
+ *                             ),
+ *                             surrogate_info_type=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs(
+ *                                 name="abc",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ),
+ *             ],
+ *         ),
+ *     ),
+ *     description="Description",
+ *     display_name="Displayname",
+ *     parent="projects/my-project-name")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.DataLoss.PreventionDeidentifyTemplate("basic", new Gcp.DataLoss.PreventionDeidentifyTemplateArgs
+ *         {
+ *             DeidentifyConfig = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigArgs
+ *             {
+ *                 InfoTypeTransformations = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs
+ *                 {
+ *                     Transformations = 
+ *                     {
+ *                         new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs
+ *                         {
+ *                             InfoTypes = 
+ *                             {
+ *                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+ *                                 {
+ *                                     Name = "FIRST_NAME",
+ *                                 },
+ *                             },
+ *                             PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
+ *                             {
+ *                                 ReplaceWithInfoTypeConfig = true,
+ *                             },
+ *                         },
+ *                         new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs
+ *                         {
+ *                             InfoTypes = 
+ *                             {
+ *                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+ *                                 {
+ *                                     Name = "PHONE_NUMBER",
+ *                                 },
+ *                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+ *                                 {
+ *                                     Name = "AGE",
+ *                                 },
+ *                             },
+ *                             PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
+ *                             {
+ *                                 ReplaceConfig = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs
+ *                                 {
+ *                                     NewValue = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs
+ *                                     {
+ *                                         IntegerValue = 9,
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                         new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs
+ *                         {
+ *                             InfoTypes = 
+ *                             {
+ *                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+ *                                 {
+ *                                     Name = "EMAIL_ADDRESS",
+ *                                 },
+ *                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+ *                                 {
+ *                                     Name = "LAST_NAME",
+ *                                 },
+ *                             },
+ *                             PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
+ *                             {
+ *                                 CharacterMaskConfig = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs
+ *                                 {
+ *                                     CharactersToIgnore = 
+ *                                     {
+ *                                         
+ *                                         {
+ *                                             { "commonCharactersToIgnore", "PUNCTUATION" },
+ *                                         },
+ *                                     },
+ *                                     MaskingCharacter = "X",
+ *                                     NumberToMask = 4,
+ *                                     ReverseOrder = true,
+ *                                 },
+ *                             },
+ *                         },
+ *                         new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs
+ *                         {
+ *                             InfoTypes = 
+ *                             {
+ *                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+ *                                 {
+ *                                     Name = "DATE_OF_BIRTH",
+ *                                 },
+ *                             },
+ *                             PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
+ *                             {
+ *                                 ReplaceConfig = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs
+ *                                 {
+ *                                     NewValue = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs
+ *                                     {
+ *                                         DateValue = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs
+ *                                         {
+ *                                             Day = 1,
+ *                                             Month = 1,
+ *                                             Year = 2020,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                         new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs
+ *                         {
+ *                             InfoTypes = 
+ *                             {
+ *                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+ *                                 {
+ *                                     Name = "CREDIT_CARD_NUMBER",
+ *                                 },
+ *                             },
+ *                             PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
+ *                             {
+ *                                 CryptoDeterministicConfig = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs
+ *                                 {
+ *                                     Context = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs
+ *                                     {
+ *                                         Name = "sometweak",
+ *                                     },
+ *                                     CryptoKey = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs
+ *                                     {
+ *                                         Transient = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs
+ *                                         {
+ *                                             Name = "beep",
+ *                                         },
+ *                                     },
+ *                                     SurrogateInfoType = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs
+ *                                     {
+ *                                         Name = "abc",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Description = "Description",
+ *             DisplayName = "Displayname",
+ *             Parent = "projects/my-project-name",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataloss"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataloss.NewPreventionDeidentifyTemplate(ctx, "basic", &dataloss.PreventionDeidentifyTemplateArgs{
+ * 			DeidentifyConfig: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigArgs{
+ * 				InfoTypeTransformations: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs{
+ * 					Transformations: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArray{
+ * 						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
+ * 							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
+ * 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+ * 									Name: pulumi.String("FIRST_NAME"),
+ * 								},
+ * 							},
+ * 							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
+ * 								ReplaceWithInfoTypeConfig: pulumi.Bool(true),
+ * 							},
+ * 						},
+ * 						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
+ * 							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
+ * 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+ * 									Name: pulumi.String("PHONE_NUMBER"),
+ * 								},
+ * 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+ * 									Name: pulumi.String("AGE"),
+ * 								},
+ * 							},
+ * 							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
+ * 								ReplaceConfig: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs{
+ * 									NewValue: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs{
+ * 										IntegerValue: pulumi.Int(9),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
+ * 							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
+ * 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+ * 									Name: pulumi.String("EMAIL_ADDRESS"),
+ * 								},
+ * 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+ * 									Name: pulumi.String("LAST_NAME"),
+ * 								},
+ * 							},
+ * 							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
+ * 								CharacterMaskConfig: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs{
+ * 									CharactersToIgnore: []map[string]interface{}{
+ * 										map[string]interface{}{
+ * 											"commonCharactersToIgnore": "PUNCTUATION",
+ * 										},
+ * 									},
+ * 									MaskingCharacter: pulumi.String("X"),
+ * 									NumberToMask:     pulumi.Int(4),
+ * 									ReverseOrder:     pulumi.Bool(true),
+ * 								},
+ * 							},
+ * 						},
+ * 						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
+ * 							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
+ * 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+ * 									Name: pulumi.String("DATE_OF_BIRTH"),
+ * 								},
+ * 							},
+ * 							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
+ * 								ReplaceConfig: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigArgs{
+ * 									NewValue: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs{
+ * 										DateValue: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs{
+ * 											Day:   pulumi.Int(1),
+ * 											Month: pulumi.Int(1),
+ * 											Year:  pulumi.Int(2020),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
+ * 							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
+ * 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+ * 									Name: pulumi.String("CREDIT_CARD_NUMBER"),
+ * 								},
+ * 							},
+ * 							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
+ * 								CryptoDeterministicConfig: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs{
+ * 									Context: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs{
+ * 										Name: pulumi.String("sometweak"),
+ * 									},
+ * 									CryptoKey: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs{
+ * 										Transient: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs{
+ * 											Name: pulumi.String("beep"),
+ * 										},
+ * 									},
+ * 									SurrogateInfoType: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs{
+ * 										Name: pulumi.String("abc"),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Description: pulumi.String("Description"),
+ * 			DisplayName: pulumi.String("Displayname"),
+ * 			Parent:      pulumi.String("projects/my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,10 +501,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:dataloss/preventionDeidentifyTemplate:PreventionDeidentifyTemplate default {{parent}}/deidentifyTemplates/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:dataloss/preventionDeidentifyTemplate:PreventionDeidentifyTemplate default {{parent}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:dataloss/preventionDeidentifyTemplate:PreventionDeidentifyTemplate")
 public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomResource {

@@ -18,13 +18,200 @@ import javax.annotation.Nullable;
 /**
  * A job trigger configuration.
  * 
+ * 
  * To get more information about JobTrigger, see:
  * 
  * * [API documentation](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.jobTriggers)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-job-triggers)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dlp Job Trigger Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
+ *     description: "Description",
+ *     displayName: "Displayname",
+ *     inspectJob: {
+ *         actions: [{
+ *             saveFindings: {
+ *                 outputConfig: {
+ *                     table: {
+ *                         datasetId: "asdf",
+ *                         projectId: "asdf",
+ *                     },
+ *                 },
+ *             },
+ *         }],
+ *         inspectTemplateName: "fake",
+ *         storageConfig: {
+ *             cloudStorageOptions: {
+ *                 fileSet: {
+ *                     url: "gs://mybucket/directory/",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     parent: "projects/my-project-name",
+ *     triggers: [{
+ *         schedule: {
+ *             recurrencePeriodDuration: "86400s",
+ *         },
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic = gcp.dataloss.PreventionJobTrigger("basic",
+ *     description="Description",
+ *     display_name="Displayname",
+ *     inspect_job=gcp.dataloss.PreventionJobTriggerInspectJobArgs(
+ *         actions=[gcp.dataloss.PreventionJobTriggerInspectJobActionArgs(
+ *             save_findings=gcp.dataloss.PreventionJobTriggerInspectJobActionSaveFindingsArgs(
+ *                 output_config=gcp.dataloss.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs(
+ *                     table=gcp.dataloss.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs(
+ *                         dataset_id="asdf",
+ *                         project_id="asdf",
+ *                     ),
+ *                 ),
+ *             ),
+ *         )],
+ *         inspect_template_name="fake",
+ *         storage_config=gcp.dataloss.PreventionJobTriggerInspectJobStorageConfigArgs(
+ *             cloud_storage_options=gcp.dataloss.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs(
+ *                 file_set=gcp.dataloss.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(
+ *                     url="gs://mybucket/directory/",
+ *                 ),
+ *             ),
+ *         ),
+ *     ),
+ *     parent="projects/my-project-name",
+ *     triggers=[gcp.dataloss.PreventionJobTriggerTriggerArgs(
+ *         schedule=gcp.dataloss.PreventionJobTriggerTriggerScheduleArgs(
+ *             recurrence_period_duration="86400s",
+ *         ),
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basic = new Gcp.DataLoss.PreventionJobTrigger("basic", new Gcp.DataLoss.PreventionJobTriggerArgs
+ *         {
+ *             Description = "Description",
+ *             DisplayName = "Displayname",
+ *             InspectJob = new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobArgs
+ *             {
+ *                 Actions = 
+ *                 {
+ *                     new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionArgs
+ *                     {
+ *                         SaveFindings = new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsArgs
+ *                         {
+ *                             OutputConfig = new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs
+ *                             {
+ *                                 Table = new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs
+ *                                 {
+ *                                     DatasetId = "asdf",
+ *                                     ProjectId = "asdf",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 InspectTemplateName = "fake",
+ *                 StorageConfig = new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigArgs
+ *                 {
+ *                     CloudStorageOptions = new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs
+ *                     {
+ *                         FileSet = new Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs
+ *                         {
+ *                             Url = "gs://mybucket/directory/",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Parent = "projects/my-project-name",
+ *             Triggers = 
+ *             {
+ *                 new Gcp.DataLoss.Inputs.PreventionJobTriggerTriggerArgs
+ *                 {
+ *                     Schedule = new Gcp.DataLoss.Inputs.PreventionJobTriggerTriggerScheduleArgs
+ *                     {
+ *                         RecurrencePeriodDuration = "86400s",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataloss"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataloss.NewPreventionJobTrigger(ctx, "basic", &dataloss.PreventionJobTriggerArgs{
+ * 			Description: pulumi.String("Description"),
+ * 			DisplayName: pulumi.String("Displayname"),
+ * 			InspectJob: &dataloss.PreventionJobTriggerInspectJobArgs{
+ * 				Actions: dataloss.PreventionJobTriggerInspectJobActionArray{
+ * 					&dataloss.PreventionJobTriggerInspectJobActionArgs{
+ * 						SaveFindings: &dataloss.PreventionJobTriggerInspectJobActionSaveFindingsArgs{
+ * 							OutputConfig: &dataloss.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs{
+ * 								Table: &dataloss.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs{
+ * 									DatasetId: pulumi.String("asdf"),
+ * 									ProjectId: pulumi.String("asdf"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				InspectTemplateName: pulumi.String("fake"),
+ * 				StorageConfig: &dataloss.PreventionJobTriggerInspectJobStorageConfigArgs{
+ * 					CloudStorageOptions: &dataloss.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs{
+ * 						FileSet: &dataloss.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs{
+ * 							Url: pulumi.String("gs://mybucket/directory/"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Parent: pulumi.String("projects/my-project-name"),
+ * 			Triggers: dataloss.PreventionJobTriggerTriggerArray{
+ * 				&dataloss.PreventionJobTriggerTriggerArgs{
+ * 					Schedule: &dataloss.PreventionJobTriggerTriggerScheduleArgs{
+ * 						RecurrencePeriodDuration: pulumi.String("86400s"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,10 +221,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:dataloss/preventionJobTrigger:PreventionJobTrigger default {{parent}}/jobTriggers/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:dataloss/preventionJobTrigger:PreventionJobTrigger default {{parent}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:dataloss/preventionJobTrigger:PreventionJobTrigger")
 public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {

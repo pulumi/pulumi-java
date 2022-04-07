@@ -22,7 +22,72 @@ import javax.annotation.Nullable;
  * 
  * > You can specify exclusions for log sinks created by the provider by using the exclusions field of `gcp.logging.OrganizationSink`
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const my_exclusion = new gcp.logging.OrganizationExclusion("my-exclusion", {
+ *     description: "Exclude GCE instance debug logs",
+ *     // Exclude all DEBUG or lower severity messages relating to instances
+ *     filter: "resource.type = gce_instance AND severity <= DEBUG",
+ *     orgId: "123456789",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_exclusion = gcp.logging.OrganizationExclusion("my-exclusion",
+ *     description="Exclude GCE instance debug logs",
+ *     filter="resource.type = gce_instance AND severity <= DEBUG",
+ *     org_id="123456789")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var my_exclusion = new Gcp.Logging.OrganizationExclusion("my-exclusion", new Gcp.Logging.OrganizationExclusionArgs
+ *         {
+ *             Description = "Exclude GCE instance debug logs",
+ *             Filter = "resource.type = gce_instance AND severity <= DEBUG",
+ *             OrgId = "123456789",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logging.NewOrganizationExclusion(ctx, "my-exclusion", &logging.OrganizationExclusionArgs{
+ * 			Description: pulumi.String("Exclude GCE instance debug logs"),
+ * 			Filter:      pulumi.String("resource.type = gce_instance AND severity <= DEBUG"),
+ * 			OrgId:       pulumi.String("123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/organizationExclusion:OrganizationExclusion my_exclusion organizations/{{organization}}/exclusions/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/organizationExclusion:OrganizationExclusion")
 public class OrganizationExclusion extends io.pulumi.resources.CustomResource {

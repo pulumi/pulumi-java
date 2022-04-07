@@ -19,7 +19,122 @@ import javax.annotation.Nullable;
  * [the official documentation](https://cloud.google.com/bigtable/) and
  * [API](https://cloud.google.com/bigtable/docs/go/reference).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instance = new gcp.bigtable.Instance("instance", {clusters: [{
+ *     clusterId: "tf-instance-cluster",
+ *     zone: "us-central1-b",
+ *     numNodes: 3,
+ *     storageType: "HDD",
+ * }]});
+ * const table = new gcp.bigtable.Table("table", {
+ *     instanceName: instance.name,
+ *     splitKeys: [
+ *         "a",
+ *         "b",
+ *         "c",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance = gcp.bigtable.Instance("instance", clusters=[gcp.bigtable.InstanceClusterArgs(
+ *     cluster_id="tf-instance-cluster",
+ *     zone="us-central1-b",
+ *     num_nodes=3,
+ *     storage_type="HDD",
+ * )])
+ * table = gcp.bigtable.Table("table",
+ *     instance_name=instance.name,
+ *     split_keys=[
+ *         "a",
+ *         "b",
+ *         "c",
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+ *         {
+ *             Clusters = 
+ *             {
+ *                 new Gcp.BigTable.Inputs.InstanceClusterArgs
+ *                 {
+ *                     ClusterId = "tf-instance-cluster",
+ *                     Zone = "us-central1-b",
+ *                     NumNodes = 3,
+ *                     StorageType = "HDD",
+ *                 },
+ *             },
+ *         });
+ *         var table = new Gcp.BigTable.Table("table", new Gcp.BigTable.TableArgs
+ *         {
+ *             InstanceName = instance.Name,
+ *             SplitKeys = 
+ *             {
+ *                 "a",
+ *                 "b",
+ *                 "c",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigtable"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+ * 			Clusters: bigtable.InstanceClusterArray{
+ * 				&bigtable.InstanceClusterArgs{
+ * 					ClusterId:   pulumi.String("tf-instance-cluster"),
+ * 					Zone:        pulumi.String("us-central1-b"),
+ * 					NumNodes:    pulumi.Int(3),
+ * 					StorageType: pulumi.String("HDD"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = bigtable.NewTable(ctx, "table", &bigtable.TableArgs{
+ * 			InstanceName: instance.Name,
+ * 			SplitKeys: pulumi.StringArray{
+ * 				pulumi.String("a"),
+ * 				pulumi.String("b"),
+ * 				pulumi.String("c"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,16 +144,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigtable/table:Table default projects/{{project}}/instances/{{instance_name}}/tables/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:bigtable/table:Table default {{project}}/{{instance_name}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:bigtable/table:Table default {{instance_name}}/{{name}}
  * ```
  * 
- *  The following fields can't be read and will show diffs if set in config when imported- `split_keys`
- * 
+ *  The following fields can't be read and will show diffs if set in config when imported- `split_keys` 
  */
 @ResourceType(type="gcp:bigtable/table:Table")
 public class Table extends io.pulumi.resources.CustomResource {

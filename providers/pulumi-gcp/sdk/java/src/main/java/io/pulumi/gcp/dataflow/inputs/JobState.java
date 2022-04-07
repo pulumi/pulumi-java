@@ -234,7 +234,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * > > > > > > > v4.1.0
+     * >>>>>>> v4.1.0
      * 
      */
     @Import(name="transformNameMapping")

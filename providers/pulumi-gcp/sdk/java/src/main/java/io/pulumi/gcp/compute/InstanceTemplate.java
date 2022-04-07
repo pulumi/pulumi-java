@@ -32,7 +32,353 @@ import javax.annotation.Nullable;
  * and
  * [API](https://cloud.google.com/compute/docs/reference/latest/instanceTemplates).
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultAccount = new gcp.serviceaccount.Account("defaultAccount", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * const myImage = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * const foobar = new gcp.compute.Disk("foobar", {
+ *     image: myImage.then(myImage => myImage.selfLink),
+ *     size: 10,
+ *     type: "pd-ssd",
+ *     zone: "us-central1-a",
+ * });
+ * const dailyBackup = new gcp.compute.ResourcePolicy("dailyBackup", {
+ *     region: "us-central1",
+ *     snapshotSchedulePolicy: {
+ *         schedule: {
+ *             dailySchedule: {
+ *                 daysInCycle: 1,
+ *                 startTime: "04:00",
+ *             },
+ *         },
+ *     },
+ * });
+ * const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanceTemplate", {
+ *     description: "This template is used to create app server instances.",
+ *     tags: [
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     labels: {
+ *         environment: "dev",
+ *     },
+ *     instanceDescription: "description assigned to instances",
+ *     machineType: "e2-medium",
+ *     canIpForward: false,
+ *     scheduling: {
+ *         automaticRestart: true,
+ *         onHostMaintenance: "MIGRATE",
+ *     },
+ *     disks: [
+ *         {
+ *             sourceImage: "debian-cloud/debian-9",
+ *             autoDelete: true,
+ *             boot: true,
+ *             resourcePolicies: [dailyBackup.id],
+ *         },
+ *         {
+ *             source: foobar.name,
+ *             autoDelete: false,
+ *             boot: false,
+ *         },
+ *     ],
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ *     metadata: {
+ *         foo: "bar",
+ *     },
+ *     serviceAccount: {
+ *         email: defaultAccount.email,
+ *         scopes: ["cloud-platform"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_account = gcp.service_account.Account("defaultAccount",
+ *     account_id="service-account-id",
+ *     display_name="Service Account")
+ * my_image = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * foobar = gcp.compute.Disk("foobar",
+ *     image=my_image.self_link,
+ *     size=10,
+ *     type="pd-ssd",
+ *     zone="us-central1-a")
+ * daily_backup = gcp.compute.ResourcePolicy("dailyBackup",
+ *     region="us-central1",
+ *     snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+ *         schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+ *             daily_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs(
+ *                 days_in_cycle=1,
+ *                 start_time="04:00",
+ *             ),
+ *         ),
+ *     ))
+ * default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplate",
+ *     description="This template is used to create app server instances.",
+ *     tags=[
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     labels={
+ *         "environment": "dev",
+ *     },
+ *     instance_description="description assigned to instances",
+ *     machine_type="e2-medium",
+ *     can_ip_forward=False,
+ *     scheduling=gcp.compute.InstanceTemplateSchedulingArgs(
+ *         automatic_restart=True,
+ *         on_host_maintenance="MIGRATE",
+ *     ),
+ *     disks=[
+ *         gcp.compute.InstanceTemplateDiskArgs(
+ *             source_image="debian-cloud/debian-9",
+ *             auto_delete=True,
+ *             boot=True,
+ *             resource_policies=[daily_backup.id],
+ *         ),
+ *         gcp.compute.InstanceTemplateDiskArgs(
+ *             source=foobar.name,
+ *             auto_delete=False,
+ *             boot=False,
+ *         ),
+ *     ],
+ *     network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     metadata={
+ *         "foo": "bar",
+ *     },
+ *     service_account=gcp.compute.InstanceTemplateServiceAccountArgs(
+ *         email=default_account.email,
+ *         scopes=["cloud-platform"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultAccount = new Gcp.ServiceAccount.Account("defaultAccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "service-account-id",
+ *             DisplayName = "Service Account",
+ *         });
+ *         var myImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var foobar = new Gcp.Compute.Disk("foobar", new Gcp.Compute.DiskArgs
+ *         {
+ *             Image = myImage.Apply(myImage => myImage.SelfLink),
+ *             Size = 10,
+ *             Type = "pd-ssd",
+ *             Zone = "us-central1-a",
+ *         });
+ *         var dailyBackup = new Gcp.Compute.ResourcePolicy("dailyBackup", new Gcp.Compute.ResourcePolicyArgs
+ *         {
+ *             Region = "us-central1",
+ *             SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+ *             {
+ *                 Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+ *                 {
+ *                     DailySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
+ *                     {
+ *                         DaysInCycle = 1,
+ *                         StartTime = "04:00",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var defaultInstanceTemplate = new Gcp.Compute.InstanceTemplate("defaultInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+ *         {
+ *             Description = "This template is used to create app server instances.",
+ *             Tags = 
+ *             {
+ *                 "foo",
+ *                 "bar",
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "environment", "dev" },
+ *             },
+ *             InstanceDescription = "description assigned to instances",
+ *             MachineType = "e2-medium",
+ *             CanIpForward = false,
+ *             Scheduling = new Gcp.Compute.Inputs.InstanceTemplateSchedulingArgs
+ *             {
+ *                 AutomaticRestart = true,
+ *                 OnHostMaintenance = "MIGRATE",
+ *             },
+ *             Disks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     SourceImage = "debian-cloud/debian-9",
+ *                     AutoDelete = true,
+ *                     Boot = true,
+ *                     ResourcePolicies = 
+ *                     {
+ *                         dailyBackup.Id,
+ *                     },
+ *                 },
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     Source = foobar.Name,
+ *                     AutoDelete = false,
+ *                     Boot = false,
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *             Metadata = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             ServiceAccount = new Gcp.Compute.Inputs.InstanceTemplateServiceAccountArgs
+ *             {
+ *                 Email = defaultAccount.Email,
+ *                 Scopes = 
+ *                 {
+ *                     "cloud-platform",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultAccount, err := serviceAccount.NewAccount(ctx, "defaultAccount", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("service-account-id"),
+ * 			DisplayName: pulumi.String("Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		myImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foobar, err := compute.NewDisk(ctx, "foobar", &compute.DiskArgs{
+ * 			Image: pulumi.String(myImage.SelfLink),
+ * 			Size:  pulumi.Int(10),
+ * 			Type:  pulumi.String("pd-ssd"),
+ * 			Zone:  pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		dailyBackup, err := compute.NewResourcePolicy(ctx, "dailyBackup", &compute.ResourcePolicyArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+ * 				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+ * 					DailySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs{
+ * 						DaysInCycle: pulumi.Int(1),
+ * 						StartTime:   pulumi.String("04:00"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInstanceTemplate(ctx, "defaultInstanceTemplate", &compute.InstanceTemplateArgs{
+ * 			Description: pulumi.String("This template is used to create app server instances."),
+ * 			Tags: pulumi.StringArray{
+ * 				pulumi.String("foo"),
+ * 				pulumi.String("bar"),
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"environment": pulumi.String("dev"),
+ * 			},
+ * 			InstanceDescription: pulumi.String("description assigned to instances"),
+ * 			MachineType:         pulumi.String("e2-medium"),
+ * 			CanIpForward:        pulumi.Bool(false),
+ * 			Scheduling: &compute.InstanceTemplateSchedulingArgs{
+ * 				AutomaticRestart:  pulumi.Bool(true),
+ * 				OnHostMaintenance: pulumi.String("MIGRATE"),
+ * 			},
+ * 			Disks: compute.InstanceTemplateDiskArray{
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					SourceImage: pulumi.String("debian-cloud/debian-9"),
+ * 					AutoDelete:  pulumi.Bool(true),
+ * 					Boot:        pulumi.Bool(true),
+ * 					ResourcePolicies: pulumi.String{
+ * 						dailyBackup.ID(),
+ * 					},
+ * 				},
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					Source:     foobar.Name,
+ * 					AutoDelete: pulumi.Bool(false),
+ * 					Boot:       pulumi.Bool(false),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+ * 				&compute.InstanceTemplateNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 			Metadata: pulumi.AnyMap{
+ * 				"foo": pulumi.Any("bar"),
+ * 			},
+ * 			ServiceAccount: &compute.InstanceTemplateServiceAccountArgs{
+ * 				Email: defaultAccount.Email,
+ * 				Scopes: pulumi.StringArray{
+ * 					pulumi.String("cloud-platform"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Using with Instance Group Manager
  * 
  * Instance Templates cannot be updated after creation with the Google
@@ -41,6 +387,25 @@ import javax.annotation.Nullable;
  * use an Instance Template resource with an [Instance Group Manager resource](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html).
  * Either omit the Instance Template `name` attribute, or specify a partial name
  * with `name_prefix`. Example:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+ *     namePrefix: "instance-template-",
+ *     machineType: "e2-medium",
+ *     region: "us-central1",
+ *     disks: [{}],
+ *     networkInterfaces: [{}],
+ * });
+ * const instanceGroupManager = new gcp.compute.InstanceGroupManager("instanceGroupManager", {
+ *     instanceTemplate: instanceTemplate.id,
+ *     baseInstanceName: "instance-group-manager",
+ *     zone: "us-central1-f",
+ *     targetSize: "1",
+ * });
+ * ```
  * 
  * With this setup, this provider generates a unique name for your Instance
  * Template and can then update the Instance Group manager without conflict before
@@ -63,9 +428,187 @@ import javax.annotation.Nullable;
  * data source, which will retrieve the latest image on every `pulumi apply`, and will update
  * the template to use that specific image:
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myImage = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+ *     namePrefix: "instance-template-",
+ *     machineType: "e2-medium",
+ *     region: "us-central1",
+ *     disks: [{
+ *         sourceImage: google_compute_image.my_image.self_link,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_image = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+ *     name_prefix="instance-template-",
+ *     machine_type="e2-medium",
+ *     region="us-central1",
+ *     disks=[gcp.compute.InstanceTemplateDiskArgs(
+ *         source_image=google_compute_image["my_image"]["self_link"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var instanceTemplate = new Gcp.Compute.InstanceTemplate("instanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+ *         {
+ *             NamePrefix = "instance-template-",
+ *             MachineType = "e2-medium",
+ *             Region = "us-central1",
+ *             Disks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     SourceImage = google_compute_image.My_image.Self_link,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		_, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewInstanceTemplate(ctx, "instanceTemplate", &compute.InstanceTemplateArgs{
+ * 			NamePrefix:  pulumi.String("instance-template-"),
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			Region:      pulumi.String("us-central1"),
+ * 			Disks: compute.InstanceTemplateDiskArray{
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					SourceImage: pulumi.Any(google_compute_image.My_image.Self_link),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * To have instances update to the latest on every scaling event or instance re-creation,
  * use the family as the image for the disk, and it will use GCP's default behavior, setting
  * the image for the template to the family:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instanceTemplate = new gcp.compute.InstanceTemplate("instance_template", {
+ *     // boot disk
+ *     disks: [{
+ *         sourceImage: "debian-cloud/debian-9",
+ *     }],
+ *     machineType: "e2-medium",
+ *     namePrefix: "instance-template-",
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+ *     disks=[gcp.compute.InstanceTemplateDiskArgs(
+ *         source_image="debian-cloud/debian-9",
+ *     )],
+ *     machine_type="e2-medium",
+ *     name_prefix="instance-template-",
+ *     region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instanceTemplate = new Gcp.Compute.InstanceTemplate("instanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+ *         {
+ *             Disks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     SourceImage = "debian-cloud/debian-9",
+ *                 },
+ *             },
+ *             MachineType = "e2-medium",
+ *             NamePrefix = "instance-template-",
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewInstanceTemplate(ctx, "instanceTemplate", &compute.InstanceTemplateArgs{
+ * 			Disks: compute.InstanceTemplateDiskArray{
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					SourceImage: pulumi.String("debian-cloud/debian-9"),
+ * 				},
+ * 			},
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			NamePrefix:  pulumi.String("instance-template-"),
+ * 			Region:      pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -75,16 +618,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/instanceTemplate:InstanceTemplate default projects/{{project}}/global/instanceTemplates/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/instanceTemplate:InstanceTemplate default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/instanceTemplate:InstanceTemplate default {{name}}
  * ```
  * 
- *  [custom-vm-types]https://cloud.google.com/dataproc/docs/concepts/compute/custom-machine-types [network-tier]https://cloud.google.com/network-tiers/docs/overview
- * 
+ *  [custom-vm-types]https://cloud.google.com/dataproc/docs/concepts/compute/custom-machine-types [network-tier]https://cloud.google.com/network-tiers/docs/overview 
  */
 @ResourceType(type="gcp:compute/instanceTemplate:InstanceTemplate")
 public class InstanceTemplate extends io.pulumi.resources.CustomResource {

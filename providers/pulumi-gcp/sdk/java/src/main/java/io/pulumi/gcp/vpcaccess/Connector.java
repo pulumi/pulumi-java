@@ -17,13 +17,513 @@ import javax.annotation.Nullable;
 /**
  * Serverless VPC Access connector resource.
  * 
+ * 
  * To get more information about Connector, see:
  * 
  * * [API documentation](https://cloud.google.com/vpc/docs/reference/vpcaccess/rest/v1/projects.locations.connectors)
  * * How-to Guides
  *     * [Configuring Serverless VPC Access](https://cloud.google.com/vpc/docs/configure-serverless-vpc-access)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VPC Access Connector
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const connector = new gcp.vpcaccess.Connector("connector", {
+ *     ipCidrRange: "10.8.0.0/28",
+ *     network: "default",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * connector = gcp.vpcaccess.Connector("connector",
+ *     ip_cidr_range="10.8.0.0/28",
+ *     network="default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connector = new Gcp.VpcAccess.Connector("connector", new Gcp.VpcAccess.ConnectorArgs
+ *         {
+ *             IpCidrRange = "10.8.0.0/28",
+ *             Network = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/vpcaccess"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := vpcaccess.NewConnector(ctx, "connector", &vpcaccess.ConnectorArgs{
+ * 			IpCidrRange: pulumi.String("10.8.0.0/28"),
+ * 			Network:     pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### VPC Access Connector Shared VPC
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const customTestNetwork = new gcp.compute.Network("customTestNetwork", {autoCreateSubnetworks: false}, {
+ *     provider: google_beta,
+ * });
+ * const customTestSubnetwork = new gcp.compute.Subnetwork("customTestSubnetwork", {
+ *     ipCidrRange: "10.2.0.0/28",
+ *     region: "us-central1",
+ *     network: customTestNetwork.id,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const connector = new gcp.vpcaccess.Connector("connector", {
+ *     subnet: {
+ *         name: customTestSubnetwork.name,
+ *     },
+ *     machineType: "e2-standard-4",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * custom_test_network = gcp.compute.Network("customTestNetwork", auto_create_subnetworks=False,
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * custom_test_subnetwork = gcp.compute.Subnetwork("customTestSubnetwork",
+ *     ip_cidr_range="10.2.0.0/28",
+ *     region="us-central1",
+ *     network=custom_test_network.id,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * connector = gcp.vpcaccess.Connector("connector",
+ *     subnet=gcp.vpcaccess.ConnectorSubnetArgs(
+ *         name=custom_test_subnetwork.name,
+ *     ),
+ *     machine_type="e2-standard-4",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customTestNetwork = new Gcp.Compute.Network("customTestNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var customTestSubnetwork = new Gcp.Compute.Subnetwork("customTestSubnetwork", new Gcp.Compute.SubnetworkArgs
+ *         {
+ *             IpCidrRange = "10.2.0.0/28",
+ *             Region = "us-central1",
+ *             Network = customTestNetwork.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var connector = new Gcp.VpcAccess.Connector("connector", new Gcp.VpcAccess.ConnectorArgs
+ *         {
+ *             Subnet = new Gcp.VpcAccess.Inputs.ConnectorSubnetArgs
+ *             {
+ *                 Name = customTestSubnetwork.Name,
+ *             },
+ *             MachineType = "e2-standard-4",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/vpcaccess"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		customTestNetwork, err := compute.NewNetwork(ctx, "customTestNetwork", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		customTestSubnetwork, err := compute.NewSubnetwork(ctx, "customTestSubnetwork", &compute.SubnetworkArgs{
+ * 			IpCidrRange: pulumi.String("10.2.0.0/28"),
+ * 			Region:      pulumi.String("us-central1"),
+ * 			Network:     customTestNetwork.ID(),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = vpcaccess.NewConnector(ctx, "connector", &vpcaccess.ConnectorArgs{
+ * 			Subnet: &vpcaccess.ConnectorSubnetArgs{
+ * 				Name: customTestSubnetwork.Name,
+ * 			},
+ * 			MachineType: pulumi.String("e2-standard-4"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloudrun VPC Access Connector
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const vpcaccessApi = new gcp.projects.Service("vpcaccessApi", {
+ *     service: "vpcaccess.googleapis.com",
+ *     disableOnDestroy: false,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * // VPC
+ * const _default = new gcp.compute.Network("default", {autoCreateSubnetworks: false}, {
+ *     provider: google_beta,
+ * });
+ * // VPC access connector
+ * const connector = new gcp.vpcaccess.Connector("connector", {
+ *     region: "us-west1",
+ *     ipCidrRange: "10.8.0.0/28",
+ *     network: _default.name,
+ * }, {
+ *     provider: google_beta,
+ *     dependsOn: [vpcaccessApi],
+ * });
+ * // Cloud Router
+ * const router = new gcp.compute.Router("router", {
+ *     region: "us-west1",
+ *     network: _default.id,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * // NAT configuration
+ * const routerNat = new gcp.compute.RouterNat("routerNat", {
+ *     region: "us-west1",
+ *     router: router.name,
+ *     sourceSubnetworkIpRangesToNat: "ALL_SUBNETWORKS_ALL_IP_RANGES",
+ *     natIpAllocateOption: "AUTO_ONLY",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * // Cloud Run service
+ * const gcrService = new gcp.cloudrun.Service("gcrService", {
+ *     location: "us-west1",
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "us-docker.pkg.dev/cloudrun/container/hello",
+ *                 resources: {
+ *                     limits: {
+ *                         cpu: "1000m",
+ *                         memory: "512M",
+ *                     },
+ *                 },
+ *             }],
+ *         },
+ *         metadata: {
+ *             annotations: {
+ *                 "autoscaling.knative.dev/maxScale": "5",
+ *                 "run.googleapis.com/vpc-access-connector": connector.name,
+ *                 "run.googleapis.com/vpc-access-egress": "all",
+ *             },
+ *         },
+ *     },
+ *     autogenerateRevisionName: true,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * vpcaccess_api = gcp.projects.Service("vpcaccessApi",
+ *     service="vpcaccess.googleapis.com",
+ *     disable_on_destroy=False,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * # VPC
+ * default = gcp.compute.Network("default", auto_create_subnetworks=False,
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * # VPC access connector
+ * connector = gcp.vpcaccess.Connector("connector",
+ *     region="us-west1",
+ *     ip_cidr_range="10.8.0.0/28",
+ *     network=default.name,
+ *     opts=pulumi.ResourceOptions(provider=google_beta,
+ *         depends_on=[vpcaccess_api]))
+ * # Cloud Router
+ * router = gcp.compute.Router("router",
+ *     region="us-west1",
+ *     network=default.id,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * # NAT configuration
+ * router_nat = gcp.compute.RouterNat("routerNat",
+ *     region="us-west1",
+ *     router=router.name,
+ *     source_subnetwork_ip_ranges_to_nat="ALL_SUBNETWORKS_ALL_IP_RANGES",
+ *     nat_ip_allocate_option="AUTO_ONLY",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * # Cloud Run service
+ * gcr_service = gcp.cloudrun.Service("gcrService",
+ *     location="us-west1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="us-docker.pkg.dev/cloudrun/container/hello",
+ *                 resources=gcp.cloudrun.ServiceTemplateSpecContainerResourcesArgs(
+ *                     limits={
+ *                         "cpu": "1000m",
+ *                         "memory": "512M",
+ *                     },
+ *                 ),
+ *             )],
+ *         ),
+ *         metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
+ *             annotations={
+ *                 "autoscaling.knative.dev/maxScale": "5",
+ *                 "run.googleapis.com/vpc-access-connector": connector.name,
+ *                 "run.googleapis.com/vpc-access-egress": "all",
+ *             },
+ *         ),
+ *     ),
+ *     autogenerate_revision_name=True,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vpcaccessApi = new Gcp.Projects.Service("vpcaccessApi", new Gcp.Projects.ServiceArgs
+ *         {
+ *             Service = "vpcaccess.googleapis.com",
+ *             DisableOnDestroy = false,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         // VPC
+ *         var @default = new Gcp.Compute.Network("default", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         // VPC access connector
+ *         var connector = new Gcp.VpcAccess.Connector("connector", new Gcp.VpcAccess.ConnectorArgs
+ *         {
+ *             Region = "us-west1",
+ *             IpCidrRange = "10.8.0.0/28",
+ *             Network = @default.Name,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *             DependsOn = 
+ *             {
+ *                 vpcaccessApi,
+ *             },
+ *         });
+ *         // Cloud Router
+ *         var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
+ *         {
+ *             Region = "us-west1",
+ *             Network = @default.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         // NAT configuration
+ *         var routerNat = new Gcp.Compute.RouterNat("routerNat", new Gcp.Compute.RouterNatArgs
+ *         {
+ *             Region = "us-west1",
+ *             Router = router.Name,
+ *             SourceSubnetworkIpRangesToNat = "ALL_SUBNETWORKS_ALL_IP_RANGES",
+ *             NatIpAllocateOption = "AUTO_ONLY",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         // Cloud Run service
+ *         var gcrService = new Gcp.CloudRun.Service("gcrService", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-west1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "us-docker.pkg.dev/cloudrun/container/hello",
+ *                             Resources = new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerResourcesArgs
+ *                             {
+ *                                 Limits = 
+ *                                 {
+ *                                     { "cpu", "1000m" },
+ *                                     { "memory", "512M" },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+ *                 {
+ *                     Annotations = 
+ *                     {
+ *                         { "autoscaling.knative.dev/maxScale", "5" },
+ *                         { "run.googleapis.com/vpc-access-connector", connector.Name },
+ *                         { "run.googleapis.com/vpc-access-egress", "all" },
+ *                     },
+ *                 },
+ *             },
+ *             AutogenerateRevisionName = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/vpcaccess"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		vpcaccessApi, err := projects.NewService(ctx, "vpcaccessApi", &projects.ServiceArgs{
+ * 			Service:          pulumi.String("vpcaccess.googleapis.com"),
+ * 			DisableOnDestroy: pulumi.Bool(false),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNetwork(ctx, "default", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		connector, err := vpcaccess.NewConnector(ctx, "connector", &vpcaccess.ConnectorArgs{
+ * 			Region:      pulumi.String("us-west1"),
+ * 			IpCidrRange: pulumi.String("10.8.0.0/28"),
+ * 			Network:     _default.Name,
+ * 		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+ * 			vpcaccessApi,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		router, err := compute.NewRouter(ctx, "router", &compute.RouterArgs{
+ * 			Region:  pulumi.String("us-west1"),
+ * 			Network: _default.ID(),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRouterNat(ctx, "routerNat", &compute.RouterNatArgs{
+ * 			Region:                        pulumi.String("us-west1"),
+ * 			Router:                        router.Name,
+ * 			SourceSubnetworkIpRangesToNat: pulumi.String("ALL_SUBNETWORKS_ALL_IP_RANGES"),
+ * 			NatIpAllocateOption:           pulumi.String("AUTO_ONLY"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudrun.NewService(ctx, "gcrService", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-west1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+ * 							Resources: &cloudrun.ServiceTemplateSpecContainerResourcesArgs{
+ * 								Limits: pulumi.StringMap{
+ * 									"cpu":    pulumi.String("1000m"),
+ * 									"memory": pulumi.String("512M"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				Metadata: &cloudrun.ServiceTemplateMetadataArgs{
+ * 					Annotations: pulumi.StringMap{
+ * 						"autoscaling.knative.dev/maxScale":        pulumi.String("5"),
+ * 						"run.googleapis.com/vpc-access-connector": connector.Name,
+ * 						"run.googleapis.com/vpc-access-egress":    pulumi.String("all"),
+ * 					},
+ * 				},
+ * 			},
+ * 			AutogenerateRevisionName: pulumi.Bool(true),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,18 +533,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:vpcaccess/connector:Connector default projects/{{project}}/locations/{{region}}/connectors/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:vpcaccess/connector:Connector default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:vpcaccess/connector:Connector default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:vpcaccess/connector:Connector default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:vpcaccess/connector:Connector")
 public class Connector extends io.pulumi.resources.CustomResource {

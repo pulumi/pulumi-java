@@ -50,7 +50,6 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      * @Deprecated
      * Deprecated until the API supports this field
-     * 
      */
     @Deprecated /* Deprecated until the API supports this field */
     @Import(name="labels")

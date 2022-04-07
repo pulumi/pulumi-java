@@ -15,7 +15,7 @@ public final class InboundSamlConfigIdpConfigIdpCertificateGetArgs extends io.pu
     public static final InboundSamlConfigIdpConfigIdpCertificateGetArgs Empty = new InboundSamlConfigIdpConfigIdpCertificateGetArgs();
 
     /**
-     * - 
+     * -
      * The x509 certificate
      * 
      */

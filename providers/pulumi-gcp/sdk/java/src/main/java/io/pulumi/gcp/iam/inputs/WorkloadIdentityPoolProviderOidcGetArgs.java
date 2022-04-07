@@ -23,6 +23,36 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends io.pulumi.res
      * If this list is empty, the OIDC token audience must be equal to the full canonical
      * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
      * For example:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
+     * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * 
      */
     @Import(name="allowedAudiences")

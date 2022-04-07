@@ -16,6 +16,7 @@ import javax.annotation.Nullable;
  * In Cloud Firestore, the unit of storage is the document. A document is a lightweight record
  * that contains fields, which map to values. Each document is identified by a name.
  * 
+ * 
  * To get more information about Document, see:
  * 
  * * [API documentation](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents)
@@ -28,7 +29,53 @@ import javax.annotation.Nullable;
  * `"CLOUD_FIRESTORE"` to do so. Your Firestore location will be the same as
  * the App Engine location specified.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Firestore Document Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const mydoc = new gcp.firestore.Document("mydoc", {
+ *     collection: "somenewcollection",
+ *     documentId: "my-doc-%{random_suffix}",
+ *     fields: "{\"something\":{\"mapValue\":{\"fields\":{\"akey\":{\"stringValue\":\"avalue\"}}}}}",
+ *     project: "my-project-name",
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Firestore Document Nested Document
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const mydoc = new gcp.firestore.Document("mydoc", {
+ *     collection: "somenewcollection",
+ *     documentId: "my-doc-%{random_suffix}",
+ *     fields: "{\"something\":{\"mapValue\":{\"fields\":{\"akey\":{\"stringValue\":\"avalue\"}}}}}",
+ *     project: "my-project-name",
+ * });
+ * const subDocument = new gcp.firestore.Document("sub_document", {
+ *     collection: pulumi.interpolate`${mydoc.path}/subdocs`,
+ *     documentId: "bitcoinkey",
+ *     fields: "{\"something\":{\"mapValue\":{\"fields\":{\"ayo\":{\"stringValue\":\"val2\"}}}}}",
+ *     project: "my-project-name",
+ * });
+ * const subSubDocument = new gcp.firestore.Document("sub_sub_document", {
+ *     collection: pulumi.interpolate`${subDocument.path}/subsubdocs`,
+ *     documentId: "asecret",
+ *     fields: "{\"something\":{\"mapValue\":{\"fields\":{\"secret\":{\"stringValue\":\"hithere\"}}}}}",
+ *     project: "my-project-name",
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:firestore/document:Document default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:firestore/document:Document")
 public class Document extends io.pulumi.resources.CustomResource {

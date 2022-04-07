@@ -22,7 +22,237 @@ import javax.annotation.Nullable;
  * the official documentation for
  * [Beam](https://beam.apache.org) and [Dataflow](https://cloud.google.com/dataflow/).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const bigDataJob = new gcp.dataflow.Job("big_data_job", {
+ *     parameters: {
+ *         baz: "qux",
+ *         foo: "bar",
+ *     },
+ *     tempGcsLocation: "gs://my-bucket/tmp_dir",
+ *     templateGcsPath: "gs://my-bucket/templates/template_file",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * big_data_job = gcp.dataflow.Job("bigDataJob",
+ *     parameters={
+ *         "baz": "qux",
+ *         "foo": "bar",
+ *     },
+ *     temp_gcs_location="gs://my-bucket/tmp_dir",
+ *     template_gcs_path="gs://my-bucket/templates/template_file")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bigDataJob = new Gcp.Dataflow.Job("bigDataJob", new Gcp.Dataflow.JobArgs
+ *         {
+ *             Parameters = 
+ *             {
+ *                 { "baz", "qux" },
+ *                 { "foo", "bar" },
+ *             },
+ *             TempGcsLocation = "gs://my-bucket/tmp_dir",
+ *             TemplateGcsPath = "gs://my-bucket/templates/template_file",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataflow.NewJob(ctx, "bigDataJob", &dataflow.JobArgs{
+ * 			Parameters: pulumi.AnyMap{
+ * 				"baz": pulumi.Any("qux"),
+ * 				"foo": pulumi.Any("bar"),
+ * 			},
+ * 			TempGcsLocation: pulumi.String("gs://my-bucket/tmp_dir"),
+ * 			TemplateGcsPath: pulumi.String("gs://my-bucket/templates/template_file"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Streaming Job
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const topic = new gcp.pubsub.Topic("topic", {});
+ * const bucket1 = new gcp.storage.Bucket("bucket1", {
+ *     location: "US",
+ *     forceDestroy: true,
+ * });
+ * const bucket2 = new gcp.storage.Bucket("bucket2", {
+ *     location: "US",
+ *     forceDestroy: true,
+ * });
+ * const pubsubStream = new gcp.dataflow.Job("pubsubStream", {
+ *     templateGcsPath: "gs://my-bucket/templates/template_file",
+ *     tempGcsLocation: "gs://my-bucket/tmp_dir",
+ *     enableStreamingEngine: true,
+ *     parameters: {
+ *         inputFilePattern: pulumi.interpolate`${bucket1.url}/*.json`,
+ *         outputTopic: topic.id,
+ *     },
+ *     transformNameMapping: {
+ *         name: "test_job",
+ *         env: "test",
+ *     },
+ *     onDelete: "cancel",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * topic = gcp.pubsub.Topic("topic")
+ * bucket1 = gcp.storage.Bucket("bucket1",
+ *     location="US",
+ *     force_destroy=True)
+ * bucket2 = gcp.storage.Bucket("bucket2",
+ *     location="US",
+ *     force_destroy=True)
+ * pubsub_stream = gcp.dataflow.Job("pubsubStream",
+ *     template_gcs_path="gs://my-bucket/templates/template_file",
+ *     temp_gcs_location="gs://my-bucket/tmp_dir",
+ *     enable_streaming_engine=True,
+ *     parameters={
+ *         "inputFilePattern": bucket1.url.apply(lambda url: f"{url}/*.json"),
+ *         "outputTopic": topic.id,
+ *     },
+ *     transform_name_mapping={
+ *         "name": "test_job",
+ *         "env": "test",
+ *     },
+ *     on_delete="cancel")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var bucket1 = new Gcp.Storage.Bucket("bucket1", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *             ForceDestroy = true,
+ *         });
+ *         var bucket2 = new Gcp.Storage.Bucket("bucket2", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *             ForceDestroy = true,
+ *         });
+ *         var pubsubStream = new Gcp.Dataflow.Job("pubsubStream", new Gcp.Dataflow.JobArgs
+ *         {
+ *             TemplateGcsPath = "gs://my-bucket/templates/template_file",
+ *             TempGcsLocation = "gs://my-bucket/tmp_dir",
+ *             EnableStreamingEngine = true,
+ *             Parameters = 
+ *             {
+ *                 { "inputFilePattern", bucket1.Url.Apply(url => $"{url}/*.json") },
+ *                 { "outputTopic", topic.Id },
+ *             },
+ *             TransformNameMapping = 
+ *             {
+ *                 { "name", "test_job" },
+ *                 { "env", "test" },
+ *             },
+ *             OnDelete = "cancel",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataflow"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bucket1, err := storage.NewBucket(ctx, "bucket1", &storage.BucketArgs{
+ * 			Location:     pulumi.String("US"),
+ * 			ForceDestroy: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storage.NewBucket(ctx, "bucket2", &storage.BucketArgs{
+ * 			Location:     pulumi.String("US"),
+ * 			ForceDestroy: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dataflow.NewJob(ctx, "pubsubStream", &dataflow.JobArgs{
+ * 			TemplateGcsPath:       pulumi.String("gs://my-bucket/templates/template_file"),
+ * 			TempGcsLocation:       pulumi.String("gs://my-bucket/tmp_dir"),
+ * 			EnableStreamingEngine: pulumi.Bool(true),
+ * 			Parameters: pulumi.AnyMap{
+ * 				"inputFilePattern": bucket1.Url.ApplyT(func(url string) (string, error) {
+ * 					return fmt.Sprintf("%v%v", url, "/*.json"), nil
+ * 				}).(pulumi.StringOutput),
+ * 				"outputTopic": topic.ID(),
+ * 			},
+ * 			TransformNameMapping: pulumi.AnyMap{
+ * 				"name": pulumi.Any("test_job"),
+ * 				"env":  pulumi.Any("test"),
+ * 			},
+ * 			OnDelete: pulumi.String("cancel"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Note on "destroy" / "apply"
  * 
  * There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.
@@ -31,10 +261,10 @@ import javax.annotation.Nullable;
  * 
  * A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If "cancelled", the job terminates - any data written remains where it is, but no new data will be processed.  If "drained", no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is "drain". When `on_delete` is set to `"drain"` in the configuration, you may experience a long wait for your `pulumi destroy` to complete.
  * 
+ * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:dataflow/job:Job")
 public class Job extends io.pulumi.resources.CustomResource {
@@ -314,7 +544,7 @@ public class Job extends io.pulumi.resources.CustomResource {
     }
     /**
      * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * > > > > > > > v4.1.0
+     * >>>>>>> v4.1.0
      * 
      */
     @Export(name="transformNameMapping", type=Map.class, parameters={String.class, Object.class})
@@ -322,7 +552,7 @@ public class Job extends io.pulumi.resources.CustomResource {
 
     /**
      * @return Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * > > > > > > > v4.1.0
+     * >>>>>>> v4.1.0
      * 
      */
     public Output</* @Nullable */ Map<String,Object>> getTransformNameMapping() {

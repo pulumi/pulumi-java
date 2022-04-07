@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class InstanceServerCaCert {
     private final @Nullable String cert;
     /**
-     * - 
+     * -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -42,7 +42,7 @@ public final class InstanceServerCaCert {
         return Optional.ofNullable(this.cert);
     }
     /**
-     * - 
+     * -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.

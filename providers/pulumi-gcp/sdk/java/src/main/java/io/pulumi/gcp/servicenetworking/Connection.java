@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * and
  * [API](https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const peeringNetwork = new gcp.compute.Network("peeringNetwork", {});
+ * const privateIpAlloc = new gcp.compute.GlobalAddress("privateIpAlloc", {
+ *     purpose: "VPC_PEERING",
+ *     addressType: "INTERNAL",
+ *     prefixLength: 16,
+ *     network: peeringNetwork.id,
+ * });
+ * const foobar = new gcp.servicenetworking.Connection("foobar", {
+ *     network: peeringNetwork.id,
+ *     service: "servicenetworking.googleapis.com",
+ *     reservedPeeringRanges: [privateIpAlloc.name],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * peering_network = gcp.compute.Network("peeringNetwork")
+ * private_ip_alloc = gcp.compute.GlobalAddress("privateIpAlloc",
+ *     purpose="VPC_PEERING",
+ *     address_type="INTERNAL",
+ *     prefix_length=16,
+ *     network=peering_network.id)
+ * foobar = gcp.servicenetworking.Connection("foobar",
+ *     network=peering_network.id,
+ *     service="servicenetworking.googleapis.com",
+ *     reserved_peering_ranges=[private_ip_alloc.name])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peeringNetwork = new Gcp.Compute.Network("peeringNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *         });
+ *         var privateIpAlloc = new Gcp.Compute.GlobalAddress("privateIpAlloc", new Gcp.Compute.GlobalAddressArgs
+ *         {
+ *             Purpose = "VPC_PEERING",
+ *             AddressType = "INTERNAL",
+ *             PrefixLength = 16,
+ *             Network = peeringNetwork.Id,
+ *         });
+ *         var foobar = new Gcp.ServiceNetworking.Connection("foobar", new Gcp.ServiceNetworking.ConnectionArgs
+ *         {
+ *             Network = peeringNetwork.Id,
+ *             Service = "servicenetworking.googleapis.com",
+ *             ReservedPeeringRanges = 
+ *             {
+ *                 privateIpAlloc.Name,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicenetworking"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		peeringNetwork, err := compute.NewNetwork(ctx, "peeringNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		privateIpAlloc, err := compute.NewGlobalAddress(ctx, "privateIpAlloc", &compute.GlobalAddressArgs{
+ * 			Purpose:      pulumi.String("VPC_PEERING"),
+ * 			AddressType:  pulumi.String("INTERNAL"),
+ * 			PrefixLength: pulumi.Int(16),
+ * 			Network:      peeringNetwork.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = servicenetworking.NewConnection(ctx, "foobar", &servicenetworking.ConnectionArgs{
+ * 			Network: peeringNetwork.ID(),
+ * 			Service: pulumi.String("servicenetworking.googleapis.com"),
+ * 			ReservedPeeringRanges: pulumi.StringArray{
+ * 				privateIpAlloc.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,10 +135,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:servicenetworking/connection:Connection peering_connection {{peering-network}}:{{service}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:servicenetworking/connection:Connection peering_connection /projects/{{project}}/global/networks/{{peering-network}}:{{service}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:servicenetworking/connection:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {

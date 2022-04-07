@@ -18,13 +18,171 @@ import javax.annotation.Nullable;
 /**
  * A repository (or repo) is a Git repository storing versioned source content.
  * 
+ * 
  * To get more information about Repository, see:
  * 
  * * [API documentation](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/source-repositories/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Sourcerepo Repository Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const my_repo = new gcp.sourcerepo.Repository("my-repo", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_repo = gcp.sourcerepo.Repository("my-repo")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var my_repo = new Gcp.SourceRepo.Repository("my-repo", new Gcp.SourceRepo.RepositoryArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sourcerepo"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sourcerepo.NewRepository(ctx, "my-repo", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Sourcerepo Repository Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const testAccount = new gcp.serviceaccount.Account("testAccount", {
+ *     accountId: "my-account",
+ *     displayName: "Test Service Account",
+ * });
+ * const topic = new gcp.pubsub.Topic("topic", {});
+ * const my_repo = new gcp.sourcerepo.Repository("my-repo", {pubsubConfigs: [{
+ *     topic: topic.id,
+ *     messageFormat: "JSON",
+ *     serviceAccountEmail: testAccount.email,
+ * }]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * test_account = gcp.service_account.Account("testAccount",
+ *     account_id="my-account",
+ *     display_name="Test Service Account")
+ * topic = gcp.pubsub.Topic("topic")
+ * my_repo = gcp.sourcerepo.Repository("my-repo", pubsub_configs=[gcp.sourcerepo.RepositoryPubsubConfigArgs(
+ *     topic=topic.id,
+ *     message_format="JSON",
+ *     service_account_email=test_account.email,
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testAccount = new Gcp.ServiceAccount.Account("testAccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "my-account",
+ *             DisplayName = "Test Service Account",
+ *         });
+ *         var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var my_repo = new Gcp.SourceRepo.Repository("my-repo", new Gcp.SourceRepo.RepositoryArgs
+ *         {
+ *             PubsubConfigs = 
+ *             {
+ *                 new Gcp.SourceRepo.Inputs.RepositoryPubsubConfigArgs
+ *                 {
+ *                     Topic = topic.Id,
+ *                     MessageFormat = "JSON",
+ *                     ServiceAccountEmail = testAccount.Email,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sourcerepo"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testAccount, err := serviceAccount.NewAccount(ctx, "testAccount", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("my-account"),
+ * 			DisplayName: pulumi.String("Test Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sourcerepo.NewRepository(ctx, "my-repo", &sourcerepo.RepositoryArgs{
+ * 			PubsubConfigs: sourcerepo.RepositoryPubsubConfigArray{
+ * 				&sourcerepo.RepositoryPubsubConfigArgs{
+ * 					Topic:               topic.ID(),
+ * 					MessageFormat:       pulumi.String("JSON"),
+ * 					ServiceAccountEmail: testAccount.Email,
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,10 +192,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:sourcerepo/repository:Repository default projects/{{project}}/repos/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:sourcerepo/repository:Repository default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:sourcerepo/repository:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {

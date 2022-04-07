@@ -17,13 +17,130 @@ import javax.annotation.Nullable;
 /**
  * Manages a VPC network or legacy network resource on GCP.
  * 
+ * 
  * To get more information about Network, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/networks)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Network Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const vpcNetwork = new gcp.compute.Network("vpc_network", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * vpc_network = gcp.compute.Network("vpcNetwork")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vpcNetwork = new Gcp.Compute.Network("vpcNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewNetwork(ctx, "vpcNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Network Custom Mtu
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const vpcNetwork = new gcp.compute.Network("vpc_network", {
+ *     autoCreateSubnetworks: true,
+ *     mtu: 1460,
+ *     project: "my-project-name",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * vpc_network = gcp.compute.Network("vpcNetwork",
+ *     auto_create_subnetworks=True,
+ *     mtu=1460,
+ *     project="my-project-name")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vpcNetwork = new Gcp.Compute.Network("vpcNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = true,
+ *             Mtu = 1460,
+ *             Project = "my-project-name",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewNetwork(ctx, "vpcNetwork", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(true),
+ * 			Mtu:                   pulumi.Int(1460),
+ * 			Project:               pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +150,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/network:Network default projects/{{project}}/global/networks/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/network:Network default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/network:Network default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/network:Network")
 public class Network extends io.pulumi.resources.CustomResource {

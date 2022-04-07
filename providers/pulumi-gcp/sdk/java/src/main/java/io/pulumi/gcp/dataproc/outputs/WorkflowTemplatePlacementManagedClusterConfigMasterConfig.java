@@ -33,24 +33,24 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
      */
     private final @Nullable String image;
     /**
-     * - 
+     * -
      * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
      * 
      */
     private final @Nullable List<String> instanceNames;
     /**
-     * - 
+     * -
      * Output only. Specifies that this instance group contains preemptible instances.
      * 
      */
     private final @Nullable Boolean isPreemptible;
     /**
-     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
      * 
      */
     private final @Nullable String machineType;
     /**
-     * - 
+     * -
      * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
      * 
      */
@@ -117,7 +117,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
         return Optional.ofNullable(this.image);
     }
     /**
-     * - 
+     * -
      * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
      * 
     */
@@ -125,7 +125,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
         return this.instanceNames == null ? List.of() : this.instanceNames;
     }
     /**
-     * - 
+     * -
      * Output only. Specifies that this instance group contains preemptible instances.
      * 
     */
@@ -133,14 +133,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfig {
         return Optional.ofNullable(this.isPreemptible);
     }
     /**
-     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+     * Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.
      * 
     */
     public Optional<String> getMachineType() {
         return Optional.ofNullable(this.machineType);
     }
     /**
-     * - 
+     * -
      * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
      * 
     */

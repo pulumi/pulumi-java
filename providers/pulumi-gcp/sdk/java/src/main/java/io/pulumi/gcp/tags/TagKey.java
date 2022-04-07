@@ -15,13 +15,80 @@ import javax.annotation.Nullable;
 /**
  * A TagKey, used to group a set of TagValues.
  * 
+ * 
  * To get more information about TagKey, see:
  * 
  * * [API documentation](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Tag Key Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const key = new gcp.tags.TagKey("key", {
+ *     description: "For keyname resources.",
+ *     parent: "organizations/123456789",
+ *     shortName: "keyname",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * key = gcp.tags.TagKey("key",
+ *     description="For keyname resources.",
+ *     parent="organizations/123456789",
+ *     short_name="keyname")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var key = new Gcp.Tags.TagKey("key", new Gcp.Tags.TagKeyArgs
+ *         {
+ *             Description = "For keyname resources.",
+ *             Parent = "organizations/123456789",
+ *             ShortName = "keyname",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/tags"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := tags.NewTagKey(ctx, "key", &tags.TagKeyArgs{
+ * 			Description: pulumi.String("For keyname resources."),
+ * 			Parent:      pulumi.String("organizations/123456789"),
+ * 			ShortName:   pulumi.String("keyname"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +98,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:tags/tagKey:TagKey default tagKeys/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:tags/tagKey:TagKey default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:tags/tagKey:TagKey")
 public class TagKey extends io.pulumi.resources.CustomResource {

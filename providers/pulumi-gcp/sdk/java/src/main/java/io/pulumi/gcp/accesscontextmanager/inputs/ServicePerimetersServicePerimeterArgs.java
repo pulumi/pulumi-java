@@ -18,7 +18,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
     public static final ServicePerimetersServicePerimeterArgs Empty = new ServicePerimetersServicePerimeterArgs();
 
     /**
-     * - 
+     * -
      * Time the AccessPolicy was created in UTC.
      * 
      */
@@ -121,7 +121,7 @@ public final class ServicePerimetersServicePerimeterArgs extends io.pulumi.resou
     }
 
     /**
-     * - 
+     * -
      * Time the AccessPolicy was updated in UTC.
      * 
      */

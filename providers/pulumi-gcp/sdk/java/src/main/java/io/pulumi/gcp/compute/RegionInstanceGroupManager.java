@@ -34,7 +34,310 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Use [gcp.compute.InstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html) to create a zonal instance group manager.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### With Top Level Instance Template (`Google` Provider)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const autohealing = new gcp.compute.HealthCheck("autohealing", {
+ *     checkIntervalSec: 5,
+ *     timeoutSec: 5,
+ *     healthyThreshold: 2,
+ *     unhealthyThreshold: 10,
+ *     httpHealthCheck: {
+ *         requestPath: "/healthz",
+ *         port: "8080",
+ *     },
+ * });
+ * const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
+ *     baseInstanceName: "app",
+ *     region: "us-central1",
+ *     distributionPolicyZones: [
+ *         "us-central1-a",
+ *         "us-central1-f",
+ *     ],
+ *     versions: [{
+ *         instanceTemplate: google_compute_instance_template.appserver.id,
+ *     }],
+ *     targetPools: [google_compute_target_pool.appserver.id],
+ *     targetSize: 2,
+ *     namedPorts: [{
+ *         name: "custom",
+ *         port: 8888,
+ *     }],
+ *     autoHealingPolicies: {
+ *         healthCheck: autohealing.id,
+ *         initialDelaySec: 300,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * autohealing = gcp.compute.HealthCheck("autohealing",
+ *     check_interval_sec=5,
+ *     timeout_sec=5,
+ *     healthy_threshold=2,
+ *     unhealthy_threshold=10,
+ *     http_health_check=gcp.compute.HealthCheckHttpHealthCheckArgs(
+ *         request_path="/healthz",
+ *         port=8080,
+ *     ))
+ * appserver = gcp.compute.RegionInstanceGroupManager("appserver",
+ *     base_instance_name="app",
+ *     region="us-central1",
+ *     distribution_policy_zones=[
+ *         "us-central1-a",
+ *         "us-central1-f",
+ *     ],
+ *     versions=[gcp.compute.RegionInstanceGroupManagerVersionArgs(
+ *         instance_template=google_compute_instance_template["appserver"]["id"],
+ *     )],
+ *     target_pools=[google_compute_target_pool["appserver"]["id"]],
+ *     target_size=2,
+ *     named_ports=[gcp.compute.RegionInstanceGroupManagerNamedPortArgs(
+ *         name="custom",
+ *         port=8888,
+ *     )],
+ *     auto_healing_policies=gcp.compute.RegionInstanceGroupManagerAutoHealingPoliciesArgs(
+ *         health_check=autohealing.id,
+ *         initial_delay_sec=300,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var autohealing = new Gcp.Compute.HealthCheck("autohealing", new Gcp.Compute.HealthCheckArgs
+ *         {
+ *             CheckIntervalSec = 5,
+ *             TimeoutSec = 5,
+ *             HealthyThreshold = 2,
+ *             UnhealthyThreshold = 10,
+ *             HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+ *             {
+ *                 RequestPath = "/healthz",
+ *                 Port = 8080,
+ *             },
+ *         });
+ *         var appserver = new Gcp.Compute.RegionInstanceGroupManager("appserver", new Gcp.Compute.RegionInstanceGroupManagerArgs
+ *         {
+ *             BaseInstanceName = "app",
+ *             Region = "us-central1",
+ *             DistributionPolicyZones = 
+ *             {
+ *                 "us-central1-a",
+ *                 "us-central1-f",
+ *             },
+ *             Versions = 
+ *             {
+ *                 new Gcp.Compute.Inputs.RegionInstanceGroupManagerVersionArgs
+ *                 {
+ *                     InstanceTemplate = google_compute_instance_template.Appserver.Id,
+ *                 },
+ *             },
+ *             TargetPools = 
+ *             {
+ *                 google_compute_target_pool.Appserver.Id,
+ *             },
+ *             TargetSize = 2,
+ *             NamedPorts = 
+ *             {
+ *                 new Gcp.Compute.Inputs.RegionInstanceGroupManagerNamedPortArgs
+ *                 {
+ *                     Name = "custom",
+ *                     Port = 8888,
+ *                 },
+ *             },
+ *             AutoHealingPolicies = new Gcp.Compute.Inputs.RegionInstanceGroupManagerAutoHealingPoliciesArgs
+ *             {
+ *                 HealthCheck = autohealing.Id,
+ *                 InitialDelaySec = 300,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		autohealing, err := compute.NewHealthCheck(ctx, "autohealing", &compute.HealthCheckArgs{
+ * 			CheckIntervalSec:   pulumi.Int(5),
+ * 			TimeoutSec:         pulumi.Int(5),
+ * 			HealthyThreshold:   pulumi.Int(2),
+ * 			UnhealthyThreshold: pulumi.Int(10),
+ * 			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
+ * 				RequestPath: pulumi.String("/healthz"),
+ * 				Port:        pulumi.Int(8080),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionInstanceGroupManager(ctx, "appserver", &compute.RegionInstanceGroupManagerArgs{
+ * 			BaseInstanceName: pulumi.String("app"),
+ * 			Region:           pulumi.String("us-central1"),
+ * 			DistributionPolicyZones: pulumi.StringArray{
+ * 				pulumi.String("us-central1-a"),
+ * 				pulumi.String("us-central1-f"),
+ * 			},
+ * 			Versions: compute.RegionInstanceGroupManagerVersionArray{
+ * 				&compute.RegionInstanceGroupManagerVersionArgs{
+ * 					InstanceTemplate: pulumi.Any(google_compute_instance_template.Appserver.Id),
+ * 				},
+ * 			},
+ * 			TargetPools: pulumi.StringArray{
+ * 				pulumi.Any(google_compute_target_pool.Appserver.Id),
+ * 			},
+ * 			TargetSize: pulumi.Int(2),
+ * 			NamedPorts: compute.RegionInstanceGroupManagerNamedPortArray{
+ * 				&compute.RegionInstanceGroupManagerNamedPortArgs{
+ * 					Name: pulumi.String("custom"),
+ * 					Port: pulumi.Int(8888),
+ * 				},
+ * 			},
+ * 			AutoHealingPolicies: &compute.RegionInstanceGroupManagerAutoHealingPoliciesArgs{
+ * 				HealthCheck:     autohealing.ID(),
+ * 				InitialDelaySec: pulumi.Int(300),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With Multiple Versions
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
+ *     baseInstanceName: "app",
+ *     region: "us-central1",
+ *     targetSize: 5,
+ *     versions: [
+ *         {
+ *             instanceTemplate: google_compute_instance_template.appserver.id,
+ *         },
+ *         {
+ *             instanceTemplate: google_compute_instance_template["appserver-canary"].id,
+ *             targetSize: {
+ *                 fixed: 1,
+ *             },
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * appserver = gcp.compute.RegionInstanceGroupManager("appserver",
+ *     base_instance_name="app",
+ *     region="us-central1",
+ *     target_size=5,
+ *     versions=[
+ *         gcp.compute.RegionInstanceGroupManagerVersionArgs(
+ *             instance_template=google_compute_instance_template["appserver"]["id"],
+ *         ),
+ *         gcp.compute.RegionInstanceGroupManagerVersionArgs(
+ *             instance_template=google_compute_instance_template["appserver-canary"]["id"],
+ *             target_size=gcp.compute.RegionInstanceGroupManagerVersionTargetSizeArgs(
+ *                 fixed=1,
+ *             ),
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var appserver = new Gcp.Compute.RegionInstanceGroupManager("appserver", new Gcp.Compute.RegionInstanceGroupManagerArgs
+ *         {
+ *             BaseInstanceName = "app",
+ *             Region = "us-central1",
+ *             TargetSize = 5,
+ *             Versions = 
+ *             {
+ *                 new Gcp.Compute.Inputs.RegionInstanceGroupManagerVersionArgs
+ *                 {
+ *                     InstanceTemplate = google_compute_instance_template.Appserver.Id,
+ *                 },
+ *                 new Gcp.Compute.Inputs.RegionInstanceGroupManagerVersionArgs
+ *                 {
+ *                     InstanceTemplate = google_compute_instance_template.Appserver_canary.Id,
+ *                     TargetSize = new Gcp.Compute.Inputs.RegionInstanceGroupManagerVersionTargetSizeArgs
+ *                     {
+ *                         Fixed = 1,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewRegionInstanceGroupManager(ctx, "appserver", &compute.RegionInstanceGroupManagerArgs{
+ * 			BaseInstanceName: pulumi.String("app"),
+ * 			Region:           pulumi.String("us-central1"),
+ * 			TargetSize:       pulumi.Int(5),
+ * 			Versions: compute.RegionInstanceGroupManagerVersionArray{
+ * 				&compute.RegionInstanceGroupManagerVersionArgs{
+ * 					InstanceTemplate: pulumi.Any(google_compute_instance_template.Appserver.Id),
+ * 				},
+ * 				&compute.RegionInstanceGroupManagerVersionArgs{
+ * 					InstanceTemplate: pulumi.Any(google_compute_instance_template.Appserver - canary.Id),
+ * 					TargetSize: &compute.RegionInstanceGroupManagerVersionTargetSizeArgs{
+ * 						Fixed: pulumi.Int(1),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -44,6 +347,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/regionInstanceGroupManager:RegionInstanceGroupManager appserver appserver-igm
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/regionInstanceGroupManager:RegionInstanceGroupManager")
 public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResource {

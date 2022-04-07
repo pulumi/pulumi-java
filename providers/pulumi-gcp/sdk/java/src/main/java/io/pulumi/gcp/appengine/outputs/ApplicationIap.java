@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationIap {
     /**
-     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
      * (default is false)
      * 
      */
@@ -48,7 +48,7 @@ public final class ApplicationIap {
     }
 
     /**
-     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
      * (default is false)
      * 
     */

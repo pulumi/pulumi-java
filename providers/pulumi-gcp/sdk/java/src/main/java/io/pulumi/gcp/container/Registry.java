@@ -17,12 +17,154 @@ import javax.annotation.Nullable;
  * 
  * This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the [access control page](https://cloud.google.com/container-registry/docs/access-control) for GCR.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const registry = new gcp.container.Registry("registry", {
+ *     location: "EU",
+ *     project: "my-project",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * registry = gcp.container.Registry("registry",
+ *     location="EU",
+ *     project="my-project")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registry = new Gcp.Container.Registry("registry", new Gcp.Container.RegistryArgs
+ *         {
+ *             Location = "EU",
+ *             Project = "my-project",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := container.NewRegistry(ctx, "registry", &container.RegistryArgs{
+ * 			Location: pulumi.String("EU"),
+ * 			Project:  pulumi.String("my-project"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * The `id` field of the `gcp.container.Registry` is the identifier of the storage bucket that backs GCR and can be used to assign permissions to the bucket.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const registry = new gcp.container.Registry("registry", {
+ *     project: "my-project",
+ *     location: "EU",
+ * });
+ * const viewer = new gcp.storage.BucketIAMMember("viewer", {
+ *     bucket: registry.id,
+ *     role: "roles/storage.objectViewer",
+ *     member: "user:jane@example.com",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * registry = gcp.container.Registry("registry",
+ *     project="my-project",
+ *     location="EU")
+ * viewer = gcp.storage.BucketIAMMember("viewer",
+ *     bucket=registry.id,
+ *     role="roles/storage.objectViewer",
+ *     member="user:jane@example.com")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registry = new Gcp.Container.Registry("registry", new Gcp.Container.RegistryArgs
+ *         {
+ *             Project = "my-project",
+ *             Location = "EU",
+ *         });
+ *         var viewer = new Gcp.Storage.BucketIAMMember("viewer", new Gcp.Storage.BucketIAMMemberArgs
+ *         {
+ *             Bucket = registry.Id,
+ *             Role = "roles/storage.objectViewer",
+ *             Member = "user:jane@example.com",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		registry, err := container.NewRegistry(ctx, "registry", &container.RegistryArgs{
+ * 			Project:  pulumi.String("my-project"),
+ * 			Location: pulumi.String("EU"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storage.NewBucketIAMMember(ctx, "viewer", &storage.BucketIAMMemberArgs{
+ * 			Bucket: registry.ID(),
+ * 			Role:   pulumi.String("roles/storage.objectViewer"),
+ * 			Member: pulumi.String("user:jane@example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:container/registry:Registry")
 public class Registry extends io.pulumi.resources.CustomResource {

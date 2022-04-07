@@ -21,7 +21,9 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://firebase.google.com/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,14 +33,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:firebase/webApp:WebApp default {{project}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:firebase/webApp:WebApp default {{project}} {{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:firebase/webApp:WebApp default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:firebase/webApp:WebApp")
 public class WebApp extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,7 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
     public static final AzureClusterFleetGetArgs Empty = new AzureClusterFleetGetArgs();
 
     /**
-     * - 
+     * -
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
      * 
      */

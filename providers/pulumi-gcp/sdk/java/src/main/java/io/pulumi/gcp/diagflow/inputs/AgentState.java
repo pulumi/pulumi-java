@@ -24,7 +24,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * * API_VERSION_V1: Legacy V1 API.
      * * API_VERSION_V2: V2 API.
      * * API_VERSION_V2_BETA_1: V2beta1 API.
-     *   Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
+     * Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
      * 
      */
     @Import(name="apiVersion")
@@ -122,10 +122,10 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     /**
      * Determines how intents are detected from user queries.
      * * MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
-     *   syntax and composite entities.
+     * syntax and composite entities.
      * * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
-     *   using @sys.any or very large developer entities.
-     *   Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
+     * using @sys.any or very large developer entities.
+     * Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
      * 
      */
     @Import(name="matchMode")
@@ -163,8 +163,8 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * * TIER_STANDARD: Standard tier.
      * * TIER_ENTERPRISE: Enterprise tier (Essentials).
      * * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
-     *   NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
-     *   the the provider state and Dialogflow if the agent tier is changed outside of the provider.
+     * NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+     * the the provider state and Dialogflow if the agent tier is changed outside of the provider.
      * 
      */
     @Import(name="tier")

@@ -27,7 +27,556 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Healthcare Hl7 V2 Store Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const topic = new gcp.pubsub.Topic("topic", {});
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+ * const store = new gcp.healthcare.Hl7Store("store", {
+ *     dataset: dataset.id,
+ *     notificationConfigs: [{
+ *         pubsubTopic: topic.id,
+ *     }],
+ *     labels: {
+ *         label1: "labelvalue1",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * topic = gcp.pubsub.Topic("topic")
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+ * store = gcp.healthcare.Hl7Store("store",
+ *     dataset=dataset.id,
+ *     notification_configs=[gcp.healthcare.Hl7StoreNotificationConfigsArgs(
+ *         pubsub_topic=topic.id,
+ *     )],
+ *     labels={
+ *         "label1": "labelvalue1",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         });
+ *         var store = new Gcp.Healthcare.Hl7Store("store", new Gcp.Healthcare.Hl7StoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *             NotificationConfigs = 
+ *             {
+ *                 new Gcp.Healthcare.Inputs.Hl7StoreNotificationConfigsArgs
+ *                 {
+ *                     PubsubTopic = topic.Id,
+ *                 },
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "label1", "labelvalue1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewHl7Store(ctx, "store", &healthcare.Hl7StoreArgs{
+ * 			Dataset: dataset.ID(),
+ * 			NotificationConfigs: healthcare.Hl7StoreNotificationConfigsArray{
+ * 				&healthcare.Hl7StoreNotificationConfigsArgs{
+ * 					PubsubTopic: topic.ID(),
+ * 				},
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"label1": pulumi.String("labelvalue1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Healthcare Hl7 V2 Store Parser Config
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"}, {
+ *     provider: google_beta,
+ * });
+ * const store = new gcp.healthcare.Hl7Store("store", {
+ *     dataset: dataset.id,
+ *     parserConfig: {
+ *         allowNullHeader: false,
+ *         segmentTerminator: "Jw==",
+ *         schema: `{
+ *   "schemas": [{
+ *     "messageSchemaConfigs": {
+ *       "ADT_A01": {
+ *         "name": "ADT_A01",
+ *         "minOccurs": 1,
+ *         "maxOccurs": 1,
+ *         "members": [{
+ *             "segment": {
+ *               "type": "MSH",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "EVN",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "PID",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "ZPD",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "OBX"
+ *             }
+ *           },
+ *           {
+ *             "group": {
+ *               "name": "PROCEDURE",
+ *               "members": [{
+ *                   "segment": {
+ *                     "type": "PR1",
+ *                     "minOccurs": 1,
+ *                     "maxOccurs": 1
+ *                   }
+ *                 },
+ *                 {
+ *                   "segment": {
+ *                     "type": "ROL"
+ *                   }
+ *                 }
+ *               ]
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "PDA",
+ *               "maxOccurs": 1
+ *             }
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }],
+ *   "types": [{
+ *     "type": [{
+ *         "name": "ZPD",
+ *         "primitive": "VARIES"
+ *       }
+ * 
+ *     ]
+ *   }],
+ *   "ignoreMinOccurs": true
+ * }
+ * `,
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1",
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * store = gcp.healthcare.Hl7Store("store",
+ *     dataset=dataset.id,
+ *     parser_config=gcp.healthcare.Hl7StoreParserConfigArgs(
+ *         allow_null_header=False,
+ *         segment_terminator="Jw==",
+ *         schema="""{
+ *   "schemas": [{
+ *     "messageSchemaConfigs": {
+ *       "ADT_A01": {
+ *         "name": "ADT_A01",
+ *         "minOccurs": 1,
+ *         "maxOccurs": 1,
+ *         "members": [{
+ *             "segment": {
+ *               "type": "MSH",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "EVN",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "PID",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "ZPD",
+ *               "minOccurs": 1,
+ *               "maxOccurs": 1
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "OBX"
+ *             }
+ *           },
+ *           {
+ *             "group": {
+ *               "name": "PROCEDURE",
+ *               "members": [{
+ *                   "segment": {
+ *                     "type": "PR1",
+ *                     "minOccurs": 1,
+ *                     "maxOccurs": 1
+ *                   }
+ *                 },
+ *                 {
+ *                   "segment": {
+ *                     "type": "ROL"
+ *                   }
+ *                 }
+ *               ]
+ *             }
+ *           },
+ *           {
+ *             "segment": {
+ *               "type": "PDA",
+ *               "maxOccurs": 1
+ *             }
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }],
+ *   "types": [{
+ *     "type": [{
+ *         "name": "ZPD",
+ *         "primitive": "VARIES"
+ *       }
+ * 
+ *     ]
+ *   }],
+ *   "ignoreMinOccurs": true
+ * }
+ * """,
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var store = new Gcp.Healthcare.Hl7Store("store", new Gcp.Healthcare.Hl7StoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *             ParserConfig = new Gcp.Healthcare.Inputs.Hl7StoreParserConfigArgs
+ *             {
+ *                 AllowNullHeader = false,
+ *                 SegmentTerminator = "Jw==",
+ *                 Schema = @"{
+ *   ""schemas"": [{
+ *     ""messageSchemaConfigs"": {
+ *       ""ADT_A01"": {
+ *         ""name"": ""ADT_A01"",
+ *         ""minOccurs"": 1,
+ *         ""maxOccurs"": 1,
+ *         ""members"": [{
+ *             ""segment"": {
+ *               ""type"": ""MSH"",
+ *               ""minOccurs"": 1,
+ *               ""maxOccurs"": 1
+ *             }
+ *           },
+ *           {
+ *             ""segment"": {
+ *               ""type"": ""EVN"",
+ *               ""minOccurs"": 1,
+ *               ""maxOccurs"": 1
+ *             }
+ *           },
+ *           {
+ *             ""segment"": {
+ *               ""type"": ""PID"",
+ *               ""minOccurs"": 1,
+ *               ""maxOccurs"": 1
+ *             }
+ *           },
+ *           {
+ *             ""segment"": {
+ *               ""type"": ""ZPD"",
+ *               ""minOccurs"": 1,
+ *               ""maxOccurs"": 1
+ *             }
+ *           },
+ *           {
+ *             ""segment"": {
+ *               ""type"": ""OBX""
+ *             }
+ *           },
+ *           {
+ *             ""group"": {
+ *               ""name"": ""PROCEDURE"",
+ *               ""members"": [{
+ *                   ""segment"": {
+ *                     ""type"": ""PR1"",
+ *                     ""minOccurs"": 1,
+ *                     ""maxOccurs"": 1
+ *                   }
+ *                 },
+ *                 {
+ *                   ""segment"": {
+ *                     ""type"": ""ROL""
+ *                   }
+ *                 }
+ *               ]
+ *             }
+ *           },
+ *           {
+ *             ""segment"": {
+ *               ""type"": ""PDA"",
+ *               ""maxOccurs"": 1
+ *             }
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }],
+ *   ""types"": [{
+ *     ""type"": [{
+ *         ""name"": ""ZPD"",
+ *         ""primitive"": ""VARIES""
+ *       }
+ * 
+ *     ]
+ *   }],
+ *   ""ignoreMinOccurs"": true
+ * }
+ * ",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewHl7Store(ctx, "store", &healthcare.Hl7StoreArgs{
+ * 			Dataset: dataset.ID(),
+ * 			ParserConfig: &healthcare.Hl7StoreParserConfigArgs{
+ * 				AllowNullHeader:   pulumi.Bool(false),
+ * 				SegmentTerminator: pulumi.String("Jw=="),
+ * 				Schema:            pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"schemas\": [{\n", "    \"messageSchemaConfigs\": {\n", "      \"ADT_A01\": {\n", "        \"name\": \"ADT_A01\",\n", "        \"minOccurs\": 1,\n", "        \"maxOccurs\": 1,\n", "        \"members\": [{\n", "            \"segment\": {\n", "              \"type\": \"MSH\",\n", "              \"minOccurs\": 1,\n", "              \"maxOccurs\": 1\n", "            }\n", "          },\n", "          {\n", "            \"segment\": {\n", "              \"type\": \"EVN\",\n", "              \"minOccurs\": 1,\n", "              \"maxOccurs\": 1\n", "            }\n", "          },\n", "          {\n", "            \"segment\": {\n", "              \"type\": \"PID\",\n", "              \"minOccurs\": 1,\n", "              \"maxOccurs\": 1\n", "            }\n", "          },\n", "          {\n", "            \"segment\": {\n", "              \"type\": \"ZPD\",\n", "              \"minOccurs\": 1,\n", "              \"maxOccurs\": 1\n", "            }\n", "          },\n", "          {\n", "            \"segment\": {\n", "              \"type\": \"OBX\"\n", "            }\n", "          },\n", "          {\n", "            \"group\": {\n", "              \"name\": \"PROCEDURE\",\n", "              \"members\": [{\n", "                  \"segment\": {\n", "                    \"type\": \"PR1\",\n", "                    \"minOccurs\": 1,\n", "                    \"maxOccurs\": 1\n", "                  }\n", "                },\n", "                {\n", "                  \"segment\": {\n", "                    \"type\": \"ROL\"\n", "                  }\n", "                }\n", "              ]\n", "            }\n", "          },\n", "          {\n", "            \"segment\": {\n", "              \"type\": \"PDA\",\n", "              \"maxOccurs\": 1\n", "            }\n", "          }\n", "        ]\n", "      }\n", "    }\n", "  }],\n", "  \"types\": [{\n", "    \"type\": [{\n", "        \"name\": \"ZPD\",\n", "        \"primitive\": \"VARIES\"\n", "      }\n", "\n", "    ]\n", "  }],\n", "  \"ignoreMinOccurs\": true\n", "}\n")),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Healthcare Hl7 V2 Store Unschematized
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"}, {
+ *     provider: google_beta,
+ * });
+ * const store = new gcp.healthcare.Hl7Store("store", {
+ *     dataset: dataset.id,
+ *     parserConfig: {
+ *         allowNullHeader: false,
+ *         segmentTerminator: "Jw==",
+ *         version: "V2",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dataset = gcp.healthcare.Dataset("dataset", location="us-central1",
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * store = gcp.healthcare.Hl7Store("store",
+ *     dataset=dataset.id,
+ *     parser_config=gcp.healthcare.Hl7StoreParserConfigArgs(
+ *         allow_null_header=False,
+ *         segment_terminator="Jw==",
+ *         version="V2",
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var store = new Gcp.Healthcare.Hl7Store("store", new Gcp.Healthcare.Hl7StoreArgs
+ *         {
+ *             Dataset = dataset.Id,
+ *             ParserConfig = new Gcp.Healthcare.Inputs.Hl7StoreParserConfigArgs
+ *             {
+ *                 AllowNullHeader = false,
+ *                 SegmentTerminator = "Jw==",
+ *                 Version = "V2",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = healthcare.NewHl7Store(ctx, "store", &healthcare.Hl7StoreArgs{
+ * 			Dataset: dataset.ID(),
+ * 			ParserConfig: &healthcare.Hl7StoreParserConfigArgs{
+ * 				AllowNullHeader:   pulumi.Bool(false),
+ * 				SegmentTerminator: pulumi.String("Jw=="),
+ * 				Version:           pulumi.String("V2"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,10 +586,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:healthcare/hl7Store:Hl7Store default {{dataset}}/hl7V2Stores/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:healthcare/hl7Store:Hl7Store default {{dataset}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:healthcare/hl7Store:Hl7Store")
 public class Hl7Store extends io.pulumi.resources.CustomResource {
@@ -105,14 +657,13 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * A nested object resource
      * Structure is documented below.
      * 
      * @Deprecated
      * This field has been replaced by notificationConfigs
-     * 
      */
     @Deprecated /* This field has been replaced by notificationConfigs */
     @Export(name="notificationConfig", type=Hl7StoreNotificationConfig.class, parameters={})

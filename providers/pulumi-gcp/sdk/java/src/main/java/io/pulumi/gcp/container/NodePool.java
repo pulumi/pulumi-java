@@ -24,7 +24,179 @@ import javax.annotation.Nullable;
  * the cluster control plane. For more information see [the official documentation](https://cloud.google.com/container-engine/docs/node-pools)
  * and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Using A Separately Managed Node Pool (Recommended)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.serviceaccount.Account("default", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * const primary = new gcp.container.Cluster("primary", {
+ *     location: "us-central1",
+ *     removeDefaultNodePool: true,
+ *     initialNodeCount: 1,
+ * });
+ * const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNodes", {
+ *     cluster: primary.id,
+ *     nodeCount: 1,
+ *     nodeConfig: {
+ *         preemptible: true,
+ *         machineType: "e2-medium",
+ *         serviceAccount: _default.email,
+ *         oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.service_account.Account("default",
+ *     account_id="service-account-id",
+ *     display_name="Service Account")
+ * primary = gcp.container.Cluster("primary",
+ *     location="us-central1",
+ *     remove_default_node_pool=True,
+ *     initial_node_count=1)
+ * primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
+ *     cluster=primary.id,
+ *     node_count=1,
+ *     node_config=gcp.container.NodePoolNodeConfigArgs(
+ *         preemptible=True,
+ *         machine_type="e2-medium",
+ *         service_account=default.email,
+ *         oauth_scopes=["https://www.googleapis.com/auth/cloud-platform"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "service-account-id",
+ *             DisplayName = "Service Account",
+ *         });
+ *         var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+ *         {
+ *             Location = "us-central1",
+ *             RemoveDefaultNodePool = true,
+ *             InitialNodeCount = 1,
+ *         });
+ *         var primaryPreemptibleNodes = new Gcp.Container.NodePool("primaryPreemptibleNodes", new Gcp.Container.NodePoolArgs
+ *         {
+ *             Cluster = primary.Id,
+ *             NodeCount = 1,
+ *             NodeConfig = new Gcp.Container.Inputs.NodePoolNodeConfigArgs
+ *             {
+ *                 Preemptible = true,
+ *                 MachineType = "e2-medium",
+ *                 ServiceAccount = @default.Email,
+ *                 OauthScopes = 
+ *                 {
+ *                     "https://www.googleapis.com/auth/cloud-platform",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := serviceAccount.NewAccount(ctx, "default", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("service-account-id"),
+ * 			DisplayName: pulumi.String("Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+ * 			Location:              pulumi.String("us-central1"),
+ * 			RemoveDefaultNodePool: pulumi.Bool(true),
+ * 			InitialNodeCount:      pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = container.NewNodePool(ctx, "primaryPreemptibleNodes", &container.NodePoolArgs{
+ * 			Cluster:   primary.ID(),
+ * 			NodeCount: pulumi.Int(1),
+ * 			NodeConfig: &container.NodePoolNodeConfigArgs{
+ * 				Preemptible:    pulumi.Bool(true),
+ * 				MachineType:    pulumi.String("e2-medium"),
+ * 				ServiceAccount: _default.Email,
+ * 				OauthScopes: pulumi.StringArray{
+ * 					pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### 2 Node Pools, 1 Separately Managed + The Default Node Pool
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.serviceaccount.Account("default", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * const primary = new gcp.container.Cluster("primary", {
+ *     location: "us-central1-a",
+ *     initialNodeCount: 3,
+ *     nodeLocations: ["us-central1-c"],
+ *     nodeConfig: {
+ *         serviceAccount: _default.email,
+ *         oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+ *         guestAccelerators: [{
+ *             type: "nvidia-tesla-k80",
+ *             count: 1,
+ *         }],
+ *     },
+ * });
+ * const np = new gcp.container.NodePool("np", {
+ *     cluster: primary.id,
+ *     nodeConfig: {
+ *         machineType: "e2-medium",
+ *         serviceAccount: _default.email,
+ *         oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+ *     },
+ *     timeouts: [{
+ *         create: "30m",
+ *         update: "20m",
+ *     }],
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,10 +206,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:container/nodePool:NodePool mainpool my-gcp-project/us-east1-a/my-cluster/main-pool
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:container/nodePool:NodePool mainpool us-east1/my-cluster/main-pool
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:container/nodePool:NodePool")
 public class NodePool extends io.pulumi.resources.CustomResource {

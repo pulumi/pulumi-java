@@ -23,13 +23,535 @@ import javax.annotation.Nullable;
 /**
  * A Google Cloud Redis instance.
  * 
+ * 
  * To get more information about Instance, see:
  * 
  * * [API documentation](https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/memorystore/docs/redis/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Redis Instance Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const cache = new gcp.redis.Instance("cache", {
+ *     memorySizeGb: 1,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * cache = gcp.redis.Instance("cache", memory_size_gb=1)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+ *         {
+ *             MemorySizeGb = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/redis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+ * 			MemorySizeGb: pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Redis Instance Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const redis-network = gcp.compute.getNetwork({
+ *     name: "redis-test-network",
+ * });
+ * const cache = new gcp.redis.Instance("cache", {
+ *     tier: "STANDARD_HA",
+ *     memorySizeGb: 1,
+ *     locationId: "us-central1-a",
+ *     alternativeLocationId: "us-central1-f",
+ *     authorizedNetwork: redis_network.then(redis_network => redis_network.id),
+ *     redisVersion: "REDIS_4_0",
+ *     displayName: "Test Instance",
+ *     reservedIpRange: "192.168.0.0/29",
+ *     labels: {
+ *         my_key: "my_val",
+ *         other_key: "other_val",
+ *     },
+ *     maintenancePolicy: {
+ *         weeklyMaintenanceWindows: [{
+ *             day: "TUESDAY",
+ *             startTime: {
+ *                 hours: 0,
+ *                 minutes: 30,
+ *                 seconds: 0,
+ *                 nanos: 0,
+ *             },
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * redis_network = gcp.compute.get_network(name="redis-test-network")
+ * cache = gcp.redis.Instance("cache",
+ *     tier="STANDARD_HA",
+ *     memory_size_gb=1,
+ *     location_id="us-central1-a",
+ *     alternative_location_id="us-central1-f",
+ *     authorized_network=redis_network.id,
+ *     redis_version="REDIS_4_0",
+ *     display_name="Test Instance",
+ *     reserved_ip_range="192.168.0.0/29",
+ *     labels={
+ *         "my_key": "my_val",
+ *         "other_key": "other_val",
+ *     },
+ *     maintenance_policy=gcp.redis.InstanceMaintenancePolicyArgs(
+ *         weekly_maintenance_windows=[gcp.redis.InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs(
+ *             day="TUESDAY",
+ *             start_time=gcp.redis.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs(
+ *                 hours=0,
+ *                 minutes=30,
+ *                 seconds=0,
+ *                 nanos=0,
+ *             ),
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+ *         {
+ *             Name = "redis-test-network",
+ *         }));
+ *         var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+ *         {
+ *             Tier = "STANDARD_HA",
+ *             MemorySizeGb = 1,
+ *             LocationId = "us-central1-a",
+ *             AlternativeLocationId = "us-central1-f",
+ *             AuthorizedNetwork = redis_network.Apply(redis_network => redis_network.Id),
+ *             RedisVersion = "REDIS_4_0",
+ *             DisplayName = "Test Instance",
+ *             ReservedIpRange = "192.168.0.0/29",
+ *             Labels = 
+ *             {
+ *                 { "my_key", "my_val" },
+ *                 { "other_key", "other_val" },
+ *             },
+ *             MaintenancePolicy = new Gcp.Redis.Inputs.InstanceMaintenancePolicyArgs
+ *             {
+ *                 WeeklyMaintenanceWindows = 
+ *                 {
+ *                     new Gcp.Redis.Inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs
+ *                     {
+ *                         Day = "TUESDAY",
+ *                         StartTime = new Gcp.Redis.Inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs
+ *                         {
+ *                             Hours = 0,
+ *                             Minutes = 30,
+ *                             Seconds = 0,
+ *                             Nanos = 0,
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/redis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		redis_network, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+ * 			Name: "redis-test-network",
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+ * 			Tier:                  pulumi.String("STANDARD_HA"),
+ * 			MemorySizeGb:          pulumi.Int(1),
+ * 			LocationId:            pulumi.String("us-central1-a"),
+ * 			AlternativeLocationId: pulumi.String("us-central1-f"),
+ * 			AuthorizedNetwork:     pulumi.String(redis_network.Id),
+ * 			RedisVersion:          pulumi.String("REDIS_4_0"),
+ * 			DisplayName:           pulumi.String("Test Instance"),
+ * 			ReservedIpRange:       pulumi.String("192.168.0.0/29"),
+ * 			Labels: pulumi.StringMap{
+ * 				"my_key":    pulumi.String("my_val"),
+ * 				"other_key": pulumi.String("other_val"),
+ * 			},
+ * 			MaintenancePolicy: &redis.InstanceMaintenancePolicyArgs{
+ * 				WeeklyMaintenanceWindows: redis.InstanceMaintenancePolicyWeeklyMaintenanceWindowArray{
+ * 					&redis.InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs{
+ * 						Day: pulumi.String("TUESDAY"),
+ * 						StartTime: &redis.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs{
+ * 							Hours:   pulumi.Int(0),
+ * 							Minutes: pulumi.Int(30),
+ * 							Seconds: pulumi.Int(0),
+ * 							Nanos:   pulumi.Int(0),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Redis Instance Private Service
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const redis-network = gcp.compute.getNetwork({
+ *     name: "redis-test-network",
+ * });
+ * const serviceRange = new gcp.compute.GlobalAddress("serviceRange", {
+ *     purpose: "VPC_PEERING",
+ *     addressType: "INTERNAL",
+ *     prefixLength: 16,
+ *     network: redis_network.then(redis_network => redis_network.id),
+ * });
+ * const privateServiceConnection = new gcp.servicenetworking.Connection("privateServiceConnection", {
+ *     network: redis_network.then(redis_network => redis_network.id),
+ *     service: "servicenetworking.googleapis.com",
+ *     reservedPeeringRanges: [serviceRange.name],
+ * });
+ * const cache = new gcp.redis.Instance("cache", {
+ *     tier: "STANDARD_HA",
+ *     memorySizeGb: 1,
+ *     locationId: "us-central1-a",
+ *     alternativeLocationId: "us-central1-f",
+ *     authorizedNetwork: redis_network.then(redis_network => redis_network.id),
+ *     connectMode: "PRIVATE_SERVICE_ACCESS",
+ *     redisVersion: "REDIS_4_0",
+ *     displayName: "Test Instance",
+ * }, {
+ *     dependsOn: [privateServiceConnection],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * redis_network = gcp.compute.get_network(name="redis-test-network")
+ * service_range = gcp.compute.GlobalAddress("serviceRange",
+ *     purpose="VPC_PEERING",
+ *     address_type="INTERNAL",
+ *     prefix_length=16,
+ *     network=redis_network.id)
+ * private_service_connection = gcp.servicenetworking.Connection("privateServiceConnection",
+ *     network=redis_network.id,
+ *     service="servicenetworking.googleapis.com",
+ *     reserved_peering_ranges=[service_range.name])
+ * cache = gcp.redis.Instance("cache",
+ *     tier="STANDARD_HA",
+ *     memory_size_gb=1,
+ *     location_id="us-central1-a",
+ *     alternative_location_id="us-central1-f",
+ *     authorized_network=redis_network.id,
+ *     connect_mode="PRIVATE_SERVICE_ACCESS",
+ *     redis_version="REDIS_4_0",
+ *     display_name="Test Instance",
+ *     opts=pulumi.ResourceOptions(depends_on=[private_service_connection]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+ *         {
+ *             Name = "redis-test-network",
+ *         }));
+ *         var serviceRange = new Gcp.Compute.GlobalAddress("serviceRange", new Gcp.Compute.GlobalAddressArgs
+ *         {
+ *             Purpose = "VPC_PEERING",
+ *             AddressType = "INTERNAL",
+ *             PrefixLength = 16,
+ *             Network = redis_network.Apply(redis_network => redis_network.Id),
+ *         });
+ *         var privateServiceConnection = new Gcp.ServiceNetworking.Connection("privateServiceConnection", new Gcp.ServiceNetworking.ConnectionArgs
+ *         {
+ *             Network = redis_network.Apply(redis_network => redis_network.Id),
+ *             Service = "servicenetworking.googleapis.com",
+ *             ReservedPeeringRanges = 
+ *             {
+ *                 serviceRange.Name,
+ *             },
+ *         });
+ *         var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+ *         {
+ *             Tier = "STANDARD_HA",
+ *             MemorySizeGb = 1,
+ *             LocationId = "us-central1-a",
+ *             AlternativeLocationId = "us-central1-f",
+ *             AuthorizedNetwork = redis_network.Apply(redis_network => redis_network.Id),
+ *             ConnectMode = "PRIVATE_SERVICE_ACCESS",
+ *             RedisVersion = "REDIS_4_0",
+ *             DisplayName = "Test Instance",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 privateServiceConnection,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/redis"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicenetworking"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		redis_network, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+ * 			Name: "redis-test-network",
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		serviceRange, err := compute.NewGlobalAddress(ctx, "serviceRange", &compute.GlobalAddressArgs{
+ * 			Purpose:      pulumi.String("VPC_PEERING"),
+ * 			AddressType:  pulumi.String("INTERNAL"),
+ * 			PrefixLength: pulumi.Int(16),
+ * 			Network:      pulumi.String(redis_network.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		privateServiceConnection, err := servicenetworking.NewConnection(ctx, "privateServiceConnection", &servicenetworking.ConnectionArgs{
+ * 			Network: pulumi.String(redis_network.Id),
+ * 			Service: pulumi.String("servicenetworking.googleapis.com"),
+ * 			ReservedPeeringRanges: pulumi.StringArray{
+ * 				serviceRange.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+ * 			Tier:                  pulumi.String("STANDARD_HA"),
+ * 			MemorySizeGb:          pulumi.Int(1),
+ * 			LocationId:            pulumi.String("us-central1-a"),
+ * 			AlternativeLocationId: pulumi.String("us-central1-f"),
+ * 			AuthorizedNetwork:     pulumi.String(redis_network.Id),
+ * 			ConnectMode:           pulumi.String("PRIVATE_SERVICE_ACCESS"),
+ * 			RedisVersion:          pulumi.String("REDIS_4_0"),
+ * 			DisplayName:           pulumi.String("Test Instance"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			privateServiceConnection,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Redis Instance Mrr
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const redis-network = gcp.compute.getNetwork({
+ *     name: "redis-test-network",
+ * });
+ * const cache = new gcp.redis.Instance("cache", {
+ *     tier: "STANDARD_HA",
+ *     memorySizeGb: 5,
+ *     locationId: "us-central1-a",
+ *     alternativeLocationId: "us-central1-f",
+ *     authorizedNetwork: redis_network.then(redis_network => redis_network.id),
+ *     redisVersion: "REDIS_6_X",
+ *     displayName: "Terraform Test Instance",
+ *     reservedIpRange: "192.168.0.0/28",
+ *     replicaCount: 5,
+ *     readReplicasMode: "READ_REPLICAS_ENABLED",
+ *     labels: {
+ *         my_key: "my_val",
+ *         other_key: "other_val",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * redis_network = gcp.compute.get_network(name="redis-test-network")
+ * cache = gcp.redis.Instance("cache",
+ *     tier="STANDARD_HA",
+ *     memory_size_gb=5,
+ *     location_id="us-central1-a",
+ *     alternative_location_id="us-central1-f",
+ *     authorized_network=redis_network.id,
+ *     redis_version="REDIS_6_X",
+ *     display_name="Terraform Test Instance",
+ *     reserved_ip_range="192.168.0.0/28",
+ *     replica_count=5,
+ *     read_replicas_mode="READ_REPLICAS_ENABLED",
+ *     labels={
+ *         "my_key": "my_val",
+ *         "other_key": "other_val",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+ *         {
+ *             Name = "redis-test-network",
+ *         }));
+ *         var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+ *         {
+ *             Tier = "STANDARD_HA",
+ *             MemorySizeGb = 5,
+ *             LocationId = "us-central1-a",
+ *             AlternativeLocationId = "us-central1-f",
+ *             AuthorizedNetwork = redis_network.Apply(redis_network => redis_network.Id),
+ *             RedisVersion = "REDIS_6_X",
+ *             DisplayName = "Terraform Test Instance",
+ *             ReservedIpRange = "192.168.0.0/28",
+ *             ReplicaCount = 5,
+ *             ReadReplicasMode = "READ_REPLICAS_ENABLED",
+ *             Labels = 
+ *             {
+ *                 { "my_key", "my_val" },
+ *                 { "other_key", "other_val" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/redis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		redis_network, err := compute.LookupNetwork(ctx, &compute.LookupNetworkArgs{
+ * 			Name: "redis-test-network",
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+ * 			Tier:                  pulumi.String("STANDARD_HA"),
+ * 			MemorySizeGb:          pulumi.Int(5),
+ * 			LocationId:            pulumi.String("us-central1-a"),
+ * 			AlternativeLocationId: pulumi.String("us-central1-f"),
+ * 			AuthorizedNetwork:     pulumi.String(redis_network.Id),
+ * 			RedisVersion:          pulumi.String("REDIS_6_X"),
+ * 			DisplayName:           pulumi.String("Terraform Test Instance"),
+ * 			ReservedIpRange:       pulumi.String("192.168.0.0/28"),
+ * 			ReplicaCount:          pulumi.Int(5),
+ * 			ReadReplicasMode:      pulumi.String("READ_REPLICAS_ENABLED"),
+ * 			Labels: pulumi.StringMap{
+ * 				"my_key":    pulumi.String("my_val"),
+ * 				"other_key": pulumi.String("other_val"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,18 +561,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:redis/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:redis/instance:Instance default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:redis/instance:Instance default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:redis/instance:Instance default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:redis/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
@@ -143,7 +672,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return this.connectMode;
     }
     /**
-     * - 
+     * -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -530,8 +1059,8 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The service tier of the instance. Must be one of these values:
      * - BASIC: standalone instance
      * - STANDARD_HA: highly available primary/replica instances
-     *   Default value is `BASIC`.
-     *   Possible values are `BASIC` and `STANDARD_HA`.
+     * Default value is `BASIC`.
+     * Possible values are `BASIC` and `STANDARD_HA`.
      * 
      */
     @Export(name="tier", type=String.class, parameters={})
@@ -541,8 +1070,8 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The service tier of the instance. Must be one of these values:
      * - BASIC: standalone instance
      * - STANDARD_HA: highly available primary/replica instances
-     *   Default value is `BASIC`.
-     *   Possible values are `BASIC` and `STANDARD_HA`.
+     * Default value is `BASIC`.
+     * Possible values are `BASIC` and `STANDARD_HA`.
      * 
      */
     public Output</* @Nullable */ String> getTier() {
@@ -551,8 +1080,8 @@ public class Instance extends io.pulumi.resources.CustomResource {
     /**
      * The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
      * - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication
-     *   Default value is `DISABLED`.
-     *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
+     * Default value is `DISABLED`.
+     * Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
      * 
      */
     @Export(name="transitEncryptionMode", type=String.class, parameters={})
@@ -561,8 +1090,8 @@ public class Instance extends io.pulumi.resources.CustomResource {
     /**
      * @return The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
      * - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication
-     *   Default value is `DISABLED`.
-     *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
+     * Default value is `DISABLED`.
+     * Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
      * 
      */
     public Output</* @Nullable */ String> getTransitEncryptionMode() {

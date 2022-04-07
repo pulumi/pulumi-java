@@ -22,7 +22,408 @@ import javax.annotation.Nullable;
  * For more information, see:
  * * [Understanding Certificate Templates](https://cloud.google.com/certificate-authority-service/docs/certificate-template)
  * * [Common configurations and Certificate Profiles](https://cloud.google.com/certificate-authority-service/docs/certificate-profile)
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic_certificate_template
+ * An example of a basic privateca certificate template
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.certificateauthority.CertificateTemplate("primary", {
+ *     description: "An updated sample certificate template",
+ *     identityConstraints: {
+ *         allowSubjectAltNamesPassthrough: true,
+ *         allowSubjectPassthrough: true,
+ *         celExpression: {
+ *             description: "Always true",
+ *             expression: "true",
+ *             location: "any.file.anywhere",
+ *             title: "Sample expression",
+ *         },
+ *     },
+ *     labels: {
+ *         "label-two": "value-two",
+ *     },
+ *     location: "us-west1",
+ *     passthroughExtensions: {
+ *         additionalExtensions: [{
+ *             objectIdPaths: [
+ *                 1,
+ *                 6,
+ *             ],
+ *         }],
+ *         knownExtensions: ["EXTENDED_KEY_USAGE"],
+ *     },
+ *     predefinedValues: {
+ *         additionalExtensions: [{
+ *             critical: true,
+ *             objectId: {
+ *                 objectIdPaths: [
+ *                     1,
+ *                     6,
+ *                 ],
+ *             },
+ *             value: "c3RyaW5nCg==",
+ *         }],
+ *         aiaOcspServers: ["string"],
+ *         caOptions: {
+ *             isCa: false,
+ *             maxIssuerPathLength: 6,
+ *         },
+ *         keyUsage: {
+ *             baseKeyUsage: {
+ *                 certSign: false,
+ *                 contentCommitment: true,
+ *                 crlSign: false,
+ *                 dataEncipherment: true,
+ *                 decipherOnly: true,
+ *                 digitalSignature: true,
+ *                 encipherOnly: true,
+ *                 keyAgreement: true,
+ *                 keyEncipherment: true,
+ *             },
+ *             extendedKeyUsage: {
+ *                 clientAuth: true,
+ *                 codeSigning: true,
+ *                 emailProtection: true,
+ *                 ocspSigning: true,
+ *                 serverAuth: true,
+ *                 timeStamping: true,
+ *             },
+ *             unknownExtendedKeyUsages: [{
+ *                 objectIdPaths: [
+ *                     1,
+ *                     6,
+ *                 ],
+ *             }],
+ *         },
+ *         policyIds: [{
+ *             objectIdPaths: [
+ *                 1,
+ *                 6,
+ *             ],
+ *         }],
+ *     },
+ *     project: "my-project-name",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.certificateauthority.CertificateTemplate("primary",
+ *     description="An updated sample certificate template",
+ *     identity_constraints=gcp.certificateauthority.CertificateTemplateIdentityConstraintsArgs(
+ *         allow_subject_alt_names_passthrough=True,
+ *         allow_subject_passthrough=True,
+ *         cel_expression=gcp.certificateauthority.CertificateTemplateIdentityConstraintsCelExpressionArgs(
+ *             description="Always true",
+ *             expression="true",
+ *             location="any.file.anywhere",
+ *             title="Sample expression",
+ *         ),
+ *     ),
+ *     labels={
+ *         "label-two": "value-two",
+ *     },
+ *     location="us-west1",
+ *     passthrough_extensions=gcp.certificateauthority.CertificateTemplatePassthroughExtensionsArgs(
+ *         additional_extensions=[gcp.certificateauthority.CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs(
+ *             object_id_path=[
+ *                 1,
+ *                 6,
+ *             ],
+ *         )],
+ *         known_extensions=["EXTENDED_KEY_USAGE"],
+ *     ),
+ *     predefined_values=gcp.certificateauthority.CertificateTemplatePredefinedValuesArgs(
+ *         additional_extensions=[gcp.certificateauthority.CertificateTemplatePredefinedValuesAdditionalExtensionArgs(
+ *             critical=True,
+ *             object_id=gcp.certificateauthority.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs(
+ *                 object_id_path=[
+ *                     1,
+ *                     6,
+ *                 ],
+ *             ),
+ *             value="c3RyaW5nCg==",
+ *         )],
+ *         aia_ocsp_servers=["string"],
+ *         ca_options=gcp.certificateauthority.CertificateTemplatePredefinedValuesCaOptionsArgs(
+ *             is_ca=False,
+ *             max_issuer_path_length=6,
+ *         ),
+ *         key_usage=gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageArgs(
+ *             base_key_usage=gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs(
+ *                 cert_sign=False,
+ *                 content_commitment=True,
+ *                 crl_sign=False,
+ *                 data_encipherment=True,
+ *                 decipher_only=True,
+ *                 digital_signature=True,
+ *                 encipher_only=True,
+ *                 key_agreement=True,
+ *                 key_encipherment=True,
+ *             ),
+ *             extended_key_usage=gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs(
+ *                 client_auth=True,
+ *                 code_signing=True,
+ *                 email_protection=True,
+ *                 ocsp_signing=True,
+ *                 server_auth=True,
+ *                 time_stamping=True,
+ *             ),
+ *             unknown_extended_key_usages=[gcp.certificateauthority.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs(
+ *                 object_id_path=[
+ *                     1,
+ *                     6,
+ *                 ],
+ *             )],
+ *         ),
+ *         policy_ids=[gcp.certificateauthority.CertificateTemplatePredefinedValuesPolicyIdArgs(
+ *             object_id_path=[
+ *                 1,
+ *                 6,
+ *             ],
+ *         )],
+ *     ),
+ *     project="my-project-name")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.CertificateAuthority.CertificateTemplate("primary", new Gcp.CertificateAuthority.CertificateTemplateArgs
+ *         {
+ *             Description = "An updated sample certificate template",
+ *             IdentityConstraints = new Gcp.CertificateAuthority.Inputs.CertificateTemplateIdentityConstraintsArgs
+ *             {
+ *                 AllowSubjectAltNamesPassthrough = true,
+ *                 AllowSubjectPassthrough = true,
+ *                 CelExpression = new Gcp.CertificateAuthority.Inputs.CertificateTemplateIdentityConstraintsCelExpressionArgs
+ *                 {
+ *                     Description = "Always true",
+ *                     Expression = "true",
+ *                     Location = "any.file.anywhere",
+ *                     Title = "Sample expression",
+ *                 },
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "label-two", "value-two" },
+ *             },
+ *             Location = "us-west1",
+ *             PassthroughExtensions = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePassthroughExtensionsArgs
+ *             {
+ *                 AdditionalExtensions = 
+ *                 {
+ *                     new Gcp.CertificateAuthority.Inputs.CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs
+ *                     {
+ *                         ObjectIdPath = 
+ *                         {
+ *                             1,
+ *                             6,
+ *                         },
+ *                     },
+ *                 },
+ *                 KnownExtensions = 
+ *                 {
+ *                     "EXTENDED_KEY_USAGE",
+ *                 },
+ *             },
+ *             PredefinedValues = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesArgs
+ *             {
+ *                 AdditionalExtensions = 
+ *                 {
+ *                     new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesAdditionalExtensionArgs
+ *                     {
+ *                         Critical = true,
+ *                         ObjectId = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs
+ *                         {
+ *                             ObjectIdPath = 
+ *                             {
+ *                                 1,
+ *                                 6,
+ *                             },
+ *                         },
+ *                         Value = "c3RyaW5nCg==",
+ *                     },
+ *                 },
+ *                 AiaOcspServers = 
+ *                 {
+ *                     "string",
+ *                 },
+ *                 CaOptions = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesCaOptionsArgs
+ *                 {
+ *                     IsCa = false,
+ *                     MaxIssuerPathLength = 6,
+ *                 },
+ *                 KeyUsage = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageArgs
+ *                 {
+ *                     BaseKeyUsage = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs
+ *                     {
+ *                         CertSign = false,
+ *                         ContentCommitment = true,
+ *                         CrlSign = false,
+ *                         DataEncipherment = true,
+ *                         DecipherOnly = true,
+ *                         DigitalSignature = true,
+ *                         EncipherOnly = true,
+ *                         KeyAgreement = true,
+ *                         KeyEncipherment = true,
+ *                     },
+ *                     ExtendedKeyUsage = new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs
+ *                     {
+ *                         ClientAuth = true,
+ *                         CodeSigning = true,
+ *                         EmailProtection = true,
+ *                         OcspSigning = true,
+ *                         ServerAuth = true,
+ *                         TimeStamping = true,
+ *                     },
+ *                     UnknownExtendedKeyUsages = 
+ *                     {
+ *                         new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs
+ *                         {
+ *                             ObjectIdPath = 
+ *                             {
+ *                                 1,
+ *                                 6,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 PolicyIds = 
+ *                 {
+ *                     new Gcp.CertificateAuthority.Inputs.CertificateTemplatePredefinedValuesPolicyIdArgs
+ *                     {
+ *                         ObjectIdPath = 
+ *                         {
+ *                             1,
+ *                             6,
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Project = "my-project-name",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/certificateauthority"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := certificateauthority.NewCertificateTemplate(ctx, "primary", &certificateauthority.CertificateTemplateArgs{
+ * 			Description: pulumi.String("An updated sample certificate template"),
+ * 			IdentityConstraints: &certificateauthority.CertificateTemplateIdentityConstraintsArgs{
+ * 				AllowSubjectAltNamesPassthrough: pulumi.Bool(true),
+ * 				AllowSubjectPassthrough:         pulumi.Bool(true),
+ * 				CelExpression: &certificateauthority.CertificateTemplateIdentityConstraintsCelExpressionArgs{
+ * 					Description: pulumi.String("Always true"),
+ * 					Expression:  pulumi.String("true"),
+ * 					Location:    pulumi.String("any.file.anywhere"),
+ * 					Title:       pulumi.String("Sample expression"),
+ * 				},
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"label-two": pulumi.String("value-two"),
+ * 			},
+ * 			Location: pulumi.String("us-west1"),
+ * 			PassthroughExtensions: &certificateauthority.CertificateTemplatePassthroughExtensionsArgs{
+ * 				AdditionalExtensions: certificateauthority.CertificateTemplatePassthroughExtensionsAdditionalExtensionArray{
+ * 					&certificateauthority.CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs{
+ * 						ObjectIdPath: []float64{
+ * 							1,
+ * 							6,
+ * 						},
+ * 					},
+ * 				},
+ * 				KnownExtensions: pulumi.StringArray{
+ * 					pulumi.String("EXTENDED_KEY_USAGE"),
+ * 				},
+ * 			},
+ * 			PredefinedValues: &certificateauthority.CertificateTemplatePredefinedValuesArgs{
+ * 				AdditionalExtensions: certificateauthority.CertificateTemplatePredefinedValuesAdditionalExtensionArray{
+ * 					&certificateauthority.CertificateTemplatePredefinedValuesAdditionalExtensionArgs{
+ * 						Critical: pulumi.Bool(true),
+ * 						ObjectId: &certificateauthority.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs{
+ * 							ObjectIdPath: []float64{
+ * 								1,
+ * 								6,
+ * 							},
+ * 						},
+ * 						Value: pulumi.String("c3RyaW5nCg=="),
+ * 					},
+ * 				},
+ * 				AiaOcspServers: pulumi.StringArray{
+ * 					pulumi.String("string"),
+ * 				},
+ * 				CaOptions: &certificateauthority.CertificateTemplatePredefinedValuesCaOptionsArgs{
+ * 					IsCa:                pulumi.Bool(false),
+ * 					MaxIssuerPathLength: pulumi.Int(6),
+ * 				},
+ * 				KeyUsage: &certificateauthority.CertificateTemplatePredefinedValuesKeyUsageArgs{
+ * 					BaseKeyUsage: &certificateauthority.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs{
+ * 						CertSign:          pulumi.Bool(false),
+ * 						ContentCommitment: pulumi.Bool(true),
+ * 						CrlSign:           pulumi.Bool(false),
+ * 						DataEncipherment:  pulumi.Bool(true),
+ * 						DecipherOnly:      pulumi.Bool(true),
+ * 						DigitalSignature:  pulumi.Bool(true),
+ * 						EncipherOnly:      pulumi.Bool(true),
+ * 						KeyAgreement:      pulumi.Bool(true),
+ * 						KeyEncipherment:   pulumi.Bool(true),
+ * 					},
+ * 					ExtendedKeyUsage: &certificateauthority.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs{
+ * 						ClientAuth:      pulumi.Bool(true),
+ * 						CodeSigning:     pulumi.Bool(true),
+ * 						EmailProtection: pulumi.Bool(true),
+ * 						OcspSigning:     pulumi.Bool(true),
+ * 						ServerAuth:      pulumi.Bool(true),
+ * 						TimeStamping:    pulumi.Bool(true),
+ * 					},
+ * 					UnknownExtendedKeyUsages: certificateauthority.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArray{
+ * 						&certificateauthority.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs{
+ * 							ObjectIdPath: []float64{
+ * 								1,
+ * 								6,
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				PolicyIds: certificateauthority.CertificateTemplatePredefinedValuesPolicyIdArray{
+ * 					&certificateauthority.CertificateTemplatePredefinedValuesPolicyIdArgs{
+ * 						ObjectIdPath: []float64{
+ * 							1,
+ * 							6,
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +433,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:certificateauthority/certificateTemplate:CertificateTemplate default projects/{{project}}/locations/{{location}}/certificateTemplates/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:certificateauthority/certificateTemplate:CertificateTemplate default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:certificateauthority/certificateTemplate:CertificateTemplate default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:certificateauthority/certificateTemplate:CertificateTemplate")
 public class CertificateTemplate extends io.pulumi.resources.CustomResource {

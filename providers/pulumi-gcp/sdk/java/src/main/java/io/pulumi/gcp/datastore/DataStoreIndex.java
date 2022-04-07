@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Describes a composite index for Cloud Datastore.
  * 
+ * 
  * To get more information about Index, see:
  * 
  * * [API documentation](https://cloud.google.com/datastore/docs/reference/admin/rest/v1/projects.indexes)
@@ -29,7 +30,108 @@ import javax.annotation.Nullable;
  * `database_type` set to `"CLOUD_DATASTORE_COMPATIBILITY"` to do so. Your
  * Datastore location will be the same as the App Engine location specified.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Datastore Index
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
+ *     kind: "foo",
+ *     properties: [
+ *         {
+ *             direction: "ASCENDING",
+ *             name: "property_a",
+ *         },
+ *         {
+ *             direction: "ASCENDING",
+ *             name: "property_b",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.datastore.DataStoreIndex("default",
+ *     kind="foo",
+ *     properties=[
+ *         gcp.datastore.DataStoreIndexPropertyArgs(
+ *             direction="ASCENDING",
+ *             name="property_a",
+ *         ),
+ *         gcp.datastore.DataStoreIndexPropertyArgs(
+ *             direction="ASCENDING",
+ *             name="property_b",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Datastore.DataStoreIndex("default", new Gcp.Datastore.DataStoreIndexArgs
+ *         {
+ *             Kind = "foo",
+ *             Properties = 
+ *             {
+ *                 new Gcp.Datastore.Inputs.DataStoreIndexPropertyArgs
+ *                 {
+ *                     Direction = "ASCENDING",
+ *                     Name = "property_a",
+ *                 },
+ *                 new Gcp.Datastore.Inputs.DataStoreIndexPropertyArgs
+ *                 {
+ *                     Direction = "ASCENDING",
+ *                     Name = "property_b",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datastore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datastore.NewDataStoreIndex(ctx, "default", &datastore.DataStoreIndexArgs{
+ * 			Kind: pulumi.String("foo"),
+ * 			Properties: datastore.DataStoreIndexPropertyArray{
+ * 				&datastore.DataStoreIndexPropertyArgs{
+ * 					Direction: pulumi.String("ASCENDING"),
+ * 					Name:      pulumi.String("property_a"),
+ * 				},
+ * 				&datastore.DataStoreIndexPropertyArgs{
+ * 					Direction: pulumi.String("ASCENDING"),
+ * 					Name:      pulumi.String("property_b"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,14 +141,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default projects/{{project}}/indexes/{{index_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default {{project}}/{{index_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default {{index_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:datastore/dataStoreIndex:DataStoreIndex")
 public class DataStoreIndex extends io.pulumi.resources.CustomResource {

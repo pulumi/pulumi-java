@@ -26,7 +26,69 @@ import javax.annotation.Nullable;
  * errors when you try to apply ACLs to service accounts immediately after
  * creation.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * This snippet creates a service account in a project.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const serviceAccount = new gcp.serviceAccount.Account("service_account", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * service_account = gcp.service_account.Account("serviceAccount",
+ *     account_id="service-account-id",
+ *     display_name="Service Account")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "service-account-id",
+ *             DisplayName = "Service Account",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("service-account-id"),
+ * 			DisplayName: pulumi.String("Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:serviceAccount/account:Account my_sa projects/my-project/serviceAccounts/my-sa@my-project.iam.gserviceaccount.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:serviceAccount/account:Account")
 public class Account extends io.pulumi.resources.CustomResource {

@@ -19,7 +19,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     public static final RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs Empty = new RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs();
 
     /**
-     * - 
+     * -
      * Optional. Specifies whether the disk will be auto-deleted
      * when the instance is deleted (but not when the disk is
      * detached from the instance).
@@ -33,7 +33,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     }
 
     /**
-     * - 
+     * -
      * Optional. Indicates that this is a boot disk. The virtual
      * machine will use the first partition of the disk for its
      * root filesystem.
@@ -47,7 +47,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     }
 
     /**
-     * - 
+     * -
      * Optional. Specifies a unique device name of your choice
      * that is reflected into the /dev/disk/by-id/google-* tree
      * of a Linux operating system running within the instance.
@@ -67,7 +67,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     }
 
     /**
-     * - 
+     * -
      * Indicates a list of features to enable on the guest operating
      * system. Applicable only for bootable images. To see a list of
      * available features, read `https://cloud.google.com/compute/docs/
@@ -83,7 +83,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     }
 
     /**
-     * - 
+     * -
      * Output only. A zero-based index to this disk, where 0 is
      * reserved for the boot disk. If you have many disks attached
      * to an instance, each disk would have a unique index number.
@@ -130,7 +130,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     }
 
     /**
-     * - 
+     * -
      * Type of the resource. Always compute#attachedDisk for attached
      * disks.
      * 
@@ -143,7 +143,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     }
 
     /**
-     * - 
+     * -
      * Output only. Any valid publicly visible licenses.
      * 
      */

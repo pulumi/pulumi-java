@@ -20,8 +20,8 @@ public final class GameServerConfigFleetConfigArgs extends io.pulumi.resources.R
      * instead. File references can contain the json or yaml format of the fleet spec. Eg:
      * * fleet_spec = jsonencode(yamldecode(file("fleet_configs.yaml")))
      * * fleet_spec = file("fleet_configs.json")
-     *   The format of the spec can be found :
-     *   `https://agones.dev/site/docs/reference/fleet/`.
+     * The format of the spec can be found :
+     * `https://agones.dev/site/docs/reference/fleet/`.
      * 
      */
     @Import(name="fleetSpec", required=true)

@@ -24,7 +24,70 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** If Shared VPC Admin role is set at the folder level, use the google-beta provider. The google provider only supports this permission at project or organizational level currently. [[0]](https://cloud.google.com/vpc/docs/provisioning-shared-vpc#enable-shared-vpc-host)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const service1 = new gcp.compute.SharedVPCServiceProject("service1", {
+ *     hostProject: "host-project-id",
+ *     serviceProject: "service-project-id-1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * service1 = gcp.compute.SharedVPCServiceProject("service1",
+ *     host_project="host-project-id",
+ *     service_project="service-project-id-1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service1 = new Gcp.Compute.SharedVPCServiceProject("service1", new Gcp.Compute.SharedVPCServiceProjectArgs
+ *         {
+ *             HostProject = "host-project-id",
+ *             ServiceProject = "service-project-id-1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSharedVPCServiceProject(ctx, "service1", &compute.SharedVPCServiceProjectArgs{
+ * 			HostProject:    pulumi.String("host-project-id"),
+ * 			ServiceProject: pulumi.String("service-project-id-1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * For a complete Shared VPC example with both host and service projects, see
+ * [`gcp.compute.SharedVPCHostProject`](https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_host_project.html).
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/sharedVPCServiceProject:SharedVPCServiceProject service1 host-project-id/service-project-id-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/sharedVPCServiceProject:SharedVPCServiceProject")
 public class SharedVPCServiceProject extends io.pulumi.resources.CustomResource {

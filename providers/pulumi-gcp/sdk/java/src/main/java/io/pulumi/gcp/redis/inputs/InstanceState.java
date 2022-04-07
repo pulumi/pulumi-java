@@ -87,7 +87,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * - 
+     * -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -374,8 +374,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The service tier of the instance. Must be one of these values:
      * - BASIC: standalone instance
      * - STANDARD_HA: highly available primary/replica instances
-     *   Default value is `BASIC`.
-     *   Possible values are `BASIC` and `STANDARD_HA`.
+     * Default value is `BASIC`.
+     * Possible values are `BASIC` and `STANDARD_HA`.
      * 
      */
     @Import(name="tier")
@@ -388,8 +388,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     /**
      * The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
      * - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication
-     *   Default value is `DISABLED`.
-     *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
+     * Default value is `DISABLED`.
+     * Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
      * 
      */
     @Import(name="transitEncryptionMode")

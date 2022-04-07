@@ -40,7 +40,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * - 
+     * -
      * The ID of the gateway the device accessed most recently.
      * 
      */
@@ -52,7 +52,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * - 
+     * -
      * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
      * 
      */

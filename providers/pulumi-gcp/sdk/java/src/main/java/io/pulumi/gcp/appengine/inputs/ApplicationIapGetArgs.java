@@ -16,7 +16,7 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
     public static final ApplicationIapGetArgs Empty = new ApplicationIapGetArgs();
 
     /**
-     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+     * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
      * (default is false)
      * 
      */

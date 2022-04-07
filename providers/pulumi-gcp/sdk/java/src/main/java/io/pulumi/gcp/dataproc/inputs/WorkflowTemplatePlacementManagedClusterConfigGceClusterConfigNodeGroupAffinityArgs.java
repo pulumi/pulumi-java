@@ -14,7 +14,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     public static final WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs();
 
     /**
-     * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
+     * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
      * 
      */
     @Import(name="nodeGroup", required=true)

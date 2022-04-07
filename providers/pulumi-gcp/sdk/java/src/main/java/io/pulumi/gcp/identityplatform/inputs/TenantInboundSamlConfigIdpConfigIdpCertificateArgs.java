@@ -15,7 +15,7 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificateArgs extends io
     public static final TenantInboundSamlConfigIdpConfigIdpCertificateArgs Empty = new TenantInboundSamlConfigIdpConfigIdpCertificateArgs();
 
     /**
-     * - 
+     * -
      * The x509 certificate
      * 
      */

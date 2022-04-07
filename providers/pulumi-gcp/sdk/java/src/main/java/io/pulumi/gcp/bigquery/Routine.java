@@ -18,13 +18,100 @@ import javax.annotation.Nullable;
 /**
  * A user-defined function or a stored procedure that belongs to a Dataset
  * 
+ * 
  * To get more information about Routine, see:
  * 
  * * [API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/routines)
  * * How-to Guides
  *     * [Routines Intro](https://cloud.google.com/bigquery/docs/reference/rest/v2/routines)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Big Query Routine Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const test = new gcp.bigquery.Dataset("test", {datasetId: "dataset_id"});
+ * const sproc = new gcp.bigquery.Routine("sproc", {
+ *     datasetId: test.datasetId,
+ *     routineId: "routine_id",
+ *     routineType: "PROCEDURE",
+ *     language: "SQL",
+ *     definitionBody: "CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * test = gcp.bigquery.Dataset("test", dataset_id="dataset_id")
+ * sproc = gcp.bigquery.Routine("sproc",
+ *     dataset_id=test.dataset_id,
+ *     routine_id="routine_id",
+ *     routine_type="PROCEDURE",
+ *     language="SQL",
+ *     definition_body="CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Gcp.BigQuery.Dataset("test", new Gcp.BigQuery.DatasetArgs
+ *         {
+ *             DatasetId = "dataset_id",
+ *         });
+ *         var sproc = new Gcp.BigQuery.Routine("sproc", new Gcp.BigQuery.RoutineArgs
+ *         {
+ *             DatasetId = test.DatasetId,
+ *             RoutineId = "routine_id",
+ *             RoutineType = "PROCEDURE",
+ *             Language = "SQL",
+ *             DefinitionBody = "CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigquery"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		test, err := bigquery.NewDataset(ctx, "test", &bigquery.DatasetArgs{
+ * 			DatasetId: pulumi.String("dataset_id"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = bigquery.NewRoutine(ctx, "sproc", &bigquery.RoutineArgs{
+ * 			DatasetId:      test.DatasetId,
+ * 			RoutineId:      pulumi.String("routine_id"),
+ * 			RoutineType:    pulumi.String("PROCEDURE"),
+ * 			Language:       pulumi.String("SQL"),
+ * 			DefinitionBody: pulumi.String("CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +121,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigquery/routine:Routine default projects/{{project}}/datasets/{{dataset_id}}/routines/{{routine_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:bigquery/routine:Routine default {{project}}/{{dataset_id}}/{{routine_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:bigquery/routine:Routine default {{dataset_id}}/{{routine_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:bigquery/routine:Routine")
 public class Routine extends io.pulumi.resources.CustomResource {

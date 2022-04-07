@@ -15,13 +15,16 @@ import javax.annotation.Nullable;
 /**
  * An `Instance` is the runtime dataplane in Apigee.
  * 
+ * 
  * To get more information about Instance, see:
  * 
  * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances/create)
  * * How-to Guides
  *     * [Creating a runtime instance](https://cloud.google.com/apigee/docs/api-platform/get-started/create-instance)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +34,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:apigee/instance:Instance default {{org_id}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:apigee/instance:Instance default {{org_id}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:apigee/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {

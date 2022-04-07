@@ -18,6 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Represents a NodeGroup resource to manage a group of sole-tenant nodes.
  * 
+ * 
  * To get more information about NodeGroup, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups)
@@ -29,7 +30,221 @@ import javax.annotation.Nullable;
  * through provider config or through external changes will cause
  * the provider to delete and recreate the node group.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Node Group Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+ *     region: "us-central1",
+ *     nodeType: "n1-node-96-624",
+ * });
+ * const nodes = new gcp.compute.NodeGroup("nodes", {
+ *     zone: "us-central1-a",
+ *     description: "example google_compute_node_group for the Google Provider",
+ *     size: 1,
+ *     nodeTemplate: soletenant_tmpl.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
+ *     region="us-central1",
+ *     node_type="n1-node-96-624")
+ * nodes = gcp.compute.NodeGroup("nodes",
+ *     zone="us-central1-a",
+ *     description="example google_compute_node_group for the Google Provider",
+ *     size=1,
+ *     node_template=soletenant_tmpl.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var soletenant_tmpl = new Gcp.Compute.NodeTemplate("soletenant-tmpl", new Gcp.Compute.NodeTemplateArgs
+ *         {
+ *             Region = "us-central1",
+ *             NodeType = "n1-node-96-624",
+ *         });
+ *         var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
+ *         {
+ *             Zone = "us-central1-a",
+ *             Description = "example google_compute_node_group for the Google Provider",
+ *             Size = 1,
+ *             NodeTemplate = soletenant_tmpl.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewNodeTemplate(ctx, "soletenant-tmpl", &compute.NodeTemplateArgs{
+ * 			Region:   pulumi.String("us-central1"),
+ * 			NodeType: pulumi.String("n1-node-96-624"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNodeGroup(ctx, "nodes", &compute.NodeGroupArgs{
+ * 			Zone:         pulumi.String("us-central1-a"),
+ * 			Description:  pulumi.String("example google_compute_node_group for the Google Provider"),
+ * 			Size:         pulumi.Int(1),
+ * 			NodeTemplate: soletenant_tmpl.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Node Group Autoscaling Policy
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+ *     region: "us-central1",
+ *     nodeType: "n1-node-96-624",
+ * });
+ * const nodes = new gcp.compute.NodeGroup("nodes", {
+ *     zone: "us-central1-a",
+ *     description: "example google_compute_node_group for Google Provider",
+ *     maintenancePolicy: "RESTART_IN_PLACE",
+ *     maintenanceWindow: {
+ *         startTime: "08:00",
+ *     },
+ *     initialSize: 1,
+ *     nodeTemplate: soletenant_tmpl.id,
+ *     autoscalingPolicy: {
+ *         mode: "ONLY_SCALE_OUT",
+ *         minNodes: 1,
+ *         maxNodes: 10,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
+ *     region="us-central1",
+ *     node_type="n1-node-96-624")
+ * nodes = gcp.compute.NodeGroup("nodes",
+ *     zone="us-central1-a",
+ *     description="example google_compute_node_group for Google Provider",
+ *     maintenance_policy="RESTART_IN_PLACE",
+ *     maintenance_window=gcp.compute.NodeGroupMaintenanceWindowArgs(
+ *         start_time="08:00",
+ *     ),
+ *     initial_size=1,
+ *     node_template=soletenant_tmpl.id,
+ *     autoscaling_policy=gcp.compute.NodeGroupAutoscalingPolicyArgs(
+ *         mode="ONLY_SCALE_OUT",
+ *         min_nodes=1,
+ *         max_nodes=10,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var soletenant_tmpl = new Gcp.Compute.NodeTemplate("soletenant-tmpl", new Gcp.Compute.NodeTemplateArgs
+ *         {
+ *             Region = "us-central1",
+ *             NodeType = "n1-node-96-624",
+ *         });
+ *         var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
+ *         {
+ *             Zone = "us-central1-a",
+ *             Description = "example google_compute_node_group for Google Provider",
+ *             MaintenancePolicy = "RESTART_IN_PLACE",
+ *             MaintenanceWindow = new Gcp.Compute.Inputs.NodeGroupMaintenanceWindowArgs
+ *             {
+ *                 StartTime = "08:00",
+ *             },
+ *             InitialSize = 1,
+ *             NodeTemplate = soletenant_tmpl.Id,
+ *             AutoscalingPolicy = new Gcp.Compute.Inputs.NodeGroupAutoscalingPolicyArgs
+ *             {
+ *                 Mode = "ONLY_SCALE_OUT",
+ *                 MinNodes = 1,
+ *                 MaxNodes = 10,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewNodeTemplate(ctx, "soletenant-tmpl", &compute.NodeTemplateArgs{
+ * 			Region:   pulumi.String("us-central1"),
+ * 			NodeType: pulumi.String("n1-node-96-624"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNodeGroup(ctx, "nodes", &compute.NodeGroupArgs{
+ * 			Zone:              pulumi.String("us-central1-a"),
+ * 			Description:       pulumi.String("example google_compute_node_group for Google Provider"),
+ * 			MaintenancePolicy: pulumi.String("RESTART_IN_PLACE"),
+ * 			MaintenanceWindow: &compute.NodeGroupMaintenanceWindowArgs{
+ * 				StartTime: pulumi.String("08:00"),
+ * 			},
+ * 			InitialSize:  pulumi.Int(1),
+ * 			NodeTemplate: soletenant_tmpl.ID(),
+ * 			AutoscalingPolicy: &compute.NodeGroupAutoscalingPolicyArgs{
+ * 				Mode:     pulumi.String("ONLY_SCALE_OUT"),
+ * 				MinNodes: pulumi.Int(1),
+ * 				MaxNodes: pulumi.Int(10),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,18 +254,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default projects/{{project}}/zones/{{zone}}/nodeGroups/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{project}}/{{zone}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{zone}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/nodeGroup:NodeGroup default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/nodeGroup:NodeGroup")
 public class NodeGroup extends io.pulumi.resources.CustomResource {

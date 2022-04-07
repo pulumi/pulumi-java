@@ -19,13 +19,482 @@ import javax.annotation.Nullable;
  * rules reference a target gRPC proxy. The Target gRPC Proxy references
  * a URL map which specifies how traffic routes to gRPC backend services.
  * 
+ * 
  * To get more information about TargetGrpcProxy, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/targetGrpcProxies)
  * * How-to Guides
  *     * [Using Target gRPC Proxies](https://cloud.google.com/traffic-director/docs/proxyless-overview)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Target Grpc Proxy Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+ *     timeoutSec: 1,
+ *     checkIntervalSec: 1,
+ *     grpcHealthCheck: {
+ *         portName: "health-check-port",
+ *         portSpecification: "USE_NAMED_PORT",
+ *         grpcServiceName: "testservice",
+ *     },
+ * });
+ * const home = new gcp.compute.BackendService("home", {
+ *     portName: "grpc",
+ *     protocol: "GRPC",
+ *     timeoutSec: 10,
+ *     healthChecks: [defaultHealthCheck.id],
+ *     loadBalancingScheme: "INTERNAL_SELF_MANAGED",
+ * });
+ * const urlmap = new gcp.compute.URLMap("urlmap", {
+ *     description: "a description",
+ *     defaultService: home.id,
+ *     hostRules: [{
+ *         hosts: ["mysite.com"],
+ *         pathMatcher: "allpaths",
+ *     }],
+ *     pathMatchers: [{
+ *         name: "allpaths",
+ *         defaultService: home.id,
+ *         routeRules: [{
+ *             priority: 1,
+ *             headerAction: {
+ *                 requestHeadersToRemoves: ["RemoveMe2"],
+ *                 requestHeadersToAdds: [{
+ *                     headerName: "AddSomethingElse",
+ *                     headerValue: "MyOtherValue",
+ *                     replace: true,
+ *                 }],
+ *                 responseHeadersToRemoves: ["RemoveMe3"],
+ *                 responseHeadersToAdds: [{
+ *                     headerName: "AddMe",
+ *                     headerValue: "MyValue",
+ *                     replace: false,
+ *                 }],
+ *             },
+ *             matchRules: [{
+ *                 fullPathMatch: "a full path",
+ *                 headerMatches: [{
+ *                     headerName: "someheader",
+ *                     exactMatch: "match this exactly",
+ *                     invertMatch: true,
+ *                 }],
+ *                 ignoreCase: true,
+ *                 metadataFilters: [{
+ *                     filterMatchCriteria: "MATCH_ANY",
+ *                     filterLabels: [{
+ *                         name: "PLANET",
+ *                         value: "MARS",
+ *                     }],
+ *                 }],
+ *                 queryParameterMatches: [{
+ *                     name: "a query parameter",
+ *                     presentMatch: true,
+ *                 }],
+ *             }],
+ *             urlRedirect: {
+ *                 hostRedirect: "A host",
+ *                 httpsRedirect: false,
+ *                 pathRedirect: "some/path",
+ *                 redirectResponseCode: "TEMPORARY_REDIRECT",
+ *                 stripQuery: true,
+ *             },
+ *         }],
+ *     }],
+ *     tests: [{
+ *         service: home.id,
+ *         host: "hi.com",
+ *         path: "/home",
+ *     }],
+ * });
+ * const defaultTargetGrpcProxy = new gcp.compute.TargetGrpcProxy("defaultTargetGrpcProxy", {
+ *     urlMap: urlmap.id,
+ *     validateForProxyless: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+ *     timeout_sec=1,
+ *     check_interval_sec=1,
+ *     grpc_health_check=gcp.compute.HealthCheckGrpcHealthCheckArgs(
+ *         port_name="health-check-port",
+ *         port_specification="USE_NAMED_PORT",
+ *         grpc_service_name="testservice",
+ *     ))
+ * home = gcp.compute.BackendService("home",
+ *     port_name="grpc",
+ *     protocol="GRPC",
+ *     timeout_sec=10,
+ *     health_checks=[default_health_check.id],
+ *     load_balancing_scheme="INTERNAL_SELF_MANAGED")
+ * urlmap = gcp.compute.URLMap("urlmap",
+ *     description="a description",
+ *     default_service=home.id,
+ *     host_rules=[gcp.compute.URLMapHostRuleArgs(
+ *         hosts=["mysite.com"],
+ *         path_matcher="allpaths",
+ *     )],
+ *     path_matchers=[gcp.compute.URLMapPathMatcherArgs(
+ *         name="allpaths",
+ *         default_service=home.id,
+ *         route_rules=[gcp.compute.URLMapPathMatcherRouteRuleArgs(
+ *             priority=1,
+ *             header_action=gcp.compute.URLMapPathMatcherRouteRuleHeaderActionArgs(
+ *                 request_headers_to_removes=["RemoveMe2"],
+ *                 request_headers_to_adds=[gcp.compute.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs(
+ *                     header_name="AddSomethingElse",
+ *                     header_value="MyOtherValue",
+ *                     replace=True,
+ *                 )],
+ *                 response_headers_to_removes=["RemoveMe3"],
+ *                 response_headers_to_adds=[gcp.compute.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs(
+ *                     header_name="AddMe",
+ *                     header_value="MyValue",
+ *                     replace=False,
+ *                 )],
+ *             ),
+ *             match_rules=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleArgs(
+ *                 full_path_match="a full path",
+ *                 header_matches=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs(
+ *                     header_name="someheader",
+ *                     exact_match="match this exactly",
+ *                     invert_match=True,
+ *                 )],
+ *                 ignore_case=True,
+ *                 metadata_filters=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(
+ *                     filter_match_criteria="MATCH_ANY",
+ *                     filter_labels=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs(
+ *                         name="PLANET",
+ *                         value="MARS",
+ *                     )],
+ *                 )],
+ *                 query_parameter_matches=[gcp.compute.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
+ *                     name="a query parameter",
+ *                     present_match=True,
+ *                 )],
+ *             )],
+ *             url_redirect=gcp.compute.URLMapPathMatcherRouteRuleUrlRedirectArgs(
+ *                 host_redirect="A host",
+ *                 https_redirect=False,
+ *                 path_redirect="some/path",
+ *                 redirect_response_code="TEMPORARY_REDIRECT",
+ *                 strip_query=True,
+ *             ),
+ *         )],
+ *     )],
+ *     tests=[gcp.compute.URLMapTestArgs(
+ *         service=home.id,
+ *         host="hi.com",
+ *         path="/home",
+ *     )])
+ * default_target_grpc_proxy = gcp.compute.TargetGrpcProxy("defaultTargetGrpcProxy",
+ *     url_map=urlmap.id,
+ *     validate_for_proxyless=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
+ *         {
+ *             TimeoutSec = 1,
+ *             CheckIntervalSec = 1,
+ *             GrpcHealthCheck = new Gcp.Compute.Inputs.HealthCheckGrpcHealthCheckArgs
+ *             {
+ *                 PortName = "health-check-port",
+ *                 PortSpecification = "USE_NAMED_PORT",
+ *                 GrpcServiceName = "testservice",
+ *             },
+ *         });
+ *         var home = new Gcp.Compute.BackendService("home", new Gcp.Compute.BackendServiceArgs
+ *         {
+ *             PortName = "grpc",
+ *             Protocol = "GRPC",
+ *             TimeoutSec = 10,
+ *             HealthChecks = 
+ *             {
+ *                 defaultHealthCheck.Id,
+ *             },
+ *             LoadBalancingScheme = "INTERNAL_SELF_MANAGED",
+ *         });
+ *         var urlmap = new Gcp.Compute.URLMap("urlmap", new Gcp.Compute.URLMapArgs
+ *         {
+ *             Description = "a description",
+ *             DefaultService = home.Id,
+ *             HostRules = 
+ *             {
+ *                 new Gcp.Compute.Inputs.URLMapHostRuleArgs
+ *                 {
+ *                     Hosts = 
+ *                     {
+ *                         "mysite.com",
+ *                     },
+ *                     PathMatcher = "allpaths",
+ *                 },
+ *             },
+ *             PathMatchers = 
+ *             {
+ *                 new Gcp.Compute.Inputs.URLMapPathMatcherArgs
+ *                 {
+ *                     Name = "allpaths",
+ *                     DefaultService = home.Id,
+ *                     RouteRules = 
+ *                     {
+ *                         new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleArgs
+ *                         {
+ *                             Priority = 1,
+ *                             HeaderAction = new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleHeaderActionArgs
+ *                             {
+ *                                 RequestHeadersToRemoves = 
+ *                                 {
+ *                                     "RemoveMe2",
+ *                                 },
+ *                                 RequestHeadersToAdds = 
+ *                                 {
+ *                                     new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs
+ *                                     {
+ *                                         HeaderName = "AddSomethingElse",
+ *                                         HeaderValue = "MyOtherValue",
+ *                                         Replace = true,
+ *                                     },
+ *                                 },
+ *                                 ResponseHeadersToRemoves = 
+ *                                 {
+ *                                     "RemoveMe3",
+ *                                 },
+ *                                 ResponseHeadersToAdds = 
+ *                                 {
+ *                                     new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs
+ *                                     {
+ *                                         HeaderName = "AddMe",
+ *                                         HeaderValue = "MyValue",
+ *                                         Replace = false,
+ *                                     },
+ *                                 },
+ *                             },
+ *                             MatchRules = 
+ *                             {
+ *                                 new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleArgs
+ *                                 {
+ *                                     FullPathMatch = "a full path",
+ *                                     HeaderMatches = 
+ *                                     {
+ *                                         new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs
+ *                                         {
+ *                                             HeaderName = "someheader",
+ *                                             ExactMatch = "match this exactly",
+ *                                             InvertMatch = true,
+ *                                         },
+ *                                     },
+ *                                     IgnoreCase = true,
+ *                                     MetadataFilters = 
+ *                                     {
+ *                                         new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs
+ *                                         {
+ *                                             FilterMatchCriteria = "MATCH_ANY",
+ *                                             FilterLabels = 
+ *                                             {
+ *                                                 new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs
+ *                                                 {
+ *                                                     Name = "PLANET",
+ *                                                     Value = "MARS",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                     QueryParameterMatches = 
+ *                                     {
+ *                                         new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs
+ *                                         {
+ *                                             Name = "a query parameter",
+ *                                             PresentMatch = true,
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                             UrlRedirect = new Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleUrlRedirectArgs
+ *                             {
+ *                                 HostRedirect = "A host",
+ *                                 HttpsRedirect = false,
+ *                                 PathRedirect = "some/path",
+ *                                 RedirectResponseCode = "TEMPORARY_REDIRECT",
+ *                                 StripQuery = true,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tests = 
+ *             {
+ *                 new Gcp.Compute.Inputs.URLMapTestArgs
+ *                 {
+ *                     Service = home.Id,
+ *                     Host = "hi.com",
+ *                     Path = "/home",
+ *                 },
+ *             },
+ *         });
+ *         var defaultTargetGrpcProxy = new Gcp.Compute.TargetGrpcProxy("defaultTargetGrpcProxy", new Gcp.Compute.TargetGrpcProxyArgs
+ *         {
+ *             UrlMap = urlmap.Id,
+ *             ValidateForProxyless = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			GrpcHealthCheck: &compute.HealthCheckGrpcHealthCheckArgs{
+ * 				PortName:          pulumi.String("health-check-port"),
+ * 				PortSpecification: pulumi.String("USE_NAMED_PORT"),
+ * 				GrpcServiceName:   pulumi.String("testservice"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		home, err := compute.NewBackendService(ctx, "home", &compute.BackendServiceArgs{
+ * 			PortName:   pulumi.String("grpc"),
+ * 			Protocol:   pulumi.String("GRPC"),
+ * 			TimeoutSec: pulumi.Int(10),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultHealthCheck.ID(),
+ * 			},
+ * 			LoadBalancingScheme: pulumi.String("INTERNAL_SELF_MANAGED"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		urlmap, err := compute.NewURLMap(ctx, "urlmap", &compute.URLMapArgs{
+ * 			Description:    pulumi.String("a description"),
+ * 			DefaultService: home.ID(),
+ * 			HostRules: compute.URLMapHostRuleArray{
+ * 				&compute.URLMapHostRuleArgs{
+ * 					Hosts: pulumi.StringArray{
+ * 						pulumi.String("mysite.com"),
+ * 					},
+ * 					PathMatcher: pulumi.String("allpaths"),
+ * 				},
+ * 			},
+ * 			PathMatchers: compute.URLMapPathMatcherArray{
+ * 				&compute.URLMapPathMatcherArgs{
+ * 					Name:           pulumi.String("allpaths"),
+ * 					DefaultService: home.ID(),
+ * 					RouteRules: compute.URLMapPathMatcherRouteRuleArray{
+ * 						&compute.URLMapPathMatcherRouteRuleArgs{
+ * 							Priority: pulumi.Int(1),
+ * 							HeaderAction: &compute.URLMapPathMatcherRouteRuleHeaderActionArgs{
+ * 								RequestHeadersToRemoves: pulumi.StringArray{
+ * 									pulumi.String("RemoveMe2"),
+ * 								},
+ * 								RequestHeadersToAdds: compute.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArray{
+ * 									&compute.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs{
+ * 										HeaderName:  pulumi.String("AddSomethingElse"),
+ * 										HeaderValue: pulumi.String("MyOtherValue"),
+ * 										Replace:     pulumi.Bool(true),
+ * 									},
+ * 								},
+ * 								ResponseHeadersToRemoves: pulumi.StringArray{
+ * 									pulumi.String("RemoveMe3"),
+ * 								},
+ * 								ResponseHeadersToAdds: compute.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArray{
+ * 									&compute.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs{
+ * 										HeaderName:  pulumi.String("AddMe"),
+ * 										HeaderValue: pulumi.String("MyValue"),
+ * 										Replace:     pulumi.Bool(false),
+ * 									},
+ * 								},
+ * 							},
+ * 							MatchRules: compute.URLMapPathMatcherRouteRuleMatchRuleArray{
+ * 								&compute.URLMapPathMatcherRouteRuleMatchRuleArgs{
+ * 									FullPathMatch: pulumi.String("a full path"),
+ * 									HeaderMatches: compute.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArray{
+ * 										&compute.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs{
+ * 											HeaderName:  pulumi.String("someheader"),
+ * 											ExactMatch:  pulumi.String("match this exactly"),
+ * 											InvertMatch: pulumi.Bool(true),
+ * 										},
+ * 									},
+ * 									IgnoreCase: pulumi.Bool(true),
+ * 									MetadataFilters: compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArray{
+ * 										&compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs{
+ * 											FilterMatchCriteria: pulumi.String("MATCH_ANY"),
+ * 											FilterLabels: compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArray{
+ * 												&compute.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs{
+ * 													Name:  pulumi.String("PLANET"),
+ * 													Value: pulumi.String("MARS"),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 									QueryParameterMatches: compute.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArray{
+ * 										&compute.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs{
+ * 											Name:         pulumi.String("a query parameter"),
+ * 											PresentMatch: pulumi.Bool(true),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 							UrlRedirect: &compute.URLMapPathMatcherRouteRuleUrlRedirectArgs{
+ * 								HostRedirect:         pulumi.String("A host"),
+ * 								HttpsRedirect:        pulumi.Bool(false),
+ * 								PathRedirect:         pulumi.String("some/path"),
+ * 								RedirectResponseCode: pulumi.String("TEMPORARY_REDIRECT"),
+ * 								StripQuery:           pulumi.Bool(true),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tests: compute.URLMapTestArray{
+ * 				&compute.URLMapTestArgs{
+ * 					Service: home.ID(),
+ * 					Host:    pulumi.String("hi.com"),
+ * 					Path:    pulumi.String("/home"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewTargetGrpcProxy(ctx, "defaultTargetGrpcProxy", &compute.TargetGrpcProxyArgs{
+ * 			UrlMap:               urlmap.ID(),
+ * 			ValidateForProxyless: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +504,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default projects/{{project}}/global/targetGrpcProxies/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/targetGrpcProxy:TargetGrpcProxy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/targetGrpcProxy:TargetGrpcProxy")
 public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {

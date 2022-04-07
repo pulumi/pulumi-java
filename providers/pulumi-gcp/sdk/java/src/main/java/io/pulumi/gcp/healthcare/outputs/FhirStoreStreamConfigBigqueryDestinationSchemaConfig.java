@@ -23,9 +23,9 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
     /**
      * Specifies the output schema type. Only ANALYTICS is supported at this time.
      * * ANALYTICS: Analytics schema defined by the FHIR community.
-     *   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
-     *   Default value is `ANALYTICS`.
-     *   Possible values are `ANALYTICS`.
+     * See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+     * Default value is `ANALYTICS`.
+     * Possible values are `ANALYTICS`.
      * 
      */
     private final @Nullable String schemaType;
@@ -51,9 +51,9 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
     /**
      * Specifies the output schema type. Only ANALYTICS is supported at this time.
      * * ANALYTICS: Analytics schema defined by the FHIR community.
-     *   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
-     *   Default value is `ANALYTICS`.
-     *   Possible values are `ANALYTICS`.
+     * See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+     * Default value is `ANALYTICS`.
+     * Possible values are `ANALYTICS`.
      * 
     */
     public Optional<String> getSchemaType() {

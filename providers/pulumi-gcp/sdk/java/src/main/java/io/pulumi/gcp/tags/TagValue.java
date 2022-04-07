@@ -15,13 +15,107 @@ import javax.annotation.Nullable;
 /**
  * A TagValue is a child of a particular TagKey. TagValues are used to group cloud resources for the purpose of controlling them using policies.
  * 
+ * 
  * To get more information about TagValue, see:
  * 
  * * [API documentation](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Tag Value Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const key = new gcp.tags.TagKey("key", {
+ *     description: "For keyname resources.",
+ *     parent: "organizations/123456789",
+ *     shortName: "keyname",
+ * });
+ * const value = new gcp.tags.TagValue("value", {
+ *     description: "For valuename resources.",
+ *     parent: pulumi.interpolate`tagKeys/${key.name}`,
+ *     shortName: "valuename",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * key = gcp.tags.TagKey("key",
+ *     description="For keyname resources.",
+ *     parent="organizations/123456789",
+ *     short_name="keyname")
+ * value = gcp.tags.TagValue("value",
+ *     description="For valuename resources.",
+ *     parent=key.name.apply(lambda name: f"tagKeys/{name}"),
+ *     short_name="valuename")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var key = new Gcp.Tags.TagKey("key", new Gcp.Tags.TagKeyArgs
+ *         {
+ *             Description = "For keyname resources.",
+ *             Parent = "organizations/123456789",
+ *             ShortName = "keyname",
+ *         });
+ *         var @value = new Gcp.Tags.TagValue("value", new Gcp.Tags.TagValueArgs
+ *         {
+ *             Description = "For valuename resources.",
+ *             Parent = key.Name.Apply(name => $"tagKeys/{name}"),
+ *             ShortName = "valuename",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/tags"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		key, err := tags.NewTagKey(ctx, "key", &tags.TagKeyArgs{
+ * 			Description: pulumi.String("For keyname resources."),
+ * 			Parent:      pulumi.String("organizations/123456789"),
+ * 			ShortName:   pulumi.String("keyname"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = tags.NewTagValue(ctx, "value", &tags.TagValueArgs{
+ * 			Description: pulumi.String("For valuename resources."),
+ * 			Parent: key.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "tagKeys/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			ShortName: pulumi.String("valuename"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +125,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:tags/tagValue:TagValue default tagValues/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:tags/tagValue:TagValue default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:tags/tagValue:TagValue")
 public class TagValue extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,91 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are "_Default" and "_Required".
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const default = gcp.organizations.getBillingAccount({
+ *     billingAccount: "00AA00-000AAA-00AA0A",
+ * });
+ * const basic = new gcp.logging.BillingAccountBucketConfig("basic", {
+ *     billingAccount: _default.then(_default => _default.billingAccount),
+ *     location: "global",
+ *     retentionDays: 30,
+ *     bucketId: "_Default",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.organizations.get_billing_account(billing_account="00AA00-000AAA-00AA0A")
+ * basic = gcp.logging.BillingAccountBucketConfig("basic",
+ *     billing_account=default.billing_account,
+ *     location="global",
+ *     retention_days=30,
+ *     bucket_id="_Default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = Output.Create(Gcp.Organizations.GetBillingAccount.InvokeAsync(new Gcp.Organizations.GetBillingAccountArgs
+ *         {
+ *             BillingAccount = "00AA00-000AAA-00AA0A",
+ *         }));
+ *         var basic = new Gcp.Logging.BillingAccountBucketConfig("basic", new Gcp.Logging.BillingAccountBucketConfigArgs
+ *         {
+ *             BillingAccount = @default.Apply(@default => @default.BillingAccount),
+ *             Location = "global",
+ *             RetentionDays = 30,
+ *             BucketId = "_Default",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "00AA00-000AAA-00AA0A"
+ * 		_default, err := organizations.GetBillingAccount(ctx, &organizations.GetBillingAccountArgs{
+ * 			BillingAccount: &opt0,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = logging.NewBillingAccountBucketConfig(ctx, "basic", &logging.BillingAccountBucketConfigArgs{
+ * 			BillingAccount: pulumi.String(_default.BillingAccount),
+ * 			Location:       pulumi.String("global"),
+ * 			RetentionDays:  pulumi.Int(30),
+ * 			BucketId:       pulumi.String("_Default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +114,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig default billingAccounts/{{billingAccount}}/locations/{{location}}/buckets/{{bucket_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig")
 public class BillingAccountBucketConfig extends io.pulumi.resources.CustomResource {

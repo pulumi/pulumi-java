@@ -149,7 +149,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * - GATEWAY_ERROR: Similar to 5xx, but only applies to response codes 502, 503 or 504.
      * - RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
      * - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
-     *   Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
+     * Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
      * 
      */
     @Import(name="retryConditions")

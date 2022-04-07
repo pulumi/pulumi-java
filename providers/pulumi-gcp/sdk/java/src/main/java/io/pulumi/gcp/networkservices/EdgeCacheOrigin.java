@@ -19,7 +19,238 @@ import javax.annotation.Nullable;
 /**
  * EdgeCacheOrigin represents a HTTP-reachable backend for an EdgeCacheService.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Network Services Edge Cache Origin Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultEdgeCacheOrigin = new gcp.networkservices.EdgeCacheOrigin("default", {
+ *     description: "The default bucket for media edge test",
+ *     originAddress: "gs://media-edge-default",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.networkservices.EdgeCacheOrigin("default",
+ *     description="The default bucket for media edge test",
+ *     origin_address="gs://media-edge-default")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.NetworkServices.EdgeCacheOrigin("default", new Gcp.NetworkServices.EdgeCacheOriginArgs
+ *         {
+ *             Description = "The default bucket for media edge test",
+ *             OriginAddress = "gs://media-edge-default",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/networkservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkservices.NewEdgeCacheOrigin(ctx, "default", &networkservices.EdgeCacheOriginArgs{
+ * 			Description:   pulumi.String("The default bucket for media edge test"),
+ * 			OriginAddress: pulumi.String("gs://media-edge-default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Network Services Edge Cache Origin Advanced
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const fallback = new gcp.networkservices.EdgeCacheOrigin("fallback", {
+ *     originAddress: "gs://media-edge-fallback",
+ *     description: "The default bucket for media edge test",
+ *     maxAttempts: 3,
+ *     protocol: "HTTP",
+ *     port: 80,
+ *     retryConditions: [
+ *         "CONNECT_FAILURE",
+ *         "NOT_FOUND",
+ *         "HTTP_5XX",
+ *     ],
+ *     timeout: {
+ *         connectTimeout: "10s",
+ *         maxAttemptsTimeout: "10s",
+ *         responseTimeout: "10s",
+ *     },
+ * });
+ * const _default = new gcp.networkservices.EdgeCacheOrigin("default", {
+ *     originAddress: "gs://media-edge-default",
+ *     failoverOrigin: fallback.id,
+ *     description: "The default bucket for media edge test",
+ *     maxAttempts: 2,
+ *     labels: {
+ *         a: "b",
+ *     },
+ *     timeout: {
+ *         connectTimeout: "10s",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * fallback = gcp.networkservices.EdgeCacheOrigin("fallback",
+ *     origin_address="gs://media-edge-fallback",
+ *     description="The default bucket for media edge test",
+ *     max_attempts=3,
+ *     protocol="HTTP",
+ *     port=80,
+ *     retry_conditions=[
+ *         "CONNECT_FAILURE",
+ *         "NOT_FOUND",
+ *         "HTTP_5XX",
+ *     ],
+ *     timeout=gcp.networkservices.EdgeCacheOriginTimeoutArgs(
+ *         connect_timeout="10s",
+ *         max_attempts_timeout="10s",
+ *         response_timeout="10s",
+ *     ))
+ * default = gcp.networkservices.EdgeCacheOrigin("default",
+ *     origin_address="gs://media-edge-default",
+ *     failover_origin=fallback.id,
+ *     description="The default bucket for media edge test",
+ *     max_attempts=2,
+ *     labels={
+ *         "a": "b",
+ *     },
+ *     timeout=gcp.networkservices.EdgeCacheOriginTimeoutArgs(
+ *         connect_timeout="10s",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fallback = new Gcp.NetworkServices.EdgeCacheOrigin("fallback", new Gcp.NetworkServices.EdgeCacheOriginArgs
+ *         {
+ *             OriginAddress = "gs://media-edge-fallback",
+ *             Description = "The default bucket for media edge test",
+ *             MaxAttempts = 3,
+ *             Protocol = "HTTP",
+ *             Port = 80,
+ *             RetryConditions = 
+ *             {
+ *                 "CONNECT_FAILURE",
+ *                 "NOT_FOUND",
+ *                 "HTTP_5XX",
+ *             },
+ *             Timeout = new Gcp.NetworkServices.Inputs.EdgeCacheOriginTimeoutArgs
+ *             {
+ *                 ConnectTimeout = "10s",
+ *                 MaxAttemptsTimeout = "10s",
+ *                 ResponseTimeout = "10s",
+ *             },
+ *         });
+ *         var @default = new Gcp.NetworkServices.EdgeCacheOrigin("default", new Gcp.NetworkServices.EdgeCacheOriginArgs
+ *         {
+ *             OriginAddress = "gs://media-edge-default",
+ *             FailoverOrigin = fallback.Id,
+ *             Description = "The default bucket for media edge test",
+ *             MaxAttempts = 2,
+ *             Labels = 
+ *             {
+ *                 { "a", "b" },
+ *             },
+ *             Timeout = new Gcp.NetworkServices.Inputs.EdgeCacheOriginTimeoutArgs
+ *             {
+ *                 ConnectTimeout = "10s",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/networkservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		fallback, err := networkservices.NewEdgeCacheOrigin(ctx, "fallback", &networkservices.EdgeCacheOriginArgs{
+ * 			OriginAddress: pulumi.String("gs://media-edge-fallback"),
+ * 			Description:   pulumi.String("The default bucket for media edge test"),
+ * 			MaxAttempts:   pulumi.Int(3),
+ * 			Protocol:      pulumi.String("HTTP"),
+ * 			Port:          pulumi.Int(80),
+ * 			RetryConditions: pulumi.StringArray{
+ * 				pulumi.String("CONNECT_FAILURE"),
+ * 				pulumi.String("NOT_FOUND"),
+ * 				pulumi.String("HTTP_5XX"),
+ * 			},
+ * 			Timeout: &networkservices.EdgeCacheOriginTimeoutArgs{
+ * 				ConnectTimeout:     pulumi.String("10s"),
+ * 				MaxAttemptsTimeout: pulumi.String("10s"),
+ * 				ResponseTimeout:    pulumi.String("10s"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = networkservices.NewEdgeCacheOrigin(ctx, "default", &networkservices.EdgeCacheOriginArgs{
+ * 			OriginAddress:  pulumi.String("gs://media-edge-default"),
+ * 			FailoverOrigin: fallback.ID(),
+ * 			Description:    pulumi.String("The default bucket for media edge test"),
+ * 			MaxAttempts:    pulumi.Int(2),
+ * 			Labels: pulumi.StringMap{
+ * 				"a": pulumi.String("b"),
+ * 			},
+ * 			Timeout: &networkservices.EdgeCacheOriginTimeoutArgs{
+ * 				ConnectTimeout: pulumi.String("10s"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,14 +260,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:networkservices/edgeCacheOrigin:EdgeCacheOrigin default projects/{{project}}/locations/global/edgeCacheOrigins/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:networkservices/edgeCacheOrigin:EdgeCacheOrigin default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:networkservices/edgeCacheOrigin:EdgeCacheOrigin default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:networkservices/edgeCacheOrigin:EdgeCacheOrigin")
 public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
@@ -217,7 +453,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * - GATEWAY_ERROR: Similar to 5xx, but only applies to response codes 502, 503 or 504.
      * - RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
      * - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
-     *   Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
+     * Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
      * 
      */
     @Export(name="retryConditions", type=List.class, parameters={String.class})
@@ -236,7 +472,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * - GATEWAY_ERROR: Similar to 5xx, but only applies to response codes 502, 503 or 504.
      * - RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
      * - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
-     *   Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
+     * Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
      * 
      */
     public Output<List<String>> getRetryConditions() {

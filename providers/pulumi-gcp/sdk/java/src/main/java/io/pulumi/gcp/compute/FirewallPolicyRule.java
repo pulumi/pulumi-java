@@ -21,7 +21,163 @@ import javax.annotation.Nullable;
  * 
  * For more information see the [official documentation](https://cloud.google.com/vpc/docs/using-firewall-policies#create-rules)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultFirewallPolicy = new gcp.compute.FirewallPolicy("defaultFirewallPolicy", {
+ *     parent: "organizations/12345",
+ *     shortName: "my-policy",
+ *     description: "Example Resource",
+ * });
+ * const defaultFirewallPolicyRule = new gcp.compute.FirewallPolicyRule("defaultFirewallPolicyRule", {
+ *     firewallPolicy: defaultFirewallPolicy.id,
+ *     description: "Example Resource",
+ *     priority: 9000,
+ *     enableLogging: true,
+ *     action: "allow",
+ *     direction: "EGRESS",
+ *     disabled: false,
+ *     match: {
+ *         layer4Configs: [{
+ *             ipProtocol: "tcp",
+ *             ports: [
+ *                 80,
+ *                 8080,
+ *             ],
+ *         }],
+ *         destIpRanges: ["11.100.0.1/32"],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_firewall_policy = gcp.compute.FirewallPolicy("defaultFirewallPolicy",
+ *     parent="organizations/12345",
+ *     short_name="my-policy",
+ *     description="Example Resource")
+ * default_firewall_policy_rule = gcp.compute.FirewallPolicyRule("defaultFirewallPolicyRule",
+ *     firewall_policy=default_firewall_policy.id,
+ *     description="Example Resource",
+ *     priority=9000,
+ *     enable_logging=True,
+ *     action="allow",
+ *     direction="EGRESS",
+ *     disabled=False,
+ *     match=gcp.compute.FirewallPolicyRuleMatchArgs(
+ *         layer4_configs=[gcp.compute.FirewallPolicyRuleMatchLayer4ConfigArgs(
+ *             ip_protocol="tcp",
+ *             ports=[
+ *                 "80",
+ *                 "8080",
+ *             ],
+ *         )],
+ *         dest_ip_ranges=["11.100.0.1/32"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultFirewallPolicy = new Gcp.Compute.FirewallPolicy("defaultFirewallPolicy", new Gcp.Compute.FirewallPolicyArgs
+ *         {
+ *             Parent = "organizations/12345",
+ *             ShortName = "my-policy",
+ *             Description = "Example Resource",
+ *         });
+ *         var defaultFirewallPolicyRule = new Gcp.Compute.FirewallPolicyRule("defaultFirewallPolicyRule", new Gcp.Compute.FirewallPolicyRuleArgs
+ *         {
+ *             FirewallPolicy = defaultFirewallPolicy.Id,
+ *             Description = "Example Resource",
+ *             Priority = 9000,
+ *             EnableLogging = true,
+ *             Action = "allow",
+ *             Direction = "EGRESS",
+ *             Disabled = false,
+ *             Match = new Gcp.Compute.Inputs.FirewallPolicyRuleMatchArgs
+ *             {
+ *                 Layer4Configs = 
+ *                 {
+ *                     new Gcp.Compute.Inputs.FirewallPolicyRuleMatchLayer4ConfigArgs
+ *                     {
+ *                         IpProtocol = "tcp",
+ *                         Ports = 
+ *                         {
+ *                             "80",
+ *                             "8080",
+ *                         },
+ *                     },
+ *                 },
+ *                 DestIpRanges = 
+ *                 {
+ *                     "11.100.0.1/32",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultFirewallPolicy, err := compute.NewFirewallPolicy(ctx, "defaultFirewallPolicy", &compute.FirewallPolicyArgs{
+ * 			Parent:      pulumi.String("organizations/12345"),
+ * 			ShortName:   pulumi.String("my-policy"),
+ * 			Description: pulumi.String("Example Resource"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewFirewallPolicyRule(ctx, "defaultFirewallPolicyRule", &compute.FirewallPolicyRuleArgs{
+ * 			FirewallPolicy: defaultFirewallPolicy.ID(),
+ * 			Description:    pulumi.String("Example Resource"),
+ * 			Priority:       pulumi.Int(9000),
+ * 			EnableLogging:  pulumi.Bool(true),
+ * 			Action:         pulumi.String("allow"),
+ * 			Direction:      pulumi.String("EGRESS"),
+ * 			Disabled:       pulumi.Bool(false),
+ * 			Match: &compute.FirewallPolicyRuleMatchArgs{
+ * 				Layer4Configs: compute.FirewallPolicyRuleMatchLayer4ConfigArray{
+ * 					&compute.FirewallPolicyRuleMatchLayer4ConfigArgs{
+ * 						IpProtocol: pulumi.String("tcp"),
+ * 						Ports: pulumi.StringArray{
+ * 							pulumi.String("80"),
+ * 							pulumi.String("8080"),
+ * 						},
+ * 					},
+ * 				},
+ * 				DestIpRanges: pulumi.StringArray{
+ * 					pulumi.String("11.100.0.1/32"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +187,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/firewallPolicyRule:FirewallPolicyRule default locations/global/firewallPolicies/{{firewall_policy}}/rules/{{priority}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/firewallPolicyRule:FirewallPolicyRule default {{firewall_policy}}/{{priority}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/firewallPolicyRule:FirewallPolicyRule")
 public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {

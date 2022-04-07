@@ -30,7 +30,7 @@ public final class SnapshotSnapshotEncryptionKey {
      */
     private final @Nullable String rawKey;
     /**
-     * - 
+     * -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 
@@ -74,7 +74,7 @@ public final class SnapshotSnapshotEncryptionKey {
         return Optional.ofNullable(this.rawKey);
     }
     /**
-     * - 
+     * -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 

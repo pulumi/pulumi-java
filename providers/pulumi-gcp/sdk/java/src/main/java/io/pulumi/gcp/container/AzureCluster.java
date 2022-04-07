@@ -25,7 +25,232 @@ import javax.annotation.Nullable;
  * 
  * For more information, see:
  * * [Multicloud overview](https://cloud.google.com/anthos/clusters/docs/multi-cloud)
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic_azure_cluster
+ * A basic example of a containerazure azure cluster
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const versions = pulumi.output(gcp.container.getAzureVersions({
+ *     location: "us-west1",
+ *     project: "my-project-name",
+ * }));
+ * const basic = new gcp.container.AzureClient("basic", {
+ *     applicationId: "12345678-1234-1234-1234-123456789111",
+ *     location: "us-west1",
+ *     project: "my-project-name",
+ *     tenantId: "12345678-1234-1234-1234-123456789111",
+ * });
+ * const primary = new gcp.container.AzureCluster("primary", {
+ *     authorization: {
+ *         adminUsers: [{
+ *             username: "mmv2@google.com",
+ *         }],
+ *     },
+ *     azureRegion: "westus2",
+ *     client: pulumi.interpolate`projects/my-project-number/locations/us-west1/azureClients/${basic.name}`,
+ *     controlPlane: {
+ *         sshConfig: {
+ *             authorizedKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *         },
+ *         subnetId: "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *         version: versions.apply(versions => versions.validVersions[0]),
+ *     },
+ *     fleet: {
+ *         project: "my-project-number",
+ *     },
+ *     location: "us-west1",
+ *     networking: {
+ *         podAddressCidrBlocks: ["10.200.0.0/16"],
+ *         serviceAddressCidrBlocks: ["10.32.0.0/24"],
+ *         virtualNetworkId: "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet",
+ *     },
+ *     project: "my-project-name",
+ *     resourceGroupId: "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * versions = gcp.container.get_azure_versions(location="us-west1",
+ *     project="my-project-name")
+ * basic = gcp.container.AzureClient("basic",
+ *     application_id="12345678-1234-1234-1234-123456789111",
+ *     location="us-west1",
+ *     project="my-project-name",
+ *     tenant_id="12345678-1234-1234-1234-123456789111")
+ * primary = gcp.container.AzureCluster("primary",
+ *     authorization=gcp.container.AzureClusterAuthorizationArgs(
+ *         admin_users=[gcp.container.AzureClusterAuthorizationAdminUserArgs(
+ *             username="mmv2@google.com",
+ *         )],
+ *     ),
+ *     azure_region="westus2",
+ *     client=basic.name.apply(lambda name: f"projects/my-project-number/locations/us-west1/azureClients/{name}"),
+ *     control_plane=gcp.container.AzureClusterControlPlaneArgs(
+ *         ssh_config=gcp.container.AzureClusterControlPlaneSshConfigArgs(
+ *             authorized_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *         ),
+ *         subnet_id="/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *         version=versions.valid_versions[0],
+ *     ),
+ *     fleet=gcp.container.AzureClusterFleetArgs(
+ *         project="my-project-number",
+ *     ),
+ *     location="us-west1",
+ *     networking=gcp.container.AzureClusterNetworkingArgs(
+ *         pod_address_cidr_blocks=["10.200.0.0/16"],
+ *         service_address_cidr_blocks=["10.32.0.0/24"],
+ *         virtual_network_id="/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet",
+ *     ),
+ *     project="my-project-name",
+ *     resource_group_id="/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var versions = Output.Create(Gcp.Container.GetAzureVersions.InvokeAsync(new Gcp.Container.GetAzureVersionsArgs
+ *         {
+ *             Location = "us-west1",
+ *             Project = "my-project-name",
+ *         }));
+ *         var basic = new Gcp.Container.AzureClient("basic", new Gcp.Container.AzureClientArgs
+ *         {
+ *             ApplicationId = "12345678-1234-1234-1234-123456789111",
+ *             Location = "us-west1",
+ *             Project = "my-project-name",
+ *             TenantId = "12345678-1234-1234-1234-123456789111",
+ *         });
+ *         var primary = new Gcp.Container.AzureCluster("primary", new Gcp.Container.AzureClusterArgs
+ *         {
+ *             Authorization = new Gcp.Container.Inputs.AzureClusterAuthorizationArgs
+ *             {
+ *                 AdminUsers = 
+ *                 {
+ *                     new Gcp.Container.Inputs.AzureClusterAuthorizationAdminUserArgs
+ *                     {
+ *                         Username = "mmv2@google.com",
+ *                     },
+ *                 },
+ *             },
+ *             AzureRegion = "westus2",
+ *             Client = basic.Name.Apply(name => $"projects/my-project-number/locations/us-west1/azureClients/{name}"),
+ *             ControlPlane = new Gcp.Container.Inputs.AzureClusterControlPlaneArgs
+ *             {
+ *                 SshConfig = new Gcp.Container.Inputs.AzureClusterControlPlaneSshConfigArgs
+ *                 {
+ *                     AuthorizedKey = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *                 },
+ *                 SubnetId = "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *                 Version = versions.Apply(versions => versions.ValidVersions?[0]),
+ *             },
+ *             Fleet = new Gcp.Container.Inputs.AzureClusterFleetArgs
+ *             {
+ *                 Project = "my-project-number",
+ *             },
+ *             Location = "us-west1",
+ *             Networking = new Gcp.Container.Inputs.AzureClusterNetworkingArgs
+ *             {
+ *                 PodAddressCidrBlocks = 
+ *                 {
+ *                     "10.200.0.0/16",
+ *                 },
+ *                 ServiceAddressCidrBlocks = 
+ *                 {
+ *                     "10.32.0.0/24",
+ *                 },
+ *                 VirtualNetworkId = "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet",
+ *             },
+ *             Project = "my-project-name",
+ *             ResourceGroupId = "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "us-west1"
+ * 		opt1 := "my-project-name"
+ * 		versions, err := container.GetAzureVersions(ctx, &container.GetAzureVersionsArgs{
+ * 			Location: &opt0,
+ * 			Project:  &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		basic, err := container.NewAzureClient(ctx, "basic", &container.AzureClientArgs{
+ * 			ApplicationId: pulumi.String("12345678-1234-1234-1234-123456789111"),
+ * 			Location:      pulumi.String("us-west1"),
+ * 			Project:       pulumi.String("my-project-name"),
+ * 			TenantId:      pulumi.String("12345678-1234-1234-1234-123456789111"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = container.NewAzureCluster(ctx, "primary", &container.AzureClusterArgs{
+ * 			Authorization: &container.AzureClusterAuthorizationArgs{
+ * 				AdminUsers: container.AzureClusterAuthorizationAdminUserArray{
+ * 					&container.AzureClusterAuthorizationAdminUserArgs{
+ * 						Username: pulumi.String("mmv2@google.com"),
+ * 					},
+ * 				},
+ * 			},
+ * 			AzureRegion: pulumi.String("westus2"),
+ * 			Client: basic.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "projects/my-project-number/locations/us-west1/azureClients/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			ControlPlane: &container.AzureClusterControlPlaneArgs{
+ * 				SshConfig: &container.AzureClusterControlPlaneSshConfigArgs{
+ * 					AuthorizedKey: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers"),
+ * 				},
+ * 				SubnetId: pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default"),
+ * 				Version:  pulumi.String(versions.ValidVersions[0]),
+ * 			},
+ * 			Fleet: &container.AzureClusterFleetArgs{
+ * 				Project: pulumi.String("my-project-number"),
+ * 			},
+ * 			Location: pulumi.String("us-west1"),
+ * 			Networking: &container.AzureClusterNetworkingArgs{
+ * 				PodAddressCidrBlocks: pulumi.StringArray{
+ * 					pulumi.String("10.200.0.0/16"),
+ * 				},
+ * 				ServiceAddressCidrBlocks: pulumi.StringArray{
+ * 					pulumi.String("10.32.0.0/24"),
+ * 				},
+ * 				VirtualNetworkId: pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet"),
+ * 			},
+ * 			Project:         pulumi.String("my-project-name"),
+ * 			ResourceGroupId: pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +260,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:container/azureCluster:AzureCluster default projects/{{project}}/locations/{{location}}/azureClusters/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:container/azureCluster:AzureCluster default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:container/azureCluster:AzureCluster default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:container/azureCluster:AzureCluster")
 public class AzureCluster extends io.pulumi.resources.CustomResource {

@@ -17,8 +17,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Entities are extracted from user input and represent parameters that are meaningful to your application.
+ * Entities are extracted from user input and represent parameters that are meaningful to your application. 
  * For example, a date range, a proper name such as a geographic location or landmark, and so on. Entities represent actionable data for your application.
+ * 
  * 
  * To get more information about EntityType, see:
  * 
@@ -26,7 +27,223 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflowcx Entity Type Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const agent = new gcp.diagflow.CxAgent("agent", {
+ *     displayName: "dialogflowcx-agent",
+ *     location: "global",
+ *     defaultLanguageCode: "en",
+ *     supportedLanguageCodes: [
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     timeZone: "America/New_York",
+ *     description: "Example description.",
+ *     avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     enableStackdriverLogging: true,
+ *     enableSpellCorrection: true,
+ *     speechToTextSettings: {
+ *         enableSpeechAdaptation: true,
+ *     },
+ * });
+ * const basicEntityType = new gcp.diagflow.CxEntityType("basicEntityType", {
+ *     parent: agent.id,
+ *     displayName: "MyEntity",
+ *     kind: "KIND_MAP",
+ *     entities: [
+ *         {
+ *             value: "value1",
+ *             synonyms: [
+ *                 "synonym1",
+ *                 "synonym2",
+ *             ],
+ *         },
+ *         {
+ *             value: "value2",
+ *             synonyms: [
+ *                 "synonym3",
+ *                 "synonym4",
+ *             ],
+ *         },
+ *     ],
+ *     enableFuzzyExtraction: false,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * agent = gcp.diagflow.CxAgent("agent",
+ *     display_name="dialogflowcx-agent",
+ *     location="global",
+ *     default_language_code="en",
+ *     supported_language_codes=[
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     time_zone="America/New_York",
+ *     description="Example description.",
+ *     avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     enable_stackdriver_logging=True,
+ *     enable_spell_correction=True,
+ *     speech_to_text_settings=gcp.diagflow.CxAgentSpeechToTextSettingsArgs(
+ *         enable_speech_adaptation=True,
+ *     ))
+ * basic_entity_type = gcp.diagflow.CxEntityType("basicEntityType",
+ *     parent=agent.id,
+ *     display_name="MyEntity",
+ *     kind="KIND_MAP",
+ *     entities=[
+ *         gcp.diagflow.CxEntityTypeEntityArgs(
+ *             value="value1",
+ *             synonyms=[
+ *                 "synonym1",
+ *                 "synonym2",
+ *             ],
+ *         ),
+ *         gcp.diagflow.CxEntityTypeEntityArgs(
+ *             value="value2",
+ *             synonyms=[
+ *                 "synonym3",
+ *                 "synonym4",
+ *             ],
+ *         ),
+ *     ],
+ *     enable_fuzzy_extraction=False)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var agent = new Gcp.Diagflow.CxAgent("agent", new Gcp.Diagflow.CxAgentArgs
+ *         {
+ *             DisplayName = "dialogflowcx-agent",
+ *             Location = "global",
+ *             DefaultLanguageCode = "en",
+ *             SupportedLanguageCodes = 
+ *             {
+ *                 "fr",
+ *                 "de",
+ *                 "es",
+ *             },
+ *             TimeZone = "America/New_York",
+ *             Description = "Example description.",
+ *             AvatarUri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *             EnableStackdriverLogging = true,
+ *             EnableSpellCorrection = true,
+ *             SpeechToTextSettings = new Gcp.Diagflow.Inputs.CxAgentSpeechToTextSettingsArgs
+ *             {
+ *                 EnableSpeechAdaptation = true,
+ *             },
+ *         });
+ *         var basicEntityType = new Gcp.Diagflow.CxEntityType("basicEntityType", new Gcp.Diagflow.CxEntityTypeArgs
+ *         {
+ *             Parent = agent.Id,
+ *             DisplayName = "MyEntity",
+ *             Kind = "KIND_MAP",
+ *             Entities = 
+ *             {
+ *                 new Gcp.Diagflow.Inputs.CxEntityTypeEntityArgs
+ *                 {
+ *                     Value = "value1",
+ *                     Synonyms = 
+ *                     {
+ *                         "synonym1",
+ *                         "synonym2",
+ *                     },
+ *                 },
+ *                 new Gcp.Diagflow.Inputs.CxEntityTypeEntityArgs
+ *                 {
+ *                     Value = "value2",
+ *                     Synonyms = 
+ *                     {
+ *                         "synonym3",
+ *                         "synonym4",
+ *                     },
+ *                 },
+ *             },
+ *             EnableFuzzyExtraction = false,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		agent, err := diagflow.NewCxAgent(ctx, "agent", &diagflow.CxAgentArgs{
+ * 			DisplayName:         pulumi.String("dialogflowcx-agent"),
+ * 			Location:            pulumi.String("global"),
+ * 			DefaultLanguageCode: pulumi.String("en"),
+ * 			SupportedLanguageCodes: pulumi.StringArray{
+ * 				pulumi.String("fr"),
+ * 				pulumi.String("de"),
+ * 				pulumi.String("es"),
+ * 			},
+ * 			TimeZone:                 pulumi.String("America/New_York"),
+ * 			Description:              pulumi.String("Example description."),
+ * 			AvatarUri:                pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
+ * 			EnableStackdriverLogging: pulumi.Bool(true),
+ * 			EnableSpellCorrection:    pulumi.Bool(true),
+ * 			SpeechToTextSettings: &diagflow.CxAgentSpeechToTextSettingsArgs{
+ * 				EnableSpeechAdaptation: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = diagflow.NewCxEntityType(ctx, "basicEntityType", &diagflow.CxEntityTypeArgs{
+ * 			Parent:      agent.ID(),
+ * 			DisplayName: pulumi.String("MyEntity"),
+ * 			Kind:        pulumi.String("KIND_MAP"),
+ * 			Entities: diagflow.CxEntityTypeEntityArray{
+ * 				&diagflow.CxEntityTypeEntityArgs{
+ * 					Value: pulumi.String("value1"),
+ * 					Synonyms: pulumi.StringArray{
+ * 						pulumi.String("synonym1"),
+ * 						pulumi.String("synonym2"),
+ * 					},
+ * 				},
+ * 				&diagflow.CxEntityTypeEntityArgs{
+ * 					Value: pulumi.String("value2"),
+ * 					Synonyms: pulumi.StringArray{
+ * 						pulumi.String("synonym3"),
+ * 						pulumi.String("synonym4"),
+ * 					},
+ * 				},
+ * 			},
+ * 			EnableFuzzyExtraction: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,10 +253,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/cxEntityType:CxEntityType default {{parent}}/entityTypes/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:diagflow/cxEntityType:CxEntityType default {{parent}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/cxEntityType:CxEntityType")
 public class CxEntityType extends io.pulumi.resources.CustomResource {
@@ -47,7 +267,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Represents kinds of entities.
      * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
      * * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity.
-     *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
+     * Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
      * 
      */
     @Export(name="autoExpansionMode", type=String.class, parameters={})
@@ -57,7 +277,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * @return Represents kinds of entities.
      * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
      * * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity.
-     *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
+     * Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
      * 
      */
     public Output</* @Nullable */ String> getAutoExpansionMode() {
@@ -130,7 +350,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
      * * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
      * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
-     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -141,7 +361,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
      * * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
      * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
-     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
     public Output<String> getKind() {

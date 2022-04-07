@@ -17,7 +17,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Allows management of Organization Policies for a Google Cloud Folder.
+ * Allows management of Organization Policies for a Google Cloud Folder. 
  * 
  * > **Warning:** This resource has been superseded by `gcp.orgpolicy.Policy`. `gcp.orgpolicy.Policy` uses Organization Policy API V2 instead of Cloud Resource Manager API V1 and it supports additional features such as tags and conditions.
  * 
@@ -27,7 +27,324 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Introduction to the Organization Policy Service](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * To set policy with a [boolean constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-boolean-constraints):
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy", {
+ *     booleanPolicy: {
+ *         enforced: true,
+ *     },
+ *     constraint: "compute.disableSerialPortAccess",
+ *     folder: "folders/123456789",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * serial_port_policy = gcp.folder.OrganizationPolicy("serialPortPolicy",
+ *     boolean_policy=gcp.folder.OrganizationPolicyBooleanPolicyArgs(
+ *         enforced=True,
+ *     ),
+ *     constraint="compute.disableSerialPortAccess",
+ *     folder="folders/123456789")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serialPortPolicy = new Gcp.Folder.OrganizationPolicy("serialPortPolicy", new Gcp.Folder.OrganizationPolicyArgs
+ *         {
+ *             BooleanPolicy = new Gcp.Folder.Inputs.OrganizationPolicyBooleanPolicyArgs
+ *             {
+ *                 Enforced = true,
+ *             },
+ *             Constraint = "compute.disableSerialPortAccess",
+ *             Folder = "folders/123456789",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/folder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := folder.NewOrganizationPolicy(ctx, "serialPortPolicy", &folder.OrganizationPolicyArgs{
+ * 			BooleanPolicy: &folder.OrganizationPolicyBooleanPolicyArgs{
+ * 				Enforced: pulumi.Bool(true),
+ * 			},
+ * 			Constraint: pulumi.String("compute.disableSerialPortAccess"),
+ * 			Folder:     pulumi.String("folders/123456789"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * 
+ * To set a policy with a [list constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-list-constraints):
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const servicesPolicy = new gcp.folder.OrganizationPolicy("services_policy", {
+ *     constraint: "serviceuser.services",
+ *     folder: "folders/123456789",
+ *     listPolicy: {
+ *         allow: {
+ *             all: true,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * services_policy = gcp.folder.OrganizationPolicy("servicesPolicy",
+ *     constraint="serviceuser.services",
+ *     folder="folders/123456789",
+ *     list_policy=gcp.folder.OrganizationPolicyListPolicyArgs(
+ *         allow=gcp.folder.OrganizationPolicyListPolicyAllowArgs(
+ *             all=True,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicesPolicy = new Gcp.Folder.OrganizationPolicy("servicesPolicy", new Gcp.Folder.OrganizationPolicyArgs
+ *         {
+ *             Constraint = "serviceuser.services",
+ *             Folder = "folders/123456789",
+ *             ListPolicy = new Gcp.Folder.Inputs.OrganizationPolicyListPolicyArgs
+ *             {
+ *                 Allow = new Gcp.Folder.Inputs.OrganizationPolicyListPolicyAllowArgs
+ *                 {
+ *                     All = true,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/folder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := folder.NewOrganizationPolicy(ctx, "servicesPolicy", &folder.OrganizationPolicyArgs{
+ * 			Constraint: pulumi.String("serviceuser.services"),
+ * 			Folder:     pulumi.String("folders/123456789"),
+ * 			ListPolicy: &folder.OrganizationPolicyListPolicyArgs{
+ * 				Allow: &folder.OrganizationPolicyListPolicyAllowArgs{
+ * 					All: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * 
+ * Or to deny some services, use the following instead:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const servicesPolicy = new gcp.folder.OrganizationPolicy("services_policy", {
+ *     constraint: "serviceuser.services",
+ *     folder: "folders/123456789",
+ *     listPolicy: {
+ *         deny: {
+ *             values: ["cloudresourcemanager.googleapis.com"],
+ *         },
+ *         suggestedValue: "compute.googleapis.com",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * services_policy = gcp.folder.OrganizationPolicy("servicesPolicy",
+ *     constraint="serviceuser.services",
+ *     folder="folders/123456789",
+ *     list_policy=gcp.folder.OrganizationPolicyListPolicyArgs(
+ *         deny=gcp.folder.OrganizationPolicyListPolicyDenyArgs(
+ *             values=["cloudresourcemanager.googleapis.com"],
+ *         ),
+ *         suggested_value="compute.googleapis.com",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicesPolicy = new Gcp.Folder.OrganizationPolicy("servicesPolicy", new Gcp.Folder.OrganizationPolicyArgs
+ *         {
+ *             Constraint = "serviceuser.services",
+ *             Folder = "folders/123456789",
+ *             ListPolicy = new Gcp.Folder.Inputs.OrganizationPolicyListPolicyArgs
+ *             {
+ *                 Deny = new Gcp.Folder.Inputs.OrganizationPolicyListPolicyDenyArgs
+ *                 {
+ *                     Values = 
+ *                     {
+ *                         "cloudresourcemanager.googleapis.com",
+ *                     },
+ *                 },
+ *                 SuggestedValue = "compute.googleapis.com",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/folder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := folder.NewOrganizationPolicy(ctx, "servicesPolicy", &folder.OrganizationPolicyArgs{
+ * 			Constraint: pulumi.String("serviceuser.services"),
+ * 			Folder:     pulumi.String("folders/123456789"),
+ * 			ListPolicy: &folder.OrganizationPolicyListPolicyArgs{
+ * 				Deny: &folder.OrganizationPolicyListPolicyDenyArgs{
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("cloudresourcemanager.googleapis.com"),
+ * 					},
+ * 				},
+ * 				SuggestedValue: pulumi.String("compute.googleapis.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * To restore the default folder organization policy, use the following instead:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const servicesPolicy = new gcp.folder.OrganizationPolicy("services_policy", {
+ *     constraint: "serviceuser.services",
+ *     folder: "folders/123456789",
+ *     restorePolicy: {
+ *         default: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * services_policy = gcp.folder.OrganizationPolicy("servicesPolicy",
+ *     constraint="serviceuser.services",
+ *     folder="folders/123456789",
+ *     restore_policy=gcp.folder.OrganizationPolicyRestorePolicyArgs(
+ *         default=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicesPolicy = new Gcp.Folder.OrganizationPolicy("servicesPolicy", new Gcp.Folder.OrganizationPolicyArgs
+ *         {
+ *             Constraint = "serviceuser.services",
+ *             Folder = "folders/123456789",
+ *             RestorePolicy = new Gcp.Folder.Inputs.OrganizationPolicyRestorePolicyArgs
+ *             {
+ *                 Default = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/folder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := folder.NewOrganizationPolicy(ctx, "servicesPolicy", &folder.OrganizationPolicyArgs{
+ * 			Constraint: pulumi.String("serviceuser.services"),
+ * 			Folder:     pulumi.String("folders/123456789"),
+ * 			RestorePolicy: &folder.OrganizationPolicyRestorePolicyArgs{
+ * 				Default: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,10 +354,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:folder/organizationPolicy:OrganizationPolicy policy folders/folder-1234/constraints/serviceuser.services
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:folder/organizationPolicy:OrganizationPolicy policy folder-1234/serviceuser.services
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:folder/organizationPolicy:OrganizationPolicy")
 public class OrganizationPolicy extends io.pulumi.resources.CustomResource {

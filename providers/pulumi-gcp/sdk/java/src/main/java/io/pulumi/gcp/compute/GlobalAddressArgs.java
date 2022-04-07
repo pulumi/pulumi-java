@@ -33,8 +33,8 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the address to reserve.
      * * EXTERNAL indicates public/external single IP address.
      * * INTERNAL indicates internal IP ranges belonging to some network.
-     *   Default value is `EXTERNAL`.
-     *   Possible values are `EXTERNAL` and `INTERNAL`.
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL` and `INTERNAL`.
      * 
      */
     @Import(name="addressType")

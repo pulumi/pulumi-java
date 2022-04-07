@@ -15,7 +15,7 @@ public final class TenantInboundSamlConfigSpConfigSpCertificateArgs extends io.p
     public static final TenantInboundSamlConfigSpConfigSpCertificateArgs Empty = new TenantInboundSamlConfigSpConfigSpCertificateArgs();
 
     /**
-     * - 
+     * -
      * The x509 certificate
      * 
      */

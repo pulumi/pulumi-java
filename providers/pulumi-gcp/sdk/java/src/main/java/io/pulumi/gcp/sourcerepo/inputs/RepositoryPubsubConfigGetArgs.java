@@ -18,7 +18,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * The format of the Cloud Pub/Sub messages.
      * - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
      * - JSON: The message payload is a JSON string of SourceRepoEvent.
-     *   Possible values are `PROTOBUF` and `JSON`.
+     * Possible values are `PROTOBUF` and `JSON`.
      * 
      */
     @Import(name="messageFormat", required=true)

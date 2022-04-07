@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FeatureMembershipConfigmanagementConfigSync {
     /**
-     * - 
+     * -
      * (Optional) Structure is documented below.
      * 
      */
@@ -33,7 +33,7 @@ public final class FeatureMembershipConfigmanagementConfigSync {
     }
 
     /**
-     * - 
+     * -
      * (Optional) Structure is documented below.
      * 
     */

@@ -15,6 +15,7 @@ import javax.annotation.Nullable;
 /**
  * Represents a Location resource.
  * 
+ * 
  * ## Import
  * 
  * Location can be imported using any of these accepted formats
@@ -23,14 +24,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:notebooks/location:Location default projects/{{project}}/locations/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:notebooks/location:Location default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:notebooks/location:Location default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:notebooks/location:Location")
 public class Location extends io.pulumi.resources.CustomResource {

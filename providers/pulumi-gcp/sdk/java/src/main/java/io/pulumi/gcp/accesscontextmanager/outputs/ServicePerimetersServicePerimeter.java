@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePerimetersServicePerimeter {
     /**
-     * - 
+     * -
      * Time the AccessPolicy was created in UTC.
      * 
      */
@@ -76,7 +76,7 @@ public final class ServicePerimetersServicePerimeter {
      */
     private final String title;
     /**
-     * - 
+     * -
      * Time the AccessPolicy was updated in UTC.
      * 
      */
@@ -118,7 +118,7 @@ public final class ServicePerimetersServicePerimeter {
     }
 
     /**
-     * - 
+     * -
      * Time the AccessPolicy was created in UTC.
      * 
     */
@@ -193,7 +193,7 @@ public final class ServicePerimetersServicePerimeter {
         return this.title;
     }
     /**
-     * - 
+     * -
      * Time the AccessPolicy was updated in UTC.
      * 
     */

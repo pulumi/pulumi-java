@@ -15,7 +15,7 @@ public final class InboundSamlConfigSpConfigSpCertificateGetArgs extends io.pulu
     public static final InboundSamlConfigSpConfigSpCertificateGetArgs Empty = new InboundSamlConfigSpConfigSpCertificateGetArgs();
 
     /**
-     * - 
+     * -
      * The x509 certificate
      * 
      */

@@ -26,7 +26,350 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/compute/docs/machine-images)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Machine Image Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const vm = new gcp.compute.Instance("vm", {
+ *     machineType: "e2-medium",
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: "debian-cloud/debian-9",
+ *         },
+ *     },
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const image = new gcp.compute.MachineImage("image", {sourceInstance: vm.selfLink}, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * vm = gcp.compute.Instance("vm",
+ *     machine_type="e2-medium",
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image="debian-cloud/debian-9",
+ *         ),
+ *     ),
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * image = gcp.compute.MachineImage("image", source_instance=vm.self_link,
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vm = new Gcp.Compute.Instance("vm", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = "debian-cloud/debian-9",
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var image = new Gcp.Compute.MachineImage("image", new Gcp.Compute.MachineImageArgs
+ *         {
+ *             SourceInstance = vm.SelfLink,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		vm, err := compute.NewInstance(ctx, "vm", &compute.InstanceArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String("debian-cloud/debian-9"),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewMachineImage(ctx, "image", &compute.MachineImageArgs{
+ * 			SourceInstance: vm.SelfLink,
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Compute Machine Image Kms
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const vm = new gcp.compute.Instance("vm", {
+ *     machineType: "e2-medium",
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: "debian-cloud/debian-9",
+ *         },
+ *     },
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const keyRing = new gcp.kms.KeyRing("keyRing", {location: "us"}, {
+ *     provider: google_beta,
+ * });
+ * const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id}, {
+ *     provider: google_beta,
+ * });
+ * const project = gcp.organizations.getProject({});
+ * const kms_project_binding = new gcp.projects.IAMMember("kms-project-binding", {
+ *     project: project.then(project => project.projectId),
+ *     role: "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+ *     member: project.then(project => `serviceAccount:service-${project.number}@compute-system.iam.gserviceaccount.com`),
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const image = new gcp.compute.MachineImage("image", {
+ *     sourceInstance: vm.selfLink,
+ *     machineImageEncryptionKey: {
+ *         kmsKeyName: cryptoKey.id,
+ *     },
+ * }, {
+ *     provider: google_beta,
+ *     dependsOn: [kms_project_binding],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * vm = gcp.compute.Instance("vm",
+ *     machine_type="e2-medium",
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image="debian-cloud/debian-9",
+ *         ),
+ *     ),
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * key_ring = gcp.kms.KeyRing("keyRing", location="us",
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id,
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * project = gcp.organizations.get_project()
+ * kms_project_binding = gcp.projects.IAMMember("kms-project-binding",
+ *     project=project.project_id,
+ *     role="roles/cloudkms.cryptoKeyEncrypterDecrypter",
+ *     member=f"serviceAccount:service-{project.number}@compute-system.iam.gserviceaccount.com",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * image = gcp.compute.MachineImage("image",
+ *     source_instance=vm.self_link,
+ *     machine_image_encryption_key=gcp.compute.MachineImageMachineImageEncryptionKeyArgs(
+ *         kms_key_name=crypto_key.id,
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta,
+ *         depends_on=[kms_project_binding]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vm = new Gcp.Compute.Instance("vm", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = "debian-cloud/debian-9",
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var keyRing = new Gcp.Kms.KeyRing("keyRing", new Gcp.Kms.KeyRingArgs
+ *         {
+ *             Location = "us",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var cryptoKey = new Gcp.Kms.CryptoKey("cryptoKey", new Gcp.Kms.CryptoKeyArgs
+ *         {
+ *             KeyRing = keyRing.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var kms_project_binding = new Gcp.Projects.IAMMember("kms-project-binding", new Gcp.Projects.IAMMemberArgs
+ *         {
+ *             Project = project.Apply(project => project.ProjectId),
+ *             Role = "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+ *             Member = project.Apply(project => $"serviceAccount:service-{project.Number}@compute-system.iam.gserviceaccount.com"),
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var image = new Gcp.Compute.MachineImage("image", new Gcp.Compute.MachineImageArgs
+ *         {
+ *             SourceInstance = vm.SelfLink,
+ *             MachineImageEncryptionKey = new Gcp.Compute.Inputs.MachineImageMachineImageEncryptionKeyArgs
+ *             {
+ *                 KmsKeyName = cryptoKey.Id,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *             DependsOn = 
+ *             {
+ *                 kms_project_binding,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/kms"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		vm, err := compute.NewInstance(ctx, "vm", &compute.InstanceArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String("debian-cloud/debian-9"),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		keyRing, err := kms.NewKeyRing(ctx, "keyRing", &kms.KeyRingArgs{
+ * 			Location: pulumi.String("us"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cryptoKey, err := kms.NewCryptoKey(ctx, "cryptoKey", &kms.CryptoKeyArgs{
+ * 			KeyRing: keyRing.ID(),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = projects.NewIAMMember(ctx, "kms-project-binding", &projects.IAMMemberArgs{
+ * 			Project: pulumi.String(project.ProjectId),
+ * 			Role:    pulumi.String("roles/cloudkms.cryptoKeyEncrypterDecrypter"),
+ * 			Member:  pulumi.String(fmt.Sprintf("%v%v%v", "serviceAccount:service-", project.Number, "@compute-system.iam.gserviceaccount.com")),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewMachineImage(ctx, "image", &compute.MachineImageArgs{
+ * 			SourceInstance: vm.SelfLink,
+ * 			MachineImageEncryptionKey: &compute.MachineImageMachineImageEncryptionKeyArgs{
+ * 				KmsKeyName: cryptoKey.ID(),
+ * 			},
+ * 		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+ * 			kms_project_binding,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,14 +379,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/machineImage:MachineImage default projects/{{project}}/global/machineImages/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/machineImage:MachineImage default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/machineImage:MachineImage default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/machineImage:MachineImage")
 public class MachineImage extends io.pulumi.resources.CustomResource {

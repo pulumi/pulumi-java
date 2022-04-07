@@ -20,7 +20,82 @@ import javax.annotation.Nullable;
  * Compute Engine. For more information see the official documentation for [Beam](https://beam.apache.org)
  * and [Dataflow](https://cloud.google.com/dataflow/).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const bigDataJob = new gcp.dataflow.FlexTemplateJob("bigDataJob", {
+ *     containerSpecGcsPath: "gs://my-bucket/templates/template.json",
+ *     parameters: {
+ *         inputSubscription: "messages",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * big_data_job = gcp.dataflow.FlexTemplateJob("bigDataJob",
+ *     container_spec_gcs_path="gs://my-bucket/templates/template.json",
+ *     parameters={
+ *         "inputSubscription": "messages",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bigDataJob = new Gcp.Dataflow.FlexTemplateJob("bigDataJob", new Gcp.Dataflow.FlexTemplateJobArgs
+ *         {
+ *             ContainerSpecGcsPath = "gs://my-bucket/templates/template.json",
+ *             Parameters = 
+ *             {
+ *                 { "inputSubscription", "messages" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataflow.NewFlexTemplateJob(ctx, "bigDataJob", &dataflow.FlexTemplateJobArgs{
+ * 			ContainerSpecGcsPath: pulumi.String("gs://my-bucket/templates/template.json"),
+ * 			Parameters: pulumi.AnyMap{
+ * 				"inputSubscription": pulumi.Any("messages"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Note on "destroy" / "apply"
  * 
  * There are many types of Dataflow jobs.  Some Dataflow jobs run constantly,
@@ -43,10 +118,10 @@ import javax.annotation.Nullable;
  * configuration, you may experience a long wait for your `pulumi destroy` to
  * complete.
  * 
+ * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:dataflow/flexTemplateJob:FlexTemplateJob")
 public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
@@ -91,7 +166,6 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Deprecated until the API supports this field
-     * 
      */
     @Deprecated /* Deprecated until the API supports this field */
     @Export(name="labels", type=Map.class, parameters={String.class, Object.class})

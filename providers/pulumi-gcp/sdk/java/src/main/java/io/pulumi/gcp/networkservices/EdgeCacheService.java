@@ -20,9 +20,1213 @@ import javax.annotation.Nullable;
 /**
  * EdgeCacheService defines the IP addresses, protocols, security policies, cache policies and routing configuration.
  * 
+ * 
+ * 
  * > **Warning:** These resources require allow-listing to use, and are not openly available to all Cloud customers. Engage with your Cloud account team to discuss how to onboard.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Network Services Edge Cache Service Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dest = new gcp.storage.Bucket("dest", {
+ *     location: "US",
+ *     forceDestroy: true,
+ * });
+ * const instanceEdgeCacheOrigin = new gcp.networkservices.EdgeCacheOrigin("instanceEdgeCacheOrigin", {
+ *     originAddress: dest.url,
+ *     description: "The default bucket for media edge test",
+ *     maxAttempts: 2,
+ *     timeout: {
+ *         connectTimeout: "10s",
+ *     },
+ * });
+ * const instanceEdgeCacheService = new gcp.networkservices.EdgeCacheService("instanceEdgeCacheService", {
+ *     description: "some description",
+ *     routing: {
+ *         hostRules: [{
+ *             description: "host rule description",
+ *             hosts: ["sslcert.tf-test.club"],
+ *             pathMatcher: "routes",
+ *         }],
+ *         pathMatchers: [{
+ *             name: "routes",
+ *             routeRules: [{
+ *                 description: "a route rule to match against",
+ *                 priority: 1,
+ *                 matchRules: [{
+ *                     prefixMatch: "/",
+ *                 }],
+ *                 origin: instanceEdgeCacheOrigin.name,
+ *                 routeAction: {
+ *                     cdnPolicy: {
+ *                         cacheMode: "CACHE_ALL_STATIC",
+ *                         defaultTtl: "3600s",
+ *                     },
+ *                 },
+ *                 headerAction: {
+ *                     responseHeaderToAdds: [{
+ *                         headerName: "x-cache-status",
+ *                         headerValue: "{cdn_cache_status}",
+ *                     }],
+ *                 },
+ *             }],
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dest = gcp.storage.Bucket("dest",
+ *     location="US",
+ *     force_destroy=True)
+ * instance_edge_cache_origin = gcp.networkservices.EdgeCacheOrigin("instanceEdgeCacheOrigin",
+ *     origin_address=dest.url,
+ *     description="The default bucket for media edge test",
+ *     max_attempts=2,
+ *     timeout=gcp.networkservices.EdgeCacheOriginTimeoutArgs(
+ *         connect_timeout="10s",
+ *     ))
+ * instance_edge_cache_service = gcp.networkservices.EdgeCacheService("instanceEdgeCacheService",
+ *     description="some description",
+ *     routing=gcp.networkservices.EdgeCacheServiceRoutingArgs(
+ *         host_rules=[gcp.networkservices.EdgeCacheServiceRoutingHostRuleArgs(
+ *             description="host rule description",
+ *             hosts=["sslcert.tf-test.club"],
+ *             path_matcher="routes",
+ *         )],
+ *         path_matchers=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherArgs(
+ *             name="routes",
+ *             route_rules=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(
+ *                 description="a route rule to match against",
+ *                 priority="1",
+ *                 match_rules=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs(
+ *                     prefix_match="/",
+ *                 )],
+ *                 origin=instance_edge_cache_origin.name,
+ *                 route_action=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs(
+ *                     cdn_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs(
+ *                         cache_mode="CACHE_ALL_STATIC",
+ *                         default_ttl="3600s",
+ *                     ),
+ *                 ),
+ *                 header_action=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs(
+ *                     response_header_to_adds=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs(
+ *                         header_name="x-cache-status",
+ *                         header_value="{cdn_cache_status}",
+ *                     )],
+ *                 ),
+ *             )],
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dest = new Gcp.Storage.Bucket("dest", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *             ForceDestroy = true,
+ *         });
+ *         var instanceEdgeCacheOrigin = new Gcp.NetworkServices.EdgeCacheOrigin("instanceEdgeCacheOrigin", new Gcp.NetworkServices.EdgeCacheOriginArgs
+ *         {
+ *             OriginAddress = dest.Url,
+ *             Description = "The default bucket for media edge test",
+ *             MaxAttempts = 2,
+ *             Timeout = new Gcp.NetworkServices.Inputs.EdgeCacheOriginTimeoutArgs
+ *             {
+ *                 ConnectTimeout = "10s",
+ *             },
+ *         });
+ *         var instanceEdgeCacheService = new Gcp.NetworkServices.EdgeCacheService("instanceEdgeCacheService", new Gcp.NetworkServices.EdgeCacheServiceArgs
+ *         {
+ *             Description = "some description",
+ *             Routing = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingArgs
+ *             {
+ *                 HostRules = 
+ *                 {
+ *                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingHostRuleArgs
+ *                     {
+ *                         Description = "host rule description",
+ *                         Hosts = 
+ *                         {
+ *                             "sslcert.tf-test.club",
+ *                         },
+ *                         PathMatcher = "routes",
+ *                     },
+ *                 },
+ *                 PathMatchers = 
+ *                 {
+ *                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherArgs
+ *                     {
+ *                         Name = "routes",
+ *                         RouteRules = 
+ *                         {
+ *                             new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs
+ *                             {
+ *                                 Description = "a route rule to match against",
+ *                                 Priority = "1",
+ *                                 MatchRules = 
+ *                                 {
+ *                                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs
+ *                                     {
+ *                                         PrefixMatch = "/",
+ *                                     },
+ *                                 },
+ *                                 Origin = instanceEdgeCacheOrigin.Name,
+ *                                 RouteAction = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs
+ *                                 {
+ *                                     CdnPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs
+ *                                     {
+ *                                         CacheMode = "CACHE_ALL_STATIC",
+ *                                         DefaultTtl = "3600s",
+ *                                     },
+ *                                 },
+ *                                 HeaderAction = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs
+ *                                 {
+ *                                     ResponseHeaderToAdds = 
+ *                                     {
+ *                                         new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs
+ *                                         {
+ *                                             HeaderName = "x-cache-status",
+ *                                             HeaderValue = "{cdn_cache_status}",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/networkservices"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dest, err := storage.NewBucket(ctx, "dest", &storage.BucketArgs{
+ * 			Location:     pulumi.String("US"),
+ * 			ForceDestroy: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		instanceEdgeCacheOrigin, err := networkservices.NewEdgeCacheOrigin(ctx, "instanceEdgeCacheOrigin", &networkservices.EdgeCacheOriginArgs{
+ * 			OriginAddress: dest.Url,
+ * 			Description:   pulumi.String("The default bucket for media edge test"),
+ * 			MaxAttempts:   pulumi.Int(2),
+ * 			Timeout: &networkservices.EdgeCacheOriginTimeoutArgs{
+ * 				ConnectTimeout: pulumi.String("10s"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = networkservices.NewEdgeCacheService(ctx, "instanceEdgeCacheService", &networkservices.EdgeCacheServiceArgs{
+ * 			Description: pulumi.String("some description"),
+ * 			Routing: &networkservices.EdgeCacheServiceRoutingArgs{
+ * 				HostRules: networkservices.EdgeCacheServiceRoutingHostRuleArray{
+ * 					&networkservices.EdgeCacheServiceRoutingHostRuleArgs{
+ * 						Description: pulumi.String("host rule description"),
+ * 						Hosts: pulumi.StringArray{
+ * 							pulumi.String("sslcert.tf-test.club"),
+ * 						},
+ * 						PathMatcher: pulumi.String("routes"),
+ * 					},
+ * 				},
+ * 				PathMatchers: networkservices.EdgeCacheServiceRoutingPathMatcherArray{
+ * 					&networkservices.EdgeCacheServiceRoutingPathMatcherArgs{
+ * 						Name: pulumi.String("routes"),
+ * 						RouteRules: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArray{
+ * 							&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs{
+ * 								Description: pulumi.String("a route rule to match against"),
+ * 								Priority:    pulumi.String("1"),
+ * 								MatchRules: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArray{
+ * 									&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs{
+ * 										PrefixMatch: pulumi.String("/"),
+ * 									},
+ * 								},
+ * 								Origin: instanceEdgeCacheOrigin.Name,
+ * 								RouteAction: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs{
+ * 									CdnPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs{
+ * 										CacheMode:  pulumi.String("CACHE_ALL_STATIC"),
+ * 										DefaultTtl: pulumi.String("3600s"),
+ * 									},
+ * 								},
+ * 								HeaderAction: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs{
+ * 									ResponseHeaderToAdds: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArray{
+ * 										&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs{
+ * 											HeaderName:  pulumi.String("x-cache-status"),
+ * 											HeaderValue: pulumi.String("{cdn_cache_status}"),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Network Services Edge Cache Service Advanced
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const dest = new gcp.storage.Bucket("dest", {
+ *     location: "US",
+ *     forceDestroy: true,
+ * });
+ * const google = new gcp.networkservices.EdgeCacheOrigin("google", {
+ *     originAddress: "google.com",
+ *     description: "The default bucket for media edge test",
+ *     maxAttempts: 2,
+ *     timeout: {
+ *         connectTimeout: "10s",
+ *     },
+ * });
+ * const instanceEdgeCacheOrigin = new gcp.networkservices.EdgeCacheOrigin("instanceEdgeCacheOrigin", {
+ *     originAddress: dest.url,
+ *     description: "The default bucket for media edge test",
+ *     maxAttempts: 2,
+ *     timeout: {
+ *         connectTimeout: "10s",
+ *     },
+ * });
+ * const instanceEdgeCacheService = new gcp.networkservices.EdgeCacheService("instanceEdgeCacheService", {
+ *     description: "some description",
+ *     disableQuic: true,
+ *     labels: {
+ *         a: "b",
+ *     },
+ *     routing: {
+ *         hostRules: [
+ *             {
+ *                 description: "host rule description",
+ *                 hosts: ["sslcert.tf-test.club"],
+ *                 pathMatcher: "routes",
+ *             },
+ *             {
+ *                 description: "host rule2",
+ *                 hosts: ["sslcert.tf-test2.club"],
+ *                 pathMatcher: "routes",
+ *             },
+ *             {
+ *                 description: "host rule3",
+ *                 hosts: ["sslcert.tf-test3.club"],
+ *                 pathMatcher: "routesAdvanced",
+ *             },
+ *         ],
+ *         pathMatchers: [
+ *             {
+ *                 name: "routes",
+ *                 routeRules: [{
+ *                     description: "a route rule to match against",
+ *                     priority: 1,
+ *                     matchRules: [{
+ *                         prefixMatch: "/",
+ *                     }],
+ *                     origin: instanceEdgeCacheOrigin.name,
+ *                     routeAction: {
+ *                         cdnPolicy: {
+ *                             cacheMode: "CACHE_ALL_STATIC",
+ *                             defaultTtl: "3600s",
+ *                         },
+ *                     },
+ *                     headerAction: {
+ *                         responseHeaderToAdds: [{
+ *                             headerName: "x-cache-status",
+ *                             headerValue: "{cdn_cache_status}",
+ *                         }],
+ *                     },
+ *                 }],
+ *             },
+ *             {
+ *                 name: "routesAdvanced",
+ *                 description: "an advanced ruleset",
+ *                 routeRules: [
+ *                     {
+ *                         description: "an advanced route rule to match against",
+ *                         priority: 1,
+ *                         matchRules: [
+ *                             {
+ *                                 prefixMatch: "/potato/",
+ *                                 queryParameterMatches: [
+ *                                     {
+ *                                         name: "debug",
+ *                                         presentMatch: true,
+ *                                     },
+ *                                     {
+ *                                         name: "state",
+ *                                         exactMatch: "debug",
+ *                                     },
+ *                                 ],
+ *                             },
+ *                             {
+ *                                 fullPathMatch: "/apple",
+ *                             },
+ *                         ],
+ *                         headerAction: {
+ *                             requestHeaderToAdds: [
+ *                                 {
+ *                                     headerName: "debug",
+ *                                     headerValue: "true",
+ *                                     replace: true,
+ *                                 },
+ *                                 {
+ *                                     headerName: "potato",
+ *                                     headerValue: "plant",
+ *                                 },
+ *                             ],
+ *                             responseHeaderToAdds: [{
+ *                                 headerName: "potato",
+ *                                 headerValue: "plant",
+ *                                 replace: true,
+ *                             }],
+ *                             requestHeaderToRemoves: [{
+ *                                 headerName: "prod",
+ *                             }],
+ *                             responseHeaderToRemoves: [{
+ *                                 headerName: "prod",
+ *                             }],
+ *                         },
+ *                         origin: instanceEdgeCacheOrigin.name,
+ *                         routeAction: {
+ *                             cdnPolicy: {
+ *                                 cacheMode: "CACHE_ALL_STATIC",
+ *                                 defaultTtl: "3800s",
+ *                                 clientTtl: "3600s",
+ *                                 maxTtl: "9000s",
+ *                                 cacheKeyPolicy: {
+ *                                     includeProtocol: true,
+ *                                     excludeHost: true,
+ *                                     includedQueryParameters: [
+ *                                         "apple",
+ *                                         "dev",
+ *                                         "santa",
+ *                                         "claus",
+ *                                     ],
+ *                                     includedHeaderNames: ["banana"],
+ *                                 },
+ *                                 negativeCaching: true,
+ *                                 signedRequestMode: "DISABLED",
+ *                                 negativeCachingPolicy: {
+ *                                     "500": "3000s",
+ *                                 },
+ *                             },
+ *                             urlRewrite: {
+ *                                 pathPrefixRewrite: "/dev",
+ *                                 hostRewrite: "dev.club",
+ *                             },
+ *                             corsPolicy: {
+ *                                 maxAge: "2500s",
+ *                                 allowCredentials: true,
+ *                                 allowOrigins: ["*"],
+ *                                 allowMethods: ["GET"],
+ *                                 allowHeaders: ["dev"],
+ *                                 exposeHeaders: ["prod"],
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         description: "a second route rule to match against",
+ *                         priority: 2,
+ *                         matchRules: [{
+ *                             fullPathMatch: "/yay",
+ *                         }],
+ *                         origin: instanceEdgeCacheOrigin.name,
+ *                         routeAction: {
+ *                             cdnPolicy: {
+ *                                 cacheMode: "CACHE_ALL_STATIC",
+ *                                 defaultTtl: "3600s",
+ *                                 cacheKeyPolicy: {
+ *                                     excludedQueryParameters: ["dev"],
+ *                                 },
+ *                             },
+ *                             corsPolicy: {
+ *                                 maxAge: "3000s",
+ *                                 allowHeaders: ["dev"],
+ *                                 disabled: true,
+ *                             },
+ *                         },
+ *                     },
+ *                 ],
+ *             },
+ *         ],
+ *     },
+ *     logConfig: {
+ *         enable: true,
+ *         sampleRate: 0.01,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * dest = gcp.storage.Bucket("dest",
+ *     location="US",
+ *     force_destroy=True)
+ * google = gcp.networkservices.EdgeCacheOrigin("google",
+ *     origin_address="google.com",
+ *     description="The default bucket for media edge test",
+ *     max_attempts=2,
+ *     timeout=gcp.networkservices.EdgeCacheOriginTimeoutArgs(
+ *         connect_timeout="10s",
+ *     ))
+ * instance_edge_cache_origin = gcp.networkservices.EdgeCacheOrigin("instanceEdgeCacheOrigin",
+ *     origin_address=dest.url,
+ *     description="The default bucket for media edge test",
+ *     max_attempts=2,
+ *     timeout=gcp.networkservices.EdgeCacheOriginTimeoutArgs(
+ *         connect_timeout="10s",
+ *     ))
+ * instance_edge_cache_service = gcp.networkservices.EdgeCacheService("instanceEdgeCacheService",
+ *     description="some description",
+ *     disable_quic=True,
+ *     labels={
+ *         "a": "b",
+ *     },
+ *     routing=gcp.networkservices.EdgeCacheServiceRoutingArgs(
+ *         host_rules=[
+ *             gcp.networkservices.EdgeCacheServiceRoutingHostRuleArgs(
+ *                 description="host rule description",
+ *                 hosts=["sslcert.tf-test.club"],
+ *                 path_matcher="routes",
+ *             ),
+ *             gcp.networkservices.EdgeCacheServiceRoutingHostRuleArgs(
+ *                 description="host rule2",
+ *                 hosts=["sslcert.tf-test2.club"],
+ *                 path_matcher="routes",
+ *             ),
+ *             gcp.networkservices.EdgeCacheServiceRoutingHostRuleArgs(
+ *                 description="host rule3",
+ *                 hosts=["sslcert.tf-test3.club"],
+ *                 path_matcher="routesAdvanced",
+ *             ),
+ *         ],
+ *         path_matchers=[
+ *             gcp.networkservices.EdgeCacheServiceRoutingPathMatcherArgs(
+ *                 name="routes",
+ *                 route_rules=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(
+ *                     description="a route rule to match against",
+ *                     priority="1",
+ *                     match_rules=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs(
+ *                         prefix_match="/",
+ *                     )],
+ *                     origin=instance_edge_cache_origin.name,
+ *                     route_action=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs(
+ *                         cdn_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs(
+ *                             cache_mode="CACHE_ALL_STATIC",
+ *                             default_ttl="3600s",
+ *                         ),
+ *                     ),
+ *                     header_action=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs(
+ *                         response_header_to_adds=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs(
+ *                             header_name="x-cache-status",
+ *                             header_value="{cdn_cache_status}",
+ *                         )],
+ *                     ),
+ *                 )],
+ *             ),
+ *             gcp.networkservices.EdgeCacheServiceRoutingPathMatcherArgs(
+ *                 name="routesAdvanced",
+ *                 description="an advanced ruleset",
+ *                 route_rules=[
+ *                     gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(
+ *                         description="an advanced route rule to match against",
+ *                         priority="1",
+ *                         match_rules=[
+ *                             gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs(
+ *                                 prefix_match="/potato/",
+ *                                 query_parameter_matches=[
+ *                                     gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
+ *                                         name="debug",
+ *                                         present_match=True,
+ *                                     ),
+ *                                     gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
+ *                                         name="state",
+ *                                         exact_match="debug",
+ *                                     ),
+ *                                 ],
+ *                             ),
+ *                             gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs(
+ *                                 full_path_match="/apple",
+ *                             ),
+ *                         ],
+ *                         header_action=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs(
+ *                             request_header_to_adds=[
+ *                                 gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs(
+ *                                     header_name="debug",
+ *                                     header_value="true",
+ *                                     replace=True,
+ *                                 ),
+ *                                 gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs(
+ *                                     header_name="potato",
+ *                                     header_value="plant",
+ *                                 ),
+ *                             ],
+ *                             response_header_to_adds=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs(
+ *                                 header_name="potato",
+ *                                 header_value="plant",
+ *                                 replace=True,
+ *                             )],
+ *                             request_header_to_removes=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs(
+ *                                 header_name="prod",
+ *                             )],
+ *                             response_header_to_removes=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArgs(
+ *                                 header_name="prod",
+ *                             )],
+ *                         ),
+ *                         origin=instance_edge_cache_origin.name,
+ *                         route_action=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs(
+ *                             cdn_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs(
+ *                                 cache_mode="CACHE_ALL_STATIC",
+ *                                 default_ttl="3800s",
+ *                                 client_ttl="3600s",
+ *                                 max_ttl="9000s",
+ *                                 cache_key_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs(
+ *                                     include_protocol=True,
+ *                                     exclude_host=True,
+ *                                     included_query_parameters=[
+ *                                         "apple",
+ *                                         "dev",
+ *                                         "santa",
+ *                                         "claus",
+ *                                     ],
+ *                                     included_header_names=["banana"],
+ *                                 ),
+ *                                 negative_caching=True,
+ *                                 signed_request_mode="DISABLED",
+ *                                 negative_caching_policy={
+ *                                     "500": "3000s",
+ *                                 },
+ *                             ),
+ *                             url_rewrite=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs(
+ *                                 path_prefix_rewrite="/dev",
+ *                                 host_rewrite="dev.club",
+ *                             ),
+ *                             cors_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs(
+ *                                 max_age="2500s",
+ *                                 allow_credentials=True,
+ *                                 allow_origins=["*"],
+ *                                 allow_methods=["GET"],
+ *                                 allow_headers=["dev"],
+ *                                 expose_headers=["prod"],
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(
+ *                         description="a second route rule to match against",
+ *                         priority="2",
+ *                         match_rules=[gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs(
+ *                             full_path_match="/yay",
+ *                         )],
+ *                         origin=instance_edge_cache_origin.name,
+ *                         route_action=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs(
+ *                             cdn_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs(
+ *                                 cache_mode="CACHE_ALL_STATIC",
+ *                                 default_ttl="3600s",
+ *                                 cache_key_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs(
+ *                                     excluded_query_parameters=["dev"],
+ *                                 ),
+ *                             ),
+ *                             cors_policy=gcp.networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs(
+ *                                 max_age="3000s",
+ *                                 allow_headers=["dev"],
+ *                                 disabled=True,
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ],
+ *             ),
+ *         ],
+ *     ),
+ *     log_config=gcp.networkservices.EdgeCacheServiceLogConfigArgs(
+ *         enable=True,
+ *         sample_rate=0.01,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dest = new Gcp.Storage.Bucket("dest", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *             ForceDestroy = true,
+ *         });
+ *         var google = new Gcp.NetworkServices.EdgeCacheOrigin("google", new Gcp.NetworkServices.EdgeCacheOriginArgs
+ *         {
+ *             OriginAddress = "google.com",
+ *             Description = "The default bucket for media edge test",
+ *             MaxAttempts = 2,
+ *             Timeout = new Gcp.NetworkServices.Inputs.EdgeCacheOriginTimeoutArgs
+ *             {
+ *                 ConnectTimeout = "10s",
+ *             },
+ *         });
+ *         var instanceEdgeCacheOrigin = new Gcp.NetworkServices.EdgeCacheOrigin("instanceEdgeCacheOrigin", new Gcp.NetworkServices.EdgeCacheOriginArgs
+ *         {
+ *             OriginAddress = dest.Url,
+ *             Description = "The default bucket for media edge test",
+ *             MaxAttempts = 2,
+ *             Timeout = new Gcp.NetworkServices.Inputs.EdgeCacheOriginTimeoutArgs
+ *             {
+ *                 ConnectTimeout = "10s",
+ *             },
+ *         });
+ *         var instanceEdgeCacheService = new Gcp.NetworkServices.EdgeCacheService("instanceEdgeCacheService", new Gcp.NetworkServices.EdgeCacheServiceArgs
+ *         {
+ *             Description = "some description",
+ *             DisableQuic = true,
+ *             Labels = 
+ *             {
+ *                 { "a", "b" },
+ *             },
+ *             Routing = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingArgs
+ *             {
+ *                 HostRules = 
+ *                 {
+ *                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingHostRuleArgs
+ *                     {
+ *                         Description = "host rule description",
+ *                         Hosts = 
+ *                         {
+ *                             "sslcert.tf-test.club",
+ *                         },
+ *                         PathMatcher = "routes",
+ *                     },
+ *                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingHostRuleArgs
+ *                     {
+ *                         Description = "host rule2",
+ *                         Hosts = 
+ *                         {
+ *                             "sslcert.tf-test2.club",
+ *                         },
+ *                         PathMatcher = "routes",
+ *                     },
+ *                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingHostRuleArgs
+ *                     {
+ *                         Description = "host rule3",
+ *                         Hosts = 
+ *                         {
+ *                             "sslcert.tf-test3.club",
+ *                         },
+ *                         PathMatcher = "routesAdvanced",
+ *                     },
+ *                 },
+ *                 PathMatchers = 
+ *                 {
+ *                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherArgs
+ *                     {
+ *                         Name = "routes",
+ *                         RouteRules = 
+ *                         {
+ *                             new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs
+ *                             {
+ *                                 Description = "a route rule to match against",
+ *                                 Priority = "1",
+ *                                 MatchRules = 
+ *                                 {
+ *                                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs
+ *                                     {
+ *                                         PrefixMatch = "/",
+ *                                     },
+ *                                 },
+ *                                 Origin = instanceEdgeCacheOrigin.Name,
+ *                                 RouteAction = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs
+ *                                 {
+ *                                     CdnPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs
+ *                                     {
+ *                                         CacheMode = "CACHE_ALL_STATIC",
+ *                                         DefaultTtl = "3600s",
+ *                                     },
+ *                                 },
+ *                                 HeaderAction = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs
+ *                                 {
+ *                                     ResponseHeaderToAdds = 
+ *                                     {
+ *                                         new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs
+ *                                         {
+ *                                             HeaderName = "x-cache-status",
+ *                                             HeaderValue = "{cdn_cache_status}",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherArgs
+ *                     {
+ *                         Name = "routesAdvanced",
+ *                         Description = "an advanced ruleset",
+ *                         RouteRules = 
+ *                         {
+ *                             new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs
+ *                             {
+ *                                 Description = "an advanced route rule to match against",
+ *                                 Priority = "1",
+ *                                 MatchRules = 
+ *                                 {
+ *                                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs
+ *                                     {
+ *                                         PrefixMatch = "/potato/",
+ *                                         QueryParameterMatches = 
+ *                                         {
+ *                                             new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs
+ *                                             {
+ *                                                 Name = "debug",
+ *                                                 PresentMatch = true,
+ *                                             },
+ *                                             new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs
+ *                                             {
+ *                                                 Name = "state",
+ *                                                 ExactMatch = "debug",
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs
+ *                                     {
+ *                                         FullPathMatch = "/apple",
+ *                                     },
+ *                                 },
+ *                                 HeaderAction = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs
+ *                                 {
+ *                                     RequestHeaderToAdds = 
+ *                                     {
+ *                                         new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs
+ *                                         {
+ *                                             HeaderName = "debug",
+ *                                             HeaderValue = "true",
+ *                                             Replace = true,
+ *                                         },
+ *                                         new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs
+ *                                         {
+ *                                             HeaderName = "potato",
+ *                                             HeaderValue = "plant",
+ *                                         },
+ *                                     },
+ *                                     ResponseHeaderToAdds = 
+ *                                     {
+ *                                         new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs
+ *                                         {
+ *                                             HeaderName = "potato",
+ *                                             HeaderValue = "plant",
+ *                                             Replace = true,
+ *                                         },
+ *                                     },
+ *                                     RequestHeaderToRemoves = 
+ *                                     {
+ *                                         new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs
+ *                                         {
+ *                                             HeaderName = "prod",
+ *                                         },
+ *                                     },
+ *                                     ResponseHeaderToRemoves = 
+ *                                     {
+ *                                         new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArgs
+ *                                         {
+ *                                             HeaderName = "prod",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 Origin = instanceEdgeCacheOrigin.Name,
+ *                                 RouteAction = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs
+ *                                 {
+ *                                     CdnPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs
+ *                                     {
+ *                                         CacheMode = "CACHE_ALL_STATIC",
+ *                                         DefaultTtl = "3800s",
+ *                                         ClientTtl = "3600s",
+ *                                         MaxTtl = "9000s",
+ *                                         CacheKeyPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs
+ *                                         {
+ *                                             IncludeProtocol = true,
+ *                                             ExcludeHost = true,
+ *                                             IncludedQueryParameters = 
+ *                                             {
+ *                                                 "apple",
+ *                                                 "dev",
+ *                                                 "santa",
+ *                                                 "claus",
+ *                                             },
+ *                                             IncludedHeaderNames = 
+ *                                             {
+ *                                                 "banana",
+ *                                             },
+ *                                         },
+ *                                         NegativeCaching = true,
+ *                                         SignedRequestMode = "DISABLED",
+ *                                         NegativeCachingPolicy = 
+ *                                         {
+ *                                             { "500", "3000s" },
+ *                                         },
+ *                                     },
+ *                                     UrlRewrite = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs
+ *                                     {
+ *                                         PathPrefixRewrite = "/dev",
+ *                                         HostRewrite = "dev.club",
+ *                                     },
+ *                                     CorsPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs
+ *                                     {
+ *                                         MaxAge = "2500s",
+ *                                         AllowCredentials = true,
+ *                                         AllowOrigins = 
+ *                                         {
+ *                                             "*",
+ *                                         },
+ *                                         AllowMethods = 
+ *                                         {
+ *                                             "GET",
+ *                                         },
+ *                                         AllowHeaders = 
+ *                                         {
+ *                                             "dev",
+ *                                         },
+ *                                         ExposeHeaders = 
+ *                                         {
+ *                                             "prod",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                             new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs
+ *                             {
+ *                                 Description = "a second route rule to match against",
+ *                                 Priority = "2",
+ *                                 MatchRules = 
+ *                                 {
+ *                                     new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs
+ *                                     {
+ *                                         FullPathMatch = "/yay",
+ *                                     },
+ *                                 },
+ *                                 Origin = instanceEdgeCacheOrigin.Name,
+ *                                 RouteAction = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs
+ *                                 {
+ *                                     CdnPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs
+ *                                     {
+ *                                         CacheMode = "CACHE_ALL_STATIC",
+ *                                         DefaultTtl = "3600s",
+ *                                         CacheKeyPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs
+ *                                         {
+ *                                             ExcludedQueryParameters = 
+ *                                             {
+ *                                                 "dev",
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                     CorsPolicy = new Gcp.NetworkServices.Inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs
+ *                                     {
+ *                                         MaxAge = "3000s",
+ *                                         AllowHeaders = 
+ *                                         {
+ *                                             "dev",
+ *                                         },
+ *                                         Disabled = true,
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             LogConfig = new Gcp.NetworkServices.Inputs.EdgeCacheServiceLogConfigArgs
+ *             {
+ *                 Enable = true,
+ *                 SampleRate = 0.01,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/networkservices"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		dest, err := storage.NewBucket(ctx, "dest", &storage.BucketArgs{
+ * 			Location:     pulumi.String("US"),
+ * 			ForceDestroy: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = networkservices.NewEdgeCacheOrigin(ctx, "google", &networkservices.EdgeCacheOriginArgs{
+ * 			OriginAddress: pulumi.String("google.com"),
+ * 			Description:   pulumi.String("The default bucket for media edge test"),
+ * 			MaxAttempts:   pulumi.Int(2),
+ * 			Timeout: &networkservices.EdgeCacheOriginTimeoutArgs{
+ * 				ConnectTimeout: pulumi.String("10s"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		instanceEdgeCacheOrigin, err := networkservices.NewEdgeCacheOrigin(ctx, "instanceEdgeCacheOrigin", &networkservices.EdgeCacheOriginArgs{
+ * 			OriginAddress: dest.Url,
+ * 			Description:   pulumi.String("The default bucket for media edge test"),
+ * 			MaxAttempts:   pulumi.Int(2),
+ * 			Timeout: &networkservices.EdgeCacheOriginTimeoutArgs{
+ * 				ConnectTimeout: pulumi.String("10s"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = networkservices.NewEdgeCacheService(ctx, "instanceEdgeCacheService", &networkservices.EdgeCacheServiceArgs{
+ * 			Description: pulumi.String("some description"),
+ * 			DisableQuic: pulumi.Bool(true),
+ * 			Labels: pulumi.StringMap{
+ * 				"a": pulumi.String("b"),
+ * 			},
+ * 			Routing: &networkservices.EdgeCacheServiceRoutingArgs{
+ * 				HostRules: networkservices.EdgeCacheServiceRoutingHostRuleArray{
+ * 					&networkservices.EdgeCacheServiceRoutingHostRuleArgs{
+ * 						Description: pulumi.String("host rule description"),
+ * 						Hosts: pulumi.StringArray{
+ * 							pulumi.String("sslcert.tf-test.club"),
+ * 						},
+ * 						PathMatcher: pulumi.String("routes"),
+ * 					},
+ * 					&networkservices.EdgeCacheServiceRoutingHostRuleArgs{
+ * 						Description: pulumi.String("host rule2"),
+ * 						Hosts: pulumi.StringArray{
+ * 							pulumi.String("sslcert.tf-test2.club"),
+ * 						},
+ * 						PathMatcher: pulumi.String("routes"),
+ * 					},
+ * 					&networkservices.EdgeCacheServiceRoutingHostRuleArgs{
+ * 						Description: pulumi.String("host rule3"),
+ * 						Hosts: pulumi.StringArray{
+ * 							pulumi.String("sslcert.tf-test3.club"),
+ * 						},
+ * 						PathMatcher: pulumi.String("routesAdvanced"),
+ * 					},
+ * 				},
+ * 				PathMatchers: networkservices.EdgeCacheServiceRoutingPathMatcherArray{
+ * 					&networkservices.EdgeCacheServiceRoutingPathMatcherArgs{
+ * 						Name: pulumi.String("routes"),
+ * 						RouteRules: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArray{
+ * 							&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs{
+ * 								Description: pulumi.String("a route rule to match against"),
+ * 								Priority:    pulumi.String("1"),
+ * 								MatchRules: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArray{
+ * 									&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs{
+ * 										PrefixMatch: pulumi.String("/"),
+ * 									},
+ * 								},
+ * 								Origin: instanceEdgeCacheOrigin.Name,
+ * 								RouteAction: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs{
+ * 									CdnPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs{
+ * 										CacheMode:  pulumi.String("CACHE_ALL_STATIC"),
+ * 										DefaultTtl: pulumi.String("3600s"),
+ * 									},
+ * 								},
+ * 								HeaderAction: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs{
+ * 									ResponseHeaderToAdds: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArray{
+ * 										&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs{
+ * 											HeaderName:  pulumi.String("x-cache-status"),
+ * 											HeaderValue: pulumi.String("{cdn_cache_status}"),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					&networkservices.EdgeCacheServiceRoutingPathMatcherArgs{
+ * 						Name:        pulumi.String("routesAdvanced"),
+ * 						Description: pulumi.String("an advanced ruleset"),
+ * 						RouteRules: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArray{
+ * 							&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs{
+ * 								Description: pulumi.String("an advanced route rule to match against"),
+ * 								Priority:    pulumi.String("1"),
+ * 								MatchRules: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArray{
+ * 									&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs{
+ * 										PrefixMatch: pulumi.String("/potato/"),
+ * 										QueryParameterMatches: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArray{
+ * 											&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs{
+ * 												Name:         pulumi.String("debug"),
+ * 												PresentMatch: pulumi.Bool(true),
+ * 											},
+ * 											&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs{
+ * 												Name:       pulumi.String("state"),
+ * 												ExactMatch: pulumi.String("debug"),
+ * 											},
+ * 										},
+ * 									},
+ * 									&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs{
+ * 										FullPathMatch: pulumi.String("/apple"),
+ * 									},
+ * 								},
+ * 								HeaderAction: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs{
+ * 									RequestHeaderToAdds: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArray{
+ * 										&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs{
+ * 											HeaderName:  pulumi.String("debug"),
+ * 											HeaderValue: pulumi.String("true"),
+ * 											Replace:     pulumi.Bool(true),
+ * 										},
+ * 										&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddArgs{
+ * 											HeaderName:  pulumi.String("potato"),
+ * 											HeaderValue: pulumi.String("plant"),
+ * 										},
+ * 									},
+ * 									ResponseHeaderToAdds: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArray{
+ * 										&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddArgs{
+ * 											HeaderName:  pulumi.String("potato"),
+ * 											HeaderValue: pulumi.String("plant"),
+ * 											Replace:     pulumi.Bool(true),
+ * 										},
+ * 									},
+ * 									RequestHeaderToRemoves: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArray{
+ * 										&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveArgs{
+ * 											HeaderName: pulumi.String("prod"),
+ * 										},
+ * 									},
+ * 									ResponseHeaderToRemoves: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArray{
+ * 										&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveArgs{
+ * 											HeaderName: pulumi.String("prod"),
+ * 										},
+ * 									},
+ * 								},
+ * 								Origin: instanceEdgeCacheOrigin.Name,
+ * 								RouteAction: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs{
+ * 									CdnPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs{
+ * 										CacheMode:  pulumi.String("CACHE_ALL_STATIC"),
+ * 										DefaultTtl: pulumi.String("3800s"),
+ * 										ClientTtl:  pulumi.String("3600s"),
+ * 										MaxTtl:     pulumi.String("9000s"),
+ * 										CacheKeyPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs{
+ * 											IncludeProtocol: pulumi.Bool(true),
+ * 											ExcludeHost:     pulumi.Bool(true),
+ * 											IncludedQueryParameters: pulumi.StringArray{
+ * 												pulumi.String("apple"),
+ * 												pulumi.String("dev"),
+ * 												pulumi.String("santa"),
+ * 												pulumi.String("claus"),
+ * 											},
+ * 											IncludedHeaderNames: pulumi.StringArray{
+ * 												pulumi.String("banana"),
+ * 											},
+ * 										},
+ * 										NegativeCaching:   pulumi.Bool(true),
+ * 										SignedRequestMode: pulumi.String("DISABLED"),
+ * 										NegativeCachingPolicy: pulumi.StringMap{
+ * 											"500": pulumi.String("3000s"),
+ * 										},
+ * 									},
+ * 									UrlRewrite: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs{
+ * 										PathPrefixRewrite: pulumi.String("/dev"),
+ * 										HostRewrite:       pulumi.String("dev.club"),
+ * 									},
+ * 									CorsPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs{
+ * 										MaxAge:           pulumi.String("2500s"),
+ * 										AllowCredentials: pulumi.Bool(true),
+ * 										AllowOrigins: pulumi.StringArray{
+ * 											pulumi.String("*"),
+ * 										},
+ * 										AllowMethods: pulumi.StringArray{
+ * 											pulumi.String("GET"),
+ * 										},
+ * 										AllowHeaders: pulumi.StringArray{
+ * 											pulumi.String("dev"),
+ * 										},
+ * 										ExposeHeaders: pulumi.StringArray{
+ * 											pulumi.String("prod"),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 							&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs{
+ * 								Description: pulumi.String("a second route rule to match against"),
+ * 								Priority:    pulumi.String("2"),
+ * 								MatchRules: networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArray{
+ * 									&networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs{
+ * 										FullPathMatch: pulumi.String("/yay"),
+ * 									},
+ * 								},
+ * 								Origin: instanceEdgeCacheOrigin.Name,
+ * 								RouteAction: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs{
+ * 									CdnPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs{
+ * 										CacheMode:  pulumi.String("CACHE_ALL_STATIC"),
+ * 										DefaultTtl: pulumi.String("3600s"),
+ * 										CacheKeyPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs{
+ * 											ExcludedQueryParameters: pulumi.StringArray{
+ * 												pulumi.String("dev"),
+ * 											},
+ * 										},
+ * 									},
+ * 									CorsPolicy: &networkservices.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs{
+ * 										MaxAge: pulumi.String("3000s"),
+ * 										AllowHeaders: pulumi.StringArray{
+ * 											pulumi.String("dev"),
+ * 										},
+ * 										Disabled: pulumi.Bool(true),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			LogConfig: &networkservices.EdgeCacheServiceLogConfigArgs{
+ * 				Enable:     pulumi.Bool(true),
+ * 				SampleRate: pulumi.Float64(0.01),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +1236,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:networkservices/edgeCacheService:EdgeCacheService default projects/{{project}}/locations/global/edgeCacheServices/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:networkservices/edgeCacheService:EdgeCacheService default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:networkservices/edgeCacheService:EdgeCacheService default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:networkservices/edgeCacheService:EdgeCacheService")
 public class EdgeCacheService extends io.pulumi.resources.CustomResource {

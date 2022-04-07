@@ -34,6 +34,7 @@ import javax.annotation.Nullable;
  * Add a persistent disk to your instance when you need reliable and
  * affordable storage with consistent performance characteristics.
  * 
+ * 
  * To get more information about RegionDisk, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/regionDisks)
@@ -43,7 +44,140 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Region Disk Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const disk = new gcp.compute.Disk("disk", {
+ *     image: "debian-cloud/debian-9",
+ *     size: 50,
+ *     type: "pd-ssd",
+ *     zone: "us-central1-a",
+ * });
+ * const snapdisk = new gcp.compute.Snapshot("snapdisk", {
+ *     sourceDisk: disk.name,
+ *     zone: "us-central1-a",
+ * });
+ * const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
+ *     snapshot: snapdisk.id,
+ *     type: "pd-ssd",
+ *     region: "us-central1",
+ *     physicalBlockSizeBytes: 4096,
+ *     replicaZones: [
+ *         "us-central1-a",
+ *         "us-central1-f",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * disk = gcp.compute.Disk("disk",
+ *     image="debian-cloud/debian-9",
+ *     size=50,
+ *     type="pd-ssd",
+ *     zone="us-central1-a")
+ * snapdisk = gcp.compute.Snapshot("snapdisk",
+ *     source_disk=disk.name,
+ *     zone="us-central1-a")
+ * regiondisk = gcp.compute.RegionDisk("regiondisk",
+ *     snapshot=snapdisk.id,
+ *     type="pd-ssd",
+ *     region="us-central1",
+ *     physical_block_size_bytes=4096,
+ *     replica_zones=[
+ *         "us-central1-a",
+ *         "us-central1-f",
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var disk = new Gcp.Compute.Disk("disk", new Gcp.Compute.DiskArgs
+ *         {
+ *             Image = "debian-cloud/debian-9",
+ *             Size = 50,
+ *             Type = "pd-ssd",
+ *             Zone = "us-central1-a",
+ *         });
+ *         var snapdisk = new Gcp.Compute.Snapshot("snapdisk", new Gcp.Compute.SnapshotArgs
+ *         {
+ *             SourceDisk = disk.Name,
+ *             Zone = "us-central1-a",
+ *         });
+ *         var regiondisk = new Gcp.Compute.RegionDisk("regiondisk", new Gcp.Compute.RegionDiskArgs
+ *         {
+ *             Snapshot = snapdisk.Id,
+ *             Type = "pd-ssd",
+ *             Region = "us-central1",
+ *             PhysicalBlockSizeBytes = 4096,
+ *             ReplicaZones = 
+ *             {
+ *                 "us-central1-a",
+ *                 "us-central1-f",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		disk, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+ * 			Image: pulumi.String("debian-cloud/debian-9"),
+ * 			Size:  pulumi.Int(50),
+ * 			Type:  pulumi.String("pd-ssd"),
+ * 			Zone:  pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		snapdisk, err := compute.NewSnapshot(ctx, "snapdisk", &compute.SnapshotArgs{
+ * 			SourceDisk: disk.Name,
+ * 			Zone:       pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewRegionDisk(ctx, "regiondisk", &compute.RegionDiskArgs{
+ * 			Snapshot:               snapdisk.ID(),
+ * 			Type:                   pulumi.String("pd-ssd"),
+ * 			Region:                 pulumi.String("us-central1"),
+ * 			PhysicalBlockSizeBytes: pulumi.Int(4096),
+ * 			ReplicaZones: pulumi.StringArray{
+ * 				pulumi.String("us-central1-a"),
+ * 				pulumi.String("us-central1-f"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -53,18 +187,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/regionDisk:RegionDisk default projects/{{project}}/regions/{{region}}/disks/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionDisk:RegionDisk default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/regionDisk:RegionDisk default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/regionDisk:RegionDisk default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/regionDisk:RegionDisk")
 public class RegionDisk extends io.pulumi.resources.CustomResource {
@@ -135,7 +276,6 @@ public class RegionDisk extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
-     * 
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @Export(name="interface", type=String.class, parameters={})

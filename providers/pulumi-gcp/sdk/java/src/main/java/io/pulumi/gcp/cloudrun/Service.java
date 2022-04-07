@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * See also:
  * https://github.com/knative/specs/blob/main/specs/serving/overview.md
  * 
+ * 
  * To get more information about Service, see:
  * 
  * * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services)
@@ -43,7 +44,1388 @@ import javax.annotation.Nullable;
  * a Cloud Run Service on Anthos(GKE/VMWare) then you will need to create it using the kubernetes alpha provider.
  * Have a look at the Cloud Run Anthos example below.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cloud Run Service Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultService = new gcp.cloudrun.Service("default", {
+ *     location: "us-central1",
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "us-docker.pkg.dev/cloudrun/container/hello",
+ *             }],
+ *         },
+ *     },
+ *     traffics: [{
+ *         latestRevision: true,
+ *         percent: 100,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.cloudrun.Service("default",
+ *     location="us-central1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="us-docker.pkg.dev/cloudrun/container/hello",
+ *             )],
+ *         ),
+ *     ),
+ *     traffics=[gcp.cloudrun.ServiceTrafficArgs(
+ *         latest_revision=True,
+ *         percent=100,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "us-docker.pkg.dev/cloudrun/container/hello",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Traffics = 
+ *             {
+ *                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+ *                 {
+ *                     LatestRevision = true,
+ *                     Percent = 100,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Traffics: cloudrun.ServiceTrafficArray{
+ * 				&cloudrun.ServiceTrafficArgs{
+ * 					LatestRevision: pulumi.Bool(true),
+ * 					Percent:        pulumi.Int(100),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloud Run Service Sql
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instance = new gcp.sql.DatabaseInstance("instance", {
+ *     region: "us-east1",
+ *     databaseVersion: "MYSQL_5_7",
+ *     settings: {
+ *         tier: "db-f1-micro",
+ *     },
+ *     deletionProtection: "true",
+ * });
+ * const _default = new gcp.cloudrun.Service("default", {
+ *     location: "us-central1",
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "us-docker.pkg.dev/cloudrun/container/hello",
+ *             }],
+ *         },
+ *         metadata: {
+ *             annotations: {
+ *                 "autoscaling.knative.dev/maxScale": "1000",
+ *                 "run.googleapis.com/cloudsql-instances": instance.connectionName,
+ *                 "run.googleapis.com/client-name": "demo",
+ *             },
+ *         },
+ *     },
+ *     autogenerateRevisionName: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance = gcp.sql.DatabaseInstance("instance",
+ *     region="us-east1",
+ *     database_version="MYSQL_5_7",
+ *     settings=gcp.sql.DatabaseInstanceSettingsArgs(
+ *         tier="db-f1-micro",
+ *     ),
+ *     deletion_protection=True)
+ * default = gcp.cloudrun.Service("default",
+ *     location="us-central1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="us-docker.pkg.dev/cloudrun/container/hello",
+ *             )],
+ *         ),
+ *         metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
+ *             annotations={
+ *                 "autoscaling.knative.dev/maxScale": "1000",
+ *                 "run.googleapis.com/cloudsql-instances": instance.connection_name,
+ *                 "run.googleapis.com/client-name": "demo",
+ *             },
+ *         ),
+ *     ),
+ *     autogenerate_revision_name=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+ *         {
+ *             Region = "us-east1",
+ *             DatabaseVersion = "MYSQL_5_7",
+ *             Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+ *             {
+ *                 Tier = "db-f1-micro",
+ *             },
+ *             DeletionProtection = true,
+ *         });
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "us-docker.pkg.dev/cloudrun/container/hello",
+ *                         },
+ *                     },
+ *                 },
+ *                 Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+ *                 {
+ *                     Annotations = 
+ *                     {
+ *                         { "autoscaling.knative.dev/maxScale", "1000" },
+ *                         { "run.googleapis.com/cloudsql-instances", instance.ConnectionName },
+ *                         { "run.googleapis.com/client-name", "demo" },
+ *                     },
+ *                 },
+ *             },
+ *             AutogenerateRevisionName = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+ * 			Region:          pulumi.String("us-east1"),
+ * 			DatabaseVersion: pulumi.String("MYSQL_5_7"),
+ * 			Settings: &sql.DatabaseInstanceSettingsArgs{
+ * 				Tier: pulumi.String("db-f1-micro"),
+ * 			},
+ * 			DeletionProtection: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+ * 						},
+ * 					},
+ * 				},
+ * 				Metadata: &cloudrun.ServiceTemplateMetadataArgs{
+ * 					Annotations: pulumi.StringMap{
+ * 						"autoscaling.knative.dev/maxScale":      pulumi.String("1000"),
+ * 						"run.googleapis.com/cloudsql-instances": instance.ConnectionName,
+ * 						"run.googleapis.com/client-name":        pulumi.String("demo"),
+ * 					},
+ * 				},
+ * 			},
+ * 			AutogenerateRevisionName: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloud Run Service Noauth
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.cloudrun.Service("default", {
+ *     location: "us-central1",
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "us-docker.pkg.dev/cloudrun/container/hello",
+ *             }],
+ *         },
+ *     },
+ * });
+ * const noauthIAMPolicy = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/run.invoker",
+ *         members: ["allUsers"],
+ *     }],
+ * });
+ * const noauthIamPolicy = new gcp.cloudrun.IamPolicy("noauthIamPolicy", {
+ *     location: _default.location,
+ *     project: _default.project,
+ *     service: _default.name,
+ *     policyData: noauthIAMPolicy.then(noauthIAMPolicy => noauthIAMPolicy.policyData),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.cloudrun.Service("default",
+ *     location="us-central1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="us-docker.pkg.dev/cloudrun/container/hello",
+ *             )],
+ *         ),
+ *     ))
+ * noauth_iam_policy = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/run.invoker",
+ *     members=["allUsers"],
+ * )])
+ * noauth_iam_policy = gcp.cloudrun.IamPolicy("noauthIamPolicy",
+ *     location=default.location,
+ *     project=default.project,
+ *     service=default.name,
+ *     policy_data=noauth_iam_policy.policy_data)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "us-docker.pkg.dev/cloudrun/container/hello",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var noauthIAMPolicy = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/run.invoker",
+ *                     Members = 
+ *                     {
+ *                         "allUsers",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var noauthIamPolicy = new Gcp.CloudRun.IamPolicy("noauthIamPolicy", new Gcp.CloudRun.IamPolicyArgs
+ *         {
+ *             Location = @default.Location,
+ *             Project = @default.Project,
+ *             Service = @default.Name,
+ *             PolicyData = noauthIAMPolicy.Apply(noauthIAMPolicy => noauthIAMPolicy.PolicyData),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		noauthIAMPolicy, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/run.invoker",
+ * 					Members: []string{
+ * 						"allUsers",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudrun.NewIamPolicy(ctx, "noauthIamPolicy", &cloudrun.IamPolicyArgs{
+ * 			Location:   _default.Location,
+ * 			Project:    _default.Project,
+ * 			Service:    _default.Name,
+ * 			PolicyData: pulumi.String(noauthIAMPolicy.PolicyData),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloud Run Service Multiple Environment Variables
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.cloudrun.Service("default", {
+ *     location: "us-central1",
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "us-docker.pkg.dev/cloudrun/container/hello",
+ *                 envs: [
+ *                     {
+ *                         name: "SOURCE",
+ *                         value: "remote",
+ *                     },
+ *                     {
+ *                         name: "TARGET",
+ *                         value: "home",
+ *                     },
+ *                 ],
+ *             }],
+ *         },
+ *     },
+ *     metadata: {
+ *         annotations: {
+ *             "generated-by": "magic-modules",
+ *         },
+ *     },
+ *     traffics: [{
+ *         percent: 100,
+ *         latestRevision: true,
+ *     }],
+ *     autogenerateRevisionName: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.cloudrun.Service("default",
+ *     location="us-central1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="us-docker.pkg.dev/cloudrun/container/hello",
+ *                 envs=[
+ *                     gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+ *                         name="SOURCE",
+ *                         value="remote",
+ *                     ),
+ *                     gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+ *                         name="TARGET",
+ *                         value="home",
+ *                     ),
+ *                 ],
+ *             )],
+ *         ),
+ *     ),
+ *     metadata=gcp.cloudrun.ServiceMetadataArgs(
+ *         annotations={
+ *             "generated-by": "magic-modules",
+ *         },
+ *     ),
+ *     traffics=[gcp.cloudrun.ServiceTrafficArgs(
+ *         percent=100,
+ *         latest_revision=True,
+ *     )],
+ *     autogenerate_revision_name=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "us-docker.pkg.dev/cloudrun/container/hello",
+ *                             Envs = 
+ *                             {
+ *                                 new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
+ *                                 {
+ *                                     Name = "SOURCE",
+ *                                     Value = "remote",
+ *                                 },
+ *                                 new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
+ *                                 {
+ *                                     Name = "TARGET",
+ *                                     Value = "home",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+ *             {
+ *                 Annotations = 
+ *                 {
+ *                     { "generated-by", "magic-modules" },
+ *                 },
+ *             },
+ *             Traffics = 
+ *             {
+ *                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+ *                 {
+ *                     Percent = 100,
+ *                     LatestRevision = true,
+ *                 },
+ *             },
+ *             AutogenerateRevisionName = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+ * 							Envs: cloudrun.ServiceTemplateSpecContainerEnvArray{
+ * 								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+ * 									Name:  pulumi.String("SOURCE"),
+ * 									Value: pulumi.String("remote"),
+ * 								},
+ * 								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+ * 									Name:  pulumi.String("TARGET"),
+ * 									Value: pulumi.String("home"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Metadata: &cloudrun.ServiceMetadataArgs{
+ * 				Annotations: pulumi.StringMap{
+ * 					"generated-by": pulumi.String("magic-modules"),
+ * 				},
+ * 			},
+ * 			Traffics: cloudrun.ServiceTrafficArray{
+ * 				&cloudrun.ServiceTrafficArgs{
+ * 					Percent:        pulumi.Int(100),
+ * 					LatestRevision: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			AutogenerateRevisionName: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloud Run Service Traffic Split
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultService = new gcp.cloudrun.Service("default", {
+ *     location: "us-central1",
+ *     template: {
+ *         metadata: {
+ *             name: "cloudrun-srv-green",
+ *         },
+ *         spec: {
+ *             containers: [{
+ *                 image: "us-docker.pkg.dev/cloudrun/container/hello",
+ *             }],
+ *         },
+ *     },
+ *     traffics: [
+ *         {
+ *             percent: 25,
+ *             revisionName: "cloudrun-srv-green",
+ *         },
+ *         {
+ *             percent: 75,
+ *             // This revision needs to already exist
+ *             revisionName: "cloudrun-srv-blue",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.cloudrun.Service("default",
+ *     location="us-central1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
+ *             name="cloudrun-srv-green",
+ *         ),
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="us-docker.pkg.dev/cloudrun/container/hello",
+ *             )],
+ *         ),
+ *     ),
+ *     traffics=[
+ *         gcp.cloudrun.ServiceTrafficArgs(
+ *             percent=25,
+ *             revision_name="cloudrun-srv-green",
+ *         ),
+ *         gcp.cloudrun.ServiceTrafficArgs(
+ *             percent=75,
+ *             revision_name="cloudrun-srv-blue",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+ *                 {
+ *                     Name = "cloudrun-srv-green",
+ *                 },
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "us-docker.pkg.dev/cloudrun/container/hello",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Traffics = 
+ *             {
+ *                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+ *                 {
+ *                     Percent = 25,
+ *                     RevisionName = "cloudrun-srv-green",
+ *                 },
+ *                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+ *                 {
+ *                     Percent = 75,
+ *                     RevisionName = "cloudrun-srv-blue",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Metadata: &cloudrun.ServiceTemplateMetadataArgs{
+ * 					Name: pulumi.String("cloudrun-srv-green"),
+ * 				},
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Traffics: cloudrun.ServiceTrafficArray{
+ * 				&cloudrun.ServiceTrafficArgs{
+ * 					Percent:      pulumi.Int(25),
+ * 					RevisionName: pulumi.String("cloudrun-srv-green"),
+ * 				},
+ * 				&cloudrun.ServiceTrafficArgs{
+ * 					Percent:      pulumi.Int(75),
+ * 					RevisionName: pulumi.String("cloudrun-srv-blue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloud Run Service Secret Environment Variables
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = gcp.organizations.getProject({});
+ * const secret = new gcp.secretmanager.Secret("secret", {
+ *     secretId: "secret",
+ *     replication: {
+ *         automatic: true,
+ *     },
+ * });
+ * const secret_version_data = new gcp.secretmanager.SecretVersion("secret-version-data", {
+ *     secret: secret.name,
+ *     secretData: "secret-data",
+ * });
+ * const secret_access = new gcp.secretmanager.SecretIamMember("secret-access", {
+ *     secretId: secret.id,
+ *     role: "roles/secretmanager.secretAccessor",
+ *     member: project.then(project => `serviceAccount:${project.number}-compute@developer.gserviceaccount.com`),
+ * }, {
+ *     dependsOn: [secret],
+ * });
+ * const _default = new gcp.cloudrun.Service("default", {
+ *     location: "us-central1",
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "gcr.io/cloudrun/hello",
+ *                 envs: [{
+ *                     name: "SECRET_ENV_VAR",
+ *                     valueFrom: {
+ *                         secretKeyRef: {
+ *                             name: secret.secretId,
+ *                             key: "1",
+ *                         },
+ *                     },
+ *                 }],
+ *             }],
+ *         },
+ *     },
+ *     metadata: {
+ *         annotations: {
+ *             "generated-by": "magic-modules",
+ *         },
+ *     },
+ *     traffics: [{
+ *         percent: 100,
+ *         latestRevision: true,
+ *     }],
+ *     autogenerateRevisionName: true,
+ * }, {
+ *     dependsOn: [secret_version_data],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.get_project()
+ * secret = gcp.secretmanager.Secret("secret",
+ *     secret_id="secret",
+ *     replication=gcp.secretmanager.SecretReplicationArgs(
+ *         automatic=True,
+ *     ))
+ * secret_version_data = gcp.secretmanager.SecretVersion("secret-version-data",
+ *     secret=secret.name,
+ *     secret_data="secret-data")
+ * secret_access = gcp.secretmanager.SecretIamMember("secret-access",
+ *     secret_id=secret.id,
+ *     role="roles/secretmanager.secretAccessor",
+ *     member=f"serviceAccount:{project.number}-compute@developer.gserviceaccount.com",
+ *     opts=pulumi.ResourceOptions(depends_on=[secret]))
+ * default = gcp.cloudrun.Service("default",
+ *     location="us-central1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="gcr.io/cloudrun/hello",
+ *                 envs=[gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+ *                     name="SECRET_ENV_VAR",
+ *                     value_from=gcp.cloudrun.ServiceTemplateSpecContainerEnvValueFromArgs(
+ *                         secret_key_ref=gcp.cloudrun.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs(
+ *                             name=secret.secret_id,
+ *                             key="1",
+ *                         ),
+ *                     ),
+ *                 )],
+ *             )],
+ *         ),
+ *     ),
+ *     metadata=gcp.cloudrun.ServiceMetadataArgs(
+ *         annotations={
+ *             "generated-by": "magic-modules",
+ *         },
+ *     ),
+ *     traffics=[gcp.cloudrun.ServiceTrafficArgs(
+ *         percent=100,
+ *         latest_revision=True,
+ *     )],
+ *     autogenerate_revision_name=True,
+ *     opts=pulumi.ResourceOptions(depends_on=[secret_version_data]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var secret = new Gcp.SecretManager.Secret("secret", new Gcp.SecretManager.SecretArgs
+ *         {
+ *             SecretId = "secret",
+ *             Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+ *             {
+ *                 Automatic = true,
+ *             },
+ *         });
+ *         var secret_version_data = new Gcp.SecretManager.SecretVersion("secret-version-data", new Gcp.SecretManager.SecretVersionArgs
+ *         {
+ *             Secret = secret.Name,
+ *             SecretData = "secret-data",
+ *         });
+ *         var secret_access = new Gcp.SecretManager.SecretIamMember("secret-access", new Gcp.SecretManager.SecretIamMemberArgs
+ *         {
+ *             SecretId = secret.Id,
+ *             Role = "roles/secretmanager.secretAccessor",
+ *             Member = project.Apply(project => $"serviceAccount:{project.Number}-compute@developer.gserviceaccount.com"),
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 secret,
+ *             },
+ *         });
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "gcr.io/cloudrun/hello",
+ *                             Envs = 
+ *                             {
+ *                                 new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
+ *                                 {
+ *                                     Name = "SECRET_ENV_VAR",
+ *                                     ValueFrom = new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvValueFromArgs
+ *                                     {
+ *                                         SecretKeyRef = new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs
+ *                                         {
+ *                                             Name = secret.SecretId,
+ *                                             Key = "1",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+ *             {
+ *                 Annotations = 
+ *                 {
+ *                     { "generated-by", "magic-modules" },
+ *                 },
+ *             },
+ *             Traffics = 
+ *             {
+ *                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+ *                 {
+ *                     Percent = 100,
+ *                     LatestRevision = true,
+ *                 },
+ *             },
+ *             AutogenerateRevisionName = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 secret_version_data,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/secretmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		secret, err := secretmanager.NewSecret(ctx, "secret", &secretmanager.SecretArgs{
+ * 			SecretId: pulumi.String("secret"),
+ * 			Replication: &secretmanager.SecretReplicationArgs{
+ * 				Automatic: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = secretmanager.NewSecretVersion(ctx, "secret-version-data", &secretmanager.SecretVersionArgs{
+ * 			Secret:     secret.Name,
+ * 			SecretData: pulumi.String("secret-data"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = secretmanager.NewSecretIamMember(ctx, "secret-access", &secretmanager.SecretIamMemberArgs{
+ * 			SecretId: secret.ID(),
+ * 			Role:     pulumi.String("roles/secretmanager.secretAccessor"),
+ * 			Member:   pulumi.String(fmt.Sprintf("%v%v%v", "serviceAccount:", project.Number, "-compute@developer.gserviceaccount.com")),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			secret,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("gcr.io/cloudrun/hello"),
+ * 							Envs: cloudrun.ServiceTemplateSpecContainerEnvArray{
+ * 								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+ * 									Name: pulumi.String("SECRET_ENV_VAR"),
+ * 									ValueFrom: &cloudrun.ServiceTemplateSpecContainerEnvValueFromArgs{
+ * 										SecretKeyRef: &cloudrun.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs{
+ * 											Name: secret.SecretId,
+ * 											Key:  pulumi.String("1"),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Metadata: &cloudrun.ServiceMetadataArgs{
+ * 				Annotations: pulumi.StringMap{
+ * 					"generated-by": pulumi.String("magic-modules"),
+ * 				},
+ * 			},
+ * 			Traffics: cloudrun.ServiceTrafficArray{
+ * 				&cloudrun.ServiceTrafficArgs{
+ * 					Percent:        pulumi.Int(100),
+ * 					LatestRevision: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			AutogenerateRevisionName: pulumi.Bool(true),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			secret_version_data,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Cloud Run Service Secret Volumes
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = gcp.organizations.getProject({});
+ * const secret = new gcp.secretmanager.Secret("secret", {
+ *     secretId: "secret",
+ *     replication: {
+ *         automatic: true,
+ *     },
+ * });
+ * const secret_version_data = new gcp.secretmanager.SecretVersion("secret-version-data", {
+ *     secret: secret.name,
+ *     secretData: "secret-data",
+ * });
+ * const secret_access = new gcp.secretmanager.SecretIamMember("secret-access", {
+ *     secretId: secret.id,
+ *     role: "roles/secretmanager.secretAccessor",
+ *     member: project.then(project => `serviceAccount:${project.number}-compute@developer.gserviceaccount.com`),
+ * }, {
+ *     dependsOn: [secret],
+ * });
+ * const _default = new gcp.cloudrun.Service("default", {
+ *     location: "us-central1",
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "gcr.io/cloudrun/hello",
+ *                 volumeMounts: [{
+ *                     name: "a-volume",
+ *                     mountPath: "/secrets",
+ *                 }],
+ *             }],
+ *             volumes: [{
+ *                 name: "a-volume",
+ *                 secret: {
+ *                     secretName: secret.secretId,
+ *                     defaultMode: 292,
+ *                     items: [{
+ *                         key: "1",
+ *                         path: "my-secret",
+ *                         mode: 256,
+ *                     }],
+ *                 },
+ *             }],
+ *         },
+ *     },
+ *     metadata: {
+ *         annotations: {
+ *             "generated-by": "magic-modules",
+ *         },
+ *     },
+ *     traffics: [{
+ *         percent: 100,
+ *         latestRevision: true,
+ *     }],
+ *     autogenerateRevisionName: true,
+ * }, {
+ *     dependsOn: [secret_version_data],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.get_project()
+ * secret = gcp.secretmanager.Secret("secret",
+ *     secret_id="secret",
+ *     replication=gcp.secretmanager.SecretReplicationArgs(
+ *         automatic=True,
+ *     ))
+ * secret_version_data = gcp.secretmanager.SecretVersion("secret-version-data",
+ *     secret=secret.name,
+ *     secret_data="secret-data")
+ * secret_access = gcp.secretmanager.SecretIamMember("secret-access",
+ *     secret_id=secret.id,
+ *     role="roles/secretmanager.secretAccessor",
+ *     member=f"serviceAccount:{project.number}-compute@developer.gserviceaccount.com",
+ *     opts=pulumi.ResourceOptions(depends_on=[secret]))
+ * default = gcp.cloudrun.Service("default",
+ *     location="us-central1",
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="gcr.io/cloudrun/hello",
+ *                 volume_mounts=[gcp.cloudrun.ServiceTemplateSpecContainerVolumeMountArgs(
+ *                     name="a-volume",
+ *                     mount_path="/secrets",
+ *                 )],
+ *             )],
+ *             volumes=[gcp.cloudrun.ServiceTemplateSpecVolumeArgs(
+ *                 name="a-volume",
+ *                 secret=gcp.cloudrun.ServiceTemplateSpecVolumeSecretArgs(
+ *                     secret_name=secret.secret_id,
+ *                     default_mode=292,
+ *                     items=[gcp.cloudrun.ServiceTemplateSpecVolumeSecretItemArgs(
+ *                         key="1",
+ *                         path="my-secret",
+ *                         mode=256,
+ *                     )],
+ *                 ),
+ *             )],
+ *         ),
+ *     ),
+ *     metadata=gcp.cloudrun.ServiceMetadataArgs(
+ *         annotations={
+ *             "generated-by": "magic-modules",
+ *         },
+ *     ),
+ *     traffics=[gcp.cloudrun.ServiceTrafficArgs(
+ *         percent=100,
+ *         latest_revision=True,
+ *     )],
+ *     autogenerate_revision_name=True,
+ *     opts=pulumi.ResourceOptions(depends_on=[secret_version_data]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var secret = new Gcp.SecretManager.Secret("secret", new Gcp.SecretManager.SecretArgs
+ *         {
+ *             SecretId = "secret",
+ *             Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+ *             {
+ *                 Automatic = true,
+ *             },
+ *         });
+ *         var secret_version_data = new Gcp.SecretManager.SecretVersion("secret-version-data", new Gcp.SecretManager.SecretVersionArgs
+ *         {
+ *             Secret = secret.Name,
+ *             SecretData = "secret-data",
+ *         });
+ *         var secret_access = new Gcp.SecretManager.SecretIamMember("secret-access", new Gcp.SecretManager.SecretIamMemberArgs
+ *         {
+ *             SecretId = secret.Id,
+ *             Role = "roles/secretmanager.secretAccessor",
+ *             Member = project.Apply(project => $"serviceAccount:{project.Number}-compute@developer.gserviceaccount.com"),
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 secret,
+ *             },
+ *         });
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "us-central1",
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "gcr.io/cloudrun/hello",
+ *                             VolumeMounts = 
+ *                             {
+ *                                 new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerVolumeMountArgs
+ *                                 {
+ *                                     Name = "a-volume",
+ *                                     MountPath = "/secrets",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     Volumes = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecVolumeArgs
+ *                         {
+ *                             Name = "a-volume",
+ *                             Secret = new Gcp.CloudRun.Inputs.ServiceTemplateSpecVolumeSecretArgs
+ *                             {
+ *                                 SecretName = secret.SecretId,
+ *                                 DefaultMode = 292,
+ *                                 Items = 
+ *                                 {
+ *                                     new Gcp.CloudRun.Inputs.ServiceTemplateSpecVolumeSecretItemArgs
+ *                                     {
+ *                                         Key = "1",
+ *                                         Path = "my-secret",
+ *                                         Mode = 256,
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+ *             {
+ *                 Annotations = 
+ *                 {
+ *                     { "generated-by", "magic-modules" },
+ *                 },
+ *             },
+ *             Traffics = 
+ *             {
+ *                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+ *                 {
+ *                     Percent = 100,
+ *                     LatestRevision = true,
+ *                 },
+ *             },
+ *             AutogenerateRevisionName = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 secret_version_data,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/secretmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		secret, err := secretmanager.NewSecret(ctx, "secret", &secretmanager.SecretArgs{
+ * 			SecretId: pulumi.String("secret"),
+ * 			Replication: &secretmanager.SecretReplicationArgs{
+ * 				Automatic: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = secretmanager.NewSecretVersion(ctx, "secret-version-data", &secretmanager.SecretVersionArgs{
+ * 			Secret:     secret.Name,
+ * 			SecretData: pulumi.String("secret-data"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = secretmanager.NewSecretIamMember(ctx, "secret-access", &secretmanager.SecretIamMemberArgs{
+ * 			SecretId: secret.ID(),
+ * 			Role:     pulumi.String("roles/secretmanager.secretAccessor"),
+ * 			Member:   pulumi.String(fmt.Sprintf("%v%v%v", "serviceAccount:", project.Number, "-compute@developer.gserviceaccount.com")),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			secret,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("gcr.io/cloudrun/hello"),
+ * 							VolumeMounts: cloudrun.ServiceTemplateSpecContainerVolumeMountArray{
+ * 								&cloudrun.ServiceTemplateSpecContainerVolumeMountArgs{
+ * 									Name:      pulumi.String("a-volume"),
+ * 									MountPath: pulumi.String("/secrets"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					Volumes: cloudrun.ServiceTemplateSpecVolumeArray{
+ * 						&cloudrun.ServiceTemplateSpecVolumeArgs{
+ * 							Name: pulumi.String("a-volume"),
+ * 							Secret: &cloudrun.ServiceTemplateSpecVolumeSecretArgs{
+ * 								SecretName:  secret.SecretId,
+ * 								DefaultMode: pulumi.Int(292),
+ * 								Items: cloudrun.ServiceTemplateSpecVolumeSecretItemArray{
+ * 									&cloudrun.ServiceTemplateSpecVolumeSecretItemArgs{
+ * 										Key:  pulumi.String("1"),
+ * 										Path: pulumi.String("my-secret"),
+ * 										Mode: pulumi.Int(256),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Metadata: &cloudrun.ServiceMetadataArgs{
+ * 				Annotations: pulumi.StringMap{
+ * 					"generated-by": pulumi.String("magic-modules"),
+ * 				},
+ * 			},
+ * 			Traffics: cloudrun.ServiceTrafficArray{
+ * 				&cloudrun.ServiceTrafficArgs{
+ * 					Percent:        pulumi.Int(100),
+ * 					LatestRevision: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			AutogenerateRevisionName: pulumi.Bool(true),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			secret_version_data,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -53,14 +1435,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:cloudrun/service:Service default locations/{{location}}/namespaces/{{project}}/services/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:cloudrun/service:Service")
 public class Service extends io.pulumi.resources.CustomResource {

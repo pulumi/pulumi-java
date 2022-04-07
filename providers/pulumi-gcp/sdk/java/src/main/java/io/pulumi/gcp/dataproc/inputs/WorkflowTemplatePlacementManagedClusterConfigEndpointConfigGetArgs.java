@@ -28,7 +28,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
     }
 
     /**
-     * - 
+     * -
      * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
      * 
      */

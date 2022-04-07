@@ -25,7 +25,364 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/game-servers/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Game Service Config Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultGameServerDeployment = new gcp.gameservices.GameServerDeployment("defaultGameServerDeployment", {
+ *     deploymentId: "tf-test-deployment",
+ *     description: "a deployment description",
+ * });
+ * const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGameServerConfig", {
+ *     configId: "tf-test-config",
+ *     deploymentId: defaultGameServerDeployment.deploymentId,
+ *     description: "a config description",
+ *     fleetConfigs: [{
+ *         name: "something-unique",
+ *         fleetSpec: JSON.stringify({
+ *             replicas: 1,
+ *             scheduling: "Packed",
+ *             template: {
+ *                 metadata: {
+ *                     name: "tf-test-game-server-template",
+ *                 },
+ *                 spec: {
+ *                     ports: [{
+ *                         name: "default",
+ *                         portPolicy: "Dynamic",
+ *                         containerPort: 7654,
+ *                         protocol: "UDP",
+ *                     }],
+ *                     template: {
+ *                         spec: {
+ *                             containers: [{
+ *                                 name: "simple-udp-server",
+ *                                 image: "gcr.io/agones-images/udp-server:0.14",
+ *                             }],
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }),
+ *     }],
+ *     scalingConfigs: [{
+ *         name: "scaling-config-name",
+ *         fleetAutoscalerSpec: JSON.stringify({
+ *             policy: {
+ *                 type: "Webhook",
+ *                 webhook: {
+ *                     service: {
+ *                         name: "autoscaler-webhook-service",
+ *                         namespace: "default",
+ *                         path: "scale",
+ *                     },
+ *                 },
+ *             },
+ *         }),
+ *         selectors: [{
+ *             labels: {
+ *                 one: "two",
+ *             },
+ *         }],
+ *         schedules: [{
+ *             cronJobDuration: "3.500s",
+ *             cronSpec: "0 0 * * 0",
+ *         }],
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_gcp as gcp
+ * 
+ * default_game_server_deployment = gcp.gameservices.GameServerDeployment("defaultGameServerDeployment",
+ *     deployment_id="tf-test-deployment",
+ *     description="a deployment description")
+ * default_game_server_config = gcp.gameservices.GameServerConfig("defaultGameServerConfig",
+ *     config_id="tf-test-config",
+ *     deployment_id=default_game_server_deployment.deployment_id,
+ *     description="a config description",
+ *     fleet_configs=[gcp.gameservices.GameServerConfigFleetConfigArgs(
+ *         name="something-unique",
+ *         fleet_spec=json.dumps({
+ *             "replicas": 1,
+ *             "scheduling": "Packed",
+ *             "template": {
+ *                 "metadata": {
+ *                     "name": "tf-test-game-server-template",
+ *                 },
+ *                 "spec": {
+ *                     "ports": [{
+ *                         "name": "default",
+ *                         "portPolicy": "Dynamic",
+ *                         "containerPort": 7654,
+ *                         "protocol": "UDP",
+ *                     }],
+ *                     "template": {
+ *                         "spec": {
+ *                             "containers": [{
+ *                                 "name": "simple-udp-server",
+ *                                 "image": "gcr.io/agones-images/udp-server:0.14",
+ *                             }],
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }),
+ *     )],
+ *     scaling_configs=[gcp.gameservices.GameServerConfigScalingConfigArgs(
+ *         name="scaling-config-name",
+ *         fleet_autoscaler_spec=json.dumps({
+ *             "policy": {
+ *                 "type": "Webhook",
+ *                 "webhook": {
+ *                     "service": {
+ *                         "name": "autoscaler-webhook-service",
+ *                         "namespace": "default",
+ *                         "path": "scale",
+ *                     },
+ *                 },
+ *             },
+ *         }),
+ *         selectors=[gcp.gameservices.GameServerConfigScalingConfigSelectorArgs(
+ *             labels={
+ *                 "one": "two",
+ *             },
+ *         )],
+ *         schedules=[gcp.gameservices.GameServerConfigScalingConfigScheduleArgs(
+ *             cron_job_duration="3.500s",
+ *             cron_spec="0 0 * * 0",
+ *         )],
+ *     )])
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultGameServerDeployment = new Gcp.GameServices.GameServerDeployment("defaultGameServerDeployment", new Gcp.GameServices.GameServerDeploymentArgs
+ *         {
+ *             DeploymentId = "tf-test-deployment",
+ *             Description = "a deployment description",
+ *         });
+ *         var defaultGameServerConfig = new Gcp.GameServices.GameServerConfig("defaultGameServerConfig", new Gcp.GameServices.GameServerConfigArgs
+ *         {
+ *             ConfigId = "tf-test-config",
+ *             DeploymentId = defaultGameServerDeployment.DeploymentId,
+ *             Description = "a config description",
+ *             FleetConfigs = 
+ *             {
+ *                 new Gcp.GameServices.Inputs.GameServerConfigFleetConfigArgs
+ *                 {
+ *                     Name = "something-unique",
+ *                     FleetSpec = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                     {
+ *                         { "replicas", 1 },
+ *                         { "scheduling", "Packed" },
+ *                         { "template", new Dictionary<string, object?>
+ *                         {
+ *                             { "metadata", new Dictionary<string, object?>
+ *                             {
+ *                                 { "name", "tf-test-game-server-template" },
+ *                             } },
+ *                             { "spec", new Dictionary<string, object?>
+ *                             {
+ *                                 { "ports", new[]
+ *                                     {
+ *                                         new Dictionary<string, object?>
+ *                                         {
+ *                                             { "name", "default" },
+ *                                             { "portPolicy", "Dynamic" },
+ *                                             { "containerPort", 7654 },
+ *                                             { "protocol", "UDP" },
+ *                                         },
+ *                                     }
+ *                                  },
+ *                                 { "template", new Dictionary<string, object?>
+ *                                 {
+ *                                     { "spec", new Dictionary<string, object?>
+ *                                     {
+ *                                         { "containers", new[]
+ *                                             {
+ *                                                 new Dictionary<string, object?>
+ *                                                 {
+ *                                                     { "name", "simple-udp-server" },
+ *                                                     { "image", "gcr.io/agones-images/udp-server:0.14" },
+ *                                                 },
+ *                                             }
+ *                                          },
+ *                                     } },
+ *                                 } },
+ *                             } },
+ *                         } },
+ *                     }),
+ *                 },
+ *             },
+ *             ScalingConfigs = 
+ *             {
+ *                 new Gcp.GameServices.Inputs.GameServerConfigScalingConfigArgs
+ *                 {
+ *                     Name = "scaling-config-name",
+ *                     FleetAutoscalerSpec = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                     {
+ *                         { "policy", new Dictionary<string, object?>
+ *                         {
+ *                             { "type", "Webhook" },
+ *                             { "webhook", new Dictionary<string, object?>
+ *                             {
+ *                                 { "service", new Dictionary<string, object?>
+ *                                 {
+ *                                     { "name", "autoscaler-webhook-service" },
+ *                                     { "namespace", "default" },
+ *                                     { "path", "scale" },
+ *                                 } },
+ *                             } },
+ *                         } },
+ *                     }),
+ *                     Selectors = 
+ *                     {
+ *                         new Gcp.GameServices.Inputs.GameServerConfigScalingConfigSelectorArgs
+ *                         {
+ *                             Labels = 
+ *                             {
+ *                                 { "one", "two" },
+ *                             },
+ *                         },
+ *                     },
+ *                     Schedules = 
+ *                     {
+ *                         new Gcp.GameServices.Inputs.GameServerConfigScalingConfigScheduleArgs
+ *                         {
+ *                             CronJobDuration = "3.500s",
+ *                             CronSpec = "0 0 * * 0",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/gameservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultGameServerDeployment, err := gameservices.NewGameServerDeployment(ctx, "defaultGameServerDeployment", &gameservices.GameServerDeploymentArgs{
+ * 			DeploymentId: pulumi.String("tf-test-deployment"),
+ * 			Description:  pulumi.String("a deployment description"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"replicas":   1,
+ * 			"scheduling": "Packed",
+ * 			"template": map[string]interface{}{
+ * 				"metadata": map[string]interface{}{
+ * 					"name": "tf-test-game-server-template",
+ * 				},
+ * 				"spec": map[string]interface{}{
+ * 					"ports": []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"name":          "default",
+ * 							"portPolicy":    "Dynamic",
+ * 							"containerPort": 7654,
+ * 							"protocol":      "UDP",
+ * 						},
+ * 					},
+ * 					"template": map[string]interface{}{
+ * 						"spec": map[string]interface{}{
+ * 							"containers": []map[string]interface{}{
+ * 								map[string]interface{}{
+ * 									"name":  "simple-udp-server",
+ * 									"image": "gcr.io/agones-images/udp-server:0.14",
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		tmpJSON1, err := json.Marshal(map[string]interface{}{
+ * 			"policy": map[string]interface{}{
+ * 				"type": "Webhook",
+ * 				"webhook": map[string]interface{}{
+ * 					"service": map[string]interface{}{
+ * 						"name":      "autoscaler-webhook-service",
+ * 						"namespace": "default",
+ * 						"path":      "scale",
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json1 := string(tmpJSON1)
+ * 		_, err = gameservices.NewGameServerConfig(ctx, "defaultGameServerConfig", &gameservices.GameServerConfigArgs{
+ * 			ConfigId:     pulumi.String("tf-test-config"),
+ * 			DeploymentId: defaultGameServerDeployment.DeploymentId,
+ * 			Description:  pulumi.String("a config description"),
+ * 			FleetConfigs: gameservices.GameServerConfigFleetConfigArray{
+ * 				&gameservices.GameServerConfigFleetConfigArgs{
+ * 					Name:      pulumi.String("something-unique"),
+ * 					FleetSpec: pulumi.String(json0),
+ * 				},
+ * 			},
+ * 			ScalingConfigs: gameservices.GameServerConfigScalingConfigArray{
+ * 				&gameservices.GameServerConfigScalingConfigArgs{
+ * 					Name:                pulumi.String("scaling-config-name"),
+ * 					FleetAutoscalerSpec: pulumi.String(json1),
+ * 					Selectors: gameservices.GameServerConfigScalingConfigSelectorArray{
+ * 						&gameservices.GameServerConfigScalingConfigSelectorArgs{
+ * 							Labels: pulumi.StringMap{
+ * 								"one": pulumi.String("two"),
+ * 							},
+ * 						},
+ * 					},
+ * 					Schedules: gameservices.GameServerConfigScalingConfigScheduleArray{
+ * 						&gameservices.GameServerConfigScalingConfigScheduleArgs{
+ * 							CronJobDuration: pulumi.String("3.500s"),
+ * 							CronSpec:        pulumi.String("0 0 * * 0"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +392,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:gameservices/gameServerConfig:GameServerConfig default projects/{{project}}/locations/{{location}}/gameServerDeployments/{{deployment_id}}/configs/{{config_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:gameservices/gameServerConfig:GameServerConfig default {{project}}/{{location}}/{{deployment_id}}/{{config_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:gameservices/gameServerConfig:GameServerConfig default {{location}}/{{deployment_id}}/{{config_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:gameservices/gameServerConfig:GameServerConfig")
 public class GameServerConfig extends io.pulumi.resources.CustomResource {

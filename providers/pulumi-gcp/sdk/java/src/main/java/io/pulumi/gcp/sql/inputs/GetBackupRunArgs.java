@@ -40,7 +40,7 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Toggles use of the most recent backup run if multiple backups exist for a
+     * Toggles use of the most recent backup run if multiple backups exist for a 
      * Cloud SQL instance.
      * 
      */

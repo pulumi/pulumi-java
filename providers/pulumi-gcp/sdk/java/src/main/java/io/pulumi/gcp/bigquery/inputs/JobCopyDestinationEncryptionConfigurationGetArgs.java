@@ -27,7 +27,7 @@ public final class JobCopyDestinationEncryptionConfigurationGetArgs extends io.p
     }
 
     /**
-     * - 
+     * -
      * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
      * 
      */

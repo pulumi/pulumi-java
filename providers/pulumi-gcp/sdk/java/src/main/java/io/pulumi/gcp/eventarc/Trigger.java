@@ -20,7 +20,234 @@ import javax.annotation.Nullable;
 /**
  * The Eventarc Trigger resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.cloudrun.Service("default", {
+ *     location: "europe-west1",
+ *     metadata: {
+ *         namespace: "my-project-name",
+ *     },
+ *     template: {
+ *         spec: {
+ *             containers: [{
+ *                 image: "gcr.io/cloudrun/hello",
+ *                 args: ["arrgs"],
+ *             }],
+ *             containerConcurrency: 50,
+ *         },
+ *     },
+ *     traffics: [{
+ *         percent: 100,
+ *         latestRevision: true,
+ *     }],
+ * });
+ * const primary = new gcp.eventarc.Trigger("primary", {
+ *     location: "europe-west1",
+ *     matchingCriterias: [{
+ *         attribute: "type",
+ *         value: "google.cloud.pubsub.topic.v1.messagePublished",
+ *     }],
+ *     destination: {
+ *         cloudRunService: {
+ *             service: _default.name,
+ *             region: "europe-west1",
+ *         },
+ *     },
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ * });
+ * const foo = new gcp.pubsub.Topic("foo", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.cloudrun.Service("default",
+ *     location="europe-west1",
+ *     metadata=gcp.cloudrun.ServiceMetadataArgs(
+ *         namespace="my-project-name",
+ *     ),
+ *     template=gcp.cloudrun.ServiceTemplateArgs(
+ *         spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+ *             containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+ *                 image="gcr.io/cloudrun/hello",
+ *                 args=["arrgs"],
+ *             )],
+ *             container_concurrency=50,
+ *         ),
+ *     ),
+ *     traffics=[gcp.cloudrun.ServiceTrafficArgs(
+ *         percent=100,
+ *         latest_revision=True,
+ *     )])
+ * primary = gcp.eventarc.Trigger("primary",
+ *     location="europe-west1",
+ *     matching_criterias=[gcp.eventarc.TriggerMatchingCriteriaArgs(
+ *         attribute="type",
+ *         value="google.cloud.pubsub.topic.v1.messagePublished",
+ *     )],
+ *     destination=gcp.eventarc.TriggerDestinationArgs(
+ *         cloud_run_service=gcp.eventarc.TriggerDestinationCloudRunServiceArgs(
+ *             service=default.name,
+ *             region="europe-west1",
+ *         ),
+ *     ),
+ *     labels={
+ *         "foo": "bar",
+ *     })
+ * foo = gcp.pubsub.Topic("foo")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+ *         {
+ *             Location = "europe-west1",
+ *             Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+ *             {
+ *                 Namespace = "my-project-name",
+ *             },
+ *             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+ *             {
+ *                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+ *                 {
+ *                     Containers = 
+ *                     {
+ *                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+ *                         {
+ *                             Image = "gcr.io/cloudrun/hello",
+ *                             Args = 
+ *                             {
+ *                                 "arrgs",
+ *                             },
+ *                         },
+ *                     },
+ *                     ContainerConcurrency = 50,
+ *                 },
+ *             },
+ *             Traffics = 
+ *             {
+ *                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+ *                 {
+ *                     Percent = 100,
+ *                     LatestRevision = true,
+ *                 },
+ *             },
+ *         });
+ *         var primary = new Gcp.Eventarc.Trigger("primary", new Gcp.Eventarc.TriggerArgs
+ *         {
+ *             Location = "europe-west1",
+ *             MatchingCriterias = 
+ *             {
+ *                 new Gcp.Eventarc.Inputs.TriggerMatchingCriteriaArgs
+ *                 {
+ *                     Attribute = "type",
+ *                     Value = "google.cloud.pubsub.topic.v1.messagePublished",
+ *                 },
+ *             },
+ *             Destination = new Gcp.Eventarc.Inputs.TriggerDestinationArgs
+ *             {
+ *                 CloudRunService = new Gcp.Eventarc.Inputs.TriggerDestinationCloudRunServiceArgs
+ *                 {
+ *                     Service = @default.Name,
+ *                     Region = "europe-west1",
+ *                 },
+ *             },
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *         });
+ *         var foo = new Gcp.PubSub.Topic("foo", new Gcp.PubSub.TopicArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudrun"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/eventarc"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+ * 			Location: pulumi.String("europe-west1"),
+ * 			Metadata: &cloudrun.ServiceMetadataArgs{
+ * 				Namespace: pulumi.String("my-project-name"),
+ * 			},
+ * 			Template: &cloudrun.ServiceTemplateArgs{
+ * 				Spec: &cloudrun.ServiceTemplateSpecArgs{
+ * 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+ * 						&cloudrun.ServiceTemplateSpecContainerArgs{
+ * 							Image: pulumi.String("gcr.io/cloudrun/hello"),
+ * 							Args: pulumi.StringArray{
+ * 								pulumi.String("arrgs"),
+ * 							},
+ * 						},
+ * 					},
+ * 					ContainerConcurrency: pulumi.Int(50),
+ * 				},
+ * 			},
+ * 			Traffics: cloudrun.ServiceTrafficArray{
+ * 				&cloudrun.ServiceTrafficArgs{
+ * 					Percent:        pulumi.Int(100),
+ * 					LatestRevision: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = eventarc.NewTrigger(ctx, "primary", &eventarc.TriggerArgs{
+ * 			Location: pulumi.String("europe-west1"),
+ * 			MatchingCriterias: eventarc.TriggerMatchingCriteriaArray{
+ * 				&eventarc.TriggerMatchingCriteriaArgs{
+ * 					Attribute: pulumi.String("type"),
+ * 					Value:     pulumi.String("google.cloud.pubsub.topic.v1.messagePublished"),
+ * 				},
+ * 			},
+ * 			Destination: &eventarc.TriggerDestinationArgs{
+ * 				CloudRunService: &eventarc.TriggerDestinationCloudRunServiceArgs{
+ * 					Service: _default.Name,
+ * 					Region:  pulumi.String("europe-west1"),
+ * 				},
+ * 			},
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pubsub.NewTopic(ctx, "foo", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +257,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:eventarc/trigger:Trigger default projects/{{project}}/locations/{{location}}/triggers/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:eventarc/trigger:Trigger default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:eventarc/trigger:Trigger default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:eventarc/trigger:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {

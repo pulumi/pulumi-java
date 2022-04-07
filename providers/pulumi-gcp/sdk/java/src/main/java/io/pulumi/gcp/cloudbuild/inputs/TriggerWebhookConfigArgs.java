@@ -27,7 +27,7 @@ public final class TriggerWebhookConfigArgs extends io.pulumi.resources.Resource
     }
 
     /**
-     * - 
+     * -
      * Potential issues with the underlying Pub/Sub subscription configuration.
      * Only populated on get requests.
      * 

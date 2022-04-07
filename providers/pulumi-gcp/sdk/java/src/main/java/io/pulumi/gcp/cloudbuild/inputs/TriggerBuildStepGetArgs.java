@@ -130,7 +130,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * - 
+     * -
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 

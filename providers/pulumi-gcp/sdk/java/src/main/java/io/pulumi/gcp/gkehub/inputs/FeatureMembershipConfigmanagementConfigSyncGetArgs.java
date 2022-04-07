@@ -16,7 +16,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGetArgs extends io
     public static final FeatureMembershipConfigmanagementConfigSyncGetArgs Empty = new FeatureMembershipConfigmanagementConfigSyncGetArgs();
 
     /**
-     * - 
+     * -
      * (Optional) Structure is documented below.
      * 
      */

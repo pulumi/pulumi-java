@@ -13,9 +13,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Allows management of a Google Cloud Platform folder. For more information see
+ * Allows management of a Google Cloud Platform folder. For more information see 
  * [the official documentation](https://cloud.google.com/resource-manager/docs/creating-managing-folders)
- * and
+ * and 
  * [API](https://cloud.google.com/resource-manager/reference/rest/v2/folders).
  * 
  * A folder can contain projects, other folders, or a combination of both. You can use folders to group projects under an organization in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Cloud Platform resources. Folders allows you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.
@@ -27,7 +27,92 @@ import javax.annotation.Nullable;
  * [Access Control for Folders Using IAM](https://cloud.google.com/resource-manager/docs/access-control-folders)
  * doc for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * // Top-level folder under an organization.
+ * const department1 = new gcp.organizations.Folder("department1", {
+ *     displayName: "Department 1",
+ *     parent: "organizations/1234567",
+ * });
+ * // Folder nested under another folder.
+ * const team_abc = new gcp.organizations.Folder("team-abc", {
+ *     displayName: "Team ABC",
+ *     parent: department1.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * # Top-level folder under an organization.
+ * department1 = gcp.organizations.Folder("department1",
+ *     display_name="Department 1",
+ *     parent="organizations/1234567")
+ * # Folder nested under another folder.
+ * team_abc = gcp.organizations.Folder("team-abc",
+ *     display_name="Team ABC",
+ *     parent=department1.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Top-level folder under an organization.
+ *         var department1 = new Gcp.Organizations.Folder("department1", new Gcp.Organizations.FolderArgs
+ *         {
+ *             DisplayName = "Department 1",
+ *             Parent = "organizations/1234567",
+ *         });
+ *         // Folder nested under another folder.
+ *         var team_abc = new Gcp.Organizations.Folder("team-abc", new Gcp.Organizations.FolderArgs
+ *         {
+ *             DisplayName = "Team ABC",
+ *             Parent = department1.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		department1, err := organizations.NewFolder(ctx, "department1", &organizations.FolderArgs{
+ * 			DisplayName: pulumi.String("Department 1"),
+ * 			Parent:      pulumi.String("organizations/1234567"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = organizations.NewFolder(ctx, "team-abc", &organizations.FolderArgs{
+ * 			DisplayName: pulumi.String("Team ABC"),
+ * 			Parent:      department1.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,10 +122,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:organizations/folder:Folder department1 1234567
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:organizations/folder:Folder department1 folders/1234567
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:organizations/folder:Folder")
 public class Folder extends io.pulumi.resources.CustomResource {

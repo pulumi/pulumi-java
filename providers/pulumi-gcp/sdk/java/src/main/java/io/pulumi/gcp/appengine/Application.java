@@ -27,7 +27,87 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `iap.oauth2_client_secret` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myProject = new gcp.organizations.Project("myProject", {
+ *     projectId: "your-project-id",
+ *     orgId: "1234567",
+ * });
+ * const app = new gcp.appengine.Application("app", {
+ *     project: myProject.projectId,
+ *     locationId: "us-central",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * my_project = gcp.organizations.Project("myProject",
+ *     project_id="your-project-id",
+ *     org_id="1234567")
+ * app = gcp.appengine.Application("app",
+ *     project=my_project.project_id,
+ *     location_id="us-central")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             ProjectId = "your-project-id",
+ *             OrgId = "1234567",
+ *         });
+ *         var app = new Gcp.AppEngine.Application("app", new Gcp.AppEngine.ApplicationArgs
+ *         {
+ *             Project = myProject.ProjectId,
+ *             LocationId = "us-central",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/appengine"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+ * 			ProjectId: pulumi.String("your-project-id"),
+ * 			OrgId:     pulumi.String("1234567"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
+ * 			Project:    myProject.ProjectId,
+ * 			LocationId: pulumi.String("us-central"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,6 +117,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:appengine/application:Application app your-project-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:appengine/application:Application")
 public class Application extends io.pulumi.resources.CustomResource {

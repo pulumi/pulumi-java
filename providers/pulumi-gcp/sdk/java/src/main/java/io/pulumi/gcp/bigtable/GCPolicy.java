@@ -20,12 +20,253 @@ import javax.annotation.Nullable;
  * [the official documentation](https://cloud.google.com/bigtable/) and
  * [API](https://cloud.google.com/bigtable/docs/go/reference).
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instance = new gcp.bigtable.Instance("instance", {clusters: [{
+ *     clusterId: "tf-instance-cluster",
+ *     numNodes: 3,
+ *     storageType: "HDD",
+ * }]});
+ * const table = new gcp.bigtable.Table("table", {
+ *     instanceName: instance.name,
+ *     columnFamilies: [{
+ *         family: "name",
+ *     }],
+ * });
+ * const policy = new gcp.bigtable.GCPolicy("policy", {
+ *     instanceName: instance.name,
+ *     table: table.name,
+ *     columnFamily: "name",
+ *     maxAge: {
+ *         duration: "168h",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance = gcp.bigtable.Instance("instance", clusters=[gcp.bigtable.InstanceClusterArgs(
+ *     cluster_id="tf-instance-cluster",
+ *     num_nodes=3,
+ *     storage_type="HDD",
+ * )])
+ * table = gcp.bigtable.Table("table",
+ *     instance_name=instance.name,
+ *     column_families=[gcp.bigtable.TableColumnFamilyArgs(
+ *         family="name",
+ *     )])
+ * policy = gcp.bigtable.GCPolicy("policy",
+ *     instance_name=instance.name,
+ *     table=table.name,
+ *     column_family="name",
+ *     max_age=gcp.bigtable.GCPolicyMaxAgeArgs(
+ *         duration="168h",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+ *         {
+ *             Clusters = 
+ *             {
+ *                 new Gcp.BigTable.Inputs.InstanceClusterArgs
+ *                 {
+ *                     ClusterId = "tf-instance-cluster",
+ *                     NumNodes = 3,
+ *                     StorageType = "HDD",
+ *                 },
+ *             },
+ *         });
+ *         var table = new Gcp.BigTable.Table("table", new Gcp.BigTable.TableArgs
+ *         {
+ *             InstanceName = instance.Name,
+ *             ColumnFamilies = 
+ *             {
+ *                 new Gcp.BigTable.Inputs.TableColumnFamilyArgs
+ *                 {
+ *                     Family = "name",
+ *                 },
+ *             },
+ *         });
+ *         var policy = new Gcp.BigTable.GCPolicy("policy", new Gcp.BigTable.GCPolicyArgs
+ *         {
+ *             InstanceName = instance.Name,
+ *             Table = table.Name,
+ *             ColumnFamily = "name",
+ *             MaxAge = new Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs
+ *             {
+ *                 Duration = "168h",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigtable"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+ * 			Clusters: bigtable.InstanceClusterArray{
+ * 				&bigtable.InstanceClusterArgs{
+ * 					ClusterId:   pulumi.String("tf-instance-cluster"),
+ * 					NumNodes:    pulumi.Int(3),
+ * 					StorageType: pulumi.String("HDD"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		table, err := bigtable.NewTable(ctx, "table", &bigtable.TableArgs{
+ * 			InstanceName: instance.Name,
+ * 			ColumnFamilies: bigtable.TableColumnFamilyArray{
+ * 				&bigtable.TableColumnFamilyArgs{
+ * 					Family: pulumi.String("name"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = bigtable.NewGCPolicy(ctx, "policy", &bigtable.GCPolicyArgs{
+ * 			InstanceName: instance.Name,
+ * 			Table:        table.Name,
+ * 			ColumnFamily: pulumi.String("name"),
+ * 			MaxAge: &bigtable.GCPolicyMaxAgeArgs{
+ * 				Duration: pulumi.String("168h"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Multiple conditions is also supported. `UNION` when any of its sub-policies apply (OR). `INTERSECTION` when all its sub-policies apply (AND)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const policy = new gcp.bigtable.GCPolicy("policy", {
+ *     instanceName: google_bigtable_instance.instance.name,
+ *     table: google_bigtable_table.table.name,
+ *     columnFamily: "name",
+ *     mode: "UNION",
+ *     maxAge: {
+ *         duration: "168h",
+ *     },
+ *     maxVersions: [{
+ *         number: 10,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * policy = gcp.bigtable.GCPolicy("policy",
+ *     instance_name=google_bigtable_instance["instance"]["name"],
+ *     table=google_bigtable_table["table"]["name"],
+ *     column_family="name",
+ *     mode="UNION",
+ *     max_age=gcp.bigtable.GCPolicyMaxAgeArgs(
+ *         duration="168h",
+ *     ),
+ *     max_versions=[gcp.bigtable.GCPolicyMaxVersionArgs(
+ *         number=10,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var policy = new Gcp.BigTable.GCPolicy("policy", new Gcp.BigTable.GCPolicyArgs
+ *         {
+ *             InstanceName = google_bigtable_instance.Instance.Name,
+ *             Table = google_bigtable_table.Table.Name,
+ *             ColumnFamily = "name",
+ *             Mode = "UNION",
+ *             MaxAge = new Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs
+ *             {
+ *                 Duration = "168h",
+ *             },
+ *             MaxVersions = 
+ *             {
+ *                 new Gcp.BigTable.Inputs.GCPolicyMaxVersionArgs
+ *                 {
+ *                     Number = 10,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigtable"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := bigtable.NewGCPolicy(ctx, "policy", &bigtable.GCPolicyArgs{
+ * 			InstanceName: pulumi.Any(google_bigtable_instance.Instance.Name),
+ * 			Table:        pulumi.Any(google_bigtable_table.Table.Name),
+ * 			ColumnFamily: pulumi.String("name"),
+ * 			Mode:         pulumi.String("UNION"),
+ * 			MaxAge: &bigtable.GCPolicyMaxAgeArgs{
+ * 				Duration: pulumi.String("168h"),
+ * 			},
+ * 			MaxVersions: bigtable.GCPolicyMaxVersionArray{
+ * 				&bigtable.GCPolicyMaxVersionArgs{
+ * 					Number: pulumi.Int(10),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:bigtable/gCPolicy:GCPolicy")
 public class GCPolicy extends io.pulumi.resources.CustomResource {

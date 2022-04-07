@@ -18,13 +18,85 @@ import javax.annotation.Nullable;
 /**
  * A domain serving an App Engine application.
  * 
+ * 
  * To get more information about DomainMapping, see:
  * 
  * * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.domainMappings)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### App Engine Domain Mapping Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
+ *     domainName: "verified-domain.com",
+ *     sslSettings: {
+ *         sslManagementType: "AUTOMATIC",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * domain_mapping = gcp.appengine.DomainMapping("domainMapping",
+ *     domain_name="verified-domain.com",
+ *     ssl_settings=gcp.appengine.DomainMappingSslSettingsArgs(
+ *         ssl_management_type="AUTOMATIC",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var domainMapping = new Gcp.AppEngine.DomainMapping("domainMapping", new Gcp.AppEngine.DomainMappingArgs
+ *         {
+ *             DomainName = "verified-domain.com",
+ *             SslSettings = new Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs
+ *             {
+ *                 SslManagementType = "AUTOMATIC",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/appengine"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appengine.NewDomainMapping(ctx, "domainMapping", &appengine.DomainMappingArgs{
+ * 			DomainName: pulumi.String("verified-domain.com"),
+ * 			SslSettings: &appengine.DomainMappingSslSettingsArgs{
+ * 				SslManagementType: pulumi.String("AUTOMATIC"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +106,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:appengine/domainMapping:DomainMapping default apps/{{project}}/domainMappings/{{domain_name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{project}}/{{domain_name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:appengine/domainMapping:DomainMapping default {{domain_name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:appengine/domainMapping:DomainMapping")
 public class DomainMapping extends io.pulumi.resources.CustomResource {

@@ -16,13 +16,16 @@ import javax.annotation.Nullable;
 /**
  * An `Environment group` in Apigee.
  * 
+ * 
  * To get more information about Envgroup, see:
  * 
  * * [API documentation](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.envgroups/create)
  * * How-to Guides
  *     * [Creating an environment](https://cloud.google.com/apigee/docs/api-platform/get-started/create-environment)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,10 +35,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:apigee/envGroup:EnvGroup default {{org_id}}/envgroups/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:apigee/envGroup:EnvGroup default {{org_id}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:apigee/envGroup:EnvGroup")
 public class EnvGroup extends io.pulumi.resources.CustomResource {

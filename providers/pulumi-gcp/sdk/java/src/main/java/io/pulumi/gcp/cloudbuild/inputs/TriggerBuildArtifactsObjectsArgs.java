@@ -41,7 +41,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
     }
 
     /**
-     * - 
+     * -
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 

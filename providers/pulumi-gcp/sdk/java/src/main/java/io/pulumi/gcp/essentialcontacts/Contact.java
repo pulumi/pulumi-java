@@ -28,7 +28,90 @@ import javax.annotation.Nullable;
  * Your account must have the `serviceusage.services.use` permission on the
  * `billing_project` you defined.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Essential Contact
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = gcp.organizations.getProject({});
+ * const contact = new gcp.essentialcontacts.Contact("contact", {
+ *     parent: project.then(project => project.id),
+ *     email: "foo@bar.com",
+ *     languageTag: "en-GB",
+ *     notificationCategorySubscriptions: ["ALL"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.get_project()
+ * contact = gcp.essentialcontacts.Contact("contact",
+ *     parent=project.id,
+ *     email="foo@bar.com",
+ *     language_tag="en-GB",
+ *     notification_category_subscriptions=["ALL"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var contact = new Gcp.EssentialContacts.Contact("contact", new Gcp.EssentialContacts.ContactArgs
+ *         {
+ *             Parent = project.Apply(project => project.Id),
+ *             Email = "foo@bar.com",
+ *             LanguageTag = "en-GB",
+ *             NotificationCategorySubscriptions = 
+ *             {
+ *                 "ALL",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/essentialcontacts"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = essentialcontacts.NewContact(ctx, "contact", &essentialcontacts.ContactArgs{
+ * 			Parent:      pulumi.String(project.Id),
+ * 			Email:       pulumi.String("foo@bar.com"),
+ * 			LanguageTag: pulumi.String("en-GB"),
+ * 			NotificationCategorySubscriptions: pulumi.StringArray{
+ * 				pulumi.String("ALL"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,6 +121,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:essentialcontacts/contact:Contact default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:essentialcontacts/contact:Contact")
 public class Contact extends io.pulumi.resources.CustomResource {

@@ -22,7 +22,117 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Configuring a service](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_service)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Service Directory Service Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
+ *     namespaceId: "example-namespace",
+ *     location: "us-central1",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const exampleService = new gcp.servicedirectory.Service("exampleService", {
+ *     serviceId: "example-service",
+ *     namespace: exampleNamespace.id,
+ *     metadata: {
+ *         stage: "prod",
+ *         region: "us-central1",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
+ *     namespace_id="example-namespace",
+ *     location="us-central1",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * example_service = gcp.servicedirectory.Service("exampleService",
+ *     service_id="example-service",
+ *     namespace=example_namespace.id,
+ *     metadata={
+ *         "stage": "prod",
+ *         "region": "us-central1",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleNamespace = new Gcp.ServiceDirectory.Namespace("exampleNamespace", new Gcp.ServiceDirectory.NamespaceArgs
+ *         {
+ *             NamespaceId = "example-namespace",
+ *             Location = "us-central1",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var exampleService = new Gcp.ServiceDirectory.Service("exampleService", new Gcp.ServiceDirectory.ServiceArgs
+ *         {
+ *             ServiceId = "example-service",
+ *             Namespace = exampleNamespace.Id,
+ *             Metadata = 
+ *             {
+ *                 { "stage", "prod" },
+ *                 { "region", "us-central1" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicedirectory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleNamespace, err := servicedirectory.NewNamespace(ctx, "exampleNamespace", &servicedirectory.NamespaceArgs{
+ * 			NamespaceId: pulumi.String("example-namespace"),
+ * 			Location:    pulumi.String("us-central1"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = servicedirectory.NewService(ctx, "exampleService", &servicedirectory.ServiceArgs{
+ * 			ServiceId: pulumi.String("example-service"),
+ * 			Namespace: exampleNamespace.ID(),
+ * 			Metadata: pulumi.StringMap{
+ * 				"stage":  pulumi.String("prod"),
+ * 				"region": pulumi.String("us-central1"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +142,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:servicedirectory/service:Service default projects/{{project}}/locations/{{location}}/namespaces/{{namespace_id}}/services/{{service_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:servicedirectory/service:Service default {{project}}/{{location}}/{{namespace_id}}/{{service_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:servicedirectory/service:Service default {{location}}/{{namespace_id}}/{{service_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:servicedirectory/service:Service")
 public class Service extends io.pulumi.resources.CustomResource {

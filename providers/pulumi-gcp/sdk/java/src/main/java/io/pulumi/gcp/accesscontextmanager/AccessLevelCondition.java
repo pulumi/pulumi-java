@@ -25,6 +25,7 @@ import javax.annotation.Nullable;
  * the access level resource must have a `lifecycle` block with `ignore_changes = [basic[0].conditions]` so
  * they don't fight over which service accounts should be included.
  * 
+ * 
  * To get more information about AccessLevelCondition, see:
  * 
  * * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels)
@@ -37,12 +38,13 @@ import javax.annotation.Nullable;
  * Your account must have the `serviceusage.services.use` permission on the
  * `billing_project` you defined.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition")
 public class AccessLevelCondition extends io.pulumi.resources.CustomResource {

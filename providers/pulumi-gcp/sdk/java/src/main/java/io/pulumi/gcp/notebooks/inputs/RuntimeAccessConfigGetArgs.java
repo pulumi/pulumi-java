@@ -28,7 +28,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     /**
-     * - 
+     * -
      * The proxy endpoint that is used to access the runtime.
      * 
      */

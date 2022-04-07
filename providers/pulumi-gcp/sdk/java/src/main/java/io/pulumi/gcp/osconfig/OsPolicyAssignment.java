@@ -20,7 +20,2073 @@ import javax.annotation.Nullable;
 /**
  * Represents an OSPolicyAssignment resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Fixed_os_policy_assignment
+ * An example of an osconfig os policy assignment with fixed rollout disruption budget
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.osconfig.OsPolicyAssignment("primary", {
+ *     description: "A test os policy assignment",
+ *     instanceFilter: {
+ *         all: false,
+ *         exclusionLabels: [{
+ *             labels: {
+ *                 "label-two": "value-two",
+ *             },
+ *         }],
+ *         inclusionLabels: [{
+ *             labels: {
+ *                 "label-one": "value-one",
+ *             },
+ *         }],
+ *         inventories: [{
+ *             osShortName: "centos",
+ *             osVersion: "8.*",
+ *         }],
+ *     },
+ *     location: "us-west1-a",
+ *     osPolicies: [{
+ *         allowNoResourceGroupMatch: false,
+ *         description: "A test os policy",
+ *         id: "policy",
+ *         mode: "VALIDATION",
+ *         resourceGroups: [
+ *             {
+ *                 inventoryFilters: [{
+ *                     osShortName: "centos",
+ *                     osVersion: "8.*",
+ *                 }],
+ *                 resources: [
+ *                     {
+ *                         id: "apt",
+ *                         pkg: {
+ *                             apt: {
+ *                                 name: "bazel",
+ *                             },
+ *                             desiredState: "INSTALLED",
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "deb1",
+ *                         pkg: {
+ *                             deb: {
+ *                                 source: {
+ *                                     localPath: "$HOME/package.deb",
+ *                                 },
+ *                             },
+ *                             desiredState: "INSTALLED",
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "deb2",
+ *                         pkg: {
+ *                             deb: {
+ *                                 pullDeps: true,
+ *                                 source: {
+ *                                     allowInsecure: true,
+ *                                     remote: {
+ *                                         sha256Checksum: "3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                         uri: "ftp.us.debian.org/debian/package.deb",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             desiredState: "INSTALLED",
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "deb3",
+ *                         pkg: {
+ *                             deb: {
+ *                                 pullDeps: true,
+ *                                 source: {
+ *                                     gcs: {
+ *                                         bucket: "test-bucket",
+ *                                         generation: 1,
+ *                                         object: "test-object",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             desiredState: "INSTALLED",
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "yum",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             yum: {
+ *                                 name: "gstreamer-plugins-base-devel.x86_64",
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "zypper",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             zypper: {
+ *                                 name: "gcc",
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "rpm1",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             rpm: {
+ *                                 pullDeps: true,
+ *                                 source: {
+ *                                     localPath: "$HOME/package.rpm",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "rpm2",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             rpm: {
+ *                                 source: {
+ *                                     allowInsecure: true,
+ *                                     remote: {
+ *                                         sha256Checksum: "3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                         uri: "https://mirror.jaleco.com/centos/8.3.2011/BaseOS/x86_64/os/Packages/efi-filesystem-3-2.el8.noarch.rpm",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "rpm3",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             rpm: {
+ *                                 source: {
+ *                                     gcs: {
+ *                                         bucket: "test-bucket",
+ *                                         generation: 1,
+ *                                         object: "test-object",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 ],
+ *             },
+ *             {
+ *                 resources: [
+ *                     {
+ *                         id: "apt-to-deb",
+ *                         pkg: {
+ *                             apt: {
+ *                                 name: "bazel",
+ *                             },
+ *                             desiredState: "INSTALLED",
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "deb-local-path-to-gcs",
+ *                         pkg: {
+ *                             deb: {
+ *                                 source: {
+ *                                     localPath: "$HOME/package.deb",
+ *                                 },
+ *                             },
+ *                             desiredState: "INSTALLED",
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "googet",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             googet: {
+ *                                 name: "gcc",
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "msi1",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             msi: {
+ *                                 properties: ["REBOOT=ReallySuppress"],
+ *                                 source: {
+ *                                     localPath: "$HOME/package.msi",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "msi2",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             msi: {
+ *                                 source: {
+ *                                     allowInsecure: true,
+ *                                     remote: {
+ *                                         sha256Checksum: "3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                         uri: "https://remote.uri.com/package.msi",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "msi3",
+ *                         pkg: {
+ *                             desiredState: "INSTALLED",
+ *                             msi: {
+ *                                 source: {
+ *                                     gcs: {
+ *                                         bucket: "test-bucket",
+ *                                         generation: 1,
+ *                                         object: "test-object",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 ],
+ *             },
+ *         ],
+ *     }],
+ *     project: "my-project-name",
+ *     rollout: {
+ *         disruptionBudget: {
+ *             fixed: 1,
+ *         },
+ *         minWaitDuration: "3.5s",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.osconfig.OsPolicyAssignment("primary",
+ *     description="A test os policy assignment",
+ *     instance_filter=gcp.osconfig.OsPolicyAssignmentInstanceFilterArgs(
+ *         all=False,
+ *         exclusion_labels=[gcp.osconfig.OsPolicyAssignmentInstanceFilterExclusionLabelArgs(
+ *             labels={
+ *                 "label-two": "value-two",
+ *             },
+ *         )],
+ *         inclusion_labels=[gcp.osconfig.OsPolicyAssignmentInstanceFilterInclusionLabelArgs(
+ *             labels={
+ *                 "label-one": "value-one",
+ *             },
+ *         )],
+ *         inventories=[gcp.osconfig.OsPolicyAssignmentInstanceFilterInventoryArgs(
+ *             os_short_name="centos",
+ *             os_version="8.*",
+ *         )],
+ *     ),
+ *     location="us-west1-a",
+ *     os_policies=[gcp.osconfig.OsPolicyAssignmentOsPolicyArgs(
+ *         allow_no_resource_group_match=False,
+ *         description="A test os policy",
+ *         id="policy",
+ *         mode="VALIDATION",
+ *         resource_groups=[
+ *             gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs(
+ *                 inventory_filters=[gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs(
+ *                     os_short_name="centos",
+ *                     os_version="8.*",
+ *                 )],
+ *                 resources=[
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="apt",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             apt=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs(
+ *                                 name="bazel",
+ *                             ),
+ *                             desired_state="INSTALLED",
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="deb1",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             deb=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs(
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs(
+ *                                     local_path="$HOME/package.deb",
+ *                                 ),
+ *                             ),
+ *                             desired_state="INSTALLED",
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="deb2",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             deb=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs(
+ *                                 pull_deps=True,
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs(
+ *                                     allow_insecure=True,
+ *                                     remote=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs(
+ *                                         sha256_checksum="3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                         uri="ftp.us.debian.org/debian/package.deb",
+ *                                     ),
+ *                                 ),
+ *                             ),
+ *                             desired_state="INSTALLED",
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="deb3",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             deb=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs(
+ *                                 pull_deps=True,
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs(
+ *                                     gcs=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs(
+ *                                         bucket="test-bucket",
+ *                                         generation=1,
+ *                                         object="test-object",
+ *                                     ),
+ *                                 ),
+ *                             ),
+ *                             desired_state="INSTALLED",
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="yum",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             yum=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs(
+ *                                 name="gstreamer-plugins-base-devel.x86_64",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="zypper",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             zypper=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs(
+ *                                 name="gcc",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="rpm1",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             rpm=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs(
+ *                                 pull_deps=True,
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs(
+ *                                     local_path="$HOME/package.rpm",
+ *                                 ),
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="rpm2",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             rpm=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs(
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs(
+ *                                     allow_insecure=True,
+ *                                     remote=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteArgs(
+ *                                         sha256_checksum="3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                         uri="https://mirror.jaleco.com/centos/8.3.2011/BaseOS/x86_64/os/Packages/efi-filesystem-3-2.el8.noarch.rpm",
+ *                                     ),
+ *                                 ),
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="rpm3",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             rpm=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs(
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs(
+ *                                     gcs=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsArgs(
+ *                                         bucket="test-bucket",
+ *                                         generation=1,
+ *                                         object="test-object",
+ *                                     ),
+ *                                 ),
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ],
+ *             ),
+ *             gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs(
+ *                 resources=[
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="apt-to-deb",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             apt=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs(
+ *                                 name="bazel",
+ *                             ),
+ *                             desired_state="INSTALLED",
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="deb-local-path-to-gcs",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             deb=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs(
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs(
+ *                                     local_path="$HOME/package.deb",
+ *                                 ),
+ *                             ),
+ *                             desired_state="INSTALLED",
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="googet",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             googet=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs(
+ *                                 name="gcc",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="msi1",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             msi=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(
+ *                                 properties=["REBOOT=ReallySuppress"],
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs(
+ *                                     local_path="$HOME/package.msi",
+ *                                 ),
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="msi2",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             msi=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs(
+ *                                     allow_insecure=True,
+ *                                     remote=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs(
+ *                                         sha256_checksum="3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                         uri="https://remote.uri.com/package.msi",
+ *                                     ),
+ *                                 ),
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="msi3",
+ *                         pkg=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(
+ *                             desired_state="INSTALLED",
+ *                             msi=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(
+ *                                 source=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs(
+ *                                     gcs=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs(
+ *                                         bucket="test-bucket",
+ *                                         generation=1,
+ *                                         object="test-object",
+ *                                     ),
+ *                                 ),
+ *                             ),
+ *                         ),
+ *                     ),
+ *                 ],
+ *             ),
+ *         ],
+ *     )],
+ *     project="my-project-name",
+ *     rollout=gcp.osconfig.OsPolicyAssignmentRolloutArgs(
+ *         disruption_budget=gcp.osconfig.OsPolicyAssignmentRolloutDisruptionBudgetArgs(
+ *             fixed=1,
+ *         ),
+ *         min_wait_duration="3.5s",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.OsConfig.OsPolicyAssignment("primary", new Gcp.OsConfig.OsPolicyAssignmentArgs
+ *         {
+ *             Description = "A test os policy assignment",
+ *             InstanceFilter = new Gcp.OsConfig.Inputs.OsPolicyAssignmentInstanceFilterArgs
+ *             {
+ *                 All = false,
+ *                 ExclusionLabels = 
+ *                 {
+ *                     new Gcp.OsConfig.Inputs.OsPolicyAssignmentInstanceFilterExclusionLabelArgs
+ *                     {
+ *                         Labels = 
+ *                         {
+ *                             { "label-two", "value-two" },
+ *                         },
+ *                     },
+ *                 },
+ *                 InclusionLabels = 
+ *                 {
+ *                     new Gcp.OsConfig.Inputs.OsPolicyAssignmentInstanceFilterInclusionLabelArgs
+ *                     {
+ *                         Labels = 
+ *                         {
+ *                             { "label-one", "value-one" },
+ *                         },
+ *                     },
+ *                 },
+ *                 Inventories = 
+ *                 {
+ *                     new Gcp.OsConfig.Inputs.OsPolicyAssignmentInstanceFilterInventoryArgs
+ *                     {
+ *                         OsShortName = "centos",
+ *                         OsVersion = "8.*",
+ *                     },
+ *                 },
+ *             },
+ *             Location = "us-west1-a",
+ *             OsPolicies = 
+ *             {
+ *                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyArgs
+ *                 {
+ *                     AllowNoResourceGroupMatch = false,
+ *                     Description = "A test os policy",
+ *                     Id = "policy",
+ *                     Mode = "VALIDATION",
+ *                     ResourceGroups = 
+ *                     {
+ *                         new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupArgs
+ *                         {
+ *                             InventoryFilters = 
+ *                             {
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs
+ *                                 {
+ *                                     OsShortName = "centos",
+ *                                     OsVersion = "8.*",
+ *                                 },
+ *                             },
+ *                             Resources = 
+ *                             {
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "apt",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         Apt = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs
+ *                                         {
+ *                                             Name = "bazel",
+ *                                         },
+ *                                         DesiredState = "INSTALLED",
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "deb1",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         Deb = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs
+ *                                         {
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs
+ *                                             {
+ *                                                 LocalPath = "$HOME/package.deb",
+ *                                             },
+ *                                         },
+ *                                         DesiredState = "INSTALLED",
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "deb2",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         Deb = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs
+ *                                         {
+ *                                             PullDeps = true,
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs
+ *                                             {
+ *                                                 AllowInsecure = true,
+ *                                                 Remote = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs
+ *                                                 {
+ *                                                     Sha256Checksum = "3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                                     Uri = "ftp.us.debian.org/debian/package.deb",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                         DesiredState = "INSTALLED",
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "deb3",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         Deb = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs
+ *                                         {
+ *                                             PullDeps = true,
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs
+ *                                             {
+ *                                                 Gcs = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs
+ *                                                 {
+ *                                                     Bucket = "test-bucket",
+ *                                                     Generation = 1,
+ *                                                     Object = "test-object",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                         DesiredState = "INSTALLED",
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "yum",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Yum = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs
+ *                                         {
+ *                                             Name = "gstreamer-plugins-base-devel.x86_64",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "zypper",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Zypper = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs
+ *                                         {
+ *                                             Name = "gcc",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "rpm1",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Rpm = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs
+ *                                         {
+ *                                             PullDeps = true,
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs
+ *                                             {
+ *                                                 LocalPath = "$HOME/package.rpm",
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "rpm2",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Rpm = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs
+ *                                         {
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs
+ *                                             {
+ *                                                 AllowInsecure = true,
+ *                                                 Remote = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteArgs
+ *                                                 {
+ *                                                     Sha256Checksum = "3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                                     Uri = "https://mirror.jaleco.com/centos/8.3.2011/BaseOS/x86_64/os/Packages/efi-filesystem-3-2.el8.noarch.rpm",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "rpm3",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Rpm = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs
+ *                                         {
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs
+ *                                             {
+ *                                                 Gcs = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsArgs
+ *                                                 {
+ *                                                     Bucket = "test-bucket",
+ *                                                     Generation = 1,
+ *                                                     Object = "test-object",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                         new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupArgs
+ *                         {
+ *                             Resources = 
+ *                             {
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "apt-to-deb",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         Apt = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs
+ *                                         {
+ *                                             Name = "bazel",
+ *                                         },
+ *                                         DesiredState = "INSTALLED",
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "deb-local-path-to-gcs",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         Deb = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs
+ *                                         {
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs
+ *                                             {
+ *                                                 LocalPath = "$HOME/package.deb",
+ *                                             },
+ *                                         },
+ *                                         DesiredState = "INSTALLED",
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "googet",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Googet = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs
+ *                                         {
+ *                                             Name = "gcc",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "msi1",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Msi = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs
+ *                                         {
+ *                                             Properties = 
+ *                                             {
+ *                                                 "REBOOT=ReallySuppress",
+ *                                             },
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs
+ *                                             {
+ *                                                 LocalPath = "$HOME/package.msi",
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "msi2",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Msi = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs
+ *                                         {
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs
+ *                                             {
+ *                                                 AllowInsecure = true,
+ *                                                 Remote = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs
+ *                                                 {
+ *                                                     Sha256Checksum = "3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025",
+ *                                                     Uri = "https://remote.uri.com/package.msi",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "msi3",
+ *                                     Pkg = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs
+ *                                     {
+ *                                         DesiredState = "INSTALLED",
+ *                                         Msi = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs
+ *                                         {
+ *                                             Source = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs
+ *                                             {
+ *                                                 Gcs = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs
+ *                                                 {
+ *                                                     Bucket = "test-bucket",
+ *                                                     Generation = 1,
+ *                                                     Object = "test-object",
+ *                                                 },
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Project = "my-project-name",
+ *             Rollout = new Gcp.OsConfig.Inputs.OsPolicyAssignmentRolloutArgs
+ *             {
+ *                 DisruptionBudget = new Gcp.OsConfig.Inputs.OsPolicyAssignmentRolloutDisruptionBudgetArgs
+ *                 {
+ *                     Fixed = 1,
+ *                 },
+ *                 MinWaitDuration = "3.5s",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/osconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := osconfig.NewOsPolicyAssignment(ctx, "primary", &osconfig.OsPolicyAssignmentArgs{
+ * 			Description: pulumi.String("A test os policy assignment"),
+ * 			InstanceFilter: &osconfig.OsPolicyAssignmentInstanceFilterArgs{
+ * 				All: pulumi.Bool(false),
+ * 				ExclusionLabels: osconfig.OsPolicyAssignmentInstanceFilterExclusionLabelArray{
+ * 					&osconfig.OsPolicyAssignmentInstanceFilterExclusionLabelArgs{
+ * 						Labels: pulumi.StringMap{
+ * 							"label-two": pulumi.String("value-two"),
+ * 						},
+ * 					},
+ * 				},
+ * 				InclusionLabels: osconfig.OsPolicyAssignmentInstanceFilterInclusionLabelArray{
+ * 					&osconfig.OsPolicyAssignmentInstanceFilterInclusionLabelArgs{
+ * 						Labels: pulumi.StringMap{
+ * 							"label-one": pulumi.String("value-one"),
+ * 						},
+ * 					},
+ * 				},
+ * 				Inventories: osconfig.OsPolicyAssignmentInstanceFilterInventoryArray{
+ * 					&osconfig.OsPolicyAssignmentInstanceFilterInventoryArgs{
+ * 						OsShortName: pulumi.String("centos"),
+ * 						OsVersion:   pulumi.String("8.*"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Location: pulumi.String("us-west1-a"),
+ * 			OsPolicies: osconfig.OsPolicyAssignmentOsPolicyArray{
+ * 				&osconfig.OsPolicyAssignmentOsPolicyArgs{
+ * 					AllowNoResourceGroupMatch: pulumi.Bool(false),
+ * 					Description:               pulumi.String("A test os policy"),
+ * 					Id:                        pulumi.String("policy"),
+ * 					Mode:                      pulumi.String("VALIDATION"),
+ * 					ResourceGroups: osconfig.OsPolicyAssignmentOsPolicyResourceGroupArray{
+ * 						&osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs{
+ * 							InventoryFilters: osconfig.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArray{
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs{
+ * 									OsShortName: pulumi.String("centos"),
+ * 									OsVersion:   pulumi.String("8.*"),
+ * 								},
+ * 							},
+ * 							Resources: osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArray{
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("apt"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										Apt: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs{
+ * 											Name: pulumi.String("bazel"),
+ * 										},
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("deb1"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										Deb: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs{
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs{
+ * 												LocalPath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/package.deb")),
+ * 											},
+ * 										},
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("deb2"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										Deb: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs{
+ * 											PullDeps: pulumi.Bool(true),
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs{
+ * 												AllowInsecure: pulumi.Bool(true),
+ * 												Remote: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs{
+ * 													Sha256Checksum: pulumi.String("3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025"),
+ * 													Uri:            pulumi.String("ftp.us.debian.org/debian/package.deb"),
+ * 												},
+ * 											},
+ * 										},
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("deb3"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										Deb: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs{
+ * 											PullDeps: pulumi.Bool(true),
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs{
+ * 												Gcs: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs{
+ * 													Bucket:     pulumi.String("test-bucket"),
+ * 													Generation: pulumi.Int(1),
+ * 													Object:     pulumi.String("test-object"),
+ * 												},
+ * 											},
+ * 										},
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("yum"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Yum: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs{
+ * 											Name: pulumi.String("gstreamer-plugins-base-devel.x86_64"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("zypper"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Zypper: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs{
+ * 											Name: pulumi.String("gcc"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("rpm1"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Rpm: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs{
+ * 											PullDeps: pulumi.Bool(true),
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs{
+ * 												LocalPath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/package.rpm")),
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("rpm2"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Rpm: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs{
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs{
+ * 												AllowInsecure: pulumi.Bool(true),
+ * 												Remote: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteArgs{
+ * 													Sha256Checksum: pulumi.String("3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025"),
+ * 													Uri:            pulumi.String("https://mirror.jaleco.com/centos/8.3.2011/BaseOS/x86_64/os/Packages/efi-filesystem-3-2.el8.noarch.rpm"),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("rpm3"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Rpm: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs{
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs{
+ * 												Gcs: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsArgs{
+ * 													Bucket:     pulumi.String("test-bucket"),
+ * 													Generation: pulumi.Int(1),
+ * 													Object:     pulumi.String("test-object"),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 						&osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs{
+ * 							Resources: osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArray{
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("apt-to-deb"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										Apt: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs{
+ * 											Name: pulumi.String("bazel"),
+ * 										},
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("deb-local-path-to-gcs"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										Deb: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs{
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs{
+ * 												LocalPath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/package.deb")),
+ * 											},
+ * 										},
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("googet"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Googet: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs{
+ * 											Name: pulumi.String("gcc"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("msi1"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Msi: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs{
+ * 											Properties: pulumi.StringArray{
+ * 												pulumi.String("REBOOT=ReallySuppress"),
+ * 											},
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs{
+ * 												LocalPath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/package.msi")),
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("msi2"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Msi: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs{
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs{
+ * 												AllowInsecure: pulumi.Bool(true),
+ * 												Remote: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteArgs{
+ * 													Sha256Checksum: pulumi.String("3bbfd1043cd7afdb78cf9afec36c0c5370d2fea98166537b4e67f3816f256025"),
+ * 													Uri:            pulumi.String("https://remote.uri.com/package.msi"),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("msi3"),
+ * 									Pkg: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs{
+ * 										DesiredState: pulumi.String("INSTALLED"),
+ * 										Msi: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs{
+ * 											Source: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs{
+ * 												Gcs: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsArgs{
+ * 													Bucket:     pulumi.String("test-bucket"),
+ * 													Generation: pulumi.Int(1),
+ * 													Object:     pulumi.String("test-object"),
+ * 												},
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 			Rollout: &osconfig.OsPolicyAssignmentRolloutArgs{
+ * 				DisruptionBudget: &osconfig.OsPolicyAssignmentRolloutDisruptionBudgetArgs{
+ * 					Fixed: pulumi.Int(1),
+ * 				},
+ * 				MinWaitDuration: pulumi.String("3.5s"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Percent_os_policy_assignment
+ * An example of an osconfig os policy assignment with percent rollout disruption budget
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const primary = new gcp.osconfig.OsPolicyAssignment("primary", {
+ *     description: "A test os policy assignment",
+ *     instanceFilter: {
+ *         all: true,
+ *     },
+ *     location: "us-west1-a",
+ *     osPolicies: [{
+ *         id: "policy",
+ *         mode: "VALIDATION",
+ *         resourceGroups: [
+ *             {
+ *                 resources: [
+ *                     {
+ *                         id: "apt-to-yum",
+ *                         repository: {
+ *                             apt: {
+ *                                 archiveType: "DEB",
+ *                                 components: ["doc"],
+ *                                 distribution: "debian",
+ *                                 gpgKey: ".gnupg/pubring.kbx",
+ *                                 uri: "https://atl.mirrors.clouvider.net/debian",
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "yum",
+ *                         repository: {
+ *                             yum: {
+ *                                 baseUrl: "http://centos.s.uw.edu/centos/",
+ *                                 displayName: "yum",
+ *                                 gpgKeys: ["RPM-GPG-KEY-CentOS-7"],
+ *                                 id: "yum",
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "zypper",
+ *                         repository: {
+ *                             zypper: {
+ *                                 baseUrl: "http://mirror.dal10.us.leaseweb.net/opensuse",
+ *                                 displayName: "zypper",
+ *                                 gpgKeys: ["sample-key-uri"],
+ *                                 id: "zypper",
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         id: "goo",
+ *                         repository: {
+ *                             goo: {
+ *                                 name: "goo",
+ *                                 url: "https://foo.com/googet/bar",
+ *                             },
+ *                         },
+ *                     },
+ *                     {
+ *                         exec: {
+ *                             enforce: {
+ *                                 args: ["arg1"],
+ *                                 file: {
+ *                                     allowInsecure: true,
+ *                                     remote: {
+ *                                         sha256Checksum: "c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                         uri: "https://www.example.com/script.sh",
+ *                                     },
+ *                                 },
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                             },
+ *                             validate: {
+ *                                 args: ["arg1"],
+ *                                 file: {
+ *                                     localPath: "$HOME/script.sh",
+ *                                 },
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                             },
+ *                         },
+ *                         id: "exec1",
+ *                     },
+ *                     {
+ *                         exec: {
+ *                             enforce: {
+ *                                 args: ["arg1"],
+ *                                 file: {
+ *                                     localPath: "$HOME/script.sh",
+ *                                 },
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                             },
+ *                             validate: {
+ *                                 args: ["arg1"],
+ *                                 file: {
+ *                                     allowInsecure: true,
+ *                                     remote: {
+ *                                         sha256Checksum: "c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                         uri: "https://www.example.com/script.sh",
+ *                                     },
+ *                                 },
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                             },
+ *                         },
+ *                         id: "exec2",
+ *                     },
+ *                     {
+ *                         exec: {
+ *                             enforce: {
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                                 script: "pwd",
+ *                             },
+ *                             validate: {
+ *                                 file: {
+ *                                     allowInsecure: true,
+ *                                     gcs: {
+ *                                         bucket: "test-bucket",
+ *                                         generation: 1,
+ *                                         object: "test-object",
+ *                                     },
+ *                                 },
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                             },
+ *                         },
+ *                         id: "exec3",
+ *                     },
+ *                     {
+ *                         exec: {
+ *                             enforce: {
+ *                                 file: {
+ *                                     allowInsecure: true,
+ *                                     gcs: {
+ *                                         bucket: "test-bucket",
+ *                                         generation: 1,
+ *                                         object: "test-object",
+ *                                     },
+ *                                 },
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                             },
+ *                             validate: {
+ *                                 interpreter: "SHELL",
+ *                                 outputFilePath: "$HOME/out",
+ *                                 script: "pwd",
+ *                             },
+ *                         },
+ *                         id: "exec4",
+ *                     },
+ *                     {
+ *                         file: {
+ *                             file: {
+ *                                 localPath: "$HOME/file",
+ *                             },
+ *                             path: "$HOME/file",
+ *                             state: "PRESENT",
+ *                         },
+ *                         id: "file1",
+ *                     },
+ *                 ],
+ *             },
+ *             {
+ *                 resources: [
+ *                     {
+ *                         file: {
+ *                             file: {
+ *                                 allowInsecure: true,
+ *                                 remote: {
+ *                                     sha256Checksum: "c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                     uri: "https://www.example.com/file",
+ *                                 },
+ *                             },
+ *                             path: "$HOME/file",
+ *                             state: "PRESENT",
+ *                         },
+ *                         id: "file2",
+ *                     },
+ *                     {
+ *                         file: {
+ *                             file: {
+ *                                 gcs: {
+ *                                     bucket: "test-bucket",
+ *                                     generation: 1,
+ *                                     object: "test-object",
+ *                                 },
+ *                             },
+ *                             path: "$HOME/file",
+ *                             state: "PRESENT",
+ *                         },
+ *                         id: "file3",
+ *                     },
+ *                     {
+ *                         file: {
+ *                             content: "sample-content",
+ *                             path: "$HOME/file",
+ *                             state: "PRESENT",
+ *                         },
+ *                         id: "file4",
+ *                     },
+ *                 ],
+ *             },
+ *         ],
+ *     }],
+ *     project: "my-project-name",
+ *     rollout: {
+ *         disruptionBudget: {
+ *             percent: 1,
+ *         },
+ *         minWaitDuration: "3.5s",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * primary = gcp.osconfig.OsPolicyAssignment("primary",
+ *     description="A test os policy assignment",
+ *     instance_filter=gcp.osconfig.OsPolicyAssignmentInstanceFilterArgs(
+ *         all=True,
+ *     ),
+ *     location="us-west1-a",
+ *     os_policies=[gcp.osconfig.OsPolicyAssignmentOsPolicyArgs(
+ *         id="policy",
+ *         mode="VALIDATION",
+ *         resource_groups=[
+ *             gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs(
+ *                 resources=[
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="apt-to-yum",
+ *                         repository=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(
+ *                             apt=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs(
+ *                                 archive_type="DEB",
+ *                                 components=["doc"],
+ *                                 distribution="debian",
+ *                                 gpg_key=".gnupg/pubring.kbx",
+ *                                 uri="https://atl.mirrors.clouvider.net/debian",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="yum",
+ *                         repository=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(
+ *                             yum=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs(
+ *                                 base_url="http://centos.s.uw.edu/centos/",
+ *                                 display_name="yum",
+ *                                 gpg_keys=["RPM-GPG-KEY-CentOS-7"],
+ *                                 id="yum",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="zypper",
+ *                         repository=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(
+ *                             zypper=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs(
+ *                                 base_url="http://mirror.dal10.us.leaseweb.net/opensuse",
+ *                                 display_name="zypper",
+ *                                 gpg_keys=["sample-key-uri"],
+ *                                 id="zypper",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         id="goo",
+ *                         repository=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(
+ *                             goo=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs(
+ *                                 name="goo",
+ *                                 url="https://foo.com/googet/bar",
+ *                             ),
+ *                         ),
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         exec_=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs(
+ *                             enforce=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs(
+ *                                 args=["arg1"],
+ *                                 file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs(
+ *                                     allow_insecure=True,
+ *                                     remote=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs(
+ *                                         sha256_checksum="c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                         uri="https://www.example.com/script.sh",
+ *                                     ),
+ *                                 ),
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                             ),
+ *                             validate=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs(
+ *                                 args=["arg1"],
+ *                                 file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs(
+ *                                     local_path="$HOME/script.sh",
+ *                                 ),
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                             ),
+ *                         ),
+ *                         id="exec1",
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         exec_=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs(
+ *                             enforce=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs(
+ *                                 args=["arg1"],
+ *                                 file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs(
+ *                                     local_path="$HOME/script.sh",
+ *                                 ),
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                             ),
+ *                             validate=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs(
+ *                                 args=["arg1"],
+ *                                 file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs(
+ *                                     allow_insecure=True,
+ *                                     remote=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteArgs(
+ *                                         sha256_checksum="c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                         uri="https://www.example.com/script.sh",
+ *                                     ),
+ *                                 ),
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                             ),
+ *                         ),
+ *                         id="exec2",
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         exec_=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs(
+ *                             enforce=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs(
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                                 script="pwd",
+ *                             ),
+ *                             validate=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs(
+ *                                 file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs(
+ *                                     allow_insecure=True,
+ *                                     gcs=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsArgs(
+ *                                         bucket="test-bucket",
+ *                                         generation=1,
+ *                                         object="test-object",
+ *                                     ),
+ *                                 ),
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                             ),
+ *                         ),
+ *                         id="exec3",
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         exec_=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs(
+ *                             enforce=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs(
+ *                                 file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs(
+ *                                     allow_insecure=True,
+ *                                     gcs=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsArgs(
+ *                                         bucket="test-bucket",
+ *                                         generation=1,
+ *                                         object="test-object",
+ *                                     ),
+ *                                 ),
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                             ),
+ *                             validate=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs(
+ *                                 interpreter="SHELL",
+ *                                 output_file_path="$HOME/out",
+ *                                 script="pwd",
+ *                             ),
+ *                         ),
+ *                         id="exec4",
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs(
+ *                             file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs(
+ *                                 local_path="$HOME/file",
+ *                             ),
+ *                             path="$HOME/file",
+ *                             state="PRESENT",
+ *                         ),
+ *                         id="file1",
+ *                     ),
+ *                 ],
+ *             ),
+ *             gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs(
+ *                 resources=[
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs(
+ *                             file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs(
+ *                                 allow_insecure=True,
+ *                                 remote=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteArgs(
+ *                                     sha256_checksum="c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                     uri="https://www.example.com/file",
+ *                                 ),
+ *                             ),
+ *                             path="$HOME/file",
+ *                             state="PRESENT",
+ *                         ),
+ *                         id="file2",
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs(
+ *                             file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs(
+ *                                 gcs=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsArgs(
+ *                                     bucket="test-bucket",
+ *                                     generation=1,
+ *                                     object="test-object",
+ *                                 ),
+ *                             ),
+ *                             path="$HOME/file",
+ *                             state="PRESENT",
+ *                         ),
+ *                         id="file3",
+ *                     ),
+ *                     gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
+ *                         file=gcp.osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs(
+ *                             content="sample-content",
+ *                             path="$HOME/file",
+ *                             state="PRESENT",
+ *                         ),
+ *                         id="file4",
+ *                     ),
+ *                 ],
+ *             ),
+ *         ],
+ *     )],
+ *     project="my-project-name",
+ *     rollout=gcp.osconfig.OsPolicyAssignmentRolloutArgs(
+ *         disruption_budget=gcp.osconfig.OsPolicyAssignmentRolloutDisruptionBudgetArgs(
+ *             percent=1,
+ *         ),
+ *         min_wait_duration="3.5s",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Gcp.OsConfig.OsPolicyAssignment("primary", new Gcp.OsConfig.OsPolicyAssignmentArgs
+ *         {
+ *             Description = "A test os policy assignment",
+ *             InstanceFilter = new Gcp.OsConfig.Inputs.OsPolicyAssignmentInstanceFilterArgs
+ *             {
+ *                 All = true,
+ *             },
+ *             Location = "us-west1-a",
+ *             OsPolicies = 
+ *             {
+ *                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyArgs
+ *                 {
+ *                     Id = "policy",
+ *                     Mode = "VALIDATION",
+ *                     ResourceGroups = 
+ *                     {
+ *                         new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupArgs
+ *                         {
+ *                             Resources = 
+ *                             {
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "apt-to-yum",
+ *                                     Repository = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
+ *                                     {
+ *                                         Apt = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs
+ *                                         {
+ *                                             ArchiveType = "DEB",
+ *                                             Components = 
+ *                                             {
+ *                                                 "doc",
+ *                                             },
+ *                                             Distribution = "debian",
+ *                                             GpgKey = ".gnupg/pubring.kbx",
+ *                                             Uri = "https://atl.mirrors.clouvider.net/debian",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "yum",
+ *                                     Repository = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
+ *                                     {
+ *                                         Yum = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs
+ *                                         {
+ *                                             BaseUrl = "http://centos.s.uw.edu/centos/",
+ *                                             DisplayName = "yum",
+ *                                             GpgKeys = 
+ *                                             {
+ *                                                 "RPM-GPG-KEY-CentOS-7",
+ *                                             },
+ *                                             Id = "yum",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "zypper",
+ *                                     Repository = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
+ *                                     {
+ *                                         Zypper = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs
+ *                                         {
+ *                                             BaseUrl = "http://mirror.dal10.us.leaseweb.net/opensuse",
+ *                                             DisplayName = "zypper",
+ *                                             GpgKeys = 
+ *                                             {
+ *                                                 "sample-key-uri",
+ *                                             },
+ *                                             Id = "zypper",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Id = "goo",
+ *                                     Repository = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
+ *                                     {
+ *                                         Goo = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs
+ *                                         {
+ *                                             Name = "goo",
+ *                                             Url = "https://foo.com/googet/bar",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Exec = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs
+ *                                     {
+ *                                         Enforce = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs
+ *                                         {
+ *                                             Args = 
+ *                                             {
+ *                                                 "arg1",
+ *                                             },
+ *                                             File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs
+ *                                             {
+ *                                                 AllowInsecure = true,
+ *                                                 Remote = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs
+ *                                                 {
+ *                                                     Sha256Checksum = "c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                                     Uri = "https://www.example.com/script.sh",
+ *                                                 },
+ *                                             },
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                         },
+ *                                         Validate = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs
+ *                                         {
+ *                                             Args = 
+ *                                             {
+ *                                                 "arg1",
+ *                                             },
+ *                                             File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs
+ *                                             {
+ *                                                 LocalPath = "$HOME/script.sh",
+ *                                             },
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                         },
+ *                                     },
+ *                                     Id = "exec1",
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Exec = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs
+ *                                     {
+ *                                         Enforce = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs
+ *                                         {
+ *                                             Args = 
+ *                                             {
+ *                                                 "arg1",
+ *                                             },
+ *                                             File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs
+ *                                             {
+ *                                                 LocalPath = "$HOME/script.sh",
+ *                                             },
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                         },
+ *                                         Validate = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs
+ *                                         {
+ *                                             Args = 
+ *                                             {
+ *                                                 "arg1",
+ *                                             },
+ *                                             File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs
+ *                                             {
+ *                                                 AllowInsecure = true,
+ *                                                 Remote = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteArgs
+ *                                                 {
+ *                                                     Sha256Checksum = "c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                                     Uri = "https://www.example.com/script.sh",
+ *                                                 },
+ *                                             },
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                         },
+ *                                     },
+ *                                     Id = "exec2",
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Exec = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs
+ *                                     {
+ *                                         Enforce = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs
+ *                                         {
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                             Script = "pwd",
+ *                                         },
+ *                                         Validate = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs
+ *                                         {
+ *                                             File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs
+ *                                             {
+ *                                                 AllowInsecure = true,
+ *                                                 Gcs = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsArgs
+ *                                                 {
+ *                                                     Bucket = "test-bucket",
+ *                                                     Generation = 1,
+ *                                                     Object = "test-object",
+ *                                                 },
+ *                                             },
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                         },
+ *                                     },
+ *                                     Id = "exec3",
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     Exec = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs
+ *                                     {
+ *                                         Enforce = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs
+ *                                         {
+ *                                             File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs
+ *                                             {
+ *                                                 AllowInsecure = true,
+ *                                                 Gcs = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsArgs
+ *                                                 {
+ *                                                     Bucket = "test-bucket",
+ *                                                     Generation = 1,
+ *                                                     Object = "test-object",
+ *                                                 },
+ *                                             },
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                         },
+ *                                         Validate = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs
+ *                                         {
+ *                                             Interpreter = "SHELL",
+ *                                             OutputFilePath = "$HOME/out",
+ *                                             Script = "pwd",
+ *                                         },
+ *                                     },
+ *                                     Id = "exec4",
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs
+ *                                     {
+ *                                         File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs
+ *                                         {
+ *                                             LocalPath = "$HOME/file",
+ *                                         },
+ *                                         Path = "$HOME/file",
+ *                                         State = "PRESENT",
+ *                                     },
+ *                                     Id = "file1",
+ *                                 },
+ *                             },
+ *                         },
+ *                         new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupArgs
+ *                         {
+ *                             Resources = 
+ *                             {
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs
+ *                                     {
+ *                                         File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs
+ *                                         {
+ *                                             AllowInsecure = true,
+ *                                             Remote = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteArgs
+ *                                             {
+ *                                                 Sha256Checksum = "c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063",
+ *                                                 Uri = "https://www.example.com/file",
+ *                                             },
+ *                                         },
+ *                                         Path = "$HOME/file",
+ *                                         State = "PRESENT",
+ *                                     },
+ *                                     Id = "file2",
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs
+ *                                     {
+ *                                         File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs
+ *                                         {
+ *                                             Gcs = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsArgs
+ *                                             {
+ *                                                 Bucket = "test-bucket",
+ *                                                 Generation = 1,
+ *                                                 Object = "test-object",
+ *                                             },
+ *                                         },
+ *                                         Path = "$HOME/file",
+ *                                         State = "PRESENT",
+ *                                     },
+ *                                     Id = "file3",
+ *                                 },
+ *                                 new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs
+ *                                 {
+ *                                     File = new Gcp.OsConfig.Inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs
+ *                                     {
+ *                                         Content = "sample-content",
+ *                                         Path = "$HOME/file",
+ *                                         State = "PRESENT",
+ *                                     },
+ *                                     Id = "file4",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Project = "my-project-name",
+ *             Rollout = new Gcp.OsConfig.Inputs.OsPolicyAssignmentRolloutArgs
+ *             {
+ *                 DisruptionBudget = new Gcp.OsConfig.Inputs.OsPolicyAssignmentRolloutDisruptionBudgetArgs
+ *                 {
+ *                     Percent = 1,
+ *                 },
+ *                 MinWaitDuration = "3.5s",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/osconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := osconfig.NewOsPolicyAssignment(ctx, "primary", &osconfig.OsPolicyAssignmentArgs{
+ * 			Description: pulumi.String("A test os policy assignment"),
+ * 			InstanceFilter: &osconfig.OsPolicyAssignmentInstanceFilterArgs{
+ * 				All: pulumi.Bool(true),
+ * 			},
+ * 			Location: pulumi.String("us-west1-a"),
+ * 			OsPolicies: osconfig.OsPolicyAssignmentOsPolicyArray{
+ * 				&osconfig.OsPolicyAssignmentOsPolicyArgs{
+ * 					Id:   pulumi.String("policy"),
+ * 					Mode: pulumi.String("VALIDATION"),
+ * 					ResourceGroups: osconfig.OsPolicyAssignmentOsPolicyResourceGroupArray{
+ * 						&osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs{
+ * 							Resources: osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArray{
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("apt-to-yum"),
+ * 									Repository: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs{
+ * 										Apt: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs{
+ * 											ArchiveType: pulumi.String("DEB"),
+ * 											Components: pulumi.StringArray{
+ * 												pulumi.String("doc"),
+ * 											},
+ * 											Distribution: pulumi.String("debian"),
+ * 											GpgKey:       pulumi.String(".gnupg/pubring.kbx"),
+ * 											Uri:          pulumi.String("https://atl.mirrors.clouvider.net/debian"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("yum"),
+ * 									Repository: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs{
+ * 										Yum: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs{
+ * 											BaseUrl:     pulumi.String("http://centos.s.uw.edu/centos/"),
+ * 											DisplayName: pulumi.String("yum"),
+ * 											GpgKeys: pulumi.StringArray{
+ * 												pulumi.String("RPM-GPG-KEY-CentOS-7"),
+ * 											},
+ * 											Id: pulumi.String("yum"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("zypper"),
+ * 									Repository: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs{
+ * 										Zypper: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs{
+ * 											BaseUrl:     pulumi.String("http://mirror.dal10.us.leaseweb.net/opensuse"),
+ * 											DisplayName: pulumi.String("zypper"),
+ * 											GpgKeys: pulumi.StringArray{
+ * 												pulumi.String("sample-key-uri"),
+ * 											},
+ * 											Id: pulumi.String("zypper"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Id: pulumi.String("goo"),
+ * 									Repository: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs{
+ * 										Goo: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs{
+ * 											Name: pulumi.String("goo"),
+ * 											Url:  pulumi.String("https://foo.com/googet/bar"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Exec: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs{
+ * 										Enforce: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs{
+ * 											Args: pulumi.StringArray{
+ * 												pulumi.String("arg1"),
+ * 											},
+ * 											File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs{
+ * 												AllowInsecure: pulumi.Bool(true),
+ * 												Remote: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs{
+ * 													Sha256Checksum: pulumi.String("c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063"),
+ * 													Uri:            pulumi.String("https://www.example.com/script.sh"),
+ * 												},
+ * 											},
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 										},
+ * 										Validate: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs{
+ * 											Args: pulumi.StringArray{
+ * 												pulumi.String("arg1"),
+ * 											},
+ * 											File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs{
+ * 												LocalPath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/script.sh")),
+ * 											},
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 										},
+ * 									},
+ * 									Id: pulumi.String("exec1"),
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Exec: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs{
+ * 										Enforce: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs{
+ * 											Args: pulumi.StringArray{
+ * 												pulumi.String("arg1"),
+ * 											},
+ * 											File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs{
+ * 												LocalPath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/script.sh")),
+ * 											},
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 										},
+ * 										Validate: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs{
+ * 											Args: pulumi.StringArray{
+ * 												pulumi.String("arg1"),
+ * 											},
+ * 											File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs{
+ * 												AllowInsecure: pulumi.Bool(true),
+ * 												Remote: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteArgs{
+ * 													Sha256Checksum: pulumi.String("c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063"),
+ * 													Uri:            pulumi.String("https://www.example.com/script.sh"),
+ * 												},
+ * 											},
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 										},
+ * 									},
+ * 									Id: pulumi.String("exec2"),
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Exec: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs{
+ * 										Enforce: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs{
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 											Script:         pulumi.String("pwd"),
+ * 										},
+ * 										Validate: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs{
+ * 											File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs{
+ * 												AllowInsecure: pulumi.Bool(true),
+ * 												Gcs: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsArgs{
+ * 													Bucket:     pulumi.String("test-bucket"),
+ * 													Generation: pulumi.Int(1),
+ * 													Object:     pulumi.String("test-object"),
+ * 												},
+ * 											},
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 										},
+ * 									},
+ * 									Id: pulumi.String("exec3"),
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									Exec: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs{
+ * 										Enforce: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs{
+ * 											File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs{
+ * 												AllowInsecure: pulumi.Bool(true),
+ * 												Gcs: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsArgs{
+ * 													Bucket:     pulumi.String("test-bucket"),
+ * 													Generation: pulumi.Int(1),
+ * 													Object:     pulumi.String("test-object"),
+ * 												},
+ * 											},
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 										},
+ * 										Validate: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs{
+ * 											Interpreter:    pulumi.String("SHELL"),
+ * 											OutputFilePath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/out")),
+ * 											Script:         pulumi.String("pwd"),
+ * 										},
+ * 									},
+ * 									Id: pulumi.String("exec4"),
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs{
+ * 										File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs{
+ * 											LocalPath: pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/file")),
+ * 										},
+ * 										Path:  pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/file")),
+ * 										State: pulumi.String("PRESENT"),
+ * 									},
+ * 									Id: pulumi.String("file1"),
+ * 								},
+ * 							},
+ * 						},
+ * 						&osconfig.OsPolicyAssignmentOsPolicyResourceGroupArgs{
+ * 							Resources: osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArray{
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs{
+ * 										File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs{
+ * 											AllowInsecure: pulumi.Bool(true),
+ * 											Remote: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteArgs{
+ * 												Sha256Checksum: pulumi.String("c7938fed83afdccbb0e86a2a2e4cad7d5035012ca3214b4a61268393635c3063"),
+ * 												Uri:            pulumi.String("https://www.example.com/file"),
+ * 											},
+ * 										},
+ * 										Path:  pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/file")),
+ * 										State: pulumi.String("PRESENT"),
+ * 									},
+ * 									Id: pulumi.String("file2"),
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs{
+ * 										File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs{
+ * 											Gcs: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsArgs{
+ * 												Bucket:     pulumi.String("test-bucket"),
+ * 												Generation: pulumi.Int(1),
+ * 												Object:     pulumi.String("test-object"),
+ * 											},
+ * 										},
+ * 										Path:  pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/file")),
+ * 										State: pulumi.String("PRESENT"),
+ * 									},
+ * 									Id: pulumi.String("file3"),
+ * 								},
+ * 								&osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs{
+ * 									File: &osconfig.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs{
+ * 										Content: pulumi.String("sample-content"),
+ * 										Path:    pulumi.String(fmt.Sprintf("%v%v", "$", "HOME/file")),
+ * 										State:   pulumi.String("PRESENT"),
+ * 									},
+ * 									Id: pulumi.String("file4"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 			Rollout: &osconfig.OsPolicyAssignmentRolloutArgs{
+ * 				DisruptionBudget: &osconfig.OsPolicyAssignmentRolloutDisruptionBudgetArgs{
+ * 					Percent: pulumi.Int(1),
+ * 				},
+ * 				MinWaitDuration: pulumi.String("3.5s"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,14 +2096,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:osconfig/osPolicyAssignment:OsPolicyAssignment default projects/{{project}}/locations/{{location}}/osPolicyAssignments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:osconfig/osPolicyAssignment:OsPolicyAssignment default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:osconfig/osPolicyAssignment:OsPolicyAssignment default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:osconfig/osPolicyAssignment:OsPolicyAssignment")
 public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {

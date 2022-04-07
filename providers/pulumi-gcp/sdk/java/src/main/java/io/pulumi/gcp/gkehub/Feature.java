@@ -17,6 +17,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Feature can be imported using any of these accepted formats
@@ -25,14 +28,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:gkehub/feature:Feature default projects/{{project}}/locations/{{location}}/features/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:gkehub/feature:Feature default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:gkehub/feature:Feature default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:gkehub/feature:Feature")
 public class Feature extends io.pulumi.resources.CustomResource {

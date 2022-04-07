@@ -43,7 +43,318 @@ import javax.annotation.Nullable;
  * 
  * In conclusion: Be extremely cautious.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Managed Ssl Certificate Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultManagedSslCertificate = new gcp.compute.ManagedSslCertificate("defaultManagedSslCertificate", {managed: {
+ *     domains: ["sslcert.tf-test.club."],
+ * }});
+ * const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+ *     requestPath: "/",
+ *     checkIntervalSec: 1,
+ *     timeoutSec: 1,
+ * });
+ * const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+ *     portName: "http",
+ *     protocol: "HTTP",
+ *     timeoutSec: 10,
+ *     healthChecks: [defaultHttpHealthCheck.id],
+ * });
+ * const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+ *     description: "a description",
+ *     defaultService: defaultBackendService.id,
+ *     hostRules: [{
+ *         hosts: ["sslcert.tf-test.club"],
+ *         pathMatcher: "allpaths",
+ *     }],
+ *     pathMatchers: [{
+ *         name: "allpaths",
+ *         defaultService: defaultBackendService.id,
+ *         pathRules: [{
+ *             paths: ["/*"],
+ *             service: defaultBackendService.id,
+ *         }],
+ *     }],
+ * });
+ * const defaultTargetHttpsProxy = new gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy", {
+ *     urlMap: defaultURLMap.id,
+ *     sslCertificates: [defaultManagedSslCertificate.id],
+ * });
+ * const zone = new gcp.dns.ManagedZone("zone", {dnsName: "sslcert.tf-test.club."});
+ * const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
+ *     target: defaultTargetHttpsProxy.id,
+ *     portRange: 443,
+ * });
+ * const set = new gcp.dns.RecordSet("set", {
+ *     name: "sslcert.tf-test.club.",
+ *     type: "A",
+ *     ttl: 3600,
+ *     managedZone: zone.name,
+ *     rrdatas: [defaultGlobalForwardingRule.ipAddress],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_managed_ssl_certificate = gcp.compute.ManagedSslCertificate("defaultManagedSslCertificate", managed=gcp.compute.ManagedSslCertificateManagedArgs(
+ *     domains=["sslcert.tf-test.club."],
+ * ))
+ * default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+ *     request_path="/",
+ *     check_interval_sec=1,
+ *     timeout_sec=1)
+ * default_backend_service = gcp.compute.BackendService("defaultBackendService",
+ *     port_name="http",
+ *     protocol="HTTP",
+ *     timeout_sec=10,
+ *     health_checks=[default_http_health_check.id])
+ * default_url_map = gcp.compute.URLMap("defaultURLMap",
+ *     description="a description",
+ *     default_service=default_backend_service.id,
+ *     host_rules=[gcp.compute.URLMapHostRuleArgs(
+ *         hosts=["sslcert.tf-test.club"],
+ *         path_matcher="allpaths",
+ *     )],
+ *     path_matchers=[gcp.compute.URLMapPathMatcherArgs(
+ *         name="allpaths",
+ *         default_service=default_backend_service.id,
+ *         path_rules=[gcp.compute.URLMapPathMatcherPathRuleArgs(
+ *             paths=["/*"],
+ *             service=default_backend_service.id,
+ *         )],
+ *     )])
+ * default_target_https_proxy = gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy",
+ *     url_map=default_url_map.id,
+ *     ssl_certificates=[default_managed_ssl_certificate.id])
+ * zone = gcp.dns.ManagedZone("zone", dns_name="sslcert.tf-test.club.")
+ * default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
+ *     target=default_target_https_proxy.id,
+ *     port_range="443")
+ * set = gcp.dns.RecordSet("set",
+ *     name="sslcert.tf-test.club.",
+ *     type="A",
+ *     ttl=3600,
+ *     managed_zone=zone.name,
+ *     rrdatas=[default_global_forwarding_rule.ip_address])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultManagedSslCertificate = new Gcp.Compute.ManagedSslCertificate("defaultManagedSslCertificate", new Gcp.Compute.ManagedSslCertificateArgs
+ *         {
+ *             Managed = new Gcp.Compute.Inputs.ManagedSslCertificateManagedArgs
+ *             {
+ *                 Domains = 
+ *                 {
+ *                     "sslcert.tf-test.club.",
+ *                 },
+ *             },
+ *         });
+ *         var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+ *         {
+ *             RequestPath = "/",
+ *             CheckIntervalSec = 1,
+ *             TimeoutSec = 1,
+ *         });
+ *         var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+ *         {
+ *             PortName = "http",
+ *             Protocol = "HTTP",
+ *             TimeoutSec = 10,
+ *             HealthChecks = 
+ *             {
+ *                 defaultHttpHealthCheck.Id,
+ *             },
+ *         });
+ *         var defaultURLMap = new Gcp.Compute.URLMap("defaultURLMap", new Gcp.Compute.URLMapArgs
+ *         {
+ *             Description = "a description",
+ *             DefaultService = defaultBackendService.Id,
+ *             HostRules = 
+ *             {
+ *                 new Gcp.Compute.Inputs.URLMapHostRuleArgs
+ *                 {
+ *                     Hosts = 
+ *                     {
+ *                         "sslcert.tf-test.club",
+ *                     },
+ *                     PathMatcher = "allpaths",
+ *                 },
+ *             },
+ *             PathMatchers = 
+ *             {
+ *                 new Gcp.Compute.Inputs.URLMapPathMatcherArgs
+ *                 {
+ *                     Name = "allpaths",
+ *                     DefaultService = defaultBackendService.Id,
+ *                     PathRules = 
+ *                     {
+ *                         new Gcp.Compute.Inputs.URLMapPathMatcherPathRuleArgs
+ *                         {
+ *                             Paths = 
+ *                             {
+ *                                 "/*",
+ *                             },
+ *                             Service = defaultBackendService.Id,
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var defaultTargetHttpsProxy = new Gcp.Compute.TargetHttpsProxy("defaultTargetHttpsProxy", new Gcp.Compute.TargetHttpsProxyArgs
+ *         {
+ *             UrlMap = defaultURLMap.Id,
+ *             SslCertificates = 
+ *             {
+ *                 defaultManagedSslCertificate.Id,
+ *             },
+ *         });
+ *         var zone = new Gcp.Dns.ManagedZone("zone", new Gcp.Dns.ManagedZoneArgs
+ *         {
+ *             DnsName = "sslcert.tf-test.club.",
+ *         });
+ *         var defaultGlobalForwardingRule = new Gcp.Compute.GlobalForwardingRule("defaultGlobalForwardingRule", new Gcp.Compute.GlobalForwardingRuleArgs
+ *         {
+ *             Target = defaultTargetHttpsProxy.Id,
+ *             PortRange = "443",
+ *         });
+ *         var @set = new Gcp.Dns.RecordSet("set", new Gcp.Dns.RecordSetArgs
+ *         {
+ *             Name = "sslcert.tf-test.club.",
+ *             Type = "A",
+ *             Ttl = 3600,
+ *             ManagedZone = zone.Name,
+ *             Rrdatas = 
+ *             {
+ *                 defaultGlobalForwardingRule.IpAddress,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultManagedSslCertificate, err := compute.NewManagedSslCertificate(ctx, "defaultManagedSslCertificate", &compute.ManagedSslCertificateArgs{
+ * 			Managed: &compute.ManagedSslCertificateManagedArgs{
+ * 				Domains: pulumi.StringArray{
+ * 					pulumi.String("sslcert.tf-test.club."),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+ * 			RequestPath:      pulumi.String("/"),
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+ * 			PortName:   pulumi.String("http"),
+ * 			Protocol:   pulumi.String("HTTP"),
+ * 			TimeoutSec: pulumi.Int(10),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultHttpHealthCheck.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultURLMap, err := compute.NewURLMap(ctx, "defaultURLMap", &compute.URLMapArgs{
+ * 			Description:    pulumi.String("a description"),
+ * 			DefaultService: defaultBackendService.ID(),
+ * 			HostRules: compute.URLMapHostRuleArray{
+ * 				&compute.URLMapHostRuleArgs{
+ * 					Hosts: pulumi.StringArray{
+ * 						pulumi.String("sslcert.tf-test.club"),
+ * 					},
+ * 					PathMatcher: pulumi.String("allpaths"),
+ * 				},
+ * 			},
+ * 			PathMatchers: compute.URLMapPathMatcherArray{
+ * 				&compute.URLMapPathMatcherArgs{
+ * 					Name:           pulumi.String("allpaths"),
+ * 					DefaultService: defaultBackendService.ID(),
+ * 					PathRules: compute.URLMapPathMatcherPathRuleArray{
+ * 						&compute.URLMapPathMatcherPathRuleArgs{
+ * 							Paths: pulumi.StringArray{
+ * 								pulumi.String("/*"),
+ * 							},
+ * 							Service: defaultBackendService.ID(),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultTargetHttpsProxy, err := compute.NewTargetHttpsProxy(ctx, "defaultTargetHttpsProxy", &compute.TargetHttpsProxyArgs{
+ * 			UrlMap: defaultURLMap.ID(),
+ * 			SslCertificates: pulumi.StringArray{
+ * 				defaultManagedSslCertificate.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		zone, err := dns.NewManagedZone(ctx, "zone", &dns.ManagedZoneArgs{
+ * 			DnsName: pulumi.String("sslcert.tf-test.club."),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultGlobalForwardingRule, err := compute.NewGlobalForwardingRule(ctx, "defaultGlobalForwardingRule", &compute.GlobalForwardingRuleArgs{
+ * 			Target:    defaultTargetHttpsProxy.ID(),
+ * 			PortRange: pulumi.String("443"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dns.NewRecordSet(ctx, "set", &dns.RecordSetArgs{
+ * 			Name:        pulumi.String("sslcert.tf-test.club."),
+ * 			Type:        pulumi.String("A"),
+ * 			Ttl:         pulumi.Int(3600),
+ * 			ManagedZone: zone.Name,
+ * 			Rrdatas: pulumi.StringArray{
+ * 				defaultGlobalForwardingRule.IpAddress,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -53,14 +364,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default projects/{{project}}/global/sslCertificates/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/managedSslCertificate:ManagedSslCertificate")
 public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {

@@ -20,13 +20,367 @@ import javax.annotation.Nullable;
 /**
  * A Dialogflow CX conversation (session) can be described and visualized as a state machine. The states of a CX session are represented by pages.
  * 
+ * 
  * To get more information about Page, see:
  * 
  * * [API documentation](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents.flows.pages)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflowcx Page Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const agent = new gcp.diagflow.CxAgent("agent", {
+ *     displayName: "dialogflowcx-agent",
+ *     location: "global",
+ *     defaultLanguageCode: "en",
+ *     supportedLanguageCodes: [
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     timeZone: "America/New_York",
+ *     description: "Example description.",
+ *     avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     enableStackdriverLogging: true,
+ *     enableSpellCorrection: true,
+ *     speechToTextSettings: {
+ *         enableSpeechAdaptation: true,
+ *     },
+ * });
+ * const myPage2 = new gcp.diagflow.CxPage("myPage2", {
+ *     parent: agent.startFlow,
+ *     displayName: "MyPage2",
+ * });
+ * const basicPage = new gcp.diagflow.CxPage("basicPage", {
+ *     parent: agent.startFlow,
+ *     displayName: "MyPage",
+ *     entryFulfillment: {
+ *         messages: [{
+ *             text: {
+ *                 texts: ["Welcome to page"],
+ *             },
+ *         }],
+ *     },
+ *     form: {
+ *         parameters: [{
+ *             displayName: "param1",
+ *             entityType: "projects/-/locations/-/agents/-/entityTypes/sys.date",
+ *             fillBehavior: {
+ *                 initialPromptFulfillment: {
+ *                     messages: [{
+ *                         text: {
+ *                             texts: ["Please provide param1"],
+ *                         },
+ *                     }],
+ *                 },
+ *             },
+ *             required: "true",
+ *             redact: "true",
+ *         }],
+ *     },
+ *     transitionRoutes: [{
+ *         condition: `$page.params.status = 'FINAL'`,
+ *         triggerFulfillment: {
+ *             messages: [{
+ *                 text: {
+ *                     texts: ["information completed, navigating to page 2"],
+ *                 },
+ *             }],
+ *         },
+ *         targetPage: myPage2.id,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * agent = gcp.diagflow.CxAgent("agent",
+ *     display_name="dialogflowcx-agent",
+ *     location="global",
+ *     default_language_code="en",
+ *     supported_language_codes=[
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     time_zone="America/New_York",
+ *     description="Example description.",
+ *     avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     enable_stackdriver_logging=True,
+ *     enable_spell_correction=True,
+ *     speech_to_text_settings=gcp.diagflow.CxAgentSpeechToTextSettingsArgs(
+ *         enable_speech_adaptation=True,
+ *     ))
+ * my_page2 = gcp.diagflow.CxPage("myPage2",
+ *     parent=agent.start_flow,
+ *     display_name="MyPage2")
+ * basic_page = gcp.diagflow.CxPage("basicPage",
+ *     parent=agent.start_flow,
+ *     display_name="MyPage",
+ *     entry_fulfillment=gcp.diagflow.CxPageEntryFulfillmentArgs(
+ *         messages=[gcp.diagflow.CxPageEntryFulfillmentMessageArgs(
+ *             text=gcp.diagflow.CxPageEntryFulfillmentMessageTextArgs(
+ *                 texts=["Welcome to page"],
+ *             ),
+ *         )],
+ *     ),
+ *     form=gcp.diagflow.CxPageFormArgs(
+ *         parameters=[gcp.diagflow.CxPageFormParameterArgs(
+ *             display_name="param1",
+ *             entity_type="projects/-/locations/-/agents/-/entityTypes/sys.date",
+ *             fill_behavior=gcp.diagflow.CxPageFormParameterFillBehaviorArgs(
+ *                 initial_prompt_fulfillment=gcp.diagflow.CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs(
+ *                     messages=[gcp.diagflow.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(
+ *                         text=gcp.diagflow.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs(
+ *                             texts=["Please provide param1"],
+ *                         ),
+ *                     )],
+ *                 ),
+ *             ),
+ *             required=True,
+ *             redact=True,
+ *         )],
+ *     ),
+ *     transition_routes=[gcp.diagflow.CxPageTransitionRouteArgs(
+ *         condition="$page.params.status = 'FINAL'",
+ *         trigger_fulfillment=gcp.diagflow.CxPageTransitionRouteTriggerFulfillmentArgs(
+ *             messages=[gcp.diagflow.CxPageTransitionRouteTriggerFulfillmentMessageArgs(
+ *                 text=gcp.diagflow.CxPageTransitionRouteTriggerFulfillmentMessageTextArgs(
+ *                     texts=["information completed, navigating to page 2"],
+ *                 ),
+ *             )],
+ *         ),
+ *         target_page=my_page2.id,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var agent = new Gcp.Diagflow.CxAgent("agent", new Gcp.Diagflow.CxAgentArgs
+ *         {
+ *             DisplayName = "dialogflowcx-agent",
+ *             Location = "global",
+ *             DefaultLanguageCode = "en",
+ *             SupportedLanguageCodes = 
+ *             {
+ *                 "fr",
+ *                 "de",
+ *                 "es",
+ *             },
+ *             TimeZone = "America/New_York",
+ *             Description = "Example description.",
+ *             AvatarUri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *             EnableStackdriverLogging = true,
+ *             EnableSpellCorrection = true,
+ *             SpeechToTextSettings = new Gcp.Diagflow.Inputs.CxAgentSpeechToTextSettingsArgs
+ *             {
+ *                 EnableSpeechAdaptation = true,
+ *             },
+ *         });
+ *         var myPage2 = new Gcp.Diagflow.CxPage("myPage2", new Gcp.Diagflow.CxPageArgs
+ *         {
+ *             Parent = agent.StartFlow,
+ *             DisplayName = "MyPage2",
+ *         });
+ *         var basicPage = new Gcp.Diagflow.CxPage("basicPage", new Gcp.Diagflow.CxPageArgs
+ *         {
+ *             Parent = agent.StartFlow,
+ *             DisplayName = "MyPage",
+ *             EntryFulfillment = new Gcp.Diagflow.Inputs.CxPageEntryFulfillmentArgs
+ *             {
+ *                 Messages = 
+ *                 {
+ *                     new Gcp.Diagflow.Inputs.CxPageEntryFulfillmentMessageArgs
+ *                     {
+ *                         Text = new Gcp.Diagflow.Inputs.CxPageEntryFulfillmentMessageTextArgs
+ *                         {
+ *                             Texts = 
+ *                             {
+ *                                 "Welcome to page",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Form = new Gcp.Diagflow.Inputs.CxPageFormArgs
+ *             {
+ *                 Parameters = 
+ *                 {
+ *                     new Gcp.Diagflow.Inputs.CxPageFormParameterArgs
+ *                     {
+ *                         DisplayName = "param1",
+ *                         EntityType = "projects/-/locations/-/agents/-/entityTypes/sys.date",
+ *                         FillBehavior = new Gcp.Diagflow.Inputs.CxPageFormParameterFillBehaviorArgs
+ *                         {
+ *                             InitialPromptFulfillment = new Gcp.Diagflow.Inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs
+ *                             {
+ *                                 Messages = 
+ *                                 {
+ *                                     new Gcp.Diagflow.Inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs
+ *                                     {
+ *                                         Text = new Gcp.Diagflow.Inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs
+ *                                         {
+ *                                             Texts = 
+ *                                             {
+ *                                                 "Please provide param1",
+ *                                             },
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                         Required = true,
+ *                         Redact = true,
+ *                     },
+ *                 },
+ *             },
+ *             TransitionRoutes = 
+ *             {
+ *                 new Gcp.Diagflow.Inputs.CxPageTransitionRouteArgs
+ *                 {
+ *                     Condition = "$page.params.status = 'FINAL'",
+ *                     TriggerFulfillment = new Gcp.Diagflow.Inputs.CxPageTransitionRouteTriggerFulfillmentArgs
+ *                     {
+ *                         Messages = 
+ *                         {
+ *                             new Gcp.Diagflow.Inputs.CxPageTransitionRouteTriggerFulfillmentMessageArgs
+ *                             {
+ *                                 Text = new Gcp.Diagflow.Inputs.CxPageTransitionRouteTriggerFulfillmentMessageTextArgs
+ *                                 {
+ *                                     Texts = 
+ *                                     {
+ *                                         "information completed, navigating to page 2",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     TargetPage = myPage2.Id,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		agent, err := diagflow.NewCxAgent(ctx, "agent", &diagflow.CxAgentArgs{
+ * 			DisplayName:         pulumi.String("dialogflowcx-agent"),
+ * 			Location:            pulumi.String("global"),
+ * 			DefaultLanguageCode: pulumi.String("en"),
+ * 			SupportedLanguageCodes: pulumi.StringArray{
+ * 				pulumi.String("fr"),
+ * 				pulumi.String("de"),
+ * 				pulumi.String("es"),
+ * 			},
+ * 			TimeZone:                 pulumi.String("America/New_York"),
+ * 			Description:              pulumi.String("Example description."),
+ * 			AvatarUri:                pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
+ * 			EnableStackdriverLogging: pulumi.Bool(true),
+ * 			EnableSpellCorrection:    pulumi.Bool(true),
+ * 			SpeechToTextSettings: &diagflow.CxAgentSpeechToTextSettingsArgs{
+ * 				EnableSpeechAdaptation: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		myPage2, err := diagflow.NewCxPage(ctx, "myPage2", &diagflow.CxPageArgs{
+ * 			Parent:      agent.StartFlow,
+ * 			DisplayName: pulumi.String("MyPage2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = diagflow.NewCxPage(ctx, "basicPage", &diagflow.CxPageArgs{
+ * 			Parent:      agent.StartFlow,
+ * 			DisplayName: pulumi.String("MyPage"),
+ * 			EntryFulfillment: &diagflow.CxPageEntryFulfillmentArgs{
+ * 				Messages: diagflow.CxPageEntryFulfillmentMessageArray{
+ * 					&diagflow.CxPageEntryFulfillmentMessageArgs{
+ * 						Text: &diagflow.CxPageEntryFulfillmentMessageTextArgs{
+ * 							Texts: pulumi.StringArray{
+ * 								pulumi.String("Welcome to page"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Form: &diagflow.CxPageFormArgs{
+ * 				Parameters: diagflow.CxPageFormParameterArray{
+ * 					&diagflow.CxPageFormParameterArgs{
+ * 						DisplayName: pulumi.String("param1"),
+ * 						EntityType:  pulumi.String("projects/-/locations/-/agents/-/entityTypes/sys.date"),
+ * 						FillBehavior: &diagflow.CxPageFormParameterFillBehaviorArgs{
+ * 							InitialPromptFulfillment: &diagflow.CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs{
+ * 								Messages: diagflow.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArray{
+ * 									&diagflow.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs{
+ * 										Text: &diagflow.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs{
+ * 											Texts: pulumi.StringArray{
+ * 												pulumi.String("Please provide param1"),
+ * 											},
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 						Required: pulumi.Bool(true),
+ * 						Redact:   pulumi.Bool(true),
+ * 					},
+ * 				},
+ * 			},
+ * 			TransitionRoutes: diagflow.CxPageTransitionRouteArray{
+ * 				&diagflow.CxPageTransitionRouteArgs{
+ * 					Condition: pulumi.String(fmt.Sprintf("%v%v", "$", "page.params.status = 'FINAL'")),
+ * 					TriggerFulfillment: &diagflow.CxPageTransitionRouteTriggerFulfillmentArgs{
+ * 						Messages: diagflow.CxPageTransitionRouteTriggerFulfillmentMessageArray{
+ * 							&diagflow.CxPageTransitionRouteTriggerFulfillmentMessageArgs{
+ * 								Text: &diagflow.CxPageTransitionRouteTriggerFulfillmentMessageTextArgs{
+ * 									Texts: pulumi.StringArray{
+ * 										pulumi.String("information completed, navigating to page 2"),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					TargetPage: myPage2.ID(),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,10 +390,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/cxPage:CxPage default {{parent}}/pages/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:diagflow/cxPage:CxPage default {{parent}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/cxPage:CxPage")
 public class CxPage extends io.pulumi.resources.CustomResource {
@@ -142,7 +499,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
         return this.languageCode;
     }
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */

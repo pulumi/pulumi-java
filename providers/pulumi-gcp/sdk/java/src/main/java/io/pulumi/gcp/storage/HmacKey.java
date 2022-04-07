@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
  * consists of a secret and HMAC key metadata. HMAC keys can be used as credentials
  * for service accounts.
  * 
+ * 
  * To get more information about HmacKey, see:
  * 
  * * [API documentation](https://cloud.google.com/storage/docs/json_api/v1/projects/hmacKeys)
@@ -30,7 +31,81 @@ import javax.annotation.Nullable;
  * > **Warning:** All arguments including `secret` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Storage Hmac Key
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * // Create a new service account
+ * const serviceAccount = new gcp.serviceaccount.Account("serviceAccount", {accountId: "my-svc-acc"});
+ * //Create the HMAC key for the associated service account 
+ * const key = new gcp.storage.HmacKey("key", {serviceAccountEmail: serviceAccount.email});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * # Create a new service account
+ * service_account = gcp.service_account.Account("serviceAccount", account_id="my-svc-acc")
+ * #Create the HMAC key for the associated service account 
+ * key = gcp.storage.HmacKey("key", service_account_email=service_account.email)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new service account
+ *         var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "my-svc-acc",
+ *         });
+ *         //Create the HMAC key for the associated service account 
+ *         var key = new Gcp.Storage.HmacKey("key", new Gcp.Storage.HmacKeyArgs
+ *         {
+ *             ServiceAccountEmail = serviceAccount.Email,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		serviceAccount, err := serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
+ * 			AccountId: pulumi.String("my-svc-acc"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storage.NewHmacKey(ctx, "key", &storage.HmacKeyArgs{
+ * 			ServiceAccountEmail: serviceAccount.Email,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,14 +115,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:storage/hmacKey:HmacKey default projects/{{project}}/hmacKeys/{{access_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:storage/hmacKey:HmacKey default {{project}}/{{access_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:storage/hmacKey:HmacKey default {{access_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:storage/hmacKey:HmacKey")
 public class HmacKey extends io.pulumi.resources.CustomResource {

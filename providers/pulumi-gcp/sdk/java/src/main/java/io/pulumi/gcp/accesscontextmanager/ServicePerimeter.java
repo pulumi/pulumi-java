@@ -22,9 +22,10 @@ import javax.annotation.Nullable;
  * has a target outside of the ServicePerimeter, the request will be blocked.
  * Otherwise the request is allowed. There are two types of Service Perimeter
  * - Regular and Bridge. Regular Service Perimeters cannot overlap, a single
- *   GCP project can only belong to a single regular Service Perimeter. Service
- *   Perimeter Bridges can contain only GCP projects as members, a single GCP
- *   project may belong to multiple Service Perimeter Bridges.
+ * GCP project can only belong to a single regular Service Perimeter. Service
+ * Perimeter Bridges can contain only GCP projects as members, a single GCP
+ * project may belong to multiple Service Perimeter Bridges.
+ * 
  * 
  * To get more information about ServicePerimeter, see:
  * 
@@ -38,7 +39,890 @@ import javax.annotation.Nullable;
  * Your account must have the `serviceusage.services.use` permission on the
  * `billing_project` you defined.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Access Context Manager Service Perimeter Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+ *     parent: "organizations/123456789",
+ *     title: "my policy",
+ * });
+ * const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
+ *     parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+ *     status: {
+ *         restrictedServices: ["storage.googleapis.com"],
+ *     },
+ *     title: "restrict_storage",
+ * });
+ * const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
+ *     basic: {
+ *         conditions: [{
+ *             devicePolicy: {
+ *                 osConstraints: [{
+ *                     osType: "DESKTOP_CHROME_OS",
+ *                 }],
+ *                 requireScreenLock: false,
+ *             },
+ *             regions: [
+ *                 "CH",
+ *                 "IT",
+ *                 "US",
+ *             ],
+ *         }],
+ *     },
+ *     parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+ *     title: "chromeos_no_lock",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+ *     parent="organizations/123456789",
+ *     title="my policy")
+ * service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
+ *     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+ *     status=gcp.accesscontextmanager.ServicePerimeterStatusArgs(
+ *         restricted_services=["storage.googleapis.com"],
+ *     ),
+ *     title="restrict_storage")
+ * access_level = gcp.accesscontextmanager.AccessLevel("access-level",
+ *     basic=gcp.accesscontextmanager.AccessLevelBasicArgs(
+ *         conditions=[gcp.accesscontextmanager.AccessLevelBasicConditionArgs(
+ *             device_policy=gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs(
+ *                 os_constraints=[gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs(
+ *                     os_type="DESKTOP_CHROME_OS",
+ *                 )],
+ *                 require_screen_lock=False,
+ *             ),
+ *             regions=[
+ *                 "CH",
+ *                 "IT",
+ *                 "US",
+ *             ],
+ *         )],
+ *     ),
+ *     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+ *     title="chromeos_no_lock")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+ *         {
+ *             Parent = "organizations/123456789",
+ *             Title = "my policy",
+ *         });
+ *         var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
+ *         {
+ *             Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+ *             Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+ *             {
+ *                 RestrictedServices = 
+ *                 {
+ *                     "storage.googleapis.com",
+ *                 },
+ *             },
+ *             Title = "restrict_storage",
+ *         });
+ *         var access_level = new Gcp.AccessContextManager.AccessLevel("access-level", new Gcp.AccessContextManager.AccessLevelArgs
+ *         {
+ *             Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
+ *             {
+ *                 Conditions = 
+ *                 {
+ *                     new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
+ *                     {
+ *                         DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
+ *                         {
+ *                             OsConstraints = 
+ *                             {
+ *                                 new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
+ *                                 {
+ *                                     OsType = "DESKTOP_CHROME_OS",
+ *                                 },
+ *                             },
+ *                             RequireScreenLock = false,
+ *                         },
+ *                         Regions = 
+ *                         {
+ *                             "CH",
+ *                             "IT",
+ *                             "US",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+ *             Title = "chromeos_no_lock",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/accesscontextmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access-policy", &accesscontextmanager.AccessPolicyArgs{
+ * 			Parent: pulumi.String("organizations/123456789"),
+ * 			Title:  pulumi.String("my policy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = accesscontextmanager.NewServicePerimeter(ctx, "service-perimeter", &accesscontextmanager.ServicePerimeterArgs{
+ * 			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Status: &accesscontextmanager.ServicePerimeterStatusArgs{
+ * 				RestrictedServices: pulumi.StringArray{
+ * 					pulumi.String("storage.googleapis.com"),
+ * 				},
+ * 			},
+ * 			Title: pulumi.String("restrict_storage"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = accesscontextmanager.NewAccessLevel(ctx, "access-level", &accesscontextmanager.AccessLevelArgs{
+ * 			Basic: &accesscontextmanager.AccessLevelBasicArgs{
+ * 				Conditions: accesscontextmanager.AccessLevelBasicConditionArray{
+ * 					&accesscontextmanager.AccessLevelBasicConditionArgs{
+ * 						DevicePolicy: &accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs{
+ * 							OsConstraints: accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArray{
+ * 								&accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs{
+ * 									OsType: pulumi.String("DESKTOP_CHROME_OS"),
+ * 								},
+ * 							},
+ * 							RequireScreenLock: pulumi.Bool(false),
+ * 						},
+ * 						Regions: pulumi.StringArray{
+ * 							pulumi.String("CH"),
+ * 							pulumi.String("IT"),
+ * 							pulumi.String("US"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Title: pulumi.String("chromeos_no_lock"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Access Context Manager Service Perimeter Secure Data Exchange
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+ *     parent: "organizations/123456789",
+ *     title: "my policy",
+ * });
+ * const secure_data_exchange = new gcp.accesscontextmanager.ServicePerimeters("secure-data-exchange", {
+ *     parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+ *     servicePerimeters: [
+ *         {
+ *             name: pulumi.interpolate`accessPolicies/${access_policy.name}/servicePerimeters/`,
+ *             title: "",
+ *             status: {
+ *                 restrictedServices: ["storage.googleapis.com"],
+ *             },
+ *         },
+ *         {
+ *             name: pulumi.interpolate`accessPolicies/${access_policy.name}/servicePerimeters/`,
+ *             title: "",
+ *             status: {
+ *                 restrictedServices: ["bigtable.googleapis.com"],
+ *                 vpcAccessibleServices: {
+ *                     enableRestriction: true,
+ *                     allowedServices: ["bigquery.googleapis.com"],
+ *                 },
+ *             },
+ *         },
+ *     ],
+ * });
+ * const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
+ *     parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+ *     title: "secure_data_exchange",
+ *     basic: {
+ *         conditions: [{
+ *             devicePolicy: {
+ *                 requireScreenLock: false,
+ *                 osConstraints: [{
+ *                     osType: "DESKTOP_CHROME_OS",
+ *                 }],
+ *             },
+ *             regions: [
+ *                 "CH",
+ *                 "IT",
+ *                 "US",
+ *             ],
+ *         }],
+ *     },
+ * });
+ * const test_access = new gcp.accesscontextmanager.ServicePerimeter("test-access", {
+ *     parent: `accessPolicies/${google_access_context_manager_access_policy["test-access"].name}`,
+ *     title: `%s`,
+ *     perimeterType: "PERIMETER_TYPE_REGULAR",
+ *     status: {
+ *         restrictedServices: [
+ *             "bigquery.googleapis.com",
+ *             "storage.googleapis.com",
+ *         ],
+ *         accessLevels: [access_level.name],
+ *         vpcAccessibleServices: {
+ *             enableRestriction: true,
+ *             allowedServices: [
+ *                 "bigquery.googleapis.com",
+ *                 "storage.googleapis.com",
+ *             ],
+ *         },
+ *         ingressPolicies: [{
+ *             ingressFrom: {
+ *                 sources: [{
+ *                     accessLevel: google_access_context_manager_access_level["test-access"].name,
+ *                 }],
+ *                 identityType: "ANY_IDENTITY",
+ *             },
+ *             ingressTo: {
+ *                 resources: ["*"],
+ *                 operations: [
+ *                     {
+ *                         serviceName: "bigquery.googleapis.com",
+ *                         methodSelectors: [
+ *                             {
+ *                                 method: "BigQueryStorage.ReadRows",
+ *                             },
+ *                             {
+ *                                 method: "TableService.ListTables",
+ *                             },
+ *                             {
+ *                                 permission: "bigquery.jobs.get",
+ *                             },
+ *                         ],
+ *                     },
+ *                     {
+ *                         serviceName: "storage.googleapis.com",
+ *                         methodSelectors: [{
+ *                             method: "google.storage.objects.create",
+ *                         }],
+ *                     },
+ *                 ],
+ *             },
+ *         }],
+ *         egressPolicies: [{
+ *             egressFrom: {
+ *                 identityType: "ANY_USER_ACCOUNT",
+ *             },
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+ *     parent="organizations/123456789",
+ *     title="my policy")
+ * secure_data_exchange = gcp.accesscontextmanager.ServicePerimeters("secure-data-exchange",
+ *     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+ *     service_perimeters=[
+ *         gcp.accesscontextmanager.ServicePerimetersServicePerimeterArgs(
+ *             name=access_policy.name.apply(lambda name: f"accessPolicies/{name}/servicePerimeters/"),
+ *             title="",
+ *             status=gcp.accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs(
+ *                 restricted_services=["storage.googleapis.com"],
+ *             ),
+ *         ),
+ *         gcp.accesscontextmanager.ServicePerimetersServicePerimeterArgs(
+ *             name=access_policy.name.apply(lambda name: f"accessPolicies/{name}/servicePerimeters/"),
+ *             title="",
+ *             status=gcp.accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs(
+ *                 restricted_services=["bigtable.googleapis.com"],
+ *                 vpc_accessible_services=gcp.accesscontextmanager.ServicePerimetersServicePerimeterStatusVpcAccessibleServicesArgs(
+ *                     enable_restriction=True,
+ *                     allowed_services=["bigquery.googleapis.com"],
+ *                 ),
+ *             ),
+ *         ),
+ *     ])
+ * access_level = gcp.accesscontextmanager.AccessLevel("access-level",
+ *     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+ *     title="secure_data_exchange",
+ *     basic=gcp.accesscontextmanager.AccessLevelBasicArgs(
+ *         conditions=[gcp.accesscontextmanager.AccessLevelBasicConditionArgs(
+ *             device_policy=gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs(
+ *                 require_screen_lock=False,
+ *                 os_constraints=[gcp.accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs(
+ *                     os_type="DESKTOP_CHROME_OS",
+ *                 )],
+ *             ),
+ *             regions=[
+ *                 "CH",
+ *                 "IT",
+ *                 "US",
+ *             ],
+ *         )],
+ *     ))
+ * test_access = gcp.accesscontextmanager.ServicePerimeter("test-access",
+ *     parent=f"accessPolicies/{google_access_context_manager_access_policy['test-access']['name']}",
+ *     title="%s",
+ *     perimeter_type="PERIMETER_TYPE_REGULAR",
+ *     status=gcp.accesscontextmanager.ServicePerimeterStatusArgs(
+ *         restricted_services=[
+ *             "bigquery.googleapis.com",
+ *             "storage.googleapis.com",
+ *         ],
+ *         access_levels=[access_level.name],
+ *         vpc_accessible_services=gcp.accesscontextmanager.ServicePerimeterStatusVpcAccessibleServicesArgs(
+ *             enable_restriction=True,
+ *             allowed_services=[
+ *                 "bigquery.googleapis.com",
+ *                 "storage.googleapis.com",
+ *             ],
+ *         ),
+ *         ingress_policies=[gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyArgs(
+ *             ingress_from=gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressFromArgs(
+ *                 sources=[gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressFromSourceArgs(
+ *                     access_level=google_access_context_manager_access_level["test-access"]["name"],
+ *                 )],
+ *                 identity_type="ANY_IDENTITY",
+ *             ),
+ *             ingress_to=gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToArgs(
+ *                 resources=["*"],
+ *                 operations=[
+ *                     gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationArgs(
+ *                         service_name="bigquery.googleapis.com",
+ *                         method_selectors=[
+ *                             gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs(
+ *                                 method="BigQueryStorage.ReadRows",
+ *                             ),
+ *                             gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs(
+ *                                 method="TableService.ListTables",
+ *                             ),
+ *                             gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs(
+ *                                 permission="bigquery.jobs.get",
+ *                             ),
+ *                         ],
+ *                     ),
+ *                     gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationArgs(
+ *                         service_name="storage.googleapis.com",
+ *                         method_selectors=[gcp.accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs(
+ *                             method="google.storage.objects.create",
+ *                         )],
+ *                     ),
+ *                 ],
+ *             ),
+ *         )],
+ *         egress_policies=[gcp.accesscontextmanager.ServicePerimeterStatusEgressPolicyArgs(
+ *             egress_from=gcp.accesscontextmanager.ServicePerimeterStatusEgressPolicyEgressFromArgs(
+ *                 identity_type="ANY_USER_ACCOUNT",
+ *             ),
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+ *         {
+ *             Parent = "organizations/123456789",
+ *             Title = "my policy",
+ *         });
+ *         var secure_data_exchange = new Gcp.AccessContextManager.ServicePerimeters("secure-data-exchange", new Gcp.AccessContextManager.ServicePerimetersArgs
+ *         {
+ *             Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+ *             ServicePerimeters = 
+ *             {
+ *                 new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterArgs
+ *                 {
+ *                     Name = access_policy.Name.Apply(name => $"accessPolicies/{name}/servicePerimeters/"),
+ *                     Title = "",
+ *                     Status = new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterStatusArgs
+ *                     {
+ *                         RestrictedServices = 
+ *                         {
+ *                             "storage.googleapis.com",
+ *                         },
+ *                     },
+ *                 },
+ *                 new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterArgs
+ *                 {
+ *                     Name = access_policy.Name.Apply(name => $"accessPolicies/{name}/servicePerimeters/"),
+ *                     Title = "",
+ *                     Status = new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterStatusArgs
+ *                     {
+ *                         RestrictedServices = 
+ *                         {
+ *                             "bigtable.googleapis.com",
+ *                         },
+ *                         VpcAccessibleServices = new Gcp.AccessContextManager.Inputs.ServicePerimetersServicePerimeterStatusVpcAccessibleServicesArgs
+ *                         {
+ *                             EnableRestriction = true,
+ *                             AllowedServices = 
+ *                             {
+ *                                 "bigquery.googleapis.com",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var access_level = new Gcp.AccessContextManager.AccessLevel("access-level", new Gcp.AccessContextManager.AccessLevelArgs
+ *         {
+ *             Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+ *             Title = "secure_data_exchange",
+ *             Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
+ *             {
+ *                 Conditions = 
+ *                 {
+ *                     new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
+ *                     {
+ *                         DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
+ *                         {
+ *                             RequireScreenLock = false,
+ *                             OsConstraints = 
+ *                             {
+ *                                 new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
+ *                                 {
+ *                                     OsType = "DESKTOP_CHROME_OS",
+ *                                 },
+ *                             },
+ *                         },
+ *                         Regions = 
+ *                         {
+ *                             "CH",
+ *                             "IT",
+ *                             "US",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var test_access = new Gcp.AccessContextManager.ServicePerimeter("test-access", new Gcp.AccessContextManager.ServicePerimeterArgs
+ *         {
+ *             Parent = $"accessPolicies/{google_access_context_manager_access_policy.Test_access.Name}",
+ *             Title = "%s",
+ *             PerimeterType = "PERIMETER_TYPE_REGULAR",
+ *             Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+ *             {
+ *                 RestrictedServices = 
+ *                 {
+ *                     "bigquery.googleapis.com",
+ *                     "storage.googleapis.com",
+ *                 },
+ *                 AccessLevels = 
+ *                 {
+ *                     access_level.Name,
+ *                 },
+ *                 VpcAccessibleServices = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusVpcAccessibleServicesArgs
+ *                 {
+ *                     EnableRestriction = true,
+ *                     AllowedServices = 
+ *                     {
+ *                         "bigquery.googleapis.com",
+ *                         "storage.googleapis.com",
+ *                     },
+ *                 },
+ *                 IngressPolicies = 
+ *                 {
+ *                     new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyArgs
+ *                     {
+ *                         IngressFrom = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressFromArgs
+ *                         {
+ *                             Sources = 
+ *                             {
+ *                                 new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressFromSourceArgs
+ *                                 {
+ *                                     AccessLevel = google_access_context_manager_access_level.Test_access.Name,
+ *                                 },
+ *                             },
+ *                             IdentityType = "ANY_IDENTITY",
+ *                         },
+ *                         IngressTo = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressToArgs
+ *                         {
+ *                             Resources = 
+ *                             {
+ *                                 "*",
+ *                             },
+ *                             Operations = 
+ *                             {
+ *                                 new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressToOperationArgs
+ *                                 {
+ *                                     ServiceName = "bigquery.googleapis.com",
+ *                                     MethodSelectors = 
+ *                                     {
+ *                                         new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs
+ *                                         {
+ *                                             Method = "BigQueryStorage.ReadRows",
+ *                                         },
+ *                                         new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs
+ *                                         {
+ *                                             Method = "TableService.ListTables",
+ *                                         },
+ *                                         new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs
+ *                                         {
+ *                                             Permission = "bigquery.jobs.get",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                                 new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressToOperationArgs
+ *                                 {
+ *                                     ServiceName = "storage.googleapis.com",
+ *                                     MethodSelectors = 
+ *                                     {
+ *                                         new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs
+ *                                         {
+ *                                             Method = "google.storage.objects.create",
+ *                                         },
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 EgressPolicies = 
+ *                 {
+ *                     new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusEgressPolicyArgs
+ *                     {
+ *                         EgressFrom = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusEgressPolicyEgressFromArgs
+ *                         {
+ *                             IdentityType = "ANY_USER_ACCOUNT",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/accesscontextmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access-policy", &accesscontextmanager.AccessPolicyArgs{
+ * 			Parent: pulumi.String("organizations/123456789"),
+ * 			Title:  pulumi.String("my policy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = accesscontextmanager.NewServicePerimeters(ctx, "secure-data-exchange", &accesscontextmanager.ServicePerimetersArgs{
+ * 			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			ServicePerimeters: accesscontextmanager.ServicePerimetersServicePerimeterArray{
+ * 				&accesscontextmanager.ServicePerimetersServicePerimeterArgs{
+ * 					Name: access_policy.Name.ApplyT(func(name string) (string, error) {
+ * 						return fmt.Sprintf("%v%v%v", "accessPolicies/", name, "/servicePerimeters/"), nil
+ * 					}).(pulumi.StringOutput),
+ * 					Title: pulumi.String(""),
+ * 					Status: &accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs{
+ * 						RestrictedServices: pulumi.StringArray{
+ * 							pulumi.String("storage.googleapis.com"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&accesscontextmanager.ServicePerimetersServicePerimeterArgs{
+ * 					Name: access_policy.Name.ApplyT(func(name string) (string, error) {
+ * 						return fmt.Sprintf("%v%v%v", "accessPolicies/", name, "/servicePerimeters/"), nil
+ * 					}).(pulumi.StringOutput),
+ * 					Title: pulumi.String(""),
+ * 					Status: &accesscontextmanager.ServicePerimetersServicePerimeterStatusArgs{
+ * 						RestrictedServices: pulumi.StringArray{
+ * 							pulumi.String("bigtable.googleapis.com"),
+ * 						},
+ * 						VpcAccessibleServices: &accesscontextmanager.ServicePerimetersServicePerimeterStatusVpcAccessibleServicesArgs{
+ * 							EnableRestriction: pulumi.Bool(true),
+ * 							AllowedServices: pulumi.StringArray{
+ * 								pulumi.String("bigquery.googleapis.com"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = accesscontextmanager.NewAccessLevel(ctx, "access-level", &accesscontextmanager.AccessLevelArgs{
+ * 			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Title: pulumi.String("secure_data_exchange"),
+ * 			Basic: &accesscontextmanager.AccessLevelBasicArgs{
+ * 				Conditions: accesscontextmanager.AccessLevelBasicConditionArray{
+ * 					&accesscontextmanager.AccessLevelBasicConditionArgs{
+ * 						DevicePolicy: &accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs{
+ * 							RequireScreenLock: pulumi.Bool(false),
+ * 							OsConstraints: accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArray{
+ * 								&accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs{
+ * 									OsType: pulumi.String("DESKTOP_CHROME_OS"),
+ * 								},
+ * 							},
+ * 						},
+ * 						Regions: pulumi.StringArray{
+ * 							pulumi.String("CH"),
+ * 							pulumi.String("IT"),
+ * 							pulumi.String("US"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = accesscontextmanager.NewServicePerimeter(ctx, "test-access", &accesscontextmanager.ServicePerimeterArgs{
+ * 			Parent:        pulumi.String(fmt.Sprintf("%v%v", "accessPolicies/", google_access_context_manager_access_policy.Test-access.Name)),
+ * 			Title:         pulumi.String(fmt.Sprintf("%v%v", "%", "s")),
+ * 			PerimeterType: pulumi.String("PERIMETER_TYPE_REGULAR"),
+ * 			Status: &accesscontextmanager.ServicePerimeterStatusArgs{
+ * 				RestrictedServices: pulumi.StringArray{
+ * 					pulumi.String("bigquery.googleapis.com"),
+ * 					pulumi.String("storage.googleapis.com"),
+ * 				},
+ * 				AccessLevels: pulumi.StringArray{
+ * 					access_level.Name,
+ * 				},
+ * 				VpcAccessibleServices: &accesscontextmanager.ServicePerimeterStatusVpcAccessibleServicesArgs{
+ * 					EnableRestriction: pulumi.Bool(true),
+ * 					AllowedServices: pulumi.StringArray{
+ * 						pulumi.String("bigquery.googleapis.com"),
+ * 						pulumi.String("storage.googleapis.com"),
+ * 					},
+ * 				},
+ * 				IngressPolicies: accesscontextmanager.ServicePerimeterStatusIngressPolicyArray{
+ * 					&accesscontextmanager.ServicePerimeterStatusIngressPolicyArgs{
+ * 						IngressFrom: &accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressFromArgs{
+ * 							Sources: accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressFromSourceArray{
+ * 								&accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressFromSourceArgs{
+ * 									AccessLevel: pulumi.Any(google_access_context_manager_access_level.Test - access.Name),
+ * 								},
+ * 							},
+ * 							IdentityType: pulumi.String("ANY_IDENTITY"),
+ * 						},
+ * 						IngressTo: &accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToArgs{
+ * 							Resources: pulumi.StringArray{
+ * 								pulumi.String("*"),
+ * 							},
+ * 							Operations: accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationArray{
+ * 								&accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationArgs{
+ * 									ServiceName: pulumi.String("bigquery.googleapis.com"),
+ * 									MethodSelectors: accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArray{
+ * 										&accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs{
+ * 											Method: pulumi.String("BigQueryStorage.ReadRows"),
+ * 										},
+ * 										&accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs{
+ * 											Method: pulumi.String("TableService.ListTables"),
+ * 										},
+ * 										&accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs{
+ * 											Permission: pulumi.String("bigquery.jobs.get"),
+ * 										},
+ * 									},
+ * 								},
+ * 								&accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationArgs{
+ * 									ServiceName: pulumi.String("storage.googleapis.com"),
+ * 									MethodSelectors: accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArray{
+ * 										&accesscontextmanager.ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs{
+ * 											Method: pulumi.String("google.storage.objects.create"),
+ * 										},
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				EgressPolicies: accesscontextmanager.ServicePerimeterStatusEgressPolicyArray{
+ * 					&accesscontextmanager.ServicePerimeterStatusEgressPolicyArgs{
+ * 						EgressFrom: &accesscontextmanager.ServicePerimeterStatusEgressPolicyEgressFromArgs{
+ * 							IdentityType: pulumi.String("ANY_USER_ACCOUNT"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Access Context Manager Service Perimeter Dry Run
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+ *     parent: "organizations/123456789",
+ *     title: "my policy",
+ * });
+ * const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
+ *     parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+ *     // Service 'storage.googleapis.com' will be in dry-run mode.
+ *     spec: {
+ *         restrictedServices: ["storage.googleapis.com"],
+ *     },
+ *     // Service 'bigquery.googleapis.com' will be restricted.
+ *     status: {
+ *         restrictedServices: ["bigquery.googleapis.com"],
+ *     },
+ *     title: "restrict_bigquery_dryrun_storage",
+ *     useExplicitDryRunSpec: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+ *     parent="organizations/123456789",
+ *     title="my policy")
+ * service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
+ *     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+ *     spec=gcp.accesscontextmanager.ServicePerimeterSpecArgs(
+ *         restricted_services=["storage.googleapis.com"],
+ *     ),
+ *     status=gcp.accesscontextmanager.ServicePerimeterStatusArgs(
+ *         restricted_services=["bigquery.googleapis.com"],
+ *     ),
+ *     title="restrict_bigquery_dryrun_storage",
+ *     use_explicit_dry_run_spec=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+ *         {
+ *             Parent = "organizations/123456789",
+ *             Title = "my policy",
+ *         });
+ *         var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
+ *         {
+ *             Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+ *             Spec = new Gcp.AccessContextManager.Inputs.ServicePerimeterSpecArgs
+ *             {
+ *                 RestrictedServices = 
+ *                 {
+ *                     "storage.googleapis.com",
+ *                 },
+ *             },
+ *             Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+ *             {
+ *                 RestrictedServices = 
+ *                 {
+ *                     "bigquery.googleapis.com",
+ *                 },
+ *             },
+ *             Title = "restrict_bigquery_dryrun_storage",
+ *             UseExplicitDryRunSpec = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/accesscontextmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access-policy", &accesscontextmanager.AccessPolicyArgs{
+ * 			Parent: pulumi.String("organizations/123456789"),
+ * 			Title:  pulumi.String("my policy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = accesscontextmanager.NewServicePerimeter(ctx, "service-perimeter", &accesscontextmanager.ServicePerimeterArgs{
+ * 			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Spec: &accesscontextmanager.ServicePerimeterSpecArgs{
+ * 				RestrictedServices: pulumi.StringArray{
+ * 					pulumi.String("storage.googleapis.com"),
+ * 				},
+ * 			},
+ * 			Status: &accesscontextmanager.ServicePerimeterStatusArgs{
+ * 				RestrictedServices: pulumi.StringArray{
+ * 					pulumi.String("bigquery.googleapis.com"),
+ * 				},
+ * 			},
+ * 			Title:                 pulumi.String("restrict_bigquery_dryrun_storage"),
+ * 			UseExplicitDryRunSpec: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -48,6 +932,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:accesscontextmanager/servicePerimeter:ServicePerimeter default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:accesscontextmanager/servicePerimeter:ServicePerimeter")
 public class ServicePerimeter extends io.pulumi.resources.CustomResource {

@@ -27,10 +27,40 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * * `assertion`: JSON representing the authentication credential issued by the provider.
      * * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`.
      * * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`.
-     *   The maximum length of the attribute condition expression is 4096 characters. If
-     *   unspecified, all valid authentication credential are accepted.
-     *   The following example shows how to only allow credentials with a mapped `google.groups`
-     *   value of `admins`:
+     * The maximum length of the attribute condition expression is 4096 characters. If
+     * unspecified, all valid authentication credential are accepted.
+     * The following example shows how to only allow credentials with a mapped `google.groups`
+     * value of `admins`:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
+     * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * 
      */
     @Import(name="attributeCondition")
@@ -46,38 +76,98 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * Each key must be a string specifying the Google Cloud IAM attribute to map to.
      * The following keys are supported:
      * * `google.subject`: The principal IAM is authenticating. You can reference this value
-     *   in IAM bindings. This is also the subject that appears in Cloud Logging logs.
-     *   Cannot exceed 127 characters.
+     * in IAM bindings. This is also the subject that appears in Cloud Logging logs.
+     * Cannot exceed 127 characters.
      * * `google.groups`: Groups the external identity belongs to. You can grant groups
-     *   access to resources using an IAM `principalSet` binding; access applies to all
-     *   members of the group.
-     *   You can also provide custom attributes by specifying `attribute.{custom_attribute}`,
-     *   where `{custom_attribute}` is the name of the custom attribute to be mapped. You can
-     *   define a maximum of 50 custom attributes. The maximum length of a mapped attribute key
-     *   is 100 characters, and the key may only contain the characters [a-z0-9_].
-     *   You can reference these attributes in IAM policies to define fine-grained access for a
-     *   workload to Google Cloud resources. For example:
+     * access to resources using an IAM `principalSet` binding; access applies to all
+     * members of the group.
+     * You can also provide custom attributes by specifying `attribute.{custom_attribute}`,
+     * where `{custom_attribute}` is the name of the custom attribute to be mapped. You can
+     * define a maximum of 50 custom attributes. The maximum length of a mapped attribute key
+     * is 100 characters, and the key may only contain the characters [a-z0-9_].
+     * You can reference these attributes in IAM policies to define fine-grained access for a
+     * workload to Google Cloud resources. For example:
      * * `google.subject`:
-     *   `principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}`
+     * `principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}`
      * * `google.groups`:
-     *   `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}`
+     * `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}`
      * * `attribute.{custom_attribute}`:
-     *   `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}`
-     *   Each value must be a [Common Expression Language](https://opensource.google/projects/cel)
-     *   function that maps an identity provider credential to the normalized attribute specified
-     *   by the corresponding map key.
-     *   You can use the `assertion` keyword in the expression to access a JSON representation of
-     *   the authentication credential issued by the provider.
-     *   The maximum length of an attribute mapping expression is 2048 characters. When evaluated,
-     *   the total size of all mapped attributes must not exceed 8KB.
-     *   For AWS providers, the following rules apply:
+     * `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}`
+     * Each value must be a [Common Expression Language](https://opensource.google/projects/cel)
+     * function that maps an identity provider credential to the normalized attribute specified
+     * by the corresponding map key.
+     * You can use the `assertion` keyword in the expression to access a JSON representation of
+     * the authentication credential issued by the provider.
+     * The maximum length of an attribute mapping expression is 2048 characters. When evaluated,
+     * the total size of all mapped attributes must not exceed 8KB.
+     * For AWS providers, the following rules apply:
      * - If no attribute mapping is defined, the following default mapping applies:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
+     * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * - If any custom attribute mappings are defined, they must include a mapping to the
-     *   `google.subject` attribute.
-     *   For OIDC providers, the following rules apply:
+     * `google.subject` attribute.
+     * For OIDC providers, the following rules apply:
      * - Custom attribute mappings must be defined, and must include a mapping to the
-     *   `google.subject` attribute. For example, the following maps the `sub` claim of the
-     *   incoming credential to the `subject` attribute on a Google token.
+     * `google.subject` attribute. For example, the following maps the `sub` claim of the
+     * incoming credential to the `subject` attribute on a Google token.
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
+     * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * 
      */
     @Import(name="attributeMapping")

@@ -24,13 +24,150 @@ import javax.annotation.Nullable;
  * considered to be "unhealthy" and the ways to notify people or services
  * about this state.
  * 
+ * 
  * To get more information about AlertPolicy, see:
  * 
  * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.alertPolicies)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/monitoring/alerts/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Monitoring Alert Policy Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
+ *     combiner: "OR",
+ *     conditions: [{
+ *         conditionThreshold: {
+ *             aggregations: [{
+ *                 alignmentPeriod: "60s",
+ *                 perSeriesAligner: "ALIGN_RATE",
+ *             }],
+ *             comparison: "COMPARISON_GT",
+ *             duration: "60s",
+ *             filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+ *         },
+ *         displayName: "test condition",
+ *     }],
+ *     displayName: "My Alert Policy",
+ *     userLabels: {
+ *         foo: "bar",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
+ *     combiner="OR",
+ *     conditions=[gcp.monitoring.AlertPolicyConditionArgs(
+ *         condition_threshold=gcp.monitoring.AlertPolicyConditionConditionThresholdArgs(
+ *             aggregations=[gcp.monitoring.AlertPolicyConditionConditionThresholdAggregationArgs(
+ *                 alignment_period="60s",
+ *                 per_series_aligner="ALIGN_RATE",
+ *             )],
+ *             comparison="COMPARISON_GT",
+ *             duration="60s",
+ *             filter="metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+ *         ),
+ *         display_name="test condition",
+ *     )],
+ *     display_name="My Alert Policy",
+ *     user_labels={
+ *         "foo": "bar",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var alertPolicy = new Gcp.Monitoring.AlertPolicy("alertPolicy", new Gcp.Monitoring.AlertPolicyArgs
+ *         {
+ *             Combiner = "OR",
+ *             Conditions = 
+ *             {
+ *                 new Gcp.Monitoring.Inputs.AlertPolicyConditionArgs
+ *                 {
+ *                     ConditionThreshold = new Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdArgs
+ *                     {
+ *                         Aggregations = 
+ *                         {
+ *                             new Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs
+ *                             {
+ *                                 AlignmentPeriod = "60s",
+ *                                 PerSeriesAligner = "ALIGN_RATE",
+ *                             },
+ *                         },
+ *                         Comparison = "COMPARISON_GT",
+ *                         Duration = "60s",
+ *                         Filter = "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+ *                     },
+ *                     DisplayName = "test condition",
+ *                 },
+ *             },
+ *             DisplayName = "My Alert Policy",
+ *             UserLabels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/monitoring"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
+ * 			Combiner: pulumi.String("OR"),
+ * 			Conditions: monitoring.AlertPolicyConditionArray{
+ * 				&monitoring.AlertPolicyConditionArgs{
+ * 					ConditionThreshold: &monitoring.AlertPolicyConditionConditionThresholdArgs{
+ * 						Aggregations: monitoring.AlertPolicyConditionConditionThresholdAggregationArray{
+ * 							&monitoring.AlertPolicyConditionConditionThresholdAggregationArgs{
+ * 								AlignmentPeriod:  pulumi.String("60s"),
+ * 								PerSeriesAligner: pulumi.String("ALIGN_RATE"),
+ * 							},
+ * 						},
+ * 						Comparison: pulumi.String("COMPARISON_GT"),
+ * 						Duration:   pulumi.String("60s"),
+ * 						Filter:     pulumi.String("metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""),
+ * 					},
+ * 					DisplayName: pulumi.String("test condition"),
+ * 				},
+ * 			},
+ * 			DisplayName: pulumi.String("My Alert Policy"),
+ * 			UserLabels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,6 +177,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:monitoring/alertPolicy:AlertPolicy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:monitoring/alertPolicy:AlertPolicy")
 public class AlertPolicy extends io.pulumi.resources.CustomResource {
@@ -176,7 +314,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
         return this.enabled;
     }
     /**
-     * - 
+     * -
      * The unique resource name for this condition.
      * Its syntax is:
      * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]

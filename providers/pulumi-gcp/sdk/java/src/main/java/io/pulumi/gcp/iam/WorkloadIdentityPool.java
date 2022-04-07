@@ -23,7 +23,142 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Managing workload identity pools](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#pools)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Iam Workload Identity Pool Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.iam.WorkloadIdentityPool("example", {workloadIdentityPoolId: "example-pool"}, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.iam.WorkloadIdentityPool("example", workload_identity_pool_id="example-pool",
+ * opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.Iam.WorkloadIdentityPool("example", new Gcp.Iam.WorkloadIdentityPoolArgs
+ *         {
+ *             WorkloadIdentityPoolId = "example-pool",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewWorkloadIdentityPool(ctx, "example", &iam.WorkloadIdentityPoolArgs{
+ * 			WorkloadIdentityPoolId: pulumi.String("example-pool"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Iam Workload Identity Pool Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.iam.WorkloadIdentityPool("example", {
+ *     workloadIdentityPoolId: "example-pool",
+ *     displayName: "Name of pool",
+ *     description: "Identity pool for automated test",
+ *     disabled: true,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.iam.WorkloadIdentityPool("example",
+ *     workload_identity_pool_id="example-pool",
+ *     display_name="Name of pool",
+ *     description="Identity pool for automated test",
+ *     disabled=True,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.Iam.WorkloadIdentityPool("example", new Gcp.Iam.WorkloadIdentityPoolArgs
+ *         {
+ *             WorkloadIdentityPoolId = "example-pool",
+ *             DisplayName = "Name of pool",
+ *             Description = "Identity pool for automated test",
+ *             Disabled = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewWorkloadIdentityPool(ctx, "example", &iam.WorkloadIdentityPoolArgs{
+ * 			WorkloadIdentityPoolId: pulumi.String("example-pool"),
+ * 			DisplayName:            pulumi.String("Name of pool"),
+ * 			Description:            pulumi.String("Identity pool for automated test"),
+ * 			Disabled:               pulumi.Bool(true),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +168,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:iam/workloadIdentityPool:WorkloadIdentityPool default projects/{{project}}/locations/global/workloadIdentityPools/{{workload_identity_pool_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:iam/workloadIdentityPool:WorkloadIdentityPool default {{project}}/{{workload_identity_pool_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:iam/workloadIdentityPool:WorkloadIdentityPool default {{workload_identity_pool_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:iam/workloadIdentityPool:WorkloadIdentityPool")
 public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {

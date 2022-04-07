@@ -27,7 +27,7 @@ public final class InstanceGroupManagerNamedPortGetArgs extends io.pulumi.resour
 
     /**
      * The port number.
-     * ***
+     * - - -
      * 
      */
     @Import(name="port", required=true)

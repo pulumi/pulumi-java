@@ -18,13 +18,99 @@ import javax.annotation.Nullable;
  * **NOTE**: Global network endpoints cannot be created outside of a
  * global network endpoint group.
  * 
+ * 
  * To get more information about GlobalNetworkEndpoint, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Global Network Endpoint
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
+ *     defaultPort: "90",
+ *     networkEndpointType: "INTERNET_FQDN_PORT",
+ * });
+ * const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint", {
+ *     globalNetworkEndpointGroup: neg.name,
+ *     fqdn: "www.example.com",
+ *     port: 90,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
+ *     default_port=90,
+ *     network_endpoint_type="INTERNET_FQDN_PORT")
+ * default_endpoint = gcp.compute.GlobalNetworkEndpoint("default-endpoint",
+ *     global_network_endpoint_group=neg.name,
+ *     fqdn="www.example.com",
+ *     port=90)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var neg = new Gcp.Compute.GlobalNetworkEndpointGroup("neg", new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+ *         {
+ *             DefaultPort = 90,
+ *             NetworkEndpointType = "INTERNET_FQDN_PORT",
+ *         });
+ *         var default_endpoint = new Gcp.Compute.GlobalNetworkEndpoint("default-endpoint", new Gcp.Compute.GlobalNetworkEndpointArgs
+ *         {
+ *             GlobalNetworkEndpointGroup = neg.Name,
+ *             Fqdn = "www.example.com",
+ *             Port = 90,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		neg, err := compute.NewGlobalNetworkEndpointGroup(ctx, "neg", &compute.GlobalNetworkEndpointGroupArgs{
+ * 			DefaultPort:         pulumi.Int(90),
+ * 			NetworkEndpointType: pulumi.String("INTERNET_FQDN_PORT"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewGlobalNetworkEndpoint(ctx, "default-endpoint", &compute.GlobalNetworkEndpointArgs{
+ * 			GlobalNetworkEndpointGroup: neg.Name,
+ * 			Fqdn:                       pulumi.String("www.example.com"),
+ * 			Port:                       pulumi.Int(90),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +120,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/globalNetworkEndpoint:GlobalNetworkEndpoint default projects/{{project}}/global/networkEndpointGroups/{{global_network_endpoint_group}}/{{ip_address}}/{{fqdn}}/{{port}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/globalNetworkEndpoint:GlobalNetworkEndpoint default {{project}}/{{global_network_endpoint_group}}/{{ip_address}}/{{fqdn}}/{{port}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/globalNetworkEndpoint:GlobalNetworkEndpoint default {{global_network_endpoint_group}}/{{ip_address}}/{{fqdn}}/{{port}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/globalNetworkEndpoint:GlobalNetworkEndpoint")
 public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {

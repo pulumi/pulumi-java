@@ -23,7 +23,7 @@ public final class EntityTypeEntity {
      * could be scallions.
      * For KIND_MAP entity types:
      * * A reference value to be used in place of synonyms.
-     *   For KIND_LIST entity types:
+     * For KIND_LIST entity types:
      * * A string that can contain references to other entity types (with or without aliases).
      * 
      */
@@ -52,7 +52,7 @@ public final class EntityTypeEntity {
      * could be scallions.
      * For KIND_MAP entity types:
      * * A reference value to be used in place of synonyms.
-     *   For KIND_LIST entity types:
+     * For KIND_LIST entity types:
      * * A string that can contain references to other entity types (with or without aliases).
      * 
     */

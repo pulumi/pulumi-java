@@ -24,7 +24,203 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Data Fusion Instance Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basicInstance = new gcp.datafusion.Instance("basicInstance", {
+ *     region: "us-central1",
+ *     type: "BASIC",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic_instance = gcp.datafusion.Instance("basicInstance",
+ *     region="us-central1",
+ *     type="BASIC",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicInstance = new Gcp.DataFusion.Instance("basicInstance", new Gcp.DataFusion.InstanceArgs
+ *         {
+ *             Region = "us-central1",
+ *             Type = "BASIC",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datafusion"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datafusion.NewInstance(ctx, "basicInstance", &datafusion.InstanceArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 			Type:   pulumi.String("BASIC"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Data Fusion Instance Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const default = gcp.appengine.getDefaultServiceAccount({});
+ * const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
+ *     description: "My Data Fusion instance",
+ *     region: "us-central1",
+ *     type: "BASIC",
+ *     enableStackdriverLogging: true,
+ *     enableStackdriverMonitoring: true,
+ *     labels: {
+ *         example_key: "example_value",
+ *     },
+ *     privateInstance: true,
+ *     networkConfig: {
+ *         network: "default",
+ *         ipAllocation: "10.89.48.0/22",
+ *     },
+ *     version: "6.3.0",
+ *     dataprocServiceAccount: _default.then(_default => _default.email),
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.appengine.get_default_service_account()
+ * extended_instance = gcp.datafusion.Instance("extendedInstance",
+ *     description="My Data Fusion instance",
+ *     region="us-central1",
+ *     type="BASIC",
+ *     enable_stackdriver_logging=True,
+ *     enable_stackdriver_monitoring=True,
+ *     labels={
+ *         "example_key": "example_value",
+ *     },
+ *     private_instance=True,
+ *     network_config=gcp.datafusion.InstanceNetworkConfigArgs(
+ *         network="default",
+ *         ip_allocation="10.89.48.0/22",
+ *     ),
+ *     version="6.3.0",
+ *     dataproc_service_account=default.email,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = Output.Create(Gcp.AppEngine.GetDefaultServiceAccount.InvokeAsync());
+ *         var extendedInstance = new Gcp.DataFusion.Instance("extendedInstance", new Gcp.DataFusion.InstanceArgs
+ *         {
+ *             Description = "My Data Fusion instance",
+ *             Region = "us-central1",
+ *             Type = "BASIC",
+ *             EnableStackdriverLogging = true,
+ *             EnableStackdriverMonitoring = true,
+ *             Labels = 
+ *             {
+ *                 { "example_key", "example_value" },
+ *             },
+ *             PrivateInstance = true,
+ *             NetworkConfig = new Gcp.DataFusion.Inputs.InstanceNetworkConfigArgs
+ *             {
+ *                 Network = "default",
+ *                 IpAllocation = "10.89.48.0/22",
+ *             },
+ *             Version = "6.3.0",
+ *             DataprocServiceAccount = @default.Apply(@default => @default.Email),
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/appengine"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/datafusion"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_default, err := appengine.GetDefaultServiceAccount(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = datafusion.NewInstance(ctx, "extendedInstance", &datafusion.InstanceArgs{
+ * 			Description:                 pulumi.String("My Data Fusion instance"),
+ * 			Region:                      pulumi.String("us-central1"),
+ * 			Type:                        pulumi.String("BASIC"),
+ * 			EnableStackdriverLogging:    pulumi.Bool(true),
+ * 			EnableStackdriverMonitoring: pulumi.Bool(true),
+ * 			Labels: pulumi.StringMap{
+ * 				"example_key": pulumi.String("example_value"),
+ * 			},
+ * 			PrivateInstance: pulumi.Bool(true),
+ * 			NetworkConfig: &datafusion.InstanceNetworkConfigArgs{
+ * 				Network:      pulumi.String("default"),
+ * 				IpAllocation: pulumi.String("10.89.48.0/22"),
+ * 			},
+ * 			Version:                pulumi.String("6.3.0"),
+ * 			DataprocServiceAccount: pulumi.String(_default.Email),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,18 +230,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:datafusion/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:datafusion/instance:Instance default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:datafusion/instance:Instance default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:datafusion/instance:Instance default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:datafusion/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
@@ -291,14 +494,14 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Represents the type of Data Fusion instance. Each type is configured with
      * the default settings for processing and memory.
      * - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
-     *   using point and click UI. However, there are certain limitations, such as fewer number
-     *   of concurrent pipelines, no support for streaming pipelines, etc.
+     * using point and click UI. However, there are certain limitations, such as fewer number
+     * of concurrent pipelines, no support for streaming pipelines, etc.
      * - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
-     *   available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+     * available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
      * - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
-     *   with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
-     *   pipelines at low cost.
-     *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+     * with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+     * pipelines at low cost.
+     * Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
@@ -308,14 +511,14 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Represents the type of Data Fusion instance. Each type is configured with
      * the default settings for processing and memory.
      * - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
-     *   using point and click UI. However, there are certain limitations, such as fewer number
-     *   of concurrent pipelines, no support for streaming pipelines, etc.
+     * using point and click UI. However, there are certain limitations, such as fewer number
+     * of concurrent pipelines, no support for streaming pipelines, etc.
      * - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
-     *   available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+     * available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
      * - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
-     *   with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
-     *   pipelines at low cost.
-     *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+     * with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+     * pipelines at low cost.
+     * Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
      * 
      */
     public Output<String> getType() {

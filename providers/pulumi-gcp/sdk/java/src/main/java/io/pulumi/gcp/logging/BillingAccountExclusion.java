@@ -14,6 +14,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Billing account logging exclusions can be imported using their URI, e.g.
@@ -22,6 +25,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/billingAccountExclusion:BillingAccountExclusion my_exclusion billingAccounts/my-billing_account/exclusions/my-exclusion
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/billingAccountExclusion:BillingAccountExclusion")
 public class BillingAccountExclusion extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
     public static final QueueRateLimitsGetArgs Empty = new QueueRateLimitsGetArgs();
 
     /**
-     * - 
+     * -
      * The max burst size.
      * Max burst size limits how fast tasks in queue are processed when many tasks are
      * in the queue and the rate is high. This field allows the queue to have a high

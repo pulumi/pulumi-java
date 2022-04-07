@@ -17,7 +17,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     public static final CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs Empty = new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs();
 
     /**
-     * - 
+     * -
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
      */

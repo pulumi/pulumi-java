@@ -20,13 +20,628 @@ import javax.annotation.Nullable;
  * managed instance groups according to an autoscaling policy that you
  * define.
  * 
+ * 
  * To get more information about Autoscaler, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/autoscalers)
  * * How-to Guides
  *     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Autoscaler Single Instance
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const debian9 = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanceTemplate", {
+ *     machineType: "e2-medium",
+ *     canIpForward: false,
+ *     tags: [
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     disks: [{
+ *         sourceImage: debian9.then(debian9 => debian9.id),
+ *     }],
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ *     metadata: {
+ *         foo: "bar",
+ *     },
+ *     serviceAccount: {
+ *         scopes: [
+ *             "userinfo-email",
+ *             "compute-ro",
+ *             "storage-ro",
+ *         ],
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {}, {
+ *     provider: google_beta,
+ * });
+ * const defaultInstanceGroupManager = new gcp.compute.InstanceGroupManager("defaultInstanceGroupManager", {
+ *     zone: "us-central1-f",
+ *     versions: [{
+ *         instanceTemplate: defaultInstanceTemplate.id,
+ *         name: "primary",
+ *     }],
+ *     targetPools: [defaultTargetPool.id],
+ *     baseInstanceName: "autoscaler-sample",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const defaultAutoscaler = new gcp.compute.Autoscaler("defaultAutoscaler", {
+ *     zone: "us-central1-f",
+ *     target: defaultInstanceGroupManager.id,
+ *     autoscalingPolicy: {
+ *         maxReplicas: 5,
+ *         minReplicas: 1,
+ *         cooldownPeriod: 60,
+ *         metrics: [{
+ *             name: "pubsub.googleapis.com/subscription/num_undelivered_messages",
+ *             filter: "resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+ *             singleInstanceAssignment: 65535,
+ *         }],
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * debian9 = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplate",
+ *     machine_type="e2-medium",
+ *     can_ip_forward=False,
+ *     tags=[
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     disks=[gcp.compute.InstanceTemplateDiskArgs(
+ *         source_image=debian9.id,
+ *     )],
+ *     network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     metadata={
+ *         "foo": "bar",
+ *     },
+ *     service_account=gcp.compute.InstanceTemplateServiceAccountArgs(
+ *         scopes=[
+ *             "userinfo-email",
+ *             "compute-ro",
+ *             "storage-ro",
+ *         ],
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * default_target_pool = gcp.compute.TargetPool("defaultTargetPool", opts=pulumi.ResourceOptions(provider=google_beta))
+ * default_instance_group_manager = gcp.compute.InstanceGroupManager("defaultInstanceGroupManager",
+ *     zone="us-central1-f",
+ *     versions=[gcp.compute.InstanceGroupManagerVersionArgs(
+ *         instance_template=default_instance_template.id,
+ *         name="primary",
+ *     )],
+ *     target_pools=[default_target_pool.id],
+ *     base_instance_name="autoscaler-sample",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * default_autoscaler = gcp.compute.Autoscaler("defaultAutoscaler",
+ *     zone="us-central1-f",
+ *     target=default_instance_group_manager.id,
+ *     autoscaling_policy=gcp.compute.AutoscalerAutoscalingPolicyArgs(
+ *         max_replicas=5,
+ *         min_replicas=1,
+ *         cooldown_period=60,
+ *         metrics=[gcp.compute.AutoscalerAutoscalingPolicyMetricArgs(
+ *             name="pubsub.googleapis.com/subscription/num_undelivered_messages",
+ *             filter="resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+ *             single_instance_assignment=65535,
+ *         )],
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var debian9 = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var defaultInstanceTemplate = new Gcp.Compute.InstanceTemplate("defaultInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             CanIpForward = false,
+ *             Tags = 
+ *             {
+ *                 "foo",
+ *                 "bar",
+ *             },
+ *             Disks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     SourceImage = debian9.Apply(debian9 => debian9.Id),
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *             Metadata = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             ServiceAccount = new Gcp.Compute.Inputs.InstanceTemplateServiceAccountArgs
+ *             {
+ *                 Scopes = 
+ *                 {
+ *                     "userinfo-email",
+ *                     "compute-ro",
+ *                     "storage-ro",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var defaultTargetPool = new Gcp.Compute.TargetPool("defaultTargetPool", new Gcp.Compute.TargetPoolArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var defaultInstanceGroupManager = new Gcp.Compute.InstanceGroupManager("defaultInstanceGroupManager", new Gcp.Compute.InstanceGroupManagerArgs
+ *         {
+ *             Zone = "us-central1-f",
+ *             Versions = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs
+ *                 {
+ *                     InstanceTemplate = defaultInstanceTemplate.Id,
+ *                     Name = "primary",
+ *                 },
+ *             },
+ *             TargetPools = 
+ *             {
+ *                 defaultTargetPool.Id,
+ *             },
+ *             BaseInstanceName = "autoscaler-sample",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var defaultAutoscaler = new Gcp.Compute.Autoscaler("defaultAutoscaler", new Gcp.Compute.AutoscalerArgs
+ *         {
+ *             Zone = "us-central1-f",
+ *             Target = defaultInstanceGroupManager.Id,
+ *             AutoscalingPolicy = new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyArgs
+ *             {
+ *                 MaxReplicas = 5,
+ *                 MinReplicas = 1,
+ *                 CooldownPeriod = 60,
+ *                 Metrics = 
+ *                 {
+ *                     new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyMetricArgs
+ *                     {
+ *                         Name = "pubsub.googleapis.com/subscription/num_undelivered_messages",
+ *                         Filter = "resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+ *                         SingleInstanceAssignment = 65535,
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		debian9, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultInstanceTemplate, err := compute.NewInstanceTemplate(ctx, "defaultInstanceTemplate", &compute.InstanceTemplateArgs{
+ * 			MachineType:  pulumi.String("e2-medium"),
+ * 			CanIpForward: pulumi.Bool(false),
+ * 			Tags: pulumi.StringArray{
+ * 				pulumi.String("foo"),
+ * 				pulumi.String("bar"),
+ * 			},
+ * 			Disks: compute.InstanceTemplateDiskArray{
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					SourceImage: pulumi.String(debian9.Id),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+ * 				&compute.InstanceTemplateNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 			Metadata: pulumi.AnyMap{
+ * 				"foo": pulumi.Any("bar"),
+ * 			},
+ * 			ServiceAccount: &compute.InstanceTemplateServiceAccountArgs{
+ * 				Scopes: pulumi.StringArray{
+ * 					pulumi.String("userinfo-email"),
+ * 					pulumi.String("compute-ro"),
+ * 					pulumi.String("storage-ro"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultTargetPool, err := compute.NewTargetPool(ctx, "defaultTargetPool", nil, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultInstanceGroupManager, err := compute.NewInstanceGroupManager(ctx, "defaultInstanceGroupManager", &compute.InstanceGroupManagerArgs{
+ * 			Zone: pulumi.String("us-central1-f"),
+ * 			Versions: compute.InstanceGroupManagerVersionArray{
+ * 				&compute.InstanceGroupManagerVersionArgs{
+ * 					InstanceTemplate: defaultInstanceTemplate.ID(),
+ * 					Name:             pulumi.String("primary"),
+ * 				},
+ * 			},
+ * 			TargetPools: pulumi.StringArray{
+ * 				defaultTargetPool.ID(),
+ * 			},
+ * 			BaseInstanceName: pulumi.String("autoscaler-sample"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewAutoscaler(ctx, "defaultAutoscaler", &compute.AutoscalerArgs{
+ * 			Zone:   pulumi.String("us-central1-f"),
+ * 			Target: defaultInstanceGroupManager.ID(),
+ * 			AutoscalingPolicy: &compute.AutoscalerAutoscalingPolicyArgs{
+ * 				MaxReplicas:    pulumi.Int(5),
+ * 				MinReplicas:    pulumi.Int(1),
+ * 				CooldownPeriod: pulumi.Int(60),
+ * 				Metrics: compute.AutoscalerAutoscalingPolicyMetricArray{
+ * 					&compute.AutoscalerAutoscalingPolicyMetricArgs{
+ * 						Name:                     pulumi.String("pubsub.googleapis.com/subscription/num_undelivered_messages"),
+ * 						Filter:                   pulumi.String("resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription"),
+ * 						SingleInstanceAssignment: pulumi.Float64(65535),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Autoscaler Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const debian9 = gcp.compute.getImage({
+ *     family: "debian-9",
+ *     project: "debian-cloud",
+ * });
+ * const foobarInstanceTemplate = new gcp.compute.InstanceTemplate("foobarInstanceTemplate", {
+ *     machineType: "e2-medium",
+ *     canIpForward: false,
+ *     tags: [
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     disks: [{
+ *         sourceImage: debian9.then(debian9 => debian9.id),
+ *     }],
+ *     networkInterfaces: [{
+ *         network: "default",
+ *     }],
+ *     metadata: {
+ *         foo: "bar",
+ *     },
+ *     serviceAccount: {
+ *         scopes: [
+ *             "userinfo-email",
+ *             "compute-ro",
+ *             "storage-ro",
+ *         ],
+ *     },
+ * });
+ * const foobarTargetPool = new gcp.compute.TargetPool("foobarTargetPool", {});
+ * const foobarInstanceGroupManager = new gcp.compute.InstanceGroupManager("foobarInstanceGroupManager", {
+ *     zone: "us-central1-f",
+ *     versions: [{
+ *         instanceTemplate: foobarInstanceTemplate.id,
+ *         name: "primary",
+ *     }],
+ *     targetPools: [foobarTargetPool.id],
+ *     baseInstanceName: "foobar",
+ * });
+ * const foobarAutoscaler = new gcp.compute.Autoscaler("foobarAutoscaler", {
+ *     zone: "us-central1-f",
+ *     target: foobarInstanceGroupManager.id,
+ *     autoscalingPolicy: {
+ *         maxReplicas: 5,
+ *         minReplicas: 1,
+ *         cooldownPeriod: 60,
+ *         cpuUtilization: {
+ *             target: 0.5,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * debian9 = gcp.compute.get_image(family="debian-9",
+ *     project="debian-cloud")
+ * foobar_instance_template = gcp.compute.InstanceTemplate("foobarInstanceTemplate",
+ *     machine_type="e2-medium",
+ *     can_ip_forward=False,
+ *     tags=[
+ *         "foo",
+ *         "bar",
+ *     ],
+ *     disks=[gcp.compute.InstanceTemplateDiskArgs(
+ *         source_image=debian9.id,
+ *     )],
+ *     network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+ *         network="default",
+ *     )],
+ *     metadata={
+ *         "foo": "bar",
+ *     },
+ *     service_account=gcp.compute.InstanceTemplateServiceAccountArgs(
+ *         scopes=[
+ *             "userinfo-email",
+ *             "compute-ro",
+ *             "storage-ro",
+ *         ],
+ *     ))
+ * foobar_target_pool = gcp.compute.TargetPool("foobarTargetPool")
+ * foobar_instance_group_manager = gcp.compute.InstanceGroupManager("foobarInstanceGroupManager",
+ *     zone="us-central1-f",
+ *     versions=[gcp.compute.InstanceGroupManagerVersionArgs(
+ *         instance_template=foobar_instance_template.id,
+ *         name="primary",
+ *     )],
+ *     target_pools=[foobar_target_pool.id],
+ *     base_instance_name="foobar")
+ * foobar_autoscaler = gcp.compute.Autoscaler("foobarAutoscaler",
+ *     zone="us-central1-f",
+ *     target=foobar_instance_group_manager.id,
+ *     autoscaling_policy=gcp.compute.AutoscalerAutoscalingPolicyArgs(
+ *         max_replicas=5,
+ *         min_replicas=1,
+ *         cooldown_period=60,
+ *         cpu_utilization=gcp.compute.AutoscalerAutoscalingPolicyCpuUtilizationArgs(
+ *             target=0.5,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var debian9 = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+ *         {
+ *             Family = "debian-9",
+ *             Project = "debian-cloud",
+ *         }));
+ *         var foobarInstanceTemplate = new Gcp.Compute.InstanceTemplate("foobarInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             CanIpForward = false,
+ *             Tags = 
+ *             {
+ *                 "foo",
+ *                 "bar",
+ *             },
+ *             Disks = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+ *                 {
+ *                     SourceImage = debian9.Apply(debian9 => debian9.Id),
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+ *                 {
+ *                     Network = "default",
+ *                 },
+ *             },
+ *             Metadata = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             ServiceAccount = new Gcp.Compute.Inputs.InstanceTemplateServiceAccountArgs
+ *             {
+ *                 Scopes = 
+ *                 {
+ *                     "userinfo-email",
+ *                     "compute-ro",
+ *                     "storage-ro",
+ *                 },
+ *             },
+ *         });
+ *         var foobarTargetPool = new Gcp.Compute.TargetPool("foobarTargetPool", new Gcp.Compute.TargetPoolArgs
+ *         {
+ *         });
+ *         var foobarInstanceGroupManager = new Gcp.Compute.InstanceGroupManager("foobarInstanceGroupManager", new Gcp.Compute.InstanceGroupManagerArgs
+ *         {
+ *             Zone = "us-central1-f",
+ *             Versions = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs
+ *                 {
+ *                     InstanceTemplate = foobarInstanceTemplate.Id,
+ *                     Name = "primary",
+ *                 },
+ *             },
+ *             TargetPools = 
+ *             {
+ *                 foobarTargetPool.Id,
+ *             },
+ *             BaseInstanceName = "foobar",
+ *         });
+ *         var foobarAutoscaler = new Gcp.Compute.Autoscaler("foobarAutoscaler", new Gcp.Compute.AutoscalerArgs
+ *         {
+ *             Zone = "us-central1-f",
+ *             Target = foobarInstanceGroupManager.Id,
+ *             AutoscalingPolicy = new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyArgs
+ *             {
+ *                 MaxReplicas = 5,
+ *                 MinReplicas = 1,
+ *                 CooldownPeriod = 60,
+ *                 CpuUtilization = new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyCpuUtilizationArgs
+ *                 {
+ *                     Target = 0.5,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "debian-9"
+ * 		opt1 := "debian-cloud"
+ * 		debian9, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+ * 			Family:  &opt0,
+ * 			Project: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foobarInstanceTemplate, err := compute.NewInstanceTemplate(ctx, "foobarInstanceTemplate", &compute.InstanceTemplateArgs{
+ * 			MachineType:  pulumi.String("e2-medium"),
+ * 			CanIpForward: pulumi.Bool(false),
+ * 			Tags: pulumi.StringArray{
+ * 				pulumi.String("foo"),
+ * 				pulumi.String("bar"),
+ * 			},
+ * 			Disks: compute.InstanceTemplateDiskArray{
+ * 				&compute.InstanceTemplateDiskArgs{
+ * 					SourceImage: pulumi.String(debian9.Id),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+ * 				&compute.InstanceTemplateNetworkInterfaceArgs{
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 			Metadata: pulumi.AnyMap{
+ * 				"foo": pulumi.Any("bar"),
+ * 			},
+ * 			ServiceAccount: &compute.InstanceTemplateServiceAccountArgs{
+ * 				Scopes: pulumi.StringArray{
+ * 					pulumi.String("userinfo-email"),
+ * 					pulumi.String("compute-ro"),
+ * 					pulumi.String("storage-ro"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foobarTargetPool, err := compute.NewTargetPool(ctx, "foobarTargetPool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foobarInstanceGroupManager, err := compute.NewInstanceGroupManager(ctx, "foobarInstanceGroupManager", &compute.InstanceGroupManagerArgs{
+ * 			Zone: pulumi.String("us-central1-f"),
+ * 			Versions: compute.InstanceGroupManagerVersionArray{
+ * 				&compute.InstanceGroupManagerVersionArgs{
+ * 					InstanceTemplate: foobarInstanceTemplate.ID(),
+ * 					Name:             pulumi.String("primary"),
+ * 				},
+ * 			},
+ * 			TargetPools: pulumi.StringArray{
+ * 				foobarTargetPool.ID(),
+ * 			},
+ * 			BaseInstanceName: pulumi.String("foobar"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewAutoscaler(ctx, "foobarAutoscaler", &compute.AutoscalerArgs{
+ * 			Zone:   pulumi.String("us-central1-f"),
+ * 			Target: foobarInstanceGroupManager.ID(),
+ * 			AutoscalingPolicy: &compute.AutoscalerAutoscalingPolicyArgs{
+ * 				MaxReplicas:    pulumi.Int(5),
+ * 				MinReplicas:    pulumi.Int(1),
+ * 				CooldownPeriod: pulumi.Int(60),
+ * 				CpuUtilization: &compute.AutoscalerAutoscalingPolicyCpuUtilizationArgs{
+ * 					Target: pulumi.Float64(0.5),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,21 +651,27 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/autoscalar:Autoscalar default projects/{{project}}/zones/{{zone}}/autoscalers/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/autoscalar:Autoscalar default {{project}}/{{zone}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/autoscalar:Autoscalar default {{zone}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/autoscalar:Autoscalar default {{name}}
  * ```
  * 
+ *  
  * @Deprecated
  * gcp.compute.Autoscalar has been deprecated in favor of gcp.compute.Autoscaler
- * 
  */
 @Deprecated /* gcp.compute.Autoscalar has been deprecated in favor of gcp.compute.Autoscaler */
 @ResourceType(type="gcp:compute/autoscalar:Autoscalar")

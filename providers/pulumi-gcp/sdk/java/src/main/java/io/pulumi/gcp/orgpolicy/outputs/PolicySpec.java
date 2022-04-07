@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicySpec {
     /**
-     * - 
+     * -
      * An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
      * 
      */
@@ -36,7 +36,7 @@ public final class PolicySpec {
      */
     private final @Nullable List<PolicySpecRule> rules;
     /**
-     * - 
+     * -
      * Output only. The time stamp this was previously updated. This represents the last time a call to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
      * 
      */
@@ -57,7 +57,7 @@ public final class PolicySpec {
     }
 
     /**
-     * - 
+     * -
      * An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
      * 
     */
@@ -86,7 +86,7 @@ public final class PolicySpec {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
-     * - 
+     * -
      * Output only. The time stamp this was previously updated. This represents the last time a call to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
      * 
     */

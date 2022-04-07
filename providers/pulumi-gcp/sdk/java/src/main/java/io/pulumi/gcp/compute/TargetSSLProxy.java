@@ -19,13 +19,168 @@ import javax.annotation.Nullable;
  * global forwarding rule to route incoming SSL requests to a backend
  * service.
  * 
+ * 
  * To get more information about TargetSslProxy, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/v1/targetSslProxies)
  * * How-to Guides
  *     * [Setting Up SSL proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Target Ssl Proxy Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * const defaultSSLCertificate = new gcp.compute.SSLCertificate("defaultSSLCertificate", {
+ *     privateKey: fs.readFileSync("path/to/private.key"),
+ *     certificate: fs.readFileSync("path/to/certificate.crt"),
+ * });
+ * const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+ *     checkIntervalSec: 1,
+ *     timeoutSec: 1,
+ *     tcpHealthCheck: {
+ *         port: "443",
+ *     },
+ * });
+ * const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+ *     protocol: "SSL",
+ *     healthChecks: [defaultHealthCheck.id],
+ * });
+ * const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLProxy", {
+ *     backendService: defaultBackendService.id,
+ *     sslCertificates: [defaultSSLCertificate.id],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_ssl_certificate = gcp.compute.SSLCertificate("defaultSSLCertificate",
+ *     private_key=(lambda path: open(path).read())("path/to/private.key"),
+ *     certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+ * default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+ *     check_interval_sec=1,
+ *     timeout_sec=1,
+ *     tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+ *         port=443,
+ *     ))
+ * default_backend_service = gcp.compute.BackendService("defaultBackendService",
+ *     protocol="SSL",
+ *     health_checks=[default_health_check.id])
+ * default_target_ssl_proxy = gcp.compute.TargetSSLProxy("defaultTargetSSLProxy",
+ *     backend_service=default_backend_service.id,
+ *     ssl_certificates=[default_ssl_certificate.id])
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultSSLCertificate = new Gcp.Compute.SSLCertificate("defaultSSLCertificate", new Gcp.Compute.SSLCertificateArgs
+ *         {
+ *             PrivateKey = File.ReadAllText("path/to/private.key"),
+ *             Certificate = File.ReadAllText("path/to/certificate.crt"),
+ *         });
+ *         var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
+ *         {
+ *             CheckIntervalSec = 1,
+ *             TimeoutSec = 1,
+ *             TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+ *             {
+ *                 Port = 443,
+ *             },
+ *         });
+ *         var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+ *         {
+ *             Protocol = "SSL",
+ *             HealthChecks = 
+ *             {
+ *                 defaultHealthCheck.Id,
+ *             },
+ *         });
+ *         var defaultTargetSSLProxy = new Gcp.Compute.TargetSSLProxy("defaultTargetSSLProxy", new Gcp.Compute.TargetSSLProxyArgs
+ *         {
+ *             BackendService = defaultBackendService.Id,
+ *             SslCertificates = 
+ *             {
+ *                 defaultSSLCertificate.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultSSLCertificate, err := compute.NewSSLCertificate(ctx, "defaultSSLCertificate", &compute.SSLCertificateArgs{
+ * 			PrivateKey:  readFileOrPanic("path/to/private.key"),
+ * 			Certificate: readFileOrPanic("path/to/certificate.crt"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+ * 				Port: pulumi.Int(443),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+ * 			Protocol: pulumi.String("SSL"),
+ * 			HealthChecks: pulumi.String{
+ * 				defaultHealthCheck.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewTargetSSLProxy(ctx, "defaultTargetSSLProxy", &compute.TargetSSLProxyArgs{
+ * 			BackendService: defaultBackendService.ID(),
+ * 			SslCertificates: pulumi.StringArray{
+ * 				defaultSSLCertificate.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +190,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/targetSSLProxy:TargetSSLProxy default projects/{{project}}/global/targetSslProxies/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/targetSSLProxy:TargetSSLProxy default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/targetSSLProxy:TargetSSLProxy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/targetSSLProxy:TargetSSLProxy")
 public class TargetSSLProxy extends io.pulumi.resources.CustomResource {

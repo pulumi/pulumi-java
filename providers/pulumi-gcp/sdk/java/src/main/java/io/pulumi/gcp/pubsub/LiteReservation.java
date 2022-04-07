@@ -16,13 +16,84 @@ import javax.annotation.Nullable;
 /**
  * A named resource representing a shared pool of capacity.
  * 
+ * 
  * To get more information about Reservation, see:
  * 
  * * [API documentation](https://cloud.google.com/pubsub/lite/docs/reference/rest/v1/admin.projects.locations.reservations)
  * * How-to Guides
  *     * [Managing Reservations](https://cloud.google.com/pubsub/lite/docs/reservations)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Pubsub Lite Reservation Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = gcp.organizations.getProject({});
+ * const example = new gcp.pubsub.LiteReservation("example", {
+ *     project: project.then(project => project.number),
+ *     throughputCapacity: 2,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.get_project()
+ * example = gcp.pubsub.LiteReservation("example",
+ *     project=project.number,
+ *     throughput_capacity=2)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+ *         var example = new Gcp.PubSub.LiteReservation("example", new Gcp.PubSub.LiteReservationArgs
+ *         {
+ *             Project = project.Apply(project => project.Number),
+ *             ThroughputCapacity = 2,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/pubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.LookupProject(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pubsub.NewLiteReservation(ctx, "example", &pubsub.LiteReservationArgs{
+ * 			Project:            pulumi.String(project.Number),
+ * 			ThroughputCapacity: pulumi.Int(2),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,18 +103,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default projects/{{project}}/locations/{{region}}/reservations/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:pubsub/liteReservation:LiteReservation default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:pubsub/liteReservation:LiteReservation")
 public class LiteReservation extends io.pulumi.resources.CustomResource {

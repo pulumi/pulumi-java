@@ -22,7 +22,358 @@ import javax.annotation.Nullable;
  * 
  * For more information, see:
  * * [Multicloud overview](https://cloud.google.com/anthos/clusters/docs/multi-cloud)
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic_azure_node_pool
+ * A basic example of a containerazure azure node pool
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const versions = gcp.container.getAzureVersions({
+ *     project: "my-project-name",
+ *     location: "us-west1",
+ * });
+ * const basic = new gcp.container.AzureClient("basic", {
+ *     applicationId: "12345678-1234-1234-1234-123456789111",
+ *     location: "us-west1",
+ *     tenantId: "12345678-1234-1234-1234-123456789111",
+ *     project: "my-project-name",
+ * });
+ * const primaryAzureCluster = new gcp.container.AzureCluster("primaryAzureCluster", {
+ *     authorization: {
+ *         adminUsers: [{
+ *             username: "mmv2@google.com",
+ *         }],
+ *     },
+ *     azureRegion: "westus2",
+ *     client: pulumi.interpolate`projects/my-project-number/locations/us-west1/azureClients/${basic.name}`,
+ *     controlPlane: {
+ *         sshConfig: {
+ *             authorizedKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *         },
+ *         subnetId: "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *         version: versions.then(versions => versions.validVersions?[0]),
+ *     },
+ *     fleet: {
+ *         project: "my-project-number",
+ *     },
+ *     location: "us-west1",
+ *     networking: {
+ *         podAddressCidrBlocks: ["10.200.0.0/16"],
+ *         serviceAddressCidrBlocks: ["10.32.0.0/24"],
+ *         virtualNetworkId: "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet",
+ *     },
+ *     resourceGroupId: "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster",
+ *     project: "my-project-name",
+ * });
+ * const primaryAzureNodePool = new gcp.container.AzureNodePool("primaryAzureNodePool", {
+ *     autoscaling: {
+ *         maxNodeCount: 3,
+ *         minNodeCount: 2,
+ *     },
+ *     cluster: primaryAzureCluster.name,
+ *     config: {
+ *         sshConfig: {
+ *             authorizedKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *         },
+ *         rootVolume: {
+ *             sizeGib: 32,
+ *         },
+ *         tags: {
+ *             owner: "mmv2",
+ *         },
+ *         vmSize: "Standard_DS2_v2",
+ *     },
+ *     location: "us-west1",
+ *     maxPodsConstraint: {
+ *         maxPodsPerNode: 110,
+ *     },
+ *     subnetId: "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *     version: versions.then(versions => versions.validVersions?[0]),
+ *     annotations: {
+ *         "annotation-one": "value-one",
+ *     },
+ *     project: "my-project-name",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * versions = gcp.container.get_azure_versions(project="my-project-name",
+ *     location="us-west1")
+ * basic = gcp.container.AzureClient("basic",
+ *     application_id="12345678-1234-1234-1234-123456789111",
+ *     location="us-west1",
+ *     tenant_id="12345678-1234-1234-1234-123456789111",
+ *     project="my-project-name")
+ * primary_azure_cluster = gcp.container.AzureCluster("primaryAzureCluster",
+ *     authorization=gcp.container.AzureClusterAuthorizationArgs(
+ *         admin_users=[gcp.container.AzureClusterAuthorizationAdminUserArgs(
+ *             username="mmv2@google.com",
+ *         )],
+ *     ),
+ *     azure_region="westus2",
+ *     client=basic.name.apply(lambda name: f"projects/my-project-number/locations/us-west1/azureClients/{name}"),
+ *     control_plane=gcp.container.AzureClusterControlPlaneArgs(
+ *         ssh_config=gcp.container.AzureClusterControlPlaneSshConfigArgs(
+ *             authorized_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *         ),
+ *         subnet_id="/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *         version=versions.valid_versions[0],
+ *     ),
+ *     fleet=gcp.container.AzureClusterFleetArgs(
+ *         project="my-project-number",
+ *     ),
+ *     location="us-west1",
+ *     networking=gcp.container.AzureClusterNetworkingArgs(
+ *         pod_address_cidr_blocks=["10.200.0.0/16"],
+ *         service_address_cidr_blocks=["10.32.0.0/24"],
+ *         virtual_network_id="/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet",
+ *     ),
+ *     resource_group_id="/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster",
+ *     project="my-project-name")
+ * primary_azure_node_pool = gcp.container.AzureNodePool("primaryAzureNodePool",
+ *     autoscaling=gcp.container.AzureNodePoolAutoscalingArgs(
+ *         max_node_count=3,
+ *         min_node_count=2,
+ *     ),
+ *     cluster=primary_azure_cluster.name,
+ *     config=gcp.container.AzureNodePoolConfigArgs(
+ *         ssh_config=gcp.container.AzureNodePoolConfigSshConfigArgs(
+ *             authorized_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *         ),
+ *         root_volume=gcp.container.AzureNodePoolConfigRootVolumeArgs(
+ *             size_gib=32,
+ *         ),
+ *         tags={
+ *             "owner": "mmv2",
+ *         },
+ *         vm_size="Standard_DS2_v2",
+ *     ),
+ *     location="us-west1",
+ *     max_pods_constraint=gcp.container.AzureNodePoolMaxPodsConstraintArgs(
+ *         max_pods_per_node=110,
+ *     ),
+ *     subnet_id="/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *     version=versions.valid_versions[0],
+ *     annotations={
+ *         "annotation-one": "value-one",
+ *     },
+ *     project="my-project-name")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var versions = Output.Create(Gcp.Container.GetAzureVersions.InvokeAsync(new Gcp.Container.GetAzureVersionsArgs
+ *         {
+ *             Project = "my-project-name",
+ *             Location = "us-west1",
+ *         }));
+ *         var basic = new Gcp.Container.AzureClient("basic", new Gcp.Container.AzureClientArgs
+ *         {
+ *             ApplicationId = "12345678-1234-1234-1234-123456789111",
+ *             Location = "us-west1",
+ *             TenantId = "12345678-1234-1234-1234-123456789111",
+ *             Project = "my-project-name",
+ *         });
+ *         var primaryAzureCluster = new Gcp.Container.AzureCluster("primaryAzureCluster", new Gcp.Container.AzureClusterArgs
+ *         {
+ *             Authorization = new Gcp.Container.Inputs.AzureClusterAuthorizationArgs
+ *             {
+ *                 AdminUsers = 
+ *                 {
+ *                     new Gcp.Container.Inputs.AzureClusterAuthorizationAdminUserArgs
+ *                     {
+ *                         Username = "mmv2@google.com",
+ *                     },
+ *                 },
+ *             },
+ *             AzureRegion = "westus2",
+ *             Client = basic.Name.Apply(name => $"projects/my-project-number/locations/us-west1/azureClients/{name}"),
+ *             ControlPlane = new Gcp.Container.Inputs.AzureClusterControlPlaneArgs
+ *             {
+ *                 SshConfig = new Gcp.Container.Inputs.AzureClusterControlPlaneSshConfigArgs
+ *                 {
+ *                     AuthorizedKey = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *                 },
+ *                 SubnetId = "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *                 Version = versions.Apply(versions => versions.ValidVersions?[0]),
+ *             },
+ *             Fleet = new Gcp.Container.Inputs.AzureClusterFleetArgs
+ *             {
+ *                 Project = "my-project-number",
+ *             },
+ *             Location = "us-west1",
+ *             Networking = new Gcp.Container.Inputs.AzureClusterNetworkingArgs
+ *             {
+ *                 PodAddressCidrBlocks = 
+ *                 {
+ *                     "10.200.0.0/16",
+ *                 },
+ *                 ServiceAddressCidrBlocks = 
+ *                 {
+ *                     "10.32.0.0/24",
+ *                 },
+ *                 VirtualNetworkId = "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet",
+ *             },
+ *             ResourceGroupId = "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster",
+ *             Project = "my-project-name",
+ *         });
+ *         var primaryAzureNodePool = new Gcp.Container.AzureNodePool("primaryAzureNodePool", new Gcp.Container.AzureNodePoolArgs
+ *         {
+ *             Autoscaling = new Gcp.Container.Inputs.AzureNodePoolAutoscalingArgs
+ *             {
+ *                 MaxNodeCount = 3,
+ *                 MinNodeCount = 2,
+ *             },
+ *             Cluster = primaryAzureCluster.Name,
+ *             Config = new Gcp.Container.Inputs.AzureNodePoolConfigArgs
+ *             {
+ *                 SshConfig = new Gcp.Container.Inputs.AzureNodePoolConfigSshConfigArgs
+ *                 {
+ *                     AuthorizedKey = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers",
+ *                 },
+ *                 RootVolume = new Gcp.Container.Inputs.AzureNodePoolConfigRootVolumeArgs
+ *                 {
+ *                     SizeGib = 32,
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "owner", "mmv2" },
+ *                 },
+ *                 VmSize = "Standard_DS2_v2",
+ *             },
+ *             Location = "us-west1",
+ *             MaxPodsConstraint = new Gcp.Container.Inputs.AzureNodePoolMaxPodsConstraintArgs
+ *             {
+ *                 MaxPodsPerNode = 110,
+ *             },
+ *             SubnetId = "/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default",
+ *             Version = versions.Apply(versions => versions.ValidVersions?[0]),
+ *             Annotations = 
+ *             {
+ *                 { "annotation-one", "value-one" },
+ *             },
+ *             Project = "my-project-name",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := "my-project-name"
+ * 		opt1 := "us-west1"
+ * 		versions, err := container.GetAzureVersions(ctx, &container.GetAzureVersionsArgs{
+ * 			Project:  &opt0,
+ * 			Location: &opt1,
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		basic, err := container.NewAzureClient(ctx, "basic", &container.AzureClientArgs{
+ * 			ApplicationId: pulumi.String("12345678-1234-1234-1234-123456789111"),
+ * 			Location:      pulumi.String("us-west1"),
+ * 			TenantId:      pulumi.String("12345678-1234-1234-1234-123456789111"),
+ * 			Project:       pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		primaryAzureCluster, err := container.NewAzureCluster(ctx, "primaryAzureCluster", &container.AzureClusterArgs{
+ * 			Authorization: &container.AzureClusterAuthorizationArgs{
+ * 				AdminUsers: container.AzureClusterAuthorizationAdminUserArray{
+ * 					&container.AzureClusterAuthorizationAdminUserArgs{
+ * 						Username: pulumi.String("mmv2@google.com"),
+ * 					},
+ * 				},
+ * 			},
+ * 			AzureRegion: pulumi.String("westus2"),
+ * 			Client: basic.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "projects/my-project-number/locations/us-west1/azureClients/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			ControlPlane: &container.AzureClusterControlPlaneArgs{
+ * 				SshConfig: &container.AzureClusterControlPlaneSshConfigArgs{
+ * 					AuthorizedKey: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers"),
+ * 				},
+ * 				SubnetId: pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default"),
+ * 				Version:  pulumi.String(versions.ValidVersions[0]),
+ * 			},
+ * 			Fleet: &container.AzureClusterFleetArgs{
+ * 				Project: pulumi.String("my-project-number"),
+ * 			},
+ * 			Location: pulumi.String("us-west1"),
+ * 			Networking: &container.AzureClusterNetworkingArgs{
+ * 				PodAddressCidrBlocks: pulumi.StringArray{
+ * 					pulumi.String("10.200.0.0/16"),
+ * 				},
+ * 				ServiceAddressCidrBlocks: pulumi.StringArray{
+ * 					pulumi.String("10.32.0.0/24"),
+ * 				},
+ * 				VirtualNetworkId: pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet"),
+ * 			},
+ * 			ResourceGroupId: pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster"),
+ * 			Project:         pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = container.NewAzureNodePool(ctx, "primaryAzureNodePool", &container.AzureNodePoolArgs{
+ * 			Autoscaling: &container.AzureNodePoolAutoscalingArgs{
+ * 				MaxNodeCount: pulumi.Int(3),
+ * 				MinNodeCount: pulumi.Int(2),
+ * 			},
+ * 			Cluster: primaryAzureCluster.Name,
+ * 			Config: &container.AzureNodePoolConfigArgs{
+ * 				SshConfig: &container.AzureNodePoolConfigSshConfigArgs{
+ * 					AuthorizedKey: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers"),
+ * 				},
+ * 				RootVolume: &container.AzureNodePoolConfigRootVolumeArgs{
+ * 					SizeGib: pulumi.Int(32),
+ * 				},
+ * 				Tags: pulumi.StringMap{
+ * 					"owner": pulumi.String("mmv2"),
+ * 				},
+ * 				VmSize: pulumi.String("Standard_DS2_v2"),
+ * 			},
+ * 			Location: pulumi.String("us-west1"),
+ * 			MaxPodsConstraint: &container.AzureNodePoolMaxPodsConstraintArgs{
+ * 				MaxPodsPerNode: pulumi.Int(110),
+ * 			},
+ * 			SubnetId: pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default"),
+ * 			Version:  pulumi.String(versions.ValidVersions[0]),
+ * 			Annotations: pulumi.StringMap{
+ * 				"annotation-one": pulumi.String("value-one"),
+ * 			},
+ * 			Project: pulumi.String("my-project-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +383,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:container/azureNodePool:AzureNodePool default projects/{{project}}/locations/{{location}}/azureClusters/{{cluster}}/azureNodePools/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:container/azureNodePool:AzureNodePool default {{project}}/{{location}}/{{cluster}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:container/azureNodePool:AzureNodePool default {{location}}/{{cluster}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:container/azureNodePool:AzureNodePool")
 public class AzureNodePool extends io.pulumi.resources.CustomResource {

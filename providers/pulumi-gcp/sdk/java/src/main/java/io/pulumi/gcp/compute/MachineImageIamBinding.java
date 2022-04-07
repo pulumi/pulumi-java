@@ -27,13 +27,575 @@ import javax.annotation.Nullable;
  * 
  * ## google\_compute\_machine\_image\_iam\_policy
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/compute.admin",
+ *         members: ["user:jane@example.com"],
+ *     }],
+ * });
+ * const policy = new gcp.compute.MachineImageIamPolicy("policy", {
+ *     project: google_compute_machine_image.image.project,
+ *     machineImage: google_compute_machine_image.image.name,
+ *     policyData: admin.then(admin => admin.policyData),
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/compute.admin",
+ *     members=["user:jane@example.com"],
+ * )])
+ * policy = gcp.compute.MachineImageIamPolicy("policy",
+ *     project=google_compute_machine_image["image"]["project"],
+ *     machine_image=google_compute_machine_image["image"]["name"],
+ *     policy_data=admin.policy_data,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/compute.admin",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var policy = new Gcp.Compute.MachineImageIamPolicy("policy", new Gcp.Compute.MachineImageIamPolicyArgs
+ *         {
+ *             Project = google_compute_machine_image.Image.Project,
+ *             MachineImage = google_compute_machine_image.Image.Name,
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/compute.admin",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewMachineImageIamPolicy(ctx, "policy", &compute.MachineImageIamPolicyArgs{
+ * 			Project:      pulumi.Any(google_compute_machine_image.Image.Project),
+ * 			MachineImage: pulumi.Any(google_compute_machine_image.Image.Name),
+ * 			PolicyData:   pulumi.String(admin.PolicyData),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * With IAM Conditions:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/compute.admin",
+ *         members: ["user:jane@example.com"],
+ *         condition: {
+ *             title: "expires_after_2019_12_31",
+ *             description: "Expiring at midnight of 2019-12-31",
+ *             expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *         },
+ *     }],
+ * });
+ * const policy = new gcp.compute.MachineImageIamPolicy("policy", {
+ *     project: google_compute_machine_image.image.project,
+ *     machineImage: google_compute_machine_image.image.name,
+ *     policyData: admin.then(admin => admin.policyData),
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/compute.admin",
+ *     members=["user:jane@example.com"],
+ *     condition=gcp.organizations.GetIAMPolicyBindingConditionArgs(
+ *         title="expires_after_2019_12_31",
+ *         description="Expiring at midnight of 2019-12-31",
+ *         expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *     ),
+ * )])
+ * policy = gcp.compute.MachineImageIamPolicy("policy",
+ *     project=google_compute_machine_image["image"]["project"],
+ *     machine_image=google_compute_machine_image["image"]["name"],
+ *     policy_data=admin.policy_data,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/compute.admin",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                     Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+ *                     {
+ *                         Title = "expires_after_2019_12_31",
+ *                         Description = "Expiring at midnight of 2019-12-31",
+ *                         Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var policy = new Gcp.Compute.MachineImageIamPolicy("policy", new Gcp.Compute.MachineImageIamPolicyArgs
+ *         {
+ *             Project = google_compute_machine_image.Image.Project,
+ *             MachineImage = google_compute_machine_image.Image.Name,
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/compute.admin",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 					Condition: organizations.GetIAMPolicyBindingCondition{
+ * 						Title:       "expires_after_2019_12_31",
+ * 						Description: "Expiring at midnight of 2019-12-31",
+ * 						Expression:  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewMachineImageIamPolicy(ctx, "policy", &compute.MachineImageIamPolicyArgs{
+ * 			Project:      pulumi.Any(google_compute_machine_image.Image.Project),
+ * 			MachineImage: pulumi.Any(google_compute_machine_image.Image.Name),
+ * 			PolicyData:   pulumi.String(admin.PolicyData),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * ## google\_compute\_machine\_image\_iam\_binding
  * 
- * With IAM Conditions:
- * ## google\_compute\_machine\_image\_iam\_member
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const binding = new gcp.compute.MachineImageIamBinding("binding", {
+ *     project: google_compute_machine_image.image.project,
+ *     machineImage: google_compute_machine_image.image.name,
+ *     role: "roles/compute.admin",
+ *     members: ["user:jane@example.com"],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * binding = gcp.compute.MachineImageIamBinding("binding",
+ *     project=google_compute_machine_image["image"]["project"],
+ *     machine_image=google_compute_machine_image["image"]["name"],
+ *     role="roles/compute.admin",
+ *     members=["user:jane@example.com"],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var binding = new Gcp.Compute.MachineImageIamBinding("binding", new Gcp.Compute.MachineImageIamBindingArgs
+ *         {
+ *             Project = google_compute_machine_image.Image.Project,
+ *             MachineImage = google_compute_machine_image.Image.Name,
+ *             Role = "roles/compute.admin",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewMachineImageIamBinding(ctx, "binding", &compute.MachineImageIamBindingArgs{
+ * 			Project:      pulumi.Any(google_compute_machine_image.Image.Project),
+ * 			MachineImage: pulumi.Any(google_compute_machine_image.Image.Name),
+ * 			Role:         pulumi.String("roles/compute.admin"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const binding = new gcp.compute.MachineImageIamBinding("binding", {
+ *     project: google_compute_machine_image.image.project,
+ *     machineImage: google_compute_machine_image.image.name,
+ *     role: "roles/compute.admin",
+ *     members: ["user:jane@example.com"],
+ *     condition: {
+ *         title: "expires_after_2019_12_31",
+ *         description: "Expiring at midnight of 2019-12-31",
+ *         expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * binding = gcp.compute.MachineImageIamBinding("binding",
+ *     project=google_compute_machine_image["image"]["project"],
+ *     machine_image=google_compute_machine_image["image"]["name"],
+ *     role="roles/compute.admin",
+ *     members=["user:jane@example.com"],
+ *     condition=gcp.compute.MachineImageIamBindingConditionArgs(
+ *         title="expires_after_2019_12_31",
+ *         description="Expiring at midnight of 2019-12-31",
+ *         expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var binding = new Gcp.Compute.MachineImageIamBinding("binding", new Gcp.Compute.MachineImageIamBindingArgs
+ *         {
+ *             Project = google_compute_machine_image.Image.Project,
+ *             MachineImage = google_compute_machine_image.Image.Name,
+ *             Role = "roles/compute.admin",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *             Condition = new Gcp.Compute.Inputs.MachineImageIamBindingConditionArgs
+ *             {
+ *                 Title = "expires_after_2019_12_31",
+ *                 Description = "Expiring at midnight of 2019-12-31",
+ *                 Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewMachineImageIamBinding(ctx, "binding", &compute.MachineImageIamBindingArgs{
+ * 			Project:      pulumi.Any(google_compute_machine_image.Image.Project),
+ * 			MachineImage: pulumi.Any(google_compute_machine_image.Image.Name),
+ * 			Role:         pulumi.String("roles/compute.admin"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 			Condition: &compute.MachineImageIamBindingConditionArgs{
+ * 				Title:       pulumi.String("expires_after_2019_12_31"),
+ * 				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+ * 				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * ## google\_compute\_machine\_image\_iam\_member
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const member = new gcp.compute.MachineImageIamMember("member", {
+ *     project: google_compute_machine_image.image.project,
+ *     machineImage: google_compute_machine_image.image.name,
+ *     role: "roles/compute.admin",
+ *     member: "user:jane@example.com",
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * member = gcp.compute.MachineImageIamMember("member",
+ *     project=google_compute_machine_image["image"]["project"],
+ *     machine_image=google_compute_machine_image["image"]["name"],
+ *     role="roles/compute.admin",
+ *     member="user:jane@example.com",
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var member = new Gcp.Compute.MachineImageIamMember("member", new Gcp.Compute.MachineImageIamMemberArgs
+ *         {
+ *             Project = google_compute_machine_image.Image.Project,
+ *             MachineImage = google_compute_machine_image.Image.Name,
+ *             Role = "roles/compute.admin",
+ *             Member = "user:jane@example.com",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewMachineImageIamMember(ctx, "member", &compute.MachineImageIamMemberArgs{
+ * 			Project:      pulumi.Any(google_compute_machine_image.Image.Project),
+ * 			MachineImage: pulumi.Any(google_compute_machine_image.Image.Name),
+ * 			Role:         pulumi.String("roles/compute.admin"),
+ * 			Member:       pulumi.String("user:jane@example.com"),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * With IAM Conditions:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const member = new gcp.compute.MachineImageIamMember("member", {
+ *     project: google_compute_machine_image.image.project,
+ *     machineImage: google_compute_machine_image.image.name,
+ *     role: "roles/compute.admin",
+ *     member: "user:jane@example.com",
+ *     condition: {
+ *         title: "expires_after_2019_12_31",
+ *         description: "Expiring at midnight of 2019-12-31",
+ *         expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * member = gcp.compute.MachineImageIamMember("member",
+ *     project=google_compute_machine_image["image"]["project"],
+ *     machine_image=google_compute_machine_image["image"]["name"],
+ *     role="roles/compute.admin",
+ *     member="user:jane@example.com",
+ *     condition=gcp.compute.MachineImageIamMemberConditionArgs(
+ *         title="expires_after_2019_12_31",
+ *         description="Expiring at midnight of 2019-12-31",
+ *         expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var member = new Gcp.Compute.MachineImageIamMember("member", new Gcp.Compute.MachineImageIamMemberArgs
+ *         {
+ *             Project = google_compute_machine_image.Image.Project,
+ *             MachineImage = google_compute_machine_image.Image.Name,
+ *             Role = "roles/compute.admin",
+ *             Member = "user:jane@example.com",
+ *             Condition = new Gcp.Compute.Inputs.MachineImageIamMemberConditionArgs
+ *             {
+ *                 Title = "expires_after_2019_12_31",
+ *                 Description = "Expiring at midnight of 2019-12-31",
+ *                 Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewMachineImageIamMember(ctx, "member", &compute.MachineImageIamMemberArgs{
+ * 			Project:      pulumi.Any(google_compute_machine_image.Image.Project),
+ * 			MachineImage: pulumi.Any(google_compute_machine_image.Image.Name),
+ * 			Role:         pulumi.String("roles/compute.admin"),
+ * 			Member:       pulumi.String("user:jane@example.com"),
+ * 			Condition: &compute.MachineImageIamMemberConditionArgs{
+ * 				Title:       pulumi.String("expires_after_2019_12_31"),
+ * 				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+ * 				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -57,8 +619,7 @@ import javax.annotation.Nullable;
  * 
  *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
  * 
- * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
- * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. 
  */
 @ResourceType(type="gcp:compute/machineImageIamBinding:MachineImageIamBinding")
 public class MachineImageIamBinding extends io.pulumi.resources.CustomResource {

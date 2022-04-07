@@ -18,13 +18,179 @@ import javax.annotation.Nullable;
 /**
  * Represents an entity type. Entity types serve as a tool for extracting parameter values from natural language queries.
  * 
+ * 
  * To get more information about EntityType, see:
  * 
  * * [API documentation](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.entityTypes)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflow Entity Type Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const basicAgent = new gcp.diagflow.Agent("basicAgent", {
+ *     displayName: "example_agent",
+ *     defaultLanguageCode: "en",
+ *     timeZone: "America/New_York",
+ * });
+ * const basicEntityType = new gcp.diagflow.EntityType("basicEntityType", {
+ *     displayName: "",
+ *     kind: "KIND_MAP",
+ *     entities: [
+ *         {
+ *             value: "value1",
+ *             synonyms: [
+ *                 "synonym1",
+ *                 "synonym2",
+ *             ],
+ *         },
+ *         {
+ *             value: "value2",
+ *             synonyms: [
+ *                 "synonym3",
+ *                 "synonym4",
+ *             ],
+ *         },
+ *     ],
+ * }, {
+ *     dependsOn: [basicAgent],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * basic_agent = gcp.diagflow.Agent("basicAgent",
+ *     display_name="example_agent",
+ *     default_language_code="en",
+ *     time_zone="America/New_York")
+ * basic_entity_type = gcp.diagflow.EntityType("basicEntityType",
+ *     display_name="",
+ *     kind="KIND_MAP",
+ *     entities=[
+ *         gcp.diagflow.EntityTypeEntityArgs(
+ *             value="value1",
+ *             synonyms=[
+ *                 "synonym1",
+ *                 "synonym2",
+ *             ],
+ *         ),
+ *         gcp.diagflow.EntityTypeEntityArgs(
+ *             value="value2",
+ *             synonyms=[
+ *                 "synonym3",
+ *                 "synonym4",
+ *             ],
+ *         ),
+ *     ],
+ *     opts=pulumi.ResourceOptions(depends_on=[basic_agent]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicAgent = new Gcp.Diagflow.Agent("basicAgent", new Gcp.Diagflow.AgentArgs
+ *         {
+ *             DisplayName = "example_agent",
+ *             DefaultLanguageCode = "en",
+ *             TimeZone = "America/New_York",
+ *         });
+ *         var basicEntityType = new Gcp.Diagflow.EntityType("basicEntityType", new Gcp.Diagflow.EntityTypeArgs
+ *         {
+ *             DisplayName = "",
+ *             Kind = "KIND_MAP",
+ *             Entities = 
+ *             {
+ *                 new Gcp.Diagflow.Inputs.EntityTypeEntityArgs
+ *                 {
+ *                     Value = "value1",
+ *                     Synonyms = 
+ *                     {
+ *                         "synonym1",
+ *                         "synonym2",
+ *                     },
+ *                 },
+ *                 new Gcp.Diagflow.Inputs.EntityTypeEntityArgs
+ *                 {
+ *                     Value = "value2",
+ *                     Synonyms = 
+ *                     {
+ *                         "synonym3",
+ *                         "synonym4",
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 basicAgent,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicAgent, err := diagflow.NewAgent(ctx, "basicAgent", &diagflow.AgentArgs{
+ * 			DisplayName:         pulumi.String("example_agent"),
+ * 			DefaultLanguageCode: pulumi.String("en"),
+ * 			TimeZone:            pulumi.String("America/New_York"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = diagflow.NewEntityType(ctx, "basicEntityType", &diagflow.EntityTypeArgs{
+ * 			DisplayName: pulumi.String(""),
+ * 			Kind:        pulumi.String("KIND_MAP"),
+ * 			Entities: diagflow.EntityTypeEntityArray{
+ * 				&diagflow.EntityTypeEntityArgs{
+ * 					Value: pulumi.String("value1"),
+ * 					Synonyms: pulumi.StringArray{
+ * 						pulumi.String("synonym1"),
+ * 						pulumi.String("synonym2"),
+ * 					},
+ * 				},
+ * 				&diagflow.EntityTypeEntityArgs{
+ * 					Value: pulumi.String("value2"),
+ * 					Synonyms: pulumi.StringArray{
+ * 						pulumi.String("synonym3"),
+ * 						pulumi.String("synonym4"),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			basicAgent,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +200,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/entityType:EntityType default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/entityType:EntityType")
 public class EntityType extends io.pulumi.resources.CustomResource {
@@ -85,9 +252,9 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Indicates the kind of entity type.
      * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
      * * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
-     *   types can contain references to other entity types (with or without aliases).
+     * types can contain references to other entity types (with or without aliases).
      * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
-     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -97,9 +264,9 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates the kind of entity type.
      * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
      * * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
-     *   types can contain references to other entity types (with or without aliases).
+     * types can contain references to other entity types (with or without aliases).
      * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
-     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
     public Output<String> getKind() {

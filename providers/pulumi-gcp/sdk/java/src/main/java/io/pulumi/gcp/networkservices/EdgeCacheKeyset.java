@@ -18,10 +18,113 @@ import javax.annotation.Nullable;
 /**
  * EdgeCacheKeyset represents a collection of public keys used for validating signed requests.
  * 
+ * 
+ * 
  * > **Warning:** All arguments including `public_key.public_key.value` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Network Services Edge Cache Keyset Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultEdgeCacheKeyset = new gcp.networkservices.EdgeCacheKeyset("default", {
+ *     description: "The default keyset",
+ *     publicKeys: [
+ *         {
+ *             id: "my-public-key",
+ *             value: "FHsTyFHNmvNpw4o7-rp-M1yqMyBF8vXSBRkZtkQ0RKY",
+ *         },
+ *         {
+ *             id: "my-public-key-2",
+ *             value: "hzd03llxB1u5FOLKFkZ6_wCJqC7jtN0bg7xlBqS6WVM",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.networkservices.EdgeCacheKeyset("default",
+ *     description="The default keyset",
+ *     public_keys=[
+ *         gcp.networkservices.EdgeCacheKeysetPublicKeyArgs(
+ *             id="my-public-key",
+ *             value="FHsTyFHNmvNpw4o7-rp-M1yqMyBF8vXSBRkZtkQ0RKY",
+ *         ),
+ *         gcp.networkservices.EdgeCacheKeysetPublicKeyArgs(
+ *             id="my-public-key-2",
+ *             value="hzd03llxB1u5FOLKFkZ6_wCJqC7jtN0bg7xlBqS6WVM",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.NetworkServices.EdgeCacheKeyset("default", new Gcp.NetworkServices.EdgeCacheKeysetArgs
+ *         {
+ *             Description = "The default keyset",
+ *             PublicKeys = 
+ *             {
+ *                 new Gcp.NetworkServices.Inputs.EdgeCacheKeysetPublicKeyArgs
+ *                 {
+ *                     Id = "my-public-key",
+ *                     Value = "FHsTyFHNmvNpw4o7-rp-M1yqMyBF8vXSBRkZtkQ0RKY",
+ *                 },
+ *                 new Gcp.NetworkServices.Inputs.EdgeCacheKeysetPublicKeyArgs
+ *                 {
+ *                     Id = "my-public-key-2",
+ *                     Value = "hzd03llxB1u5FOLKFkZ6_wCJqC7jtN0bg7xlBqS6WVM",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/networkservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkservices.NewEdgeCacheKeyset(ctx, "default", &networkservices.EdgeCacheKeysetArgs{
+ * 			Description: pulumi.String("The default keyset"),
+ * 			PublicKeys: networkservices.EdgeCacheKeysetPublicKeyArray{
+ * 				&networkservices.EdgeCacheKeysetPublicKeyArgs{
+ * 					Id:    pulumi.String("my-public-key"),
+ * 					Value: pulumi.String("FHsTyFHNmvNpw4o7-rp-M1yqMyBF8vXSBRkZtkQ0RKY"),
+ * 				},
+ * 				&networkservices.EdgeCacheKeysetPublicKeyArgs{
+ * 					Id:    pulumi.String("my-public-key-2"),
+ * 					Value: pulumi.String("hzd03llxB1u5FOLKFkZ6_wCJqC7jtN0bg7xlBqS6WVM"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,14 +134,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset default projects/{{project}}/locations/global/edgeCacheKeysets/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset")
 public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {

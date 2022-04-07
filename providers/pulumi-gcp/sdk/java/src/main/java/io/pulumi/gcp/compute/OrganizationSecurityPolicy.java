@@ -21,7 +21,9 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Creating a firewall policy](https://cloud.google.com/vpc/docs/using-firewall-policies#create-policy)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,10 +33,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy default locations/global/securityPolicies/{{policy_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy default {{policy_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy")
 public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResource {

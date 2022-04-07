@@ -21,7 +21,9 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Associating a policy with the organization or folder](https://cloud.google.com/vpc/docs/using-firewall-policies#associate)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +33,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation default {{policy_id}}/association/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation")
 public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.CustomResource {

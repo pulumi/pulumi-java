@@ -89,7 +89,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */

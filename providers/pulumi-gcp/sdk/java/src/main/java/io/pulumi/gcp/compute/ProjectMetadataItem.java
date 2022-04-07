@@ -18,7 +18,67 @@ import javax.annotation.Nullable;
  * manage a single key/value setting in the provider rather than the entire
  * project metadata map.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultProjectMetadataItem = new gcp.compute.ProjectMetadataItem("default", {
+ *     key: "my_metadata",
+ *     value: "my_value",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.ProjectMetadataItem("default",
+ *     key="my_metadata",
+ *     value="my_value")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.ProjectMetadataItem("default", new Gcp.Compute.ProjectMetadataItemArgs
+ *         {
+ *             Key = "my_metadata",
+ *             Value = "my_value",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewProjectMetadataItem(ctx, "default", &compute.ProjectMetadataItemArgs{
+ * 			Key:   pulumi.String("my_metadata"),
+ * 			Value: pulumi.String("my_value"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/projectMetadataItem:ProjectMetadataItem default my_metadata
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/projectMetadataItem:ProjectMetadataItem")
 public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {

@@ -22,7 +22,116 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Exporting Logs](https://cloud.google.com/logging/docs/export)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const log_bucket = new gcp.storage.Bucket("log-bucket", {location: "US"});
+ * const my_sink = new gcp.logging.OrganizationSink("my-sink", {
+ *     description: "some explanation on what this is",
+ *     orgId: "123456789",
+ *     destination: pulumi.interpolate`storage.googleapis.com/${log_bucket.name}`,
+ *     filter: "resource.type = gce_instance AND severity >= WARNING",
+ * });
+ * const log_writer = new gcp.projects.IAMMember("log-writer", {
+ *     project: "your-project-id",
+ *     role: "roles/storage.objectCreator",
+ *     member: my_sink.writerIdentity,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * log_bucket = gcp.storage.Bucket("log-bucket", location="US")
+ * my_sink = gcp.logging.OrganizationSink("my-sink",
+ *     description="some explanation on what this is",
+ *     org_id="123456789",
+ *     destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"),
+ *     filter="resource.type = gce_instance AND severity >= WARNING")
+ * log_writer = gcp.projects.IAMMember("log-writer",
+ *     project="your-project-id",
+ *     role="roles/storage.objectCreator",
+ *     member=my_sink.writer_identity)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var log_bucket = new Gcp.Storage.Bucket("log-bucket", new Gcp.Storage.BucketArgs
+ *         {
+ *             Location = "US",
+ *         });
+ *         var my_sink = new Gcp.Logging.OrganizationSink("my-sink", new Gcp.Logging.OrganizationSinkArgs
+ *         {
+ *             Description = "some explanation on what this is",
+ *             OrgId = "123456789",
+ *             Destination = log_bucket.Name.Apply(name => $"storage.googleapis.com/{name}"),
+ *             Filter = "resource.type = gce_instance AND severity >= WARNING",
+ *         });
+ *         var log_writer = new Gcp.Projects.IAMMember("log-writer", new Gcp.Projects.IAMMemberArgs
+ *         {
+ *             Project = "your-project-id",
+ *             Role = "roles/storage.objectCreator",
+ *             Member = my_sink.WriterIdentity,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/logging"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBucket(ctx, "log-bucket", &storage.BucketArgs{
+ * 			Location: pulumi.String("US"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = logging.NewOrganizationSink(ctx, "my-sink", &logging.OrganizationSinkArgs{
+ * 			Description: pulumi.String("some explanation on what this is"),
+ * 			OrgId:       pulumi.String("123456789"),
+ * 			Destination: log_bucket.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "storage.googleapis.com/", name), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Filter: pulumi.String("resource.type = gce_instance AND severity >= WARNING"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = projects.NewIAMMember(ctx, "log-writer", &projects.IAMMemberArgs{
+ * 			Project: pulumi.String("your-project-id"),
+ * 			Role:    pulumi.String("roles/storage.objectCreator"),
+ * 			Member:  my_sink.WriterIdentity,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +141,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:logging/organizationSink:OrganizationSink my_sink organizations/{{organization_id}}/sinks/{{sink_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:logging/organizationSink:OrganizationSink")
 public class OrganizationSink extends io.pulumi.resources.CustomResource {
@@ -66,7 +176,36 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
      * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -76,7 +215,36 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
     /**
      * @return The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```typescript
+     * import * as pulumi from "@pulumi/pulumi";
+     * ```
+     * ```python
+     * import pulumi
+     * ```
+     * ```csharp
+     * using Pulumi;
      * 
+     * class MyStack : Stack
+     * {
+     *     public MyStack()
+     *     {
+     *     }
+     * 
+     * }
+     * ```
+     * ```go
+     * package main
+     * 
+     * import (
+     * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+     * )
+     * 
+     * func main() {
+     * 	pulumi.Run(func(ctx *pulumi.Context) error {
+     * 		return nil
+     * 	})
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */

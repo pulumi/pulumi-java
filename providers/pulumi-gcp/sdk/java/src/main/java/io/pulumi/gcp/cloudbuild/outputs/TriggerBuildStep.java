@@ -79,7 +79,7 @@ public final class TriggerBuildStep {
      */
     private final @Nullable String timeout;
     /**
-     * - 
+     * -
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 
@@ -214,7 +214,7 @@ public final class TriggerBuildStep {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * - 
+     * -
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 

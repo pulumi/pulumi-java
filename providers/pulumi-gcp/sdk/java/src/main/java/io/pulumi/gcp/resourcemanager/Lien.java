@@ -16,7 +16,103 @@ import javax.annotation.Nullable;
 /**
  * A Lien represents an encumbrance on the actions that can be performed on a resource.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Resource Manager Lien
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = new gcp.organizations.Project("project", {
+ *     projectId: "staging-project",
+ * });
+ * const lien = new gcp.resourcemanager.Lien("lien", {
+ *     origin: "machine-readable-explanation",
+ *     parent: pulumi.interpolate`projects/${project.number}`,
+ *     reason: "This project is an important environment",
+ *     restrictions: ["resourcemanager.projects.delete"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.organizations.Project("project", project_id="staging-project")
+ * lien = gcp.resourcemanager.Lien("lien",
+ *     origin="machine-readable-explanation",
+ *     parent=project.number.apply(lambda number: f"projects/{number}"),
+ *     reason="This project is an important environment",
+ *     restrictions=["resourcemanager.projects.delete"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = new Gcp.Organizations.Project("project", new Gcp.Organizations.ProjectArgs
+ *         {
+ *             ProjectId = "staging-project",
+ *         });
+ *         var lien = new Gcp.ResourceManager.Lien("lien", new Gcp.ResourceManager.LienArgs
+ *         {
+ *             Origin = "machine-readable-explanation",
+ *             Parent = project.Number.Apply(number => $"projects/{number}"),
+ *             Reason = "This project is an important environment",
+ *             Restrictions = 
+ *             {
+ *                 "resourcemanager.projects.delete",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/resourcemanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		project, err := organizations.NewProject(ctx, "project", &organizations.ProjectArgs{
+ * 			ProjectId: pulumi.String("staging-project"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = resourcemanager.NewLien(ctx, "lien", &resourcemanager.LienArgs{
+ * 			Origin: pulumi.String("machine-readable-explanation"),
+ * 			Parent: project.Number.ApplyT(func(number string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "projects/", number), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Reason: pulumi.String("This project is an important environment"),
+ * 			Restrictions: pulumi.StringArray{
+ * 				pulumi.String("resourcemanager.projects.delete"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +122,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:resourcemanager/lien:Lien default {{parent}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:resourcemanager/lien:Lien")
 public class Lien extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,7 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
     public static final RuntimeVirtualMachineGetArgs Empty = new RuntimeVirtualMachineGetArgs();
 
     /**
-     * - 
+     * -
      * The unique identifier of the Managed Compute Engine instance.
      * 
      */
@@ -28,7 +28,7 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
     }
 
     /**
-     * - 
+     * -
      * The user-friendly name of the Managed Compute Engine instance.
      * 
      */

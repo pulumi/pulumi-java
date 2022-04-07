@@ -16,13 +16,364 @@ import javax.annotation.Nullable;
 /**
  * An attestor that attests to container image artifacts.
  * 
+ * 
  * To get more information about Attestor, see:
  * 
  * * [API documentation](https://cloud.google.com/binary-authorization/docs/reference/rest/)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/binary-authorization/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Binary Authorization Attestor Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const note = new gcp.containeranalysis.Note("note", {attestationAuthority: {
+ *     hint: {
+ *         humanReadableName: "Attestor Note",
+ *     },
+ * }});
+ * const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestationAuthorityNote: {
+ *     noteReference: note.name,
+ *     publicKeys: [{
+ *         asciiArmoredPgpPublicKey: `mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
+ * bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0
+ * oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6
+ * V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD
+ * Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX
+ * 83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y
+ * IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L
+ * uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6
+ * 0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC
+ * 51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U
+ * WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h
+ * MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l
+ * +OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1
+ * qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
+ * =6Bvm
+ * `,
+ *     }],
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+ *     hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+ *         human_readable_name="Attestor Note",
+ *     ),
+ * ))
+ * attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
+ *     note_reference=note.name,
+ *     public_keys=[gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs(
+ *         ascii_armored_pgp_public_key="""mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
+ * bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0
+ * oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6
+ * V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD
+ * Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX
+ * 83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y
+ * IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L
+ * uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6
+ * 0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC
+ * 51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U
+ * WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h
+ * MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l
+ * +OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1
+ * qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
+ * =6Bvm
+ * """,
+ *     )],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+ *         {
+ *             AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+ *             {
+ *                 Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+ *                 {
+ *                     HumanReadableName = "Attestor Note",
+ *                 },
+ *             },
+ *         });
+ *         var attestor = new Gcp.BinaryAuthorization.Attestor("attestor", new Gcp.BinaryAuthorization.AttestorArgs
+ *         {
+ *             AttestationAuthorityNote = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs
+ *             {
+ *                 NoteReference = note.Name,
+ *                 PublicKeys = 
+ *                 {
+ *                     new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyArgs
+ *                     {
+ *                         AsciiArmoredPgpPublicKey = @"mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
+ * bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0
+ * oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6
+ * V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD
+ * Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX
+ * 83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y
+ * IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L
+ * uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6
+ * 0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC
+ * 51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U
+ * WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h
+ * MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l
+ * +OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1
+ * qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
+ * =6Bvm
+ * ",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/binaryauthorization"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/containeranalysis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		note, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+ * 			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+ * 				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+ * 					HumanReadableName: pulumi.String("Attestor Note"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = binaryauthorization.NewAttestor(ctx, "attestor", &binaryauthorization.AttestorArgs{
+ * 			AttestationAuthorityNote: &binaryauthorization.AttestorAttestationAuthorityNoteArgs{
+ * 				NoteReference: note.Name,
+ * 				PublicKeys: binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArray{
+ * 					&binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs{
+ * 						AsciiArmoredPgpPublicKey: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl\n", "bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0\n", "oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6\n", "V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD\n", "Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX\n", "83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y\n", "IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L\n", "uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6\n", "0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC\n", "51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U\n", "WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h\n", "MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l\n", "+OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1\n", "qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg\n", "=6Bvm\n")),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Binary Authorization Attestor Kms
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+ * const crypto_key = new gcp.kms.CryptoKey("crypto-key", {
+ *     keyRing: keyring.id,
+ *     purpose: "ASYMMETRIC_SIGN",
+ *     versionTemplate: {
+ *         algorithm: "RSA_SIGN_PKCS1_4096_SHA512",
+ *     },
+ * });
+ * const version = gcp.kms.getKMSCryptoKeyVersionOutput({
+ *     cryptoKey: crypto_key.id,
+ * });
+ * const note = new gcp.containeranalysis.Note("note", {attestationAuthority: {
+ *     hint: {
+ *         humanReadableName: "Attestor Note",
+ *     },
+ * }});
+ * const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestationAuthorityNote: {
+ *     noteReference: note.name,
+ *     publicKeys: [{
+ *         id: version.apply(version => version.id),
+ *         pkixPublicKey: {
+ *             publicKeyPem: version.apply(version => version.publicKeys?[0]?.pem),
+ *             signatureAlgorithm: version.apply(version => version.publicKeys?[0]?.algorithm),
+ *         },
+ *     }],
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * keyring = gcp.kms.KeyRing("keyring", location="global")
+ * crypto_key = gcp.kms.CryptoKey("crypto-key",
+ *     key_ring=keyring.id,
+ *     purpose="ASYMMETRIC_SIGN",
+ *     version_template=gcp.kms.CryptoKeyVersionTemplateArgs(
+ *         algorithm="RSA_SIGN_PKCS1_4096_SHA512",
+ *     ))
+ * version = gcp.kms.get_kms_crypto_key_version_output(crypto_key=crypto_key.id)
+ * note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+ *     hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+ *         human_readable_name="Attestor Note",
+ *     ),
+ * ))
+ * attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
+ *     note_reference=note.name,
+ *     public_keys=[gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs(
+ *         id=version.id,
+ *         pkix_public_key=gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(
+ *             public_key_pem=version.public_keys[0].pem,
+ *             signature_algorithm=version.public_keys[0].algorithm,
+ *         ),
+ *     )],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+ *         {
+ *             Location = "global",
+ *         });
+ *         var crypto_key = new Gcp.Kms.CryptoKey("crypto-key", new Gcp.Kms.CryptoKeyArgs
+ *         {
+ *             KeyRing = keyring.Id,
+ *             Purpose = "ASYMMETRIC_SIGN",
+ *             VersionTemplate = new Gcp.Kms.Inputs.CryptoKeyVersionTemplateArgs
+ *             {
+ *                 Algorithm = "RSA_SIGN_PKCS1_4096_SHA512",
+ *             },
+ *         });
+ *         var version = Gcp.Kms.GetKMSCryptoKeyVersion.Invoke(new Gcp.Kms.GetKMSCryptoKeyVersionInvokeArgs
+ *         {
+ *             CryptoKey = crypto_key.Id,
+ *         });
+ *         var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+ *         {
+ *             AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+ *             {
+ *                 Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+ *                 {
+ *                     HumanReadableName = "Attestor Note",
+ *                 },
+ *             },
+ *         });
+ *         var attestor = new Gcp.BinaryAuthorization.Attestor("attestor", new Gcp.BinaryAuthorization.AttestorArgs
+ *         {
+ *             AttestationAuthorityNote = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs
+ *             {
+ *                 NoteReference = note.Name,
+ *                 PublicKeys = 
+ *                 {
+ *                     new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyArgs
+ *                     {
+ *                         Id = version.Apply(version => version.Id),
+ *                         PkixPublicKey = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs
+ *                         {
+ *                             PublicKeyPem = version.Apply(version => version.PublicKeys?[0]?.Pem),
+ *                             SignatureAlgorithm = version.Apply(version => version.PublicKeys?[0]?.Algorithm),
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/binaryauthorization"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/containeranalysis"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+ * 			Location: pulumi.String("global"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewCryptoKey(ctx, "crypto-key", &kms.CryptoKeyArgs{
+ * 			KeyRing: keyring.ID(),
+ * 			Purpose: pulumi.String("ASYMMETRIC_SIGN"),
+ * 			VersionTemplate: &kms.CryptoKeyVersionTemplateArgs{
+ * 				Algorithm: pulumi.String("RSA_SIGN_PKCS1_4096_SHA512"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		version := kms.GetKMSCryptoKeyVersionOutput(ctx, kms.GetKMSCryptoKeyVersionOutputArgs{
+ * 			CryptoKey: crypto_key.ID(),
+ * 		}, nil)
+ * 		note, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+ * 			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+ * 				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+ * 					HumanReadableName: pulumi.String("Attestor Note"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = binaryauthorization.NewAttestor(ctx, "attestor", &binaryauthorization.AttestorArgs{
+ * 			AttestationAuthorityNote: &binaryauthorization.AttestorAttestationAuthorityNoteArgs{
+ * 				NoteReference: note.Name,
+ * 				PublicKeys: binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArray{
+ * 					&binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs{
+ * 						Id: version.ApplyT(func(version kms.GetKMSCryptoKeyVersionResult) (string, error) {
+ * 							return version.Id, nil
+ * 						}).(pulumi.StringOutput),
+ * 						PkixPublicKey: &binaryauthorization.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs{
+ * 							PublicKeyPem: version.ApplyT(func(version kms.GetKMSCryptoKeyVersionResult) (string, error) {
+ * 								return version.PublicKeys[0].Pem, nil
+ * 							}).(pulumi.StringOutput),
+ * 							SignatureAlgorithm: version.ApplyT(func(version kms.GetKMSCryptoKeyVersionResult) (string, error) {
+ * 								return version.PublicKeys[0].Algorithm, nil
+ * 							}).(pulumi.StringOutput),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +383,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:binaryauthorization/attestor:Attestor default projects/{{project}}/attestors/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:binaryauthorization/attestor:Attestor default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:binaryauthorization/attestor:Attestor default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:binaryauthorization/attestor:Attestor")
 public class Attestor extends io.pulumi.resources.CustomResource {

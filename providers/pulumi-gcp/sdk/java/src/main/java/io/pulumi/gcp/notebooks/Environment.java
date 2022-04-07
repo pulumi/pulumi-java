@@ -23,7 +23,78 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Notebook Environment Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const environment = new gcp.notebooks.Environment("environment", {
+ *     containerImage: {
+ *         repository: "gcr.io/deeplearning-platform-release/base-cpu",
+ *     },
+ *     location: "us-west1-a",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * environment = gcp.notebooks.Environment("environment",
+ *     container_image=gcp.notebooks.EnvironmentContainerImageArgs(
+ *         repository="gcr.io/deeplearning-platform-release/base-cpu",
+ *     ),
+ *     location="us-west1-a")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var environment = new Gcp.Notebooks.Environment("environment", new Gcp.Notebooks.EnvironmentArgs
+ *         {
+ *             ContainerImage = new Gcp.Notebooks.Inputs.EnvironmentContainerImageArgs
+ *             {
+ *                 Repository = "gcr.io/deeplearning-platform-release/base-cpu",
+ *             },
+ *             Location = "us-west1-a",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/notebooks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := notebooks.NewEnvironment(ctx, "environment", &notebooks.EnvironmentArgs{
+ * 			ContainerImage: &notebooks.EnvironmentContainerImageArgs{
+ * 				Repository: pulumi.String("gcr.io/deeplearning-platform-release/base-cpu"),
+ * 			},
+ * 			Location: pulumi.String("us-west1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +104,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:notebooks/environment:Environment default projects/{{project}}/locations/{{location}}/environments/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:notebooks/environment:Environment default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:notebooks/environment:Environment default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:notebooks/environment:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {

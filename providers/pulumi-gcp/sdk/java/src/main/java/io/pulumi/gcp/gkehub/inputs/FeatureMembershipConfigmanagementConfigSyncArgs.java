@@ -16,7 +16,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     public static final FeatureMembershipConfigmanagementConfigSyncArgs Empty = new FeatureMembershipConfigmanagementConfigSyncArgs();
 
     /**
-     * - 
+     * -
      * (Optional) Structure is documented below.
      * 
      */

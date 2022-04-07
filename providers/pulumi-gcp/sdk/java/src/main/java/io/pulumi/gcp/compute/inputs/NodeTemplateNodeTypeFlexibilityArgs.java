@@ -26,7 +26,7 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
     }
 
     /**
-     * - 
+     * -
      * Use local SSD
      * 
      */

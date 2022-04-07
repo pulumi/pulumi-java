@@ -29,7 +29,9 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Setting up IAP Brand](https://cloud.google.com/iap/docs/tutorial-gce#set_up_iap)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,6 +41,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:iap/brand:Brand default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:iap/brand:Brand")
 public class Brand extends io.pulumi.resources.CustomResource {

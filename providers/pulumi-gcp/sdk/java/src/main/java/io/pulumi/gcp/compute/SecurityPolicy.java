@@ -20,8 +20,171 @@ import javax.annotation.Nullable;
  * see the [official documentation](https://cloud.google.com/armor/docs/configure-security-policies)
  * and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const policy = new gcp.compute.SecurityPolicy("policy", {
+ *     rules: [
+ *         {
+ *             action: "deny(403)",
+ *             description: "Deny access to IPs in 9.9.9.0/24",
+ *             match: {
+ *                 config: {
+ *                     srcIpRanges: ["9.9.9.0/24"],
+ *                 },
+ *                 versionedExpr: "SRC_IPS_V1",
+ *             },
+ *             priority: 1000,
+ *         },
+ *         {
+ *             action: "allow",
+ *             description: "default rule",
+ *             match: {
+ *                 config: {
+ *                     srcIpRanges: ["*"],
+ *                 },
+ *                 versionedExpr: "SRC_IPS_V1",
+ *             },
+ *             priority: 2147483647,
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * policy = gcp.compute.SecurityPolicy("policy", rules=[
+ *     gcp.compute.SecurityPolicyRuleArgs(
+ *         action="deny(403)",
+ *         description="Deny access to IPs in 9.9.9.0/24",
+ *         match=gcp.compute.SecurityPolicyRuleMatchArgs(
+ *             config=gcp.compute.SecurityPolicyRuleMatchConfigArgs(
+ *                 src_ip_ranges=["9.9.9.0/24"],
+ *             ),
+ *             versioned_expr="SRC_IPS_V1",
+ *         ),
+ *         priority=1000,
+ *     ),
+ *     gcp.compute.SecurityPolicyRuleArgs(
+ *         action="allow",
+ *         description="default rule",
+ *         match=gcp.compute.SecurityPolicyRuleMatchArgs(
+ *             config=gcp.compute.SecurityPolicyRuleMatchConfigArgs(
+ *                 src_ip_ranges=["*"],
+ *             ),
+ *             versioned_expr="SRC_IPS_V1",
+ *         ),
+ *         priority=2147483647,
+ *     ),
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var policy = new Gcp.Compute.SecurityPolicy("policy", new Gcp.Compute.SecurityPolicyArgs
+ *         {
+ *             Rules = 
+ *             {
+ *                 new Gcp.Compute.Inputs.SecurityPolicyRuleArgs
+ *                 {
+ *                     Action = "deny(403)",
+ *                     Description = "Deny access to IPs in 9.9.9.0/24",
+ *                     Match = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchArgs
+ *                     {
+ *                         Config = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchConfigArgs
+ *                         {
+ *                             SrcIpRanges = 
+ *                             {
+ *                                 "9.9.9.0/24",
+ *                             },
+ *                         },
+ *                         VersionedExpr = "SRC_IPS_V1",
+ *                     },
+ *                     Priority = 1000,
+ *                 },
+ *                 new Gcp.Compute.Inputs.SecurityPolicyRuleArgs
+ *                 {
+ *                     Action = "allow",
+ *                     Description = "default rule",
+ *                     Match = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchArgs
+ *                     {
+ *                         Config = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchConfigArgs
+ *                         {
+ *                             SrcIpRanges = 
+ *                             {
+ *                                 "*",
+ *                             },
+ *                         },
+ *                         VersionedExpr = "SRC_IPS_V1",
+ *                     },
+ *                     Priority = 2147483647,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSecurityPolicy(ctx, "policy", &compute.SecurityPolicyArgs{
+ * 			Rules: compute.SecurityPolicyRuleArray{
+ * 				&compute.SecurityPolicyRuleArgs{
+ * 					Action:      pulumi.String("deny(403)"),
+ * 					Description: pulumi.String("Deny access to IPs in 9.9.9.0/24"),
+ * 					Match: &compute.SecurityPolicyRuleMatchArgs{
+ * 						Config: &compute.SecurityPolicyRuleMatchConfigArgs{
+ * 							SrcIpRanges: pulumi.StringArray{
+ * 								pulumi.String("9.9.9.0/24"),
+ * 							},
+ * 						},
+ * 						VersionedExpr: pulumi.String("SRC_IPS_V1"),
+ * 					},
+ * 					Priority: pulumi.Int(1000),
+ * 				},
+ * 				&compute.SecurityPolicyRuleArgs{
+ * 					Action:      pulumi.String("allow"),
+ * 					Description: pulumi.String("default rule"),
+ * 					Match: &compute.SecurityPolicyRuleMatchArgs{
+ * 						Config: &compute.SecurityPolicyRuleMatchConfigArgs{
+ * 							SrcIpRanges: pulumi.StringArray{
+ * 								pulumi.String("*"),
+ * 							},
+ * 						},
+ * 						VersionedExpr: pulumi.String("SRC_IPS_V1"),
+ * 					},
+ * 					Priority: pulumi.Int(2147483647),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="gcp:compute/securityPolicy:SecurityPolicy")
 public class SecurityPolicy extends io.pulumi.resources.CustomResource {

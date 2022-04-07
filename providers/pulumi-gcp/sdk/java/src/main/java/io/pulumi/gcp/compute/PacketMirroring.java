@@ -28,7 +28,353 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Using Packet Mirroring](https://cloud.google.com/vpc/docs/using-packet-mirroring#creating)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Compute Packet Mirroring Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+ * const mirror = new gcp.compute.Instance("mirror", {
+ *     machineType: "e2-medium",
+ *     bootDisk: {
+ *         initializeParams: {
+ *             image: "debian-cloud/debian-9",
+ *         },
+ *     },
+ *     networkInterfaces: [{
+ *         network: defaultNetwork.id,
+ *         accessConfigs: [{}],
+ *     }],
+ * });
+ * const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+ *     network: defaultNetwork.id,
+ *     ipCidrRange: "10.2.0.0/16",
+ * });
+ * const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+ *     checkIntervalSec: 1,
+ *     timeoutSec: 1,
+ *     tcpHealthCheck: {
+ *         port: "80",
+ *     },
+ * });
+ * const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {healthChecks: [defaultHealthCheck.id]});
+ * const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+ *     isMirroringCollector: true,
+ *     ipProtocol: "TCP",
+ *     loadBalancingScheme: "INTERNAL",
+ *     backendService: defaultRegionBackendService.id,
+ *     allPorts: true,
+ *     network: defaultNetwork.id,
+ *     subnetwork: defaultSubnetwork.id,
+ *     networkTier: "PREMIUM",
+ * }, {
+ *     dependsOn: [defaultSubnetwork],
+ * });
+ * const foobar = new gcp.compute.PacketMirroring("foobar", {
+ *     description: "bar",
+ *     network: {
+ *         url: defaultNetwork.id,
+ *     },
+ *     collectorIlb: {
+ *         url: defaultForwardingRule.id,
+ *     },
+ *     mirroredResources: {
+ *         tags: ["foo"],
+ *         instances: [{
+ *             url: mirror.id,
+ *         }],
+ *     },
+ *     filter: {
+ *         ipProtocols: ["tcp"],
+ *         cidrRanges: ["0.0.0.0/0"],
+ *         direction: "BOTH",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_network = gcp.compute.Network("defaultNetwork")
+ * mirror = gcp.compute.Instance("mirror",
+ *     machine_type="e2-medium",
+ *     boot_disk=gcp.compute.InstanceBootDiskArgs(
+ *         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+ *             image="debian-cloud/debian-9",
+ *         ),
+ *     ),
+ *     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+ *         network=default_network.id,
+ *         access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+ *     )])
+ * default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+ *     network=default_network.id,
+ *     ip_cidr_range="10.2.0.0/16")
+ * default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+ *     check_interval_sec=1,
+ *     timeout_sec=1,
+ *     tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+ *         port=80,
+ *     ))
+ * default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService", health_checks=[default_health_check.id])
+ * default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+ *     is_mirroring_collector=True,
+ *     ip_protocol="TCP",
+ *     load_balancing_scheme="INTERNAL",
+ *     backend_service=default_region_backend_service.id,
+ *     all_ports=True,
+ *     network=default_network.id,
+ *     subnetwork=default_subnetwork.id,
+ *     network_tier="PREMIUM",
+ *     opts=pulumi.ResourceOptions(depends_on=[default_subnetwork]))
+ * foobar = gcp.compute.PacketMirroring("foobar",
+ *     description="bar",
+ *     network=gcp.compute.PacketMirroringNetworkArgs(
+ *         url=default_network.id,
+ *     ),
+ *     collector_ilb=gcp.compute.PacketMirroringCollectorIlbArgs(
+ *         url=default_forwarding_rule.id,
+ *     ),
+ *     mirrored_resources=gcp.compute.PacketMirroringMirroredResourcesArgs(
+ *         tags=["foo"],
+ *         instances=[gcp.compute.PacketMirroringMirroredResourcesInstanceArgs(
+ *             url=mirror.id,
+ *         )],
+ *     ),
+ *     filter=gcp.compute.PacketMirroringFilterArgs(
+ *         ip_protocols=["tcp"],
+ *         cidr_ranges=["0.0.0.0/0"],
+ *         direction="BOTH",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *         });
+ *         var mirror = new Gcp.Compute.Instance("mirror", new Gcp.Compute.InstanceArgs
+ *         {
+ *             MachineType = "e2-medium",
+ *             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+ *             {
+ *                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+ *                 {
+ *                     Image = "debian-cloud/debian-9",
+ *                 },
+ *             },
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     Network = defaultNetwork.Id,
+ *                     AccessConfigs = 
+ *                     {
+ *                         ,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+ *         {
+ *             Network = defaultNetwork.Id,
+ *             IpCidrRange = "10.2.0.0/16",
+ *         });
+ *         var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
+ *         {
+ *             CheckIntervalSec = 1,
+ *             TimeoutSec = 1,
+ *             TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+ *             {
+ *                 Port = 80,
+ *             },
+ *         });
+ *         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+ *         {
+ *             HealthChecks = 
+ *             {
+ *                 defaultHealthCheck.Id,
+ *             },
+ *         });
+ *         var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+ *         {
+ *             IsMirroringCollector = true,
+ *             IpProtocol = "TCP",
+ *             LoadBalancingScheme = "INTERNAL",
+ *             BackendService = defaultRegionBackendService.Id,
+ *             AllPorts = true,
+ *             Network = defaultNetwork.Id,
+ *             Subnetwork = defaultSubnetwork.Id,
+ *             NetworkTier = "PREMIUM",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 defaultSubnetwork,
+ *             },
+ *         });
+ *         var foobar = new Gcp.Compute.PacketMirroring("foobar", new Gcp.Compute.PacketMirroringArgs
+ *         {
+ *             Description = "bar",
+ *             Network = new Gcp.Compute.Inputs.PacketMirroringNetworkArgs
+ *             {
+ *                 Url = defaultNetwork.Id,
+ *             },
+ *             CollectorIlb = new Gcp.Compute.Inputs.PacketMirroringCollectorIlbArgs
+ *             {
+ *                 Url = defaultForwardingRule.Id,
+ *             },
+ *             MirroredResources = new Gcp.Compute.Inputs.PacketMirroringMirroredResourcesArgs
+ *             {
+ *                 Tags = 
+ *                 {
+ *                     "foo",
+ *                 },
+ *                 Instances = 
+ *                 {
+ *                     new Gcp.Compute.Inputs.PacketMirroringMirroredResourcesInstanceArgs
+ *                     {
+ *                         Url = mirror.Id,
+ *                     },
+ *                 },
+ *             },
+ *             Filter = new Gcp.Compute.Inputs.PacketMirroringFilterArgs
+ *             {
+ *                 IpProtocols = 
+ *                 {
+ *                     "tcp",
+ *                 },
+ *                 CidrRanges = 
+ *                 {
+ *                     "0.0.0.0/0",
+ *                 },
+ *                 Direction = "BOTH",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		mirror, err := compute.NewInstance(ctx, "mirror", &compute.InstanceArgs{
+ * 			MachineType: pulumi.String("e2-medium"),
+ * 			BootDisk: &compute.InstanceBootDiskArgs{
+ * 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+ * 					Image: pulumi.String("debian-cloud/debian-9"),
+ * 				},
+ * 			},
+ * 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+ * 				&compute.InstanceNetworkInterfaceArgs{
+ * 					Network: defaultNetwork.ID(),
+ * 					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+ * 						nil,
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+ * 			Network:     defaultNetwork.ID(),
+ * 			IpCidrRange: pulumi.String("10.2.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+ * 				Port: pulumi.Int(80),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+ * 			HealthChecks: pulumi.String{
+ * 				defaultHealthCheck.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultForwardingRule, err := compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+ * 			IsMirroringCollector: pulumi.Bool(true),
+ * 			IpProtocol:           pulumi.String("TCP"),
+ * 			LoadBalancingScheme:  pulumi.String("INTERNAL"),
+ * 			BackendService:       defaultRegionBackendService.ID(),
+ * 			AllPorts:             pulumi.Bool(true),
+ * 			Network:              defaultNetwork.ID(),
+ * 			Subnetwork:           defaultSubnetwork.ID(),
+ * 			NetworkTier:          pulumi.String("PREMIUM"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			defaultSubnetwork,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewPacketMirroring(ctx, "foobar", &compute.PacketMirroringArgs{
+ * 			Description: pulumi.String("bar"),
+ * 			Network: &compute.PacketMirroringNetworkArgs{
+ * 				Url: defaultNetwork.ID(),
+ * 			},
+ * 			CollectorIlb: &compute.PacketMirroringCollectorIlbArgs{
+ * 				Url: defaultForwardingRule.ID(),
+ * 			},
+ * 			MirroredResources: &compute.PacketMirroringMirroredResourcesArgs{
+ * 				Tags: pulumi.StringArray{
+ * 					pulumi.String("foo"),
+ * 				},
+ * 				Instances: compute.PacketMirroringMirroredResourcesInstanceArray{
+ * 					&compute.PacketMirroringMirroredResourcesInstanceArgs{
+ * 						Url: mirror.ID(),
+ * 					},
+ * 				},
+ * 			},
+ * 			Filter: &compute.PacketMirroringFilterArgs{
+ * 				IpProtocols: pulumi.StringArray{
+ * 					pulumi.String("tcp"),
+ * 				},
+ * 				CidrRanges: pulumi.StringArray{
+ * 					pulumi.String("0.0.0.0/0"),
+ * 				},
+ * 				Direction: pulumi.String("BOTH"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,18 +384,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/packetMirroring:PacketMirroring default projects/{{project}}/regions/{{region}}/packetMirrorings/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/packetMirroring:PacketMirroring default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/packetMirroring:PacketMirroring default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/packetMirroring:PacketMirroring default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/packetMirroring:PacketMirroring")
 public class PacketMirroring extends io.pulumi.resources.CustomResource {

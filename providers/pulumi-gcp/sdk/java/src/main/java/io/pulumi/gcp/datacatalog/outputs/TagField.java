@@ -20,7 +20,7 @@ public final class TagField {
      */
     private final @Nullable Boolean boolValue;
     /**
-     * - 
+     * -
      * The display name of this field
      * 
      */
@@ -42,7 +42,7 @@ public final class TagField {
      */
     private final String fieldName;
     /**
-     * - 
+     * -
      * The order of this field with respect to other fields in this tag. For example, a higher value can indicate
      * a more important field. The value can be negative. Multiple fields can have the same order, and field orders
      * within a tag do not have to be sequential.
@@ -88,7 +88,7 @@ public final class TagField {
         return Optional.ofNullable(this.boolValue);
     }
     /**
-     * - 
+     * -
      * The display name of this field
      * 
     */
@@ -118,7 +118,7 @@ public final class TagField {
         return this.fieldName;
     }
     /**
-     * - 
+     * -
      * The order of this field with respect to other fields in this tag. For example, a higher value can indicate
      * a more important field. The value can be negative. Multiple fields can have the same order, and field orders
      * within a tag do not have to be sequential.

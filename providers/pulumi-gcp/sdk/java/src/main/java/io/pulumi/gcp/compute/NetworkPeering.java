@@ -24,7 +24,110 @@ import javax.annotation.Nullable;
  * 
  * > Subnets IP ranges across peered VPC networks cannot overlap.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
+ * const other = new gcp.compute.Network("other", {autoCreateSubnetworks: "false"});
+ * const peering1 = new gcp.compute.NetworkPeering("peering1", {
+ *     network: _default.selfLink,
+ *     peerNetwork: other.selfLink,
+ * });
+ * const peering2 = new gcp.compute.NetworkPeering("peering2", {
+ *     network: other.selfLink,
+ *     peerNetwork: _default.selfLink,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.Network("default", auto_create_subnetworks=False)
+ * other = gcp.compute.Network("other", auto_create_subnetworks=False)
+ * peering1 = gcp.compute.NetworkPeering("peering1",
+ *     network=default.self_link,
+ *     peer_network=other.self_link)
+ * peering2 = gcp.compute.NetworkPeering("peering2",
+ *     network=other.self_link,
+ *     peer_network=default.self_link)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.Network("default", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var other = new Gcp.Compute.Network("other", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var peering1 = new Gcp.Compute.NetworkPeering("peering1", new Gcp.Compute.NetworkPeeringArgs
+ *         {
+ *             Network = @default.SelfLink,
+ *             PeerNetwork = other.SelfLink,
+ *         });
+ *         var peering2 = new Gcp.Compute.NetworkPeering("peering2", new Gcp.Compute.NetworkPeeringArgs
+ *         {
+ *             Network = other.SelfLink,
+ *             PeerNetwork = @default.SelfLink,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewNetwork(ctx, "default", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		other, err := compute.NewNetwork(ctx, "other", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNetworkPeering(ctx, "peering1", &compute.NetworkPeeringArgs{
+ * 			Network:     _default.SelfLink,
+ * 			PeerNetwork: other.SelfLink,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNetworkPeering(ctx, "peering2", &compute.NetworkPeeringArgs{
+ * 			Network:     other.SelfLink,
+ * 			PeerNetwork: _default.SelfLink,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +137,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/networkPeering:NetworkPeering peering_network project-name/network-name/peering-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/networkPeering:NetworkPeering")
 public class NetworkPeering extends io.pulumi.resources.CustomResource {

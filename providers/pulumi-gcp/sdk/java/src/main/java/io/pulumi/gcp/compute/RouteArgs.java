@@ -95,10 +95,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * * 10.128.0.56
      * * https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
      * * regions/region/forwardingRules/forwardingRule
-     *   When the beta provider, you can also specify the IP address
-     *   of a forwarding rule from the same VPC or any peered VPC.
-     *   Note that this can only be used when the destinationRange is
-     *   a public (non-RFC 1918) IP CIDR range.
+     * When the beta provider, you can also specify the IP address
+     * of a forwarding rule from the same VPC or any peered VPC.
+     * Note that this can only be used when the destinationRange is
+     * a public (non-RFC 1918) IP CIDR range.
      * 
      */
     @Import(name="nextHopIlb")

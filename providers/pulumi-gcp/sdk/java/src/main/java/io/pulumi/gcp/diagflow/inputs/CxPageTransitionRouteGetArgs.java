@@ -40,7 +40,7 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
     }
 
     /**
-     * - 
+     * -
      * The unique identifier of this event handler.
      * 
      */

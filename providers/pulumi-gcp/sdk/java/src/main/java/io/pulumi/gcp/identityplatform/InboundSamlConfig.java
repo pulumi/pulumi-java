@@ -22,7 +22,135 @@ import javax.annotation.Nullable;
  * [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
  * the marketplace prior to using this resource.
  * 
+ * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Identity Platform Inbound Saml Config Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * from "fs";
+ * 
+ * const samlConfig = new gcp.identityplatform.InboundSamlConfig("samlConfig", {
+ *     displayName: "Display Name",
+ *     idpConfig: {
+ *         idpEntityId: "tf-idp",
+ *         signRequest: true,
+ *         ssoUrl: "https://example.com",
+ *         idpCertificates: [{
+ *             x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+ *         }],
+ *     },
+ *     spConfig: {
+ *         spEntityId: "tf-sp",
+ *         callbackUri: "https://example.com",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * saml_config = gcp.identityplatform.InboundSamlConfig("samlConfig",
+ *     display_name="Display Name",
+ *     idp_config=gcp.identityplatform.InboundSamlConfigIdpConfigArgs(
+ *         idp_entity_id="tf-idp",
+ *         sign_request=True,
+ *         sso_url="https://example.com",
+ *         idp_certificates=[gcp.identityplatform.InboundSamlConfigIdpConfigIdpCertificateArgs(
+ *             x509_certificate=(lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+ *         )],
+ *     ),
+ *     sp_config=gcp.identityplatform.InboundSamlConfigSpConfigArgs(
+ *         sp_entity_id="tf-sp",
+ *         callback_uri="https://example.com",
+ *     ))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var samlConfig = new Gcp.IdentityPlatform.InboundSamlConfig("samlConfig", new Gcp.IdentityPlatform.InboundSamlConfigArgs
+ *         {
+ *             DisplayName = "Display Name",
+ *             IdpConfig = new Gcp.IdentityPlatform.Inputs.InboundSamlConfigIdpConfigArgs
+ *             {
+ *                 IdpEntityId = "tf-idp",
+ *                 SignRequest = true,
+ *                 SsoUrl = "https://example.com",
+ *                 IdpCertificates = 
+ *                 {
+ *                     new Gcp.IdentityPlatform.Inputs.InboundSamlConfigIdpConfigIdpCertificateArgs
+ *                     {
+ *                         X509Certificate = File.ReadAllText("test-fixtures/rsa_cert.pem"),
+ *                     },
+ *                 },
+ *             },
+ *             SpConfig = new Gcp.IdentityPlatform.Inputs.InboundSamlConfigSpConfigArgs
+ *             {
+ *                 SpEntityId = "tf-sp",
+ *                 CallbackUri = "https://example.com",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/identityplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := identityplatform.NewInboundSamlConfig(ctx, "samlConfig", &identityplatform.InboundSamlConfigArgs{
+ * 			DisplayName: pulumi.String("Display Name"),
+ * 			IdpConfig: &identityplatform.InboundSamlConfigIdpConfigArgs{
+ * 				IdpEntityId: pulumi.String("tf-idp"),
+ * 				SignRequest: pulumi.Bool(true),
+ * 				SsoUrl:      pulumi.String("https://example.com"),
+ * 				IdpCertificates: identityplatform.InboundSamlConfigIdpConfigIdpCertificateArray{
+ * 					&identityplatform.InboundSamlConfigIdpConfigIdpCertificateArgs{
+ * 						X509Certificate: readFileOrPanic("test-fixtures/rsa_cert.pem"),
+ * 					},
+ * 				},
+ * 			},
+ * 			SpConfig: &identityplatform.InboundSamlConfigSpConfigArgs{
+ * 				SpEntityId:  pulumi.String("tf-sp"),
+ * 				CallbackUri: pulumi.String("https://example.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +160,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default projects/{{project}}/inboundSamlConfigs/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:identityplatform/inboundSamlConfig:InboundSamlConfig")
 public class InboundSamlConfig extends io.pulumi.resources.CustomResource {

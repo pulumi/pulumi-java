@@ -28,7 +28,7 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
     }
 
     /**
-     * - 
+     * -
      * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 

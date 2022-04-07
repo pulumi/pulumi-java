@@ -23,7 +23,75 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Introduction to Reservations](https://cloud.google.com/bigquery/docs/reservations-intro)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Bigquery Reservation Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const reservation = new gcp.bigquery.Reservation("reservation", {
+ *     ignoreIdleSlots: false,
+ *     location: "asia-northeast1",
+ *     // Set to 0 for testing purposes
+ *     // In reality this would be larger than zero
+ *     slotCapacity: 0,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * reservation = gcp.bigquery.Reservation("reservation",
+ *     ignore_idle_slots=False,
+ *     location="asia-northeast1",
+ *     slot_capacity=0)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var reservation = new Gcp.BigQuery.Reservation("reservation", new Gcp.BigQuery.ReservationArgs
+ *         {
+ *             IgnoreIdleSlots = false,
+ *             Location = "asia-northeast1",
+ *             SlotCapacity = 0,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/bigquery"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := bigquery.NewReservation(ctx, "reservation", &bigquery.ReservationArgs{
+ * 			IgnoreIdleSlots: pulumi.Bool(false),
+ * 			Location:        pulumi.String("asia-northeast1"),
+ * 			SlotCapacity:    pulumi.Int(0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +101,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigquery/reservation:Reservation default projects/{{project}}/locations/{{location}}/reservations/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:bigquery/reservation:Reservation default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:bigquery/reservation:Reservation default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:bigquery/reservation:Reservation")
 public class Reservation extends io.pulumi.resources.CustomResource {

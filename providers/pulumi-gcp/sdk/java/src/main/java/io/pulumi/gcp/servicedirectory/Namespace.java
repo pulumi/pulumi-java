@@ -23,7 +23,92 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Configuring a namespace](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_namespace)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Service Directory Namespace Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const example = new gcp.servicedirectory.Namespace("example", {
+ *     namespaceId: "example-namespace",
+ *     location: "us-central1",
+ *     labels: {
+ *         key: "value",
+ *         foo: "bar",
+ *     },
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * example = gcp.servicedirectory.Namespace("example",
+ *     namespace_id="example-namespace",
+ *     location="us-central1",
+ *     labels={
+ *         "key": "value",
+ *         "foo": "bar",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Gcp.ServiceDirectory.Namespace("example", new Gcp.ServiceDirectory.NamespaceArgs
+ *         {
+ *             NamespaceId = "example-namespace",
+ *             Location = "us-central1",
+ *             Labels = 
+ *             {
+ *                 { "key", "value" },
+ *                 { "foo", "bar" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicedirectory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicedirectory.NewNamespace(ctx, "example", &servicedirectory.NamespaceArgs{
+ * 			NamespaceId: pulumi.String("example-namespace"),
+ * 			Location:    pulumi.String("us-central1"),
+ * 			Labels: pulumi.StringMap{
+ * 				"key": pulumi.String("value"),
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +118,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:servicedirectory/namespace:Namespace default projects/{{project}}/locations/{{location}}/namespaces/{{namespace_id}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:servicedirectory/namespace:Namespace default {{project}}/{{location}}/{{namespace_id}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:servicedirectory/namespace:Namespace default {{location}}/{{namespace_id}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:servicedirectory/namespace:Namespace")
 public class Namespace extends io.pulumi.resources.CustomResource {

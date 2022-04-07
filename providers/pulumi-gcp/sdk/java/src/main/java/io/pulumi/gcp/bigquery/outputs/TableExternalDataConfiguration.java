@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 public final class TableExternalDataConfiguration {
     /**
      * - Let BigQuery try to autodetect the schema
-     *   and format of the table.
+     * and format of the table.
      * 
      */
     private final Boolean autodetect;
@@ -123,7 +123,7 @@ public final class TableExternalDataConfiguration {
 
     /**
      * - Let BigQuery try to autodetect the schema
-     *   and format of the table.
+     * and format of the table.
      * 
     */
     public Boolean getAutodetect() {

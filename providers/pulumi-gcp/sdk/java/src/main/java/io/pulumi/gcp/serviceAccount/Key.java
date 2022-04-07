@@ -15,18 +15,99 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Creates and manages service account keys, which allow the use of a service account outside of Google Cloud.
+ * Creates and manages service account keys, which allow the use of a service account outside of Google Cloud. 
  * 
  * * [API documentation](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creating A New Key
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const myaccount = new gcp.serviceaccount.Account("myaccount", {
+ *     accountId: "myaccount",
+ *     displayName: "My Service Account",
+ * });
+ * const mykey = new gcp.serviceaccount.Key("mykey", {
+ *     serviceAccountId: myaccount.name,
+ *     publicKeyType: "TYPE_X509_PEM_FILE",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * myaccount = gcp.service_account.Account("myaccount",
+ *     account_id="myaccount",
+ *     display_name="My Service Account")
+ * mykey = gcp.service_account.Key("mykey",
+ *     service_account_id=myaccount.name,
+ *     public_key_type="TYPE_X509_PEM_FILE")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myaccount = new Gcp.ServiceAccount.Account("myaccount", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "myaccount",
+ *             DisplayName = "My Service Account",
+ *         });
+ *         var mykey = new Gcp.ServiceAccount.Key("mykey", new Gcp.ServiceAccount.KeyArgs
+ *         {
+ *             ServiceAccountId = myaccount.Name,
+ *             PublicKeyType = "TYPE_X509_PEM_FILE",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myaccount, err := serviceAccount.NewAccount(ctx, "myaccount", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("myaccount"),
+ * 			DisplayName: pulumi.String("My Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = serviceAccount.NewKey(ctx, "mykey", &serviceAccount.KeyArgs{
+ * 			ServiceAccountId: myaccount.Name,
+ * 			PublicKeyType:    pulumi.String("TYPE_X509_PEM_FILE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:serviceAccount/key:Key")
 public class Key extends io.pulumi.resources.CustomResource {

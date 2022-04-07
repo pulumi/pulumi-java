@@ -16,6 +16,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Featurestore can be imported using any of these accepted formats
@@ -24,18 +27,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:vertex/aiFeatureStore:AiFeatureStore default projects/{{project}}/locations/{{region}}/featurestores/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:vertex/aiFeatureStore:AiFeatureStore default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:vertex/aiFeatureStore:AiFeatureStore default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:vertex/aiFeatureStore:AiFeatureStore default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:vertex/aiFeatureStore:AiFeatureStore")
 public class AiFeatureStore extends io.pulumi.resources.CustomResource {

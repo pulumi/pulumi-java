@@ -17,7 +17,6 @@ public final class GCPolicyMaxAge {
      * 
      * @Deprecated
      * Deprecated in favor of duration
-     * 
      */
         @Deprecated /* Deprecated in favor of duration */
     private final @Nullable Integer days;
@@ -40,7 +39,6 @@ public final class GCPolicyMaxAge {
      * 
      * @Deprecated
      * Deprecated in favor of duration
-     * 
     */
     @Deprecated /* Deprecated in favor of duration */
     public Optional<Integer> getDays() {

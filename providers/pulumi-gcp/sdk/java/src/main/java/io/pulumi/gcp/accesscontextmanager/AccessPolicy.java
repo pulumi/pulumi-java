@@ -19,6 +19,7 @@ import javax.annotation.Nullable;
  * access policy is globally visible within an organization, and the
  * restrictions it specifies apply to all projects within an organization.
  * 
+ * 
  * To get more information about AccessPolicy, see:
  * 
  * * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies)
@@ -31,7 +32,69 @@ import javax.annotation.Nullable;
  * Your account must have the `serviceusage.services.use` permission on the
  * `billing_project` you defined.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Access Context Manager Access Policy Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+ *     parent: "organizations/123456789",
+ *     title: "my policy",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+ *     parent="organizations/123456789",
+ *     title="my policy")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+ *         {
+ *             Parent = "organizations/123456789",
+ *             Title = "my policy",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/accesscontextmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access-policy", &accesscontextmanager.AccessPolicyArgs{
+ * 			Parent: pulumi.String("organizations/123456789"),
+ * 			Title:  pulumi.String("my policy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:accesscontextmanager/accessPolicy:AccessPolicy default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:accesscontextmanager/accessPolicy:AccessPolicy")
 public class AccessPolicy extends io.pulumi.resources.CustomResource {

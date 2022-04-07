@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 /**
  * A Cloud Identity resource representing a Group.
  * 
+ * 
  * To get more information about Group, see:
  * 
  * * [API documentation](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups)
@@ -29,7 +30,99 @@ import javax.annotation.Nullable;
  * Your account must have the `serviceusage.services.use` permission on the
  * `billing_project` you defined.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Cloud Identity Groups Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const cloudIdentityGroupBasic = new gcp.cloudidentity.Group("cloud_identity_group_basic", {
+ *     displayName: "my-identity-group",
+ *     groupKey: {
+ *         id: "my-identity-group@example.com",
+ *     },
+ *     initialGroupConfig: "WITH_INITIAL_OWNER",
+ *     labels: {
+ *         "cloudidentity.googleapis.com/groups.discussion_forum": "",
+ *     },
+ *     parent: "customers/A01b123xz",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * cloud_identity_group_basic = gcp.cloudidentity.Group("cloudIdentityGroupBasic",
+ *     display_name="my-identity-group",
+ *     group_key=gcp.cloudidentity.GroupGroupKeyArgs(
+ *         id="my-identity-group@example.com",
+ *     ),
+ *     initial_group_config="WITH_INITIAL_OWNER",
+ *     labels={
+ *         "cloudidentity.googleapis.com/groups.discussion_forum": "",
+ *     },
+ *     parent="customers/A01b123xz")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudIdentityGroupBasic = new Gcp.CloudIdentity.Group("cloudIdentityGroupBasic", new Gcp.CloudIdentity.GroupArgs
+ *         {
+ *             DisplayName = "my-identity-group",
+ *             GroupKey = new Gcp.CloudIdentity.Inputs.GroupGroupKeyArgs
+ *             {
+ *                 Id = "my-identity-group@example.com",
+ *             },
+ *             InitialGroupConfig = "WITH_INITIAL_OWNER",
+ *             Labels = 
+ *             {
+ *                 { "cloudidentity.googleapis.com/groups.discussion_forum", "" },
+ *             },
+ *             Parent = "customers/A01b123xz",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/cloudidentity"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudidentity.NewGroup(ctx, "cloudIdentityGroupBasic", &cloudidentity.GroupArgs{
+ * 			DisplayName: pulumi.String("my-identity-group"),
+ * 			GroupKey: &cloudidentity.GroupGroupKeyArgs{
+ * 				Id: pulumi.String("my-identity-group@example.com"),
+ * 			},
+ * 			InitialGroupConfig: pulumi.String("WITH_INITIAL_OWNER"),
+ * 			Labels: pulumi.StringMap{
+ * 				"cloudidentity.googleapis.com/groups.discussion_forum": pulumi.String(""),
+ * 			},
+ * 			Parent: pulumi.String("customers/A01b123xz"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,6 +132,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:cloudidentity/group:Group default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:cloudidentity/group:Group")
 public class Group extends io.pulumi.resources.CustomResource {

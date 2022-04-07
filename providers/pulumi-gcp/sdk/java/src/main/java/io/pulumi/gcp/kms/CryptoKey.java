@@ -18,6 +18,7 @@ import javax.annotation.Nullable;
 /**
  * A `CryptoKey` represents a logical key that can be used for cryptographic operations.
  * 
+ * 
  * > **Note:** CryptoKeys cannot be deleted from Google Cloud Platform.
  * Destroying a provider-managed CryptoKey will remove it from state
  * and delete all CryptoKeyVersions, rendering the key unusable, but *will
@@ -26,13 +27,173 @@ import javax.annotation.Nullable;
  * For this reason, it is strongly recommended that you add lifecycle hooks
  * to the resource to prevent accidental destruction.
  * 
+ * 
  * To get more information about CryptoKey, see:
  * 
  * * [API documentation](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys)
  * * How-to Guides
  *     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Kms Crypto Key Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+ * const example_key = new gcp.kms.CryptoKey("example-key", {
+ *     keyRing: keyring.id,
+ *     rotationPeriod: "100000s",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * keyring = gcp.kms.KeyRing("keyring", location="global")
+ * example_key = gcp.kms.CryptoKey("example-key",
+ *     key_ring=keyring.id,
+ *     rotation_period="100000s")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+ *         {
+ *             Location = "global",
+ *         });
+ *         var example_key = new Gcp.Kms.CryptoKey("example-key", new Gcp.Kms.CryptoKeyArgs
+ *         {
+ *             KeyRing = keyring.Id,
+ *             RotationPeriod = "100000s",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+ * 			Location: pulumi.String("global"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewCryptoKey(ctx, "example-key", &kms.CryptoKeyArgs{
+ * 			KeyRing:        keyring.ID(),
+ * 			RotationPeriod: pulumi.String("100000s"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Kms Crypto Key Asymmetric Sign
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+ * const example_asymmetric_sign_key = new gcp.kms.CryptoKey("example-asymmetric-sign-key", {
+ *     keyRing: keyring.id,
+ *     purpose: "ASYMMETRIC_SIGN",
+ *     versionTemplate: {
+ *         algorithm: "EC_SIGN_P384_SHA384",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * keyring = gcp.kms.KeyRing("keyring", location="global")
+ * example_asymmetric_sign_key = gcp.kms.CryptoKey("example-asymmetric-sign-key",
+ *     key_ring=keyring.id,
+ *     purpose="ASYMMETRIC_SIGN",
+ *     version_template=gcp.kms.CryptoKeyVersionTemplateArgs(
+ *         algorithm="EC_SIGN_P384_SHA384",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+ *         {
+ *             Location = "global",
+ *         });
+ *         var example_asymmetric_sign_key = new Gcp.Kms.CryptoKey("example-asymmetric-sign-key", new Gcp.Kms.CryptoKeyArgs
+ *         {
+ *             KeyRing = keyring.Id,
+ *             Purpose = "ASYMMETRIC_SIGN",
+ *             VersionTemplate = new Gcp.Kms.Inputs.CryptoKeyVersionTemplateArgs
+ *             {
+ *                 Algorithm = "EC_SIGN_P384_SHA384",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+ * 			Location: pulumi.String("global"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewCryptoKey(ctx, "example-asymmetric-sign-key", &kms.CryptoKeyArgs{
+ * 			KeyRing: keyring.ID(),
+ * 			Purpose: pulumi.String("ASYMMETRIC_SIGN"),
+ * 			VersionTemplate: &kms.CryptoKeyVersionTemplateArgs{
+ * 				Algorithm: pulumi.String("EC_SIGN_P384_SHA384"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -42,10 +203,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:kms/cryptoKey:CryptoKey default {{key_ring}}/cryptoKeys/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:kms/cryptoKey:CryptoKey default {{key_ring}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:kms/cryptoKey:CryptoKey")
 public class CryptoKey extends io.pulumi.resources.CustomResource {

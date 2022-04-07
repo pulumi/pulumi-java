@@ -33,7 +33,286 @@ import javax.annotation.Nullable;
  * (and run `pulumi update` to write the field to state) in order to destroy an instance.
  * It is recommended to not set this field (or set it to true) until you're ready to destroy the instance and its databases.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SQL Second Generation Instance
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const master = new gcp.sql.DatabaseInstance("master", {
+ *     databaseVersion: "POSTGRES_11",
+ *     region: "us-central1",
+ *     settings: {
+ *         // Second-generation instance tiers are based on the machine
+ *         // type. See argument reference below.
+ *         tier: "db-f1-micro",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * master = gcp.sql.DatabaseInstance("master",
+ *     database_version="POSTGRES_11",
+ *     region="us-central1",
+ *     settings=gcp.sql.DatabaseInstanceSettingsArgs(
+ *         tier="db-f1-micro",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var master = new Gcp.Sql.DatabaseInstance("master", new Gcp.Sql.DatabaseInstanceArgs
+ *         {
+ *             DatabaseVersion = "POSTGRES_11",
+ *             Region = "us-central1",
+ *             Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+ *             {
+ *                 Tier = "db-f1-micro",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
+ * 			DatabaseVersion: pulumi.String("POSTGRES_11"),
+ * 			Region:          pulumi.String("us-central1"),
+ * 			Settings: &sql.DatabaseInstanceSettingsArgs{
+ * 				Tier: pulumi.String("db-f1-micro"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Private IP Instance
+ * > **NOTE:** For private IP instance setup, note that the `gcp.sql.DatabaseInstance` does not actually interpolate values from `gcp.servicenetworking.Connection`. You must explicitly add a `depends_on`reference as shown below.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * import * as random from "@pulumi/random";
+ * 
+ * const privateNetwork = new gcp.compute.Network("privateNetwork", {}, {
+ *     provider: google_beta,
+ * });
+ * const privateIpAddress = new gcp.compute.GlobalAddress("privateIpAddress", {
+ *     purpose: "VPC_PEERING",
+ *     addressType: "INTERNAL",
+ *     prefixLength: 16,
+ *     network: privateNetwork.id,
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const privateVpcConnection = new gcp.servicenetworking.Connection("privateVpcConnection", {
+ *     network: privateNetwork.id,
+ *     service: "servicenetworking.googleapis.com",
+ *     reservedPeeringRanges: [privateIpAddress.name],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+ * const instance = new gcp.sql.DatabaseInstance("instance", {
+ *     region: "us-central1",
+ *     databaseVersion: "MYSQL_5_7",
+ *     settings: {
+ *         tier: "db-f1-micro",
+ *         ipConfiguration: {
+ *             ipv4Enabled: false,
+ *             privateNetwork: privateNetwork.id,
+ *         },
+ *     },
+ * }, {
+ *     provider: google_beta,
+ *     dependsOn: [privateVpcConnection],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * import pulumi_random as random
+ * 
+ * private_network = gcp.compute.Network("privateNetwork", opts=pulumi.ResourceOptions(provider=google_beta))
+ * private_ip_address = gcp.compute.GlobalAddress("privateIpAddress",
+ *     purpose="VPC_PEERING",
+ *     address_type="INTERNAL",
+ *     prefix_length=16,
+ *     network=private_network.id,
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * private_vpc_connection = gcp.servicenetworking.Connection("privateVpcConnection",
+ *     network=private_network.id,
+ *     service="servicenetworking.googleapis.com",
+ *     reserved_peering_ranges=[private_ip_address.name],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+ * instance = gcp.sql.DatabaseInstance("instance",
+ *     region="us-central1",
+ *     database_version="MYSQL_5_7",
+ *     settings=gcp.sql.DatabaseInstanceSettingsArgs(
+ *         tier="db-f1-micro",
+ *         ip_configuration=gcp.sql.DatabaseInstanceSettingsIpConfigurationArgs(
+ *             ipv4_enabled=False,
+ *             private_network=private_network.id,
+ *         ),
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=google_beta,
+ *         depends_on=[private_vpc_connection]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateNetwork = new Gcp.Compute.Network("privateNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var privateIpAddress = new Gcp.Compute.GlobalAddress("privateIpAddress", new Gcp.Compute.GlobalAddressArgs
+ *         {
+ *             Purpose = "VPC_PEERING",
+ *             AddressType = "INTERNAL",
+ *             PrefixLength = 16,
+ *             Network = privateNetwork.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var privateVpcConnection = new Gcp.ServiceNetworking.Connection("privateVpcConnection", new Gcp.ServiceNetworking.ConnectionArgs
+ *         {
+ *             Network = privateNetwork.Id,
+ *             Service = "servicenetworking.googleapis.com",
+ *             ReservedPeeringRanges = 
+ *             {
+ *                 privateIpAddress.Name,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *         var dbNameSuffix = new Random.RandomId("dbNameSuffix", new Random.RandomIdArgs
+ *         {
+ *             ByteLength = 4,
+ *         });
+ *         var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+ *         {
+ *             Region = "us-central1",
+ *             DatabaseVersion = "MYSQL_5_7",
+ *             Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+ *             {
+ *                 Tier = "db-f1-micro",
+ *                 IpConfiguration = new Gcp.Sql.Inputs.DatabaseInstanceSettingsIpConfigurationArgs
+ *                 {
+ *                     Ipv4Enabled = false,
+ *                     PrivateNetwork = privateNetwork.Id,
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *             DependsOn = 
+ *             {
+ *                 privateVpcConnection,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/servicenetworking"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/sql"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		privateNetwork, err := compute.NewNetwork(ctx, "privateNetwork", nil, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		privateIpAddress, err := compute.NewGlobalAddress(ctx, "privateIpAddress", &compute.GlobalAddressArgs{
+ * 			Purpose:      pulumi.String("VPC_PEERING"),
+ * 			AddressType:  pulumi.String("INTERNAL"),
+ * 			PrefixLength: pulumi.Int(16),
+ * 			Network:      privateNetwork.ID(),
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		privateVpcConnection, err := servicenetworking.NewConnection(ctx, "privateVpcConnection", &servicenetworking.ConnectionArgs{
+ * 			Network: privateNetwork.ID(),
+ * 			Service: pulumi.String("servicenetworking.googleapis.com"),
+ * 			ReservedPeeringRanges: pulumi.StringArray{
+ * 				privateIpAddress.Name,
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = random.NewRandomId(ctx, "dbNameSuffix", &random.RandomIdArgs{
+ * 			ByteLength: pulumi.Int(4),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+ * 			Region:          pulumi.String("us-central1"),
+ * 			DatabaseVersion: pulumi.String("MYSQL_5_7"),
+ * 			Settings: &sql.DatabaseInstanceSettingsArgs{
+ * 				Tier: pulumi.String("db-f1-micro"),
+ * 				IpConfiguration: &sql.DatabaseInstanceSettingsIpConfigurationArgs{
+ * 					Ipv4Enabled:    pulumi.Bool(false),
+ * 					PrivateNetwork: privateNetwork.ID(),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+ * 			privateVpcConnection,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -43,16 +322,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master projects/{{project}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master {{project}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master {{name}}
  * ```
  * 
- *  config and set on the server. When importing, double-check that your config has all the fields set that you expect- just seeing no diff isn't sufficient to know that your config could reproduce the imported resource.
- * 
+ *  config and set on the server. When importing, double-check that your config has all the fields set that you expect- just seeing no diff isn't sufficient to know that your config could reproduce the imported resource. 
  */
 @ResourceType(type="gcp:sql/databaseInstance:DatabaseInstance")
 public class DatabaseInstance extends io.pulumi.resources.CustomResource {

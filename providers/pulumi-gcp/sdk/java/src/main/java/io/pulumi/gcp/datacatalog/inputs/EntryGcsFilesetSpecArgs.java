@@ -38,7 +38,7 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * - 
+     * -
      * Sample files contained in this fileset, not all files contained in this fileset are represented here.
      * Structure is documented below.
      * 

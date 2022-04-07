@@ -18,6 +18,63 @@ import javax.annotation.Nullable;
  * 
  * !> **WARNING:** Deleting this resource will not delete or close the billing subaccount.
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const subaccount = new gcp.billing.SubAccount("subaccount", {
+ *     displayName: "My Billing Account",
+ *     masterBillingAccount: "012345-567890-ABCDEF",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * subaccount = gcp.billing.SubAccount("subaccount",
+ *     display_name="My Billing Account",
+ *     master_billing_account="012345-567890-ABCDEF")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var subaccount = new Gcp.Billing.SubAccount("subaccount", new Gcp.Billing.SubAccountArgs
+ *         {
+ *             DisplayName = "My Billing Account",
+ *             MasterBillingAccount = "012345-567890-ABCDEF",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/billing"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := billing.NewSubAccount(ctx, "subaccount", &billing.SubAccountArgs{
+ * 			DisplayName:          pulumi.String("My Billing Account"),
+ * 			MasterBillingAccount: pulumi.String("012345-567890-ABCDEF"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * 
  * ## Import
  * 
  * Billing Subaccounts can be imported using any of these accepted formats
@@ -26,6 +83,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:billing/subAccount:SubAccount default billingAccounts/{billing_account_id}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:billing/subAccount:SubAccount")
 public class SubAccount extends io.pulumi.resources.CustomResource {

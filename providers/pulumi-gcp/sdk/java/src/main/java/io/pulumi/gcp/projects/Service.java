@@ -28,7 +28,74 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Enabling and Disabling Services](https://cloud.google.com/service-usage/docs/enable-disable)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const project = new gcp.projects.Service("project", {
+ *     disableDependentServices: true,
+ *     project: "your-project-id",
+ *     service: "iam.googleapis.com",
+ * }, { timeouts: {
+ *     create: "30m",
+ *     update: "40m",
+ * } });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * project = gcp.projects.Service("project",
+ *     disable_dependent_services=True,
+ *     project="your-project-id",
+ *     service="iam.googleapis.com")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var project = new Gcp.Projects.Service("project", new Gcp.Projects.ServiceArgs
+ *         {
+ *             DisableDependentServices = true,
+ *             Project = "your-project-id",
+ *             Service = "iam.googleapis.com",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := projects.NewService(ctx, "project", &projects.ServiceArgs{
+ * 			DisableDependentServices: pulumi.Bool(true),
+ * 			Project:                  pulumi.String("your-project-id"),
+ * 			Service:                  pulumi.String("iam.googleapis.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,8 +105,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:projects/service:Service my_project your-project-id/iam.googleapis.com
  * ```
  * 
- *  Note that unlike other resources that fail if they already exist, `terraform apply` can be successfully used to verify already enabled services. This means that when importing existing resources into Terraform, you can either import the `google_project_service` resources or treat them as new infrastructure and run `terraform apply` to add them to state.
- * 
+ *  Note that unlike other resources that fail if they already exist, `terraform apply` can be successfully used to verify already enabled services. This means that when importing existing resources into Terraform, you can either import the `google_project_service` resources or treat them as new infrastructure and run `terraform apply` to add them to state. 
  */
 @ResourceType(type="gcp:projects/service:Service")
 public class Service extends io.pulumi.resources.CustomResource {

@@ -21,7 +21,69 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Creating a dataset](https://cloud.google.com/healthcare/docs/how-tos/datasets)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Healthcare Dataset Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultDataset = new gcp.healthcare.Dataset("default", {
+ *     location: "us-central1",
+ *     timeZone: "UTC",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.healthcare.Dataset("default",
+ *     location="us-central1",
+ *     time_zone="UTC")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Healthcare.Dataset("default", new Gcp.Healthcare.DatasetArgs
+ *         {
+ *             Location = "us-central1",
+ *             TimeZone = "UTC",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/healthcare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := healthcare.NewDataset(ctx, "default", &healthcare.DatasetArgs{
+ * 			Location: pulumi.String("us-central1"),
+ * 			TimeZone: pulumi.String("UTC"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,14 +93,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:healthcare/dataset:Dataset default projects/{{project}}/locations/{{location}}/datasets/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:healthcare/dataset:Dataset default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:healthcare/dataset:Dataset default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:healthcare/dataset:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {

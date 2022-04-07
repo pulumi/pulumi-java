@@ -22,12 +22,12 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * - FRIDAY: Friday
      * - SATURDAY: Saturday
      * - SUNDAY: Sunday
-     *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
     private final String day;
     /**
-     * - 
+     * -
      * Output only. Duration of the maintenance window.
      * The current window is fixed at 1 hour.
      * A duration in seconds with up to nine fractional digits,
@@ -36,7 +36,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      */
     private final @Nullable String duration;
     /**
-     * - 
+     * -
      * Output only. The start time of any upcoming scheduled maintenance for this instance.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -64,14 +64,14 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * - FRIDAY: Friday
      * - SATURDAY: Saturday
      * - SUNDAY: Sunday
-     *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
     */
     public String getDay() {
         return this.day;
     }
     /**
-     * - 
+     * -
      * Output only. Duration of the maintenance window.
      * The current window is fixed at 1 hour.
      * A duration in seconds with up to nine fractional digits,
@@ -82,7 +82,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
         return Optional.ofNullable(this.duration);
     }
     /**
-     * - 
+     * -
      * Output only. The start time of any upcoming scheduled maintenance for this instance.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.

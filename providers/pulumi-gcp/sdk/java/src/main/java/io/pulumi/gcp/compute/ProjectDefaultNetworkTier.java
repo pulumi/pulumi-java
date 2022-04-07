@@ -20,7 +20,62 @@ import javax.annotation.Nullable;
  * For more information, see,
  * [the Project API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/projects/setDefaultNetworkTier).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultProjectDefaultNetworkTier = new gcp.compute.ProjectDefaultNetworkTier("default", {
+ *     networkTier: "PREMIUM",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.compute.ProjectDefaultNetworkTier("default", network_tier="PREMIUM")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.Compute.ProjectDefaultNetworkTier("default", new Gcp.Compute.ProjectDefaultNetworkTierArgs
+ *         {
+ *             NetworkTier = "PREMIUM",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewProjectDefaultNetworkTier(ctx, "default", &compute.ProjectDefaultNetworkTierArgs{
+ * 			NetworkTier: pulumi.String("PREMIUM"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier default project-id`
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier")
 public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResource {

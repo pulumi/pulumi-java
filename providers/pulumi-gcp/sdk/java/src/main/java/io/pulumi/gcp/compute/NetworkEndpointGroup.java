@@ -29,13 +29,119 @@ import javax.annotation.Nullable;
  * `resourceInUseByAnotherResource` error. Use `lifecycle.create_before_destroy`
  * to avoid this type of error.
  * 
+ * 
  * To get more information about NetworkEndpointGroup, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Network Endpoint Group
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+ * const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+ *     ipCidrRange: "10.0.0.0/16",
+ *     region: "us-central1",
+ *     network: defaultNetwork.id,
+ * });
+ * const neg = new gcp.compute.NetworkEndpointGroup("neg", {
+ *     network: defaultNetwork.id,
+ *     subnetwork: defaultSubnetwork.id,
+ *     defaultPort: "90",
+ *     zone: "us-central1-a",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+ * default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+ *     ip_cidr_range="10.0.0.0/16",
+ *     region="us-central1",
+ *     network=default_network.id)
+ * neg = gcp.compute.NetworkEndpointGroup("neg",
+ *     network=default_network.id,
+ *     subnetwork=default_subnetwork.id,
+ *     default_port=90,
+ *     zone="us-central1-a")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+ *         {
+ *             IpCidrRange = "10.0.0.0/16",
+ *             Region = "us-central1",
+ *             Network = defaultNetwork.Id,
+ *         });
+ *         var neg = new Gcp.Compute.NetworkEndpointGroup("neg", new Gcp.Compute.NetworkEndpointGroupArgs
+ *         {
+ *             Network = defaultNetwork.Id,
+ *             Subnetwork = defaultSubnetwork.Id,
+ *             DefaultPort = 90,
+ *             Zone = "us-central1-a",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+ * 			IpCidrRange: pulumi.String("10.0.0.0/16"),
+ * 			Region:      pulumi.String("us-central1"),
+ * 			Network:     defaultNetwork.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNetworkEndpointGroup(ctx, "neg", &compute.NetworkEndpointGroupArgs{
+ * 			Network:     defaultNetwork.ID(),
+ * 			Subnetwork:  defaultSubnetwork.ID(),
+ * 			DefaultPort: pulumi.Int(90),
+ * 			Zone:        pulumi.String("us-central1-a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -45,18 +151,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default projects/{{project}}/zones/{{zone}}/networkEndpointGroups/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default {{project}}/{{zone}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default {{zone}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/networkEndpointGroup:NetworkEndpointGroup default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/networkEndpointGroup:NetworkEndpointGroup")
 public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {

@@ -25,9 +25,237 @@ import javax.annotation.Nullable;
  * 
  * ## google\_dataproc\_job\_iam\_policy
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const admin = gcp.organizations.getIAMPolicy({
+ *     bindings: [{
+ *         role: "roles/editor",
+ *         members: ["user:jane@example.com"],
+ *     }],
+ * });
+ * const editor = new gcp.dataproc.JobIAMPolicy("editor", {
+ *     project: "your-project",
+ *     region: "your-region",
+ *     jobId: "your-dataproc-job",
+ *     policyData: admin.then(admin => admin.policyData),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+ *     role="roles/editor",
+ *     members=["user:jane@example.com"],
+ * )])
+ * editor = gcp.dataproc.JobIAMPolicy("editor",
+ *     project="your-project",
+ *     region="your-region",
+ *     job_id="your-dataproc-job",
+ *     policy_data=admin.policy_data)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+ *         {
+ *             Bindings = 
+ *             {
+ *                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+ *                 {
+ *                     Role = "roles/editor",
+ *                     Members = 
+ *                     {
+ *                         "user:jane@example.com",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var editor = new Gcp.Dataproc.JobIAMPolicy("editor", new Gcp.Dataproc.JobIAMPolicyArgs
+ *         {
+ *             Project = "your-project",
+ *             Region = "your-region",
+ *             JobId = "your-dataproc-job",
+ *             PolicyData = admin.Apply(admin => admin.PolicyData),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+ * 			Bindings: []organizations.GetIAMPolicyBinding{
+ * 				organizations.GetIAMPolicyBinding{
+ * 					Role: "roles/editor",
+ * 					Members: []string{
+ * 						"user:jane@example.com",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dataproc.NewJobIAMPolicy(ctx, "editor", &dataproc.JobIAMPolicyArgs{
+ * 			Project:    pulumi.String("your-project"),
+ * 			Region:     pulumi.String("your-region"),
+ * 			JobId:      pulumi.String("your-dataproc-job"),
+ * 			PolicyData: pulumi.String(admin.PolicyData),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_dataproc\_job\_iam\_binding
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const editor = new gcp.dataproc.JobIAMBinding("editor", {
+ *     jobId: "your-dataproc-job",
+ *     members: ["user:jane@example.com"],
+ *     role: "roles/editor",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * editor = gcp.dataproc.JobIAMBinding("editor",
+ *     job_id="your-dataproc-job",
+ *     members=["user:jane@example.com"],
+ *     role="roles/editor")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var editor = new Gcp.Dataproc.JobIAMBinding("editor", new Gcp.Dataproc.JobIAMBindingArgs
+ *         {
+ *             JobId = "your-dataproc-job",
+ *             Members = 
+ *             {
+ *                 "user:jane@example.com",
+ *             },
+ *             Role = "roles/editor",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataproc.NewJobIAMBinding(ctx, "editor", &dataproc.JobIAMBindingArgs{
+ * 			JobId: pulumi.String("your-dataproc-job"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("user:jane@example.com"),
+ * 			},
+ * 			Role: pulumi.String("roles/editor"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## google\_dataproc\_job\_iam\_member
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const editor = new gcp.dataproc.JobIAMMember("editor", {
+ *     jobId: "your-dataproc-job",
+ *     member: "user:jane@example.com",
+ *     role: "roles/editor",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * editor = gcp.dataproc.JobIAMMember("editor",
+ *     job_id="your-dataproc-job",
+ *     member="user:jane@example.com",
+ *     role="roles/editor")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var editor = new Gcp.Dataproc.JobIAMMember("editor", new Gcp.Dataproc.JobIAMMemberArgs
+ *         {
+ *             JobId = "your-dataproc-job",
+ *             Member = "user:jane@example.com",
+ *             Role = "roles/editor",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataproc.NewJobIAMMember(ctx, "editor", &dataproc.JobIAMMemberArgs{
+ * 			JobId:  pulumi.String("your-dataproc-job"),
+ * 			Member: pulumi.String("user:jane@example.com"),
+ * 			Role:   pulumi.String("roles/editor"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -37,9 +265,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor "projects/{project}/regions/{region}/jobs/{job_id}"
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor "projects/{project}/regions/{region}/jobs/{job_id} roles/editor"
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor "projects/{project}/regions/{region}/jobs/{job_id} roles/editor user:jane@example.com"
@@ -47,8 +279,7 @@ import javax.annotation.Nullable;
  * 
  *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
  * 
- * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
- * 
+ * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. 
  */
 @ResourceType(type="gcp:dataproc/jobIAMPolicy:JobIAMPolicy")
 public class JobIAMPolicy extends io.pulumi.resources.CustomResource {

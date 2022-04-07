@@ -54,7 +54,7 @@ public final class DiskSourceImageEncryptionKeyArgs extends io.pulumi.resources.
     }
 
     /**
-     * - 
+     * -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 

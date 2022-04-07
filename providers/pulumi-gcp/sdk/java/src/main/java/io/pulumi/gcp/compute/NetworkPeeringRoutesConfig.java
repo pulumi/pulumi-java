@@ -19,13 +19,380 @@ import javax.annotation.Nullable;
  * peerings that shouldn't otherwise be managed by other tools. Deleting this
  * resource is a no-op and the peering will not be modified.
  * 
+ * 
  * To get more information about NetworkPeeringRoutesConfig, see:
  * 
  * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/networks/updatePeering)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc-peering)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Network Peering Routes Config Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const networkPrimary = new gcp.compute.Network("networkPrimary", {autoCreateSubnetworks: "false"});
+ * const networkSecondary = new gcp.compute.Network("networkSecondary", {autoCreateSubnetworks: "false"});
+ * const peeringPrimary = new gcp.compute.NetworkPeering("peeringPrimary", {
+ *     network: networkPrimary.id,
+ *     peerNetwork: networkSecondary.id,
+ *     importCustomRoutes: true,
+ *     exportCustomRoutes: true,
+ * });
+ * const peeringPrimaryRoutes = new gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", {
+ *     peering: peeringPrimary.name,
+ *     network: networkPrimary.name,
+ *     importCustomRoutes: true,
+ *     exportCustomRoutes: true,
+ * });
+ * const peeringSecondary = new gcp.compute.NetworkPeering("peeringSecondary", {
+ *     network: networkSecondary.id,
+ *     peerNetwork: networkPrimary.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * network_primary = gcp.compute.Network("networkPrimary", auto_create_subnetworks=False)
+ * network_secondary = gcp.compute.Network("networkSecondary", auto_create_subnetworks=False)
+ * peering_primary = gcp.compute.NetworkPeering("peeringPrimary",
+ *     network=network_primary.id,
+ *     peer_network=network_secondary.id,
+ *     import_custom_routes=True,
+ *     export_custom_routes=True)
+ * peering_primary_routes = gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes",
+ *     peering=peering_primary.name,
+ *     network=network_primary.name,
+ *     import_custom_routes=True,
+ *     export_custom_routes=True)
+ * peering_secondary = gcp.compute.NetworkPeering("peeringSecondary",
+ *     network=network_secondary.id,
+ *     peer_network=network_primary.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var networkPrimary = new Gcp.Compute.Network("networkPrimary", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var networkSecondary = new Gcp.Compute.Network("networkSecondary", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var peeringPrimary = new Gcp.Compute.NetworkPeering("peeringPrimary", new Gcp.Compute.NetworkPeeringArgs
+ *         {
+ *             Network = networkPrimary.Id,
+ *             PeerNetwork = networkSecondary.Id,
+ *             ImportCustomRoutes = true,
+ *             ExportCustomRoutes = true,
+ *         });
+ *         var peeringPrimaryRoutes = new Gcp.Compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", new Gcp.Compute.NetworkPeeringRoutesConfigArgs
+ *         {
+ *             Peering = peeringPrimary.Name,
+ *             Network = networkPrimary.Name,
+ *             ImportCustomRoutes = true,
+ *             ExportCustomRoutes = true,
+ *         });
+ *         var peeringSecondary = new Gcp.Compute.NetworkPeering("peeringSecondary", new Gcp.Compute.NetworkPeeringArgs
+ *         {
+ *             Network = networkSecondary.Id,
+ *             PeerNetwork = networkPrimary.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		networkPrimary, err := compute.NewNetwork(ctx, "networkPrimary", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		networkSecondary, err := compute.NewNetwork(ctx, "networkSecondary", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		peeringPrimary, err := compute.NewNetworkPeering(ctx, "peeringPrimary", &compute.NetworkPeeringArgs{
+ * 			Network:            networkPrimary.ID(),
+ * 			PeerNetwork:        networkSecondary.ID(),
+ * 			ImportCustomRoutes: pulumi.Bool(true),
+ * 			ExportCustomRoutes: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNetworkPeeringRoutesConfig(ctx, "peeringPrimaryRoutes", &compute.NetworkPeeringRoutesConfigArgs{
+ * 			Peering:            peeringPrimary.Name,
+ * 			Network:            networkPrimary.Name,
+ * 			ImportCustomRoutes: pulumi.Bool(true),
+ * 			ExportCustomRoutes: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNetworkPeering(ctx, "peeringSecondary", &compute.NetworkPeeringArgs{
+ * 			Network:     networkSecondary.ID(),
+ * 			PeerNetwork: networkPrimary.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Network Peering Routes Config Gke
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const containerNetwork = new gcp.compute.Network("containerNetwork", {autoCreateSubnetworks: false});
+ * const containerSubnetwork = new gcp.compute.Subnetwork("containerSubnetwork", {
+ *     region: "us-central1",
+ *     network: containerNetwork.name,
+ *     ipCidrRange: "10.0.36.0/24",
+ *     privateIpGoogleAccess: true,
+ *     secondaryIpRanges: [
+ *         {
+ *             rangeName: "pod",
+ *             ipCidrRange: "10.0.0.0/19",
+ *         },
+ *         {
+ *             rangeName: "svc",
+ *             ipCidrRange: "10.0.32.0/22",
+ *         },
+ *     ],
+ * });
+ * const privateCluster = new gcp.container.Cluster("privateCluster", {
+ *     location: "us-central1-a",
+ *     initialNodeCount: 1,
+ *     network: containerNetwork.name,
+ *     subnetwork: containerSubnetwork.name,
+ *     privateClusterConfig: {
+ *         enablePrivateEndpoint: true,
+ *         enablePrivateNodes: true,
+ *         masterIpv4CidrBlock: "10.42.0.0/28",
+ *     },
+ *     masterAuthorizedNetworksConfig: {},
+ *     ipAllocationPolicy: {
+ *         clusterSecondaryRangeName: containerSubnetwork.secondaryIpRanges.apply(secondaryIpRanges => secondaryIpRanges[0].rangeName),
+ *         servicesSecondaryRangeName: containerSubnetwork.secondaryIpRanges.apply(secondaryIpRanges => secondaryIpRanges[1].rangeName),
+ *     },
+ * });
+ * const peeringGkeRoutes = new gcp.compute.NetworkPeeringRoutesConfig("peeringGkeRoutes", {
+ *     peering: privateCluster.privateClusterConfig.apply(privateClusterConfig => privateClusterConfig.peeringName),
+ *     network: containerNetwork.name,
+ *     importCustomRoutes: true,
+ *     exportCustomRoutes: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * container_network = gcp.compute.Network("containerNetwork", auto_create_subnetworks=False)
+ * container_subnetwork = gcp.compute.Subnetwork("containerSubnetwork",
+ *     region="us-central1",
+ *     network=container_network.name,
+ *     ip_cidr_range="10.0.36.0/24",
+ *     private_ip_google_access=True,
+ *     secondary_ip_ranges=[
+ *         gcp.compute.SubnetworkSecondaryIpRangeArgs(
+ *             range_name="pod",
+ *             ip_cidr_range="10.0.0.0/19",
+ *         ),
+ *         gcp.compute.SubnetworkSecondaryIpRangeArgs(
+ *             range_name="svc",
+ *             ip_cidr_range="10.0.32.0/22",
+ *         ),
+ *     ])
+ * private_cluster = gcp.container.Cluster("privateCluster",
+ *     location="us-central1-a",
+ *     initial_node_count=1,
+ *     network=container_network.name,
+ *     subnetwork=container_subnetwork.name,
+ *     private_cluster_config=gcp.container.ClusterPrivateClusterConfigArgs(
+ *         enable_private_endpoint=True,
+ *         enable_private_nodes=True,
+ *         master_ipv4_cidr_block="10.42.0.0/28",
+ *     ),
+ *     master_authorized_networks_config=gcp.container.ClusterMasterAuthorizedNetworksConfigArgs(),
+ *     ip_allocation_policy=gcp.container.ClusterIpAllocationPolicyArgs(
+ *         cluster_secondary_range_name=container_subnetwork.secondary_ip_ranges[0].range_name,
+ *         services_secondary_range_name=container_subnetwork.secondary_ip_ranges[1].range_name,
+ *     ))
+ * peering_gke_routes = gcp.compute.NetworkPeeringRoutesConfig("peeringGkeRoutes",
+ *     peering=private_cluster.private_cluster_config.peering_name,
+ *     network=container_network.name,
+ *     import_custom_routes=True,
+ *     export_custom_routes=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var containerNetwork = new Gcp.Compute.Network("containerNetwork", new Gcp.Compute.NetworkArgs
+ *         {
+ *             AutoCreateSubnetworks = false,
+ *         });
+ *         var containerSubnetwork = new Gcp.Compute.Subnetwork("containerSubnetwork", new Gcp.Compute.SubnetworkArgs
+ *         {
+ *             Region = "us-central1",
+ *             Network = containerNetwork.Name,
+ *             IpCidrRange = "10.0.36.0/24",
+ *             PrivateIpGoogleAccess = true,
+ *             SecondaryIpRanges = 
+ *             {
+ *                 new Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs
+ *                 {
+ *                     RangeName = "pod",
+ *                     IpCidrRange = "10.0.0.0/19",
+ *                 },
+ *                 new Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs
+ *                 {
+ *                     RangeName = "svc",
+ *                     IpCidrRange = "10.0.32.0/22",
+ *                 },
+ *             },
+ *         });
+ *         var privateCluster = new Gcp.Container.Cluster("privateCluster", new Gcp.Container.ClusterArgs
+ *         {
+ *             Location = "us-central1-a",
+ *             InitialNodeCount = 1,
+ *             Network = containerNetwork.Name,
+ *             Subnetwork = containerSubnetwork.Name,
+ *             PrivateClusterConfig = new Gcp.Container.Inputs.ClusterPrivateClusterConfigArgs
+ *             {
+ *                 EnablePrivateEndpoint = true,
+ *                 EnablePrivateNodes = true,
+ *                 MasterIpv4CidrBlock = "10.42.0.0/28",
+ *             },
+ *             MasterAuthorizedNetworksConfig = ,
+ *             IpAllocationPolicy = new Gcp.Container.Inputs.ClusterIpAllocationPolicyArgs
+ *             {
+ *                 ClusterSecondaryRangeName = containerSubnetwork.SecondaryIpRanges.Apply(secondaryIpRanges => secondaryIpRanges[0].RangeName),
+ *                 ServicesSecondaryRangeName = containerSubnetwork.SecondaryIpRanges.Apply(secondaryIpRanges => secondaryIpRanges[1].RangeName),
+ *             },
+ *         });
+ *         var peeringGkeRoutes = new Gcp.Compute.NetworkPeeringRoutesConfig("peeringGkeRoutes", new Gcp.Compute.NetworkPeeringRoutesConfigArgs
+ *         {
+ *             Peering = privateCluster.PrivateClusterConfig.Apply(privateClusterConfig => privateClusterConfig.PeeringName),
+ *             Network = containerNetwork.Name,
+ *             ImportCustomRoutes = true,
+ *             ExportCustomRoutes = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/container"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		containerNetwork, err := compute.NewNetwork(ctx, "containerNetwork", &compute.NetworkArgs{
+ * 			AutoCreateSubnetworks: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		containerSubnetwork, err := compute.NewSubnetwork(ctx, "containerSubnetwork", &compute.SubnetworkArgs{
+ * 			Region:                pulumi.String("us-central1"),
+ * 			Network:               containerNetwork.Name,
+ * 			IpCidrRange:           pulumi.String("10.0.36.0/24"),
+ * 			PrivateIpGoogleAccess: pulumi.Bool(true),
+ * 			SecondaryIpRanges: compute.SubnetworkSecondaryIpRangeArray{
+ * 				&compute.SubnetworkSecondaryIpRangeArgs{
+ * 					RangeName:   pulumi.String("pod"),
+ * 					IpCidrRange: pulumi.String("10.0.0.0/19"),
+ * 				},
+ * 				&compute.SubnetworkSecondaryIpRangeArgs{
+ * 					RangeName:   pulumi.String("svc"),
+ * 					IpCidrRange: pulumi.String("10.0.32.0/22"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		privateCluster, err := container.NewCluster(ctx, "privateCluster", &container.ClusterArgs{
+ * 			Location:         pulumi.String("us-central1-a"),
+ * 			InitialNodeCount: pulumi.Int(1),
+ * 			Network:          containerNetwork.Name,
+ * 			Subnetwork:       containerSubnetwork.Name,
+ * 			PrivateClusterConfig: &container.ClusterPrivateClusterConfigArgs{
+ * 				EnablePrivateEndpoint: pulumi.Bool(true),
+ * 				EnablePrivateNodes:    pulumi.Bool(true),
+ * 				MasterIpv4CidrBlock:   pulumi.String("10.42.0.0/28"),
+ * 			},
+ * 			MasterAuthorizedNetworksConfig: nil,
+ * 			IpAllocationPolicy: &container.ClusterIpAllocationPolicyArgs{
+ * 				ClusterSecondaryRangeName: containerSubnetwork.SecondaryIpRanges.ApplyT(func(secondaryIpRanges []compute.SubnetworkSecondaryIpRange) (string, error) {
+ * 					return secondaryIpRanges[0].RangeName, nil
+ * 				}).(pulumi.StringOutput),
+ * 				ServicesSecondaryRangeName: containerSubnetwork.SecondaryIpRanges.ApplyT(func(secondaryIpRanges []compute.SubnetworkSecondaryIpRange) (string, error) {
+ * 					return secondaryIpRanges[1].RangeName, nil
+ * 				}).(pulumi.StringOutput),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewNetworkPeeringRoutesConfig(ctx, "peeringGkeRoutes", &compute.NetworkPeeringRoutesConfigArgs{
+ * 			Peering: privateCluster.PrivateClusterConfig.ApplyT(func(privateClusterConfig container.ClusterPrivateClusterConfig) (string, error) {
+ * 				return privateClusterConfig.PeeringName, nil
+ * 			}).(pulumi.StringOutput),
+ * 			Network:            containerNetwork.Name,
+ * 			ImportCustomRoutes: pulumi.Bool(true),
+ * 			ExportCustomRoutes: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +402,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default projects/{{project}}/global/networks/{{network}}/networkPeerings/{{peering}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{project}}/{{network}}/{{peering}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{network}}/{{peering}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig")
 public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResource {

@@ -25,7 +25,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * - FRIDAY: Friday
      * - SATURDAY: Saturday
      * - SUNDAY: Sunday
-     *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
     @Import(name="day", required=true)
@@ -36,7 +36,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     }
 
     /**
-     * - 
+     * -
      * Output only. Duration of the maintenance window.
      * The current window is fixed at 1 hour.
      * A duration in seconds with up to nine fractional digits,
@@ -51,7 +51,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     }
 
     /**
-     * - 
+     * -
      * Output only. The start time of any upcoming scheduled maintenance for this instance.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.

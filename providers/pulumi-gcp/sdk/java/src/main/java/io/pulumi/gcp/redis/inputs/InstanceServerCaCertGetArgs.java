@@ -22,7 +22,7 @@ public final class InstanceServerCaCertGetArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * - 
+     * -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.

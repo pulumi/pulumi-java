@@ -17,7 +17,7 @@ public final class InstanceGroupManagerNamedPort {
     private final String name;
     /**
      * The port number.
-     * ***
+     * - - -
      * 
      */
     private final Integer port;
@@ -39,7 +39,7 @@ public final class InstanceGroupManagerNamedPort {
     }
     /**
      * The port number.
-     * ***
+     * - - -
      * 
     */
     public Integer getPort() {

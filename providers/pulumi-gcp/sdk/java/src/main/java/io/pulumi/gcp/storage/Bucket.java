@@ -34,7 +34,254 @@ import javax.annotation.Nullable;
  * **Note**: If the project id is not set on the resource or in the provider block it will be dynamically
  * determined which will require enabling the compute api.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creating A Private Bucket In Standard Storage, In The EU Region. Bucket Configured As Static Website And CORS Configurations
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const static_site = new gcp.storage.Bucket("static-site", {
+ *     cors: [{
+ *         maxAgeSeconds: 3600,
+ *         methods: [
+ *             "GET",
+ *             "HEAD",
+ *             "PUT",
+ *             "POST",
+ *             "DELETE",
+ *         ],
+ *         origins: ["http://image-store.com"],
+ *         responseHeaders: ["*"],
+ *     }],
+ *     forceDestroy: true,
+ *     location: "EU",
+ *     uniformBucketLevelAccess: true,
+ *     website: {
+ *         mainPageSuffix: "index.html",
+ *         notFoundPage: "404.html",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * static_site = gcp.storage.Bucket("static-site",
+ *     cors=[gcp.storage.BucketCorArgs(
+ *         max_age_seconds=3600,
+ *         methods=[
+ *             "GET",
+ *             "HEAD",
+ *             "PUT",
+ *             "POST",
+ *             "DELETE",
+ *         ],
+ *         origins=["http://image-store.com"],
+ *         response_headers=["*"],
+ *     )],
+ *     force_destroy=True,
+ *     location="EU",
+ *     uniform_bucket_level_access=True,
+ *     website=gcp.storage.BucketWebsiteArgs(
+ *         main_page_suffix="index.html",
+ *         not_found_page="404.html",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var static_site = new Gcp.Storage.Bucket("static-site", new Gcp.Storage.BucketArgs
+ *         {
+ *             Cors = 
+ *             {
+ *                 new Gcp.Storage.Inputs.BucketCorArgs
+ *                 {
+ *                     MaxAgeSeconds = 3600,
+ *                     Methods = 
+ *                     {
+ *                         "GET",
+ *                         "HEAD",
+ *                         "PUT",
+ *                         "POST",
+ *                         "DELETE",
+ *                     },
+ *                     Origins = 
+ *                     {
+ *                         "http://image-store.com",
+ *                     },
+ *                     ResponseHeaders = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                 },
+ *             },
+ *             ForceDestroy = true,
+ *             Location = "EU",
+ *             UniformBucketLevelAccess = true,
+ *             Website = new Gcp.Storage.Inputs.BucketWebsiteArgs
+ *             {
+ *                 MainPageSuffix = "index.html",
+ *                 NotFoundPage = "404.html",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBucket(ctx, "static-site", &storage.BucketArgs{
+ * 			Cors: storage.BucketCorArray{
+ * 				&storage.BucketCorArgs{
+ * 					MaxAgeSeconds: pulumi.Int(3600),
+ * 					Methods: pulumi.StringArray{
+ * 						pulumi.String("GET"),
+ * 						pulumi.String("HEAD"),
+ * 						pulumi.String("PUT"),
+ * 						pulumi.String("POST"),
+ * 						pulumi.String("DELETE"),
+ * 					},
+ * 					Origins: pulumi.StringArray{
+ * 						pulumi.String("http://image-store.com"),
+ * 					},
+ * 					ResponseHeaders: pulumi.StringArray{
+ * 						pulumi.String("*"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ForceDestroy:             pulumi.Bool(true),
+ * 			Location:                 pulumi.String("EU"),
+ * 			UniformBucketLevelAccess: pulumi.Bool(true),
+ * 			Website: &storage.BucketWebsiteArgs{
+ * 				MainPageSuffix: pulumi.String("index.html"),
+ * 				NotFoundPage:   pulumi.String("404.html"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Life Cycle Settings For Storage Bucket Objects
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const auto_expire = new gcp.storage.Bucket("auto-expire", {
+ *     forceDestroy: true,
+ *     lifecycleRules: [{
+ *         action: {
+ *             type: "Delete",
+ *         },
+ *         condition: {
+ *             age: 3,
+ *         },
+ *     }],
+ *     location: "US",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * auto_expire = gcp.storage.Bucket("auto-expire",
+ *     force_destroy=True,
+ *     lifecycle_rules=[gcp.storage.BucketLifecycleRuleArgs(
+ *         action=gcp.storage.BucketLifecycleRuleActionArgs(
+ *             type="Delete",
+ *         ),
+ *         condition=gcp.storage.BucketLifecycleRuleConditionArgs(
+ *             age=3,
+ *         ),
+ *     )],
+ *     location="US")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var auto_expire = new Gcp.Storage.Bucket("auto-expire", new Gcp.Storage.BucketArgs
+ *         {
+ *             ForceDestroy = true,
+ *             LifecycleRules = 
+ *             {
+ *                 new Gcp.Storage.Inputs.BucketLifecycleRuleArgs
+ *                 {
+ *                     Action = new Gcp.Storage.Inputs.BucketLifecycleRuleActionArgs
+ *                     {
+ *                         Type = "Delete",
+ *                     },
+ *                     Condition = new Gcp.Storage.Inputs.BucketLifecycleRuleConditionArgs
+ *                     {
+ *                         Age = 3,
+ *                     },
+ *                 },
+ *             },
+ *             Location = "US",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewBucket(ctx, "auto-expire", &storage.BucketArgs{
+ * 			ForceDestroy: pulumi.Bool(true),
+ * 			LifecycleRules: storage.BucketLifecycleRuleArray{
+ * 				&storage.BucketLifecycleRuleArgs{
+ * 					Action: &storage.BucketLifecycleRuleActionArgs{
+ * 						Type: pulumi.String("Delete"),
+ * 					},
+ * 					Condition: &storage.BucketLifecycleRuleConditionArgs{
+ * 						Age: pulumi.Int(3),
+ * 					},
+ * 				},
+ * 			},
+ * 			Location: pulumi.String("US"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -46,12 +293,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:storage/bucket:Bucket image-store image-store-bucket
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:storage/bucket:Bucket image-store tf-test-project/image-store-bucket
  * ```
  * 
- *  `false` in state. If you've set it to `true` in config, run `terraform apply` to update the value set in state. If you delete this resource before updating the value, objects in the bucket will not be destroyed.
- * 
+ *  `false` in state. If you've set it to `true` in config, run `terraform apply` to update the value set in state. If you delete this resource before updating the value, objects in the bucket will not be destroyed. 
  */
 @ResourceType(type="gcp:storage/bucket:Bucket")
 public class Bucket extends io.pulumi.resources.CustomResource {

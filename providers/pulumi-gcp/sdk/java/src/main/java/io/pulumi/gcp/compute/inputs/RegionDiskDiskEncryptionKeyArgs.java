@@ -38,7 +38,7 @@ public final class RegionDiskDiskEncryptionKeyArgs extends io.pulumi.resources.R
     }
 
     /**
-     * - 
+     * -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 /**
  * @Deprecated
  * gcp.compute.MangedSslCertificate has been deprecated in favor of gcp.compute.ManagedSslCertificate
- * 
  */
 @Deprecated /* gcp.compute.MangedSslCertificate has been deprecated in favor of gcp.compute.ManagedSslCertificate */
 @ResourceType(type="gcp:compute/mangedSslCertificate:MangedSslCertificate")

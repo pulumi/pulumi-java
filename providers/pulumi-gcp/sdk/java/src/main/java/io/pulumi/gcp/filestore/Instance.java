@@ -19,6 +19,7 @@ import javax.annotation.Nullable;
 /**
  * A Google Cloud Filestore instance.
  * 
+ * 
  * To get more information about Instance, see:
  * 
  * * [API documentation](https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create)
@@ -27,7 +28,296 @@ import javax.annotation.Nullable;
  *     * [Use with Kubernetes](https://cloud.google.com/filestore/docs/accessing-fileshares)
  *     * [Copying Data In/Out](https://cloud.google.com/filestore/docs/copying-data)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Filestore Instance Basic
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instance = new gcp.filestore.Instance("instance", {
+ *     fileShares: {
+ *         capacityGb: 2660,
+ *         name: "share1",
+ *     },
+ *     location: "us-central1-b",
+ *     networks: [{
+ *         modes: ["MODE_IPV4"],
+ *         network: "default",
+ *     }],
+ *     tier: "PREMIUM",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance = gcp.filestore.Instance("instance",
+ *     file_shares=gcp.filestore.InstanceFileSharesArgs(
+ *         capacity_gb=2660,
+ *         name="share1",
+ *     ),
+ *     location="us-central1-b",
+ *     networks=[gcp.filestore.InstanceNetworkArgs(
+ *         modes=["MODE_IPV4"],
+ *         network="default",
+ *     )],
+ *     tier="PREMIUM")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new Gcp.Filestore.Instance("instance", new Gcp.Filestore.InstanceArgs
+ *         {
+ *             FileShares = new Gcp.Filestore.Inputs.InstanceFileSharesArgs
+ *             {
+ *                 CapacityGb = 2660,
+ *                 Name = "share1",
+ *             },
+ *             Location = "us-central1-b",
+ *             Networks = 
+ *             {
+ *                 new Gcp.Filestore.Inputs.InstanceNetworkArgs
+ *                 {
+ *                     Modes = 
+ *                     {
+ *                         "MODE_IPV4",
+ *                     },
+ *                     Network = "default",
+ *                 },
+ *             },
+ *             Tier = "PREMIUM",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/filestore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
+ * 			FileShares: &filestore.InstanceFileSharesArgs{
+ * 				CapacityGb: pulumi.Int(2660),
+ * 				Name:       pulumi.String("share1"),
+ * 			},
+ * 			Location: pulumi.String("us-central1-b"),
+ * 			Networks: filestore.InstanceNetworkArray{
+ * 				&filestore.InstanceNetworkArgs{
+ * 					Modes: pulumi.StringArray{
+ * 						pulumi.String("MODE_IPV4"),
+ * 					},
+ * 					Network: pulumi.String("default"),
+ * 				},
+ * 			},
+ * 			Tier: pulumi.String("PREMIUM"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Filestore Instance Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const instance = new gcp.filestore.Instance("instance", {
+ *     location: "us-central1-b",
+ *     tier: "BASIC_SSD",
+ *     fileShares: {
+ *         capacityGb: 2660,
+ *         name: "share1",
+ *         nfsExportOptions: [
+ *             {
+ *                 ipRanges: ["10.0.0.0/24"],
+ *                 accessMode: "READ_WRITE",
+ *                 squashMode: "NO_ROOT_SQUASH",
+ *             },
+ *             {
+ *                 ipRanges: ["10.10.0.0/24"],
+ *                 accessMode: "READ_ONLY",
+ *                 squashMode: "ROOT_SQUASH",
+ *                 anonUid: 123,
+ *                 anonGid: 456,
+ *             },
+ *         ],
+ *     },
+ *     networks: [{
+ *         network: "default",
+ *         modes: ["MODE_IPV4"],
+ *         connectMode: "DIRECT_PEERING",
+ *     }],
+ * }, {
+ *     provider: google_beta,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * instance = gcp.filestore.Instance("instance",
+ *     location="us-central1-b",
+ *     tier="BASIC_SSD",
+ *     file_shares=gcp.filestore.InstanceFileSharesArgs(
+ *         capacity_gb=2660,
+ *         name="share1",
+ *         nfs_export_options=[
+ *             gcp.filestore.InstanceFileSharesNfsExportOptionArgs(
+ *                 ip_ranges=["10.0.0.0/24"],
+ *                 access_mode="READ_WRITE",
+ *                 squash_mode="NO_ROOT_SQUASH",
+ *             ),
+ *             gcp.filestore.InstanceFileSharesNfsExportOptionArgs(
+ *                 ip_ranges=["10.10.0.0/24"],
+ *                 access_mode="READ_ONLY",
+ *                 squash_mode="ROOT_SQUASH",
+ *                 anon_uid=123,
+ *                 anon_gid=456,
+ *             ),
+ *         ],
+ *     ),
+ *     networks=[gcp.filestore.InstanceNetworkArgs(
+ *         network="default",
+ *         modes=["MODE_IPV4"],
+ *         connect_mode="DIRECT_PEERING",
+ *     )],
+ *     opts=pulumi.ResourceOptions(provider=google_beta))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instance = new Gcp.Filestore.Instance("instance", new Gcp.Filestore.InstanceArgs
+ *         {
+ *             Location = "us-central1-b",
+ *             Tier = "BASIC_SSD",
+ *             FileShares = new Gcp.Filestore.Inputs.InstanceFileSharesArgs
+ *             {
+ *                 CapacityGb = 2660,
+ *                 Name = "share1",
+ *                 NfsExportOptions = 
+ *                 {
+ *                     new Gcp.Filestore.Inputs.InstanceFileSharesNfsExportOptionArgs
+ *                     {
+ *                         IpRanges = 
+ *                         {
+ *                             "10.0.0.0/24",
+ *                         },
+ *                         AccessMode = "READ_WRITE",
+ *                         SquashMode = "NO_ROOT_SQUASH",
+ *                     },
+ *                     new Gcp.Filestore.Inputs.InstanceFileSharesNfsExportOptionArgs
+ *                     {
+ *                         IpRanges = 
+ *                         {
+ *                             "10.10.0.0/24",
+ *                         },
+ *                         AccessMode = "READ_ONLY",
+ *                         SquashMode = "ROOT_SQUASH",
+ *                         AnonUid = 123,
+ *                         AnonGid = 456,
+ *                     },
+ *                 },
+ *             },
+ *             Networks = 
+ *             {
+ *                 new Gcp.Filestore.Inputs.InstanceNetworkArgs
+ *                 {
+ *                     Network = "default",
+ *                     Modes = 
+ *                     {
+ *                         "MODE_IPV4",
+ *                     },
+ *                     ConnectMode = "DIRECT_PEERING",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = google_beta,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/filestore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
+ * 			Location: pulumi.String("us-central1-b"),
+ * 			Tier:     pulumi.String("BASIC_SSD"),
+ * 			FileShares: &filestore.InstanceFileSharesArgs{
+ * 				CapacityGb: pulumi.Int(2660),
+ * 				Name:       pulumi.String("share1"),
+ * 				NfsExportOptions: filestore.InstanceFileSharesNfsExportOptionArray{
+ * 					&filestore.InstanceFileSharesNfsExportOptionArgs{
+ * 						IpRanges: pulumi.StringArray{
+ * 							pulumi.String("10.0.0.0/24"),
+ * 						},
+ * 						AccessMode: pulumi.String("READ_WRITE"),
+ * 						SquashMode: pulumi.String("NO_ROOT_SQUASH"),
+ * 					},
+ * 					&filestore.InstanceFileSharesNfsExportOptionArgs{
+ * 						IpRanges: pulumi.StringArray{
+ * 							pulumi.String("10.10.0.0/24"),
+ * 						},
+ * 						AccessMode: pulumi.String("READ_ONLY"),
+ * 						SquashMode: pulumi.String("ROOT_SQUASH"),
+ * 						AnonUid:    pulumi.Int(123),
+ * 						AnonGid:    pulumi.Int(456),
+ * 					},
+ * 				},
+ * 			},
+ * 			Networks: filestore.InstanceNetworkArray{
+ * 				&filestore.InstanceNetworkArgs{
+ * 					Network: pulumi.String("default"),
+ * 					Modes: pulumi.StringArray{
+ * 						pulumi.String("MODE_IPV4"),
+ * 					},
+ * 					ConnectMode: pulumi.String("DIRECT_PEERING"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(google_beta))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,14 +327,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:filestore/instance:Instance default projects/{{project}}/locations/{{location}}/instances/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:filestore/instance:Instance default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:filestore/instance:Instance default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:filestore/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
@@ -201,13 +496,12 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return this.tier;
     }
     /**
-     * - 
+     * -
      * (Optional, Deprecated)
      * The name of the Filestore zone of the instance.
      * 
      * @Deprecated
      * Deprecated in favor of location.
-     * 
      */
     @Deprecated /* Deprecated in favor of location. */
     @Export(name="zone", type=String.class, parameters={})

@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 /**
  * @Deprecated
  * gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry
- * 
  */
 @Deprecated /* gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry */
 @ResourceType(type="gcp:kms/registry:Registry")

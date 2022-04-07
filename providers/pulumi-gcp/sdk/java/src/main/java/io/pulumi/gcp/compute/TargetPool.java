@@ -21,7 +21,109 @@ import javax.annotation.Nullable;
  * documentation](https://cloud.google.com/compute/docs/load-balancing/network/target-pools)
  * and [API](https://cloud.google.com/compute/docs/reference/latest/targetPools).
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+ *     requestPath: "/",
+ *     checkIntervalSec: 1,
+ *     timeoutSec: 1,
+ * });
+ * const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
+ *     instances: [
+ *         "us-central1-a/myinstance1",
+ *         "us-central1-b/myinstance2",
+ *     ],
+ *     healthChecks: [defaultHttpHealthCheck.name],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+ *     request_path="/",
+ *     check_interval_sec=1,
+ *     timeout_sec=1)
+ * default_target_pool = gcp.compute.TargetPool("defaultTargetPool",
+ *     instances=[
+ *         "us-central1-a/myinstance1",
+ *         "us-central1-b/myinstance2",
+ *     ],
+ *     health_checks=[default_http_health_check.name])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+ *         {
+ *             RequestPath = "/",
+ *             CheckIntervalSec = 1,
+ *             TimeoutSec = 1,
+ *         });
+ *         var defaultTargetPool = new Gcp.Compute.TargetPool("defaultTargetPool", new Gcp.Compute.TargetPoolArgs
+ *         {
+ *             Instances = 
+ *             {
+ *                 "us-central1-a/myinstance1",
+ *                 "us-central1-b/myinstance2",
+ *             },
+ *             HealthChecks = 
+ *             {
+ *                 defaultHttpHealthCheck.Name,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+ * 			RequestPath:      pulumi.String("/"),
+ * 			CheckIntervalSec: pulumi.Int(1),
+ * 			TimeoutSec:       pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = compute.NewTargetPool(ctx, "defaultTargetPool", &compute.TargetPoolArgs{
+ * 			Instances: pulumi.StringArray{
+ * 				pulumi.String("us-central1-a/myinstance1"),
+ * 				pulumi.String("us-central1-b/myinstance2"),
+ * 			},
+ * 			HealthChecks: pulumi.String{
+ * 				defaultHttpHealthCheck.Name,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,18 +133,25 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/targetPool:TargetPool default projects/{{project}}/regions/{{region}}/targetPools/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/targetPool:TargetPool default {{project}}/{{region}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:compute/targetPool:TargetPool default {{region}}/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:compute/targetPool:TargetPool default {{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:compute/targetPool:TargetPool")
 public class TargetPool extends io.pulumi.resources.CustomResource {

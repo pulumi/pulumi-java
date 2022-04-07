@@ -21,16 +21,457 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dataproc/docs)
  * 
+ * 
  * !> **Warning:** Due to limitations of the API, all arguments except
  * `labels`,`cluster_config.worker_config.num_instances` and `cluster_config.preemptible_worker_config.num_instances` are non-updatable. Changing others will cause recreation of the
  * whole cluster!
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const simplecluster = new gcp.dataproc.Cluster("simplecluster", {
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * simplecluster = gcp.dataproc.Cluster("simplecluster", region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var simplecluster = new Gcp.Dataproc.Cluster("simplecluster", new Gcp.Dataproc.ClusterArgs
+ *         {
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataproc.NewCluster(ctx, "simplecluster", &dataproc.ClusterArgs{
+ * 			Region: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Advanced
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const _default = new gcp.serviceaccount.Account("default", {
+ *     accountId: "service-account-id",
+ *     displayName: "Service Account",
+ * });
+ * const mycluster = new gcp.dataproc.Cluster("mycluster", {
+ *     region: "us-central1",
+ *     gracefulDecommissionTimeout: "120s",
+ *     labels: {
+ *         foo: "bar",
+ *     },
+ *     clusterConfig: {
+ *         stagingBucket: "dataproc-staging-bucket",
+ *         masterConfig: {
+ *             numInstances: 1,
+ *             machineType: "e2-medium",
+ *             diskConfig: {
+ *                 bootDiskType: "pd-ssd",
+ *                 bootDiskSizeGb: 30,
+ *             },
+ *         },
+ *         workerConfig: {
+ *             numInstances: 2,
+ *             machineType: "e2-medium",
+ *             minCpuPlatform: "Intel Skylake",
+ *             diskConfig: {
+ *                 bootDiskSizeGb: 30,
+ *                 numLocalSsds: 1,
+ *             },
+ *         },
+ *         preemptibleWorkerConfig: {
+ *             numInstances: 0,
+ *         },
+ *         softwareConfig: {
+ *             imageVersion: "1.3.7-deb9",
+ *             overrideProperties: {
+ *                 "dataproc:dataproc.allow.zero.workers": "true",
+ *             },
+ *         },
+ *         gceClusterConfig: {
+ *             tags: [
+ *                 "foo",
+ *                 "bar",
+ *             ],
+ *             serviceAccount: _default.email,
+ *             serviceAccountScopes: ["cloud-platform"],
+ *         },
+ *         initializationActions: [{
+ *             script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+ *             timeoutSec: 500,
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * default = gcp.service_account.Account("default",
+ *     account_id="service-account-id",
+ *     display_name="Service Account")
+ * mycluster = gcp.dataproc.Cluster("mycluster",
+ *     region="us-central1",
+ *     graceful_decommission_timeout="120s",
+ *     labels={
+ *         "foo": "bar",
+ *     },
+ *     cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+ *         staging_bucket="dataproc-staging-bucket",
+ *         master_config=gcp.dataproc.ClusterClusterConfigMasterConfigArgs(
+ *             num_instances=1,
+ *             machine_type="e2-medium",
+ *             disk_config=gcp.dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs(
+ *                 boot_disk_type="pd-ssd",
+ *                 boot_disk_size_gb=30,
+ *             ),
+ *         ),
+ *         worker_config=gcp.dataproc.ClusterClusterConfigWorkerConfigArgs(
+ *             num_instances=2,
+ *             machine_type="e2-medium",
+ *             min_cpu_platform="Intel Skylake",
+ *             disk_config=gcp.dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs(
+ *                 boot_disk_size_gb=30,
+ *                 num_local_ssds=1,
+ *             ),
+ *         ),
+ *         preemptible_worker_config=gcp.dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs(
+ *             num_instances=0,
+ *         ),
+ *         software_config=gcp.dataproc.ClusterClusterConfigSoftwareConfigArgs(
+ *             image_version="1.3.7-deb9",
+ *             override_properties={
+ *                 "dataproc:dataproc.allow.zero.workers": "true",
+ *             },
+ *         ),
+ *         gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
+ *             tags=[
+ *                 "foo",
+ *                 "bar",
+ *             ],
+ *             service_account=default.email,
+ *             service_account_scopes=["cloud-platform"],
+ *         ),
+ *         initialization_actions=[gcp.dataproc.ClusterClusterConfigInitializationActionArgs(
+ *             script="gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+ *             timeout_sec=500,
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+ *         {
+ *             AccountId = "service-account-id",
+ *             DisplayName = "Service Account",
+ *         });
+ *         var mycluster = new Gcp.Dataproc.Cluster("mycluster", new Gcp.Dataproc.ClusterArgs
+ *         {
+ *             Region = "us-central1",
+ *             GracefulDecommissionTimeout = "120s",
+ *             Labels = 
+ *             {
+ *                 { "foo", "bar" },
+ *             },
+ *             ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+ *             {
+ *                 StagingBucket = "dataproc-staging-bucket",
+ *                 MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+ *                 {
+ *                     NumInstances = 1,
+ *                     MachineType = "e2-medium",
+ *                     DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
+ *                     {
+ *                         BootDiskType = "pd-ssd",
+ *                         BootDiskSizeGb = 30,
+ *                     },
+ *                 },
+ *                 WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+ *                 {
+ *                     NumInstances = 2,
+ *                     MachineType = "e2-medium",
+ *                     MinCpuPlatform = "Intel Skylake",
+ *                     DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+ *                     {
+ *                         BootDiskSizeGb = 30,
+ *                         NumLocalSsds = 1,
+ *                     },
+ *                 },
+ *                 PreemptibleWorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs
+ *                 {
+ *                     NumInstances = 0,
+ *                 },
+ *                 SoftwareConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs
+ *                 {
+ *                     ImageVersion = "1.3.7-deb9",
+ *                     OverrideProperties = 
+ *                     {
+ *                         { "dataproc:dataproc.allow.zero.workers", "true" },
+ *                     },
+ *                 },
+ *                 GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+ *                 {
+ *                     Tags = 
+ *                     {
+ *                         "foo",
+ *                         "bar",
+ *                     },
+ *                     ServiceAccount = @default.Email,
+ *                     ServiceAccountScopes = 
+ *                     {
+ *                         "cloud-platform",
+ *                     },
+ *                 },
+ *                 InitializationActions = 
+ *                 {
+ *                     new Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs
+ *                     {
+ *                         Script = "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+ *                         TimeoutSec = 500,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/serviceAccount"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := serviceAccount.NewAccount(ctx, "default", &serviceAccount.AccountArgs{
+ * 			AccountId:   pulumi.String("service-account-id"),
+ * 			DisplayName: pulumi.String("Service Account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
+ * 			Region:                      pulumi.String("us-central1"),
+ * 			GracefulDecommissionTimeout: pulumi.String("120s"),
+ * 			Labels: pulumi.StringMap{
+ * 				"foo": pulumi.String("bar"),
+ * 			},
+ * 			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
+ * 				StagingBucket: pulumi.String("dataproc-staging-bucket"),
+ * 				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
+ * 					NumInstances: pulumi.Int(1),
+ * 					MachineType:  pulumi.String("e2-medium"),
+ * 					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
+ * 						BootDiskType:   pulumi.String("pd-ssd"),
+ * 						BootDiskSizeGb: pulumi.Int(30),
+ * 					},
+ * 				},
+ * 				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
+ * 					NumInstances:   pulumi.Int(2),
+ * 					MachineType:    pulumi.String("e2-medium"),
+ * 					MinCpuPlatform: pulumi.String("Intel Skylake"),
+ * 					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
+ * 						BootDiskSizeGb: pulumi.Int(30),
+ * 						NumLocalSsds:   pulumi.Int(1),
+ * 					},
+ * 				},
+ * 				PreemptibleWorkerConfig: &dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs{
+ * 					NumInstances: pulumi.Int(0),
+ * 				},
+ * 				SoftwareConfig: &dataproc.ClusterClusterConfigSoftwareConfigArgs{
+ * 					ImageVersion: pulumi.String("1.3.7-deb9"),
+ * 					OverrideProperties: pulumi.StringMap{
+ * 						"dataproc:dataproc.allow.zero.workers": pulumi.String("true"),
+ * 					},
+ * 				},
+ * 				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
+ * 					Tags: pulumi.StringArray{
+ * 						pulumi.String("foo"),
+ * 						pulumi.String("bar"),
+ * 					},
+ * 					ServiceAccount: _default.Email,
+ * 					ServiceAccountScopes: pulumi.StringArray{
+ * 						pulumi.String("cloud-platform"),
+ * 					},
+ * 				},
+ * 				InitializationActions: dataproc.ClusterClusterConfigInitializationActionArray{
+ * 					&dataproc.ClusterClusterConfigInitializationActionArgs{
+ * 						Script:     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
+ * 						TimeoutSec: pulumi.Int(500),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using A GPU Accelerator
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
+ *     clusterConfig: {
+ *         gceClusterConfig: {
+ *             zone: "us-central1-a",
+ *         },
+ *         masterConfig: {
+ *             accelerators: [{
+ *                 acceleratorCount: 1,
+ *                 acceleratorType: "nvidia-tesla-k80",
+ *             }],
+ *         },
+ *     },
+ *     region: "us-central1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
+ *     cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+ *         gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
+ *             zone="us-central1-a",
+ *         ),
+ *         master_config=gcp.dataproc.ClusterClusterConfigMasterConfigArgs(
+ *             accelerators=[gcp.dataproc.ClusterClusterConfigMasterConfigAcceleratorArgs(
+ *                 accelerator_count=1,
+ *                 accelerator_type="nvidia-tesla-k80",
+ *             )],
+ *         ),
+ *     ),
+ *     region="us-central1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var acceleratedCluster = new Gcp.Dataproc.Cluster("acceleratedCluster", new Gcp.Dataproc.ClusterArgs
+ *         {
+ *             ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+ *             {
+ *                 GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+ *                 {
+ *                     Zone = "us-central1-a",
+ *                 },
+ *                 MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+ *                 {
+ *                     Accelerators = 
+ *                     {
+ *                         new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs
+ *                         {
+ *                             AcceleratorCount = 1,
+ *                             AcceleratorType = "nvidia-tesla-k80",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Region = "us-central1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/dataproc"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dataproc.NewCluster(ctx, "acceleratedCluster", &dataproc.ClusterArgs{
+ * 			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
+ * 				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
+ * 					Zone: pulumi.String("us-central1-a"),
+ * 				},
+ * 				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
+ * 					Accelerators: dataproc.ClusterClusterConfigMasterConfigAcceleratorArray{
+ * 						&dataproc.ClusterClusterConfigMasterConfigAcceleratorArgs{
+ * 							AcceleratorCount: pulumi.Int(1),
+ * 							AcceleratorType:  pulumi.String("nvidia-tesla-k80"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Region: pulumi.String("us-central1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * This resource does not support import.
- * 
+ * This resource does not support import. 
  */
 @ResourceType(type="gcp:dataproc/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

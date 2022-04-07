@@ -22,7 +22,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
 
     /**
      * - Let BigQuery try to autodetect the schema
-     *   and format of the table.
+     * and format of the table.
      * 
      */
     @Import(name="autodetect", required=true)

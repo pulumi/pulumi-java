@@ -18,13 +18,134 @@ import javax.annotation.Nullable;
 /**
  * Agents are best described as Natural Language Understanding (NLU) modules that transform user requests into actionable data. You can include agents in your app, product, or service to determine user intent and respond to the user in a natural way.
  * 
+ * 
  * To get more information about Agent, see:
  * 
  * * [API documentation](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents)
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Dialogflowcx Agent Full
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as gcp from "@pulumi/gcp";
+ * 
+ * const fullAgent = new gcp.diagflow.CxAgent("full_agent", {
+ *     avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     defaultLanguageCode: "en",
+ *     description: "Example description.",
+ *     displayName: "dialogflowcx-agent",
+ *     enableSpellCorrection: true,
+ *     enableStackdriverLogging: true,
+ *     location: "global",
+ *     speechToTextSettings: {
+ *         enableSpeechAdaptation: true,
+ *     },
+ *     supportedLanguageCodes: [
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     timeZone: "America/New_York",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_gcp as gcp
+ * 
+ * full_agent = gcp.diagflow.CxAgent("fullAgent",
+ *     avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *     default_language_code="en",
+ *     description="Example description.",
+ *     display_name="dialogflowcx-agent",
+ *     enable_spell_correction=True,
+ *     enable_stackdriver_logging=True,
+ *     location="global",
+ *     speech_to_text_settings=gcp.diagflow.CxAgentSpeechToTextSettingsArgs(
+ *         enable_speech_adaptation=True,
+ *     ),
+ *     supported_language_codes=[
+ *         "fr",
+ *         "de",
+ *         "es",
+ *     ],
+ *     time_zone="America/New_York")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Gcp = Pulumi.Gcp;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fullAgent = new Gcp.Diagflow.CxAgent("fullAgent", new Gcp.Diagflow.CxAgentArgs
+ *         {
+ *             AvatarUri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+ *             DefaultLanguageCode = "en",
+ *             Description = "Example description.",
+ *             DisplayName = "dialogflowcx-agent",
+ *             EnableSpellCorrection = true,
+ *             EnableStackdriverLogging = true,
+ *             Location = "global",
+ *             SpeechToTextSettings = new Gcp.Diagflow.Inputs.CxAgentSpeechToTextSettingsArgs
+ *             {
+ *                 EnableSpeechAdaptation = true,
+ *             },
+ *             SupportedLanguageCodes = 
+ *             {
+ *                 "fr",
+ *                 "de",
+ *                 "es",
+ *             },
+ *             TimeZone = "America/New_York",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/diagflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := diagflow.NewCxAgent(ctx, "fullAgent", &diagflow.CxAgentArgs{
+ * 			AvatarUri:                pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
+ * 			DefaultLanguageCode:      pulumi.String("en"),
+ * 			Description:              pulumi.String("Example description."),
+ * 			DisplayName:              pulumi.String("dialogflowcx-agent"),
+ * 			EnableSpellCorrection:    pulumi.Bool(true),
+ * 			EnableStackdriverLogging: pulumi.Bool(true),
+ * 			Location:                 pulumi.String("global"),
+ * 			SpeechToTextSettings: &diagflow.CxAgentSpeechToTextSettingsArgs{
+ * 				EnableSpeechAdaptation: pulumi.Bool(true),
+ * 			},
+ * 			SupportedLanguageCodes: pulumi.StringArray{
+ * 				pulumi.String("fr"),
+ * 				pulumi.String("de"),
+ * 				pulumi.String("es"),
+ * 			},
+ * 			TimeZone: pulumi.String("America/New_York"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +155,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:diagflow/cxAgent:CxAgent default projects/{{project}}/locations/{{location}}/agents/{{name}}
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import gcp:diagflow/cxAgent:CxAgent default {{project}}/{{location}}/{{name}}
  * ```
+ * 
+ * 
  * 
  * ```sh
  *  $ pulumi import gcp:diagflow/cxAgent:CxAgent default {{location}}/{{name}}
  * ```
  * 
+ *  
  */
 @ResourceType(type="gcp:diagflow/cxAgent:CxAgent")
 public class CxAgent extends io.pulumi.resources.CustomResource {
