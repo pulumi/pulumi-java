@@ -3,11 +3,5 @@ schema: https://raw.githubusercontent.com/pulumi/pulumi-azure-native/v1.56.0/pro
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/azure-native/version.txt
 pluginFile: src/main/resources/io/pulumi/azure-native/plugin.json
-
-packageInfo:
-  packageReferences:
-    "io.pulumi:pulumi": "0.0.1-SNAPSHOT"
-  gprPublishSettings:
-    groupId: io.pulumi
-    artifactId: azure-native
-    repositoryUrl: https://maven.pkg.github.com/pulumi/pulumi-jvm
+overlays:
+  - "./build"
