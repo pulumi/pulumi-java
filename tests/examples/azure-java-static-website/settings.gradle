@@ -3,7 +3,7 @@
 // When the example code moves to a separate repository these can be
 // removed.
 
-root = System.getenv("PULUMI_REPO_ROOT") ?: "../../..";
+var root = System.getenv("PULUMI_REPO_ROOT") ?: "../../..";
 
 includeBuild(root + '/sdk/jvm') {
   dependencySubstitution {
