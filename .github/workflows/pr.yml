@@ -129,11 +129,13 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - name: Build JVM SDK provider
+        continue-on-error: true
         run: make provider.${PROVIDER}.install
         env:
           PROVIDER: ${{ matrix.provider }}
       - name: Get old JAR size
         id: oldJar
+        continue-on-error: true
         run: |
           size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
           sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
@@ -141,6 +143,7 @@ jobs:
           echo ::set-output name=sizeHuman::${sizeHuman}
       # clean up
       - name: Remove old JARs
+        continue-on-error: true
         run: |
           rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
       # build new
@@ -158,6 +161,7 @@ jobs:
           echo ::set-output name=sizeHuman::${sizeHuman}
       # prepare output
       - name: Get JAR size diff
+        continue-on-error: true
         id: diffJar
         run: |
           size=$((${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }}))
