@@ -32,7 +32,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
-     * 
      */
     @Import(name="amiId")
       private final @Nullable Output<String> amiId;
@@ -47,7 +46,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
      * 
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
-     * 
      */
     @Import(name="autoScalingGroupTags")
       private final @Nullable Output<Map<String,String>> autoScalingGroupTags;
@@ -58,7 +56,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional args to pass directly to `/etc/eks/bootstrap.sh`. For details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.
-     * 
      */
     @Import(name="bootstrapExtraArgs")
       private final @Nullable Output<String> bootstrapExtraArgs;
@@ -71,7 +68,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The tags to apply to the CloudFormation Stack of the Worker NodeGroup.
      * 
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
-     * 
      */
     @Import(name="cloudFormationTags")
       private final @Nullable Output<Map<String,String>> cloudFormationTags;
@@ -82,7 +78,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target EKS cluster.
-     * 
      */
     @Import(name="cluster", required=true)
       private final Output<CoreDataArgs> cluster;
@@ -93,7 +88,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ingress rule that gives node group access.
-     * 
      */
     @Import(name="clusterIngressRule")
       private final @Nullable Output<SecurityGroupRule> clusterIngressRule;
@@ -104,7 +98,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of worker nodes that should be running in the cluster. Defaults to 2.
-     * 
      */
     @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
@@ -115,7 +108,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encrypt the root block device of the nodes in the node group.
-     * 
      */
     @Import(name="encryptRootBlockDevice")
       private final @Nullable Output<Boolean> encryptRootBlockDevice;
@@ -128,7 +120,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Extra security groups to attach on all nodes in this worker node group.
      * 
      * This additional set of security groups captures any user application rules that will be needed for the nodes.
-     * 
      */
     @Import(name="extraNodeSecurityGroups")
       private final @Nullable Output<List<SecurityGroup>> extraNodeSecurityGroups;
@@ -147,7 +138,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
      * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
-     * 
      */
     @Import(name="gpu")
       private final @Nullable Output<Boolean> gpu;
@@ -158,7 +148,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ingress rule that gives node group access.
-     * 
      */
     @Import(name="instanceProfile")
       private final @Nullable Output<InstanceProfile> instanceProfile;
@@ -169,7 +158,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -180,7 +168,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the key pair to use for SSH access to worker nodes.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -191,7 +178,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
-     * 
      */
     @Import(name="kubeletExtraArgs")
       private final @Nullable Output<String> kubeletExtraArgs;
@@ -202,7 +188,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom k8s node labels to be attached to each worker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
@@ -213,7 +198,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of worker nodes running in the cluster. Defaults to 2.
-     * 
      */
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
@@ -224,7 +208,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of worker nodes running in the cluster. Defaults to 1.
-     * 
      */
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
@@ -235,7 +218,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
-     * 
      */
     @Import(name="nodeAssociatePublicIpAddress")
       private final @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
@@ -248,7 +230,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Public key material for SSH access to worker nodes. See allowed formats at:
      * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
      * If not provided, no SSH access is enabled on VMs.
-     * 
      */
     @Import(name="nodePublicKey")
       private final @Nullable Output<String> nodePublicKey;
@@ -259,7 +240,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The size in GiB of a cluster node's root volume. Defaults to 20.
-     * 
      */
     @Import(name="nodeRootVolumeSize")
       private final @Nullable Output<Integer> nodeRootVolumeSize;
@@ -277,7 +257,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html
      * 
      * Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.
-     * 
      */
     @Import(name="nodeSecurityGroup")
       private final @Nullable Output<SecurityGroup> nodeSecurityGroup;
@@ -290,7 +269,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The set of subnets to override and use for the worker node group.
      * 
      * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
-     * 
      */
     @Import(name="nodeSubnetIds")
       private final @Nullable Output<List<String>> nodeSubnetIds;
@@ -301,7 +279,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
-     * 
      */
     @Import(name="nodeUserData")
       private final @Nullable Output<String> nodeUserData;
@@ -314,7 +291,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * User specified code to run on node startup. This code is expected to handle the full AWS EKS bootstrapping code and signal node readiness to the managing CloudFormation stack. This code must be a complete and executable user data script in bash (Linux) or powershell (Windows).
      * 
      * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html
-     * 
      */
     @Import(name="nodeUserDataOverride")
       private final @Nullable Output<String> nodeUserDataOverride;
@@ -325,7 +301,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Bidding price for spot instance. If set, only spot instances will be added as worker node.
-     * 
      */
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
@@ -336,7 +311,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument
-     * 
      */
     @Import(name="taints")
       private final @Nullable Output<Map<String,TaintArgs>> taints;
@@ -347,7 +321,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

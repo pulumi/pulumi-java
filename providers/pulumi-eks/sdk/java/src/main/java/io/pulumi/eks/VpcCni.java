@@ -11,7 +11,6 @@ import javax.annotation.Nullable;
 
 /**
  * VpcCni manages the configuration of the Amazon VPC CNI plugin for Kubernetes by applying its YAML chart.
- * 
  */
 @ResourceType(type="eks:index:VpcCni")
 public class VpcCni extends io.pulumi.resources.CustomResource {

@@ -27,7 +27,6 @@ import javax.annotation.Nullable;
  * - https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
  * - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-role.html
  * - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
- * 
  */
 public final class KubeconfigOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -37,7 +36,6 @@ public final class KubeconfigOptionsArgs extends io.pulumi.resources.ResourceArg
      * AWS credential profile name to always use instead of the default AWS credential provider chain.
      * 
      * The profile is passed to kubeconfig as an authentication environment setting.
-     * 
      */
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
@@ -50,7 +48,6 @@ public final class KubeconfigOptionsArgs extends io.pulumi.resources.ResourceArg
      * Role ARN to assume instead of the default AWS credential provider chain.
      * 
      * The role is passed to kubeconfig as an authentication exec argument.
-     * 
      */
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;

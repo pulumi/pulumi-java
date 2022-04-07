@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * NodeGroup is a component that wraps the AWS EC2 instances that provide compute capacity for an EKS cluster.
- * 
  */
 @ResourceType(type="eks:index:NodeGroup")
 public class NodeGroup extends io.pulumi.resources.ComponentResource {
     /**
      * The AutoScalingGroup name for the Node group.
-     * 
      */
     @Export(name="autoScalingGroupName", type=String.class, parameters={})
     private Output<String> autoScalingGroupName;
 
     /**
      * @return The AutoScalingGroup name for the Node group.
-     * 
      */
     public Output<String> getAutoScalingGroupName() {
         return this.autoScalingGroupName;
     }
     /**
      * The CloudFormation Stack which defines the Node AutoScalingGroup.
-     * 
      */
     @Export(name="cfnStack", type=Stack.class, parameters={})
     private Output<Stack> cfnStack;
 
     /**
      * @return The CloudFormation Stack which defines the Node AutoScalingGroup.
-     * 
      */
     public Output<Stack> getCfnStack() {
         return this.cfnStack;
     }
     /**
      * The additional security groups for the node group that captures user-specific rules.
-     * 
      */
     @Export(name="extraNodeSecurityGroups", type=List.class, parameters={SecurityGroup.class})
     private Output<List<SecurityGroup>> extraNodeSecurityGroups;
 
     /**
      * @return The additional security groups for the node group that captures user-specific rules.
-     * 
      */
     public Output<List<SecurityGroup>> getExtraNodeSecurityGroups() {
         return this.extraNodeSecurityGroups;
     }
     /**
      * The security group for the node group to communicate with the cluster.
-     * 
      */
     @Export(name="nodeSecurityGroup", type=SecurityGroup.class, parameters={})
     private Output<SecurityGroup> nodeSecurityGroup;
 
     /**
      * @return The security group for the node group to communicate with the cluster.
-     * 
      */
     public Output<SecurityGroup> getNodeSecurityGroup() {
         return this.nodeSecurityGroup;

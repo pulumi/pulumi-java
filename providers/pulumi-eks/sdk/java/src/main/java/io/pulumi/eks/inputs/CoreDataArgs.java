@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the core set of data associated with an EKS cluster, including the network in which it runs.
- * 
  */
 public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -31,7 +31,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.
-     * 
      */
     @Import(name="clusterSecurityGroup")
       private final @Nullable Output<SecurityGroup> clusterSecurityGroup;
@@ -42,7 +41,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags to apply to the cluster security group.
-     * 
      */
     @Import(name="clusterSecurityGroupTags")
       private final @Nullable Output<Map<String,String>> clusterSecurityGroupTags;
@@ -53,7 +51,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags to apply to the EKS cluster.
-     * 
      */
     @Import(name="clusterTags")
       private final @Nullable Output<Map<String,String>> clusterTags;
@@ -72,7 +69,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      *  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
      *  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
      *  - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts
-     * 
      */
     @Import(name="createOidcProvider")
       private final @Nullable Output<Boolean> createOidcProvider;
@@ -83,7 +79,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
-     * 
      */
     @Import(name="creationRoleProvider")
       private final @Nullable Output<CreationRoleProviderArgs> creationRoleProvider;
@@ -94,7 +89,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of worker nodes that should be running in the cluster. Defaults to 2.
-     * 
      */
     @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
@@ -105,7 +99,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.
-     * 
      */
     @Import(name="enabledClusterLogTypes")
       private final @Nullable Output<List<String>> enabledClusterLogTypes;
@@ -116,7 +109,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encrypt the root block device of the nodes in the node group.
-     * 
      */
     @Import(name="encryptRootBlockDevice")
       private final @Nullable Output<Boolean> encryptRootBlockDevice;
@@ -131,7 +123,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
      * See for more details:
      * - https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/
-     * 
      */
     @Import(name="encryptionConfigKeyArn")
       private final @Nullable Output<String> encryptionConfigKeyArn;
@@ -142,7 +133,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
-     * 
      */
     @Import(name="endpointPrivateAccess")
       private final @Nullable Output<Boolean> endpointPrivateAccess;
@@ -153,7 +143,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
-     * 
      */
     @Import(name="endpointPublicAccess")
       private final @Nullable Output<Boolean> endpointPublicAccess;
@@ -164,7 +153,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.
-     * 
      */
     @Import(name="fargate")
       private final @Nullable Output<Either<Boolean,FargateProfileArgs>> fargate;
@@ -183,7 +171,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
      * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
-     * 
      */
     @Import(name="gpu")
       private final @Nullable Output<Boolean> gpu;
@@ -194,7 +181,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.
-     * 
      */
     @Import(name="instanceProfileName")
       private final @Nullable Output<String> instanceProfileName;
@@ -207,7 +193,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
      * 
      * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
-     * 
      */
     @Import(name="instanceRole")
       private final @Nullable Output<Role> instanceRole;
@@ -220,7 +205,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
      * 
      * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
-     * 
      */
     @Import(name="instanceRoles")
       private final @Nullable Output<List<Role>> instanceRoles;
@@ -231,7 +215,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -251,7 +234,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
      * - Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
      * - Between /24 and /12.
-     * 
      */
     @Import(name="kubernetesServiceIpAddressRange")
       private final @Nullable Output<String> kubernetesServiceIpAddressRange;
@@ -262,7 +244,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of worker nodes running in the cluster. Defaults to 2.
-     * 
      */
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
@@ -273,7 +254,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of worker nodes running in the cluster. Defaults to 1.
-     * 
      */
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
@@ -288,7 +268,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, the default is to use auto-naming for the cluster's name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
      * 
      * See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -306,7 +285,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * See for more details:
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
-     * 
      */
     @Import(name="nodeAmiId")
       private final @Nullable Output<String> nodeAmiId;
@@ -317,7 +295,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
-     * 
      */
     @Import(name="nodeAssociatePublicIpAddress")
       private final @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
@@ -328,7 +305,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The common configuration settings for NodeGroups.
-     * 
      */
     @Import(name="nodeGroupOptions")
       private final @Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions;
@@ -341,7 +317,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Public key material for SSH access to worker nodes. See allowed formats at:
      * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
      * If not provided, no SSH access is enabled on VMs.
-     * 
      */
     @Import(name="nodePublicKey")
       private final @Nullable Output<String> nodePublicKey;
@@ -352,7 +327,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to delete a cluster node's root volume on termination. Defaults to true.
-     * 
      */
     @Import(name="nodeRootVolumeDeleteOnTermination")
       private final @Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination;
@@ -363,7 +337,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to encrypt a cluster node's root volume. Defaults to false.
-     * 
      */
     @Import(name="nodeRootVolumeEncrypted")
       private final @Nullable Output<Boolean> nodeRootVolumeEncrypted;
@@ -374,7 +347,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provisioned IOPS for a cluster node's root volume. Only valid for io1 volumes.
-     * 
      */
     @Import(name="nodeRootVolumeIops")
       private final @Nullable Output<Integer> nodeRootVolumeIops;
@@ -385,7 +357,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The size in GiB of a cluster node's root volume. Defaults to 20.
-     * 
      */
     @Import(name="nodeRootVolumeSize")
       private final @Nullable Output<Integer> nodeRootVolumeSize;
@@ -396,7 +367,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provisioned throughput performance in integer MiB/s for a cluster node's root volume. Only valid for gp3 volumes.
-     * 
      */
     @Import(name="nodeRootVolumeThroughput")
       private final @Nullable Output<Integer> nodeRootVolumeThroughput;
@@ -407,7 +377,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configured EBS type for a cluster node's root volume. Default is gp2.
-     * 
      */
     @Import(name="nodeRootVolumeType")
       private final @Nullable Output<String> nodeRootVolumeType;
@@ -420,7 +389,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The tags to apply to the default `nodeSecurityGroup` created by the cluster.
      * 
      * Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.
-     * 
      */
     @Import(name="nodeSecurityGroupTags")
       private final @Nullable Output<Map<String,String>> nodeSecurityGroupTags;
@@ -431,7 +399,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subnets to use for worker nodes. Defaults to the value of subnetIds.
-     * 
      */
     @Import(name="nodeSubnetIds")
       private final @Nullable Output<List<String>> nodeSubnetIds;
@@ -442,7 +409,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
-     * 
      */
     @Import(name="nodeUserData")
       private final @Nullable Output<String> nodeUserData;
@@ -467,7 +433,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
      * 
      * Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.
-     * 
      */
     @Import(name="privateSubnetIds")
       private final @Nullable Output<List<String>> privateSubnetIds;
@@ -483,14 +448,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * - Creating and using a new AWS provider instance, or
      * - Setting the AWS_PROFILE environment variable, or
      * - Using a named profile configured on the AWS provider via:
-     *   `pulumi config set aws:profile <profileName>`
+     * `pulumi config set aws:profile <profileName>`
      * 
      * See for more details:
      * - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
      * - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
      * - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
      * - https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
-     * 
      */
     @Import(name="providerCredentialOpts")
       private final @Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts;
@@ -515,7 +479,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      *   - "http://proxy.example.com:3128"
      *   - "https://proxy.example.com"
      *   - "http://username:password@proxy.example.com:3128"
-     * 
      */
     @Import(name="proxy")
       private final @Nullable Output<String> proxy;
@@ -526,7 +489,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
-     * 
      */
     @Import(name="publicAccessCidrs")
       private final @Nullable Output<List<String>> publicAccessCidrs;
@@ -549,7 +511,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
      * 
      * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
-     * 
      */
     @Import(name="publicSubnetIds")
       private final @Nullable Output<List<String>> publicSubnetIds;
@@ -560,7 +521,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional mappings from AWS IAM roles to Kubernetes users and groups.
-     * 
      */
     @Import(name="roleMappings")
       private final @Nullable Output<List<RoleMappingArgs>> roleMappings;
@@ -571,7 +531,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IAM Service Role for EKS to use to manage the cluster.
-     * 
      */
     @Import(name="serviceRole")
       private final @Nullable Output<Role> serviceRole;
@@ -582,7 +541,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.
-     * 
      */
     @Import(name="skipDefaultNodeGroup")
       private final @Nullable Output<Boolean> skipDefaultNodeGroup;
@@ -595,7 +553,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
      * 
      * Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
-     * 
      */
     @Import(name="storageClasses")
       private final @Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses;
@@ -614,7 +571,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
      * 
      * Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
-     * 
      */
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
@@ -625,7 +581,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -636,7 +591,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.
-     * 
      */
     @Import(name="useDefaultVpcCni")
       private final @Nullable Output<Boolean> useDefaultVpcCni;
@@ -647,7 +601,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional mappings from AWS IAM users to Kubernetes users and groups.
-     * 
      */
     @Import(name="userMappings")
       private final @Nullable Output<List<UserMappingArgs>> userMappings;
@@ -658,7 +611,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;
@@ -669,7 +621,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.
-     * 
      */
     @Import(name="vpcCniOptions")
       private final @Nullable Output<VpcCniOptionsArgs> vpcCniOptions;
@@ -680,7 +631,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.
-     * 
      */
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;

@@ -19,7 +19,6 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The security group associated with the EKS cluster.
-     * 
      */
     @Import(name="clusterSecurityGroup", required=true)
       private final Output<SecurityGroup> clusterSecurityGroup;
@@ -30,7 +29,6 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The EKS cluster associated with the worker node group
-     * 
      */
     @Import(name="eksCluster", required=true)
       private final Output<Cluster> eksCluster;
@@ -41,7 +39,6 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * Key-value mapping of tags to apply to this security group.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -52,7 +49,6 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The VPC in which to create the worker node group.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
