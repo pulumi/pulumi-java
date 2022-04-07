@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a Route53 Resolver rule association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.route53.ResolverRuleAssociation("example", {
+ *     resolverRuleId: aws_route53_resolver_rule.sys.id,
+ *     vpcId: aws_vpc.foo.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.route53.ResolverRuleAssociation("example",
+ *     resolver_rule_id=aws_route53_resolver_rule["sys"]["id"],
+ *     vpc_id=aws_vpc["foo"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Route53.ResolverRuleAssociation("example", new Aws.Route53.ResolverRuleAssociationArgs
+ *         {
+ *             ResolverRuleId = aws_route53_resolver_rule.Sys.Id,
+ *             VpcId = aws_vpc.Foo.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53.NewResolverRuleAssociation(ctx, "example", &route53.ResolverRuleAssociationArgs{
+ * 			ResolverRuleId: pulumi.Any(aws_route53_resolver_rule.Sys.Id),
+ * 			VpcId:          pulumi.Any(aws_vpc.Foo.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/resolverRuleAssociation:ResolverRuleAssociation example rslvr-rrassoc-97242eaf88example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/resolverRuleAssociation:ResolverRuleAssociation")
 public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource {

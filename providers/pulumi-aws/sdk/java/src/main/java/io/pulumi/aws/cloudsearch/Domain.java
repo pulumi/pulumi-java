@@ -18,6 +18,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * CloudSearch Domains can be imported using the `name`, e.g.,
@@ -26,6 +29,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudsearch/domain:Domain example example-domain
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudsearch/domain:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {

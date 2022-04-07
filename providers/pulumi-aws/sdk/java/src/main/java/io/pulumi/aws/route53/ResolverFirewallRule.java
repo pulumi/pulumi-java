@@ -16,7 +16,127 @@ import javax.annotation.Nullable;
 /**
  * Provides a Route 53 Resolver DNS Firewall rule resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleResolverFirewallDomainList = new aws.route53.ResolverFirewallDomainList("exampleResolverFirewallDomainList", {
+ *     domains: ["example.com"],
+ *     tags: {},
+ * });
+ * const exampleResolverFirewallRuleGroup = new aws.route53.ResolverFirewallRuleGroup("exampleResolverFirewallRuleGroup", {tags: {}});
+ * const exampleResolverFirewallRule = new aws.route53.ResolverFirewallRule("exampleResolverFirewallRule", {
+ *     action: "BLOCK",
+ *     blockOverrideDnsType: "CNAME",
+ *     blockOverrideDomain: "example.com",
+ *     blockOverrideTtl: 1,
+ *     blockResponse: "OVERRIDE",
+ *     firewallDomainListId: exampleResolverFirewallDomainList.id,
+ *     firewallRuleGroupId: exampleResolverFirewallRuleGroup.id,
+ *     priority: 100,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_resolver_firewall_domain_list = aws.route53.ResolverFirewallDomainList("exampleResolverFirewallDomainList",
+ *     domains=["example.com"],
+ *     tags={})
+ * example_resolver_firewall_rule_group = aws.route53.ResolverFirewallRuleGroup("exampleResolverFirewallRuleGroup", tags={})
+ * example_resolver_firewall_rule = aws.route53.ResolverFirewallRule("exampleResolverFirewallRule",
+ *     action="BLOCK",
+ *     block_override_dns_type="CNAME",
+ *     block_override_domain="example.com",
+ *     block_override_ttl=1,
+ *     block_response="OVERRIDE",
+ *     firewall_domain_list_id=example_resolver_firewall_domain_list.id,
+ *     firewall_rule_group_id=example_resolver_firewall_rule_group.id,
+ *     priority=100)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleResolverFirewallDomainList = new Aws.Route53.ResolverFirewallDomainList("exampleResolverFirewallDomainList", new Aws.Route53.ResolverFirewallDomainListArgs
+ *         {
+ *             Domains = 
+ *             {
+ *                 "example.com",
+ *             },
+ *             Tags = ,
+ *         });
+ *         var exampleResolverFirewallRuleGroup = new Aws.Route53.ResolverFirewallRuleGroup("exampleResolverFirewallRuleGroup", new Aws.Route53.ResolverFirewallRuleGroupArgs
+ *         {
+ *             Tags = ,
+ *         });
+ *         var exampleResolverFirewallRule = new Aws.Route53.ResolverFirewallRule("exampleResolverFirewallRule", new Aws.Route53.ResolverFirewallRuleArgs
+ *         {
+ *             Action = "BLOCK",
+ *             BlockOverrideDnsType = "CNAME",
+ *             BlockOverrideDomain = "example.com",
+ *             BlockOverrideTtl = 1,
+ *             BlockResponse = "OVERRIDE",
+ *             FirewallDomainListId = exampleResolverFirewallDomainList.Id,
+ *             FirewallRuleGroupId = exampleResolverFirewallRuleGroup.Id,
+ *             Priority = 100,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleResolverFirewallDomainList, err := route53.NewResolverFirewallDomainList(ctx, "exampleResolverFirewallDomainList", &route53.ResolverFirewallDomainListArgs{
+ * 			Domains: pulumi.StringArray{
+ * 				pulumi.String("example.com"),
+ * 			},
+ * 			Tags: nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleResolverFirewallRuleGroup, err := route53.NewResolverFirewallRuleGroup(ctx, "exampleResolverFirewallRuleGroup", &route53.ResolverFirewallRuleGroupArgs{
+ * 			Tags: nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewResolverFirewallRule(ctx, "exampleResolverFirewallRule", &route53.ResolverFirewallRuleArgs{
+ * 			Action:               pulumi.String("BLOCK"),
+ * 			BlockOverrideDnsType: pulumi.String("CNAME"),
+ * 			BlockOverrideDomain:  pulumi.String("example.com"),
+ * 			BlockOverrideTtl:     pulumi.Int(1),
+ * 			BlockResponse:        pulumi.String("OVERRIDE"),
+ * 			FirewallDomainListId: exampleResolverFirewallDomainList.ID(),
+ * 			FirewallRuleGroupId:  exampleResolverFirewallRuleGroup.ID(),
+ * 			Priority:             pulumi.Int(100),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +146,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/resolverFirewallRule:ResolverFirewallRule example rslvr-frg-0123456789abcdef:rslvr-fdl-0123456789abcdef
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/resolverFirewallRule:ResolverFirewallRule")
 public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {

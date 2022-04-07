@@ -26,7 +26,92 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** When you create a canary, AWS creates supporting implicit resources. See the Amazon CloudWatch Synthetics documentation on [DeleteCanary](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DeleteCanary.html) for a full list. Neither AWS nor this provider deletes these implicit resources automatically when the canary is deleted. Before deleting a canary, ensure you have all the information about the canary that you need to delete the implicit resources using the AWS Console, or AWS CLI.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const some = new aws.synthetics.Canary("some", {
+ *     artifactS3Location: "s3://some-bucket/",
+ *     executionRoleArn: "some-role",
+ *     handler: "exports.handler",
+ *     runtimeVersion: "syn-1.0",
+ *     schedule: {
+ *         expression: "rate(0 minute)",
+ *     },
+ *     zipFile: "test-fixtures/lambdatest.zip",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * some = aws.synthetics.Canary("some",
+ *     artifact_s3_location="s3://some-bucket/",
+ *     execution_role_arn="some-role",
+ *     handler="exports.handler",
+ *     runtime_version="syn-1.0",
+ *     schedule=aws.synthetics.CanaryScheduleArgs(
+ *         expression="rate(0 minute)",
+ *     ),
+ *     zip_file="test-fixtures/lambdatest.zip")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var some = new Aws.Synthetics.Canary("some", new Aws.Synthetics.CanaryArgs
+ *         {
+ *             ArtifactS3Location = "s3://some-bucket/",
+ *             ExecutionRoleArn = "some-role",
+ *             Handler = "exports.handler",
+ *             RuntimeVersion = "syn-1.0",
+ *             Schedule = new Aws.Synthetics.Inputs.CanaryScheduleArgs
+ *             {
+ *                 Expression = "rate(0 minute)",
+ *             },
+ *             ZipFile = "test-fixtures/lambdatest.zip",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/synthetics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synthetics.NewCanary(ctx, "some", &synthetics.CanaryArgs{
+ * 			ArtifactS3Location: pulumi.String("s3://some-bucket/"),
+ * 			ExecutionRoleArn:   pulumi.String("some-role"),
+ * 			Handler:            pulumi.String("exports.handler"),
+ * 			RuntimeVersion:     pulumi.String("syn-1.0"),
+ * 			Schedule: &synthetics.CanaryScheduleArgs{
+ * 				Expression: pulumi.String("rate(0 minute)"),
+ * 			},
+ * 			ZipFile: pulumi.String("test-fixtures/lambdatest.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +121,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:synthetics/canary:Canary some some-canary
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:synthetics/canary:Canary")
 public class Canary extends io.pulumi.resources.CustomResource {

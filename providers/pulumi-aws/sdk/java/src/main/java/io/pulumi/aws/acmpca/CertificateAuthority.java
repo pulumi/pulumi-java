@@ -22,7 +22,346 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Creating this resource will leave the certificate authority in a `PENDING_CERTIFICATE` status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the `certificate_signing_request` attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.acmpca.CertificateAuthority("example", {
+ *     certificateAuthorityConfiguration: {
+ *         keyAlgorithm: "RSA_4096",
+ *         signingAlgorithm: "SHA512WITHRSA",
+ *         subject: {
+ *             commonName: "example.com",
+ *         },
+ *     },
+ *     permanentDeletionTimeInDays: 7,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.acmpca.CertificateAuthority("example",
+ *     certificate_authority_configuration=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs(
+ *         key_algorithm="RSA_4096",
+ *         signing_algorithm="SHA512WITHRSA",
+ *         subject=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs(
+ *             common_name="example.com",
+ *         ),
+ *     ),
+ *     permanent_deletion_time_in_days=7)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Acmpca.CertificateAuthority("example", new Aws.Acmpca.CertificateAuthorityArgs
+ *         {
+ *             CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+ *             {
+ *                 KeyAlgorithm = "RSA_4096",
+ *                 SigningAlgorithm = "SHA512WITHRSA",
+ *                 Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+ *                 {
+ *                     CommonName = "example.com",
+ *                 },
+ *             },
+ *             PermanentDeletionTimeInDays = 7,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acmpca"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := acmpca.NewCertificateAuthority(ctx, "example", &acmpca.CertificateAuthorityArgs{
+ * 			CertificateAuthorityConfiguration: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs{
+ * 				KeyAlgorithm:     pulumi.String("RSA_4096"),
+ * 				SigningAlgorithm: pulumi.String("SHA512WITHRSA"),
+ * 				Subject: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs{
+ * 					CommonName: pulumi.String("example.com"),
+ * 				},
+ * 			},
+ * 			PermanentDeletionTimeInDays: pulumi.Int(7),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Enable Certificate Revocation List
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const acmpcaBucketAccess = aws.iam.getPolicyDocumentOutput({
+ *     statements: [{
+ *         actions: [
+ *             "s3:GetBucketAcl",
+ *             "s3:GetBucketLocation",
+ *             "s3:PutObject",
+ *             "s3:PutObjectAcl",
+ *         ],
+ *         resources: [
+ *             exampleBucket.arn,
+ *             pulumi.interpolate`${exampleBucket.arn}/*`,
+ *         ],
+ *         principals: [{
+ *             identifiers: ["acm-pca.amazonaws.com"],
+ *             type: "Service",
+ *         }],
+ *     }],
+ * });
+ * const exampleBucketPolicy = new aws.s3.BucketPolicy("exampleBucketPolicy", {
+ *     bucket: exampleBucket.id,
+ *     policy: acmpcaBucketAccess.apply(acmpcaBucketAccess => acmpcaBucketAccess.json),
+ * });
+ * const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("exampleCertificateAuthority", {
+ *     certificateAuthorityConfiguration: {
+ *         keyAlgorithm: "RSA_4096",
+ *         signingAlgorithm: "SHA512WITHRSA",
+ *         subject: {
+ *             commonName: "example.com",
+ *         },
+ *     },
+ *     revocationConfiguration: {
+ *         crlConfiguration: {
+ *             customCname: "crl.example.com",
+ *             enabled: true,
+ *             expirationInDays: 7,
+ *             s3BucketName: exampleBucket.id,
+ *         },
+ *     },
+ * }, {
+ *     dependsOn: [exampleBucketPolicy],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * acmpca_bucket_access = aws.iam.get_policy_document_output(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=[
+ *         "s3:GetBucketAcl",
+ *         "s3:GetBucketLocation",
+ *         "s3:PutObject",
+ *         "s3:PutObjectAcl",
+ *     ],
+ *     resources=[
+ *         example_bucket.arn,
+ *         example_bucket.arn.apply(lambda arn: f"{arn}/*"),
+ *     ],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         identifiers=["acm-pca.amazonaws.com"],
+ *         type="Service",
+ *     )],
+ * )])
+ * example_bucket_policy = aws.s3.BucketPolicy("exampleBucketPolicy",
+ *     bucket=example_bucket.id,
+ *     policy=acmpca_bucket_access.json)
+ * example_certificate_authority = aws.acmpca.CertificateAuthority("exampleCertificateAuthority",
+ *     certificate_authority_configuration=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs(
+ *         key_algorithm="RSA_4096",
+ *         signing_algorithm="SHA512WITHRSA",
+ *         subject=aws.acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs(
+ *             common_name="example.com",
+ *         ),
+ *     ),
+ *     revocation_configuration=aws.acmpca.CertificateAuthorityRevocationConfigurationArgs(
+ *         crl_configuration=aws.acmpca.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs(
+ *             custom_cname="crl.example.com",
+ *             enabled=True,
+ *             expiration_in_days=7,
+ *             s3_bucket_name=example_bucket.id,
+ *         ),
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[example_bucket_policy]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var acmpcaBucketAccess = Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "s3:GetBucketAcl",
+ *                         "s3:GetBucketLocation",
+ *                         "s3:PutObject",
+ *                         "s3:PutObjectAcl",
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         exampleBucket.Arn,
+ *                         exampleBucket.Arn.Apply(arn => $"{arn}/*"),
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                         {
+ *                             Identifiers = 
+ *                             {
+ *                                 "acm-pca.amazonaws.com",
+ *                             },
+ *                             Type = "Service",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var exampleBucketPolicy = new Aws.S3.BucketPolicy("exampleBucketPolicy", new Aws.S3.BucketPolicyArgs
+ *         {
+ *             Bucket = exampleBucket.Id,
+ *             Policy = acmpcaBucketAccess.Apply(acmpcaBucketAccess => acmpcaBucketAccess.Json),
+ *         });
+ *         var exampleCertificateAuthority = new Aws.Acmpca.CertificateAuthority("exampleCertificateAuthority", new Aws.Acmpca.CertificateAuthorityArgs
+ *         {
+ *             CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+ *             {
+ *                 KeyAlgorithm = "RSA_4096",
+ *                 SigningAlgorithm = "SHA512WITHRSA",
+ *                 Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+ *                 {
+ *                     CommonName = "example.com",
+ *                 },
+ *             },
+ *             RevocationConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationArgs
+ *             {
+ *                 CrlConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs
+ *                 {
+ *                     CustomCname = "crl.example.com",
+ *                     Enabled = true,
+ *                     ExpirationInDays = 7,
+ *                     S3BucketName = exampleBucket.Id,
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleBucketPolicy,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acmpca"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		acmpcaBucketAccess := iam.GetPolicyDocumentOutput(ctx, iam.GetPolicyDocumentOutputArgs{
+ * 			Statements: iam.GetPolicyDocumentStatementArray{
+ * 				&iam.GetPolicyDocumentStatementArgs{
+ * 					Actions: pulumi.StringArray{
+ * 						pulumi.String("s3:GetBucketAcl"),
+ * 						pulumi.String("s3:GetBucketLocation"),
+ * 						pulumi.String("s3:PutObject"),
+ * 						pulumi.String("s3:PutObjectAcl"),
+ * 					},
+ * 					Resources: pulumi.StringArray{
+ * 						exampleBucket.Arn,
+ * 						exampleBucket.Arn.ApplyT(func(arn string) (string, error) {
+ * 							return fmt.Sprintf("%v%v", arn, "/*"), nil
+ * 						}).(pulumi.StringOutput),
+ * 					},
+ * 					Principals: iam.GetPolicyDocumentStatementPrincipalArray{
+ * 						&iam.GetPolicyDocumentStatementPrincipalArgs{
+ * 							Identifiers: pulumi.StringArray{
+ * 								pulumi.String("acm-pca.amazonaws.com"),
+ * 							},
+ * 							Type: pulumi.String("Service"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		exampleBucketPolicy, err := s3.NewBucketPolicy(ctx, "exampleBucketPolicy", &s3.BucketPolicyArgs{
+ * 			Bucket: exampleBucket.ID(),
+ * 			Policy: acmpcaBucketAccess.ApplyT(func(acmpcaBucketAccess iam.GetPolicyDocumentResult) (string, error) {
+ * 				return acmpcaBucketAccess.Json, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = acmpca.NewCertificateAuthority(ctx, "exampleCertificateAuthority", &acmpca.CertificateAuthorityArgs{
+ * 			CertificateAuthorityConfiguration: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationArgs{
+ * 				KeyAlgorithm:     pulumi.String("RSA_4096"),
+ * 				SigningAlgorithm: pulumi.String("SHA512WITHRSA"),
+ * 				Subject: &acmpca.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs{
+ * 					CommonName: pulumi.String("example.com"),
+ * 				},
+ * 			},
+ * 			RevocationConfiguration: &acmpca.CertificateAuthorityRevocationConfigurationArgs{
+ * 				CrlConfiguration: &acmpca.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs{
+ * 					CustomCname:      pulumi.String("crl.example.com"),
+ * 					Enabled:          pulumi.Bool(true),
+ * 					ExpirationInDays: pulumi.Int(7),
+ * 					S3BucketName:     exampleBucket.ID(),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleBucketPolicy,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +371,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:acmpca/certificateAuthority:CertificateAuthority example arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:acmpca/certificateAuthority:CertificateAuthority")
 public class CertificateAuthority extends io.pulumi.resources.CustomResource {

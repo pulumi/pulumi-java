@@ -15,8 +15,126 @@ import javax.annotation.Nullable;
 /**
  * Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g., ARN)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.elasticsearch.Domain("example", {elasticsearchVersion: "2.3"});
+ * const main = new aws.elasticsearch.DomainPolicy("main", {
+ *     domainName: example.domainName,
+ *     accessPolicies: pulumi.interpolate`{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Action": "es:*",
+ *             "Principal": "*",
+ *             "Effect": "Allow",
+ *             "Condition": {
+ *                 "IpAddress": {"aws:SourceIp": "127.0.0.1/32"}
+ *             },
+ *             "Resource": "${example.arn}/*"
+ *         }
+ *     ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.elasticsearch.Domain("example", elasticsearch_version="2.3")
+ * main = aws.elasticsearch.DomainPolicy("main",
+ *     domain_name=example.domain_name,
+ *     access_policies=example.arn.apply(lambda arn: f"""{{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {{
+ *             "Action": "es:*",
+ *             "Principal": "*",
+ *             "Effect": "Allow",
+ *             "Condition": {{
+ *                 "IpAddress": {{"aws:SourceIp": "127.0.0.1/32"}}
+ *             }},
+ *             "Resource": "{arn}/*"
+ *         }}
+ *     ]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ElasticSearch.Domain("example", new Aws.ElasticSearch.DomainArgs
+ *         {
+ *             ElasticsearchVersion = "2.3",
+ *         });
+ *         var main = new Aws.ElasticSearch.DomainPolicy("main", new Aws.ElasticSearch.DomainPolicyArgs
+ *         {
+ *             DomainName = example.DomainName,
+ *             AccessPolicies = example.Arn.Apply(arn => @$"{{
+ *     ""Version"": ""2012-10-17"",
+ *     ""Statement"": [
+ *         {{
+ *             ""Action"": ""es:*"",
+ *             ""Principal"": ""*"",
+ *             ""Effect"": ""Allow"",
+ *             ""Condition"": {{
+ *                 ""IpAddress"": {{""aws:SourceIp"": ""127.0.0.1/32""}}
+ *             }},
+ *             ""Resource"": ""{arn}/*""
+ *         }}
+ *     ]
+ * }}
+ * "),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
+ * 			ElasticsearchVersion: pulumi.String("2.3"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticsearch.NewDomainPolicy(ctx, "main", &elasticsearch.DomainPolicyArgs{
+ * 			DomainName: example.DomainName,
+ * 			AccessPolicies: example.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Action\": \"es:*\",\n", "            \"Principal\": \"*\",\n", "            \"Effect\": \"Allow\",\n", "            \"Condition\": {\n", "                \"IpAddress\": {\"aws:SourceIp\": \"127.0.0.1/32\"}\n", "            },\n", "            \"Resource\": \"", arn, "/*\"\n", "        }\n", "    ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:elasticsearch/domainPolicy:DomainPolicy")
 public class DomainPolicy extends io.pulumi.resources.CustomResource {

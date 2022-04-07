@@ -13,8 +13,8 @@ import java.util.Objects;
 public final class GetResourcesResourceTagMappingListComplianceDetail {
     /**
      * Whether the resource is compliant.
-     * * ` keys_with_noncompliant_values  ` - Set of tag keys with non-compliant tag values.
-     * * ` non_compliant_keys  ` - Set of non-compliant tag keys.
+     * * `keys_with_noncompliant_values ` - Set of tag keys with non-compliant tag values.
+     * * `non_compliant_keys ` - Set of non-compliant tag keys.
      * 
      */
     private final Boolean complianceStatus;
@@ -33,8 +33,8 @@ public final class GetResourcesResourceTagMappingListComplianceDetail {
 
     /**
      * Whether the resource is compliant.
-     * * ` keys_with_noncompliant_values  ` - Set of tag keys with non-compliant tag values.
-     * * ` non_compliant_keys  ` - Set of non-compliant tag keys.
+     * * `keys_with_noncompliant_values ` - Set of tag keys with non-compliant tag values.
+     * * `non_compliant_keys ` - Set of non-compliant tag keys.
      * 
     */
     public Boolean getComplianceStatus() {

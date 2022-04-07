@@ -16,7 +16,123 @@ import javax.annotation.Nullable;
  * Provides a resource to create an association between a route table and a subnet or a route table and an
  * internet gateway or virtual private gateway.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const routeTableAssociation = new aws.ec2.RouteTableAssociation("routeTableAssociation", {
+ *     subnetId: aws_subnet.foo.id,
+ *     routeTableId: aws_route_table.bar.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * route_table_association = aws.ec2.RouteTableAssociation("routeTableAssociation",
+ *     subnet_id=aws_subnet["foo"]["id"],
+ *     route_table_id=aws_route_table["bar"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var routeTableAssociation = new Aws.Ec2.RouteTableAssociation("routeTableAssociation", new Aws.Ec2.RouteTableAssociationArgs
+ *         {
+ *             SubnetId = aws_subnet.Foo.Id,
+ *             RouteTableId = aws_route_table.Bar.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewRouteTableAssociation(ctx, "routeTableAssociation", &ec2.RouteTableAssociationArgs{
+ * 			SubnetId:     pulumi.Any(aws_subnet.Foo.Id),
+ * 			RouteTableId: pulumi.Any(aws_route_table.Bar.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const routeTableAssociation = new aws.ec2.RouteTableAssociation("routeTableAssociation", {
+ *     gatewayId: aws_internet_gateway.foo.id,
+ *     routeTableId: aws_route_table.bar.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * route_table_association = aws.ec2.RouteTableAssociation("routeTableAssociation",
+ *     gateway_id=aws_internet_gateway["foo"]["id"],
+ *     route_table_id=aws_route_table["bar"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var routeTableAssociation = new Aws.Ec2.RouteTableAssociation("routeTableAssociation", new Aws.Ec2.RouteTableAssociationArgs
+ *         {
+ *             GatewayId = aws_internet_gateway.Foo.Id,
+ *             RouteTableId = aws_route_table.Bar.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewRouteTableAssociation(ctx, "routeTableAssociation", &ec2.RouteTableAssociationArgs{
+ * 			GatewayId:    pulumi.Any(aws_internet_gateway.Foo.Id),
+ * 			RouteTableId: pulumi.Any(aws_route_table.Bar.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +148,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/routeTableAssociation:RouteTableAssociation assoc igw-01b3a60780f8d034a/rtb-656c65616e6f72
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/routeTableAssociation:RouteTableAssociation")
 public class RouteTableAssociation extends io.pulumi.resources.CustomResource {

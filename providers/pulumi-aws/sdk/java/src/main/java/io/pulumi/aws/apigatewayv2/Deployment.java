@@ -20,7 +20,68 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Creating a deployment for an API requires at least one `aws.apigatewayv2.Route` resource associated with that API. To avoid race conditions when all resources are being created together, you need to add implicit resource references via the `triggers` argument or explicit resource references using the [resource `dependsOn` meta-argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apigatewayv2.Deployment("example", {
+ *     apiId: aws_apigatewayv2_route.example.api_id,
+ *     description: "Example deployment",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apigatewayv2.Deployment("example",
+ *     api_id=aws_apigatewayv2_route["example"]["api_id"],
+ *     description="Example deployment")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ApiGatewayV2.Deployment("example", new Aws.ApiGatewayV2.DeploymentArgs
+ *         {
+ *             ApiId = aws_apigatewayv2_route.Example.Api_id,
+ *             Description = "Example deployment",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigatewayv2.NewDeployment(ctx, "example", &apigatewayv2.DeploymentArgs{
+ * 			ApiId:       pulumi.Any(aws_apigatewayv2_route.Example.Api_id),
+ * 			Description: pulumi.String("Example deployment"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,8 +91,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigatewayv2/deployment:Deployment example aabbccddee/1122334
  * ```
  * 
- *  The `triggers` argument cannot be imported.
- * 
+ *  The `triggers` argument cannot be imported. 
  */
 @ResourceType(type="aws:apigatewayv2/deployment:Deployment")
 public class Deployment extends io.pulumi.resources.CustomResource {

@@ -21,7 +21,6 @@ public final class ProjectSource {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final @Nullable ProjectSourceAuth auth;
@@ -93,7 +92,6 @@ public final class ProjectSource {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Optional<ProjectSourceAuth> getAuth() {

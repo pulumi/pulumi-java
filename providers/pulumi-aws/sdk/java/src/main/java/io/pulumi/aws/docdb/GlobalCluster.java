@@ -20,7 +20,137 @@ import javax.annotation.Nullable;
  * 
  * More information about DocumentDB Global Clusters can be found in the [DocumentDB Developer Guide](https://docs.aws.amazon.com/documentdb/latest/developerguide/global-clusters.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### New DocumentDB Global Cluster
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.Provider("primary", {region: "us-east-2"});
+ * const secondary = new aws.Provider("secondary", {region: "us-east-1"});
+ * const example = new aws.docdb.GlobalCluster("example", {
+ *     globalClusterIdentifier: "global-test",
+ *     engine: "docdb",
+ *     engineVersion: "4.0.0",
+ * });
+ * const primaryCluster = new aws.docdb.Cluster("primaryCluster", {
+ *     engine: example.engine,
+ *     engineVersion: example.engineVersion,
+ *     clusterIdentifier: "test-primary-cluster",
+ *     masterUsername: "username",
+ *     masterPassword: "somepass123",
+ *     globalClusterIdentifier: example.id,
+ *     dbSubnetGroupName: "default",
+ * }, {
+ *     provider: aws.primary,
+ * });
+ * const primaryClusterInstance = new aws.docdb.ClusterInstance("primaryClusterInstance", {
+ *     engine: example.engine,
+ *     engineVersion: example.engineVersion,
+ *     identifier: "test-primary-cluster-instance",
+ *     clusterIdentifier: primaryCluster.id,
+ *     instanceClass: "db.r5.large",
+ *     dbSubnetGroupName: "default",
+ * }, {
+ *     provider: aws.primary,
+ * });
+ * const secondaryCluster = new aws.docdb.Cluster("secondaryCluster", {
+ *     engine: example.engine,
+ *     engineVersion: example.engineVersion,
+ *     clusterIdentifier: "test-secondary-cluster",
+ *     globalClusterIdentifier: example.id,
+ *     dbSubnetGroupName: "default",
+ * }, {
+ *     provider: aws.secondary,
+ * });
+ * const secondaryClusterInstance = new aws.docdb.ClusterInstance("secondaryClusterInstance", {
+ *     engine: example.engine,
+ *     engineVersion: example.engineVersion,
+ *     identifier: "test-secondary-cluster-instance",
+ *     clusterIdentifier: secondaryCluster.id,
+ *     instanceClass: "db.r5.large",
+ *     dbSubnetGroupName: "default",
+ * }, {
+ *     provider: aws.secondary,
+ *     dependsOn: [primaryClusterInstance],
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### New Global Cluster From Existing DB Cluster
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ... other configuration ...
+ * const exampleCluster = new aws.docdb.Cluster("exampleCluster", {});
+ * const exampleGlobalCluster = new aws.docdb.GlobalCluster("exampleGlobalCluster", {
+ *     globalClusterIdentifier: "example",
+ *     sourceDbClusterIdentifier: exampleCluster.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ... other configuration ...
+ * example_cluster = aws.docdb.Cluster("exampleCluster")
+ * example_global_cluster = aws.docdb.GlobalCluster("exampleGlobalCluster",
+ *     global_cluster_identifier="example",
+ *     source_db_cluster_identifier=example_cluster.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ... other configuration ...
+ *         var exampleCluster = new Aws.DocDB.Cluster("exampleCluster", new Aws.DocDB.ClusterArgs
+ *         {
+ *         });
+ *         var exampleGlobalCluster = new Aws.DocDB.GlobalCluster("exampleGlobalCluster", new Aws.DocDB.GlobalClusterArgs
+ *         {
+ *             GlobalClusterIdentifier = "example",
+ *             SourceDbClusterIdentifier = exampleCluster.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/docdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleCluster, err := docdb.NewCluster(ctx, "exampleCluster", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = docdb.NewGlobalCluster(ctx, "exampleGlobalCluster", &docdb.GlobalClusterArgs{
+ * 			GlobalClusterIdentifier:   pulumi.String("example"),
+ * 			SourceDbClusterIdentifier: exampleCluster.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,16 +162,17 @@ import javax.annotation.Nullable;
  * 
  *  Certain resource arguments, like `source_db_cluster_identifier`, do not have an API method for reading the information after creation. If the argument is set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g. terraform resource "aws_docdb_global_cluster" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
- * # There is no API for reading source_db_cluster_identifier
+ *  # There is no API for reading source_db_cluster_identifier
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [source_db_cluster_identifier]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:docdb/globalCluster:GlobalCluster")
 public class GlobalCluster extends io.pulumi.resources.CustomResource {

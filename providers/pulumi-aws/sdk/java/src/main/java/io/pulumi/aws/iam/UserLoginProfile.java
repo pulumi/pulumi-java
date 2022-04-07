@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * 
  * > To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleUser = new aws.iam.User("exampleUser", {
+ *     path: "/",
+ *     forceDestroy: true,
+ * });
+ * const exampleUserLoginProfile = new aws.iam.UserLoginProfile("exampleUserLoginProfile", {
+ *     user: exampleUser.name,
+ *     pgpKey: "keybase:some_person_that_exists",
+ * });
+ * export const password = exampleUserLoginProfile.encryptedPassword;
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_user = aws.iam.User("exampleUser",
+ *     path="/",
+ *     force_destroy=True)
+ * example_user_login_profile = aws.iam.UserLoginProfile("exampleUserLoginProfile",
+ *     user=example_user.name,
+ *     pgp_key="keybase:some_person_that_exists")
+ * pulumi.export("password", example_user_login_profile.encrypted_password)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleUser = new Aws.Iam.User("exampleUser", new Aws.Iam.UserArgs
+ *         {
+ *             Path = "/",
+ *             ForceDestroy = true,
+ *         });
+ *         var exampleUserLoginProfile = new Aws.Iam.UserLoginProfile("exampleUserLoginProfile", new Aws.Iam.UserLoginProfileArgs
+ *         {
+ *             User = exampleUser.Name,
+ *             PgpKey = "keybase:some_person_that_exists",
+ *         });
+ *         this.Password = exampleUserLoginProfile.EncryptedPassword;
+ *     }
+ * 
+ *     [Output("password")]
+ *     public Output<string> Password { get; set; }
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleUser, err := iam.NewUser(ctx, "exampleUser", &iam.UserArgs{
+ * 			Path:         pulumi.String("/"),
+ * 			ForceDestroy: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleUserLoginProfile, err := iam.NewUserLoginProfile(ctx, "exampleUserLoginProfile", &iam.UserLoginProfileArgs{
+ * 			User:   exampleUser.Name,
+ * 			PgpKey: pulumi.String("keybase:some_person_that_exists"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("password", exampleUserLoginProfile.EncryptedPassword)
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,22 +116,37 @@ import javax.annotation.Nullable;
  * 
  *  Since this provider has no method to read the PGP or password information during import, use [`ignore_changes` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to ignore them unless password recreation is desired. e.g. terraform resource "aws_iam_user_login_profile" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [
+ * 
+ * 
+ * 
+ * 
  * 
  *  password_length,
  * 
+ * 
+ * 
+ * 
+ * 
  *  password_reset_required,
+ * 
+ * 
+ * 
+ * 
  * 
  *  pgp_key,
  * 
+ * 
+ * 
  *  ]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:iam/userLoginProfile:UserLoginProfile")
 public class UserLoginProfile extends io.pulumi.resources.CustomResource {

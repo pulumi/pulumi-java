@@ -16,8 +16,8 @@ public final class GetResourcesResourceTagMappingListComplianceDetail extends io
 
     /**
      * Whether the resource is compliant.
-     * * ` keys_with_noncompliant_values  ` - Set of tag keys with non-compliant tag values.
-     * * ` non_compliant_keys  ` - Set of non-compliant tag keys.
+     * * `keys_with_noncompliant_values ` - Set of tag keys with non-compliant tag values.
+     * * `non_compliant_keys ` - Set of non-compliant tag keys.
      * 
      */
     @Import(name="complianceStatus", required=true)

@@ -21,7 +21,6 @@ public final class ProjectSecondarySource {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final @Nullable ProjectSecondarySourceAuth auth;
@@ -100,7 +99,6 @@ public final class ProjectSecondarySource {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Optional<ProjectSecondarySourceAuth> getAuth() {

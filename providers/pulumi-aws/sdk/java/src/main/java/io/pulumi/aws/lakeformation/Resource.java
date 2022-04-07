@@ -17,8 +17,75 @@ import javax.annotation.Nullable;
  * 
  * Choose a role that has read/write access to the chosen Amazon S3 path or use the service-linked role. When you register the S3 path, the service-linked role and a new inline policy are created on your behalf. Lake Formation adds the first path to the inline policy and attaches it to the service-linked role. When you register subsequent paths, Lake Formation adds the path to the existing policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = aws.s3.getBucket({
+ *     bucket: "an-example-bucket",
+ * });
+ * const exampleResource = new aws.lakeformation.Resource("exampleResource", {arn: exampleBucket.then(exampleBucket => exampleBucket.arn)});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.get_bucket(bucket="an-example-bucket")
+ * example_resource = aws.lakeformation.Resource("exampleResource", arn=example_bucket.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+ *         {
+ *             Bucket = "an-example-bucket",
+ *         }));
+ *         var exampleResource = new Aws.LakeFormation.Resource("exampleResource", new Aws.LakeFormation.ResourceArgs
+ *         {
+ *             Arn = exampleBucket.Apply(exampleBucket => exampleBucket.Arn),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lakeformation"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.LookupBucket(ctx, &s3.LookupBucketArgs{
+ * 			Bucket: "an-example-bucket",
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lakeformation.NewResource(ctx, "exampleResource", &lakeformation.ResourceArgs{
+ * 			Arn: pulumi.String(exampleBucket.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:lakeformation/resource:Resource")
 public class Resource extends io.pulumi.resources.CustomResource {

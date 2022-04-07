@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [AWS Macie Account](https://docs.aws.amazon.com/macie/latest/APIReference/macie.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.macie2.Account("test", {
+ *     findingPublishingFrequency: "FIFTEEN_MINUTES",
+ *     status: "ENABLED",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.macie2.Account("test",
+ *     finding_publishing_frequency="FIFTEEN_MINUTES",
+ *     status="ENABLED")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Macie2.Account("test", new Aws.Macie2.AccountArgs
+ *         {
+ *             FindingPublishingFrequency = "FIFTEEN_MINUTES",
+ *             Status = "ENABLED",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := macie2.NewAccount(ctx, "test", &macie2.AccountArgs{
+ * 			FindingPublishingFrequency: pulumi.String("FIFTEEN_MINUTES"),
+ * 			Status:                     pulumi.String("ENABLED"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:macie2/account:Account example abcd1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:macie2/account:Account")
 public class Account extends io.pulumi.resources.CustomResource {

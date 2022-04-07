@@ -13,7 +13,81 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * The following example below creates a CloudFront public key.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const example = new aws.cloudfront.PublicKey("example", {
+ *     comment: "test public key",
+ *     encodedKey: fs.readFileSync("public_key.pem"),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudfront.PublicKey("example",
+ *     comment="test public key",
+ *     encoded_key=(lambda path: open(path).read())("public_key.pem"))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFront.PublicKey("example", new Aws.CloudFront.PublicKeyArgs
+ *         {
+ *             Comment = "test public key",
+ *             EncodedKey = File.ReadAllText("public_key.pem"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewPublicKey(ctx, "example", &cloudfront.PublicKeyArgs{
+ * 			Comment:    pulumi.String("test public key"),
+ * 			EncodedKey: readFileOrPanic("public_key.pem"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -23,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudfront/publicKey:PublicKey example K3D5EWEUDCCXON
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudfront/publicKey:PublicKey")
 public class PublicKey extends io.pulumi.resources.CustomResource {

@@ -76,7 +76,6 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
     /**
      * @Deprecated
      * use 'associated_gateway_id' argument instead
-     * 
      */
     @Deprecated /* use 'associated_gateway_id' argument instead */
     @Import(name="vpnGatewayId")

@@ -32,7 +32,253 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const mytopic = new aws.sns.Topic("mytopic", {});
+ * const myerrortopic = new aws.sns.Topic("myerrortopic", {});
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "iot.amazonaws.com"
+ *       },
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const rule = new aws.iot.TopicRule("rule", {
+ *     description: "Example rule",
+ *     enabled: true,
+ *     sql: "SELECT * FROM 'topic/test'",
+ *     sqlVersion: "2016-03-23",
+ *     sns: {
+ *         messageFormat: "RAW",
+ *         roleArn: role.arn,
+ *         targetArn: mytopic.arn,
+ *     },
+ *     errorAction: {
+ *         sns: {
+ *             messageFormat: "RAW",
+ *             roleArn: role.arn,
+ *             targetArn: myerrortopic.arn,
+ *         },
+ *     },
+ * });
+ * const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
+ *     role: role.id,
+ *     policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *         "Effect": "Allow",
+ *         "Action": [
+ *             "sns:Publish"
+ *         ],
+ *         "Resource": "${mytopic.arn}"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * mytopic = aws.sns.Topic("mytopic")
+ * myerrortopic = aws.sns.Topic("myerrortopic")
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "iot.amazonaws.com"
+ *       },
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   ]
+ * }
+ * """)
+ * rule = aws.iot.TopicRule("rule",
+ *     description="Example rule",
+ *     enabled=True,
+ *     sql="SELECT * FROM 'topic/test'",
+ *     sql_version="2016-03-23",
+ *     sns=aws.iot.TopicRuleSnsArgs(
+ *         message_format="RAW",
+ *         role_arn=role.arn,
+ *         target_arn=mytopic.arn,
+ *     ),
+ *     error_action=aws.iot.TopicRuleErrorActionArgs(
+ *         sns=aws.iot.TopicRuleErrorActionSnsArgs(
+ *             message_format="RAW",
+ *             role_arn=role.arn,
+ *             target_arn=myerrortopic.arn,
+ *         ),
+ *     ))
+ * iam_policy_for_lambda = aws.iam.RolePolicy("iamPolicyForLambda",
+ *     role=role.id,
+ *     policy=mytopic.arn.apply(lambda arn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *         "Effect": "Allow",
+ *         "Action": [
+ *             "sns:Publish"
+ *         ],
+ *         "Resource": "{arn}"
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mytopic = new Aws.Sns.Topic("mytopic", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var myerrortopic = new Aws.Sns.Topic("myerrortopic", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {
+ *         ""Service"": ""iot.amazonaws.com""
+ *       },
+ *       ""Action"": ""sts:AssumeRole""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var rule = new Aws.Iot.TopicRule("rule", new Aws.Iot.TopicRuleArgs
+ *         {
+ *             Description = "Example rule",
+ *             Enabled = true,
+ *             Sql = "SELECT * FROM 'topic/test'",
+ *             SqlVersion = "2016-03-23",
+ *             Sns = new Aws.Iot.Inputs.TopicRuleSnsArgs
+ *             {
+ *                 MessageFormat = "RAW",
+ *                 RoleArn = role.Arn,
+ *                 TargetArn = mytopic.Arn,
+ *             },
+ *             ErrorAction = new Aws.Iot.Inputs.TopicRuleErrorActionArgs
+ *             {
+ *                 Sns = new Aws.Iot.Inputs.TopicRuleErrorActionSnsArgs
+ *                 {
+ *                     MessageFormat = "RAW",
+ *                     RoleArn = role.Arn,
+ *                     TargetArn = myerrortopic.Arn,
+ *                 },
+ *             },
+ *         });
+ *         var iamPolicyForLambda = new Aws.Iam.RolePolicy("iamPolicyForLambda", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = role.Id,
+ *             Policy = mytopic.Arn.Apply(arn => @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *         ""Effect"": ""Allow"",
+ *         ""Action"": [
+ *             ""sns:Publish""
+ *         ],
+ *         ""Resource"": ""{arn}""
+ *     }}
+ *   ]
+ * }}
+ * "),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		mytopic, err := sns.NewTopic(ctx, "mytopic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		myerrortopic, err := sns.NewTopic(ctx, "myerrortopic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"iot.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iot.NewTopicRule(ctx, "rule", &iot.TopicRuleArgs{
+ * 			Description: pulumi.String("Example rule"),
+ * 			Enabled:     pulumi.Bool(true),
+ * 			Sql:         pulumi.String("SELECT * FROM 'topic/test'"),
+ * 			SqlVersion:  pulumi.String("2016-03-23"),
+ * 			Sns: &iot.TopicRuleSnsArgs{
+ * 				MessageFormat: pulumi.String("RAW"),
+ * 				RoleArn:       role.Arn,
+ * 				TargetArn:     mytopic.Arn,
+ * 			},
+ * 			ErrorAction: &iot.TopicRuleErrorActionArgs{
+ * 				Sns: &iot.TopicRuleErrorActionSnsArgs{
+ * 					MessageFormat: pulumi.String("RAW"),
+ * 					RoleArn:       role.Arn,
+ * 					TargetArn:     myerrortopic.Arn,
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "iamPolicyForLambda", &iam.RolePolicyArgs{
+ * 			Role: role.ID(),
+ * 			Policy: mytopic.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "        \"Effect\": \"Allow\",\n", "        \"Action\": [\n", "            \"sns:Publish\"\n", "        ],\n", "        \"Resource\": \"", arn, "\"\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -42,6 +288,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iot/topicRule:TopicRule rule <name>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iot/topicRule:TopicRule")
 public class TopicRule extends io.pulumi.resources.CustomResource {

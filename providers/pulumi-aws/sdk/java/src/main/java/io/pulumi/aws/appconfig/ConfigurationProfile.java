@@ -18,7 +18,106 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppConfig Configuration Profile resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appconfig.ConfigurationProfile("example", {
+ *     applicationId: aws_appconfig_application.example.id,
+ *     description: "Example Configuration Profile",
+ *     locationUri: "hosted",
+ *     validators: [{
+ *         content: aws_lambda_function.example.arn,
+ *         type: "LAMBDA",
+ *     }],
+ *     tags: {
+ *         Type: "AppConfig Configuration Profile",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appconfig.ConfigurationProfile("example",
+ *     application_id=aws_appconfig_application["example"]["id"],
+ *     description="Example Configuration Profile",
+ *     location_uri="hosted",
+ *     validators=[aws.appconfig.ConfigurationProfileValidatorArgs(
+ *         content=aws_lambda_function["example"]["arn"],
+ *         type="LAMBDA",
+ *     )],
+ *     tags={
+ *         "Type": "AppConfig Configuration Profile",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppConfig.ConfigurationProfile("example", new Aws.AppConfig.ConfigurationProfileArgs
+ *         {
+ *             ApplicationId = aws_appconfig_application.Example.Id,
+ *             Description = "Example Configuration Profile",
+ *             LocationUri = "hosted",
+ *             Validators = 
+ *             {
+ *                 new Aws.AppConfig.Inputs.ConfigurationProfileValidatorArgs
+ *                 {
+ *                     Content = aws_lambda_function.Example.Arn,
+ *                     Type = "LAMBDA",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Type", "AppConfig Configuration Profile" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appconfig.NewConfigurationProfile(ctx, "example", &appconfig.ConfigurationProfileArgs{
+ * 			ApplicationId: pulumi.Any(aws_appconfig_application.Example.Id),
+ * 			Description:   pulumi.String("Example Configuration Profile"),
+ * 			LocationUri:   pulumi.String("hosted"),
+ * 			Validators: appconfig.ConfigurationProfileValidatorArray{
+ * 				&appconfig.ConfigurationProfileValidatorArgs{
+ * 					Content: pulumi.Any(aws_lambda_function.Example.Arn),
+ * 					Type:    pulumi.String("LAMBDA"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Type": pulumi.String("AppConfig Configuration Profile"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +127,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appconfig/configurationProfile:ConfigurationProfile example 71abcde:11xxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appconfig/configurationProfile:ConfigurationProfile")
 public class ConfigurationProfile extends io.pulumi.resources.CustomResource {

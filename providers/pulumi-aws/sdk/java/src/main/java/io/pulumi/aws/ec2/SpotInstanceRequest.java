@@ -49,8 +49,88 @@ import javax.annotation.Nullable;
  * documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
  * for more information.
  * 
- * ## Example Usage
  * 
+ * {{% examples %}}
+ * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Request a spot instance at $0.03
+ * const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
+ *     ami: "ami-1234",
+ *     instanceType: "c4.xlarge",
+ *     spotPrice: "0.03",
+ *     tags: {
+ *         Name: "CheapWorker",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Request a spot instance at $0.03
+ * cheap_worker = aws.ec2.SpotInstanceRequest("cheapWorker",
+ *     ami="ami-1234",
+ *     instance_type="c4.xlarge",
+ *     spot_price="0.03",
+ *     tags={
+ *         "Name": "CheapWorker",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Request a spot instance at $0.03
+ *         var cheapWorker = new Aws.Ec2.SpotInstanceRequest("cheapWorker", new Aws.Ec2.SpotInstanceRequestArgs
+ *         {
+ *             Ami = "ami-1234",
+ *             InstanceType = "c4.xlarge",
+ *             SpotPrice = "0.03",
+ *             Tags = 
+ *             {
+ *                 { "Name", "CheapWorker" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewSpotInstanceRequest(ctx, "cheapWorker", &ec2.SpotInstanceRequestArgs{
+ * 			Ami:          pulumi.String("ami-1234"),
+ * 			InstanceType: pulumi.String("c4.xlarge"),
+ * 			SpotPrice:    pulumi.String("0.03"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("CheapWorker"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/spotInstanceRequest:SpotInstanceRequest")
 public class SpotInstanceRequest extends io.pulumi.resources.CustomResource {
@@ -335,7 +415,6 @@ public class SpotInstanceRequest extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use the parameter "instance_interruption_behavior" instead.
-     * 
      */
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
     @Export(name="instanceInterruptionBehaviour", type=String.class, parameters={})
@@ -653,8 +732,8 @@ public class SpotInstanceRequest extends io.pulumi.resources.CustomResource {
      * status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
      * of the Spot Instance Request.
      * * `spot_request_state` The current [request
-     *   state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status)
-     *   of the Spot Instance Request.
+     * state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status)
+     * of the Spot Instance Request.
      * 
      */
     @Export(name="spotBidStatus", type=String.class, parameters={})
@@ -665,8 +744,8 @@ public class SpotInstanceRequest extends io.pulumi.resources.CustomResource {
      * status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
      * of the Spot Instance Request.
      * * `spot_request_state` The current [request
-     *   state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status)
-     *   of the Spot Instance Request.
+     * state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status)
+     * of the Spot Instance Request.
      * 
      */
     public Output<String> getSpotBidStatus() {

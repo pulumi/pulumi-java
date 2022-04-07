@@ -28,7 +28,614 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Elasticsearch Domain.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.elasticsearch.Domain("example", {
+ *     clusterConfig: {
+ *         instanceType: "r4.large.elasticsearch",
+ *     },
+ *     elasticsearchVersion: "7.10",
+ *     tags: {
+ *         Domain: "TestDomain",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.elasticsearch.Domain("example",
+ *     cluster_config=aws.elasticsearch.DomainClusterConfigArgs(
+ *         instance_type="r4.large.elasticsearch",
+ *     ),
+ *     elasticsearch_version="7.10",
+ *     tags={
+ *         "Domain": "TestDomain",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ElasticSearch.Domain("example", new Aws.ElasticSearch.DomainArgs
+ *         {
+ *             ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
+ *             {
+ *                 InstanceType = "r4.large.elasticsearch",
+ *             },
+ *             ElasticsearchVersion = "7.10",
+ *             Tags = 
+ *             {
+ *                 { "Domain", "TestDomain" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
+ * 			ClusterConfig: &elasticsearch.DomainClusterConfigArgs{
+ * 				InstanceType: pulumi.String("r4.large.elasticsearch"),
+ * 			},
+ * 			ElasticsearchVersion: pulumi.String("7.10"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Domain": pulumi.String("TestDomain"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Access Policy
+ * 
+ * > See also: `aws.elasticsearch.DomainPolicy` resource
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const config = new pulumi.Config();
+ * const domain = config.get("domain") || "tf-test";
+ * const currentRegion = aws.getRegion({});
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const example = new aws.elasticsearch.Domain("example", {accessPolicies: Promise.all([currentRegion, currentCallerIdentity]).then(([currentRegion, currentCallerIdentity]) => `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "es:*",
+ *       "Principal": "*",
+ *       "Effect": "Allow",
+ *       "Resource": "arn:aws:es:${currentRegion.name}:${currentCallerIdentity.accountId}:domain/${domain}/*",
+ *       "Condition": {
+ *         "IpAddress": {"aws:SourceIp": ["66.193.100.22/32"]}
+ *       }
+ *     }
+ *   ]
+ * }
+ * `)});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * config = pulumi.Config()
+ * domain = config.get("domain")
+ * if domain is None:
+ *     domain = "tf-test"
+ * current_region = aws.get_region()
+ * current_caller_identity = aws.get_caller_identity()
+ * example = aws.elasticsearch.Domain("example", access_policies=f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Action": "es:*",
+ *       "Principal": "*",
+ *       "Effect": "Allow",
+ *       "Resource": "arn:aws:es:{current_region.name}:{current_caller_identity.account_id}:domain/{domain}/*",
+ *       "Condition": {{
+ *         "IpAddress": {{"aws:SourceIp": ["66.193.100.22/32"]}}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var domain = config.Get("domain") ?? "tf-test";
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var example = new Aws.ElasticSearch.Domain("example", new Aws.ElasticSearch.DomainArgs
+ *         {
+ *             AccessPolicies = Output.Tuple(currentRegion, currentCallerIdentity).Apply(values =>
+ *             {
+ *                 var currentRegion = values.Item1;
+ *                 var currentCallerIdentity = values.Item2;
+ *                 return @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Action"": ""es:*"",
+ *       ""Principal"": ""*"",
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": ""arn:aws:es:{currentRegion.Name}:{currentCallerIdentity.AccountId}:domain/{domain}/*"",
+ *       ""Condition"": {{
+ *         ""IpAddress"": {{""aws:SourceIp"": [""66.193.100.22/32""]}}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * ";
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		domain := "tf-test"
+ * 		if param := cfg.Get("domain"); param != "" {
+ * 			domain = param
+ * 		}
+ * 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
+ * 			AccessPolicies: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"es:*\",\n", "      \"Principal\": \"*\",\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"arn:aws:es:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":domain/", domain, "/*\",\n", "      \"Condition\": {\n", "        \"IpAddress\": {\"aws:SourceIp\": [\"66.193.100.22/32\"]}\n", "      }\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Log Publishing to CloudWatch Logs
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
+ * const exampleLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("exampleLogResourcePolicy", {
+ *     policyName: "example",
+ *     policyDocument: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "es.amazonaws.com"
+ *       },
+ *       "Action": [
+ *         "logs:PutLogEvents",
+ *         "logs:PutLogEventsBatch",
+ *         "logs:CreateLogStream"
+ *       ],
+ *       "Resource": "arn:aws:logs:*"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * // .. other configuration ...
+ * const exampleDomain = new aws.elasticsearch.Domain("exampleDomain", {logPublishingOptions: [{
+ *     cloudwatchLogGroupArn: exampleLogGroup.arn,
+ *     logType: "INDEX_SLOW_LOGS",
+ * }]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
+ * example_log_resource_policy = aws.cloudwatch.LogResourcePolicy("exampleLogResourcePolicy",
+ *     policy_name="example",
+ *     policy_document="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "es.amazonaws.com"
+ *       },
+ *       "Action": [
+ *         "logs:PutLogEvents",
+ *         "logs:PutLogEventsBatch",
+ *         "logs:CreateLogStream"
+ *       ],
+ *       "Resource": "arn:aws:logs:*"
+ *     }
+ *   ]
+ * }
+ * """)
+ * # .. other configuration ...
+ * example_domain = aws.elasticsearch.Domain("exampleDomain", log_publishing_options=[aws.elasticsearch.DomainLogPublishingOptionArgs(
+ *     cloudwatch_log_group_arn=example_log_group.arn,
+ *     log_type="INDEX_SLOW_LOGS",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+ *         {
+ *         });
+ *         var exampleLogResourcePolicy = new Aws.CloudWatch.LogResourcePolicy("exampleLogResourcePolicy", new Aws.CloudWatch.LogResourcePolicyArgs
+ *         {
+ *             PolicyName = "example",
+ *             PolicyDocument = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {
+ *         ""Service"": ""es.amazonaws.com""
+ *       },
+ *       ""Action"": [
+ *         ""logs:PutLogEvents"",
+ *         ""logs:PutLogEventsBatch"",
+ *         ""logs:CreateLogStream""
+ *       ],
+ *       ""Resource"": ""arn:aws:logs:*""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         // .. other configuration ...
+ *         var exampleDomain = new Aws.ElasticSearch.Domain("exampleDomain", new Aws.ElasticSearch.DomainArgs
+ *         {
+ *             LogPublishingOptions = 
+ *             {
+ *                 new Aws.ElasticSearch.Inputs.DomainLogPublishingOptionArgs
+ *                 {
+ *                     CloudwatchLogGroupArn = exampleLogGroup.Arn,
+ *                     LogType = "INDEX_SLOW_LOGS",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewLogResourcePolicy(ctx, "exampleLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
+ * 			PolicyName:     pulumi.String("example"),
+ * 			PolicyDocument: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"es.amazonaws.com\"\n", "      },\n", "      \"Action\": [\n", "        \"logs:PutLogEvents\",\n", "        \"logs:PutLogEventsBatch\",\n", "        \"logs:CreateLogStream\"\n", "      ],\n", "      \"Resource\": \"arn:aws:logs:*\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticsearch.NewDomain(ctx, "exampleDomain", &elasticsearch.DomainArgs{
+ * 			LogPublishingOptions: elasticsearch.DomainLogPublishingOptionArray{
+ * 				&elasticsearch.DomainLogPublishingOptionArgs{
+ * 					CloudwatchLogGroupArn: exampleLogGroup.Arn,
+ * 					LogType:               pulumi.String("INDEX_SLOW_LOGS"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### VPC based ES
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const config = new pulumi.Config();
+ * const vpc = config.requireObject("vpc");
+ * const domain = config.get("domain") || "tf-test";
+ * const selectedVpc = aws.ec2.getVpc({
+ *     tags: {
+ *         Name: vpc,
+ *     },
+ * });
+ * const selectedSubnetIds = selectedVpc.then(selectedVpc => aws.ec2.getSubnetIds({
+ *     vpcId: selectedVpc.id,
+ *     tags: {
+ *         Tier: "private",
+ *     },
+ * }));
+ * const currentRegion = aws.getRegion({});
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const esSecurityGroup = new aws.ec2.SecurityGroup("esSecurityGroup", {
+ *     description: "Managed by Pulumi",
+ *     vpcId: selectedVpc.then(selectedVpc => selectedVpc.id),
+ *     ingress: [{
+ *         fromPort: 443,
+ *         toPort: 443,
+ *         protocol: "tcp",
+ *         cidrBlocks: [selectedVpc.then(selectedVpc => selectedVpc.cidrBlock)],
+ *     }],
+ * });
+ * const esServiceLinkedRole = new aws.iam.ServiceLinkedRole("esServiceLinkedRole", {awsServiceName: "es.amazonaws.com"});
+ * const esDomain = new aws.elasticsearch.Domain("esDomain", {
+ *     elasticsearchVersion: "6.3",
+ *     clusterConfig: {
+ *         instanceType: "m4.large.elasticsearch",
+ *         zoneAwarenessEnabled: true,
+ *     },
+ *     vpcOptions: {
+ *         subnetIds: [
+ *             selectedSubnetIds.then(selectedSubnetIds => selectedSubnetIds.ids?[0]),
+ *             selectedSubnetIds.then(selectedSubnetIds => selectedSubnetIds.ids?[1]),
+ *         ],
+ *         securityGroupIds: [esSecurityGroup.id],
+ *     },
+ *     advancedOptions: {
+ *         "rest.action.multi.allow_explicit_index": "true",
+ *     },
+ *     accessPolicies: Promise.all([currentRegion, currentCallerIdentity]).then(([currentRegion, currentCallerIdentity]) => `{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 			"Action": "es:*",
+ * 			"Principal": "*",
+ * 			"Effect": "Allow",
+ * 			"Resource": "arn:aws:es:${currentRegion.name}:${currentCallerIdentity.accountId}:domain/${domain}/*"
+ * 		}
+ * 	]
+ * }
+ * `),
+ *     tags: {
+ *         Domain: "TestDomain",
+ *     },
+ * }, {
+ *     dependsOn: [esServiceLinkedRole],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * config = pulumi.Config()
+ * vpc = config.require_object("vpc")
+ * domain = config.get("domain")
+ * if domain is None:
+ *     domain = "tf-test"
+ * selected_vpc = aws.ec2.get_vpc(tags={
+ *     "Name": vpc,
+ * })
+ * selected_subnet_ids = aws.ec2.get_subnet_ids(vpc_id=selected_vpc.id,
+ *     tags={
+ *         "Tier": "private",
+ *     })
+ * current_region = aws.get_region()
+ * current_caller_identity = aws.get_caller_identity()
+ * es_security_group = aws.ec2.SecurityGroup("esSecurityGroup",
+ *     description="Managed by Pulumi",
+ *     vpc_id=selected_vpc.id,
+ *     ingress=[aws.ec2.SecurityGroupIngressArgs(
+ *         from_port=443,
+ *         to_port=443,
+ *         protocol="tcp",
+ *         cidr_blocks=[selected_vpc.cidr_block],
+ *     )])
+ * es_service_linked_role = aws.iam.ServiceLinkedRole("esServiceLinkedRole", aws_service_name="es.amazonaws.com")
+ * es_domain = aws.elasticsearch.Domain("esDomain",
+ *     elasticsearch_version="6.3",
+ *     cluster_config=aws.elasticsearch.DomainClusterConfigArgs(
+ *         instance_type="m4.large.elasticsearch",
+ *         zone_awareness_enabled=True,
+ *     ),
+ *     vpc_options=aws.elasticsearch.DomainVpcOptionsArgs(
+ *         subnet_ids=[
+ *             selected_subnet_ids.ids[0],
+ *             selected_subnet_ids.ids[1],
+ *         ],
+ *         security_group_ids=[es_security_group.id],
+ *     ),
+ *     advanced_options={
+ *         "rest.action.multi.allow_explicit_index": "true",
+ *     },
+ *     access_policies=f"""{{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{{
+ * 			"Action": "es:*",
+ * 			"Principal": "*",
+ * 			"Effect": "Allow",
+ * 			"Resource": "arn:aws:es:{current_region.name}:{current_caller_identity.account_id}:domain/{domain}/*"
+ * 		}}
+ * 	]
+ * }}
+ * """,
+ *     tags={
+ *         "Domain": "TestDomain",
+ *     },
+ *     opts=pulumi.ResourceOptions(depends_on=[es_service_linked_role]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var vpc = config.RequireObject<dynamic>("vpc");
+ *         var domain = config.Get("domain") ?? "tf-test";
+ *         var selectedVpc = Output.Create(Aws.Ec2.GetVpc.InvokeAsync(new Aws.Ec2.GetVpcArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", vpc },
+ *             },
+ *         }));
+ *         var selectedSubnetIds = selectedVpc.Apply(selectedVpc => Output.Create(Aws.Ec2.GetSubnetIds.InvokeAsync(new Aws.Ec2.GetSubnetIdsArgs
+ *         {
+ *             VpcId = selectedVpc.Id,
+ *             Tags = 
+ *             {
+ *                 { "Tier", "private" },
+ *             },
+ *         })));
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var esSecurityGroup = new Aws.Ec2.SecurityGroup("esSecurityGroup", new Aws.Ec2.SecurityGroupArgs
+ *         {
+ *             Description = "Managed by Pulumi",
+ *             VpcId = selectedVpc.Apply(selectedVpc => selectedVpc.Id),
+ *             Ingress = 
+ *             {
+ *                 new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+ *                 {
+ *                     FromPort = 443,
+ *                     ToPort = 443,
+ *                     Protocol = "tcp",
+ *                     CidrBlocks = 
+ *                     {
+ *                         selectedVpc.Apply(selectedVpc => selectedVpc.CidrBlock),
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var esServiceLinkedRole = new Aws.Iam.ServiceLinkedRole("esServiceLinkedRole", new Aws.Iam.ServiceLinkedRoleArgs
+ *         {
+ *             AwsServiceName = "es.amazonaws.com",
+ *         });
+ *         var esDomain = new Aws.ElasticSearch.Domain("esDomain", new Aws.ElasticSearch.DomainArgs
+ *         {
+ *             ElasticsearchVersion = "6.3",
+ *             ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
+ *             {
+ *                 InstanceType = "m4.large.elasticsearch",
+ *                 ZoneAwarenessEnabled = true,
+ *             },
+ *             VpcOptions = new Aws.ElasticSearch.Inputs.DomainVpcOptionsArgs
+ *             {
+ *                 SubnetIds = 
+ *                 {
+ *                     selectedSubnetIds.Apply(selectedSubnetIds => selectedSubnetIds.Ids?[0]),
+ *                     selectedSubnetIds.Apply(selectedSubnetIds => selectedSubnetIds.Ids?[1]),
+ *                 },
+ *                 SecurityGroupIds = 
+ *                 {
+ *                     esSecurityGroup.Id,
+ *                 },
+ *             },
+ *             AdvancedOptions = 
+ *             {
+ *                 { "rest.action.multi.allow_explicit_index", "true" },
+ *             },
+ *             AccessPolicies = Output.Tuple(currentRegion, currentCallerIdentity).Apply(values =>
+ *             {
+ *                 var currentRegion = values.Item1;
+ *                 var currentCallerIdentity = values.Item2;
+ *                 return @$"{{
+ * 	""Version"": ""2012-10-17"",
+ * 	""Statement"": [
+ * 		{{
+ * 			""Action"": ""es:*"",
+ * 			""Principal"": ""*"",
+ * 			""Effect"": ""Allow"",
+ * 			""Resource"": ""arn:aws:es:{currentRegion.Name}:{currentCallerIdentity.AccountId}:domain/{domain}/*""
+ * 		}}
+ * 	]
+ * }}
+ * ";
+ *             }),
+ *             Tags = 
+ *             {
+ *                 { "Domain", "TestDomain" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 esServiceLinkedRole,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,6 +645,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticsearch/domain:Domain example domain_name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticsearch/domain:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {

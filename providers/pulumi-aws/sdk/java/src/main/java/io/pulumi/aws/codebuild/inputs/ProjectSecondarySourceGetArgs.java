@@ -24,7 +24,6 @@ public final class ProjectSecondarySourceGetArgs extends io.pulumi.resources.Res
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @Import(name="auth")

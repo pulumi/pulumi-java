@@ -16,7 +16,99 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glue Data Catalog Encryption Settings resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.DataCatalogEncryptionSettings("example", {dataCatalogEncryptionSettings: {
+ *     connectionPasswordEncryption: {
+ *         awsKmsKeyId: aws_kms_key.test.arn,
+ *         returnConnectionPasswordEncrypted: true,
+ *     },
+ *     encryptionAtRest: {
+ *         catalogEncryptionMode: "SSE-KMS",
+ *         sseAwsKmsKeyId: aws_kms_key.test.arn,
+ *     },
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.DataCatalogEncryptionSettings("example", data_catalog_encryption_settings=aws.glue.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs(
+ *     connection_password_encryption=aws.glue.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs(
+ *         aws_kms_key_id=aws_kms_key["test"]["arn"],
+ *         return_connection_password_encrypted=True,
+ *     ),
+ *     encryption_at_rest=aws.glue.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(
+ *         catalog_encryption_mode="SSE-KMS",
+ *         sse_aws_kms_key_id=aws_kms_key["test"]["arn"],
+ *     ),
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.DataCatalogEncryptionSettings("example", new Aws.Glue.DataCatalogEncryptionSettingsArgs
+ *         {
+ *             DataCatalogEncryptionSettings = new Aws.Glue.Inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs
+ *             {
+ *                 ConnectionPasswordEncryption = new Aws.Glue.Inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs
+ *                 {
+ *                     AwsKmsKeyId = aws_kms_key.Test.Arn,
+ *                     ReturnConnectionPasswordEncrypted = true,
+ *                 },
+ *                 EncryptionAtRest = new Aws.Glue.Inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs
+ *                 {
+ *                     CatalogEncryptionMode = "SSE-KMS",
+ *                     SseAwsKmsKeyId = aws_kms_key.Test.Arn,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewDataCatalogEncryptionSettings(ctx, "example", &glue.DataCatalogEncryptionSettingsArgs{
+ * 			DataCatalogEncryptionSettings: &glue.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs{
+ * 				ConnectionPasswordEncryption: &glue.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs{
+ * 					AwsKmsKeyId:                       pulumi.Any(aws_kms_key.Test.Arn),
+ * 					ReturnConnectionPasswordEncrypted: pulumi.Bool(true),
+ * 				},
+ * 				EncryptionAtRest: &glue.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs{
+ * 					CatalogEncryptionMode: pulumi.String("SSE-KMS"),
+ * 					SseAwsKmsKeyId:        pulumi.Any(aws_kms_key.Test.Arn),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +118,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/dataCatalogEncryptionSettings:DataCatalogEncryptionSettings example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/dataCatalogEncryptionSettings:DataCatalogEncryptionSettings")
 public class DataCatalogEncryptionSettings extends io.pulumi.resources.CustomResource {

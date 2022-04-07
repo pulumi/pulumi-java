@@ -17,7 +17,135 @@ import javax.annotation.Nullable;
 /**
  * Provides a Timestream database resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.timestreamwrite.Database("example", {
+ *     databaseName: "database-example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.timestreamwrite.Database("example", database_name="database-example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.TimestreamWrite.Database("example", new Aws.TimestreamWrite.DatabaseArgs
+ *         {
+ *             DatabaseName = "database-example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/timestreamwrite"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timestreamwrite.NewDatabase(ctx, "example", &timestreamwrite.DatabaseArgs{
+ * 			DatabaseName: pulumi.String("database-example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Full usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.timestreamwrite.Database("example", {
+ *     databaseName: "database-example",
+ *     kmsKeyId: aws_kms_key.example.arn,
+ *     tags: {
+ *         Name: "value",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.timestreamwrite.Database("example",
+ *     database_name="database-example",
+ *     kms_key_id=aws_kms_key["example"]["arn"],
+ *     tags={
+ *         "Name": "value",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.TimestreamWrite.Database("example", new Aws.TimestreamWrite.DatabaseArgs
+ *         {
+ *             DatabaseName = "database-example",
+ *             KmsKeyId = aws_kms_key.Example.Arn,
+ *             Tags = 
+ *             {
+ *                 { "Name", "value" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/timestreamwrite"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timestreamwrite.NewDatabase(ctx, "example", &timestreamwrite.DatabaseArgs{
+ * 			DatabaseName: pulumi.String("database-example"),
+ * 			KmsKeyId:     pulumi.Any(aws_kms_key.Example.Arn),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +155,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:timestreamwrite/database:Database example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:timestreamwrite/database:Database")
 public class Database extends io.pulumi.resources.CustomResource {

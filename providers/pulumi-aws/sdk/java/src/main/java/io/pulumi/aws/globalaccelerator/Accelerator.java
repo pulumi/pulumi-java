@@ -20,7 +20,88 @@ import javax.annotation.Nullable;
 /**
  * Creates a Global Accelerator accelerator.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.globalaccelerator.Accelerator("example", {
+ *     attributes: {
+ *         flowLogsEnabled: true,
+ *         flowLogsS3Bucket: "example-bucket",
+ *         flowLogsS3Prefix: "flow-logs/",
+ *     },
+ *     enabled: true,
+ *     ipAddressType: "IPV4",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.globalaccelerator.Accelerator("example",
+ *     attributes=aws.globalaccelerator.AcceleratorAttributesArgs(
+ *         flow_logs_enabled=True,
+ *         flow_logs_s3_bucket="example-bucket",
+ *         flow_logs_s3_prefix="flow-logs/",
+ *     ),
+ *     enabled=True,
+ *     ip_address_type="IPV4")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.GlobalAccelerator.Accelerator("example", new Aws.GlobalAccelerator.AcceleratorArgs
+ *         {
+ *             Attributes = new Aws.GlobalAccelerator.Inputs.AcceleratorAttributesArgs
+ *             {
+ *                 FlowLogsEnabled = true,
+ *                 FlowLogsS3Bucket = "example-bucket",
+ *                 FlowLogsS3Prefix = "flow-logs/",
+ *             },
+ *             Enabled = true,
+ *             IpAddressType = "IPV4",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/globalaccelerator"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := globalaccelerator.NewAccelerator(ctx, "example", &globalaccelerator.AcceleratorArgs{
+ * 			Attributes: &globalaccelerator.AcceleratorAttributesArgs{
+ * 				FlowLogsEnabled:  pulumi.Bool(true),
+ * 				FlowLogsS3Bucket: pulumi.String("example-bucket"),
+ * 				FlowLogsS3Prefix: pulumi.String("flow-logs/"),
+ * 			},
+ * 			Enabled:       pulumi.Bool(true),
+ * 			IpAddressType: pulumi.String("IPV4"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +111,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:globalaccelerator/accelerator:Accelerator example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:globalaccelerator/accelerator:Accelerator")
 public class Accelerator extends io.pulumi.resources.CustomResource {
@@ -50,8 +132,8 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
     /**
      * The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
      * * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-     *   route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
-     *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
+     * route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
+     * is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
      * 
      */
     @Export(name="dnsName", type=String.class, parameters={})
@@ -60,8 +142,8 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
     /**
      * @return The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
      * * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-     *   route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
-     *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
+     * route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
+     * is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
      * 
      */
     public Output<String> getDnsName() {

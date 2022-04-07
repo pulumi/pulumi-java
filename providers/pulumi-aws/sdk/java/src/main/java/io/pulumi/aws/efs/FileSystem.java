@@ -22,7 +22,135 @@ import javax.annotation.Nullable;
 /**
  * Provides an Elastic File System (EFS) File System resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### EFS File System w/ tags
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.efs.FileSystem("foo", {
+ *     tags: {
+ *         Name: "MyProduct",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.efs.FileSystem("foo", tags={
+ *     "Name": "MyProduct",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Efs.FileSystem("foo", new Aws.Efs.FileSystemArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", "MyProduct" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/efs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := efs.NewFileSystem(ctx, "foo", &efs.FileSystemArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("MyProduct"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using lifecycle policy
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy", {
+ *     lifecyclePolicies: {
+ *         transitionToIa: "AFTER_30_DAYS",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo_with_lifecyle_policy = aws.efs.FileSystem("fooWithLifecylePolicy", lifecycle_policy=aws.efs.FileSystemLifecyclePolicyArgs(
+ *     transition_to_ia="AFTER_30_DAYS",
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fooWithLifecylePolicy = new Aws.Efs.FileSystem("fooWithLifecylePolicy", new Aws.Efs.FileSystemArgs
+ *         {
+ *             LifecyclePolicy = new Aws.Efs.Inputs.FileSystemLifecyclePolicyArgs
+ *             {
+ *                 TransitionToIa = "AFTER_30_DAYS",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/efs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := efs.NewFileSystem(ctx, "fooWithLifecylePolicy", &efs.FileSystemArgs{
+ * 			LifecyclePolicy: &efs.FileSystemLifecyclePolicyArgs{
+ * 				TransitionToIa: pulumi.String("AFTER_30_DAYS"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +160,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:efs/fileSystem:FileSystem foo fs-6fa144c6
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:efs/fileSystem:FileSystem")
 public class FileSystem extends io.pulumi.resources.CustomResource {

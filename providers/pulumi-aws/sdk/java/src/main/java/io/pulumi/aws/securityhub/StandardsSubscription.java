@@ -15,7 +15,103 @@ import javax.annotation.Nullable;
 /**
  * Subscribes to a Security Hub standard.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.securityhub.Account("example", {});
+ * const cis = new aws.securityhub.StandardsSubscription("cis", {standardsArn: "arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0"}, {
+ *     dependsOn: [example],
+ * });
+ * const pci321 = new aws.securityhub.StandardsSubscription("pci321", {standardsArn: "arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1"}, {
+ *     dependsOn: [example],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.securityhub.Account("example")
+ * cis = aws.securityhub.StandardsSubscription("cis", standards_arn="arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0",
+ * opts=pulumi.ResourceOptions(depends_on=[example]))
+ * pci321 = aws.securityhub.StandardsSubscription("pci321", standards_arn="arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1",
+ * opts=pulumi.ResourceOptions(depends_on=[example]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.SecurityHub.Account("example", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var cis = new Aws.SecurityHub.StandardsSubscription("cis", new Aws.SecurityHub.StandardsSubscriptionArgs
+ *         {
+ *             StandardsArn = "arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 example,
+ *             },
+ *         });
+ *         var pci321 = new Aws.SecurityHub.StandardsSubscription("pci321", new Aws.SecurityHub.StandardsSubscriptionArgs
+ *         {
+ *             StandardsArn = "arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 example,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := securityhub.NewAccount(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewStandardsSubscription(ctx, "cis", &securityhub.StandardsSubscriptionArgs{
+ * 			StandardsArn: pulumi.String("arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			example,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewStandardsSubscription(ctx, "pci321", &securityhub.StandardsSubscriptionArgs{
+ * 			StandardsArn: pulumi.String("arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			example,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,10 +121,13 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/standardsSubscription:StandardsSubscription cis arn:aws:securityhub:eu-west-1:123456789012:subscription/cis-aws-foundations-benchmark/v/1.2.0
  * ```
  * 
+ * 
+ * 
  * ```sh
  *  $ pulumi import aws:securityhub/standardsSubscription:StandardsSubscription pci_321 arn:aws:securityhub:eu-west-1:123456789012:subscription/pci-dss/v/3.2.1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/standardsSubscription:StandardsSubscription")
 public class StandardsSubscription extends io.pulumi.resources.CustomResource {

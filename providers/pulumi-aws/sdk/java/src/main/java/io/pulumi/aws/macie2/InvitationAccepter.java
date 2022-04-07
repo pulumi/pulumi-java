@@ -15,7 +15,135 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [Amazon Macie Invitation Accepter](https://docs.aws.amazon.com/macie/latest/APIReference/invitations-accept.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primaryAccount = new aws.macie2.Account("primaryAccount", {}, {
+ *     provider: "awsalternate",
+ * });
+ * const memberAccount = new aws.macie2.Account("memberAccount", {});
+ * const primaryMember = new aws.macie2.Member("primaryMember", {
+ *     accountId: "ACCOUNT ID",
+ *     email: "EMAIL",
+ *     invite: true,
+ *     invitationMessage: "Message of the invite",
+ * }, {
+ *     provider: "awsalternate",
+ *     dependsOn: [primaryAccount],
+ * });
+ * const memberInvitationAccepter = new aws.macie2.InvitationAccepter("memberInvitationAccepter", {administratorAccountId: "ADMINISTRATOR ACCOUNT ID"}, {
+ *     dependsOn: [primaryMember],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * primary_account = aws.macie2.Account("primaryAccount", opts=pulumi.ResourceOptions(provider="awsalternate"))
+ * member_account = aws.macie2.Account("memberAccount")
+ * primary_member = aws.macie2.Member("primaryMember",
+ *     account_id="ACCOUNT ID",
+ *     email="EMAIL",
+ *     invite=True,
+ *     invitation_message="Message of the invite",
+ *     opts=pulumi.ResourceOptions(provider="awsalternate",
+ *         depends_on=[primary_account]))
+ * member_invitation_accepter = aws.macie2.InvitationAccepter("memberInvitationAccepter", administrator_account_id="ADMINISTRATOR ACCOUNT ID",
+ * opts=pulumi.ResourceOptions(depends_on=[primary_member]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primaryAccount = new Aws.Macie2.Account("primaryAccount", new Aws.Macie2.AccountArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = "awsalternate",
+ *         });
+ *         var memberAccount = new Aws.Macie2.Account("memberAccount", new Aws.Macie2.AccountArgs
+ *         {
+ *         });
+ *         var primaryMember = new Aws.Macie2.Member("primaryMember", new Aws.Macie2.MemberArgs
+ *         {
+ *             AccountId = "ACCOUNT ID",
+ *             Email = "EMAIL",
+ *             Invite = true,
+ *             InvitationMessage = "Message of the invite",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = "awsalternate",
+ *             DependsOn = 
+ *             {
+ *                 primaryAccount,
+ *             },
+ *         });
+ *         var memberInvitationAccepter = new Aws.Macie2.InvitationAccepter("memberInvitationAccepter", new Aws.Macie2.InvitationAccepterArgs
+ *         {
+ *             AdministratorAccountId = "ADMINISTRATOR ACCOUNT ID",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 primaryMember,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primaryAccount, err := macie2.NewAccount(ctx, "primaryAccount", nil, pulumi.Provider("awsalternate"))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = macie2.NewAccount(ctx, "memberAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		primaryMember, err := macie2.NewMember(ctx, "primaryMember", &macie2.MemberArgs{
+ * 			AccountId:         pulumi.String("ACCOUNT ID"),
+ * 			Email:             pulumi.String("EMAIL"),
+ * 			Invite:            pulumi.Bool(true),
+ * 			InvitationMessage: pulumi.String("Message of the invite"),
+ * 		}, pulumi.Provider("awsalternate"), pulumi.DependsOn([]pulumi.Resource{
+ * 			primaryAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = macie2.NewInvitationAccepter(ctx, "memberInvitationAccepter", &macie2.InvitationAccepterArgs{
+ * 			AdministratorAccountId: pulumi.String("ADMINISTRATOR ACCOUNT ID"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			primaryMember,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +153,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:macie2/invitationAccepter:InvitationAccepter example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:macie2/invitationAccepter:InvitationAccepter")
 public class InvitationAccepter extends io.pulumi.resources.CustomResource {

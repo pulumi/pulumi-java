@@ -19,7 +19,140 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudFormation Stack resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const network = new aws.cloudformation.Stack("network", {
+ *     parameters: {
+ *         VPCCidr: "10.0.0.0/16",
+ *     },
+ *     templateBody: `{
+ *   "Parameters" : {
+ *     "VPCCidr" : {
+ *       "Type" : "String",
+ *       "Default" : "10.0.0.0/16",
+ *       "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+ *     }
+ *   },
+ *   "Resources" : {
+ *     "myVpc": {
+ *       "Type" : "AWS::EC2::VPC",
+ *       "Properties" : {
+ *         "CidrBlock" : { "Ref" : "VPCCidr" },
+ *         "Tags" : [
+ *           {"Key": "Name", "Value": "Primary_CF_VPC"}
+ *         ]
+ *       }
+ *     }
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * network = aws.cloudformation.Stack("network",
+ *     parameters={
+ *         "VPCCidr": "10.0.0.0/16",
+ *     },
+ *     template_body="""{
+ *   "Parameters" : {
+ *     "VPCCidr" : {
+ *       "Type" : "String",
+ *       "Default" : "10.0.0.0/16",
+ *       "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+ *     }
+ *   },
+ *   "Resources" : {
+ *     "myVpc": {
+ *       "Type" : "AWS::EC2::VPC",
+ *       "Properties" : {
+ *         "CidrBlock" : { "Ref" : "VPCCidr" },
+ *         "Tags" : [
+ *           {"Key": "Name", "Value": "Primary_CF_VPC"}
+ *         ]
+ *       }
+ *     }
+ *   }
+ * }
+ * 
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var network = new Aws.CloudFormation.Stack("network", new Aws.CloudFormation.StackArgs
+ *         {
+ *             Parameters = 
+ *             {
+ *                 { "VPCCidr", "10.0.0.0/16" },
+ *             },
+ *             TemplateBody = @"{
+ *   ""Parameters"" : {
+ *     ""VPCCidr"" : {
+ *       ""Type"" : ""String"",
+ *       ""Default"" : ""10.0.0.0/16"",
+ *       ""Description"" : ""Enter the CIDR block for the VPC. Default is 10.0.0.0/16.""
+ *     }
+ *   },
+ *   ""Resources"" : {
+ *     ""myVpc"": {
+ *       ""Type"" : ""AWS::EC2::VPC"",
+ *       ""Properties"" : {
+ *         ""CidrBlock"" : { ""Ref"" : ""VPCCidr"" },
+ *         ""Tags"" : [
+ *           {""Key"": ""Name"", ""Value"": ""Primary_CF_VPC""}
+ *         ]
+ *       }
+ *     }
+ *   }
+ * }
+ * 
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudformation.NewStack(ctx, "network", &cloudformation.StackArgs{
+ * 			Parameters: pulumi.StringMap{
+ * 				"VPCCidr": pulumi.String("10.0.0.0/16"),
+ * 			},
+ * 			TemplateBody: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Parameters\" : {\n", "    \"VPCCidr\" : {\n", "      \"Type\" : \"String\",\n", "      \"Default\" : \"10.0.0.0/16\",\n", "      \"Description\" : \"Enter the CIDR block for the VPC. Default is 10.0.0.0/16.\"\n", "    }\n", "  },\n", "  \"Resources\" : {\n", "    \"myVpc\": {\n", "      \"Type\" : \"AWS::EC2::VPC\",\n", "      \"Properties\" : {\n", "        \"CidrBlock\" : { \"Ref\" : \"VPCCidr\" },\n", "        \"Tags\" : [\n", "          {\"Key\": \"Name\", \"Value\": \"Primary_CF_VPC\"}\n", "        ]\n", "      }\n", "    }\n", "  }\n", "}\n", "\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +162,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudformation/stack:Stack stack networking-stack
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudformation/stack:Stack")
 public class Stack extends io.pulumi.resources.CustomResource {

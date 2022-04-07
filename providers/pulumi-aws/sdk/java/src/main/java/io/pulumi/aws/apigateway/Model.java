@@ -15,7 +15,98 @@ import javax.annotation.Nullable;
 /**
  * Provides a Model for a REST API Gateway.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myDemoAPI = new aws.apigateway.RestApi("myDemoAPI", {description: "This is my API for demonstration purposes"});
+ * const myDemoModel = new aws.apigateway.Model("myDemoModel", {
+ *     restApi: myDemoAPI.id,
+ *     description: "a JSON schema",
+ *     contentType: "application/json",
+ *     schema: `{
+ *   "type": "object"
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+ * my_demo_model = aws.apigateway.Model("myDemoModel",
+ *     rest_api=my_demo_api.id,
+ *     description="a JSON schema",
+ *     content_type="application/json",
+ *     schema="""{
+ *   "type": "object"
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *             Description = "This is my API for demonstration purposes",
+ *         });
+ *         var myDemoModel = new Aws.ApiGateway.Model("myDemoModel", new Aws.ApiGateway.ModelArgs
+ *         {
+ *             RestApi = myDemoAPI.Id,
+ *             Description = "a JSON schema",
+ *             ContentType = "application/json",
+ *             Schema = @"{
+ *   ""type"": ""object""
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
+ * 			Description: pulumi.String("This is my API for demonstration purposes"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewModel(ctx, "myDemoModel", &apigateway.ModelArgs{
+ * 			RestApi:     myDemoAPI.ID(),
+ * 			Description: pulumi.String("a JSON schema"),
+ * 			ContentType: pulumi.String("application/json"),
+ * 			Schema:      pulumi.String(fmt.Sprintf("%v%v%v", "{\n", "  \"type\": \"object\"\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +116,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/model:Model example 12345abcde/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/model:Model")
 public class Model extends io.pulumi.resources.CustomResource {

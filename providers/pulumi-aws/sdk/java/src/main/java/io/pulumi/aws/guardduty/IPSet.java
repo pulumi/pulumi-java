@@ -19,7 +19,139 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the primary account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.guardduty.Detector("primary", {enable: true});
+ * const bucket = new aws.s3.Bucket("bucket", {acl: "private"});
+ * const myIPSet = new aws.s3.BucketObject("myIPSet", {
+ *     acl: "public-read",
+ *     content: "10.0.0.0/8\n",
+ *     bucket: bucket.id,
+ *     key: "MyIPSet",
+ * });
+ * const example = new aws.guardduty.IPSet("example", {
+ *     activate: true,
+ *     detectorId: primary.id,
+ *     format: "TXT",
+ *     location: pulumi.interpolate`https://s3.amazonaws.com/${myIPSet.bucket}/${myIPSet.key}`,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * primary = aws.guardduty.Detector("primary", enable=True)
+ * bucket = aws.s3.Bucket("bucket", acl="private")
+ * my_ip_set = aws.s3.BucketObject("myIPSet",
+ *     acl="public-read",
+ *     content="10.0.0.0/8\n",
+ *     bucket=bucket.id,
+ *     key="MyIPSet")
+ * example = aws.guardduty.IPSet("example",
+ *     activate=True,
+ *     detector_id=primary.id,
+ *     format="TXT",
+ *     location=pulumi.Output.all(my_ip_set.bucket, my_ip_set.key).apply(lambda bucket, key: f"https://s3.amazonaws.com/{bucket}/{key}"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.GuardDuty.Detector("primary", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *             Enable = true,
+ *         });
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *         });
+ *         var myIPSet = new Aws.S3.BucketObject("myIPSet", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Acl = "public-read",
+ *             Content = @"10.0.0.0/8
+ * ",
+ *             Bucket = bucket.Id,
+ *             Key = "MyIPSet",
+ *         });
+ *         var example = new Aws.GuardDuty.IPSet("example", new Aws.GuardDuty.IPSetArgs
+ *         {
+ *             Activate = true,
+ *             DetectorId = primary.Id,
+ *             Format = "TXT",
+ *             Location = Output.Tuple(myIPSet.Bucket, myIPSet.Key).Apply(values =>
+ *             {
+ *                 var bucket = values.Item1;
+ *                 var key = values.Item2;
+ *                 return $"https://s3.amazonaws.com/{bucket}/{key}";
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/guardduty"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		primary, err := guardduty.NewDetector(ctx, "primary", &guardduty.DetectorArgs{
+ * 			Enable: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		myIPSet, err := s3.NewBucketObject(ctx, "myIPSet", &s3.BucketObjectArgs{
+ * 			Acl:     pulumi.String("public-read"),
+ * 			Content: pulumi.String("10.0.0.0/8\n"),
+ * 			Bucket:  bucket.ID(),
+ * 			Key:     pulumi.String("MyIPSet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = guardduty.NewIPSet(ctx, "example", &guardduty.IPSetArgs{
+ * 			Activate:   pulumi.Bool(true),
+ * 			DetectorId: primary.ID(),
+ * 			Format:     pulumi.String("TXT"),
+ * 			Location: pulumi.All(myIPSet.Bucket, myIPSet.Key).ApplyT(func(_args []interface{}) (string, error) {
+ * 				bucket := _args[0].(string)
+ * 				key := _args[1].(string)
+ * 				return fmt.Sprintf("%v%v%v%v", "https://s3.amazonaws.com/", bucket, "/", key), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +161,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:guardduty/iPSet:IPSet MyIPSet 00b00fd5aecc0ab60a708659477e9617:123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:guardduty/iPSet:IPSet")
 public class IPSet extends io.pulumi.resources.CustomResource {

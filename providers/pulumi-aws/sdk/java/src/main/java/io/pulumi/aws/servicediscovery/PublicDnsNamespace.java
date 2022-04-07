@@ -16,7 +16,62 @@ import javax.annotation.Nullable;
 /**
  * Provides a Service Discovery Public DNS Namespace resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicediscovery.PublicDnsNamespace("example", {
+ *     description: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicediscovery.PublicDnsNamespace("example", description="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceDiscovery.PublicDnsNamespace("example", new Aws.ServiceDiscovery.PublicDnsNamespaceArgs
+ *         {
+ *             Description = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicediscovery"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicediscovery.NewPublicDnsNamespace(ctx, "example", &servicediscovery.PublicDnsNamespaceArgs{
+ * 			Description: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +81,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace example 0123456789
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace")
 public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {

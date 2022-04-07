@@ -19,7 +19,126 @@ import javax.annotation.Nullable;
 /**
  * Provides a IPAM resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getRegion({});
+ * const main = new aws.ec2.VpcIpam("main", {
+ *     description: "My IPAM",
+ *     operatingRegions: [{
+ *         regionName: current.then(current => current.name),
+ *     }],
+ *     tags: {
+ *         Test: "Main",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_region()
+ * main = aws.ec2.VpcIpam("main",
+ *     description="My IPAM",
+ *     operating_regions=[aws.ec2.VpcIpamOperatingRegionArgs(
+ *         region_name=current.name,
+ *     )],
+ *     tags={
+ *         "Test": "Main",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var main = new Aws.Ec2.VpcIpam("main", new Aws.Ec2.VpcIpamArgs
+ *         {
+ *             Description = "My IPAM",
+ *             OperatingRegions = 
+ *             {
+ *                 new Aws.Ec2.Inputs.VpcIpamOperatingRegionArgs
+ *                 {
+ *                     RegionName = current.Apply(current => current.Name),
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Test", "Main" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpam(ctx, "main", &ec2.VpcIpamArgs{
+ * 			Description: pulumi.String("My IPAM"),
+ * 			OperatingRegions: ec2.VpcIpamOperatingRegionArray{
+ * 				&ec2.VpcIpamOperatingRegionArgs{
+ * 					RegionName: pulumi.String(current.Name),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Test": pulumi.String("Main"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Shared with multiple operating_regions:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const config = new pulumi.Config();
+ * const ipamRegions = config.getObject("ipamRegions") || [
+ *     "us-east-1",
+ *     "us-west-2",
+ * ];
+ * const example = new aws.ec2.VpcIpam("example", {
+ *     description: "test4",
+ *     dynamic: [{
+ *         forEach: ipamRegions,
+ *         content: [{
+ *             regionName: operating_regions.value,
+ *         }],
+ *     }],
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +148,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcIpam:VpcIpam example ipam-0178368ad2146a492
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcIpam:VpcIpam")
 public class VpcIpam extends io.pulumi.resources.CustomResource {

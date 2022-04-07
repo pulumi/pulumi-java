@@ -19,7 +19,79 @@ import javax.annotation.Nullable;
  * a specific application and are used to deploy different versions of the
  * application with the same configuration settings.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const tftest = new aws.elasticbeanstalk.Application("tftest", {description: "tf-test-desc"});
+ * const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", {
+ *     application: tftest.name,
+ *     solutionStackName: "64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * tftest = aws.elasticbeanstalk.Application("tftest", description="tf-test-desc")
+ * tf_template = aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate",
+ *     application=tftest.name,
+ *     solution_stack_name="64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tftest = new Aws.ElasticBeanstalk.Application("tftest", new Aws.ElasticBeanstalk.ApplicationArgs
+ *         {
+ *             Description = "tf-test-desc",
+ *         });
+ *         var tfTemplate = new Aws.ElasticBeanstalk.ConfigurationTemplate("tfTemplate", new Aws.ElasticBeanstalk.ConfigurationTemplateArgs
+ *         {
+ *             Application = tftest.Name,
+ *             SolutionStackName = "64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticbeanstalk"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tftest, err := elasticbeanstalk.NewApplication(ctx, "tftest", &elasticbeanstalk.ApplicationArgs{
+ * 			Description: pulumi.String("tf-test-desc"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticbeanstalk.NewConfigurationTemplate(ctx, "tfTemplate", &elasticbeanstalk.ConfigurationTemplateArgs{
+ * 			Application:       tftest.Name,
+ * 			SolutionStackName: pulumi.String("64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Option Settings
  * 
  * The `setting` field supports the following format:

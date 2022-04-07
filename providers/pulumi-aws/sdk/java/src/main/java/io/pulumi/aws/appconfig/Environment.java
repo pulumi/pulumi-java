@@ -18,7 +18,130 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppConfig Environment resource for an `aws.appconfig.Application` resource. One or more environments can be defined for an application.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleApplication = new aws.appconfig.Application("exampleApplication", {
+ *     description: "Example AppConfig Application",
+ *     tags: {
+ *         Type: "AppConfig Application",
+ *     },
+ * });
+ * const exampleEnvironment = new aws.appconfig.Environment("exampleEnvironment", {
+ *     description: "Example AppConfig Environment",
+ *     applicationId: exampleApplication.id,
+ *     monitors: [{
+ *         alarmArn: aws_cloudwatch_metric_alarm.example.arn,
+ *         alarmRoleArn: aws_iam_role.example.arn,
+ *     }],
+ *     tags: {
+ *         Type: "AppConfig Environment",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_application = aws.appconfig.Application("exampleApplication",
+ *     description="Example AppConfig Application",
+ *     tags={
+ *         "Type": "AppConfig Application",
+ *     })
+ * example_environment = aws.appconfig.Environment("exampleEnvironment",
+ *     description="Example AppConfig Environment",
+ *     application_id=example_application.id,
+ *     monitors=[aws.appconfig.EnvironmentMonitorArgs(
+ *         alarm_arn=aws_cloudwatch_metric_alarm["example"]["arn"],
+ *         alarm_role_arn=aws_iam_role["example"]["arn"],
+ *     )],
+ *     tags={
+ *         "Type": "AppConfig Environment",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleApplication = new Aws.AppConfig.Application("exampleApplication", new Aws.AppConfig.ApplicationArgs
+ *         {
+ *             Description = "Example AppConfig Application",
+ *             Tags = 
+ *             {
+ *                 { "Type", "AppConfig Application" },
+ *             },
+ *         });
+ *         var exampleEnvironment = new Aws.AppConfig.Environment("exampleEnvironment", new Aws.AppConfig.EnvironmentArgs
+ *         {
+ *             Description = "Example AppConfig Environment",
+ *             ApplicationId = exampleApplication.Id,
+ *             Monitors = 
+ *             {
+ *                 new Aws.AppConfig.Inputs.EnvironmentMonitorArgs
+ *                 {
+ *                     AlarmArn = aws_cloudwatch_metric_alarm.Example.Arn,
+ *                     AlarmRoleArn = aws_iam_role.Example.Arn,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Type", "AppConfig Environment" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleApplication, err := appconfig.NewApplication(ctx, "exampleApplication", &appconfig.ApplicationArgs{
+ * 			Description: pulumi.String("Example AppConfig Application"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Type": pulumi.String("AppConfig Application"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appconfig.NewEnvironment(ctx, "exampleEnvironment", &appconfig.EnvironmentArgs{
+ * 			Description:   pulumi.String("Example AppConfig Environment"),
+ * 			ApplicationId: exampleApplication.ID(),
+ * 			Monitors: appconfig.EnvironmentMonitorArray{
+ * 				&appconfig.EnvironmentMonitorArgs{
+ * 					AlarmArn:     pulumi.Any(aws_cloudwatch_metric_alarm.Example.Arn),
+ * 					AlarmRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Type": pulumi.String("AppConfig Environment"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +151,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appconfig/environment:Environment example 71abcde:11xxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appconfig/environment:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {

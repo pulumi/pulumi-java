@@ -18,7 +18,67 @@ import javax.annotation.Nullable;
  * More information about pull through cache rules, including the set of supported
  * upstream repositories, see [Using pull through cache rules](https://docs.aws.amazon.com/AmazonECR/latest/userguide/pull-through-cache.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ecr.PullThroughCacheRule("example", {
+ *     ecrRepositoryPrefix: "ecr-public",
+ *     upstreamRegistryUrl: "public.ecr.aws",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ecr.PullThroughCacheRule("example",
+ *     ecr_repository_prefix="ecr-public",
+ *     upstream_registry_url="public.ecr.aws")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ecr.PullThroughCacheRule("example", new Aws.Ecr.PullThroughCacheRuleArgs
+ *         {
+ *             EcrRepositoryPrefix = "ecr-public",
+ *             UpstreamRegistryUrl = "public.ecr.aws",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecr.NewPullThroughCacheRule(ctx, "example", &ecr.PullThroughCacheRuleArgs{
+ * 			EcrRepositoryPrefix: pulumi.String("ecr-public"),
+ * 			UpstreamRegistryUrl: pulumi.String("public.ecr.aws"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecr/pullThroughCacheRule:PullThroughCacheRule example ecr-public
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecr/pullThroughCacheRule:PullThroughCacheRule")
 public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {

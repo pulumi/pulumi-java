@@ -13,6 +13,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * `aws_ecs_tag` can be imported by using the ECS resource identifier and key, separated by a comma (`,`), e.g.,
@@ -21,6 +24,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecs/tag:Tag example arn:aws:ecs:us-east-1:123456789012:cluster/example,Name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecs/tag:Tag")
 public class Tag extends io.pulumi.resources.CustomResource {

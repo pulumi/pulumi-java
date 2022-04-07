@@ -18,7 +18,544 @@ import javax.annotation.Nullable;
 /**
  * Manages selection conditions for AWS Backup plan resources.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### IAM Role
+ * 
+ * > For more information about creating and managing IAM Roles for backups and restores, see the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/iam-service-roles.html).
+ * 
+ * The below example creates an IAM role with the default managed IAM Policy for allowing AWS Backup to create backups.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": ["sts:AssumeRole"],
+ *       "Effect": "allow",
+ *       "Principal": {
+ *         "Service": ["backup.amazonaws.com"]
+ *       }
+ *     }
+ *   ]
+ * }
+ * `});
+ * const exampleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment", {
+ *     policyArn: "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
+ *     role: exampleRole.name,
+ * });
+ * // ... other configuration ...
+ * const exampleSelection = new aws.backup.Selection("exampleSelection", {iamRoleArn: exampleRole.arn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": ["sts:AssumeRole"],
+ *       "Effect": "allow",
+ *       "Principal": {
+ *         "Service": ["backup.amazonaws.com"]
+ *       }
+ *     }
+ *   ]
+ * }
+ * """)
+ * example_role_policy_attachment = aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment",
+ *     policy_arn="arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
+ *     role=example_role.name)
+ * # ... other configuration ...
+ * example_selection = aws.backup.Selection("exampleSelection", iam_role_arn=example_role.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": [""sts:AssumeRole""],
+ *       ""Effect"": ""allow"",
+ *       ""Principal"": {
+ *         ""Service"": [""backup.amazonaws.com""]
+ *       }
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("exampleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
+ *             Role = exampleRole.Name,
+ *         });
+ *         // ... other configuration ...
+ *         var exampleSelection = new Aws.Backup.Selection("exampleSelection", new Aws.Backup.SelectionArgs
+ *         {
+ *             IamRoleArn = exampleRole.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\"sts:AssumeRole\"],\n", "      \"Effect\": \"allow\",\n", "      \"Principal\": {\n", "        \"Service\": [\"backup.amazonaws.com\"]\n", "      }\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "exampleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup"),
+ * 			Role:      exampleRole.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = backup.NewSelection(ctx, "exampleSelection", &backup.SelectionArgs{
+ * 			IamRoleArn: exampleRole.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Selecting Backups By Tag
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.backup.Selection("example", {
+ *     iamRoleArn: aws_iam_role.example.arn,
+ *     planId: aws_backup_plan.example.id,
+ *     selectionTags: [{
+ *         type: "STRINGEQUALS",
+ *         key: "foo",
+ *         value: "bar",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.backup.Selection("example",
+ *     iam_role_arn=aws_iam_role["example"]["arn"],
+ *     plan_id=aws_backup_plan["example"]["id"],
+ *     selection_tags=[aws.backup.SelectionSelectionTagArgs(
+ *         type="STRINGEQUALS",
+ *         key="foo",
+ *         value="bar",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Backup.Selection("example", new Aws.Backup.SelectionArgs
+ *         {
+ *             IamRoleArn = aws_iam_role.Example.Arn,
+ *             PlanId = aws_backup_plan.Example.Id,
+ *             SelectionTags = 
+ *             {
+ *                 new Aws.Backup.Inputs.SelectionSelectionTagArgs
+ *                 {
+ *                     Type = "STRINGEQUALS",
+ *                     Key = "foo",
+ *                     Value = "bar",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
+ * 			IamRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+ * 			PlanId:     pulumi.Any(aws_backup_plan.Example.Id),
+ * 			SelectionTags: backup.SelectionSelectionTagArray{
+ * 				&backup.SelectionSelectionTagArgs{
+ * 					Type:  pulumi.String("STRINGEQUALS"),
+ * 					Key:   pulumi.String("foo"),
+ * 					Value: pulumi.String("bar"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Selecting Backups By Conditions
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.backup.Selection("example", {
+ *     iamRoleArn: aws_iam_role.example.arn,
+ *     planId: aws_backup_plan.example.id,
+ *     conditions: [{
+ *         stringEquals: [{
+ *             key: "aws:ResourceTag/Component",
+ *             value: "rds",
+ *         }],
+ *         stringLikes: [{
+ *             key: "aws:ResourceTag/Application",
+ *             value: "app*",
+ *         }],
+ *         stringNotEquals: [{
+ *             key: "aws:ResourceTag/Backup",
+ *             value: "false",
+ *         }],
+ *         stringNotLikes: [{
+ *             key: "aws:ResourceTag/Environment",
+ *             value: "test*",
+ *         }],
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.backup.Selection("example",
+ *     iam_role_arn=aws_iam_role["example"]["arn"],
+ *     plan_id=aws_backup_plan["example"]["id"],
+ *     conditions=[aws.backup.SelectionConditionArgs(
+ *         string_equals=[aws.backup.SelectionConditionStringEqualArgs(
+ *             key="aws:ResourceTag/Component",
+ *             value="rds",
+ *         )],
+ *         string_likes=[aws.backup.SelectionConditionStringLikeArgs(
+ *             key="aws:ResourceTag/Application",
+ *             value="app*",
+ *         )],
+ *         string_not_equals=[aws.backup.SelectionConditionStringNotEqualArgs(
+ *             key="aws:ResourceTag/Backup",
+ *             value="false",
+ *         )],
+ *         string_not_likes=[aws.backup.SelectionConditionStringNotLikeArgs(
+ *             key="aws:ResourceTag/Environment",
+ *             value="test*",
+ *         )],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Backup.Selection("example", new Aws.Backup.SelectionArgs
+ *         {
+ *             IamRoleArn = aws_iam_role.Example.Arn,
+ *             PlanId = aws_backup_plan.Example.Id,
+ *             Conditions = 
+ *             {
+ *                 new Aws.Backup.Inputs.SelectionConditionArgs
+ *                 {
+ *                     StringEquals = 
+ *                     {
+ *                         new Aws.Backup.Inputs.SelectionConditionStringEqualArgs
+ *                         {
+ *                             Key = "aws:ResourceTag/Component",
+ *                             Value = "rds",
+ *                         },
+ *                     },
+ *                     StringLikes = 
+ *                     {
+ *                         new Aws.Backup.Inputs.SelectionConditionStringLikeArgs
+ *                         {
+ *                             Key = "aws:ResourceTag/Application",
+ *                             Value = "app*",
+ *                         },
+ *                     },
+ *                     StringNotEquals = 
+ *                     {
+ *                         new Aws.Backup.Inputs.SelectionConditionStringNotEqualArgs
+ *                         {
+ *                             Key = "aws:ResourceTag/Backup",
+ *                             Value = "false",
+ *                         },
+ *                     },
+ *                     StringNotLikes = 
+ *                     {
+ *                         new Aws.Backup.Inputs.SelectionConditionStringNotLikeArgs
+ *                         {
+ *                             Key = "aws:ResourceTag/Environment",
+ *                             Value = "test*",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
+ * 			IamRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+ * 			PlanId:     pulumi.Any(aws_backup_plan.Example.Id),
+ * 			Conditions: backup.SelectionConditionArray{
+ * 				&backup.SelectionConditionArgs{
+ * 					StringEquals: backup.SelectionConditionStringEqualArray{
+ * 						&backup.SelectionConditionStringEqualArgs{
+ * 							Key:   pulumi.String("aws:ResourceTag/Component"),
+ * 							Value: pulumi.String("rds"),
+ * 						},
+ * 					},
+ * 					StringLikes: backup.SelectionConditionStringLikeArray{
+ * 						&backup.SelectionConditionStringLikeArgs{
+ * 							Key:   pulumi.String("aws:ResourceTag/Application"),
+ * 							Value: pulumi.String("app*"),
+ * 						},
+ * 					},
+ * 					StringNotEquals: backup.SelectionConditionStringNotEqualArray{
+ * 						&backup.SelectionConditionStringNotEqualArgs{
+ * 							Key:   pulumi.String("aws:ResourceTag/Backup"),
+ * 							Value: pulumi.String("false"),
+ * 						},
+ * 					},
+ * 					StringNotLikes: backup.SelectionConditionStringNotLikeArray{
+ * 						&backup.SelectionConditionStringNotLikeArgs{
+ * 							Key:   pulumi.String("aws:ResourceTag/Environment"),
+ * 							Value: pulumi.String("test*"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Selecting Backups By Resource
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.backup.Selection("example", {
+ *     iamRoleArn: aws_iam_role.example.arn,
+ *     planId: aws_backup_plan.example.id,
+ *     resources: [
+ *         aws_db_instance.example.arn,
+ *         aws_ebs_volume.example.arn,
+ *         aws_efs_file_system.example.arn,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.backup.Selection("example",
+ *     iam_role_arn=aws_iam_role["example"]["arn"],
+ *     plan_id=aws_backup_plan["example"]["id"],
+ *     resources=[
+ *         aws_db_instance["example"]["arn"],
+ *         aws_ebs_volume["example"]["arn"],
+ *         aws_efs_file_system["example"]["arn"],
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Backup.Selection("example", new Aws.Backup.SelectionArgs
+ *         {
+ *             IamRoleArn = aws_iam_role.Example.Arn,
+ *             PlanId = aws_backup_plan.Example.Id,
+ *             Resources = 
+ *             {
+ *                 aws_db_instance.Example.Arn,
+ *                 aws_ebs_volume.Example.Arn,
+ *                 aws_efs_file_system.Example.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
+ * 			IamRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+ * 			PlanId:     pulumi.Any(aws_backup_plan.Example.Id),
+ * 			Resources: pulumi.StringArray{
+ * 				pulumi.Any(aws_db_instance.Example.Arn),
+ * 				pulumi.Any(aws_ebs_volume.Example.Arn),
+ * 				pulumi.Any(aws_efs_file_system.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Selecting Backups By Not Resource
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.backup.Selection("example", {
+ *     iamRoleArn: aws_iam_role.example.arn,
+ *     planId: aws_backup_plan.example.id,
+ *     notResources: [
+ *         aws_db_instance.example.arn,
+ *         aws_ebs_volume.example.arn,
+ *         aws_efs_file_system.example.arn,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.backup.Selection("example",
+ *     iam_role_arn=aws_iam_role["example"]["arn"],
+ *     plan_id=aws_backup_plan["example"]["id"],
+ *     not_resources=[
+ *         aws_db_instance["example"]["arn"],
+ *         aws_ebs_volume["example"]["arn"],
+ *         aws_efs_file_system["example"]["arn"],
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Backup.Selection("example", new Aws.Backup.SelectionArgs
+ *         {
+ *             IamRoleArn = aws_iam_role.Example.Arn,
+ *             PlanId = aws_backup_plan.Example.Id,
+ *             NotResources = 
+ *             {
+ *                 aws_db_instance.Example.Arn,
+ *                 aws_ebs_volume.Example.Arn,
+ *                 aws_efs_file_system.Example.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
+ * 			IamRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+ * 			PlanId:     pulumi.Any(aws_backup_plan.Example.Id),
+ * 			NotResources: pulumi.StringArray{
+ * 				pulumi.Any(aws_db_instance.Example.Arn),
+ * 				pulumi.Any(aws_ebs_volume.Example.Arn),
+ * 				pulumi.Any(aws_efs_file_system.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +565,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:backup/selection:Selection example plan-id|selection-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:backup/selection:Selection")
 public class Selection extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,82 @@ import javax.annotation.Nullable;
 /**
  * Manages a single EBS volume.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ebs.Volume("example", {
+ *     availabilityZone: "us-west-2a",
+ *     size: 40,
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ebs.Volume("example",
+ *     availability_zone="us-west-2a",
+ *     size=40,
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ebs.Volume("example", new Aws.Ebs.VolumeArgs
+ *         {
+ *             AvailabilityZone = "us-west-2a",
+ *             Size = 40,
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ebs.NewVolume(ctx, "example", &ebs.VolumeArgs{
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Size:             pulumi.Int(40),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * > **NOTE**: At least one of `size` or `snapshot_id` is required when specifying an EBS volume
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ebs/volume:Volume id vol-049df61146c4d7901
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ebs/volume:Volume")
 public class Volume extends io.pulumi.resources.CustomResource {

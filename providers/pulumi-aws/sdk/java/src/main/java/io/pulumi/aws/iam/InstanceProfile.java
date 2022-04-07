@@ -16,7 +16,120 @@ import javax.annotation.Nullable;
 /**
  * Provides an IAM instance profile.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const role = new aws.iam.Role("role", {
+ *     path: "/",
+ *     assumeRolePolicy: `{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Action": "sts:AssumeRole",
+ *             "Principal": {
+ *                "Service": "ec2.amazonaws.com"
+ *             },
+ *             "Effect": "Allow",
+ *             "Sid": ""
+ *         }
+ *     ]
+ * }
+ * `,
+ * });
+ * const testProfile = new aws.iam.InstanceProfile("testProfile", {role: role.name});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * role = aws.iam.Role("role",
+ *     path="/",
+ *     assume_role_policy="""{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Action": "sts:AssumeRole",
+ *             "Principal": {
+ *                "Service": "ec2.amazonaws.com"
+ *             },
+ *             "Effect": "Allow",
+ *             "Sid": ""
+ *         }
+ *     ]
+ * }
+ * """)
+ * test_profile = aws.iam.InstanceProfile("testProfile", role=role.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             Path = "/",
+ *             AssumeRolePolicy = @"{
+ *     ""Version"": ""2012-10-17"",
+ *     ""Statement"": [
+ *         {
+ *             ""Action"": ""sts:AssumeRole"",
+ *             ""Principal"": {
+ *                ""Service"": ""ec2.amazonaws.com""
+ *             },
+ *             ""Effect"": ""Allow"",
+ *             ""Sid"": """"
+ *         }
+ *     ]
+ * }
+ * ",
+ *         });
+ *         var testProfile = new Aws.Iam.InstanceProfile("testProfile", new Aws.Iam.InstanceProfileArgs
+ *         {
+ *             Role = role.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			Path:             pulumi.String("/"),
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Action\": \"sts:AssumeRole\",\n", "            \"Principal\": {\n", "               \"Service\": \"ec2.amazonaws.com\"\n", "            },\n", "            \"Effect\": \"Allow\",\n", "            \"Sid\": \"\"\n", "        }\n", "    ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewInstanceProfile(ctx, "testProfile", &iam.InstanceProfileArgs{
+ * 			Role: role.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +139,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/instanceProfile:InstanceProfile test_profile app-instance-profile-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iam/instanceProfile:InstanceProfile")
 public class InstanceProfile extends io.pulumi.resources.CustomResource {

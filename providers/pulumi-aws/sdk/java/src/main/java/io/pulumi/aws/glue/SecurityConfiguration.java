@@ -16,7 +16,108 @@ import javax.annotation.Nullable;
 /**
  * Manages a Glue Security Configuration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.SecurityConfiguration("example", {encryptionConfiguration: {
+ *     cloudwatchEncryption: {
+ *         cloudwatchEncryptionMode: "DISABLED",
+ *     },
+ *     jobBookmarksEncryption: {
+ *         jobBookmarksEncryptionMode: "DISABLED",
+ *     },
+ *     s3Encryption: {
+ *         kmsKeyArn: data.aws_kms_key.example.arn,
+ *         s3EncryptionMode: "SSE-KMS",
+ *     },
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.SecurityConfiguration("example", encryption_configuration=aws.glue.SecurityConfigurationEncryptionConfigurationArgs(
+ *     cloudwatch_encryption=aws.glue.SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs(
+ *         cloudwatch_encryption_mode="DISABLED",
+ *     ),
+ *     job_bookmarks_encryption=aws.glue.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs(
+ *         job_bookmarks_encryption_mode="DISABLED",
+ *     ),
+ *     s3_encryption=aws.glue.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs(
+ *         kms_key_arn=data["aws_kms_key"]["example"]["arn"],
+ *         s3_encryption_mode="SSE-KMS",
+ *     ),
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.SecurityConfiguration("example", new Aws.Glue.SecurityConfigurationArgs
+ *         {
+ *             EncryptionConfiguration = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationArgs
+ *             {
+ *                 CloudwatchEncryption = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs
+ *                 {
+ *                     CloudwatchEncryptionMode = "DISABLED",
+ *                 },
+ *                 JobBookmarksEncryption = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs
+ *                 {
+ *                     JobBookmarksEncryptionMode = "DISABLED",
+ *                 },
+ *                 S3Encryption = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs
+ *                 {
+ *                     KmsKeyArn = data.Aws_kms_key.Example.Arn,
+ *                     S3EncryptionMode = "SSE-KMS",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewSecurityConfiguration(ctx, "example", &glue.SecurityConfigurationArgs{
+ * 			EncryptionConfiguration: &glue.SecurityConfigurationEncryptionConfigurationArgs{
+ * 				CloudwatchEncryption: &glue.SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs{
+ * 					CloudwatchEncryptionMode: pulumi.String("DISABLED"),
+ * 				},
+ * 				JobBookmarksEncryption: &glue.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs{
+ * 					JobBookmarksEncryptionMode: pulumi.String("DISABLED"),
+ * 				},
+ * 				S3Encryption: &glue.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs{
+ * 					KmsKeyArn:        pulumi.Any(data.Aws_kms_key.Example.Arn),
+ * 					S3EncryptionMode: pulumi.String("SSE-KMS"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +127,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/securityConfiguration:SecurityConfiguration example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/securityConfiguration:SecurityConfiguration")
 public class SecurityConfiguration extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,62 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeArtifact Domain Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codeartifact.Domain("example", {
+ *     domain: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codeartifact.Domain("example", domain="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeArtifact.Domain("example", new Aws.CodeArtifact.DomainArgs
+ *         {
+ *             Domain = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codeartifact.NewDomain(ctx, "example", &codeartifact.DomainArgs{
+ * 			Domain: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +82,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codeartifact/domain:Domain example arn:aws:codeartifact:us-west-2:012345678912:domain/tf-acc-test-8593714120730241305
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codeartifact/domain:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {

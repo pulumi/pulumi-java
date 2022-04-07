@@ -16,7 +16,6 @@ public final class ProjectSourceAuth {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final @Nullable String resource;
@@ -25,7 +24,6 @@ public final class ProjectSourceAuth {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final String type;
@@ -43,7 +41,6 @@ public final class ProjectSourceAuth {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Optional<String> getResource() {
@@ -54,7 +51,6 @@ public final class ProjectSourceAuth {
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public String getType() {

@@ -17,7 +17,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a Connection of Direct Connect.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const hoge = new aws.directconnect.Connection("hoge", {
+ *     bandwidth: "1Gbps",
+ *     location: "EqDC2",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * hoge = aws.directconnect.Connection("hoge",
+ *     bandwidth="1Gbps",
+ *     location="EqDC2")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hoge = new Aws.DirectConnect.Connection("hoge", new Aws.DirectConnect.ConnectionArgs
+ *         {
+ *             Bandwidth = "1Gbps",
+ *             Location = "EqDC2",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewConnection(ctx, "hoge", &directconnect.ConnectionArgs{
+ * 			Bandwidth: pulumi.String("1Gbps"),
+ * 			Location:  pulumi.String("EqDC2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/connection:Connection test_connection dxcon-ffre0ec3
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/connection:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {

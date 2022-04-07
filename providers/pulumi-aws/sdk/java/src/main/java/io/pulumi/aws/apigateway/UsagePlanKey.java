@@ -15,7 +15,122 @@ import javax.annotation.Nullable;
 /**
  * Provides an API Gateway Usage Plan Key.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.apigateway.RestApi("test", {});
+ * // ...
+ * const myusageplan = new aws.apigateway.UsagePlan("myusageplan", {apiStages: [{
+ *     apiId: test.id,
+ *     stage: aws_api_gateway_deployment.foo.stage_name,
+ * }]});
+ * const mykey = new aws.apigateway.ApiKey("mykey", {});
+ * const main = new aws.apigateway.UsagePlanKey("main", {
+ *     keyId: mykey.id,
+ *     keyType: "API_KEY",
+ *     usagePlanId: myusageplan.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.apigateway.RestApi("test")
+ * # ...
+ * myusageplan = aws.apigateway.UsagePlan("myusageplan", api_stages=[aws.apigateway.UsagePlanApiStageArgs(
+ *     api_id=test.id,
+ *     stage=aws_api_gateway_deployment["foo"]["stage_name"],
+ * )])
+ * mykey = aws.apigateway.ApiKey("mykey")
+ * main = aws.apigateway.UsagePlanKey("main",
+ *     key_id=mykey.id,
+ *     key_type="API_KEY",
+ *     usage_plan_id=myusageplan.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.ApiGateway.RestApi("test", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *         });
+ *         // ...
+ *         var myusageplan = new Aws.ApiGateway.UsagePlan("myusageplan", new Aws.ApiGateway.UsagePlanArgs
+ *         {
+ *             ApiStages = 
+ *             {
+ *                 new Aws.ApiGateway.Inputs.UsagePlanApiStageArgs
+ *                 {
+ *                     ApiId = test.Id,
+ *                     Stage = aws_api_gateway_deployment.Foo.Stage_name,
+ *                 },
+ *             },
+ *         });
+ *         var mykey = new Aws.ApiGateway.ApiKey("mykey", new Aws.ApiGateway.ApiKeyArgs
+ *         {
+ *         });
+ *         var main = new Aws.ApiGateway.UsagePlanKey("main", new Aws.ApiGateway.UsagePlanKeyArgs
+ *         {
+ *             KeyId = mykey.Id,
+ *             KeyType = "API_KEY",
+ *             UsagePlanId = myusageplan.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		test, err := apigateway.NewRestApi(ctx, "test", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		myusageplan, err := apigateway.NewUsagePlan(ctx, "myusageplan", &apigateway.UsagePlanArgs{
+ * 			ApiStages: apigateway.UsagePlanApiStageArray{
+ * 				&apigateway.UsagePlanApiStageArgs{
+ * 					ApiId: test.ID(),
+ * 					Stage: pulumi.Any(aws_api_gateway_deployment.Foo.Stage_name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		mykey, err := apigateway.NewApiKey(ctx, "mykey", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewUsagePlanKey(ctx, "main", &apigateway.UsagePlanKeyArgs{
+ * 			KeyId:       mykey.ID(),
+ * 			KeyType:     pulumi.String("API_KEY"),
+ * 			UsagePlanId: myusageplan.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +140,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/usagePlanKey:UsagePlanKey key 12345abcde/zzz
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/usagePlanKey:UsagePlanKey")
 public class UsagePlanKey extends io.pulumi.resources.CustomResource {

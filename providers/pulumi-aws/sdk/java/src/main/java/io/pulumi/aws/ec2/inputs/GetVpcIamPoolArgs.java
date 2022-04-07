@@ -40,7 +40,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * - 
+     * -
      * 
      */
     @Import(name="id")

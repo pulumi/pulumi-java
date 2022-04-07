@@ -19,7 +19,6 @@ public final class ProjectSecondarySourceAuthArgs extends io.pulumi.resources.Re
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @Import(name="resource")
@@ -35,7 +34,6 @@ public final class ProjectSecondarySourceAuthArgs extends io.pulumi.resources.Re
      * 
      * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
-     * 
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @Import(name="type", required=true)

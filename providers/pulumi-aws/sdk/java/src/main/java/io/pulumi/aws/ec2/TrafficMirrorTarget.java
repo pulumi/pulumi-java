@@ -14,10 +14,91 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Provides a Traffic mirror target.\
+ * Provides a Traffic mirror target.  
  * Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html) for traffic mirroring
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * To create a basic traffic mirror session
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const nlb = new aws.ec2.TrafficMirrorTarget("nlb", {
+ *     description: "NLB target",
+ *     networkLoadBalancerArn: aws_lb.lb.arn,
+ * });
+ * const eni = new aws.ec2.TrafficMirrorTarget("eni", {
+ *     description: "ENI target",
+ *     networkInterfaceId: aws_instance.test.primary_network_interface_id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * nlb = aws.ec2.TrafficMirrorTarget("nlb",
+ *     description="NLB target",
+ *     network_load_balancer_arn=aws_lb["lb"]["arn"])
+ * eni = aws.ec2.TrafficMirrorTarget("eni",
+ *     description="ENI target",
+ *     network_interface_id=aws_instance["test"]["primary_network_interface_id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var nlb = new Aws.Ec2.TrafficMirrorTarget("nlb", new Aws.Ec2.TrafficMirrorTargetArgs
+ *         {
+ *             Description = "NLB target",
+ *             NetworkLoadBalancerArn = aws_lb.Lb.Arn,
+ *         });
+ *         var eni = new Aws.Ec2.TrafficMirrorTarget("eni", new Aws.Ec2.TrafficMirrorTargetArgs
+ *         {
+ *             Description = "ENI target",
+ *             NetworkInterfaceId = aws_instance.Test.Primary_network_interface_id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewTrafficMirrorTarget(ctx, "nlb", &ec2.TrafficMirrorTargetArgs{
+ * 			Description:            pulumi.String("NLB target"),
+ * 			NetworkLoadBalancerArn: pulumi.Any(aws_lb.Lb.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewTrafficMirrorTarget(ctx, "eni", &ec2.TrafficMirrorTargetArgs{
+ * 			Description:        pulumi.String("ENI target"),
+ * 			NetworkInterfaceId: pulumi.Any(aws_instance.Test.Primary_network_interface_id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/trafficMirrorTarget:TrafficMirrorTarget target tmt-0c13a005422b86606
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/trafficMirrorTarget:TrafficMirrorTarget")
 public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {

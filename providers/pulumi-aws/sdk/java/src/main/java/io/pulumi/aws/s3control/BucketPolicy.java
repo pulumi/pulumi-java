@@ -17,7 +17,134 @@ import javax.annotation.Nullable;
  * 
  * > This functionality is for managing [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html). To manage S3 Bucket Policies in an AWS Partition, see the `aws.s3.BucketPolicy` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3control.BucketPolicy("example", {
+ *     bucket: aws_s3control_bucket.example.arn,
+ *     policy: JSON.stringify({
+ *         Id: "testBucketPolicy",
+ *         Statement: [{
+ *             Action: "s3-outposts:PutBucketLifecycleConfiguration",
+ *             Effect: "Deny",
+ *             Principal: {
+ *                 AWS: "*",
+ *             },
+ *             Resource: aws_s3control_bucket.example.arn,
+ *             Sid: "statement1",
+ *         }],
+ *         Version: "2012-10-17",
+ *     }),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3control.BucketPolicy("example",
+ *     bucket=aws_s3control_bucket["example"]["arn"],
+ *     policy=json.dumps({
+ *         "Id": "testBucketPolicy",
+ *         "Statement": [{
+ *             "Action": "s3-outposts:PutBucketLifecycleConfiguration",
+ *             "Effect": "Deny",
+ *             "Principal": {
+ *                 "AWS": "*",
+ *             },
+ *             "Resource": aws_s3control_bucket["example"]["arn"],
+ *             "Sid": "statement1",
+ *         }],
+ *         "Version": "2012-10-17",
+ *     }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3Control.BucketPolicy("example", new Aws.S3Control.BucketPolicyArgs
+ *         {
+ *             Bucket = aws_s3control_bucket.Example.Arn,
+ *             Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "Id", "testBucketPolicy" },
+ *                 { "Statement", new[]
+ *                     {
+ *                         new Dictionary<string, object?>
+ *                         {
+ *                             { "Action", "s3-outposts:PutBucketLifecycleConfiguration" },
+ *                             { "Effect", "Deny" },
+ *                             { "Principal", new Dictionary<string, object?>
+ *                             {
+ *                                 { "AWS", "*" },
+ *                             } },
+ *                             { "Resource", aws_s3control_bucket.Example.Arn },
+ *                             { "Sid", "statement1" },
+ *                         },
+ *                     }
+ *                  },
+ *                 { "Version", "2012-10-17" },
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3control"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"Id": "testBucketPolicy",
+ * 			"Statement": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Action": "s3-outposts:PutBucketLifecycleConfiguration",
+ * 					"Effect": "Deny",
+ * 					"Principal": map[string]interface{}{
+ * 						"AWS": "*",
+ * 					},
+ * 					"Resource": aws_s3control_bucket.Example.Arn,
+ * 					"Sid":      "statement1",
+ * 				},
+ * 			},
+ * 			"Version": "2012-10-17",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := s3control.NewBucketPolicy(ctx, "example", &s3control.BucketPolicyArgs{
+ * 			Bucket: pulumi.Any(aws_s3control_bucket.Example.Arn),
+ * 			Policy: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +154,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3control/bucketPolicy:BucketPolicy example arn:aws:s3-outposts:us-east-1:123456789012:outpost/op-12345678/bucket/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3control/bucketPolicy:BucketPolicy")
 public class BucketPolicy extends io.pulumi.resources.CustomResource {

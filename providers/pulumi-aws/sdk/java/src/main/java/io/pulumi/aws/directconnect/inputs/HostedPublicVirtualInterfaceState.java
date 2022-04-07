@@ -17,7 +17,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
     public static final HostedPublicVirtualInterfaceState Empty = new HostedPublicVirtualInterfaceState();
 
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Import(name="addressFamily")

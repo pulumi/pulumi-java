@@ -14,7 +14,6 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
         @Deprecated /* Not supported by WAFv2 API */
     private final String name;
@@ -29,7 +28,6 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
     */
     @Deprecated /* Not supported by WAFv2 API */
     public String getName() {

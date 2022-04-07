@@ -17,7 +17,167 @@ import javax.annotation.Nullable;
 /**
  * Provides a Cognito Resource Server.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a basic resource server
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const pool = new aws.cognito.UserPool("pool", {});
+ * const resource = new aws.cognito.ResourceServer("resource", {
+ *     identifier: "https://example.com",
+ *     userPoolId: pool.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * pool = aws.cognito.UserPool("pool")
+ * resource = aws.cognito.ResourceServer("resource",
+ *     identifier="https://example.com",
+ *     user_pool_id=pool.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var resource = new Aws.Cognito.ResourceServer("resource", new Aws.Cognito.ResourceServerArgs
+ *         {
+ *             Identifier = "https://example.com",
+ *             UserPoolId = pool.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		pool, err := cognito.NewUserPool(ctx, "pool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewResourceServer(ctx, "resource", &cognito.ResourceServerArgs{
+ * 			Identifier: pulumi.String("https://example.com"),
+ * 			UserPoolId: pool.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a resource server with sample-scope
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const pool = new aws.cognito.UserPool("pool", {});
+ * const resource = new aws.cognito.ResourceServer("resource", {
+ *     identifier: "https://example.com",
+ *     scopes: [{
+ *         scopeName: "sample-scope",
+ *         scopeDescription: "a Sample Scope Description",
+ *     }],
+ *     userPoolId: pool.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * pool = aws.cognito.UserPool("pool")
+ * resource = aws.cognito.ResourceServer("resource",
+ *     identifier="https://example.com",
+ *     scopes=[aws.cognito.ResourceServerScopeArgs(
+ *         scope_name="sample-scope",
+ *         scope_description="a Sample Scope Description",
+ *     )],
+ *     user_pool_id=pool.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *         var resource = new Aws.Cognito.ResourceServer("resource", new Aws.Cognito.ResourceServerArgs
+ *         {
+ *             Identifier = "https://example.com",
+ *             Scopes = 
+ *             {
+ *                 new Aws.Cognito.Inputs.ResourceServerScopeArgs
+ *                 {
+ *                     ScopeName = "sample-scope",
+ *                     ScopeDescription = "a Sample Scope Description",
+ *                 },
+ *             },
+ *             UserPoolId = pool.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		pool, err := cognito.NewUserPool(ctx, "pool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewResourceServer(ctx, "resource", &cognito.ResourceServerArgs{
+ * 			Identifier: pulumi.String("https://example.com"),
+ * 			Scopes: cognito.ResourceServerScopeArray{
+ * 				&cognito.ResourceServerScopeArgs{
+ * 					ScopeName:        pulumi.String("sample-scope"),
+ * 					ScopeDescription: pulumi.String("a Sample Scope Description"),
+ * 				},
+ * 			},
+ * 			UserPoolId: pool.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +187,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cognito/resourceServer:ResourceServer example xxx_yyyyy|https://example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cognito/resourceServer:ResourceServer")
 public class ResourceServer extends io.pulumi.resources.CustomResource {

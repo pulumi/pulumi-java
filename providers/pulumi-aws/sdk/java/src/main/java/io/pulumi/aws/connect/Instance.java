@@ -19,7 +19,215 @@ import javax.annotation.Nullable;
  * 
  * !> **WARN:** There are limits to the number of Connect Instances that can be created in a specific AWS account, and those limits span the life of the account, not just active Instances. Minimize the number of times you create/delete an instance.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.connect.Instance("test", {
+ *     identityManagementType: "CONNECT_MANAGED",
+ *     inboundCallsEnabled: true,
+ *     instanceAlias: "friendly-name-connect",
+ *     outboundCallsEnabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.connect.Instance("test",
+ *     identity_management_type="CONNECT_MANAGED",
+ *     inbound_calls_enabled=True,
+ *     instance_alias="friendly-name-connect",
+ *     outbound_calls_enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Connect.Instance("test", new Aws.Connect.InstanceArgs
+ *         {
+ *             IdentityManagementType = "CONNECT_MANAGED",
+ *             InboundCallsEnabled = true,
+ *             InstanceAlias = "friendly-name-connect",
+ *             OutboundCallsEnabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewInstance(ctx, "test", &connect.InstanceArgs{
+ * 			IdentityManagementType: pulumi.String("CONNECT_MANAGED"),
+ * 			InboundCallsEnabled:    pulumi.Bool(true),
+ * 			InstanceAlias:          pulumi.String("friendly-name-connect"),
+ * 			OutboundCallsEnabled:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With Existing Active Directory
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.connect.Instance("test", {
+ *     directoryId: aws_directory_service_directory.test.id,
+ *     identityManagementType: "EXISTING_DIRECTORY",
+ *     inboundCallsEnabled: true,
+ *     instanceAlias: "friendly-name-connect",
+ *     outboundCallsEnabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.connect.Instance("test",
+ *     directory_id=aws_directory_service_directory["test"]["id"],
+ *     identity_management_type="EXISTING_DIRECTORY",
+ *     inbound_calls_enabled=True,
+ *     instance_alias="friendly-name-connect",
+ *     outbound_calls_enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Connect.Instance("test", new Aws.Connect.InstanceArgs
+ *         {
+ *             DirectoryId = aws_directory_service_directory.Test.Id,
+ *             IdentityManagementType = "EXISTING_DIRECTORY",
+ *             InboundCallsEnabled = true,
+ *             InstanceAlias = "friendly-name-connect",
+ *             OutboundCallsEnabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewInstance(ctx, "test", &connect.InstanceArgs{
+ * 			DirectoryId:            pulumi.Any(aws_directory_service_directory.Test.Id),
+ * 			IdentityManagementType: pulumi.String("EXISTING_DIRECTORY"),
+ * 			InboundCallsEnabled:    pulumi.Bool(true),
+ * 			InstanceAlias:          pulumi.String("friendly-name-connect"),
+ * 			OutboundCallsEnabled:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With SAML
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.connect.Instance("test", {
+ *     identityManagementType: "SAML",
+ *     inboundCallsEnabled: true,
+ *     instanceAlias: "friendly-name-connect",
+ *     outboundCallsEnabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.connect.Instance("test",
+ *     identity_management_type="SAML",
+ *     inbound_calls_enabled=True,
+ *     instance_alias="friendly-name-connect",
+ *     outbound_calls_enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Connect.Instance("test", new Aws.Connect.InstanceArgs
+ *         {
+ *             IdentityManagementType = "SAML",
+ *             InboundCallsEnabled = true,
+ *             InstanceAlias = "friendly-name-connect",
+ *             OutboundCallsEnabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/connect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connect.NewInstance(ctx, "test", &connect.InstanceArgs{
+ * 			IdentityManagementType: pulumi.String("SAML"),
+ * 			InboundCallsEnabled:    pulumi.Bool(true),
+ * 			InstanceAlias:          pulumi.String("friendly-name-connect"),
+ * 			OutboundCallsEnabled:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +237,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:connect/instance:Instance example f1288a1f-6193-445a-b47e-af739b2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:connect/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {

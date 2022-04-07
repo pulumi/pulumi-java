@@ -16,7 +16,160 @@ import javax.annotation.Nullable;
 /**
  * Manages SAML authentication options for an AWS Elasticsearch Domain.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const exampleDomain = new aws.elasticsearch.Domain("exampleDomain", {
+ *     elasticsearchVersion: "1.5",
+ *     clusterConfig: {
+ *         instanceType: "r4.large.elasticsearch",
+ *     },
+ *     snapshotOptions: {
+ *         automatedSnapshotStartHour: 23,
+ *     },
+ *     tags: {
+ *         Domain: "TestDomain",
+ *     },
+ * });
+ * const exampleDomainSamlOptions = new aws.elasticsearch.DomainSamlOptions("exampleDomainSamlOptions", {
+ *     domainName: exampleDomain.domainName,
+ *     samlOptions: {
+ *         enabled: true,
+ *         idp: {
+ *             entityId: "https://example.com",
+ *             metadataContent: fs.readFileSync("./saml-metadata.xml"),
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_domain = aws.elasticsearch.Domain("exampleDomain",
+ *     elasticsearch_version="1.5",
+ *     cluster_config=aws.elasticsearch.DomainClusterConfigArgs(
+ *         instance_type="r4.large.elasticsearch",
+ *     ),
+ *     snapshot_options=aws.elasticsearch.DomainSnapshotOptionsArgs(
+ *         automated_snapshot_start_hour=23,
+ *     ),
+ *     tags={
+ *         "Domain": "TestDomain",
+ *     })
+ * example_domain_saml_options = aws.elasticsearch.DomainSamlOptions("exampleDomainSamlOptions",
+ *     domain_name=example_domain.domain_name,
+ *     saml_options=aws.elasticsearch.DomainSamlOptionsSamlOptionsArgs(
+ *         enabled=True,
+ *         idp=aws.elasticsearch.DomainSamlOptionsSamlOptionsIdpArgs(
+ *             entity_id="https://example.com",
+ *             metadata_content=(lambda path: open(path).read())("./saml-metadata.xml"),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleDomain = new Aws.ElasticSearch.Domain("exampleDomain", new Aws.ElasticSearch.DomainArgs
+ *         {
+ *             ElasticsearchVersion = "1.5",
+ *             ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
+ *             {
+ *                 InstanceType = "r4.large.elasticsearch",
+ *             },
+ *             SnapshotOptions = new Aws.ElasticSearch.Inputs.DomainSnapshotOptionsArgs
+ *             {
+ *                 AutomatedSnapshotStartHour = 23,
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Domain", "TestDomain" },
+ *             },
+ *         });
+ *         var exampleDomainSamlOptions = new Aws.ElasticSearch.DomainSamlOptions("exampleDomainSamlOptions", new Aws.ElasticSearch.DomainSamlOptionsArgs
+ *         {
+ *             DomainName = exampleDomain.DomainName,
+ *             SamlOptions = new Aws.ElasticSearch.Inputs.DomainSamlOptionsSamlOptionsArgs
+ *             {
+ *                 Enabled = true,
+ *                 Idp = new Aws.ElasticSearch.Inputs.DomainSamlOptionsSamlOptionsIdpArgs
+ *                 {
+ *                     EntityId = "https://example.com",
+ *                     MetadataContent = File.ReadAllText("./saml-metadata.xml"),
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleDomain, err := elasticsearch.NewDomain(ctx, "exampleDomain", &elasticsearch.DomainArgs{
+ * 			ElasticsearchVersion: pulumi.String("1.5"),
+ * 			ClusterConfig: &elasticsearch.DomainClusterConfigArgs{
+ * 				InstanceType: pulumi.String("r4.large.elasticsearch"),
+ * 			},
+ * 			SnapshotOptions: &elasticsearch.DomainSnapshotOptionsArgs{
+ * 				AutomatedSnapshotStartHour: pulumi.Int(23),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Domain": pulumi.String("TestDomain"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticsearch.NewDomainSamlOptions(ctx, "exampleDomainSamlOptions", &elasticsearch.DomainSamlOptionsArgs{
+ * 			DomainName: exampleDomain.DomainName,
+ * 			SamlOptions: &elasticsearch.DomainSamlOptionsSamlOptionsArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 				Idp: &elasticsearch.DomainSamlOptionsSamlOptionsIdpArgs{
+ * 					EntityId:        pulumi.String("https://example.com"),
+ * 					MetadataContent: readFileOrPanic("./saml-metadata.xml"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +179,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticsearch/domainSamlOptions:DomainSamlOptions example domain_name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticsearch/domainSamlOptions:DomainSamlOptions")
 public class DomainSamlOptions extends io.pulumi.resources.CustomResource {

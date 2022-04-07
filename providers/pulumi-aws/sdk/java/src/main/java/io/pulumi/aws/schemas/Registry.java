@@ -18,7 +18,62 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.schemas.Registry("test", {
+ *     description: "A custom schema registry",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.schemas.Registry("test", description="A custom schema registry")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Schemas.Registry("test", new Aws.Schemas.RegistryArgs
+ *         {
+ *             Description = "A custom schema registry",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/schemas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := schemas.NewRegistry(ctx, "test", &schemas.RegistryArgs{
+ * 			Description: pulumi.String("A custom schema registry"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +83,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:schemas/registry:Registry test my_own_registry
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:schemas/registry:Registry")
 public class Registry extends io.pulumi.resources.CustomResource {

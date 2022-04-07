@@ -20,7 +20,475 @@ import javax.annotation.Nullable;
 /**
  * Manages a Glue Trigger resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Conditional Trigger
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Trigger("example", {
+ *     type: "CONDITIONAL",
+ *     actions: [{
+ *         jobName: aws_glue_job.example1.name,
+ *     }],
+ *     predicate: {
+ *         conditions: [{
+ *             jobName: aws_glue_job.example2.name,
+ *             state: "SUCCEEDED",
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Trigger("example",
+ *     type="CONDITIONAL",
+ *     actions=[aws.glue.TriggerActionArgs(
+ *         job_name=aws_glue_job["example1"]["name"],
+ *     )],
+ *     predicate=aws.glue.TriggerPredicateArgs(
+ *         conditions=[aws.glue.TriggerPredicateConditionArgs(
+ *             job_name=aws_glue_job["example2"]["name"],
+ *             state="SUCCEEDED",
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+ *         {
+ *             Type = "CONDITIONAL",
+ *             Actions = 
+ *             {
+ *                 new Aws.Glue.Inputs.TriggerActionArgs
+ *                 {
+ *                     JobName = aws_glue_job.Example1.Name,
+ *                 },
+ *             },
+ *             Predicate = new Aws.Glue.Inputs.TriggerPredicateArgs
+ *             {
+ *                 Conditions = 
+ *                 {
+ *                     new Aws.Glue.Inputs.TriggerPredicateConditionArgs
+ *                     {
+ *                         JobName = aws_glue_job.Example2.Name,
+ *                         State = "SUCCEEDED",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+ * 			Type: pulumi.String("CONDITIONAL"),
+ * 			Actions: glue.TriggerActionArray{
+ * 				&glue.TriggerActionArgs{
+ * 					JobName: pulumi.Any(aws_glue_job.Example1.Name),
+ * 				},
+ * 			},
+ * 			Predicate: &glue.TriggerPredicateArgs{
+ * 				Conditions: glue.TriggerPredicateConditionArray{
+ * 					&glue.TriggerPredicateConditionArgs{
+ * 						JobName: pulumi.Any(aws_glue_job.Example2.Name),
+ * 						State:   pulumi.String("SUCCEEDED"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### On-Demand Trigger
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Trigger("example", {
+ *     type: "ON_DEMAND",
+ *     actions: [{
+ *         jobName: aws_glue_job.example.name,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Trigger("example",
+ *     type="ON_DEMAND",
+ *     actions=[aws.glue.TriggerActionArgs(
+ *         job_name=aws_glue_job["example"]["name"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+ *         {
+ *             Type = "ON_DEMAND",
+ *             Actions = 
+ *             {
+ *                 new Aws.Glue.Inputs.TriggerActionArgs
+ *                 {
+ *                     JobName = aws_glue_job.Example.Name,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+ * 			Type: pulumi.String("ON_DEMAND"),
+ * 			Actions: glue.TriggerActionArray{
+ * 				&glue.TriggerActionArgs{
+ * 					JobName: pulumi.Any(aws_glue_job.Example.Name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Scheduled Trigger
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Trigger("example", {
+ *     schedule: "cron(15 12 * * ? *)",
+ *     type: "SCHEDULED",
+ *     actions: [{
+ *         jobName: aws_glue_job.example.name,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Trigger("example",
+ *     schedule="cron(15 12 * * ? *)",
+ *     type="SCHEDULED",
+ *     actions=[aws.glue.TriggerActionArgs(
+ *         job_name=aws_glue_job["example"]["name"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+ *         {
+ *             Schedule = "cron(15 12 * * ? *)",
+ *             Type = "SCHEDULED",
+ *             Actions = 
+ *             {
+ *                 new Aws.Glue.Inputs.TriggerActionArgs
+ *                 {
+ *                     JobName = aws_glue_job.Example.Name,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+ * 			Schedule: pulumi.String("cron(15 12 * * ? *)"),
+ * 			Type:     pulumi.String("SCHEDULED"),
+ * 			Actions: glue.TriggerActionArray{
+ * 				&glue.TriggerActionArgs{
+ * 					JobName: pulumi.Any(aws_glue_job.Example.Name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Conditional Trigger with Crawler Action
+ * 
+ * **Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Trigger("example", {
+ *     type: "CONDITIONAL",
+ *     actions: [{
+ *         crawlerName: aws_glue_crawler.example1.name,
+ *     }],
+ *     predicate: {
+ *         conditions: [{
+ *             jobName: aws_glue_job.example2.name,
+ *             state: "SUCCEEDED",
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Trigger("example",
+ *     type="CONDITIONAL",
+ *     actions=[aws.glue.TriggerActionArgs(
+ *         crawler_name=aws_glue_crawler["example1"]["name"],
+ *     )],
+ *     predicate=aws.glue.TriggerPredicateArgs(
+ *         conditions=[aws.glue.TriggerPredicateConditionArgs(
+ *             job_name=aws_glue_job["example2"]["name"],
+ *             state="SUCCEEDED",
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+ *         {
+ *             Type = "CONDITIONAL",
+ *             Actions = 
+ *             {
+ *                 new Aws.Glue.Inputs.TriggerActionArgs
+ *                 {
+ *                     CrawlerName = aws_glue_crawler.Example1.Name,
+ *                 },
+ *             },
+ *             Predicate = new Aws.Glue.Inputs.TriggerPredicateArgs
+ *             {
+ *                 Conditions = 
+ *                 {
+ *                     new Aws.Glue.Inputs.TriggerPredicateConditionArgs
+ *                     {
+ *                         JobName = aws_glue_job.Example2.Name,
+ *                         State = "SUCCEEDED",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+ * 			Type: pulumi.String("CONDITIONAL"),
+ * 			Actions: glue.TriggerActionArray{
+ * 				&glue.TriggerActionArgs{
+ * 					CrawlerName: pulumi.Any(aws_glue_crawler.Example1.Name),
+ * 				},
+ * 			},
+ * 			Predicate: &glue.TriggerPredicateArgs{
+ * 				Conditions: glue.TriggerPredicateConditionArray{
+ * 					&glue.TriggerPredicateConditionArgs{
+ * 						JobName: pulumi.Any(aws_glue_job.Example2.Name),
+ * 						State:   pulumi.String("SUCCEEDED"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Conditional Trigger with Crawler Condition
+ * 
+ * **Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Trigger("example", {
+ *     type: "CONDITIONAL",
+ *     actions: [{
+ *         jobName: aws_glue_job.example1.name,
+ *     }],
+ *     predicate: {
+ *         conditions: [{
+ *             crawlerName: aws_glue_crawler.example2.name,
+ *             crawlState: "SUCCEEDED",
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Trigger("example",
+ *     type="CONDITIONAL",
+ *     actions=[aws.glue.TriggerActionArgs(
+ *         job_name=aws_glue_job["example1"]["name"],
+ *     )],
+ *     predicate=aws.glue.TriggerPredicateArgs(
+ *         conditions=[aws.glue.TriggerPredicateConditionArgs(
+ *             crawler_name=aws_glue_crawler["example2"]["name"],
+ *             crawl_state="SUCCEEDED",
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+ *         {
+ *             Type = "CONDITIONAL",
+ *             Actions = 
+ *             {
+ *                 new Aws.Glue.Inputs.TriggerActionArgs
+ *                 {
+ *                     JobName = aws_glue_job.Example1.Name,
+ *                 },
+ *             },
+ *             Predicate = new Aws.Glue.Inputs.TriggerPredicateArgs
+ *             {
+ *                 Conditions = 
+ *                 {
+ *                     new Aws.Glue.Inputs.TriggerPredicateConditionArgs
+ *                     {
+ *                         CrawlerName = aws_glue_crawler.Example2.Name,
+ *                         CrawlState = "SUCCEEDED",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+ * 			Type: pulumi.String("CONDITIONAL"),
+ * 			Actions: glue.TriggerActionArray{
+ * 				&glue.TriggerActionArgs{
+ * 					JobName: pulumi.Any(aws_glue_job.Example1.Name),
+ * 				},
+ * 			},
+ * 			Predicate: &glue.TriggerPredicateArgs{
+ * 				Conditions: glue.TriggerPredicateConditionArray{
+ * 					&glue.TriggerPredicateConditionArgs{
+ * 						CrawlerName: pulumi.Any(aws_glue_crawler.Example2.Name),
+ * 						CrawlState:  pulumi.String("SUCCEEDED"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +498,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/trigger:Trigger MyTrigger MyTrigger
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/trigger:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {

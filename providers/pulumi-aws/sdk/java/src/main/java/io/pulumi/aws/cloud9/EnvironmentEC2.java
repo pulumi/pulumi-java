@@ -17,8 +17,273 @@ import javax.annotation.Nullable;
 /**
  * Provides a Cloud9 EC2 Development Environment.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloud9.EnvironmentEC2("example", {
+ *     instanceType: "t2.micro",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloud9.EnvironmentEC2("example", instance_type="t2.micro")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Cloud9.EnvironmentEC2("example", new Aws.Cloud9.EnvironmentEC2Args
+ *         {
+ *             InstanceType = "t2.micro",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloud9"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloud9.NewEnvironmentEC2(ctx, "example", &cloud9.EnvironmentEC2Args{
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Get the URL of the Cloud9 environment after creation:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloud9.EnvironmentEC2("example", {instanceType: "t2.micro"});
+ * const cloud9Instance = aws.ec2.getInstanceOutput({
+ *     filters: [{
+ *         name: "tag:aws:cloud9:environment",
+ *         values: [example.id],
+ *     }],
+ * });
+ * export const cloud9Url = pulumi.interpolate`https://${_var.region}.console.aws.amazon.com/cloud9/ide/${example.id}`;
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloud9.EnvironmentEC2("example", instance_type="t2.micro")
+ * cloud9_instance = aws.ec2.get_instance_output(filters=[aws.ec2.GetInstanceFilterArgs(
+ *     name="tag:aws:cloud9:environment",
+ *     values=[example.id],
+ * )])
+ * pulumi.export("cloud9Url", example.id.apply(lambda id: f"https://{var['region']}.console.aws.amazon.com/cloud9/ide/{id}"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Cloud9.EnvironmentEC2("example", new Aws.Cloud9.EnvironmentEC2Args
+ *         {
+ *             InstanceType = "t2.micro",
+ *         });
+ *         var cloud9Instance = Aws.Ec2.GetInstance.Invoke(new Aws.Ec2.GetInstanceInvokeArgs
+ *         {
+ *             Filters = 
+ *             {
+ *                 new Aws.Ec2.Inputs.GetInstanceFilterInputArgs
+ *                 {
+ *                     Name = "tag:aws:cloud9:environment",
+ *                     Values = 
+ *                     {
+ *                         example.Id,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         this.Cloud9Url = example.Id.Apply(id => $"https://{@var.Region}.console.aws.amazon.com/cloud9/ide/{id}");
+ *     }
+ * 
+ *     [Output("cloud9Url")]
+ *     public Output<string> Cloud9Url { get; set; }
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloud9"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := cloud9.NewEnvironmentEC2(ctx, "example", &cloud9.EnvironmentEC2Args{
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_ = ec2.LookupInstanceOutput(ctx, ec2.GetInstanceOutputArgs{
+ * 			Filters: ec2.GetInstanceFilterArray{
+ * 				&ec2.GetInstanceFilterArgs{
+ * 					Name: pulumi.String("tag:aws:cloud9:environment"),
+ * 					Values: pulumi.StringArray{
+ * 						example.ID(),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		ctx.Export("cloud9Url", example.ID().ApplyT(func(id string) (string, error) {
+ * 			return fmt.Sprintf("%v%v%v%v", "https://", _var.Region, ".console.aws.amazon.com/cloud9/ide/", id), nil
+ * 		}).(pulumi.StringOutput))
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Allocate a static IP to the Cloud9 environment:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloud9.EnvironmentEC2("example", {instanceType: "t2.micro"});
+ * const cloud9Instance = aws.ec2.getInstanceOutput({
+ *     filters: [{
+ *         name: "tag:aws:cloud9:environment",
+ *         values: [example.id],
+ *     }],
+ * });
+ * const cloud9Eip = new aws.ec2.Eip("cloud9Eip", {
+ *     instance: cloud9Instance.apply(cloud9Instance => cloud9Instance.id),
+ *     vpc: true,
+ * });
+ * export const cloud9PublicIp = cloud9Eip.publicIp;
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloud9.EnvironmentEC2("example", instance_type="t2.micro")
+ * cloud9_instance = aws.ec2.get_instance_output(filters=[aws.ec2.GetInstanceFilterArgs(
+ *     name="tag:aws:cloud9:environment",
+ *     values=[example.id],
+ * )])
+ * cloud9_eip = aws.ec2.Eip("cloud9Eip",
+ *     instance=cloud9_instance.id,
+ *     vpc=True)
+ * pulumi.export("cloud9PublicIp", cloud9_eip.public_ip)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Cloud9.EnvironmentEC2("example", new Aws.Cloud9.EnvironmentEC2Args
+ *         {
+ *             InstanceType = "t2.micro",
+ *         });
+ *         var cloud9Instance = Aws.Ec2.GetInstance.Invoke(new Aws.Ec2.GetInstanceInvokeArgs
+ *         {
+ *             Filters = 
+ *             {
+ *                 new Aws.Ec2.Inputs.GetInstanceFilterInputArgs
+ *                 {
+ *                     Name = "tag:aws:cloud9:environment",
+ *                     Values = 
+ *                     {
+ *                         example.Id,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var cloud9Eip = new Aws.Ec2.Eip("cloud9Eip", new Aws.Ec2.EipArgs
+ *         {
+ *             Instance = cloud9Instance.Apply(cloud9Instance => cloud9Instance.Id),
+ *             Vpc = true,
+ *         });
+ *         this.Cloud9PublicIp = cloud9Eip.PublicIp;
+ *     }
+ * 
+ *     [Output("cloud9PublicIp")]
+ *     public Output<string> Cloud9PublicIp { get; set; }
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloud9"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := cloud9.NewEnvironmentEC2(ctx, "example", &cloud9.EnvironmentEC2Args{
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cloud9Instance := ec2.LookupInstanceOutput(ctx, ec2.GetInstanceOutputArgs{
+ * 			Filters: ec2.GetInstanceFilterArray{
+ * 				&ec2.GetInstanceFilterArgs{
+ * 					Name: pulumi.String("tag:aws:cloud9:environment"),
+ * 					Values: pulumi.StringArray{
+ * 						example.ID(),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		cloud9Eip, err := ec2.NewEip(ctx, "cloud9Eip", &ec2.EipArgs{
+ * 			Instance: cloud9Instance.ApplyT(func(cloud9Instance ec2.GetInstanceResult) (string, error) {
+ * 				return cloud9Instance.Id, nil
+ * 			}).(pulumi.StringOutput),
+ * 			Vpc: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("cloud9PublicIp", cloud9Eip.PublicIp)
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:cloud9/environmentEC2:EnvironmentEC2")
 public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {

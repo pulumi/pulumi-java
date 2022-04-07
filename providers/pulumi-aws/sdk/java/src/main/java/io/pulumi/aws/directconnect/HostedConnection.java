@@ -17,8 +17,75 @@ import javax.annotation.Nullable;
 /**
  * Provides a hosted connection on the specified interconnect or a link aggregation group (LAG) of interconnects. Intended for use by AWS Direct Connect Partners only.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const hosted = new aws.directconnect.HostedConnection("hosted", {
+ *     bandwidth: "100Mbps",
+ *     connectionId: "dxcon-ffabc123",
+ *     ownerAccountId: "123456789012",
+ *     vlan: 1,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * hosted = aws.directconnect.HostedConnection("hosted",
+ *     bandwidth="100Mbps",
+ *     connection_id="dxcon-ffabc123",
+ *     owner_account_id="123456789012",
+ *     vlan=1)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hosted = new Aws.DirectConnect.HostedConnection("hosted", new Aws.DirectConnect.HostedConnectionArgs
+ *         {
+ *             Bandwidth = "100Mbps",
+ *             ConnectionId = "dxcon-ffabc123",
+ *             OwnerAccountId = "123456789012",
+ *             Vlan = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewHostedConnection(ctx, "hosted", &directconnect.HostedConnectionArgs{
+ * 			Bandwidth:      pulumi.String("100Mbps"),
+ * 			ConnectionId:   pulumi.String("dxcon-ffabc123"),
+ * 			OwnerAccountId: pulumi.String("123456789012"),
+ * 			Vlan:           pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:directconnect/hostedConnection:HostedConnection")
 public class HostedConnection extends io.pulumi.resources.CustomResource {

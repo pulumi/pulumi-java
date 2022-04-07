@@ -17,7 +17,171 @@ import javax.annotation.Nullable;
  * Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.
  * This resource accepts ownership of a private virtual interface created by another AWS account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const accepter = new aws.Provider("accepter", {});
+ * // Accepter's credentials.
+ * const accepterCallerIdentity = aws.getCallerIdentity({});
+ * // Accepter's side of the VIF.
+ * const vpnGw = new aws.ec2.VpnGateway("vpnGw", {}, {
+ *     provider: aws.accepter,
+ * });
+ * // Creator's side of the VIF
+ * const creator = new aws.directconnect.HostedPrivateVirtualInterface("creator", {
+ *     connectionId: "dxcon-zzzzzzzz",
+ *     ownerAccountId: accepterCallerIdentity.then(accepterCallerIdentity => accepterCallerIdentity.accountId),
+ *     vlan: 4094,
+ *     addressFamily: "ipv4",
+ *     bgpAsn: 65352,
+ * }, {
+ *     dependsOn: [vpnGw],
+ * });
+ * const accepterHostedPrivateVirtualInterfaceAccepter = new aws.directconnect.HostedPrivateVirtualInterfaceAccepter("accepterHostedPrivateVirtualInterfaceAccepter", {
+ *     virtualInterfaceId: creator.id,
+ *     vpnGatewayId: vpnGw.id,
+ *     tags: {
+ *         Side: "Accepter",
+ *     },
+ * }, {
+ *     provider: aws.accepter,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * accepter = pulumi.providers.Aws("accepter")
+ * # Accepter's credentials.
+ * accepter_caller_identity = aws.get_caller_identity()
+ * # Accepter's side of the VIF.
+ * vpn_gw = aws.ec2.VpnGateway("vpnGw", opts=pulumi.ResourceOptions(provider=aws["accepter"]))
+ * # Creator's side of the VIF
+ * creator = aws.directconnect.HostedPrivateVirtualInterface("creator",
+ *     connection_id="dxcon-zzzzzzzz",
+ *     owner_account_id=accepter_caller_identity.account_id,
+ *     vlan=4094,
+ *     address_family="ipv4",
+ *     bgp_asn=65352,
+ *     opts=pulumi.ResourceOptions(depends_on=[vpn_gw]))
+ * accepter_hosted_private_virtual_interface_accepter = aws.directconnect.HostedPrivateVirtualInterfaceAccepter("accepterHostedPrivateVirtualInterfaceAccepter",
+ *     virtual_interface_id=creator.id,
+ *     vpn_gateway_id=vpn_gw.id,
+ *     tags={
+ *         "Side": "Accepter",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=aws["accepter"]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var accepter = new Aws.Provider("accepter", new Aws.ProviderArgs
+ *         {
+ *         });
+ *         // Accepter's credentials.
+ *         var accepterCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         // Accepter's side of the VIF.
+ *         var vpnGw = new Aws.Ec2.VpnGateway("vpnGw", new Aws.Ec2.VpnGatewayArgs
+ *         {
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Accepter,
+ *         });
+ *         // Creator's side of the VIF
+ *         var creator = new Aws.DirectConnect.HostedPrivateVirtualInterface("creator", new Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs
+ *         {
+ *             ConnectionId = "dxcon-zzzzzzzz",
+ *             OwnerAccountId = accepterCallerIdentity.Apply(accepterCallerIdentity => accepterCallerIdentity.AccountId),
+ *             Vlan = 4094,
+ *             AddressFamily = "ipv4",
+ *             BgpAsn = 65352,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 vpnGw,
+ *             },
+ *         });
+ *         var accepterHostedPrivateVirtualInterfaceAccepter = new Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter("accepterHostedPrivateVirtualInterfaceAccepter", new Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepterArgs
+ *         {
+ *             VirtualInterfaceId = creator.Id,
+ *             VpnGatewayId = vpnGw.Id,
+ *             Tags = 
+ *             {
+ *                 { "Side", "Accepter" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Accepter,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "accepter", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		accepterCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		vpnGw, err := ec2.NewVpnGateway(ctx, "vpnGw", nil, pulumi.Provider(aws.Accepter))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		creator, err := directconnect.NewHostedPrivateVirtualInterface(ctx, "creator", &directconnect.HostedPrivateVirtualInterfaceArgs{
+ * 			ConnectionId:   pulumi.String("dxcon-zzzzzzzz"),
+ * 			OwnerAccountId: pulumi.String(accepterCallerIdentity.AccountId),
+ * 			Vlan:           pulumi.Int(4094),
+ * 			AddressFamily:  pulumi.String("ipv4"),
+ * 			BgpAsn:         pulumi.Int(65352),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			vpnGw,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directconnect.NewHostedPrivateVirtualInterfaceAccepter(ctx, "accepterHostedPrivateVirtualInterfaceAccepter", &directconnect.HostedPrivateVirtualInterfaceAccepterArgs{
+ * 			VirtualInterfaceId: creator.ID(),
+ * 			VpnGatewayId:       vpnGw.ID(),
+ * 			Tags: pulumi.StringMap{
+ * 				"Side": pulumi.String("Accepter"),
+ * 			},
+ * 		}, pulumi.Provider(aws.Accepter))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +191,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/hostedPrivateVirtualInterfaceAccepter:HostedPrivateVirtualInterfaceAccepter test dxvif-33cc44dd
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/hostedPrivateVirtualInterfaceAccepter:HostedPrivateVirtualInterfaceAccepter")
 public class HostedPrivateVirtualInterfaceAccepter extends io.pulumi.resources.CustomResource {

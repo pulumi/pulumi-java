@@ -250,7 +250,6 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      * @Deprecated
      * Use the parameter "instance_interruption_behavior" instead.
-     * 
      */
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
     @Import(name="instanceInterruptionBehaviour")
@@ -508,8 +507,8 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
      * of the Spot Instance Request.
      * * `spot_request_state` The current [request
-     *   state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status)
-     *   of the Spot Instance Request.
+     * state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status)
+     * of the Spot Instance Request.
      * 
      */
     @Import(name="spotBidStatus")

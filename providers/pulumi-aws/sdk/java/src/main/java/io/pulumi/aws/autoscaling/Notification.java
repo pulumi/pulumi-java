@@ -18,8 +18,144 @@ import javax.annotation.Nullable;
  * the `notifications` map to a [Notification Configuration](https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_DescribeNotificationConfigurations.html) inside Amazon Web
  * Services, and are applied to each AutoScaling Group you supply.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sns.Topic("example", {});
+ * // arn is an exported attribute
+ * const bar = new aws.autoscaling.Group("bar", {});
+ * // ...
+ * const foo = new aws.autoscaling.Group("foo", {});
+ * // ...
+ * const exampleNotifications = new aws.autoscaling.Notification("exampleNotifications", {
+ *     groupNames: [
+ *         bar.name,
+ *         foo.name,
+ *     ],
+ *     notifications: [
+ *         "autoscaling:EC2_INSTANCE_LAUNCH",
+ *         "autoscaling:EC2_INSTANCE_TERMINATE",
+ *         "autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
+ *         "autoscaling:EC2_INSTANCE_TERMINATE_ERROR",
+ *     ],
+ *     topicArn: example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sns.Topic("example")
+ * # arn is an exported attribute
+ * bar = aws.autoscaling.Group("bar")
+ * # ...
+ * foo = aws.autoscaling.Group("foo")
+ * # ...
+ * example_notifications = aws.autoscaling.Notification("exampleNotifications",
+ *     group_names=[
+ *         bar.name,
+ *         foo.name,
+ *     ],
+ *     notifications=[
+ *         "autoscaling:EC2_INSTANCE_LAUNCH",
+ *         "autoscaling:EC2_INSTANCE_TERMINATE",
+ *         "autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
+ *         "autoscaling:EC2_INSTANCE_TERMINATE_ERROR",
+ *     ],
+ *     topic_arn=example.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sns.Topic("example", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         // arn is an exported attribute
+ *         var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
+ *         {
+ *         });
+ *         // ...
+ *         var foo = new Aws.AutoScaling.Group("foo", new Aws.AutoScaling.GroupArgs
+ *         {
+ *         });
+ *         // ...
+ *         var exampleNotifications = new Aws.AutoScaling.Notification("exampleNotifications", new Aws.AutoScaling.NotificationArgs
+ *         {
+ *             GroupNames = 
+ *             {
+ *                 bar.Name,
+ *                 foo.Name,
+ *             },
+ *             Notifications = 
+ *             {
+ *                 "autoscaling:EC2_INSTANCE_LAUNCH",
+ *                 "autoscaling:EC2_INSTANCE_TERMINATE",
+ *                 "autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
+ *                 "autoscaling:EC2_INSTANCE_TERMINATE_ERROR",
+ *             },
+ *             TopicArn = example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := sns.NewTopic(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bar, err := autoscaling.NewGroup(ctx, "bar", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foo, err := autoscaling.NewGroup(ctx, "foo", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = autoscaling.NewNotification(ctx, "exampleNotifications", &autoscaling.NotificationArgs{
+ * 			GroupNames: pulumi.StringArray{
+ * 				bar.Name,
+ * 				foo.Name,
+ * 			},
+ * 			Notifications: pulumi.StringArray{
+ * 				pulumi.String("autoscaling:EC2_INSTANCE_LAUNCH"),
+ * 				pulumi.String("autoscaling:EC2_INSTANCE_TERMINATE"),
+ * 				pulumi.String("autoscaling:EC2_INSTANCE_LAUNCH_ERROR"),
+ * 				pulumi.String("autoscaling:EC2_INSTANCE_TERMINATE_ERROR"),
+ * 			},
+ * 			TopicArn: example.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:autoscaling/notification:Notification")
 public class Notification extends io.pulumi.resources.CustomResource {

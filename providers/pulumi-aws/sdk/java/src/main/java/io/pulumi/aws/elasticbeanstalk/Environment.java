@@ -24,7 +24,79 @@ import javax.annotation.Nullable;
  * Environments are often things such as `development`, `integration`, or
  * `production`.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const tftest = new aws.elasticbeanstalk.Application("tftest", {description: "tf-test-desc"});
+ * const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
+ *     application: tftest.name,
+ *     solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * tftest = aws.elasticbeanstalk.Application("tftest", description="tf-test-desc")
+ * tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
+ *     application=tftest.name,
+ *     solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tftest = new Aws.ElasticBeanstalk.Application("tftest", new Aws.ElasticBeanstalk.ApplicationArgs
+ *         {
+ *             Description = "tf-test-desc",
+ *         });
+ *         var tfenvtest = new Aws.ElasticBeanstalk.Environment("tfenvtest", new Aws.ElasticBeanstalk.EnvironmentArgs
+ *         {
+ *             Application = tftest.Name,
+ *             SolutionStackName = "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticbeanstalk"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tftest, err := elasticbeanstalk.NewApplication(ctx, "tftest", &elasticbeanstalk.ApplicationArgs{
+ * 			Description: pulumi.String("tf-test-desc"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticbeanstalk.NewEnvironment(ctx, "tfenvtest", &elasticbeanstalk.EnvironmentArgs{
+ * 			Application:       tftest.Name,
+ * 			SolutionStackName: pulumi.String("64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Option Settings
  * 
  * Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -39,6 +111,126 @@ import javax.annotation.Nullable;
  * 
  * ### Example With Options
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const tftest = new aws.elasticbeanstalk.Application("tftest", {description: "tf-test-desc"});
+ * const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
+ *     application: tftest.name,
+ *     solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+ *     settings: [
+ *         {
+ *             namespace: "aws:ec2:vpc",
+ *             name: "VPCId",
+ *             value: "vpc-xxxxxxxx",
+ *         },
+ *         {
+ *             namespace: "aws:ec2:vpc",
+ *             name: "Subnets",
+ *             value: "subnet-xxxxxxxx",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * tftest = aws.elasticbeanstalk.Application("tftest", description="tf-test-desc")
+ * tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
+ *     application=tftest.name,
+ *     solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+ *     settings=[
+ *         aws.elasticbeanstalk.EnvironmentSettingArgs(
+ *             namespace="aws:ec2:vpc",
+ *             name="VPCId",
+ *             value="vpc-xxxxxxxx",
+ *         ),
+ *         aws.elasticbeanstalk.EnvironmentSettingArgs(
+ *             namespace="aws:ec2:vpc",
+ *             name="Subnets",
+ *             value="subnet-xxxxxxxx",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tftest = new Aws.ElasticBeanstalk.Application("tftest", new Aws.ElasticBeanstalk.ApplicationArgs
+ *         {
+ *             Description = "tf-test-desc",
+ *         });
+ *         var tfenvtest = new Aws.ElasticBeanstalk.Environment("tfenvtest", new Aws.ElasticBeanstalk.EnvironmentArgs
+ *         {
+ *             Application = tftest.Name,
+ *             SolutionStackName = "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+ *             Settings = 
+ *             {
+ *                 new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
+ *                 {
+ *                     Namespace = "aws:ec2:vpc",
+ *                     Name = "VPCId",
+ *                     Value = "vpc-xxxxxxxx",
+ *                 },
+ *                 new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
+ *                 {
+ *                     Namespace = "aws:ec2:vpc",
+ *                     Name = "Subnets",
+ *                     Value = "subnet-xxxxxxxx",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticbeanstalk"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tftest, err := elasticbeanstalk.NewApplication(ctx, "tftest", &elasticbeanstalk.ApplicationArgs{
+ * 			Description: pulumi.String("tf-test-desc"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticbeanstalk.NewEnvironment(ctx, "tfenvtest", &elasticbeanstalk.EnvironmentArgs{
+ * 			Application:       tftest.Name,
+ * 			SolutionStackName: pulumi.String("64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4"),
+ * 			Settings: elasticbeanstalk.EnvironmentSettingArray{
+ * 				&elasticbeanstalk.EnvironmentSettingArgs{
+ * 					Namespace: pulumi.String("aws:ec2:vpc"),
+ * 					Name:      pulumi.String("VPCId"),
+ * 					Value:     pulumi.String("vpc-xxxxxxxx"),
+ * 				},
+ * 				&elasticbeanstalk.EnvironmentSettingArgs{
+ * 					Namespace: pulumi.String("aws:ec2:vpc"),
+ * 					Name:      pulumi.String("Subnets"),
+ * 					Value:     pulumi.String("subnet-xxxxxxxx"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * 
  * ## Import
  * 
  * Elastic Beanstalk Environments can be imported using the `id`, e.g.,
@@ -47,6 +239,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticbeanstalk/environment:Environment prodenv e-rpqsewtp2j
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticbeanstalk/environment:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {

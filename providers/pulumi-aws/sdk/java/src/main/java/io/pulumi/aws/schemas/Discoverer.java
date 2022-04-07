@@ -18,7 +18,78 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const messenger = new aws.cloudwatch.EventBus("messenger", {});
+ * const test = new aws.schemas.Discoverer("test", {
+ *     sourceArn: messenger.arn,
+ *     description: "Auto discover event schemas",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * messenger = aws.cloudwatch.EventBus("messenger")
+ * test = aws.schemas.Discoverer("test",
+ *     source_arn=messenger.arn,
+ *     description="Auto discover event schemas")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var messenger = new Aws.CloudWatch.EventBus("messenger", new Aws.CloudWatch.EventBusArgs
+ *         {
+ *         });
+ *         var test = new Aws.Schemas.Discoverer("test", new Aws.Schemas.DiscovererArgs
+ *         {
+ *             SourceArn = messenger.Arn,
+ *             Description = "Auto discover event schemas",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/schemas"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		messenger, err := cloudwatch.NewEventBus(ctx, "messenger", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = schemas.NewDiscoverer(ctx, "test", &schemas.DiscovererArgs{
+ * 			SourceArn:   messenger.Arn,
+ * 			Description: pulumi.String("Auto discover event schemas"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +99,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:schemas/discoverer:Discoverer test 123
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:schemas/discoverer:Discoverer")
 public class Discoverer extends io.pulumi.resources.CustomResource {

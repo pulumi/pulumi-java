@@ -18,7 +18,196 @@ import javax.annotation.Nullable;
 /**
  * Provides an SSM Parameter resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * To store a basic string parameter:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.ssm.Parameter("foo", {
+ *     type: "String",
+ *     value: "bar",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.ssm.Parameter("foo",
+ *     type="String",
+ *     value="bar")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Ssm.Parameter("foo", new Aws.Ssm.ParameterArgs
+ *         {
+ *             Type = "String",
+ *             Value = "bar",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewParameter(ctx, "foo", &ssm.ParameterArgs{
+ * 			Type:  pulumi.String("String"),
+ * 			Value: pulumi.String("bar"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * To store an encrypted string using the default SSM KMS key:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const _default = new aws.rds.Instance("default", {
+ *     allocatedStorage: 10,
+ *     storageType: "gp2",
+ *     engine: "mysql",
+ *     engineVersion: "5.7.16",
+ *     instanceClass: "db.t2.micro",
+ *     name: "mydb",
+ *     username: "foo",
+ *     password: _var.database_master_password,
+ *     dbSubnetGroupName: "my_database_subnet_group",
+ *     parameterGroupName: "default.mysql5.7",
+ * });
+ * const secret = new aws.ssm.Parameter("secret", {
+ *     description: "The parameter description",
+ *     type: "SecureString",
+ *     value: _var.database_master_password,
+ *     tags: {
+ *         environment: "production",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.rds.Instance("default",
+ *     allocated_storage=10,
+ *     storage_type="gp2",
+ *     engine="mysql",
+ *     engine_version="5.7.16",
+ *     instance_class="db.t2.micro",
+ *     name="mydb",
+ *     username="foo",
+ *     password=var["database_master_password"],
+ *     db_subnet_group_name="my_database_subnet_group",
+ *     parameter_group_name="default.mysql5.7")
+ * secret = aws.ssm.Parameter("secret",
+ *     description="The parameter description",
+ *     type="SecureString",
+ *     value=var["database_master_password"],
+ *     tags={
+ *         "environment": "production",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Rds.Instance("default", new Aws.Rds.InstanceArgs
+ *         {
+ *             AllocatedStorage = 10,
+ *             StorageType = "gp2",
+ *             Engine = "mysql",
+ *             EngineVersion = "5.7.16",
+ *             InstanceClass = "db.t2.micro",
+ *             Name = "mydb",
+ *             Username = "foo",
+ *             Password = @var.Database_master_password,
+ *             DbSubnetGroupName = "my_database_subnet_group",
+ *             ParameterGroupName = "default.mysql5.7",
+ *         });
+ *         var secret = new Aws.Ssm.Parameter("secret", new Aws.Ssm.ParameterArgs
+ *         {
+ *             Description = "The parameter description",
+ *             Type = "SecureString",
+ *             Value = @var.Database_master_password,
+ *             Tags = 
+ *             {
+ *                 { "environment", "production" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewInstance(ctx, "default", &rds.InstanceArgs{
+ * 			AllocatedStorage:   pulumi.Int(10),
+ * 			StorageType:        pulumi.String("gp2"),
+ * 			Engine:             pulumi.String("mysql"),
+ * 			EngineVersion:      pulumi.String("5.7.16"),
+ * 			InstanceClass:      pulumi.String("db.t2.micro"),
+ * 			Name:               pulumi.String("mydb"),
+ * 			Username:           pulumi.String("foo"),
+ * 			Password:           pulumi.Any(_var.Database_master_password),
+ * 			DbSubnetGroupName:  pulumi.String("my_database_subnet_group"),
+ * 			ParameterGroupName: pulumi.String("default.mysql5.7"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ssm.NewParameter(ctx, "secret", &ssm.ParameterArgs{
+ * 			Description: pulumi.String("The parameter description"),
+ * 			Type:        pulumi.String("SecureString"),
+ * 			Value:       pulumi.Any(_var.Database_master_password),
+ * 			Tags: pulumi.StringMap{
+ * 				"environment": pulumi.String("production"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +217,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ssm/parameter:Parameter my_param /my_path/my_paramname
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ssm/parameter:Parameter")
 public class Parameter extends io.pulumi.resources.CustomResource {

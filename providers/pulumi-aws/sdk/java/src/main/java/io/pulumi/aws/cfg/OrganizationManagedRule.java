@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Every Organization account except those configured in the `excluded_accounts` argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the `aws.cfg.Recorder` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
+ *     awsServiceAccessPrincipals: ["config-multiaccountsetup.amazonaws.com"],
+ *     featureSet: "ALL",
+ * });
+ * const exampleOrganizationManagedRule = new aws.cfg.OrganizationManagedRule("exampleOrganizationManagedRule", {ruleIdentifier: "IAM_PASSWORD_POLICY"}, {
+ *     dependsOn: [exampleOrganization],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_organization = aws.organizations.Organization("exampleOrganization",
+ *     aws_service_access_principals=["config-multiaccountsetup.amazonaws.com"],
+ *     feature_set="ALL")
+ * example_organization_managed_rule = aws.cfg.OrganizationManagedRule("exampleOrganizationManagedRule", rule_identifier="IAM_PASSWORD_POLICY",
+ * opts=pulumi.ResourceOptions(depends_on=[example_organization]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "config-multiaccountsetup.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *         var exampleOrganizationManagedRule = new Aws.Cfg.OrganizationManagedRule("exampleOrganizationManagedRule", new Aws.Cfg.OrganizationManagedRuleArgs
+ *         {
+ *             RuleIdentifier = "IAM_PASSWORD_POLICY",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("config-multiaccountsetup.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewOrganizationManagedRule(ctx, "exampleOrganizationManagedRule", &cfg.OrganizationManagedRuleArgs{
+ * 			RuleIdentifier: pulumi.String("IAM_PASSWORD_POLICY"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +119,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/organizationManagedRule:OrganizationManagedRule example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/organizationManagedRule:OrganizationManagedRule")
 public class OrganizationManagedRule extends io.pulumi.resources.CustomResource {

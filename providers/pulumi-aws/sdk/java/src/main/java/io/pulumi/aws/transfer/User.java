@@ -19,7 +19,234 @@ import javax.annotation.Nullable;
 /**
  * Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the `aws.transfer.SshKey` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const fooServer = new aws.transfer.Server("fooServer", {
+ *     identityProviderType: "SERVICE_MANAGED",
+ *     tags: {
+ *         NAME: "tf-acc-test-transfer-server",
+ *     },
+ * });
+ * const fooRole = new aws.iam.Role("fooRole", {assumeRolePolicy: `{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 		"Effect": "Allow",
+ * 		"Principal": {
+ * 			"Service": "transfer.amazonaws.com"
+ * 		},
+ * 		"Action": "sts:AssumeRole"
+ * 		}
+ * 	]
+ * }
+ * `});
+ * const fooRolePolicy = new aws.iam.RolePolicy("fooRolePolicy", {
+ *     role: fooRole.id,
+ *     policy: `{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 			"Sid": "AllowFullAccesstoS3",
+ * 			"Effect": "Allow",
+ * 			"Action": [
+ * 				"s3:*"
+ * 			],
+ * 			"Resource": "*"
+ * 		}
+ * 	]
+ * }
+ * `,
+ * });
+ * const fooUser = new aws.transfer.User("fooUser", {
+ *     serverId: fooServer.id,
+ *     userName: "tftestuser",
+ *     role: fooRole.arn,
+ *     homeDirectoryType: "LOGICAL",
+ *     homeDirectoryMappings: [{
+ *         entry: "/test.pdf",
+ *         target: "/bucket3/test-path/tftestuser.pdf",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo_server = aws.transfer.Server("fooServer",
+ *     identity_provider_type="SERVICE_MANAGED",
+ *     tags={
+ *         "NAME": "tf-acc-test-transfer-server",
+ *     })
+ * foo_role = aws.iam.Role("fooRole", assume_role_policy="""{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 		"Effect": "Allow",
+ * 		"Principal": {
+ * 			"Service": "transfer.amazonaws.com"
+ * 		},
+ * 		"Action": "sts:AssumeRole"
+ * 		}
+ * 	]
+ * }
+ * """)
+ * foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
+ *     role=foo_role.id,
+ *     policy="""{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [
+ * 		{
+ * 			"Sid": "AllowFullAccesstoS3",
+ * 			"Effect": "Allow",
+ * 			"Action": [
+ * 				"s3:*"
+ * 			],
+ * 			"Resource": "*"
+ * 		}
+ * 	]
+ * }
+ * """)
+ * foo_user = aws.transfer.User("fooUser",
+ *     server_id=foo_server.id,
+ *     user_name="tftestuser",
+ *     role=foo_role.arn,
+ *     home_directory_type="LOGICAL",
+ *     home_directory_mappings=[aws.transfer.UserHomeDirectoryMappingArgs(
+ *         entry="/test.pdf",
+ *         target="/bucket3/test-path/tftestuser.pdf",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fooServer = new Aws.Transfer.Server("fooServer", new Aws.Transfer.ServerArgs
+ *         {
+ *             IdentityProviderType = "SERVICE_MANAGED",
+ *             Tags = 
+ *             {
+ *                 { "NAME", "tf-acc-test-transfer-server" },
+ *             },
+ *         });
+ *         var fooRole = new Aws.Iam.Role("fooRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ * 	""Version"": ""2012-10-17"",
+ * 	""Statement"": [
+ * 		{
+ * 		""Effect"": ""Allow"",
+ * 		""Principal"": {
+ * 			""Service"": ""transfer.amazonaws.com""
+ * 		},
+ * 		""Action"": ""sts:AssumeRole""
+ * 		}
+ * 	]
+ * }
+ * ",
+ *         });
+ *         var fooRolePolicy = new Aws.Iam.RolePolicy("fooRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = fooRole.Id,
+ *             Policy = @"{
+ * 	""Version"": ""2012-10-17"",
+ * 	""Statement"": [
+ * 		{
+ * 			""Sid"": ""AllowFullAccesstoS3"",
+ * 			""Effect"": ""Allow"",
+ * 			""Action"": [
+ * 				""s3:*""
+ * 			],
+ * 			""Resource"": ""*""
+ * 		}
+ * 	]
+ * }
+ * ",
+ *         });
+ *         var fooUser = new Aws.Transfer.User("fooUser", new Aws.Transfer.UserArgs
+ *         {
+ *             ServerId = fooServer.Id,
+ *             UserName = "tftestuser",
+ *             Role = fooRole.Arn,
+ *             HomeDirectoryType = "LOGICAL",
+ *             HomeDirectoryMappings = 
+ *             {
+ *                 new Aws.Transfer.Inputs.UserHomeDirectoryMappingArgs
+ *                 {
+ *                     Entry = "/test.pdf",
+ *                     Target = "/bucket3/test-path/tftestuser.pdf",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/transfer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		fooServer, err := transfer.NewServer(ctx, "fooServer", &transfer.ServerArgs{
+ * 			IdentityProviderType: pulumi.String("SERVICE_MANAGED"),
+ * 			Tags: pulumi.StringMap{
+ * 				"NAME": pulumi.String("tf-acc-test-transfer-server"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		fooRole, err := iam.NewRole(ctx, "fooRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "		\"Effect\": \"Allow\",\n", "		\"Principal\": {\n", "			\"Service\": \"transfer.amazonaws.com\"\n", "		},\n", "		\"Action\": \"sts:AssumeRole\"\n", "		}\n", "	]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "fooRolePolicy", &iam.RolePolicyArgs{
+ * 			Role: fooRole.ID(),
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "			\"Sid\": \"AllowFullAccesstoS3\",\n", "			\"Effect\": \"Allow\",\n", "			\"Action\": [\n", "				\"s3:*\"\n", "			],\n", "			\"Resource\": \"*\"\n", "		}\n", "	]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = transfer.NewUser(ctx, "fooUser", &transfer.UserArgs{
+ * 			ServerId:          fooServer.ID(),
+ * 			UserName:          pulumi.String("tftestuser"),
+ * 			Role:              fooRole.Arn,
+ * 			HomeDirectoryType: pulumi.String("LOGICAL"),
+ * 			HomeDirectoryMappings: transfer.UserHomeDirectoryMappingArray{
+ * 				&transfer.UserHomeDirectoryMappingArgs{
+ * 					Entry:  pulumi.String("/test.pdf"),
+ * 					Target: pulumi.String("/bucket3/test-path/tftestuser.pdf"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +256,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:transfer/user:User bar s-12345678/test-username
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:transfer/user:User")
 public class User extends io.pulumi.resources.CustomResource {

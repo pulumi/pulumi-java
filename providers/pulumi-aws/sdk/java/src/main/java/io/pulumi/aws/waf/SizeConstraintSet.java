@@ -17,7 +17,97 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Size Constraint Set Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
+ *     sizeConstraints: [{
+ *         comparisonOperator: "EQ",
+ *         fieldToMatch: {
+ *             type: "BODY",
+ *         },
+ *         size: 4096,
+ *         textTransformation: "NONE",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * size_constraint_set = aws.waf.SizeConstraintSet("sizeConstraintSet", size_constraints=[aws.waf.SizeConstraintSetSizeConstraintArgs(
+ *     comparison_operator="EQ",
+ *     field_to_match=aws.waf.SizeConstraintSetSizeConstraintFieldToMatchArgs(
+ *         type="BODY",
+ *     ),
+ *     size=4096,
+ *     text_transformation="NONE",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sizeConstraintSet = new Aws.Waf.SizeConstraintSet("sizeConstraintSet", new Aws.Waf.SizeConstraintSetArgs
+ *         {
+ *             SizeConstraints = 
+ *             {
+ *                 new Aws.Waf.Inputs.SizeConstraintSetSizeConstraintArgs
+ *                 {
+ *                     ComparisonOperator = "EQ",
+ *                     FieldToMatch = new Aws.Waf.Inputs.SizeConstraintSetSizeConstraintFieldToMatchArgs
+ *                     {
+ *                         Type = "BODY",
+ *                     },
+ *                     Size = 4096,
+ *                     TextTransformation = "NONE",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/waf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := waf.NewSizeConstraintSet(ctx, "sizeConstraintSet", &waf.SizeConstraintSetArgs{
+ * 			SizeConstraints: waf.SizeConstraintSetSizeConstraintArray{
+ * 				&waf.SizeConstraintSetSizeConstraintArgs{
+ * 					ComparisonOperator: pulumi.String("EQ"),
+ * 					FieldToMatch: &waf.SizeConstraintSetSizeConstraintFieldToMatchArgs{
+ * 						Type: pulumi.String("BODY"),
+ * 					},
+ * 					Size:               pulumi.Int(4096),
+ * 					TextTransformation: pulumi.String("NONE"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +117,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:waf/sizeConstraintSet:SizeConstraintSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:waf/sizeConstraintSet:SizeConstraintSet")
 public class SizeConstraintSet extends io.pulumi.resources.CustomResource {

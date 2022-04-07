@@ -17,7 +17,184 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** If a Principal is specified as just an AWS account ID rather than an ARN, AWS silently converts it to the ARN for the root user, causing future deployments to differ. To avoid this problem, just specify the full ARN, e.g. `arn:aws:iam::123456789012:root`
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.sns.Topic("test", {});
+ * const snsTopicPolicy = test.arn.apply(arn => aws.iam.getPolicyDocumentOutput({
+ *     policyId: "__default_policy_ID",
+ *     statements: [{
+ *         actions: [
+ *             "SNS:Subscribe",
+ *             "SNS:SetTopicAttributes",
+ *             "SNS:RemovePermission",
+ *             "SNS:Receive",
+ *             "SNS:Publish",
+ *             "SNS:ListSubscriptionsByTopic",
+ *             "SNS:GetTopicAttributes",
+ *             "SNS:DeleteTopic",
+ *             "SNS:AddPermission",
+ *         ],
+ *         conditions: [{
+ *             test: "StringEquals",
+ *             variable: "AWS:SourceOwner",
+ *             values: [_var["account-id"]],
+ *         }],
+ *         effect: "Allow",
+ *         principals: [{
+ *             type: "AWS",
+ *             identifiers: ["*"],
+ *         }],
+ *         resources: [arn],
+ *         sid: "__default_statement_ID",
+ *     }],
+ * }));
+ * const _default = new aws.sns.TopicPolicy("default", {
+ *     arn: test.arn,
+ *     policy: snsTopicPolicy.apply(snsTopicPolicy => snsTopicPolicy.json),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.sns.Topic("test")
+ * sns_topic_policy = test.arn.apply(lambda arn: aws.iam.get_policy_document_output(policy_id="__default_policy_ID",
+ *     statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *         actions=[
+ *             "SNS:Subscribe",
+ *             "SNS:SetTopicAttributes",
+ *             "SNS:RemovePermission",
+ *             "SNS:Receive",
+ *             "SNS:Publish",
+ *             "SNS:ListSubscriptionsByTopic",
+ *             "SNS:GetTopicAttributes",
+ *             "SNS:DeleteTopic",
+ *             "SNS:AddPermission",
+ *         ],
+ *         conditions=[aws.iam.GetPolicyDocumentStatementConditionArgs(
+ *             test="StringEquals",
+ *             variable="AWS:SourceOwner",
+ *             values=[var["account-id"]],
+ *         )],
+ *         effect="Allow",
+ *         principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *             type="AWS",
+ *             identifiers=["*"],
+ *         )],
+ *         resources=[arn],
+ *         sid="__default_statement_ID",
+ *     )]))
+ * default = aws.sns.TopicPolicy("default",
+ *     arn=test.arn,
+ *     policy=sns_topic_policy.json)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Sns.Topic("test", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var snsTopicPolicy = test.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *         {
+ *             PolicyId = "__default_policy_ID",
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "SNS:Subscribe",
+ *                         "SNS:SetTopicAttributes",
+ *                         "SNS:RemovePermission",
+ *                         "SNS:Receive",
+ *                         "SNS:Publish",
+ *                         "SNS:ListSubscriptionsByTopic",
+ *                         "SNS:GetTopicAttributes",
+ *                         "SNS:DeleteTopic",
+ *                         "SNS:AddPermission",
+ *                     },
+ *                     Conditions = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionInputArgs
+ *                         {
+ *                             Test = "StringEquals",
+ *                             Variable = "AWS:SourceOwner",
+ *                             Values = 
+ *                             {
+ *                                 @var.Account_id,
+ *                             },
+ *                         },
+ *                     },
+ *                     Effect = "Allow",
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                         {
+ *                             Type = "AWS",
+ *                             Identifiers = 
+ *                             {
+ *                                 "*",
+ *                             },
+ *                         },
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         arn,
+ *                     },
+ *                     Sid = "__default_statement_ID",
+ *                 },
+ *             },
+ *         }));
+ *         var @default = new Aws.Sns.TopicPolicy("default", new Aws.Sns.TopicPolicyArgs
+ *         {
+ *             Arn = test.Arn,
+ *             Policy = snsTopicPolicy.Apply(snsTopicPolicy => snsTopicPolicy.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		test, err := sns.NewTopic(ctx, "test", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
+ * 			Arn: test.Arn,
+ * 			Policy: snsTopicPolicy.ApplyT(func(snsTopicPolicy iam.GetPolicyDocumentResult) (string, error) {
+ * 				return snsTopicPolicy.Json, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +204,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sns/topicPolicy:TopicPolicy user_updates arn:aws:sns:us-west-2:0123456789012:my-topic
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sns/topicPolicy:TopicPolicy")
 public class TopicPolicy extends io.pulumi.resources.CustomResource {

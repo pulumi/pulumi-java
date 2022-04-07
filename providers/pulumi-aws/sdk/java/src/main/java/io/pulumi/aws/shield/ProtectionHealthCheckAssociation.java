@@ -18,7 +18,191 @@ import javax.annotation.Nullable;
  * 
  * Blog post: [AWS Shield Advanced now supports Health Based Detection](https://aws.amazon.com/about-aws/whats-new/2020/02/aws-shield-advanced-now-supports-health-based-detection/)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an association between a protected EIP and a Route53 Health Check
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const currentRegion = aws.getRegion({});
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const currentPartition = aws.getPartition({});
+ * const exampleEip = new aws.ec2.Eip("exampleEip", {
+ *     vpc: true,
+ *     tags: {
+ *         Name: "example",
+ *     },
+ * });
+ * const exampleProtection = new aws.shield.Protection("exampleProtection", {resourceArn: pulumi.all([currentPartition, currentRegion, currentCallerIdentity, exampleEip.id]).apply(([currentPartition, currentRegion, currentCallerIdentity, id]) => `arn:${currentPartition.partition}:ec2:${currentRegion.name}:${currentCallerIdentity.accountId}:eip-allocation/${id}`)});
+ * const exampleHealthCheck = new aws.route53.HealthCheck("exampleHealthCheck", {
+ *     ipAddress: exampleEip.publicIp,
+ *     port: 80,
+ *     type: "HTTP",
+ *     resourcePath: "/ready",
+ *     failureThreshold: "3",
+ *     requestInterval: "30",
+ *     tags: {
+ *         Name: "tf-example-health-check",
+ *     },
+ * });
+ * const exampleProtectionHealthCheckAssociation = new aws.shield.ProtectionHealthCheckAssociation("exampleProtectionHealthCheckAssociation", {
+ *     healthCheckArn: exampleHealthCheck.arn,
+ *     shieldProtectionId: exampleProtection.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current_region = aws.get_region()
+ * current_caller_identity = aws.get_caller_identity()
+ * current_partition = aws.get_partition()
+ * example_eip = aws.ec2.Eip("exampleEip",
+ *     vpc=True,
+ *     tags={
+ *         "Name": "example",
+ *     })
+ * example_protection = aws.shield.Protection("exampleProtection", resource_arn=example_eip.id.apply(lambda id: f"arn:{current_partition.partition}:ec2:{current_region.name}:{current_caller_identity.account_id}:eip-allocation/{id}"))
+ * example_health_check = aws.route53.HealthCheck("exampleHealthCheck",
+ *     ip_address=example_eip.public_ip,
+ *     port=80,
+ *     type="HTTP",
+ *     resource_path="/ready",
+ *     failure_threshold=3,
+ *     request_interval=30,
+ *     tags={
+ *         "Name": "tf-example-health-check",
+ *     })
+ * example_protection_health_check_association = aws.shield.ProtectionHealthCheckAssociation("exampleProtectionHealthCheckAssociation",
+ *     health_check_arn=example_health_check.arn,
+ *     shield_protection_id=example_protection.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var currentPartition = Output.Create(Aws.GetPartition.InvokeAsync());
+ *         var exampleEip = new Aws.Ec2.Eip("exampleEip", new Aws.Ec2.EipArgs
+ *         {
+ *             Vpc = true,
+ *             Tags = 
+ *             {
+ *                 { "Name", "example" },
+ *             },
+ *         });
+ *         var exampleProtection = new Aws.Shield.Protection("exampleProtection", new Aws.Shield.ProtectionArgs
+ *         {
+ *             ResourceArn = Output.Tuple(currentPartition, currentRegion, currentCallerIdentity, exampleEip.Id).Apply(values =>
+ *             {
+ *                 var currentPartition = values.Item1;
+ *                 var currentRegion = values.Item2;
+ *                 var currentCallerIdentity = values.Item3;
+ *                 var id = values.Item4;
+ *                 return $"arn:{currentPartition.Partition}:ec2:{currentRegion.Name}:{currentCallerIdentity.AccountId}:eip-allocation/{id}";
+ *             }),
+ *         });
+ *         var exampleHealthCheck = new Aws.Route53.HealthCheck("exampleHealthCheck", new Aws.Route53.HealthCheckArgs
+ *         {
+ *             IpAddress = exampleEip.PublicIp,
+ *             Port = 80,
+ *             Type = "HTTP",
+ *             ResourcePath = "/ready",
+ *             FailureThreshold = 3,
+ *             RequestInterval = 30,
+ *             Tags = 
+ *             {
+ *                 { "Name", "tf-example-health-check" },
+ *             },
+ *         });
+ *         var exampleProtectionHealthCheckAssociation = new Aws.Shield.ProtectionHealthCheckAssociation("exampleProtectionHealthCheckAssociation", new Aws.Shield.ProtectionHealthCheckAssociationArgs
+ *         {
+ *             HealthCheckArn = exampleHealthCheck.Arn,
+ *             ShieldProtectionId = exampleProtection.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/shield"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentPartition, err := aws.GetPartition(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleEip, err := ec2.NewEip(ctx, "exampleEip", &ec2.EipArgs{
+ * 			Vpc: pulumi.Bool(true),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleProtection, err := shield.NewProtection(ctx, "exampleProtection", &shield.ProtectionArgs{
+ * 			ResourceArn: exampleEip.ID().ApplyT(func(id string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v", "arn:", currentPartition.Partition, ":ec2:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":eip-allocation/", id), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleHealthCheck, err := route53.NewHealthCheck(ctx, "exampleHealthCheck", &route53.HealthCheckArgs{
+ * 			IpAddress:        exampleEip.PublicIp,
+ * 			Port:             pulumi.Int(80),
+ * 			Type:             pulumi.String("HTTP"),
+ * 			ResourcePath:     pulumi.String("/ready"),
+ * 			FailureThreshold: pulumi.Int(3),
+ * 			RequestInterval:  pulumi.Int(30),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("tf-example-health-check"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = shield.NewProtectionHealthCheckAssociation(ctx, "exampleProtectionHealthCheckAssociation", &shield.ProtectionHealthCheckAssociationArgs{
+ * 			HealthCheckArn:     exampleHealthCheck.Arn,
+ * 			ShieldProtectionId: exampleProtection.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +212,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:shield/protectionHealthCheckAssociation:ProtectionHealthCheckAssociation example ff9592dc-22f3-4e88-afa1-7b29fde9669a+arn:aws:route53:::healthcheck/3742b175-edb9-46bc-9359-f53e3b794b1b
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:shield/protectionHealthCheckAssociation:ProtectionHealthCheckAssociation")
 public class ProtectionHealthCheckAssociation extends io.pulumi.resources.CustomResource {

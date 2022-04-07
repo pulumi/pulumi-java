@@ -15,7 +15,79 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppSync API Key.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {authenticationType: "API_KEY"});
+ * const exampleApiKey = new aws.appsync.ApiKey("exampleApiKey", {
+ *     apiId: exampleGraphQLApi.id,
+ *     expires: "2018-05-03T04:00:00Z",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", authentication_type="API_KEY")
+ * example_api_key = aws.appsync.ApiKey("exampleApiKey",
+ *     api_id=example_graph_ql_api.id,
+ *     expires="2018-05-03T04:00:00Z")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+ *         {
+ *             AuthenticationType = "API_KEY",
+ *         });
+ *         var exampleApiKey = new Aws.AppSync.ApiKey("exampleApiKey", new Aws.AppSync.ApiKeyArgs
+ *         {
+ *             ApiId = exampleGraphQLApi.Id,
+ *             Expires = "2018-05-03T04:00:00Z",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appsync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleGraphQLApi, err := appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
+ * 			AuthenticationType: pulumi.String("API_KEY"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = appsync.NewApiKey(ctx, "exampleApiKey", &appsync.ApiKeyArgs{
+ * 			ApiId:   exampleGraphQLApi.ID(),
+ * 			Expires: pulumi.String("2018-05-03T04:00:00Z"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appsync/apiKey:ApiKey example xxxxx:yyyyy
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appsync/apiKey:ApiKey")
 public class ApiKey extends io.pulumi.resources.CustomResource {

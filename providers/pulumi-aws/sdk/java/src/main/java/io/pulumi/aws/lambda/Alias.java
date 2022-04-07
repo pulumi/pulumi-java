@@ -19,7 +19,93 @@ import javax.annotation.Nullable;
  * For information about Lambda and how to use it, see [What is AWS Lambda?](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
  * For information about function aliases, see [CreateAlias](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateAlias.html) and [AliasRoutingConfiguration](https://docs.aws.amazon.com/lambda/latest/dg/API_AliasRoutingConfiguration.html) in the API docs.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testLambdaAlias = new aws.lambda.Alias("testLambdaAlias", {
+ *     description: "a sample description",
+ *     functionName: aws_lambda_function.lambda_function_test.arn,
+ *     functionVersion: "1",
+ *     routingConfig: {
+ *         additionalVersionWeights: {
+ *             "2": 0.5,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_lambda_alias = aws.lambda_.Alias("testLambdaAlias",
+ *     description="a sample description",
+ *     function_name=aws_lambda_function["lambda_function_test"]["arn"],
+ *     function_version="1",
+ *     routing_config=aws.lambda..AliasRoutingConfigArgs(
+ *         additional_version_weights={
+ *             "2": 0.5,
+ *         },
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testLambdaAlias = new Aws.Lambda.Alias("testLambdaAlias", new Aws.Lambda.AliasArgs
+ *         {
+ *             Description = "a sample description",
+ *             FunctionName = aws_lambda_function.Lambda_function_test.Arn,
+ *             FunctionVersion = "1",
+ *             RoutingConfig = new Aws.Lambda.Inputs.AliasRoutingConfigArgs
+ *             {
+ *                 AdditionalVersionWeights = 
+ *                 {
+ *                     { "2", 0.5 },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewAlias(ctx, "testLambdaAlias", &lambda.AliasArgs{
+ * 			Description:     pulumi.String("a sample description"),
+ * 			FunctionName:    pulumi.Any(aws_lambda_function.Lambda_function_test.Arn),
+ * 			FunctionVersion: pulumi.String("1"),
+ * 			RoutingConfig: &lambda.AliasRoutingConfigArgs{
+ * 				AdditionalVersionWeights: pulumi.Float64Map{
+ * 					"2": pulumi.Float64(0.5),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +115,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lambda/alias:Alias test_lambda_alias my_test_lambda_function/my_alias
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lambda/alias:Alias")
 public class Alias extends io.pulumi.resources.CustomResource {

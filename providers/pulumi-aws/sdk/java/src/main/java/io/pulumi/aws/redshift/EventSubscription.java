@@ -18,7 +18,150 @@ import javax.annotation.Nullable;
 /**
  * Provides a Redshift event subscription resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCluster = new aws.redshift.Cluster("defaultCluster", {
+ *     clusterIdentifier: "default",
+ *     databaseName: "default",
+ * });
+ * // ...
+ * const defaultTopic = new aws.sns.Topic("defaultTopic", {});
+ * const defaultEventSubscription = new aws.redshift.EventSubscription("defaultEventSubscription", {
+ *     snsTopicArn: defaultTopic.arn,
+ *     sourceType: "cluster",
+ *     sourceIds: [defaultCluster.id],
+ *     severity: "INFO",
+ *     eventCategories: [
+ *         "configuration",
+ *         "management",
+ *         "monitoring",
+ *         "security",
+ *     ],
+ *     tags: {
+ *         Name: "default",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_cluster = aws.redshift.Cluster("defaultCluster",
+ *     cluster_identifier="default",
+ *     database_name="default")
+ * # ...
+ * default_topic = aws.sns.Topic("defaultTopic")
+ * default_event_subscription = aws.redshift.EventSubscription("defaultEventSubscription",
+ *     sns_topic_arn=default_topic.arn,
+ *     source_type="cluster",
+ *     source_ids=[default_cluster.id],
+ *     severity="INFO",
+ *     event_categories=[
+ *         "configuration",
+ *         "management",
+ *         "monitoring",
+ *         "security",
+ *     ],
+ *     tags={
+ *         "Name": "default",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultCluster = new Aws.RedShift.Cluster("defaultCluster", new Aws.RedShift.ClusterArgs
+ *         {
+ *             ClusterIdentifier = "default",
+ *             DatabaseName = "default",
+ *         });
+ *         // ...
+ *         var defaultTopic = new Aws.Sns.Topic("defaultTopic", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var defaultEventSubscription = new Aws.RedShift.EventSubscription("defaultEventSubscription", new Aws.RedShift.EventSubscriptionArgs
+ *         {
+ *             SnsTopicArn = defaultTopic.Arn,
+ *             SourceType = "cluster",
+ *             SourceIds = 
+ *             {
+ *                 defaultCluster.Id,
+ *             },
+ *             Severity = "INFO",
+ *             EventCategories = 
+ *             {
+ *                 "configuration",
+ *                 "management",
+ *                 "monitoring",
+ *                 "security",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "default" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultCluster, err := redshift.NewCluster(ctx, "defaultCluster", &redshift.ClusterArgs{
+ * 			ClusterIdentifier: pulumi.String("default"),
+ * 			DatabaseName:      pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		defaultTopic, err := sns.NewTopic(ctx, "defaultTopic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = redshift.NewEventSubscription(ctx, "defaultEventSubscription", &redshift.EventSubscriptionArgs{
+ * 			SnsTopicArn: defaultTopic.Arn,
+ * 			SourceType:  pulumi.String("cluster"),
+ * 			SourceIds: pulumi.StringArray{
+ * 				defaultCluster.ID(),
+ * 			},
+ * 			Severity: pulumi.String("INFO"),
+ * 			EventCategories: pulumi.StringArray{
+ * 				pulumi.String("configuration"),
+ * 				pulumi.String("management"),
+ * 				pulumi.String("monitoring"),
+ * 				pulumi.String("security"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("default"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +171,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/eventSubscription:EventSubscription default redshift-event-sub
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/eventSubscription:EventSubscription")
 public class EventSubscription extends io.pulumi.resources.CustomResource {

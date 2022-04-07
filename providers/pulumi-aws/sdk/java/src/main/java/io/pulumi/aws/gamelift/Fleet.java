@@ -20,12 +20,106 @@ import javax.annotation.Nullable;
 /**
  * Provides a Gamelift Fleet resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.gamelift.Fleet("example", {
+ *     buildId: aws_gamelift_build.example.id,
+ *     ec2InstanceType: "t2.micro",
+ *     fleetType: "ON_DEMAND",
+ *     runtimeConfiguration: {
+ *         serverProcesses: [{
+ *             concurrentExecutions: 1,
+ *             launchPath: "C:\\game\\GomokuServer.exe",
+ *         }],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.gamelift.Fleet("example",
+ *     build_id=aws_gamelift_build["example"]["id"],
+ *     ec2_instance_type="t2.micro",
+ *     fleet_type="ON_DEMAND",
+ *     runtime_configuration=aws.gamelift.FleetRuntimeConfigurationArgs(
+ *         server_processes=[aws.gamelift.FleetRuntimeConfigurationServerProcessArgs(
+ *             concurrent_executions=1,
+ *             launch_path="C:\\game\\GomokuServer.exe",
+ *         )],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.GameLift.Fleet("example", new Aws.GameLift.FleetArgs
+ *         {
+ *             BuildId = aws_gamelift_build.Example.Id,
+ *             Ec2InstanceType = "t2.micro",
+ *             FleetType = "ON_DEMAND",
+ *             RuntimeConfiguration = new Aws.GameLift.Inputs.FleetRuntimeConfigurationArgs
+ *             {
+ *                 ServerProcesses = 
+ *                 {
+ *                     new Aws.GameLift.Inputs.FleetRuntimeConfigurationServerProcessArgs
+ *                     {
+ *                         ConcurrentExecutions = 1,
+ *                         LaunchPath = "C:\\game\\GomokuServer.exe",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/gamelift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := gamelift.NewFleet(ctx, "example", &gamelift.FleetArgs{
+ * 			BuildId:         pulumi.Any(aws_gamelift_build.Example.Id),
+ * 			Ec2InstanceType: pulumi.String("t2.micro"),
+ * 			FleetType:       pulumi.String("ON_DEMAND"),
+ * 			RuntimeConfiguration: &gamelift.FleetRuntimeConfigurationArgs{
+ * 				ServerProcesses: gamelift.FleetRuntimeConfigurationServerProcessArray{
+ * 					&gamelift.FleetRuntimeConfigurationServerProcessArgs{
+ * 						ConcurrentExecutions: pulumi.Int(1),
+ * 						LaunchPath:           pulumi.String("C:\\game\\GomokuServer.exe"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * Gamelift Fleets cannot be imported at this time.
- * 
+ * Gamelift Fleets cannot be imported at this time. 
  */
 @ResourceType(type="aws:gamelift/fleet:Fleet")
 public class Fleet extends io.pulumi.resources.CustomResource {

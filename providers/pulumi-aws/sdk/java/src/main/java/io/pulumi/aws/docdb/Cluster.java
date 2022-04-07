@@ -28,7 +28,87 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** using `apply_immediately` can result in a brief downtime as the server reboots.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const docdb = new aws.docdb.Cluster("docdb", {
+ *     backupRetentionPeriod: 5,
+ *     clusterIdentifier: "my-docdb-cluster",
+ *     engine: "docdb",
+ *     masterPassword: "mustbeeightchars",
+ *     masterUsername: "foo",
+ *     preferredBackupWindow: "07:00-09:00",
+ *     skipFinalSnapshot: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * docdb = aws.docdb.Cluster("docdb",
+ *     backup_retention_period=5,
+ *     cluster_identifier="my-docdb-cluster",
+ *     engine="docdb",
+ *     master_password="mustbeeightchars",
+ *     master_username="foo",
+ *     preferred_backup_window="07:00-09:00",
+ *     skip_final_snapshot=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var docdb = new Aws.DocDB.Cluster("docdb", new Aws.DocDB.ClusterArgs
+ *         {
+ *             BackupRetentionPeriod = 5,
+ *             ClusterIdentifier = "my-docdb-cluster",
+ *             Engine = "docdb",
+ *             MasterPassword = "mustbeeightchars",
+ *             MasterUsername = "foo",
+ *             PreferredBackupWindow = "07:00-09:00",
+ *             SkipFinalSnapshot = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/docdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := docdb.NewCluster(ctx, "docdb", &docdb.ClusterArgs{
+ * 			BackupRetentionPeriod: pulumi.Int(5),
+ * 			ClusterIdentifier:     pulumi.String("my-docdb-cluster"),
+ * 			Engine:                pulumi.String("docdb"),
+ * 			MasterPassword:        pulumi.String("mustbeeightchars"),
+ * 			MasterUsername:        pulumi.String("foo"),
+ * 			PreferredBackupWindow: pulumi.String("07:00-09:00"),
+ * 			SkipFinalSnapshot:     pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,6 +118,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:docdb/cluster:Cluster docdb_cluster docdb-prod-cluster
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:docdb/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,69 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Log Stream resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const yada = new aws.cloudwatch.LogGroup("yada", {});
+ * const foo = new aws.cloudwatch.LogStream("foo", {logGroupName: yada.name});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * yada = aws.cloudwatch.LogGroup("yada")
+ * foo = aws.cloudwatch.LogStream("foo", log_group_name=yada.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var yada = new Aws.CloudWatch.LogGroup("yada", new Aws.CloudWatch.LogGroupArgs
+ *         {
+ *         });
+ *         var foo = new Aws.CloudWatch.LogStream("foo", new Aws.CloudWatch.LogStreamArgs
+ *         {
+ *             LogGroupName = yada.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		yada, err := cloudwatch.NewLogGroup(ctx, "yada", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewLogStream(ctx, "foo", &cloudwatch.LogStreamArgs{
+ * 			LogGroupName: yada.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/logStream:LogStream foo Yada:SampleLogStream1234
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/logStream:LogStream")
 public class LogStream extends io.pulumi.resources.CustomResource {

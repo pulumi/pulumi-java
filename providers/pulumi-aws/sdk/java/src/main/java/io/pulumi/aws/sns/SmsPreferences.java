@@ -16,8 +16,57 @@ import javax.annotation.Nullable;
 /**
  * Provides a way to set SNS SMS preferences.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * update_sms_prefs = aws.sns.SmsPreferences("updateSmsPrefs")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var updateSmsPrefs = new Aws.Sns.SmsPreferences("updateSmsPrefs", new Aws.Sns.SmsPreferencesArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sns.NewSmsPreferences(ctx, "updateSmsPrefs", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:sns/smsPreferences:SmsPreferences")
 public class SmsPreferences extends io.pulumi.resources.CustomResource {

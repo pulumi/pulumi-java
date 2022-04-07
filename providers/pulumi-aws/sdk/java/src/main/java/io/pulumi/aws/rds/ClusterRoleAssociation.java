@@ -18,7 +18,71 @@ import javax.annotation.Nullable;
  * * [Creating an IAM Role to Allow Amazon Aurora to Access AWS Services](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.IAM.CreateRole.html)
  * * [Importing Amazon S3 Data into an RDS PostgreSQL DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PostgreSQL.S3Import.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.rds.ClusterRoleAssociation("example", {
+ *     dbClusterIdentifier: aws_rds_cluster.example.id,
+ *     featureName: "S3_INTEGRATION",
+ *     roleArn: aws_iam_role.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.rds.ClusterRoleAssociation("example",
+ *     db_cluster_identifier=aws_rds_cluster["example"]["id"],
+ *     feature_name="S3_INTEGRATION",
+ *     role_arn=aws_iam_role["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Rds.ClusterRoleAssociation("example", new Aws.Rds.ClusterRoleAssociationArgs
+ *         {
+ *             DbClusterIdentifier = aws_rds_cluster.Example.Id,
+ *             FeatureName = "S3_INTEGRATION",
+ *             RoleArn = aws_iam_role.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewClusterRoleAssociation(ctx, "example", &rds.ClusterRoleAssociationArgs{
+ * 			DbClusterIdentifier: pulumi.Any(aws_rds_cluster.Example.Id),
+ * 			FeatureName:         pulumi.String("S3_INTEGRATION"),
+ * 			RoleArn:             pulumi.Any(aws_iam_role.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +92,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/clusterRoleAssociation:ClusterRoleAssociation example my-db-cluster,arn:aws:iam::123456789012:role/my-role
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/clusterRoleAssociation:ClusterRoleAssociation")
 public class ClusterRoleAssociation extends io.pulumi.resources.CustomResource {

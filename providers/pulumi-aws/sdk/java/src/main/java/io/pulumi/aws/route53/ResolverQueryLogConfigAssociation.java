@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a Route 53 Resolver query logging configuration association resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.route53.ResolverQueryLogConfigAssociation("example", {
+ *     resolverQueryLogConfigId: aws_route53_resolver_query_log_config.example.id,
+ *     resourceId: aws_vpc.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.route53.ResolverQueryLogConfigAssociation("example",
+ *     resolver_query_log_config_id=aws_route53_resolver_query_log_config["example"]["id"],
+ *     resource_id=aws_vpc["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Route53.ResolverQueryLogConfigAssociation("example", new Aws.Route53.ResolverQueryLogConfigAssociationArgs
+ *         {
+ *             ResolverQueryLogConfigId = aws_route53_resolver_query_log_config.Example.Id,
+ *             ResourceId = aws_vpc.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53.NewResolverQueryLogConfigAssociation(ctx, "example", &route53.ResolverQueryLogConfigAssociationArgs{
+ * 			ResolverQueryLogConfigId: pulumi.Any(aws_route53_resolver_query_log_config.Example.Id),
+ * 			ResourceId:               pulumi.Any(aws_vpc.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/resolverQueryLogConfigAssociation:ResolverQueryLogConfigAssociation example rqlca-b320624fef3c4d70
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/resolverQueryLogConfigAssociation:ResolverQueryLogConfigAssociation")
 public class ResolverQueryLogConfigAssociation extends io.pulumi.resources.CustomResource {

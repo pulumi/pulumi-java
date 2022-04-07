@@ -17,8 +17,63 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This resource can only be used by the management account in the organization. In other words, a delegated administrator is not authorized to use the resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.OrganizationsAccess("example", {
+ *     enabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.OrganizationsAccess("example", enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.OrganizationsAccess("example", new Aws.ServiceCatalog.OrganizationsAccessArgs
+ *         {
+ *             Enabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewOrganizationsAccess(ctx, "example", &servicecatalog.OrganizationsAccessArgs{
+ * 			Enabled: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:servicecatalog/organizationsAccess:OrganizationsAccess")
 public class OrganizationsAccess extends io.pulumi.resources.CustomResource {

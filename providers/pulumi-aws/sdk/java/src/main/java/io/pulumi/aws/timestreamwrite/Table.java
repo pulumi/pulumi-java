@@ -18,7 +18,157 @@ import javax.annotation.Nullable;
 /**
  * Provides a Timestream table resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.timestreamwrite.Table("example", {
+ *     databaseName: aws_timestreamwrite_database.example.database_name,
+ *     tableName: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.timestreamwrite.Table("example",
+ *     database_name=aws_timestreamwrite_database["example"]["database_name"],
+ *     table_name="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.TimestreamWrite.Table("example", new Aws.TimestreamWrite.TableArgs
+ *         {
+ *             DatabaseName = aws_timestreamwrite_database.Example.Database_name,
+ *             TableName = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/timestreamwrite"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timestreamwrite.NewTable(ctx, "example", &timestreamwrite.TableArgs{
+ * 			DatabaseName: pulumi.Any(aws_timestreamwrite_database.Example.Database_name),
+ * 			TableName:    pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Full usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.timestreamwrite.Table("example", {
+ *     databaseName: aws_timestreamwrite_database.example.database_name,
+ *     tableName: "example",
+ *     retentionProperties: {
+ *         magneticStoreRetentionPeriodInDays: 30,
+ *         memoryStoreRetentionPeriodInHours: 8,
+ *     },
+ *     tags: {
+ *         Name: "example-timestream-table",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.timestreamwrite.Table("example",
+ *     database_name=aws_timestreamwrite_database["example"]["database_name"],
+ *     table_name="example",
+ *     retention_properties=aws.timestreamwrite.TableRetentionPropertiesArgs(
+ *         magnetic_store_retention_period_in_days=30,
+ *         memory_store_retention_period_in_hours=8,
+ *     ),
+ *     tags={
+ *         "Name": "example-timestream-table",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.TimestreamWrite.Table("example", new Aws.TimestreamWrite.TableArgs
+ *         {
+ *             DatabaseName = aws_timestreamwrite_database.Example.Database_name,
+ *             TableName = "example",
+ *             RetentionProperties = new Aws.TimestreamWrite.Inputs.TableRetentionPropertiesArgs
+ *             {
+ *                 MagneticStoreRetentionPeriodInDays = 30,
+ *                 MemoryStoreRetentionPeriodInHours = 8,
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "example-timestream-table" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/timestreamwrite"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timestreamwrite.NewTable(ctx, "example", &timestreamwrite.TableArgs{
+ * 			DatabaseName: pulumi.Any(aws_timestreamwrite_database.Example.Database_name),
+ * 			TableName:    pulumi.String("example"),
+ * 			RetentionProperties: &timestreamwrite.TableRetentionPropertiesArgs{
+ * 				MagneticStoreRetentionPeriodInDays: pulumi.Int(30),
+ * 				MemoryStoreRetentionPeriodInHours:  pulumi.Int(8),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example-timestream-table"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +178,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:timestreamwrite/table:Table example ExampleTable:ExampleDatabase
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:timestreamwrite/table:Table")
 public class Table extends io.pulumi.resources.CustomResource {

@@ -21,7 +21,257 @@ import javax.annotation.Nullable;
  * 
  * > Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the [AWS DynamoDB Global Table Requirements](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const us_east_1 = new aws.Provider("us-east-1", {region: "us-east-1"});
+ * const us_west_2 = new aws.Provider("us-west-2", {region: "us-west-2"});
+ * const us_east_1Table = new aws.dynamodb.Table("us-east-1Table", {
+ *     hashKey: "myAttribute",
+ *     streamEnabled: true,
+ *     streamViewType: "NEW_AND_OLD_IMAGES",
+ *     readCapacity: 1,
+ *     writeCapacity: 1,
+ *     attributes: [{
+ *         name: "myAttribute",
+ *         type: "S",
+ *     }],
+ * }, {
+ *     provider: aws["us-east-1"],
+ * });
+ * const us_west_2Table = new aws.dynamodb.Table("us-west-2Table", {
+ *     hashKey: "myAttribute",
+ *     streamEnabled: true,
+ *     streamViewType: "NEW_AND_OLD_IMAGES",
+ *     readCapacity: 1,
+ *     writeCapacity: 1,
+ *     attributes: [{
+ *         name: "myAttribute",
+ *         type: "S",
+ *     }],
+ * }, {
+ *     provider: aws["us-west-2"],
+ * });
+ * const myTable = new aws.dynamodb.GlobalTable("myTable", {replicas: [
+ *     {
+ *         regionName: "us-east-1",
+ *     },
+ *     {
+ *         regionName: "us-west-2",
+ *     },
+ * ]}, {
+ *     provider: aws["us-east-1"],
+ *     dependsOn: [
+ *         us_east_1Table,
+ *         us_west_2Table,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * us_east_1 = pulumi.providers.Aws("us-east-1", region="us-east-1")
+ * us_west_2 = pulumi.providers.Aws("us-west-2", region="us-west-2")
+ * us_east_1_table = aws.dynamodb.Table("us-east-1Table",
+ *     hash_key="myAttribute",
+ *     stream_enabled=True,
+ *     stream_view_type="NEW_AND_OLD_IMAGES",
+ *     read_capacity=1,
+ *     write_capacity=1,
+ *     attributes=[aws.dynamodb.TableAttributeArgs(
+ *         name="myAttribute",
+ *         type="S",
+ *     )],
+ *     opts=pulumi.ResourceOptions(provider=aws["us-east-1"]))
+ * us_west_2_table = aws.dynamodb.Table("us-west-2Table",
+ *     hash_key="myAttribute",
+ *     stream_enabled=True,
+ *     stream_view_type="NEW_AND_OLD_IMAGES",
+ *     read_capacity=1,
+ *     write_capacity=1,
+ *     attributes=[aws.dynamodb.TableAttributeArgs(
+ *         name="myAttribute",
+ *         type="S",
+ *     )],
+ *     opts=pulumi.ResourceOptions(provider=aws["us-west-2"]))
+ * my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
+ *     aws.dynamodb.GlobalTableReplicaArgs(
+ *         region_name="us-east-1",
+ *     ),
+ *     aws.dynamodb.GlobalTableReplicaArgs(
+ *         region_name="us-west-2",
+ *     ),
+ * ],
+ * opts=pulumi.ResourceOptions(provider=aws["us-east-1"],
+ *     depends_on=[
+ *         us_east_1_table,
+ *         us_west_2_table,
+ *     ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var us_east_1 = new Aws.Provider("us-east-1", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-east-1",
+ *         });
+ *         var us_west_2 = new Aws.Provider("us-west-2", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-west-2",
+ *         });
+ *         var us_east_1Table = new Aws.DynamoDB.Table("us-east-1Table", new Aws.DynamoDB.TableArgs
+ *         {
+ *             HashKey = "myAttribute",
+ *             StreamEnabled = true,
+ *             StreamViewType = "NEW_AND_OLD_IMAGES",
+ *             ReadCapacity = 1,
+ *             WriteCapacity = 1,
+ *             Attributes = 
+ *             {
+ *                 new Aws.DynamoDB.Inputs.TableAttributeArgs
+ *                 {
+ *                     Name = "myAttribute",
+ *                     Type = "S",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Us_east_1,
+ *         });
+ *         var us_west_2Table = new Aws.DynamoDB.Table("us-west-2Table", new Aws.DynamoDB.TableArgs
+ *         {
+ *             HashKey = "myAttribute",
+ *             StreamEnabled = true,
+ *             StreamViewType = "NEW_AND_OLD_IMAGES",
+ *             ReadCapacity = 1,
+ *             WriteCapacity = 1,
+ *             Attributes = 
+ *             {
+ *                 new Aws.DynamoDB.Inputs.TableAttributeArgs
+ *                 {
+ *                     Name = "myAttribute",
+ *                     Type = "S",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Us_west_2,
+ *         });
+ *         var myTable = new Aws.DynamoDB.GlobalTable("myTable", new Aws.DynamoDB.GlobalTableArgs
+ *         {
+ *             Replicas = 
+ *             {
+ *                 new Aws.DynamoDB.Inputs.GlobalTableReplicaArgs
+ *                 {
+ *                     RegionName = "us-east-1",
+ *                 },
+ *                 new Aws.DynamoDB.Inputs.GlobalTableReplicaArgs
+ *                 {
+ *                     RegionName = "us-west-2",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Us_east_1,
+ *             DependsOn = 
+ *             {
+ *                 us_east_1Table,
+ *                 us_west_2Table,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dynamodb"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "us-east-1", &providers.awsArgs{
+ * 			Region: "us-east-1",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = providers.Newaws(ctx, "us-west-2", &providers.awsArgs{
+ * 			Region: "us-west-2",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dynamodb.NewTable(ctx, "us-east-1Table", &dynamodb.TableArgs{
+ * 			HashKey:        pulumi.String("myAttribute"),
+ * 			StreamEnabled:  pulumi.Bool(true),
+ * 			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+ * 			ReadCapacity:   pulumi.Int(1),
+ * 			WriteCapacity:  pulumi.Int(1),
+ * 			Attributes: dynamodb.TableAttributeArray{
+ * 				&dynamodb.TableAttributeArgs{
+ * 					Name: pulumi.String("myAttribute"),
+ * 					Type: pulumi.String("S"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(aws.Us-east-1))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dynamodb.NewTable(ctx, "us-west-2Table", &dynamodb.TableArgs{
+ * 			HashKey:        pulumi.String("myAttribute"),
+ * 			StreamEnabled:  pulumi.Bool(true),
+ * 			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+ * 			ReadCapacity:   pulumi.Int(1),
+ * 			WriteCapacity:  pulumi.Int(1),
+ * 			Attributes: dynamodb.TableAttributeArray{
+ * 				&dynamodb.TableAttributeArgs{
+ * 					Name: pulumi.String("myAttribute"),
+ * 					Type: pulumi.String("S"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(aws.Us-west-2))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dynamodb.NewGlobalTable(ctx, "myTable", &dynamodb.GlobalTableArgs{
+ * 			Replicas: dynamodb.GlobalTableReplicaArray{
+ * 				&dynamodb.GlobalTableReplicaArgs{
+ * 					RegionName: pulumi.String("us-east-1"),
+ * 				},
+ * 				&dynamodb.GlobalTableReplicaArgs{
+ * 					RegionName: pulumi.String("us-west-2"),
+ * 				},
+ * 			},
+ * 		}, pulumi.Provider(aws.Us-east-1), pulumi.DependsOn([]pulumi.Resource{
+ * 			us_east_1Table,
+ * 			us_west_2Table,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +281,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dynamodb/globalTable:GlobalTable MyTable MyTable
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dynamodb/globalTable:GlobalTable")
 public class GlobalTable extends io.pulumi.resources.CustomResource {

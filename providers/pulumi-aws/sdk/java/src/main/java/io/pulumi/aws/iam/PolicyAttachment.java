@@ -22,8 +22,217 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** For a given role, this resource is incompatible with using the `aws.iam.Role` resource `managed_policy_arns` argument. When using that argument and this resource, both will attempt to manage the role's managed policy attachments and the provider will show a permanent difference.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const user = new aws.iam.User("user", {});
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "ec2.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const group = new aws.iam.Group("group", {});
+ * const policy = new aws.iam.Policy("policy", {
+ *     description: "A test policy",
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "ec2:Describe*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * const test_attach = new aws.iam.PolicyAttachment("test-attach", {
+ *     users: [user.name],
+ *     roles: [role.name],
+ *     groups: [group.name],
+ *     policyArn: policy.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * user = aws.iam.User("user")
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "ec2.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * group = aws.iam.Group("group")
+ * policy = aws.iam.Policy("policy",
+ *     description="A test policy",
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "ec2:Describe*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * """)
+ * test_attach = aws.iam.PolicyAttachment("test-attach",
+ *     users=[user.name],
+ *     roles=[role.name],
+ *     groups=[group.name],
+ *     policy_arn=policy.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var user = new Aws.Iam.User("user", new Aws.Iam.UserArgs
+ *         {
+ *         });
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""ec2.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var @group = new Aws.Iam.Group("group", new Aws.Iam.GroupArgs
+ *         {
+ *         });
+ *         var policy = new Aws.Iam.Policy("policy", new Aws.Iam.PolicyArgs
+ *         {
+ *             Description = "A test policy",
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": [
+ *         ""ec2:Describe*""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": ""*""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var test_attach = new Aws.Iam.PolicyAttachment("test-attach", new Aws.Iam.PolicyAttachmentArgs
+ *         {
+ *             Users = 
+ *             {
+ *                 user.Name,
+ *             },
+ *             Roles = 
+ *             {
+ *                 role.Name,
+ *             },
+ *             Groups = 
+ *             {
+ *                 @group.Name,
+ *             },
+ *             PolicyArn = policy.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		user, err := iam.NewUser(ctx, "user", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"ec2.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		group, err := iam.NewGroup(ctx, "group", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		policy, err := iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
+ * 			Description: pulumi.String("A test policy"),
+ * 			Policy:      pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewPolicyAttachment(ctx, "test-attach", &iam.PolicyAttachmentArgs{
+ * 			Users: pulumi.AnyArray{
+ * 				user.Name,
+ * 			},
+ * 			Roles: pulumi.AnyArray{
+ * 				role.Name,
+ * 			},
+ * 			Groups: pulumi.AnyArray{
+ * 				group.Name,
+ * 			},
+ * 			PolicyArn: policy.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:iam/policyAttachment:PolicyAttachment")
 public class PolicyAttachment extends io.pulumi.resources.CustomResource {

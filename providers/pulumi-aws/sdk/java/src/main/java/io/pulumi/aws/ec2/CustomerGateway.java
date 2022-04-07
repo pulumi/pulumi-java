@@ -16,7 +16,84 @@ import javax.annotation.Nullable;
 /**
  * Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ec2.CustomerGateway("main", {
+ *     bgpAsn: "65000",
+ *     ipAddress: "172.83.124.10",
+ *     tags: {
+ *         Name: "main-customer-gateway",
+ *     },
+ *     type: "ipsec.1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ec2.CustomerGateway("main",
+ *     bgp_asn="65000",
+ *     ip_address="172.83.124.10",
+ *     tags={
+ *         "Name": "main-customer-gateway",
+ *     },
+ *     type="ipsec.1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ec2.CustomerGateway("main", new Aws.Ec2.CustomerGatewayArgs
+ *         {
+ *             BgpAsn = "65000",
+ *             IpAddress = "172.83.124.10",
+ *             Tags = 
+ *             {
+ *                 { "Name", "main-customer-gateway" },
+ *             },
+ *             Type = "ipsec.1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewCustomerGateway(ctx, "main", &ec2.CustomerGatewayArgs{
+ * 			BgpAsn:    pulumi.String("65000"),
+ * 			IpAddress: pulumi.String("172.83.124.10"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("main-customer-gateway"),
+ * 			},
+ * 			Type: pulumi.String("ipsec.1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/customerGateway:CustomerGateway main cgw-b4dc3961
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/customerGateway:CustomerGateway")
 public class CustomerGateway extends io.pulumi.resources.CustomResource {

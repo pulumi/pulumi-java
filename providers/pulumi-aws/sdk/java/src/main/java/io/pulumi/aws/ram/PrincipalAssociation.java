@@ -25,7 +25,139 @@ import javax.annotation.Nullable;
  * - Organization and Organizational Unit principals cannot be used.
  * - For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the `aws.ram.ResourceShareAccepter` resource to accept these invitations.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AWS Account ID
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleResourceShare = new aws.ram.ResourceShare("exampleResourceShare", {allowExternalPrincipals: true});
+ * const examplePrincipalAssociation = new aws.ram.PrincipalAssociation("examplePrincipalAssociation", {
+ *     principal: "111111111111",
+ *     resourceShareArn: exampleResourceShare.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_resource_share = aws.ram.ResourceShare("exampleResourceShare", allow_external_principals=True)
+ * example_principal_association = aws.ram.PrincipalAssociation("examplePrincipalAssociation",
+ *     principal="111111111111",
+ *     resource_share_arn=example_resource_share.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleResourceShare = new Aws.Ram.ResourceShare("exampleResourceShare", new Aws.Ram.ResourceShareArgs
+ *         {
+ *             AllowExternalPrincipals = true,
+ *         });
+ *         var examplePrincipalAssociation = new Aws.Ram.PrincipalAssociation("examplePrincipalAssociation", new Aws.Ram.PrincipalAssociationArgs
+ *         {
+ *             Principal = "111111111111",
+ *             ResourceShareArn = exampleResourceShare.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ram"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleResourceShare, err := ram.NewResourceShare(ctx, "exampleResourceShare", &ram.ResourceShareArgs{
+ * 			AllowExternalPrincipals: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ram.NewPrincipalAssociation(ctx, "examplePrincipalAssociation", &ram.PrincipalAssociationArgs{
+ * 			Principal:        pulumi.String("111111111111"),
+ * 			ResourceShareArn: exampleResourceShare.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### AWS Organization
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ram.PrincipalAssociation("example", {
+ *     principal: aws_organizations_organization.example.arn,
+ *     resourceShareArn: aws_ram_resource_share.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ram.PrincipalAssociation("example",
+ *     principal=aws_organizations_organization["example"]["arn"],
+ *     resource_share_arn=aws_ram_resource_share["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ram.PrincipalAssociation("example", new Aws.Ram.PrincipalAssociationArgs
+ *         {
+ *             Principal = aws_organizations_organization.Example.Arn,
+ *             ResourceShareArn = aws_ram_resource_share.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ram"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ram.NewPrincipalAssociation(ctx, "example", &ram.PrincipalAssociationArgs{
+ * 			Principal:        pulumi.Any(aws_organizations_organization.Example.Arn),
+ * 			ResourceShareArn: pulumi.Any(aws_ram_resource_share.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +167,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ram/principalAssociation:PrincipalAssociation example arn:aws:ram:eu-west-1:123456789012:resource-share/73da1ab9-b94a-4ba3-8eb4-45917f7f4b12,123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ram/principalAssociation:PrincipalAssociation")
 public class PrincipalAssociation extends io.pulumi.resources.CustomResource {

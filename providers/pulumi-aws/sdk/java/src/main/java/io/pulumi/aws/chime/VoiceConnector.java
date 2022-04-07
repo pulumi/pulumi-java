@@ -16,7 +16,67 @@ import javax.annotation.Nullable;
 /**
  * Enables you to connect your phone system to the telephone network at a substantial cost savings by using SIP trunking.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.chime.VoiceConnector("test", {
+ *     awsRegion: "us-east-1",
+ *     requireEncryption: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.chime.VoiceConnector("test",
+ *     aws_region="us-east-1",
+ *     require_encryption=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Chime.VoiceConnector("test", new Aws.Chime.VoiceConnectorArgs
+ *         {
+ *             AwsRegion = "us-east-1",
+ *             RequireEncryption = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/chime"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := chime.NewVoiceConnector(ctx, "test", &chime.VoiceConnectorArgs{
+ * 			AwsRegion:         pulumi.String("us-east-1"),
+ * 			RequireEncryption: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:chime/voiceConnector:VoiceConnector test example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:chime/voiceConnector:VoiceConnector")
 public class VoiceConnector extends io.pulumi.resources.CustomResource {

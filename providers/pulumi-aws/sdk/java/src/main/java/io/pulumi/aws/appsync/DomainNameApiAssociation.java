@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppSync API Association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appsync.DomainNameApiAssociation("example", {
+ *     apiId: aws_appsync_graphql_api.example.id,
+ *     domainName: aws_appsync_domain_name.example.domain_name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appsync.DomainNameApiAssociation("example",
+ *     api_id=aws_appsync_graphql_api["example"]["id"],
+ *     domain_name=aws_appsync_domain_name["example"]["domain_name"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppSync.DomainNameApiAssociation("example", new Aws.AppSync.DomainNameApiAssociationArgs
+ *         {
+ *             ApiId = aws_appsync_graphql_api.Example.Id,
+ *             DomainName = aws_appsync_domain_name.Example.Domain_name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appsync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appsync.NewDomainNameApiAssociation(ctx, "example", &appsync.DomainNameApiAssociationArgs{
+ * 			ApiId:      pulumi.Any(aws_appsync_graphql_api.Example.Id),
+ * 			DomainName: pulumi.Any(aws_appsync_domain_name.Example.Domain_name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appsync/domainNameApiAssociation:DomainNameApiAssociation example example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appsync/domainNameApiAssociation:DomainNameApiAssociation")
 public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource {

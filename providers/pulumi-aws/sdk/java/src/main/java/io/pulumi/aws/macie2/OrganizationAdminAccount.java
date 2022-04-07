@@ -15,7 +15,80 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [Amazon Macie Organization Admin Account](https://docs.aws.amazon.com/macie/latest/APIReference/admin.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.macie2.Account("example", {});
+ * const test = new aws.macie2.OrganizationAdminAccount("test", {adminAccountId: "ID OF THE ADMIN ACCOUNT"}, {
+ *     dependsOn: [aws_macie2_account.test],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.macie2.Account("example")
+ * test = aws.macie2.OrganizationAdminAccount("test", admin_account_id="ID OF THE ADMIN ACCOUNT",
+ * opts=pulumi.ResourceOptions(depends_on=[aws_macie2_account["test"]]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Macie2.Account("example", new Aws.Macie2.AccountArgs
+ *         {
+ *         });
+ *         var test = new Aws.Macie2.OrganizationAdminAccount("test", new Aws.Macie2.OrganizationAdminAccountArgs
+ *         {
+ *             AdminAccountId = "ID OF THE ADMIN ACCOUNT",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 aws_macie2_account.Test,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := macie2.NewAccount(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = macie2.NewOrganizationAdminAccount(ctx, "test", &macie2.OrganizationAdminAccountArgs{
+ * 			AdminAccountId: pulumi.String("ID OF THE ADMIN ACCOUNT"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			aws_macie2_account.Test,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:macie2/organizationAdminAccount:OrganizationAdminAccount example abcd1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:macie2/organizationAdminAccount:OrganizationAdminAccount")
 public class OrganizationAdminAccount extends io.pulumi.resources.CustomResource {

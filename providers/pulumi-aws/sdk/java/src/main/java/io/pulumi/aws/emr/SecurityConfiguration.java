@@ -15,7 +15,111 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage AWS EMR Security Configurations
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.emr.SecurityConfiguration("foo", {
+ *     configuration: `{
+ *   "EncryptionConfiguration": {
+ *     "AtRestEncryptionConfiguration": {
+ *       "S3EncryptionConfiguration": {
+ *         "EncryptionMode": "SSE-S3"
+ *       },
+ *       "LocalDiskEncryptionConfiguration": {
+ *         "EncryptionKeyProviderType": "AwsKms",
+ *         "AwsKmsKey": "arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key"
+ *       }
+ *     },
+ *     "EnableInTransitEncryption": false,
+ *     "EnableAtRestEncryption": true
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.emr.SecurityConfiguration("foo", configuration="""{
+ *   "EncryptionConfiguration": {
+ *     "AtRestEncryptionConfiguration": {
+ *       "S3EncryptionConfiguration": {
+ *         "EncryptionMode": "SSE-S3"
+ *       },
+ *       "LocalDiskEncryptionConfiguration": {
+ *         "EncryptionKeyProviderType": "AwsKms",
+ *         "AwsKmsKey": "arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key"
+ *       }
+ *     },
+ *     "EnableInTransitEncryption": false,
+ *     "EnableAtRestEncryption": true
+ *   }
+ * }
+ * 
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Emr.SecurityConfiguration("foo", new Aws.Emr.SecurityConfigurationArgs
+ *         {
+ *             Configuration = @"{
+ *   ""EncryptionConfiguration"": {
+ *     ""AtRestEncryptionConfiguration"": {
+ *       ""S3EncryptionConfiguration"": {
+ *         ""EncryptionMode"": ""SSE-S3""
+ *       },
+ *       ""LocalDiskEncryptionConfiguration"": {
+ *         ""EncryptionKeyProviderType"": ""AwsKms"",
+ *         ""AwsKmsKey"": ""arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key""
+ *       }
+ *     },
+ *     ""EnableInTransitEncryption"": false,
+ *     ""EnableAtRestEncryption"": true
+ *   }
+ * }
+ * 
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := emr.NewSecurityConfiguration(ctx, "foo", &emr.SecurityConfigurationArgs{
+ * 			Configuration: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"EncryptionConfiguration\": {\n", "    \"AtRestEncryptionConfiguration\": {\n", "      \"S3EncryptionConfiguration\": {\n", "        \"EncryptionMode\": \"SSE-S3\"\n", "      },\n", "      \"LocalDiskEncryptionConfiguration\": {\n", "        \"EncryptionKeyProviderType\": \"AwsKms\",\n", "        \"AwsKmsKey\": \"arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key\"\n", "      }\n", "    },\n", "    \"EnableInTransitEncryption\": false,\n", "    \"EnableAtRestEncryption\": true\n", "  }\n", "}\n", "\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +129,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:emr/securityConfiguration:SecurityConfiguration sc example-sc-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:emr/securityConfiguration:SecurityConfiguration")
 public class SecurityConfiguration extends io.pulumi.resources.CustomResource {

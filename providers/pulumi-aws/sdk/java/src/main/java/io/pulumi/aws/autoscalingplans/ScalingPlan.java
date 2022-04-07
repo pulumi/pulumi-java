@@ -24,7 +24,9 @@ import javax.annotation.Nullable;
  * An `aws.iam.ServiceLinkedRole` resource can be used to manually manage this role.
  * See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/userguide/aws-auto-scaling-service-linked-roles.html#create-service-linked-role-manual) for more details.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +36,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:autoscalingplans/scalingPlan:ScalingPlan example MyScale1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:autoscalingplans/scalingPlan:ScalingPlan")
 public class ScalingPlan extends io.pulumi.resources.CustomResource {

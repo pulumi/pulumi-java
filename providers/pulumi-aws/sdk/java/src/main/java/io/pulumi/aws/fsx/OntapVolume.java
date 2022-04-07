@@ -20,7 +20,163 @@ import javax.annotation.Nullable;
  * Manages a FSx ONTAP Volume.
  * See the [FSx ONTAP User Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html) for more information.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.fsx.OntapVolume("test", {
+ *     junctionPath: "/test",
+ *     sizeInMegabytes: 1024,
+ *     storageEfficiencyEnabled: true,
+ *     storageVirtualMachineId: aws_fsx_ontap_storage_virtual_machine.test.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.fsx.OntapVolume("test",
+ *     junction_path="/test",
+ *     size_in_megabytes=1024,
+ *     storage_efficiency_enabled=True,
+ *     storage_virtual_machine_id=aws_fsx_ontap_storage_virtual_machine["test"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Fsx.OntapVolume("test", new Aws.Fsx.OntapVolumeArgs
+ *         {
+ *             JunctionPath = "/test",
+ *             SizeInMegabytes = 1024,
+ *             StorageEfficiencyEnabled = true,
+ *             StorageVirtualMachineId = aws_fsx_ontap_storage_virtual_machine.Test.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewOntapVolume(ctx, "test", &fsx.OntapVolumeArgs{
+ * 			JunctionPath:             pulumi.String("/test"),
+ * 			SizeInMegabytes:          pulumi.Int(1024),
+ * 			StorageEfficiencyEnabled: pulumi.Bool(true),
+ * 			StorageVirtualMachineId:  pulumi.Any(aws_fsx_ontap_storage_virtual_machine.Test.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using Tiering Policy
+ * 
+ * Additional information on tiering policy with ONTAP Volumes can be found in the [FSx ONTAP Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.fsx.OntapVolume("test", {
+ *     junctionPath: "/test",
+ *     sizeInMegabytes: 1024,
+ *     storageEfficiencyEnabled: true,
+ *     storageVirtualMachineId: aws_fsx_ontap_storage_virtual_machine.test.id,
+ *     tieringPolicy: {
+ *         name: "AUTO",
+ *         coolingPeriod: 31,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.fsx.OntapVolume("test",
+ *     junction_path="/test",
+ *     size_in_megabytes=1024,
+ *     storage_efficiency_enabled=True,
+ *     storage_virtual_machine_id=aws_fsx_ontap_storage_virtual_machine["test"]["id"],
+ *     tiering_policy=aws.fsx.OntapVolumeTieringPolicyArgs(
+ *         name="AUTO",
+ *         cooling_period=31,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Fsx.OntapVolume("test", new Aws.Fsx.OntapVolumeArgs
+ *         {
+ *             JunctionPath = "/test",
+ *             SizeInMegabytes = 1024,
+ *             StorageEfficiencyEnabled = true,
+ *             StorageVirtualMachineId = aws_fsx_ontap_storage_virtual_machine.Test.Id,
+ *             TieringPolicy = new Aws.Fsx.Inputs.OntapVolumeTieringPolicyArgs
+ *             {
+ *                 Name = "AUTO",
+ *                 CoolingPeriod = 31,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewOntapVolume(ctx, "test", &fsx.OntapVolumeArgs{
+ * 			JunctionPath:             pulumi.String("/test"),
+ * 			SizeInMegabytes:          pulumi.Int(1024),
+ * 			StorageEfficiencyEnabled: pulumi.Bool(true),
+ * 			StorageVirtualMachineId:  pulumi.Any(aws_fsx_ontap_storage_virtual_machine.Test.Id),
+ * 			TieringPolicy: &fsx.OntapVolumeTieringPolicyArgs{
+ * 				Name:          pulumi.String("AUTO"),
+ * 				CoolingPeriod: pulumi.Int(31),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +186,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:fsx/ontapVolume:OntapVolume example fsvol-12345678abcdef123
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:fsx/ontapVolume:OntapVolume")
 public class OntapVolume extends io.pulumi.resources.CustomResource {

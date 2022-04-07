@@ -15,8 +15,109 @@ import javax.annotation.Nullable;
 /**
  * Manages a Cloud Control API Resource. The configuration and lifecycle handling of these resources is proxied through Cloud Control API handlers to the backend service.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudcontrol.Resource("example", {
+ *     typeName: "AWS::ECS::Cluster",
+ *     desiredState: JSON.stringify({
+ *         ClusterName: "example",
+ *         Tags: [{
+ *             Key: "CostCenter",
+ *             Value: "IT",
+ *         }],
+ *     }),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudcontrol.Resource("example",
+ *     type_name="AWS::ECS::Cluster",
+ *     desired_state=json.dumps({
+ *         "ClusterName": "example",
+ *         "Tags": [{
+ *             "Key": "CostCenter",
+ *             "Value": "IT",
+ *         }],
+ *     }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudControl.Resource("example", new Aws.CloudControl.ResourceArgs
+ *         {
+ *             TypeName = "AWS::ECS::Cluster",
+ *             DesiredState = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "ClusterName", "example" },
+ *                 { "Tags", new[]
+ *                     {
+ *                         new Dictionary<string, object?>
+ *                         {
+ *                             { "Key", "CostCenter" },
+ *                             { "Value", "IT" },
+ *                         },
+ *                     }
+ *                  },
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudcontrol"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"ClusterName": "example",
+ * 			"Tags": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Key":   "CostCenter",
+ * 					"Value": "IT",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := cloudcontrol.NewResource(ctx, "example", &cloudcontrol.ResourceArgs{
+ * 			TypeName:     pulumi.String("AWS::ECS::Cluster"),
+ * 			DesiredState: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:cloudcontrol/resource:Resource")
 public class Resource extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,80 @@ import javax.annotation.Nullable;
 /**
  * Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("exampleBucketPublicAccessBlock", {
+ *     bucket: exampleBucket.id,
+ *     blockPublicAcls: true,
+ *     blockPublicPolicy: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * example_bucket_public_access_block = aws.s3.BucketPublicAccessBlock("exampleBucketPublicAccessBlock",
+ *     bucket=example_bucket.id,
+ *     block_public_acls=True,
+ *     block_public_policy=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleBucketPublicAccessBlock = new Aws.S3.BucketPublicAccessBlock("exampleBucketPublicAccessBlock", new Aws.S3.BucketPublicAccessBlockArgs
+ *         {
+ *             Bucket = exampleBucket.Id,
+ *             BlockPublicAcls = true,
+ *             BlockPublicPolicy = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketPublicAccessBlock(ctx, "exampleBucketPublicAccessBlock", &s3.BucketPublicAccessBlockArgs{
+ * 			Bucket:            exampleBucket.ID(),
+ * 			BlockPublicAcls:   pulumi.Bool(true),
+ * 			BlockPublicPolicy: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +99,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock example my-bucket
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock")
 public class BucketPublicAccessBlock extends io.pulumi.resources.CustomResource {

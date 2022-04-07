@@ -18,7 +18,80 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.cloudwatch.EventApiDestination("test", {
+ *     description: "An API Destination",
+ *     invocationEndpoint: "https://api.destination.com/endpoint",
+ *     httpMethod: "POST",
+ *     invocationRateLimitPerSecond: 20,
+ *     connectionArn: aws_cloudwatch_event_connection.test.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.cloudwatch.EventApiDestination("test",
+ *     description="An API Destination",
+ *     invocation_endpoint="https://api.destination.com/endpoint",
+ *     http_method="POST",
+ *     invocation_rate_limit_per_second=20,
+ *     connection_arn=aws_cloudwatch_event_connection["test"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.CloudWatch.EventApiDestination("test", new Aws.CloudWatch.EventApiDestinationArgs
+ *         {
+ *             Description = "An API Destination",
+ *             InvocationEndpoint = "https://api.destination.com/endpoint",
+ *             HttpMethod = "POST",
+ *             InvocationRateLimitPerSecond = 20,
+ *             ConnectionArn = aws_cloudwatch_event_connection.Test.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewEventApiDestination(ctx, "test", &cloudwatch.EventApiDestinationArgs{
+ * 			Description:                  pulumi.String("An API Destination"),
+ * 			InvocationEndpoint:           pulumi.String("https://api.destination.com/endpoint"),
+ * 			HttpMethod:                   pulumi.String("POST"),
+ * 			InvocationRateLimitPerSecond: pulumi.Int(20),
+ * 			ConnectionArn:                pulumi.Any(aws_cloudwatch_event_connection.Test.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +101,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/eventApiDestination:EventApiDestination test api-destination
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/eventApiDestination:EventApiDestination")
 public class EventApiDestination extends io.pulumi.resources.CustomResource {

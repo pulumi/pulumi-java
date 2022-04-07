@@ -16,7 +16,68 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Image resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.Image("example", {
+ *     imageName: "example",
+ *     roleArn: aws_iam_role.test.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.Image("example",
+ *     image_name="example",
+ *     role_arn=aws_iam_role["test"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.Image("example", new Aws.Sagemaker.ImageArgs
+ *         {
+ *             ImageName = "example",
+ *             RoleArn = aws_iam_role.Test.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewImage(ctx, "example", &sagemaker.ImageArgs{
+ * 			ImageName: pulumi.String("example"),
+ * 			RoleArn:   pulumi.Any(aws_iam_role.Test.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/image:Image test_image my-code-repo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/image:Image")
 public class Image extends io.pulumi.resources.CustomResource {

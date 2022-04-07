@@ -16,7 +16,76 @@ import javax.annotation.Nullable;
 /**
  * Manages an EC2 Carrier Gateway. See the AWS [documentation](https://docs.aws.amazon.com/vpc/latest/userguide/Carrier_Gateway.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.CarrierGateway("example", {
+ *     vpcId: aws_vpc.example.id,
+ *     tags: {
+ *         Name: "example-carrier-gateway",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.CarrierGateway("example",
+ *     vpc_id=aws_vpc["example"]["id"],
+ *     tags={
+ *         "Name": "example-carrier-gateway",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.CarrierGateway("example", new Aws.Ec2.CarrierGatewayArgs
+ *         {
+ *             VpcId = aws_vpc.Example.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "example-carrier-gateway" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewCarrierGateway(ctx, "example", &ec2.CarrierGatewayArgs{
+ * 			VpcId: pulumi.Any(aws_vpc.Example.Id),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example-carrier-gateway"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/carrierGateway:CarrierGateway example cgw-12345
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/carrierGateway:CarrierGateway")
 public class CarrierGateway extends io.pulumi.resources.CustomResource {

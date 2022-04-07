@@ -22,7 +22,61 @@ import javax.annotation.Nullable;
  * Manages an Amazon API Gateway Version 2 stage.
  * More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_api.example.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apigatewayv2.Stage("example", api_id=aws_apigatewayv2_api["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ApiGatewayV2.Stage("example", new Aws.ApiGatewayV2.StageArgs
+ *         {
+ *             ApiId = aws_apigatewayv2_api.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigatewayv2.NewStage(ctx, "example", &apigatewayv2.StageArgs{
+ * 			ApiId: pulumi.Any(aws_apigatewayv2_api.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigatewayv2/stage:Stage example aabbccddee/example-stage
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigatewayv2/stage:Stage")
 public class Stage extends io.pulumi.resources.CustomResource {

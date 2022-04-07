@@ -17,7 +17,76 @@ import javax.annotation.Nullable;
 /**
  * Manages a Resource Access Manager (RAM) Resource Share. To associate principals with the share, see the `aws.ram.PrincipalAssociation` resource. To associate resources with the share, see the `aws.ram.ResourceAssociation` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ram.ResourceShare("example", {
+ *     allowExternalPrincipals: true,
+ *     tags: {
+ *         Environment: "Production",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ram.ResourceShare("example",
+ *     allow_external_principals=True,
+ *     tags={
+ *         "Environment": "Production",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ram.ResourceShare("example", new Aws.Ram.ResourceShareArgs
+ *         {
+ *             AllowExternalPrincipals = true,
+ *             Tags = 
+ *             {
+ *                 { "Environment", "Production" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ram"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ram.NewResourceShare(ctx, "example", &ram.ResourceShareArgs{
+ * 			AllowExternalPrincipals: pulumi.Bool(true),
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("Production"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ram/resourceShare:ResourceShare example arn:aws:ram:eu-west-1:123456789012:resource-share/73da1ab9-b94a-4ba3-8eb4-45917f7f4b12
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ram/resourceShare:ResourceShare")
 public class ResourceShare extends io.pulumi.resources.CustomResource {

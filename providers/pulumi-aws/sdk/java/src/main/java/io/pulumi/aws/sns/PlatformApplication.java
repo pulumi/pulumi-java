@@ -15,7 +15,131 @@ import javax.annotation.Nullable;
 /**
  * Provides an SNS platform application resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Apple Push Notification Service (APNS)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const apnsApplication = new aws.sns.PlatformApplication("apns_application", {
+ *     platform: "APNS",
+ *     platformCredential: "<APNS PRIVATE KEY>",
+ *     platformPrincipal: "<APNS CERTIFICATE>",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * apns_application = aws.sns.PlatformApplication("apnsApplication",
+ *     platform="APNS",
+ *     platform_credential="<APNS PRIVATE KEY>",
+ *     platform_principal="<APNS CERTIFICATE>")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apnsApplication = new Aws.Sns.PlatformApplication("apnsApplication", new Aws.Sns.PlatformApplicationArgs
+ *         {
+ *             Platform = "APNS",
+ *             PlatformCredential = "<APNS PRIVATE KEY>",
+ *             PlatformPrincipal = "<APNS CERTIFICATE>",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sns.NewPlatformApplication(ctx, "apnsApplication", &sns.PlatformApplicationArgs{
+ * 			Platform:           pulumi.String("APNS"),
+ * 			PlatformCredential: pulumi.String("<APNS PRIVATE KEY>"),
+ * 			PlatformPrincipal:  pulumi.String("<APNS CERTIFICATE>"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Google Cloud Messaging (GCM)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
+ *     platform: "GCM",
+ *     platformCredential: "<GCM API KEY>",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * gcm_application = aws.sns.PlatformApplication("gcmApplication",
+ *     platform="GCM",
+ *     platform_credential="<GCM API KEY>")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var gcmApplication = new Aws.Sns.PlatformApplication("gcmApplication", new Aws.Sns.PlatformApplicationArgs
+ *         {
+ *             Platform = "GCM",
+ *             PlatformCredential = "<GCM API KEY>",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sns.NewPlatformApplication(ctx, "gcmApplication", &sns.PlatformApplicationArgs{
+ * 			Platform:           pulumi.String("GCM"),
+ * 			PlatformCredential: pulumi.String("<GCM API KEY>"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +149,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sns/platformApplication:PlatformApplication gcm_application arn:aws:sns:us-west-2:0123456789012:app/GCM/gcm_application
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sns/platformApplication:PlatformApplication")
 public class PlatformApplication extends io.pulumi.resources.CustomResource {

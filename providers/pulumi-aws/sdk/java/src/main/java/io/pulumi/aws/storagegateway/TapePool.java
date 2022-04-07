@@ -17,7 +17,67 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Storage Gateway Tape Pool.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.TapePool("example", {
+ *     poolName: "example",
+ *     storageClass: "GLACIER",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.TapePool("example",
+ *     pool_name="example",
+ *     storage_class="GLACIER")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.TapePool("example", new Aws.StorageGateway.TapePoolArgs
+ *         {
+ *             PoolName = "example",
+ *             StorageClass = "GLACIER",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewTapePool(ctx, "example", &storagegateway.TapePoolArgs{
+ * 			PoolName:     pulumi.String("example"),
+ * 			StorageClass: pulumi.String("GLACIER"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:storagegateway/tapePool:TapePool example arn:aws:storagegateway:us-east-1:123456789012:tapepool/pool-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:storagegateway/tapePool:TapePool")
 public class TapePool extends io.pulumi.resources.CustomResource {

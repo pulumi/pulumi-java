@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Logs destination resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testDestination = new aws.cloudwatch.LogDestination("testDestination", {
+ *     roleArn: aws_iam_role.iam_for_cloudwatch.arn,
+ *     targetArn: aws_kinesis_stream.kinesis_for_cloudwatch.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_destination = aws.cloudwatch.LogDestination("testDestination",
+ *     role_arn=aws_iam_role["iam_for_cloudwatch"]["arn"],
+ *     target_arn=aws_kinesis_stream["kinesis_for_cloudwatch"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testDestination = new Aws.CloudWatch.LogDestination("testDestination", new Aws.CloudWatch.LogDestinationArgs
+ *         {
+ *             RoleArn = aws_iam_role.Iam_for_cloudwatch.Arn,
+ *             TargetArn = aws_kinesis_stream.Kinesis_for_cloudwatch.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewLogDestination(ctx, "testDestination", &cloudwatch.LogDestinationArgs{
+ * 			RoleArn:   pulumi.Any(aws_iam_role.Iam_for_cloudwatch.Arn),
+ * 			TargetArn: pulumi.Any(aws_kinesis_stream.Kinesis_for_cloudwatch.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/logDestination:LogDestination test_destination test_destination
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/logDestination:LogDestination")
 public class LogDestination extends io.pulumi.resources.CustomResource {

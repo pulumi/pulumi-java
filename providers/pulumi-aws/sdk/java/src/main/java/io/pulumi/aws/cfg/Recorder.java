@@ -18,7 +18,114 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** _Starting_ the Configuration Recorder requires a `delivery channel` (while delivery channel creation requires Configuration Recorder). This is why `aws.cfg.RecorderStatus` is a separate resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const foo = new aws.cfg.Recorder("foo", {roleArn: role.arn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * foo = aws.cfg.Recorder("foo", role_arn=role.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""config.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var foo = new Aws.Cfg.Recorder("foo", new Aws.Cfg.RecorderArgs
+ *         {
+ *             RoleArn = role.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewRecorder(ctx, "foo", &cfg.RecorderArgs{
+ * 			RoleArn: role.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +135,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/recorder:Recorder foo example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/recorder:Recorder")
 public class Recorder extends io.pulumi.resources.CustomResource {

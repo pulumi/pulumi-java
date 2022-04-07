@@ -28,7 +28,353 @@ import javax.annotation.Nullable;
 /**
  * Provides an EC2 instance resource. This allows instances to be created, updated, and deleted.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Example Using AMI Lookup
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ubuntu = aws.ec2.getAmi({
+ *     mostRecent: true,
+ *     filters: [
+ *         {
+ *             name: "name",
+ *             values: ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"],
+ *         },
+ *         {
+ *             name: "virtualization-type",
+ *             values: ["hvm"],
+ *         },
+ *     ],
+ *     owners: ["099720109477"],
+ * });
+ * const web = new aws.ec2.Instance("web", {
+ *     ami: ubuntu.then(ubuntu => ubuntu.id),
+ *     instanceType: "t3.micro",
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ubuntu = aws.ec2.get_ami(most_recent=True,
+ *     filters=[
+ *         aws.ec2.GetAmiFilterArgs(
+ *             name="name",
+ *             values=["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"],
+ *         ),
+ *         aws.ec2.GetAmiFilterArgs(
+ *             name="virtualization-type",
+ *             values=["hvm"],
+ *         ),
+ *     ],
+ *     owners=["099720109477"])
+ * web = aws.ec2.Instance("web",
+ *     ami=ubuntu.id,
+ *     instance_type="t3.micro",
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ubuntu = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
+ *         {
+ *             MostRecent = true,
+ *             Filters = 
+ *             {
+ *                 new Aws.Ec2.Inputs.GetAmiFilterArgs
+ *                 {
+ *                     Name = "name",
+ *                     Values = 
+ *                     {
+ *                         "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
+ *                     },
+ *                 },
+ *                 new Aws.Ec2.Inputs.GetAmiFilterArgs
+ *                 {
+ *                     Name = "virtualization-type",
+ *                     Values = 
+ *                     {
+ *                         "hvm",
+ *                     },
+ *                 },
+ *             },
+ *             Owners = 
+ *             {
+ *                 "099720109477",
+ *             },
+ *         }));
+ *         var web = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
+ *         {
+ *             Ami = ubuntu.Apply(ubuntu => ubuntu.Id),
+ *             InstanceType = "t3.micro",
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := true
+ * 		ubuntu, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+ * 			MostRecent: &opt0,
+ * 			Filters: []ec2.GetAmiFilter{
+ * 				ec2.GetAmiFilter{
+ * 					Name: "name",
+ * 					Values: []string{
+ * 						"ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
+ * 					},
+ * 				},
+ * 				ec2.GetAmiFilter{
+ * 					Name: "virtualization-type",
+ * 					Values: []string{
+ * 						"hvm",
+ * 					},
+ * 				},
+ * 			},
+ * 			Owners: []string{
+ * 				"099720109477",
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+ * 			Ami:          pulumi.String(ubuntu.Id),
+ * 			InstanceType: pulumi.String("t3.micro"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Network and Credit Specification Example
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myVpc = new aws.ec2.Vpc("myVpc", {
+ *     cidrBlock: "172.16.0.0/16",
+ *     tags: {
+ *         Name: "tf-example",
+ *     },
+ * });
+ * const mySubnet = new aws.ec2.Subnet("mySubnet", {
+ *     vpcId: myVpc.id,
+ *     cidrBlock: "172.16.10.0/24",
+ *     availabilityZone: "us-west-2a",
+ *     tags: {
+ *         Name: "tf-example",
+ *     },
+ * });
+ * const fooNetworkInterface = new aws.ec2.NetworkInterface("fooNetworkInterface", {
+ *     subnetId: mySubnet.id,
+ *     privateIps: ["172.16.10.100"],
+ *     tags: {
+ *         Name: "primary_network_interface",
+ *     },
+ * });
+ * const fooInstance = new aws.ec2.Instance("fooInstance", {
+ *     ami: "ami-005e54dee72cc1d00",
+ *     instanceType: "t2.micro",
+ *     networkInterfaces: [{
+ *         networkInterfaceId: fooNetworkInterface.id,
+ *         deviceIndex: 0,
+ *     }],
+ *     creditSpecification: {
+ *         cpuCredits: "unlimited",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_vpc = aws.ec2.Vpc("myVpc",
+ *     cidr_block="172.16.0.0/16",
+ *     tags={
+ *         "Name": "tf-example",
+ *     })
+ * my_subnet = aws.ec2.Subnet("mySubnet",
+ *     vpc_id=my_vpc.id,
+ *     cidr_block="172.16.10.0/24",
+ *     availability_zone="us-west-2a",
+ *     tags={
+ *         "Name": "tf-example",
+ *     })
+ * foo_network_interface = aws.ec2.NetworkInterface("fooNetworkInterface",
+ *     subnet_id=my_subnet.id,
+ *     private_ips=["172.16.10.100"],
+ *     tags={
+ *         "Name": "primary_network_interface",
+ *     })
+ * foo_instance = aws.ec2.Instance("fooInstance",
+ *     ami="ami-005e54dee72cc1d00",
+ *     instance_type="t2.micro",
+ *     network_interfaces=[aws.ec2.InstanceNetworkInterfaceArgs(
+ *         network_interface_id=foo_network_interface.id,
+ *         device_index=0,
+ *     )],
+ *     credit_specification=aws.ec2.InstanceCreditSpecificationArgs(
+ *         cpu_credits="unlimited",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myVpc = new Aws.Ec2.Vpc("myVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "172.16.0.0/16",
+ *             Tags = 
+ *             {
+ *                 { "Name", "tf-example" },
+ *             },
+ *         });
+ *         var mySubnet = new Aws.Ec2.Subnet("mySubnet", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = myVpc.Id,
+ *             CidrBlock = "172.16.10.0/24",
+ *             AvailabilityZone = "us-west-2a",
+ *             Tags = 
+ *             {
+ *                 { "Name", "tf-example" },
+ *             },
+ *         });
+ *         var fooNetworkInterface = new Aws.Ec2.NetworkInterface("fooNetworkInterface", new Aws.Ec2.NetworkInterfaceArgs
+ *         {
+ *             SubnetId = mySubnet.Id,
+ *             PrivateIps = 
+ *             {
+ *                 "172.16.10.100",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "primary_network_interface" },
+ *             },
+ *         });
+ *         var fooInstance = new Aws.Ec2.Instance("fooInstance", new Aws.Ec2.InstanceArgs
+ *         {
+ *             Ami = "ami-005e54dee72cc1d00",
+ *             InstanceType = "t2.micro",
+ *             NetworkInterfaces = 
+ *             {
+ *                 new Aws.Ec2.Inputs.InstanceNetworkInterfaceArgs
+ *                 {
+ *                     NetworkInterfaceId = fooNetworkInterface.Id,
+ *                     DeviceIndex = 0,
+ *                 },
+ *             },
+ *             CreditSpecification = new Aws.Ec2.Inputs.InstanceCreditSpecificationArgs
+ *             {
+ *                 CpuCredits = "unlimited",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myVpc, err := ec2.NewVpc(ctx, "myVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("172.16.0.0/16"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("tf-example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		mySubnet, err := ec2.NewSubnet(ctx, "mySubnet", &ec2.SubnetArgs{
+ * 			VpcId:            myVpc.ID(),
+ * 			CidrBlock:        pulumi.String("172.16.10.0/24"),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("tf-example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		fooNetworkInterface, err := ec2.NewNetworkInterface(ctx, "fooNetworkInterface", &ec2.NetworkInterfaceArgs{
+ * 			SubnetId: mySubnet.ID(),
+ * 			PrivateIps: pulumi.StringArray{
+ * 				pulumi.String("172.16.10.100"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("primary_network_interface"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewInstance(ctx, "fooInstance", &ec2.InstanceArgs{
+ * 			Ami:          pulumi.String("ami-005e54dee72cc1d00"),
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 			NetworkInterfaces: ec2.InstanceNetworkInterfaceArray{
+ * 				&ec2.InstanceNetworkInterfaceArgs{
+ * 					NetworkInterfaceId: fooNetworkInterface.ID(),
+ * 					DeviceIndex:        pulumi.Int(0),
+ * 				},
+ * 			},
+ * 			CreditSpecification: &ec2.InstanceCreditSpecificationArgs{
+ * 				CpuCredits: pulumi.String("unlimited"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,6 +384,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/instance:Instance web i-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
@@ -580,7 +927,6 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.
-     * 
      */
     @Deprecated /* Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates. */
     @Export(name="securityGroups", type=List.class, parameters={String.class})

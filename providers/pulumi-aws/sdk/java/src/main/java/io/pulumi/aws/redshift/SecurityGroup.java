@@ -17,7 +17,76 @@ import javax.annotation.Nullable;
 /**
  * Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultSecurityGroup = new aws.redshift.SecurityGroup("default", {
+ *     ingress: [{
+ *         cidr: "10.0.0.0/24",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.redshift.SecurityGroup("default", ingress=[aws.redshift.SecurityGroupIngressArgs(
+ *     cidr="10.0.0.0/24",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.RedShift.SecurityGroup("default", new Aws.RedShift.SecurityGroupArgs
+ *         {
+ *             Ingress = 
+ *             {
+ *                 new Aws.RedShift.Inputs.SecurityGroupIngressArgs
+ *                 {
+ *                     Cidr = "10.0.0.0/24",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := redshift.NewSecurityGroup(ctx, "default", &redshift.SecurityGroupArgs{
+ * 			Ingress: redshift.SecurityGroupIngressArray{
+ * 				&redshift.SecurityGroupIngressArgs{
+ * 					Cidr: pulumi.String("10.0.0.0/24"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/securityGroup:SecurityGroup testgroup1 redshift_test_group
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/securityGroup:SecurityGroup")
 public class SecurityGroup extends io.pulumi.resources.CustomResource {

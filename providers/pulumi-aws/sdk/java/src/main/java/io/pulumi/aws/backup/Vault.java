@@ -17,7 +17,60 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Backup vault resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.backup.Vault("example", {kmsKeyArn: aws_kms_key.example.arn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.backup.Vault("example", kms_key_arn=aws_kms_key["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Backup.Vault("example", new Aws.Backup.VaultArgs
+ *         {
+ *             KmsKeyArn = aws_kms_key.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := backup.NewVault(ctx, "example", &backup.VaultArgs{
+ * 			KmsKeyArn: pulumi.Any(aws_kms_key.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +80,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:backup/vault:Vault test-vault TestVault
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:backup/vault:Vault")
 public class Vault extends io.pulumi.resources.CustomResource {

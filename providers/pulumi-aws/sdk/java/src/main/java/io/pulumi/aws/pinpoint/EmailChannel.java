@@ -17,7 +17,205 @@ import javax.annotation.Nullable;
 /**
  * Provides a Pinpoint Email Channel resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const app = new aws.pinpoint.App("app", {});
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "pinpoint.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const email = new aws.pinpoint.EmailChannel("email", {
+ *     applicationId: app.applicationId,
+ *     fromAddress: "user@example.com",
+ *     roleArn: role.arn,
+ * });
+ * const identity = new aws.ses.DomainIdentity("identity", {domain: "example.com"});
+ * const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
+ *     role: role.id,
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": {
+ *     "Action": [
+ *       "mobileanalytics:PutEvents",
+ *       "mobileanalytics:PutItems"
+ *     ],
+ *     "Effect": "Allow",
+ *     "Resource": [
+ *       "*"
+ *     ]
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.pinpoint.App("app")
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "pinpoint.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * email = aws.pinpoint.EmailChannel("email",
+ *     application_id=app.application_id,
+ *     from_address="user@example.com",
+ *     role_arn=role.arn)
+ * identity = aws.ses.DomainIdentity("identity", domain="example.com")
+ * role_policy = aws.iam.RolePolicy("rolePolicy",
+ *     role=role.id,
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": {
+ *     "Action": [
+ *       "mobileanalytics:PutEvents",
+ *       "mobileanalytics:PutItems"
+ *     ],
+ *     "Effect": "Allow",
+ *     "Resource": [
+ *       "*"
+ *     ]
+ *   }
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+ *         {
+ *         });
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""pinpoint.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var email = new Aws.Pinpoint.EmailChannel("email", new Aws.Pinpoint.EmailChannelArgs
+ *         {
+ *             ApplicationId = app.ApplicationId,
+ *             FromAddress = "user@example.com",
+ *             RoleArn = role.Arn,
+ *         });
+ *         var identity = new Aws.Ses.DomainIdentity("identity", new Aws.Ses.DomainIdentityArgs
+ *         {
+ *             Domain = "example.com",
+ *         });
+ *         var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = role.Id,
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": {
+ *     ""Action"": [
+ *       ""mobileanalytics:PutEvents"",
+ *       ""mobileanalytics:PutItems""
+ *     ],
+ *     ""Effect"": ""Allow"",
+ *     ""Resource"": [
+ *       ""*""
+ *     ]
+ *   }
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		app, err := pinpoint.NewApp(ctx, "app", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pinpoint.NewEmailChannel(ctx, "email", &pinpoint.EmailChannelArgs{
+ * 			ApplicationId: app.ApplicationId,
+ * 			FromAddress:   pulumi.String("user@example.com"),
+ * 			RoleArn:       role.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ses.NewDomainIdentity(ctx, "identity", &ses.DomainIdentityArgs{
+ * 			Domain: pulumi.String("example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
+ * 			Role:   role.ID(),
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"mobileanalytics:PutEvents\",\n", "      \"mobileanalytics:PutItems\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"*\"\n", "    ]\n", "  }\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +225,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:pinpoint/emailChannel:EmailChannel email application-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:pinpoint/emailChannel:EmailChannel")
 public class EmailChannel extends io.pulumi.resources.CustomResource {

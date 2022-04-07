@@ -16,7 +16,271 @@ import javax.annotation.Nullable;
 /**
  * Manages a Security Hub finding aggregator. Security Hub needs to be enabled in a region in order for the aggregator to pull through findings.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### All Regions Usage
+ * 
+ * The following example will enable the aggregator for every region.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
+ * const exampleFindingAggregator = new aws.securityhub.FindingAggregator("exampleFindingAggregator", {linkingMode: "ALL_REGIONS"}, {
+ *     dependsOn: [exampleAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.securityhub.Account("exampleAccount")
+ * example_finding_aggregator = aws.securityhub.FindingAggregator("exampleFindingAggregator", linking_mode="ALL_REGIONS",
+ * opts=pulumi.ResourceOptions(depends_on=[example_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.SecurityHub.Account("exampleAccount", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var exampleFindingAggregator = new Aws.SecurityHub.FindingAggregator("exampleFindingAggregator", new Aws.SecurityHub.FindingAggregatorArgs
+ *         {
+ *             LinkingMode = "ALL_REGIONS",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleAccount, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewFindingAggregator(ctx, "exampleFindingAggregator", &securityhub.FindingAggregatorArgs{
+ * 			LinkingMode: pulumi.String("ALL_REGIONS"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### All Regions Except Specified Regions Usage
+ * 
+ * The following example will enable the aggregator for every region except those specified in `specified_regions`.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
+ * const exampleFindingAggregator = new aws.securityhub.FindingAggregator("exampleFindingAggregator", {
+ *     linkingMode: "ALL_REGIONS_EXCEPT_SPECIFIED",
+ *     specifiedRegions: [
+ *         "eu-west-1",
+ *         "eu-west-2",
+ *     ],
+ * }, {
+ *     dependsOn: [exampleAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.securityhub.Account("exampleAccount")
+ * example_finding_aggregator = aws.securityhub.FindingAggregator("exampleFindingAggregator",
+ *     linking_mode="ALL_REGIONS_EXCEPT_SPECIFIED",
+ *     specified_regions=[
+ *         "eu-west-1",
+ *         "eu-west-2",
+ *     ],
+ *     opts=pulumi.ResourceOptions(depends_on=[example_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.SecurityHub.Account("exampleAccount", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var exampleFindingAggregator = new Aws.SecurityHub.FindingAggregator("exampleFindingAggregator", new Aws.SecurityHub.FindingAggregatorArgs
+ *         {
+ *             LinkingMode = "ALL_REGIONS_EXCEPT_SPECIFIED",
+ *             SpecifiedRegions = 
+ *             {
+ *                 "eu-west-1",
+ *                 "eu-west-2",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleAccount, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewFindingAggregator(ctx, "exampleFindingAggregator", &securityhub.FindingAggregatorArgs{
+ * 			LinkingMode: pulumi.String("ALL_REGIONS_EXCEPT_SPECIFIED"),
+ * 			SpecifiedRegions: pulumi.StringArray{
+ * 				pulumi.String("eu-west-1"),
+ * 				pulumi.String("eu-west-2"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Specified Regions Usage
+ * 
+ * The following example will enable the aggregator for every region specified in `specified_regions`.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
+ * const exampleFindingAggregator = new aws.securityhub.FindingAggregator("exampleFindingAggregator", {
+ *     linkingMode: "SPECIFIED_REGIONS",
+ *     specifiedRegions: [
+ *         "eu-west-1",
+ *         "eu-west-2",
+ *     ],
+ * }, {
+ *     dependsOn: [exampleAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.securityhub.Account("exampleAccount")
+ * example_finding_aggregator = aws.securityhub.FindingAggregator("exampleFindingAggregator",
+ *     linking_mode="SPECIFIED_REGIONS",
+ *     specified_regions=[
+ *         "eu-west-1",
+ *         "eu-west-2",
+ *     ],
+ *     opts=pulumi.ResourceOptions(depends_on=[example_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.SecurityHub.Account("exampleAccount", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var exampleFindingAggregator = new Aws.SecurityHub.FindingAggregator("exampleFindingAggregator", new Aws.SecurityHub.FindingAggregatorArgs
+ *         {
+ *             LinkingMode = "SPECIFIED_REGIONS",
+ *             SpecifiedRegions = 
+ *             {
+ *                 "eu-west-1",
+ *                 "eu-west-2",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleAccount, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewFindingAggregator(ctx, "exampleFindingAggregator", &securityhub.FindingAggregatorArgs{
+ * 			LinkingMode: pulumi.String("SPECIFIED_REGIONS"),
+ * 			SpecifiedRegions: pulumi.StringArray{
+ * 				pulumi.String("eu-west-1"),
+ * 				pulumi.String("eu-west-2"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +290,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/findingAggregator:FindingAggregator example arn:aws:securityhub:eu-west-1:123456789098:finding-aggregator/abcd1234-abcd-1234-1234-abcdef123456
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/findingAggregator:FindingAggregator")
 public class FindingAggregator extends io.pulumi.resources.CustomResource {

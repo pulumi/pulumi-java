@@ -23,7 +23,471 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Local Cache
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testVolumeAttachment = new aws.ec2.VolumeAttachment("testVolumeAttachment", {
+ *     deviceName: "/dev/xvdb",
+ *     volumeId: aws_ebs_volume.test.id,
+ *     instanceId: aws_instance.test.id,
+ * });
+ * const testLocalDisk = testVolumeAttachment.deviceName.apply(deviceName => aws.storagegateway.getLocalDiskOutput({
+ *     diskNode: deviceName,
+ *     gatewayArn: aws_storagegateway_gateway.test.arn,
+ * }));
+ * const testCache = new aws.storagegateway.Cache("testCache", {
+ *     diskId: testLocalDisk.apply(testLocalDisk => testLocalDisk.diskId),
+ *     gatewayArn: aws_storagegateway_gateway.test.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_volume_attachment = aws.ec2.VolumeAttachment("testVolumeAttachment",
+ *     device_name="/dev/xvdb",
+ *     volume_id=aws_ebs_volume["test"]["id"],
+ *     instance_id=aws_instance["test"]["id"])
+ * test_local_disk = test_volume_attachment.device_name.apply(lambda device_name: aws.storagegateway.get_local_disk_output(disk_node=device_name,
+ *     gateway_arn=aws_storagegateway_gateway["test"]["arn"]))
+ * test_cache = aws.storagegateway.Cache("testCache",
+ *     disk_id=test_local_disk.disk_id,
+ *     gateway_arn=aws_storagegateway_gateway["test"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testVolumeAttachment = new Aws.Ec2.VolumeAttachment("testVolumeAttachment", new Aws.Ec2.VolumeAttachmentArgs
+ *         {
+ *             DeviceName = "/dev/xvdb",
+ *             VolumeId = aws_ebs_volume.Test.Id,
+ *             InstanceId = aws_instance.Test.Id,
+ *         });
+ *         var testLocalDisk = testVolumeAttachment.DeviceName.Apply(deviceName => Aws.StorageGateway.GetLocalDisk.Invoke(new Aws.StorageGateway.GetLocalDiskInvokeArgs
+ *         {
+ *             DiskNode = deviceName,
+ *             GatewayArn = aws_storagegateway_gateway.Test.Arn,
+ *         }));
+ *         var testCache = new Aws.StorageGateway.Cache("testCache", new Aws.StorageGateway.CacheArgs
+ *         {
+ *             DiskId = testLocalDisk.Apply(testLocalDisk => testLocalDisk.DiskId),
+ *             GatewayArn = aws_storagegateway_gateway.Test.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testVolumeAttachment, err := ec2.NewVolumeAttachment(ctx, "testVolumeAttachment", &ec2.VolumeAttachmentArgs{
+ * 			DeviceName: pulumi.String("/dev/xvdb"),
+ * 			VolumeId:   pulumi.Any(aws_ebs_volume.Test.Id),
+ * 			InstanceId: pulumi.Any(aws_instance.Test.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = storagegateway.NewCache(ctx, "testCache", &storagegateway.CacheArgs{
+ * 			DiskId: testLocalDisk.ApplyT(func(testLocalDisk storagegateway.GetLocalDiskResult) (string, error) {
+ * 				return testLocalDisk.DiskId, nil
+ * 			}).(pulumi.StringOutput),
+ * 			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Test.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### FSx File Gateway
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.Gateway("example", {
+ *     gatewayIpAddress: "1.2.3.4",
+ *     gatewayName: "example",
+ *     gatewayTimezone: "GMT",
+ *     gatewayType: "FILE_FSX_SMB",
+ *     smbActiveDirectorySettings: {
+ *         domainName: "corp.example.com",
+ *         password: "avoid-plaintext-passwords",
+ *         username: "Admin",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.Gateway("example",
+ *     gateway_ip_address="1.2.3.4",
+ *     gateway_name="example",
+ *     gateway_timezone="GMT",
+ *     gateway_type="FILE_FSX_SMB",
+ *     smb_active_directory_settings=aws.storagegateway.GatewaySmbActiveDirectorySettingsArgs(
+ *         domain_name="corp.example.com",
+ *         password="avoid-plaintext-passwords",
+ *         username="Admin",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+ *         {
+ *             GatewayIpAddress = "1.2.3.4",
+ *             GatewayName = "example",
+ *             GatewayTimezone = "GMT",
+ *             GatewayType = "FILE_FSX_SMB",
+ *             SmbActiveDirectorySettings = new Aws.StorageGateway.Inputs.GatewaySmbActiveDirectorySettingsArgs
+ *             {
+ *                 DomainName = "corp.example.com",
+ *                 Password = "avoid-plaintext-passwords",
+ *                 Username = "Admin",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+ * 			GatewayIpAddress: pulumi.String("1.2.3.4"),
+ * 			GatewayName:      pulumi.String("example"),
+ * 			GatewayTimezone:  pulumi.String("GMT"),
+ * 			GatewayType:      pulumi.String("FILE_FSX_SMB"),
+ * 			SmbActiveDirectorySettings: &storagegateway.GatewaySmbActiveDirectorySettingsArgs{
+ * 				DomainName: pulumi.String("corp.example.com"),
+ * 				Password:   pulumi.String("avoid-plaintext-passwords"),
+ * 				Username:   pulumi.String("Admin"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### S3 File Gateway
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.Gateway("example", {
+ *     gatewayIpAddress: "1.2.3.4",
+ *     gatewayName: "example",
+ *     gatewayTimezone: "GMT",
+ *     gatewayType: "FILE_S3",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.Gateway("example",
+ *     gateway_ip_address="1.2.3.4",
+ *     gateway_name="example",
+ *     gateway_timezone="GMT",
+ *     gateway_type="FILE_S3")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+ *         {
+ *             GatewayIpAddress = "1.2.3.4",
+ *             GatewayName = "example",
+ *             GatewayTimezone = "GMT",
+ *             GatewayType = "FILE_S3",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+ * 			GatewayIpAddress: pulumi.String("1.2.3.4"),
+ * 			GatewayName:      pulumi.String("example"),
+ * 			GatewayTimezone:  pulumi.String("GMT"),
+ * 			GatewayType:      pulumi.String("FILE_S3"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Tape Gateway
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.Gateway("example", {
+ *     gatewayIpAddress: "1.2.3.4",
+ *     gatewayName: "example",
+ *     gatewayTimezone: "GMT",
+ *     gatewayType: "VTL",
+ *     mediumChangerType: "AWS-Gateway-VTL",
+ *     tapeDriveType: "IBM-ULT3580-TD5",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.Gateway("example",
+ *     gateway_ip_address="1.2.3.4",
+ *     gateway_name="example",
+ *     gateway_timezone="GMT",
+ *     gateway_type="VTL",
+ *     medium_changer_type="AWS-Gateway-VTL",
+ *     tape_drive_type="IBM-ULT3580-TD5")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+ *         {
+ *             GatewayIpAddress = "1.2.3.4",
+ *             GatewayName = "example",
+ *             GatewayTimezone = "GMT",
+ *             GatewayType = "VTL",
+ *             MediumChangerType = "AWS-Gateway-VTL",
+ *             TapeDriveType = "IBM-ULT3580-TD5",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+ * 			GatewayIpAddress:  pulumi.String("1.2.3.4"),
+ * 			GatewayName:       pulumi.String("example"),
+ * 			GatewayTimezone:   pulumi.String("GMT"),
+ * 			GatewayType:       pulumi.String("VTL"),
+ * 			MediumChangerType: pulumi.String("AWS-Gateway-VTL"),
+ * 			TapeDriveType:     pulumi.String("IBM-ULT3580-TD5"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Volume Gateway (Cached)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.Gateway("example", {
+ *     gatewayIpAddress: "1.2.3.4",
+ *     gatewayName: "example",
+ *     gatewayTimezone: "GMT",
+ *     gatewayType: "CACHED",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.Gateway("example",
+ *     gateway_ip_address="1.2.3.4",
+ *     gateway_name="example",
+ *     gateway_timezone="GMT",
+ *     gateway_type="CACHED")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+ *         {
+ *             GatewayIpAddress = "1.2.3.4",
+ *             GatewayName = "example",
+ *             GatewayTimezone = "GMT",
+ *             GatewayType = "CACHED",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+ * 			GatewayIpAddress: pulumi.String("1.2.3.4"),
+ * 			GatewayName:      pulumi.String("example"),
+ * 			GatewayTimezone:  pulumi.String("GMT"),
+ * 			GatewayType:      pulumi.String("CACHED"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Volume Gateway (Stored)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.storagegateway.Gateway("example", {
+ *     gatewayIpAddress: "1.2.3.4",
+ *     gatewayName: "example",
+ *     gatewayTimezone: "GMT",
+ *     gatewayType: "STORED",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.storagegateway.Gateway("example",
+ *     gateway_ip_address="1.2.3.4",
+ *     gateway_name="example",
+ *     gateway_timezone="GMT",
+ *     gateway_type="STORED")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+ *         {
+ *             GatewayIpAddress = "1.2.3.4",
+ *             GatewayName = "example",
+ *             GatewayTimezone = "GMT",
+ *             GatewayType = "STORED",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+ * 			GatewayIpAddress: pulumi.String("1.2.3.4"),
+ * 			GatewayName:      pulumi.String("example"),
+ * 			GatewayTimezone:  pulumi.String("GMT"),
+ * 			GatewayType:      pulumi.String("STORED"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,8 +497,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:storagegateway/gateway:Gateway example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678
  * ```
  * 
- *  Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignoreChanges` to hide the difference.
- * 
+ *  Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignoreChanges` to hide the difference. 
  */
 @ResourceType(type="aws:storagegateway/gateway:Gateway")
 public class Gateway extends io.pulumi.resources.CustomResource {

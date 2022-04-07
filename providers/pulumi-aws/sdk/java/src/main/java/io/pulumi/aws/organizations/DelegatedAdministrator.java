@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [AWS Organizations Delegated Administrator](https://docs.aws.amazon.com/organizations/latest/APIReference/API_RegisterDelegatedAdministrator.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.organizations.DelegatedAdministrator("example", {
+ *     accountId: "AWS ACCOUNT ID",
+ *     servicePrincipal: "Service principal",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.organizations.DelegatedAdministrator("example",
+ *     account_id="AWS ACCOUNT ID",
+ *     service_principal="Service principal")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Organizations.DelegatedAdministrator("example", new Aws.Organizations.DelegatedAdministratorArgs
+ *         {
+ *             AccountId = "AWS ACCOUNT ID",
+ *             ServicePrincipal = "Service principal",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewDelegatedAdministrator(ctx, "example", &organizations.DelegatedAdministratorArgs{
+ * 			AccountId:        pulumi.String("AWS ACCOUNT ID"),
+ * 			ServicePrincipal: pulumi.String("Service principal"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:organizations/delegatedAdministrator:DelegatedAdministrator example 123456789012/config.amazonaws.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:organizations/delegatedAdministrator:DelegatedAdministrator")
 public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {

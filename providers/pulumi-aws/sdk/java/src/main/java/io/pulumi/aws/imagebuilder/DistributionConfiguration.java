@@ -18,7 +18,120 @@ import javax.annotation.Nullable;
 /**
  * Manages an Image Builder Distribution Configuration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.imagebuilder.DistributionConfiguration("example", {
+ *     distributions: [{
+ *         amiDistributionConfiguration: {
+ *             amiTags: {
+ *                 CostCenter: "IT",
+ *             },
+ *             launchPermission: {
+ *                 userIds: ["123456789012"],
+ *             },
+ *             name: "example-{{ imagebuilder:buildDate }}",
+ *         },
+ *         region: "us-east-1",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.imagebuilder.DistributionConfiguration("example", distributions=[aws.imagebuilder.DistributionConfigurationDistributionArgs(
+ *     ami_distribution_configuration=aws.imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationArgs(
+ *         ami_tags={
+ *             "CostCenter": "IT",
+ *         },
+ *         launch_permission=aws.imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs(
+ *             user_ids=["123456789012"],
+ *         ),
+ *         name="example-{{ imagebuilder:buildDate }}",
+ *     ),
+ *     region="us-east-1",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ImageBuilder.DistributionConfiguration("example", new Aws.ImageBuilder.DistributionConfigurationArgs
+ *         {
+ *             Distributions = 
+ *             {
+ *                 new Aws.ImageBuilder.Inputs.DistributionConfigurationDistributionArgs
+ *                 {
+ *                     AmiDistributionConfiguration = new Aws.ImageBuilder.Inputs.DistributionConfigurationDistributionAmiDistributionConfigurationArgs
+ *                     {
+ *                         AmiTags = 
+ *                         {
+ *                             { "CostCenter", "IT" },
+ *                         },
+ *                         LaunchPermission = new Aws.ImageBuilder.Inputs.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs
+ *                         {
+ *                             UserIds = 
+ *                             {
+ *                                 "123456789012",
+ *                             },
+ *                         },
+ *                         Name = "example-{{ imagebuilder:buildDate }}",
+ *                     },
+ *                     Region = "us-east-1",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewDistributionConfiguration(ctx, "example", &imagebuilder.DistributionConfigurationArgs{
+ * 			Distributions: imagebuilder.DistributionConfigurationDistributionArray{
+ * 				&imagebuilder.DistributionConfigurationDistributionArgs{
+ * 					AmiDistributionConfiguration: &imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationArgs{
+ * 						AmiTags: pulumi.StringMap{
+ * 							"CostCenter": pulumi.String("IT"),
+ * 						},
+ * 						LaunchPermission: &imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs{
+ * 							UserIds: pulumi.StringArray{
+ * 								pulumi.String("123456789012"),
+ * 							},
+ * 						},
+ * 						Name: pulumi.String("example-{{ imagebuilder:buildDate }}"),
+ * 					},
+ * 					Region: pulumi.String("us-east-1"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +141,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:imagebuilder/distributionConfiguration:DistributionConfiguration example arn:aws:imagebuilder:us-east-1:123456789012:distribution-configuration/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:imagebuilder/distributionConfiguration:DistributionConfiguration")
 public class DistributionConfiguration extends io.pulumi.resources.CustomResource {

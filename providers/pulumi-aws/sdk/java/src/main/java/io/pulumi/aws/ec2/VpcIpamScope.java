@@ -18,7 +18,103 @@ import javax.annotation.Nullable;
 /**
  * Creates a scope for AWS IPAM.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getRegion({});
+ * const exampleVpcIpam = new aws.ec2.VpcIpam("exampleVpcIpam", {operatingRegions: [{
+ *     regionName: current.then(current => current.name),
+ * }]});
+ * const exampleVpcIpamScope = new aws.ec2.VpcIpamScope("exampleVpcIpamScope", {
+ *     ipamId: exampleVpcIpam.id,
+ *     description: "Another Scope",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_region()
+ * example_vpc_ipam = aws.ec2.VpcIpam("exampleVpcIpam", operating_regions=[aws.ec2.VpcIpamOperatingRegionArgs(
+ *     region_name=current.name,
+ * )])
+ * example_vpc_ipam_scope = aws.ec2.VpcIpamScope("exampleVpcIpamScope",
+ *     ipam_id=example_vpc_ipam.id,
+ *     description="Another Scope")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var exampleVpcIpam = new Aws.Ec2.VpcIpam("exampleVpcIpam", new Aws.Ec2.VpcIpamArgs
+ *         {
+ *             OperatingRegions = 
+ *             {
+ *                 new Aws.Ec2.Inputs.VpcIpamOperatingRegionArgs
+ *                 {
+ *                     RegionName = current.Apply(current => current.Name),
+ *                 },
+ *             },
+ *         });
+ *         var exampleVpcIpamScope = new Aws.Ec2.VpcIpamScope("exampleVpcIpamScope", new Aws.Ec2.VpcIpamScopeArgs
+ *         {
+ *             IpamId = exampleVpcIpam.Id,
+ *             Description = "Another Scope",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpam, err := ec2.NewVpcIpam(ctx, "exampleVpcIpam", &ec2.VpcIpamArgs{
+ * 			OperatingRegions: ec2.VpcIpamOperatingRegionArray{
+ * 				&ec2.VpcIpamOperatingRegionArgs{
+ * 					RegionName: pulumi.String(current.Name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpamScope(ctx, "exampleVpcIpamScope", &ec2.VpcIpamScopeArgs{
+ * 			IpamId:      exampleVpcIpam.ID(),
+ * 			Description: pulumi.String("Another Scope"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +124,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcIpamScope:VpcIpamScope example ipam-scope-0513c69f283d11dfb
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcIpamScope:VpcIpamScope")
 public class VpcIpamScope extends io.pulumi.resources.CustomResource {

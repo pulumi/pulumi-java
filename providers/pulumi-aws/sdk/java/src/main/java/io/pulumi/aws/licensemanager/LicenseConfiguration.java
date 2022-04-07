@@ -21,7 +21,97 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Removing the `license_count` attribute is not supported by the License Manager API - recreate the resource instead.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.licensemanager.LicenseConfiguration("example", {
+ *     description: "Example",
+ *     licenseCount: 10,
+ *     licenseCountHardLimit: true,
+ *     licenseCountingType: "Socket",
+ *     licenseRules: ["#minimumSockets=2"],
+ *     tags: {
+ *         foo: "barr",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.licensemanager.LicenseConfiguration("example",
+ *     description="Example",
+ *     license_count=10,
+ *     license_count_hard_limit=True,
+ *     license_counting_type="Socket",
+ *     license_rules=["#minimumSockets=2"],
+ *     tags={
+ *         "foo": "barr",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.LicenseManager.LicenseConfiguration("example", new Aws.LicenseManager.LicenseConfigurationArgs
+ *         {
+ *             Description = "Example",
+ *             LicenseCount = 10,
+ *             LicenseCountHardLimit = true,
+ *             LicenseCountingType = "Socket",
+ *             LicenseRules = 
+ *             {
+ *                 "#minimumSockets=2",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "foo", "barr" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/licensemanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := licensemanager.NewLicenseConfiguration(ctx, "example", &licensemanager.LicenseConfigurationArgs{
+ * 			Description:           pulumi.String("Example"),
+ * 			LicenseCount:          pulumi.Int(10),
+ * 			LicenseCountHardLimit: pulumi.Bool(true),
+ * 			LicenseCountingType:   pulumi.String("Socket"),
+ * 			LicenseRules: pulumi.StringArray{
+ * 				pulumi.String("#minimumSockets=2"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"foo": pulumi.String("barr"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Rules
  * 
  * License rules should be in the format of `#RuleType=RuleValue`. Supported rule types:
@@ -34,6 +124,7 @@ import javax.annotation.Nullable;
  * * `maximumSockets` - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000
  * * `allowedTenancy` - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of `EC2-Default`, `EC2-DedicatedHost`, `EC2-DedicatedInstance`
  * 
+ * 
  * ## Import
  * 
  * License configurations can be imported using the `id`, e.g.,
@@ -42,6 +133,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:licensemanager/licenseConfiguration:LicenseConfiguration example arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:licensemanager/licenseConfiguration:LicenseConfiguration")
 public class LicenseConfiguration extends io.pulumi.resources.CustomResource {

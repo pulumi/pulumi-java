@@ -17,7 +17,120 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Regex Match Set Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRegexPatternSet = new aws.waf.RegexPatternSet("exampleRegexPatternSet", {regexPatternStrings: [
+ *     "one",
+ *     "two",
+ * ]});
+ * const exampleRegexMatchSet = new aws.waf.RegexMatchSet("exampleRegexMatchSet", {regexMatchTuples: [{
+ *     fieldToMatch: {
+ *         data: "User-Agent",
+ *         type: "HEADER",
+ *     },
+ *     regexPatternSetId: exampleRegexPatternSet.id,
+ *     textTransformation: "NONE",
+ * }]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_regex_pattern_set = aws.waf.RegexPatternSet("exampleRegexPatternSet", regex_pattern_strings=[
+ *     "one",
+ *     "two",
+ * ])
+ * example_regex_match_set = aws.waf.RegexMatchSet("exampleRegexMatchSet", regex_match_tuples=[aws.waf.RegexMatchSetRegexMatchTupleArgs(
+ *     field_to_match=aws.waf.RegexMatchSetRegexMatchTupleFieldToMatchArgs(
+ *         data="User-Agent",
+ *         type="HEADER",
+ *     ),
+ *     regex_pattern_set_id=example_regex_pattern_set.id,
+ *     text_transformation="NONE",
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRegexPatternSet = new Aws.Waf.RegexPatternSet("exampleRegexPatternSet", new Aws.Waf.RegexPatternSetArgs
+ *         {
+ *             RegexPatternStrings = 
+ *             {
+ *                 "one",
+ *                 "two",
+ *             },
+ *         });
+ *         var exampleRegexMatchSet = new Aws.Waf.RegexMatchSet("exampleRegexMatchSet", new Aws.Waf.RegexMatchSetArgs
+ *         {
+ *             RegexMatchTuples = 
+ *             {
+ *                 new Aws.Waf.Inputs.RegexMatchSetRegexMatchTupleArgs
+ *                 {
+ *                     FieldToMatch = new Aws.Waf.Inputs.RegexMatchSetRegexMatchTupleFieldToMatchArgs
+ *                     {
+ *                         Data = "User-Agent",
+ *                         Type = "HEADER",
+ *                     },
+ *                     RegexPatternSetId = exampleRegexPatternSet.Id,
+ *                     TextTransformation = "NONE",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/waf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRegexPatternSet, err := waf.NewRegexPatternSet(ctx, "exampleRegexPatternSet", &waf.RegexPatternSetArgs{
+ * 			RegexPatternStrings: pulumi.StringArray{
+ * 				pulumi.String("one"),
+ * 				pulumi.String("two"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = waf.NewRegexMatchSet(ctx, "exampleRegexMatchSet", &waf.RegexMatchSetArgs{
+ * 			RegexMatchTuples: waf.RegexMatchSetRegexMatchTupleArray{
+ * 				&waf.RegexMatchSetRegexMatchTupleArgs{
+ * 					FieldToMatch: &waf.RegexMatchSetRegexMatchTupleFieldToMatchArgs{
+ * 						Data: pulumi.String("User-Agent"),
+ * 						Type: pulumi.String("HEADER"),
+ * 					},
+ * 					RegexPatternSetId:  exampleRegexPatternSet.ID(),
+ * 					TextTransformation: pulumi.String("NONE"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +140,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:waf/regexMatchSet:RegexMatchSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:waf/regexMatchSet:RegexMatchSet")
 public class RegexMatchSet extends io.pulumi.resources.CustomResource {

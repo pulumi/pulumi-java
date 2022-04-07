@@ -15,7 +15,105 @@ import javax.annotation.Nullable;
 /**
  * Manages a GuardDuty Organization Admin Account. The AWS account utilizing this resource must be an Organizations primary account. More information about Organizations support in GuardDuty can be found in the [GuardDuty User Guide](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
+ *     awsServiceAccessPrincipals: ["guardduty.amazonaws.com"],
+ *     featureSet: "ALL",
+ * });
+ * const exampleDetector = new aws.guardduty.Detector("exampleDetector", {});
+ * const exampleOrganizationAdminAccount = new aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", {adminAccountId: "123456789012"}, {
+ *     dependsOn: [exampleOrganization],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_organization = aws.organizations.Organization("exampleOrganization",
+ *     aws_service_access_principals=["guardduty.amazonaws.com"],
+ *     feature_set="ALL")
+ * example_detector = aws.guardduty.Detector("exampleDetector")
+ * example_organization_admin_account = aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012",
+ * opts=pulumi.ResourceOptions(depends_on=[example_organization]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "guardduty.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *         var exampleDetector = new Aws.GuardDuty.Detector("exampleDetector", new Aws.GuardDuty.DetectorArgs
+ *         {
+ *         });
+ *         var exampleOrganizationAdminAccount = new Aws.GuardDuty.OrganizationAdminAccount("exampleOrganizationAdminAccount", new Aws.GuardDuty.OrganizationAdminAccountArgs
+ *         {
+ *             AdminAccountId = "123456789012",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/guardduty"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("guardduty.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = guardduty.NewDetector(ctx, "exampleDetector", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = guardduty.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &guardduty.OrganizationAdminAccountArgs{
+ * 			AdminAccountId: pulumi.String("123456789012"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +123,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:guardduty/organizationAdminAccount:OrganizationAdminAccount example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:guardduty/organizationAdminAccount:OrganizationAdminAccount")
 public class OrganizationAdminAccount extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,68 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Image Version resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.sagemaker.ImageVersion("test", {
+ *     imageName: aws_sagemaker_image.test.id,
+ *     baseImage: "012345678912.dkr.ecr.us-west-2.amazonaws.com/image:latest",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.sagemaker.ImageVersion("test",
+ *     image_name=aws_sagemaker_image["test"]["id"],
+ *     base_image="012345678912.dkr.ecr.us-west-2.amazonaws.com/image:latest")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Sagemaker.ImageVersion("test", new Aws.Sagemaker.ImageVersionArgs
+ *         {
+ *             ImageName = aws_sagemaker_image.Test.Id,
+ *             BaseImage = "012345678912.dkr.ecr.us-west-2.amazonaws.com/image:latest",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewImageVersion(ctx, "test", &sagemaker.ImageVersionArgs{
+ * 			ImageName: pulumi.Any(aws_sagemaker_image.Test.Id),
+ * 			BaseImage: pulumi.String("012345678912.dkr.ecr.us-west-2.amazonaws.com/image:latest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +87,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/imageVersion:ImageVersion test_image my-code-repo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/imageVersion:ImageVersion")
 public class ImageVersion extends io.pulumi.resources.CustomResource {

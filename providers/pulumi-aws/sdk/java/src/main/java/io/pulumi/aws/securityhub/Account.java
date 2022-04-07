@@ -15,7 +15,57 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Destroying this resource will disable Security Hub for this AWS account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.securityhub.Account("example", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.securityhub.Account("example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.SecurityHub.Account("example", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityhub.NewAccount(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +75,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/account:Account example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/account:Account")
 public class Account extends io.pulumi.resources.CustomResource {

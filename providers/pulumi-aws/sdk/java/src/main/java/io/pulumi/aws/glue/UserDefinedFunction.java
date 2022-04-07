@@ -17,7 +17,113 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glue User Defined Function Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleCatalogDatabase = new aws.glue.CatalogDatabase("exampleCatalogDatabase", {name: "my_database"});
+ * const exampleUserDefinedFunction = new aws.glue.UserDefinedFunction("exampleUserDefinedFunction", {
+ *     catalogId: exampleCatalogDatabase.catalogId,
+ *     databaseName: exampleCatalogDatabase.name,
+ *     className: "class",
+ *     ownerName: "owner",
+ *     ownerType: "GROUP",
+ *     resourceUris: [{
+ *         resourceType: "ARCHIVE",
+ *         uri: "uri",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_catalog_database = aws.glue.CatalogDatabase("exampleCatalogDatabase", name="my_database")
+ * example_user_defined_function = aws.glue.UserDefinedFunction("exampleUserDefinedFunction",
+ *     catalog_id=example_catalog_database.catalog_id,
+ *     database_name=example_catalog_database.name,
+ *     class_name="class",
+ *     owner_name="owner",
+ *     owner_type="GROUP",
+ *     resource_uris=[aws.glue.UserDefinedFunctionResourceUriArgs(
+ *         resource_type="ARCHIVE",
+ *         uri="uri",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleCatalogDatabase = new Aws.Glue.CatalogDatabase("exampleCatalogDatabase", new Aws.Glue.CatalogDatabaseArgs
+ *         {
+ *             Name = "my_database",
+ *         });
+ *         var exampleUserDefinedFunction = new Aws.Glue.UserDefinedFunction("exampleUserDefinedFunction", new Aws.Glue.UserDefinedFunctionArgs
+ *         {
+ *             CatalogId = exampleCatalogDatabase.CatalogId,
+ *             DatabaseName = exampleCatalogDatabase.Name,
+ *             ClassName = "class",
+ *             OwnerName = "owner",
+ *             OwnerType = "GROUP",
+ *             ResourceUris = 
+ *             {
+ *                 new Aws.Glue.Inputs.UserDefinedFunctionResourceUriArgs
+ *                 {
+ *                     ResourceType = "ARCHIVE",
+ *                     Uri = "uri",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleCatalogDatabase, err := glue.NewCatalogDatabase(ctx, "exampleCatalogDatabase", &glue.CatalogDatabaseArgs{
+ * 			Name: pulumi.String("my_database"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = glue.NewUserDefinedFunction(ctx, "exampleUserDefinedFunction", &glue.UserDefinedFunctionArgs{
+ * 			CatalogId:    exampleCatalogDatabase.CatalogId,
+ * 			DatabaseName: exampleCatalogDatabase.Name,
+ * 			ClassName:    pulumi.String("class"),
+ * 			OwnerName:    pulumi.String("owner"),
+ * 			OwnerType:    pulumi.String("GROUP"),
+ * 			ResourceUris: glue.UserDefinedFunctionResourceUriArray{
+ * 				&glue.UserDefinedFunctionResourceUriArgs{
+ * 					ResourceType: pulumi.String("ARCHIVE"),
+ * 					Uri:          pulumi.String("uri"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +133,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/userDefinedFunction:UserDefinedFunction func 123456789012:my_database:my_func
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/userDefinedFunction:UserDefinedFunction")
 public class UserDefinedFunction extends io.pulumi.resources.CustomResource {

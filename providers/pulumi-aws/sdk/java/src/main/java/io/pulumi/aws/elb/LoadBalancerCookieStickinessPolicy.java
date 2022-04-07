@@ -18,8 +18,121 @@ import javax.annotation.Nullable;
 /**
  * Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const lb = new aws.elb.LoadBalancer("lb", {
+ *     availabilityZones: ["us-east-1a"],
+ *     listeners: [{
+ *         instancePort: 8000,
+ *         instanceProtocol: "http",
+ *         lbPort: 80,
+ *         lbProtocol: "http",
+ *     }],
+ * });
+ * const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
+ *     loadBalancer: lb.id,
+ *     lbPort: 80,
+ *     cookieExpirationPeriod: 600,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * lb = aws.elb.LoadBalancer("lb",
+ *     availability_zones=["us-east-1a"],
+ *     listeners=[aws.elb.LoadBalancerListenerArgs(
+ *         instance_port=8000,
+ *         instance_protocol="http",
+ *         lb_port=80,
+ *         lb_protocol="http",
+ *     )])
+ * foo = aws.elb.LoadBalancerCookieStickinessPolicy("foo",
+ *     load_balancer=lb.id,
+ *     lb_port=80,
+ *     cookie_expiration_period=600)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var lb = new Aws.Elb.LoadBalancer("lb", new Aws.Elb.LoadBalancerArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-east-1a",
+ *             },
+ *             Listeners = 
+ *             {
+ *                 new Aws.Elb.Inputs.LoadBalancerListenerArgs
+ *                 {
+ *                     InstancePort = 8000,
+ *                     InstanceProtocol = "http",
+ *                     LbPort = 80,
+ *                     LbProtocol = "http",
+ *                 },
+ *             },
+ *         });
+ *         var foo = new Aws.Elb.LoadBalancerCookieStickinessPolicy("foo", new Aws.Elb.LoadBalancerCookieStickinessPolicyArgs
+ *         {
+ *             LoadBalancer = lb.Id,
+ *             LbPort = 80,
+ *             CookieExpirationPeriod = 600,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		lb, err := elb.NewLoadBalancer(ctx, "lb", &elb.LoadBalancerArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-east-1a"),
+ * 			},
+ * 			Listeners: elb.LoadBalancerListenerArray{
+ * 				&elb.LoadBalancerListenerArgs{
+ * 					InstancePort:     pulumi.Int(8000),
+ * 					InstanceProtocol: pulumi.String("http"),
+ * 					LbPort:           pulumi.Int(80),
+ * 					LbProtocol:       pulumi.String("http"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elb.NewLoadBalancerCookieStickinessPolicy(ctx, "foo", &elb.LoadBalancerCookieStickinessPolicyArgs{
+ * 			LoadBalancer:           lb.ID(),
+ * 			LbPort:                 pulumi.Int(80),
+ * 			CookieExpirationPeriod: pulumi.Int(600),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:elb/loadBalancerCookieStickinessPolicy:LoadBalancerCookieStickinessPolicy")
 public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.CustomResource {

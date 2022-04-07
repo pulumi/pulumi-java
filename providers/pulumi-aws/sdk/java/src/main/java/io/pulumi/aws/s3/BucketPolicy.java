@@ -15,7 +15,166 @@ import javax.annotation.Nullable;
 /**
  * Attaches a policy to an S3 bucket resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3.Bucket("example", {});
+ * const allowAccessFromAnotherAccountPolicyDocument = aws.iam.getPolicyDocumentOutput({
+ *     statements: [{
+ *         principals: [{
+ *             type: "AWS",
+ *             identifiers: ["123456789012"],
+ *         }],
+ *         actions: [
+ *             "s3:GetObject",
+ *             "s3:ListBucket",
+ *         ],
+ *         resources: [
+ *             example.arn,
+ *             pulumi.interpolate`${example.arn}/*`,
+ *         ],
+ *     }],
+ * });
+ * const allowAccessFromAnotherAccountBucketPolicy = new aws.s3.BucketPolicy("allowAccessFromAnotherAccountBucketPolicy", {
+ *     bucket: example.id,
+ *     policy: allowAccessFromAnotherAccountPolicyDocument.apply(allowAccessFromAnotherAccountPolicyDocument => allowAccessFromAnotherAccountPolicyDocument.json),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3.Bucket("example")
+ * allow_access_from_another_account_policy_document = aws.iam.get_policy_document_output(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="AWS",
+ *         identifiers=["123456789012"],
+ *     )],
+ *     actions=[
+ *         "s3:GetObject",
+ *         "s3:ListBucket",
+ *     ],
+ *     resources=[
+ *         example.arn,
+ *         example.arn.apply(lambda arn: f"{arn}/*"),
+ *     ],
+ * )])
+ * allow_access_from_another_account_bucket_policy = aws.s3.BucketPolicy("allowAccessFromAnotherAccountBucketPolicy",
+ *     bucket=example.id,
+ *     policy=allow_access_from_another_account_policy_document.json)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var allowAccessFromAnotherAccountPolicyDocument = Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                 {
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                         {
+ *                             Type = "AWS",
+ *                             Identifiers = 
+ *                             {
+ *                                 "123456789012",
+ *                             },
+ *                         },
+ *                     },
+ *                     Actions = 
+ *                     {
+ *                         "s3:GetObject",
+ *                         "s3:ListBucket",
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         example.Arn,
+ *                         example.Arn.Apply(arn => $"{arn}/*"),
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var allowAccessFromAnotherAccountBucketPolicy = new Aws.S3.BucketPolicy("allowAccessFromAnotherAccountBucketPolicy", new Aws.S3.BucketPolicyArgs
+ *         {
+ *             Bucket = example.Id,
+ *             Policy = allowAccessFromAnotherAccountPolicyDocument.Apply(allowAccessFromAnotherAccountPolicyDocument => allowAccessFromAnotherAccountPolicyDocument.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := s3.NewBucket(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		allowAccessFromAnotherAccountPolicyDocument := iam.GetPolicyDocumentOutput(ctx, iam.GetPolicyDocumentOutputArgs{
+ * 			Statements: iam.GetPolicyDocumentStatementArray{
+ * 				&iam.GetPolicyDocumentStatementArgs{
+ * 					Principals: iam.GetPolicyDocumentStatementPrincipalArray{
+ * 						&iam.GetPolicyDocumentStatementPrincipalArgs{
+ * 							Type: pulumi.String("AWS"),
+ * 							Identifiers: pulumi.StringArray{
+ * 								pulumi.String("123456789012"),
+ * 							},
+ * 						},
+ * 					},
+ * 					Actions: pulumi.StringArray{
+ * 						pulumi.String("s3:GetObject"),
+ * 						pulumi.String("s3:ListBucket"),
+ * 					},
+ * 					Resources: pulumi.StringArray{
+ * 						example.Arn,
+ * 						example.Arn.ApplyT(func(arn string) (string, error) {
+ * 							return fmt.Sprintf("%v%v", arn, "/*"), nil
+ * 						}).(pulumi.StringOutput),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		_, err = s3.NewBucketPolicy(ctx, "allowAccessFromAnotherAccountBucketPolicy", &s3.BucketPolicyArgs{
+ * 			Bucket: example.ID(),
+ * 			Policy: allowAccessFromAnotherAccountPolicyDocument.ApplyT(func(allowAccessFromAnotherAccountPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+ * 				return allowAccessFromAnotherAccountPolicyDocument.Json, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +184,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketPolicy:BucketPolicy example my-bucket-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketPolicy:BucketPolicy")
 public class BucketPolicy extends io.pulumi.resources.CustomResource {

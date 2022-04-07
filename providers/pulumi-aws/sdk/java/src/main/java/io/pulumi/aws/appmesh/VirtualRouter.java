@@ -29,7 +29,98 @@ import javax.annotation.Nullable;
  * 
  * The state associated with existing resources will automatically be migrated.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
+ *     meshName: aws_appmesh_mesh.simple.id,
+ *     spec: {
+ *         listener: {
+ *             portMapping: {
+ *                 port: 8080,
+ *                 protocol: "http",
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * serviceb = aws.appmesh.VirtualRouter("serviceb",
+ *     mesh_name=aws_appmesh_mesh["simple"]["id"],
+ *     spec=aws.appmesh.VirtualRouterSpecArgs(
+ *         listener=aws.appmesh.VirtualRouterSpecListenerArgs(
+ *             port_mapping=aws.appmesh.VirtualRouterSpecListenerPortMappingArgs(
+ *                 port=8080,
+ *                 protocol="http",
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceb = new Aws.AppMesh.VirtualRouter("serviceb", new Aws.AppMesh.VirtualRouterArgs
+ *         {
+ *             MeshName = aws_appmesh_mesh.Simple.Id,
+ *             Spec = new Aws.AppMesh.Inputs.VirtualRouterSpecArgs
+ *             {
+ *                 Listener = new Aws.AppMesh.Inputs.VirtualRouterSpecListenerArgs
+ *                 {
+ *                     PortMapping = new Aws.AppMesh.Inputs.VirtualRouterSpecListenerPortMappingArgs
+ *                     {
+ *                         Port = 8080,
+ *                         Protocol = "http",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewVirtualRouter(ctx, "serviceb", &appmesh.VirtualRouterArgs{
+ * 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+ * 			Spec: &appmesh.VirtualRouterSpecArgs{
+ * 				Listener: &appmesh.VirtualRouterSpecListenerArgs{
+ * 					PortMapping: &appmesh.VirtualRouterSpecListenerPortMappingArgs{
+ * 						Port:     pulumi.Int(8080),
+ * 						Protocol: pulumi.String("http"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,8 +130,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appmesh/virtualRouter:VirtualRouter serviceb simpleapp/serviceB
  * ```
  * 
- *  [1]/docs/providers/aws/index.html
- * 
+ *  [1]/docs/providers/aws/index.html 
  */
 @ResourceType(type="aws:appmesh/virtualRouter:VirtualRouter")
 public class VirtualRouter extends io.pulumi.resources.CustomResource {

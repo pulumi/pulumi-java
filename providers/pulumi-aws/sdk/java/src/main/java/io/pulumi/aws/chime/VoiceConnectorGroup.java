@@ -19,7 +19,137 @@ import javax.annotation.Nullable;
  * 
  * You can include Amazon Chime Voice Connectors from different AWS Regions in your group. This creates a fault tolerant mechanism for fallback in case of availability events.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const vc1 = new aws.chime.VoiceConnector("vc1", {
+ *     requireEncryption: true,
+ *     awsRegion: "us-east-1",
+ * });
+ * const vc2 = new aws.chime.VoiceConnector("vc2", {
+ *     requireEncryption: true,
+ *     awsRegion: "us-west-2",
+ * });
+ * const group = new aws.chime.VoiceConnectorGroup("group", {connectors: [
+ *     {
+ *         voiceConnectorId: vc1.id,
+ *         priority: 1,
+ *     },
+ *     {
+ *         voiceConnectorId: vc2.id,
+ *         priority: 3,
+ *     },
+ * ]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * vc1 = aws.chime.VoiceConnector("vc1",
+ *     require_encryption=True,
+ *     aws_region="us-east-1")
+ * vc2 = aws.chime.VoiceConnector("vc2",
+ *     require_encryption=True,
+ *     aws_region="us-west-2")
+ * group = aws.chime.VoiceConnectorGroup("group", connectors=[
+ *     aws.chime.VoiceConnectorGroupConnectorArgs(
+ *         voice_connector_id=vc1.id,
+ *         priority=1,
+ *     ),
+ *     aws.chime.VoiceConnectorGroupConnectorArgs(
+ *         voice_connector_id=vc2.id,
+ *         priority=3,
+ *     ),
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vc1 = new Aws.Chime.VoiceConnector("vc1", new Aws.Chime.VoiceConnectorArgs
+ *         {
+ *             RequireEncryption = true,
+ *             AwsRegion = "us-east-1",
+ *         });
+ *         var vc2 = new Aws.Chime.VoiceConnector("vc2", new Aws.Chime.VoiceConnectorArgs
+ *         {
+ *             RequireEncryption = true,
+ *             AwsRegion = "us-west-2",
+ *         });
+ *         var @group = new Aws.Chime.VoiceConnectorGroup("group", new Aws.Chime.VoiceConnectorGroupArgs
+ *         {
+ *             Connectors = 
+ *             {
+ *                 new Aws.Chime.Inputs.VoiceConnectorGroupConnectorArgs
+ *                 {
+ *                     VoiceConnectorId = vc1.Id,
+ *                     Priority = 1,
+ *                 },
+ *                 new Aws.Chime.Inputs.VoiceConnectorGroupConnectorArgs
+ *                 {
+ *                     VoiceConnectorId = vc2.Id,
+ *                     Priority = 3,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/chime"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		vc1, err := chime.NewVoiceConnector(ctx, "vc1", &chime.VoiceConnectorArgs{
+ * 			RequireEncryption: pulumi.Bool(true),
+ * 			AwsRegion:         pulumi.String("us-east-1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		vc2, err := chime.NewVoiceConnector(ctx, "vc2", &chime.VoiceConnectorArgs{
+ * 			RequireEncryption: pulumi.Bool(true),
+ * 			AwsRegion:         pulumi.String("us-west-2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = chime.NewVoiceConnectorGroup(ctx, "group", &chime.VoiceConnectorGroupArgs{
+ * 			Connectors: chime.VoiceConnectorGroupConnectorArray{
+ * 				&chime.VoiceConnectorGroupConnectorArgs{
+ * 					VoiceConnectorId: vc1.ID(),
+ * 					Priority:         pulumi.Int(1),
+ * 				},
+ * 				&chime.VoiceConnectorGroupConnectorArgs{
+ * 					VoiceConnectorId: vc2.ID(),
+ * 					Priority:         pulumi.Int(3),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +159,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:chime/voiceConnectorGroup:VoiceConnectorGroup default example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:chime/voiceConnectorGroup:VoiceConnectorGroup")
 public class VoiceConnectorGroup extends io.pulumi.resources.CustomResource {

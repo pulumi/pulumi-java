@@ -20,7 +20,512 @@ import javax.annotation.Nullable;
 /**
  * Provides a Simple or Managed Microsoft directory in AWS Directory Service.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SimpleAD
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
+ * const foo = new aws.ec2.Subnet("foo", {
+ *     vpcId: main.id,
+ *     availabilityZone: "us-west-2a",
+ *     cidrBlock: "10.0.1.0/24",
+ * });
+ * const barSubnet = new aws.ec2.Subnet("barSubnet", {
+ *     vpcId: main.id,
+ *     availabilityZone: "us-west-2b",
+ *     cidrBlock: "10.0.2.0/24",
+ * });
+ * const barDirectory = new aws.directoryservice.Directory("barDirectory", {
+ *     name: "corp.notexample.com",
+ *     password: "SuperSecretPassw0rd",
+ *     size: "Small",
+ *     vpcSettings: {
+ *         vpcId: main.id,
+ *         subnetIds: [
+ *             foo.id,
+ *             barSubnet.id,
+ *         ],
+ *     },
+ *     tags: {
+ *         Project: "foo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+ * foo = aws.ec2.Subnet("foo",
+ *     vpc_id=main.id,
+ *     availability_zone="us-west-2a",
+ *     cidr_block="10.0.1.0/24")
+ * bar_subnet = aws.ec2.Subnet("barSubnet",
+ *     vpc_id=main.id,
+ *     availability_zone="us-west-2b",
+ *     cidr_block="10.0.2.0/24")
+ * bar_directory = aws.directoryservice.Directory("barDirectory",
+ *     name="corp.notexample.com",
+ *     password="SuperSecretPassw0rd",
+ *     size="Small",
+ *     vpc_settings=aws.directoryservice.DirectoryVpcSettingsArgs(
+ *         vpc_id=main.id,
+ *         subnet_ids=[
+ *             foo.id,
+ *             bar_subnet.id,
+ *         ],
+ *     ),
+ *     tags={
+ *         "Project": "foo",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var foo = new Aws.Ec2.Subnet("foo", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = main.Id,
+ *             AvailabilityZone = "us-west-2a",
+ *             CidrBlock = "10.0.1.0/24",
+ *         });
+ *         var barSubnet = new Aws.Ec2.Subnet("barSubnet", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = main.Id,
+ *             AvailabilityZone = "us-west-2b",
+ *             CidrBlock = "10.0.2.0/24",
+ *         });
+ *         var barDirectory = new Aws.DirectoryService.Directory("barDirectory", new Aws.DirectoryService.DirectoryArgs
+ *         {
+ *             Name = "corp.notexample.com",
+ *             Password = "SuperSecretPassw0rd",
+ *             Size = "Small",
+ *             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
+ *             {
+ *                 VpcId = main.Id,
+ *                 SubnetIds = 
+ *                 {
+ *                     foo.Id,
+ *                     barSubnet.Id,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Project", "foo" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directoryservice"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foo, err := ec2.NewSubnet(ctx, "foo", &ec2.SubnetArgs{
+ * 			VpcId:            main.ID(),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			CidrBlock:        pulumi.String("10.0.1.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		barSubnet, err := ec2.NewSubnet(ctx, "barSubnet", &ec2.SubnetArgs{
+ * 			VpcId:            main.ID(),
+ * 			AvailabilityZone: pulumi.String("us-west-2b"),
+ * 			CidrBlock:        pulumi.String("10.0.2.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
+ * 			Name:     pulumi.String("corp.notexample.com"),
+ * 			Password: pulumi.String("SuperSecretPassw0rd"),
+ * 			Size:     pulumi.String("Small"),
+ * 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
+ * 				VpcId: main.ID(),
+ * 				SubnetIds: pulumi.StringArray{
+ * 					foo.ID(),
+ * 					barSubnet.ID(),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Project": pulumi.String("foo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Microsoft Active Directory (MicrosoftAD)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
+ * const foo = new aws.ec2.Subnet("foo", {
+ *     vpcId: main.id,
+ *     availabilityZone: "us-west-2a",
+ *     cidrBlock: "10.0.1.0/24",
+ * });
+ * const barSubnet = new aws.ec2.Subnet("barSubnet", {
+ *     vpcId: main.id,
+ *     availabilityZone: "us-west-2b",
+ *     cidrBlock: "10.0.2.0/24",
+ * });
+ * const barDirectory = new aws.directoryservice.Directory("barDirectory", {
+ *     name: "corp.notexample.com",
+ *     password: "SuperSecretPassw0rd",
+ *     edition: "Standard",
+ *     type: "MicrosoftAD",
+ *     vpcSettings: {
+ *         vpcId: main.id,
+ *         subnetIds: [
+ *             foo.id,
+ *             barSubnet.id,
+ *         ],
+ *     },
+ *     tags: {
+ *         Project: "foo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+ * foo = aws.ec2.Subnet("foo",
+ *     vpc_id=main.id,
+ *     availability_zone="us-west-2a",
+ *     cidr_block="10.0.1.0/24")
+ * bar_subnet = aws.ec2.Subnet("barSubnet",
+ *     vpc_id=main.id,
+ *     availability_zone="us-west-2b",
+ *     cidr_block="10.0.2.0/24")
+ * bar_directory = aws.directoryservice.Directory("barDirectory",
+ *     name="corp.notexample.com",
+ *     password="SuperSecretPassw0rd",
+ *     edition="Standard",
+ *     type="MicrosoftAD",
+ *     vpc_settings=aws.directoryservice.DirectoryVpcSettingsArgs(
+ *         vpc_id=main.id,
+ *         subnet_ids=[
+ *             foo.id,
+ *             bar_subnet.id,
+ *         ],
+ *     ),
+ *     tags={
+ *         "Project": "foo",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var foo = new Aws.Ec2.Subnet("foo", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = main.Id,
+ *             AvailabilityZone = "us-west-2a",
+ *             CidrBlock = "10.0.1.0/24",
+ *         });
+ *         var barSubnet = new Aws.Ec2.Subnet("barSubnet", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = main.Id,
+ *             AvailabilityZone = "us-west-2b",
+ *             CidrBlock = "10.0.2.0/24",
+ *         });
+ *         var barDirectory = new Aws.DirectoryService.Directory("barDirectory", new Aws.DirectoryService.DirectoryArgs
+ *         {
+ *             Name = "corp.notexample.com",
+ *             Password = "SuperSecretPassw0rd",
+ *             Edition = "Standard",
+ *             Type = "MicrosoftAD",
+ *             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
+ *             {
+ *                 VpcId = main.Id,
+ *                 SubnetIds = 
+ *                 {
+ *                     foo.Id,
+ *                     barSubnet.Id,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Project", "foo" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directoryservice"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foo, err := ec2.NewSubnet(ctx, "foo", &ec2.SubnetArgs{
+ * 			VpcId:            main.ID(),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			CidrBlock:        pulumi.String("10.0.1.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		barSubnet, err := ec2.NewSubnet(ctx, "barSubnet", &ec2.SubnetArgs{
+ * 			VpcId:            main.ID(),
+ * 			AvailabilityZone: pulumi.String("us-west-2b"),
+ * 			CidrBlock:        pulumi.String("10.0.2.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
+ * 			Name:     pulumi.String("corp.notexample.com"),
+ * 			Password: pulumi.String("SuperSecretPassw0rd"),
+ * 			Edition:  pulumi.String("Standard"),
+ * 			Type:     pulumi.String("MicrosoftAD"),
+ * 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
+ * 				VpcId: main.ID(),
+ * 				SubnetIds: pulumi.StringArray{
+ * 					foo.ID(),
+ * 					barSubnet.ID(),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Project": pulumi.String("foo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Microsoft Active Directory Connector (ADConnector)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
+ * const foo = new aws.ec2.Subnet("foo", {
+ *     vpcId: main.id,
+ *     availabilityZone: "us-west-2a",
+ *     cidrBlock: "10.0.1.0/24",
+ * });
+ * const bar = new aws.ec2.Subnet("bar", {
+ *     vpcId: main.id,
+ *     availabilityZone: "us-west-2b",
+ *     cidrBlock: "10.0.2.0/24",
+ * });
+ * const connector = new aws.directoryservice.Directory("connector", {
+ *     name: "corp.notexample.com",
+ *     password: "SuperSecretPassw0rd",
+ *     size: "Small",
+ *     type: "ADConnector",
+ *     connectSettings: {
+ *         customerDnsIps: ["A.B.C.D"],
+ *         customerUsername: "Admin",
+ *         subnetIds: [
+ *             foo.id,
+ *             bar.id,
+ *         ],
+ *         vpcId: main.id,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+ * foo = aws.ec2.Subnet("foo",
+ *     vpc_id=main.id,
+ *     availability_zone="us-west-2a",
+ *     cidr_block="10.0.1.0/24")
+ * bar = aws.ec2.Subnet("bar",
+ *     vpc_id=main.id,
+ *     availability_zone="us-west-2b",
+ *     cidr_block="10.0.2.0/24")
+ * connector = aws.directoryservice.Directory("connector",
+ *     name="corp.notexample.com",
+ *     password="SuperSecretPassw0rd",
+ *     size="Small",
+ *     type="ADConnector",
+ *     connect_settings=aws.directoryservice.DirectoryConnectSettingsArgs(
+ *         customer_dns_ips=["A.B.C.D"],
+ *         customer_username="Admin",
+ *         subnet_ids=[
+ *             foo.id,
+ *             bar.id,
+ *         ],
+ *         vpc_id=main.id,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var foo = new Aws.Ec2.Subnet("foo", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = main.Id,
+ *             AvailabilityZone = "us-west-2a",
+ *             CidrBlock = "10.0.1.0/24",
+ *         });
+ *         var bar = new Aws.Ec2.Subnet("bar", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = main.Id,
+ *             AvailabilityZone = "us-west-2b",
+ *             CidrBlock = "10.0.2.0/24",
+ *         });
+ *         var connector = new Aws.DirectoryService.Directory("connector", new Aws.DirectoryService.DirectoryArgs
+ *         {
+ *             Name = "corp.notexample.com",
+ *             Password = "SuperSecretPassw0rd",
+ *             Size = "Small",
+ *             Type = "ADConnector",
+ *             ConnectSettings = new Aws.DirectoryService.Inputs.DirectoryConnectSettingsArgs
+ *             {
+ *                 CustomerDnsIps = 
+ *                 {
+ *                     "A.B.C.D",
+ *                 },
+ *                 CustomerUsername = "Admin",
+ *                 SubnetIds = 
+ *                 {
+ *                     foo.Id,
+ *                     bar.Id,
+ *                 },
+ *                 VpcId = main.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directoryservice"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		foo, err := ec2.NewSubnet(ctx, "foo", &ec2.SubnetArgs{
+ * 			VpcId:            main.ID(),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			CidrBlock:        pulumi.String("10.0.1.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bar, err := ec2.NewSubnet(ctx, "bar", &ec2.SubnetArgs{
+ * 			VpcId:            main.ID(),
+ * 			AvailabilityZone: pulumi.String("us-west-2b"),
+ * 			CidrBlock:        pulumi.String("10.0.2.0/24"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directoryservice.NewDirectory(ctx, "connector", &directoryservice.DirectoryArgs{
+ * 			Name:     pulumi.String("corp.notexample.com"),
+ * 			Password: pulumi.String("SuperSecretPassw0rd"),
+ * 			Size:     pulumi.String("Small"),
+ * 			Type:     pulumi.String("ADConnector"),
+ * 			ConnectSettings: &directoryservice.DirectoryConnectSettingsArgs{
+ * 				CustomerDnsIps: pulumi.StringArray{
+ * 					pulumi.String("A.B.C.D"),
+ * 				},
+ * 				CustomerUsername: pulumi.String("Admin"),
+ * 				SubnetIds: pulumi.StringArray{
+ * 					foo.ID(),
+ * 					bar.ID(),
+ * 				},
+ * 				VpcId: main.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +535,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directoryservice/directory:Directory sample d-926724cf57
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directoryservice/directory:Directory")
 public class Directory extends io.pulumi.resources.CustomResource {

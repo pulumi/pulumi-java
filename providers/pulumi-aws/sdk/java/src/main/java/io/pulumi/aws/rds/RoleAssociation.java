@@ -20,7 +20,71 @@ import javax.annotation.Nullable;
  * 
  * > To manage the RDS DB Instance IAM Role for [Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html), see the `aws.rds.Instance` resource `monitoring_role_arn` argument instead.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.rds.RoleAssociation("example", {
+ *     dbInstanceIdentifier: aws_db_instance.example.id,
+ *     featureName: "S3_INTEGRATION",
+ *     roleArn: aws_iam_role.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.rds.RoleAssociation("example",
+ *     db_instance_identifier=aws_db_instance["example"]["id"],
+ *     feature_name="S3_INTEGRATION",
+ *     role_arn=aws_iam_role["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Rds.RoleAssociation("example", new Aws.Rds.RoleAssociationArgs
+ *         {
+ *             DbInstanceIdentifier = aws_db_instance.Example.Id,
+ *             FeatureName = "S3_INTEGRATION",
+ *             RoleArn = aws_iam_role.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewRoleAssociation(ctx, "example", &rds.RoleAssociationArgs{
+ * 			DbInstanceIdentifier: pulumi.Any(aws_db_instance.Example.Id),
+ * 			FeatureName:          pulumi.String("S3_INTEGRATION"),
+ * 			RoleArn:              pulumi.Any(aws_iam_role.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +94,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/roleAssociation:RoleAssociation example my-db-instance,arn:aws:iam::123456789012:role/my-role
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/roleAssociation:RoleAssociation")
 public class RoleAssociation extends io.pulumi.resources.CustomResource {

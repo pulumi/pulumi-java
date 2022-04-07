@@ -21,8 +21,67 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks haproxy layer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const lb = new aws.opsworks.HaproxyLayer("lb", {
+ *     stackId: aws_opsworks_stack.main.id,
+ *     statsPassword: "foobarbaz",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * lb = aws.opsworks.HaproxyLayer("lb",
+ *     stack_id=aws_opsworks_stack["main"]["id"],
+ *     stats_password="foobarbaz")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var lb = new Aws.OpsWorks.HaproxyLayer("lb", new Aws.OpsWorks.HaproxyLayerArgs
+ *         {
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *             StatsPassword = "foobarbaz",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewHaproxyLayer(ctx, "lb", &opsworks.HaproxyLayerArgs{
+ * 			StackId:       pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 			StatsPassword: pulumi.String("foobarbaz"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:opsworks/haproxyLayer:HaproxyLayer")
 public class HaproxyLayer extends io.pulumi.resources.CustomResource {

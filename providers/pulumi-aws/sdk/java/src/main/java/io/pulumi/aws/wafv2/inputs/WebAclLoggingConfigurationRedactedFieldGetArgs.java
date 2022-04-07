@@ -25,7 +25,6 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
     @Deprecated /* Not supported by WAFv2 API */
     @Import(name="allQueryArguments")
@@ -41,7 +40,6 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
     @Deprecated /* Not supported by WAFv2 API */
     @Import(name="body")
@@ -90,7 +88,6 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
     @Deprecated /* Not supported by WAFv2 API */
     @Import(name="singleQueryArgument")

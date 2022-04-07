@@ -18,12 +18,143 @@ import javax.annotation.Nullable;
  * > **Note:** This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.
  *   You should perform **regular backups** of all data in the table, see [AWS docs for more](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleTable = new aws.dynamodb.Table("exampleTable", {
+ *     readCapacity: 10,
+ *     writeCapacity: 10,
+ *     hashKey: "exampleHashKey",
+ *     attributes: [{
+ *         name: "exampleHashKey",
+ *         type: "S",
+ *     }],
+ * });
+ * const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
+ *     tableName: exampleTable.name,
+ *     hashKey: exampleTable.hashKey,
+ *     item: `{
+ *   "exampleHashKey": {"S": "something"},
+ *   "one": {"N": "11111"},
+ *   "two": {"N": "22222"},
+ *   "three": {"N": "33333"},
+ *   "four": {"N": "44444"}
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_table = aws.dynamodb.Table("exampleTable",
+ *     read_capacity=10,
+ *     write_capacity=10,
+ *     hash_key="exampleHashKey",
+ *     attributes=[aws.dynamodb.TableAttributeArgs(
+ *         name="exampleHashKey",
+ *         type="S",
+ *     )])
+ * example_table_item = aws.dynamodb.TableItem("exampleTableItem",
+ *     table_name=example_table.name,
+ *     hash_key=example_table.hash_key,
+ *     item="""{
+ *   "exampleHashKey": {"S": "something"},
+ *   "one": {"N": "11111"},
+ *   "two": {"N": "22222"},
+ *   "three": {"N": "33333"},
+ *   "four": {"N": "44444"}
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleTable = new Aws.DynamoDB.Table("exampleTable", new Aws.DynamoDB.TableArgs
+ *         {
+ *             ReadCapacity = 10,
+ *             WriteCapacity = 10,
+ *             HashKey = "exampleHashKey",
+ *             Attributes = 
+ *             {
+ *                 new Aws.DynamoDB.Inputs.TableAttributeArgs
+ *                 {
+ *                     Name = "exampleHashKey",
+ *                     Type = "S",
+ *                 },
+ *             },
+ *         });
+ *         var exampleTableItem = new Aws.DynamoDB.TableItem("exampleTableItem", new Aws.DynamoDB.TableItemArgs
+ *         {
+ *             TableName = exampleTable.Name,
+ *             HashKey = exampleTable.HashKey,
+ *             Item = @"{
+ *   ""exampleHashKey"": {""S"": ""something""},
+ *   ""one"": {""N"": ""11111""},
+ *   ""two"": {""N"": ""22222""},
+ *   ""three"": {""N"": ""33333""},
+ *   ""four"": {""N"": ""44444""}
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dynamodb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+ * 			ReadCapacity:  pulumi.Int(10),
+ * 			WriteCapacity: pulumi.Int(10),
+ * 			HashKey:       pulumi.String("exampleHashKey"),
+ * 			Attributes: dynamodb.TableAttributeArray{
+ * 				&dynamodb.TableAttributeArgs{
+ * 					Name: pulumi.String("exampleHashKey"),
+ * 					Type: pulumi.String("S"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = dynamodb.NewTableItem(ctx, "exampleTableItem", &dynamodb.TableItemArgs{
+ * 			TableName: exampleTable.Name,
+ * 			HashKey:   exampleTable.HashKey,
+ * 			Item:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "  \"exampleHashKey\": {\"S\": \"something\"},\n", "  \"one\": {\"N\": \"11111\"},\n", "  \"two\": {\"N\": \"22222\"},\n", "  \"three\": {\"N\": \"33333\"},\n", "  \"four\": {\"N\": \"44444\"}\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * DynamoDB table items cannot be imported.
- * 
+ * DynamoDB table items cannot be imported. 
  */
 @ResourceType(type="aws:dynamodb/tableItem:TableItem")
 public class TableItem extends io.pulumi.resources.CustomResource {

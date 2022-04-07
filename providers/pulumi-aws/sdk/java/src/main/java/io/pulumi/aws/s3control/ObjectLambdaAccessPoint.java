@@ -17,7 +17,136 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an S3 Object Lambda Access Point.
  * An Object Lambda access point is associated with exactly one standard access point and thus one Amazon S3 bucket.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {bucket: exampleBucket.id});
+ * const exampleObjectLambdaAccessPoint = new aws.s3control.ObjectLambdaAccessPoint("exampleObjectLambdaAccessPoint", {configuration: {
+ *     supportingAccessPoint: exampleAccessPoint.arn,
+ *     transformationConfigurations: [{
+ *         actions: ["GetObject"],
+ *         contentTransformation: {
+ *             awsLambda: {
+ *                 functionArn: aws_lambda_function.example.arn,
+ *             },
+ *         },
+ *     }],
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * example_access_point = aws.s3.AccessPoint("exampleAccessPoint", bucket=example_bucket.id)
+ * example_object_lambda_access_point = aws.s3control.ObjectLambdaAccessPoint("exampleObjectLambdaAccessPoint", configuration=aws.s3control.ObjectLambdaAccessPointConfigurationArgs(
+ *     supporting_access_point=example_access_point.arn,
+ *     transformation_configurations=[aws.s3control.ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs(
+ *         actions=["GetObject"],
+ *         content_transformation=aws.s3control.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs(
+ *             aws_lambda=aws.s3control.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs(
+ *                 function_arn=aws_lambda_function["example"]["arn"],
+ *             ),
+ *         ),
+ *     )],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleAccessPoint = new Aws.S3.AccessPoint("exampleAccessPoint", new Aws.S3.AccessPointArgs
+ *         {
+ *             Bucket = exampleBucket.Id,
+ *         });
+ *         var exampleObjectLambdaAccessPoint = new Aws.S3Control.ObjectLambdaAccessPoint("exampleObjectLambdaAccessPoint", new Aws.S3Control.ObjectLambdaAccessPointArgs
+ *         {
+ *             Configuration = new Aws.S3Control.Inputs.ObjectLambdaAccessPointConfigurationArgs
+ *             {
+ *                 SupportingAccessPoint = exampleAccessPoint.Arn,
+ *                 TransformationConfigurations = 
+ *                 {
+ *                     new Aws.S3Control.Inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs
+ *                     {
+ *                         Actions = 
+ *                         {
+ *                             "GetObject",
+ *                         },
+ *                         ContentTransformation = new Aws.S3Control.Inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs
+ *                         {
+ *                             AwsLambda = new Aws.S3Control.Inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs
+ *                             {
+ *                                 FunctionArn = aws_lambda_function.Example.Arn,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3control"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleAccessPoint, err := s3.NewAccessPoint(ctx, "exampleAccessPoint", &s3.AccessPointArgs{
+ * 			Bucket: exampleBucket.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3control.NewObjectLambdaAccessPoint(ctx, "exampleObjectLambdaAccessPoint", &s3control.ObjectLambdaAccessPointArgs{
+ * 			Configuration: &s3control.ObjectLambdaAccessPointConfigurationArgs{
+ * 				SupportingAccessPoint: exampleAccessPoint.Arn,
+ * 				TransformationConfigurations: s3control.ObjectLambdaAccessPointConfigurationTransformationConfigurationArray{
+ * 					&s3control.ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs{
+ * 						Actions: pulumi.StringArray{
+ * 							pulumi.String("GetObject"),
+ * 						},
+ * 						ContentTransformation: &s3control.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs{
+ * 							AwsLambda: &s3control.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs{
+ * 								FunctionArn: pulumi.Any(aws_lambda_function.Example.Arn),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +156,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint example 123456789012:example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint")
 public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource {

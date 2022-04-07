@@ -18,7 +18,105 @@ import javax.annotation.Nullable;
 /**
  * Provides an Athena Workgroup.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.athena.Workgroup("example", {configuration: {
+ *     enforceWorkgroupConfiguration: true,
+ *     publishCloudwatchMetricsEnabled: true,
+ *     resultConfiguration: {
+ *         outputLocation: `s3://${aws_s3_bucket.example.bucket}/output/`,
+ *         encryptionConfiguration: {
+ *             encryptionOption: "SSE_KMS",
+ *             kmsKeyArn: aws_kms_key.example.arn,
+ *         },
+ *     },
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.athena.Workgroup("example", configuration=aws.athena.WorkgroupConfigurationArgs(
+ *     enforce_workgroup_configuration=True,
+ *     publish_cloudwatch_metrics_enabled=True,
+ *     result_configuration=aws.athena.WorkgroupConfigurationResultConfigurationArgs(
+ *         output_location=f"s3://{aws_s3_bucket['example']['bucket']}/output/",
+ *         encryption_configuration=aws.athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(
+ *             encryption_option="SSE_KMS",
+ *             kms_key_arn=aws_kms_key["example"]["arn"],
+ *         ),
+ *     ),
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Athena.Workgroup("example", new Aws.Athena.WorkgroupArgs
+ *         {
+ *             Configuration = new Aws.Athena.Inputs.WorkgroupConfigurationArgs
+ *             {
+ *                 EnforceWorkgroupConfiguration = true,
+ *                 PublishCloudwatchMetricsEnabled = true,
+ *                 ResultConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationArgs
+ *                 {
+ *                     OutputLocation = $"s3://{aws_s3_bucket.Example.Bucket}/output/",
+ *                     EncryptionConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs
+ *                     {
+ *                         EncryptionOption = "SSE_KMS",
+ *                         KmsKeyArn = aws_kms_key.Example.Arn,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewWorkgroup(ctx, "example", &athena.WorkgroupArgs{
+ * 			Configuration: &athena.WorkgroupConfigurationArgs{
+ * 				EnforceWorkgroupConfiguration:   pulumi.Bool(true),
+ * 				PublishCloudwatchMetricsEnabled: pulumi.Bool(true),
+ * 				ResultConfiguration: &athena.WorkgroupConfigurationResultConfigurationArgs{
+ * 					OutputLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/output/")),
+ * 					EncryptionConfiguration: &athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs{
+ * 						EncryptionOption: pulumi.String("SSE_KMS"),
+ * 						KmsKeyArn:        pulumi.Any(aws_kms_key.Example.Arn),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +126,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:athena/workgroup:Workgroup example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:athena/workgroup:Workgroup")
 public class Workgroup extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,9 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Model Package Group Policy resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +27,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/modelPackageGroupPolicy:ModelPackageGroupPolicy example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/modelPackageGroupPolicy:ModelPackageGroupPolicy")
 public class ModelPackageGroupPolicy extends io.pulumi.resources.CustomResource {

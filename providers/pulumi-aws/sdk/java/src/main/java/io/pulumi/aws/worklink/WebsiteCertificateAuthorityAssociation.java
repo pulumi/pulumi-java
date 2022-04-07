@@ -13,7 +13,88 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const example = new aws.worklink.Fleet("example", {});
+ * const test = new aws.worklink.WebsiteCertificateAuthorityAssociation("test", {
+ *     fleetArn: aws_worklink_fleet.test.arn,
+ *     certificate: fs.readFileSync("certificate.pem"),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.worklink.Fleet("example")
+ * test = aws.worklink.WebsiteCertificateAuthorityAssociation("test",
+ *     fleet_arn=aws_worklink_fleet["test"]["arn"],
+ *     certificate=(lambda path: open(path).read())("certificate.pem"))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.WorkLink.Fleet("example", new Aws.WorkLink.FleetArgs
+ *         {
+ *         });
+ *         var test = new Aws.WorkLink.WebsiteCertificateAuthorityAssociation("test", new Aws.WorkLink.WebsiteCertificateAuthorityAssociationArgs
+ *         {
+ *             FleetArn = aws_worklink_fleet.Test.Arn,
+ *             Certificate = File.ReadAllText("certificate.pem"),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/worklink"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := worklink.NewFleet(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = worklink.NewWebsiteCertificateAuthorityAssociation(ctx, "test", &worklink.WebsiteCertificateAuthorityAssociationArgs{
+ * 			FleetArn:    pulumi.Any(aws_worklink_fleet.Test.Arn),
+ * 			Certificate: readFileOrPanic("certificate.pem"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -23,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:worklink/websiteCertificateAuthorityAssociation:WebsiteCertificateAuthorityAssociation example arn:aws:worklink::123456789012:fleet/example,abcdefghijk
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:worklink/websiteCertificateAuthorityAssociation:WebsiteCertificateAuthorityAssociation")
 public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.CustomResource {

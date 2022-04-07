@@ -17,7 +17,92 @@ import javax.annotation.Nullable;
 /**
  * Provides a DMS (Data Migration Service) replication subnet group resource. DMS replication subnet groups can be created, updated, deleted, and imported.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new replication subnet group
+ * const test = new aws.dms.ReplicationSubnetGroup("test", {
+ *     replicationSubnetGroupDescription: "Test replication subnet group",
+ *     replicationSubnetGroupId: "test-dms-replication-subnet-group-tf",
+ *     subnetIds: ["subnet-12345678"],
+ *     tags: {
+ *         Name: "test",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new replication subnet group
+ * test = aws.dms.ReplicationSubnetGroup("test",
+ *     replication_subnet_group_description="Test replication subnet group",
+ *     replication_subnet_group_id="test-dms-replication-subnet-group-tf",
+ *     subnet_ids=["subnet-12345678"],
+ *     tags={
+ *         "Name": "test",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new replication subnet group
+ *         var test = new Aws.Dms.ReplicationSubnetGroup("test", new Aws.Dms.ReplicationSubnetGroupArgs
+ *         {
+ *             ReplicationSubnetGroupDescription = "Test replication subnet group",
+ *             ReplicationSubnetGroupId = "test-dms-replication-subnet-group-tf",
+ *             SubnetIds = 
+ *             {
+ *                 "subnet-12345678",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "test" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dms.NewReplicationSubnetGroup(ctx, "test", &dms.ReplicationSubnetGroupArgs{
+ * 			ReplicationSubnetGroupDescription: pulumi.String("Test replication subnet group"),
+ * 			ReplicationSubnetGroupId:          pulumi.String("test-dms-replication-subnet-group-tf"),
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.String("subnet-12345678"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +112,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dms/replicationSubnetGroup:ReplicationSubnetGroup test test-dms-replication-subnet-group-tf
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dms/replicationSubnetGroup:ReplicationSubnetGroup")
 public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {

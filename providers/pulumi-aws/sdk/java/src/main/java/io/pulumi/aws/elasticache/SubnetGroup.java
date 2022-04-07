@@ -21,7 +21,130 @@ import javax.annotation.Nullable;
  * ElastiCache cluster **inside** of a VPC. If you are on EC2 Classic, see the
  * ElastiCache Security Group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const fooVpc = new aws.ec2.Vpc("fooVpc", {
+ *     cidrBlock: "10.0.0.0/16",
+ *     tags: {
+ *         Name: "tf-test",
+ *     },
+ * });
+ * const fooSubnet = new aws.ec2.Subnet("fooSubnet", {
+ *     vpcId: fooVpc.id,
+ *     cidrBlock: "10.0.0.0/24",
+ *     availabilityZone: "us-west-2a",
+ *     tags: {
+ *         Name: "tf-test",
+ *     },
+ * });
+ * const bar = new aws.elasticache.SubnetGroup("bar", {subnetIds: [fooSubnet.id]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo_vpc = aws.ec2.Vpc("fooVpc",
+ *     cidr_block="10.0.0.0/16",
+ *     tags={
+ *         "Name": "tf-test",
+ *     })
+ * foo_subnet = aws.ec2.Subnet("fooSubnet",
+ *     vpc_id=foo_vpc.id,
+ *     cidr_block="10.0.0.0/24",
+ *     availability_zone="us-west-2a",
+ *     tags={
+ *         "Name": "tf-test",
+ *     })
+ * bar = aws.elasticache.SubnetGroup("bar", subnet_ids=[foo_subnet.id])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fooVpc = new Aws.Ec2.Vpc("fooVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *             Tags = 
+ *             {
+ *                 { "Name", "tf-test" },
+ *             },
+ *         });
+ *         var fooSubnet = new Aws.Ec2.Subnet("fooSubnet", new Aws.Ec2.SubnetArgs
+ *         {
+ *             VpcId = fooVpc.Id,
+ *             CidrBlock = "10.0.0.0/24",
+ *             AvailabilityZone = "us-west-2a",
+ *             Tags = 
+ *             {
+ *                 { "Name", "tf-test" },
+ *             },
+ *         });
+ *         var bar = new Aws.ElastiCache.SubnetGroup("bar", new Aws.ElastiCache.SubnetGroupArgs
+ *         {
+ *             SubnetIds = 
+ *             {
+ *                 fooSubnet.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("tf-test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
+ * 			VpcId:            fooVpc.ID(),
+ * 			CidrBlock:        pulumi.String("10.0.0.0/24"),
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("tf-test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elasticache.NewSubnetGroup(ctx, "bar", &elasticache.SubnetGroupArgs{
+ * 			SubnetIds: pulumi.StringArray{
+ * 				fooSubnet.ID(),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +154,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticache/subnetGroup:SubnetGroup bar tf-test-cache-subnet
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticache/subnetGroup:SubnetGroup")
 public class SubnetGroup extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,310 @@ import javax.annotation.Nullable;
 /**
  * Allocates (reserves) a CIDR from an IPAM address pool, preventing usage by IPAM. Only works for private IPv4.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getRegion({});
+ * const exampleVpcIpam = new aws.ec2.VpcIpam("exampleVpcIpam", {operatingRegions: [{
+ *     regionName: current.then(current => current.name),
+ * }]});
+ * const exampleVpcIpamPool = new aws.ec2.VpcIpamPool("exampleVpcIpamPool", {
+ *     addressFamily: "ipv4",
+ *     ipamScopeId: exampleVpcIpam.privateDefaultScopeId,
+ *     locale: current.then(current => current.name),
+ * });
+ * const exampleVpcIpamPoolCidr = new aws.ec2.VpcIpamPoolCidr("exampleVpcIpamPoolCidr", {
+ *     ipamPoolId: exampleVpcIpamPool.id,
+ *     cidr: "172.2.0.0/16",
+ * });
+ * const exampleVpcIpamPoolCidrAllocation = new aws.ec2.VpcIpamPoolCidrAllocation("exampleVpcIpamPoolCidrAllocation", {
+ *     ipamPoolId: exampleVpcIpamPool.id,
+ *     cidr: "172.2.0.0/24",
+ * }, {
+ *     dependsOn: [exampleVpcIpamPoolCidr],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_region()
+ * example_vpc_ipam = aws.ec2.VpcIpam("exampleVpcIpam", operating_regions=[aws.ec2.VpcIpamOperatingRegionArgs(
+ *     region_name=current.name,
+ * )])
+ * example_vpc_ipam_pool = aws.ec2.VpcIpamPool("exampleVpcIpamPool",
+ *     address_family="ipv4",
+ *     ipam_scope_id=example_vpc_ipam.private_default_scope_id,
+ *     locale=current.name)
+ * example_vpc_ipam_pool_cidr = aws.ec2.VpcIpamPoolCidr("exampleVpcIpamPoolCidr",
+ *     ipam_pool_id=example_vpc_ipam_pool.id,
+ *     cidr="172.2.0.0/16")
+ * example_vpc_ipam_pool_cidr_allocation = aws.ec2.VpcIpamPoolCidrAllocation("exampleVpcIpamPoolCidrAllocation",
+ *     ipam_pool_id=example_vpc_ipam_pool.id,
+ *     cidr="172.2.0.0/24",
+ *     opts=pulumi.ResourceOptions(depends_on=[example_vpc_ipam_pool_cidr]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var exampleVpcIpam = new Aws.Ec2.VpcIpam("exampleVpcIpam", new Aws.Ec2.VpcIpamArgs
+ *         {
+ *             OperatingRegions = 
+ *             {
+ *                 new Aws.Ec2.Inputs.VpcIpamOperatingRegionArgs
+ *                 {
+ *                     RegionName = current.Apply(current => current.Name),
+ *                 },
+ *             },
+ *         });
+ *         var exampleVpcIpamPool = new Aws.Ec2.VpcIpamPool("exampleVpcIpamPool", new Aws.Ec2.VpcIpamPoolArgs
+ *         {
+ *             AddressFamily = "ipv4",
+ *             IpamScopeId = exampleVpcIpam.PrivateDefaultScopeId,
+ *             Locale = current.Apply(current => current.Name),
+ *         });
+ *         var exampleVpcIpamPoolCidr = new Aws.Ec2.VpcIpamPoolCidr("exampleVpcIpamPoolCidr", new Aws.Ec2.VpcIpamPoolCidrArgs
+ *         {
+ *             IpamPoolId = exampleVpcIpamPool.Id,
+ *             Cidr = "172.2.0.0/16",
+ *         });
+ *         var exampleVpcIpamPoolCidrAllocation = new Aws.Ec2.VpcIpamPoolCidrAllocation("exampleVpcIpamPoolCidrAllocation", new Aws.Ec2.VpcIpamPoolCidrAllocationArgs
+ *         {
+ *             IpamPoolId = exampleVpcIpamPool.Id,
+ *             Cidr = "172.2.0.0/24",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleVpcIpamPoolCidr,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpam, err := ec2.NewVpcIpam(ctx, "exampleVpcIpam", &ec2.VpcIpamArgs{
+ * 			OperatingRegions: ec2.VpcIpamOperatingRegionArray{
+ * 				&ec2.VpcIpamOperatingRegionArgs{
+ * 					RegionName: pulumi.String(current.Name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpamPool, err := ec2.NewVpcIpamPool(ctx, "exampleVpcIpamPool", &ec2.VpcIpamPoolArgs{
+ * 			AddressFamily: pulumi.String("ipv4"),
+ * 			IpamScopeId:   exampleVpcIpam.PrivateDefaultScopeId,
+ * 			Locale:        pulumi.String(current.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpamPoolCidr, err := ec2.NewVpcIpamPoolCidr(ctx, "exampleVpcIpamPoolCidr", &ec2.VpcIpamPoolCidrArgs{
+ * 			IpamPoolId: exampleVpcIpamPool.ID(),
+ * 			Cidr:       pulumi.String("172.2.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpamPoolCidrAllocation(ctx, "exampleVpcIpamPoolCidrAllocation", &ec2.VpcIpamPoolCidrAllocationArgs{
+ * 			IpamPoolId: exampleVpcIpamPool.ID(),
+ * 			Cidr:       pulumi.String("172.2.0.0/24"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleVpcIpamPoolCidr,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * With the `disallowed_cidrs` attribute:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const current = aws.getRegion({});
+ * const exampleVpcIpam = new aws.ec2.VpcIpam("exampleVpcIpam", {operatingRegions: [{
+ *     regionName: current.then(current => current.name),
+ * }]});
+ * const exampleVpcIpamPool = new aws.ec2.VpcIpamPool("exampleVpcIpamPool", {
+ *     addressFamily: "ipv4",
+ *     ipamScopeId: exampleVpcIpam.privateDefaultScopeId,
+ *     locale: current.then(current => current.name),
+ * });
+ * const exampleVpcIpamPoolCidr = new aws.ec2.VpcIpamPoolCidr("exampleVpcIpamPoolCidr", {
+ *     ipamPoolId: exampleVpcIpamPool.id,
+ *     cidr: "172.2.0.0/16",
+ * });
+ * const exampleVpcIpamPoolCidrAllocation = new aws.ec2.VpcIpamPoolCidrAllocation("exampleVpcIpamPoolCidrAllocation", {
+ *     ipamPoolId: exampleVpcIpamPool.id,
+ *     netmaskLength: 28,
+ *     disallowedCidrs: ["172.2.0.0/28"],
+ * }, {
+ *     dependsOn: [exampleVpcIpamPoolCidr],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current = aws.get_region()
+ * example_vpc_ipam = aws.ec2.VpcIpam("exampleVpcIpam", operating_regions=[aws.ec2.VpcIpamOperatingRegionArgs(
+ *     region_name=current.name,
+ * )])
+ * example_vpc_ipam_pool = aws.ec2.VpcIpamPool("exampleVpcIpamPool",
+ *     address_family="ipv4",
+ *     ipam_scope_id=example_vpc_ipam.private_default_scope_id,
+ *     locale=current.name)
+ * example_vpc_ipam_pool_cidr = aws.ec2.VpcIpamPoolCidr("exampleVpcIpamPoolCidr",
+ *     ipam_pool_id=example_vpc_ipam_pool.id,
+ *     cidr="172.2.0.0/16")
+ * example_vpc_ipam_pool_cidr_allocation = aws.ec2.VpcIpamPoolCidrAllocation("exampleVpcIpamPoolCidrAllocation",
+ *     ipam_pool_id=example_vpc_ipam_pool.id,
+ *     netmask_length=28,
+ *     disallowed_cidrs=["172.2.0.0/28"],
+ *     opts=pulumi.ResourceOptions(depends_on=[example_vpc_ipam_pool_cidr]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var current = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var exampleVpcIpam = new Aws.Ec2.VpcIpam("exampleVpcIpam", new Aws.Ec2.VpcIpamArgs
+ *         {
+ *             OperatingRegions = 
+ *             {
+ *                 new Aws.Ec2.Inputs.VpcIpamOperatingRegionArgs
+ *                 {
+ *                     RegionName = current.Apply(current => current.Name),
+ *                 },
+ *             },
+ *         });
+ *         var exampleVpcIpamPool = new Aws.Ec2.VpcIpamPool("exampleVpcIpamPool", new Aws.Ec2.VpcIpamPoolArgs
+ *         {
+ *             AddressFamily = "ipv4",
+ *             IpamScopeId = exampleVpcIpam.PrivateDefaultScopeId,
+ *             Locale = current.Apply(current => current.Name),
+ *         });
+ *         var exampleVpcIpamPoolCidr = new Aws.Ec2.VpcIpamPoolCidr("exampleVpcIpamPoolCidr", new Aws.Ec2.VpcIpamPoolCidrArgs
+ *         {
+ *             IpamPoolId = exampleVpcIpamPool.Id,
+ *             Cidr = "172.2.0.0/16",
+ *         });
+ *         var exampleVpcIpamPoolCidrAllocation = new Aws.Ec2.VpcIpamPoolCidrAllocation("exampleVpcIpamPoolCidrAllocation", new Aws.Ec2.VpcIpamPoolCidrAllocationArgs
+ *         {
+ *             IpamPoolId = exampleVpcIpamPool.Id,
+ *             NetmaskLength = 28,
+ *             DisallowedCidrs = 
+ *             {
+ *                 "172.2.0.0/28",
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleVpcIpamPoolCidr,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		current, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpam, err := ec2.NewVpcIpam(ctx, "exampleVpcIpam", &ec2.VpcIpamArgs{
+ * 			OperatingRegions: ec2.VpcIpamOperatingRegionArray{
+ * 				&ec2.VpcIpamOperatingRegionArgs{
+ * 					RegionName: pulumi.String(current.Name),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpamPool, err := ec2.NewVpcIpamPool(ctx, "exampleVpcIpamPool", &ec2.VpcIpamPoolArgs{
+ * 			AddressFamily: pulumi.String("ipv4"),
+ * 			IpamScopeId:   exampleVpcIpam.PrivateDefaultScopeId,
+ * 			Locale:        pulumi.String(current.Name),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcIpamPoolCidr, err := ec2.NewVpcIpamPoolCidr(ctx, "exampleVpcIpamPoolCidr", &ec2.VpcIpamPoolCidrArgs{
+ * 			IpamPoolId: exampleVpcIpamPool.ID(),
+ * 			Cidr:       pulumi.String("172.2.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpamPoolCidrAllocation(ctx, "exampleVpcIpamPoolCidrAllocation", &ec2.VpcIpamPoolCidrAllocationArgs{
+ * 			IpamPoolId:    exampleVpcIpamPool.ID(),
+ * 			NetmaskLength: pulumi.Int(28),
+ * 			DisallowedCidrs: pulumi.StringArray{
+ * 				pulumi.String("172.2.0.0/28"),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleVpcIpamPoolCidr,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +330,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcIpamPoolCidrAllocation:VpcIpamPoolCidrAllocation example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcIpamPoolCidrAllocation:VpcIpamPoolCidrAllocation")
 public class VpcIpamPoolCidrAllocation extends io.pulumi.resources.CustomResource {

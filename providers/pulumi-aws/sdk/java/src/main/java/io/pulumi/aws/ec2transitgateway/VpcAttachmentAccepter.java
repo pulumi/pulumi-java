@@ -24,7 +24,76 @@ import javax.annotation.Nullable;
  * and the accepter can use the `aws.ec2transitgateway.VpcAttachmentAccepter` resource to "adopt" its side of the
  * connection into management.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2transitgateway.VpcAttachmentAccepter("example", {
+ *     transitGatewayAttachmentId: aws_ec2_transit_gateway_vpc_attachment.example.id,
+ *     tags: {
+ *         Name: "Example cross-account attachment",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2transitgateway.VpcAttachmentAccepter("example",
+ *     transit_gateway_attachment_id=aws_ec2_transit_gateway_vpc_attachment["example"]["id"],
+ *     tags={
+ *         "Name": "Example cross-account attachment",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2TransitGateway.VpcAttachmentAccepter("example", new Aws.Ec2TransitGateway.VpcAttachmentAccepterArgs
+ *         {
+ *             TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "Example cross-account attachment" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2transitgateway.NewVpcAttachmentAccepter(ctx, "example", &ec2transitgateway.VpcAttachmentAccepterArgs{
+ * 			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_vpc_attachment.Example.Id),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Example cross-account attachment"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter example tgw-attach-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter")
 public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {

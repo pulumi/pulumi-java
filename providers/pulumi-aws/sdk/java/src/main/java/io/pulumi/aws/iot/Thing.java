@@ -17,7 +17,71 @@ import javax.annotation.Nullable;
 /**
  * Creates and manages an AWS IoT Thing.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.iot.Thing("example", {
+ *     attributes: {
+ *         First: "examplevalue",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.iot.Thing("example", attributes={
+ *     "First": "examplevalue",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Iot.Thing("example", new Aws.Iot.ThingArgs
+ *         {
+ *             Attributes = 
+ *             {
+ *                 { "First", "examplevalue" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewThing(ctx, "example", &iot.ThingArgs{
+ * 			Attributes: pulumi.StringMap{
+ * 				"First": pulumi.String("examplevalue"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +91,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iot/thing:Thing example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iot/thing:Thing")
 public class Thing extends io.pulumi.resources.CustomResource {

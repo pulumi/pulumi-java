@@ -18,8 +18,140 @@ import javax.annotation.Nullable;
 /**
  * Creates a Snapshot of a snapshot.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ebs.Volume("example", {
+ *     availabilityZone: "us-west-2a",
+ *     size: 40,
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * const exampleSnapshot = new aws.ebs.Snapshot("exampleSnapshot", {
+ *     volumeId: example.id,
+ *     tags: {
+ *         Name: "HelloWorld_snap",
+ *     },
+ * });
+ * const exampleCopy = new aws.ebs.SnapshotCopy("exampleCopy", {
+ *     sourceSnapshotId: exampleSnapshot.id,
+ *     sourceRegion: "us-west-2",
+ *     tags: {
+ *         Name: "HelloWorld_copy_snap",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ebs.Volume("example",
+ *     availability_zone="us-west-2a",
+ *     size=40,
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * example_snapshot = aws.ebs.Snapshot("exampleSnapshot",
+ *     volume_id=example.id,
+ *     tags={
+ *         "Name": "HelloWorld_snap",
+ *     })
+ * example_copy = aws.ebs.SnapshotCopy("exampleCopy",
+ *     source_snapshot_id=example_snapshot.id,
+ *     source_region="us-west-2",
+ *     tags={
+ *         "Name": "HelloWorld_copy_snap",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ebs.Volume("example", new Aws.Ebs.VolumeArgs
+ *         {
+ *             AvailabilityZone = "us-west-2a",
+ *             Size = 40,
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *         var exampleSnapshot = new Aws.Ebs.Snapshot("exampleSnapshot", new Aws.Ebs.SnapshotArgs
+ *         {
+ *             VolumeId = example.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld_snap" },
+ *             },
+ *         });
+ *         var exampleCopy = new Aws.Ebs.SnapshotCopy("exampleCopy", new Aws.Ebs.SnapshotCopyArgs
+ *         {
+ *             SourceSnapshotId = exampleSnapshot.Id,
+ *             SourceRegion = "us-west-2",
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld_copy_snap" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := ebs.NewVolume(ctx, "example", &ebs.VolumeArgs{
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Size:             pulumi.Int(40),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleSnapshot, err := ebs.NewSnapshot(ctx, "exampleSnapshot", &ebs.SnapshotArgs{
+ * 			VolumeId: example.ID(),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld_snap"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ebs.NewSnapshotCopy(ctx, "exampleCopy", &ebs.SnapshotCopyArgs{
+ * 			SourceSnapshotId: exampleSnapshot.ID(),
+ * 			SourceRegion:     pulumi.String("us-west-2"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld_copy_snap"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ebs/snapshotCopy:SnapshotCopy")
 public class SnapshotCopy extends io.pulumi.resources.CustomResource {

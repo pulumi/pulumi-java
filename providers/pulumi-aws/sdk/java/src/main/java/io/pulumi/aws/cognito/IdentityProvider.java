@@ -17,7 +17,126 @@ import javax.annotation.Nullable;
 /**
  * Provides a Cognito User Identity Provider resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cognito.UserPool("example", {autoVerifiedAttributes: ["email"]});
+ * const exampleProvider = new aws.cognito.IdentityProvider("exampleProvider", {
+ *     userPoolId: example.id,
+ *     providerName: "Google",
+ *     providerType: "Google",
+ *     providerDetails: {
+ *         authorize_scopes: "email",
+ *         client_id: "your client_id",
+ *         client_secret: "your client_secret",
+ *     },
+ *     attributeMapping: {
+ *         email: "email",
+ *         username: "sub",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cognito.UserPool("example", auto_verified_attributes=["email"])
+ * example_provider = aws.cognito.IdentityProvider("exampleProvider",
+ *     user_pool_id=example.id,
+ *     provider_name="Google",
+ *     provider_type="Google",
+ *     provider_details={
+ *         "authorize_scopes": "email",
+ *         "client_id": "your client_id",
+ *         "client_secret": "your client_secret",
+ *     },
+ *     attribute_mapping={
+ *         "email": "email",
+ *         "username": "sub",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Cognito.UserPool("example", new Aws.Cognito.UserPoolArgs
+ *         {
+ *             AutoVerifiedAttributes = 
+ *             {
+ *                 "email",
+ *             },
+ *         });
+ *         var exampleProvider = new Aws.Cognito.IdentityProvider("exampleProvider", new Aws.Cognito.IdentityProviderArgs
+ *         {
+ *             UserPoolId = example.Id,
+ *             ProviderName = "Google",
+ *             ProviderType = "Google",
+ *             ProviderDetails = 
+ *             {
+ *                 { "authorize_scopes", "email" },
+ *                 { "client_id", "your client_id" },
+ *                 { "client_secret", "your client_secret" },
+ *             },
+ *             AttributeMapping = 
+ *             {
+ *                 { "email", "email" },
+ *                 { "username", "sub" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := cognito.NewUserPool(ctx, "example", &cognito.UserPoolArgs{
+ * 			AutoVerifiedAttributes: pulumi.StringArray{
+ * 				pulumi.String("email"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cognito.NewIdentityProvider(ctx, "exampleProvider", &cognito.IdentityProviderArgs{
+ * 			UserPoolId:   example.ID(),
+ * 			ProviderName: pulumi.String("Google"),
+ * 			ProviderType: pulumi.String("Google"),
+ * 			ProviderDetails: pulumi.StringMap{
+ * 				"authorize_scopes": pulumi.String("email"),
+ * 				"client_id":        pulumi.String("your client_id"),
+ * 				"client_secret":    pulumi.String("your client_secret"),
+ * 			},
+ * 			AttributeMapping: pulumi.StringMap{
+ * 				"email":    pulumi.String("email"),
+ * 				"username": pulumi.String("sub"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +146,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cognito/identityProvider:IdentityProvider example xxx_yyyyy:example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cognito/identityProvider:IdentityProvider")
 public class IdentityProvider extends io.pulumi.resources.CustomResource {

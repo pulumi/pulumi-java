@@ -19,7 +19,129 @@ import javax.annotation.Nullable;
  * Manages a KMS multi-Region replica key that uses external key material.
  * See the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-import.html) for more information on importing key material into multi-Region keys.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.Provider("primary", {region: "us-east-1"});
+ * const primaryExternalKey = new aws.kms.ExternalKey("primaryExternalKey", {
+ *     description: "Multi-Region primary key",
+ *     deletionWindowInDays: 30,
+ *     multiRegion: true,
+ *     enabled: true,
+ *     keyMaterialBase64: "...",
+ * }, {
+ *     provider: aws.primary,
+ * });
+ * const replica = new aws.kms.ReplicaExternalKey("replica", {
+ *     description: "Multi-Region replica key",
+ *     deletionWindowInDays: 7,
+ *     primaryKeyArn: aws_kms_external.primary.arn,
+ *     keyMaterialBase64: "...",
+ * });
+ * // Must be the same key material as the primary's.
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * primary = pulumi.providers.Aws("primary", region="us-east-1")
+ * primary_external_key = aws.kms.ExternalKey("primaryExternalKey",
+ *     description="Multi-Region primary key",
+ *     deletion_window_in_days=30,
+ *     multi_region=True,
+ *     enabled=True,
+ *     key_material_base64="...",
+ *     opts=pulumi.ResourceOptions(provider=aws["primary"]))
+ * replica = aws.kms.ReplicaExternalKey("replica",
+ *     description="Multi-Region replica key",
+ *     deletion_window_in_days=7,
+ *     primary_key_arn=aws_kms_external["primary"]["arn"],
+ *     key_material_base64="...")
+ * # Must be the same key material as the primary's.
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.Provider("primary", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-east-1",
+ *         });
+ *         var primaryExternalKey = new Aws.Kms.ExternalKey("primaryExternalKey", new Aws.Kms.ExternalKeyArgs
+ *         {
+ *             Description = "Multi-Region primary key",
+ *             DeletionWindowInDays = 30,
+ *             MultiRegion = true,
+ *             Enabled = true,
+ *             KeyMaterialBase64 = "...",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Primary,
+ *         });
+ *         var replica = new Aws.Kms.ReplicaExternalKey("replica", new Aws.Kms.ReplicaExternalKeyArgs
+ *         {
+ *             Description = "Multi-Region replica key",
+ *             DeletionWindowInDays = 7,
+ *             PrimaryKeyArn = aws_kms_external.Primary.Arn,
+ *             KeyMaterialBase64 = "...",
+ *         });
+ *         // Must be the same key material as the primary's.
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "primary", &providers.awsArgs{
+ * 			Region: "us-east-1",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewExternalKey(ctx, "primaryExternalKey", &kms.ExternalKeyArgs{
+ * 			Description:          pulumi.String("Multi-Region primary key"),
+ * 			DeletionWindowInDays: pulumi.Int(30),
+ * 			MultiRegion:          pulumi.Bool(true),
+ * 			Enabled:              pulumi.Bool(true),
+ * 			KeyMaterialBase64:    pulumi.String("..."),
+ * 		}, pulumi.Provider(aws.Primary))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = kms.NewReplicaExternalKey(ctx, "replica", &kms.ReplicaExternalKeyArgs{
+ * 			Description:          pulumi.String("Multi-Region replica key"),
+ * 			DeletionWindowInDays: pulumi.Int(7),
+ * 			PrimaryKeyArn:        pulumi.Any(aws_kms_external.Primary.Arn),
+ * 			KeyMaterialBase64:    pulumi.String("..."),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +151,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kms/replicaExternalKey:ReplicaExternalKey example 1234abcd-12ab-34cd-56ef-1234567890ab
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:kms/replicaExternalKey:ReplicaExternalKey")
 public class ReplicaExternalKey extends io.pulumi.resources.CustomResource {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * See https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
-     * 
      */
     @EnumType
     public enum Runtime {

@@ -18,7 +18,119 @@ import javax.annotation.Nullable;
 /**
  * Provides an WAF Regional Rule Resource for use with Application Load Balancer.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ipset = new aws.wafregional.IpSet("ipset", {ipSetDescriptors: [{
+ *     type: "IPV4",
+ *     value: "192.0.7.0/24",
+ * }]});
+ * const wafrule = new aws.wafregional.Rule("wafrule", {
+ *     metricName: "tfWAFRule",
+ *     predicates: [{
+ *         type: "IPMatch",
+ *         dataId: ipset.id,
+ *         negated: false,
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[aws.wafregional.IpSetIpSetDescriptorArgs(
+ *     type="IPV4",
+ *     value="192.0.7.0/24",
+ * )])
+ * wafrule = aws.wafregional.Rule("wafrule",
+ *     metric_name="tfWAFRule",
+ *     predicates=[aws.wafregional.RulePredicateArgs(
+ *         type="IPMatch",
+ *         data_id=ipset.id,
+ *         negated=False,
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ipset = new Aws.WafRegional.IpSet("ipset", new Aws.WafRegional.IpSetArgs
+ *         {
+ *             IpSetDescriptors = 
+ *             {
+ *                 new Aws.WafRegional.Inputs.IpSetIpSetDescriptorArgs
+ *                 {
+ *                     Type = "IPV4",
+ *                     Value = "192.0.7.0/24",
+ *                 },
+ *             },
+ *         });
+ *         var wafrule = new Aws.WafRegional.Rule("wafrule", new Aws.WafRegional.RuleArgs
+ *         {
+ *             MetricName = "tfWAFRule",
+ *             Predicates = 
+ *             {
+ *                 new Aws.WafRegional.Inputs.RulePredicateArgs
+ *                 {
+ *                     Type = "IPMatch",
+ *                     DataId = ipset.Id,
+ *                     Negated = false,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafregional"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		ipset, err := wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
+ * 			IpSetDescriptors: wafregional.IpSetIpSetDescriptorArray{
+ * 				&wafregional.IpSetIpSetDescriptorArgs{
+ * 					Type:  pulumi.String("IPV4"),
+ * 					Value: pulumi.String("192.0.7.0/24"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = wafregional.NewRule(ctx, "wafrule", &wafregional.RuleArgs{
+ * 			MetricName: pulumi.String("tfWAFRule"),
+ * 			Predicates: wafregional.RulePredicateArray{
+ * 				&wafregional.RulePredicateArgs{
+ * 					Type:    pulumi.String("IPMatch"),
+ * 					DataId:  ipset.ID(),
+ * 					Negated: pulumi.Bool(false),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Nested Fields
  * 
  * ### `predicate`
@@ -31,6 +143,7 @@ import javax.annotation.Nullable;
  * * `data_id` - (Required) The unique identifier of a predicate, such as the ID of a `ByteMatchSet` or `IPSet`.
  * * `negated` - (Required) Whether to use the settings or the negated settings that you specified in the objects.
  * 
+ * 
  * ## Import
  * 
  * WAF Regional Rule can be imported using the id, e.g.,
@@ -39,6 +152,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:wafregional/rule:Rule wafrule a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:wafregional/rule:Rule")
 public class Rule extends io.pulumi.resources.CustomResource {

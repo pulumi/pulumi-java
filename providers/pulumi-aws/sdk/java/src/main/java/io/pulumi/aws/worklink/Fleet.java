@@ -16,7 +16,186 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.worklink.Fleet("example", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.worklink.Fleet("example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.WorkLink.Fleet("example", new Aws.WorkLink.FleetArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/worklink"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := worklink.NewFleet(ctx, "example", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Network Configuration Usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.worklink.Fleet("example", {network: {
+ *     vpcId: aws_vpc.test.id,
+ *     subnetIds: [aws_subnet.test.map(__item => __item.id)],
+ *     securityGroupIds: [aws_security_group.test.id],
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.worklink.Fleet("example", network=aws.worklink.FleetNetworkArgs(
+ *     vpc_id=aws_vpc["test"]["id"],
+ *     subnet_ids=[[__item["id"] for __item in aws_subnet["test"]]],
+ *     security_group_ids=[aws_security_group["test"]["id"]],
+ * ))
+ * ```
+ * ```csharp
+ * using System.Linq;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.WorkLink.Fleet("example", new Aws.WorkLink.FleetArgs
+ *         {
+ *             Network = new Aws.WorkLink.Inputs.FleetNetworkArgs
+ *             {
+ *                 VpcId = aws_vpc.Test.Id,
+ *                 SubnetIds = 
+ *                 {
+ *                     aws_subnet.Test.Select(__item => __item.Id).ToList(),
+ *                 },
+ *                 SecurityGroupIds = 
+ *                 {
+ *                     aws_security_group.Test.Id,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * 
+ * Identity Provider Configuration Usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * from "fs";
+ * 
+ * const test = new aws.worklink.Fleet("test", {identityProvider: {
+ *     type: "SAML",
+ *     samlMetadata: fs.readFileSync("saml-metadata.xml"),
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.worklink.Fleet("test", identity_provider=aws.worklink.FleetIdentityProviderArgs(
+ *     type="SAML",
+ *     saml_metadata=(lambda path: open(path).read())("saml-metadata.xml"),
+ * ))
+ * ```
+ * ```csharp
+ * using System.IO;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.WorkLink.Fleet("test", new Aws.WorkLink.FleetArgs
+ *         {
+ *             IdentityProvider = new Aws.WorkLink.Inputs.FleetIdentityProviderArgs
+ *             {
+ *                 Type = "SAML",
+ *                 SamlMetadata = File.ReadAllText("saml-metadata.xml"),
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"io/ioutil"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/worklink"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func readFileOrPanic(path string) pulumi.StringPtrInput {
+ * 	data, err := ioutil.ReadFile(path)
+ * 	if err != nil {
+ * 		panic(err.Error())
+ * 	}
+ * 	return pulumi.String(string(data))
+ * }
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := worklink.NewFleet(ctx, "test", &worklink.FleetArgs{
+ * 			IdentityProvider: &worklink.FleetIdentityProviderArgs{
+ * 				Type:         pulumi.String("SAML"),
+ * 				SamlMetadata: readFileOrPanic("saml-metadata.xml"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +205,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:worklink/fleet:Fleet test arn:aws:worklink::123456789012:fleet/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:worklink/fleet:Fleet")
 public class Fleet extends io.pulumi.resources.CustomResource {

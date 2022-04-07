@@ -17,7 +17,235 @@ import javax.annotation.Nullable;
 /**
  * Provides an SSM Maintenance Window Target resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Instance Target
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const window = new aws.ssm.MaintenanceWindow("window", {
+ *     schedule: "cron(0 16 ? * TUE *)",
+ *     duration: 3,
+ *     cutoff: 1,
+ * });
+ * const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
+ *     windowId: window.id,
+ *     description: "This is a maintenance window target",
+ *     resourceType: "INSTANCE",
+ *     targets: [{
+ *         key: "tag:Name",
+ *         values: ["acceptance_test"],
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * window = aws.ssm.MaintenanceWindow("window",
+ *     schedule="cron(0 16 ? * TUE *)",
+ *     duration=3,
+ *     cutoff=1)
+ * target1 = aws.ssm.MaintenanceWindowTarget("target1",
+ *     window_id=window.id,
+ *     description="This is a maintenance window target",
+ *     resource_type="INSTANCE",
+ *     targets=[aws.ssm.MaintenanceWindowTargetTargetArgs(
+ *         key="tag:Name",
+ *         values=["acceptance_test"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var window = new Aws.Ssm.MaintenanceWindow("window", new Aws.Ssm.MaintenanceWindowArgs
+ *         {
+ *             Schedule = "cron(0 16 ? * TUE *)",
+ *             Duration = 3,
+ *             Cutoff = 1,
+ *         });
+ *         var target1 = new Aws.Ssm.MaintenanceWindowTarget("target1", new Aws.Ssm.MaintenanceWindowTargetArgs
+ *         {
+ *             WindowId = window.Id,
+ *             Description = "This is a maintenance window target",
+ *             ResourceType = "INSTANCE",
+ *             Targets = 
+ *             {
+ *                 new Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs
+ *                 {
+ *                     Key = "tag:Name",
+ *                     Values = 
+ *                     {
+ *                         "acceptance_test",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		window, err := ssm.NewMaintenanceWindow(ctx, "window", &ssm.MaintenanceWindowArgs{
+ * 			Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
+ * 			Duration: pulumi.Int(3),
+ * 			Cutoff:   pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
+ * 			WindowId:     window.ID(),
+ * 			Description:  pulumi.String("This is a maintenance window target"),
+ * 			ResourceType: pulumi.String("INSTANCE"),
+ * 			Targets: ssm.MaintenanceWindowTargetTargetArray{
+ * 				&ssm.MaintenanceWindowTargetTargetArgs{
+ * 					Key: pulumi.String("tag:Name"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("acceptance_test"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Resource Group Target
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const window = new aws.ssm.MaintenanceWindow("window", {
+ *     schedule: "cron(0 16 ? * TUE *)",
+ *     duration: 3,
+ *     cutoff: 1,
+ * });
+ * const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
+ *     windowId: window.id,
+ *     description: "This is a maintenance window target",
+ *     resourceType: "RESOURCE_GROUP",
+ *     targets: [{
+ *         key: "resource-groups:ResourceTypeFilters",
+ *         values: ["AWS::EC2::Instance"],
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * window = aws.ssm.MaintenanceWindow("window",
+ *     schedule="cron(0 16 ? * TUE *)",
+ *     duration=3,
+ *     cutoff=1)
+ * target1 = aws.ssm.MaintenanceWindowTarget("target1",
+ *     window_id=window.id,
+ *     description="This is a maintenance window target",
+ *     resource_type="RESOURCE_GROUP",
+ *     targets=[aws.ssm.MaintenanceWindowTargetTargetArgs(
+ *         key="resource-groups:ResourceTypeFilters",
+ *         values=["AWS::EC2::Instance"],
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var window = new Aws.Ssm.MaintenanceWindow("window", new Aws.Ssm.MaintenanceWindowArgs
+ *         {
+ *             Schedule = "cron(0 16 ? * TUE *)",
+ *             Duration = 3,
+ *             Cutoff = 1,
+ *         });
+ *         var target1 = new Aws.Ssm.MaintenanceWindowTarget("target1", new Aws.Ssm.MaintenanceWindowTargetArgs
+ *         {
+ *             WindowId = window.Id,
+ *             Description = "This is a maintenance window target",
+ *             ResourceType = "RESOURCE_GROUP",
+ *             Targets = 
+ *             {
+ *                 new Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs
+ *                 {
+ *                     Key = "resource-groups:ResourceTypeFilters",
+ *                     Values = 
+ *                     {
+ *                         "AWS::EC2::Instance",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		window, err := ssm.NewMaintenanceWindow(ctx, "window", &ssm.MaintenanceWindowArgs{
+ * 			Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
+ * 			Duration: pulumi.Int(3),
+ * 			Cutoff:   pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
+ * 			WindowId:     window.ID(),
+ * 			Description:  pulumi.String("This is a maintenance window target"),
+ * 			ResourceType: pulumi.String("RESOURCE_GROUP"),
+ * 			Targets: ssm.MaintenanceWindowTargetTargetArray{
+ * 				&ssm.MaintenanceWindowTargetTargetArgs{
+ * 					Key: pulumi.String("resource-groups:ResourceTypeFilters"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("AWS::EC2::Instance"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +255,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ssm/maintenanceWindowTarget:MaintenanceWindowTarget example mw-0c50858d01EXAMPLE/23639a0b-ddbc-4bca-9e72-78d96EXAMPLE
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ssm/maintenanceWindowTarget:MaintenanceWindowTarget")
 public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource {

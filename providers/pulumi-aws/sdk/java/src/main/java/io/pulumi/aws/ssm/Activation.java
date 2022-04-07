@@ -18,7 +18,140 @@ import javax.annotation.Nullable;
 /**
  * Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testRole = new aws.iam.Role("testRole", {assumeRolePolicy: `  {
+ *     "Version": "2012-10-17",
+ *     "Statement": {
+ *       "Effect": "Allow",
+ *       "Principal": {"Service": "ssm.amazonaws.com"},
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   }
+ * `});
+ * const testAttach = new aws.iam.RolePolicyAttachment("testAttach", {
+ *     role: testRole.name,
+ *     policyArn: "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+ * });
+ * const foo = new aws.ssm.Activation("foo", {
+ *     description: "Test",
+ *     iamRole: testRole.id,
+ *     registrationLimit: "5",
+ * }, {
+ *     dependsOn: [testAttach],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_role = aws.iam.Role("testRole", assume_role_policy="""  {
+ *     "Version": "2012-10-17",
+ *     "Statement": {
+ *       "Effect": "Allow",
+ *       "Principal": {"Service": "ssm.amazonaws.com"},
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   }
+ * """)
+ * test_attach = aws.iam.RolePolicyAttachment("testAttach",
+ *     role=test_role.name,
+ *     policy_arn="arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore")
+ * foo = aws.ssm.Activation("foo",
+ *     description="Test",
+ *     iam_role=test_role.id,
+ *     registration_limit=5,
+ *     opts=pulumi.ResourceOptions(depends_on=[test_attach]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"  {
+ *     ""Version"": ""2012-10-17"",
+ *     ""Statement"": {
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {""Service"": ""ssm.amazonaws.com""},
+ *       ""Action"": ""sts:AssumeRole""
+ *     }
+ *   }
+ * ",
+ *         });
+ *         var testAttach = new Aws.Iam.RolePolicyAttachment("testAttach", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = testRole.Name,
+ *             PolicyArn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+ *         });
+ *         var foo = new Aws.Ssm.Activation("foo", new Aws.Ssm.ActivationArgs
+ *         {
+ *             Description = "Test",
+ *             IamRole = testRole.Id,
+ *             RegistrationLimit = 5,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 testAttach,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v", "  {\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\"Service\": \"ssm.amazonaws.com\"},\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  }\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		testAttach, err := iam.NewRolePolicyAttachment(ctx, "testAttach", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      testRole.Name,
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ssm.NewActivation(ctx, "foo", &ssm.ActivationArgs{
+ * 			Description:       pulumi.String("Test"),
+ * 			IamRole:           testRole.ID(),
+ * 			RegistrationLimit: pulumi.Int(5),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			testAttach,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +161,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ssm/activation:Activation example e488f2f6-e686-4afb-8a04-ef6dfEXAMPLE
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ssm/activation:Activation")
 public class Activation extends io.pulumi.resources.CustomResource {

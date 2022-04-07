@@ -17,6 +17,9 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Lambda Layers can be imported using `arn`.
@@ -25,10 +28,15 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lambda/layerVersion:LayerVersion \
  * ```
  * 
+ * 
+ * 
+ * 
+ * 
  *  aws_lambda_layer_version.test_layer \
  * 
- *  arn:aws:lambda:_REGION_:_ACCOUNT_ID_:layer:_LAYER_NAME_:_LAYER_VERSION_
  * 
+ * 
+ *  arn:aws:lambda:_REGION_:_ACCOUNT_ID_:layer:_LAYER_NAME_:_LAYER_VERSION_ 
  */
 @ResourceType(type="aws:lambda/layerVersion:LayerVersion")
 public class LayerVersion extends io.pulumi.resources.CustomResource {

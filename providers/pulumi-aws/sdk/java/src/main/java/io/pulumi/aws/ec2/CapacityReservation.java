@@ -18,7 +18,75 @@ import javax.annotation.Nullable;
 /**
  * Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
+ *     availabilityZone: "eu-west-1a",
+ *     instanceCount: 1,
+ *     instancePlatform: "Linux/UNIX",
+ *     instanceType: "t2.micro",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.ec2.CapacityReservation("default",
+ *     availability_zone="eu-west-1a",
+ *     instance_count=1,
+ *     instance_platform="Linux/UNIX",
+ *     instance_type="t2.micro")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Ec2.CapacityReservation("default", new Aws.Ec2.CapacityReservationArgs
+ *         {
+ *             AvailabilityZone = "eu-west-1a",
+ *             InstanceCount = 1,
+ *             InstancePlatform = "Linux/UNIX",
+ *             InstanceType = "t2.micro",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewCapacityReservation(ctx, "default", &ec2.CapacityReservationArgs{
+ * 			AvailabilityZone: pulumi.String("eu-west-1a"),
+ * 			InstanceCount:    pulumi.Int(1),
+ * 			InstancePlatform: pulumi.String("Linux/UNIX"),
+ * 			InstanceType:     pulumi.String("t2.micro"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/capacityReservation:CapacityReservation web cr-0123456789abcdef0
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/capacityReservation:CapacityReservation")
 public class CapacityReservation extends io.pulumi.resources.CustomResource {

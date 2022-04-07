@@ -21,7 +21,177 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to create an AWS Firewall Manager policy. You need to be using AWS organizations and have enabled the Firewall Manager administrator account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRuleGroup = new aws.wafregional.RuleGroup("exampleRuleGroup", {metricName: "WAFRuleGroupExample"});
+ * const examplePolicy = new aws.fms.Policy("examplePolicy", {
+ *     excludeResourceTags: false,
+ *     remediationEnabled: false,
+ *     resourceTypeLists: ["AWS::ElasticLoadBalancingV2::LoadBalancer"],
+ *     securityServicePolicyData: {
+ *         type: "WAF",
+ *         managedServiceData: exampleRuleGroup.id.apply(id => JSON.stringify({
+ *             type: "WAF",
+ *             ruleGroups: [{
+ *                 id: id,
+ *                 overrideAction: {
+ *                     type: "COUNT",
+ *                 },
+ *             }],
+ *             defaultAction: {
+ *                 type: "BLOCK",
+ *             },
+ *             overrideCustomerWebACLAssociation: false,
+ *         })),
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example_rule_group = aws.wafregional.RuleGroup("exampleRuleGroup", metric_name="WAFRuleGroupExample")
+ * example_policy = aws.fms.Policy("examplePolicy",
+ *     exclude_resource_tags=False,
+ *     remediation_enabled=False,
+ *     resource_type_lists=["AWS::ElasticLoadBalancingV2::LoadBalancer"],
+ *     security_service_policy_data=aws.fms.PolicySecurityServicePolicyDataArgs(
+ *         type="WAF",
+ *         managed_service_data=example_rule_group.id.apply(lambda id: json.dumps({
+ *             "type": "WAF",
+ *             "ruleGroups": [{
+ *                 "id": id,
+ *                 "overrideAction": {
+ *                     "type": "COUNT",
+ *                 },
+ *             }],
+ *             "defaultAction": {
+ *                 "type": "BLOCK",
+ *             },
+ *             "overrideCustomerWebACLAssociation": False,
+ *         })),
+ *     ))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRuleGroup = new Aws.WafRegional.RuleGroup("exampleRuleGroup", new Aws.WafRegional.RuleGroupArgs
+ *         {
+ *             MetricName = "WAFRuleGroupExample",
+ *         });
+ *         var examplePolicy = new Aws.Fms.Policy("examplePolicy", new Aws.Fms.PolicyArgs
+ *         {
+ *             ExcludeResourceTags = false,
+ *             RemediationEnabled = false,
+ *             ResourceTypeLists = 
+ *             {
+ *                 "AWS::ElasticLoadBalancingV2::LoadBalancer",
+ *             },
+ *             SecurityServicePolicyData = new Aws.Fms.Inputs.PolicySecurityServicePolicyDataArgs
+ *             {
+ *                 Type = "WAF",
+ *                 ManagedServiceData = exampleRuleGroup.Id.Apply(id => JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                 {
+ *                     { "type", "WAF" },
+ *                     { "ruleGroups", new[]
+ *                         {
+ *                             new Dictionary<string, object?>
+ *                             {
+ *                                 { "id", id },
+ *                                 { "overrideAction", new Dictionary<string, object?>
+ *                                 {
+ *                                     { "type", "COUNT" },
+ *                                 } },
+ *                             },
+ *                         }
+ *                      },
+ *                     { "defaultAction", new Dictionary<string, object?>
+ *                     {
+ *                         { "type", "BLOCK" },
+ *                     } },
+ *                     { "overrideCustomerWebACLAssociation", false },
+ *                 })),
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fms"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafregional"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRuleGroup, err := wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
+ * 			MetricName: pulumi.String("WAFRuleGroupExample"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = fms.NewPolicy(ctx, "examplePolicy", &fms.PolicyArgs{
+ * 			ExcludeResourceTags: pulumi.Bool(false),
+ * 			RemediationEnabled:  pulumi.Bool(false),
+ * 			ResourceTypeLists: pulumi.StringArray{
+ * 				pulumi.String("AWS::ElasticLoadBalancingV2::LoadBalancer"),
+ * 			},
+ * 			SecurityServicePolicyData: &fms.PolicySecurityServicePolicyDataArgs{
+ * 				Type: pulumi.String("WAF"),
+ * 				ManagedServiceData: exampleRuleGroup.ID().ApplyT(func(id string) (pulumi.String, error) {
+ * 					var _zero pulumi.String
+ * 					tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 						"type": "WAF",
+ * 						"ruleGroups": []map[string]interface{}{
+ * 							map[string]interface{}{
+ * 								"id": id,
+ * 								"overrideAction": map[string]interface{}{
+ * 									"type": "COUNT",
+ * 								},
+ * 							},
+ * 						},
+ * 						"defaultAction": map[string]interface{}{
+ * 							"type": "BLOCK",
+ * 						},
+ * 						"overrideCustomerWebACLAssociation": false,
+ * 					})
+ * 					if err != nil {
+ * 						return _zero, err
+ * 					}
+ * 					json0 := string(tmpJSON0)
+ * 					return json0, nil
+ * 				}).(pulumi.StringOutput),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +201,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:fms/policy:Policy example 5be49585-a7e3-4c49-dde1-a179fe4a619a
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:fms/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,166 @@ import javax.annotation.Nullable;
  * Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.
  * This resource accepts ownership of a public virtual interface created by another AWS account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const accepter = new aws.Provider("accepter", {});
+ * // Accepter's credentials.
+ * const accepterCallerIdentity = aws.getCallerIdentity({});
+ * // Creator's side of the VIF
+ * const creator = new aws.directconnect.HostedPublicVirtualInterface("creator", {
+ *     connectionId: "dxcon-zzzzzzzz",
+ *     ownerAccountId: accepterCallerIdentity.then(accepterCallerIdentity => accepterCallerIdentity.accountId),
+ *     vlan: 4094,
+ *     addressFamily: "ipv4",
+ *     bgpAsn: 65352,
+ *     customerAddress: "175.45.176.1/30",
+ *     amazonAddress: "175.45.176.2/30",
+ *     routeFilterPrefixes: [
+ *         "210.52.109.0/24",
+ *         "175.45.176.0/22",
+ *     ],
+ * });
+ * // Accepter's side of the VIF.
+ * const accepterHostedPublicVirtualInterfaceAccepter = new aws.directconnect.HostedPublicVirtualInterfaceAccepter("accepterHostedPublicVirtualInterfaceAccepter", {
+ *     virtualInterfaceId: creator.id,
+ *     tags: {
+ *         Side: "Accepter",
+ *     },
+ * }, {
+ *     provider: aws.accepter,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * accepter = pulumi.providers.Aws("accepter")
+ * # Accepter's credentials.
+ * accepter_caller_identity = aws.get_caller_identity()
+ * # Creator's side of the VIF
+ * creator = aws.directconnect.HostedPublicVirtualInterface("creator",
+ *     connection_id="dxcon-zzzzzzzz",
+ *     owner_account_id=accepter_caller_identity.account_id,
+ *     vlan=4094,
+ *     address_family="ipv4",
+ *     bgp_asn=65352,
+ *     customer_address="175.45.176.1/30",
+ *     amazon_address="175.45.176.2/30",
+ *     route_filter_prefixes=[
+ *         "210.52.109.0/24",
+ *         "175.45.176.0/22",
+ *     ])
+ * # Accepter's side of the VIF.
+ * accepter_hosted_public_virtual_interface_accepter = aws.directconnect.HostedPublicVirtualInterfaceAccepter("accepterHostedPublicVirtualInterfaceAccepter",
+ *     virtual_interface_id=creator.id,
+ *     tags={
+ *         "Side": "Accepter",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=aws["accepter"]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var accepter = new Aws.Provider("accepter", new Aws.ProviderArgs
+ *         {
+ *         });
+ *         // Accepter's credentials.
+ *         var accepterCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         // Creator's side of the VIF
+ *         var creator = new Aws.DirectConnect.HostedPublicVirtualInterface("creator", new Aws.DirectConnect.HostedPublicVirtualInterfaceArgs
+ *         {
+ *             ConnectionId = "dxcon-zzzzzzzz",
+ *             OwnerAccountId = accepterCallerIdentity.Apply(accepterCallerIdentity => accepterCallerIdentity.AccountId),
+ *             Vlan = 4094,
+ *             AddressFamily = "ipv4",
+ *             BgpAsn = 65352,
+ *             CustomerAddress = "175.45.176.1/30",
+ *             AmazonAddress = "175.45.176.2/30",
+ *             RouteFilterPrefixes = 
+ *             {
+ *                 "210.52.109.0/24",
+ *                 "175.45.176.0/22",
+ *             },
+ *         });
+ *         // Accepter's side of the VIF.
+ *         var accepterHostedPublicVirtualInterfaceAccepter = new Aws.DirectConnect.HostedPublicVirtualInterfaceAccepter("accepterHostedPublicVirtualInterfaceAccepter", new Aws.DirectConnect.HostedPublicVirtualInterfaceAccepterArgs
+ *         {
+ *             VirtualInterfaceId = creator.Id,
+ *             Tags = 
+ *             {
+ *                 { "Side", "Accepter" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Accepter,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "accepter", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		accepterCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		creator, err := directconnect.NewHostedPublicVirtualInterface(ctx, "creator", &directconnect.HostedPublicVirtualInterfaceArgs{
+ * 			ConnectionId:    pulumi.String("dxcon-zzzzzzzz"),
+ * 			OwnerAccountId:  pulumi.String(accepterCallerIdentity.AccountId),
+ * 			Vlan:            pulumi.Int(4094),
+ * 			AddressFamily:   pulumi.String("ipv4"),
+ * 			BgpAsn:          pulumi.Int(65352),
+ * 			CustomerAddress: pulumi.String("175.45.176.1/30"),
+ * 			AmazonAddress:   pulumi.String("175.45.176.2/30"),
+ * 			RouteFilterPrefixes: pulumi.StringArray{
+ * 				pulumi.String("210.52.109.0/24"),
+ * 				pulumi.String("175.45.176.0/22"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directconnect.NewHostedPublicVirtualInterfaceAccepter(ctx, "accepterHostedPublicVirtualInterfaceAccepter", &directconnect.HostedPublicVirtualInterfaceAccepterArgs{
+ * 			VirtualInterfaceId: creator.ID(),
+ * 			Tags: pulumi.StringMap{
+ * 				"Side": pulumi.String("Accepter"),
+ * 			},
+ * 		}, pulumi.Provider(aws.Accepter))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +186,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter test dxvif-33cc44dd
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter")
 public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.CustomResource {

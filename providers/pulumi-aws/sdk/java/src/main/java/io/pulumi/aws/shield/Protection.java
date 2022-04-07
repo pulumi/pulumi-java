@@ -17,7 +17,124 @@ import javax.annotation.Nullable;
  * Enables AWS Shield Advanced for a specific AWS resource.
  * The resource can be an Amazon CloudFront distribution, Elastic Load Balancing load balancer, AWS Global Accelerator accelerator, Elastic IP Address, or an Amazon Route 53 hosted zone.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create protection
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const available = pulumi.output(aws.getAvailabilityZones());
+ * const currentRegion = pulumi.output(aws.getRegion());
+ * const currentCallerIdentity = pulumi.output(aws.getCallerIdentity());
+ * const exampleEip = new aws.ec2.Eip("example", {
+ *     vpc: true,
+ * });
+ * const exampleProtection = new aws.shield.Protection("example", {
+ *     resourceArn: pulumi.interpolate`arn:aws:ec2:${currentRegion.name!}:${currentCallerIdentity.accountId}:eip-allocation/${exampleEip.id}`,
+ *     tags: {
+ *         Environment: "Dev",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * available = aws.get_availability_zones()
+ * current_region = aws.get_region()
+ * current_caller_identity = aws.get_caller_identity()
+ * example_eip = aws.ec2.Eip("exampleEip", vpc=True)
+ * example_protection = aws.shield.Protection("exampleProtection",
+ *     resource_arn=example_eip.id.apply(lambda id: f"arn:aws:ec2:{current_region.name}:{current_caller_identity.account_id}:eip-allocation/{id}"),
+ *     tags={
+ *         "Environment": "Dev",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var available = Output.Create(Aws.GetAvailabilityZones.InvokeAsync());
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var exampleEip = new Aws.Ec2.Eip("exampleEip", new Aws.Ec2.EipArgs
+ *         {
+ *             Vpc = true,
+ *         });
+ *         var exampleProtection = new Aws.Shield.Protection("exampleProtection", new Aws.Shield.ProtectionArgs
+ *         {
+ *             ResourceArn = Output.Tuple(currentRegion, currentCallerIdentity, exampleEip.Id).Apply(values =>
+ *             {
+ *                 var currentRegion = values.Item1;
+ *                 var currentCallerIdentity = values.Item2;
+ *                 var id = values.Item3;
+ *                 return $"arn:aws:ec2:{currentRegion.Name}:{currentCallerIdentity.AccountId}:eip-allocation/{id}";
+ *             }),
+ *             Tags = 
+ *             {
+ *                 { "Environment", "Dev" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/shield"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := aws.GetAvailabilityZones(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleEip, err := ec2.NewEip(ctx, "exampleEip", &ec2.EipArgs{
+ * 			Vpc: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = shield.NewProtection(ctx, "exampleProtection", &shield.ProtectionArgs{
+ * 			ResourceArn: exampleEip.ID().ApplyT(func(id string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v", "arn:aws:ec2:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":eip-allocation/", id), nil
+ * 			}).(pulumi.StringOutput),
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("Dev"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +144,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:shield/protection:Protection example ff9592dc-22f3-4e88-afa1-7b29fde9669a
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:shield/protection:Protection")
 public class Protection extends io.pulumi.resources.CustomResource {

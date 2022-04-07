@@ -23,7 +23,88 @@ import javax.annotation.Nullable;
  * 
  * More information about MemoryDB can be found in the [Developer Guide](https://docs.aws.amazon.com/memorydb/latest/devguide/what-is-memorydb-for-redis.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.memorydb.Cluster("example", {
+ *     aclName: "open-access",
+ *     nodeType: "db.t4g.small",
+ *     numShards: 2,
+ *     securityGroupIds: [aws_security_group.example.id],
+ *     snapshotRetentionLimit: 7,
+ *     subnetGroupName: aws_memorydb_subnet_group.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.memorydb.Cluster("example",
+ *     acl_name="open-access",
+ *     node_type="db.t4g.small",
+ *     num_shards=2,
+ *     security_group_ids=[aws_security_group["example"]["id"]],
+ *     snapshot_retention_limit=7,
+ *     subnet_group_name=aws_memorydb_subnet_group["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.MemoryDb.Cluster("example", new Aws.MemoryDb.ClusterArgs
+ *         {
+ *             AclName = "open-access",
+ *             NodeType = "db.t4g.small",
+ *             NumShards = 2,
+ *             SecurityGroupIds = 
+ *             {
+ *                 aws_security_group.Example.Id,
+ *             },
+ *             SnapshotRetentionLimit = 7,
+ *             SubnetGroupName = aws_memorydb_subnet_group.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/memorydb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := memorydb.NewCluster(ctx, "example", &memorydb.ClusterArgs{
+ * 			AclName:   pulumi.String("open-access"),
+ * 			NodeType:  pulumi.String("db.t4g.small"),
+ * 			NumShards: pulumi.Int(2),
+ * 			SecurityGroupIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_security_group.Example.Id),
+ * 			},
+ * 			SnapshotRetentionLimit: pulumi.Int(7),
+ * 			SubnetGroupName:        pulumi.Any(aws_memorydb_subnet_group.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +114,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:memorydb/cluster:Cluster example my-cluster
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:memorydb/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

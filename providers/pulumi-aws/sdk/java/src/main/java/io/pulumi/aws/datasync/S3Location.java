@@ -18,7 +18,81 @@ import javax.annotation.Nullable;
 /**
  * Manages an S3 Location within AWS DataSync.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.datasync.S3Location("example", {
+ *     s3BucketArn: aws_s3_bucket.example.arn,
+ *     subdirectory: "/example/prefix",
+ *     s3Config: {
+ *         bucketAccessRoleArn: aws_iam_role.example.arn,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.datasync.S3Location("example",
+ *     s3_bucket_arn=aws_s3_bucket["example"]["arn"],
+ *     subdirectory="/example/prefix",
+ *     s3_config=aws.datasync.S3LocationS3ConfigArgs(
+ *         bucket_access_role_arn=aws_iam_role["example"]["arn"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DataSync.S3Location("example", new Aws.DataSync.S3LocationArgs
+ *         {
+ *             S3BucketArn = aws_s3_bucket.Example.Arn,
+ *             Subdirectory = "/example/prefix",
+ *             S3Config = new Aws.DataSync.Inputs.S3LocationS3ConfigArgs
+ *             {
+ *                 BucketAccessRoleArn = aws_iam_role.Example.Arn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewS3Location(ctx, "example", &datasync.S3LocationArgs{
+ * 			S3BucketArn:  pulumi.Any(aws_s3_bucket.Example.Arn),
+ * 			Subdirectory: pulumi.String("/example/prefix"),
+ * 			S3Config: &datasync.S3LocationS3ConfigArgs{
+ * 				BucketAccessRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +102,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:datasync/s3Location:S3Location example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:datasync/s3Location:S3Location")
 public class S3Location extends io.pulumi.resources.CustomResource {

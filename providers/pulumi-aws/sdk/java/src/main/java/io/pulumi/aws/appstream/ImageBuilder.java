@@ -21,7 +21,110 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppStream image builder.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testFleet = new aws.appstream.ImageBuilder("testFleet", {
+ *     description: "Description of a ImageBuilder",
+ *     displayName: "Display name of a ImageBuilder",
+ *     enableDefaultInternetAccess: false,
+ *     imageName: "AppStream-WinServer2012R2-07-19-2021",
+ *     instanceType: "stream.standard.large",
+ *     vpcConfig: {
+ *         subnetIds: [aws_subnet.example.id],
+ *     },
+ *     tags: {
+ *         Name: "Example Image Builder",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_fleet = aws.appstream.ImageBuilder("testFleet",
+ *     description="Description of a ImageBuilder",
+ *     display_name="Display name of a ImageBuilder",
+ *     enable_default_internet_access=False,
+ *     image_name="AppStream-WinServer2012R2-07-19-2021",
+ *     instance_type="stream.standard.large",
+ *     vpc_config=aws.appstream.ImageBuilderVpcConfigArgs(
+ *         subnet_ids=[aws_subnet["example"]["id"]],
+ *     ),
+ *     tags={
+ *         "Name": "Example Image Builder",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testFleet = new Aws.AppStream.ImageBuilder("testFleet", new Aws.AppStream.ImageBuilderArgs
+ *         {
+ *             Description = "Description of a ImageBuilder",
+ *             DisplayName = "Display name of a ImageBuilder",
+ *             EnableDefaultInternetAccess = false,
+ *             ImageName = "AppStream-WinServer2012R2-07-19-2021",
+ *             InstanceType = "stream.standard.large",
+ *             VpcConfig = new Aws.AppStream.Inputs.ImageBuilderVpcConfigArgs
+ *             {
+ *                 SubnetIds = 
+ *                 {
+ *                     aws_subnet.Example.Id,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "Example Image Builder" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appstream"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appstream.NewImageBuilder(ctx, "testFleet", &appstream.ImageBuilderArgs{
+ * 			Description:                 pulumi.String("Description of a ImageBuilder"),
+ * 			DisplayName:                 pulumi.String("Display name of a ImageBuilder"),
+ * 			EnableDefaultInternetAccess: pulumi.Bool(false),
+ * 			ImageName:                   pulumi.String("AppStream-WinServer2012R2-07-19-2021"),
+ * 			InstanceType:                pulumi.String("stream.standard.large"),
+ * 			VpcConfig: &appstream.ImageBuilderVpcConfigArgs{
+ * 				SubnetIds: pulumi.StringArray{
+ * 					pulumi.Any(aws_subnet.Example.Id),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Example Image Builder"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +134,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appstream/imageBuilder:ImageBuilder example imageBuilderExample
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appstream/imageBuilder:ImageBuilder")
 public class ImageBuilder extends io.pulumi.resources.CustomResource {

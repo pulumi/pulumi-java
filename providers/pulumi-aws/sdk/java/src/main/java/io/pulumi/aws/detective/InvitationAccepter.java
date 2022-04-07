@@ -15,7 +15,28 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [Amazon Detective Invitation Accepter](https://docs.aws.amazon.com/detective/latest/APIReference/API_AcceptInvitation.html). Ensure that the accepter is configured to use the AWS account you wish to _accept_ the invitation from the primary graph owner account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primaryGraph = new aws.detective.Graph("primaryGraph", {});
+ * const primaryMember = new aws.detective.Member("primaryMember", {
+ *     accountId: "ACCOUNT ID",
+ *     email: "EMAIL",
+ *     graphArn: primaryGraph.id,
+ *     message: "Message of the invite",
+ * });
+ * const member = new aws.detective.InvitationAccepter("member", {graphArn: primaryMember.graphArn}, {
+ *     provider: "awsalternate",
+ *     dependsOn: [aws_detective_member.test],
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +46,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:detective/invitationAccepter:InvitationAccepter example arn:aws:detective:us-east-1:123456789101:graph:231684d34gh74g4bae1dbc7bd807d02d
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:detective/invitationAccepter:InvitationAccepter")
 public class InvitationAccepter extends io.pulumi.resources.CustomResource {

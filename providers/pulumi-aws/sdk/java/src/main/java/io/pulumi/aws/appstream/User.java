@@ -16,7 +16,75 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppStream user.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appstream.User("example", {
+ *     authenticationType: "USERPOOL",
+ *     firstName: "FIRST NAME",
+ *     lastName: "LAST NAME",
+ *     userName: "EMAIL ADDRESS",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appstream.User("example",
+ *     authentication_type="USERPOOL",
+ *     first_name="FIRST NAME",
+ *     last_name="LAST NAME",
+ *     user_name="EMAIL ADDRESS")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppStream.User("example", new Aws.AppStream.UserArgs
+ *         {
+ *             AuthenticationType = "USERPOOL",
+ *             FirstName = "FIRST NAME",
+ *             LastName = "LAST NAME",
+ *             UserName = "EMAIL ADDRESS",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appstream"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appstream.NewUser(ctx, "example", &appstream.UserArgs{
+ * 			AuthenticationType: pulumi.String("USERPOOL"),
+ * 			FirstName:          pulumi.String("FIRST NAME"),
+ * 			LastName:           pulumi.String("LAST NAME"),
+ * 			UserName:           pulumi.String("EMAIL ADDRESS"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +94,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appstream/user:User example UserName/AuthenticationType
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appstream/user:User")
 public class User extends io.pulumi.resources.CustomResource {

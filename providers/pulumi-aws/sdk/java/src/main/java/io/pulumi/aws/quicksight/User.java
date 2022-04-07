@@ -15,12 +15,83 @@ import javax.annotation.Nullable;
 /**
  * Resource for managing QuickSight User
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.quicksight.User("example", {
+ *     email: "author@example.com",
+ *     iamArn: "arn:aws:iam::123456789012:user/Example",
+ *     identityType: "IAM",
+ *     sessionName: "an-author",
+ *     userRole: "AUTHOR",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.quicksight.User("example",
+ *     email="author@example.com",
+ *     iam_arn="arn:aws:iam::123456789012:user/Example",
+ *     identity_type="IAM",
+ *     session_name="an-author",
+ *     user_role="AUTHOR")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Quicksight.User("example", new Aws.Quicksight.UserArgs
+ *         {
+ *             Email = "author@example.com",
+ *             IamArn = "arn:aws:iam::123456789012:user/Example",
+ *             IdentityType = "IAM",
+ *             SessionName = "an-author",
+ *             UserRole = "AUTHOR",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/quicksight"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := quicksight.NewUser(ctx, "example", &quicksight.UserArgs{
+ * 			Email:        pulumi.String("author@example.com"),
+ * 			IamArn:       pulumi.String("arn:aws:iam::123456789012:user/Example"),
+ * 			IdentityType: pulumi.String("IAM"),
+ * 			SessionName:  pulumi.String("an-author"),
+ * 			UserRole:     pulumi.String("AUTHOR"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
- * Importing is currently not supported on this resource.
- * 
+ * Importing is currently not supported on this resource. 
  */
 @ResourceType(type="aws:quicksight/user:User")
 public class User extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,84 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks instance resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const my_instance = new aws.opsworks.Instance("my-instance", {
+ *     stackId: aws_opsworks_stack.main.id,
+ *     layerIds: [aws_opsworks_custom_layer["my-layer"].id],
+ *     instanceType: "t2.micro",
+ *     os: "Amazon Linux 2015.09",
+ *     state: "stopped",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_instance = aws.opsworks.Instance("my-instance",
+ *     stack_id=aws_opsworks_stack["main"]["id"],
+ *     layer_ids=[aws_opsworks_custom_layer["my-layer"]["id"]],
+ *     instance_type="t2.micro",
+ *     os="Amazon Linux 2015.09",
+ *     state="stopped")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var my_instance = new Aws.OpsWorks.Instance("my-instance", new Aws.OpsWorks.InstanceArgs
+ *         {
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *             LayerIds = 
+ *             {
+ *                 aws_opsworks_custom_layer.My_layer.Id,
+ *             },
+ *             InstanceType = "t2.micro",
+ *             Os = "Amazon Linux 2015.09",
+ *             State = "stopped",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewInstance(ctx, "my-instance", &opsworks.InstanceArgs{
+ * 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 			LayerIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_opsworks_custom_layer.My - layer.Id),
+ * 			},
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 			Os:           pulumi.String("Amazon Linux 2015.09"),
+ * 			State:        pulumi.String("stopped"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Block devices
  * 
  * Each of the `*_block_device` attributes controls a portion of the AWS
@@ -75,6 +152,7 @@ import javax.annotation.Nullable;
  * to block device configuration, resource recreation can be manually triggered by
  * using the [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
  * 
+ * 
  * ## Import
  * 
  * Opsworks Instances can be imported using the `instance id`, e.g.,
@@ -83,6 +161,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:opsworks/instance:Instance my_instance 4d6d1710-ded9-42a1-b08e-b043ad7af1e2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:opsworks/instance:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,85 @@ import javax.annotation.Nullable;
 /**
  * Provides a Pinpoint ADM (Amazon Device Messaging) Channel resource.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const app = new aws.pinpoint.App("app", {});
+ * const channel = new aws.pinpoint.AdmChannel("channel", {
+ *     applicationId: app.applicationId,
+ *     clientId: "",
+ *     clientSecret: "",
+ *     enabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.pinpoint.App("app")
+ * channel = aws.pinpoint.AdmChannel("channel",
+ *     application_id=app.application_id,
+ *     client_id="",
+ *     client_secret="",
+ *     enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+ *         {
+ *         });
+ *         var channel = new Aws.Pinpoint.AdmChannel("channel", new Aws.Pinpoint.AdmChannelArgs
+ *         {
+ *             ApplicationId = app.ApplicationId,
+ *             ClientId = "",
+ *             ClientSecret = "",
+ *             Enabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		app, err := pinpoint.NewApp(ctx, "app", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pinpoint.NewAdmChannel(ctx, "channel", &pinpoint.AdmChannelArgs{
+ * 			ApplicationId: app.ApplicationId,
+ * 			ClientId:      pulumi.String(""),
+ * 			ClientSecret:  pulumi.String(""),
+ * 			Enabled:       pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:pinpoint/admChannel:AdmChannel channel application-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:pinpoint/admChannel:AdmChannel")
 public class AdmChannel extends io.pulumi.resources.CustomResource {

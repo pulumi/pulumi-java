@@ -16,7 +16,84 @@ import javax.annotation.Nullable;
 /**
  * Provides a [Route53 Delegation Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API-actions-by-function.html#actions-by-function-reusable-delegation-sets) resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.route53.DelegationSet("main", {referenceName: "DynDNS"});
+ * const primary = new aws.route53.Zone("primary", {delegationSetId: main.id});
+ * const secondary = new aws.route53.Zone("secondary", {delegationSetId: main.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.route53.DelegationSet("main", reference_name="DynDNS")
+ * primary = aws.route53.Zone("primary", delegation_set_id=main.id)
+ * secondary = aws.route53.Zone("secondary", delegation_set_id=main.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Route53.DelegationSet("main", new Aws.Route53.DelegationSetArgs
+ *         {
+ *             ReferenceName = "DynDNS",
+ *         });
+ *         var primary = new Aws.Route53.Zone("primary", new Aws.Route53.ZoneArgs
+ *         {
+ *             DelegationSetId = main.Id,
+ *         });
+ *         var secondary = new Aws.Route53.Zone("secondary", new Aws.Route53.ZoneArgs
+ *         {
+ *             DelegationSetId = main.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := route53.NewDelegationSet(ctx, "main", &route53.DelegationSetArgs{
+ * 			ReferenceName: pulumi.String("DynDNS"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewZone(ctx, "primary", &route53.ZoneArgs{
+ * 			DelegationSetId: main.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewZone(ctx, "secondary", &route53.ZoneArgs{
+ * 			DelegationSetId: main.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/delegationSet:DelegationSet set1 N1PA6795SAMPLE
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/delegationSet:DelegationSet")
 public class DelegationSet extends io.pulumi.resources.CustomResource {

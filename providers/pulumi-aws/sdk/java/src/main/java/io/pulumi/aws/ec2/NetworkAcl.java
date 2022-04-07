@@ -26,7 +26,152 @@ import javax.annotation.Nullable;
  * in conjunction with any Network ACL Rule resources. Doing so will cause
  * a conflict of rule settings and will overwrite rules.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ec2.NetworkAcl("main", {
+ *     vpcId: aws_vpc.main.id,
+ *     egress: [{
+ *         protocol: "tcp",
+ *         ruleNo: 200,
+ *         action: "allow",
+ *         cidrBlock: "10.3.0.0/18",
+ *         fromPort: 443,
+ *         toPort: 443,
+ *     }],
+ *     ingress: [{
+ *         protocol: "tcp",
+ *         ruleNo: 100,
+ *         action: "allow",
+ *         cidrBlock: "10.3.0.0/18",
+ *         fromPort: 80,
+ *         toPort: 80,
+ *     }],
+ *     tags: {
+ *         Name: "main",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ec2.NetworkAcl("main",
+ *     vpc_id=aws_vpc["main"]["id"],
+ *     egress=[aws.ec2.NetworkAclEgressArgs(
+ *         protocol="tcp",
+ *         rule_no=200,
+ *         action="allow",
+ *         cidr_block="10.3.0.0/18",
+ *         from_port=443,
+ *         to_port=443,
+ *     )],
+ *     ingress=[aws.ec2.NetworkAclIngressArgs(
+ *         protocol="tcp",
+ *         rule_no=100,
+ *         action="allow",
+ *         cidr_block="10.3.0.0/18",
+ *         from_port=80,
+ *         to_port=80,
+ *     )],
+ *     tags={
+ *         "Name": "main",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ec2.NetworkAcl("main", new Aws.Ec2.NetworkAclArgs
+ *         {
+ *             VpcId = aws_vpc.Main.Id,
+ *             Egress = 
+ *             {
+ *                 new Aws.Ec2.Inputs.NetworkAclEgressArgs
+ *                 {
+ *                     Protocol = "tcp",
+ *                     RuleNo = 200,
+ *                     Action = "allow",
+ *                     CidrBlock = "10.3.0.0/18",
+ *                     FromPort = 443,
+ *                     ToPort = 443,
+ *                 },
+ *             },
+ *             Ingress = 
+ *             {
+ *                 new Aws.Ec2.Inputs.NetworkAclIngressArgs
+ *                 {
+ *                     Protocol = "tcp",
+ *                     RuleNo = 100,
+ *                     Action = "allow",
+ *                     CidrBlock = "10.3.0.0/18",
+ *                     FromPort = 80,
+ *                     ToPort = 80,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "main" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewNetworkAcl(ctx, "main", &ec2.NetworkAclArgs{
+ * 			VpcId: pulumi.Any(aws_vpc.Main.Id),
+ * 			Egress: ec2.NetworkAclEgressArray{
+ * 				&ec2.NetworkAclEgressArgs{
+ * 					Protocol:  pulumi.String("tcp"),
+ * 					RuleNo:    pulumi.Int(200),
+ * 					Action:    pulumi.String("allow"),
+ * 					CidrBlock: pulumi.String("10.3.0.0/18"),
+ * 					FromPort:  pulumi.Int(443),
+ * 					ToPort:    pulumi.Int(443),
+ * 				},
+ * 			},
+ * 			Ingress: ec2.NetworkAclIngressArray{
+ * 				&ec2.NetworkAclIngressArgs{
+ * 					Protocol:  pulumi.String("tcp"),
+ * 					RuleNo:    pulumi.Int(100),
+ * 					Action:    pulumi.String("allow"),
+ * 					CidrBlock: pulumi.String("10.3.0.0/18"),
+ * 					FromPort:  pulumi.Int(80),
+ * 					ToPort:    pulumi.Int(80),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("main"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,6 +181,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/networkAcl:NetworkAcl main acl-7aaabd18
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/networkAcl:NetworkAcl")
 public class NetworkAcl extends io.pulumi.resources.CustomResource {

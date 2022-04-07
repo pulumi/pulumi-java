@@ -16,7 +16,73 @@ import javax.annotation.Nullable;
 /**
  * Provides a DAX Subnet Group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.dax.SubnetGroup("example", {subnetIds: [
+ *     aws_subnet.example1.id,
+ *     aws_subnet.example2.id,
+ * ]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.dax.SubnetGroup("example", subnet_ids=[
+ *     aws_subnet["example1"]["id"],
+ *     aws_subnet["example2"]["id"],
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Dax.SubnetGroup("example", new Aws.Dax.SubnetGroupArgs
+ *         {
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example1.Id,
+ *                 aws_subnet.Example2.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dax"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dax.NewSubnetGroup(ctx, "example", &dax.SubnetGroupArgs{
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_subnet.Example1.Id),
+ * 				pulumi.Any(aws_subnet.Example2.Id),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +92,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dax/subnetGroup:SubnetGroup example my_dax_sg
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dax/subnetGroup:SubnetGroup")
 public class SubnetGroup extends io.pulumi.resources.CustomResource {

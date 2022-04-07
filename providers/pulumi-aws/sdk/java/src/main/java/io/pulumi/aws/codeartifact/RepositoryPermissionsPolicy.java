@@ -15,7 +15,159 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeArtifact Repostory Permissions Policy Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleKey = new aws.kms.Key("exampleKey", {description: "domain key"});
+ * const exampleDomain = new aws.codeartifact.Domain("exampleDomain", {
+ *     domain: "example.com",
+ *     encryptionKey: exampleKey.arn,
+ * });
+ * const exampleRepository = new aws.codeartifact.Repository("exampleRepository", {
+ *     repository: "example",
+ *     domain: exampleDomain.domain,
+ * });
+ * const exampleRepositoryPermissionsPolicy = new aws.codeartifact.RepositoryPermissionsPolicy("exampleRepositoryPermissionsPolicy", {
+ *     repository: exampleRepository.repository,
+ *     domain: exampleDomain.domain,
+ *     policyDocument: pulumi.interpolate`{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Action": "codeartifact:CreateRepository",
+ *             "Effect": "Allow",
+ *             "Principal": "*",
+ *             "Resource": "${exampleDomain.arn}"
+ *         }
+ *     ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_key = aws.kms.Key("exampleKey", description="domain key")
+ * example_domain = aws.codeartifact.Domain("exampleDomain",
+ *     domain="example.com",
+ *     encryption_key=example_key.arn)
+ * example_repository = aws.codeartifact.Repository("exampleRepository",
+ *     repository="example",
+ *     domain=example_domain.domain)
+ * example_repository_permissions_policy = aws.codeartifact.RepositoryPermissionsPolicy("exampleRepositoryPermissionsPolicy",
+ *     repository=example_repository.repository,
+ *     domain=example_domain.domain,
+ *     policy_document=example_domain.arn.apply(lambda arn: f"""{{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {{
+ *             "Action": "codeartifact:CreateRepository",
+ *             "Effect": "Allow",
+ *             "Principal": "*",
+ *             "Resource": "{arn}"
+ *         }}
+ *     ]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "domain key",
+ *         });
+ *         var exampleDomain = new Aws.CodeArtifact.Domain("exampleDomain", new Aws.CodeArtifact.DomainArgs
+ *         {
+ *             Domain = "example.com",
+ *             EncryptionKey = exampleKey.Arn,
+ *         });
+ *         var exampleRepository = new Aws.CodeArtifact.Repository("exampleRepository", new Aws.CodeArtifact.RepositoryArgs
+ *         {
+ *             Repository = "example",
+ *             Domain = exampleDomain.DomainName,
+ *         });
+ *         var exampleRepositoryPermissionsPolicy = new Aws.CodeArtifact.RepositoryPermissionsPolicy("exampleRepositoryPermissionsPolicy", new Aws.CodeArtifact.RepositoryPermissionsPolicyArgs
+ *         {
+ *             Repository = exampleRepository.RepositoryName,
+ *             Domain = exampleDomain.DomainName,
+ *             PolicyDocument = exampleDomain.Arn.Apply(arn => @$"{{
+ *     ""Version"": ""2012-10-17"",
+ *     ""Statement"": [
+ *         {{
+ *             ""Action"": ""codeartifact:CreateRepository"",
+ *             ""Effect"": ""Allow"",
+ *             ""Principal"": ""*"",
+ *             ""Resource"": ""{arn}""
+ *         }}
+ *     ]
+ * }}
+ * "),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
+ * 			Description: pulumi.String("domain key"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleDomain, err := codeartifact.NewDomain(ctx, "exampleDomain", &codeartifact.DomainArgs{
+ * 			Domain:        pulumi.String("example.com"),
+ * 			EncryptionKey: exampleKey.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleRepository, err := codeartifact.NewRepository(ctx, "exampleRepository", &codeartifact.RepositoryArgs{
+ * 			Repository: pulumi.String("example"),
+ * 			Domain:     exampleDomain.Domain,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = codeartifact.NewRepositoryPermissionsPolicy(ctx, "exampleRepositoryPermissionsPolicy", &codeartifact.RepositoryPermissionsPolicyArgs{
+ * 			Repository: exampleRepository.Repository,
+ * 			Domain:     exampleDomain.Domain,
+ * 			PolicyDocument: exampleDomain.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Action\": \"codeartifact:CreateRepository\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": \"*\",\n", "            \"Resource\": \"", arn, "\"\n", "        }\n", "    ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +177,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy example arn:aws:codeartifact:us-west-2:012345678912:repository/tf-acc-test-6968272603913957763/tf-acc-test-6968272603913957763
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy")
 public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResource {

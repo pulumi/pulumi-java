@@ -18,7 +18,189 @@ import javax.annotation.Nullable;
 /**
  * Manages an EKS Fargate Profile.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.eks.FargateProfile("example", {
+ *     clusterName: aws_eks_cluster.example.name,
+ *     podExecutionRoleArn: aws_iam_role.example.arn,
+ *     subnetIds: aws_subnet.example.map(__item => __item.id),
+ *     selectors: [{
+ *         namespace: "example",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.eks.FargateProfile("example",
+ *     cluster_name=aws_eks_cluster["example"]["name"],
+ *     pod_execution_role_arn=aws_iam_role["example"]["arn"],
+ *     subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
+ *     selectors=[aws.eks.FargateProfileSelectorArgs(
+ *         namespace="example",
+ *     )])
+ * ```
+ * ```csharp
+ * using System.Linq;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Eks.FargateProfile("example", new Aws.Eks.FargateProfileArgs
+ *         {
+ *             ClusterName = aws_eks_cluster.Example.Name,
+ *             PodExecutionRoleArn = aws_iam_role.Example.Arn,
+ *             SubnetIds = aws_subnet.Example.Select(__item => __item.Id).ToList(),
+ *             Selectors = 
+ *             {
+ *                 new Aws.Eks.Inputs.FargateProfileSelectorArgs
+ *                 {
+ *                     Namespace = "example",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example IAM Role for EKS Fargate Profile
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.iam.Role("example", {assumeRolePolicy: JSON.stringify({
+ *     Statement: [{
+ *         Action: "sts:AssumeRole",
+ *         Effect: "Allow",
+ *         Principal: {
+ *             Service: "eks-fargate-pods.amazonaws.com",
+ *         },
+ *     }],
+ *     Version: "2012-10-17",
+ * })});
+ * const example_AmazonEKSFargatePodExecutionRolePolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSFargatePodExecutionRolePolicy", {
+ *     policyArn: "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
+ *     role: example.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.iam.Role("example", assume_role_policy=json.dumps({
+ *     "Statement": [{
+ *         "Action": "sts:AssumeRole",
+ *         "Effect": "Allow",
+ *         "Principal": {
+ *             "Service": "eks-fargate-pods.amazonaws.com",
+ *         },
+ *     }],
+ *     "Version": "2012-10-17",
+ * }))
+ * example__amazon_eks_fargate_pod_execution_role_policy = aws.iam.RolePolicyAttachment("example-AmazonEKSFargatePodExecutionRolePolicy",
+ *     policy_arn="arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
+ *     role=example.name)
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "Statement", new[]
+ *                     {
+ *                         new Dictionary<string, object?>
+ *                         {
+ *                             { "Action", "sts:AssumeRole" },
+ *                             { "Effect", "Allow" },
+ *                             { "Principal", new Dictionary<string, object?>
+ *                             {
+ *                                 { "Service", "eks-fargate-pods.amazonaws.com" },
+ *                             } },
+ *                         },
+ *                     }
+ *                  },
+ *                 { "Version", "2012-10-17" },
+ *             }),
+ *         });
+ *         var example_AmazonEKSFargatePodExecutionRolePolicy = new Aws.Iam.RolePolicyAttachment("example-AmazonEKSFargatePodExecutionRolePolicy", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
+ *             Role = example.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"Statement": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Action": "sts:AssumeRole",
+ * 					"Effect": "Allow",
+ * 					"Principal": map[string]interface{}{
+ * 						"Service": "eks-fargate-pods.amazonaws.com",
+ * 					},
+ * 				},
+ * 			},
+ * 			"Version": "2012-10-17",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		example, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSFargatePodExecutionRolePolicy", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy"),
+ * 			Role:      example.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +210,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:eks/fargateProfile:FargateProfile my_fargate_profile my_cluster:my_fargate_profile
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:eks/fargateProfile:FargateProfile")
 public class FargateProfile extends io.pulumi.resources.CustomResource {

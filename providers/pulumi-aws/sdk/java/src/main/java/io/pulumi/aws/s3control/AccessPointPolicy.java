@@ -14,6 +14,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Access Point policies can be imported using the `access_point_arn`, e.g.
@@ -22,6 +25,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3control/accessPointPolicy:AccessPointPolicy example arn:aws:s3:us-west-2:123456789012:accesspoint/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3control/accessPointPolicy:AccessPointPolicy")
 public class AccessPointPolicy extends io.pulumi.resources.CustomResource {

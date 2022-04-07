@@ -44,7 +44,6 @@ public final class GetSecretResult {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
      */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final Boolean rotationEnabled;
@@ -53,7 +52,6 @@ public final class GetSecretResult {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
      */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final String rotationLambdaArn;
@@ -62,7 +60,6 @@ public final class GetSecretResult {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
      */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final List<GetSecretRotationRule> rotationRules;
@@ -139,7 +136,6 @@ public final class GetSecretResult {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public Boolean getRotationEnabled() {
@@ -150,7 +146,6 @@ public final class GetSecretResult {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public String getRotationLambdaArn() {
@@ -161,7 +156,6 @@ public final class GetSecretResult {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public List<GetSecretRotationRule> getRotationRules() {

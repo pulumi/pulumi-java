@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * Provides a Direct Connect transit virtual interface resource.
  * A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleGateway = new aws.directconnect.Gateway("exampleGateway", {amazonSideAsn: 64512});
+ * const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInterface("exampleTransitVirtualInterface", {
+ *     connectionId: aws_dx_connection.example.id,
+ *     dxGatewayId: exampleGateway.id,
+ *     vlan: 4094,
+ *     addressFamily: "ipv4",
+ *     bgpAsn: 65352,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_gateway = aws.directconnect.Gateway("exampleGateway", amazon_side_asn="64512")
+ * example_transit_virtual_interface = aws.directconnect.TransitVirtualInterface("exampleTransitVirtualInterface",
+ *     connection_id=aws_dx_connection["example"]["id"],
+ *     dx_gateway_id=example_gateway.id,
+ *     vlan=4094,
+ *     address_family="ipv4",
+ *     bgp_asn=65352)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleGateway = new Aws.DirectConnect.Gateway("exampleGateway", new Aws.DirectConnect.GatewayArgs
+ *         {
+ *             AmazonSideAsn = "64512",
+ *         });
+ *         var exampleTransitVirtualInterface = new Aws.DirectConnect.TransitVirtualInterface("exampleTransitVirtualInterface", new Aws.DirectConnect.TransitVirtualInterfaceArgs
+ *         {
+ *             ConnectionId = aws_dx_connection.Example.Id,
+ *             DxGatewayId = exampleGateway.Id,
+ *             Vlan = 4094,
+ *             AddressFamily = "ipv4",
+ *             BgpAsn = 65352,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
+ * 			AmazonSideAsn: pulumi.String("64512"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = directconnect.NewTransitVirtualInterface(ctx, "exampleTransitVirtualInterface", &directconnect.TransitVirtualInterfaceArgs{
+ * 			ConnectionId:  pulumi.Any(aws_dx_connection.Example.Id),
+ * 			DxGatewayId:   exampleGateway.ID(),
+ * 			Vlan:          pulumi.Int(4094),
+ * 			AddressFamily: pulumi.String("ipv4"),
+ * 			BgpAsn:        pulumi.Int(65352),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,18 +113,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/transitVirtualInterface:TransitVirtualInterface test dxvif-33cc44dd
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/transitVirtualInterface:TransitVirtualInterface")
 public class TransitVirtualInterface extends io.pulumi.resources.CustomResource {
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Export(name="addressFamily", type=String.class, parameters={})
     private Output<String> addressFamily;
 
     /**
-     * @return The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * @return The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     public Output<String> getAddressFamily() {

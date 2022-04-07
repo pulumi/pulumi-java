@@ -17,7 +17,190 @@ import javax.annotation.Nullable;
  * Manages an Amazon FSx for OpenZFS volume.
  * See the [FSx OpenZFS User Guide](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/what-is-fsx.html) for more information.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Root volume Example
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOpenZfsFileSystem = new aws.fsx.OpenZfsFileSystem("exampleOpenZfsFileSystem", {
+ *     storageCapacity: 64,
+ *     subnetIds: [aws_subnet.example.id],
+ *     deploymentType: "SINGLE_AZ_1",
+ *     throughputCapacity: 64,
+ * });
+ * const exampleOpenZfsSnapshot = new aws.fsx.OpenZfsSnapshot("exampleOpenZfsSnapshot", {volumeId: exampleOpenZfsFileSystem.rootVolumeId});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_open_zfs_file_system = aws.fsx.OpenZfsFileSystem("exampleOpenZfsFileSystem",
+ *     storage_capacity=64,
+ *     subnet_ids=[aws_subnet["example"]["id"]],
+ *     deployment_type="SINGLE_AZ_1",
+ *     throughput_capacity=64)
+ * example_open_zfs_snapshot = aws.fsx.OpenZfsSnapshot("exampleOpenZfsSnapshot", volume_id=example_open_zfs_file_system.root_volume_id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOpenZfsFileSystem = new Aws.Fsx.OpenZfsFileSystem("exampleOpenZfsFileSystem", new Aws.Fsx.OpenZfsFileSystemArgs
+ *         {
+ *             StorageCapacity = 64,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example.Id,
+ *             },
+ *             DeploymentType = "SINGLE_AZ_1",
+ *             ThroughputCapacity = 64,
+ *         });
+ *         var exampleOpenZfsSnapshot = new Aws.Fsx.OpenZfsSnapshot("exampleOpenZfsSnapshot", new Aws.Fsx.OpenZfsSnapshotArgs
+ *         {
+ *             VolumeId = exampleOpenZfsFileSystem.RootVolumeId,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOpenZfsFileSystem, err := fsx.NewOpenZfsFileSystem(ctx, "exampleOpenZfsFileSystem", &fsx.OpenZfsFileSystemArgs{
+ * 			StorageCapacity: pulumi.Int(64),
+ * 			SubnetIds: pulumi.String{
+ * 				aws_subnet.Example.Id,
+ * 			},
+ * 			DeploymentType:     pulumi.String("SINGLE_AZ_1"),
+ * 			ThroughputCapacity: pulumi.Int(64),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = fsx.NewOpenZfsSnapshot(ctx, "exampleOpenZfsSnapshot", &fsx.OpenZfsSnapshotArgs{
+ * 			VolumeId: exampleOpenZfsFileSystem.RootVolumeId,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Child volume Example
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOpenZfsFileSystem = new aws.fsx.OpenZfsFileSystem("exampleOpenZfsFileSystem", {
+ *     storageCapacity: 64,
+ *     subnetIds: [aws_subnet.example.id],
+ *     deploymentType: "SINGLE_AZ_1",
+ *     throughputCapacity: 64,
+ * });
+ * const exampleOpenZfsVolume = new aws.fsx.OpenZfsVolume("exampleOpenZfsVolume", {parentVolumeId: exampleOpenZfsFileSystem.rootVolumeId});
+ * const exampleOpenZfsSnapshot = new aws.fsx.OpenZfsSnapshot("exampleOpenZfsSnapshot", {volumeId: exampleOpenZfsVolume.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_open_zfs_file_system = aws.fsx.OpenZfsFileSystem("exampleOpenZfsFileSystem",
+ *     storage_capacity=64,
+ *     subnet_ids=[aws_subnet["example"]["id"]],
+ *     deployment_type="SINGLE_AZ_1",
+ *     throughput_capacity=64)
+ * example_open_zfs_volume = aws.fsx.OpenZfsVolume("exampleOpenZfsVolume", parent_volume_id=example_open_zfs_file_system.root_volume_id)
+ * example_open_zfs_snapshot = aws.fsx.OpenZfsSnapshot("exampleOpenZfsSnapshot", volume_id=example_open_zfs_volume.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOpenZfsFileSystem = new Aws.Fsx.OpenZfsFileSystem("exampleOpenZfsFileSystem", new Aws.Fsx.OpenZfsFileSystemArgs
+ *         {
+ *             StorageCapacity = 64,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example.Id,
+ *             },
+ *             DeploymentType = "SINGLE_AZ_1",
+ *             ThroughputCapacity = 64,
+ *         });
+ *         var exampleOpenZfsVolume = new Aws.Fsx.OpenZfsVolume("exampleOpenZfsVolume", new Aws.Fsx.OpenZfsVolumeArgs
+ *         {
+ *             ParentVolumeId = exampleOpenZfsFileSystem.RootVolumeId,
+ *         });
+ *         var exampleOpenZfsSnapshot = new Aws.Fsx.OpenZfsSnapshot("exampleOpenZfsSnapshot", new Aws.Fsx.OpenZfsSnapshotArgs
+ *         {
+ *             VolumeId = exampleOpenZfsVolume.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOpenZfsFileSystem, err := fsx.NewOpenZfsFileSystem(ctx, "exampleOpenZfsFileSystem", &fsx.OpenZfsFileSystemArgs{
+ * 			StorageCapacity: pulumi.Int(64),
+ * 			SubnetIds: pulumi.String{
+ * 				aws_subnet.Example.Id,
+ * 			},
+ * 			DeploymentType:     pulumi.String("SINGLE_AZ_1"),
+ * 			ThroughputCapacity: pulumi.Int(64),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleOpenZfsVolume, err := fsx.NewOpenZfsVolume(ctx, "exampleOpenZfsVolume", &fsx.OpenZfsVolumeArgs{
+ * 			ParentVolumeId: exampleOpenZfsFileSystem.RootVolumeId,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = fsx.NewOpenZfsSnapshot(ctx, "exampleOpenZfsSnapshot", &fsx.OpenZfsSnapshotArgs{
+ * 			VolumeId: exampleOpenZfsVolume.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +210,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:fsx/openZfsSnapshot:OpenZfsSnapshot example fs-543ab12b1ca672f33
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:fsx/openZfsSnapshot:OpenZfsSnapshot")
 public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {

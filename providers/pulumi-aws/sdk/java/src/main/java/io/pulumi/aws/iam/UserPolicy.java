@@ -15,7 +15,143 @@ import javax.annotation.Nullable;
 /**
  * Provides an IAM policy attached to a user.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const lbUser = new aws.iam.User("lbUser", {path: "/system/"});
+ * const lbRo = new aws.iam.UserPolicy("lbRo", {
+ *     user: lbUser.name,
+ *     policy: JSON.stringify({
+ *         Version: "2012-10-17",
+ *         Statement: [{
+ *             Action: ["ec2:Describe*"],
+ *             Effect: "Allow",
+ *             Resource: "*",
+ *         }],
+ *     }),
+ * });
+ * const lbAccessKey = new aws.iam.AccessKey("lbAccessKey", {user: lbUser.name});
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * lb_user = aws.iam.User("lbUser", path="/system/")
+ * lb_ro = aws.iam.UserPolicy("lbRo",
+ *     user=lb_user.name,
+ *     policy=json.dumps({
+ *         "Version": "2012-10-17",
+ *         "Statement": [{
+ *             "Action": ["ec2:Describe*"],
+ *             "Effect": "Allow",
+ *             "Resource": "*",
+ *         }],
+ *     }))
+ * lb_access_key = aws.iam.AccessKey("lbAccessKey", user=lb_user.name)
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var lbUser = new Aws.Iam.User("lbUser", new Aws.Iam.UserArgs
+ *         {
+ *             Path = "/system/",
+ *         });
+ *         var lbRo = new Aws.Iam.UserPolicy("lbRo", new Aws.Iam.UserPolicyArgs
+ *         {
+ *             User = lbUser.Name,
+ *             Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "Version", "2012-10-17" },
+ *                 { "Statement", new[]
+ *                     {
+ *                         new Dictionary<string, object?>
+ *                         {
+ *                             { "Action", new[]
+ *                                 {
+ *                                     "ec2:Describe*",
+ *                                 }
+ *                              },
+ *                             { "Effect", "Allow" },
+ *                             { "Resource", "*" },
+ *                         },
+ *                     }
+ *                  },
+ *             }),
+ *         });
+ *         var lbAccessKey = new Aws.Iam.AccessKey("lbAccessKey", new Aws.Iam.AccessKeyArgs
+ *         {
+ *             User = lbUser.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		lbUser, err := iam.NewUser(ctx, "lbUser", &iam.UserArgs{
+ * 			Path: pulumi.String("/system/"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"Version": "2012-10-17",
+ * 			"Statement": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Action": []string{
+ * 						"ec2:Describe*",
+ * 					},
+ * 					"Effect":   "Allow",
+ * 					"Resource": "*",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
+ * 			User:   lbUser.Name,
+ * 			Policy: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewAccessKey(ctx, "lbAccessKey", &iam.AccessKeyArgs{
+ * 			User: lbUser.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +161,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/userPolicy:UserPolicy mypolicy user_of_mypolicy_name:mypolicy_name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iam/userPolicy:UserPolicy")
 public class UserPolicy extends io.pulumi.resources.CustomResource {

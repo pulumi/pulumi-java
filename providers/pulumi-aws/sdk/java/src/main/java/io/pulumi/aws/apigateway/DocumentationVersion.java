@@ -15,7 +15,123 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an API Gateway Documentation Version.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRestApi = new aws.apigateway.RestApi("exampleRestApi", {});
+ * const exampleDocumentationPart = new aws.apigateway.DocumentationPart("exampleDocumentationPart", {
+ *     location: {
+ *         type: "API",
+ *     },
+ *     properties: "{\"description\":\"Example\"}",
+ *     restApiId: exampleRestApi.id,
+ * });
+ * const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exampleDocumentationVersion", {
+ *     version: "example_version",
+ *     restApiId: exampleRestApi.id,
+ *     description: "Example description",
+ * }, {
+ *     dependsOn: [exampleDocumentationPart],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_rest_api = aws.apigateway.RestApi("exampleRestApi")
+ * example_documentation_part = aws.apigateway.DocumentationPart("exampleDocumentationPart",
+ *     location=aws.apigateway.DocumentationPartLocationArgs(
+ *         type="API",
+ *     ),
+ *     properties="{\"description\":\"Example\"}",
+ *     rest_api_id=example_rest_api.id)
+ * example_documentation_version = aws.apigateway.DocumentationVersion("exampleDocumentationVersion",
+ *     version="example_version",
+ *     rest_api_id=example_rest_api.id,
+ *     description="Example description",
+ *     opts=pulumi.ResourceOptions(depends_on=[example_documentation_part]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRestApi = new Aws.ApiGateway.RestApi("exampleRestApi", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *         });
+ *         var exampleDocumentationPart = new Aws.ApiGateway.DocumentationPart("exampleDocumentationPart", new Aws.ApiGateway.DocumentationPartArgs
+ *         {
+ *             Location = new Aws.ApiGateway.Inputs.DocumentationPartLocationArgs
+ *             {
+ *                 Type = "API",
+ *             },
+ *             Properties = "{\"description\":\"Example\"}",
+ *             RestApiId = exampleRestApi.Id,
+ *         });
+ *         var exampleDocumentationVersion = new Aws.ApiGateway.DocumentationVersion("exampleDocumentationVersion", new Aws.ApiGateway.DocumentationVersionArgs
+ *         {
+ *             Version = "example_version",
+ *             RestApiId = exampleRestApi.Id,
+ *             Description = "Example description",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleDocumentationPart,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRestApi, err := apigateway.NewRestApi(ctx, "exampleRestApi", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleDocumentationPart, err := apigateway.NewDocumentationPart(ctx, "exampleDocumentationPart", &apigateway.DocumentationPartArgs{
+ * 			Location: &apigateway.DocumentationPartLocationArgs{
+ * 				Type: pulumi.String("API"),
+ * 			},
+ * 			Properties: pulumi.String("{\"description\":\"Example\"}"),
+ * 			RestApiId:  exampleRestApi.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewDocumentationVersion(ctx, "exampleDocumentationVersion", &apigateway.DocumentationVersionArgs{
+ * 			Version:     pulumi.String("example_version"),
+ * 			RestApiId:   exampleRestApi.ID(),
+ * 			Description: pulumi.String("Example description"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleDocumentationPart,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +141,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/documentationVersion:DocumentationVersion example 5i4e1ko720/example-version
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/documentationVersion:DocumentationVersion")
 public class DocumentationVersion extends io.pulumi.resources.CustomResource {

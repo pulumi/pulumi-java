@@ -18,7 +18,192 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Route 53 Recovery Control Config Safety Rule
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.route53recoverycontrol.SafetyRule("example", {
+ *     assertedControls: [aws_route53recoverycontrolconfig_routing_control.example.arn],
+ *     controlPanelArn: "arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8",
+ *     waitPeriodMs: 5000,
+ *     ruleConfig: {
+ *         inverted: false,
+ *         threshold: 1,
+ *         type: "ATLEAST",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.route53recoverycontrol.SafetyRule("example",
+ *     asserted_controls=[aws_route53recoverycontrolconfig_routing_control["example"]["arn"]],
+ *     control_panel_arn="arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8",
+ *     wait_period_ms=5000,
+ *     rule_config=aws.route53recoverycontrol.SafetyRuleRuleConfigArgs(
+ *         inverted=False,
+ *         threshold=1,
+ *         type="ATLEAST",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Route53RecoveryControl.SafetyRule("example", new Aws.Route53RecoveryControl.SafetyRuleArgs
+ *         {
+ *             AssertedControls = 
+ *             {
+ *                 aws_route53recoverycontrolconfig_routing_control.Example.Arn,
+ *             },
+ *             ControlPanelArn = "arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8",
+ *             WaitPeriodMs = 5000,
+ *             RuleConfig = new Aws.Route53RecoveryControl.Inputs.SafetyRuleRuleConfigArgs
+ *             {
+ *                 Inverted = false,
+ *                 Threshold = 1,
+ *                 Type = "ATLEAST",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53recoverycontrol"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53recoverycontrol.NewSafetyRule(ctx, "example", &route53recoverycontrol.SafetyRuleArgs{
+ * 			AssertedControls: pulumi.StringArray{
+ * 				pulumi.Any(aws_route53recoverycontrolconfig_routing_control.Example.Arn),
+ * 			},
+ * 			ControlPanelArn: pulumi.String("arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8"),
+ * 			WaitPeriodMs:    pulumi.Int(5000),
+ * 			RuleConfig: &route53recoverycontrol.SafetyRuleRuleConfigArgs{
+ * 				Inverted:  pulumi.Bool(false),
+ * 				Threshold: pulumi.Int(1),
+ * 				Type:      pulumi.String("ATLEAST"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.route53recoverycontrol.SafetyRule("example", {
+ *     controlPanelArn: "arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8",
+ *     waitPeriodMs: 5000,
+ *     gatingControls: [aws_route53recoverycontrolconfig_routing_control.example.arn],
+ *     targetControls: [aws_route53recoverycontrolconfig_routing_control.example.arn],
+ *     ruleConfig: {
+ *         inverted: false,
+ *         threshold: 1,
+ *         type: "ATLEAST",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.route53recoverycontrol.SafetyRule("example",
+ *     control_panel_arn="arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8",
+ *     wait_period_ms=5000,
+ *     gating_controls=[aws_route53recoverycontrolconfig_routing_control["example"]["arn"]],
+ *     target_controls=[aws_route53recoverycontrolconfig_routing_control["example"]["arn"]],
+ *     rule_config=aws.route53recoverycontrol.SafetyRuleRuleConfigArgs(
+ *         inverted=False,
+ *         threshold=1,
+ *         type="ATLEAST",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Route53RecoveryControl.SafetyRule("example", new Aws.Route53RecoveryControl.SafetyRuleArgs
+ *         {
+ *             ControlPanelArn = "arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8",
+ *             WaitPeriodMs = 5000,
+ *             GatingControls = 
+ *             {
+ *                 aws_route53recoverycontrolconfig_routing_control.Example.Arn,
+ *             },
+ *             TargetControls = 
+ *             {
+ *                 aws_route53recoverycontrolconfig_routing_control.Example.Arn,
+ *             },
+ *             RuleConfig = new Aws.Route53RecoveryControl.Inputs.SafetyRuleRuleConfigArgs
+ *             {
+ *                 Inverted = false,
+ *                 Threshold = 1,
+ *                 Type = "ATLEAST",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53recoverycontrol"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53recoverycontrol.NewSafetyRule(ctx, "example", &route53recoverycontrol.SafetyRuleArgs{
+ * 			ControlPanelArn: pulumi.String("arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8"),
+ * 			WaitPeriodMs:    pulumi.Int(5000),
+ * 			GatingControls: pulumi.StringArray{
+ * 				pulumi.Any(aws_route53recoverycontrolconfig_routing_control.Example.Arn),
+ * 			},
+ * 			TargetControls: pulumi.StringArray{
+ * 				pulumi.Any(aws_route53recoverycontrolconfig_routing_control.Example.Arn),
+ * 			},
+ * 			RuleConfig: &route53recoverycontrol.SafetyRuleRuleConfigArgs{
+ * 				Inverted:  pulumi.Bool(false),
+ * 				Threshold: pulumi.Int(1),
+ * 				Type:      pulumi.String("ATLEAST"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +213,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53recoverycontrol/safetyRule:SafetyRule myrule arn:aws:route53-recovery-control::313517334327:controlpanel/1bfba17df8684f5dab0467b71424f7e8/safetyrule/3bacc77003364c0f
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53recoverycontrol/safetyRule:SafetyRule")
 public class SafetyRule extends io.pulumi.resources.CustomResource {

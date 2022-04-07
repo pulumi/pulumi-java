@@ -18,7 +18,6 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGet
      * 
      * @Deprecated
      * Not supported by WAFv2 API
-     * 
      */
     @Deprecated /* Not supported by WAFv2 API */
     @Import(name="name", required=true)

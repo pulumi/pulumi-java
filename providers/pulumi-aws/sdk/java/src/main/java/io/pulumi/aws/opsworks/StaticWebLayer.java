@@ -21,7 +21,60 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks static web server layer resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const web = new aws.opsworks.StaticWebLayer("web", {stackId: aws_opsworks_stack.main.id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * web = aws.opsworks.StaticWebLayer("web", stack_id=aws_opsworks_stack["main"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var web = new Aws.OpsWorks.StaticWebLayer("web", new Aws.OpsWorks.StaticWebLayerArgs
+ *         {
+ *             StackId = aws_opsworks_stack.Main.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewStaticWebLayer(ctx, "web", &opsworks.StaticWebLayerArgs{
+ * 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +84,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:opsworks/staticWebLayer:StaticWebLayer bar 00000000-0000-0000-0000-000000000000
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:opsworks/staticWebLayer:StaticWebLayer")
 public class StaticWebLayer extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,53 @@ import javax.annotation.Nullable;
 /**
  * Provides an RDS DB proxy endpoint resource. For additional information, see the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#rds-proxy-endpoints).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.rds.ProxyEndpoint("example", {
+ *     dbProxyName: aws_db_proxy.test.name,
+ *     dbProxyEndpointName: "example",
+ *     vpcSubnetIds: aws_subnet.test.map(__item => __item.id),
+ *     targetRole: "READ_ONLY",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.rds.ProxyEndpoint("example",
+ *     db_proxy_name=aws_db_proxy["test"]["name"],
+ *     db_proxy_endpoint_name="example",
+ *     vpc_subnet_ids=[__item["id"] for __item in aws_subnet["test"]],
+ *     target_role="READ_ONLY")
+ * ```
+ * ```csharp
+ * using System.Linq;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Rds.ProxyEndpoint("example", new Aws.Rds.ProxyEndpointArgs
+ *         {
+ *             DbProxyName = aws_db_proxy.Test.Name,
+ *             DbProxyEndpointName = "example",
+ *             VpcSubnetIds = aws_subnet.Test.Select(__item => __item.Id).ToList(),
+ *             TargetRole = "READ_ONLY",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +74,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/proxyEndpoint:ProxyEndpoint example example/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/proxyEndpoint:ProxyEndpoint")
 public class ProxyEndpoint extends io.pulumi.resources.CustomResource {

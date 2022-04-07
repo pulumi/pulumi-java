@@ -20,7 +20,124 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic WebSocket API
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apigatewayv2.Api("example", {
+ *     protocolType: "WEBSOCKET",
+ *     routeSelectionExpression: "$request.body.action",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apigatewayv2.Api("example",
+ *     protocol_type="WEBSOCKET",
+ *     route_selection_expression="$request.body.action")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ApiGatewayV2.Api("example", new Aws.ApiGatewayV2.ApiArgs
+ *         {
+ *             ProtocolType = "WEBSOCKET",
+ *             RouteSelectionExpression = "$request.body.action",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
+ * 			ProtocolType:             pulumi.String("WEBSOCKET"),
+ * 			RouteSelectionExpression: pulumi.String(fmt.Sprintf("%v%v", "$", "request.body.action")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Basic HTTP API
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apigatewayv2.Api("example", {
+ *     protocolType: "HTTP",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apigatewayv2.Api("example", protocol_type="HTTP")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ApiGatewayV2.Api("example", new Aws.ApiGatewayV2.ApiArgs
+ *         {
+ *             ProtocolType = "HTTP",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
+ * 			ProtocolType: pulumi.String("HTTP"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +147,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigatewayv2/api:Api example aabbccddee
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigatewayv2/api:Api")
 public class Api extends io.pulumi.resources.CustomResource {

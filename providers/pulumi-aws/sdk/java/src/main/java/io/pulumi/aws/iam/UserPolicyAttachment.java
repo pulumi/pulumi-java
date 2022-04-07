@@ -17,7 +17,96 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The usage of this resource conflicts with the `aws.iam.PolicyAttachment` resource and will permanently show a difference if both are defined.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const user = new aws.iam.User("user", {});
+ * const policy = new aws.iam.Policy("policy", {
+ *     description: "A test policy",
+ *     policy: "{ ... policy JSON ... }",
+ * });
+ * const test_attach = new aws.iam.UserPolicyAttachment("test-attach", {
+ *     user: user.name,
+ *     policyArn: policy.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * user = aws.iam.User("user")
+ * policy = aws.iam.Policy("policy",
+ *     description="A test policy",
+ *     policy="{ ... policy JSON ... }")
+ * test_attach = aws.iam.UserPolicyAttachment("test-attach",
+ *     user=user.name,
+ *     policy_arn=policy.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var user = new Aws.Iam.User("user", new Aws.Iam.UserArgs
+ *         {
+ *         });
+ *         var policy = new Aws.Iam.Policy("policy", new Aws.Iam.PolicyArgs
+ *         {
+ *             Description = "A test policy",
+ *             Policy = "{ ... policy JSON ... }",
+ *         });
+ *         var test_attach = new Aws.Iam.UserPolicyAttachment("test-attach", new Aws.Iam.UserPolicyAttachmentArgs
+ *         {
+ *             User = user.Name,
+ *             PolicyArn = policy.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		user, err := iam.NewUser(ctx, "user", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		policy, err := iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
+ * 			Description: pulumi.String("A test policy"),
+ * 			Policy:      pulumi.Any("{ ... policy JSON ... }"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewUserPolicyAttachment(ctx, "test-attach", &iam.UserPolicyAttachmentArgs{
+ * 			User:      user.Name,
+ * 			PolicyArn: policy.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +116,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/userPolicyAttachment:UserPolicyAttachment test-attach test-user/arn:aws:iam::xxxxxxxxxxxx:policy/test-policy
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iam/userPolicyAttachment:UserPolicyAttachment")
 public class UserPolicyAttachment extends io.pulumi.resources.CustomResource {

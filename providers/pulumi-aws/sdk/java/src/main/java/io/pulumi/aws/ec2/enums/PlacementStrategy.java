@@ -11,19 +11,16 @@ import java.util.StringJoiner;
     /**
      * The strategy of the placement group determines how the instances are organized within the group.
      * See https://docs.aws.amazon.com/cli/latest/reference/ec2/create-placement-group.html
-     * 
      */
     @EnumType
     public enum PlacementStrategy {
         /**
          * A `spread` placement group places instances on distinct hardware.
-         * 
          */
         Spread("spread"),
         /**
          * A `cluster` placement group is a logical grouping of instances within a single
          * Availability Zone that benefit from low network latency, high network throughput.
-         * 
          */
         Cluster("cluster");
 

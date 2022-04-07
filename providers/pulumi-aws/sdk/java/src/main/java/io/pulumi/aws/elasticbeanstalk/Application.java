@@ -22,7 +22,84 @@ import javax.annotation.Nullable;
  * This resource creates an application that has one configuration template named
  * `default`, and no application versions
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const tftest = new aws.elasticbeanstalk.Application("tftest", {
+ *     description: "tf-test-desc",
+ *     appversionLifecycle: {
+ *         serviceRole: aws_iam_role.beanstalk_service.arn,
+ *         maxCount: 128,
+ *         deleteSourceFromS3: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * tftest = aws.elasticbeanstalk.Application("tftest",
+ *     description="tf-test-desc",
+ *     appversion_lifecycle=aws.elasticbeanstalk.ApplicationAppversionLifecycleArgs(
+ *         service_role=aws_iam_role["beanstalk_service"]["arn"],
+ *         max_count=128,
+ *         delete_source_from_s3=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tftest = new Aws.ElasticBeanstalk.Application("tftest", new Aws.ElasticBeanstalk.ApplicationArgs
+ *         {
+ *             Description = "tf-test-desc",
+ *             AppversionLifecycle = new Aws.ElasticBeanstalk.Inputs.ApplicationAppversionLifecycleArgs
+ *             {
+ *                 ServiceRole = aws_iam_role.Beanstalk_service.Arn,
+ *                 MaxCount = 128,
+ *                 DeleteSourceFromS3 = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticbeanstalk"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elasticbeanstalk.NewApplication(ctx, "tftest", &elasticbeanstalk.ApplicationArgs{
+ * 			Description: pulumi.String("tf-test-desc"),
+ * 			AppversionLifecycle: &elasticbeanstalk.ApplicationAppversionLifecycleArgs{
+ * 				ServiceRole:        pulumi.Any(aws_iam_role.Beanstalk_service.Arn),
+ * 				MaxCount:           pulumi.Int(128),
+ * 				DeleteSourceFromS3: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +109,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticbeanstalk/application:Application tf_test tf-test-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:elasticbeanstalk/application:Application")
 public class Application extends io.pulumi.resources.CustomResource {

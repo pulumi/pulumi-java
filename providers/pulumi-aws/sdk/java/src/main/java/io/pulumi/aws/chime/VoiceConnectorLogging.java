@@ -16,7 +16,79 @@ import javax.annotation.Nullable;
 /**
  * Adds a logging configuration for the specified Amazon Chime Voice Connector. The logging configuration specifies whether SIP message logs are enabled for sending to Amazon CloudWatch Logs.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultVoiceConnector = new aws.chime.VoiceConnector("defaultVoiceConnector", {requireEncryption: true});
+ * const defaultVoiceConnectorLogging = new aws.chime.VoiceConnectorLogging("defaultVoiceConnectorLogging", {
+ *     enableSipLogs: true,
+ *     voiceConnectorId: defaultVoiceConnector.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_voice_connector = aws.chime.VoiceConnector("defaultVoiceConnector", require_encryption=True)
+ * default_voice_connector_logging = aws.chime.VoiceConnectorLogging("defaultVoiceConnectorLogging",
+ *     enable_sip_logs=True,
+ *     voice_connector_id=default_voice_connector.id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultVoiceConnector = new Aws.Chime.VoiceConnector("defaultVoiceConnector", new Aws.Chime.VoiceConnectorArgs
+ *         {
+ *             RequireEncryption = true,
+ *         });
+ *         var defaultVoiceConnectorLogging = new Aws.Chime.VoiceConnectorLogging("defaultVoiceConnectorLogging", new Aws.Chime.VoiceConnectorLoggingArgs
+ *         {
+ *             EnableSipLogs = true,
+ *             VoiceConnectorId = defaultVoiceConnector.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/chime"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		defaultVoiceConnector, err := chime.NewVoiceConnector(ctx, "defaultVoiceConnector", &chime.VoiceConnectorArgs{
+ * 			RequireEncryption: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = chime.NewVoiceConnectorLogging(ctx, "defaultVoiceConnectorLogging", &chime.VoiceConnectorLoggingArgs{
+ * 			EnableSipLogs:    pulumi.Bool(true),
+ * 			VoiceConnectorId: defaultVoiceConnector.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:chime/voiceConnectorLogging:VoiceConnectorLogging default abcdef1ghij2klmno3pqr4
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:chime/voiceConnectorLogging:VoiceConnectorLogging")
 public class VoiceConnectorLogging extends io.pulumi.resources.CustomResource {

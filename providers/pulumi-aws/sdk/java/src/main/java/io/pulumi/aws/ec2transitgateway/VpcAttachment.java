@@ -18,7 +18,76 @@ import javax.annotation.Nullable;
 /**
  * Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2transitgateway.VpcAttachment("example", {
+ *     subnetIds: [aws_subnet.example.id],
+ *     transitGatewayId: aws_ec2_transit_gateway.example.id,
+ *     vpcId: aws_vpc.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2transitgateway.VpcAttachment("example",
+ *     subnet_ids=[aws_subnet["example"]["id"]],
+ *     transit_gateway_id=aws_ec2_transit_gateway["example"]["id"],
+ *     vpc_id=aws_vpc["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2TransitGateway.VpcAttachment("example", new Aws.Ec2TransitGateway.VpcAttachmentArgs
+ *         {
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example.Id,
+ *             },
+ *             TransitGatewayId = aws_ec2_transit_gateway.Example.Id,
+ *             VpcId = aws_vpc.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2transitgateway.NewVpcAttachment(ctx, "example", &ec2transitgateway.VpcAttachmentArgs{
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_subnet.Example.Id),
+ * 			},
+ * 			TransitGatewayId: pulumi.Any(aws_ec2_transit_gateway.Example.Id),
+ * 			VpcId:            pulumi.Any(aws_vpc.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +97,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2transitgateway/vpcAttachment:VpcAttachment example tgw-attach-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2transitgateway/vpcAttachment:VpcAttachment")
 public class VpcAttachment extends io.pulumi.resources.CustomResource {

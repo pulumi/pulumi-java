@@ -15,7 +15,160 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glue resource policy. Only one can exist per region.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const currentPartition = aws.getPartition({});
+ * const currentRegion = aws.getRegion({});
+ * const glue-example-policy = Promise.all([currentPartition, currentRegion, currentCallerIdentity]).then(([currentPartition, currentRegion, currentCallerIdentity]) => aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: ["glue:CreateTable"],
+ *         resources: [`arn:${currentPartition.partition}:glue:${currentRegion.name}:${currentCallerIdentity.accountId}:*`],
+ *         principals: [{
+ *             identifiers: ["*"],
+ *             type: "AWS",
+ *         }],
+ *     }],
+ * }));
+ * const example = new aws.glue.ResourcePolicy("example", {policy: glue_example_policy.then(glue_example_policy => glue_example_policy.json)});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current_caller_identity = aws.get_caller_identity()
+ * current_partition = aws.get_partition()
+ * current_region = aws.get_region()
+ * glue_example_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=["glue:CreateTable"],
+ *     resources=[f"arn:{current_partition.partition}:glue:{current_region.name}:{current_caller_identity.account_id}:*"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         identifiers=["*"],
+ *         type="AWS",
+ *     )],
+ * )])
+ * example = aws.glue.ResourcePolicy("example", policy=glue_example_policy.json)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var currentPartition = Output.Create(Aws.GetPartition.InvokeAsync());
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var glue_example_policy = Output.Tuple(currentPartition, currentRegion, currentCallerIdentity).Apply(values =>
+ *         {
+ *             var currentPartition = values.Item1;
+ *             var currentRegion = values.Item2;
+ *             var currentCallerIdentity = values.Item3;
+ *             return Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *             {
+ *                 Statements = 
+ *                 {
+ *                     new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                     {
+ *                         Actions = 
+ *                         {
+ *                             "glue:CreateTable",
+ *                         },
+ *                         Resources = 
+ *                         {
+ *                             $"arn:{currentPartition.Partition}:glue:{currentRegion.Name}:{currentCallerIdentity.AccountId}:*",
+ *                         },
+ *                         Principals = 
+ *                         {
+ *                             new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                             {
+ *                                 Identifiers = 
+ *                                 {
+ *                                     "*",
+ *                                 },
+ *                                 Type = "AWS",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             }));
+ *         });
+ *         var example = new Aws.Glue.ResourcePolicy("example", new Aws.Glue.ResourcePolicyArgs
+ *         {
+ *             Policy = glue_example_policy.Apply(glue_example_policy => glue_example_policy.Json),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentPartition, err := aws.GetPartition(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		glue_example_policy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+ * 			Statements: []iam.GetPolicyDocumentStatement{
+ * 				iam.GetPolicyDocumentStatement{
+ * 					Actions: []string{
+ * 						"glue:CreateTable",
+ * 					},
+ * 					Resources: []string{
+ * 						fmt.Sprintf("%v%v%v%v%v%v%v", "arn:", currentPartition.Partition, ":glue:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":*"),
+ * 					},
+ * 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+ * 						iam.GetPolicyDocumentStatementPrincipal{
+ * 							Identifiers: []string{
+ * 								"*",
+ * 							},
+ * 							Type: "AWS",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = glue.NewResourcePolicy(ctx, "example", &glue.ResourcePolicyArgs{
+ * 			Policy: pulumi.String(glue_example_policy.Json),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +178,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/resourcePolicy:ResourcePolicy Test 12356789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/resourcePolicy:ResourcePolicy")
 public class ResourcePolicy extends io.pulumi.resources.CustomResource {

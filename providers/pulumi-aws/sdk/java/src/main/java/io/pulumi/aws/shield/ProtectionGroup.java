@@ -19,7 +19,280 @@ import javax.annotation.Nullable;
  * This resource grouping improves the accuracy of detection and reduces false positives. For more information see
  * [Managing AWS Shield Advanced protection groups](https://docs.aws.amazon.com/waf/latest/developerguide/manage-protection-group.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create protection group for all resources
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.shield.ProtectionGroup("example", {
+ *     aggregation: "MAX",
+ *     pattern: "ALL",
+ *     protectionGroupId: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.shield.ProtectionGroup("example",
+ *     aggregation="MAX",
+ *     pattern="ALL",
+ *     protection_group_id="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Shield.ProtectionGroup("example", new Aws.Shield.ProtectionGroupArgs
+ *         {
+ *             Aggregation = "MAX",
+ *             Pattern = "ALL",
+ *             ProtectionGroupId = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/shield"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := shield.NewProtectionGroup(ctx, "example", &shield.ProtectionGroupArgs{
+ * 			Aggregation:       pulumi.String("MAX"),
+ * 			Pattern:           pulumi.String("ALL"),
+ * 			ProtectionGroupId: pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create protection group for arbitrary number of resources
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const currentRegion = aws.getRegion({});
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const exampleEip = new aws.ec2.Eip("exampleEip", {vpc: true});
+ * const exampleProtection = new aws.shield.Protection("exampleProtection", {resourceArn: pulumi.all([currentRegion, currentCallerIdentity, exampleEip.id]).apply(([currentRegion, currentCallerIdentity, id]) => `arn:aws:ec2:${currentRegion.name}:${currentCallerIdentity.accountId}:eip-allocation/${id}`)});
+ * const exampleProtectionGroup = new aws.shield.ProtectionGroup("exampleProtectionGroup", {
+ *     protectionGroupId: "example",
+ *     aggregation: "MEAN",
+ *     pattern: "ARBITRARY",
+ *     members: [pulumi.all([currentRegion, currentCallerIdentity, exampleEip.id]).apply(([currentRegion, currentCallerIdentity, id]) => `arn:aws:ec2:${currentRegion.name}:${currentCallerIdentity.accountId}:eip-allocation/${id}`)],
+ * }, {
+ *     dependsOn: [exampleProtection],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current_region = aws.get_region()
+ * current_caller_identity = aws.get_caller_identity()
+ * example_eip = aws.ec2.Eip("exampleEip", vpc=True)
+ * example_protection = aws.shield.Protection("exampleProtection", resource_arn=example_eip.id.apply(lambda id: f"arn:aws:ec2:{current_region.name}:{current_caller_identity.account_id}:eip-allocation/{id}"))
+ * example_protection_group = aws.shield.ProtectionGroup("exampleProtectionGroup",
+ *     protection_group_id="example",
+ *     aggregation="MEAN",
+ *     pattern="ARBITRARY",
+ *     members=[example_eip.id.apply(lambda id: f"arn:aws:ec2:{current_region.name}:{current_caller_identity.account_id}:eip-allocation/{id}")],
+ *     opts=pulumi.ResourceOptions(depends_on=[example_protection]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var exampleEip = new Aws.Ec2.Eip("exampleEip", new Aws.Ec2.EipArgs
+ *         {
+ *             Vpc = true,
+ *         });
+ *         var exampleProtection = new Aws.Shield.Protection("exampleProtection", new Aws.Shield.ProtectionArgs
+ *         {
+ *             ResourceArn = Output.Tuple(currentRegion, currentCallerIdentity, exampleEip.Id).Apply(values =>
+ *             {
+ *                 var currentRegion = values.Item1;
+ *                 var currentCallerIdentity = values.Item2;
+ *                 var id = values.Item3;
+ *                 return $"arn:aws:ec2:{currentRegion.Name}:{currentCallerIdentity.AccountId}:eip-allocation/{id}";
+ *             }),
+ *         });
+ *         var exampleProtectionGroup = new Aws.Shield.ProtectionGroup("exampleProtectionGroup", new Aws.Shield.ProtectionGroupArgs
+ *         {
+ *             ProtectionGroupId = "example",
+ *             Aggregation = "MEAN",
+ *             Pattern = "ARBITRARY",
+ *             Members = 
+ *             {
+ *                 Output.Tuple(currentRegion, currentCallerIdentity, exampleEip.Id).Apply(values =>
+ *                 {
+ *                     var currentRegion = values.Item1;
+ *                     var currentCallerIdentity = values.Item2;
+ *                     var id = values.Item3;
+ *                     return $"arn:aws:ec2:{currentRegion.Name}:{currentCallerIdentity.AccountId}:eip-allocation/{id}";
+ *                 }),
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleProtection,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/shield"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleEip, err := ec2.NewEip(ctx, "exampleEip", &ec2.EipArgs{
+ * 			Vpc: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleProtection, err := shield.NewProtection(ctx, "exampleProtection", &shield.ProtectionArgs{
+ * 			ResourceArn: exampleEip.ID().ApplyT(func(id string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v", "arn:aws:ec2:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":eip-allocation/", id), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = shield.NewProtectionGroup(ctx, "exampleProtectionGroup", &shield.ProtectionGroupArgs{
+ * 			ProtectionGroupId: pulumi.String("example"),
+ * 			Aggregation:       pulumi.String("MEAN"),
+ * 			Pattern:           pulumi.String("ARBITRARY"),
+ * 			Members: pulumi.StringArray{
+ * 				exampleEip.ID().ApplyT(func(id string) (string, error) {
+ * 					return fmt.Sprintf("%v%v%v%v%v%v", "arn:aws:ec2:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":eip-allocation/", id), nil
+ * 				}).(pulumi.StringOutput),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleProtection,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create protection group for a type of resource
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.shield.ProtectionGroup("example", {
+ *     aggregation: "SUM",
+ *     pattern: "BY_RESOURCE_TYPE",
+ *     protectionGroupId: "example",
+ *     resourceType: "ELASTIC_IP_ALLOCATION",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.shield.ProtectionGroup("example",
+ *     aggregation="SUM",
+ *     pattern="BY_RESOURCE_TYPE",
+ *     protection_group_id="example",
+ *     resource_type="ELASTIC_IP_ALLOCATION")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Shield.ProtectionGroup("example", new Aws.Shield.ProtectionGroupArgs
+ *         {
+ *             Aggregation = "SUM",
+ *             Pattern = "BY_RESOURCE_TYPE",
+ *             ProtectionGroupId = "example",
+ *             ResourceType = "ELASTIC_IP_ALLOCATION",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/shield"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := shield.NewProtectionGroup(ctx, "example", &shield.ProtectionGroupArgs{
+ * 			Aggregation:       pulumi.String("SUM"),
+ * 			Pattern:           pulumi.String("BY_RESOURCE_TYPE"),
+ * 			ProtectionGroupId: pulumi.String("example"),
+ * 			ResourceType:      pulumi.String("ELASTIC_IP_ALLOCATION"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +302,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:shield/protectionGroup:ProtectionGroup example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:shield/protectionGroup:ProtectionGroup")
 public class ProtectionGroup extends io.pulumi.resources.CustomResource {

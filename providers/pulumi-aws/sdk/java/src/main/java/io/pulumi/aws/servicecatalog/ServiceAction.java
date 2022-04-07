@@ -16,7 +16,77 @@ import javax.annotation.Nullable;
 /**
  * Manages a Service Catalog self-service action.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.ServiceAction("example", {
+ *     definition: {
+ *         name: "AWS-RestartEC2Instance",
+ *     },
+ *     description: "Motor generator unit",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.ServiceAction("example",
+ *     definition=aws.servicecatalog.ServiceActionDefinitionArgs(
+ *         name="AWS-RestartEC2Instance",
+ *     ),
+ *     description="Motor generator unit")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.ServiceAction("example", new Aws.ServiceCatalog.ServiceActionArgs
+ *         {
+ *             Definition = new Aws.ServiceCatalog.Inputs.ServiceActionDefinitionArgs
+ *             {
+ *                 Name = "AWS-RestartEC2Instance",
+ *             },
+ *             Description = "Motor generator unit",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewServiceAction(ctx, "example", &servicecatalog.ServiceActionArgs{
+ * 			Definition: &servicecatalog.ServiceActionDefinitionArgs{
+ * 				Name: pulumi.String("AWS-RestartEC2Instance"),
+ * 			},
+ * 			Description: pulumi.String("Motor generator unit"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +96,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/serviceAction:ServiceAction example act-f1w12eperfslh
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/serviceAction:ServiceAction")
 public class ServiceAction extends io.pulumi.resources.CustomResource {

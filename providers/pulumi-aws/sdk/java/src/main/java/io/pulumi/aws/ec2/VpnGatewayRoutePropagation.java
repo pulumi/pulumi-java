@@ -19,8 +19,67 @@ import javax.annotation.Nullable;
  * the `propagating_vgws` argument set. If that argument is set, any route
  * propagation not explicitly listed in its value will be removed.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.VpnGatewayRoutePropagation("example", {
+ *     vpnGatewayId: aws_vpn_gateway.example.id,
+ *     routeTableId: aws_route_table.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.VpnGatewayRoutePropagation("example",
+ *     vpn_gateway_id=aws_vpn_gateway["example"]["id"],
+ *     route_table_id=aws_route_table["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.VpnGatewayRoutePropagation("example", new Aws.Ec2.VpnGatewayRoutePropagationArgs
+ *         {
+ *             VpnGatewayId = aws_vpn_gateway.Example.Id,
+ *             RouteTableId = aws_route_table.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpnGatewayRoutePropagation(ctx, "example", &ec2.VpnGatewayRoutePropagationArgs{
+ * 			VpnGatewayId: pulumi.Any(aws_vpn_gateway.Example.Id),
+ * 			RouteTableId: pulumi.Any(aws_route_table.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/vpnGatewayRoutePropagation:VpnGatewayRoutePropagation")
 public class VpnGatewayRoutePropagation extends io.pulumi.resources.CustomResource {

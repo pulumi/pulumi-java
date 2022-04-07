@@ -17,7 +17,123 @@ import javax.annotation.Nullable;
 /**
  * Provides an Amazon MSK Connect Custom Plugin Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic configuration
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const exampleBucketObject = new aws.s3.BucketObject("exampleBucketObject", {
+ *     bucket: exampleBucket.id,
+ *     key: "debezium.zip",
+ *     source: new pulumi.asset.FileAsset("debezium.zip"),
+ * });
+ * const exampleCustomPlugin = new aws.mskconnect.CustomPlugin("exampleCustomPlugin", {
+ *     contentType: "ZIP",
+ *     location: {
+ *         s3: {
+ *             bucketArn: exampleBucket.arn,
+ *             fileKey: exampleBucketObject.key,
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * example_bucket_object = aws.s3.BucketObject("exampleBucketObject",
+ *     bucket=example_bucket.id,
+ *     key="debezium.zip",
+ *     source=pulumi.FileAsset("debezium.zip"))
+ * example_custom_plugin = aws.mskconnect.CustomPlugin("exampleCustomPlugin",
+ *     content_type="ZIP",
+ *     location=aws.mskconnect.CustomPluginLocationArgs(
+ *         s3=aws.mskconnect.CustomPluginLocationS3Args(
+ *             bucket_arn=example_bucket.arn,
+ *             file_key=example_bucket_object.key,
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleBucketObject = new Aws.S3.BucketObject("exampleBucketObject", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Bucket = exampleBucket.Id,
+ *             Key = "debezium.zip",
+ *             Source = new FileAsset("debezium.zip"),
+ *         });
+ *         var exampleCustomPlugin = new Aws.MskConnect.CustomPlugin("exampleCustomPlugin", new Aws.MskConnect.CustomPluginArgs
+ *         {
+ *             ContentType = "ZIP",
+ *             Location = new Aws.MskConnect.Inputs.CustomPluginLocationArgs
+ *             {
+ *                 S3 = new Aws.MskConnect.Inputs.CustomPluginLocationS3Args
+ *                 {
+ *                     BucketArn = exampleBucket.Arn,
+ *                     FileKey = exampleBucketObject.Key,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/mskconnect"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleBucketObject, err := s3.NewBucketObject(ctx, "exampleBucketObject", &s3.BucketObjectArgs{
+ * 			Bucket: exampleBucket.ID(),
+ * 			Key:    pulumi.String("debezium.zip"),
+ * 			Source: pulumi.NewFileAsset("debezium.zip"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = mskconnect.NewCustomPlugin(ctx, "exampleCustomPlugin", &mskconnect.CustomPluginArgs{
+ * 			ContentType: pulumi.String("ZIP"),
+ * 			Location: &mskconnect.CustomPluginLocationArgs{
+ * 				S3: &mskconnect.CustomPluginLocationS3Args{
+ * 					BucketArn: exampleBucket.Arn,
+ * 					FileKey:   exampleBucketObject.Key,
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +143,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:mskconnect/customPlugin:CustomPlugin example 'arn:aws:kafkaconnect:eu-central-1:123456789012:custom-plugin/debezium-example/abcdefgh-1234-5678-9abc-defghijklmno-4'
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:mskconnect/customPlugin:CustomPlugin")
 public class CustomPlugin extends io.pulumi.resources.CustomResource {

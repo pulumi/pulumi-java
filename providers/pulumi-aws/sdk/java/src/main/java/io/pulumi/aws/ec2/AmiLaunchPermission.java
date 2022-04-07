@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Adds launch permission to Amazon Machine Image (AMI) from another AWS account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.AmiLaunchPermission("example", {
+ *     accountId: "123456789012",
+ *     imageId: "ami-12345678",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.AmiLaunchPermission("example",
+ *     account_id="123456789012",
+ *     image_id="ami-12345678")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.AmiLaunchPermission("example", new Aws.Ec2.AmiLaunchPermissionArgs
+ *         {
+ *             AccountId = "123456789012",
+ *             ImageId = "ami-12345678",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewAmiLaunchPermission(ctx, "example", &ec2.AmiLaunchPermissionArgs{
+ * 			AccountId: pulumi.String("123456789012"),
+ * 			ImageId:   pulumi.String("ami-12345678"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/amiLaunchPermission:AmiLaunchPermission example 123456789012/ami-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/amiLaunchPermission:AmiLaunchPermission")
 public class AmiLaunchPermission extends io.pulumi.resources.CustomResource {

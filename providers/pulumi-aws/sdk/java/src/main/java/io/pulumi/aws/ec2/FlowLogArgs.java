@@ -88,7 +88,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * use 'log_destination' argument instead
-     * 
      */
     @Deprecated /* use 'log_destination' argument instead */
     @Import(name="logGroupName")

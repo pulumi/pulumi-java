@@ -15,7 +15,62 @@ import javax.annotation.Nullable;
 /**
  * Provides an IAM group.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const developers = new aws.iam.Group("developers", {
+ *     path: "/users/",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * developers = aws.iam.Group("developers", path="/users/")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var developers = new Aws.Iam.Group("developers", new Aws.Iam.GroupArgs
+ *         {
+ *             Path = "/users/",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iam.NewGroup(ctx, "developers", &iam.GroupArgs{
+ * 			Path: pulumi.String("/users/"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +80,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/group:Group developers developers
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iam/group:Group")
 public class Group extends io.pulumi.resources.CustomResource {

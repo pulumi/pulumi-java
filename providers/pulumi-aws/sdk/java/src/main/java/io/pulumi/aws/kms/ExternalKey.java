@@ -18,7 +18,62 @@ import javax.annotation.Nullable;
 /**
  * Manages a KMS Customer Master Key that uses external key material. To instead manage a KMS Customer Master Key where AWS automatically generates and potentially rotates key material, see the `aws.kms.Key` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.kms.ExternalKey("example", {
+ *     description: "KMS EXTERNAL for AMI encryption",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.kms.ExternalKey("example", description="KMS EXTERNAL for AMI encryption")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Kms.ExternalKey("example", new Aws.Kms.ExternalKeyArgs
+ *         {
+ *             Description = "KMS EXTERNAL for AMI encryption",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kms.NewExternalKey(ctx, "example", &kms.ExternalKeyArgs{
+ * 			Description: pulumi.String("KMS EXTERNAL for AMI encryption"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +83,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:kms/externalKey:ExternalKey a arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:kms/externalKey:ExternalKey")
 public class ExternalKey extends io.pulumi.resources.CustomResource {

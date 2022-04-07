@@ -37,7 +37,386 @@ import javax.annotation.Nullable;
  * brief downtime as the server reboots. See the AWS Docs on [RDS Maintenance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html)
  * for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Aurora MySQL 2.x (MySQL 5.7)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCluster = new aws.rds.Cluster("default", {
+ *     availabilityZones: [
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     backupRetentionPeriod: 5,
+ *     clusterIdentifier: "aurora-cluster-demo",
+ *     databaseName: "mydb",
+ *     engine: "aurora-mysql",
+ *     engineVersion: "5.7.mysql_aurora.2.03.2",
+ *     masterPassword: "bar",
+ *     masterUsername: "foo",
+ *     preferredBackupWindow: "07:00-09:00",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.rds.Cluster("default",
+ *     availability_zones=[
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     backup_retention_period=5,
+ *     cluster_identifier="aurora-cluster-demo",
+ *     database_name="mydb",
+ *     engine="aurora-mysql",
+ *     engine_version="5.7.mysql_aurora.2.03.2",
+ *     master_password="bar",
+ *     master_username="foo",
+ *     preferred_backup_window="07:00-09:00")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Rds.Cluster("default", new Aws.Rds.ClusterArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *                 "us-west-2b",
+ *                 "us-west-2c",
+ *             },
+ *             BackupRetentionPeriod = 5,
+ *             ClusterIdentifier = "aurora-cluster-demo",
+ *             DatabaseName = "mydb",
+ *             Engine = "aurora-mysql",
+ *             EngineVersion = "5.7.mysql_aurora.2.03.2",
+ *             MasterPassword = "bar",
+ *             MasterUsername = "foo",
+ *             PreferredBackupWindow = "07:00-09:00",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewCluster(ctx, "default", &rds.ClusterArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 				pulumi.String("us-west-2b"),
+ * 				pulumi.String("us-west-2c"),
+ * 			},
+ * 			BackupRetentionPeriod: pulumi.Int(5),
+ * 			ClusterIdentifier:     pulumi.String("aurora-cluster-demo"),
+ * 			DatabaseName:          pulumi.String("mydb"),
+ * 			Engine:                pulumi.String("aurora-mysql"),
+ * 			EngineVersion:         pulumi.String("5.7.mysql_aurora.2.03.2"),
+ * 			MasterPassword:        pulumi.String("bar"),
+ * 			MasterUsername:        pulumi.String("foo"),
+ * 			PreferredBackupWindow: pulumi.String("07:00-09:00"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Aurora MySQL 1.x (MySQL 5.6)
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCluster = new aws.rds.Cluster("default", {
+ *     availabilityZones: [
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     backupRetentionPeriod: 5,
+ *     clusterIdentifier: "aurora-cluster-demo",
+ *     databaseName: "mydb",
+ *     masterPassword: "bar",
+ *     masterUsername: "foo",
+ *     preferredBackupWindow: "07:00-09:00",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.rds.Cluster("default",
+ *     availability_zones=[
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     backup_retention_period=5,
+ *     cluster_identifier="aurora-cluster-demo",
+ *     database_name="mydb",
+ *     master_password="bar",
+ *     master_username="foo",
+ *     preferred_backup_window="07:00-09:00")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Rds.Cluster("default", new Aws.Rds.ClusterArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *                 "us-west-2b",
+ *                 "us-west-2c",
+ *             },
+ *             BackupRetentionPeriod = 5,
+ *             ClusterIdentifier = "aurora-cluster-demo",
+ *             DatabaseName = "mydb",
+ *             MasterPassword = "bar",
+ *             MasterUsername = "foo",
+ *             PreferredBackupWindow = "07:00-09:00",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewCluster(ctx, "default", &rds.ClusterArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 				pulumi.String("us-west-2b"),
+ * 				pulumi.String("us-west-2c"),
+ * 			},
+ * 			BackupRetentionPeriod: pulumi.Int(5),
+ * 			ClusterIdentifier:     pulumi.String("aurora-cluster-demo"),
+ * 			DatabaseName:          pulumi.String("mydb"),
+ * 			MasterPassword:        pulumi.String("bar"),
+ * 			MasterUsername:        pulumi.String("foo"),
+ * 			PreferredBackupWindow: pulumi.String("07:00-09:00"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Aurora with PostgreSQL engine
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const postgresql = new aws.rds.Cluster("postgresql", {
+ *     availabilityZones: [
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     backupRetentionPeriod: 5,
+ *     clusterIdentifier: "aurora-cluster-demo",
+ *     databaseName: "mydb",
+ *     engine: "aurora-postgresql",
+ *     masterPassword: "bar",
+ *     masterUsername: "foo",
+ *     preferredBackupWindow: "07:00-09:00",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * postgresql = aws.rds.Cluster("postgresql",
+ *     availability_zones=[
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     backup_retention_period=5,
+ *     cluster_identifier="aurora-cluster-demo",
+ *     database_name="mydb",
+ *     engine="aurora-postgresql",
+ *     master_password="bar",
+ *     master_username="foo",
+ *     preferred_backup_window="07:00-09:00")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var postgresql = new Aws.Rds.Cluster("postgresql", new Aws.Rds.ClusterArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *                 "us-west-2b",
+ *                 "us-west-2c",
+ *             },
+ *             BackupRetentionPeriod = 5,
+ *             ClusterIdentifier = "aurora-cluster-demo",
+ *             DatabaseName = "mydb",
+ *             Engine = "aurora-postgresql",
+ *             MasterPassword = "bar",
+ *             MasterUsername = "foo",
+ *             PreferredBackupWindow = "07:00-09:00",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewCluster(ctx, "postgresql", &rds.ClusterArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 				pulumi.String("us-west-2b"),
+ * 				pulumi.String("us-west-2c"),
+ * 			},
+ * 			BackupRetentionPeriod: pulumi.Int(5),
+ * 			ClusterIdentifier:     pulumi.String("aurora-cluster-demo"),
+ * 			DatabaseName:          pulumi.String("mydb"),
+ * 			Engine:                pulumi.String("aurora-postgresql"),
+ * 			MasterPassword:        pulumi.String("bar"),
+ * 			MasterUsername:        pulumi.String("foo"),
+ * 			PreferredBackupWindow: pulumi.String("07:00-09:00"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Aurora Multi-Master Cluster
+ * 
+ * > More information about Aurora Multi-Master Clusters can be found in the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.rds.Cluster("example", {
+ *     clusterIdentifier: "example",
+ *     dbSubnetGroupName: aws_db_subnet_group.example.name,
+ *     engineMode: "multimaster",
+ *     masterPassword: "barbarbarbar",
+ *     masterUsername: "foo",
+ *     skipFinalSnapshot: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.rds.Cluster("example",
+ *     cluster_identifier="example",
+ *     db_subnet_group_name=aws_db_subnet_group["example"]["name"],
+ *     engine_mode="multimaster",
+ *     master_password="barbarbarbar",
+ *     master_username="foo",
+ *     skip_final_snapshot=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Rds.Cluster("example", new Aws.Rds.ClusterArgs
+ *         {
+ *             ClusterIdentifier = "example",
+ *             DbSubnetGroupName = aws_db_subnet_group.Example.Name,
+ *             EngineMode = "multimaster",
+ *             MasterPassword = "barbarbarbar",
+ *             MasterUsername = "foo",
+ *             SkipFinalSnapshot = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewCluster(ctx, "example", &rds.ClusterArgs{
+ * 			ClusterIdentifier: pulumi.String("example"),
+ * 			DbSubnetGroupName: pulumi.Any(aws_db_subnet_group.Example.Name),
+ * 			EngineMode:        pulumi.String("multimaster"),
+ * 			MasterPassword:    pulumi.String("barbarbarbar"),
+ * 			MasterUsername:    pulumi.String("foo"),
+ * 			SkipFinalSnapshot: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,6 +426,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/cluster:Cluster aurora_cluster aurora-prod-cluster
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

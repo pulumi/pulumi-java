@@ -25,7 +25,132 @@ import javax.annotation.Nullable;
  * Cluster, or you may specify different Cluster Instance resources with various
  * `instance_class` sizes.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const _default = new aws.docdb.Cluster("default", {
+ *     clusterIdentifier: "docdb-cluster-demo",
+ *     availabilityZones: [
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     masterUsername: "foo",
+ *     masterPassword: "barbut8chars",
+ * });
+ * const clusterInstances: aws.docdb.ClusterInstance[];
+ * for (const range = {value: 0}; range.value < 2; range.value++) {
+ *     clusterInstances.push(new aws.docdb.ClusterInstance(`clusterInstances-${range.value}`, {
+ *         identifier: `docdb-cluster-demo-${range.value}`,
+ *         clusterIdentifier: _default.id,
+ *         instanceClass: "db.r5.large",
+ *     }));
+ * }
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.docdb.Cluster("default",
+ *     cluster_identifier="docdb-cluster-demo",
+ *     availability_zones=[
+ *         "us-west-2a",
+ *         "us-west-2b",
+ *         "us-west-2c",
+ *     ],
+ *     master_username="foo",
+ *     master_password="barbut8chars")
+ * cluster_instances = []
+ * for range in [{"value": i} for i in range(0, 2)]:
+ *     cluster_instances.append(aws.docdb.ClusterInstance(f"clusterInstances-{range['value']}",
+ *         identifier=f"docdb-cluster-demo-{range['value']}",
+ *         cluster_identifier=default.id,
+ *         instance_class="db.r5.large"))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.DocDB.Cluster("default", new Aws.DocDB.ClusterArgs
+ *         {
+ *             ClusterIdentifier = "docdb-cluster-demo",
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *                 "us-west-2b",
+ *                 "us-west-2c",
+ *             },
+ *             MasterUsername = "foo",
+ *             MasterPassword = "barbut8chars",
+ *         });
+ *         var clusterInstances = new List<Aws.DocDB.ClusterInstance>();
+ *         for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+ *         {
+ *             var range = new { Value = rangeIndex };
+ *             clusterInstances.Add(new Aws.DocDB.ClusterInstance($"clusterInstances-{range.Value}", new Aws.DocDB.ClusterInstanceArgs
+ *             {
+ *                 Identifier = $"docdb-cluster-demo-{range.Value}",
+ *                 ClusterIdentifier = @default.Id,
+ *                 InstanceClass = "db.r5.large",
+ *             }));
+ *         }
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/docdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := docdb.NewCluster(ctx, "default", &docdb.ClusterArgs{
+ * 			ClusterIdentifier: pulumi.String("docdb-cluster-demo"),
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 				pulumi.String("us-west-2b"),
+ * 				pulumi.String("us-west-2c"),
+ * 			},
+ * 			MasterUsername: pulumi.String("foo"),
+ * 			MasterPassword: pulumi.String("barbut8chars"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		var clusterInstances []*docdb.ClusterInstance
+ * 		for key0, val0 := range 2 {
+ * 			__res, err := docdb.NewClusterInstance(ctx, fmt.Sprintf("clusterInstances-%v", key0), &docdb.ClusterInstanceArgs{
+ * 				Identifier:        pulumi.String(fmt.Sprintf("%v%v", "docdb-cluster-demo-", val0)),
+ * 				ClusterIdentifier: _default.ID(),
+ * 				InstanceClass:     pulumi.String("db.r5.large"),
+ * 			})
+ * 			if err != nil {
+ * 				return err
+ * 			}
+ * 			clusterInstances = append(clusterInstances, __res)
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +160,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:docdb/clusterInstance:ClusterInstance prod_instance_1 aurora-cluster-instance-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:docdb/clusterInstance:ClusterInstance")
 public class ClusterInstance extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,74 @@ import javax.annotation.Nullable;
 /**
  * Manages an Image Builder Component.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### URI Document
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.imagebuilder.Component("example", {
+ *     platform: "Linux",
+ *     uri: pulumi.interpolate`s3://${aws_s3_bucket_object_example.bucket}/${aws_s3_bucket_object_example.key}`,
+ *     version: "1.0.0",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.imagebuilder.Component("example",
+ *     platform="Linux",
+ *     uri=f"s3://{aws_s3_bucket_object['example']['bucket']}/{aws_s3_bucket_object['example']['key']}",
+ *     version="1.0.0")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ImageBuilder.Component("example", new Aws.ImageBuilder.ComponentArgs
+ *         {
+ *             Platform = "Linux",
+ *             Uri = $"s3://{aws_s3_bucket_object.Example.Bucket}/{aws_s3_bucket_object.Example.Key}",
+ *             Version = "1.0.0",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewComponent(ctx, "example", &imagebuilder.ComponentArgs{
+ * 			Platform: pulumi.String("Linux"),
+ * 			Uri:      pulumi.String(fmt.Sprintf("%v%v%v%v", "s3://", aws_s3_bucket_object.Example.Bucket, "/", aws_s3_bucket_object.Example.Key)),
+ * 			Version:  pulumi.String("1.0.0"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,8 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:imagebuilder/component:Component example arn:aws:imagebuilder:us-east-1:123456789012:component/example/1.0.0/1
  * ```
  * 
- *  Certain resource arguments, such as `uri`, cannot be read via the API and imported into the provider. The provider will display a difference for these arguments the first run after import if declared in the the provider configuration for an imported resource.
- * 
+ *  Certain resource arguments, such as `uri`, cannot be read via the API and imported into the provider. The provider will display a difference for these arguments the first run after import if declared in the the provider configuration for an imported resource. 
  */
 @ResourceType(type="aws:imagebuilder/component:Component")
 public class Component extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,83 @@ import javax.annotation.Nullable;
 /**
  * Provides a DMS (Data Migration Service) certificate resource. DMS certificates can be created, deleted, and imported.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new certificate
+ * const test = new aws.dms.Certificate("test", {
+ *     certificateId: "test-dms-certificate-tf",
+ *     certificatePem: "...",
+ *     tags: {
+ *         Name: "test",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new certificate
+ * test = aws.dms.Certificate("test",
+ *     certificate_id="test-dms-certificate-tf",
+ *     certificate_pem="...",
+ *     tags={
+ *         "Name": "test",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new certificate
+ *         var test = new Aws.Dms.Certificate("test", new Aws.Dms.CertificateArgs
+ *         {
+ *             CertificateId = "test-dms-certificate-tf",
+ *             CertificatePem = "...",
+ *             Tags = 
+ *             {
+ *                 { "Name", "test" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dms.NewCertificate(ctx, "test", &dms.CertificateArgs{
+ * 			CertificateId:  pulumi.String("test-dms-certificate-tf"),
+ * 			CertificatePem: pulumi.String("..."),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("test"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +102,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dms/certificate:Certificate test test-dms-certificate-tf
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dms/certificate:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {

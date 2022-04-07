@@ -16,16 +16,376 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const queue = new aws.sqs.Queue("queue", {
+ *     delaySeconds: 90,
+ *     maxMessageSize: 2048,
+ *     messageRetentionSeconds: 86400,
+ *     receiveWaitTimeSeconds: 10,
+ *     redrivePolicy: JSON.stringify({
+ *         deadLetterTargetArn: aws_sqs_queue.queue_deadletter.arn,
+ *         maxReceiveCount: 4,
+ *     }),
+ *     redriveAllowPolicy: JSON.stringify({
+ *         redrivePermission: "byQueue",
+ *         sourceQueueArns: [aws_sqs_queue.terraform_queue_deadletter.arn],
+ *     }),
+ *     tags: {
+ *         Environment: "production",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * queue = aws.sqs.Queue("queue",
+ *     delay_seconds=90,
+ *     max_message_size=2048,
+ *     message_retention_seconds=86400,
+ *     receive_wait_time_seconds=10,
+ *     redrive_policy=json.dumps({
+ *         "deadLetterTargetArn": aws_sqs_queue["queue_deadletter"]["arn"],
+ *         "maxReceiveCount": 4,
+ *     }),
+ *     redrive_allow_policy=json.dumps({
+ *         "redrivePermission": "byQueue",
+ *         "sourceQueueArns": [aws_sqs_queue["terraform_queue_deadletter"]["arn"]],
+ *     }),
+ *     tags={
+ *         "Environment": "production",
+ *     })
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+ *         {
+ *             DelaySeconds = 90,
+ *             MaxMessageSize = 2048,
+ *             MessageRetentionSeconds = 86400,
+ *             ReceiveWaitTimeSeconds = 10,
+ *             RedrivePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "deadLetterTargetArn", aws_sqs_queue.Queue_deadletter.Arn },
+ *                 { "maxReceiveCount", 4 },
+ *             }),
+ *             RedriveAllowPolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "redrivePermission", "byQueue" },
+ *                 { "sourceQueueArns", new[]
+ *                     {
+ *                         aws_sqs_queue.Terraform_queue_deadletter.Arn,
+ *                     }
+ *                  },
+ *             }),
+ *             Tags = 
+ *             {
+ *                 { "Environment", "production" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"deadLetterTargetArn": aws_sqs_queue.Queue_deadletter.Arn,
+ * 			"maxReceiveCount":     4,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		tmpJSON1, err := json.Marshal(map[string]interface{}{
+ * 			"redrivePermission": "byQueue",
+ * 			"sourceQueueArns": []interface{}{
+ * 				aws_sqs_queue.Terraform_queue_deadletter.Arn,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json1 := string(tmpJSON1)
+ * 		_, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
+ * 			DelaySeconds:            pulumi.Int(90),
+ * 			MaxMessageSize:          pulumi.Int(2048),
+ * 			MessageRetentionSeconds: pulumi.Int(86400),
+ * 			ReceiveWaitTimeSeconds:  pulumi.Int(10),
+ * 			RedrivePolicy:           pulumi.String(json0),
+ * 			RedriveAllowPolicy:      pulumi.String(json1),
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("production"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## FIFO queue
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const queue = new aws.sqs.Queue("queue", {
+ *     contentBasedDeduplication: true,
+ *     fifoQueue: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * queue = aws.sqs.Queue("queue",
+ *     content_based_deduplication=True,
+ *     fifo_queue=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+ *         {
+ *             ContentBasedDeduplication = true,
+ *             FifoQueue = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
+ * 			ContentBasedDeduplication: pulumi.Bool(true),
+ * 			FifoQueue:                 pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * ## High-throughput FIFO queue
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const terraformQueue = new aws.sqs.Queue("terraform_queue", {
+ *     deduplicationScope: "messageGroup",
+ *     fifoQueue: true,
+ *     fifoThroughputLimit: "perMessageGroupId",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * terraform_queue = aws.sqs.Queue("terraformQueue",
+ *     deduplication_scope="messageGroup",
+ *     fifo_queue=True,
+ *     fifo_throughput_limit="perMessageGroupId")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var terraformQueue = new Aws.Sqs.Queue("terraformQueue", new Aws.Sqs.QueueArgs
+ *         {
+ *             DeduplicationScope = "messageGroup",
+ *             FifoQueue = true,
+ *             FifoThroughputLimit = "perMessageGroupId",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqs.NewQueue(ctx, "terraformQueue", &sqs.QueueArgs{
+ * 			DeduplicationScope:  pulumi.String("messageGroup"),
+ * 			FifoQueue:           pulumi.Bool(true),
+ * 			FifoThroughputLimit: pulumi.String("perMessageGroupId"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * 
  * ## Server-side encryption (SSE)
  * 
  * Using [SSE-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html):
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const terraformQueue = new aws.sqs.Queue("terraform_queue", {
+ *     sqsManagedSseEnabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * terraform_queue = aws.sqs.Queue("terraformQueue", sqs_managed_sse_enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var terraformQueue = new Aws.Sqs.Queue("terraformQueue", new Aws.Sqs.QueueArgs
+ *         {
+ *             SqsManagedSseEnabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqs.NewQueue(ctx, "terraformQueue", &sqs.QueueArgs{
+ * 			SqsManagedSseEnabled: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * Using [SSE-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html):
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const queue = new aws.sqs.Queue("queue", {
+ *     kmsDataKeyReusePeriodSeconds: 300,
+ *     kmsMasterKeyId: "alias/aws/sqs",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * queue = aws.sqs.Queue("queue",
+ *     kms_data_key_reuse_period_seconds=300,
+ *     kms_master_key_id="alias/aws/sqs")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+ *         {
+ *             KmsDataKeyReusePeriodSeconds = 300,
+ *             KmsMasterKeyId = "alias/aws/sqs",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
+ * 			KmsDataKeyReusePeriodSeconds: pulumi.Int(300),
+ * 			KmsMasterKeyId:               pulumi.String("alias/aws/sqs"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -35,6 +395,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sqs/queue:Queue public_queue https://queue.amazonaws.com/80398EXAMPLE/MyQueue
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sqs/queue:Queue")
 public class Queue extends io.pulumi.resources.CustomResource {

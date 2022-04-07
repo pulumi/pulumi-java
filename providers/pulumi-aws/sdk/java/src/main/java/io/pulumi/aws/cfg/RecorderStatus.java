@@ -18,7 +18,251 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** Starting Configuration Recorder requires a `Delivery Channel` to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("bucket", {});
+ * const fooDeliveryChannel = new aws.cfg.DeliveryChannel("fooDeliveryChannel", {s3BucketName: bucket.bucket});
+ * const fooRecorderStatus = new aws.cfg.RecorderStatus("fooRecorderStatus", {isEnabled: true}, {
+ *     dependsOn: [fooDeliveryChannel],
+ * });
+ * const role = new aws.iam.Role("role", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("rolePolicyAttachment", {
+ *     role: role.name,
+ *     policyArn: "arn:aws:iam::aws:policy/service-role/AWSConfigRole",
+ * });
+ * const fooRecorder = new aws.cfg.Recorder("fooRecorder", {roleArn: role.arn});
+ * const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
+ *     role: role.id,
+ *     policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "s3:*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "${bucket.arn}",
+ *         "${bucket.arn}/*"
+ *       ]
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket")
+ * foo_delivery_channel = aws.cfg.DeliveryChannel("fooDeliveryChannel", s3_bucket_name=bucket.bucket)
+ * foo_recorder_status = aws.cfg.RecorderStatus("fooRecorderStatus", is_enabled=True,
+ * opts=pulumi.ResourceOptions(depends_on=[foo_delivery_channel]))
+ * role = aws.iam.Role("role", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "config.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * role_policy_attachment = aws.iam.RolePolicyAttachment("rolePolicyAttachment",
+ *     role=role.name,
+ *     policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRole")
+ * foo_recorder = aws.cfg.Recorder("fooRecorder", role_arn=role.arn)
+ * role_policy = aws.iam.RolePolicy("rolePolicy",
+ *     role=role.id,
+ *     policy=pulumi.Output.all(bucket.arn, bucket.arn).apply(lambda bucketArn, bucketArn1: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Action": [
+ *         "s3:*"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "{bucket_arn}",
+ *         "{bucket_arn1}/*"
+ *       ]
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var fooDeliveryChannel = new Aws.Cfg.DeliveryChannel("fooDeliveryChannel", new Aws.Cfg.DeliveryChannelArgs
+ *         {
+ *             S3BucketName = bucket.BucketName,
+ *         });
+ *         var fooRecorderStatus = new Aws.Cfg.RecorderStatus("fooRecorderStatus", new Aws.Cfg.RecorderStatusArgs
+ *         {
+ *             IsEnabled = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 fooDeliveryChannel,
+ *             },
+ *         });
+ *         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""config.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var rolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("rolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = role.Name,
+ *             PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSConfigRole",
+ *         });
+ *         var fooRecorder = new Aws.Cfg.Recorder("fooRecorder", new Aws.Cfg.RecorderArgs
+ *         {
+ *             RoleArn = role.Arn,
+ *         });
+ *         var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = role.Id,
+ *             Policy = Output.Tuple(bucket.Arn, bucket.Arn).Apply(values =>
+ *             {
+ *                 var bucketArn = values.Item1;
+ *                 var bucketArn1 = values.Item2;
+ *                 return @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Action"": [
+ *         ""s3:*""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": [
+ *         ""{bucketArn}"",
+ *         ""{bucketArn1}/*""
+ *       ]
+ *     }}
+ *   ]
+ * }}
+ * ";
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		fooDeliveryChannel, err := cfg.NewDeliveryChannel(ctx, "fooDeliveryChannel", &cfg.DeliveryChannelArgs{
+ * 			S3BucketName: bucket.Bucket,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewRecorderStatus(ctx, "fooRecorderStatus", &cfg.RecorderStatusArgs{
+ * 			IsEnabled: pulumi.Bool(true),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			fooDeliveryChannel,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "rolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      role.Name,
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/service-role/AWSConfigRole"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewRecorder(ctx, "fooRecorder", &cfg.RecorderArgs{
+ * 			RoleArn: role.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
+ * 			Role: role.ID(),
+ * 			Policy: pulumi.All(bucket.Arn, bucket.Arn).ApplyT(func(_args []interface{}) (string, error) {
+ * 				bucketArn := _args[0].(string)
+ * 				bucketArn1 := _args[1].(string)
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", bucketArn, "\",\n", "        \"", bucketArn1, "/*\"\n", "      ]\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +272,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/recorderStatus:RecorderStatus foo example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/recorderStatus:RecorderStatus")
 public class RecorderStatus extends io.pulumi.resources.CustomResource {

@@ -17,12 +17,418 @@ import javax.annotation.Nullable;
 /**
  * Provides an independent configuration resource for S3 bucket [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Using replication configuration
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const central = new aws.Provider("central", {region: "eu-central-1"});
+ * const replicationRole = new aws.iam.Role("replicationRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "s3.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * `});
+ * const destination = new aws.s3.Bucket("destination", {versioning: {
+ *     enabled: true,
+ * }});
+ * const source = new aws.s3.Bucket("source", {
+ *     acl: "private",
+ *     versioning: {
+ *         enabled: true,
+ *     },
+ * }, {
+ *     provider: aws.central,
+ * });
+ * const replicationPolicy = new aws.iam.Policy("replicationPolicy", {policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": [
+ *         "s3:GetReplicationConfiguration",
+ *         "s3:ListBucket"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "${source.arn}"
+ *       ]
+ *     },
+ *     {
+ *       "Action": [
+ *         "s3:GetObjectVersionForReplication",
+ *         "s3:GetObjectVersionAcl",
+ *          "s3:GetObjectVersionTagging"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "${source.arn}/*"
+ *       ]
+ *     },
+ *     {
+ *       "Action": [
+ *         "s3:ReplicateObject",
+ *         "s3:ReplicateDelete",
+ *         "s3:ReplicateTags"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "${destination.arn}/*"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const replicationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("replicationRolePolicyAttachment", {
+ *     role: replicationRole.name,
+ *     policyArn: replicationPolicy.arn,
+ * });
+ * const replicationBucketReplicationConfig = new aws.s3.BucketReplicationConfig("replicationBucketReplicationConfig", {
+ *     role: replicationRole.arn,
+ *     bucket: source.id,
+ *     rules: [{
+ *         id: "foobar",
+ *         prefix: "foo",
+ *         status: "Enabled",
+ *         destination: {
+ *             bucket: destination.arn,
+ *             storageClass: "STANDARD",
+ *         },
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * central = pulumi.providers.Aws("central", region="eu-central-1")
+ * replication_role = aws.iam.Role("replicationRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "s3.amazonaws.com"
+ *       },
+ *       "Effect": "Allow",
+ *       "Sid": ""
+ *     }
+ *   ]
+ * }
+ * """)
+ * destination = aws.s3.Bucket("destination", versioning=aws.s3.BucketVersioningArgs(
+ *     enabled=True,
+ * ))
+ * source = aws.s3.Bucket("source",
+ *     acl="private",
+ *     versioning=aws.s3.BucketVersioningArgs(
+ *         enabled=True,
+ *     ),
+ *     opts=pulumi.ResourceOptions(provider=aws["central"]))
+ * replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.all(source.arn, source.arn, destination.arn).apply(lambda sourceArn, sourceArn1, destinationArn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Action": [
+ *         "s3:GetReplicationConfiguration",
+ *         "s3:ListBucket"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "{source_arn}"
+ *       ]
+ *     }},
+ *     {{
+ *       "Action": [
+ *         "s3:GetObjectVersionForReplication",
+ *         "s3:GetObjectVersionAcl",
+ *          "s3:GetObjectVersionTagging"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": [
+ *         "{source_arn1}/*"
+ *       ]
+ *     }},
+ *     {{
+ *       "Action": [
+ *         "s3:ReplicateObject",
+ *         "s3:ReplicateDelete",
+ *         "s3:ReplicateTags"
+ *       ],
+ *       "Effect": "Allow",
+ *       "Resource": "{destination_arn}/*"
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * replication_role_policy_attachment = aws.iam.RolePolicyAttachment("replicationRolePolicyAttachment",
+ *     role=replication_role.name,
+ *     policy_arn=replication_policy.arn)
+ * replication_bucket_replication_config = aws.s3.BucketReplicationConfig("replicationBucketReplicationConfig",
+ *     role=replication_role.arn,
+ *     bucket=source.id,
+ *     rules=[aws.s3.BucketReplicationConfigRuleArgs(
+ *         id="foobar",
+ *         prefix="foo",
+ *         status="Enabled",
+ *         destination=aws.s3.BucketReplicationConfigRuleDestinationArgs(
+ *             bucket=destination.arn,
+ *             storage_class="STANDARD",
+ *         ),
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var central = new Aws.Provider("central", new Aws.ProviderArgs
+ *         {
+ *             Region = "eu-central-1",
+ *         });
+ *         var replicationRole = new Aws.Iam.Role("replicationRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""s3.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow"",
+ *       ""Sid"": """"
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var destination = new Aws.S3.Bucket("destination", new Aws.S3.BucketArgs
+ *         {
+ *             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *         });
+ *         var source = new Aws.S3.Bucket("source", new Aws.S3.BucketArgs
+ *         {
+ *             Acl = "private",
+ *             Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Central,
+ *         });
+ *         var replicationPolicy = new Aws.Iam.Policy("replicationPolicy", new Aws.Iam.PolicyArgs
+ *         {
+ *             Policy = Output.Tuple(source.Arn, source.Arn, destination.Arn).Apply(values =>
+ *             {
+ *                 var sourceArn = values.Item1;
+ *                 var sourceArn1 = values.Item2;
+ *                 var destinationArn = values.Item3;
+ *                 return @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Action"": [
+ *         ""s3:GetReplicationConfiguration"",
+ *         ""s3:ListBucket""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": [
+ *         ""{sourceArn}""
+ *       ]
+ *     }},
+ *     {{
+ *       ""Action"": [
+ *         ""s3:GetObjectVersionForReplication"",
+ *         ""s3:GetObjectVersionAcl"",
+ *          ""s3:GetObjectVersionTagging""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": [
+ *         ""{sourceArn1}/*""
+ *       ]
+ *     }},
+ *     {{
+ *       ""Action"": [
+ *         ""s3:ReplicateObject"",
+ *         ""s3:ReplicateDelete"",
+ *         ""s3:ReplicateTags""
+ *       ],
+ *       ""Effect"": ""Allow"",
+ *       ""Resource"": ""{destinationArn}/*""
+ *     }}
+ *   ]
+ * }}
+ * ";
+ *             }),
+ *         });
+ *         var replicationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("replicationRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             Role = replicationRole.Name,
+ *             PolicyArn = replicationPolicy.Arn,
+ *         });
+ *         var replicationBucketReplicationConfig = new Aws.S3.BucketReplicationConfig("replicationBucketReplicationConfig", new Aws.S3.BucketReplicationConfigArgs
+ *         {
+ *             Role = replicationRole.Arn,
+ *             Bucket = source.Id,
+ *             Rules = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketReplicationConfigRuleArgs
+ *                 {
+ *                     Id = "foobar",
+ *                     Prefix = "foo",
+ *                     Status = "Enabled",
+ *                     Destination = new Aws.S3.Inputs.BucketReplicationConfigRuleDestinationArgs
+ *                     {
+ *                         Bucket = destination.Arn,
+ *                         StorageClass = "STANDARD",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "central", &providers.awsArgs{
+ * 			Region: "eu-central-1",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		replicationRole, err := iam.NewRole(ctx, "replicationRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"s3.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		destination, err := s3.NewBucket(ctx, "destination", &s3.BucketArgs{
+ * 			Versioning: &s3.BucketVersioningArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		source, err := s3.NewBucket(ctx, "source", &s3.BucketArgs{
+ * 			Acl: pulumi.String("private"),
+ * 			Versioning: &s3.BucketVersioningArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 		}, pulumi.Provider(aws.Central))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		replicationPolicy, err := iam.NewPolicy(ctx, "replicationPolicy", &iam.PolicyArgs{
+ * 			Policy: pulumi.All(source.Arn, source.Arn, destination.Arn).ApplyT(func(_args []interface{}) (string, error) {
+ * 				sourceArn := _args[0].(string)
+ * 				sourceArn1 := _args[1].(string)
+ * 				destinationArn := _args[2].(string)
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetReplicationConfiguration\",\n", "        \"s3:ListBucket\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", sourceArn, "\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:GetObjectVersionForReplication\",\n", "        \"s3:GetObjectVersionAcl\",\n", "         \"s3:GetObjectVersionTagging\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", sourceArn1, "/*\"\n", "      ]\n", "    },\n", "    {\n", "      \"Action\": [\n", "        \"s3:ReplicateObject\",\n", "        \"s3:ReplicateDelete\",\n", "        \"s3:ReplicateTags\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"", destinationArn, "/*\"\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "replicationRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+ * 			Role:      replicationRole.Name,
+ * 			PolicyArn: replicationPolicy.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketReplicationConfig(ctx, "replicationBucketReplicationConfig", &s3.BucketReplicationConfigArgs{
+ * 			Role:   replicationRole.Arn,
+ * 			Bucket: source.ID(),
+ * 			Rules: s3.BucketReplicationConfigRuleArray{
+ * 				&s3.BucketReplicationConfigRuleArgs{
+ * 					Id:     pulumi.String("foobar"),
+ * 					Prefix: pulumi.String("foo"),
+ * 					Status: pulumi.String("Enabled"),
+ * 					Destination: &s3.BucketReplicationConfigRuleDestinationArgs{
+ * 						Bucket:       destination.Arn,
+ * 						StorageClass: pulumi.String("STANDARD"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Usage Notes
  * 
  * > **NOTE:** To avoid conflicts always add the following lifecycle object to the `aws.s3.Bucket` resource of the source bucket.
  * 
  * This resource implements the same features that are provided by the `replication_configuration` object of the `aws.s3.Bucket` resource. To avoid conflicts or unexpected apply results, a lifecycle configuration is needed on the `aws.s3.Bucket` to ignore changes to the internal `replication_configuration` object.  Failure to add the `lifecycle` configuration to the `aws.s3.Bucket` will result in conflicting state results.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * ```
+ * ```python
+ * import pulumi
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		return nil
+ * 	})
+ * }
+ * ```
  * 
  * The `aws.s3.BucketReplicationConfig` resource provides the following features that are not available in the `aws.s3.Bucket` resource:
  * 
@@ -33,6 +439,7 @@ import javax.annotation.Nullable;
  * 
  * Replication for existing objects requires activation by AWS Support.  See [userguide/replication-what-is-isnot-replicated](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-what-is-isnot-replicated.html#existing-object-replication).
  * 
+ * 
  * ## Import
  * 
  * S3 bucket replication configuration can be imported using the `bucket`, e.g.
@@ -41,6 +448,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketReplicationConfig:BucketReplicationConfig replication bucket-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketReplicationConfig:BucketReplicationConfig")
 public class BucketReplicationConfig extends io.pulumi.resources.CustomResource {

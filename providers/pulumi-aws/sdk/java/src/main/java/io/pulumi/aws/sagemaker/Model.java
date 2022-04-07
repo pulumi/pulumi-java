@@ -22,10 +22,169 @@ import javax.annotation.Nullable;
 /**
  * Provides a SageMaker model resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const assumeRole = aws.iam.getPolicyDocument({
+ *     statements: [{
+ *         actions: ["sts:AssumeRole"],
+ *         principals: [{
+ *             type: "Service",
+ *             identifiers: ["sagemaker.amazonaws.com"],
+ *         }],
+ *     }],
+ * });
+ * const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: assumeRole.then(assumeRole => assumeRole.json)});
+ * const test = aws.sagemaker.getPrebuiltEcrImage({
+ *     repositoryName: "kmeans",
+ * });
+ * const exampleModel = new aws.sagemaker.Model("exampleModel", {
+ *     executionRoleArn: exampleRole.arn,
+ *     primaryContainer: {
+ *         image: test.then(test => test.registryPath),
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * assume_role = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *     actions=["sts:AssumeRole"],
+ *     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *         type="Service",
+ *         identifiers=["sagemaker.amazonaws.com"],
+ *     )],
+ * )])
+ * example_role = aws.iam.Role("exampleRole", assume_role_policy=assume_role.json)
+ * test = aws.sagemaker.get_prebuilt_ecr_image(repository_name="kmeans")
+ * example_model = aws.sagemaker.Model("exampleModel",
+ *     execution_role_arn=example_role.arn,
+ *     primary_container=aws.sagemaker.ModelPrimaryContainerArgs(
+ *         image=test.registry_path,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var assumeRole = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+ *         {
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "sts:AssumeRole",
+ *                     },
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+ *                         {
+ *                             Type = "Service",
+ *                             Identifiers = 
+ *                             {
+ *                                 "sagemaker.amazonaws.com",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = assumeRole.Apply(assumeRole => assumeRole.Json),
+ *         });
+ *         var test = Output.Create(Aws.Sagemaker.GetPrebuiltEcrImage.InvokeAsync(new Aws.Sagemaker.GetPrebuiltEcrImageArgs
+ *         {
+ *             RepositoryName = "kmeans",
+ *         }));
+ *         var exampleModel = new Aws.Sagemaker.Model("exampleModel", new Aws.Sagemaker.ModelArgs
+ *         {
+ *             ExecutionRoleArn = exampleRole.Arn,
+ *             PrimaryContainer = new Aws.Sagemaker.Inputs.ModelPrimaryContainerArgs
+ *             {
+ *                 Image = test.Apply(test => test.RegistryPath),
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		assumeRole, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+ * 			Statements: []iam.GetPolicyDocumentStatement{
+ * 				iam.GetPolicyDocumentStatement{
+ * 					Actions: []string{
+ * 						"sts:AssumeRole",
+ * 					},
+ * 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+ * 						iam.GetPolicyDocumentStatementPrincipal{
+ * 							Type: "Service",
+ * 							Identifiers: []string{
+ * 								"sagemaker.amazonaws.com",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(assumeRole.Json),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		test, err := sagemaker.GetPrebuiltEcrImage(ctx, &sagemaker.GetPrebuiltEcrImageArgs{
+ * 			RepositoryName: "kmeans",
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sagemaker.NewModel(ctx, "exampleModel", &sagemaker.ModelArgs{
+ * 			ExecutionRoleArn: exampleRole.Arn,
+ * 			PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
+ * 				Image: pulumi.String(test.RegistryPath),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Inference Execution Config
  * 
  * * `mode` - (Required) How containers in a multi-container are run. The following values are valid `Serial` and `Direct`.
+ * 
  * 
  * ## Import
  * 
@@ -35,6 +194,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/model:Model test_model model-foo
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/model:Model")
 public class Model extends io.pulumi.resources.CustomResource {

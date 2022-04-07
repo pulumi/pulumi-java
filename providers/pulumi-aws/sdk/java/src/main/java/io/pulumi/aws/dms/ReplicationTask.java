@@ -16,7 +16,109 @@ import javax.annotation.Nullable;
 /**
  * Provides a DMS (Data Migration Service) replication task resource. DMS replication tasks can be created, updated, deleted, and imported.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new replication task
+ * const test = new aws.dms.ReplicationTask("test", {
+ *     cdcStartTime: 1484346880,
+ *     migrationType: "full-load",
+ *     replicationInstanceArn: aws_dms_replication_instance["test-dms-replication-instance-tf"].replication_instance_arn,
+ *     replicationTaskId: "test-dms-replication-task-tf",
+ *     replicationTaskSettings: "...",
+ *     sourceEndpointArn: aws_dms_endpoint["test-dms-source-endpoint-tf"].endpoint_arn,
+ *     tableMappings: `{"rules":[{"rule-type":"selection","rule-id":"1","rule-name":"1","object-locator":{"schema-name":"%","table-name":"%"},"rule-action":"include"}]}`,
+ *     tags: {
+ *         Name: "test",
+ *     },
+ *     targetEndpointArn: aws_dms_endpoint["test-dms-target-endpoint-tf"].endpoint_arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new replication task
+ * test = aws.dms.ReplicationTask("test",
+ *     cdc_start_time="1484346880",
+ *     migration_type="full-load",
+ *     replication_instance_arn=aws_dms_replication_instance["test-dms-replication-instance-tf"]["replication_instance_arn"],
+ *     replication_task_id="test-dms-replication-task-tf",
+ *     replication_task_settings="...",
+ *     source_endpoint_arn=aws_dms_endpoint["test-dms-source-endpoint-tf"]["endpoint_arn"],
+ *     table_mappings="{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"%\",\"table-name\":\"%\"},\"rule-action\":\"include\"}]}",
+ *     tags={
+ *         "Name": "test",
+ *     },
+ *     target_endpoint_arn=aws_dms_endpoint["test-dms-target-endpoint-tf"]["endpoint_arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new replication task
+ *         var test = new Aws.Dms.ReplicationTask("test", new Aws.Dms.ReplicationTaskArgs
+ *         {
+ *             CdcStartTime = "1484346880",
+ *             MigrationType = "full-load",
+ *             ReplicationInstanceArn = aws_dms_replication_instance.Test_dms_replication_instance_tf.Replication_instance_arn,
+ *             ReplicationTaskId = "test-dms-replication-task-tf",
+ *             ReplicationTaskSettings = "...",
+ *             SourceEndpointArn = aws_dms_endpoint.Test_dms_source_endpoint_tf.Endpoint_arn,
+ *             TableMappings = "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"%\",\"table-name\":\"%\"},\"rule-action\":\"include\"}]}",
+ *             Tags = 
+ *             {
+ *                 { "Name", "test" },
+ *             },
+ *             TargetEndpointArn = aws_dms_endpoint.Test_dms_target_endpoint_tf.Endpoint_arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dms.NewReplicationTask(ctx, "test", &dms.ReplicationTaskArgs{
+ * 			CdcStartTime:            pulumi.String("1484346880"),
+ * 			MigrationType:           pulumi.String("full-load"),
+ * 			ReplicationInstanceArn:  pulumi.Any(aws_dms_replication_instance.Test - dms - replication - instance - tf.Replication_instance_arn),
+ * 			ReplicationTaskId:       pulumi.String("test-dms-replication-task-tf"),
+ * 			ReplicationTaskSettings: pulumi.String("..."),
+ * 			SourceEndpointArn:       pulumi.Any(aws_dms_endpoint.Test - dms - source - endpoint - tf.Endpoint_arn),
+ * 			TableMappings:           pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"", "%", "\",\"table-name\":\"", "%", "\"},\"rule-action\":\"include\"}]}")),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("test"),
+ * 			},
+ * 			TargetEndpointArn: pulumi.Any(aws_dms_endpoint.Test - dms - target - endpoint - tf.Endpoint_arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +128,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dms/replicationTask:ReplicationTask test test-dms-replication-task-tf
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dms/replicationTask:ReplicationTask")
 public class ReplicationTask extends io.pulumi.resources.CustomResource {

@@ -20,7 +20,85 @@ import javax.annotation.Nullable;
  * > **Note:** Amazon API Gateway Version 2 VPC Links enable private integrations that connect HTTP APIs to private resources in a VPC.
  * To enable private integration for REST APIs, use the `Amazon API Gateway Version 1 VPC Link` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apigatewayv2.VpcLink("example", {
+ *     securityGroupIds: [data.aws_security_group.example.id],
+ *     subnetIds: data.aws_subnet_ids.example.ids,
+ *     tags: {
+ *         Usage: "example",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apigatewayv2.VpcLink("example",
+ *     security_group_ids=[data["aws_security_group"]["example"]["id"]],
+ *     subnet_ids=data["aws_subnet_ids"]["example"]["ids"],
+ *     tags={
+ *         "Usage": "example",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ApiGatewayV2.VpcLink("example", new Aws.ApiGatewayV2.VpcLinkArgs
+ *         {
+ *             SecurityGroupIds = 
+ *             {
+ *                 data.Aws_security_group.Example.Id,
+ *             },
+ *             SubnetIds = data.Aws_subnet_ids.Example.Ids,
+ *             Tags = 
+ *             {
+ *                 { "Usage", "example" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigatewayv2.NewVpcLink(ctx, "example", &apigatewayv2.VpcLinkArgs{
+ * 			SecurityGroupIds: pulumi.StringArray{
+ * 				pulumi.Any(data.Aws_security_group.Example.Id),
+ * 			},
+ * 			SubnetIds: pulumi.Any(data.Aws_subnet_ids.Example.Ids),
+ * 			Tags: pulumi.StringMap{
+ * 				"Usage": pulumi.String("example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +108,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigatewayv2/vpcLink:VpcLink example aabbccddee
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigatewayv2/vpcLink:VpcLink")
 public class VpcLink extends io.pulumi.resources.CustomResource {

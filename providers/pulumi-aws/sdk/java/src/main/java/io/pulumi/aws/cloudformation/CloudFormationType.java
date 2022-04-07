@@ -15,6 +15,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * `aws_cloudformation_type` can be imported with their type version Amazon Resource Name (ARN), e.g.,
@@ -23,6 +26,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudformation/cloudFormationType:CloudFormationType example arn:aws:cloudformation:us-east-1:123456789012:type/resource/ExampleCompany-ExampleService-ExampleType/1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudformation/cloudFormationType:CloudFormationType")
 public class CloudFormationType extends io.pulumi.resources.CustomResource {

@@ -16,7 +16,9 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Studio Lifecycle Config resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +28,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/studioLifecycleConfig:StudioLifecycleConfig example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/studioLifecycleConfig:StudioLifecycleConfig")
 public class StudioLifecycleConfig extends io.pulumi.resources.CustomResource {

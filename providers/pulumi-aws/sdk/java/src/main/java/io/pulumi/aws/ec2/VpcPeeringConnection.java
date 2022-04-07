@@ -31,12 +31,371 @@ import javax.annotation.Nullable;
  * VPC Peering Connections use the `aws.ec2.VpcPeeringConnection` resource to manage the requester's side of the
  * connection and use the `aws.ec2.VpcPeeringConnectionAccepter` resource to manage the accepter's side of the connection.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.ec2.VpcPeeringConnection("foo", {
+ *     peerOwnerId: _var.peer_owner_id,
+ *     peerVpcId: aws_vpc.bar.id,
+ *     vpcId: aws_vpc.foo.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.ec2.VpcPeeringConnection("foo",
+ *     peer_owner_id=var["peer_owner_id"],
+ *     peer_vpc_id=aws_vpc["bar"]["id"],
+ *     vpc_id=aws_vpc["foo"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Ec2.VpcPeeringConnection("foo", new Aws.Ec2.VpcPeeringConnectionArgs
+ *         {
+ *             PeerOwnerId = @var.Peer_owner_id,
+ *             PeerVpcId = aws_vpc.Bar.Id,
+ *             VpcId = aws_vpc.Foo.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpcPeeringConnection(ctx, "foo", &ec2.VpcPeeringConnectionArgs{
+ * 			PeerOwnerId: pulumi.Any(_var.Peer_owner_id),
+ * 			PeerVpcId:   pulumi.Any(aws_vpc.Bar.Id),
+ * 			VpcId:       pulumi.Any(aws_vpc.Foo.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Basic usage with connection options:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.ec2.VpcPeeringConnection("foo", {
+ *     peerOwnerId: _var.peer_owner_id,
+ *     peerVpcId: aws_vpc.bar.id,
+ *     vpcId: aws_vpc.foo.id,
+ *     accepter: {
+ *         allowRemoteVpcDnsResolution: true,
+ *     },
+ *     requester: {
+ *         allowRemoteVpcDnsResolution: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.ec2.VpcPeeringConnection("foo",
+ *     peer_owner_id=var["peer_owner_id"],
+ *     peer_vpc_id=aws_vpc["bar"]["id"],
+ *     vpc_id=aws_vpc["foo"]["id"],
+ *     accepter=aws.ec2.VpcPeeringConnectionAccepterArgs(
+ *         allow_remote_vpc_dns_resolution=True,
+ *     ),
+ *     requester=aws.ec2.VpcPeeringConnectionRequesterArgs(
+ *         allow_remote_vpc_dns_resolution=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Ec2.VpcPeeringConnection("foo", new Aws.Ec2.VpcPeeringConnectionArgs
+ *         {
+ *             PeerOwnerId = @var.Peer_owner_id,
+ *             PeerVpcId = aws_vpc.Bar.Id,
+ *             VpcId = aws_vpc.Foo.Id,
+ *             Accepter = new Aws.Ec2.Inputs.VpcPeeringConnectionAccepterArgs
+ *             {
+ *                 AllowRemoteVpcDnsResolution = true,
+ *             },
+ *             Requester = new Aws.Ec2.Inputs.VpcPeeringConnectionRequesterArgs
+ *             {
+ *                 AllowRemoteVpcDnsResolution = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewVpcPeeringConnection(ctx, "foo", &ec2.VpcPeeringConnectionArgs{
+ * 			PeerOwnerId: pulumi.Any(_var.Peer_owner_id),
+ * 			PeerVpcId:   pulumi.Any(aws_vpc.Bar.Id),
+ * 			VpcId:       pulumi.Any(aws_vpc.Foo.Id),
+ * 			Accepter: &ec2.VpcPeeringConnectionAccepterArgs{
+ * 				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
+ * 			},
+ * 			Requester: &ec2.VpcPeeringConnectionRequesterArgs{
+ * 				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Basic usage with tags:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const fooVpc = new aws.ec2.Vpc("fooVpc", {cidrBlock: "10.1.0.0/16"});
+ * const bar = new aws.ec2.Vpc("bar", {cidrBlock: "10.2.0.0/16"});
+ * const fooVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("fooVpcPeeringConnection", {
+ *     peerOwnerId: _var.peer_owner_id,
+ *     peerVpcId: bar.id,
+ *     vpcId: fooVpc.id,
+ *     autoAccept: true,
+ *     tags: {
+ *         Name: "VPC Peering between foo and bar",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16")
+ * bar = aws.ec2.Vpc("bar", cidr_block="10.2.0.0/16")
+ * foo_vpc_peering_connection = aws.ec2.VpcPeeringConnection("fooVpcPeeringConnection",
+ *     peer_owner_id=var["peer_owner_id"],
+ *     peer_vpc_id=bar.id,
+ *     vpc_id=foo_vpc.id,
+ *     auto_accept=True,
+ *     tags={
+ *         "Name": "VPC Peering between foo and bar",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fooVpc = new Aws.Ec2.Vpc("fooVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.1.0.0/16",
+ *         });
+ *         var bar = new Aws.Ec2.Vpc("bar", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.2.0.0/16",
+ *         });
+ *         var fooVpcPeeringConnection = new Aws.Ec2.VpcPeeringConnection("fooVpcPeeringConnection", new Aws.Ec2.VpcPeeringConnectionArgs
+ *         {
+ *             PeerOwnerId = @var.Peer_owner_id,
+ *             PeerVpcId = bar.Id,
+ *             VpcId = fooVpc.Id,
+ *             AutoAccept = true,
+ *             Tags = 
+ *             {
+ *                 { "Name", "VPC Peering between foo and bar" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.1.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bar, err := ec2.NewVpc(ctx, "bar", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.2.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcPeeringConnection(ctx, "fooVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
+ * 			PeerOwnerId: pulumi.Any(_var.Peer_owner_id),
+ * 			PeerVpcId:   bar.ID(),
+ * 			VpcId:       fooVpc.ID(),
+ * 			AutoAccept:  pulumi.Bool(true),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("VPC Peering between foo and bar"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * Basic usage with region:
+ * 
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const fooVpc = new aws.ec2.Vpc("fooVpc", {cidrBlock: "10.1.0.0/16"}, {
+ *     provider: aws["us-west-2"],
+ * });
+ * const bar = new aws.ec2.Vpc("bar", {cidrBlock: "10.2.0.0/16"}, {
+ *     provider: aws["us-east-1"],
+ * });
+ * const fooVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("fooVpcPeeringConnection", {
+ *     peerOwnerId: _var.peer_owner_id,
+ *     peerVpcId: bar.id,
+ *     vpcId: fooVpc.id,
+ *     peerRegion: "us-east-1",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16",
+ * opts=pulumi.ResourceOptions(provider=aws["us-west-2"]))
+ * bar = aws.ec2.Vpc("bar", cidr_block="10.2.0.0/16",
+ * opts=pulumi.ResourceOptions(provider=aws["us-east-1"]))
+ * foo_vpc_peering_connection = aws.ec2.VpcPeeringConnection("fooVpcPeeringConnection",
+ *     peer_owner_id=var["peer_owner_id"],
+ *     peer_vpc_id=bar.id,
+ *     vpc_id=foo_vpc.id,
+ *     peer_region="us-east-1")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fooVpc = new Aws.Ec2.Vpc("fooVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.1.0.0/16",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Us_west_2,
+ *         });
+ *         var bar = new Aws.Ec2.Vpc("bar", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.2.0.0/16",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Us_east_1,
+ *         });
+ *         var fooVpcPeeringConnection = new Aws.Ec2.VpcPeeringConnection("fooVpcPeeringConnection", new Aws.Ec2.VpcPeeringConnectionArgs
+ *         {
+ *             PeerOwnerId = @var.Peer_owner_id,
+ *             PeerVpcId = bar.Id,
+ *             VpcId = fooVpc.Id,
+ *             PeerRegion = "us-east-1",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.1.0.0/16"),
+ * 		}, pulumi.Provider(aws.Us-west-2))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bar, err := ec2.NewVpc(ctx, "bar", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.2.0.0/16"),
+ * 		}, pulumi.Provider(aws.Us-east-1))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcPeeringConnection(ctx, "fooVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
+ * 			PeerOwnerId: pulumi.Any(_var.Peer_owner_id),
+ * 			PeerVpcId:   bar.ID(),
+ * 			VpcId:       fooVpc.ID(),
+ * 			PeerRegion:  pulumi.String("us-east-1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Notes
  * 
  * If both VPCs are not in the same AWS account and region do not enable the `auto_accept` attribute.
  * The accepter can manage its side of the connection using the `aws.ec2.VpcPeeringConnectionAccepter` resource
  * or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.
+ * 
  * 
  * ## Import
  * 
@@ -46,8 +405,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcPeeringConnection:VpcPeeringConnection test_connection pcx-111aaa111
  * ```
  * 
- *  [1]/docs/providers/aws/index.html
- * 
+ *  [1]/docs/providers/aws/index.html 
  */
 @ResourceType(type="aws:ec2/vpcPeeringConnection:VpcPeeringConnection")
 public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {

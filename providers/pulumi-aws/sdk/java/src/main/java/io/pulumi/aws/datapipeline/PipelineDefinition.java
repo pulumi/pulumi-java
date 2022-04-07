@@ -19,7 +19,308 @@ import javax.annotation.Nullable;
 /**
  * Provides a DataPipeline Pipeline Definition resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const _default = new aws.datapipeline.Pipeline("default", {});
+ * const example = new aws.datapipeline.PipelineDefinition("example", {
+ *     pipelineId: _default.id,
+ *     pipelineObjects: [
+ *         {
+ *             id: "Default",
+ *             name: "Default",
+ *             fields: [{
+ *                 key: "workerGroup",
+ *                 stringValue: "workerGroup",
+ *             }],
+ *         },
+ *         {
+ *             id: "Schedule",
+ *             name: "Schedule",
+ *             fields: [
+ *                 {
+ *                     key: "startDateTime",
+ *                     stringValue: "2012-12-12T00:00:00",
+ *                 },
+ *                 {
+ *                     key: "type",
+ *                     stringValue: "Schedule",
+ *                 },
+ *                 {
+ *                     key: "period",
+ *                     stringValue: "1 hour",
+ *                 },
+ *                 {
+ *                     key: "endDateTime",
+ *                     stringValue: "2012-12-21T18:00:00",
+ *                 },
+ *             ],
+ *         },
+ *         {
+ *             id: "SayHello",
+ *             name: "SayHello",
+ *             fields: [
+ *                 {
+ *                     key: "type",
+ *                     stringValue: "ShellCommandActivity",
+ *                 },
+ *                 {
+ *                     key: "command",
+ *                     stringValue: "echo hello",
+ *                 },
+ *                 {
+ *                     key: "parent",
+ *                     stringValue: "Default",
+ *                 },
+ *                 {
+ *                     key: "schedule",
+ *                     stringValue: "Schedule",
+ *                 },
+ *             ],
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.datapipeline.Pipeline("default")
+ * example = aws.datapipeline.PipelineDefinition("example",
+ *     pipeline_id=default.id,
+ *     pipeline_objects=[
+ *         aws.datapipeline.PipelineDefinitionPipelineObjectArgs(
+ *             id="Default",
+ *             name="Default",
+ *             fields=[aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                 key="workerGroup",
+ *                 string_value="workerGroup",
+ *             )],
+ *         ),
+ *         aws.datapipeline.PipelineDefinitionPipelineObjectArgs(
+ *             id="Schedule",
+ *             name="Schedule",
+ *             fields=[
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="startDateTime",
+ *                     string_value="2012-12-12T00:00:00",
+ *                 ),
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="type",
+ *                     string_value="Schedule",
+ *                 ),
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="period",
+ *                     string_value="1 hour",
+ *                 ),
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="endDateTime",
+ *                     string_value="2012-12-21T18:00:00",
+ *                 ),
+ *             ],
+ *         ),
+ *         aws.datapipeline.PipelineDefinitionPipelineObjectArgs(
+ *             id="SayHello",
+ *             name="SayHello",
+ *             fields=[
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="type",
+ *                     string_value="ShellCommandActivity",
+ *                 ),
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="command",
+ *                     string_value="echo hello",
+ *                 ),
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="parent",
+ *                     string_value="Default",
+ *                 ),
+ *                 aws.datapipeline.PipelineDefinitionPipelineObjectFieldArgs(
+ *                     key="schedule",
+ *                     string_value="Schedule",
+ *                 ),
+ *             ],
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.DataPipeline.Pipeline("default", new Aws.DataPipeline.PipelineArgs
+ *         {
+ *         });
+ *         var example = new Aws.DataPipeline.PipelineDefinition("example", new Aws.DataPipeline.PipelineDefinitionArgs
+ *         {
+ *             PipelineId = @default.Id,
+ *             PipelineObjects = 
+ *             {
+ *                 new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectArgs
+ *                 {
+ *                     Id = "Default",
+ *                     Name = "Default",
+ *                     Fields = 
+ *                     {
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "workerGroup",
+ *                             StringValue = "workerGroup",
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectArgs
+ *                 {
+ *                     Id = "Schedule",
+ *                     Name = "Schedule",
+ *                     Fields = 
+ *                     {
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "startDateTime",
+ *                             StringValue = "2012-12-12T00:00:00",
+ *                         },
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "type",
+ *                             StringValue = "Schedule",
+ *                         },
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "period",
+ *                             StringValue = "1 hour",
+ *                         },
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "endDateTime",
+ *                             StringValue = "2012-12-21T18:00:00",
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectArgs
+ *                 {
+ *                     Id = "SayHello",
+ *                     Name = "SayHello",
+ *                     Fields = 
+ *                     {
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "type",
+ *                             StringValue = "ShellCommandActivity",
+ *                         },
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "command",
+ *                             StringValue = "echo hello",
+ *                         },
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "parent",
+ *                             StringValue = "Default",
+ *                         },
+ *                         new Aws.DataPipeline.Inputs.PipelineDefinitionPipelineObjectFieldArgs
+ *                         {
+ *                             Key = "schedule",
+ *                             StringValue = "Schedule",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datapipeline"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datapipeline.NewPipeline(ctx, "default", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = datapipeline.NewPipelineDefinition(ctx, "example", &datapipeline.PipelineDefinitionArgs{
+ * 			PipelineId: _default.ID(),
+ * 			PipelineObjects: datapipeline.PipelineDefinitionPipelineObjectArray{
+ * 				&datapipeline.PipelineDefinitionPipelineObjectArgs{
+ * 					Id:   pulumi.String("Default"),
+ * 					Name: pulumi.String("Default"),
+ * 					Fields: datapipeline.PipelineDefinitionPipelineObjectFieldArray{
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("workerGroup"),
+ * 							StringValue: pulumi.String("workerGroup"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&datapipeline.PipelineDefinitionPipelineObjectArgs{
+ * 					Id:   pulumi.String("Schedule"),
+ * 					Name: pulumi.String("Schedule"),
+ * 					Fields: datapipeline.PipelineDefinitionPipelineObjectFieldArray{
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("startDateTime"),
+ * 							StringValue: pulumi.String("2012-12-12T00:00:00"),
+ * 						},
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("type"),
+ * 							StringValue: pulumi.String("Schedule"),
+ * 						},
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("period"),
+ * 							StringValue: pulumi.String("1 hour"),
+ * 						},
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("endDateTime"),
+ * 							StringValue: pulumi.String("2012-12-21T18:00:00"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&datapipeline.PipelineDefinitionPipelineObjectArgs{
+ * 					Id:   pulumi.String("SayHello"),
+ * 					Name: pulumi.String("SayHello"),
+ * 					Fields: datapipeline.PipelineDefinitionPipelineObjectFieldArray{
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("type"),
+ * 							StringValue: pulumi.String("ShellCommandActivity"),
+ * 						},
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("command"),
+ * 							StringValue: pulumi.String("echo hello"),
+ * 						},
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("parent"),
+ * 							StringValue: pulumi.String("Default"),
+ * 						},
+ * 						&datapipeline.PipelineDefinitionPipelineObjectFieldArgs{
+ * 							Key:         pulumi.String("schedule"),
+ * 							StringValue: pulumi.String("Schedule"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +330,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:datapipeline/pipelineDefinition:PipelineDefinition example df-1234567890
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:datapipeline/pipelineDefinition:PipelineDefinition")
 public class PipelineDefinition extends io.pulumi.resources.CustomResource {

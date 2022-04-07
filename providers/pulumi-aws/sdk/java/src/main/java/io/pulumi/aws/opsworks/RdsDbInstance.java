@@ -15,8 +15,75 @@ import javax.annotation.Nullable;
 /**
  * Provides an OpsWorks RDS DB Instance resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myInstance = new aws.opsworks.RdsDbInstance("myInstance", {
+ *     stackId: aws_opsworks_stack.my_stack.id,
+ *     rdsDbInstanceArn: aws_db_instance.my_instance.arn,
+ *     dbUser: "someUser",
+ *     dbPassword: "somePass",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_instance = aws.opsworks.RdsDbInstance("myInstance",
+ *     stack_id=aws_opsworks_stack["my_stack"]["id"],
+ *     rds_db_instance_arn=aws_db_instance["my_instance"]["arn"],
+ *     db_user="someUser",
+ *     db_password="somePass")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myInstance = new Aws.OpsWorks.RdsDbInstance("myInstance", new Aws.OpsWorks.RdsDbInstanceArgs
+ *         {
+ *             StackId = aws_opsworks_stack.My_stack.Id,
+ *             RdsDbInstanceArn = aws_db_instance.My_instance.Arn,
+ *             DbUser = "someUser",
+ *             DbPassword = "somePass",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := opsworks.NewRdsDbInstance(ctx, "myInstance", &opsworks.RdsDbInstanceArgs{
+ * 			StackId:          pulumi.Any(aws_opsworks_stack.My_stack.Id),
+ * 			RdsDbInstanceArn: pulumi.Any(aws_db_instance.My_instance.Arn),
+ * 			DbUser:           pulumi.String("someUser"),
+ * 			DbPassword:       pulumi.String("somePass"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:opsworks/rdsDbInstance:RdsDbInstance")
 public class RdsDbInstance extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,187 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** As there is no API method for deleting account settings or resetting it to defaults, destroying this resource will keep your account settings intact
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const cloudwatchRole = new aws.iam.Role("cloudwatchRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Sid": "",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "apigateway.amazonaws.com"
+ *       },
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const demo = new aws.apigateway.Account("demo", {cloudwatchRoleArn: cloudwatchRole.arn});
+ * const cloudwatchRolePolicy = new aws.iam.RolePolicy("cloudwatchRolePolicy", {
+ *     role: cloudwatchRole.id,
+ *     policy: `{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Effect": "Allow",
+ *             "Action": [
+ *                 "logs:CreateLogGroup",
+ *                 "logs:CreateLogStream",
+ *                 "logs:DescribeLogGroups",
+ *                 "logs:DescribeLogStreams",
+ *                 "logs:PutLogEvents",
+ *                 "logs:GetLogEvents",
+ *                 "logs:FilterLogEvents"
+ *             ],
+ *             "Resource": "*"
+ *         }
+ *     ]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * cloudwatch_role = aws.iam.Role("cloudwatchRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Sid": "",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "Service": "apigateway.amazonaws.com"
+ *       },
+ *       "Action": "sts:AssumeRole"
+ *     }
+ *   ]
+ * }
+ * """)
+ * demo = aws.apigateway.Account("demo", cloudwatch_role_arn=cloudwatch_role.arn)
+ * cloudwatch_role_policy = aws.iam.RolePolicy("cloudwatchRolePolicy",
+ *     role=cloudwatch_role.id,
+ *     policy="""{
+ *     "Version": "2012-10-17",
+ *     "Statement": [
+ *         {
+ *             "Effect": "Allow",
+ *             "Action": [
+ *                 "logs:CreateLogGroup",
+ *                 "logs:CreateLogStream",
+ *                 "logs:DescribeLogGroups",
+ *                 "logs:DescribeLogStreams",
+ *                 "logs:PutLogEvents",
+ *                 "logs:GetLogEvents",
+ *                 "logs:FilterLogEvents"
+ *             ],
+ *             "Resource": "*"
+ *         }
+ *     ]
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudwatchRole = new Aws.Iam.Role("cloudwatchRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Sid"": """",
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {
+ *         ""Service"": ""apigateway.amazonaws.com""
+ *       },
+ *       ""Action"": ""sts:AssumeRole""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var demo = new Aws.ApiGateway.Account("demo", new Aws.ApiGateway.AccountArgs
+ *         {
+ *             CloudwatchRoleArn = cloudwatchRole.Arn,
+ *         });
+ *         var cloudwatchRolePolicy = new Aws.Iam.RolePolicy("cloudwatchRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = cloudwatchRole.Id,
+ *             Policy = @"{
+ *     ""Version"": ""2012-10-17"",
+ *     ""Statement"": [
+ *         {
+ *             ""Effect"": ""Allow"",
+ *             ""Action"": [
+ *                 ""logs:CreateLogGroup"",
+ *                 ""logs:CreateLogStream"",
+ *                 ""logs:DescribeLogGroups"",
+ *                 ""logs:DescribeLogStreams"",
+ *                 ""logs:PutLogEvents"",
+ *                 ""logs:GetLogEvents"",
+ *                 ""logs:FilterLogEvents""
+ *             ],
+ *             ""Resource"": ""*""
+ *         }
+ *     ]
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cloudwatchRole, err := iam.NewRole(ctx, "cloudwatchRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"apigateway.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewAccount(ctx, "demo", &apigateway.AccountArgs{
+ * 			CloudwatchRoleArn: cloudwatchRole.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicy(ctx, "cloudwatchRolePolicy", &iam.RolePolicyArgs{
+ * 			Role:   cloudwatchRole.ID(),
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Effect\": \"Allow\",\n", "            \"Action\": [\n", "                \"logs:CreateLogGroup\",\n", "                \"logs:CreateLogStream\",\n", "                \"logs:DescribeLogGroups\",\n", "                \"logs:DescribeLogStreams\",\n", "                \"logs:PutLogEvents\",\n", "                \"logs:GetLogEvents\",\n", "                \"logs:FilterLogEvents\"\n", "            ],\n", "            \"Resource\": \"*\"\n", "        }\n", "    ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +208,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/account:Account demo api-gateway-account
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/account:Account")
 public class Account extends io.pulumi.resources.CustomResource {

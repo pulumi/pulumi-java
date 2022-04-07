@@ -22,9 +22,1004 @@ import javax.annotation.Nullable;
 /**
  * Creates a WAFv2 Web ACL resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
  * 
  * This resource is based on `aws.wafv2.RuleGroup`, check the documentation of the `aws.wafv2.RuleGroup` resource to see examples of the various available statements.
+ * 
+ * {{% example %}}
+ * ### Managed Rule
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.wafv2.WebAcl("example", {
+ *     defaultAction: {
+ *         allow: {},
+ *     },
+ *     description: "Example of a managed rule.",
+ *     rules: [{
+ *         name: "rule-1",
+ *         overrideAction: {
+ *             count: {},
+ *         },
+ *         priority: 1,
+ *         statement: {
+ *             managedRuleGroupStatement: {
+ *                 excludedRules: [
+ *                     {
+ *                         name: "SizeRestrictions_QUERYSTRING",
+ *                     },
+ *                     {
+ *                         name: "NoUserAgent_HEADER",
+ *                     },
+ *                 ],
+ *                 name: "AWSManagedRulesCommonRuleSet",
+ *                 scopeDownStatement: {
+ *                     geoMatchStatement: {
+ *                         countryCodes: [
+ *                             "US",
+ *                             "NL",
+ *                         ],
+ *                     },
+ *                 },
+ *                 vendorName: "AWS",
+ *             },
+ *         },
+ *         visibilityConfig: {
+ *             cloudwatchMetricsEnabled: false,
+ *             metricName: "friendly-rule-metric-name",
+ *             sampledRequestsEnabled: false,
+ *         },
+ *     }],
+ *     scope: "REGIONAL",
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ *     visibilityConfig: {
+ *         cloudwatchMetricsEnabled: false,
+ *         metricName: "friendly-metric-name",
+ *         sampledRequestsEnabled: false,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.wafv2.WebAcl("example",
+ *     default_action=aws.wafv2.WebAclDefaultActionArgs(
+ *         allow=aws.wafv2.WebAclDefaultActionAllowArgs(),
+ *     ),
+ *     description="Example of a managed rule.",
+ *     rules=[aws.wafv2.WebAclRuleArgs(
+ *         name="rule-1",
+ *         override_action=aws.wafv2.WebAclRuleOverrideActionArgs(
+ *             count=aws.wafv2.WebAclRuleOverrideActionCountArgs(),
+ *         ),
+ *         priority=1,
+ *         statement=aws.wafv2.WebAclRuleStatementArgs(
+ *             managed_rule_group_statement=aws.wafv2.WebAclRuleStatementManagedRuleGroupStatementArgs(
+ *                 excluded_rule=[
+ *                     {
+ *                         "name": "SizeRestrictions_QUERYSTRING",
+ *                     },
+ *                     {
+ *                         "name": "NoUserAgent_HEADER",
+ *                     },
+ *                 ],
+ *                 name="AWSManagedRulesCommonRuleSet",
+ *                 scope_down_statement=aws.wafv2.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs(
+ *                     geo_match_statement=aws.wafv2.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGeoMatchStatementArgs(
+ *                         country_codes=[
+ *                             "US",
+ *                             "NL",
+ *                         ],
+ *                     ),
+ *                 ),
+ *                 vendor_name="AWS",
+ *             ),
+ *         ),
+ *         visibility_config=aws.wafv2.WebAclRuleVisibilityConfigArgs(
+ *             cloudwatch_metrics_enabled=False,
+ *             metric_name="friendly-rule-metric-name",
+ *             sampled_requests_enabled=False,
+ *         ),
+ *     )],
+ *     scope="REGIONAL",
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     },
+ *     visibility_config=aws.wafv2.WebAclVisibilityConfigArgs(
+ *         cloudwatch_metrics_enabled=False,
+ *         metric_name="friendly-metric-name",
+ *         sampled_requests_enabled=False,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.WafV2.WebAcl("example", new Aws.WafV2.WebAclArgs
+ *         {
+ *             DefaultAction = new Aws.WafV2.Inputs.WebAclDefaultActionArgs
+ *             {
+ *                 Allow = ,
+ *             },
+ *             Description = "Example of a managed rule.",
+ *             Rules = 
+ *             {
+ *                 new Aws.WafV2.Inputs.WebAclRuleArgs
+ *                 {
+ *                     Name = "rule-1",
+ *                     OverrideAction = new Aws.WafV2.Inputs.WebAclRuleOverrideActionArgs
+ *                     {
+ *                         Count = ,
+ *                     },
+ *                     Priority = 1,
+ *                     Statement = new Aws.WafV2.Inputs.WebAclRuleStatementArgs
+ *                     {
+ *                         ManagedRuleGroupStatement = new Aws.WafV2.Inputs.WebAclRuleStatementManagedRuleGroupStatementArgs
+ *                         {
+ *                             ExcludedRule = 
+ *                             {
+ *                                 
+ *                                 {
+ *                                     { "name", "SizeRestrictions_QUERYSTRING" },
+ *                                 },
+ *                                 
+ *                                 {
+ *                                     { "name", "NoUserAgent_HEADER" },
+ *                                 },
+ *                             },
+ *                             Name = "AWSManagedRulesCommonRuleSet",
+ *                             ScopeDownStatement = new Aws.WafV2.Inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs
+ *                             {
+ *                                 GeoMatchStatement = new Aws.WafV2.Inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGeoMatchStatementArgs
+ *                                 {
+ *                                     CountryCodes = 
+ *                                     {
+ *                                         "US",
+ *                                         "NL",
+ *                                     },
+ *                                 },
+ *                             },
+ *                             VendorName = "AWS",
+ *                         },
+ *                     },
+ *                     VisibilityConfig = new Aws.WafV2.Inputs.WebAclRuleVisibilityConfigArgs
+ *                     {
+ *                         CloudwatchMetricsEnabled = false,
+ *                         MetricName = "friendly-rule-metric-name",
+ *                         SampledRequestsEnabled = false,
+ *                     },
+ *                 },
+ *             },
+ *             Scope = "REGIONAL",
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *             VisibilityConfig = new Aws.WafV2.Inputs.WebAclVisibilityConfigArgs
+ *             {
+ *                 CloudwatchMetricsEnabled = false,
+ *                 MetricName = "friendly-metric-name",
+ *                 SampledRequestsEnabled = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := wafv2.NewWebAcl(ctx, "example", &wafv2.WebAclArgs{
+ * 			DefaultAction: &wafv2.WebAclDefaultActionArgs{
+ * 				Allow: nil,
+ * 			},
+ * 			Description: pulumi.String("Example of a managed rule."),
+ * 			Rules: wafv2.WebAclRuleArray{
+ * 				&wafv2.WebAclRuleArgs{
+ * 					Name: pulumi.String("rule-1"),
+ * 					OverrideAction: &wafv2.WebAclRuleOverrideActionArgs{
+ * 						Count: nil,
+ * 					},
+ * 					Priority: pulumi.Int(1),
+ * 					Statement: &wafv2.WebAclRuleStatementArgs{
+ * 						ManagedRuleGroupStatement: &wafv2.WebAclRuleStatementManagedRuleGroupStatementArgs{
+ * 							ExcludedRule: []map[string]interface{}{
+ * 								map[string]interface{}{
+ * 									"name": "SizeRestrictions_QUERYSTRING",
+ * 								},
+ * 								map[string]interface{}{
+ * 									"name": "NoUserAgent_HEADER",
+ * 								},
+ * 							},
+ * 							Name: pulumi.String("AWSManagedRulesCommonRuleSet"),
+ * 							ScopeDownStatement: &wafv2.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs{
+ * 								GeoMatchStatement: &wafv2.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGeoMatchStatementArgs{
+ * 									CountryCodes: pulumi.StringArray{
+ * 										pulumi.String("US"),
+ * 										pulumi.String("NL"),
+ * 									},
+ * 								},
+ * 							},
+ * 							VendorName: pulumi.String("AWS"),
+ * 						},
+ * 					},
+ * 					VisibilityConfig: &wafv2.WebAclRuleVisibilityConfigArgs{
+ * 						CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 						MetricName:               pulumi.String("friendly-rule-metric-name"),
+ * 						SampledRequestsEnabled:   pulumi.Bool(false),
+ * 					},
+ * 				},
+ * 			},
+ * 			Scope: pulumi.String("REGIONAL"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 			VisibilityConfig: &wafv2.WebAclVisibilityConfigArgs{
+ * 				CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 				MetricName:               pulumi.String("friendly-metric-name"),
+ * 				SampledRequestsEnabled:   pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Rate Based
+ * Rate-limit US and NL-based clients to 10,000 requests for every 5 minutes.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.wafv2.WebAcl("example", {
+ *     defaultAction: {
+ *         allow: {},
+ *     },
+ *     description: "Example of a Cloudfront rate based statement.",
+ *     rules: [{
+ *         action: {
+ *             block: {},
+ *         },
+ *         name: "rule-1",
+ *         priority: 1,
+ *         statement: {
+ *             rateBasedStatement: {
+ *                 aggregateKeyType: "IP",
+ *                 limit: 10000,
+ *                 scopeDownStatement: {
+ *                     geoMatchStatement: {
+ *                         countryCodes: [
+ *                             "US",
+ *                             "NL",
+ *                         ],
+ *                     },
+ *                 },
+ *             },
+ *         },
+ *         visibilityConfig: {
+ *             cloudwatchMetricsEnabled: false,
+ *             metricName: "friendly-rule-metric-name",
+ *             sampledRequestsEnabled: false,
+ *         },
+ *     }],
+ *     scope: "CLOUDFRONT",
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ *     visibilityConfig: {
+ *         cloudwatchMetricsEnabled: false,
+ *         metricName: "friendly-metric-name",
+ *         sampledRequestsEnabled: false,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.wafv2.WebAcl("example",
+ *     default_action=aws.wafv2.WebAclDefaultActionArgs(
+ *         allow=aws.wafv2.WebAclDefaultActionAllowArgs(),
+ *     ),
+ *     description="Example of a Cloudfront rate based statement.",
+ *     rules=[aws.wafv2.WebAclRuleArgs(
+ *         action=aws.wafv2.WebAclRuleActionArgs(
+ *             block=aws.wafv2.WebAclRuleActionBlockArgs(),
+ *         ),
+ *         name="rule-1",
+ *         priority=1,
+ *         statement=aws.wafv2.WebAclRuleStatementArgs(
+ *             rate_based_statement=aws.wafv2.WebAclRuleStatementRateBasedStatementArgs(
+ *                 aggregate_key_type="IP",
+ *                 limit=10000,
+ *                 scope_down_statement=aws.wafv2.WebAclRuleStatementRateBasedStatementScopeDownStatementArgs(
+ *                     geo_match_statement=aws.wafv2.WebAclRuleStatementRateBasedStatementScopeDownStatementGeoMatchStatementArgs(
+ *                         country_codes=[
+ *                             "US",
+ *                             "NL",
+ *                         ],
+ *                     ),
+ *                 ),
+ *             ),
+ *         ),
+ *         visibility_config=aws.wafv2.WebAclRuleVisibilityConfigArgs(
+ *             cloudwatch_metrics_enabled=False,
+ *             metric_name="friendly-rule-metric-name",
+ *             sampled_requests_enabled=False,
+ *         ),
+ *     )],
+ *     scope="CLOUDFRONT",
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     },
+ *     visibility_config=aws.wafv2.WebAclVisibilityConfigArgs(
+ *         cloudwatch_metrics_enabled=False,
+ *         metric_name="friendly-metric-name",
+ *         sampled_requests_enabled=False,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.WafV2.WebAcl("example", new Aws.WafV2.WebAclArgs
+ *         {
+ *             DefaultAction = new Aws.WafV2.Inputs.WebAclDefaultActionArgs
+ *             {
+ *                 Allow = ,
+ *             },
+ *             Description = "Example of a Cloudfront rate based statement.",
+ *             Rules = 
+ *             {
+ *                 new Aws.WafV2.Inputs.WebAclRuleArgs
+ *                 {
+ *                     Action = new Aws.WafV2.Inputs.WebAclRuleActionArgs
+ *                     {
+ *                         Block = ,
+ *                     },
+ *                     Name = "rule-1",
+ *                     Priority = 1,
+ *                     Statement = new Aws.WafV2.Inputs.WebAclRuleStatementArgs
+ *                     {
+ *                         RateBasedStatement = new Aws.WafV2.Inputs.WebAclRuleStatementRateBasedStatementArgs
+ *                         {
+ *                             AggregateKeyType = "IP",
+ *                             Limit = 10000,
+ *                             ScopeDownStatement = new Aws.WafV2.Inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementArgs
+ *                             {
+ *                                 GeoMatchStatement = new Aws.WafV2.Inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementGeoMatchStatementArgs
+ *                                 {
+ *                                     CountryCodes = 
+ *                                     {
+ *                                         "US",
+ *                                         "NL",
+ *                                     },
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     VisibilityConfig = new Aws.WafV2.Inputs.WebAclRuleVisibilityConfigArgs
+ *                     {
+ *                         CloudwatchMetricsEnabled = false,
+ *                         MetricName = "friendly-rule-metric-name",
+ *                         SampledRequestsEnabled = false,
+ *                     },
+ *                 },
+ *             },
+ *             Scope = "CLOUDFRONT",
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *             VisibilityConfig = new Aws.WafV2.Inputs.WebAclVisibilityConfigArgs
+ *             {
+ *                 CloudwatchMetricsEnabled = false,
+ *                 MetricName = "friendly-metric-name",
+ *                 SampledRequestsEnabled = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := wafv2.NewWebAcl(ctx, "example", &wafv2.WebAclArgs{
+ * 			DefaultAction: &wafv2.WebAclDefaultActionArgs{
+ * 				Allow: nil,
+ * 			},
+ * 			Description: pulumi.String("Example of a Cloudfront rate based statement."),
+ * 			Rules: wafv2.WebAclRuleArray{
+ * 				&wafv2.WebAclRuleArgs{
+ * 					Action: &wafv2.WebAclRuleActionArgs{
+ * 						Block: nil,
+ * 					},
+ * 					Name:     pulumi.String("rule-1"),
+ * 					Priority: pulumi.Int(1),
+ * 					Statement: &wafv2.WebAclRuleStatementArgs{
+ * 						RateBasedStatement: &wafv2.WebAclRuleStatementRateBasedStatementArgs{
+ * 							AggregateKeyType: pulumi.String("IP"),
+ * 							Limit:            pulumi.Int(10000),
+ * 							ScopeDownStatement: &wafv2.WebAclRuleStatementRateBasedStatementScopeDownStatementArgs{
+ * 								GeoMatchStatement: &wafv2.WebAclRuleStatementRateBasedStatementScopeDownStatementGeoMatchStatementArgs{
+ * 									CountryCodes: pulumi.StringArray{
+ * 										pulumi.String("US"),
+ * 										pulumi.String("NL"),
+ * 									},
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					VisibilityConfig: &wafv2.WebAclRuleVisibilityConfigArgs{
+ * 						CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 						MetricName:               pulumi.String("friendly-rule-metric-name"),
+ * 						SampledRequestsEnabled:   pulumi.Bool(false),
+ * 					},
+ * 				},
+ * 			},
+ * 			Scope: pulumi.String("CLOUDFRONT"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 			VisibilityConfig: &wafv2.WebAclVisibilityConfigArgs{
+ * 				CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 				MetricName:               pulumi.String("friendly-metric-name"),
+ * 				SampledRequestsEnabled:   pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Rule Group Reference
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.wafv2.RuleGroup("example", {
+ *     capacity: 10,
+ *     scope: "REGIONAL",
+ *     rules: [
+ *         {
+ *             name: "rule-1",
+ *             priority: 1,
+ *             action: {
+ *                 count: {},
+ *             },
+ *             statement: {
+ *                 geoMatchStatement: {
+ *                     countryCodes: ["NL"],
+ *                 },
+ *             },
+ *             visibilityConfig: {
+ *                 cloudwatchMetricsEnabled: false,
+ *                 metricName: "friendly-rule-metric-name",
+ *                 sampledRequestsEnabled: false,
+ *             },
+ *         },
+ *         {
+ *             name: "rule-to-exclude-a",
+ *             priority: 10,
+ *             action: {
+ *                 allow: {},
+ *             },
+ *             statement: {
+ *                 geoMatchStatement: {
+ *                     countryCodes: ["US"],
+ *                 },
+ *             },
+ *             visibilityConfig: {
+ *                 cloudwatchMetricsEnabled: false,
+ *                 metricName: "friendly-rule-metric-name",
+ *                 sampledRequestsEnabled: false,
+ *             },
+ *         },
+ *         {
+ *             name: "rule-to-exclude-b",
+ *             priority: 15,
+ *             action: {
+ *                 allow: {},
+ *             },
+ *             statement: {
+ *                 geoMatchStatement: {
+ *                     countryCodes: ["GB"],
+ *                 },
+ *             },
+ *             visibilityConfig: {
+ *                 cloudwatchMetricsEnabled: false,
+ *                 metricName: "friendly-rule-metric-name",
+ *                 sampledRequestsEnabled: false,
+ *             },
+ *         },
+ *     ],
+ *     visibilityConfig: {
+ *         cloudwatchMetricsEnabled: false,
+ *         metricName: "friendly-metric-name",
+ *         sampledRequestsEnabled: false,
+ *     },
+ * });
+ * const test = new aws.wafv2.WebAcl("test", {
+ *     scope: "REGIONAL",
+ *     defaultAction: {
+ *         block: {},
+ *     },
+ *     rules: [{
+ *         name: "rule-1",
+ *         priority: 1,
+ *         overrideAction: {
+ *             count: {},
+ *         },
+ *         statement: {
+ *             ruleGroupReferenceStatement: {
+ *                 arn: example.arn,
+ *                 excludedRules: [
+ *                     {
+ *                         name: "rule-to-exclude-b",
+ *                     },
+ *                     {
+ *                         name: "rule-to-exclude-a",
+ *                     },
+ *                 ],
+ *             },
+ *         },
+ *         visibilityConfig: {
+ *             cloudwatchMetricsEnabled: false,
+ *             metricName: "friendly-rule-metric-name",
+ *             sampledRequestsEnabled: false,
+ *         },
+ *     }],
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ *     visibilityConfig: {
+ *         cloudwatchMetricsEnabled: false,
+ *         metricName: "friendly-metric-name",
+ *         sampledRequestsEnabled: false,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.wafv2.RuleGroup("example",
+ *     capacity=10,
+ *     scope="REGIONAL",
+ *     rules=[
+ *         aws.wafv2.RuleGroupRuleArgs(
+ *             name="rule-1",
+ *             priority=1,
+ *             action=aws.wafv2.RuleGroupRuleActionArgs(
+ *                 count=aws.wafv2.RuleGroupRuleActionCountArgs(),
+ *             ),
+ *             statement=aws.wafv2.RuleGroupRuleStatementArgs(
+ *                 geo_match_statement=aws.wafv2.RuleGroupRuleStatementGeoMatchStatementArgs(
+ *                     country_codes=["NL"],
+ *                 ),
+ *             ),
+ *             visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+ *                 cloudwatch_metrics_enabled=False,
+ *                 metric_name="friendly-rule-metric-name",
+ *                 sampled_requests_enabled=False,
+ *             ),
+ *         ),
+ *         aws.wafv2.RuleGroupRuleArgs(
+ *             name="rule-to-exclude-a",
+ *             priority=10,
+ *             action=aws.wafv2.RuleGroupRuleActionArgs(
+ *                 allow=aws.wafv2.RuleGroupRuleActionAllowArgs(),
+ *             ),
+ *             statement=aws.wafv2.RuleGroupRuleStatementArgs(
+ *                 geo_match_statement=aws.wafv2.RuleGroupRuleStatementGeoMatchStatementArgs(
+ *                     country_codes=["US"],
+ *                 ),
+ *             ),
+ *             visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+ *                 cloudwatch_metrics_enabled=False,
+ *                 metric_name="friendly-rule-metric-name",
+ *                 sampled_requests_enabled=False,
+ *             ),
+ *         ),
+ *         aws.wafv2.RuleGroupRuleArgs(
+ *             name="rule-to-exclude-b",
+ *             priority=15,
+ *             action=aws.wafv2.RuleGroupRuleActionArgs(
+ *                 allow=aws.wafv2.RuleGroupRuleActionAllowArgs(),
+ *             ),
+ *             statement=aws.wafv2.RuleGroupRuleStatementArgs(
+ *                 geo_match_statement=aws.wafv2.RuleGroupRuleStatementGeoMatchStatementArgs(
+ *                     country_codes=["GB"],
+ *                 ),
+ *             ),
+ *             visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+ *                 cloudwatch_metrics_enabled=False,
+ *                 metric_name="friendly-rule-metric-name",
+ *                 sampled_requests_enabled=False,
+ *             ),
+ *         ),
+ *     ],
+ *     visibility_config=aws.wafv2.RuleGroupVisibilityConfigArgs(
+ *         cloudwatch_metrics_enabled=False,
+ *         metric_name="friendly-metric-name",
+ *         sampled_requests_enabled=False,
+ *     ))
+ * test = aws.wafv2.WebAcl("test",
+ *     scope="REGIONAL",
+ *     default_action=aws.wafv2.WebAclDefaultActionArgs(
+ *         block=aws.wafv2.WebAclDefaultActionBlockArgs(),
+ *     ),
+ *     rules=[aws.wafv2.WebAclRuleArgs(
+ *         name="rule-1",
+ *         priority=1,
+ *         override_action=aws.wafv2.WebAclRuleOverrideActionArgs(
+ *             count=aws.wafv2.WebAclRuleOverrideActionCountArgs(),
+ *         ),
+ *         statement=aws.wafv2.WebAclRuleStatementArgs(
+ *             rule_group_reference_statement=aws.wafv2.WebAclRuleStatementRuleGroupReferenceStatementArgs(
+ *                 arn=example.arn,
+ *                 excluded_rules=[
+ *                     aws.wafv2.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs(
+ *                         name="rule-to-exclude-b",
+ *                     ),
+ *                     aws.wafv2.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs(
+ *                         name="rule-to-exclude-a",
+ *                     ),
+ *                 ],
+ *             ),
+ *         ),
+ *         visibility_config=aws.wafv2.WebAclRuleVisibilityConfigArgs(
+ *             cloudwatch_metrics_enabled=False,
+ *             metric_name="friendly-rule-metric-name",
+ *             sampled_requests_enabled=False,
+ *         ),
+ *     )],
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     },
+ *     visibility_config=aws.wafv2.WebAclVisibilityConfigArgs(
+ *         cloudwatch_metrics_enabled=False,
+ *         metric_name="friendly-metric-name",
+ *         sampled_requests_enabled=False,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.WafV2.RuleGroup("example", new Aws.WafV2.RuleGroupArgs
+ *         {
+ *             Capacity = 10,
+ *             Scope = "REGIONAL",
+ *             Rules = 
+ *             {
+ *                 new Aws.WafV2.Inputs.RuleGroupRuleArgs
+ *                 {
+ *                     Name = "rule-1",
+ *                     Priority = 1,
+ *                     Action = new Aws.WafV2.Inputs.RuleGroupRuleActionArgs
+ *                     {
+ *                         Count = ,
+ *                     },
+ *                     Statement = new Aws.WafV2.Inputs.RuleGroupRuleStatementArgs
+ *                     {
+ *                         GeoMatchStatement = new Aws.WafV2.Inputs.RuleGroupRuleStatementGeoMatchStatementArgs
+ *                         {
+ *                             CountryCodes = 
+ *                             {
+ *                                 "NL",
+ *                             },
+ *                         },
+ *                     },
+ *                     VisibilityConfig = new Aws.WafV2.Inputs.RuleGroupRuleVisibilityConfigArgs
+ *                     {
+ *                         CloudwatchMetricsEnabled = false,
+ *                         MetricName = "friendly-rule-metric-name",
+ *                         SampledRequestsEnabled = false,
+ *                     },
+ *                 },
+ *                 new Aws.WafV2.Inputs.RuleGroupRuleArgs
+ *                 {
+ *                     Name = "rule-to-exclude-a",
+ *                     Priority = 10,
+ *                     Action = new Aws.WafV2.Inputs.RuleGroupRuleActionArgs
+ *                     {
+ *                         Allow = ,
+ *                     },
+ *                     Statement = new Aws.WafV2.Inputs.RuleGroupRuleStatementArgs
+ *                     {
+ *                         GeoMatchStatement = new Aws.WafV2.Inputs.RuleGroupRuleStatementGeoMatchStatementArgs
+ *                         {
+ *                             CountryCodes = 
+ *                             {
+ *                                 "US",
+ *                             },
+ *                         },
+ *                     },
+ *                     VisibilityConfig = new Aws.WafV2.Inputs.RuleGroupRuleVisibilityConfigArgs
+ *                     {
+ *                         CloudwatchMetricsEnabled = false,
+ *                         MetricName = "friendly-rule-metric-name",
+ *                         SampledRequestsEnabled = false,
+ *                     },
+ *                 },
+ *                 new Aws.WafV2.Inputs.RuleGroupRuleArgs
+ *                 {
+ *                     Name = "rule-to-exclude-b",
+ *                     Priority = 15,
+ *                     Action = new Aws.WafV2.Inputs.RuleGroupRuleActionArgs
+ *                     {
+ *                         Allow = ,
+ *                     },
+ *                     Statement = new Aws.WafV2.Inputs.RuleGroupRuleStatementArgs
+ *                     {
+ *                         GeoMatchStatement = new Aws.WafV2.Inputs.RuleGroupRuleStatementGeoMatchStatementArgs
+ *                         {
+ *                             CountryCodes = 
+ *                             {
+ *                                 "GB",
+ *                             },
+ *                         },
+ *                     },
+ *                     VisibilityConfig = new Aws.WafV2.Inputs.RuleGroupRuleVisibilityConfigArgs
+ *                     {
+ *                         CloudwatchMetricsEnabled = false,
+ *                         MetricName = "friendly-rule-metric-name",
+ *                         SampledRequestsEnabled = false,
+ *                     },
+ *                 },
+ *             },
+ *             VisibilityConfig = new Aws.WafV2.Inputs.RuleGroupVisibilityConfigArgs
+ *             {
+ *                 CloudwatchMetricsEnabled = false,
+ *                 MetricName = "friendly-metric-name",
+ *                 SampledRequestsEnabled = false,
+ *             },
+ *         });
+ *         var test = new Aws.WafV2.WebAcl("test", new Aws.WafV2.WebAclArgs
+ *         {
+ *             Scope = "REGIONAL",
+ *             DefaultAction = new Aws.WafV2.Inputs.WebAclDefaultActionArgs
+ *             {
+ *                 Block = ,
+ *             },
+ *             Rules = 
+ *             {
+ *                 new Aws.WafV2.Inputs.WebAclRuleArgs
+ *                 {
+ *                     Name = "rule-1",
+ *                     Priority = 1,
+ *                     OverrideAction = new Aws.WafV2.Inputs.WebAclRuleOverrideActionArgs
+ *                     {
+ *                         Count = ,
+ *                     },
+ *                     Statement = new Aws.WafV2.Inputs.WebAclRuleStatementArgs
+ *                     {
+ *                         RuleGroupReferenceStatement = new Aws.WafV2.Inputs.WebAclRuleStatementRuleGroupReferenceStatementArgs
+ *                         {
+ *                             Arn = example.Arn,
+ *                             ExcludedRules = 
+ *                             {
+ *                                 new Aws.WafV2.Inputs.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs
+ *                                 {
+ *                                     Name = "rule-to-exclude-b",
+ *                                 },
+ *                                 new Aws.WafV2.Inputs.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs
+ *                                 {
+ *                                     Name = "rule-to-exclude-a",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                     VisibilityConfig = new Aws.WafV2.Inputs.WebAclRuleVisibilityConfigArgs
+ *                     {
+ *                         CloudwatchMetricsEnabled = false,
+ *                         MetricName = "friendly-rule-metric-name",
+ *                         SampledRequestsEnabled = false,
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *             VisibilityConfig = new Aws.WafV2.Inputs.WebAclVisibilityConfigArgs
+ *             {
+ *                 CloudwatchMetricsEnabled = false,
+ *                 MetricName = "friendly-metric-name",
+ *                 SampledRequestsEnabled = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := wafv2.NewRuleGroup(ctx, "example", &wafv2.RuleGroupArgs{
+ * 			Capacity: pulumi.Int(10),
+ * 			Scope:    pulumi.String("REGIONAL"),
+ * 			Rules: wafv2.RuleGroupRuleArray{
+ * 				&wafv2.RuleGroupRuleArgs{
+ * 					Name:     pulumi.String("rule-1"),
+ * 					Priority: pulumi.Int(1),
+ * 					Action: &wafv2.RuleGroupRuleActionArgs{
+ * 						Count: nil,
+ * 					},
+ * 					Statement: &wafv2.RuleGroupRuleStatementArgs{
+ * 						GeoMatchStatement: &wafv2.RuleGroupRuleStatementGeoMatchStatementArgs{
+ * 							CountryCodes: pulumi.StringArray{
+ * 								pulumi.String("NL"),
+ * 							},
+ * 						},
+ * 					},
+ * 					VisibilityConfig: &wafv2.RuleGroupRuleVisibilityConfigArgs{
+ * 						CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 						MetricName:               pulumi.String("friendly-rule-metric-name"),
+ * 						SampledRequestsEnabled:   pulumi.Bool(false),
+ * 					},
+ * 				},
+ * 				&wafv2.RuleGroupRuleArgs{
+ * 					Name:     pulumi.String("rule-to-exclude-a"),
+ * 					Priority: pulumi.Int(10),
+ * 					Action: &wafv2.RuleGroupRuleActionArgs{
+ * 						Allow: nil,
+ * 					},
+ * 					Statement: &wafv2.RuleGroupRuleStatementArgs{
+ * 						GeoMatchStatement: &wafv2.RuleGroupRuleStatementGeoMatchStatementArgs{
+ * 							CountryCodes: pulumi.StringArray{
+ * 								pulumi.String("US"),
+ * 							},
+ * 						},
+ * 					},
+ * 					VisibilityConfig: &wafv2.RuleGroupRuleVisibilityConfigArgs{
+ * 						CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 						MetricName:               pulumi.String("friendly-rule-metric-name"),
+ * 						SampledRequestsEnabled:   pulumi.Bool(false),
+ * 					},
+ * 				},
+ * 				&wafv2.RuleGroupRuleArgs{
+ * 					Name:     pulumi.String("rule-to-exclude-b"),
+ * 					Priority: pulumi.Int(15),
+ * 					Action: &wafv2.RuleGroupRuleActionArgs{
+ * 						Allow: nil,
+ * 					},
+ * 					Statement: &wafv2.RuleGroupRuleStatementArgs{
+ * 						GeoMatchStatement: &wafv2.RuleGroupRuleStatementGeoMatchStatementArgs{
+ * 							CountryCodes: pulumi.StringArray{
+ * 								pulumi.String("GB"),
+ * 							},
+ * 						},
+ * 					},
+ * 					VisibilityConfig: &wafv2.RuleGroupRuleVisibilityConfigArgs{
+ * 						CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 						MetricName:               pulumi.String("friendly-rule-metric-name"),
+ * 						SampledRequestsEnabled:   pulumi.Bool(false),
+ * 					},
+ * 				},
+ * 			},
+ * 			VisibilityConfig: &wafv2.RuleGroupVisibilityConfigArgs{
+ * 				CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 				MetricName:               pulumi.String("friendly-metric-name"),
+ * 				SampledRequestsEnabled:   pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = wafv2.NewWebAcl(ctx, "test", &wafv2.WebAclArgs{
+ * 			Scope: pulumi.String("REGIONAL"),
+ * 			DefaultAction: &wafv2.WebAclDefaultActionArgs{
+ * 				Block: nil,
+ * 			},
+ * 			Rules: wafv2.WebAclRuleArray{
+ * 				&wafv2.WebAclRuleArgs{
+ * 					Name:     pulumi.String("rule-1"),
+ * 					Priority: pulumi.Int(1),
+ * 					OverrideAction: &wafv2.WebAclRuleOverrideActionArgs{
+ * 						Count: nil,
+ * 					},
+ * 					Statement: &wafv2.WebAclRuleStatementArgs{
+ * 						RuleGroupReferenceStatement: &wafv2.WebAclRuleStatementRuleGroupReferenceStatementArgs{
+ * 							Arn: example.Arn,
+ * 							ExcludedRules: wafv2.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArray{
+ * 								&wafv2.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs{
+ * 									Name: pulumi.String("rule-to-exclude-b"),
+ * 								},
+ * 								&wafv2.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs{
+ * 									Name: pulumi.String("rule-to-exclude-a"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 					VisibilityConfig: &wafv2.WebAclRuleVisibilityConfigArgs{
+ * 						CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 						MetricName:               pulumi.String("friendly-rule-metric-name"),
+ * 						SampledRequestsEnabled:   pulumi.Bool(false),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 			VisibilityConfig: &wafv2.WebAclVisibilityConfigArgs{
+ * 				CloudwatchMetricsEnabled: pulumi.Bool(false),
+ * 				MetricName:               pulumi.String("friendly-metric-name"),
+ * 				SampledRequestsEnabled:   pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +1029,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:wafv2/webAcl:WebAcl example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc/example/REGIONAL
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:wafv2/webAcl:WebAcl")
 public class WebAcl extends io.pulumi.resources.CustomResource {

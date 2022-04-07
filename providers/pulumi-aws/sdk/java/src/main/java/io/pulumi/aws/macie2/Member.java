@@ -17,7 +17,99 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [Amazon Macie Member](https://docs.aws.amazon.com/macie/latest/APIReference/members-id.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.macie2.Account("exampleAccount", {});
+ * const exampleMember = new aws.macie2.Member("exampleMember", {
+ *     accountId: "AWS ACCOUNT ID",
+ *     email: "EMAIL",
+ *     invite: true,
+ *     invitationMessage: "Message of the invitation",
+ *     invitationDisableEmailNotification: true,
+ * }, {
+ *     dependsOn: [exampleAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.macie2.Account("exampleAccount")
+ * example_member = aws.macie2.Member("exampleMember",
+ *     account_id="AWS ACCOUNT ID",
+ *     email="EMAIL",
+ *     invite=True,
+ *     invitation_message="Message of the invitation",
+ *     invitation_disable_email_notification="true",
+ *     opts=pulumi.ResourceOptions(depends_on=[example_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.Macie2.Account("exampleAccount", new Aws.Macie2.AccountArgs
+ *         {
+ *         });
+ *         var exampleMember = new Aws.Macie2.Member("exampleMember", new Aws.Macie2.MemberArgs
+ *         {
+ *             AccountId = "AWS ACCOUNT ID",
+ *             Email = "EMAIL",
+ *             Invite = true,
+ *             InvitationMessage = "Message of the invitation",
+ *             InvitationDisableEmailNotification = "true",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleAccount, err := macie2.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = macie2.NewMember(ctx, "exampleMember", &macie2.MemberArgs{
+ * 			AccountId:                          pulumi.String("AWS ACCOUNT ID"),
+ * 			Email:                              pulumi.String("EMAIL"),
+ * 			Invite:                             pulumi.Bool(true),
+ * 			InvitationMessage:                  pulumi.String("Message of the invitation"),
+ * 			InvitationDisableEmailNotification: pulumi.String("true"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +119,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:macie2/member:Member example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:macie2/member:Member")
 public class Member extends io.pulumi.resources.CustomResource {

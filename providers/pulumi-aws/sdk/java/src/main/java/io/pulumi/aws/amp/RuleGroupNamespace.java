@@ -15,7 +15,93 @@ import javax.annotation.Nullable;
 /**
  * Manages an Amazon Managed Service for Prometheus (AMP) Rule Group Namespace
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const demoWorkspace = new aws.amp.Workspace("demoWorkspace", {});
+ * const demoRuleGroupNamespace = new aws.amp.RuleGroupNamespace("demoRuleGroupNamespace", {
+ *     workspaceId: demoWorkspace.id,
+ *     data: `groups:
+ *   - name: test
+ *     rules:
+ *     - record: metric:recording_rule
+ *       expr: avg(rate(container_cpu_usage_seconds_total[5m]))
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * demo_workspace = aws.amp.Workspace("demoWorkspace")
+ * demo_rule_group_namespace = aws.amp.RuleGroupNamespace("demoRuleGroupNamespace",
+ *     workspace_id=demo_workspace.id,
+ *     data="""groups:
+ *   - name: test
+ *     rules:
+ *     - record: metric:recording_rule
+ *       expr: avg(rate(container_cpu_usage_seconds_total[5m]))
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var demoWorkspace = new Aws.Amp.Workspace("demoWorkspace", new Aws.Amp.WorkspaceArgs
+ *         {
+ *         });
+ *         var demoRuleGroupNamespace = new Aws.Amp.RuleGroupNamespace("demoRuleGroupNamespace", new Aws.Amp.RuleGroupNamespaceArgs
+ *         {
+ *             WorkspaceId = demoWorkspace.Id,
+ *             Data = @"groups:
+ *   - name: test
+ *     rules:
+ *     - record: metric:recording_rule
+ *       expr: avg(rate(container_cpu_usage_seconds_total[5m]))
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/amp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		demoWorkspace, err := amp.NewWorkspace(ctx, "demoWorkspace", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = amp.NewRuleGroupNamespace(ctx, "demoRuleGroupNamespace", &amp.RuleGroupNamespaceArgs{
+ * 			WorkspaceId: demoWorkspace.ID(),
+ * 			Data:        pulumi.String(fmt.Sprintf("%v%v%v%v%v", "groups:\n", "  - name: test\n", "    rules:\n", "    - record: metric:recording_rule\n", "      expr: avg(rate(container_cpu_usage_seconds_total[5m]))\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +111,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:amp/ruleGroupNamespace:RuleGroupNamespace demo arn:aws:aps:us-west-2:123456789012:rulegroupsnamespace/IDstring/namespace_name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:amp/ruleGroupNamespace:RuleGroupNamespace")
 public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {

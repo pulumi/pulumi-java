@@ -15,7 +15,62 @@ import javax.annotation.Nullable;
 /**
  * Provides a Direct Connect Gateway.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.directconnect.Gateway("example", {
+ *     amazonSideAsn: "64512",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.directconnect.Gateway("example", amazon_side_asn="64512")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DirectConnect.Gateway("example", new Aws.DirectConnect.GatewayArgs
+ *         {
+ *             AmazonSideAsn = "64512",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewGateway(ctx, "example", &directconnect.GatewayArgs{
+ * 			AmazonSideAsn: pulumi.String("64512"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +80,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/gateway:Gateway test abcd1234-dcba-5678-be23-cdef9876ab45
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/gateway:Gateway")
 public class Gateway extends io.pulumi.resources.CustomResource {

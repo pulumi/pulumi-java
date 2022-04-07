@@ -18,7 +18,89 @@ import javax.annotation.Nullable;
 /**
  * Manages a Neptune Cluster Parameter Group
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.neptune.ClusterParameterGroup("example", {
+ *     description: "neptune cluster parameter group",
+ *     family: "neptune1",
+ *     parameters: [{
+ *         name: "neptune_enable_audit_log",
+ *         value: "1",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.neptune.ClusterParameterGroup("example",
+ *     description="neptune cluster parameter group",
+ *     family="neptune1",
+ *     parameters=[aws.neptune.ClusterParameterGroupParameterArgs(
+ *         name="neptune_enable_audit_log",
+ *         value="1",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Neptune.ClusterParameterGroup("example", new Aws.Neptune.ClusterParameterGroupArgs
+ *         {
+ *             Description = "neptune cluster parameter group",
+ *             Family = "neptune1",
+ *             Parameters = 
+ *             {
+ *                 new Aws.Neptune.Inputs.ClusterParameterGroupParameterArgs
+ *                 {
+ *                     Name = "neptune_enable_audit_log",
+ *                     Value = "1",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/neptune"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := neptune.NewClusterParameterGroup(ctx, "example", &neptune.ClusterParameterGroupArgs{
+ * 			Description: pulumi.String("neptune cluster parameter group"),
+ * 			Family:      pulumi.String("neptune1"),
+ * 			Parameters: neptune.ClusterParameterGroupParameterArray{
+ * 				&neptune.ClusterParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("neptune_enable_audit_log"),
+ * 					Value: pulumi.String("1"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +110,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:neptune/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:neptune/clusterParameterGroup:ClusterParameterGroup")
 public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {

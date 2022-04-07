@@ -19,7 +19,80 @@ import javax.annotation.Nullable;
 /**
  * Manages an Image Builder Image Pipeline.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.imagebuilder.ImagePipeline("example", {
+ *     imageRecipeArn: aws_imagebuilder_image_recipe.example.arn,
+ *     infrastructureConfigurationArn: aws_imagebuilder_infrastructure_configuration.example.arn,
+ *     schedule: {
+ *         scheduleExpression: "cron(0 0 * * ? *)",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.imagebuilder.ImagePipeline("example",
+ *     image_recipe_arn=aws_imagebuilder_image_recipe["example"]["arn"],
+ *     infrastructure_configuration_arn=aws_imagebuilder_infrastructure_configuration["example"]["arn"],
+ *     schedule=aws.imagebuilder.ImagePipelineScheduleArgs(
+ *         schedule_expression="cron(0 0 * * ? *)",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ImageBuilder.ImagePipeline("example", new Aws.ImageBuilder.ImagePipelineArgs
+ *         {
+ *             ImageRecipeArn = aws_imagebuilder_image_recipe.Example.Arn,
+ *             InfrastructureConfigurationArn = aws_imagebuilder_infrastructure_configuration.Example.Arn,
+ *             Schedule = new Aws.ImageBuilder.Inputs.ImagePipelineScheduleArgs
+ *             {
+ *                 ScheduleExpression = "cron(0 0 * * ? *)",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewImagePipeline(ctx, "example", &imagebuilder.ImagePipelineArgs{
+ * 			ImageRecipeArn:                 pulumi.Any(aws_imagebuilder_image_recipe.Example.Arn),
+ * 			InfrastructureConfigurationArn: pulumi.Any(aws_imagebuilder_infrastructure_configuration.Example.Arn),
+ * 			Schedule: &imagebuilder.ImagePipelineScheduleArgs{
+ * 				ScheduleExpression: pulumi.String("cron(0 0 * * ? *)"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +102,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:imagebuilder/imagePipeline:ImagePipeline example arn:aws:imagebuilder:us-east-1:123456789012:image-pipeline/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:imagebuilder/imagePipeline:ImagePipeline")
 public class ImagePipeline extends io.pulumi.resources.CustomResource {

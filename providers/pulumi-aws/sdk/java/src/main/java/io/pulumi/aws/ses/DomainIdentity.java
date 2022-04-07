@@ -15,7 +15,97 @@ import javax.annotation.Nullable;
 /**
  * Provides an SES domain identity resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ses.DomainIdentity("example", {domain: "example.com"});
+ * const exampleAmazonsesVerificationRecord = new aws.route53.Record("exampleAmazonsesVerificationRecord", {
+ *     zoneId: "ABCDEFGHIJ123",
+ *     name: "_amazonses.example.com",
+ *     type: "TXT",
+ *     ttl: "600",
+ *     records: [example.verificationToken],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ses.DomainIdentity("example", domain="example.com")
+ * example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVerificationRecord",
+ *     zone_id="ABCDEFGHIJ123",
+ *     name="_amazonses.example.com",
+ *     type="TXT",
+ *     ttl=600,
+ *     records=[example.verification_token])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ses.DomainIdentity("example", new Aws.Ses.DomainIdentityArgs
+ *         {
+ *             Domain = "example.com",
+ *         });
+ *         var exampleAmazonsesVerificationRecord = new Aws.Route53.Record("exampleAmazonsesVerificationRecord", new Aws.Route53.RecordArgs
+ *         {
+ *             ZoneId = "ABCDEFGHIJ123",
+ *             Name = "_amazonses.example.com",
+ *             Type = "TXT",
+ *             Ttl = 600,
+ *             Records = 
+ *             {
+ *                 example.VerificationToken,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := ses.NewDomainIdentity(ctx, "example", &ses.DomainIdentityArgs{
+ * 			Domain: pulumi.String("example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewRecord(ctx, "exampleAmazonsesVerificationRecord", &route53.RecordArgs{
+ * 			ZoneId: pulumi.String("ABCDEFGHIJ123"),
+ * 			Name:   pulumi.String("_amazonses.example.com"),
+ * 			Type:   pulumi.String("TXT"),
+ * 			Ttl:    pulumi.Int(600),
+ * 			Records: pulumi.StringArray{
+ * 				example.VerificationToken,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +115,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/domainIdentity:DomainIdentity example example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/domainIdentity:DomainIdentity")
 public class DomainIdentity extends io.pulumi.resources.CustomResource {

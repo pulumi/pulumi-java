@@ -16,8 +16,158 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * The following example below creates a CloudFront origin request policy.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudfront.OriginRequestPolicy("example", {
+ *     comment: "example comment",
+ *     cookiesConfig: {
+ *         cookieBehavior: "whitelist",
+ *         cookies: {
+ *             items: ["example"],
+ *         },
+ *     },
+ *     headersConfig: {
+ *         headerBehavior: "whitelist",
+ *         headers: {
+ *             items: ["example"],
+ *         },
+ *     },
+ *     queryStringsConfig: {
+ *         queryStringBehavior: "whitelist",
+ *         queryStrings: {
+ *             items: ["example"],
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudfront.OriginRequestPolicy("example",
+ *     comment="example comment",
+ *     cookies_config=aws.cloudfront.OriginRequestPolicyCookiesConfigArgs(
+ *         cookie_behavior="whitelist",
+ *         cookies=aws.cloudfront.OriginRequestPolicyCookiesConfigCookiesArgs(
+ *             items=["example"],
+ *         ),
+ *     ),
+ *     headers_config=aws.cloudfront.OriginRequestPolicyHeadersConfigArgs(
+ *         header_behavior="whitelist",
+ *         headers=aws.cloudfront.OriginRequestPolicyHeadersConfigHeadersArgs(
+ *             items=["example"],
+ *         ),
+ *     ),
+ *     query_strings_config=aws.cloudfront.OriginRequestPolicyQueryStringsConfigArgs(
+ *         query_string_behavior="whitelist",
+ *         query_strings=aws.cloudfront.OriginRequestPolicyQueryStringsConfigQueryStringsArgs(
+ *             items=["example"],
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudFront.OriginRequestPolicy("example", new Aws.CloudFront.OriginRequestPolicyArgs
+ *         {
+ *             Comment = "example comment",
+ *             CookiesConfig = new Aws.CloudFront.Inputs.OriginRequestPolicyCookiesConfigArgs
+ *             {
+ *                 CookieBehavior = "whitelist",
+ *                 Cookies = new Aws.CloudFront.Inputs.OriginRequestPolicyCookiesConfigCookiesArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         "example",
+ *                     },
+ *                 },
+ *             },
+ *             HeadersConfig = new Aws.CloudFront.Inputs.OriginRequestPolicyHeadersConfigArgs
+ *             {
+ *                 HeaderBehavior = "whitelist",
+ *                 Headers = new Aws.CloudFront.Inputs.OriginRequestPolicyHeadersConfigHeadersArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         "example",
+ *                     },
+ *                 },
+ *             },
+ *             QueryStringsConfig = new Aws.CloudFront.Inputs.OriginRequestPolicyQueryStringsConfigArgs
+ *             {
+ *                 QueryStringBehavior = "whitelist",
+ *                 QueryStrings = new Aws.CloudFront.Inputs.OriginRequestPolicyQueryStringsConfigQueryStringsArgs
+ *                 {
+ *                     Items = 
+ *                     {
+ *                         "example",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewOriginRequestPolicy(ctx, "example", &cloudfront.OriginRequestPolicyArgs{
+ * 			Comment: pulumi.String("example comment"),
+ * 			CookiesConfig: &cloudfront.OriginRequestPolicyCookiesConfigArgs{
+ * 				CookieBehavior: pulumi.String("whitelist"),
+ * 				Cookies: &cloudfront.OriginRequestPolicyCookiesConfigCookiesArgs{
+ * 					Items: pulumi.StringArray{
+ * 						pulumi.String("example"),
+ * 					},
+ * 				},
+ * 			},
+ * 			HeadersConfig: &cloudfront.OriginRequestPolicyHeadersConfigArgs{
+ * 				HeaderBehavior: pulumi.String("whitelist"),
+ * 				Headers: &cloudfront.OriginRequestPolicyHeadersConfigHeadersArgs{
+ * 					Items: pulumi.StringArray{
+ * 						pulumi.String("example"),
+ * 					},
+ * 				},
+ * 			},
+ * 			QueryStringsConfig: &cloudfront.OriginRequestPolicyQueryStringsConfigArgs{
+ * 				QueryStringBehavior: pulumi.String("whitelist"),
+ * 				QueryStrings: &cloudfront.OriginRequestPolicyQueryStringsConfigQueryStringsArgs{
+ * 					Items: pulumi.StringArray{
+ * 						pulumi.String("example"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:cloudfront/originRequestPolicy:OriginRequestPolicy")
 public class OriginRequestPolicy extends io.pulumi.resources.CustomResource {

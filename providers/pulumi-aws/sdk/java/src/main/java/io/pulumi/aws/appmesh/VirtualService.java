@@ -17,7 +17,181 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS App Mesh virtual service resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Virtual Node Provider
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const servicea = new aws.appmesh.VirtualService("servicea", {
+ *     meshName: aws_appmesh_mesh.simple.id,
+ *     spec: {
+ *         provider: {
+ *             virtualNode: {
+ *                 virtualNodeName: aws_appmesh_virtual_node.serviceb1.name,
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * servicea = aws.appmesh.VirtualService("servicea",
+ *     mesh_name=aws_appmesh_mesh["simple"]["id"],
+ *     spec=aws.appmesh.VirtualServiceSpecArgs(
+ *         provider=aws.appmesh.VirtualServiceSpecProviderArgs(
+ *             virtual_node=aws.appmesh.VirtualServiceSpecProviderVirtualNodeArgs(
+ *                 virtual_node_name=aws_appmesh_virtual_node["serviceb1"]["name"],
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicea = new Aws.AppMesh.VirtualService("servicea", new Aws.AppMesh.VirtualServiceArgs
+ *         {
+ *             MeshName = aws_appmesh_mesh.Simple.Id,
+ *             Spec = new Aws.AppMesh.Inputs.VirtualServiceSpecArgs
+ *             {
+ *                 Provider = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderArgs
+ *                 {
+ *                     VirtualNode = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualNodeArgs
+ *                     {
+ *                         VirtualNodeName = aws_appmesh_virtual_node.Serviceb1.Name,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
+ * 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+ * 			Spec: &appmesh.VirtualServiceSpecArgs{
+ * 				Provider: &appmesh.VirtualServiceSpecProviderArgs{
+ * 					VirtualNode: &appmesh.VirtualServiceSpecProviderVirtualNodeArgs{
+ * 						VirtualNodeName: pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Virtual Router Provider
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const servicea = new aws.appmesh.VirtualService("servicea", {
+ *     meshName: aws_appmesh_mesh.simple.id,
+ *     spec: {
+ *         provider: {
+ *             virtualRouter: {
+ *                 virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * servicea = aws.appmesh.VirtualService("servicea",
+ *     mesh_name=aws_appmesh_mesh["simple"]["id"],
+ *     spec=aws.appmesh.VirtualServiceSpecArgs(
+ *         provider=aws.appmesh.VirtualServiceSpecProviderArgs(
+ *             virtual_router=aws.appmesh.VirtualServiceSpecProviderVirtualRouterArgs(
+ *                 virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+ *             ),
+ *         ),
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var servicea = new Aws.AppMesh.VirtualService("servicea", new Aws.AppMesh.VirtualServiceArgs
+ *         {
+ *             MeshName = aws_appmesh_mesh.Simple.Id,
+ *             Spec = new Aws.AppMesh.Inputs.VirtualServiceSpecArgs
+ *             {
+ *                 Provider = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderArgs
+ *                 {
+ *                     VirtualRouter = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualRouterArgs
+ *                     {
+ *                         VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
+ * 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+ * 			Spec: &appmesh.VirtualServiceSpecArgs{
+ * 				Provider: &appmesh.VirtualServiceSpecProviderArgs{
+ * 					VirtualRouter: &appmesh.VirtualServiceSpecProviderVirtualRouterArgs{
+ * 						VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,8 +201,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appmesh/virtualService:VirtualService servicea simpleapp/servicea.simpleapp.local
  * ```
  * 
- *  [1]/docs/providers/aws/index.html
- * 
+ *  [1]/docs/providers/aws/index.html 
  */
 @ResourceType(type="aws:appmesh/virtualService:VirtualService")
 public class VirtualService extends io.pulumi.resources.CustomResource {

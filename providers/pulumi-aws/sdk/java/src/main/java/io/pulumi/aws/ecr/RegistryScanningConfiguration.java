@@ -17,7 +17,238 @@ import javax.annotation.Nullable;
 /**
  * Provides an Elastic Container Registry Scanning Configuration. Can't be completely deleted, instead reverts to the default `BASIC` scanning configuration without rules.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic example
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const configuration = new aws.ecr.RegistryScanningConfiguration("configuration", {
+ *     rules: [{
+ *         repositoryFilters: [{
+ *             filter: "example",
+ *             filterType: "WILDCARD",
+ *         }],
+ *         scanFrequency: "CONTINUOUS_SCAN",
+ *     }],
+ *     scanType: "ENHANCED",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * configuration = aws.ecr.RegistryScanningConfiguration("configuration",
+ *     rules=[aws.ecr.RegistryScanningConfigurationRuleArgs(
+ *         repository_filters=[aws.ecr.RegistryScanningConfigurationRuleRepositoryFilterArgs(
+ *             filter="example",
+ *             filter_type="WILDCARD",
+ *         )],
+ *         scan_frequency="CONTINUOUS_SCAN",
+ *     )],
+ *     scan_type="ENHANCED")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var configuration = new Aws.Ecr.RegistryScanningConfiguration("configuration", new Aws.Ecr.RegistryScanningConfigurationArgs
+ *         {
+ *             Rules = 
+ *             {
+ *                 new Aws.Ecr.Inputs.RegistryScanningConfigurationRuleArgs
+ *                 {
+ *                     RepositoryFilters = 
+ *                     {
+ *                         new Aws.Ecr.Inputs.RegistryScanningConfigurationRuleRepositoryFilterArgs
+ *                         {
+ *                             Filter = "example",
+ *                             FilterType = "WILDCARD",
+ *                         },
+ *                     },
+ *                     ScanFrequency = "CONTINUOUS_SCAN",
+ *                 },
+ *             },
+ *             ScanType = "ENHANCED",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecr.NewRegistryScanningConfiguration(ctx, "configuration", &ecr.RegistryScanningConfigurationArgs{
+ * 			Rules: ecr.RegistryScanningConfigurationRuleArray{
+ * 				&ecr.RegistryScanningConfigurationRuleArgs{
+ * 					RepositoryFilters: ecr.RegistryScanningConfigurationRuleRepositoryFilterArray{
+ * 						&ecr.RegistryScanningConfigurationRuleRepositoryFilterArgs{
+ * 							Filter:     pulumi.String("example"),
+ * 							FilterType: pulumi.String("WILDCARD"),
+ * 						},
+ * 					},
+ * 					ScanFrequency: pulumi.String("CONTINUOUS_SCAN"),
+ * 				},
+ * 			},
+ * 			ScanType: pulumi.String("ENHANCED"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Multiple rules
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.ecr.RegistryScanningConfiguration("test", {
+ *     rules: [
+ *         {
+ *             repositoryFilters: [{
+ *                 filter: "*",
+ *                 filterType: "WILDCARD",
+ *             }],
+ *             scanFrequency: "SCAN_ON_PUSH",
+ *         },
+ *         {
+ *             repositoryFilters: [{
+ *                 filter: "example",
+ *                 filterType: "WILDCARD",
+ *             }],
+ *             scanFrequency: "CONTINUOUS_SCAN",
+ *         },
+ *     ],
+ *     scanType: "ENHANCED",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.ecr.RegistryScanningConfiguration("test",
+ *     rules=[
+ *         aws.ecr.RegistryScanningConfigurationRuleArgs(
+ *             repository_filters=[aws.ecr.RegistryScanningConfigurationRuleRepositoryFilterArgs(
+ *                 filter="*",
+ *                 filter_type="WILDCARD",
+ *             )],
+ *             scan_frequency="SCAN_ON_PUSH",
+ *         ),
+ *         aws.ecr.RegistryScanningConfigurationRuleArgs(
+ *             repository_filters=[aws.ecr.RegistryScanningConfigurationRuleRepositoryFilterArgs(
+ *                 filter="example",
+ *                 filter_type="WILDCARD",
+ *             )],
+ *             scan_frequency="CONTINUOUS_SCAN",
+ *         ),
+ *     ],
+ *     scan_type="ENHANCED")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Ecr.RegistryScanningConfiguration("test", new Aws.Ecr.RegistryScanningConfigurationArgs
+ *         {
+ *             Rules = 
+ *             {
+ *                 new Aws.Ecr.Inputs.RegistryScanningConfigurationRuleArgs
+ *                 {
+ *                     RepositoryFilters = 
+ *                     {
+ *                         new Aws.Ecr.Inputs.RegistryScanningConfigurationRuleRepositoryFilterArgs
+ *                         {
+ *                             Filter = "*",
+ *                             FilterType = "WILDCARD",
+ *                         },
+ *                     },
+ *                     ScanFrequency = "SCAN_ON_PUSH",
+ *                 },
+ *                 new Aws.Ecr.Inputs.RegistryScanningConfigurationRuleArgs
+ *                 {
+ *                     RepositoryFilters = 
+ *                     {
+ *                         new Aws.Ecr.Inputs.RegistryScanningConfigurationRuleRepositoryFilterArgs
+ *                         {
+ *                             Filter = "example",
+ *                             FilterType = "WILDCARD",
+ *                         },
+ *                     },
+ *                     ScanFrequency = "CONTINUOUS_SCAN",
+ *                 },
+ *             },
+ *             ScanType = "ENHANCED",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecr.NewRegistryScanningConfiguration(ctx, "test", &ecr.RegistryScanningConfigurationArgs{
+ * 			Rules: ecr.RegistryScanningConfigurationRuleArray{
+ * 				&ecr.RegistryScanningConfigurationRuleArgs{
+ * 					RepositoryFilters: ecr.RegistryScanningConfigurationRuleRepositoryFilterArray{
+ * 						&ecr.RegistryScanningConfigurationRuleRepositoryFilterArgs{
+ * 							Filter:     pulumi.String("*"),
+ * 							FilterType: pulumi.String("WILDCARD"),
+ * 						},
+ * 					},
+ * 					ScanFrequency: pulumi.String("SCAN_ON_PUSH"),
+ * 				},
+ * 				&ecr.RegistryScanningConfigurationRuleArgs{
+ * 					RepositoryFilters: ecr.RegistryScanningConfigurationRuleRepositoryFilterArray{
+ * 						&ecr.RegistryScanningConfigurationRuleRepositoryFilterArgs{
+ * 							Filter:     pulumi.String("example"),
+ * 							FilterType: pulumi.String("WILDCARD"),
+ * 						},
+ * 					},
+ * 					ScanFrequency: pulumi.String("CONTINUOUS_SCAN"),
+ * 				},
+ * 			},
+ * 			ScanType: pulumi.String("ENHANCED"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +258,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration aws_ecr_registry_scanning_configuration 012345678901
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration")
 public class RegistryScanningConfiguration extends io.pulumi.resources.CustomResource {

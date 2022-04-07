@@ -23,7 +23,199 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Using AWS Directory Service
+ * 
+ * Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/fsx-aws-managed-ad.html).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.fsx.WindowsFileSystem("example", {
+ *     activeDirectoryId: aws_directory_service_directory.example.id,
+ *     kmsKeyId: aws_kms_key.example.arn,
+ *     storageCapacity: 300,
+ *     subnetIds: [aws_subnet.example.id],
+ *     throughputCapacity: 1024,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.fsx.WindowsFileSystem("example",
+ *     active_directory_id=aws_directory_service_directory["example"]["id"],
+ *     kms_key_id=aws_kms_key["example"]["arn"],
+ *     storage_capacity=300,
+ *     subnet_ids=[aws_subnet["example"]["id"]],
+ *     throughput_capacity=1024)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Fsx.WindowsFileSystem("example", new Aws.Fsx.WindowsFileSystemArgs
+ *         {
+ *             ActiveDirectoryId = aws_directory_service_directory.Example.Id,
+ *             KmsKeyId = aws_kms_key.Example.Arn,
+ *             StorageCapacity = 300,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example.Id,
+ *             },
+ *             ThroughputCapacity = 1024,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewWindowsFileSystem(ctx, "example", &fsx.WindowsFileSystemArgs{
+ * 			ActiveDirectoryId: pulumi.Any(aws_directory_service_directory.Example.Id),
+ * 			KmsKeyId:          pulumi.Any(aws_kms_key.Example.Arn),
+ * 			StorageCapacity:   pulumi.Int(300),
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_subnet.Example.Id),
+ * 			},
+ * 			ThroughputCapacity: pulumi.Int(1024),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using a Self-Managed Microsoft Active Directory
+ * 
+ * Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.fsx.WindowsFileSystem("example", {
+ *     kmsKeyId: aws_kms_key.example.arn,
+ *     storageCapacity: 300,
+ *     subnetIds: [aws_subnet.example.id],
+ *     throughputCapacity: 1024,
+ *     selfManagedActiveDirectory: {
+ *         dnsIps: [
+ *             "10.0.0.111",
+ *             "10.0.0.222",
+ *         ],
+ *         domainName: "corp.example.com",
+ *         password: "avoid-plaintext-passwords",
+ *         username: "Admin",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.fsx.WindowsFileSystem("example",
+ *     kms_key_id=aws_kms_key["example"]["arn"],
+ *     storage_capacity=300,
+ *     subnet_ids=[aws_subnet["example"]["id"]],
+ *     throughput_capacity=1024,
+ *     self_managed_active_directory=aws.fsx.WindowsFileSystemSelfManagedActiveDirectoryArgs(
+ *         dns_ips=[
+ *             "10.0.0.111",
+ *             "10.0.0.222",
+ *         ],
+ *         domain_name="corp.example.com",
+ *         password="avoid-plaintext-passwords",
+ *         username="Admin",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Fsx.WindowsFileSystem("example", new Aws.Fsx.WindowsFileSystemArgs
+ *         {
+ *             KmsKeyId = aws_kms_key.Example.Arn,
+ *             StorageCapacity = 300,
+ *             SubnetIds = 
+ *             {
+ *                 aws_subnet.Example.Id,
+ *             },
+ *             ThroughputCapacity = 1024,
+ *             SelfManagedActiveDirectory = new Aws.Fsx.Inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs
+ *             {
+ *                 DnsIps = 
+ *                 {
+ *                     "10.0.0.111",
+ *                     "10.0.0.222",
+ *                 },
+ *                 DomainName = "corp.example.com",
+ *                 Password = "avoid-plaintext-passwords",
+ *                 Username = "Admin",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fsx.NewWindowsFileSystem(ctx, "example", &fsx.WindowsFileSystemArgs{
+ * 			KmsKeyId:        pulumi.Any(aws_kms_key.Example.Arn),
+ * 			StorageCapacity: pulumi.Int(300),
+ * 			SubnetIds: pulumi.StringArray{
+ * 				pulumi.Any(aws_subnet.Example.Id),
+ * 			},
+ * 			ThroughputCapacity: pulumi.Int(1024),
+ * 			SelfManagedActiveDirectory: &fsx.WindowsFileSystemSelfManagedActiveDirectoryArgs{
+ * 				DnsIps: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.111"),
+ * 					pulumi.String("10.0.0.222"),
+ * 				},
+ * 				DomainName: pulumi.String("corp.example.com"),
+ * 				Password:   pulumi.String("avoid-plaintext-passwords"),
+ * 				Username:   pulumi.String("Admin"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,18 +227,19 @@ import javax.annotation.Nullable;
  * 
  *  Certain resource arguments, like `security_group_ids` and the `self_managed_active_directory` configuation block `password`, do not have a FSx API method for reading the information after creation. If these arguments are set in the provider configuration on an imported resource, the povider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_fsx_windows_file_system" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
  *  security_group_ids = [aws_security_group.example.id]
  * 
- * # There is no FSx API for reading security_group_ids
+ *  # There is no FSx API for reading security_group_ids
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [security_group_ids]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:fsx/windowsFileSystem:WindowsFileSystem")
 public class WindowsFileSystem extends io.pulumi.resources.CustomResource {

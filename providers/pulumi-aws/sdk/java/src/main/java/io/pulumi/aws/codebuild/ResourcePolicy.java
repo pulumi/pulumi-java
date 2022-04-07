@@ -15,7 +15,209 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeBuild Resource Policy Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleReportGroup = new aws.codebuild.ReportGroup("exampleReportGroup", {
+ *     type: "TEST",
+ *     exportConfig: {
+ *         type: "NO_EXPORT",
+ *     },
+ * });
+ * const currentPartition = aws.getPartition({});
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const exampleResourcePolicy = new aws.codebuild.ResourcePolicy("exampleResourcePolicy", {
+ *     resourceArn: exampleReportGroup.arn,
+ *     policy: pulumi.all([currentPartition, currentCallerIdentity, exampleReportGroup.arn]).apply(([currentPartition, currentCallerIdentity, arn]) => JSON.stringify({
+ *         Version: "2012-10-17",
+ *         Id: "default",
+ *         Statement: [{
+ *             Sid: "default",
+ *             Effect: "Allow",
+ *             Principal: {
+ *                 AWS: `arn:${currentPartition.partition}:iam::${currentCallerIdentity.accountId}:root`,
+ *             },
+ *             Action: [
+ *                 "codebuild:BatchGetReportGroups",
+ *                 "codebuild:BatchGetReports",
+ *                 "codebuild:ListReportsForReportGroup",
+ *                 "codebuild:DescribeTestCases",
+ *             ],
+ *             Resource: arn,
+ *         }],
+ *     })),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example_report_group = aws.codebuild.ReportGroup("exampleReportGroup",
+ *     type="TEST",
+ *     export_config=aws.codebuild.ReportGroupExportConfigArgs(
+ *         type="NO_EXPORT",
+ *     ))
+ * current_partition = aws.get_partition()
+ * current_caller_identity = aws.get_caller_identity()
+ * example_resource_policy = aws.codebuild.ResourcePolicy("exampleResourcePolicy",
+ *     resource_arn=example_report_group.arn,
+ *     policy=example_report_group.arn.apply(lambda arn: json.dumps({
+ *         "Version": "2012-10-17",
+ *         "Id": "default",
+ *         "Statement": [{
+ *             "Sid": "default",
+ *             "Effect": "Allow",
+ *             "Principal": {
+ *                 "AWS": f"arn:{current_partition.partition}:iam::{current_caller_identity.account_id}:root",
+ *             },
+ *             "Action": [
+ *                 "codebuild:BatchGetReportGroups",
+ *                 "codebuild:BatchGetReports",
+ *                 "codebuild:ListReportsForReportGroup",
+ *                 "codebuild:DescribeTestCases",
+ *             ],
+ *             "Resource": arn,
+ *         }],
+ *     })))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleReportGroup = new Aws.CodeBuild.ReportGroup("exampleReportGroup", new Aws.CodeBuild.ReportGroupArgs
+ *         {
+ *             Type = "TEST",
+ *             ExportConfig = new Aws.CodeBuild.Inputs.ReportGroupExportConfigArgs
+ *             {
+ *                 Type = "NO_EXPORT",
+ *             },
+ *         });
+ *         var currentPartition = Output.Create(Aws.GetPartition.InvokeAsync());
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var exampleResourcePolicy = new Aws.CodeBuild.ResourcePolicy("exampleResourcePolicy", new Aws.CodeBuild.ResourcePolicyArgs
+ *         {
+ *             ResourceArn = exampleReportGroup.Arn,
+ *             Policy = Output.Tuple(currentPartition, currentCallerIdentity, exampleReportGroup.Arn).Apply(values =>
+ *             {
+ *                 var currentPartition = values.Item1;
+ *                 var currentCallerIdentity = values.Item2;
+ *                 var arn = values.Item3;
+ *                 return JsonSerializer.Serialize(new Dictionary<string, object?>
+ *                 {
+ *                     { "Version", "2012-10-17" },
+ *                     { "Id", "default" },
+ *                     { "Statement", new[]
+ *                         {
+ *                             new Dictionary<string, object?>
+ *                             {
+ *                                 { "Sid", "default" },
+ *                                 { "Effect", "Allow" },
+ *                                 { "Principal", new Dictionary<string, object?>
+ *                                 {
+ *                                     { "AWS", $"arn:{currentPartition.Partition}:iam::{currentCallerIdentity.AccountId}:root" },
+ *                                 } },
+ *                                 { "Action", new[]
+ *                                     {
+ *                                         "codebuild:BatchGetReportGroups",
+ *                                         "codebuild:BatchGetReports",
+ *                                         "codebuild:ListReportsForReportGroup",
+ *                                         "codebuild:DescribeTestCases",
+ *                                     }
+ *                                  },
+ *                                 { "Resource", arn },
+ *                             },
+ *                         }
+ *                      },
+ *                 });
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codebuild"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleReportGroup, err := codebuild.NewReportGroup(ctx, "exampleReportGroup", &codebuild.ReportGroupArgs{
+ * 			Type: pulumi.String("TEST"),
+ * 			ExportConfig: &codebuild.ReportGroupExportConfigArgs{
+ * 				Type: pulumi.String("NO_EXPORT"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentPartition, err := aws.GetPartition(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = codebuild.NewResourcePolicy(ctx, "exampleResourcePolicy", &codebuild.ResourcePolicyArgs{
+ * 			ResourceArn: exampleReportGroup.Arn,
+ * 			Policy: exampleReportGroup.Arn.ApplyT(func(arn string) (pulumi.String, error) {
+ * 				var _zero pulumi.String
+ * 				tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 					"Version": "2012-10-17",
+ * 					"Id":      "default",
+ * 					"Statement": []map[string]interface{}{
+ * 						map[string]interface{}{
+ * 							"Sid":    "default",
+ * 							"Effect": "Allow",
+ * 							"Principal": map[string]interface{}{
+ * 								"AWS": fmt.Sprintf("%v%v%v%v%v", "arn:", currentPartition.Partition, ":iam::", currentCallerIdentity.AccountId, ":root"),
+ * 							},
+ * 							"Action": []string{
+ * 								"codebuild:BatchGetReportGroups",
+ * 								"codebuild:BatchGetReports",
+ * 								"codebuild:ListReportsForReportGroup",
+ * 								"codebuild:DescribeTestCases",
+ * 							},
+ * 							"Resource": arn,
+ * 						},
+ * 					},
+ * 				})
+ * 				if err != nil {
+ * 					return _zero, err
+ * 				}
+ * 				json0 := string(tmpJSON0)
+ * 				return json0, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +227,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codebuild/resourcePolicy:ResourcePolicy example arn:aws:codebuild:us-west-2:123456789:report-group/report-group-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codebuild/resourcePolicy:ResourcePolicy")
 public class ResourcePolicy extends io.pulumi.resources.CustomResource {

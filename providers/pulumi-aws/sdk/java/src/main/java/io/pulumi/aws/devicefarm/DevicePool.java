@@ -19,7 +19,89 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage AWS Device Farm Device Pools.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.devicefarm.DevicePool("example", {
+ *     projectArn: aws_devicefarm_project.example.arn,
+ *     rules: [{
+ *         attribute: "OS_VERSION",
+ *         operator: "EQUALS",
+ *         value: "\"AVAILABLE\"",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.devicefarm.DevicePool("example",
+ *     project_arn=aws_devicefarm_project["example"]["arn"],
+ *     rules=[aws.devicefarm.DevicePoolRuleArgs(
+ *         attribute="OS_VERSION",
+ *         operator="EQUALS",
+ *         value="\"AVAILABLE\"",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DeviceFarm.DevicePool("example", new Aws.DeviceFarm.DevicePoolArgs
+ *         {
+ *             ProjectArn = aws_devicefarm_project.Example.Arn,
+ *             Rules = 
+ *             {
+ *                 new Aws.DeviceFarm.Inputs.DevicePoolRuleArgs
+ *                 {
+ *                     Attribute = "OS_VERSION",
+ *                     Operator = "EQUALS",
+ *                     Value = "\"AVAILABLE\"",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/devicefarm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devicefarm.NewDevicePool(ctx, "example", &devicefarm.DevicePoolArgs{
+ * 			ProjectArn: pulumi.Any(aws_devicefarm_project.Example.Arn),
+ * 			Rules: devicefarm.DevicePoolRuleArray{
+ * 				&devicefarm.DevicePoolRuleArgs{
+ * 					Attribute: pulumi.String("OS_VERSION"),
+ * 					Operator:  pulumi.String("EQUALS"),
+ * 					Value:     pulumi.String("\"AVAILABLE\""),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +111,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:devicefarm/devicePool:DevicePool example arn:aws:devicefarm:us-west-2:123456789012:devicepool:4fa784c7-ccb4-4dbf-ba4f-02198320daa1/4fa784c7-ccb4-4dbf-ba4f-02198320daa1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:devicefarm/devicePool:DevicePool")
 public class DevicePool extends io.pulumi.resources.CustomResource {

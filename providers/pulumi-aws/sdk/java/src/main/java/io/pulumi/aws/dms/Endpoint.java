@@ -22,7 +22,123 @@ import javax.annotation.Nullable;
 /**
  * Provides a DMS (Data Migration Service) endpoint resource. DMS endpoints can be created, updated, deleted, and imported.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Create a new endpoint
+ * const test = new aws.dms.Endpoint("test", {
+ *     certificateArn: "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012",
+ *     databaseName: "test",
+ *     endpointId: "test-dms-endpoint-tf",
+ *     endpointType: "source",
+ *     engineName: "aurora",
+ *     extraConnectionAttributes: "",
+ *     kmsKeyArn: "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012",
+ *     password: "test",
+ *     port: 3306,
+ *     serverName: "test",
+ *     sslMode: "none",
+ *     tags: {
+ *         Name: "test",
+ *     },
+ *     username: "test",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Create a new endpoint
+ * test = aws.dms.Endpoint("test",
+ *     certificate_arn="arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012",
+ *     database_name="test",
+ *     endpoint_id="test-dms-endpoint-tf",
+ *     endpoint_type="source",
+ *     engine_name="aurora",
+ *     extra_connection_attributes="",
+ *     kms_key_arn="arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012",
+ *     password="test",
+ *     port=3306,
+ *     server_name="test",
+ *     ssl_mode="none",
+ *     tags={
+ *         "Name": "test",
+ *     },
+ *     username="test")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Create a new endpoint
+ *         var test = new Aws.Dms.Endpoint("test", new Aws.Dms.EndpointArgs
+ *         {
+ *             CertificateArn = "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012",
+ *             DatabaseName = "test",
+ *             EndpointId = "test-dms-endpoint-tf",
+ *             EndpointType = "source",
+ *             EngineName = "aurora",
+ *             ExtraConnectionAttributes = "",
+ *             KmsKeyArn = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012",
+ *             Password = "test",
+ *             Port = 3306,
+ *             ServerName = "test",
+ *             SslMode = "none",
+ *             Tags = 
+ *             {
+ *                 { "Name", "test" },
+ *             },
+ *             Username = "test",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dms"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dms.NewEndpoint(ctx, "test", &dms.EndpointArgs{
+ * 			CertificateArn:            pulumi.String("arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"),
+ * 			DatabaseName:              pulumi.String("test"),
+ * 			EndpointId:                pulumi.String("test-dms-endpoint-tf"),
+ * 			EndpointType:              pulumi.String("source"),
+ * 			EngineName:                pulumi.String("aurora"),
+ * 			ExtraConnectionAttributes: pulumi.String(""),
+ * 			KmsKeyArn:                 pulumi.String("arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"),
+ * 			Password:                  pulumi.String("test"),
+ * 			Port:                      pulumi.Int(3306),
+ * 			ServerName:                pulumi.String("test"),
+ * 			SslMode:                   pulumi.String("none"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("test"),
+ * 			},
+ * 			Username: pulumi.String("test"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +148,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dms/endpoint:Endpoint test test-dms-endpoint-tf
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dms/endpoint:Endpoint")
 public class Endpoint extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,120 @@ import javax.annotation.Nullable;
 /**
  * Manages a Security Hub administrator account for an organization. The AWS account utilizing this resource must be an Organizations primary account. More information about Organizations support in Security Hub can be found in the [Security Hub User Guide](https://docs.aws.amazon.com/securityhub/latest/userguide/designate-orgs-admin-account.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
+ *     awsServiceAccessPrincipals: ["securityhub.amazonaws.com"],
+ *     featureSet: "ALL",
+ * });
+ * const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
+ * const exampleOrganizationAdminAccount = new aws.securityhub.OrganizationAdminAccount("exampleOrganizationAdminAccount", {adminAccountId: "123456789012"}, {
+ *     dependsOn: [exampleOrganization],
+ * });
+ * // Auto enable security hub in organization member accounts
+ * const exampleOrganizationConfiguration = new aws.securityhub.OrganizationConfiguration("exampleOrganizationConfiguration", {autoEnable: true});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_organization = aws.organizations.Organization("exampleOrganization",
+ *     aws_service_access_principals=["securityhub.amazonaws.com"],
+ *     feature_set="ALL")
+ * example_account = aws.securityhub.Account("exampleAccount")
+ * example_organization_admin_account = aws.securityhub.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012",
+ * opts=pulumi.ResourceOptions(depends_on=[example_organization]))
+ * # Auto enable security hub in organization member accounts
+ * example_organization_configuration = aws.securityhub.OrganizationConfiguration("exampleOrganizationConfiguration", auto_enable=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "securityhub.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *         var exampleAccount = new Aws.SecurityHub.Account("exampleAccount", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var exampleOrganizationAdminAccount = new Aws.SecurityHub.OrganizationAdminAccount("exampleOrganizationAdminAccount", new Aws.SecurityHub.OrganizationAdminAccountArgs
+ *         {
+ *             AdminAccountId = "123456789012",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *         // Auto enable security hub in organization member accounts
+ *         var exampleOrganizationConfiguration = new Aws.SecurityHub.OrganizationConfiguration("exampleOrganizationConfiguration", new Aws.SecurityHub.OrganizationConfigurationArgs
+ *         {
+ *             AutoEnable = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("securityhub.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &securityhub.OrganizationAdminAccountArgs{
+ * 			AdminAccountId: pulumi.String("123456789012"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", &securityhub.OrganizationConfigurationArgs{
+ * 			AutoEnable: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +138,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/organizationAdminAccount:OrganizationAdminAccount example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/organizationAdminAccount:OrganizationAdminAccount")
 public class OrganizationAdminAccount extends io.pulumi.resources.CustomResource {

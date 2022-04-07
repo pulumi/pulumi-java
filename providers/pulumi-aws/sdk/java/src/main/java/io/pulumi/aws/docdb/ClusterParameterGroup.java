@@ -18,7 +18,89 @@ import javax.annotation.Nullable;
 /**
  * Manages a DocumentDB Cluster Parameter Group
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.docdb.ClusterParameterGroup("example", {
+ *     description: "docdb cluster parameter group",
+ *     family: "docdb3.6",
+ *     parameters: [{
+ *         name: "tls",
+ *         value: "enabled",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.docdb.ClusterParameterGroup("example",
+ *     description="docdb cluster parameter group",
+ *     family="docdb3.6",
+ *     parameters=[aws.docdb.ClusterParameterGroupParameterArgs(
+ *         name="tls",
+ *         value="enabled",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.DocDB.ClusterParameterGroup("example", new Aws.DocDB.ClusterParameterGroupArgs
+ *         {
+ *             Description = "docdb cluster parameter group",
+ *             Family = "docdb3.6",
+ *             Parameters = 
+ *             {
+ *                 new Aws.DocDB.Inputs.ClusterParameterGroupParameterArgs
+ *                 {
+ *                     Name = "tls",
+ *                     Value = "enabled",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/docdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := docdb.NewClusterParameterGroup(ctx, "example", &docdb.ClusterParameterGroupArgs{
+ * 			Description: pulumi.String("docdb cluster parameter group"),
+ * 			Family:      pulumi.String("docdb3.6"),
+ * 			Parameters: docdb.ClusterParameterGroupParameterArray{
+ * 				&docdb.ClusterParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("tls"),
+ * 					Value: pulumi.String("enabled"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +110,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:docdb/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:docdb/clusterParameterGroup:ClusterParameterGroup")
 public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {

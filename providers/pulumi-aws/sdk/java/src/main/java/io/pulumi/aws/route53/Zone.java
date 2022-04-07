@@ -19,7 +19,233 @@ import javax.annotation.Nullable;
 /**
  * Manages a Route53 Hosted Zone. For managing Domain Name System Security Extensions (DNSSEC), see the `aws.route53.KeySigningKey` and `aws.route53.HostedZoneDnsSec` resources.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Public Zone
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const primary = new aws.route53.Zone("primary", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * primary = aws.route53.Zone("primary")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primary = new Aws.Route53.Zone("primary", new Aws.Route53.ZoneArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53.NewZone(ctx, "primary", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Public Subdomain Zone
+ * 
+ * For use in subdomains, note that you need to create a
+ * `aws.route53.Record` of type `NS` as well as the subdomain
+ * zone.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.route53.Zone("main", {});
+ * const dev = new aws.route53.Zone("dev", {tags: {
+ *     Environment: "dev",
+ * }});
+ * const dev_ns = new aws.route53.Record("dev-ns", {
+ *     zoneId: main.zoneId,
+ *     name: "dev.example.com",
+ *     type: "NS",
+ *     ttl: "30",
+ *     records: dev.nameServers,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.route53.Zone("main")
+ * dev = aws.route53.Zone("dev", tags={
+ *     "Environment": "dev",
+ * })
+ * dev_ns = aws.route53.Record("dev-ns",
+ *     zone_id=main.zone_id,
+ *     name="dev.example.com",
+ *     type="NS",
+ *     ttl=30,
+ *     records=dev.name_servers)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Route53.Zone("main", new Aws.Route53.ZoneArgs
+ *         {
+ *         });
+ *         var dev = new Aws.Route53.Zone("dev", new Aws.Route53.ZoneArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Environment", "dev" },
+ *             },
+ *         });
+ *         var dev_ns = new Aws.Route53.Record("dev-ns", new Aws.Route53.RecordArgs
+ *         {
+ *             ZoneId = main.ZoneId,
+ *             Name = "dev.example.com",
+ *             Type = "NS",
+ *             Ttl = 30,
+ *             Records = dev.NameServers,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := route53.NewZone(ctx, "main", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		dev, err := route53.NewZone(ctx, "dev", &route53.ZoneArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Environment": pulumi.String("dev"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewRecord(ctx, "dev-ns", &route53.RecordArgs{
+ * 			ZoneId:  main.ZoneId,
+ * 			Name:    pulumi.String("dev.example.com"),
+ * 			Type:    pulumi.String("NS"),
+ * 			Ttl:     pulumi.Int(30),
+ * 			Records: dev.NameServers,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Private Zone
+ * 
+ * > **NOTE:** This provider provides both exclusive VPC associations defined in-line in this resource via `vpc` configuration blocks and a separate `Zone VPC Association resource. At this time, you cannot use in-line VPC associations in conjunction with any `aws.route53.ZoneAssociation` resources with the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to manage additional associations via the `aws.route53.ZoneAssociation` resource.
+ * 
+ * > **NOTE:** Private zones require at least one VPC association at all times.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const _private = new aws.route53.Zone("private", {vpcs: [{
+ *     vpcId: aws_vpc.example.id,
+ * }]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * private = aws.route53.Zone("private", vpcs=[aws.route53.ZoneVpcArgs(
+ *     vpc_id=aws_vpc["example"]["id"],
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @private = new Aws.Route53.Zone("private", new Aws.Route53.ZoneArgs
+ *         {
+ *             Vpcs = 
+ *             {
+ *                 new Aws.Route53.Inputs.ZoneVpcArgs
+ *                 {
+ *                     VpcId = aws_vpc.Example.Id,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := route53.NewZone(ctx, "private", &route53.ZoneArgs{
+ * 			Vpcs: route53.ZoneVpcArray{
+ * 				&route53.ZoneVpcArgs{
+ * 					VpcId: pulumi.Any(aws_vpc.Example.Id),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +255,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/zone:Zone myzone Z1D633PJN98FT9
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/zone:Zone")
 public class Zone extends io.pulumi.resources.CustomResource {

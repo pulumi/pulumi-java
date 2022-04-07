@@ -23,7 +23,173 @@ import javax.annotation.Nullable;
  * * [MySQL Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html)
  * * [Oracle Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.rds.OptionGroup("example", {
+ *     optionGroupDescription: "Option Group",
+ *     engineName: "sqlserver-ee",
+ *     majorEngineVersion: "11.00",
+ *     options: [
+ *         {
+ *             optionName: "Timezone",
+ *             optionSettings: [{
+ *                 name: "TIME_ZONE",
+ *                 value: "UTC",
+ *             }],
+ *         },
+ *         {
+ *             optionName: "SQLSERVER_BACKUP_RESTORE",
+ *             optionSettings: [{
+ *                 name: "IAM_ROLE_ARN",
+ *                 value: aws_iam_role.example.arn,
+ *             }],
+ *         },
+ *         {
+ *             optionName: "TDE",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.rds.OptionGroup("example",
+ *     option_group_description="Option Group",
+ *     engine_name="sqlserver-ee",
+ *     major_engine_version="11.00",
+ *     options=[
+ *         aws.rds.OptionGroupOptionArgs(
+ *             option_name="Timezone",
+ *             option_settings=[aws.rds.OptionGroupOptionOptionSettingArgs(
+ *                 name="TIME_ZONE",
+ *                 value="UTC",
+ *             )],
+ *         ),
+ *         aws.rds.OptionGroupOptionArgs(
+ *             option_name="SQLSERVER_BACKUP_RESTORE",
+ *             option_settings=[aws.rds.OptionGroupOptionOptionSettingArgs(
+ *                 name="IAM_ROLE_ARN",
+ *                 value=aws_iam_role["example"]["arn"],
+ *             )],
+ *         ),
+ *         aws.rds.OptionGroupOptionArgs(
+ *             option_name="TDE",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Rds.OptionGroup("example", new Aws.Rds.OptionGroupArgs
+ *         {
+ *             OptionGroupDescription = "Option Group",
+ *             EngineName = "sqlserver-ee",
+ *             MajorEngineVersion = "11.00",
+ *             Options = 
+ *             {
+ *                 new Aws.Rds.Inputs.OptionGroupOptionArgs
+ *                 {
+ *                     OptionName = "Timezone",
+ *                     OptionSettings = 
+ *                     {
+ *                         new Aws.Rds.Inputs.OptionGroupOptionOptionSettingArgs
+ *                         {
+ *                             Name = "TIME_ZONE",
+ *                             Value = "UTC",
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.Rds.Inputs.OptionGroupOptionArgs
+ *                 {
+ *                     OptionName = "SQLSERVER_BACKUP_RESTORE",
+ *                     OptionSettings = 
+ *                     {
+ *                         new Aws.Rds.Inputs.OptionGroupOptionOptionSettingArgs
+ *                         {
+ *                             Name = "IAM_ROLE_ARN",
+ *                             Value = aws_iam_role.Example.Arn,
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.Rds.Inputs.OptionGroupOptionArgs
+ *                 {
+ *                     OptionName = "TDE",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := rds.NewOptionGroup(ctx, "example", &rds.OptionGroupArgs{
+ * 			OptionGroupDescription: pulumi.String("Option Group"),
+ * 			EngineName:             pulumi.String("sqlserver-ee"),
+ * 			MajorEngineVersion:     pulumi.String("11.00"),
+ * 			Options: rds.OptionGroupOptionArray{
+ * 				&rds.OptionGroupOptionArgs{
+ * 					OptionName: pulumi.String("Timezone"),
+ * 					OptionSettings: rds.OptionGroupOptionOptionSettingArray{
+ * 						&rds.OptionGroupOptionOptionSettingArgs{
+ * 							Name:  pulumi.String("TIME_ZONE"),
+ * 							Value: pulumi.String("UTC"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&rds.OptionGroupOptionArgs{
+ * 					OptionName: pulumi.String("SQLSERVER_BACKUP_RESTORE"),
+ * 					OptionSettings: rds.OptionGroupOptionOptionSettingArray{
+ * 						&rds.OptionGroupOptionOptionSettingArgs{
+ * 							Name:  pulumi.String("IAM_ROLE_ARN"),
+ * 							Value: pulumi.Any(aws_iam_role.Example.Arn),
+ * 						},
+ * 					},
+ * 				},
+ * 				&rds.OptionGroupOptionArgs{
+ * 					OptionName: pulumi.String("TDE"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * > **Note**: Any modifications to the `aws.rds.OptionGroup` are set to happen immediately as we default to applying immediately.
+ * 
+ * > **WARNING:** You can perform a destroy on a `aws.rds.OptionGroup`, as long as it is not associated with any Amazon RDS resource. An option group can be associated with a DB instance, a manual DB snapshot, or an automated DB snapshot.
+ * 
+ * If you try to delete an option group that is associated with an Amazon RDS resource, an error similar to the following is returned:
+ * 
+ * > An error occurred (InvalidOptionGroupStateFault) when calling the DeleteOptionGroup operation: The option group 'optionGroupName' cannot be deleted because it is in use.
+ * 
+ * More information about this can be found [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html#USER_WorkingWithOptionGroups.Delete).
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +199,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:rds/optionGroup:OptionGroup example mysql-option-group
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:rds/optionGroup:OptionGroup")
 public class OptionGroup extends io.pulumi.resources.CustomResource {

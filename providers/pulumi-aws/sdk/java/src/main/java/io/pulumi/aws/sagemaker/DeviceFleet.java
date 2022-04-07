@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Device Fleet resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.DeviceFleet("example", {
+ *     deviceFleetName: "example",
+ *     roleArn: aws_iam_role.test.arn,
+ *     outputConfig: {
+ *         s3OutputLocation: `s3://${aws_s3_bucket.example.bucket}/prefix/`,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.DeviceFleet("example",
+ *     device_fleet_name="example",
+ *     role_arn=aws_iam_role["test"]["arn"],
+ *     output_config=aws.sagemaker.DeviceFleetOutputConfigArgs(
+ *         s3_output_location=f"s3://{aws_s3_bucket['example']['bucket']}/prefix/",
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.DeviceFleet("example", new Aws.Sagemaker.DeviceFleetArgs
+ *         {
+ *             DeviceFleetName = "example",
+ *             RoleArn = aws_iam_role.Test.Arn,
+ *             OutputConfig = new Aws.Sagemaker.Inputs.DeviceFleetOutputConfigArgs
+ *             {
+ *                 S3OutputLocation = $"s3://{aws_s3_bucket.Example.Bucket}/prefix/",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewDeviceFleet(ctx, "example", &sagemaker.DeviceFleetArgs{
+ * 			DeviceFleetName: pulumi.String("example"),
+ * 			RoleArn:         pulumi.Any(aws_iam_role.Test.Arn),
+ * 			OutputConfig: &sagemaker.DeviceFleetOutputConfigArgs{
+ * 				S3OutputLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/prefix/")),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +104,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/deviceFleet:DeviceFleet example my-fleet
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/deviceFleet:DeviceFleet")
 public class DeviceFleet extends io.pulumi.resources.CustomResource {

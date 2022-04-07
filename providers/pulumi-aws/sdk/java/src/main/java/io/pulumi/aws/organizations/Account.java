@@ -20,7 +20,62 @@ import javax.annotation.Nullable;
  * 
  * !> **WARNING:** Deleting this resource will only remove an AWS account from an organization. This provider will not close the account. The member account must be prepared to be a standalone account beforehand. See the [AWS Organizations documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const account = new aws.organizations.Account("account", {
+ *     email: "john@doe.org",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * account = aws.organizations.Account("account", email="john@doe.org")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new Aws.Organizations.Account("account", new Aws.Organizations.AccountArgs
+ *         {
+ *             Email = "john@doe.org",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewAccount(ctx, "account", &organizations.AccountArgs{
+ * 			Email: pulumi.String("john@doe.org"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,22 +89,29 @@ import javax.annotation.Nullable;
  * 
  *  name
  * 
+ * 
+ * 
+ * 
+ * 
  * = "my_new_account"
  * 
  *  email
+ * 
+ * 
  * 
  *  = "john@doe.org"
  * 
  *  role_name = "myOrganizationRole"
  * 
- * # There is no AWS Organizations API for reading role_name
+ *  # There is no AWS Organizations API for reading role_name
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [role_name]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:organizations/account:Account")
 public class Account extends io.pulumi.resources.CustomResource {

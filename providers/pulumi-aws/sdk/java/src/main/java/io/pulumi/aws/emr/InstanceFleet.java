@@ -24,7 +24,213 @@ import javax.annotation.Nullable;
  * web interface. Instance Fleets are destroyed when the EMR Cluster is destroyed.
  * the provider will resize any Instance Fleet to zero when destroying the resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const task = new aws.emr.InstanceFleet("task", {
+ *     clusterId: aws_emr_cluster.cluster.id,
+ *     instanceTypeConfigs: [
+ *         {
+ *             bidPriceAsPercentageOfOnDemandPrice: 100,
+ *             ebsConfigs: [{
+ *                 size: 100,
+ *                 type: "gp2",
+ *                 volumesPerInstance: 1,
+ *             }],
+ *             instanceType: "m4.xlarge",
+ *             weightedCapacity: 1,
+ *         },
+ *         {
+ *             bidPriceAsPercentageOfOnDemandPrice: 100,
+ *             ebsConfigs: [{
+ *                 size: 100,
+ *                 type: "gp2",
+ *                 volumesPerInstance: 1,
+ *             }],
+ *             instanceType: "m4.2xlarge",
+ *             weightedCapacity: 2,
+ *         },
+ *     ],
+ *     launchSpecifications: {
+ *         spotSpecifications: [{
+ *             allocationStrategy: "capacity-optimized",
+ *             blockDurationMinutes: 0,
+ *             timeoutAction: "TERMINATE_CLUSTER",
+ *             timeoutDurationMinutes: 10,
+ *         }],
+ *     },
+ *     targetOnDemandCapacity: 1,
+ *     targetSpotCapacity: 1,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * task = aws.emr.InstanceFleet("task",
+ *     cluster_id=aws_emr_cluster["cluster"]["id"],
+ *     instance_type_configs=[
+ *         aws.emr.InstanceFleetInstanceTypeConfigArgs(
+ *             bid_price_as_percentage_of_on_demand_price=100,
+ *             ebs_configs=[aws.emr.InstanceFleetInstanceTypeConfigEbsConfigArgs(
+ *                 size=100,
+ *                 type="gp2",
+ *                 volumes_per_instance=1,
+ *             )],
+ *             instance_type="m4.xlarge",
+ *             weighted_capacity=1,
+ *         ),
+ *         aws.emr.InstanceFleetInstanceTypeConfigArgs(
+ *             bid_price_as_percentage_of_on_demand_price=100,
+ *             ebs_configs=[aws.emr.InstanceFleetInstanceTypeConfigEbsConfigArgs(
+ *                 size=100,
+ *                 type="gp2",
+ *                 volumes_per_instance=1,
+ *             )],
+ *             instance_type="m4.2xlarge",
+ *             weighted_capacity=2,
+ *         ),
+ *     ],
+ *     launch_specifications=aws.emr.InstanceFleetLaunchSpecificationsArgs(
+ *         spot_specifications=[aws.emr.InstanceFleetLaunchSpecificationsSpotSpecificationArgs(
+ *             allocation_strategy="capacity-optimized",
+ *             block_duration_minutes=0,
+ *             timeout_action="TERMINATE_CLUSTER",
+ *             timeout_duration_minutes=10,
+ *         )],
+ *     ),
+ *     target_on_demand_capacity=1,
+ *     target_spot_capacity=1)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new Aws.Emr.InstanceFleet("task", new Aws.Emr.InstanceFleetArgs
+ *         {
+ *             ClusterId = aws_emr_cluster.Cluster.Id,
+ *             InstanceTypeConfigs = 
+ *             {
+ *                 new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigArgs
+ *                 {
+ *                     BidPriceAsPercentageOfOnDemandPrice = 100,
+ *                     EbsConfigs = 
+ *                     {
+ *                         new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigEbsConfigArgs
+ *                         {
+ *                             Size = 100,
+ *                             Type = "gp2",
+ *                             VolumesPerInstance = 1,
+ *                         },
+ *                     },
+ *                     InstanceType = "m4.xlarge",
+ *                     WeightedCapacity = 1,
+ *                 },
+ *                 new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigArgs
+ *                 {
+ *                     BidPriceAsPercentageOfOnDemandPrice = 100,
+ *                     EbsConfigs = 
+ *                     {
+ *                         new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigEbsConfigArgs
+ *                         {
+ *                             Size = 100,
+ *                             Type = "gp2",
+ *                             VolumesPerInstance = 1,
+ *                         },
+ *                     },
+ *                     InstanceType = "m4.2xlarge",
+ *                     WeightedCapacity = 2,
+ *                 },
+ *             },
+ *             LaunchSpecifications = new Aws.Emr.Inputs.InstanceFleetLaunchSpecificationsArgs
+ *             {
+ *                 SpotSpecifications = 
+ *                 {
+ *                     new Aws.Emr.Inputs.InstanceFleetLaunchSpecificationsSpotSpecificationArgs
+ *                     {
+ *                         AllocationStrategy = "capacity-optimized",
+ *                         BlockDurationMinutes = 0,
+ *                         TimeoutAction = "TERMINATE_CLUSTER",
+ *                         TimeoutDurationMinutes = 10,
+ *                     },
+ *                 },
+ *             },
+ *             TargetOnDemandCapacity = 1,
+ *             TargetSpotCapacity = 1,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := emr.NewInstanceFleet(ctx, "task", &emr.InstanceFleetArgs{
+ * 			ClusterId: pulumi.Any(aws_emr_cluster.Cluster.Id),
+ * 			InstanceTypeConfigs: emr.InstanceFleetInstanceTypeConfigArray{
+ * 				&emr.InstanceFleetInstanceTypeConfigArgs{
+ * 					BidPriceAsPercentageOfOnDemandPrice: pulumi.Float64(100),
+ * 					EbsConfigs: emr.InstanceFleetInstanceTypeConfigEbsConfigArray{
+ * 						&emr.InstanceFleetInstanceTypeConfigEbsConfigArgs{
+ * 							Size:               pulumi.Int(100),
+ * 							Type:               pulumi.String("gp2"),
+ * 							VolumesPerInstance: pulumi.Int(1),
+ * 						},
+ * 					},
+ * 					InstanceType:     pulumi.String("m4.xlarge"),
+ * 					WeightedCapacity: pulumi.Int(1),
+ * 				},
+ * 				&emr.InstanceFleetInstanceTypeConfigArgs{
+ * 					BidPriceAsPercentageOfOnDemandPrice: pulumi.Float64(100),
+ * 					EbsConfigs: emr.InstanceFleetInstanceTypeConfigEbsConfigArray{
+ * 						&emr.InstanceFleetInstanceTypeConfigEbsConfigArgs{
+ * 							Size:               pulumi.Int(100),
+ * 							Type:               pulumi.String("gp2"),
+ * 							VolumesPerInstance: pulumi.Int(1),
+ * 						},
+ * 					},
+ * 					InstanceType:     pulumi.String("m4.2xlarge"),
+ * 					WeightedCapacity: pulumi.Int(2),
+ * 				},
+ * 			},
+ * 			LaunchSpecifications: &emr.InstanceFleetLaunchSpecificationsArgs{
+ * 				SpotSpecifications: emr.InstanceFleetLaunchSpecificationsSpotSpecificationArray{
+ * 					&emr.InstanceFleetLaunchSpecificationsSpotSpecificationArgs{
+ * 						AllocationStrategy:     pulumi.String("capacity-optimized"),
+ * 						BlockDurationMinutes:   pulumi.Int(0),
+ * 						TimeoutAction:          pulumi.String("TERMINATE_CLUSTER"),
+ * 						TimeoutDurationMinutes: pulumi.Int(10),
+ * 					},
+ * 				},
+ * 			},
+ * 			TargetOnDemandCapacity: pulumi.Int(1),
+ * 			TargetSpotCapacity:     pulumi.Int(1),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,6 +240,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:emr/instanceFleet:InstanceFleet example j-123456ABCDEF/if-15EK4O09RZLNR
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:emr/instanceFleet:InstanceFleet")
 public class InstanceFleet extends io.pulumi.resources.CustomResource {

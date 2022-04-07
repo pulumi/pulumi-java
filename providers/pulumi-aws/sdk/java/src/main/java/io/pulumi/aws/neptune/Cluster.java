@@ -27,7 +27,90 @@ import javax.annotation.Nullable;
  * `apply_immediately` flag to instruct the service to apply the change immediately
  * (see documentation below).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultCluster = new aws.neptune.Cluster("default", {
+ *     applyImmediately: true,
+ *     backupRetentionPeriod: 5,
+ *     clusterIdentifier: "neptune-cluster-demo",
+ *     engine: "neptune",
+ *     iamDatabaseAuthenticationEnabled: true,
+ *     preferredBackupWindow: "07:00-09:00",
+ *     skipFinalSnapshot: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.neptune.Cluster("default",
+ *     apply_immediately=True,
+ *     backup_retention_period=5,
+ *     cluster_identifier="neptune-cluster-demo",
+ *     engine="neptune",
+ *     iam_database_authentication_enabled=True,
+ *     preferred_backup_window="07:00-09:00",
+ *     skip_final_snapshot=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Neptune.Cluster("default", new Aws.Neptune.ClusterArgs
+ *         {
+ *             ApplyImmediately = true,
+ *             BackupRetentionPeriod = 5,
+ *             ClusterIdentifier = "neptune-cluster-demo",
+ *             Engine = "neptune",
+ *             IamDatabaseAuthenticationEnabled = true,
+ *             PreferredBackupWindow = "07:00-09:00",
+ *             SkipFinalSnapshot = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/neptune"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := neptune.NewCluster(ctx, "default", &neptune.ClusterArgs{
+ * 			ApplyImmediately:                 pulumi.Bool(true),
+ * 			BackupRetentionPeriod:            pulumi.Int(5),
+ * 			ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
+ * 			Engine:                           pulumi.String("neptune"),
+ * 			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+ * 			PreferredBackupWindow:            pulumi.String("07:00-09:00"),
+ * 			SkipFinalSnapshot:                pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * > **Note:** AWS Neptune does not support user name/password–based access control.
+ * See the AWS [Docs](https://docs.aws.amazon.com/neptune/latest/userguide/limits.html) for more information.
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,6 +120,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:neptune/cluster:Cluster example my-cluster
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:neptune/cluster:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {

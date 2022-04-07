@@ -18,7 +18,75 @@ import javax.annotation.Nullable;
  * Provides a Direct Connect hosted private virtual interface resource. This resource represents the allocator's side of the hosted virtual interface.
  * A hosted virtual interface is a virtual interface that is owned by another AWS account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
+ *     addressFamily: "ipv4",
+ *     bgpAsn: 65352,
+ *     connectionId: "dxcon-zzzzzzzz",
+ *     vlan: 4094,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.directconnect.HostedPrivateVirtualInterface("foo",
+ *     address_family="ipv4",
+ *     bgp_asn=65352,
+ *     connection_id="dxcon-zzzzzzzz",
+ *     vlan=4094)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.DirectConnect.HostedPrivateVirtualInterface("foo", new Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs
+ *         {
+ *             AddressFamily = "ipv4",
+ *             BgpAsn = 65352,
+ *             ConnectionId = "dxcon-zzzzzzzz",
+ *             Vlan = 4094,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewHostedPrivateVirtualInterface(ctx, "foo", &directconnect.HostedPrivateVirtualInterfaceArgs{
+ * 			AddressFamily: pulumi.String("ipv4"),
+ * 			BgpAsn:        pulumi.Int(65352),
+ * 			ConnectionId:  pulumi.String("dxcon-zzzzzzzz"),
+ * 			Vlan:          pulumi.Int(4094),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,18 +96,19 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/hostedPrivateVirtualInterface:HostedPrivateVirtualInterface test dxvif-33cc44dd
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/hostedPrivateVirtualInterface:HostedPrivateVirtualInterface")
 public class HostedPrivateVirtualInterface extends io.pulumi.resources.CustomResource {
     /**
-     * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     @Export(name="addressFamily", type=String.class, parameters={})
     private Output<String> addressFamily;
 
     /**
-     * @return The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * @return The address family for the BGP peer. `ipv4 ` or `ipv6`.
      * 
      */
     public Output<String> getAddressFamily() {

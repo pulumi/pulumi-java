@@ -16,7 +16,123 @@ import javax.annotation.Nullable;
 /**
  * Provides an IAM policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const policy = new aws.iam.Policy("policy", {
+ *     path: "/",
+ *     description: "My test policy",
+ *     policy: JSON.stringify({
+ *         Version: "2012-10-17",
+ *         Statement: [{
+ *             Action: ["ec2:Describe*"],
+ *             Effect: "Allow",
+ *             Resource: "*",
+ *         }],
+ *     }),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * policy = aws.iam.Policy("policy",
+ *     path="/",
+ *     description="My test policy",
+ *     policy=json.dumps({
+ *         "Version": "2012-10-17",
+ *         "Statement": [{
+ *             "Action": ["ec2:Describe*"],
+ *             "Effect": "Allow",
+ *             "Resource": "*",
+ *         }],
+ *     }))
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var policy = new Aws.Iam.Policy("policy", new Aws.Iam.PolicyArgs
+ *         {
+ *             Path = "/",
+ *             Description = "My test policy",
+ *             Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "Version", "2012-10-17" },
+ *                 { "Statement", new[]
+ *                     {
+ *                         new Dictionary<string, object?>
+ *                         {
+ *                             { "Action", new[]
+ *                                 {
+ *                                     "ec2:Describe*",
+ *                                 }
+ *                              },
+ *                             { "Effect", "Allow" },
+ *                             { "Resource", "*" },
+ *                         },
+ *                     }
+ *                  },
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"Version": "2012-10-17",
+ * 			"Statement": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Action": []string{
+ * 						"ec2:Describe*",
+ * 					},
+ * 					"Effect":   "Allow",
+ * 					"Resource": "*",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		_, err := iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
+ * 			Path:        pulumi.String("/"),
+ * 			Description: pulumi.String("My test policy"),
+ * 			Policy:      pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +142,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/policy:Policy administrator arn:aws:iam::123456789012:policy/UsersManageOwnCredentials
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:iam/policy:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {

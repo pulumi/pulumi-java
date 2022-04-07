@@ -17,7 +17,144 @@ import javax.annotation.Nullable;
  * Provides network associations for AWS Client VPN endpoints. For more information on usage, please see the
  * [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Using default security group
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2clientvpn.NetworkAssociation("example", {
+ *     clientVpnEndpointId: aws_ec2_client_vpn_endpoint.example.id,
+ *     subnetId: aws_subnet.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2clientvpn.NetworkAssociation("example",
+ *     client_vpn_endpoint_id=aws_ec2_client_vpn_endpoint["example"]["id"],
+ *     subnet_id=aws_subnet["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2ClientVpn.NetworkAssociation("example", new Aws.Ec2ClientVpn.NetworkAssociationArgs
+ *         {
+ *             ClientVpnEndpointId = aws_ec2_client_vpn_endpoint.Example.Id,
+ *             SubnetId = aws_subnet.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2clientvpn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2clientvpn.NewNetworkAssociation(ctx, "example", &ec2clientvpn.NetworkAssociationArgs{
+ * 			ClientVpnEndpointId: pulumi.Any(aws_ec2_client_vpn_endpoint.Example.Id),
+ * 			SubnetId:            pulumi.Any(aws_subnet.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using custom security groups
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2clientvpn.NetworkAssociation("example", {
+ *     clientVpnEndpointId: aws_ec2_client_vpn_endpoint.example.id,
+ *     subnetId: aws_subnet.example.id,
+ *     securityGroups: [
+ *         aws_security_group.example1.id,
+ *         aws_security_group.example2.id,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2clientvpn.NetworkAssociation("example",
+ *     client_vpn_endpoint_id=aws_ec2_client_vpn_endpoint["example"]["id"],
+ *     subnet_id=aws_subnet["example"]["id"],
+ *     security_groups=[
+ *         aws_security_group["example1"]["id"],
+ *         aws_security_group["example2"]["id"],
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2ClientVpn.NetworkAssociation("example", new Aws.Ec2ClientVpn.NetworkAssociationArgs
+ *         {
+ *             ClientVpnEndpointId = aws_ec2_client_vpn_endpoint.Example.Id,
+ *             SubnetId = aws_subnet.Example.Id,
+ *             SecurityGroups = 
+ *             {
+ *                 aws_security_group.Example1.Id,
+ *                 aws_security_group.Example2.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2clientvpn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2clientvpn.NewNetworkAssociation(ctx, "example", &ec2clientvpn.NetworkAssociationArgs{
+ * 			ClientVpnEndpointId: pulumi.Any(aws_ec2_client_vpn_endpoint.Example.Id),
+ * 			SubnetId:            pulumi.Any(aws_subnet.Example.Id),
+ * 			SecurityGroups: pulumi.StringArray{
+ * 				pulumi.Any(aws_security_group.Example1.Id),
+ * 				pulumi.Any(aws_security_group.Example2.Id),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +164,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2clientvpn/networkAssociation:NetworkAssociation example cvpn-endpoint-0ac3a1abbccddd666,vpn-assoc-0b8db902465d069ad
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2clientvpn/networkAssociation:NetworkAssociation")
 public class NetworkAssociation extends io.pulumi.resources.CustomResource {

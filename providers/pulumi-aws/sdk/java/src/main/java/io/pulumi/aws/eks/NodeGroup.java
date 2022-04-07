@@ -25,7 +25,325 @@ import javax.annotation.Nullable;
 /**
  * Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the [EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.eks.NodeGroup("example", {
+ *     clusterName: aws_eks_cluster.example.name,
+ *     nodeRoleArn: aws_iam_role.example.arn,
+ *     subnetIds: aws_subnet.example.map(__item => __item.id),
+ *     scalingConfig: {
+ *         desiredSize: 1,
+ *         maxSize: 1,
+ *         minSize: 1,
+ *     },
+ *     updateConfig: {
+ *         maxUnavailable: 2,
+ *     },
+ * }, {
+ *     dependsOn: [
+ *         aws_iam_role_policy_attachment["example-AmazonEKSWorkerNodePolicy"],
+ *         aws_iam_role_policy_attachment["example-AmazonEKS_CNI_Policy"],
+ *         aws_iam_role_policy_attachment["example-AmazonEC2ContainerRegistryReadOnly"],
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.eks.NodeGroup("example",
+ *     cluster_name=aws_eks_cluster["example"]["name"],
+ *     node_role_arn=aws_iam_role["example"]["arn"],
+ *     subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
+ *     scaling_config=aws.eks.NodeGroupScalingConfigArgs(
+ *         desired_size=1,
+ *         max_size=1,
+ *         min_size=1,
+ *     ),
+ *     update_config=aws.eks.NodeGroupUpdateConfigArgs(
+ *         max_unavailable=2,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             aws_iam_role_policy_attachment["example-AmazonEKSWorkerNodePolicy"],
+ *             aws_iam_role_policy_attachment["example-AmazonEKS_CNI_Policy"],
+ *             aws_iam_role_policy_attachment["example-AmazonEC2ContainerRegistryReadOnly"],
+ *         ]))
+ * ```
+ * ```csharp
+ * using System.Linq;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Eks.NodeGroup("example", new Aws.Eks.NodeGroupArgs
+ *         {
+ *             ClusterName = aws_eks_cluster.Example.Name,
+ *             NodeRoleArn = aws_iam_role.Example.Arn,
+ *             SubnetIds = aws_subnet.Example.Select(__item => __item.Id).ToList(),
+ *             ScalingConfig = new Aws.Eks.Inputs.NodeGroupScalingConfigArgs
+ *             {
+ *                 DesiredSize = 1,
+ *                 MaxSize = 1,
+ *                 MinSize = 1,
+ *             },
+ *             UpdateConfig = new Aws.Eks.Inputs.NodeGroupUpdateConfigArgs
+ *             {
+ *                 MaxUnavailable = 2,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 aws_iam_role_policy_attachment.Example_AmazonEKSWorkerNodePolicy,
+ *                 aws_iam_role_policy_attachment.Example_AmazonEKS_CNI_Policy,
+ *                 aws_iam_role_policy_attachment.Example_AmazonEC2ContainerRegistryReadOnly,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Ignoring Changes to Desired Size
+ * 
+ * You can utilize [ignoreChanges](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) create an EKS Node Group with an initial size of running instances, then ignore any changes to that count caused externally (e.g. Application Autoscaling).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ... other configurations ...
+ * const example = new aws.eks.NodeGroup("example", {scalingConfig: {
+ *     desiredSize: 2,
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ... other configurations ...
+ * example = aws.eks.NodeGroup("example", scaling_config=aws.eks.NodeGroupScalingConfigArgs(
+ *     desired_size=2,
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ... other configurations ...
+ *         var example = new Aws.Eks.NodeGroup("example", new Aws.Eks.NodeGroupArgs
+ *         {
+ *             ScalingConfig = new Aws.Eks.Inputs.NodeGroupScalingConfigArgs
+ *             {
+ *                 DesiredSize = 2,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/eks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eks.NewNodeGroup(ctx, "example", &eks.NodeGroupArgs{
+ * 			ScalingConfig: &eks.NodeGroupScalingConfigArgs{
+ * 				DesiredSize: pulumi.Int(2),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example IAM Role for EKS Node Group
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.iam.Role("example", {assumeRolePolicy: JSON.stringify({
+ *     Statement: [{
+ *         Action: "sts:AssumeRole",
+ *         Effect: "Allow",
+ *         Principal: {
+ *             Service: "ec2.amazonaws.com",
+ *         },
+ *     }],
+ *     Version: "2012-10-17",
+ * })});
+ * const example_AmazonEKSWorkerNodePolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy", {
+ *     policyArn: "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+ *     role: example.name,
+ * });
+ * const example_AmazonEKSCNIPolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy", {
+ *     policyArn: "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+ *     role: example.name,
+ * });
+ * const example_AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly", {
+ *     policyArn: "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+ *     role: example.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import json
+ * import pulumi_aws as aws
+ * 
+ * example = aws.iam.Role("example", assume_role_policy=json.dumps({
+ *     "Statement": [{
+ *         "Action": "sts:AssumeRole",
+ *         "Effect": "Allow",
+ *         "Principal": {
+ *             "Service": "ec2.amazonaws.com",
+ *         },
+ *     }],
+ *     "Version": "2012-10-17",
+ * }))
+ * example__amazon_eks_worker_node_policy = aws.iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy",
+ *     policy_arn="arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+ *     role=example.name)
+ * example__amazon_ekscni_policy = aws.iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy",
+ *     policy_arn="arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+ *     role=example.name)
+ * example__amazon_ec2_container_registry_read_only = aws.iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly",
+ *     policy_arn="arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+ *     role=example.name)
+ * ```
+ * ```csharp
+ * using System.Collections.Generic;
+ * using System.Text.Json;
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+ *             {
+ *                 { "Statement", new[]
+ *                     {
+ *                         new Dictionary<string, object?>
+ *                         {
+ *                             { "Action", "sts:AssumeRole" },
+ *                             { "Effect", "Allow" },
+ *                             { "Principal", new Dictionary<string, object?>
+ *                             {
+ *                                 { "Service", "ec2.amazonaws.com" },
+ *                             } },
+ *                         },
+ *                     }
+ *                  },
+ *                 { "Version", "2012-10-17" },
+ *             }),
+ *         });
+ *         var example_AmazonEKSWorkerNodePolicy = new Aws.Iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+ *             Role = example.Name,
+ *         });
+ *         var example_AmazonEKSCNIPolicy = new Aws.Iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+ *             Role = example.Name,
+ *         });
+ *         var example_AmazonEC2ContainerRegistryReadOnly = new Aws.Iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly", new Aws.Iam.RolePolicyAttachmentArgs
+ *         {
+ *             PolicyArn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+ *             Role = example.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"encoding/json"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+ * 			"Statement": []map[string]interface{}{
+ * 				map[string]interface{}{
+ * 					"Action": "sts:AssumeRole",
+ * 					"Effect": "Allow",
+ * 					"Principal": map[string]interface{}{
+ * 						"Service": "ec2.amazonaws.com",
+ * 					},
+ * 				},
+ * 			},
+ * 			"Version": "2012-10-17",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		json0 := string(tmpJSON0)
+ * 		example, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.String(json0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSWorkerNodePolicy", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"),
+ * 			Role:      example.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSCNIPolicy", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"),
+ * 			Role:      example.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEC2ContainerRegistryReadOnly", &iam.RolePolicyAttachmentArgs{
+ * 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"),
+ * 			Role:      example.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +353,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:eks/nodeGroup:NodeGroup my_node_group my_cluster:my_node_group
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:eks/nodeGroup:NodeGroup")
 public class NodeGroup extends io.pulumi.resources.CustomResource {

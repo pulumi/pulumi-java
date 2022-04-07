@@ -16,7 +16,136 @@ import javax.annotation.Nullable;
 /**
  * Provides an AutoScaling Schedule resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foobarGroup = new aws.autoscaling.Group("foobarGroup", {
+ *     availabilityZones: ["us-west-2a"],
+ *     maxSize: 1,
+ *     minSize: 1,
+ *     healthCheckGracePeriod: 300,
+ *     healthCheckType: "ELB",
+ *     forceDelete: true,
+ *     terminationPolicies: ["OldestInstance"],
+ * });
+ * const foobarSchedule = new aws.autoscaling.Schedule("foobarSchedule", {
+ *     scheduledActionName: "foobar",
+ *     minSize: 0,
+ *     maxSize: 1,
+ *     desiredCapacity: 0,
+ *     startTime: "2016-12-11T18:00:00Z",
+ *     endTime: "2016-12-12T06:00:00Z",
+ *     autoscalingGroupName: foobarGroup.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foobar_group = aws.autoscaling.Group("foobarGroup",
+ *     availability_zones=["us-west-2a"],
+ *     max_size=1,
+ *     min_size=1,
+ *     health_check_grace_period=300,
+ *     health_check_type="ELB",
+ *     force_delete=True,
+ *     termination_policies=["OldestInstance"])
+ * foobar_schedule = aws.autoscaling.Schedule("foobarSchedule",
+ *     scheduled_action_name="foobar",
+ *     min_size=0,
+ *     max_size=1,
+ *     desired_capacity=0,
+ *     start_time="2016-12-11T18:00:00Z",
+ *     end_time="2016-12-12T06:00:00Z",
+ *     autoscaling_group_name=foobar_group.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foobarGroup = new Aws.AutoScaling.Group("foobarGroup", new Aws.AutoScaling.GroupArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "us-west-2a",
+ *             },
+ *             MaxSize = 1,
+ *             MinSize = 1,
+ *             HealthCheckGracePeriod = 300,
+ *             HealthCheckType = "ELB",
+ *             ForceDelete = true,
+ *             TerminationPolicies = 
+ *             {
+ *                 "OldestInstance",
+ *             },
+ *         });
+ *         var foobarSchedule = new Aws.AutoScaling.Schedule("foobarSchedule", new Aws.AutoScaling.ScheduleArgs
+ *         {
+ *             ScheduledActionName = "foobar",
+ *             MinSize = 0,
+ *             MaxSize = 1,
+ *             DesiredCapacity = 0,
+ *             StartTime = "2016-12-11T18:00:00Z",
+ *             EndTime = "2016-12-12T06:00:00Z",
+ *             AutoscalingGroupName = foobarGroup.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		foobarGroup, err := autoscaling.NewGroup(ctx, "foobarGroup", &autoscaling.GroupArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("us-west-2a"),
+ * 			},
+ * 			MaxSize:                pulumi.Int(1),
+ * 			MinSize:                pulumi.Int(1),
+ * 			HealthCheckGracePeriod: pulumi.Int(300),
+ * 			HealthCheckType:        pulumi.String("ELB"),
+ * 			ForceDelete:            pulumi.Bool(true),
+ * 			TerminationPolicies: pulumi.StringArray{
+ * 				pulumi.String("OldestInstance"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = autoscaling.NewSchedule(ctx, "foobarSchedule", &autoscaling.ScheduleArgs{
+ * 			ScheduledActionName:  pulumi.String("foobar"),
+ * 			MinSize:              pulumi.Int(0),
+ * 			MaxSize:              pulumi.Int(1),
+ * 			DesiredCapacity:      pulumi.Int(0),
+ * 			StartTime:            pulumi.String("2016-12-11T18:00:00Z"),
+ * 			EndTime:              pulumi.String("2016-12-12T06:00:00Z"),
+ * 			AutoscalingGroupName: foobarGroup.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +155,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:autoscaling/schedule:Schedule resource-name auto-scaling-group-name/scheduled-action-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:autoscaling/schedule:Schedule")
 public class Schedule extends io.pulumi.resources.CustomResource {

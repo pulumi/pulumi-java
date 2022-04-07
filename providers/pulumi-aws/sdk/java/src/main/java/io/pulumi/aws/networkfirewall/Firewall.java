@@ -20,7 +20,102 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Network Firewall Firewall Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.networkfirewall.Firewall("example", {
+ *     firewallPolicyArn: aws_networkfirewall_firewall_policy.example.arn,
+ *     vpcId: aws_vpc.example.id,
+ *     subnetMappings: [{
+ *         subnetId: aws_subnet.example.id,
+ *     }],
+ *     tags: {
+ *         Tag1: "Value1",
+ *         Tag2: "Value2",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.networkfirewall.Firewall("example",
+ *     firewall_policy_arn=aws_networkfirewall_firewall_policy["example"]["arn"],
+ *     vpc_id=aws_vpc["example"]["id"],
+ *     subnet_mappings=[aws.networkfirewall.FirewallSubnetMappingArgs(
+ *         subnet_id=aws_subnet["example"]["id"],
+ *     )],
+ *     tags={
+ *         "Tag1": "Value1",
+ *         "Tag2": "Value2",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.NetworkFirewall.Firewall("example", new Aws.NetworkFirewall.FirewallArgs
+ *         {
+ *             FirewallPolicyArn = aws_networkfirewall_firewall_policy.Example.Arn,
+ *             VpcId = aws_vpc.Example.Id,
+ *             SubnetMappings = 
+ *             {
+ *                 new Aws.NetworkFirewall.Inputs.FirewallSubnetMappingArgs
+ *                 {
+ *                     SubnetId = aws_subnet.Example.Id,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *                 { "Tag2", "Value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := networkfirewall.NewFirewall(ctx, "example", &networkfirewall.FirewallArgs{
+ * 			FirewallPolicyArn: pulumi.Any(aws_networkfirewall_firewall_policy.Example.Arn),
+ * 			VpcId:             pulumi.Any(aws_vpc.Example.Id),
+ * 			SubnetMappings: networkfirewall.FirewallSubnetMappingArray{
+ * 				&networkfirewall.FirewallSubnetMappingArgs{
+ * 					SubnetId: pulumi.Any(aws_subnet.Example.Id),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 				"Tag2": pulumi.String("Value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +125,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:networkfirewall/firewall:Firewall example arn:aws:network-firewall:us-west-1:123456789012:firewall/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:networkfirewall/firewall:Firewall")
 public class Firewall extends io.pulumi.resources.CustomResource {

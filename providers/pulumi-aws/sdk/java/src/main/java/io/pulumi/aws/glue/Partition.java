@@ -18,7 +18,22 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glue Partition Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Partition("example", {
+ *     databaseName: "some-database",
+ *     tableName: "some-table",
+ *     values: ["some-value"],
+ * });
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +43,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/partition:Partition part 123456789012:MyDatabase:MyTable:val1#val2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/partition:Partition")
 public class Partition extends io.pulumi.resources.CustomResource {

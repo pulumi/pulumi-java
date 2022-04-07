@@ -22,7 +22,1029 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** S3 Buckets only support a single notification configuration. Declaring multiple `aws.s3.BucketNotification` resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example "Trigger multiple Lambda functions" for an option.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Add notification configuration to SNS Topic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("bucket", {});
+ * const topic = new aws.sns.Topic("topic", {policy: pulumi.interpolate`{
+ *     "Version":"2012-10-17",
+ *     "Statement":[{
+ *         "Effect": "Allow",
+ *         "Principal": { "Service": "s3.amazonaws.com" },
+ *         "Action": "SNS:Publish",
+ *         "Resource": "arn:aws:sns:*:*:s3-event-notification-topic",
+ *         "Condition":{
+ *             "ArnLike":{"aws:SourceArn":"${bucket.arn}"}
+ *         }
+ *     }]
+ * }
+ * `});
+ * const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
+ *     bucket: bucket.id,
+ *     topics: [{
+ *         topicArn: topic.arn,
+ *         events: ["s3:ObjectCreated:*"],
+ *         filterSuffix: ".log",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket")
+ * topic = aws.sns.Topic("topic", policy=bucket.arn.apply(lambda arn: f"""{{
+ *     "Version":"2012-10-17",
+ *     "Statement":[{{
+ *         "Effect": "Allow",
+ *         "Principal": {{ "Service": "s3.amazonaws.com" }},
+ *         "Action": "SNS:Publish",
+ *         "Resource": "arn:aws:sns:*:*:s3-event-notification-topic",
+ *         "Condition":{{
+ *             "ArnLike":{{"aws:SourceArn":"{arn}"}}
+ *         }}
+ *     }}]
+ * }}
+ * """))
+ * bucket_notification = aws.s3.BucketNotification("bucketNotification",
+ *     bucket=bucket.id,
+ *     topics=[aws.s3.BucketNotificationTopicArgs(
+ *         topic_arn=topic.arn,
+ *         events=["s3:ObjectCreated:*"],
+ *         filter_suffix=".log",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var topic = new Aws.Sns.Topic("topic", new Aws.Sns.TopicArgs
+ *         {
+ *             Policy = bucket.Arn.Apply(arn => @$"{{
+ *     ""Version"":""2012-10-17"",
+ *     ""Statement"":[{{
+ *         ""Effect"": ""Allow"",
+ *         ""Principal"": {{ ""Service"": ""s3.amazonaws.com"" }},
+ *         ""Action"": ""SNS:Publish"",
+ *         ""Resource"": ""arn:aws:sns:*:*:s3-event-notification-topic"",
+ *         ""Condition"":{{
+ *             ""ArnLike"":{{""aws:SourceArn"":""{arn}""}}
+ *         }}
+ *     }}]
+ * }}
+ * "),
+ *         });
+ *         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+ *         {
+ *             Bucket = bucket.Id,
+ *             Topics = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketNotificationTopicArgs
+ *                 {
+ *                     TopicArn = topic.Arn,
+ *                     Events = 
+ *                     {
+ *                         "s3:ObjectCreated:*",
+ *                     },
+ *                     FilterSuffix = ".log",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		topic, err := sns.NewTopic(ctx, "topic", &sns.TopicArgs{
+ * 			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": { \"Service\": \"s3.amazonaws.com\" },\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:s3-event-notification-topic\",\n", "        \"Condition\":{\n", "            \"ArnLike\":{\"aws:SourceArn\":\"", arn, "\"}\n", "        }\n", "    }]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+ * 			Bucket: bucket.ID(),
+ * 			Topics: s3.BucketNotificationTopicArray{
+ * 				&s3.BucketNotificationTopicArgs{
+ * 					TopicArn: topic.Arn,
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("s3:ObjectCreated:*"),
+ * 					},
+ * 					FilterSuffix: pulumi.String(".log"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Add notification configuration to SQS Queue
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("bucket", {});
+ * const queue = new aws.sqs.Queue("queue", {policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Effect": "Allow",
+ *       "Principal": "*",
+ *       "Action": "sqs:SendMessage",
+ * 	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+ *       "Condition": {
+ *         "ArnEquals": { "aws:SourceArn": "${bucket.arn}" }
+ *       }
+ *     }
+ *   ]
+ * }
+ * `});
+ * const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
+ *     bucket: bucket.id,
+ *     queues: [{
+ *         queueArn: queue.arn,
+ *         events: ["s3:ObjectCreated:*"],
+ *         filterSuffix: ".log",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket")
+ * queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Effect": "Allow",
+ *       "Principal": "*",
+ *       "Action": "sqs:SendMessage",
+ * 	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+ *       "Condition": {{
+ *         "ArnEquals": {{ "aws:SourceArn": "{arn}" }}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * bucket_notification = aws.s3.BucketNotification("bucketNotification",
+ *     bucket=bucket.id,
+ *     queues=[aws.s3.BucketNotificationQueueArgs(
+ *         queue_arn=queue.arn,
+ *         events=["s3:ObjectCreated:*"],
+ *         filter_suffix=".log",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+ *         {
+ *             Policy = bucket.Arn.Apply(arn => @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": ""*"",
+ *       ""Action"": ""sqs:SendMessage"",
+ * 	  ""Resource"": ""arn:aws:sqs:*:*:s3-event-notification-queue"",
+ *       ""Condition"": {{
+ *         ""ArnEquals"": {{ ""aws:SourceArn"": ""{arn}"" }}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * "),
+ *         });
+ *         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+ *         {
+ *             Bucket = bucket.Id,
+ *             Queues = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketNotificationQueueArgs
+ *                 {
+ *                     QueueArn = queue.Arn,
+ *                     Events = 
+ *                     {
+ *                         "s3:ObjectCreated:*",
+ *                     },
+ *                     FilterSuffix = ".log",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		queue, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
+ * 			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+ * 			Bucket: bucket.ID(),
+ * 			Queues: s3.BucketNotificationQueueArray{
+ * 				&s3.BucketNotificationQueueArgs{
+ * 					QueueArn: queue.Arn,
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("s3:ObjectCreated:*"),
+ * 					},
+ * 					FilterSuffix: pulumi.String(".log"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Add notification configuration to Lambda Function
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const iamForLambda = new aws.iam.Role("iamForLambda", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const func = new aws.lambda.Function("func", {
+ *     code: new pulumi.asset.FileArchive("your-function.zip"),
+ *     role: iamForLambda.arn,
+ *     handler: "exports.example",
+ *     runtime: "go1.x",
+ * });
+ * const bucket = new aws.s3.Bucket("bucket", {});
+ * const allowBucket = new aws.lambda.Permission("allowBucket", {
+ *     action: "lambda:InvokeFunction",
+ *     "function": func.arn,
+ *     principal: "s3.amazonaws.com",
+ *     sourceArn: bucket.arn,
+ * });
+ * const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
+ *     bucket: bucket.id,
+ *     lambdaFunctions: [{
+ *         lambdaFunctionArn: func.arn,
+ *         events: ["s3:ObjectCreated:*"],
+ *         filterPrefix: "AWSLogs/",
+ *         filterSuffix: ".log",
+ *     }],
+ * }, {
+ *     dependsOn: [allowBucket],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * iam_for_lambda = aws.iam.Role("iamForLambda", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * """)
+ * func = aws.lambda_.Function("func",
+ *     code=pulumi.FileArchive("your-function.zip"),
+ *     role=iam_for_lambda.arn,
+ *     handler="exports.example",
+ *     runtime="go1.x")
+ * bucket = aws.s3.Bucket("bucket")
+ * allow_bucket = aws.lambda_.Permission("allowBucket",
+ *     action="lambda:InvokeFunction",
+ *     function=func.arn,
+ *     principal="s3.amazonaws.com",
+ *     source_arn=bucket.arn)
+ * bucket_notification = aws.s3.BucketNotification("bucketNotification",
+ *     bucket=bucket.id,
+ *     lambda_functions=[aws.s3.BucketNotificationLambdaFunctionArgs(
+ *         lambda_function_arn=func.arn,
+ *         events=["s3:ObjectCreated:*"],
+ *         filter_prefix="AWSLogs/",
+ *         filter_suffix=".log",
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[allow_bucket]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var iamForLambda = new Aws.Iam.Role("iamForLambda", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""lambda.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var func = new Aws.Lambda.Function("func", new Aws.Lambda.FunctionArgs
+ *         {
+ *             Code = new FileArchive("your-function.zip"),
+ *             Role = iamForLambda.Arn,
+ *             Handler = "exports.example",
+ *             Runtime = "go1.x",
+ *         });
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var allowBucket = new Aws.Lambda.Permission("allowBucket", new Aws.Lambda.PermissionArgs
+ *         {
+ *             Action = "lambda:InvokeFunction",
+ *             Function = func.Arn,
+ *             Principal = "s3.amazonaws.com",
+ *             SourceArn = bucket.Arn,
+ *         });
+ *         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+ *         {
+ *             Bucket = bucket.Id,
+ *             LambdaFunctions = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketNotificationLambdaFunctionArgs
+ *                 {
+ *                     LambdaFunctionArn = func.Arn,
+ *                     Events = 
+ *                     {
+ *                         "s3:ObjectCreated:*",
+ *                     },
+ *                     FilterPrefix = "AWSLogs/",
+ *                     FilterSuffix = ".log",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 allowBucket,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		iamForLambda, err := iam.NewRole(ctx, "iamForLambda", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"lambda.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = lambda.NewFunction(ctx, "func", &lambda.FunctionArgs{
+ * 			Code:    pulumi.NewFileArchive("your-function.zip"),
+ * 			Role:    iamForLambda.Arn,
+ * 			Handler: pulumi.String("exports.example"),
+ * 			Runtime: pulumi.String("go1.x"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		allowBucket, err := lambda.NewPermission(ctx, "allowBucket", &lambda.PermissionArgs{
+ * 			Action:    pulumi.String("lambda:InvokeFunction"),
+ * 			Function:  _func.Arn,
+ * 			Principal: pulumi.String("s3.amazonaws.com"),
+ * 			SourceArn: bucket.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+ * 			Bucket: bucket.ID(),
+ * 			LambdaFunctions: s3.BucketNotificationLambdaFunctionArray{
+ * 				&s3.BucketNotificationLambdaFunctionArgs{
+ * 					LambdaFunctionArn: _func.Arn,
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("s3:ObjectCreated:*"),
+ * 					},
+ * 					FilterPrefix: pulumi.String("AWSLogs/"),
+ * 					FilterSuffix: pulumi.String(".log"),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			allowBucket,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Trigger multiple Lambda functions
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const iamForLambda = new aws.iam.Role("iamForLambda", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const func1 = new aws.lambda.Function("func1", {
+ *     code: new pulumi.asset.FileArchive("your-function1.zip"),
+ *     role: iamForLambda.arn,
+ *     handler: "exports.example",
+ *     runtime: "go1.x",
+ * });
+ * const bucket = new aws.s3.Bucket("bucket", {});
+ * const allowBucket1 = new aws.lambda.Permission("allowBucket1", {
+ *     action: "lambda:InvokeFunction",
+ *     "function": func1.arn,
+ *     principal: "s3.amazonaws.com",
+ *     sourceArn: bucket.arn,
+ * });
+ * const func2 = new aws.lambda.Function("func2", {
+ *     code: new pulumi.asset.FileArchive("your-function2.zip"),
+ *     role: iamForLambda.arn,
+ *     handler: "exports.example",
+ * });
+ * const allowBucket2 = new aws.lambda.Permission("allowBucket2", {
+ *     action: "lambda:InvokeFunction",
+ *     "function": func2.arn,
+ *     principal: "s3.amazonaws.com",
+ *     sourceArn: bucket.arn,
+ * });
+ * const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
+ *     bucket: bucket.id,
+ *     lambdaFunctions: [
+ *         {
+ *             lambdaFunctionArn: func1.arn,
+ *             events: ["s3:ObjectCreated:*"],
+ *             filterPrefix: "AWSLogs/",
+ *             filterSuffix: ".log",
+ *         },
+ *         {
+ *             lambdaFunctionArn: func2.arn,
+ *             events: ["s3:ObjectCreated:*"],
+ *             filterPrefix: "OtherLogs/",
+ *             filterSuffix: ".log",
+ *         },
+ *     ],
+ * }, {
+ *     dependsOn: [
+ *         allowBucket1,
+ *         allowBucket2,
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * iam_for_lambda = aws.iam.Role("iamForLambda", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "lambda.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * """)
+ * func1 = aws.lambda_.Function("func1",
+ *     code=pulumi.FileArchive("your-function1.zip"),
+ *     role=iam_for_lambda.arn,
+ *     handler="exports.example",
+ *     runtime="go1.x")
+ * bucket = aws.s3.Bucket("bucket")
+ * allow_bucket1 = aws.lambda_.Permission("allowBucket1",
+ *     action="lambda:InvokeFunction",
+ *     function=func1.arn,
+ *     principal="s3.amazonaws.com",
+ *     source_arn=bucket.arn)
+ * func2 = aws.lambda_.Function("func2",
+ *     code=pulumi.FileArchive("your-function2.zip"),
+ *     role=iam_for_lambda.arn,
+ *     handler="exports.example")
+ * allow_bucket2 = aws.lambda_.Permission("allowBucket2",
+ *     action="lambda:InvokeFunction",
+ *     function=func2.arn,
+ *     principal="s3.amazonaws.com",
+ *     source_arn=bucket.arn)
+ * bucket_notification = aws.s3.BucketNotification("bucketNotification",
+ *     bucket=bucket.id,
+ *     lambda_functions=[
+ *         aws.s3.BucketNotificationLambdaFunctionArgs(
+ *             lambda_function_arn=func1.arn,
+ *             events=["s3:ObjectCreated:*"],
+ *             filter_prefix="AWSLogs/",
+ *             filter_suffix=".log",
+ *         ),
+ *         aws.s3.BucketNotificationLambdaFunctionArgs(
+ *             lambda_function_arn=func2.arn,
+ *             events=["s3:ObjectCreated:*"],
+ *             filter_prefix="OtherLogs/",
+ *             filter_suffix=".log",
+ *         ),
+ *     ],
+ *     opts=pulumi.ResourceOptions(depends_on=[
+ *             allow_bucket1,
+ *             allow_bucket2,
+ *         ]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var iamForLambda = new Aws.Iam.Role("iamForLambda", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""lambda.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var func1 = new Aws.Lambda.Function("func1", new Aws.Lambda.FunctionArgs
+ *         {
+ *             Code = new FileArchive("your-function1.zip"),
+ *             Role = iamForLambda.Arn,
+ *             Handler = "exports.example",
+ *             Runtime = "go1.x",
+ *         });
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var allowBucket1 = new Aws.Lambda.Permission("allowBucket1", new Aws.Lambda.PermissionArgs
+ *         {
+ *             Action = "lambda:InvokeFunction",
+ *             Function = func1.Arn,
+ *             Principal = "s3.amazonaws.com",
+ *             SourceArn = bucket.Arn,
+ *         });
+ *         var func2 = new Aws.Lambda.Function("func2", new Aws.Lambda.FunctionArgs
+ *         {
+ *             Code = new FileArchive("your-function2.zip"),
+ *             Role = iamForLambda.Arn,
+ *             Handler = "exports.example",
+ *         });
+ *         var allowBucket2 = new Aws.Lambda.Permission("allowBucket2", new Aws.Lambda.PermissionArgs
+ *         {
+ *             Action = "lambda:InvokeFunction",
+ *             Function = func2.Arn,
+ *             Principal = "s3.amazonaws.com",
+ *             SourceArn = bucket.Arn,
+ *         });
+ *         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+ *         {
+ *             Bucket = bucket.Id,
+ *             LambdaFunctions = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketNotificationLambdaFunctionArgs
+ *                 {
+ *                     LambdaFunctionArn = func1.Arn,
+ *                     Events = 
+ *                     {
+ *                         "s3:ObjectCreated:*",
+ *                     },
+ *                     FilterPrefix = "AWSLogs/",
+ *                     FilterSuffix = ".log",
+ *                 },
+ *                 new Aws.S3.Inputs.BucketNotificationLambdaFunctionArgs
+ *                 {
+ *                     LambdaFunctionArn = func2.Arn,
+ *                     Events = 
+ *                     {
+ *                         "s3:ObjectCreated:*",
+ *                     },
+ *                     FilterPrefix = "OtherLogs/",
+ *                     FilterSuffix = ".log",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 allowBucket1,
+ *                 allowBucket2,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		iamForLambda, err := iam.NewRole(ctx, "iamForLambda", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"lambda.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		func1, err := lambda.NewFunction(ctx, "func1", &lambda.FunctionArgs{
+ * 			Code:    pulumi.NewFileArchive("your-function1.zip"),
+ * 			Role:    iamForLambda.Arn,
+ * 			Handler: pulumi.String("exports.example"),
+ * 			Runtime: pulumi.String("go1.x"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		allowBucket1, err := lambda.NewPermission(ctx, "allowBucket1", &lambda.PermissionArgs{
+ * 			Action:    pulumi.String("lambda:InvokeFunction"),
+ * 			Function:  func1.Arn,
+ * 			Principal: pulumi.String("s3.amazonaws.com"),
+ * 			SourceArn: bucket.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		func2, err := lambda.NewFunction(ctx, "func2", &lambda.FunctionArgs{
+ * 			Code:    pulumi.NewFileArchive("your-function2.zip"),
+ * 			Role:    iamForLambda.Arn,
+ * 			Handler: pulumi.String("exports.example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		allowBucket2, err := lambda.NewPermission(ctx, "allowBucket2", &lambda.PermissionArgs{
+ * 			Action:    pulumi.String("lambda:InvokeFunction"),
+ * 			Function:  func2.Arn,
+ * 			Principal: pulumi.String("s3.amazonaws.com"),
+ * 			SourceArn: bucket.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+ * 			Bucket: bucket.ID(),
+ * 			LambdaFunctions: s3.BucketNotificationLambdaFunctionArray{
+ * 				&s3.BucketNotificationLambdaFunctionArgs{
+ * 					LambdaFunctionArn: func1.Arn,
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("s3:ObjectCreated:*"),
+ * 					},
+ * 					FilterPrefix: pulumi.String("AWSLogs/"),
+ * 					FilterSuffix: pulumi.String(".log"),
+ * 				},
+ * 				&s3.BucketNotificationLambdaFunctionArgs{
+ * 					LambdaFunctionArn: func2.Arn,
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("s3:ObjectCreated:*"),
+ * 					},
+ * 					FilterPrefix: pulumi.String("OtherLogs/"),
+ * 					FilterSuffix: pulumi.String(".log"),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			allowBucket1,
+ * 			allowBucket2,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Add multiple notification configurations to SQS Queue
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bucket = new aws.s3.Bucket("bucket", {});
+ * const queue = new aws.sqs.Queue("queue", {policy: pulumi.interpolate`{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Effect": "Allow",
+ *       "Principal": "*",
+ *       "Action": "sqs:SendMessage",
+ * 	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+ *       "Condition": {
+ *         "ArnEquals": { "aws:SourceArn": "${bucket.arn}" }
+ *       }
+ *     }
+ *   ]
+ * }
+ * `});
+ * const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
+ *     bucket: bucket.id,
+ *     queues: [
+ *         {
+ *             id: "image-upload-event",
+ *             queueArn: queue.arn,
+ *             events: ["s3:ObjectCreated:*"],
+ *             filterPrefix: "images/",
+ *         },
+ *         {
+ *             id: "video-upload-event",
+ *             queueArn: queue.arn,
+ *             events: ["s3:ObjectCreated:*"],
+ *             filterPrefix: "videos/",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bucket = aws.s3.Bucket("bucket")
+ * queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *       "Effect": "Allow",
+ *       "Principal": "*",
+ *       "Action": "sqs:SendMessage",
+ * 	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
+ *       "Condition": {{
+ *         "ArnEquals": {{ "aws:SourceArn": "{arn}" }}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * """))
+ * bucket_notification = aws.s3.BucketNotification("bucketNotification",
+ *     bucket=bucket.id,
+ *     queues=[
+ *         aws.s3.BucketNotificationQueueArgs(
+ *             id="image-upload-event",
+ *             queue_arn=queue.arn,
+ *             events=["s3:ObjectCreated:*"],
+ *             filter_prefix="images/",
+ *         ),
+ *         aws.s3.BucketNotificationQueueArgs(
+ *             id="video-upload-event",
+ *             queue_arn=queue.arn,
+ *             events=["s3:ObjectCreated:*"],
+ *             filter_prefix="videos/",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+ *         {
+ *             Policy = bucket.Arn.Apply(arn => @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": ""*"",
+ *       ""Action"": ""sqs:SendMessage"",
+ * 	  ""Resource"": ""arn:aws:sqs:*:*:s3-event-notification-queue"",
+ *       ""Condition"": {{
+ *         ""ArnEquals"": {{ ""aws:SourceArn"": ""{arn}"" }}
+ *       }}
+ *     }}
+ *   ]
+ * }}
+ * "),
+ *         });
+ *         var bucketNotification = new Aws.S3.BucketNotification("bucketNotification", new Aws.S3.BucketNotificationArgs
+ *         {
+ *             Bucket = bucket.Id,
+ *             Queues = 
+ *             {
+ *                 new Aws.S3.Inputs.BucketNotificationQueueArgs
+ *                 {
+ *                     Id = "image-upload-event",
+ *                     QueueArn = queue.Arn,
+ *                     Events = 
+ *                     {
+ *                         "s3:ObjectCreated:*",
+ *                     },
+ *                     FilterPrefix = "images/",
+ *                 },
+ *                 new Aws.S3.Inputs.BucketNotificationQueueArgs
+ *                 {
+ *                     Id = "video-upload-event",
+ *                     QueueArn = queue.Arn,
+ *                     Events = 
+ *                     {
+ *                         "s3:ObjectCreated:*",
+ *                     },
+ *                     FilterPrefix = "videos/",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		queue, err := sqs.NewQueue(ctx, "queue", &sqs.QueueArgs{
+ * 			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "	  \"Resource\": \"arn:aws:sqs:*:*:s3-event-notification-queue\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": { \"aws:SourceArn\": \"", arn, "\" }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucketNotification(ctx, "bucketNotification", &s3.BucketNotificationArgs{
+ * 			Bucket: bucket.ID(),
+ * 			Queues: s3.BucketNotificationQueueArray{
+ * 				&s3.BucketNotificationQueueArgs{
+ * 					Id:       pulumi.String("image-upload-event"),
+ * 					QueueArn: queue.Arn,
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("s3:ObjectCreated:*"),
+ * 					},
+ * 					FilterPrefix: pulumi.String("images/"),
+ * 				},
+ * 				&s3.BucketNotificationQueueArgs{
+ * 					Id:       pulumi.String("video-upload-event"),
+ * 					QueueArn: queue.Arn,
+ * 					Events: pulumi.StringArray{
+ * 						pulumi.String("s3:ObjectCreated:*"),
+ * 					},
+ * 					FilterPrefix: pulumi.String("videos/"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +1054,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3/bucketNotification:BucketNotification bucket_notification bucket-name
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3/bucketNotification:BucketNotification")
 public class BucketNotification extends io.pulumi.resources.CustomResource {

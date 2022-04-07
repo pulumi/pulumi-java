@@ -27,7 +27,73 @@ import javax.annotation.Nullable;
  * this provider does not _create_ this resource, but instead "adopts" it
  * into management.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * Basic usage with tags:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
+ *     tags: {
+ *         Name: "Default VPC",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default = aws.ec2.DefaultVpc("default", tags={
+ *     "Name": "Default VPC",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @default = new Aws.Ec2.DefaultVpc("default", new Aws.Ec2.DefaultVpcArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", "Default VPC" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewDefaultVpc(ctx, "default", &ec2.DefaultVpcArgs{
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Default VPC"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,6 +103,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/defaultVpc:DefaultVpc default vpc-a01106c2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/defaultVpc:DefaultVpc")
 public class DefaultVpc extends io.pulumi.resources.CustomResource {

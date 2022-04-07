@@ -15,7 +15,182 @@ import javax.annotation.Nullable;
 /**
  * Authorizes a VPC in a different account to be associated with a local Route53 Hosted Zone.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const alternate = new aws.Provider("alternate", {});
+ * const exampleVpc = new aws.ec2.Vpc("exampleVpc", {
+ *     cidrBlock: "10.6.0.0/16",
+ *     enableDnsHostnames: true,
+ *     enableDnsSupport: true,
+ * });
+ * const exampleZone = new aws.route53.Zone("exampleZone", {vpcs: [{
+ *     vpcId: exampleVpc.id,
+ * }]});
+ * const alternateVpc = new aws.ec2.Vpc("alternateVpc", {
+ *     cidrBlock: "10.7.0.0/16",
+ *     enableDnsHostnames: true,
+ *     enableDnsSupport: true,
+ * }, {
+ *     provider: "aws.alternate",
+ * });
+ * const exampleVpcAssociationAuthorization = new aws.route53.VpcAssociationAuthorization("exampleVpcAssociationAuthorization", {
+ *     vpcId: alternateVpc.id,
+ *     zoneId: exampleZone.id,
+ * });
+ * const exampleZoneAssociation = new aws.route53.ZoneAssociation("exampleZoneAssociation", {
+ *     vpcId: exampleVpcAssociationAuthorization.vpcId,
+ *     zoneId: exampleVpcAssociationAuthorization.zoneId,
+ * }, {
+ *     provider: "aws.alternate",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * alternate = pulumi.providers.Aws("alternate")
+ * example_vpc = aws.ec2.Vpc("exampleVpc",
+ *     cidr_block="10.6.0.0/16",
+ *     enable_dns_hostnames=True,
+ *     enable_dns_support=True)
+ * example_zone = aws.route53.Zone("exampleZone", vpcs=[aws.route53.ZoneVpcArgs(
+ *     vpc_id=example_vpc.id,
+ * )])
+ * alternate_vpc = aws.ec2.Vpc("alternateVpc",
+ *     cidr_block="10.7.0.0/16",
+ *     enable_dns_hostnames=True,
+ *     enable_dns_support=True,
+ *     opts=pulumi.ResourceOptions(provider="aws.alternate"))
+ * example_vpc_association_authorization = aws.route53.VpcAssociationAuthorization("exampleVpcAssociationAuthorization",
+ *     vpc_id=alternate_vpc.id,
+ *     zone_id=example_zone.id)
+ * example_zone_association = aws.route53.ZoneAssociation("exampleZoneAssociation",
+ *     vpc_id=example_vpc_association_authorization.vpc_id,
+ *     zone_id=example_vpc_association_authorization.zone_id,
+ *     opts=pulumi.ResourceOptions(provider="aws.alternate"))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var alternate = new Aws.Provider("alternate", new Aws.ProviderArgs
+ *         {
+ *         });
+ *         var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.6.0.0/16",
+ *             EnableDnsHostnames = true,
+ *             EnableDnsSupport = true,
+ *         });
+ *         var exampleZone = new Aws.Route53.Zone("exampleZone", new Aws.Route53.ZoneArgs
+ *         {
+ *             Vpcs = 
+ *             {
+ *                 new Aws.Route53.Inputs.ZoneVpcArgs
+ *                 {
+ *                     VpcId = exampleVpc.Id,
+ *                 },
+ *             },
+ *         });
+ *         var alternateVpc = new Aws.Ec2.Vpc("alternateVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.7.0.0/16",
+ *             EnableDnsHostnames = true,
+ *             EnableDnsSupport = true,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = "aws.alternate",
+ *         });
+ *         var exampleVpcAssociationAuthorization = new Aws.Route53.VpcAssociationAuthorization("exampleVpcAssociationAuthorization", new Aws.Route53.VpcAssociationAuthorizationArgs
+ *         {
+ *             VpcId = alternateVpc.Id,
+ *             ZoneId = exampleZone.Id,
+ *         });
+ *         var exampleZoneAssociation = new Aws.Route53.ZoneAssociation("exampleZoneAssociation", new Aws.Route53.ZoneAssociationArgs
+ *         {
+ *             VpcId = exampleVpcAssociationAuthorization.VpcId,
+ *             ZoneId = exampleVpcAssociationAuthorization.ZoneId,
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = "aws.alternate",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "alternate", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+ * 			CidrBlock:          pulumi.String("10.6.0.0/16"),
+ * 			EnableDnsHostnames: pulumi.Bool(true),
+ * 			EnableDnsSupport:   pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleZone, err := route53.NewZone(ctx, "exampleZone", &route53.ZoneArgs{
+ * 			Vpcs: route53.ZoneVpcArray{
+ * 				&route53.ZoneVpcArgs{
+ * 					VpcId: exampleVpc.ID(),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		alternateVpc, err := ec2.NewVpc(ctx, "alternateVpc", &ec2.VpcArgs{
+ * 			CidrBlock:          pulumi.String("10.7.0.0/16"),
+ * 			EnableDnsHostnames: pulumi.Bool(true),
+ * 			EnableDnsSupport:   pulumi.Bool(true),
+ * 		}, pulumi.Provider("aws.alternate"))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleVpcAssociationAuthorization, err := route53.NewVpcAssociationAuthorization(ctx, "exampleVpcAssociationAuthorization", &route53.VpcAssociationAuthorizationArgs{
+ * 			VpcId:  alternateVpc.ID(),
+ * 			ZoneId: exampleZone.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewZoneAssociation(ctx, "exampleZoneAssociation", &route53.ZoneAssociationArgs{
+ * 			VpcId:  exampleVpcAssociationAuthorization.VpcId,
+ * 			ZoneId: exampleVpcAssociationAuthorization.ZoneId,
+ * 		}, pulumi.Provider("aws.alternate"))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +200,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:route53/vpcAssociationAuthorization:VpcAssociationAuthorization example Z123456ABCDEFG:vpc-12345678
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:route53/vpcAssociationAuthorization:VpcAssociationAuthorization")
 public class VpcAssociationAuthorization extends io.pulumi.resources.CustomResource {

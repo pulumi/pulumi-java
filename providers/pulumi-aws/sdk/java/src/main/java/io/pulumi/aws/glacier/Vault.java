@@ -19,7 +19,163 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** When removing a Glacier Vault, the Vault must be empty.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const awsSnsTopic = new aws.sns.Topic("awsSnsTopic", {});
+ * const myArchive = new aws.glacier.Vault("myArchive", {
+ *     notification: {
+ *         snsTopic: awsSnsTopic.arn,
+ *         events: [
+ *             "ArchiveRetrievalCompleted",
+ *             "InventoryRetrievalCompleted",
+ *         ],
+ *     },
+ *     accessPolicy: `{
+ *     "Version":"2012-10-17",
+ *     "Statement":[
+ *        {
+ *           "Sid": "add-read-only-perm",
+ *           "Principal": "*",
+ *           "Effect": "Allow",
+ *           "Action": [
+ *              "glacier:InitiateJob",
+ *              "glacier:GetJobOutput"
+ *           ],
+ *           "Resource": "arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive"
+ *        }
+ *     ]
+ * }
+ * `,
+ *     tags: {
+ *         Test: "MyArchive",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * aws_sns_topic = aws.sns.Topic("awsSnsTopic")
+ * my_archive = aws.glacier.Vault("myArchive",
+ *     notification=aws.glacier.VaultNotificationArgs(
+ *         sns_topic=aws_sns_topic.arn,
+ *         events=[
+ *             "ArchiveRetrievalCompleted",
+ *             "InventoryRetrievalCompleted",
+ *         ],
+ *     ),
+ *     access_policy="""{
+ *     "Version":"2012-10-17",
+ *     "Statement":[
+ *        {
+ *           "Sid": "add-read-only-perm",
+ *           "Principal": "*",
+ *           "Effect": "Allow",
+ *           "Action": [
+ *              "glacier:InitiateJob",
+ *              "glacier:GetJobOutput"
+ *           ],
+ *           "Resource": "arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive"
+ *        }
+ *     ]
+ * }
+ * """,
+ *     tags={
+ *         "Test": "MyArchive",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var awsSnsTopic = new Aws.Sns.Topic("awsSnsTopic", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var myArchive = new Aws.Glacier.Vault("myArchive", new Aws.Glacier.VaultArgs
+ *         {
+ *             Notification = new Aws.Glacier.Inputs.VaultNotificationArgs
+ *             {
+ *                 SnsTopic = awsSnsTopic.Arn,
+ *                 Events = 
+ *                 {
+ *                     "ArchiveRetrievalCompleted",
+ *                     "InventoryRetrievalCompleted",
+ *                 },
+ *             },
+ *             AccessPolicy = @"{
+ *     ""Version"":""2012-10-17"",
+ *     ""Statement"":[
+ *        {
+ *           ""Sid"": ""add-read-only-perm"",
+ *           ""Principal"": ""*"",
+ *           ""Effect"": ""Allow"",
+ *           ""Action"": [
+ *              ""glacier:InitiateJob"",
+ *              ""glacier:GetJobOutput""
+ *           ],
+ *           ""Resource"": ""arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive""
+ *        }
+ *     ]
+ * }
+ * ",
+ *             Tags = 
+ *             {
+ *                 { "Test", "MyArchive" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glacier"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		awsSnsTopic, err := sns.NewTopic(ctx, "awsSnsTopic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = glacier.NewVault(ctx, "myArchive", &glacier.VaultArgs{
+ * 			Notification: &glacier.VaultNotificationArgs{
+ * 				SnsTopic: awsSnsTopic.Arn,
+ * 				Events: pulumi.StringArray{
+ * 					pulumi.String("ArchiveRetrievalCompleted"),
+ * 					pulumi.String("InventoryRetrievalCompleted"),
+ * 				},
+ * 			},
+ * 			AccessPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[\n", "       {\n", "          \"Sid\": \"add-read-only-perm\",\n", "          \"Principal\": \"*\",\n", "          \"Effect\": \"Allow\",\n", "          \"Action\": [\n", "             \"glacier:InitiateJob\",\n", "             \"glacier:GetJobOutput\"\n", "          ],\n", "          \"Resource\": \"arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive\"\n", "       }\n", "    ]\n", "}\n")),
+ * 			Tags: pulumi.StringMap{
+ * 				"Test": pulumi.String("MyArchive"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +185,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glacier/vault:Vault archive my_archive
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glacier/vault:Vault")
 public class Vault extends io.pulumi.resources.CustomResource {

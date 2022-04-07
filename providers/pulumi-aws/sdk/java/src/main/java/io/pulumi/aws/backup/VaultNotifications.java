@@ -16,7 +16,171 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Backup vault notifications resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testTopic = new aws.sns.Topic("testTopic", {});
+ * const testPolicyDocument = testTopic.arn.apply(arn => aws.iam.getPolicyDocumentOutput({
+ *     policyId: "__default_policy_ID",
+ *     statements: [{
+ *         actions: ["SNS:Publish"],
+ *         effect: "Allow",
+ *         principals: [{
+ *             type: "Service",
+ *             identifiers: ["backup.amazonaws.com"],
+ *         }],
+ *         resources: [arn],
+ *         sid: "__default_statement_ID",
+ *     }],
+ * }));
+ * const testTopicPolicy = new aws.sns.TopicPolicy("testTopicPolicy", {
+ *     arn: testTopic.arn,
+ *     policy: testPolicyDocument.apply(testPolicyDocument => testPolicyDocument.json),
+ * });
+ * const testVaultNotifications = new aws.backup.VaultNotifications("testVaultNotifications", {
+ *     backupVaultName: "example_backup_vault",
+ *     snsTopicArn: testTopic.arn,
+ *     backupVaultEvents: [
+ *         "BACKUP_JOB_STARTED",
+ *         "RESTORE_JOB_COMPLETED",
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_topic = aws.sns.Topic("testTopic")
+ * test_policy_document = test_topic.arn.apply(lambda arn: aws.iam.get_policy_document_output(policy_id="__default_policy_ID",
+ *     statements=[aws.iam.GetPolicyDocumentStatementArgs(
+ *         actions=["SNS:Publish"],
+ *         effect="Allow",
+ *         principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+ *             type="Service",
+ *             identifiers=["backup.amazonaws.com"],
+ *         )],
+ *         resources=[arn],
+ *         sid="__default_statement_ID",
+ *     )]))
+ * test_topic_policy = aws.sns.TopicPolicy("testTopicPolicy",
+ *     arn=test_topic.arn,
+ *     policy=test_policy_document.json)
+ * test_vault_notifications = aws.backup.VaultNotifications("testVaultNotifications",
+ *     backup_vault_name="example_backup_vault",
+ *     sns_topic_arn=test_topic.arn,
+ *     backup_vault_events=[
+ *         "BACKUP_JOB_STARTED",
+ *         "RESTORE_JOB_COMPLETED",
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testTopic = new Aws.Sns.Topic("testTopic", new Aws.Sns.TopicArgs
+ *         {
+ *         });
+ *         var testPolicyDocument = testTopic.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.Invoke(new Aws.Iam.GetPolicyDocumentInvokeArgs
+ *         {
+ *             PolicyId = "__default_policy_ID",
+ *             Statements = 
+ *             {
+ *                 new Aws.Iam.Inputs.GetPolicyDocumentStatementInputArgs
+ *                 {
+ *                     Actions = 
+ *                     {
+ *                         "SNS:Publish",
+ *                     },
+ *                     Effect = "Allow",
+ *                     Principals = 
+ *                     {
+ *                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalInputArgs
+ *                         {
+ *                             Type = "Service",
+ *                             Identifiers = 
+ *                             {
+ *                                 "backup.amazonaws.com",
+ *                             },
+ *                         },
+ *                     },
+ *                     Resources = 
+ *                     {
+ *                         arn,
+ *                     },
+ *                     Sid = "__default_statement_ID",
+ *                 },
+ *             },
+ *         }));
+ *         var testTopicPolicy = new Aws.Sns.TopicPolicy("testTopicPolicy", new Aws.Sns.TopicPolicyArgs
+ *         {
+ *             Arn = testTopic.Arn,
+ *             Policy = testPolicyDocument.Apply(testPolicyDocument => testPolicyDocument.Json),
+ *         });
+ *         var testVaultNotifications = new Aws.Backup.VaultNotifications("testVaultNotifications", new Aws.Backup.VaultNotificationsArgs
+ *         {
+ *             BackupVaultName = "example_backup_vault",
+ *             SnsTopicArn = testTopic.Arn,
+ *             BackupVaultEvents = 
+ *             {
+ *                 "BACKUP_JOB_STARTED",
+ *                 "RESTORE_JOB_COMPLETED",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testTopic, err := sns.NewTopic(ctx, "testTopic", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sns.NewTopicPolicy(ctx, "testTopicPolicy", &sns.TopicPolicyArgs{
+ * 			Arn: testTopic.Arn,
+ * 			Policy: testPolicyDocument.ApplyT(func(testPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+ * 				return testPolicyDocument.Json, nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = backup.NewVaultNotifications(ctx, "testVaultNotifications", &backup.VaultNotificationsArgs{
+ * 			BackupVaultName: pulumi.String("example_backup_vault"),
+ * 			SnsTopicArn:     testTopic.Arn,
+ * 			BackupVaultEvents: pulumi.StringArray{
+ * 				pulumi.String("BACKUP_JOB_STARTED"),
+ * 				pulumi.String("RESTORE_JOB_COMPLETED"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +190,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:backup/vaultNotifications:VaultNotifications test TestVault
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:backup/vaultNotifications:VaultNotifications")
 public class VaultNotifications extends io.pulumi.resources.CustomResource {

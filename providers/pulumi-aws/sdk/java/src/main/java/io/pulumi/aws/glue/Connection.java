@@ -18,7 +18,182 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glue Connection resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Non-VPC Connection
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Connection("example", {
+ *     connectionProperties: {
+ *         JDBC_CONNECTION_URL: "jdbc:mysql://example.com/exampledatabase",
+ *         PASSWORD: "examplepassword",
+ *         USERNAME: "exampleusername",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Connection("example", connection_properties={
+ *     "JDBC_CONNECTION_URL": "jdbc:mysql://example.com/exampledatabase",
+ *     "PASSWORD": "examplepassword",
+ *     "USERNAME": "exampleusername",
+ * })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Connection("example", new Aws.Glue.ConnectionArgs
+ *         {
+ *             ConnectionProperties = 
+ *             {
+ *                 { "JDBC_CONNECTION_URL", "jdbc:mysql://example.com/exampledatabase" },
+ *                 { "PASSWORD", "examplepassword" },
+ *                 { "USERNAME", "exampleusername" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewConnection(ctx, "example", &glue.ConnectionArgs{
+ * 			ConnectionProperties: pulumi.StringMap{
+ * 				"JDBC_CONNECTION_URL": pulumi.String("jdbc:mysql://example.com/exampledatabase"),
+ * 				"PASSWORD":            pulumi.String("examplepassword"),
+ * 				"USERNAME":            pulumi.String("exampleusername"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### VPC Connection
+ * 
+ * For more information, see the [AWS Documentation](https://docs.aws.amazon.com/glue/latest/dg/populate-add-connection.html#connection-JDBC-VPC).
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.glue.Connection("example", {
+ *     connectionProperties: {
+ *         JDBC_CONNECTION_URL: `jdbc:mysql://${aws_rds_cluster.example.endpoint}/exampledatabase`,
+ *         PASSWORD: "examplepassword",
+ *         USERNAME: "exampleusername",
+ *     },
+ *     physicalConnectionRequirements: {
+ *         availabilityZone: aws_subnet.example.availability_zone,
+ *         securityGroupIdLists: [aws_security_group.example.id],
+ *         subnetId: aws_subnet.example.id,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.glue.Connection("example",
+ *     connection_properties={
+ *         "JDBC_CONNECTION_URL": f"jdbc:mysql://{aws_rds_cluster['example']['endpoint']}/exampledatabase",
+ *         "PASSWORD": "examplepassword",
+ *         "USERNAME": "exampleusername",
+ *     },
+ *     physical_connection_requirements=aws.glue.ConnectionPhysicalConnectionRequirementsArgs(
+ *         availability_zone=aws_subnet["example"]["availability_zone"],
+ *         security_group_id_lists=[aws_security_group["example"]["id"]],
+ *         subnet_id=aws_subnet["example"]["id"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Glue.Connection("example", new Aws.Glue.ConnectionArgs
+ *         {
+ *             ConnectionProperties = 
+ *             {
+ *                 { "JDBC_CONNECTION_URL", $"jdbc:mysql://{aws_rds_cluster.Example.Endpoint}/exampledatabase" },
+ *                 { "PASSWORD", "examplepassword" },
+ *                 { "USERNAME", "exampleusername" },
+ *             },
+ *             PhysicalConnectionRequirements = new Aws.Glue.Inputs.ConnectionPhysicalConnectionRequirementsArgs
+ *             {
+ *                 AvailabilityZone = aws_subnet.Example.Availability_zone,
+ *                 SecurityGroupIdLists = 
+ *                 {
+ *                     aws_security_group.Example.Id,
+ *                 },
+ *                 SubnetId = aws_subnet.Example.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := glue.NewConnection(ctx, "example", &glue.ConnectionArgs{
+ * 			ConnectionProperties: pulumi.StringMap{
+ * 				"JDBC_CONNECTION_URL": pulumi.String(fmt.Sprintf("%v%v%v", "jdbc:mysql://", aws_rds_cluster.Example.Endpoint, "/exampledatabase")),
+ * 				"PASSWORD":            pulumi.String("examplepassword"),
+ * 				"USERNAME":            pulumi.String("exampleusername"),
+ * 			},
+ * 			PhysicalConnectionRequirements: &glue.ConnectionPhysicalConnectionRequirementsArgs{
+ * 				AvailabilityZone: pulumi.Any(aws_subnet.Example.Availability_zone),
+ * 				SecurityGroupIdLists: pulumi.StringArray{
+ * 					pulumi.Any(aws_security_group.Example.Id),
+ * 				},
+ * 				SubnetId: pulumi.Any(aws_subnet.Example.Id),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +203,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:glue/connection:Connection MyConnection 123456789012:MyConnection
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:glue/connection:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {

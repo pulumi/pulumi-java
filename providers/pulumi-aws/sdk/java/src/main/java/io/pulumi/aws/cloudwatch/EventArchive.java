@@ -18,8 +18,156 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
+ * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const orderEventBus = new aws.cloudwatch.EventBus("orderEventBus", {});
+ * const orderEventArchive = new aws.cloudwatch.EventArchive("orderEventArchive", {eventSourceArn: orderEventBus.arn});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * order_event_bus = aws.cloudwatch.EventBus("orderEventBus")
+ * order_event_archive = aws.cloudwatch.EventArchive("orderEventArchive", event_source_arn=order_event_bus.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var orderEventBus = new Aws.CloudWatch.EventBus("orderEventBus", new Aws.CloudWatch.EventBusArgs
+ *         {
+ *         });
+ *         var orderEventArchive = new Aws.CloudWatch.EventArchive("orderEventArchive", new Aws.CloudWatch.EventArchiveArgs
+ *         {
+ *             EventSourceArn = orderEventBus.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		orderEventBus, err := cloudwatch.NewEventBus(ctx, "orderEventBus", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewEventArchive(ctx, "orderEventArchive", &cloudwatch.EventArchiveArgs{
+ * 			EventSourceArn: orderEventBus.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Example all optional arguments
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const orderEventBus = new aws.cloudwatch.EventBus("orderEventBus", {});
+ * const orderEventArchive = new aws.cloudwatch.EventArchive("orderEventArchive", {
+ *     description: "Archived events from order service",
+ *     eventSourceArn: orderEventBus.arn,
+ *     retentionDays: 7,
+ *     eventPattern: `{
+ *   "source": ["company.team.order"]
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * order_event_bus = aws.cloudwatch.EventBus("orderEventBus")
+ * order_event_archive = aws.cloudwatch.EventArchive("orderEventArchive",
+ *     description="Archived events from order service",
+ *     event_source_arn=order_event_bus.arn,
+ *     retention_days=7,
+ *     event_pattern="""{
+ *   "source": ["company.team.order"]
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var orderEventBus = new Aws.CloudWatch.EventBus("orderEventBus", new Aws.CloudWatch.EventBusArgs
+ *         {
+ *         });
+ *         var orderEventArchive = new Aws.CloudWatch.EventArchive("orderEventArchive", new Aws.CloudWatch.EventArchiveArgs
+ *         {
+ *             Description = "Archived events from order service",
+ *             EventSourceArn = orderEventBus.Arn,
+ *             RetentionDays = 7,
+ *             EventPattern = @"{
+ *   ""source"": [""company.team.order""]
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		orderEventBus, err := cloudwatch.NewEventBus(ctx, "orderEventBus", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudwatch.NewEventArchive(ctx, "orderEventArchive", &cloudwatch.EventArchiveArgs{
+ * 			Description:    pulumi.String("Archived events from order service"),
+ * 			EventSourceArn: orderEventBus.Arn,
+ * 			RetentionDays:  pulumi.Int(7),
+ * 			EventPattern:   pulumi.String(fmt.Sprintf("%v%v%v", "{\n", "  \"source\": [\"company.team.order\"]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
  * 
  * ## Import
  * 
@@ -29,6 +177,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/eventArchive:EventArchive imported_event_archive order-archive
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/eventArchive:EventArchive")
 public class EventArchive extends io.pulumi.resources.CustomResource {

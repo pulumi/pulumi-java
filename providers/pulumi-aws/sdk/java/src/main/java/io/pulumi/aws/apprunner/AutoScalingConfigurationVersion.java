@@ -18,7 +18,88 @@ import javax.annotation.Nullable;
 /**
  * Manages an App Runner AutoScaling Configuration Version.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apprunner.AutoScalingConfigurationVersion("example", {
+ *     autoScalingConfigurationName: "example",
+ *     maxConcurrency: 50,
+ *     maxSize: 10,
+ *     minSize: 2,
+ *     tags: {
+ *         Name: "example-apprunner-autoscaling",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apprunner.AutoScalingConfigurationVersion("example",
+ *     auto_scaling_configuration_name="example",
+ *     max_concurrency=50,
+ *     max_size=10,
+ *     min_size=2,
+ *     tags={
+ *         "Name": "example-apprunner-autoscaling",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppRunner.AutoScalingConfigurationVersion("example", new Aws.AppRunner.AutoScalingConfigurationVersionArgs
+ *         {
+ *             AutoScalingConfigurationName = "example",
+ *             MaxConcurrency = 50,
+ *             MaxSize = 10,
+ *             MinSize = 2,
+ *             Tags = 
+ *             {
+ *                 { "Name", "example-apprunner-autoscaling" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apprunner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apprunner.NewAutoScalingConfigurationVersion(ctx, "example", &apprunner.AutoScalingConfigurationVersionArgs{
+ * 			AutoScalingConfigurationName: pulumi.String("example"),
+ * 			MaxConcurrency:               pulumi.Int(50),
+ * 			MaxSize:                      pulumi.Int(10),
+ * 			MinSize:                      pulumi.Int(2),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example-apprunner-autoscaling"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +109,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apprunner/autoScalingConfigurationVersion:AutoScalingConfigurationVersion example "arn:aws:apprunner:us-east-1:1234567890:autoscalingconfiguration/example/1/69bdfe0115224b0db49398b7beb68e0f
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apprunner/autoScalingConfigurationVersion:AutoScalingConfigurationVersion")
 public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomResource {

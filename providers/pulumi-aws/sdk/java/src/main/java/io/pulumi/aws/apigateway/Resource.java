@@ -15,7 +15,83 @@ import javax.annotation.Nullable;
 /**
  * Provides an API Gateway Resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const myDemoAPI = new aws.apigateway.RestApi("myDemoAPI", {description: "This is my API for demonstration purposes"});
+ * const myDemoResource = new aws.apigateway.Resource("myDemoResource", {
+ *     restApi: myDemoAPI.id,
+ *     parentId: myDemoAPI.rootResourceId,
+ *     pathPart: "mydemoresource",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+ * my_demo_resource = aws.apigateway.Resource("myDemoResource",
+ *     rest_api=my_demo_api.id,
+ *     parent_id=my_demo_api.root_resource_id,
+ *     path_part="mydemoresource")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+ *         {
+ *             Description = "This is my API for demonstration purposes",
+ *         });
+ *         var myDemoResource = new Aws.ApiGateway.Resource("myDemoResource", new Aws.ApiGateway.ResourceArgs
+ *         {
+ *             RestApi = myDemoAPI.Id,
+ *             ParentId = myDemoAPI.RootResourceId,
+ *             PathPart = "mydemoresource",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
+ * 			Description: pulumi.String("This is my API for demonstration purposes"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = apigateway.NewResource(ctx, "myDemoResource", &apigateway.ResourceArgs{
+ * 			RestApi:  myDemoAPI.ID(),
+ * 			ParentId: myDemoAPI.RootResourceId,
+ * 			PathPart: pulumi.String("mydemoresource"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +101,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigateway/resource:Resource example 12345abcde/67890fghij
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigateway/resource:Resource")
 public class Resource extends io.pulumi.resources.CustomResource {

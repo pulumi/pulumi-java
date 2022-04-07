@@ -16,8 +16,71 @@ import javax.annotation.Nullable;
 /**
  * Attach an Elastic network interface (ENI) resource with EC2 instance.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.ec2.NetworkInterfaceAttachment("test", {
+ *     instanceId: aws_instance.test.id,
+ *     networkInterfaceId: aws_network_interface.test.id,
+ *     deviceIndex: 0,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.ec2.NetworkInterfaceAttachment("test",
+ *     instance_id=aws_instance["test"]["id"],
+ *     network_interface_id=aws_network_interface["test"]["id"],
+ *     device_index=0)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Ec2.NetworkInterfaceAttachment("test", new Aws.Ec2.NetworkInterfaceAttachmentArgs
+ *         {
+ *             InstanceId = aws_instance.Test.Id,
+ *             NetworkInterfaceId = aws_network_interface.Test.Id,
+ *             DeviceIndex = 0,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewNetworkInterfaceAttachment(ctx, "test", &ec2.NetworkInterfaceAttachmentArgs{
+ * 			InstanceId:         pulumi.Any(aws_instance.Test.Id),
+ * 			NetworkInterfaceId: pulumi.Any(aws_network_interface.Test.Id),
+ * 			DeviceIndex:        pulumi.Int(0),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/networkInterfaceAttachment:NetworkInterfaceAttachment")
 public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResource {

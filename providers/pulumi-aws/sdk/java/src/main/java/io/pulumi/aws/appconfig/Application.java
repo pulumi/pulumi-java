@@ -16,7 +16,76 @@ import javax.annotation.Nullable;
 /**
  * Provides an AppConfig Application resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.appconfig.Application("example", {
+ *     description: "Example AppConfig Application",
+ *     tags: {
+ *         Type: "AppConfig Application",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.appconfig.Application("example",
+ *     description="Example AppConfig Application",
+ *     tags={
+ *         "Type": "AppConfig Application",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppConfig.Application("example", new Aws.AppConfig.ApplicationArgs
+ *         {
+ *             Description = "Example AppConfig Application",
+ *             Tags = 
+ *             {
+ *                 { "Type", "AppConfig Application" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appconfig"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appconfig.NewApplication(ctx, "example", &appconfig.ApplicationArgs{
+ * 			Description: pulumi.String("Example AppConfig Application"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Type": pulumi.String("AppConfig Application"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:appconfig/application:Application example 71rxuzt
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:appconfig/application:Application")
 public class Application extends io.pulumi.resources.CustomResource {

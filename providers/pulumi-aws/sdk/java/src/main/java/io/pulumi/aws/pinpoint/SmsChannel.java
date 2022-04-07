@@ -17,7 +17,69 @@ import javax.annotation.Nullable;
 /**
  * Provides a Pinpoint SMS Channel resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const app = new aws.pinpoint.App("app", {});
+ * const sms = new aws.pinpoint.SmsChannel("sms", {applicationId: app.applicationId});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * app = aws.pinpoint.App("app")
+ * sms = aws.pinpoint.SmsChannel("sms", application_id=app.application_id)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+ *         {
+ *         });
+ *         var sms = new Aws.Pinpoint.SmsChannel("sms", new Aws.Pinpoint.SmsChannelArgs
+ *         {
+ *             ApplicationId = app.ApplicationId,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pinpoint"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		app, err := pinpoint.NewApp(ctx, "app", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = pinpoint.NewSmsChannel(ctx, "sms", &pinpoint.SmsChannelArgs{
+ * 			ApplicationId: app.ApplicationId,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +89,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:pinpoint/smsChannel:SmsChannel sms application-id
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:pinpoint/smsChannel:SmsChannel")
 public class SmsChannel extends io.pulumi.resources.CustomResource {

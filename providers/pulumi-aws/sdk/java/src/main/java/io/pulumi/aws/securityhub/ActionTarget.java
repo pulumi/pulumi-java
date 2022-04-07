@@ -15,7 +15,87 @@ import javax.annotation.Nullable;
 /**
  * Creates Security Hub custom action.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
+ * const exampleActionTarget = new aws.securityhub.ActionTarget("exampleActionTarget", {
+ *     identifier: "SendToChat",
+ *     description: "This is custom action sends selected findings to chat",
+ * }, {
+ *     dependsOn: [exampleAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_account = aws.securityhub.Account("exampleAccount")
+ * example_action_target = aws.securityhub.ActionTarget("exampleActionTarget",
+ *     identifier="SendToChat",
+ *     description="This is custom action sends selected findings to chat",
+ *     opts=pulumi.ResourceOptions(depends_on=[example_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAccount = new Aws.SecurityHub.Account("exampleAccount", new Aws.SecurityHub.AccountArgs
+ *         {
+ *         });
+ *         var exampleActionTarget = new Aws.SecurityHub.ActionTarget("exampleActionTarget", new Aws.SecurityHub.ActionTargetArgs
+ *         {
+ *             Identifier = "SendToChat",
+ *             Description = "This is custom action sends selected findings to chat",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleAccount, err := securityhub.NewAccount(ctx, "exampleAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewActionTarget(ctx, "exampleActionTarget", &securityhub.ActionTargetArgs{
+ * 			Identifier:  pulumi.String("SendToChat"),
+ * 			Description: pulumi.String("This is custom action sends selected findings to chat"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +105,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/actionTarget:ActionTarget example arn:aws:securityhub:eu-west-1:312940875350:action/custom/a
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/actionTarget:ActionTarget")
 public class ActionTarget extends io.pulumi.resources.CustomResource {

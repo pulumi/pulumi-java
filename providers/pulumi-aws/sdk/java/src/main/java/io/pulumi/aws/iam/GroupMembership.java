@@ -23,8 +23,107 @@ import javax.annotation.Nullable;
  * > **Note:** `aws.iam.GroupMembership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
  * `aws.iam.UserGroupMembership` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const group = new aws.iam.Group("group", {});
+ * const userOne = new aws.iam.User("userOne", {});
+ * const userTwo = new aws.iam.User("userTwo", {});
+ * const team = new aws.iam.GroupMembership("team", {
+ *     users: [
+ *         userOne.name,
+ *         userTwo.name,
+ *     ],
+ *     group: group.name,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * group = aws.iam.Group("group")
+ * user_one = aws.iam.User("userOne")
+ * user_two = aws.iam.User("userTwo")
+ * team = aws.iam.GroupMembership("team",
+ *     users=[
+ *         user_one.name,
+ *         user_two.name,
+ *     ],
+ *     group=group.name)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @group = new Aws.Iam.Group("group", new Aws.Iam.GroupArgs
+ *         {
+ *         });
+ *         var userOne = new Aws.Iam.User("userOne", new Aws.Iam.UserArgs
+ *         {
+ *         });
+ *         var userTwo = new Aws.Iam.User("userTwo", new Aws.Iam.UserArgs
+ *         {
+ *         });
+ *         var team = new Aws.Iam.GroupMembership("team", new Aws.Iam.GroupMembershipArgs
+ *         {
+ *             Users = 
+ *             {
+ *                 userOne.Name,
+ *                 userTwo.Name,
+ *             },
+ *             Group = @group.Name,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		group, err := iam.NewGroup(ctx, "group", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		userOne, err := iam.NewUser(ctx, "userOne", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		userTwo, err := iam.NewUser(ctx, "userTwo", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iam.NewGroupMembership(ctx, "team", &iam.GroupMembershipArgs{
+ * 			Users: pulumi.StringArray{
+ * 				userOne.Name,
+ * 				userTwo.Name,
+ * 			},
+ * 			Group: group.Name,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:iam/groupMembership:GroupMembership")
 public class GroupMembership extends io.pulumi.resources.CustomResource {

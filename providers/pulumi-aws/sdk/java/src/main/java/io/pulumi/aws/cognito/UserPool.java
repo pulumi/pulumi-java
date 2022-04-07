@@ -30,7 +30,252 @@ import javax.annotation.Nullable;
 /**
  * Provides a Cognito User Pool resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic configuration
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const pool = new aws.cognito.UserPool("pool", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * pool = aws.cognito.UserPool("pool")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cognito.NewUserPool(ctx, "pool", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Enabling SMS and Software Token Multi-Factor Authentication
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // ... other configuration ...
+ * const example = new aws.cognito.UserPool("example", {
+ *     mfaConfiguration: "ON",
+ *     smsAuthenticationMessage: "Your code is {####}",
+ *     smsConfiguration: {
+ *         externalId: "example",
+ *         snsCallerArn: aws_iam_role.example.arn,
+ *     },
+ *     softwareTokenMfaConfiguration: {
+ *         enabled: true,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # ... other configuration ...
+ * example = aws.cognito.UserPool("example",
+ *     mfa_configuration="ON",
+ *     sms_authentication_message="Your code is {####}",
+ *     sms_configuration=aws.cognito.UserPoolSmsConfigurationArgs(
+ *         external_id="example",
+ *         sns_caller_arn=aws_iam_role["example"]["arn"],
+ *     ),
+ *     software_token_mfa_configuration=aws.cognito.UserPoolSoftwareTokenMfaConfigurationArgs(
+ *         enabled=True,
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // ... other configuration ...
+ *         var example = new Aws.Cognito.UserPool("example", new Aws.Cognito.UserPoolArgs
+ *         {
+ *             MfaConfiguration = "ON",
+ *             SmsAuthenticationMessage = "Your code is {####}",
+ *             SmsConfiguration = new Aws.Cognito.Inputs.UserPoolSmsConfigurationArgs
+ *             {
+ *                 ExternalId = "example",
+ *                 SnsCallerArn = aws_iam_role.Example.Arn,
+ *             },
+ *             SoftwareTokenMfaConfiguration = new Aws.Cognito.Inputs.UserPoolSoftwareTokenMfaConfigurationArgs
+ *             {
+ *                 Enabled = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cognito.NewUserPool(ctx, "example", &cognito.UserPoolArgs{
+ * 			MfaConfiguration:         pulumi.String("ON"),
+ * 			SmsAuthenticationMessage: pulumi.String("Your code is {####}"),
+ * 			SmsConfiguration: &cognito.UserPoolSmsConfigurationArgs{
+ * 				ExternalId:   pulumi.String("example"),
+ * 				SnsCallerArn: pulumi.Any(aws_iam_role.Example.Arn),
+ * 			},
+ * 			SoftwareTokenMfaConfiguration: &cognito.UserPoolSoftwareTokenMfaConfigurationArgs{
+ * 				Enabled: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Using Account Recovery Setting
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.cognito.UserPool("test", {
+ *     accountRecoverySetting: {
+ *         recoveryMechanisms: [
+ *             {
+ *                 name: "verified_email",
+ *                 priority: 1,
+ *             },
+ *             {
+ *                 name: "verified_phone_number",
+ *                 priority: 2,
+ *             },
+ *         ],
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.cognito.UserPool("test", account_recovery_setting=aws.cognito.UserPoolAccountRecoverySettingArgs(
+ *     recovery_mechanisms=[
+ *         aws.cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs(
+ *             name="verified_email",
+ *             priority=1,
+ *         ),
+ *         aws.cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs(
+ *             name="verified_phone_number",
+ *             priority=2,
+ *         ),
+ *     ],
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.Cognito.UserPool("test", new Aws.Cognito.UserPoolArgs
+ *         {
+ *             AccountRecoverySetting = new Aws.Cognito.Inputs.UserPoolAccountRecoverySettingArgs
+ *             {
+ *                 RecoveryMechanisms = 
+ *                 {
+ *                     new Aws.Cognito.Inputs.UserPoolAccountRecoverySettingRecoveryMechanismArgs
+ *                     {
+ *                         Name = "verified_email",
+ *                         Priority = 1,
+ *                     },
+ *                     new Aws.Cognito.Inputs.UserPoolAccountRecoverySettingRecoveryMechanismArgs
+ *                     {
+ *                         Name = "verified_phone_number",
+ *                         Priority = 2,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cognito.NewUserPool(ctx, "test", &cognito.UserPoolArgs{
+ * 			AccountRecoverySetting: &cognito.UserPoolAccountRecoverySettingArgs{
+ * 				RecoveryMechanisms: cognito.UserPoolAccountRecoverySettingRecoveryMechanismArray{
+ * 					&cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs{
+ * 						Name:     pulumi.String("verified_email"),
+ * 						Priority: pulumi.Int(1),
+ * 					},
+ * 					&cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs{
+ * 						Name:     pulumi.String("verified_phone_number"),
+ * 						Priority: pulumi.Int(2),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,6 +285,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cognito/userPool:UserPool pool <id>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cognito/userPool:UserPool")
 public class UserPool extends io.pulumi.resources.CustomResource {

@@ -21,7 +21,76 @@ import javax.annotation.Nullable;
  * 
  * The `aws.ec2.DefaultSubnet` resource allows you to manage a region's default VPC subnet but this provider cannot destroy it. Removing this resource from your configuration will remove it from your statefile and the provider management.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const defaultAz1 = new aws.ec2.DefaultSubnet("default_az1", {
+ *     availabilityZone: "us-west-2a",
+ *     tags: {
+ *         Name: "Default subnet for us-west-2a",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * default_az1 = aws.ec2.DefaultSubnet("defaultAz1",
+ *     availability_zone="us-west-2a",
+ *     tags={
+ *         "Name": "Default subnet for us-west-2a",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultAz1 = new Aws.Ec2.DefaultSubnet("defaultAz1", new Aws.Ec2.DefaultSubnetArgs
+ *         {
+ *             AvailabilityZone = "us-west-2a",
+ *             Tags = 
+ *             {
+ *                 { "Name", "Default subnet for us-west-2a" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewDefaultSubnet(ctx, "defaultAz1", &ec2.DefaultSubnetArgs{
+ * 			AvailabilityZone: pulumi.String("us-west-2a"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("Default subnet for us-west-2a"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +100,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/defaultSubnet:DefaultSubnet public_subnet subnet-9d4a7b6c
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/defaultSubnet:DefaultSubnet")
 public class DefaultSubnet extends io.pulumi.resources.CustomResource {

@@ -30,8 +30,84 @@ import javax.annotation.Nullable;
  * Copying an AMI can take several minutes. The creation of this resource will
  * block until the new AMI is available for use on new instances.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.AmiCopy("example", {
+ *     description: "A copy of ami-xxxxxxxx",
+ *     sourceAmiId: "ami-xxxxxxxx",
+ *     sourceAmiRegion: "us-west-1",
+ *     tags: {
+ *         Name: "HelloWorld",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.AmiCopy("example",
+ *     description="A copy of ami-xxxxxxxx",
+ *     source_ami_id="ami-xxxxxxxx",
+ *     source_ami_region="us-west-1",
+ *     tags={
+ *         "Name": "HelloWorld",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.AmiCopy("example", new Aws.Ec2.AmiCopyArgs
+ *         {
+ *             Description = "A copy of ami-xxxxxxxx",
+ *             SourceAmiId = "ami-xxxxxxxx",
+ *             SourceAmiRegion = "us-west-1",
+ *             Tags = 
+ *             {
+ *                 { "Name", "HelloWorld" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewAmiCopy(ctx, "example", &ec2.AmiCopyArgs{
+ * 			Description:     pulumi.String("A copy of ami-xxxxxxxx"),
+ * 			SourceAmiId:     pulumi.String("ami-xxxxxxxx"),
+ * 			SourceAmiRegion: pulumi.String("us-west-1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("HelloWorld"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="aws:ec2/amiCopy:AmiCopy")
 public class AmiCopy extends io.pulumi.resources.CustomResource {

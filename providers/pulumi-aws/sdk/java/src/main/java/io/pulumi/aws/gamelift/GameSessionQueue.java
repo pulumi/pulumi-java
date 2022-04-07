@@ -19,7 +19,119 @@ import javax.annotation.Nullable;
 /**
  * Provides an Gamelift Game Session Queue resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.gamelift.GameSessionQueue("test", {
+ *     destinations: [
+ *         aws_gamelift_fleet.us_west_2_fleet.arn,
+ *         aws_gamelift_fleet.eu_central_1_fleet.arn,
+ *     ],
+ *     playerLatencyPolicies: [
+ *         {
+ *             maximumIndividualPlayerLatencyMilliseconds: 100,
+ *             policyDurationSeconds: 5,
+ *         },
+ *         {
+ *             maximumIndividualPlayerLatencyMilliseconds: 200,
+ *         },
+ *     ],
+ *     timeoutInSeconds: 60,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.gamelift.GameSessionQueue("test",
+ *     destinations=[
+ *         aws_gamelift_fleet["us_west_2_fleet"]["arn"],
+ *         aws_gamelift_fleet["eu_central_1_fleet"]["arn"],
+ *     ],
+ *     player_latency_policies=[
+ *         aws.gamelift.GameSessionQueuePlayerLatencyPolicyArgs(
+ *             maximum_individual_player_latency_milliseconds=100,
+ *             policy_duration_seconds=5,
+ *         ),
+ *         aws.gamelift.GameSessionQueuePlayerLatencyPolicyArgs(
+ *             maximum_individual_player_latency_milliseconds=200,
+ *         ),
+ *     ],
+ *     timeout_in_seconds=60)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.GameLift.GameSessionQueue("test", new Aws.GameLift.GameSessionQueueArgs
+ *         {
+ *             Destinations = 
+ *             {
+ *                 aws_gamelift_fleet.Us_west_2_fleet.Arn,
+ *                 aws_gamelift_fleet.Eu_central_1_fleet.Arn,
+ *             },
+ *             PlayerLatencyPolicies = 
+ *             {
+ *                 new Aws.GameLift.Inputs.GameSessionQueuePlayerLatencyPolicyArgs
+ *                 {
+ *                     MaximumIndividualPlayerLatencyMilliseconds = 100,
+ *                     PolicyDurationSeconds = 5,
+ *                 },
+ *                 new Aws.GameLift.Inputs.GameSessionQueuePlayerLatencyPolicyArgs
+ *                 {
+ *                     MaximumIndividualPlayerLatencyMilliseconds = 200,
+ *                 },
+ *             },
+ *             TimeoutInSeconds = 60,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/gamelift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := gamelift.NewGameSessionQueue(ctx, "test", &gamelift.GameSessionQueueArgs{
+ * 			Destinations: pulumi.StringArray{
+ * 				pulumi.Any(aws_gamelift_fleet.Us_west_2_fleet.Arn),
+ * 				pulumi.Any(aws_gamelift_fleet.Eu_central_1_fleet.Arn),
+ * 			},
+ * 			PlayerLatencyPolicies: gamelift.GameSessionQueuePlayerLatencyPolicyArray{
+ * 				&gamelift.GameSessionQueuePlayerLatencyPolicyArgs{
+ * 					MaximumIndividualPlayerLatencyMilliseconds: pulumi.Int(100),
+ * 					PolicyDurationSeconds:                      pulumi.Int(5),
+ * 				},
+ * 				&gamelift.GameSessionQueuePlayerLatencyPolicyArgs{
+ * 					MaximumIndividualPlayerLatencyMilliseconds: pulumi.Int(200),
+ * 				},
+ * 			},
+ * 			TimeoutInSeconds: pulumi.Int(60),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +141,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:gamelift/gameSessionQueue:GameSessionQueue example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:gamelift/gameSessionQueue:GameSessionQueue")
 public class GameSessionQueue extends io.pulumi.resources.CustomResource {

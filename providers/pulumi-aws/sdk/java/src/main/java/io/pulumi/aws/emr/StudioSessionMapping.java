@@ -15,7 +15,75 @@ import javax.annotation.Nullable;
 /**
  * Provides an Elastic MapReduce Studio Session Mapping.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.emr.StudioSessionMapping("example", {
+ *     studioId: aws_emr_studio.example.id,
+ *     identityType: "USER",
+ *     identityId: "example",
+ *     sessionPolicyArn: aws_iam_policy.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.emr.StudioSessionMapping("example",
+ *     studio_id=aws_emr_studio["example"]["id"],
+ *     identity_type="USER",
+ *     identity_id="example",
+ *     session_policy_arn=aws_iam_policy["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Emr.StudioSessionMapping("example", new Aws.Emr.StudioSessionMappingArgs
+ *         {
+ *             StudioId = aws_emr_studio.Example.Id,
+ *             IdentityType = "USER",
+ *             IdentityId = "example",
+ *             SessionPolicyArn = aws_iam_policy.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := emr.NewStudioSessionMapping(ctx, "example", &emr.StudioSessionMappingArgs{
+ * 			StudioId:         pulumi.Any(aws_emr_studio.Example.Id),
+ * 			IdentityType:     pulumi.String("USER"),
+ * 			IdentityId:       pulumi.String("example"),
+ * 			SessionPolicyArn: pulumi.Any(aws_iam_policy.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +93,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:emr/studioSessionMapping:StudioSessionMapping example es-xxxxx:USER:xxxxx-xxx-xxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:emr/studioSessionMapping:StudioSessionMapping")
 public class StudioSessionMapping extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,60 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to create an organizational unit.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.organizations.OrganizationalUnit("example", {parentId: aws_organizations_organization.example.roots[0].id});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.organizations.OrganizationalUnit("example", parent_id=aws_organizations_organization["example"]["roots"][0]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Organizations.OrganizationalUnit("example", new Aws.Organizations.OrganizationalUnitArgs
+ *         {
+ *             ParentId = aws_organizations_organization.Example.Roots[0].Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := organizations.NewOrganizationalUnit(ctx, "example", &organizations.OrganizationalUnitArgs{
+ * 			ParentId: pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +81,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:organizations/organizationalUnit:OrganizationalUnit example ou-1234567
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:organizations/organizationalUnit:OrganizationalUnit")
 public class OrganizationalUnit extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,130 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Rule Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ipset = new aws.waf.IpSet("ipset", {ipSetDescriptors: [{
+ *     type: "IPV4",
+ *     value: "192.0.7.0/24",
+ * }]});
+ * const wafrule = new aws.waf.Rule("wafrule", {
+ *     metricName: "tfWAFRule",
+ *     predicates: [{
+ *         dataId: ipset.id,
+ *         negated: false,
+ *         type: "IPMatch",
+ *     }],
+ * }, {
+ *     dependsOn: [ipset],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ipset = aws.waf.IpSet("ipset", ip_set_descriptors=[aws.waf.IpSetIpSetDescriptorArgs(
+ *     type="IPV4",
+ *     value="192.0.7.0/24",
+ * )])
+ * wafrule = aws.waf.Rule("wafrule",
+ *     metric_name="tfWAFRule",
+ *     predicates=[aws.waf.RulePredicateArgs(
+ *         data_id=ipset.id,
+ *         negated=False,
+ *         type="IPMatch",
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[ipset]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ipset = new Aws.Waf.IpSet("ipset", new Aws.Waf.IpSetArgs
+ *         {
+ *             IpSetDescriptors = 
+ *             {
+ *                 new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+ *                 {
+ *                     Type = "IPV4",
+ *                     Value = "192.0.7.0/24",
+ *                 },
+ *             },
+ *         });
+ *         var wafrule = new Aws.Waf.Rule("wafrule", new Aws.Waf.RuleArgs
+ *         {
+ *             MetricName = "tfWAFRule",
+ *             Predicates = 
+ *             {
+ *                 new Aws.Waf.Inputs.RulePredicateArgs
+ *                 {
+ *                     DataId = ipset.Id,
+ *                     Negated = false,
+ *                     Type = "IPMatch",
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 ipset,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/waf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		ipset, err := waf.NewIpSet(ctx, "ipset", &waf.IpSetArgs{
+ * 			IpSetDescriptors: waf.IpSetIpSetDescriptorArray{
+ * 				&waf.IpSetIpSetDescriptorArgs{
+ * 					Type:  pulumi.String("IPV4"),
+ * 					Value: pulumi.String("192.0.7.0/24"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = waf.NewRule(ctx, "wafrule", &waf.RuleArgs{
+ * 			MetricName: pulumi.String("tfWAFRule"),
+ * 			Predicates: waf.RulePredicateArray{
+ * 				&waf.RulePredicateArgs{
+ * 					DataId:  ipset.ID(),
+ * 					Negated: pulumi.Bool(false),
+ * 					Type:    pulumi.String("IPMatch"),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			ipset,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +151,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:waf/rule:Rule example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:waf/rule:Rule")
 public class Rule extends io.pulumi.resources.CustomResource {

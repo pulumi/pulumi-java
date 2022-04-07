@@ -20,7 +20,242 @@ import javax.annotation.Nullable;
 /**
  * Associates an SSM Document to an instance or EC2 tag.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an association for a specific instance
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ssm.Association("example", {targets: [{
+ *     key: "InstanceIds",
+ *     values: [aws_instance.example.id],
+ * }]});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ssm.Association("example", targets=[aws.ssm.AssociationTargetArgs(
+ *     key="InstanceIds",
+ *     values=[aws_instance["example"]["id"]],
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ssm.Association("example", new Aws.Ssm.AssociationArgs
+ *         {
+ *             Targets = 
+ *             {
+ *                 new Aws.Ssm.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "InstanceIds",
+ *                     Values = 
+ *                     {
+ *                         aws_instance.Example.Id,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "example", &ssm.AssociationArgs{
+ * 			Targets: ssm.AssociationTargetArray{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("InstanceIds"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.Any(aws_instance.Example.Id),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create an association for all managed instances in an AWS account
+ * 
+ * To target all managed instances in an AWS account, set the `key` as `"InstanceIds"` with `values` set as `["*"]`. This example also illustrates how to use an Amazon owned SSM document named `AmazonCloudWatch-ManageAgent`.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ssm.Association("example", {
+ *     targets: [{
+ *         key: "InstanceIds",
+ *         values: ["*"],
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ssm.Association("example", targets=[aws.ssm.AssociationTargetArgs(
+ *     key="InstanceIds",
+ *     values=["*"],
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ssm.Association("example", new Aws.Ssm.AssociationArgs
+ *         {
+ *             Targets = 
+ *             {
+ *                 new Aws.Ssm.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "InstanceIds",
+ *                     Values = 
+ *                     {
+ *                         "*",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "example", &ssm.AssociationArgs{
+ * 			Targets: ssm.AssociationTargetArray{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("InstanceIds"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("*"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create an association for a specific tag
+ * 
+ * This example shows how to target all managed instances that are assigned a tag key of `Environment` and value of `Development`.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ssm.Association("example", {
+ *     targets: [{
+ *         key: "tag:Environment",
+ *         values: ["Development"],
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ssm.Association("example", targets=[aws.ssm.AssociationTargetArgs(
+ *     key="tag:Environment",
+ *     values=["Development"],
+ * )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ssm.Association("example", new Aws.Ssm.AssociationArgs
+ *         {
+ *             Targets = 
+ *             {
+ *                 new Aws.Ssm.Inputs.AssociationTargetArgs
+ *                 {
+ *                     Key = "tag:Environment",
+ *                     Values = 
+ *                     {
+ *                         "Development",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ssm.NewAssociation(ctx, "example", &ssm.AssociationArgs{
+ * 			Targets: ssm.AssociationTargetArray{
+ * 				&ssm.AssociationTargetArgs{
+ * 					Key: pulumi.String("tag:Environment"),
+ * 					Values: pulumi.StringArray{
+ * 						pulumi.String("Development"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +265,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ssm/association:Association test-association 10abcdef-0abc-1234-5678-90abcdef123456
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ssm/association:Association")
 public class Association extends io.pulumi.resources.CustomResource {

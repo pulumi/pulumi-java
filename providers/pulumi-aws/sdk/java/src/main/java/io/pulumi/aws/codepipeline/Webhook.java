@@ -19,7 +19,372 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodePipeline Webhook.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as github from "@pulumi/github";
+ * 
+ * const barPipeline = new aws.codepipeline.Pipeline("barPipeline", {
+ *     roleArn: aws_iam_role.bar.arn,
+ *     artifactStore: {
+ *         location: aws_s3_bucket.bar.bucket,
+ *         type: "S3",
+ *         encryptionKey: {
+ *             id: data.aws_kms_alias.s3kmskey.arn,
+ *             type: "KMS",
+ *         },
+ *     },
+ *     stages: [
+ *         {
+ *             name: "Source",
+ *             actions: [{
+ *                 name: "Source",
+ *                 category: "Source",
+ *                 owner: "ThirdParty",
+ *                 provider: "GitHub",
+ *                 version: "1",
+ *                 outputArtifacts: ["test"],
+ *                 configuration: {
+ *                     Owner: "my-organization",
+ *                     Repo: "test",
+ *                     Branch: "master",
+ *                 },
+ *             }],
+ *         },
+ *         {
+ *             name: "Build",
+ *             actions: [{
+ *                 name: "Build",
+ *                 category: "Build",
+ *                 owner: "AWS",
+ *                 provider: "CodeBuild",
+ *                 inputArtifacts: ["test"],
+ *                 version: "1",
+ *                 configuration: {
+ *                     ProjectName: "test",
+ *                 },
+ *             }],
+ *         },
+ *     ],
+ * });
+ * const webhookSecret = "super-secret";
+ * const barWebhook = new aws.codepipeline.Webhook("barWebhook", {
+ *     authentication: "GITHUB_HMAC",
+ *     targetAction: "Source",
+ *     targetPipeline: barPipeline.name,
+ *     authenticationConfiguration: {
+ *         secretToken: webhookSecret,
+ *     },
+ *     filters: [{
+ *         jsonPath: `$.ref`,
+ *         matchEquals: "refs/heads/{Branch}",
+ *     }],
+ * });
+ * // Wire the CodePipeline webhook into a GitHub repository.
+ * const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook", {
+ *     repository: github_repository.repo.name,
+ *     configuration: {
+ *         url: barWebhook.url,
+ *         contentType: "json",
+ *         insecureSsl: true,
+ *         secret: webhookSecret,
+ *     },
+ *     events: ["push"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_github as github
+ * 
+ * bar_pipeline = aws.codepipeline.Pipeline("barPipeline",
+ *     role_arn=aws_iam_role["bar"]["arn"],
+ *     artifact_store=aws.codepipeline.PipelineArtifactStoreArgs(
+ *         location=aws_s3_bucket["bar"]["bucket"],
+ *         type="S3",
+ *         encryption_key=aws.codepipeline.PipelineArtifactStoreEncryptionKeyArgs(
+ *             id=data["aws_kms_alias"]["s3kmskey"]["arn"],
+ *             type="KMS",
+ *         ),
+ *     ),
+ *     stages=[
+ *         aws.codepipeline.PipelineStageArgs(
+ *             name="Source",
+ *             actions=[aws.codepipeline.PipelineStageActionArgs(
+ *                 name="Source",
+ *                 category="Source",
+ *                 owner="ThirdParty",
+ *                 provider="GitHub",
+ *                 version="1",
+ *                 output_artifacts=["test"],
+ *                 configuration={
+ *                     "Owner": "my-organization",
+ *                     "Repo": "test",
+ *                     "Branch": "master",
+ *                 },
+ *             )],
+ *         ),
+ *         aws.codepipeline.PipelineStageArgs(
+ *             name="Build",
+ *             actions=[aws.codepipeline.PipelineStageActionArgs(
+ *                 name="Build",
+ *                 category="Build",
+ *                 owner="AWS",
+ *                 provider="CodeBuild",
+ *                 input_artifacts=["test"],
+ *                 version="1",
+ *                 configuration={
+ *                     "ProjectName": "test",
+ *                 },
+ *             )],
+ *         ),
+ *     ])
+ * webhook_secret = "super-secret"
+ * bar_webhook = aws.codepipeline.Webhook("barWebhook",
+ *     authentication="GITHUB_HMAC",
+ *     target_action="Source",
+ *     target_pipeline=bar_pipeline.name,
+ *     authentication_configuration=aws.codepipeline.WebhookAuthenticationConfigurationArgs(
+ *         secret_token=webhook_secret,
+ *     ),
+ *     filters=[aws.codepipeline.WebhookFilterArgs(
+ *         json_path="$.ref",
+ *         match_equals="refs/heads/{Branch}",
+ *     )])
+ * # Wire the CodePipeline webhook into a GitHub repository.
+ * bar_repository_webhook = github.RepositoryWebhook("barRepositoryWebhook",
+ *     repository=github_repository["repo"]["name"],
+ *     configuration=github.RepositoryWebhookConfigurationArgs(
+ *         url=bar_webhook.url,
+ *         content_type="json",
+ *         insecure_ssl=True,
+ *         secret=webhook_secret,
+ *     ),
+ *     events=["push"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * using Github = Pulumi.Github;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var barPipeline = new Aws.CodePipeline.Pipeline("barPipeline", new Aws.CodePipeline.PipelineArgs
+ *         {
+ *             RoleArn = aws_iam_role.Bar.Arn,
+ *             ArtifactStore = new Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs
+ *             {
+ *                 Location = aws_s3_bucket.Bar.Bucket,
+ *                 Type = "S3",
+ *                 EncryptionKey = new Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs
+ *                 {
+ *                     Id = data.Aws_kms_alias.S3kmskey.Arn,
+ *                     Type = "KMS",
+ *                 },
+ *             },
+ *             Stages = 
+ *             {
+ *                 new Aws.CodePipeline.Inputs.PipelineStageArgs
+ *                 {
+ *                     Name = "Source",
+ *                     Actions = 
+ *                     {
+ *                         new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+ *                         {
+ *                             Name = "Source",
+ *                             Category = "Source",
+ *                             Owner = "ThirdParty",
+ *                             Provider = "GitHub",
+ *                             Version = "1",
+ *                             OutputArtifacts = 
+ *                             {
+ *                                 "test",
+ *                             },
+ *                             Configuration = 
+ *                             {
+ *                                 { "Owner", "my-organization" },
+ *                                 { "Repo", "test" },
+ *                                 { "Branch", "master" },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new Aws.CodePipeline.Inputs.PipelineStageArgs
+ *                 {
+ *                     Name = "Build",
+ *                     Actions = 
+ *                     {
+ *                         new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+ *                         {
+ *                             Name = "Build",
+ *                             Category = "Build",
+ *                             Owner = "AWS",
+ *                             Provider = "CodeBuild",
+ *                             InputArtifacts = 
+ *                             {
+ *                                 "test",
+ *                             },
+ *                             Version = "1",
+ *                             Configuration = 
+ *                             {
+ *                                 { "ProjectName", "test" },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var webhookSecret = "super-secret";
+ *         var barWebhook = new Aws.CodePipeline.Webhook("barWebhook", new Aws.CodePipeline.WebhookArgs
+ *         {
+ *             Authentication = "GITHUB_HMAC",
+ *             TargetAction = "Source",
+ *             TargetPipeline = barPipeline.Name,
+ *             AuthenticationConfiguration = new Aws.CodePipeline.Inputs.WebhookAuthenticationConfigurationArgs
+ *             {
+ *                 SecretToken = webhookSecret,
+ *             },
+ *             Filters = 
+ *             {
+ *                 new Aws.CodePipeline.Inputs.WebhookFilterArgs
+ *                 {
+ *                     JsonPath = "$.ref",
+ *                     MatchEquals = "refs/heads/{Branch}",
+ *                 },
+ *             },
+ *         });
+ *         // Wire the CodePipeline webhook into a GitHub repository.
+ *         var barRepositoryWebhook = new Github.RepositoryWebhook("barRepositoryWebhook", new Github.RepositoryWebhookArgs
+ *         {
+ *             Repository = github_repository.Repo.Name,
+ *             Configuration = new Github.Inputs.RepositoryWebhookConfigurationArgs
+ *             {
+ *                 Url = barWebhook.Url,
+ *                 ContentType = "json",
+ *                 InsecureSsl = true,
+ *                 Secret = webhookSecret,
+ *             },
+ *             Events = 
+ *             {
+ *                 "push",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codepipeline"
+ * 	"github.com/pulumi/pulumi-github/sdk/v4/go/github"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		barPipeline, err := codepipeline.NewPipeline(ctx, "barPipeline", &codepipeline.PipelineArgs{
+ * 			RoleArn: pulumi.Any(aws_iam_role.Bar.Arn),
+ * 			ArtifactStore: &codepipeline.PipelineArtifactStoreArgs{
+ * 				Location: pulumi.Any(aws_s3_bucket.Bar.Bucket),
+ * 				Type:     pulumi.String("S3"),
+ * 				EncryptionKey: &codepipeline.PipelineArtifactStoreEncryptionKeyArgs{
+ * 					Id:   pulumi.Any(data.Aws_kms_alias.S3kmskey.Arn),
+ * 					Type: pulumi.String("KMS"),
+ * 				},
+ * 			},
+ * 			Stages: codepipeline.PipelineStageArray{
+ * 				&codepipeline.PipelineStageArgs{
+ * 					Name: pulumi.String("Source"),
+ * 					Actions: codepipeline.PipelineStageActionArray{
+ * 						&codepipeline.PipelineStageActionArgs{
+ * 							Name:     pulumi.String("Source"),
+ * 							Category: pulumi.String("Source"),
+ * 							Owner:    pulumi.String("ThirdParty"),
+ * 							Provider: pulumi.String("GitHub"),
+ * 							Version:  pulumi.String("1"),
+ * 							OutputArtifacts: pulumi.StringArray{
+ * 								pulumi.String("test"),
+ * 							},
+ * 							Configuration: pulumi.StringMap{
+ * 								"Owner":  pulumi.String("my-organization"),
+ * 								"Repo":   pulumi.String("test"),
+ * 								"Branch": pulumi.String("master"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&codepipeline.PipelineStageArgs{
+ * 					Name: pulumi.String("Build"),
+ * 					Actions: codepipeline.PipelineStageActionArray{
+ * 						&codepipeline.PipelineStageActionArgs{
+ * 							Name:     pulumi.String("Build"),
+ * 							Category: pulumi.String("Build"),
+ * 							Owner:    pulumi.String("AWS"),
+ * 							Provider: pulumi.String("CodeBuild"),
+ * 							InputArtifacts: pulumi.StringArray{
+ * 								pulumi.String("test"),
+ * 							},
+ * 							Version: pulumi.String("1"),
+ * 							Configuration: pulumi.StringMap{
+ * 								"ProjectName": pulumi.String("test"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		webhookSecret := "super-secret"
+ * 		barWebhook, err := codepipeline.NewWebhook(ctx, "barWebhook", &codepipeline.WebhookArgs{
+ * 			Authentication: pulumi.String("GITHUB_HMAC"),
+ * 			TargetAction:   pulumi.String("Source"),
+ * 			TargetPipeline: barPipeline.Name,
+ * 			AuthenticationConfiguration: &codepipeline.WebhookAuthenticationConfigurationArgs{
+ * 				SecretToken: pulumi.String(webhookSecret),
+ * 			},
+ * 			Filters: codepipeline.WebhookFilterArray{
+ * 				&codepipeline.WebhookFilterArgs{
+ * 					JsonPath:    pulumi.String(fmt.Sprintf("%v%v", "$", ".ref")),
+ * 					MatchEquals: pulumi.String("refs/heads/{Branch}"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = github.NewRepositoryWebhook(ctx, "barRepositoryWebhook", &github.RepositoryWebhookArgs{
+ * 			Repository: pulumi.Any(github_repository.Repo.Name),
+ * 			Configuration: &RepositoryWebhookConfigurationArgs{
+ * 				Url:         barWebhook.Url,
+ * 				ContentType: pulumi.String("json"),
+ * 				InsecureSsl: pulumi.Bool(true),
+ * 				Secret:      pulumi.String(webhookSecret),
+ * 			},
+ * 			Events: pulumi.StringArray{
+ * 				pulumi.String("push"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +394,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codepipeline/webhook:Webhook example arn:aws:codepipeline:us-west-2:123456789012:webhook:example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codepipeline/webhook:Webhook")
 public class Webhook extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,141 @@ import javax.annotation.Nullable;
 /**
  * Provides a MediaStore Container Policy.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const currentRegion = aws.getRegion({});
+ * const currentCallerIdentity = aws.getCallerIdentity({});
+ * const exampleContainer = new aws.mediastore.Container("exampleContainer", {});
+ * const exampleContainerPolicy = new aws.mediastore.ContainerPolicy("exampleContainerPolicy", {
+ *     containerName: exampleContainer.name,
+ *     policy: pulumi.all([currentCallerIdentity, currentRegion, currentCallerIdentity, exampleContainer.name]).apply(([currentCallerIdentity, currentRegion, currentCallerIdentity1, name]) => `{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [{
+ * 		"Sid": "MediaStoreFullAccess",
+ * 		"Action": [ "mediastore:*" ],
+ * 		"Principal": {"AWS" : "arn:aws:iam::${currentCallerIdentity.accountId}:root"},
+ * 		"Effect": "Allow",
+ * 		"Resource": "arn:aws:mediastore:${currentRegion.name}:${currentCallerIdentity1.accountId}:container/${name}/*",
+ * 		"Condition": {
+ * 			"Bool": { "aws:SecureTransport": "true" }
+ * 		}
+ * 	}]
+ * }
+ * `),
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * current_region = aws.get_region()
+ * current_caller_identity = aws.get_caller_identity()
+ * example_container = aws.mediastore.Container("exampleContainer")
+ * example_container_policy = aws.mediastore.ContainerPolicy("exampleContainerPolicy",
+ *     container_name=example_container.name,
+ *     policy=example_container.name.apply(lambda name: f"""{{
+ * 	"Version": "2012-10-17",
+ * 	"Statement": [{{
+ * 		"Sid": "MediaStoreFullAccess",
+ * 		"Action": [ "mediastore:*" ],
+ * 		"Principal": {{"AWS" : "arn:aws:iam::{current_caller_identity.account_id}:root"}},
+ * 		"Effect": "Allow",
+ * 		"Resource": "arn:aws:mediastore:{current_region.name}:{current_caller_identity.account_id}:container/{name}/*",
+ * 		"Condition": {{
+ * 			"Bool": {{ "aws:SecureTransport": "true" }}
+ * 		}}
+ * 	}}]
+ * }}
+ * """))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+ *         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         var exampleContainer = new Aws.MediaStore.Container("exampleContainer", new Aws.MediaStore.ContainerArgs
+ *         {
+ *         });
+ *         var exampleContainerPolicy = new Aws.MediaStore.ContainerPolicy("exampleContainerPolicy", new Aws.MediaStore.ContainerPolicyArgs
+ *         {
+ *             ContainerName = exampleContainer.Name,
+ *             Policy = Output.Tuple(currentCallerIdentity, currentRegion, currentCallerIdentity, exampleContainer.Name).Apply(values =>
+ *             {
+ *                 var currentCallerIdentity = values.Item1;
+ *                 var currentRegion = values.Item2;
+ *                 var currentCallerIdentity1 = values.Item3;
+ *                 var name = values.Item4;
+ *                 return @$"{{
+ * 	""Version"": ""2012-10-17"",
+ * 	""Statement"": [{{
+ * 		""Sid"": ""MediaStoreFullAccess"",
+ * 		""Action"": [ ""mediastore:*"" ],
+ * 		""Principal"": {{""AWS"" : ""arn:aws:iam::{currentCallerIdentity.AccountId}:root""}},
+ * 		""Effect"": ""Allow"",
+ * 		""Resource"": ""arn:aws:mediastore:{currentRegion.Name}:{currentCallerIdentity1.AccountId}:container/{name}/*"",
+ * 		""Condition"": {{
+ * 			""Bool"": {{ ""aws:SecureTransport"": ""true"" }}
+ * 		}}
+ * 	}}]
+ * }}
+ * ";
+ *             }),
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/mediastore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleContainer, err := mediastore.NewContainer(ctx, "exampleContainer", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = mediastore.NewContainerPolicy(ctx, "exampleContainerPolicy", &mediastore.ContainerPolicyArgs{
+ * 			ContainerName: exampleContainer.Name,
+ * 			Policy: exampleContainer.Name.ApplyT(func(name string) (string, error) {
+ * 				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [{\n", "		\"Sid\": \"MediaStoreFullAccess\",\n", "		\"Action\": [ \"mediastore:*\" ],\n", "		\"Principal\": {\"AWS\" : \"arn:aws:iam::", currentCallerIdentity.AccountId, ":root\"},\n", "		\"Effect\": \"Allow\",\n", "		\"Resource\": \"arn:aws:mediastore:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":container/", name, "/*\",\n", "		\"Condition\": {\n", "			\"Bool\": { \"aws:SecureTransport\": \"true\" }\n", "		}\n", "	}]\n", "}\n"), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +159,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:mediastore/containerPolicy:ContainerPolicy example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:mediastore/containerPolicy:ContainerPolicy")
 public class ContainerPolicy extends io.pulumi.resources.CustomResource {

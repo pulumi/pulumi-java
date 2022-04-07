@@ -15,7 +15,98 @@ import javax.annotation.Nullable;
 /**
  * Manages an Amazon API Gateway Version 2 [model](https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apigatewayv2.Model("example", {
+ *     apiId: aws_apigatewayv2_api.example.id,
+ *     contentType: "application/json",
+ *     schema: `{
+ *   "$schema": "http://json-schema.org/draft-04/schema#",
+ *   "title": "ExampleModel",
+ *   "type": "object",
+ *   "properties": {
+ *     "id": { "type": "string" }
+ *   }
+ * }
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apigatewayv2.Model("example",
+ *     api_id=aws_apigatewayv2_api["example"]["id"],
+ *     content_type="application/json",
+ *     schema="""{
+ *   "$schema": "http://json-schema.org/draft-04/schema#",
+ *   "title": "ExampleModel",
+ *   "type": "object",
+ *   "properties": {
+ *     "id": { "type": "string" }
+ *   }
+ * }
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ApiGatewayV2.Model("example", new Aws.ApiGatewayV2.ModelArgs
+ *         {
+ *             ApiId = aws_apigatewayv2_api.Example.Id,
+ *             ContentType = "application/json",
+ *             Schema = @"{
+ *   ""$schema"": ""http://json-schema.org/draft-04/schema#"",
+ *   ""title"": ""ExampleModel"",
+ *   ""type"": ""object"",
+ *   ""properties"": {
+ *     ""id"": { ""type"": ""string"" }
+ *   }
+ * }
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apigatewayv2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apigatewayv2.NewModel(ctx, "example", &apigatewayv2.ModelArgs{
+ * 			ApiId:       pulumi.Any(aws_apigatewayv2_api.Example.Id),
+ * 			ContentType: pulumi.String("application/json"),
+ * 			Schema:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"", "$", "schema\": \"http://json-schema.org/draft-04/schema#\",\n", "  \"title\": \"ExampleModel\",\n", "  \"type\": \"object\",\n", "  \"properties\": {\n", "    \"id\": { \"type\": \"string\" }\n", "  }\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +116,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apigatewayv2/model:Model example aabbccddee/1122334
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apigatewayv2/model:Model")
 public class Model extends io.pulumi.resources.CustomResource {

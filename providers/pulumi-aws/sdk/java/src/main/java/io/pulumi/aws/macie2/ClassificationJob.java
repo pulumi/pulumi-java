@@ -22,7 +22,119 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage an [AWS Macie Classification Job](https://docs.aws.amazon.com/macie/latest/APIReference/jobs.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testAccount = new aws.macie2.Account("testAccount", {});
+ * const testClassificationJob = new aws.macie2.ClassificationJob("testClassificationJob", {
+ *     jobType: "ONE_TIME",
+ *     s3JobDefinition: {
+ *         bucketDefinitions: [{
+ *             accountId: "ACCOUNT ID",
+ *             buckets: ["S3 BUCKET NAME"],
+ *         }],
+ *     },
+ * }, {
+ *     dependsOn: [testAccount],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_account = aws.macie2.Account("testAccount")
+ * test_classification_job = aws.macie2.ClassificationJob("testClassificationJob",
+ *     job_type="ONE_TIME",
+ *     s3_job_definition=aws.macie2.ClassificationJobS3JobDefinitionArgs(
+ *         bucket_definitions=[aws.macie2.ClassificationJobS3JobDefinitionBucketDefinitionArgs(
+ *             account_id="ACCOUNT ID",
+ *             buckets=["S3 BUCKET NAME"],
+ *         )],
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[test_account]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testAccount = new Aws.Macie2.Account("testAccount", new Aws.Macie2.AccountArgs
+ *         {
+ *         });
+ *         var testClassificationJob = new Aws.Macie2.ClassificationJob("testClassificationJob", new Aws.Macie2.ClassificationJobArgs
+ *         {
+ *             JobType = "ONE_TIME",
+ *             S3JobDefinition = new Aws.Macie2.Inputs.ClassificationJobS3JobDefinitionArgs
+ *             {
+ *                 BucketDefinitions = 
+ *                 {
+ *                     new Aws.Macie2.Inputs.ClassificationJobS3JobDefinitionBucketDefinitionArgs
+ *                     {
+ *                         AccountId = "ACCOUNT ID",
+ *                         Buckets = 
+ *                         {
+ *                             "S3 BUCKET NAME",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 testAccount,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testAccount, err := macie2.NewAccount(ctx, "testAccount", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = macie2.NewClassificationJob(ctx, "testClassificationJob", &macie2.ClassificationJobArgs{
+ * 			JobType: pulumi.String("ONE_TIME"),
+ * 			S3JobDefinition: &macie2.ClassificationJobS3JobDefinitionArgs{
+ * 				BucketDefinitions: macie2.ClassificationJobS3JobDefinitionBucketDefinitionArray{
+ * 					&macie2.ClassificationJobS3JobDefinitionBucketDefinitionArgs{
+ * 						AccountId: pulumi.String("ACCOUNT ID"),
+ * 						Buckets: pulumi.StringArray{
+ * 							pulumi.String("S3 BUCKET NAME"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			testAccount,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,6 +144,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:macie2/classificationJob:ClassificationJob example abcd1
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:macie2/classificationJob:ClassificationJob")
 public class ClassificationJob extends io.pulumi.resources.CustomResource {

@@ -18,7 +18,236 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudFront real-time log configuration resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "cloudfront.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * `});
+ * const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
+ *     role: exampleRole.id,
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *         "Effect": "Allow",
+ *         "Action": [
+ *           "kinesis:DescribeStreamSummary",
+ *           "kinesis:DescribeStream",
+ *           "kinesis:PutRecord",
+ *           "kinesis:PutRecords"
+ *         ],
+ *         "Resource": "${aws_kinesis_stream.example.arn}"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * const exampleRealtimeLogConfig = new aws.cloudfront.RealtimeLogConfig("exampleRealtimeLogConfig", {
+ *     samplingRate: 75,
+ *     fields: [
+ *         "timestamp",
+ *         "c-ip",
+ *     ],
+ *     endpoint: {
+ *         streamType: "Kinesis",
+ *         kinesisStreamConfig: {
+ *             roleArn: exampleRole.arn,
+ *             streamArn: aws_kinesis_stream.example.arn,
+ *         },
+ *     },
+ * }, {
+ *     dependsOn: [exampleRolePolicy],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {
+ *       "Action": "sts:AssumeRole",
+ *       "Principal": {
+ *         "Service": "cloudfront.amazonaws.com"
+ *       },
+ *       "Effect": "Allow"
+ *     }
+ *   ]
+ * }
+ * """)
+ * example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+ *     role=example_role.id,
+ *     policy=f"""{{
+ *   "Version": "2012-10-17",
+ *   "Statement": [
+ *     {{
+ *         "Effect": "Allow",
+ *         "Action": [
+ *           "kinesis:DescribeStreamSummary",
+ *           "kinesis:DescribeStream",
+ *           "kinesis:PutRecord",
+ *           "kinesis:PutRecords"
+ *         ],
+ *         "Resource": "{aws_kinesis_stream["example"]["arn"]}"
+ *     }}
+ *   ]
+ * }}
+ * """)
+ * example_realtime_log_config = aws.cloudfront.RealtimeLogConfig("exampleRealtimeLogConfig",
+ *     sampling_rate=75,
+ *     fields=[
+ *         "timestamp",
+ *         "c-ip",
+ *     ],
+ *     endpoint=aws.cloudfront.RealtimeLogConfigEndpointArgs(
+ *         stream_type="Kinesis",
+ *         kinesis_stream_config=aws.cloudfront.RealtimeLogConfigEndpointKinesisStreamConfigArgs(
+ *             role_arn=example_role.arn,
+ *             stream_arn=aws_kinesis_stream["example"]["arn"],
+ *         ),
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[example_role_policy]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+ *         {
+ *             AssumeRolePolicy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {
+ *       ""Action"": ""sts:AssumeRole"",
+ *       ""Principal"": {
+ *         ""Service"": ""cloudfront.amazonaws.com""
+ *       },
+ *       ""Effect"": ""Allow""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
+ *         {
+ *             Role = exampleRole.Id,
+ *             Policy = @$"{{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Statement"": [
+ *     {{
+ *         ""Effect"": ""Allow"",
+ *         ""Action"": [
+ *           ""kinesis:DescribeStreamSummary"",
+ *           ""kinesis:DescribeStream"",
+ *           ""kinesis:PutRecord"",
+ *           ""kinesis:PutRecords""
+ *         ],
+ *         ""Resource"": ""{aws_kinesis_stream.Example.Arn}""
+ *     }}
+ *   ]
+ * }}
+ * ",
+ *         });
+ *         var exampleRealtimeLogConfig = new Aws.CloudFront.RealtimeLogConfig("exampleRealtimeLogConfig", new Aws.CloudFront.RealtimeLogConfigArgs
+ *         {
+ *             SamplingRate = 75,
+ *             Fields = 
+ *             {
+ *                 "timestamp",
+ *                 "c-ip",
+ *             },
+ *             Endpoint = new Aws.CloudFront.Inputs.RealtimeLogConfigEndpointArgs
+ *             {
+ *                 StreamType = "Kinesis",
+ *                 KinesisStreamConfig = new Aws.CloudFront.Inputs.RealtimeLogConfigEndpointKinesisStreamConfigArgs
+ *                 {
+ *                     RoleArn = exampleRole.Arn,
+ *                     StreamArn = aws_kinesis_stream.Example.Arn,
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleRolePolicy,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+ * 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"cloudfront.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleRolePolicy, err := iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
+ * 			Role:   exampleRole.ID(),
+ * 			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "        \"Effect\": \"Allow\",\n", "        \"Action\": [\n", "          \"kinesis:DescribeStreamSummary\",\n", "          \"kinesis:DescribeStream\",\n", "          \"kinesis:PutRecord\",\n", "          \"kinesis:PutRecords\"\n", "        ],\n", "        \"Resource\": \"", aws_kinesis_stream.Example.Arn, "\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cloudfront.NewRealtimeLogConfig(ctx, "exampleRealtimeLogConfig", &cloudfront.RealtimeLogConfigArgs{
+ * 			SamplingRate: pulumi.Int(75),
+ * 			Fields: pulumi.StringArray{
+ * 				pulumi.String("timestamp"),
+ * 				pulumi.String("c-ip"),
+ * 			},
+ * 			Endpoint: &cloudfront.RealtimeLogConfigEndpointArgs{
+ * 				StreamType: pulumi.String("Kinesis"),
+ * 				KinesisStreamConfig: &cloudfront.RealtimeLogConfigEndpointKinesisStreamConfigArgs{
+ * 					RoleArn:   exampleRole.Arn,
+ * 					StreamArn: pulumi.Any(aws_kinesis_stream.Example.Arn),
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleRolePolicy,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +257,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudfront/realtimeLogConfig:RealtimeLogConfig example arn:aws:cloudfront::111122223333:realtime-log-config/ExampleNameForRealtimeLogConfig
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudfront/realtimeLogConfig:RealtimeLogConfig")
 public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {

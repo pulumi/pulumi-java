@@ -19,7 +19,79 @@ import javax.annotation.Nullable;
  * When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
  * The `aws.ec2.VpcIpv4CidrBlockAssociation` resource allows further IPv4 CIDR blocks to be added to the VPC.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
+ * const secondaryCidr = new aws.ec2.VpcIpv4CidrBlockAssociation("secondaryCidr", {
+ *     vpcId: main.id,
+ *     cidrBlock: "172.2.0.0/16",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+ * secondary_cidr = aws.ec2.VpcIpv4CidrBlockAssociation("secondaryCidr",
+ *     vpc_id=main.id,
+ *     cidr_block="172.2.0.0/16")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var secondaryCidr = new Aws.Ec2.VpcIpv4CidrBlockAssociation("secondaryCidr", new Aws.Ec2.VpcIpv4CidrBlockAssociationArgs
+ *         {
+ *             VpcId = main.Id,
+ *             CidrBlock = "172.2.0.0/16",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcIpv4CidrBlockAssociation(ctx, "secondaryCidr", &ec2.VpcIpv4CidrBlockAssociationArgs{
+ * 			VpcId:     main.ID(),
+ * 			CidrBlock: pulumi.String("172.2.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +101,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation example vpc-cidr-assoc-xxxxxxxx
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpcIpv4CidrBlockAssociation:VpcIpv4CidrBlockAssociation")
 public class VpcIpv4CidrBlockAssociation extends io.pulumi.resources.CustomResource {

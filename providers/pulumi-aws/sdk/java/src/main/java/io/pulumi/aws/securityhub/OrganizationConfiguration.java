@@ -19,7 +19,108 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** This is an advanced resource. This provider will automatically assume management of the Security Hub Organization Configuration without import and perform no actions on removal from the configuration.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {
+ *     awsServiceAccessPrincipals: ["securityhub.amazonaws.com"],
+ *     featureSet: "ALL",
+ * });
+ * const exampleOrganizationAdminAccount = new aws.securityhub.OrganizationAdminAccount("exampleOrganizationAdminAccount", {adminAccountId: "123456789012"}, {
+ *     dependsOn: [exampleOrganization],
+ * });
+ * const exampleOrganizationConfiguration = new aws.securityhub.OrganizationConfiguration("exampleOrganizationConfiguration", {autoEnable: true});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_organization = aws.organizations.Organization("exampleOrganization",
+ *     aws_service_access_principals=["securityhub.amazonaws.com"],
+ *     feature_set="ALL")
+ * example_organization_admin_account = aws.securityhub.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012",
+ * opts=pulumi.ResourceOptions(depends_on=[example_organization]))
+ * example_organization_configuration = aws.securityhub.OrganizationConfiguration("exampleOrganizationConfiguration", auto_enable=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+ *         {
+ *             AwsServiceAccessPrincipals = 
+ *             {
+ *                 "securityhub.amazonaws.com",
+ *             },
+ *             FeatureSet = "ALL",
+ *         });
+ *         var exampleOrganizationAdminAccount = new Aws.SecurityHub.OrganizationAdminAccount("exampleOrganizationAdminAccount", new Aws.SecurityHub.OrganizationAdminAccountArgs
+ *         {
+ *             AdminAccountId = "123456789012",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 exampleOrganization,
+ *             },
+ *         });
+ *         var exampleOrganizationConfiguration = new Aws.SecurityHub.OrganizationConfiguration("exampleOrganizationConfiguration", new Aws.SecurityHub.OrganizationConfigurationArgs
+ *         {
+ *             AutoEnable = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/securityhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+ * 			AwsServiceAccessPrincipals: pulumi.StringArray{
+ * 				pulumi.String("securityhub.amazonaws.com"),
+ * 			},
+ * 			FeatureSet: pulumi.String("ALL"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &securityhub.OrganizationAdminAccountArgs{
+ * 			AdminAccountId: pulumi.String("123456789012"),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			exampleOrganization,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = securityhub.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", &securityhub.OrganizationConfigurationArgs{
+ * 			AutoEnable: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +130,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:securityhub/organizationConfiguration:OrganizationConfiguration example 123456789012
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:securityhub/organizationConfiguration:OrganizationConfiguration")
 public class OrganizationConfiguration extends io.pulumi.resources.CustomResource {

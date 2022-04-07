@@ -17,7 +17,75 @@ import javax.annotation.Nullable;
  * Provides an Amazon Lex Bot Alias resource. For more information see
  * [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const orderFlowersProd = new aws.lex.BotAlias("order_flowers_prod", {
+ *     botName: "OrderFlowers",
+ *     botVersion: "1",
+ *     description: "Production Version of the OrderFlowers Bot.",
+ *     name: "OrderFlowersProd",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * order_flowers_prod = aws.lex.BotAlias("orderFlowersProd",
+ *     bot_name="OrderFlowers",
+ *     bot_version="1",
+ *     description="Production Version of the OrderFlowers Bot.",
+ *     name="OrderFlowersProd")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var orderFlowersProd = new Aws.Lex.BotAlias("orderFlowersProd", new Aws.Lex.BotAliasArgs
+ *         {
+ *             BotName = "OrderFlowers",
+ *             BotVersion = "1",
+ *             Description = "Production Version of the OrderFlowers Bot.",
+ *             Name = "OrderFlowersProd",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lex"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lex.NewBotAlias(ctx, "orderFlowersProd", &lex.BotAliasArgs{
+ * 			BotName:     pulumi.String("OrderFlowers"),
+ * 			BotVersion:  pulumi.String("1"),
+ * 			Description: pulumi.String("Production Version of the OrderFlowers Bot."),
+ * 			Name:        pulumi.String("OrderFlowersProd"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +95,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lex/botAlias:BotAlias order_flowers_prod OrderFlowers:OrderFlowersProd
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lex/botAlias:BotAlias")
 public class BotAlias extends io.pulumi.resources.CustomResource {

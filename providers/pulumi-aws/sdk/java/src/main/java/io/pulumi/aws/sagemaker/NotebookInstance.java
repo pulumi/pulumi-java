@@ -18,7 +18,185 @@ import javax.annotation.Nullable;
 /**
  * Provides a Sagemaker Notebook Instance resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const ni = new aws.sagemaker.NotebookInstance("ni", {
+ *     roleArn: aws_iam_role.role.arn,
+ *     instanceType: "ml.t2.medium",
+ *     tags: {
+ *         Name: "foo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * ni = aws.sagemaker.NotebookInstance("ni",
+ *     role_arn=aws_iam_role["role"]["arn"],
+ *     instance_type="ml.t2.medium",
+ *     tags={
+ *         "Name": "foo",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ni = new Aws.Sagemaker.NotebookInstance("ni", new Aws.Sagemaker.NotebookInstanceArgs
+ *         {
+ *             RoleArn = aws_iam_role.Role.Arn,
+ *             InstanceType = "ml.t2.medium",
+ *             Tags = 
+ *             {
+ *                 { "Name", "foo" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewNotebookInstance(ctx, "ni", &sagemaker.NotebookInstanceArgs{
+ * 			RoleArn:      pulumi.Any(aws_iam_role.Role.Arn),
+ * 			InstanceType: pulumi.String("ml.t2.medium"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("foo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Code repository usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.CodeRepository("example", {
+ *     codeRepositoryName: "my-notebook-instance-code-repo",
+ *     gitConfig: {
+ *         repositoryUrl: "https://github.com/hashicorp/terraform-provider-aws.git",
+ *     },
+ * });
+ * const ni = new aws.sagemaker.NotebookInstance("ni", {
+ *     roleArn: aws_iam_role.role.arn,
+ *     instanceType: "ml.t2.medium",
+ *     defaultCodeRepository: example.codeRepositoryName,
+ *     tags: {
+ *         Name: "foo",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.CodeRepository("example",
+ *     code_repository_name="my-notebook-instance-code-repo",
+ *     git_config=aws.sagemaker.CodeRepositoryGitConfigArgs(
+ *         repository_url="https://github.com/hashicorp/terraform-provider-aws.git",
+ *     ))
+ * ni = aws.sagemaker.NotebookInstance("ni",
+ *     role_arn=aws_iam_role["role"]["arn"],
+ *     instance_type="ml.t2.medium",
+ *     default_code_repository=example.code_repository_name,
+ *     tags={
+ *         "Name": "foo",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.CodeRepository("example", new Aws.Sagemaker.CodeRepositoryArgs
+ *         {
+ *             CodeRepositoryName = "my-notebook-instance-code-repo",
+ *             GitConfig = new Aws.Sagemaker.Inputs.CodeRepositoryGitConfigArgs
+ *             {
+ *                 RepositoryUrl = "https://github.com/hashicorp/terraform-provider-aws.git",
+ *             },
+ *         });
+ *         var ni = new Aws.Sagemaker.NotebookInstance("ni", new Aws.Sagemaker.NotebookInstanceArgs
+ *         {
+ *             RoleArn = aws_iam_role.Role.Arn,
+ *             InstanceType = "ml.t2.medium",
+ *             DefaultCodeRepository = example.CodeRepositoryName,
+ *             Tags = 
+ *             {
+ *                 { "Name", "foo" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		example, err := sagemaker.NewCodeRepository(ctx, "example", &sagemaker.CodeRepositoryArgs{
+ * 			CodeRepositoryName: pulumi.String("my-notebook-instance-code-repo"),
+ * 			GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
+ * 				RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = sagemaker.NewNotebookInstance(ctx, "ni", &sagemaker.NotebookInstanceArgs{
+ * 			RoleArn:               pulumi.Any(aws_iam_role.Role.Arn),
+ * 			InstanceType:          pulumi.String("ml.t2.medium"),
+ * 			DefaultCodeRepository: example.CodeRepositoryName,
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("foo"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +206,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/notebookInstance:NotebookInstance test_notebook_instance my-notebook-instance
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/notebookInstance:NotebookInstance")
 public class NotebookInstance extends io.pulumi.resources.CustomResource {

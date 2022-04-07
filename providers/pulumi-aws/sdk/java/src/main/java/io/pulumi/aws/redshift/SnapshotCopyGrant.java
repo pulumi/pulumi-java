@@ -18,7 +18,85 @@ import javax.annotation.Nullable;
  * 
  * Note that the grant must exist in the destination region, and not in the region of the cluster.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const testSnapshotCopyGrant = new aws.redshift.SnapshotCopyGrant("testSnapshotCopyGrant", {snapshotCopyGrantName: "my-grant"});
+ * const testCluster = new aws.redshift.Cluster("testCluster", {snapshotCopy: {
+ *     destinationRegion: "us-east-2",
+ *     grantName: testSnapshotCopyGrant.snapshotCopyGrantName,
+ * }});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test_snapshot_copy_grant = aws.redshift.SnapshotCopyGrant("testSnapshotCopyGrant", snapshot_copy_grant_name="my-grant")
+ * test_cluster = aws.redshift.Cluster("testCluster", snapshot_copy=aws.redshift.ClusterSnapshotCopyArgs(
+ *     destination_region="us-east-2",
+ *     grant_name=test_snapshot_copy_grant.snapshot_copy_grant_name,
+ * ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testSnapshotCopyGrant = new Aws.RedShift.SnapshotCopyGrant("testSnapshotCopyGrant", new Aws.RedShift.SnapshotCopyGrantArgs
+ *         {
+ *             SnapshotCopyGrantName = "my-grant",
+ *         });
+ *         var testCluster = new Aws.RedShift.Cluster("testCluster", new Aws.RedShift.ClusterArgs
+ *         {
+ *             SnapshotCopy = new Aws.RedShift.Inputs.ClusterSnapshotCopyArgs
+ *             {
+ *                 DestinationRegion = "us-east-2",
+ *                 GrantName = testSnapshotCopyGrant.SnapshotCopyGrantName,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testSnapshotCopyGrant, err := redshift.NewSnapshotCopyGrant(ctx, "testSnapshotCopyGrant", &redshift.SnapshotCopyGrantArgs{
+ * 			SnapshotCopyGrantName: pulumi.String("my-grant"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = redshift.NewCluster(ctx, "testCluster", &redshift.ClusterArgs{
+ * 			SnapshotCopy: &redshift.ClusterSnapshotCopyArgs{
+ * 				DestinationRegion: pulumi.String("us-east-2"),
+ * 				GrantName:         testSnapshotCopyGrant.SnapshotCopyGrantName,
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +106,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/snapshotCopyGrant:SnapshotCopyGrant test my-grant
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/snapshotCopyGrant:SnapshotCopyGrant")
 public class SnapshotCopyGrant extends io.pulumi.resources.CustomResource {

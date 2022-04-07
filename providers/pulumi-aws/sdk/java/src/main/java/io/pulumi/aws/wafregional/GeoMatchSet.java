@@ -17,7 +17,101 @@ import javax.annotation.Nullable;
 /**
  * Provides a WAF Regional Geo Match Set Resource
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const geoMatchSet = new aws.wafregional.GeoMatchSet("geo_match_set", {
+ *     geoMatchConstraints: [
+ *         {
+ *             type: "Country",
+ *             value: "US",
+ *         },
+ *         {
+ *             type: "Country",
+ *             value: "CA",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * geo_match_set = aws.wafregional.GeoMatchSet("geoMatchSet", geo_match_constraints=[
+ *     aws.wafregional.GeoMatchSetGeoMatchConstraintArgs(
+ *         type="Country",
+ *         value="US",
+ *     ),
+ *     aws.wafregional.GeoMatchSetGeoMatchConstraintArgs(
+ *         type="Country",
+ *         value="CA",
+ *     ),
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var geoMatchSet = new Aws.WafRegional.GeoMatchSet("geoMatchSet", new Aws.WafRegional.GeoMatchSetArgs
+ *         {
+ *             GeoMatchConstraints = 
+ *             {
+ *                 new Aws.WafRegional.Inputs.GeoMatchSetGeoMatchConstraintArgs
+ *                 {
+ *                     Type = "Country",
+ *                     Value = "US",
+ *                 },
+ *                 new Aws.WafRegional.Inputs.GeoMatchSetGeoMatchConstraintArgs
+ *                 {
+ *                     Type = "Country",
+ *                     Value = "CA",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafregional"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := wafregional.NewGeoMatchSet(ctx, "geoMatchSet", &wafregional.GeoMatchSetArgs{
+ * 			GeoMatchConstraints: wafregional.GeoMatchSetGeoMatchConstraintArray{
+ * 				&wafregional.GeoMatchSetGeoMatchConstraintArgs{
+ * 					Type:  pulumi.String("Country"),
+ * 					Value: pulumi.String("US"),
+ * 				},
+ * 				&wafregional.GeoMatchSetGeoMatchConstraintArgs{
+ * 					Type:  pulumi.String("Country"),
+ * 					Value: pulumi.String("CA"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +121,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:wafregional/geoMatchSet:GeoMatchSet geo_match_set a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:wafregional/geoMatchSet:GeoMatchSet")
 public class GeoMatchSet extends io.pulumi.resources.CustomResource {

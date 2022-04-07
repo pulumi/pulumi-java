@@ -19,7 +19,144 @@ import javax.annotation.Nullable;
  * Provides an Amazon Lex Slot Type resource. For more information see
  * [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const flowerTypes = new aws.lex.SlotType("flower_types", {
+ *     createVersion: true,
+ *     description: "Types of flowers to order",
+ *     enumerationValues: [
+ *         {
+ *             synonyms: [
+ *                 "Lirium",
+ *                 "Martagon",
+ *             ],
+ *             value: "lilies",
+ *         },
+ *         {
+ *             synonyms: [
+ *                 "Eduardoregelia",
+ *                 "Podonix",
+ *             ],
+ *             value: "tulips",
+ *         },
+ *     ],
+ *     name: "FlowerTypes",
+ *     valueSelectionStrategy: "ORIGINAL_VALUE",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * flower_types = aws.lex.SlotType("flowerTypes",
+ *     create_version=True,
+ *     description="Types of flowers to order",
+ *     enumeration_values=[
+ *         aws.lex.SlotTypeEnumerationValueArgs(
+ *             synonyms=[
+ *                 "Lirium",
+ *                 "Martagon",
+ *             ],
+ *             value="lilies",
+ *         ),
+ *         aws.lex.SlotTypeEnumerationValueArgs(
+ *             synonyms=[
+ *                 "Eduardoregelia",
+ *                 "Podonix",
+ *             ],
+ *             value="tulips",
+ *         ),
+ *     ],
+ *     name="FlowerTypes",
+ *     value_selection_strategy="ORIGINAL_VALUE")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var flowerTypes = new Aws.Lex.SlotType("flowerTypes", new Aws.Lex.SlotTypeArgs
+ *         {
+ *             CreateVersion = true,
+ *             Description = "Types of flowers to order",
+ *             EnumerationValues = 
+ *             {
+ *                 new Aws.Lex.Inputs.SlotTypeEnumerationValueArgs
+ *                 {
+ *                     Synonyms = 
+ *                     {
+ *                         "Lirium",
+ *                         "Martagon",
+ *                     },
+ *                     Value = "lilies",
+ *                 },
+ *                 new Aws.Lex.Inputs.SlotTypeEnumerationValueArgs
+ *                 {
+ *                     Synonyms = 
+ *                     {
+ *                         "Eduardoregelia",
+ *                         "Podonix",
+ *                     },
+ *                     Value = "tulips",
+ *                 },
+ *             },
+ *             Name = "FlowerTypes",
+ *             ValueSelectionStrategy = "ORIGINAL_VALUE",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lex"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lex.NewSlotType(ctx, "flowerTypes", &lex.SlotTypeArgs{
+ * 			CreateVersion: pulumi.Bool(true),
+ * 			Description:   pulumi.String("Types of flowers to order"),
+ * 			EnumerationValues: lex.SlotTypeEnumerationValueArray{
+ * 				&lex.SlotTypeEnumerationValueArgs{
+ * 					Synonyms: pulumi.StringArray{
+ * 						pulumi.String("Lirium"),
+ * 						pulumi.String("Martagon"),
+ * 					},
+ * 					Value: pulumi.String("lilies"),
+ * 				},
+ * 				&lex.SlotTypeEnumerationValueArgs{
+ * 					Synonyms: pulumi.StringArray{
+ * 						pulumi.String("Eduardoregelia"),
+ * 						pulumi.String("Podonix"),
+ * 					},
+ * 					Value: pulumi.String("tulips"),
+ * 				},
+ * 			},
+ * 			Name:                   pulumi.String("FlowerTypes"),
+ * 			ValueSelectionStrategy: pulumi.String("ORIGINAL_VALUE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +166,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:lex/slotType:SlotType flower_types FlowerTypes
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:lex/slotType:SlotType")
 public class SlotType extends io.pulumi.resources.CustomResource {

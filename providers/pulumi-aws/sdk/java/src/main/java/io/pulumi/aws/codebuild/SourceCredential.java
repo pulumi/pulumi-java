@@ -18,7 +18,138 @@ import javax.annotation.Nullable;
  * > **NOTE:**
  * [Codebuild only allows a single credential per given server type in a given region](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_codebuild.GitHubSourceCredentials.html). Therefore, when you define `aws.codebuild.SourceCredential`, `aws.codebuild.Project` resource defined in the same module will use it.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codebuild.SourceCredential("example", {
+ *     authType: "PERSONAL_ACCESS_TOKEN",
+ *     serverType: "GITHUB",
+ *     token: "example",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codebuild.SourceCredential("example",
+ *     auth_type="PERSONAL_ACCESS_TOKEN",
+ *     server_type="GITHUB",
+ *     token="example")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeBuild.SourceCredential("example", new Aws.CodeBuild.SourceCredentialArgs
+ *         {
+ *             AuthType = "PERSONAL_ACCESS_TOKEN",
+ *             ServerType = "GITHUB",
+ *             Token = "example",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codebuild"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codebuild.NewSourceCredential(ctx, "example", &codebuild.SourceCredentialArgs{
+ * 			AuthType:   pulumi.String("PERSONAL_ACCESS_TOKEN"),
+ * 			ServerType: pulumi.String("GITHUB"),
+ * 			Token:      pulumi.String("example"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Bitbucket Server Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codebuild.SourceCredential("example", {
+ *     authType: "BASIC_AUTH",
+ *     serverType: "BITBUCKET",
+ *     token: "example",
+ *     userName: "test-user",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codebuild.SourceCredential("example",
+ *     auth_type="BASIC_AUTH",
+ *     server_type="BITBUCKET",
+ *     token="example",
+ *     user_name="test-user")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeBuild.SourceCredential("example", new Aws.CodeBuild.SourceCredentialArgs
+ *         {
+ *             AuthType = "BASIC_AUTH",
+ *             ServerType = "BITBUCKET",
+ *             Token = "example",
+ *             UserName = "test-user",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codebuild"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codebuild.NewSourceCredential(ctx, "example", &codebuild.SourceCredentialArgs{
+ * 			AuthType:   pulumi.String("BASIC_AUTH"),
+ * 			ServerType: pulumi.String("BITBUCKET"),
+ * 			Token:      pulumi.String("example"),
+ * 			UserName:   pulumi.String("test-user"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +159,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codebuild/sourceCredential:SourceCredential example arn:aws:codebuild:us-west-2:123456789:token:github
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codebuild/sourceCredential:SourceCredential")
 public class SourceCredential extends io.pulumi.resources.CustomResource {

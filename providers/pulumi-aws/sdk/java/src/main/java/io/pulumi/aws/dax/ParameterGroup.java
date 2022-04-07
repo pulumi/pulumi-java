@@ -17,7 +17,101 @@ import javax.annotation.Nullable;
 /**
  * Provides a DAX Parameter Group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.dax.ParameterGroup("example", {
+ *     parameters: [
+ *         {
+ *             name: "query-ttl-millis",
+ *             value: "100000",
+ *         },
+ *         {
+ *             name: "record-ttl-millis",
+ *             value: "100000",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.dax.ParameterGroup("example", parameters=[
+ *     aws.dax.ParameterGroupParameterArgs(
+ *         name="query-ttl-millis",
+ *         value="100000",
+ *     ),
+ *     aws.dax.ParameterGroupParameterArgs(
+ *         name="record-ttl-millis",
+ *         value="100000",
+ *     ),
+ * ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Dax.ParameterGroup("example", new Aws.Dax.ParameterGroupArgs
+ *         {
+ *             Parameters = 
+ *             {
+ *                 new Aws.Dax.Inputs.ParameterGroupParameterArgs
+ *                 {
+ *                     Name = "query-ttl-millis",
+ *                     Value = "100000",
+ *                 },
+ *                 new Aws.Dax.Inputs.ParameterGroupParameterArgs
+ *                 {
+ *                     Name = "record-ttl-millis",
+ *                     Value = "100000",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dax"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dax.NewParameterGroup(ctx, "example", &dax.ParameterGroupArgs{
+ * 			Parameters: dax.ParameterGroupParameterArray{
+ * 				&dax.ParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("query-ttl-millis"),
+ * 					Value: pulumi.String("100000"),
+ * 				},
+ * 				&dax.ParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("record-ttl-millis"),
+ * 					Value: pulumi.String("100000"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +121,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:dax/parameterGroup:ParameterGroup example my_dax_pg
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:dax/parameterGroup:ParameterGroup")
 public class ParameterGroup extends io.pulumi.resources.CustomResource {

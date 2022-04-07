@@ -19,7 +19,95 @@ import javax.annotation.Nullable;
  * over IPv6 from instances in your VPC to the Internet, and prevents hosts
  * outside of your VPC from initiating an IPv6 connection with your instance.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleVpc = new aws.ec2.Vpc("exampleVpc", {
+ *     cidrBlock: "10.1.0.0/16",
+ *     assignGeneratedIpv6CidrBlock: true,
+ * });
+ * const exampleEgressOnlyInternetGateway = new aws.ec2.EgressOnlyInternetGateway("exampleEgressOnlyInternetGateway", {
+ *     vpcId: exampleVpc.id,
+ *     tags: {
+ *         Name: "main",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_vpc = aws.ec2.Vpc("exampleVpc",
+ *     cidr_block="10.1.0.0/16",
+ *     assign_generated_ipv6_cidr_block=True)
+ * example_egress_only_internet_gateway = aws.ec2.EgressOnlyInternetGateway("exampleEgressOnlyInternetGateway",
+ *     vpc_id=example_vpc.id,
+ *     tags={
+ *         "Name": "main",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.1.0.0/16",
+ *             AssignGeneratedIpv6CidrBlock = true,
+ *         });
+ *         var exampleEgressOnlyInternetGateway = new Aws.Ec2.EgressOnlyInternetGateway("exampleEgressOnlyInternetGateway", new Aws.Ec2.EgressOnlyInternetGatewayArgs
+ *         {
+ *             VpcId = exampleVpc.Id,
+ *             Tags = 
+ *             {
+ *                 { "Name", "main" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+ * 			CidrBlock:                    pulumi.String("10.1.0.0/16"),
+ * 			AssignGeneratedIpv6CidrBlock: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewEgressOnlyInternetGateway(ctx, "exampleEgressOnlyInternetGateway", &ec2.EgressOnlyInternetGatewayArgs{
+ * 			VpcId: exampleVpc.ID(),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("main"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +117,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/egressOnlyInternetGateway:EgressOnlyInternetGateway example eigw-015e0e244e24dfe8a
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/egressOnlyInternetGateway:EgressOnlyInternetGateway")
 public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResource {

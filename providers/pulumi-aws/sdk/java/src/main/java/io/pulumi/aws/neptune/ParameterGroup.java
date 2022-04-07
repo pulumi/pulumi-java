@@ -18,7 +18,85 @@ import javax.annotation.Nullable;
 /**
  * Manages a Neptune Parameter Group
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.neptune.ParameterGroup("example", {
+ *     family: "neptune1",
+ *     parameters: [{
+ *         name: "neptune_query_timeout",
+ *         value: "25",
+ *     }],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.neptune.ParameterGroup("example",
+ *     family="neptune1",
+ *     parameters=[aws.neptune.ParameterGroupParameterArgs(
+ *         name="neptune_query_timeout",
+ *         value="25",
+ *     )])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Neptune.ParameterGroup("example", new Aws.Neptune.ParameterGroupArgs
+ *         {
+ *             Family = "neptune1",
+ *             Parameters = 
+ *             {
+ *                 new Aws.Neptune.Inputs.ParameterGroupParameterArgs
+ *                 {
+ *                     Name = "neptune_query_timeout",
+ *                     Value = "25",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/neptune"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := neptune.NewParameterGroup(ctx, "example", &neptune.ParameterGroupArgs{
+ * 			Family: pulumi.String("neptune1"),
+ * 			Parameters: neptune.ParameterGroupParameterArray{
+ * 				&neptune.ParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("neptune_query_timeout"),
+ * 					Value: pulumi.String("25"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +106,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:neptune/parameterGroup:ParameterGroup some_pg some-pg
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:neptune/parameterGroup:ParameterGroup")
 public class ParameterGroup extends io.pulumi.resources.CustomResource {

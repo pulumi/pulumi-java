@@ -15,7 +15,68 @@ import javax.annotation.Nullable;
 /**
  * Manages a Service Catalog Principal Portfolio Association.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic Usage
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.servicecatalog.PrincipalPortfolioAssociation("example", {
+ *     portfolioId: "port-68656c6c6f",
+ *     principalArn: "arn:aws:iam::123456789012:user/Eleanor",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.servicecatalog.PrincipalPortfolioAssociation("example",
+ *     portfolio_id="port-68656c6c6f",
+ *     principal_arn="arn:aws:iam::123456789012:user/Eleanor")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.ServiceCatalog.PrincipalPortfolioAssociation("example", new Aws.ServiceCatalog.PrincipalPortfolioAssociationArgs
+ *         {
+ *             PortfolioId = "port-68656c6c6f",
+ *             PrincipalArn = "arn:aws:iam::123456789012:user/Eleanor",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicecatalog.NewPrincipalPortfolioAssociation(ctx, "example", &servicecatalog.PrincipalPortfolioAssociationArgs{
+ * 			PortfolioId:  pulumi.String("port-68656c6c6f"),
+ * 			PrincipalArn: pulumi.String("arn:aws:iam::123456789012:user/Eleanor"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +86,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation example en,arn:aws:iam::123456789012:user/Eleanor,port-68656c6c6f
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation")
 public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomResource {

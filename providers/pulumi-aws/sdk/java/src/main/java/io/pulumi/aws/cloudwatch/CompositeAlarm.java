@@ -20,7 +20,87 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** An alarm (composite or metric) cannot be destroyed when there are other composite alarms depending on it. This can lead to a cyclical dependency on update, as the provider will unsuccessfully attempt to destroy alarms before updating the rule. Consider using `depends_on`, references to alarm names, and two-stage updates.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cloudwatch.CompositeAlarm("example", {
+ *     alarmDescription: "This is a composite alarm!",
+ *     alarmName: "example-composite-alarm",
+ *     alarmActions: aws_sns_topic.example.arn,
+ *     okActions: aws_sns_topic.example.arn,
+ *     alarmRule: `ALARM(${aws_cloudwatch_metric_alarm.alpha.alarm_name}) OR
+ * ALARM(${aws_cloudwatch_metric_alarm.bravo.alarm_name})
+ * `,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cloudwatch.CompositeAlarm("example",
+ *     alarm_description="This is a composite alarm!",
+ *     alarm_name="example-composite-alarm",
+ *     alarm_actions=aws_sns_topic["example"]["arn"],
+ *     ok_actions=aws_sns_topic["example"]["arn"],
+ *     alarm_rule=f"""ALARM({aws_cloudwatch_metric_alarm["alpha"]["alarm_name"]}) OR
+ * ALARM({aws_cloudwatch_metric_alarm["bravo"]["alarm_name"]})
+ * """)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CloudWatch.CompositeAlarm("example", new Aws.CloudWatch.CompositeAlarmArgs
+ *         {
+ *             AlarmDescription = "This is a composite alarm!",
+ *             AlarmName = "example-composite-alarm",
+ *             AlarmActions = aws_sns_topic.Example.Arn,
+ *             OkActions = aws_sns_topic.Example.Arn,
+ *             AlarmRule = @$"ALARM({aws_cloudwatch_metric_alarm.Alpha.Alarm_name}) OR
+ * ALARM({aws_cloudwatch_metric_alarm.Bravo.Alarm_name})
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudwatch.NewCompositeAlarm(ctx, "example", &cloudwatch.CompositeAlarmArgs{
+ * 			AlarmDescription: pulumi.String("This is a composite alarm!"),
+ * 			AlarmName:        pulumi.String("example-composite-alarm"),
+ * 			AlarmActions:     pulumi.Any(aws_sns_topic.Example.Arn),
+ * 			OkActions:        pulumi.Any(aws_sns_topic.Example.Arn),
+ * 			AlarmRule:        pulumi.String(fmt.Sprintf("%v%v%v%v%v%v", "ALARM(", aws_cloudwatch_metric_alarm.Alpha.Alarm_name, ") OR\n", "ALARM(", aws_cloudwatch_metric_alarm.Bravo.Alarm_name, ")\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +110,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cloudwatch/compositeAlarm:CompositeAlarm test my-alarm
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cloudwatch/compositeAlarm:CompositeAlarm")
 public class CompositeAlarm extends io.pulumi.resources.CustomResource {

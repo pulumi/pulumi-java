@@ -113,7 +113,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
-     * 
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     @Import(name="rotationLambdaArn")
@@ -129,7 +128,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
-     * 
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     @Import(name="rotationRules")

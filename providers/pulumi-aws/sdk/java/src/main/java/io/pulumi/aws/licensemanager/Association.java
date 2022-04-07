@@ -17,7 +17,150 @@ import javax.annotation.Nullable;
  * 
  * > **Note:** License configurations can also be associated with launch templates by specifying the `license_specifications` block for an `aws.ec2.LaunchTemplate`.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleAmi = aws.ec2.getAmi({
+ *     mostRecent: true,
+ *     owners: ["amazon"],
+ *     filters: [{
+ *         name: "name",
+ *         values: ["amzn-ami-vpc-nat*"],
+ *     }],
+ * });
+ * const exampleInstance = new aws.ec2.Instance("exampleInstance", {
+ *     ami: exampleAmi.then(exampleAmi => exampleAmi.id),
+ *     instanceType: "t2.micro",
+ * });
+ * const exampleLicenseConfiguration = new aws.licensemanager.LicenseConfiguration("exampleLicenseConfiguration", {licenseCountingType: "Instance"});
+ * const exampleAssociation = new aws.licensemanager.Association("exampleAssociation", {
+ *     licenseConfigurationArn: exampleLicenseConfiguration.arn,
+ *     resourceArn: exampleInstance.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_ami = aws.ec2.get_ami(most_recent=True,
+ *     owners=["amazon"],
+ *     filters=[aws.ec2.GetAmiFilterArgs(
+ *         name="name",
+ *         values=["amzn-ami-vpc-nat*"],
+ *     )])
+ * example_instance = aws.ec2.Instance("exampleInstance",
+ *     ami=example_ami.id,
+ *     instance_type="t2.micro")
+ * example_license_configuration = aws.licensemanager.LicenseConfiguration("exampleLicenseConfiguration", license_counting_type="Instance")
+ * example_association = aws.licensemanager.Association("exampleAssociation",
+ *     license_configuration_arn=example_license_configuration.arn,
+ *     resource_arn=example_instance.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleAmi = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
+ *         {
+ *             MostRecent = true,
+ *             Owners = 
+ *             {
+ *                 "amazon",
+ *             },
+ *             Filters = 
+ *             {
+ *                 new Aws.Ec2.Inputs.GetAmiFilterArgs
+ *                 {
+ *                     Name = "name",
+ *                     Values = 
+ *                     {
+ *                         "amzn-ami-vpc-nat*",
+ *                     },
+ *                 },
+ *             },
+ *         }));
+ *         var exampleInstance = new Aws.Ec2.Instance("exampleInstance", new Aws.Ec2.InstanceArgs
+ *         {
+ *             Ami = exampleAmi.Apply(exampleAmi => exampleAmi.Id),
+ *             InstanceType = "t2.micro",
+ *         });
+ *         var exampleLicenseConfiguration = new Aws.LicenseManager.LicenseConfiguration("exampleLicenseConfiguration", new Aws.LicenseManager.LicenseConfigurationArgs
+ *         {
+ *             LicenseCountingType = "Instance",
+ *         });
+ *         var exampleAssociation = new Aws.LicenseManager.Association("exampleAssociation", new Aws.LicenseManager.AssociationArgs
+ *         {
+ *             LicenseConfigurationArn = exampleLicenseConfiguration.Arn,
+ *             ResourceArn = exampleInstance.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/licensemanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		opt0 := true
+ * 		exampleAmi, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+ * 			MostRecent: &opt0,
+ * 			Owners: []string{
+ * 				"amazon",
+ * 			},
+ * 			Filters: []ec2.GetAmiFilter{
+ * 				ec2.GetAmiFilter{
+ * 					Name: "name",
+ * 					Values: []string{
+ * 						"amzn-ami-vpc-nat*",
+ * 					},
+ * 				},
+ * 			},
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleInstance, err := ec2.NewInstance(ctx, "exampleInstance", &ec2.InstanceArgs{
+ * 			Ami:          pulumi.String(exampleAmi.Id),
+ * 			InstanceType: pulumi.String("t2.micro"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleLicenseConfiguration, err := licensemanager.NewLicenseConfiguration(ctx, "exampleLicenseConfiguration", &licensemanager.LicenseConfigurationArgs{
+ * 			LicenseCountingType: pulumi.String("Instance"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = licensemanager.NewAssociation(ctx, "exampleAssociation", &licensemanager.AssociationArgs{
+ * 			LicenseConfigurationArn: exampleLicenseConfiguration.Arn,
+ * 			ResourceArn:             exampleInstance.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +170,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:licensemanager/association:Association example arn:aws:ec2:eu-west-1:123456789012:image/ami-123456789abcdef01,arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:licensemanager/association:Association")
 public class Association extends io.pulumi.resources.CustomResource {

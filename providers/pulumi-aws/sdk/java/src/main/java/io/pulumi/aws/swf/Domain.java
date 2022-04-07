@@ -16,7 +16,69 @@ import javax.annotation.Nullable;
 /**
  * Provides an SWF Domain resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * To register a basic SWF domain:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const foo = new aws.swf.Domain("foo", {
+ *     description: "SWF Domain",
+ *     workflowExecutionRetentionPeriodInDays: "30",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * foo = aws.swf.Domain("foo",
+ *     description="SWF Domain",
+ *     workflow_execution_retention_period_in_days="30")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var foo = new Aws.Swf.Domain("foo", new Aws.Swf.DomainArgs
+ *         {
+ *             Description = "SWF Domain",
+ *             WorkflowExecutionRetentionPeriodInDays = "30",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/swf"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := swf.NewDomain(ctx, "foo", &swf.DomainArgs{
+ * 			Description:                            pulumi.String("SWF Domain"),
+ * 			WorkflowExecutionRetentionPeriodInDays: pulumi.String("30"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -26,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:swf/domain:Domain foo test-domain
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:swf/domain:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {

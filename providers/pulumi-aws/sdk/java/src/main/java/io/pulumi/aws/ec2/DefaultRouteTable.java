@@ -24,7 +24,190 @@ import javax.annotation.Nullable;
  * 
  * For more information, see the Amazon VPC User Guide on [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html). For information about managing normal route tables in this provider, see `aws.ec2.RouteTable`.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.DefaultRouteTable("example", {
+ *     defaultRouteTableId: aws_vpc.example.default_route_table_id,
+ *     routes: [
+ *         {
+ *             cidrBlock: "10.0.1.0/24",
+ *             gatewayId: aws_internet_gateway.example.id,
+ *         },
+ *         {
+ *             ipv6CidrBlock: "::/0",
+ *             egressOnlyGatewayId: aws_egress_only_internet_gateway.example.id,
+ *         },
+ *     ],
+ *     tags: {
+ *         Name: "example",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.DefaultRouteTable("example",
+ *     default_route_table_id=aws_vpc["example"]["default_route_table_id"],
+ *     routes=[
+ *         aws.ec2.DefaultRouteTableRouteArgs(
+ *             cidr_block="10.0.1.0/24",
+ *             gateway_id=aws_internet_gateway["example"]["id"],
+ *         ),
+ *         aws.ec2.DefaultRouteTableRouteArgs(
+ *             ipv6_cidr_block="::/0",
+ *             egress_only_gateway_id=aws_egress_only_internet_gateway["example"]["id"],
+ *         ),
+ *     ],
+ *     tags={
+ *         "Name": "example",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.DefaultRouteTable("example", new Aws.Ec2.DefaultRouteTableArgs
+ *         {
+ *             DefaultRouteTableId = aws_vpc.Example.Default_route_table_id,
+ *             Routes = 
+ *             {
+ *                 new Aws.Ec2.Inputs.DefaultRouteTableRouteArgs
+ *                 {
+ *                     CidrBlock = "10.0.1.0/24",
+ *                     GatewayId = aws_internet_gateway.Example.Id,
+ *                 },
+ *                 new Aws.Ec2.Inputs.DefaultRouteTableRouteArgs
+ *                 {
+ *                     Ipv6CidrBlock = "::/0",
+ *                     EgressOnlyGatewayId = aws_egress_only_internet_gateway.Example.Id,
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Name", "example" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewDefaultRouteTable(ctx, "example", &ec2.DefaultRouteTableArgs{
+ * 			DefaultRouteTableId: pulumi.Any(aws_vpc.Example.Default_route_table_id),
+ * 			Routes: ec2.DefaultRouteTableRouteArray{
+ * 				&ec2.DefaultRouteTableRouteArgs{
+ * 					CidrBlock: pulumi.String("10.0.1.0/24"),
+ * 					GatewayId: pulumi.Any(aws_internet_gateway.Example.Id),
+ * 				},
+ * 				&ec2.DefaultRouteTableRouteArgs{
+ * 					Ipv6CidrBlock:       pulumi.String("::/0"),
+ * 					EgressOnlyGatewayId: pulumi.Any(aws_egress_only_internet_gateway.Example.Id),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * To subsequently remove all managed routes:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2.DefaultRouteTable("example", {
+ *     defaultRouteTableId: aws_vpc.example.default_route_table_id,
+ *     routes: [],
+ *     tags: {
+ *         Name: "example",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2.DefaultRouteTable("example",
+ *     default_route_table_id=aws_vpc["example"]["default_route_table_id"],
+ *     routes=[],
+ *     tags={
+ *         "Name": "example",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2.DefaultRouteTable("example", new Aws.Ec2.DefaultRouteTableArgs
+ *         {
+ *             DefaultRouteTableId = aws_vpc.Example.Default_route_table_id,
+ *             Routes = {},
+ *             Tags = 
+ *             {
+ *                 { "Name", "example" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewDefaultRouteTable(ctx, "example", &ec2.DefaultRouteTableArgs{
+ * 			DefaultRouteTableId: pulumi.Any(aws_vpc.Example.Default_route_table_id),
+ * 			Routes:              ec2.DefaultRouteTableRouteArray{},
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,8 +217,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/defaultRouteTable:DefaultRouteTable example vpc-33cc44dd
  * ```
  * 
- *  [aws-route-tables]http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html#Route_Replacing_Main_Table [tf-route-tables]/docs/providers/aws/r/route_table.html [tf-main-route-table-association]/docs/providers/aws/r/main_route_table_association.html
- * 
+ *  [aws-route-tables]http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html#Route_Replacing_Main_Table [tf-route-tables]/docs/providers/aws/r/route_table.html [tf-main-route-table-association]/docs/providers/aws/r/main_route_table_association.html 
  */
 @ResourceType(type="aws:ec2/defaultRouteTable:DefaultRouteTable")
 public class DefaultRouteTable extends io.pulumi.resources.CustomResource {

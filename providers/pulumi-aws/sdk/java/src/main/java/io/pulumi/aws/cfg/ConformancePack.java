@@ -23,7 +23,263 @@ import javax.annotation.Nullable;
  * > **NOTE:** The account must have a Configuration Recorder with proper IAM permissions before the Conformance Pack will
  * successfully create or update. See also the `aws.cfg.Recorder` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Template Body
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.cfg.ConformancePack("example", {
+ *     inputParameters: [{
+ *         parameterName: "AccessKeysRotatedParameterMaxAccessKeyAge",
+ *         parameterValue: "90",
+ *     }],
+ *     templateBody: `Parameters:
+ *   AccessKeysRotatedParameterMaxAccessKeyAge:
+ *     Type: String
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * `,
+ * }, {
+ *     dependsOn: [aws_config_configuration_recorder.example],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.cfg.ConformancePack("example",
+ *     input_parameters=[aws.cfg.ConformancePackInputParameterArgs(
+ *         parameter_name="AccessKeysRotatedParameterMaxAccessKeyAge",
+ *         parameter_value="90",
+ *     )],
+ *     template_body="""Parameters:
+ *   AccessKeysRotatedParameterMaxAccessKeyAge:
+ *     Type: String
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * """,
+ *     opts=pulumi.ResourceOptions(depends_on=[aws_config_configuration_recorder["example"]]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Cfg.ConformancePack("example", new Aws.Cfg.ConformancePackArgs
+ *         {
+ *             InputParameters = 
+ *             {
+ *                 new Aws.Cfg.Inputs.ConformancePackInputParameterArgs
+ *                 {
+ *                     ParameterName = "AccessKeysRotatedParameterMaxAccessKeyAge",
+ *                     ParameterValue = "90",
+ *                 },
+ *             },
+ *             TemplateBody = @"Parameters:
+ *   AccessKeysRotatedParameterMaxAccessKeyAge:
+ *     Type: String
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * ",
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 aws_config_configuration_recorder.Example,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cfg.NewConformancePack(ctx, "example", &cfg.ConformancePackArgs{
+ * 			InputParameters: cfg.ConformancePackInputParameterArray{
+ * 				&cfg.ConformancePackInputParameterArgs{
+ * 					ParameterName:  pulumi.String("AccessKeysRotatedParameterMaxAccessKeyAge"),
+ * 					ParameterValue: pulumi.String("90"),
+ * 				},
+ * 			},
+ * 			TemplateBody: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "Parameters:\n", "  AccessKeysRotatedParameterMaxAccessKeyAge:\n", "    Type: String\n", "Resources:\n", "  IAMPasswordPolicy:\n", "    Properties:\n", "      ConfigRuleName: IAMPasswordPolicy\n", "      Source:\n", "        Owner: AWS\n", "        SourceIdentifier: IAM_PASSWORD_POLICY\n", "    Type: AWS::Config::ConfigRule\n")),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			aws_config_configuration_recorder.Example,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Template S3 URI
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+ * const exampleBucketObject = new aws.s3.BucketObject("exampleBucketObject", {
+ *     bucket: exampleBucket.id,
+ *     key: "example-key",
+ *     content: `Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * `,
+ * });
+ * const exampleConformancePack = new aws.cfg.ConformancePack("exampleConformancePack", {templateS3Uri: pulumi.interpolate`s3://${exampleBucket.bucket}/${exampleBucketObject.key}`}, {
+ *     dependsOn: [aws_config_configuration_recorder.example],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_bucket = aws.s3.Bucket("exampleBucket")
+ * example_bucket_object = aws.s3.BucketObject("exampleBucketObject",
+ *     bucket=example_bucket.id,
+ *     key="example-key",
+ *     content="""Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * """)
+ * example_conformance_pack = aws.cfg.ConformancePack("exampleConformancePack", template_s3_uri=pulumi.Output.all(example_bucket.bucket, example_bucket_object.key).apply(lambda bucket, key: f"s3://{bucket}/{key}"),
+ * opts=pulumi.ResourceOptions(depends_on=[aws_config_configuration_recorder["example"]]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+ *         {
+ *         });
+ *         var exampleBucketObject = new Aws.S3.BucketObject("exampleBucketObject", new Aws.S3.BucketObjectArgs
+ *         {
+ *             Bucket = exampleBucket.Id,
+ *             Key = "example-key",
+ *             Content = @"Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ * ",
+ *         });
+ *         var exampleConformancePack = new Aws.Cfg.ConformancePack("exampleConformancePack", new Aws.Cfg.ConformancePackArgs
+ *         {
+ *             TemplateS3Uri = Output.Tuple(exampleBucket.BucketName, exampleBucketObject.Key).Apply(values =>
+ *             {
+ *                 var bucket = values.Item1;
+ *                 var key = values.Item2;
+ *                 return $"s3://{bucket}/{key}";
+ *             }),
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 aws_config_configuration_recorder.Example,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cfg"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleBucketObject, err := s3.NewBucketObject(ctx, "exampleBucketObject", &s3.BucketObjectArgs{
+ * 			Bucket:  exampleBucket.ID(),
+ * 			Key:     pulumi.String("example-key"),
+ * 			Content: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "Resources:\n", "  IAMPasswordPolicy:\n", "    Properties:\n", "      ConfigRuleName: IAMPasswordPolicy\n", "      Source:\n", "        Owner: AWS\n", "        SourceIdentifier: IAM_PASSWORD_POLICY\n", "    Type: AWS::Config::ConfigRule\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = cfg.NewConformancePack(ctx, "exampleConformancePack", &cfg.ConformancePackArgs{
+ * 			TemplateS3Uri: pulumi.All(exampleBucket.Bucket, exampleBucketObject.Key).ApplyT(func(_args []interface{}) (string, error) {
+ * 				bucket := _args[0].(string)
+ * 				key := _args[1].(string)
+ * 				return fmt.Sprintf("%v%v%v%v", "s3://", bucket, "/", key), nil
+ * 			}).(pulumi.StringOutput),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			aws_config_configuration_recorder.Example,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,6 +289,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cfg/conformancePack:ConformancePack example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cfg/conformancePack:ConformancePack")
 public class ConformancePack extends io.pulumi.resources.CustomResource {

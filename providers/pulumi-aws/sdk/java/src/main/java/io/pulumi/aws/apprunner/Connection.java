@@ -18,7 +18,80 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** After creation, you must complete the authentication handshake using the App Runner console.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apprunner.Connection("example", {
+ *     connectionName: "example",
+ *     providerType: "GITHUB",
+ *     tags: {
+ *         Name: "example-apprunner-connection",
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apprunner.Connection("example",
+ *     connection_name="example",
+ *     provider_type="GITHUB",
+ *     tags={
+ *         "Name": "example-apprunner-connection",
+ *     })
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppRunner.Connection("example", new Aws.AppRunner.ConnectionArgs
+ *         {
+ *             ConnectionName = "example",
+ *             ProviderType = "GITHUB",
+ *             Tags = 
+ *             {
+ *                 { "Name", "example-apprunner-connection" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apprunner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apprunner.NewConnection(ctx, "example", &apprunner.ConnectionArgs{
+ * 			ConnectionName: pulumi.String("example"),
+ * 			ProviderType:   pulumi.String("GITHUB"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Name": pulumi.String("example-apprunner-connection"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +101,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apprunner/connection:Connection example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:apprunner/connection:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {

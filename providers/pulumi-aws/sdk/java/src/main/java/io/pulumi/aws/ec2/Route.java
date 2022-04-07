@@ -13,6 +13,9 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * Individual routes can be imported using `ROUTETABLEID_DESTINATION`. For example, import a route in route table `rtb-656C65616E6F72` with an IPv4 destination CIDR of `10.42.0.0/16` like thisconsole
@@ -33,6 +36,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/route:Route my_route rtb-656C65616E6F72_pl-0570a1d2d725c16be
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/route:Route")
 public class Route extends io.pulumi.resources.CustomResource {

@@ -17,7 +17,168 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** For the MAIL FROM domain to be fully usable, this resource should be paired with the `aws.ses.DomainIdentity` resource. To validate the MAIL FROM domain, a DNS MX record is required. To pass SPF checks, a DNS TXT record may also be required. See the [Amazon SES MAIL FROM documentation](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from-set.html) for more information.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * // Example SES Domain Identity
+ * const exampleDomainIdentity = new aws.ses.DomainIdentity("exampleDomainIdentity", {domain: "example.com"});
+ * const exampleMailFrom = new aws.ses.MailFrom("exampleMailFrom", {
+ *     domain: exampleDomainIdentity.domain,
+ *     mailFromDomain: pulumi.interpolate`bounce.${exampleDomainIdentity.domain}`,
+ * });
+ * // Example Route53 MX record
+ * const exampleSesDomainMailFromMx = new aws.route53.Record("exampleSesDomainMailFromMx", {
+ *     zoneId: aws_route53_zone.example.id,
+ *     name: exampleMailFrom.mailFromDomain,
+ *     type: "MX",
+ *     ttl: "600",
+ *     records: ["10 feedback-smtp.us-east-1.amazonses.com"],
+ * });
+ * // Change to the region in which `aws_ses_domain_identity.example` is created
+ * // Example Route53 TXT record for SPF
+ * const exampleSesDomainMailFromTxt = new aws.route53.Record("exampleSesDomainMailFromTxt", {
+ *     zoneId: aws_route53_zone.example.id,
+ *     name: exampleMailFrom.mailFromDomain,
+ *     type: "TXT",
+ *     ttl: "600",
+ *     records: ["v=spf1 include:amazonses.com -all"],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * # Example SES Domain Identity
+ * example_domain_identity = aws.ses.DomainIdentity("exampleDomainIdentity", domain="example.com")
+ * example_mail_from = aws.ses.MailFrom("exampleMailFrom",
+ *     domain=example_domain_identity.domain,
+ *     mail_from_domain=example_domain_identity.domain.apply(lambda domain: f"bounce.{domain}"))
+ * # Example Route53 MX record
+ * example_ses_domain_mail_from_mx = aws.route53.Record("exampleSesDomainMailFromMx",
+ *     zone_id=aws_route53_zone["example"]["id"],
+ *     name=example_mail_from.mail_from_domain,
+ *     type="MX",
+ *     ttl=600,
+ *     records=["10 feedback-smtp.us-east-1.amazonses.com"])
+ * # Change to the region in which `aws_ses_domain_identity.example` is created
+ * # Example Route53 TXT record for SPF
+ * example_ses_domain_mail_from_txt = aws.route53.Record("exampleSesDomainMailFromTxt",
+ *     zone_id=aws_route53_zone["example"]["id"],
+ *     name=example_mail_from.mail_from_domain,
+ *     type="TXT",
+ *     ttl=600,
+ *     records=["v=spf1 include:amazonses.com -all"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // Example SES Domain Identity
+ *         var exampleDomainIdentity = new Aws.Ses.DomainIdentity("exampleDomainIdentity", new Aws.Ses.DomainIdentityArgs
+ *         {
+ *             Domain = "example.com",
+ *         });
+ *         var exampleMailFrom = new Aws.Ses.MailFrom("exampleMailFrom", new Aws.Ses.MailFromArgs
+ *         {
+ *             Domain = exampleDomainIdentity.Domain,
+ *             MailFromDomain = exampleDomainIdentity.Domain.Apply(domain => $"bounce.{domain}"),
+ *         });
+ *         // Example Route53 MX record
+ *         var exampleSesDomainMailFromMx = new Aws.Route53.Record("exampleSesDomainMailFromMx", new Aws.Route53.RecordArgs
+ *         {
+ *             ZoneId = aws_route53_zone.Example.Id,
+ *             Name = exampleMailFrom.MailFromDomain,
+ *             Type = "MX",
+ *             Ttl = 600,
+ *             Records = 
+ *             {
+ *                 "10 feedback-smtp.us-east-1.amazonses.com",
+ *             },
+ *         });
+ *         // Change to the region in which `aws_ses_domain_identity.example` is created
+ *         // Example Route53 TXT record for SPF
+ *         var exampleSesDomainMailFromTxt = new Aws.Route53.Record("exampleSesDomainMailFromTxt", new Aws.Route53.RecordArgs
+ *         {
+ *             ZoneId = aws_route53_zone.Example.Id,
+ *             Name = exampleMailFrom.MailFromDomain,
+ *             Type = "TXT",
+ *             Ttl = 600,
+ *             Records = 
+ *             {
+ *                 "v=spf1 include:amazonses.com -all",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleDomainIdentity, err := ses.NewDomainIdentity(ctx, "exampleDomainIdentity", &ses.DomainIdentityArgs{
+ * 			Domain: pulumi.String("example.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleMailFrom, err := ses.NewMailFrom(ctx, "exampleMailFrom", &ses.MailFromArgs{
+ * 			Domain: exampleDomainIdentity.Domain,
+ * 			MailFromDomain: exampleDomainIdentity.Domain.ApplyT(func(domain string) (string, error) {
+ * 				return fmt.Sprintf("%v%v", "bounce.", domain), nil
+ * 			}).(pulumi.StringOutput),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewRecord(ctx, "exampleSesDomainMailFromMx", &route53.RecordArgs{
+ * 			ZoneId: pulumi.Any(aws_route53_zone.Example.Id),
+ * 			Name:   exampleMailFrom.MailFromDomain,
+ * 			Type:   pulumi.String("MX"),
+ * 			Ttl:    pulumi.Int(600),
+ * 			Records: pulumi.StringArray{
+ * 				pulumi.String("10 feedback-smtp.us-east-1.amazonses.com"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = route53.NewRecord(ctx, "exampleSesDomainMailFromTxt", &route53.RecordArgs{
+ * 			ZoneId: pulumi.Any(aws_route53_zone.Example.Id),
+ * 			Name:   exampleMailFrom.MailFromDomain,
+ * 			Type:   pulumi.String("TXT"),
+ * 			Ttl:    pulumi.Int(600),
+ * 			Records: pulumi.StringArray{
+ * 				pulumi.String("v=spf1 include:amazonses.com -all"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +188,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ses/mailFrom:MailFrom example example.com
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ses/mailFrom:MailFrom")
 public class MailFrom extends io.pulumi.resources.CustomResource {

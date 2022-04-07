@@ -17,7 +17,57 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Elemental MediaConvert Queue.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const test = new aws.mediaconvert.Queue("test", {});
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * test = aws.mediaconvert.Queue("test")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var test = new Aws.MediaConvert.Queue("test", new Aws.MediaConvert.QueueArgs
+ *         {
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/mediaconvert"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := mediaconvert.NewQueue(ctx, "test", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +77,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:mediaconvert/queue:Queue test tf-test-queue
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:mediaconvert/queue:Queue")
 public class Queue extends io.pulumi.resources.CustomResource {

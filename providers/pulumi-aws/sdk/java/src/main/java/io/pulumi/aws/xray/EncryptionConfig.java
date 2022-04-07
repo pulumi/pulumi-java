@@ -17,7 +17,193 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Removing this resource from the provider has no effect to the encryption configuration within X-Ray.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.xray.EncryptionConfig("example", {
+ *     type: "NONE",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.xray.EncryptionConfig("example", type="NONE")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Xray.EncryptionConfig("example", new Aws.Xray.EncryptionConfigArgs
+ *         {
+ *             Type = "NONE",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewEncryptionConfig(ctx, "example", &xray.EncryptionConfigArgs{
+ * 			Type: pulumi.String("NONE"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### With KMS Key
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleKey = new aws.kms.Key("exampleKey", {
+ *     description: "Some Key",
+ *     deletionWindowInDays: 7,
+ *     policy: `{
+ *   "Version": "2012-10-17",
+ *   "Id": "kms-tf-1",
+ *   "Statement": [
+ *     {
+ *       "Sid": "Enable IAM User Permissions",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "AWS": "*"
+ *       },
+ *       "Action": "kms:*",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * `,
+ * });
+ * const exampleEncryptionConfig = new aws.xray.EncryptionConfig("exampleEncryptionConfig", {
+ *     type: "KMS",
+ *     keyId: exampleKey.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_key = aws.kms.Key("exampleKey",
+ *     description="Some Key",
+ *     deletion_window_in_days=7,
+ *     policy="""{
+ *   "Version": "2012-10-17",
+ *   "Id": "kms-tf-1",
+ *   "Statement": [
+ *     {
+ *       "Sid": "Enable IAM User Permissions",
+ *       "Effect": "Allow",
+ *       "Principal": {
+ *         "AWS": "*"
+ *       },
+ *       "Action": "kms:*",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }
+ * """)
+ * example_encryption_config = aws.xray.EncryptionConfig("exampleEncryptionConfig",
+ *     type="KMS",
+ *     key_id=example_key.arn)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
+ *         {
+ *             Description = "Some Key",
+ *             DeletionWindowInDays = 7,
+ *             Policy = @"{
+ *   ""Version"": ""2012-10-17"",
+ *   ""Id"": ""kms-tf-1"",
+ *   ""Statement"": [
+ *     {
+ *       ""Sid"": ""Enable IAM User Permissions"",
+ *       ""Effect"": ""Allow"",
+ *       ""Principal"": {
+ *         ""AWS"": ""*""
+ *       },
+ *       ""Action"": ""kms:*"",
+ *       ""Resource"": ""*""
+ *     }
+ *   ]
+ * }
+ * ",
+ *         });
+ *         var exampleEncryptionConfig = new Aws.Xray.EncryptionConfig("exampleEncryptionConfig", new Aws.Xray.EncryptionConfigArgs
+ *         {
+ *             Type = "KMS",
+ *             KeyId = exampleKey.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
+ * 			Description:          pulumi.String("Some Key"),
+ * 			DeletionWindowInDays: pulumi.Int(7),
+ * 			Policy:               pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"kms-tf-1\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"Enable IAM User Permissions\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"AWS\": \"*\"\n", "      },\n", "      \"Action\": \"kms:*\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = xray.NewEncryptionConfig(ctx, "exampleEncryptionConfig", &xray.EncryptionConfigArgs{
+ * 			Type:  pulumi.String("KMS"),
+ * 			KeyId: exampleKey.Arn,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +213,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:xray/encryptionConfig:EncryptionConfig example us-west-2
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:xray/encryptionConfig:EncryptionConfig")
 public class EncryptionConfig extends io.pulumi.resources.CustomResource {

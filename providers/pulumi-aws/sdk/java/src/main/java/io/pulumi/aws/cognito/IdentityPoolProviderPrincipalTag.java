@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Cognito Identity Principal Mapping.
  * 
+ * 
  * ## Import
  * 
  * Cognito Identity Pool Roles Attachment can be imported using the Identity Pool id, e.g.,
@@ -25,6 +26,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag example <identity-pool-id>:<identity_provider_name>
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag")
 public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.CustomResource {

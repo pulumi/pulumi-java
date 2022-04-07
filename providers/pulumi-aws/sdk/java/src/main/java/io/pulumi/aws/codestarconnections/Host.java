@@ -18,7 +18,67 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** The `aws.codestarconnections.Host` resource is created in the state `PENDING`. Authentication with the host provider must be completed in the AWS Console. For more information visit [Set up a pending host](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-host-setup.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.codestarconnections.Host("example", {
+ *     providerEndpoint: "https://example.com",
+ *     providerType: "GitHubEnterpriseServer",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.codestarconnections.Host("example",
+ *     provider_endpoint="https://example.com",
+ *     provider_type="GitHubEnterpriseServer")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.CodeStarConnections.Host("example", new Aws.CodeStarConnections.HostArgs
+ *         {
+ *             ProviderEndpoint = "https://example.com",
+ *             ProviderType = "GitHubEnterpriseServer",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codestarconnections"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codestarconnections.NewHost(ctx, "example", &codestarconnections.HostArgs{
+ * 			ProviderEndpoint: pulumi.String("https://example.com"),
+ * 			ProviderType:     pulumi.String("GitHubEnterpriseServer"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +88,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:codestarconnections/host:Host example-host arn:aws:codestar-connections:us-west-1:0123456789:host/79d4d357-a2ee-41e4-b350-2fe39ae59448
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:codestarconnections/host:Host")
 public class Host extends io.pulumi.resources.CustomResource {

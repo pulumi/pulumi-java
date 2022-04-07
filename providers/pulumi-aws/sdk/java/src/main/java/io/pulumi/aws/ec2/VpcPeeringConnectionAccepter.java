@@ -26,7 +26,191 @@ import javax.annotation.Nullable;
  * and the accepter can use the `aws.ec2.VpcPeeringConnectionAccepter` resource to "adopt" its side of the
  * connection into management.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const peer = new aws.Provider("peer", {region: "us-west-2"});
+ * // Accepter's credentials.
+ * const main = new aws.ec2.Vpc("main", {cidrBlock: "10.0.0.0/16"});
+ * const peerVpc = new aws.ec2.Vpc("peerVpc", {cidrBlock: "10.1.0.0/16"}, {
+ *     provider: aws.peer,
+ * });
+ * const peerCallerIdentity = aws.getCallerIdentity({});
+ * // Requester's side of the connection.
+ * const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection", {
+ *     vpcId: main.id,
+ *     peerVpcId: peerVpc.id,
+ *     peerOwnerId: peerCallerIdentity.then(peerCallerIdentity => peerCallerIdentity.accountId),
+ *     peerRegion: "us-west-2",
+ *     autoAccept: false,
+ *     tags: {
+ *         Side: "Requester",
+ *     },
+ * });
+ * // Accepter's side of the connection.
+ * const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter", {
+ *     vpcPeeringConnectionId: peerVpcPeeringConnection.id,
+ *     autoAccept: true,
+ *     tags: {
+ *         Side: "Accepter",
+ *     },
+ * }, {
+ *     provider: aws.peer,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_pulumi as pulumi
+ * 
+ * peer = pulumi.providers.Aws("peer", region="us-west-2")
+ * # Accepter's credentials.
+ * main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
+ * peer_vpc = aws.ec2.Vpc("peerVpc", cidr_block="10.1.0.0/16",
+ * opts=pulumi.ResourceOptions(provider=aws["peer"]))
+ * peer_caller_identity = aws.get_caller_identity()
+ * # Requester's side of the connection.
+ * peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection",
+ *     vpc_id=main.id,
+ *     peer_vpc_id=peer_vpc.id,
+ *     peer_owner_id=peer_caller_identity.account_id,
+ *     peer_region="us-west-2",
+ *     auto_accept=False,
+ *     tags={
+ *         "Side": "Requester",
+ *     })
+ * # Accepter's side of the connection.
+ * peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter",
+ *     vpc_peering_connection_id=peer_vpc_peering_connection.id,
+ *     auto_accept=True,
+ *     tags={
+ *         "Side": "Accepter",
+ *     },
+ *     opts=pulumi.ResourceOptions(provider=aws["peer"]))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peer = new Aws.Provider("peer", new Aws.ProviderArgs
+ *         {
+ *             Region = "us-west-2",
+ *         });
+ *         // Accepter's credentials.
+ *         var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var peerVpc = new Aws.Ec2.Vpc("peerVpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.1.0.0/16",
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Peer,
+ *         });
+ *         var peerCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+ *         // Requester's side of the connection.
+ *         var peerVpcPeeringConnection = new Aws.Ec2.VpcPeeringConnection("peerVpcPeeringConnection", new Aws.Ec2.VpcPeeringConnectionArgs
+ *         {
+ *             VpcId = main.Id,
+ *             PeerVpcId = peerVpc.Id,
+ *             PeerOwnerId = peerCallerIdentity.Apply(peerCallerIdentity => peerCallerIdentity.AccountId),
+ *             PeerRegion = "us-west-2",
+ *             AutoAccept = false,
+ *             Tags = 
+ *             {
+ *                 { "Side", "Requester" },
+ *             },
+ *         });
+ *         // Accepter's side of the connection.
+ *         var peerVpcPeeringConnectionAccepter = new Aws.Ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter", new Aws.Ec2.VpcPeeringConnectionAccepterArgs
+ *         {
+ *             VpcPeeringConnectionId = peerVpcPeeringConnection.Id,
+ *             AutoAccept = true,
+ *             Tags = 
+ *             {
+ *                 { "Side", "Accepter" },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             Provider = aws.Peer,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providers.Newaws(ctx, "peer", &providers.awsArgs{
+ * 			Region: "us-west-2",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		peerVpc, err := ec2.NewVpc(ctx, "peerVpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.1.0.0/16"),
+ * 		}, pulumi.Provider(aws.Peer))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		peerCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		peerVpcPeeringConnection, err := ec2.NewVpcPeeringConnection(ctx, "peerVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
+ * 			VpcId:       main.ID(),
+ * 			PeerVpcId:   peerVpc.ID(),
+ * 			PeerOwnerId: pulumi.String(peerCallerIdentity.AccountId),
+ * 			PeerRegion:  pulumi.String("us-west-2"),
+ * 			AutoAccept:  pulumi.Bool(false),
+ * 			Tags: pulumi.StringMap{
+ * 				"Side": pulumi.String("Requester"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpcPeeringConnectionAccepter(ctx, "peerVpcPeeringConnectionAccepter", &ec2.VpcPeeringConnectionAccepterArgs{
+ * 			VpcPeeringConnectionId: peerVpcPeeringConnection.ID(),
+ * 			AutoAccept:             pulumi.Bool(true),
+ * 			Tags: pulumi.StringMap{
+ * 				"Side": pulumi.String("Accepter"),
+ * 			},
+ * 		}, pulumi.Provider(aws.Peer))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,16 +222,17 @@ import javax.annotation.Nullable;
  * 
  *  Certain resource arguments, like `auto_accept`, do not have an EC2 API method for reading the information after peering connection creation. If the argument is set in the provider configuration on an imported resource, this provder will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_vpc_peering_connection_accepter" "example" {
  * 
- * # ... other configuration ...
+ *  # ... other configuration ...
  * 
- * # There is no AWS EC2 API for reading auto_accept
+ *  # There is no AWS EC2 API for reading auto_accept
  * 
  *  lifecycle {
  * 
+ * 
+ * 
  *  ignore_changes = [auto_accept]
  * 
- *  } }
- * 
+ *  } } 
  */
 @ResourceType(type="aws:ec2/vpcPeeringConnectionAccepter:VpcPeeringConnectionAccepter")
 public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomResource {

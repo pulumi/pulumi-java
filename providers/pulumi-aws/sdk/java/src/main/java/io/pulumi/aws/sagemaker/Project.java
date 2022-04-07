@@ -19,7 +19,76 @@ import javax.annotation.Nullable;
  * 
  *  > Note: If you are trying to use Sagemaker projects with Sagemaker studio you will need to add a tag with the key `sagemaker:studio-visibility` with value `true`. For more on requirements to use projects and permission needed see [AWS Docs](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-projects-templates-custom.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.sagemaker.Project("example", {
+ *     projectName: "example",
+ *     serviceCatalogProvisioningDetails: {
+ *         productId: aws_servicecatalog_product.example.id,
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.sagemaker.Project("example",
+ *     project_name="example",
+ *     service_catalog_provisioning_details=aws.sagemaker.ProjectServiceCatalogProvisioningDetailsArgs(
+ *         product_id=aws_servicecatalog_product["example"]["id"],
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Sagemaker.Project("example", new Aws.Sagemaker.ProjectArgs
+ *         {
+ *             ProjectName = "example",
+ *             ServiceCatalogProvisioningDetails = new Aws.Sagemaker.Inputs.ProjectServiceCatalogProvisioningDetailsArgs
+ *             {
+ *                 ProductId = aws_servicecatalog_product.Example.Id,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewProject(ctx, "example", &sagemaker.ProjectArgs{
+ * 			ProjectName: pulumi.String("example"),
+ * 			ServiceCatalogProvisioningDetails: &sagemaker.ProjectServiceCatalogProvisioningDetailsArgs{
+ * 				ProductId: pulumi.Any(aws_servicecatalog_product.Example.Id),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +98,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:sagemaker/project:Project example example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:sagemaker/project:Project")
 public class Project extends io.pulumi.resources.CustomResource {

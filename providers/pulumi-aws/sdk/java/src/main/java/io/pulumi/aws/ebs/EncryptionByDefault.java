@@ -17,7 +17,62 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** Removing this resource disables default EBS encryption.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ebs.EncryptionByDefault("example", {
+ *     enabled: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ebs.EncryptionByDefault("example", enabled=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ebs.EncryptionByDefault("example", new Aws.Ebs.EncryptionByDefaultArgs
+ *         {
+ *             Enabled = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ebs.NewEncryptionByDefault(ctx, "example", &ebs.EncryptionByDefaultArgs{
+ * 			Enabled: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -27,6 +82,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ebs/encryptionByDefault:EncryptionByDefault example default
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ebs/encryptionByDefault:EncryptionByDefault")
 public class EncryptionByDefault extends io.pulumi.resources.CustomResource {

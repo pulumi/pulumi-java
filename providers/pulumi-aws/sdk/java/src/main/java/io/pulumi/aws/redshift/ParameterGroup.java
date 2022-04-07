@@ -18,7 +18,123 @@ import javax.annotation.Nullable;
 /**
  * Provides a Redshift Cluster parameter group resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const bar = new aws.redshift.ParameterGroup("bar", {
+ *     family: "redshift-1.0",
+ *     parameters: [
+ *         {
+ *             name: "require_ssl",
+ *             value: "true",
+ *         },
+ *         {
+ *             name: "query_group",
+ *             value: "example",
+ *         },
+ *         {
+ *             name: "enable_user_activity_logging",
+ *             value: "true",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * bar = aws.redshift.ParameterGroup("bar",
+ *     family="redshift-1.0",
+ *     parameters=[
+ *         aws.redshift.ParameterGroupParameterArgs(
+ *             name="require_ssl",
+ *             value="true",
+ *         ),
+ *         aws.redshift.ParameterGroupParameterArgs(
+ *             name="query_group",
+ *             value="example",
+ *         ),
+ *         aws.redshift.ParameterGroupParameterArgs(
+ *             name="enable_user_activity_logging",
+ *             value="true",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bar = new Aws.RedShift.ParameterGroup("bar", new Aws.RedShift.ParameterGroupArgs
+ *         {
+ *             Family = "redshift-1.0",
+ *             Parameters = 
+ *             {
+ *                 new Aws.RedShift.Inputs.ParameterGroupParameterArgs
+ *                 {
+ *                     Name = "require_ssl",
+ *                     Value = "true",
+ *                 },
+ *                 new Aws.RedShift.Inputs.ParameterGroupParameterArgs
+ *                 {
+ *                     Name = "query_group",
+ *                     Value = "example",
+ *                 },
+ *                 new Aws.RedShift.Inputs.ParameterGroupParameterArgs
+ *                 {
+ *                     Name = "enable_user_activity_logging",
+ *                     Value = "true",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/redshift"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := redshift.NewParameterGroup(ctx, "bar", &redshift.ParameterGroupArgs{
+ * 			Family: pulumi.String("redshift-1.0"),
+ * 			Parameters: redshift.ParameterGroupParameterArray{
+ * 				&redshift.ParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("require_ssl"),
+ * 					Value: pulumi.String("true"),
+ * 				},
+ * 				&redshift.ParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("query_group"),
+ * 					Value: pulumi.String("example"),
+ * 				},
+ * 				&redshift.ParameterGroupParameterArgs{
+ * 					Name:  pulumi.String("enable_user_activity_logging"),
+ * 					Value: pulumi.String("true"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -28,6 +144,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:redshift/parameterGroup:ParameterGroup paramgroup1 parameter-group-test
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:redshift/parameterGroup:ParameterGroup")
 public class ParameterGroup extends io.pulumi.resources.CustomResource {

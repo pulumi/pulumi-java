@@ -19,7 +19,71 @@ import javax.annotation.Nullable;
  * 
  * > *NOTE:* When creating a LAG, if no existing connection is specified, Direct Connect will create a connection and this provider will remove this unmanaged connection during resource creation.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const hoge = new aws.directconnect.LinkAggregationGroup("hoge", {
+ *     connectionsBandwidth: "1Gbps",
+ *     forceDestroy: true,
+ *     location: "EqDC2",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * hoge = aws.directconnect.LinkAggregationGroup("hoge",
+ *     connections_bandwidth="1Gbps",
+ *     force_destroy=True,
+ *     location="EqDC2")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hoge = new Aws.DirectConnect.LinkAggregationGroup("hoge", new Aws.DirectConnect.LinkAggregationGroupArgs
+ *         {
+ *             ConnectionsBandwidth = "1Gbps",
+ *             ForceDestroy = true,
+ *             Location = "EqDC2",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/directconnect"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := directconnect.NewLinkAggregationGroup(ctx, "hoge", &directconnect.LinkAggregationGroupArgs{
+ * 			ConnectionsBandwidth: pulumi.String("1Gbps"),
+ * 			ForceDestroy:         pulumi.Bool(true),
+ * 			Location:             pulumi.String("EqDC2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,6 +93,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:directconnect/linkAggregationGroup:LinkAggregationGroup test_lag dxlag-fgnsp5rq
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:directconnect/linkAggregationGroup:LinkAggregationGroup")
 public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {

@@ -21,7 +21,150 @@ import javax.annotation.Nullable;
  * 
  * > This functionality is for managing [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html). To manage S3 Bucket Lifecycle Configurations in an AWS Partition, see the `aws.s3.Bucket` resource.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.s3control.BucketLifecycleConfiguration("example", {
+ *     bucket: aws_s3control_bucket.example.arn,
+ *     rules: [
+ *         {
+ *             expiration: {
+ *                 days: 365,
+ *             },
+ *             filter: {
+ *                 prefix: "logs/",
+ *             },
+ *             id: "logs",
+ *         },
+ *         {
+ *             expiration: {
+ *                 days: 7,
+ *             },
+ *             filter: {
+ *                 prefix: "temp/",
+ *             },
+ *             id: "temp",
+ *         },
+ *     ],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.s3control.BucketLifecycleConfiguration("example",
+ *     bucket=aws_s3control_bucket["example"]["arn"],
+ *     rules=[
+ *         aws.s3control.BucketLifecycleConfigurationRuleArgs(
+ *             expiration=aws.s3control.BucketLifecycleConfigurationRuleExpirationArgs(
+ *                 days=365,
+ *             ),
+ *             filter=aws.s3control.BucketLifecycleConfigurationRuleFilterArgs(
+ *                 prefix="logs/",
+ *             ),
+ *             id="logs",
+ *         ),
+ *         aws.s3control.BucketLifecycleConfigurationRuleArgs(
+ *             expiration=aws.s3control.BucketLifecycleConfigurationRuleExpirationArgs(
+ *                 days=7,
+ *             ),
+ *             filter=aws.s3control.BucketLifecycleConfigurationRuleFilterArgs(
+ *                 prefix="temp/",
+ *             ),
+ *             id="temp",
+ *         ),
+ *     ])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.S3Control.BucketLifecycleConfiguration("example", new Aws.S3Control.BucketLifecycleConfigurationArgs
+ *         {
+ *             Bucket = aws_s3control_bucket.Example.Arn,
+ *             Rules = 
+ *             {
+ *                 new Aws.S3Control.Inputs.BucketLifecycleConfigurationRuleArgs
+ *                 {
+ *                     Expiration = new Aws.S3Control.Inputs.BucketLifecycleConfigurationRuleExpirationArgs
+ *                     {
+ *                         Days = 365,
+ *                     },
+ *                     Filter = new Aws.S3Control.Inputs.BucketLifecycleConfigurationRuleFilterArgs
+ *                     {
+ *                         Prefix = "logs/",
+ *                     },
+ *                     Id = "logs",
+ *                 },
+ *                 new Aws.S3Control.Inputs.BucketLifecycleConfigurationRuleArgs
+ *                 {
+ *                     Expiration = new Aws.S3Control.Inputs.BucketLifecycleConfigurationRuleExpirationArgs
+ *                     {
+ *                         Days = 7,
+ *                     },
+ *                     Filter = new Aws.S3Control.Inputs.BucketLifecycleConfigurationRuleFilterArgs
+ *                     {
+ *                         Prefix = "temp/",
+ *                     },
+ *                     Id = "temp",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3control"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3control.NewBucketLifecycleConfiguration(ctx, "example", &s3control.BucketLifecycleConfigurationArgs{
+ * 			Bucket: pulumi.Any(aws_s3control_bucket.Example.Arn),
+ * 			Rules: s3control.BucketLifecycleConfigurationRuleArray{
+ * 				&s3control.BucketLifecycleConfigurationRuleArgs{
+ * 					Expiration: &s3control.BucketLifecycleConfigurationRuleExpirationArgs{
+ * 						Days: pulumi.Int(365),
+ * 					},
+ * 					Filter: &s3control.BucketLifecycleConfigurationRuleFilterArgs{
+ * 						Prefix: pulumi.String("logs/"),
+ * 					},
+ * 					Id: pulumi.String("logs"),
+ * 				},
+ * 				&s3control.BucketLifecycleConfigurationRuleArgs{
+ * 					Expiration: &s3control.BucketLifecycleConfigurationRuleExpirationArgs{
+ * 						Days: pulumi.Int(7),
+ * 					},
+ * 					Filter: &s3control.BucketLifecycleConfigurationRuleFilterArgs{
+ * 						Prefix: pulumi.String("temp/"),
+ * 					},
+ * 					Id: pulumi.String("temp"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +174,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:s3control/bucketLifecycleConfiguration:BucketLifecycleConfiguration example arn:aws:s3-outposts:us-east-1:123456789012:outpost/op-12345678/bucket/example
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:s3control/bucketLifecycleConfiguration:BucketLifecycleConfiguration")
 public class BucketLifecycleConfiguration extends io.pulumi.resources.CustomResource {

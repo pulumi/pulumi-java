@@ -20,7 +20,67 @@ import javax.annotation.Nullable;
  * 
  * > **NOTE:** After creation, you must use the information in the `certification_validation_records` attribute to add CNAME records to your Domain Name System (DNS). For each mapped domain name, add a mapping to the target App Runner subdomain (found in the `dns_target` attribute) and one or more certificate validation records. App Runner then performs DNS validation to verify that you own or control the domain name you associated. App Runner tracks domain validity in a certificate stored in AWS Certificate Manager (ACM).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.apprunner.CustomDomainAssociation("example", {
+ *     domainName: "example.com",
+ *     serviceArn: aws_apprunner_service.example.arn,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.apprunner.CustomDomainAssociation("example",
+ *     domain_name="example.com",
+ *     service_arn=aws_apprunner_service["example"]["arn"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.AppRunner.CustomDomainAssociation("example", new Aws.AppRunner.CustomDomainAssociationArgs
+ *         {
+ *             DomainName = "example.com",
+ *             ServiceArn = aws_apprunner_service.Example.Arn,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/apprunner"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apprunner.NewCustomDomainAssociation(ctx, "example", &apprunner.CustomDomainAssociationArgs{
+ * 			DomainName: pulumi.String("example.com"),
+ * 			ServiceArn: pulumi.Any(aws_apprunner_service.Example.Arn),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,8 +90,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:apprunner/customDomainAssociation:CustomDomainAssociation example example.com,arn:aws:apprunner:us-east-1:123456789012:service/example-
  * ```
  * 
- *  app/8fe1e10304f84fd2b0df550fe98a71fa
- * 
+ *  app/8fe1e10304f84fd2b0df550fe98a71fa 
  */
 @ResourceType(type="aws:apprunner/customDomainAssociation:CustomDomainAssociation")
 public class CustomDomainAssociation extends io.pulumi.resources.CustomResource {

@@ -15,7 +15,67 @@ import javax.annotation.Nullable;
 /**
  * Manages an EC2 Transit Gateway Route Table propagation.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const example = new aws.ec2transitgateway.RouteTablePropagation("example", {
+ *     transitGatewayAttachmentId: aws_ec2_transit_gateway_vpc_attachment.example.id,
+ *     transitGatewayRouteTableId: aws_ec2_transit_gateway_route_table.example.id,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example = aws.ec2transitgateway.RouteTablePropagation("example",
+ *     transit_gateway_attachment_id=aws_ec2_transit_gateway_vpc_attachment["example"]["id"],
+ *     transit_gateway_route_table_id=aws_ec2_transit_gateway_route_table["example"]["id"])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var example = new Aws.Ec2TransitGateway.RouteTablePropagation("example", new Aws.Ec2TransitGateway.RouteTablePropagationArgs
+ *         {
+ *             TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+ *             TransitGatewayRouteTableId = aws_ec2_transit_gateway_route_table.Example.Id,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2transitgateway.NewRouteTablePropagation(ctx, "example", &ec2transitgateway.RouteTablePropagationArgs{
+ * 			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_vpc_attachment.Example.Id),
+ * 			TransitGatewayRouteTableId: pulumi.Any(aws_ec2_transit_gateway_route_table.Example.Id),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -25,6 +85,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2transitgateway/routeTablePropagation:RouteTablePropagation example tgw-rtb-12345678_tgw-attach-87654321
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2transitgateway/routeTablePropagation:RouteTablePropagation")
 public class RouteTablePropagation extends io.pulumi.resources.CustomResource {

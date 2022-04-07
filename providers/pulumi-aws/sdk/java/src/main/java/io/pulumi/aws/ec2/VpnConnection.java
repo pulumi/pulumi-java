@@ -25,7 +25,219 @@ import javax.annotation.Nullable;
  * > **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
  * [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### EC2 Transit Gateway
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const exampleTransitGateway = new aws.ec2transitgateway.TransitGateway("exampleTransitGateway", {});
+ * const exampleCustomerGateway = new aws.ec2.CustomerGateway("exampleCustomerGateway", {
+ *     bgpAsn: 65000,
+ *     ipAddress: "172.0.0.1",
+ *     type: "ipsec.1",
+ * });
+ * const exampleVpnConnection = new aws.ec2.VpnConnection("exampleVpnConnection", {
+ *     customerGatewayId: exampleCustomerGateway.id,
+ *     transitGatewayId: exampleTransitGateway.id,
+ *     type: exampleCustomerGateway.type,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * example_transit_gateway = aws.ec2transitgateway.TransitGateway("exampleTransitGateway")
+ * example_customer_gateway = aws.ec2.CustomerGateway("exampleCustomerGateway",
+ *     bgp_asn="65000",
+ *     ip_address="172.0.0.1",
+ *     type="ipsec.1")
+ * example_vpn_connection = aws.ec2.VpnConnection("exampleVpnConnection",
+ *     customer_gateway_id=example_customer_gateway.id,
+ *     transit_gateway_id=example_transit_gateway.id,
+ *     type=example_customer_gateway.type)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var exampleTransitGateway = new Aws.Ec2TransitGateway.TransitGateway("exampleTransitGateway", new Aws.Ec2TransitGateway.TransitGatewayArgs
+ *         {
+ *         });
+ *         var exampleCustomerGateway = new Aws.Ec2.CustomerGateway("exampleCustomerGateway", new Aws.Ec2.CustomerGatewayArgs
+ *         {
+ *             BgpAsn = "65000",
+ *             IpAddress = "172.0.0.1",
+ *             Type = "ipsec.1",
+ *         });
+ *         var exampleVpnConnection = new Aws.Ec2.VpnConnection("exampleVpnConnection", new Aws.Ec2.VpnConnectionArgs
+ *         {
+ *             CustomerGatewayId = exampleCustomerGateway.Id,
+ *             TransitGatewayId = exampleTransitGateway.Id,
+ *             Type = exampleCustomerGateway.Type,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		exampleTransitGateway, err := ec2transitgateway.NewTransitGateway(ctx, "exampleTransitGateway", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		exampleCustomerGateway, err := ec2.NewCustomerGateway(ctx, "exampleCustomerGateway", &ec2.CustomerGatewayArgs{
+ * 			BgpAsn:    pulumi.String("65000"),
+ * 			IpAddress: pulumi.String("172.0.0.1"),
+ * 			Type:      pulumi.String("ipsec.1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpnConnection(ctx, "exampleVpnConnection", &ec2.VpnConnectionArgs{
+ * 			CustomerGatewayId: exampleCustomerGateway.ID(),
+ * 			TransitGatewayId:  exampleTransitGateway.ID(),
+ * 			Type:              exampleCustomerGateway.Type,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Virtual Private Gateway
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * 
+ * const vpc = new aws.ec2.Vpc("vpc", {cidrBlock: "10.0.0.0/16"});
+ * const vpnGateway = new aws.ec2.VpnGateway("vpnGateway", {vpcId: vpc.id});
+ * const customerGateway = new aws.ec2.CustomerGateway("customerGateway", {
+ *     bgpAsn: 65000,
+ *     ipAddress: "172.0.0.1",
+ *     type: "ipsec.1",
+ * });
+ * const main = new aws.ec2.VpnConnection("main", {
+ *     vpnGatewayId: vpnGateway.id,
+ *     customerGatewayId: customerGateway.id,
+ *     type: "ipsec.1",
+ *     staticRoutesOnly: true,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * 
+ * vpc = aws.ec2.Vpc("vpc", cidr_block="10.0.0.0/16")
+ * vpn_gateway = aws.ec2.VpnGateway("vpnGateway", vpc_id=vpc.id)
+ * customer_gateway = aws.ec2.CustomerGateway("customerGateway",
+ *     bgp_asn="65000",
+ *     ip_address="172.0.0.1",
+ *     type="ipsec.1")
+ * main = aws.ec2.VpnConnection("main",
+ *     vpn_gateway_id=vpn_gateway.id,
+ *     customer_gateway_id=customer_gateway.id,
+ *     type="ipsec.1",
+ *     static_routes_only=True)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs
+ *         {
+ *             CidrBlock = "10.0.0.0/16",
+ *         });
+ *         var vpnGateway = new Aws.Ec2.VpnGateway("vpnGateway", new Aws.Ec2.VpnGatewayArgs
+ *         {
+ *             VpcId = vpc.Id,
+ *         });
+ *         var customerGateway = new Aws.Ec2.CustomerGateway("customerGateway", new Aws.Ec2.CustomerGatewayArgs
+ *         {
+ *             BgpAsn = "65000",
+ *             IpAddress = "172.0.0.1",
+ *             Type = "ipsec.1",
+ *         });
+ *         var main = new Aws.Ec2.VpnConnection("main", new Aws.Ec2.VpnConnectionArgs
+ *         {
+ *             VpnGatewayId = vpnGateway.Id,
+ *             CustomerGatewayId = customerGateway.Id,
+ *             Type = "ipsec.1",
+ *             StaticRoutesOnly = true,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		vpc, err := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{
+ * 			CidrBlock: pulumi.String("10.0.0.0/16"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		vpnGateway, err := ec2.NewVpnGateway(ctx, "vpnGateway", &ec2.VpnGatewayArgs{
+ * 			VpcId: vpc.ID(),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		customerGateway, err := ec2.NewCustomerGateway(ctx, "customerGateway", &ec2.CustomerGatewayArgs{
+ * 			BgpAsn:    pulumi.String("65000"),
+ * 			IpAddress: pulumi.String("172.0.0.1"),
+ * 			Type:      pulumi.String("ipsec.1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ec2.NewVpnConnection(ctx, "main", &ec2.VpnConnectionArgs{
+ * 			VpnGatewayId:      vpnGateway.ID(),
+ * 			CustomerGatewayId: customerGateway.ID(),
+ * 			Type:              pulumi.String("ipsec.1"),
+ * 			StaticRoutesOnly:  pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,6 +247,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpnConnection:VpnConnection testvpnconnection vpn-40f41529
  * ```
  * 
+ *  
  */
 @ResourceType(type="aws:ec2/vpnConnection:VpnConnection")
 public class VpnConnection extends io.pulumi.resources.CustomResource {
@@ -361,14 +574,14 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
         return this.tunnel1InsideIpv6Cidr;
     }
     /**
-     * List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
+     * List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
     @Export(name="tunnel1Phase1DhGroupNumbers", type=List.class, parameters={Integer.class})
     private Output</* @Nullable */ List<Integer>> tunnel1Phase1DhGroupNumbers;
 
     /**
-     * @return List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
+     * @return List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
     public Output</* @Nullable */ List<Integer>> getTunnel1Phase1DhGroupNumbers() {
@@ -683,14 +896,14 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
         return this.tunnel2InsideIpv6Cidr;
     }
     /**
-     * List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
+     * List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
     @Export(name="tunnel2Phase1DhGroupNumbers", type=List.class, parameters={Integer.class})
     private Output</* @Nullable */ List<Integer>> tunnel2Phase1DhGroupNumbers;
 
     /**
-     * @return List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
+     * @return List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
     public Output</* @Nullable */ List<Integer>> getTunnel2Phase1DhGroupNumbers() {
