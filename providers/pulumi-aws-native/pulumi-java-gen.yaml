@@ -3,11 +3,5 @@ schema: https://raw.githubusercontent.com/pulumi/pulumi-aws-native/v0.12.0/provi
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/aws-native/version.txt
 pluginFile: src/main/resources/io/pulumi/aws-native/plugin.json
-
-packageInfo:
-  packageReferences:
-    "io.pulumi:pulumi": "0.0.1-SNAPSHOT"
-  gprPublishSettings:
-    groupId: io.pulumi
-    artifactId: aws-native
-    repositoryUrl: https://maven.pkg.github.com/pulumi/pulumi-jvm
+overlays:
+  - "./build"
