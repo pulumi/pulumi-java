@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Billing type PAV2 meter details
- * 
  */
 public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
     /**
      * Represents billing type.
      * Expected value is 'Pav2'.
-     * 
      */
     @Import(name="billingType", required=true)
       private final String billingType;
@@ -31,7 +29,6 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Charging type.
-     * 
      */
     @Import(name="chargingType", required=true)
       private final String chargingType;
@@ -42,7 +39,6 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Validation status of requested data center and transport.
-     * 
      */
     @Import(name="meterGuid", required=true)
       private final String meterGuid;
@@ -53,7 +49,6 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Billing unit applicable for Pav2 billing
-     * 
      */
     @Import(name="multiplier", required=true)
       private final Double multiplier;

@@ -3,6 +3,7 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
+    "src/main/java/io/pulumi/foobar/Methods.java",
     "src/main/java/io/pulumi/foobar/ModuleResource.java",
     "src/main/java/io/pulumi/foobar/ModuleResourceArgs.java",
     "src/main/java/io/pulumi/foobar/Provider.java",

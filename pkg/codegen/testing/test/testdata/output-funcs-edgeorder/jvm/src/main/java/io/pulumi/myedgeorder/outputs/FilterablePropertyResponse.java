@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class FilterablePropertyResponse {
     /**
      * Values to be filtered.
-     * 
      */
     private final List<String> supportedValues;
     /**
      * Type of product filter.
-     * 
      */
     private final String type;
 
@@ -31,14 +29,12 @@ public final class FilterablePropertyResponse {
 
     /**
      * Values to be filtered.
-     * 
     */
     public List<String> getSupportedValues() {
         return this.supportedValues;
     }
     /**
      * Type of product filter.
-     * 
     */
     public String getType() {
         return this.type;

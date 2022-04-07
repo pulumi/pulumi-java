@@ -42,7 +42,6 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of lists of other objects
-     * 
      */
     @Import(name="others")
       private final @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
@@ -53,7 +52,6 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mapping from string to list of some other object
-     * 
      */
     @Import(name="stillOthers")
       private final @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;

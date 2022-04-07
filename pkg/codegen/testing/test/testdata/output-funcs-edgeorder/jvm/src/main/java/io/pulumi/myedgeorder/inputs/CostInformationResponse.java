@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Cost information for the product system
- * 
  */
 public final class CostInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Default url to display billing information
-     * 
      */
     @Import(name="billingInfoUrl", required=true)
       private final String billingInfoUrl;
@@ -31,7 +29,6 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Details on the various billing aspects for the product system.
-     * 
      */
     @Import(name="billingMeterDetails", required=true)
       private final List<BillingMeterDetailsResponse> billingMeterDetails;

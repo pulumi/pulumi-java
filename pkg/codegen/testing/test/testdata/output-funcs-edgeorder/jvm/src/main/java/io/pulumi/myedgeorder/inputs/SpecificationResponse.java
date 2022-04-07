@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifications of the configurations
- * 
  */
 public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the specification
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Value of the specification
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

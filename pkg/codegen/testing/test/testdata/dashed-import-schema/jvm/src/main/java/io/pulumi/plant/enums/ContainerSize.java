@@ -9,7 +9,6 @@ import java.util.StringJoiner;
 
     /**
      * plant container sizes
-     * 
      */
     @EnumType
     public enum ContainerSize {

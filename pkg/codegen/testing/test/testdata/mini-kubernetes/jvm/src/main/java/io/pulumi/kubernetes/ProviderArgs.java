@@ -18,7 +18,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present, the name of the kubeconfig cluster to use.
-     * 
      */
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
@@ -29,7 +28,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If present, the name of the kubeconfig context to use.
-     * 
      */
     @Import(name="context")
       private final @Nullable Output<String> context;
@@ -40,7 +38,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Options for tuning the Kubernetes client used by a Provider.
-     * 
      */
     @Import(name="kubeClientSettings", json=true)
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
@@ -51,7 +48,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The contents of a kubeconfig file or the path to a kubeconfig file.
-     * 
      */
     @Import(name="kubeconfig")
       private final @Nullable Output<String> kubeconfig;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetWebAppSlotResult {
     /**
      * Configuration of the app.
-     * 
      */
     private final @Nullable SiteConfigResponse siteConfig;
 
@@ -24,7 +23,6 @@ public final class GetWebAppSlotResult {
 
     /**
      * Configuration of the app.
-     * 
     */
     public Optional<SiteConfigResponse> getSiteConfig() {
         return Optional.ofNullable(this.siteConfig);

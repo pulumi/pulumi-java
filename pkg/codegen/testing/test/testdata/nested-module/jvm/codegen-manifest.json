@@ -3,9 +3,12 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
+    "src/main/java/io/pulumi/foo/Methods.java",
     "src/main/java/io/pulumi/foo/Provider.java",
     "src/main/java/io/pulumi/foo/ProviderArgs.java",
     "src/main/java/io/pulumi/foo/Utilities.java",
+    "src/main/java/io/pulumi/foo/nested/NestedMethods.java",
+    "src/main/java/io/pulumi/foo/nested_module/Nested_moduleMethods.java",
     "src/main/java/io/pulumi/foo/nested_module/Resource.java",
     "src/main/java/io/pulumi/foo/nested_module/ResourceArgs.java"
   ]
