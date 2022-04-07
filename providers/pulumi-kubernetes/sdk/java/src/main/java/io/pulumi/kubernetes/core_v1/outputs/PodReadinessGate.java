@@ -17,7 +17,6 @@ public final class PodReadinessGate {
      *  - `"Initialized"` means that all init containers in the pod have started successfully.
      *  - `"PodScheduled"` represents status of the scheduling process for this pod.
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
-     * 
      */
     private final String conditionType;
 
@@ -34,7 +33,6 @@ public final class PodReadinessGate {
      *  - `"Initialized"` means that all init containers in the pod have started successfully.
      *  - `"PodScheduled"` represents status of the scheduling process for this pod.
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
-     * 
     */
     public String getConditionType() {
         return this.conditionType;

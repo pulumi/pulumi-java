@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.
- * 
  */
 public final class ExternalMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * current contains the current value for the given metric
-     * 
      */
     @Import(name="current", required=true)
       private final Output<MetricValueStatusArgs> current;
@@ -31,7 +29,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * metric identifies the target metric by name and selector
-     * 
      */
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;

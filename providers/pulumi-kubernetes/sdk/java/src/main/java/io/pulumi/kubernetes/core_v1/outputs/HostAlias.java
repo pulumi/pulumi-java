@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class HostAlias {
     /**
      * Hostnames for the above IP address.
-     * 
      */
     private final @Nullable List<String> hostnames;
     /**
      * IP address of the host file entry.
-     * 
      */
     private final @Nullable String ip;
 
@@ -33,14 +31,12 @@ public final class HostAlias {
 
     /**
      * Hostnames for the above IP address.
-     * 
     */
     public List<String> getHostnames() {
         return this.hostnames == null ? List.of() : this.hostnames;
     }
     /**
      * IP address of the host file entry.
-     * 
     */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);

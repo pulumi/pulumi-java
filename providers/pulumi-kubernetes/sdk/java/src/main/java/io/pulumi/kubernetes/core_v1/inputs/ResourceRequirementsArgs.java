@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ResourceRequirements describes the compute resource requirements.
- * 
  */
 public final class ResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
 
     /**
      * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
-     * 
      */
     @Import(name="limits")
       private final @Nullable Output<Map<String,String>> limits;
@@ -32,7 +30,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
 
     /**
      * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
-     * 
      */
     @Import(name="requests")
       private final @Nullable Output<Map<String,String>> requests;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class EphemeralVolumeSource {
     /**
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
-     * 
      */
     private final @Nullable Boolean readOnly;
     /**
@@ -25,7 +24,6 @@ public final class EphemeralVolumeSource {
      * This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.
      * 
      * Required, must not be nil.
-     * 
      */
     private final @Nullable PersistentVolumeClaimTemplate volumeClaimTemplate;
 
@@ -39,7 +37,6 @@ public final class EphemeralVolumeSource {
 
     /**
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
-     * 
     */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
@@ -52,7 +49,6 @@ public final class EphemeralVolumeSource {
      * This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.
      * 
      * Required, must not be nil.
-     * 
     */
     public Optional<PersistentVolumeClaimTemplate> getVolumeClaimTemplate() {
         return Optional.ofNullable(this.volumeClaimTemplate);

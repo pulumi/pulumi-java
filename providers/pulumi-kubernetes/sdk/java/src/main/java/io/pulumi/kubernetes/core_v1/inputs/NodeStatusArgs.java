@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * NodeStatus is information about the current status of a node.
- * 
  */
 public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.
-     * 
      */
     @Import(name="addresses")
       private final @Nullable Output<List<NodeAddressArgs>> addresses;
@@ -40,7 +38,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.
-     * 
      */
     @Import(name="allocatable")
       private final @Nullable Output<Map<String,String>> allocatable;
@@ -51,7 +48,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Map<String,String>> capacity;
@@ -62,7 +58,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<NodeConditionArgs>> conditions;
@@ -73,7 +68,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of the config assigned to the node via the dynamic Kubelet config feature.
-     * 
      */
     @Import(name="config")
       private final @Nullable Output<NodeConfigStatusArgs> config;
@@ -84,7 +78,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Endpoints of daemons running on the Node.
-     * 
      */
     @Import(name="daemonEndpoints")
       private final @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints;
@@ -95,7 +88,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of container images on this node
-     * 
      */
     @Import(name="images")
       private final @Nullable Output<List<ContainerImageArgs>> images;
@@ -106,7 +98,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info
-     * 
      */
     @Import(name="nodeInfo")
       private final @Nullable Output<NodeSystemInfoArgs> nodeInfo;
@@ -122,7 +113,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Pending"` means the node has been created/added by the system, but not configured.
      *  - `"Running"` means the node has been configured and has Kubernetes components running.
      *  - `"Terminated"` means the node has been removed from the cluster.
-     * 
      */
     @Import(name="phase")
       private final @Nullable Output<String> phase;
@@ -133,7 +123,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of volumes that are attached to the node.
-     * 
      */
     @Import(name="volumesAttached")
       private final @Nullable Output<List<AttachedVolumeArgs>> volumesAttached;
@@ -144,7 +133,6 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of attachable volumes in use (mounted) by the node.
-     * 
      */
     @Import(name="volumesInUse")
       private final @Nullable Output<List<String>> volumesInUse;

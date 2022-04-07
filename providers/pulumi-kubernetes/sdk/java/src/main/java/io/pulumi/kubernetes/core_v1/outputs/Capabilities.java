@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class Capabilities {
     /**
      * Added capabilities
-     * 
      */
     private final @Nullable List<String> add;
     /**
      * Removed capabilities
-     * 
      */
     private final @Nullable List<String> drop;
 
@@ -32,14 +30,12 @@ public final class Capabilities {
 
     /**
      * Added capabilities
-     * 
     */
     public List<String> getAdd() {
         return this.add == null ? List.of() : this.add;
     }
     /**
      * Removed capabilities
-     * 
     */
     public List<String> getDrop() {
         return this.drop == null ? List.of() : this.drop;

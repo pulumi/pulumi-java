@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class PriorityLevelConfigurationCondition {
     /**
      * `lastTransitionTime` is the last time the condition transitioned from one status to another.
-     * 
      */
     private final @Nullable String lastTransitionTime;
     /**
      * `message` is a human-readable message indicating details about last transition.
-     * 
      */
     private final @Nullable String message;
     /**
      * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
-     * 
      */
     private final @Nullable String reason;
     /**
      * `status` is the status of the condition. Can be True, False, Unknown. Required.
-     * 
      */
     private final @Nullable String status;
     /**
      * `type` is the type of the condition. Required.
-     * 
      */
     private final @Nullable String type;
 
@@ -53,35 +48,30 @@ public final class PriorityLevelConfigurationCondition {
 
     /**
      * `lastTransitionTime` is the last time the condition transitioned from one status to another.
-     * 
     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * `message` is a human-readable message indicating details about last transition.
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
-     * 
     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * `status` is the status of the condition. Can be True, False, Unknown. Required.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * `type` is the type of the condition. Required.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

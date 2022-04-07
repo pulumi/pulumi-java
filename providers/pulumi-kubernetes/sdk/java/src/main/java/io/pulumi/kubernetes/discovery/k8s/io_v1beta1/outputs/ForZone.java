@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ForZone {
     /**
      * name represents the name of the zone.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class ForZone {
 
     /**
      * name represents the name of the zone.
-     * 
     */
     public String getName() {
         return this.name;

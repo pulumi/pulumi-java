@@ -18,12 +18,10 @@ public final class LimitedPriorityLevelConfiguration {
      *             ACV(l) = ceil( SCL * ACS(l) / ( sum[priority levels k] ACS(k) ) )
      * 
      * bigger numbers of ACS mean more reserved concurrent requests (at the expense of every other PL). This field has a default value of 30.
-     * 
      */
     private final @Nullable Integer assuredConcurrencyShares;
     /**
      * `limitResponse` indicates what to do with requests that can not be executed right now
-     * 
      */
     private final @Nullable LimitResponse limitResponse;
 
@@ -41,14 +39,12 @@ public final class LimitedPriorityLevelConfiguration {
      *             ACV(l) = ceil( SCL * ACS(l) / ( sum[priority levels k] ACS(k) ) )
      * 
      * bigger numbers of ACS mean more reserved concurrent requests (at the expense of every other PL). This field has a default value of 30.
-     * 
     */
     public Optional<Integer> getAssuredConcurrencyShares() {
         return Optional.ofNullable(this.assuredConcurrencyShares);
     }
     /**
      * `limitResponse` indicates what to do with requests that can not be executed right now
-     * 
     */
     public Optional<LimitResponse> getLimitResponse() {
         return Optional.ofNullable(this.limitResponse);

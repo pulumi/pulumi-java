@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * EnvVar represents an environment variable present in a Container.
- * 
  */
 public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the environment variable. Must be a C_IDENTIFIER.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;
@@ -43,7 +40,6 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source for the environment variable's value. Cannot be used if value is not empty.
-     * 
      */
     @Import(name="valueFrom")
       private final @Nullable Output<EnvVarSourceArgs> valueFrom;

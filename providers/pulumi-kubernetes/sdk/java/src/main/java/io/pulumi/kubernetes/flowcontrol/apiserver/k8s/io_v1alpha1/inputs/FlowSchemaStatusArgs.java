@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * FlowSchemaStatus represents the current state of a FlowSchema.
- * 
  */
 public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * `conditions` is a list of the current states of FlowSchema.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<FlowSchemaConditionArgs>> conditions;

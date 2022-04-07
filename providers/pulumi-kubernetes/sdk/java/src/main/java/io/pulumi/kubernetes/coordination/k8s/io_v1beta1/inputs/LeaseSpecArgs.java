@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * LeaseSpec is a specification of a Lease.
- * 
  */
 public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * acquireTime is a time when the current lease was acquired.
-     * 
      */
     @Import(name="acquireTime")
       private final @Nullable Output<String> acquireTime;
@@ -32,7 +30,6 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * holderIdentity contains the identity of the holder of a current lease.
-     * 
      */
     @Import(name="holderIdentity")
       private final @Nullable Output<String> holderIdentity;
@@ -43,7 +40,6 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
-     * 
      */
     @Import(name="leaseDurationSeconds")
       private final @Nullable Output<Integer> leaseDurationSeconds;
@@ -54,7 +50,6 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * leaseTransitions is the number of transitions of a lease between holders.
-     * 
      */
     @Import(name="leaseTransitions")
       private final @Nullable Output<Integer> leaseTransitions;
@@ -65,7 +60,6 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * renewTime is a time when the current holder of a lease has last updated the lease.
-     * 
      */
     @Import(name="renewTime")
       private final @Nullable Output<String> renewTime;

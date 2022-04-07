@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * CustomResourceDefinitionStatus indicates the state of the CustomResourceDefinition
- * 
  */
 public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
 
     /**
      * acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
-     * 
      */
     @Import(name="acceptedNames", required=true)
       private final Output<CustomResourceDefinitionNamesArgs> acceptedNames;
@@ -34,7 +32,6 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
 
     /**
      * conditions indicate state for particular aspects of a CustomResourceDefinition
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions;
@@ -45,7 +42,6 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
 
     /**
      * storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
-     * 
      */
     @Import(name="storedVersions", required=true)
       private final Output<List<String>> storedVersions;

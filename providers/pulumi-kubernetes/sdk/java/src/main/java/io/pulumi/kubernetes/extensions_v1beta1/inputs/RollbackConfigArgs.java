@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * DEPRECATED.
- * 
  */
 public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The revision to rollback to. If set to 0, rollback to the last revision.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;

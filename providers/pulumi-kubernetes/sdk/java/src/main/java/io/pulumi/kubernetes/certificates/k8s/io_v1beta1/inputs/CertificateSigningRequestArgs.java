@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a certificate signing request
- * 
  */
 public final class CertificateSigningRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -34,7 +32,6 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -52,7 +49,6 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
 
     /**
      * The certificate request itself and any additional information.
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<CertificateSigningRequestSpecArgs> spec;
@@ -63,7 +59,6 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
 
     /**
      * Derived information about the request.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<CertificateSigningRequestStatusArgs> status;

@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class EventSeries {
     /**
      * count is the number of occurrences in this series up to the last heartbeat time.
-     * 
      */
     private final Integer count;
     /**
      * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
-     * 
      */
     private final String lastObservedTime;
     /**
      * Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
-     * 
      */
     private final @Nullable String state;
 
@@ -40,21 +37,18 @@ public final class EventSeries {
 
     /**
      * count is the number of occurrences in this series up to the last heartbeat time.
-     * 
     */
     public Integer getCount() {
         return this.count;
     }
     /**
      * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
-     * 
     */
     public String getLastObservedTime() {
         return this.lastObservedTime;
     }
     /**
      * Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

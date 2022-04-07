@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * ResourceQuota sets aggregate quota restrictions enforced per namespace
- * 
  */
 @ResourceType(type="kubernetes:core/v1:ResourceQuota")
 public class ResourceQuota extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * Spec defines the desired quota. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     @Export(name="spec", type=ResourceQuotaSpec.class, parameters={})
     private Output</* @Nullable */ ResourceQuotaSpec> spec;
 
     /**
      * @return Spec defines the desired quota. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     public Output</* @Nullable */ ResourceQuotaSpec> getSpec() {
         return this.spec;
     }
     /**
      * Status defines the actual enforced quota and its current usage. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     @Export(name="status", type=ResourceQuotaStatus.class, parameters={})
     private Output</* @Nullable */ ResourceQuotaStatus> status;
 
     /**
      * @return Status defines the actual enforced quota and its current usage. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     public Output</* @Nullable */ ResourceQuotaStatus> getStatus() {
         return this.status;

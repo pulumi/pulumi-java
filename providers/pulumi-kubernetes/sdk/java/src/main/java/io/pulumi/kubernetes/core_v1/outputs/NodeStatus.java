@@ -22,42 +22,34 @@ import javax.annotation.Nullable;
 public final class NodeStatus {
     /**
      * List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.
-     * 
      */
     private final @Nullable List<NodeAddress> addresses;
     /**
      * Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.
-     * 
      */
     private final @Nullable Map<String,String> allocatable;
     /**
      * Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
-     * 
      */
     private final @Nullable Map<String,String> capacity;
     /**
      * Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition
-     * 
      */
     private final @Nullable List<NodeCondition> conditions;
     /**
      * Status of the config assigned to the node via the dynamic Kubelet config feature.
-     * 
      */
     private final @Nullable NodeConfigStatus config;
     /**
      * Endpoints of daemons running on the Node.
-     * 
      */
     private final @Nullable NodeDaemonEndpoints daemonEndpoints;
     /**
      * List of container images on this node
-     * 
      */
     private final @Nullable List<ContainerImage> images;
     /**
      * Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info
-     * 
      */
     private final @Nullable NodeSystemInfo nodeInfo;
     /**
@@ -67,17 +59,14 @@ public final class NodeStatus {
      *  - `"Pending"` means the node has been created/added by the system, but not configured.
      *  - `"Running"` means the node has been configured and has Kubernetes components running.
      *  - `"Terminated"` means the node has been removed from the cluster.
-     * 
      */
     private final @Nullable String phase;
     /**
      * List of volumes that are attached to the node.
-     * 
      */
     private final @Nullable List<AttachedVolume> volumesAttached;
     /**
      * List of attachable volumes in use (mounted) by the node.
-     * 
      */
     private final @Nullable List<String> volumesInUse;
 
@@ -109,56 +98,48 @@ public final class NodeStatus {
 
     /**
      * List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.
-     * 
     */
     public List<NodeAddress> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
      * Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.
-     * 
     */
     public Map<String,String> getAllocatable() {
         return this.allocatable == null ? Map.of() : this.allocatable;
     }
     /**
      * Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
-     * 
     */
     public Map<String,String> getCapacity() {
         return this.capacity == null ? Map.of() : this.capacity;
     }
     /**
      * Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition
-     * 
     */
     public List<NodeCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Status of the config assigned to the node via the dynamic Kubelet config feature.
-     * 
     */
     public Optional<NodeConfigStatus> getConfig() {
         return Optional.ofNullable(this.config);
     }
     /**
      * Endpoints of daemons running on the Node.
-     * 
     */
     public Optional<NodeDaemonEndpoints> getDaemonEndpoints() {
         return Optional.ofNullable(this.daemonEndpoints);
     }
     /**
      * List of container images on this node
-     * 
     */
     public List<ContainerImage> getImages() {
         return this.images == null ? List.of() : this.images;
     }
     /**
      * Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info
-     * 
     */
     public Optional<NodeSystemInfo> getNodeInfo() {
         return Optional.ofNullable(this.nodeInfo);
@@ -170,21 +151,18 @@ public final class NodeStatus {
      *  - `"Pending"` means the node has been created/added by the system, but not configured.
      *  - `"Running"` means the node has been configured and has Kubernetes components running.
      *  - `"Terminated"` means the node has been removed from the cluster.
-     * 
     */
     public Optional<String> getPhase() {
         return Optional.ofNullable(this.phase);
     }
     /**
      * List of volumes that are attached to the node.
-     * 
     */
     public List<AttachedVolume> getVolumesAttached() {
         return this.volumesAttached == null ? List.of() : this.volumesAttached;
     }
     /**
      * List of attachable volumes in use (mounted) by the node.
-     * 
     */
     public List<String> getVolumesInUse() {
         return this.volumesInUse == null ? List.of() : this.volumesInUse;

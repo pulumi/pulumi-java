@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class HostPortRange {
     /**
      * max is the end of the range, inclusive.
-     * 
      */
     private final Integer max;
     /**
      * min is the start of the range, inclusive.
-     * 
      */
     private final Integer min;
 
@@ -30,14 +28,12 @@ public final class HostPortRange {
 
     /**
      * max is the end of the range, inclusive.
-     * 
     */
     public Integer getMax() {
         return this.max;
     }
     /**
      * min is the start of the range, inclusive.
-     * 
     */
     public Integer getMin() {
         return this.min;

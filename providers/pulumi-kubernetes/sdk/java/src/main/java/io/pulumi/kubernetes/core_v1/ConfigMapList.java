@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * ConfigMapList is a resource containing a list of ConfigMap objects.
- * 
  */
 @ResourceType(type="kubernetes:core/v1:ConfigMapList")
 public class ConfigMapList extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Items is the list of ConfigMaps.
-     * 
      */
     @Export(name="items", type=List.class, parameters={ConfigMap.class})
     private Output<List<ConfigMap>> items;
 
     /**
      * @return Items is the list of ConfigMaps.
-     * 
      */
     public Output<List<ConfigMap>> getItems() {
         return this.items;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     /**
      * @return More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ListMeta> getMetadata() {
         return this.metadata;

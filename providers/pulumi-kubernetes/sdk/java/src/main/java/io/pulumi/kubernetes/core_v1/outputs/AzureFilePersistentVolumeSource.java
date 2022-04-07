@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class AzureFilePersistentVolumeSource {
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
-     * 
      */
     private final @Nullable Boolean readOnly;
     /**
      * the name of secret that contains Azure Storage Account Name and Key
-     * 
      */
     private final String secretName;
     /**
      * the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
-     * 
      */
     private final @Nullable String secretNamespace;
     /**
      * Share Name
-     * 
      */
     private final String shareName;
 
@@ -47,28 +43,24 @@ public final class AzureFilePersistentVolumeSource {
 
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
-     * 
     */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * the name of secret that contains Azure Storage Account Name and Key
-     * 
     */
     public String getSecretName() {
         return this.secretName;
     }
     /**
      * the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
-     * 
     */
     public Optional<String> getSecretNamespace() {
         return Optional.ofNullable(this.secretNamespace);
     }
     /**
      * Share Name
-     * 
     */
     public String getShareName() {
         return this.shareName;

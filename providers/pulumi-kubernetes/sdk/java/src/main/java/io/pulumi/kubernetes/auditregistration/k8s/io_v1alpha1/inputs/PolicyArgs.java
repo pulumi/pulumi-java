@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Policy defines the configuration of how audit events are logged
- * 
  */
 public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
-     * 
      */
     @Import(name="level", required=true)
       private final Output<String> level;
@@ -32,7 +30,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Stages is a list of stages for which events are created.
-     * 
      */
     @Import(name="stages")
       private final @Nullable Output<List<String>> stages;

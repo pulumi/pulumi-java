@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.
- * 
  */
 public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -35,7 +33,6 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -46,7 +43,6 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Standard object's metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -57,7 +53,6 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
-     * 
      */
     @Import(name="roleRef", required=true)
       private final Output<RoleRefArgs> roleRef;
@@ -68,7 +63,6 @@ public final class ClusterRoleBindingArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Subjects holds references to the objects the role applies to.
-     * 
      */
     @Import(name="subjects")
       private final @Nullable Output<List<SubjectArgs>> subjects;

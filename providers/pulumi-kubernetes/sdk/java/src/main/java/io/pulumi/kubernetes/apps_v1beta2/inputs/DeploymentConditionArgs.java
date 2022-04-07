@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * DeploymentCondition describes the state of a deployment at a certain point.
- * 
  */
 public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The last time this condition was updated.
-     * 
      */
     @Import(name="lastUpdateTime")
       private final @Nullable Output<String> lastUpdateTime;
@@ -42,7 +39,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A human readable message indicating details about the transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -53,7 +49,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -64,7 +59,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Status of the condition, one of True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -75,7 +69,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Type of deployment condition.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

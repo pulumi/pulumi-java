@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * WebhookThrottleConfig holds the configuration for throttling events
- * 
  */
 public final class WebhookThrottleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
 
     /**
      * ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
-     * 
      */
     @Import(name="burst")
       private final @Nullable Output<Integer> burst;
@@ -31,7 +29,6 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
 
     /**
      * ThrottleQPS maximum number of batches per second default 10 QPS
-     * 
      */
     @Import(name="qps")
       private final @Nullable Output<Integer> qps;

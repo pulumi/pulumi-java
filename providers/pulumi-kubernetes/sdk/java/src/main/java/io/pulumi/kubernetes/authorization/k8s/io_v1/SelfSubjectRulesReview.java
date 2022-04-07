@@ -18,76 +18,65 @@ import javax.annotation.Nullable;
 
 /**
  * SelfSubjectRulesReview enumerates the set of actions the current user can perform within a namespace. The returned list of actions may be incomplete depending on the server's authorization mode, and any errors experienced during the evaluation. SelfSubjectRulesReview should be used by UIs to show/hide actions, or to quickly let an end user reason about their permissions. It should NOT Be used by external systems to drive authorization decisions as this raises confused deputy, cache lifetime/revocation, and correctness concerns. SubjectAccessReview, and LocalAccessReview are the correct way to defer authorization decisions to the API server.
- * 
  */
 @ResourceType(type="kubernetes:authorization.k8s.io/v1:SelfSubjectRulesReview")
 public class SelfSubjectRulesReview extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * Spec holds information about the request being evaluated.
-     * 
      */
     @Export(name="spec", type=SelfSubjectRulesReviewSpec.class, parameters={})
     private Output<SelfSubjectRulesReviewSpec> spec;
 
     /**
      * @return Spec holds information about the request being evaluated.
-     * 
      */
     public Output<SelfSubjectRulesReviewSpec> getSpec() {
         return this.spec;
     }
     /**
      * Status is filled in by the server and indicates the set of actions a user can perform.
-     * 
      */
     @Export(name="status", type=SubjectRulesReviewStatus.class, parameters={})
     private Output</* @Nullable */ SubjectRulesReviewStatus> status;
 
     /**
      * @return Status is filled in by the server and indicates the set of actions a user can perform.
-     * 
      */
     public Output</* @Nullable */ SubjectRulesReviewStatus> getStatus() {
         return this.status;

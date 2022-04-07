@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specification defining the Helm chart repository to use.
- * 
  */
 public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Repository's CA File
-     * 
      */
     @Import(name="caFile")
       private final @Nullable Output<String> caFile;
@@ -31,7 +29,6 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The repository's cert file
-     * 
      */
     @Import(name="certFile")
       private final @Nullable Output<String> certFile;
@@ -42,7 +39,6 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The repository's cert key file
-     * 
      */
     @Import(name="keyFile")
       private final @Nullable Output<String> keyFile;
@@ -53,7 +49,6 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password for HTTP basic authentication
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -64,7 +59,6 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
-     * 
      */
     @Import(name="repo")
       private final @Nullable Output<String> repo;
@@ -75,7 +69,6 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username for HTTP basic authentication
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

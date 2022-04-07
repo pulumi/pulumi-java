@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class CronJobStatus {
     /**
      * A list of pointers to currently running jobs.
-     * 
      */
     private final @Nullable List<ObjectReference> active;
     /**
      * Information when was the last time the job was successfully scheduled.
-     * 
      */
     private final @Nullable String lastScheduleTime;
 
@@ -34,14 +32,12 @@ public final class CronJobStatus {
 
     /**
      * A list of pointers to currently running jobs.
-     * 
     */
     public List<ObjectReference> getActive() {
         return this.active == null ? List.of() : this.active;
     }
     /**
      * Information when was the last time the job was successfully scheduled.
-     * 
     */
     public Optional<String> getLastScheduleTime() {
         return Optional.ofNullable(this.lastScheduleTime);

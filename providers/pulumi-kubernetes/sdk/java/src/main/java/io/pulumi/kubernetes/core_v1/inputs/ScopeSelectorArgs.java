@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.
- * 
  */
 public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of scope selector requirements by scope of the resources.
-     * 
      */
     @Import(name="matchExpressions")
       private final @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;

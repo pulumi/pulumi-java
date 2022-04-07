@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ServiceBackendPort {
     /**
      * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
-     * 
      */
     private final @Nullable String name;
     /**
      * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
-     * 
      */
     private final @Nullable Integer number;
 
@@ -33,14 +31,12 @@ public final class ServiceBackendPort {
 
     /**
      * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
-     * 
     */
     public Optional<Integer> getNumber() {
         return Optional.ofNullable(this.number);

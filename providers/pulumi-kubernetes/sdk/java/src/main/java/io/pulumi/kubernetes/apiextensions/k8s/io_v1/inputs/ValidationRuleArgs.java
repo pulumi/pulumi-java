@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ValidationRule describes a validation rule written in the CEL expression language.
- * 
  */
 public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -55,7 +53,6 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      *   - 'map': `X + Y` performs a merge where the array positions of all keys in `X` are preserved but the values
      *     are overwritten by values in `Y` when the key sets of `X` and `Y` intersect. Elements in `Y` with
      *     non-intersecting keys are appended, retaining their partial order.
-     * 
      */
     @Import(name="rule", required=true)
       private final Output<String> rule;

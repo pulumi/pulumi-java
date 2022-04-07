@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ResourceMetricStatus {
     /**
      * current contains the current value for the given metric
-     * 
      */
     private final MetricValueStatus current;
     /**
      * Name is the name of the resource in question.
-     * 
      */
     private final String name;
 
@@ -31,14 +29,12 @@ public final class ResourceMetricStatus {
 
     /**
      * current contains the current value for the given metric
-     * 
     */
     public MetricValueStatus getCurrent() {
         return this.current;
     }
     /**
      * Name is the name of the resource in question.
-     * 
     */
     public String getName() {
         return this.name;

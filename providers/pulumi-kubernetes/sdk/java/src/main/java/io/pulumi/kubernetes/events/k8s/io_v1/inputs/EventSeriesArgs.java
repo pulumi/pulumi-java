@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * EventSeries contain information on series of events, i.e. thing that was/is happening continuously for some time. How often to update the EventSeries is up to the event reporters. The default event reporter in "k8s.io/client-go/tools/events/event_broadcaster.go" shows how this struct is updated on heartbeats and can guide customized reporter implementations.
- * 
  */
 public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * count is the number of occurrences in this series up to the last heartbeat time.
-     * 
      */
     @Import(name="count", required=true)
       private final Output<Integer> count;
@@ -31,7 +29,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
-     * 
      */
     @Import(name="lastObservedTime", required=true)
       private final Output<String> lastObservedTime;

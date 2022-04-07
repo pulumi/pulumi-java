@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference, or a value for non-objects such as user and group names.
- * 
  */
 public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion holds the API group and version of the referenced subject. Defaults to "v1" for ServiceAccount subjects. Defaults to "rbac.authorization.k8s.io/v1alpha1" for User and Group subjects.
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -31,7 +29,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of object being referenced. Values defined by this API group are "User", "Group", and "ServiceAccount". If the Authorizer does not recognized the kind value, the Authorizer should report an error.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -42,7 +39,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the object being referenced.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -53,7 +49,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or "Group", and this value is not empty the Authorizer should report an error.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;

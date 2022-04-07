@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
- * 
  */
 public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
 
     /**
      * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
-     * 
      */
     @Import(name="apiGroup")
       private final @Nullable Output<String> apiGroup;
@@ -31,7 +29,6 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
 
     /**
      * Kind is the type of resource being referenced
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -42,7 +39,6 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
 
     /**
      * Name is the name of resource being referenced
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

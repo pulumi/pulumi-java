@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * PersistentVolumeClaimCondition contails details about state of pvc
- * 
  */
 public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
 
     /**
      * Last time we probed the condition.
-     * 
      */
     @Import(name="lastProbeTime")
       private final @Nullable Output<String> lastProbeTime;
@@ -31,7 +29,6 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
 
     /**
      * Last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -42,7 +39,6 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
 
     /**
      * Human-readable message indicating details about last transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -53,7 +49,6 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
 
     /**
      * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -70,10 +65,12 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
     }
 
     /**
+     * 
+     * 
+     * 
      * Possible enum values:
      *  - `"FileSystemResizePending"` - controller resize is finished and a file system resize is pending on node
      *  - `"Resizing"` - a user trigger resize of pvc has been started
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

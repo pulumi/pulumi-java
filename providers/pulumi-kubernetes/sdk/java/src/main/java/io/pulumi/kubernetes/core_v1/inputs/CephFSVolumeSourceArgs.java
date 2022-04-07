@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
- * 
  */
 public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
-     * 
      */
     @Import(name="monitors", required=true)
       private final Output<List<String>> monitors;
@@ -34,7 +32,6 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional: Used as the mounted root, rather than the full Ceph tree, default is /
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -45,7 +42,6 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -56,7 +52,6 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
-     * 
      */
     @Import(name="secretFile")
       private final @Nullable Output<String> secretFile;
@@ -67,7 +62,6 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
-     * 
      */
     @Import(name="secretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
@@ -78,7 +72,6 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
-     * 
      */
     @Import(name="user")
       private final @Nullable Output<String> user;

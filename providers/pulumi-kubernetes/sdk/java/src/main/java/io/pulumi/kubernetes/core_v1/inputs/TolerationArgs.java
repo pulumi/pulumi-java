@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The pod this Toleration is attached to tolerates any taint that matches the triple <key,value,effect> using the matching operator <operator>.
- * 
  */
 public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"NoExecute"` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
      *  - `"NoSchedule"` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
      *  - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
-     * 
      */
     @Import(name="effect")
       private final @Nullable Output<String> effect;
@@ -37,7 +35,6 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key is the taint key that the toleration applies to. Empty means match all taint keys. If the key is empty, operator must be Exists; this combination means to match all values and all keys.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -52,7 +49,6 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
      * Possible enum values:
      *  - `"Equal"`
      *  - `"Exists"`
-     * 
      */
     @Import(name="operator")
       private final @Nullable Output<String> operator;
@@ -63,7 +59,6 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TolerationSeconds represents the period of time the toleration (which must be of effect NoExecute, otherwise this field is ignored) tolerates the taint. By default, it is not set, which means tolerate the taint forever (do not evict). Zero and negative values will be treated as 0 (evict immediately) by the system.
-     * 
      */
     @Import(name="tolerationSeconds")
       private final @Nullable Output<Integer> tolerationSeconds;
@@ -74,7 +69,6 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

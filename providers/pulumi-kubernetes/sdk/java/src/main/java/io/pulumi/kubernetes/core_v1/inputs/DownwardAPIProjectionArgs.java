@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents downward API info for projecting into a projected volume. Note that this is identical to a downwardAPI volume source without the default mode.
- * 
  */
 public final class DownwardAPIProjectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DownwardAPIProjectionArgs extends io.pulumi.resources.Resourc
 
     /**
      * Items is a list of DownwardAPIVolume file
-     * 
      */
     @Import(name="items")
       private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;

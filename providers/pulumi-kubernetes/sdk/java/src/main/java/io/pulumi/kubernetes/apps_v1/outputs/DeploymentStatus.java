@@ -15,42 +15,34 @@ import javax.annotation.Nullable;
 public final class DeploymentStatus {
     /**
      * Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
-     * 
      */
     private final @Nullable Integer availableReplicas;
     /**
      * Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
-     * 
      */
     private final @Nullable Integer collisionCount;
     /**
      * Represents the latest available observations of a deployment's current state.
-     * 
      */
     private final @Nullable List<DeploymentCondition> conditions;
     /**
      * The generation observed by the deployment controller.
-     * 
      */
     private final @Nullable Integer observedGeneration;
     /**
      * readyReplicas is the number of pods targeted by this Deployment with a Ready Condition.
-     * 
      */
     private final @Nullable Integer readyReplicas;
     /**
      * Total number of non-terminated pods targeted by this deployment (their labels match the selector).
-     * 
      */
     private final @Nullable Integer replicas;
     /**
      * Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
-     * 
      */
     private final @Nullable Integer unavailableReplicas;
     /**
      * Total number of non-terminated pods targeted by this deployment that have the desired template spec.
-     * 
      */
     private final @Nullable Integer updatedReplicas;
 
@@ -76,56 +68,48 @@ public final class DeploymentStatus {
 
     /**
      * Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
-     * 
     */
     public Optional<Integer> getAvailableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
     /**
      * Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
-     * 
     */
     public Optional<Integer> getCollisionCount() {
         return Optional.ofNullable(this.collisionCount);
     }
     /**
      * Represents the latest available observations of a deployment's current state.
-     * 
     */
     public List<DeploymentCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * The generation observed by the deployment controller.
-     * 
     */
     public Optional<Integer> getObservedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
     /**
      * readyReplicas is the number of pods targeted by this Deployment with a Ready Condition.
-     * 
     */
     public Optional<Integer> getReadyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
     /**
      * Total number of non-terminated pods targeted by this deployment (their labels match the selector).
-     * 
     */
     public Optional<Integer> getReplicas() {
         return Optional.ofNullable(this.replicas);
     }
     /**
      * Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
-     * 
     */
     public Optional<Integer> getUnavailableReplicas() {
         return Optional.ofNullable(this.unavailableReplicas);
     }
     /**
      * Total number of non-terminated pods targeted by this deployment that have the desired template spec.
-     * 
     */
     public Optional<Integer> getUpdatedReplicas() {
         return Optional.ofNullable(this.updatedReplicas);

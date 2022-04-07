@@ -40,80 +40,68 @@ import javax.annotation.Nullable;
  * If the Deployment has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
  * by setting the 'customTimeouts' option on the resource.
- * 
  * @Deprecated
  * apps/v1beta1/Deployment is deprecated by apps/v1/Deployment and not supported by Kubernetes v1.16+ clusters.
- * 
  */
 @Deprecated /* apps/v1beta1/Deployment is deprecated by apps/v1/Deployment and not supported by Kubernetes v1.16+ clusters. */
 @ResourceType(type="kubernetes:apps/v1beta1:Deployment")
 public class Deployment extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard object metadata.
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard object metadata.
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * Specification of the desired behavior of the Deployment.
-     * 
      */
     @Export(name="spec", type=DeploymentSpec.class, parameters={})
     private Output</* @Nullable */ DeploymentSpec> spec;
 
     /**
      * @return Specification of the desired behavior of the Deployment.
-     * 
      */
     public Output</* @Nullable */ DeploymentSpec> getSpec() {
         return this.spec;
     }
     /**
      * Most recently observed status of the Deployment.
-     * 
      */
     @Export(name="status", type=DeploymentStatus.class, parameters={})
     private Output</* @Nullable */ DeploymentStatus> status;
 
     /**
      * @return Most recently observed status of the Deployment.
-     * 
      */
     public Output</* @Nullable */ DeploymentStatus> getStatus() {
         return this.status;

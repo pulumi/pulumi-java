@@ -18,76 +18,65 @@ import javax.annotation.Nullable;
 
 /**
  * SubjectAccessReview checks whether or not a user or group can perform an action.
- * 
  */
 @ResourceType(type="kubernetes:authorization.k8s.io/v1:SubjectAccessReview")
 public class SubjectAccessReview extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
      * @return Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * Spec holds information about the request being evaluated
-     * 
      */
     @Export(name="spec", type=SubjectAccessReviewSpec.class, parameters={})
     private Output<SubjectAccessReviewSpec> spec;
 
     /**
      * @return Spec holds information about the request being evaluated
-     * 
      */
     public Output<SubjectAccessReviewSpec> getSpec() {
         return this.spec;
     }
     /**
      * Status is filled in by the server and indicates whether the request is allowed or not
-     * 
      */
     @Export(name="status", type=SubjectAccessReviewStatus.class, parameters={})
     private Output</* @Nullable */ SubjectAccessReviewStatus> status;
 
     /**
      * @return Status is filled in by the server and indicates whether the request is allowed or not
-     * 
      */
     public Output</* @Nullable */ SubjectAccessReviewStatus> getStatus() {
         return this.status;

@@ -21,7 +21,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AllowVolumeExpansion shows whether the storage class allow volume expand
-     * 
      */
     @Import(name="allowVolumeExpansion")
       private final @Nullable Output<Boolean> allowVolumeExpansion;
@@ -32,7 +31,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
-     * 
      */
     @Import(name="allowedTopologies")
       private final @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
@@ -43,7 +41,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -54,7 +51,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -65,7 +61,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -76,7 +71,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
-     * 
      */
     @Import(name="mountOptions")
       private final @Nullable Output<List<String>> mountOptions;
@@ -87,7 +81,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters holds the parameters for the provisioner that should create volumes of this storage class.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
@@ -98,7 +91,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provisioner indicates the type of the provisioner.
-     * 
      */
     @Import(name="provisioner", required=true)
       private final Output<String> provisioner;
@@ -109,7 +101,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
-     * 
      */
     @Import(name="reclaimPolicy")
       private final @Nullable Output<String> reclaimPolicy;
@@ -120,7 +111,6 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
-     * 
      */
     @Import(name="volumeBindingMode")
       private final @Nullable Output<String> volumeBindingMode;

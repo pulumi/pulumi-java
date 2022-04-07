@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ObjectFieldSelector selects an APIVersioned field of an object.
- * 
  */
 public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Version of the schema the FieldPath is written in terms of, defaults to "v1".
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -31,7 +29,6 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Path of the field to select in the specified API version.
-     * 
      */
     @Import(name="fieldPath", required=true)
       private final Output<String> fieldPath;

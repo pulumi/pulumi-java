@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ExternalMetricSource {
     /**
      * metricName is the name of the metric in question.
-     * 
      */
     private final String metricName;
     /**
      * metricSelector is used to identify a specific time series within a given metric.
-     * 
      */
     private final @Nullable LabelSelector metricSelector;
     /**
      * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
-     * 
      */
     private final @Nullable String targetAverageValue;
     /**
      * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
-     * 
      */
     private final @Nullable String targetValue;
 
@@ -47,28 +43,24 @@ public final class ExternalMetricSource {
 
     /**
      * metricName is the name of the metric in question.
-     * 
     */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * metricSelector is used to identify a specific time series within a given metric.
-     * 
     */
     public Optional<LabelSelector> getMetricSelector() {
         return Optional.ofNullable(this.metricSelector);
     }
     /**
      * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
-     * 
     */
     public Optional<String> getTargetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
     /**
      * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
-     * 
     */
     public Optional<String> getTargetValue() {
         return Optional.ofNullable(this.targetValue);

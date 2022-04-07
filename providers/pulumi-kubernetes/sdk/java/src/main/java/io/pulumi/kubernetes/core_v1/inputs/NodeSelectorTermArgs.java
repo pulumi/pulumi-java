@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.
- * 
  */
 public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of node selector requirements by node's labels.
-     * 
      */
     @Import(name="matchExpressions")
       private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
@@ -32,7 +30,6 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A list of node selector requirements by node's fields.
-     * 
      */
     @Import(name="matchFields")
       private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * TokenRequest contains parameters of a service account token.
- * 
  */
 public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.
-     * 
      */
     @Import(name="audience", required=true)
       private final Output<String> audience;
@@ -32,7 +30,6 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
-     * 
      */
     @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;

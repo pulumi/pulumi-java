@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * DeploymentStrategy describes how to replace existing pods with new ones.
- * 
  */
 public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
-     * 
      */
     @Import(name="rollingUpdate")
       private final @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate;
@@ -36,7 +34,6 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * Possible enum values:
      *  - `"Recreate"` Kill all existing pods before creating new ones.
      *  - `"RollingUpdate"` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

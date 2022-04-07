@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * NonResourcePolicyRule is a predicate that matches non-resource requests according to their verb and the target non-resource URL. A NonResourcePolicyRule matches a request if and only if both (a) at least one member of verbs matches the request and (b) at least one member of nonResourceURLs matches the request.
- * 
  */
 public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,8 +24,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      *   - "/hea" is legal but matches nothing
      *   - "/hea/*" also matches nothing
      *   - "/healthz/*" matches all per-component health checks.
-     *     "*" matches all non-resource urls. if it is present, it must be the only entry. Required.
-     * 
+     * "*" matches all non-resource urls. if it is present, it must be the only entry. Required.
      */
     @Import(name="nonResourceURLs", required=true)
       private final Output<List<String>> nonResourceURLs;
@@ -37,7 +35,6 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
-     * 
      */
     @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ValidationRule {
     /**
      * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
-     * 
      */
     private final @Nullable String message;
     /**
@@ -42,7 +41,6 @@ public final class ValidationRule {
      *   - 'map': `X + Y` performs a merge where the array positions of all keys in `X` are preserved but the values
      *     are overwritten by values in `Y` when the key sets of `X` and `Y` intersect. Elements in `Y` with
      *     non-intersecting keys are appended, retaining their partial order.
-     * 
      */
     private final String rule;
 
@@ -56,7 +54,6 @@ public final class ValidationRule {
 
     /**
      * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
@@ -87,7 +84,6 @@ public final class ValidationRule {
      *   - 'map': `X + Y` performs a merge where the array positions of all keys in `X` are preserved but the values
      *     are overwritten by values in `Y` when the key sets of `X` and `Y` intersect. Elements in `Y` with
      *     non-intersecting keys are appended, retaining their partial order.
-     * 
     */
     public String getRule() {
         return this.rule;

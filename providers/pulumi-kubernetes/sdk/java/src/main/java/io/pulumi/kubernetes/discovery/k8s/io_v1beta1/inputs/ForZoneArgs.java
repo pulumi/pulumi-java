@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * ForZone provides information about which zones should consume this endpoint.
- * 
  */
 public final class ForZoneArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ForZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * name represents the name of the zone.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

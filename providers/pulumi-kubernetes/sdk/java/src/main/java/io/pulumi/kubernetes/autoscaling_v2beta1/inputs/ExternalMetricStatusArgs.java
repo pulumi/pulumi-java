@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.
- * 
  */
 public final class ExternalMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * currentAverageValue is the current value of metric averaged over autoscaled pods.
-     * 
      */
     @Import(name="currentAverageValue")
       private final @Nullable Output<String> currentAverageValue;
@@ -32,7 +30,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * currentValue is the current value of the metric (as a quantity)
-     * 
      */
     @Import(name="currentValue", required=true)
       private final Output<String> currentValue;
@@ -43,7 +40,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * metricName is the name of a metric used for autoscaling in metric system.
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -54,7 +50,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
 
     /**
      * metricSelector is used to identify a specific time series within a given metric.
-     * 
      */
     @Import(name="metricSelector")
       private final @Nullable Output<LabelSelectorArgs> metricSelector;

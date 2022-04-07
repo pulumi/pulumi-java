@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
- * 
  */
 public final class LocalObjectReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LocalObjectReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * AllowedFlexVolume represents a single Flexvolume that is allowed to be used. Deprecated: use AllowedFlexVolume from policy API Group instead.
- * 
  */
 public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * driver is the name of the Flexvolume driver.
-     * 
      */
     @Import(name="driver", required=true)
       private final Output<String> driver;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * APIServiceCondition describes the state of an APIService at a particular point
- * 
  */
 public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Human-readable message indicating details about last transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -42,7 +39,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Unique, one-word, CamelCase reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -53,7 +49,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Status is the status of the condition. Can be True, False, Unknown.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -64,7 +59,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Type is the type of the condition.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

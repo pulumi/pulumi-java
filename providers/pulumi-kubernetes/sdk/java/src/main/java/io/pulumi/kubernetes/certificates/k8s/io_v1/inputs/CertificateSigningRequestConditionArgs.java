@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * CertificateSigningRequestCondition describes a condition of a CertificateSigningRequest object
- * 
  */
 public final class CertificateSigningRequestConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
 
     /**
      * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -31,7 +29,6 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
 
     /**
      * lastUpdateTime is the time of the last update to this condition
-     * 
      */
     @Import(name="lastUpdateTime")
       private final @Nullable Output<String> lastUpdateTime;
@@ -42,7 +39,6 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
 
     /**
      * message contains a human readable message with details about the request state
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -53,7 +49,6 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
 
     /**
      * reason indicates a brief reason for the request state
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -64,7 +59,6 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
 
     /**
      * status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown".
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -90,7 +84,6 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
      *  - `"Approved"` Approved indicates the request was approved and should be issued by the signer.
      *  - `"Denied"` Denied indicates the request was denied and should not be issued by the signer.
      *  - `"Failed"` Failed indicates the signer failed to issue the certificate.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

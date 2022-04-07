@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * LoadBalancerIngress represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.
- * 
  */
 public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
-     * 
      */
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
@@ -33,7 +31,6 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
 
     /**
      * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
-     * 
      */
     @Import(name="ip")
       private final @Nullable Output<String> ip;
@@ -44,7 +41,6 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
-     * 
      */
     @Import(name="ports")
       private final @Nullable Output<List<PortStatusArgs>> ports;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IngressStatus describe the current state of the Ingress.
- * 
  */
 public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * LoadBalancer contains the current status of the load-balancer.
-     * 
      */
     @Import(name="loadBalancer")
       private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;

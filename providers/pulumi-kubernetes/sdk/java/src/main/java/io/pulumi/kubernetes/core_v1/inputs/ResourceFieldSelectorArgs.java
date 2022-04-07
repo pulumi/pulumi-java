@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ResourceFieldSelector represents container resources (cpu, memory) and their output format
- * 
  */
 public final class ResourceFieldSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
 
     /**
      * Container name: required for volumes, optional for env vars
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -31,7 +29,6 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
 
     /**
      * Specifies the output format of the exposed resources, defaults to "1"
-     * 
      */
     @Import(name="divisor")
       private final @Nullable Output<String> divisor;
@@ -42,7 +39,6 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
 
     /**
      * Required: resource to select
-     * 
      */
     @Import(name="resource", required=true)
       private final Output<String> resource;

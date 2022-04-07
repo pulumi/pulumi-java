@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a Source for provider-specific attributes
- * 
  */
 public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
 
     /**
      * AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
-     * 
      */
     @Import(name="accessModes")
       private final @Nullable Output<List<String>> accessModes;
@@ -35,7 +33,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
 
     /**
      * This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
-     * 
      */
     @Import(name="dataSource")
       private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
@@ -50,8 +47,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * * While DataSource ignores disallowed values (dropping them), DataSourceRef
      *   preserves all values, and generates an error if a disallowed value is
      *   specified.
-     *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
-     * 
+     * (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
      */
     @Import(name="dataSourceRef")
       private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
@@ -62,7 +58,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
 
     /**
      * Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
-     * 
      */
     @Import(name="resources")
       private final @Nullable Output<ResourceRequirementsArgs> resources;
@@ -73,7 +68,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
 
     /**
      * A label query over volumes to consider for binding.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
@@ -84,7 +78,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
-     * 
      */
     @Import(name="storageClassName")
       private final @Nullable Output<String> storageClassName;
@@ -95,7 +88,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
 
     /**
      * volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
-     * 
      */
     @Import(name="volumeMode")
       private final @Nullable Output<String> volumeMode;
@@ -106,7 +98,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
 
     /**
      * VolumeName is the binding reference to the PersistentVolume backing this claim.
-     * 
      */
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;

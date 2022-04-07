@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * EndpointAddress is a tuple that describes single IP address.
- * 
  */
 public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Hostname of this endpoint
-     * 
      */
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
@@ -32,7 +30,6 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
-     * 
      */
     @Import(name="ip", required=true)
       private final Output<String> ip;
@@ -43,7 +40,6 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
-     * 
      */
     @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
@@ -54,7 +50,6 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Reference to object providing the endpoint.
-     * 
      */
     @Import(name="targetRef")
       private final @Nullable Output<ObjectReferenceArgs> targetRef;

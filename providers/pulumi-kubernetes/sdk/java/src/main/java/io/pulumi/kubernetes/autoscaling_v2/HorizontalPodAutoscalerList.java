@@ -16,62 +16,53 @@ import javax.annotation.Nullable;
 
 /**
  * HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
- * 
  */
 @ResourceType(type="kubernetes:autoscaling/v2:HorizontalPodAutoscalerList")
 public class HorizontalPodAutoscalerList extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * items is the list of horizontal pod autoscaler objects.
-     * 
      */
     @Export(name="items", type=List.class, parameters={HorizontalPodAutoscaler.class})
     private Output<List<HorizontalPodAutoscaler>> items;
 
     /**
      * @return items is the list of horizontal pod autoscaler objects.
-     * 
      */
     public Output<List<HorizontalPodAutoscaler>> getItems() {
         return this.items;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * metadata is the standard list metadata.
-     * 
      */
     @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     /**
      * @return metadata is the standard list metadata.
-     * 
      */
     public Output</* @Nullable */ ListMeta> getMetadata() {
         return this.metadata;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
- * 
  */
 public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated
-     * 
      */
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
@@ -31,7 +29,6 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * UUID of the dataset. This is unique identifier of a Flocker dataset
-     * 
      */
     @Import(name="datasetUUID")
       private final @Nullable Output<String> datasetUUID;

@@ -18,34 +18,29 @@ import javax.annotation.Nullable;
 
 /**
  * CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format <.spec.name>.<.spec.group>. Deprecated in v1.16, planned for removal in v1.19. Use apiextensions.k8s.io/v1 CustomResourceDefinition instead.
- * 
  */
 @ResourceType(type="kubernetes:apiextensions.k8s.io/v1beta1:CustomResourceDefinition")
 public class CustomResourceDefinition extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
@@ -58,28 +53,24 @@ public class CustomResourceDefinition extends io.pulumi.resources.CustomResource
     }
     /**
      * spec describes how the user wants the resources to appear
-     * 
      */
     @Export(name="spec", type=CustomResourceDefinitionSpec.class, parameters={})
     private Output<CustomResourceDefinitionSpec> spec;
 
     /**
      * @return spec describes how the user wants the resources to appear
-     * 
      */
     public Output<CustomResourceDefinitionSpec> getSpec() {
         return this.spec;
     }
     /**
      * status indicates the actual state of the CustomResourceDefinition
-     * 
      */
     @Export(name="status", type=CustomResourceDefinitionStatus.class, parameters={})
     private Output</* @Nullable */ CustomResourceDefinitionStatus> status;
 
     /**
      * @return status indicates the actual state of the CustomResourceDefinition
-     * 
      */
     public Output</* @Nullable */ CustomResourceDefinitionStatus> getStatus() {
         return this.status;

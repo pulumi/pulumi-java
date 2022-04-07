@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * ObjectMetricStatus indicates the current value of a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
- * 
  */
 public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * current contains the current value for the given metric
-     * 
      */
     @Import(name="current", required=true)
       private final Output<MetricValueStatusArgs> current;
@@ -39,7 +37,6 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * metric identifies the target metric by name and selector
-     * 
      */
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;

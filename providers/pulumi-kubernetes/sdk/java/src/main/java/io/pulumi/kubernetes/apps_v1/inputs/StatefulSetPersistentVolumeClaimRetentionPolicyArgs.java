@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * StatefulSetPersistentVolumeClaimRetentionPolicy describes the policy used for PVCs created from the StatefulSet VolumeClaimTemplates.
- * 
  */
 public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
 
     /**
      * WhenDeleted specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is deleted. The default policy of `Retain` causes PVCs to not be affected by StatefulSet deletion. The `Delete` policy causes those PVCs to be deleted.
-     * 
      */
     @Import(name="whenDeleted")
       private final @Nullable Output<String> whenDeleted;
@@ -31,7 +29,6 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
 
     /**
      * WhenScaled specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is scaled down. The default policy of `Retain` causes PVCs to not be affected by a scaledown. The `Delete` policy causes the associated PVCs for any excess pods above the replica count to be deleted.
-     * 
      */
     @Import(name="whenScaled")
       private final @Nullable Output<String> whenScaled;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * VolumeAttachmentStatus is the status of a VolumeAttachment request.
- * 
  */
 public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
 
     /**
      * The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
-     * 
      */
     @Import(name="attachError")
       private final @Nullable Output<VolumeErrorArgs> attachError;
@@ -34,7 +32,6 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
 
     /**
      * Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
-     * 
      */
     @Import(name="attached", required=true)
       private final Output<Boolean> attached;
@@ -45,7 +42,6 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
 
     /**
      * Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
-     * 
      */
     @Import(name="attachmentMetadata")
       private final @Nullable Output<Map<String,String>> attachmentMetadata;
@@ -56,7 +52,6 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
 
     /**
      * The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
-     * 
      */
     @Import(name="detachError")
       private final @Nullable Output<VolumeErrorArgs> detachError;

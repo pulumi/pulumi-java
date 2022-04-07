@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * PriorityLevelConfigurationSpec specifies the configuration of a priority level.
- * 
  */
 public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
 
     /**
      * `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if `type` is `"Limited"`.
-     * 
      */
     @Import(name="limited")
       private final @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
@@ -32,7 +30,6 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
 
     /**
      * `type` indicates whether this priority level is subject to limitation on request execution.  A value of `"Exempt"` means that requests of this priority level are not subject to a limit (and thus are never queued) and do not detract from the capacity made available to other priority levels.  A value of `"Limited"` means that (a) requests of this priority level _are_ subject to limits and (b) some of the server's limited capacity is made available exclusively to this priority level. Required.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

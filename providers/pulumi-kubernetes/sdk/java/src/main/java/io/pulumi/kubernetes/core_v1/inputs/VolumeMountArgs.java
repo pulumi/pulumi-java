@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VolumeMount describes a mounting of a Volume within a container.
- * 
  */
 public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path within the container at which the volume should be mounted.  Must not contain ':'.
-     * 
      */
     @Import(name="mountPath", required=true)
       private final Output<String> mountPath;
@@ -32,7 +30,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
-     * 
      */
     @Import(name="mountPropagation")
       private final @Nullable Output<String> mountPropagation;
@@ -43,7 +40,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This must match the Name of a Volume.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -54,7 +50,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
@@ -65,7 +60,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
-     * 
      */
     @Import(name="subPath")
       private final @Nullable Output<String> subPath;
@@ -76,7 +70,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.
-     * 
      */
     @Import(name="subPathExpr")
       private final @Nullable Output<String> subPathExpr;

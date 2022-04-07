@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.
- * 
  */
 public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<HorizontalPodAutoscalerConditionArgs>> conditions;
@@ -35,7 +33,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * currentMetrics is the last read state of the metrics used by this autoscaler.
-     * 
      */
     @Import(name="currentMetrics")
       private final @Nullable Output<List<MetricStatusArgs>> currentMetrics;
@@ -46,7 +43,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.
-     * 
      */
     @Import(name="currentReplicas", required=true)
       private final Output<Integer> currentReplicas;
@@ -57,7 +53,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.
-     * 
      */
     @Import(name="desiredReplicas", required=true)
       private final Output<Integer> desiredReplicas;
@@ -68,7 +63,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.
-     * 
      */
     @Import(name="lastScaleTime")
       private final @Nullable Output<String> lastScaleTime;
@@ -79,7 +73,6 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
 
     /**
      * observedGeneration is the most recent generation observed by this autoscaler.
-     * 
      */
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;

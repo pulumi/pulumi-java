@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * PodPresetSpec is a description of a pod preset.
- * 
  */
 public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Env defines the collection of EnvVar to inject into containers.
-     * 
      */
     @Import(name="env")
       private final @Nullable Output<List<EnvVarArgs>> env;
@@ -36,7 +34,6 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * EnvFrom defines the collection of EnvFromSource to inject into containers.
-     * 
      */
     @Import(name="envFrom")
       private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
@@ -47,7 +44,6 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Selector is a label query over a set of resources, in this case pods. Required.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
@@ -58,7 +54,6 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * VolumeMounts defines the collection of VolumeMount to inject into containers.
-     * 
      */
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
@@ -69,7 +64,6 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Volumes defines the collection of Volume to inject into the pod.
-     * 
      */
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;

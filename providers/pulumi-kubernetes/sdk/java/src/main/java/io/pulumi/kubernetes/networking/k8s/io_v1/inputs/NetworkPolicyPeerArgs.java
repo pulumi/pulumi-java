@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * NetworkPolicyPeer describes a peer to allow traffic to/from. Only certain combinations of fields are allowed
- * 
  */
 public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
-     * 
      */
     @Import(name="ipBlock")
       private final @Nullable Output<IPBlockArgs> ipBlock;
@@ -34,7 +32,6 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
      * 
      * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
-     * 
      */
     @Import(name="namespaceSelector")
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
@@ -47,7 +44,6 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
      * 
      * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy's own Namespace.
-     * 
      */
     @Import(name="podSelector")
       private final @Nullable Output<LabelSelectorArgs> podSelector;

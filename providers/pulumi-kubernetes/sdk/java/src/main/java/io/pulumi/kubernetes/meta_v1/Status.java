@@ -16,118 +16,101 @@ import javax.annotation.Nullable;
 
 /**
  * Status is a return value for calls that don't return other objects.
- * 
  */
 @ResourceType(type="kubernetes:meta/v1:Status")
 public class Status extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Suggested HTTP return code for this status, 0 if not set.
-     * 
      */
     @Export(name="code", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> code;
 
     /**
      * @return Suggested HTTP return code for this status, 0 if not set.
-     * 
      */
     public Output</* @Nullable */ Integer> getCode() {
         return this.code;
     }
     /**
      * Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
-     * 
      */
     @Export(name="details", type=StatusDetails.class, parameters={})
     private Output</* @Nullable */ StatusDetails> details;
 
     /**
      * @return Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
-     * 
      */
     public Output</* @Nullable */ StatusDetails> getDetails() {
         return this.details;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * A human-readable description of the status of this operation.
-     * 
      */
     @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**
      * @return A human-readable description of the status of this operation.
-     * 
      */
     public Output</* @Nullable */ String> getMessage() {
         return this.message;
     }
     /**
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     /**
      * @return Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ ListMeta> getMetadata() {
         return this.metadata;
     }
     /**
      * A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
-     * 
      */
     @Export(name="reason", type=String.class, parameters={})
     private Output</* @Nullable */ String> reason;
 
     /**
      * @return A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
-     * 
      */
     public Output</* @Nullable */ String> getReason() {
         return this.reason;
     }
     /**
      * Status of the operation. One of: "Success" or "Failure". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return Status of the operation. One of: "Success" or "Failure". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;

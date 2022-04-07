@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * PodDNSConfigOption defines DNS resolver options of a pod.
- * 
  */
 public final class PodDNSConfigOptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PodDNSConfigOptionArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

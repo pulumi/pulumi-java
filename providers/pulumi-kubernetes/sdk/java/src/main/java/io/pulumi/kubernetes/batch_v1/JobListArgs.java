@@ -19,7 +19,6 @@ public final class JobListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -30,7 +29,6 @@ public final class JobListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * items is the list of Jobs.
-     * 
      */
     @Import(name="items", required=true)
       private final Output<List<JobArgs>> items;
@@ -41,7 +39,6 @@ public final class JobListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -52,7 +49,6 @@ public final class JobListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;

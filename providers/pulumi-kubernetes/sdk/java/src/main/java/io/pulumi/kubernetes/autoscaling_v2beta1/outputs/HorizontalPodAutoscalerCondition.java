@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class HorizontalPodAutoscalerCondition {
     /**
      * lastTransitionTime is the last time the condition transitioned from one status to another
-     * 
      */
     private final @Nullable String lastTransitionTime;
     /**
      * message is a human-readable explanation containing details about the transition
-     * 
      */
     private final @Nullable String message;
     /**
      * reason is the reason for the condition's last transition.
-     * 
      */
     private final @Nullable String reason;
     /**
      * status is the status of the condition (True, False, Unknown)
-     * 
      */
     private final String status;
     /**
      * type describes the current condition
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class HorizontalPodAutoscalerCondition {
 
     /**
      * lastTransitionTime is the last time the condition transitioned from one status to another
-     * 
     */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * message is a human-readable explanation containing details about the transition
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * reason is the reason for the condition's last transition.
-     * 
     */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * status is the status of the condition (True, False, Unknown)
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * type describes the current condition
-     * 
     */
     public String getType() {
         return this.type;

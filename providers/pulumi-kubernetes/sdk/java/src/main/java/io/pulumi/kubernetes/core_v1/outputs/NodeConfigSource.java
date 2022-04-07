@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class NodeConfigSource {
     /**
      * ConfigMap is a reference to a Node's ConfigMap
-     * 
      */
     private final @Nullable ConfigMapNodeConfigSource configMap;
 
@@ -24,7 +23,6 @@ public final class NodeConfigSource {
 
     /**
      * ConfigMap is a reference to a Node's ConfigMap
-     * 
     */
     public Optional<ConfigMapNodeConfigSource> getConfigMap() {
         return Optional.ofNullable(this.configMap);

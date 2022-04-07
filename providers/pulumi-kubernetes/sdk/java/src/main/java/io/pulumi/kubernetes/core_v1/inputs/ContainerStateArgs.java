@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default one is ContainerStateWaiting.
- * 
  */
 public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details about a running container
-     * 
      */
     @Import(name="running")
       private final @Nullable Output<ContainerStateRunningArgs> running;
@@ -33,7 +31,6 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details about a terminated container
-     * 
      */
     @Import(name="terminated")
       private final @Nullable Output<ContainerStateTerminatedArgs> terminated;
@@ -44,7 +41,6 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details about a waiting container
-     * 
      */
     @Import(name="waiting")
       private final @Nullable Output<ContainerStateWaitingArgs> waiting;

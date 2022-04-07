@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * DaemonEndpoint contains information about a single Daemon endpoint.
- * 
  */
 public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Port number of the given endpoint.
-     * 
      */
     @Import(name="Port", required=true)
       private final Output<Integer> Port;

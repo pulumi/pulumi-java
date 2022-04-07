@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * CronJobStatus represents the current state of a cron job.
- * 
  */
 public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of pointers to currently running jobs.
-     * 
      */
     @Import(name="active")
       private final @Nullable Output<List<ObjectReferenceArgs>> active;
@@ -33,7 +31,6 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information when was the last time the job was successfully scheduled.
-     * 
      */
     @Import(name="lastScheduleTime")
       private final @Nullable Output<String> lastScheduleTime;
@@ -44,7 +41,6 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information when was the last time the job successfully completed.
-     * 
      */
     @Import(name="lastSuccessfulTime")
       private final @Nullable Output<String> lastSuccessfulTime;

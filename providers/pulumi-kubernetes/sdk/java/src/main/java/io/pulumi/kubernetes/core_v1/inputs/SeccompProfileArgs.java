@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SeccompProfile defines a pod/container's seccomp profile settings. Only one profile source may be set.
- * 
  */
 public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
-     * 
      */
     @Import(name="localhostProfile")
       private final @Nullable Output<String> localhostProfile;
@@ -38,7 +36,6 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Localhost"` indicates a profile defined in a file on the node should be used. The file's location relative to <kubelet-root-dir>/seccomp.
      *  - `"RuntimeDefault"` represents the default container runtime seccomp profile.
      *  - `"Unconfined"` indicates no seccomp profile is applied (A.K.A. unconfined).
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

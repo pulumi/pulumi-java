@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
- * 
  */
 public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
-     * 
      */
     @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
@@ -33,7 +31,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * metricName is the name of the metric in question.
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -44,7 +41,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
@@ -55,7 +51,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * target is the described Kubernetes object.
-     * 
      */
     @Import(name="target", required=true)
       private final Output<CrossVersionObjectReferenceArgs> target;
@@ -66,7 +61,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * targetValue is the target value of the metric (as a quantity).
-     * 
      */
     @Import(name="targetValue", required=true)
       private final Output<String> targetValue;

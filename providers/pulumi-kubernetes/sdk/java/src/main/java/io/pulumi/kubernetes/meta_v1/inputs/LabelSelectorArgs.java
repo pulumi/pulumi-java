@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
- * 
  */
 public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * matchExpressions is a list of label selector requirements. The requirements are ANDed.
-     * 
      */
     @Import(name="matchExpressions")
       private final @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
@@ -34,7 +32,6 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
-     * 
      */
     @Import(name="matchLabels")
       private final @Nullable Output<Map<String,String>> matchLabels;

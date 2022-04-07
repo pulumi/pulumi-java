@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Selects a key from a ConfigMap.
- * 
  */
 public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * The key to select.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -32,7 +30,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
 
     /**
      * Specify whether the ConfigMap or its key must be defined
-     * 
      */
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;

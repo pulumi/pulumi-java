@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a vSphere volume resource.
- * 
  */
 public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
 
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-     * 
      */
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
@@ -31,7 +29,6 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
 
     /**
      * Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
-     * 
      */
     @Import(name="storagePolicyID")
       private final @Nullable Output<String> storagePolicyID;
@@ -42,7 +39,6 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
 
     /**
      * Storage Policy Based Management (SPBM) profile name.
-     * 
      */
     @Import(name="storagePolicyName")
       private final @Nullable Output<String> storagePolicyName;
@@ -53,7 +49,6 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
 
     /**
      * Path that identifies vSphere volume vmdk
-     * 
      */
     @Import(name="volumePath", required=true)
       private final Output<String> volumePath;

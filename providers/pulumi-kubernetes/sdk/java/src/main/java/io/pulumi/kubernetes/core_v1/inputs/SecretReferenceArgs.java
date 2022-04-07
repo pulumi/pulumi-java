@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
- * 
  */
 public final class SecretReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecretReferenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name is unique within a namespace to reference a secret resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class SecretReferenceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Namespace defines the space within which the secret name must be unique.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;

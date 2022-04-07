@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class ContainerState {
     /**
      * Details about a running container
-     * 
      */
     private final @Nullable ContainerStateRunning running;
     /**
      * Details about a terminated container
-     * 
      */
     private final @Nullable ContainerStateTerminated terminated;
     /**
      * Details about a waiting container
-     * 
      */
     private final @Nullable ContainerStateWaiting waiting;
 
@@ -41,21 +38,18 @@ public final class ContainerState {
 
     /**
      * Details about a running container
-     * 
     */
     public Optional<ContainerStateRunning> getRunning() {
         return Optional.ofNullable(this.running);
     }
     /**
      * Details about a terminated container
-     * 
     */
     public Optional<ContainerStateTerminated> getTerminated() {
         return Optional.ofNullable(this.terminated);
     }
     /**
      * Details about a waiting container
-     * 
     */
     public Optional<ContainerStateWaiting> getWaiting() {
         return Optional.ofNullable(this.waiting);

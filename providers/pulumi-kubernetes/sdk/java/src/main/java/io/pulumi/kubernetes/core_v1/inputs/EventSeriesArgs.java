@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * EventSeries contain information on series of events, i.e. thing that was/is happening continuously for some time.
- * 
  */
 public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of occurrences in this series up to the last heartbeat time
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -32,7 +30,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time of the last occurrence observed
-     * 
      */
     @Import(name="lastObservedTime")
       private final @Nullable Output<String> lastObservedTime;
@@ -43,7 +40,6 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<String> state;

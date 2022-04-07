@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * AllowedCSIDriver represents a single inline CSI Driver that is allowed to be used.
- * 
  */
 public final class AllowedCSIDriverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AllowedCSIDriverArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name is the registered name of the CSI driver
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

@@ -24,34 +24,29 @@ import javax.annotation.Nullable;
  *  2. serving certificates for TLS endpoints kube-apiserver can connect to securely (with the "kubernetes.io/kubelet-serving" signerName).
  * 
  * This API can be used to request client certificates to authenticate to kube-apiserver (with the "kubernetes.io/kube-apiserver-client" signerName), or to obtain certificates from custom non-Kubernetes signers.
- * 
  */
 @ResourceType(type="kubernetes:certificates.k8s.io/v1:CertificateSigningRequest")
 public class CertificateSigningRequest extends io.pulumi.resources.CustomResource {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
@@ -64,28 +59,24 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
     }
     /**
      * spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
-     * 
      */
     @Export(name="spec", type=CertificateSigningRequestSpec.class, parameters={})
     private Output<CertificateSigningRequestSpec> spec;
 
     /**
      * @return spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
-     * 
      */
     public Output<CertificateSigningRequestSpec> getSpec() {
         return this.spec;
     }
     /**
      * status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
-     * 
      */
     @Export(name="status", type=CertificateSigningRequestStatus.class, parameters={})
     private Output</* @Nullable */ CertificateSigningRequestStatus> status;
 
     /**
      * @return status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
-     * 
      */
     public Output</* @Nullable */ CertificateSigningRequestStatus> getStatus() {
         return this.status;

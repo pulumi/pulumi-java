@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * PodCondition contains details for the current condition of this pod.
- * 
  */
 public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last time we probed the condition.
-     * 
      */
     @Import(name="lastProbeTime")
       private final @Nullable Output<String> lastProbeTime;
@@ -31,7 +29,6 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last time the condition transitioned from one status to another.
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
@@ -42,7 +39,6 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Human-readable message indicating details about last transition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -53,7 +49,6 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique, one-word, CamelCase reason for the condition's last transition.
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -64,7 +59,6 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;
@@ -81,7 +75,6 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Initialized"` means that all init containers in the pod have started successfully.
      *  - `"PodScheduled"` represents status of the scheduling process for this pod.
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

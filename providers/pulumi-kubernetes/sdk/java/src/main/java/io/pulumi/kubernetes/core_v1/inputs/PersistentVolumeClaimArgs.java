@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * PersistentVolumeClaim is a user's request for and claim to a persistent volume
- * 
  */
 public final class PersistentVolumeClaimArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class PersistentVolumeClaimArgs extends io.pulumi.resources.Resourc
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -34,7 +32,6 @@ public final class PersistentVolumeClaimArgs extends io.pulumi.resources.Resourc
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -45,7 +42,6 @@ public final class PersistentVolumeClaimArgs extends io.pulumi.resources.Resourc
 
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -56,7 +52,6 @@ public final class PersistentVolumeClaimArgs extends io.pulumi.resources.Resourc
 
     /**
      * Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<PersistentVolumeClaimSpecArgs> spec;
@@ -67,7 +62,6 @@ public final class PersistentVolumeClaimArgs extends io.pulumi.resources.Resourc
 
     /**
      * Status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<PersistentVolumeClaimStatusArgs> status;

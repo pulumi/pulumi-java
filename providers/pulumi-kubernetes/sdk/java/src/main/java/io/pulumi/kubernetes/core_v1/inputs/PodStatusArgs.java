@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * PodStatus represents information about the status of a pod. Status may trail the actual state of a system, especially if the node that hosts the pod cannot contact the control plane.
- * 
  */
 public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<PodConditionArgs>> conditions;
@@ -35,7 +33,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list has one entry per container in the manifest. Each entry is currently the output of `docker inspect`. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
-     * 
      */
     @Import(name="containerStatuses")
       private final @Nullable Output<List<ContainerStatusArgs>> containerStatuses;
@@ -46,7 +43,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status for any ephemeral containers that have run in this pod. This field is beta-level and available on clusters that haven't disabled the EphemeralContainers feature gate.
-     * 
      */
     @Import(name="ephemeralContainerStatuses")
       private final @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses;
@@ -57,7 +53,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP address of the host to which the pod is assigned. Empty if not yet scheduled.
-     * 
      */
     @Import(name="hostIP")
       private final @Nullable Output<String> hostIP;
@@ -68,7 +63,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list has one entry per init container in the manifest. The most recent successful init container will have ready = true, the most recently started container will have startTime set. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
-     * 
      */
     @Import(name="initContainerStatuses")
       private final @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses;
@@ -79,7 +73,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A human readable message indicating details about why the pod is in this condition.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -90,7 +83,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * nominatedNodeName is set only when this pod preempts other pods on the node, but it cannot be scheduled right away as preemption victims receive their graceful termination periods. This field does not guarantee that the pod will be scheduled on this node. Scheduler may decide to place the pod elsewhere if other nodes become available sooner. Scheduler may also decide to give the resources on this node to a higher priority pod that is created after preemption. As a result, this field may be different than PodSpec.nodeName when the pod is scheduled.
-     * 
      */
     @Import(name="nominatedNodeName")
       private final @Nullable Output<String> nominatedNodeName;
@@ -112,7 +104,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Running"` means the pod has been bound to a node and all of the containers have been started. At least one container is still running or is in the process of being restarted.
      *  - `"Succeeded"` means that all containers in the pod have voluntarily terminated with a container exit code of 0, and the system is not going to restart any of these containers.
      *  - `"Unknown"` means that for some reason the state of the pod could not be obtained, typically due to an error in communicating with the host of the pod. Deprecated: It isn't being set since 2015 (74da3b14b0c0f658b3bb8d2def5094686d0e9095)
-     * 
      */
     @Import(name="phase")
       private final @Nullable Output<String> phase;
@@ -123,7 +114,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.
-     * 
      */
     @Import(name="podIP")
       private final @Nullable Output<String> podIP;
@@ -134,7 +124,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th entry must match the podIP field. Pods may be allocated at most 1 value for each of IPv4 and IPv6. This list is empty if no IPs have been allocated yet.
-     * 
      */
     @Import(name="podIPs")
       private final @Nullable Output<List<PodIPArgs>> podIPs;
@@ -150,7 +139,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"BestEffort"` is the BestEffort qos class.
      *  - `"Burstable"` is the Burstable qos class.
      *  - `"Guaranteed"` is the Guaranteed qos class.
-     * 
      */
     @Import(name="qosClass")
       private final @Nullable Output<String> qosClass;
@@ -161,7 +149,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A brief CamelCase message indicating details about why the pod is in this state. e.g. 'Evicted'
-     * 
      */
     @Import(name="reason")
       private final @Nullable Output<String> reason;
@@ -172,7 +159,6 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before the Kubelet pulled the container image(s) for the pod.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

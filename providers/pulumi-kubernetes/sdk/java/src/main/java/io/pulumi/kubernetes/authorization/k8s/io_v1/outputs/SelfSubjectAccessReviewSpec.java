@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class SelfSubjectAccessReviewSpec {
     /**
      * NonResourceAttributes describes information for a non-resource access request
-     * 
      */
     private final @Nullable NonResourceAttributes nonResourceAttributes;
     /**
      * ResourceAuthorizationAttributes describes information for a resource access request
-     * 
      */
     private final @Nullable ResourceAttributes resourceAttributes;
 
@@ -33,14 +31,12 @@ public final class SelfSubjectAccessReviewSpec {
 
     /**
      * NonResourceAttributes describes information for a non-resource access request
-     * 
     */
     public Optional<NonResourceAttributes> getNonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
     /**
      * ResourceAuthorizationAttributes describes information for a resource access request
-     * 
     */
     public Optional<ResourceAttributes> getResourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);

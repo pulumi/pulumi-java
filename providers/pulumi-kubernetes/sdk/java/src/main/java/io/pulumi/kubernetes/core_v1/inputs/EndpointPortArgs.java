@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * EndpointPort is a tuple that describes a single port.
- * 
  */
 public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
-     * 
      */
     @Import(name="appProtocol")
       private final @Nullable Output<String> appProtocol;
@@ -32,7 +30,6 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of this port.  This must match the 'name' field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port number of the endpoint.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;
@@ -59,7 +55,6 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"SCTP"` is the SCTP protocol.
      *  - `"TCP"` is the TCP protocol.
      *  - `"UDP"` is the UDP protocol.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;

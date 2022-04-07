@@ -21,9 +21,9 @@ public final class CertificateSigningRequestStatus {
      * Validation requirements:
      *  1. certificate must contain one or more PEM blocks.
      *  2. All PEM blocks must have the "CERTIFICATE" label, contain no headers, and the encoded data
-     *       must be a BER-encoded ASN.1 Certificate structure as described in section 4 of RFC5280.
+     *   must be a BER-encoded ASN.1 Certificate structure as described in section 4 of RFC5280.
      *  3. Non-PEM content may appear before or after the "CERTIFICATE" PEM blocks and is unvalidated,
-     *       to allow for explanatory text as described in section 5.2 of RFC7468.
+     *   to allow for explanatory text as described in section 5.2 of RFC7468.
      * 
      * If more than one PEM block is present, and the definition of the requested spec.signerName does not indicate otherwise, the first block is the issued certificate, and subsequent blocks should be treated as intermediate certificates and presented in TLS handshakes.
      * 
@@ -36,12 +36,10 @@ public final class CertificateSigningRequestStatus {
      *     ...
      *     -----END CERTIFICATE-----
      *     )
-     * 
      */
     private final @Nullable String certificate;
     /**
      * conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".
-     * 
      */
     private final @Nullable List<CertificateSigningRequestCondition> conditions;
 
@@ -61,9 +59,9 @@ public final class CertificateSigningRequestStatus {
      * Validation requirements:
      *  1. certificate must contain one or more PEM blocks.
      *  2. All PEM blocks must have the "CERTIFICATE" label, contain no headers, and the encoded data
-     *       must be a BER-encoded ASN.1 Certificate structure as described in section 4 of RFC5280.
+     *   must be a BER-encoded ASN.1 Certificate structure as described in section 4 of RFC5280.
      *  3. Non-PEM content may appear before or after the "CERTIFICATE" PEM blocks and is unvalidated,
-     *       to allow for explanatory text as described in section 5.2 of RFC7468.
+     *   to allow for explanatory text as described in section 5.2 of RFC7468.
      * 
      * If more than one PEM block is present, and the definition of the requested spec.signerName does not indicate otherwise, the first block is the issued certificate, and subsequent blocks should be treated as intermediate certificates and presented in TLS handshakes.
      * 
@@ -76,14 +74,12 @@ public final class CertificateSigningRequestStatus {
      *     ...
      *     -----END CERTIFICATE-----
      *     )
-     * 
     */
     public Optional<String> getCertificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".
-     * 
     */
     public List<CertificateSigningRequestCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;

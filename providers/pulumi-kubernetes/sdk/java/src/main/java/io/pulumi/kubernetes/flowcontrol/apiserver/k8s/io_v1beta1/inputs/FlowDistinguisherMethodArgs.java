@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * FlowDistinguisherMethod specifies the method of a flow distinguisher.
- * 
  */
 public final class FlowDistinguisherMethodArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class FlowDistinguisherMethodArgs extends io.pulumi.resources.Resou
 
     /**
      * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * JobTemplateSpec describes the data a Job should have when created from a template
- * 
  */
 public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
@@ -32,7 +30,6 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<JobSpecArgs> spec;

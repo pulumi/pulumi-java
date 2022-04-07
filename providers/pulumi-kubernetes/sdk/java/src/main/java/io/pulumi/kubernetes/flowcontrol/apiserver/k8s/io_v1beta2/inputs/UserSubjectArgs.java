@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * UserSubject holds detailed information for user-kind subject.
- * 
  */
 public final class UserSubjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class UserSubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `name` is the username that matches, or "*" to match all usernames. Required.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

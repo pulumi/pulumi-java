@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * EventSource contains information for an event.
- * 
  */
 public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Component from which the event is generated.
-     * 
      */
     @Import(name="component")
       private final @Nullable Output<String> component;
@@ -31,7 +29,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Node name on which the event is generated.
-     * 
      */
     @Import(name="host")
       private final @Nullable Output<String> host;

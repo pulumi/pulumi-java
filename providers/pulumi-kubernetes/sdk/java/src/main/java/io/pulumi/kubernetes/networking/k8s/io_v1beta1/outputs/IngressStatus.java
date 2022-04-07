@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IngressStatus {
     /**
      * LoadBalancer contains the current status of the load-balancer.
-     * 
      */
     private final @Nullable LoadBalancerStatus loadBalancer;
 
@@ -24,7 +23,6 @@ public final class IngressStatus {
 
     /**
      * LoadBalancer contains the current status of the load-balancer.
-     * 
     */
     public Optional<LoadBalancerStatus> getLoadBalancer() {
         return Optional.ofNullable(this.loadBalancer);

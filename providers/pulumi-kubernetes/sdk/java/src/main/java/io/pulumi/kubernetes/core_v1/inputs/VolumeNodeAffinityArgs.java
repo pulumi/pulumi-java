@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.
- * 
  */
 public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required specifies hard node constraints that must be met.
-     * 
      */
     @Import(name="required")
       private final @Nullable Output<NodeSelectorArgs> required;

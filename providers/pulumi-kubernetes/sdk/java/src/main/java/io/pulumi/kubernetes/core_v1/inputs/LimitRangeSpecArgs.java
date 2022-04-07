@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * LimitRangeSpec defines a min/max usage limit for resources that match on kind.
- * 
  */
 public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Limits is the list of LimitRangeItem objects that are enforced.
-     * 
      */
     @Import(name="limits", required=true)
       private final Output<List<LimitRangeItemArgs>> limits;

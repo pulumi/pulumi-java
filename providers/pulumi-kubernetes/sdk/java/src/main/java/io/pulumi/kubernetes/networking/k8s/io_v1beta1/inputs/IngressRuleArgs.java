@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IngressRule represents the rules mapping the paths under a specified host to the related backend services. Incoming requests are first evaluated for a host match, then routed to the backend associated with the matching IngressRuleValue.
- * 
  */
 public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 	  Currently the port of an Ingress is implicitly :80 for http and
      * 	  :443 for https.
      * Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
-     * 
      */
     @Import(name="host")
       private final @Nullable Output<String> host;

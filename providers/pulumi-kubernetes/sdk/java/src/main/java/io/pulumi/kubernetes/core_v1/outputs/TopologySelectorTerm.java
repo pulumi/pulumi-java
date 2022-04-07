@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class TopologySelectorTerm {
     /**
      * A list of topology selector requirements by labels.
-     * 
      */
     private final @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions;
 
@@ -24,7 +23,6 @@ public final class TopologySelectorTerm {
 
     /**
      * A list of topology selector requirements by labels.
-     * 
     */
     public List<TopologySelectorLabelRequirement> getMatchLabelExpressions() {
         return this.matchLabelExpressions == null ? List.of() : this.matchLabelExpressions;

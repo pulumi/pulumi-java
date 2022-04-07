@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subject matches the originator of a request, as identified by the request authentication system. There are three ways of matching an originator; by user, group, or service account.
- * 
  */
 public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `group` matches based on user group name.
-     * 
      */
     @Import(name="group")
       private final @Nullable Output<GroupSubjectArgs> group;
@@ -34,7 +32,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `kind` indicates which one of the other fields is non-empty. Required
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -45,7 +42,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `serviceAccount` matches ServiceAccounts.
-     * 
      */
     @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
@@ -56,7 +52,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * `user` matches based on username.
-     * 
      */
     @Import(name="user")
       private final @Nullable Output<UserSubjectArgs> user;

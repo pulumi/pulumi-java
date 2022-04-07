@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * CertificateSigningRequestSpec contains the certificate request.
- * 
  */
 public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -36,7 +35,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
      * 
      * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
-     * 
      */
     @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;
@@ -47,7 +45,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
 
     /**
      * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     @Import(name="extra")
       private final @Nullable Output<Map<String,List<String>>> extra;
@@ -58,7 +55,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
 
     /**
      * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
@@ -69,7 +65,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
 
     /**
      * request contains an x509 certificate signing request encoded in a "CERTIFICATE REQUEST" PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
-     * 
      */
     @Import(name="request", required=true)
       private final Output<String> request;
@@ -85,11 +80,11 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      * Well-known Kubernetes signers are:
      *  1. "kubernetes.io/kube-apiserver-client": issues client certificates that can be used to authenticate to kube-apiserver.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the "csrsigning" controller in kube-controller-manager.
      *  2. "kubernetes.io/kube-apiserver-client-kubelet": issues client certificates that kubelets use to authenticate to kube-apiserver.
-     *       Requests for this signer can be auto-approved by the "csrapproving" controller in kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer can be auto-approved by the "csrapproving" controller in kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
      *  3. "kubernetes.io/kubelet-serving" issues serving certificates that kubelets use to serve TLS endpoints, which kube-apiserver can connect to securely.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
+     *   Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
      * 
      * More details are available at https://k8s.io/docs/reference/access-authn-authz/certificate-signing-requests/#kubernetes-signers
      * 
@@ -100,7 +95,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      *  4. Required, permitted, or forbidden key usages / extended key usages.
      *  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
      *  6. Whether or not requests for CA certificates are allowed.
-     * 
      */
     @Import(name="signerName", required=true)
       private final Output<String> signerName;
@@ -111,7 +105,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
 
     /**
      * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     @Import(name="uid")
       private final @Nullable Output<String> uid;
@@ -135,7 +128,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      *  "code signing", "email protection", "s/mime",
      *  "ipsec end system", "ipsec tunnel", "ipsec user",
      *  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
-     * 
      */
     @Import(name="usages")
       private final @Nullable Output<List<String>> usages;
@@ -146,7 +138,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
 
     /**
      * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

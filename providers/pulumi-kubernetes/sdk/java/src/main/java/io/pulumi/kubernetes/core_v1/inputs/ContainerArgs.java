@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * A single application container that you want to run within a pod.
- * 
  */
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-     * 
      */
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
@@ -42,7 +40,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-     * 
      */
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
@@ -53,7 +50,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of environment variables to set in the container. Cannot be updated.
-     * 
      */
     @Import(name="env")
       private final @Nullable Output<List<EnvVarArgs>> env;
@@ -64,7 +60,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
-     * 
      */
     @Import(name="envFrom")
       private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
@@ -75,7 +70,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images This field is optional to allow higher level config management to default or override container images in workload controllers like Deployments and StatefulSets.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<String> image;
@@ -91,7 +85,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Always"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.
      *  - `"IfNotPresent"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.
      *  - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
-     * 
      */
     @Import(name="imagePullPolicy")
       private final @Nullable Output<String> imagePullPolicy;
@@ -102,7 +95,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Actions that the management system should take in response to container lifecycle events. Cannot be updated.
-     * 
      */
     @Import(name="lifecycle")
       private final @Nullable Output<LifecycleArgs> lifecycle;
@@ -113,7 +105,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     * 
      */
     @Import(name="livenessProbe")
       private final @Nullable Output<ProbeArgs> livenessProbe;
@@ -124,7 +115,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the container specified as a DNS_LABEL. Each container in a pod must have a unique name (DNS_LABEL). Cannot be updated.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -135,7 +125,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated.
-     * 
      */
     @Import(name="ports")
       private final @Nullable Output<List<ContainerPortArgs>> ports;
@@ -146,7 +135,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     * 
      */
     @Import(name="readinessProbe")
       private final @Nullable Output<ProbeArgs> readinessProbe;
@@ -157,7 +145,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
-     * 
      */
     @Import(name="resources")
       private final @Nullable Output<ResourceRequirementsArgs> resources;
@@ -168,7 +155,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
-     * 
      */
     @Import(name="securityContext")
       private final @Nullable Output<SecurityContextArgs> securityContext;
@@ -179,7 +165,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     * 
      */
     @Import(name="startupProbe")
       private final @Nullable Output<ProbeArgs> startupProbe;
@@ -190,7 +175,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.
-     * 
      */
     @Import(name="stdin")
       private final @Nullable Output<Boolean> stdin;
@@ -201,7 +185,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false
-     * 
      */
     @Import(name="stdinOnce")
       private final @Nullable Output<Boolean> stdinOnce;
@@ -212,7 +195,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
-     * 
      */
     @Import(name="terminationMessagePath")
       private final @Nullable Output<String> terminationMessagePath;
@@ -227,7 +209,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Possible enum values:
      *  - `"FallbackToLogsOnError"` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
      *  - `"File"` is the default behavior and will set the container status message to the contents of the container's terminationMessagePath when the container exits.
-     * 
      */
     @Import(name="terminationMessagePolicy")
       private final @Nullable Output<String> terminationMessagePolicy;
@@ -238,7 +219,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.
-     * 
      */
     @Import(name="tty")
       private final @Nullable Output<Boolean> tty;
@@ -249,7 +229,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * volumeDevices is the list of block devices to be used by the container.
-     * 
      */
     @Import(name="volumeDevices")
       private final @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
@@ -260,7 +239,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pod volumes to mount into the container's filesystem. Cannot be updated.
-     * 
      */
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
@@ -271,7 +249,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.
-     * 
      */
     @Import(name="workingDir")
       private final @Nullable Output<String> workingDir;

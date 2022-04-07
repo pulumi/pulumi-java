@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
  * StatefulSet represents a set of pods with consistent identities. Identities are defined as:
  *  - Network: A single stable DNS and hostname.
  *  - Storage: As many VolumeClaims as requested.
- *    The StatefulSet guarantees that a given network identity will always map to the same storage identity.
+ * The StatefulSet guarantees that a given network identity will always map to the same storage identity.
  * 
  * This resource waits until its status is ready before registering success
  * for create/update, and populating output properties from the current state of the resource.
@@ -31,7 +31,6 @@ import javax.annotation.Nullable;
  * If the StatefulSet has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
  * by setting the 'customTimeouts' option on the resource.
- * 
  */
 public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -39,7 +38,6 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
@@ -50,7 +48,6 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -68,7 +65,6 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Spec defines the desired identities of pods in this set.
-     * 
      */
     @Import(name="spec")
       private final @Nullable Output<StatefulSetSpecArgs> spec;
@@ -79,7 +75,6 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<StatefulSetStatusArgs> status;

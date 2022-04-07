@@ -17,12 +17,10 @@ public final class PortStatus {
      *   CamelCase names
      * - cloud provider specific error values must have names that comply with the
      *   format foo.example.com/CamelCase.
-     * 
      */
     private final @Nullable String error;
     /**
      * Port is the port number of the service port of which status is recorded here
-     * 
      */
     private final Integer port;
     /**
@@ -32,7 +30,6 @@ public final class PortStatus {
      *  - `"SCTP"` is the SCTP protocol.
      *  - `"TCP"` is the TCP protocol.
      *  - `"UDP"` is the UDP protocol.
-     * 
      */
     private final String protocol;
 
@@ -51,14 +48,12 @@ public final class PortStatus {
      *   CamelCase names
      * - cloud provider specific error values must have names that comply with the
      *   format foo.example.com/CamelCase.
-     * 
     */
     public Optional<String> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Port is the port number of the service port of which status is recorded here
-     * 
     */
     public Integer getPort() {
         return this.port;
@@ -70,7 +65,6 @@ public final class PortStatus {
      *  - `"SCTP"` is the SCTP protocol.
      *  - `"TCP"` is the TCP protocol.
      *  - `"UDP"` is the UDP protocol.
-     * 
     */
     public String getProtocol() {
         return this.protocol;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * ServiceAccountSubject holds detailed information for service-account-kind subject.
- * 
  */
 public final class ServiceAccountSubjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
 
     /**
      * `name` is the name of matching ServiceAccount objects, or "*" to match regardless of name. Required.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -30,7 +28,6 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
 
     /**
      * `namespace` is the namespace of matching ServiceAccount objects. Required.
-     * 
      */
     @Import(name="namespace", required=true)
       private final Output<String> namespace;

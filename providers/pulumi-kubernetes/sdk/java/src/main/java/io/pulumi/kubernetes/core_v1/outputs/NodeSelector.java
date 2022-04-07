@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class NodeSelector {
     /**
      * Required. A list of node selector terms. The terms are ORed.
-     * 
      */
     private final List<NodeSelectorTerm> nodeSelectorTerms;
 
@@ -23,7 +22,6 @@ public final class NodeSelector {
 
     /**
      * Required. A list of node selector terms. The terms are ORed.
-     * 
     */
     public List<NodeSelectorTerm> getNodeSelectorTerms() {
         return this.nodeSelectorTerms;
