@@ -20,7 +20,255 @@ import javax.annotation.Nullable;
  * Pulls a Docker image to a given Docker host from a Docker Registry.
  *  This resource will *not* pull new layers of the image automatically unless used in conjunction with docker.RegistryImage data source to update the `pull_triggers` field.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Basic
+ * 
+ * Finds and downloads the latest `ubuntu:precise` image but does not check
+ * for further updates of the image
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as docker from "@pulumi/docker";
+ * 
+ * const ubuntu = new docker.RemoteImage("ubuntu", {
+ *     name: "ubuntu:precise",
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_docker as docker
+ * 
+ * ubuntu = docker.RemoteImage("ubuntu", name="ubuntu:precise")
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Docker = Pulumi.Docker;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ubuntu = new Docker.RemoteImage("ubuntu", new Docker.RemoteImageArgs
+ *         {
+ *             Name = "ubuntu:precise",
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := docker.NewRemoteImage(ctx, "ubuntu", &docker.RemoteImageArgs{
+ * 			Name: pulumi.String("ubuntu:precise"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Dynamic updates
+ * 
+ * To be able to update an image dynamically when the `sha256` sum changes,
+ * you need to use it in combination with `docker.RegistryImage` as follows:
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as docker from "@pulumi/docker";
+ * 
+ * const ubuntuRegistryImage = docker.getRegistryImage({
+ *     name: "ubuntu:precise",
+ * });
+ * const ubuntuRemoteImage = new docker.RemoteImage("ubuntuRemoteImage", {
+ *     name: ubuntuRegistryImage.then(ubuntuRegistryImage => ubuntuRegistryImage.name),
+ *     pullTriggers: [ubuntuRegistryImage.then(ubuntuRegistryImage => ubuntuRegistryImage.sha256Digest)],
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_docker as docker
+ * 
+ * ubuntu_registry_image = docker.get_registry_image(name="ubuntu:precise")
+ * ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage",
+ *     name=ubuntu_registry_image.name,
+ *     pull_triggers=[ubuntu_registry_image.sha256_digest])
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Docker = Pulumi.Docker;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ubuntuRegistryImage = Output.Create(Docker.GetRegistryImage.InvokeAsync(new Docker.GetRegistryImageArgs
+ *         {
+ *             Name = "ubuntu:precise",
+ *         }));
+ *         var ubuntuRemoteImage = new Docker.RemoteImage("ubuntuRemoteImage", new Docker.RemoteImageArgs
+ *         {
+ *             Name = ubuntuRegistryImage.Apply(ubuntuRegistryImage => ubuntuRegistryImage.Name),
+ *             PullTriggers = 
+ *             {
+ *                 ubuntuRegistryImage.Apply(ubuntuRegistryImage => ubuntuRegistryImage.Sha256Digest),
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		ubuntuRegistryImage, err := docker.LookupRegistryImage(ctx, &docker.LookupRegistryImageArgs{
+ * 			Name: "ubuntu:precise",
+ * 		}, nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = docker.NewRemoteImage(ctx, "ubuntuRemoteImage", &docker.RemoteImageArgs{
+ * 			Name: pulumi.String(ubuntuRegistryImage.Name),
+ * 			PullTriggers: pulumi.StringArray{
+ * 				pulumi.String(ubuntuRegistryImage.Sha256Digest),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Build
+ * 
+ * You can also use the resource to build an image.
+ * In this case the image "zoo" and "zoo:develop" are built.
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as docker from "@pulumi/docker";
+ * 
+ * const zoo = new docker.RemoteImage("zoo", {
+ *     name: "zoo",
+ *     build: {
+ *         path: ".",
+ *         tags: ["zoo:develop"],
+ *         buildArg: {
+ *             foo: "zoo",
+ *         },
+ *         label: {
+ *             author: "zoo",
+ *         },
+ *     },
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_docker as docker
+ * 
+ * zoo = docker.RemoteImage("zoo",
+ *     name="zoo",
+ *     build=docker.RemoteImageBuildArgs(
+ *         path=".",
+ *         tags=["zoo:develop"],
+ *         build_arg={
+ *             "foo": "zoo",
+ *         },
+ *         label={
+ *             "author": "zoo",
+ *         },
+ *     ))
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Docker = Pulumi.Docker;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var zoo = new Docker.RemoteImage("zoo", new Docker.RemoteImageArgs
+ *         {
+ *             Name = "zoo",
+ *             Build = new Docker.Inputs.RemoteImageBuildArgs
+ *             {
+ *                 Path = ".",
+ *                 Tags = 
+ *                 {
+ *                     "zoo:develop",
+ *                 },
+ *                 BuildArg = 
+ *                 {
+ *                     { "foo", "zoo" },
+ *                 },
+ *                 Label = 
+ *                 {
+ *                     { "author", "zoo" },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := docker.NewRemoteImage(ctx, "zoo", &docker.RemoteImageArgs{
+ * 			Name: pulumi.String("zoo"),
+ * 			Build: &docker.RemoteImageBuildArgs{
+ * 				Path: pulumi.String("."),
+ * 				Tags: pulumi.StringArray{
+ * 					pulumi.String("zoo:develop"),
+ * 				},
+ * 				BuildArg: pulumi.StringMap{
+ * 					"foo": pulumi.String("zoo"),
+ * 				},
+ * 				Label: pulumi.StringMap{
+ * 					"author": pulumi.String("zoo"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * 
+ * <!-- schema generated by tfplugindocs -->
+ * {{% /example %}}
+ * {{% /examples %}}
  * ## Schema
  * 
  * ### Required
@@ -114,7 +362,6 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use repo_digest instead
-     * 
      */
     @Deprecated /* Use repo_digest instead */
     @Export(name="latest", type=String.class, parameters={})
@@ -144,7 +391,6 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
     /**
      * @Deprecated
      * Is unused and will be removed.
-     * 
      */
     @Deprecated /* Is unused and will be removed. */
     @Export(name="output", type=String.class, parameters={})
@@ -158,7 +404,6 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use field pull_triggers instead
-     * 
      */
     @Deprecated /* Use field pull_triggers instead */
     @Export(name="pullTrigger", type=String.class, parameters={})

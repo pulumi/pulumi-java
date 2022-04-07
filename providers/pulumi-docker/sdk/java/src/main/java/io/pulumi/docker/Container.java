@@ -30,6 +30,9 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
+ * 
+ * 
  * ## Import
  * 
  * ### Example Assuming you created a `container` as follows #!/bin/bash docker run --name foo -p8080:80 -d nginx
@@ -46,7 +49,11 @@ import javax.annotation.Nullable;
  * 
  *  ports {
  * 
+ * 
+ * 
  *  internal = "80"
+ * 
+ * 
  * 
  *  external = "8080"
  * 
@@ -56,6 +63,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import docker:index/container:Container foo 9a550c0f0163d39d77222d3efd58701b625d47676c25c686c95b5b92d1cba6fd
  * ```
  * 
+ *  
  */
 @ResourceType(type="docker:index/container:Container")
 public class Container extends io.pulumi.resources.CustomResource {
@@ -296,7 +304,6 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
-     * 
      */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     @Export(name="gateway", type=String.class, parameters={})
@@ -402,7 +409,6 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
-     * 
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     @Export(name="ipAddress", type=String.class, parameters={})
@@ -420,7 +426,6 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
-     * 
      */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     @Export(name="ipPrefixLength", type=Integer.class, parameters={})
@@ -468,7 +473,6 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * The --link flag is a legacy feature of Docker. It may eventually be removed.
-     * 
      */
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
     @Export(name="links", type=List.class, parameters={String.class})
@@ -616,7 +620,6 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
-     * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @Export(name="networkAliases", type=List.class, parameters={String.class})
@@ -662,7 +665,6 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
-     * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @Export(name="networks", type=List.class, parameters={String.class})

@@ -57,7 +57,6 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use repo_digest instead
-     * 
      */
     @Deprecated /* Use repo_digest instead */
     @Import(name="latest")
@@ -82,7 +81,6 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     /**
      * @Deprecated
      * Is unused and will be removed.
-     * 
      */
     @Deprecated /* Is unused and will be removed. */
     @Import(name="output")
@@ -98,7 +96,6 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * 
      * @Deprecated
      * Use field pull_triggers instead
-     * 
      */
     @Deprecated /* Use field pull_triggers instead */
     @Import(name="pullTrigger")

@@ -15,7 +15,6 @@ public final class ContainerNetworkData {
     /**
      * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
-     * 
      */
         @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     private final @Nullable String gateway;
@@ -24,14 +23,12 @@ public final class ContainerNetworkData {
     /**
      * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
-     * 
      */
         @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     private final @Nullable String ipAddress;
     /**
      * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
-     * 
      */
         @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     private final @Nullable Integer ipPrefixLength;
@@ -59,7 +56,6 @@ public final class ContainerNetworkData {
     /**
      * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
-     * 
     */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     public Optional<String> getGateway() {
@@ -74,7 +70,6 @@ public final class ContainerNetworkData {
     /**
      * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
-     * 
     */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     public Optional<String> getIpAddress() {
@@ -83,7 +78,6 @@ public final class ContainerNetworkData {
     /**
      * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
-     * 
     */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     public Optional<Integer> getIpPrefixLength() {
