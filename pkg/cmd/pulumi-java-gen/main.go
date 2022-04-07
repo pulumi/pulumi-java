@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"io/fs"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -26,6 +27,7 @@ type Config struct {
 	VersionFile string      `yaml:"versionFile"`
 	PackageInfo interface{} `yaml:"packageInfo"`
 	PluginFile  string      `yaml:"pluginFile"`
+	Overlays    []string    `yaml:"overlays"`
 }
 
 func main() {
@@ -121,14 +123,12 @@ func generateJava(configFile string) error {
 		return err
 	}
 
-	if pkgInfo.DefaultVersion == "" {
-		pkgInfo.DefaultVersion = cfg.Version
-	}
-
 	pkg.Language["jvm"] = pkgInfo
 
-	// TODO handle overlays here?
-	extraFiles := map[string][]byte{}
+	extraFiles, err := readOverlays(rootDir, *cfg)
+	if err != nil {
+		return err
+	}
 	files, err := jvmgen.GeneratePackage("pulumi-java-gen", pkg, extraFiles)
 	if err != nil {
 		return err
@@ -178,9 +178,11 @@ func generateJava(configFile string) error {
 		}
 	}
 
-	if err := emitFile(filepath.Join(outDir, "gradle.properties"),
-		[]byte(fmt.Sprintf("version=%s", cfg.Version))); err != nil {
-		return fmt.Errorf("failed to generate gradle.properties: %w", err)
+	if pkgInfo.BuildFiles == "gradle" {
+		if err := emitFile(filepath.Join(outDir, "gradle.properties"),
+			[]byte(fmt.Sprintf("version=%s", cfg.Version))); err != nil {
+			return fmt.Errorf("failed to generate gradle.properties: %w", err)
+		}
 	}
 
 	return nil
@@ -198,4 +200,29 @@ func emitFile(path string, bytes []byte) error {
 		return fmt.Errorf("ioutil.WriteFile failed: %w", err)
 	}
 	return nil
+}
+
+func readOverlays(rootDir string, cfg Config) (map[string][]byte, error) {
+	result := map[string][]byte{}
+
+	for _, overlay := range cfg.Overlays {
+		overlayDir := filepath.Join(rootDir, overlay)
+
+		err := filepath.WalkDir(overlayDir, func(path string, entry fs.DirEntry, err error) error {
+			if !entry.IsDir() {
+				sourcePath := filepath.Join(overlayDir, entry.Name())
+				bytes, err := ioutil.ReadFile(sourcePath)
+				if err != nil {
+					return err
+				}
+				result[entry.Name()] = bytes
+			}
+			return err
+		})
+
+		if err != nil {
+			return nil, err
+		}
+	}
+	return result, nil
 }

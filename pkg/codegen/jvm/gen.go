@@ -2671,32 +2671,11 @@ func genSettingsFile(packageName string) ([]byte, error) {
 
 // genBuildFile emits build.gradle
 func genBuildFile(name string, basePackageName string, pkgInfo PackageInfo) ([]byte, error) {
-	publishing := &bytes.Buffer{}
-
-	gprPublishSettings := pkgInfo.GprPublishSettings
-	if gprPublishSettings == nil {
-		ctx := defaultPublishTemplateContext{
-			Name:            name,
-			BasePackageName: strings.TrimSuffix(basePackageName, "."),
-		}
-		if err := defaultPublishTemplate.Execute(publishing, ctx); err != nil {
-			return nil, err
-		}
-	} else {
-		ctx := gprPublishTemplateContext{
-			ArtifactID:    gprPublishSettings.ArtifactID,
-			GroupID:       gprPublishSettings.GroupID,
-			RepositoryURL: gprPublishSettings.RepositoryURL,
-		}
-		if err := gprPublishTemplate.Execute(publishing, ctx); err != nil {
-			return nil, err
-		}
-	}
-
 	w := &bytes.Buffer{}
 	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{
-		Publishing:  publishing.String(),
-		PackageInfo: pkgInfo,
+		Name:            name,
+		BasePackageName: strings.TrimSuffix(basePackageName, "."),
+		PackageInfo:     pkgInfo,
 	})
 	if err != nil {
 		return nil, err
@@ -2722,17 +2701,25 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		}
 	}
 
-	// Finally, emit the package metadata.
-	if err := genGradleProject(
-		pkg,
-		info.BasePackageOrDefault(),
-		packageName(info.Packages, pkg.Name),
-		*info,
-		files,
-	); err != nil {
-		return nil, err
+	switch info.BuildFiles {
+	case "gradle":
+		// Finally, emit the package metadata.
+		if err := genGradleProject(
+			pkg,
+			info.BasePackageOrDefault(),
+			packageName(info.Packages, pkg.Name),
+			*info,
+			files,
+		); err != nil {
+			return nil, err
+		}
+		return files, nil
+	case "":
+		return files, nil
+	default:
+		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",
+			info.BuildFiles)
 	}
-	return files, nil
 }
 
 func isInputType(t schema.Type) bool {

@@ -128,8 +128,6 @@ plugins {
     id("maven-publish")
 }
 
-version = project.findProperty("version") == "unspecified" ? "{{ .PackageInfo.DefaultVersion }}" : project.findProperty("version");
-
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(11)
@@ -147,19 +145,10 @@ repositories {
     }
     mavenCentral()
     mavenLocal()
-    if (project.findProperty("gpr.user") ?: System.getenv("GPR_USER")) {
-      maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
-        credentials {
-          username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
-          password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-        }
-     }
-   }
 }
 
 dependencies {
+    implementation("io.pulumi:pulumi:1.0.0")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     api("com.google.guava:guava:30.1-jre") // FIXME: do we really want to expose this dep?
     api("com.google.code.gson:gson:2.8.6") // make sure we don't clash with grpc deps
@@ -198,7 +187,18 @@ test {
     }
 }
 
-{{ .Publishing }}
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = '{{ .BasePackageName }}'
+            artifactId = '{{ .Name }}'
+            version = project.version
+
+            from components.java
+        }
+        // TODO pom
+    }
+}
 
 javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
@@ -210,8 +210,9 @@ javadoc {
 var jvmBuildTemplate = Template("JavaBuild", jvmBuildTemplateText)
 
 type jvmBuildTemplateContext struct {
-	Publishing  string
-	PackageInfo PackageInfo
+	Name            string
+	BasePackageName string
+	PackageInfo     PackageInfo
 }
 
 // nolint:lll
@@ -329,60 +330,4 @@ type builderTemplateContext struct {
 	Setters    []builderSetterTemplateContext
 	ResultType string
 	Objects    string
-}
-
-var gprPublishTemplateText = `publishing {
-    publications {
-        // Publish to GitHub Packages like this:
-        //
-        // gradle publish
-        //
-        // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
-        gpr(MavenPublication) {
-            groupId = "{{ .GroupID }}"
-            artifactId = "{{ .ArtifactID }}"
-            version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
-            from components.java
-        }
-    }
-
-    // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("{{ .RepositoryURL }}")
-            credentials {
-                username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
-                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-            }
-        }
-    }
-}`
-
-var gprPublishTemplate = Template("GprPublish", gprPublishTemplateText)
-
-type gprPublishTemplateContext struct {
-	GroupID       string
-	ArtifactID    string
-	RepositoryURL string
-}
-
-var defaultPublishTemplateText = `publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = '{{ .BasePackageName }}'
-            artifactId = '{{ .Name }}'
-            version = project.version
-
-            from components.java
-        }
-        // TODO pom
-    }
-}`
-
-var defaultPublishTemplate = Template("DefaultPublish", defaultPublishTemplateText)
-
-type defaultPublishTemplateContext struct {
-	BasePackageName string
-	Name            string
 }

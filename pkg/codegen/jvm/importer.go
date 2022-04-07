@@ -18,21 +18,13 @@ type PropertyInfo struct {
 
 // PackageInfo represents a JVM language-specific info for a package.
 type PackageInfo struct {
-	DefaultVersion         string            `json:"defaultVersion,omitempty"`
 	PackageReferences      map[string]string `json:"packageReferences,omitempty"`
 	Packages               map[string]string `json:"packages,omitempty"`
 	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
 	BasePackage            string            `json:"basePackage"`
 
-	// If configured, generates build code compatible with
-	// publishing artifacts to GitHub Package Registry (GPR).
-	GprPublishSettings *GprPublishSettings `json:"gprPublishSettings"`
-}
-
-type GprPublishSettings struct {
-	ArtifactID    string `json:"artifactId"`
-	GroupID       string `json:"groupId"`
-	RepositoryURL string `json:"repositoryUrl"`
+	// If set to "gradle" generates a basic set of Gradle build files.
+	BuildFiles string `json:"buildFiles"`
 }
 
 func (i PackageInfo) BasePackageOrDefault() string {
