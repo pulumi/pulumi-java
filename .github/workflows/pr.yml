@@ -177,9 +177,22 @@ jobs:
           echo "Old Size : ${{ steps.oldJar.outputs.sizeHuman }}"
           echo "Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}"
           echo "Change(%): ${{ steps.diffJar.outputs.sizePct }}%"
-  example-aws-java-webserver:
+
+  examples:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+        - aws-java-webserver
+        - aws-native-java-s3-folder
+        - azure-java-appservice-sql
+        - azure-java-static-website
+        - gcp-java-gke-hello-world
+        - minimal
+        - random
+        - eks-minimal
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -207,11 +220,6 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
@@ -223,354 +231,19 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Build AWS resource provider
-        run: make provider.aws.build provider.aws.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run aws-java-webserver example
-        run: make test_example.aws-java-webserver
-
-  example-azure-java-appservice-sql:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      #- name: Auth
-      #  uses: azure/login@v1
-      #  with:
-      #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
-      - name: Build Azure Native resource provider
-        run: make provider.azure-native.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example azure-java-appservice-sql
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        run: make test_example.azure-java-appservice-sql
-
-  example-gcp-java-gke-hello-world:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
       - uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: pulumi-development
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-      - name: Build GCP resource provider
-        run: make provider.gcp.install
-      - name: Build Kubernetes resource provider
-        run: make provider.kubernetes.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example gcp-java-gke-hello-world
-        run: make test_example.gcp-java-gke-hello-world
-
-  example-minimal:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'maven'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example minimal
-        run: make test_example.minimal
-
-  example-aws-native-java-s3-folder:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'maven'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ env.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-duration-seconds: 3600
-          role-session-name: ${{ env.PROVIDER }}@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Build AWS provider
-        run: make provider.aws.install
-      - name: Build AWS Native provider
-        run: make provider.aws-native.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example aws-native-java-s3-folder
-        run: make test_example.aws-native-java-s3-folder
-
-  example-azure-java-static-website:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      #- name: Auth
-      #  uses: azure/login@v1
-      #  with:
-      #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
-      - name: Build AWS provider
-        run: make provider.aws.install
-      - name: Build Azure Native provider
-        run: make provider.azure-native.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example azure-java-static-website
+      - name: Run ${{ matrix.example }} example
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        run: make test_example.azure-java-static-website
-
-  example-random:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'maven'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Build random provider
-        run: make provider.random.install
-      - name: Run random example
-        run: make test_example.random
-    strategy:
-      fail-fast: true
-
-  example-eks-minimal:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ env.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-duration-seconds: 3600
-          role-session-name: ${{ env.PROVIDER }}@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Run eks-minimal example
-        run: make test_example.eks-minimal
-    strategy:
-      fail-fast: true
+        run: make test_example.${{ matrix.example }}
 
   go-lint:
     runs-on: ubuntu-latest
